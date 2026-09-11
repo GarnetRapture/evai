@@ -7,11 +7,10 @@ import { listPersonaArchiveKeys, loadPersonaPack, normalizePersonaKey } from './
 import {
     buildLocalizedPersonaPrompt,
     localizedPersonaGreeting,
-    localizedPromptSourceKey,
     wrapAssembledPersonaPrompt,
 } from './prompt';
 import { personaRepository } from './repository';
-import type { BondRankingEntry, FamiliarityEntry, StoredPersonaProfile } from './types';
+import type { AssembledPersonaPrompt, BondRankingEntry, FamiliarityEntry, StoredPersonaProfile } from './types';
 
 const DEFAULT_PROFILE_FIELD = '-';
 const BOND_MEMORY_WEIGHT = 3;
@@ -77,33 +76,31 @@ export const personaService = {
         await personaService.ensureArchivePersonasInstalled(language);
         return personaRepository.listPersonas();
     },
-    async getAssembledSystemPrompt(id: string, language: AppLanguage): Promise<string> {
+    async getAssembledPersonaPrompt(id: string, language: AppLanguage): Promise<AssembledPersonaPrompt> {
         const persona = await personaRepository.getPersona(id);
         if (!persona) {
             throw personaNotFoundError(id);
         }
-        const sourceKey = localizedPromptSourceKey(persona.created_at);
-        const cached = await personaRepository.getLocalizedPrompt(persona.id, language, sourceKey);
-        if (cached) {
-            return cached.assembled_prompt;
-        }
         const localized = buildLocalizedPersonaPrompt(persona, language);
         const assembledPrompt = wrapAssembledPersonaPrompt(localized.localized_name, localized.body, language);
-        await personaRepository.saveLocalizedPrompt({
-            persona_id: persona.id,
-            language,
-            localized_name: localized.localized_name,
-            assembled_prompt: assembledPrompt,
-            source_updated_at: sourceKey,
-            cached_at: createMonotonicTimestamp(),
-        });
-        return assembledPrompt;
+        const cached = await personaRepository.getLocalizedPrompt(persona.id, language, persona.created_at);
+        if (!cached || cached.assembled_prompt !== assembledPrompt || cached.localized_name !== localized.localized_name) {
+            await personaRepository.saveLocalizedPrompt({
+                persona_id: persona.id,
+                language,
+                localized_name: localized.localized_name,
+                assembled_prompt: assembledPrompt,
+                source_updated_at: persona.created_at,
+                cached_at: createMonotonicTimestamp(),
+            });
+        }
+        return { localized_name: localized.localized_name, assembled_prompt: assembledPrompt };
     },
     async warmLocalizedPrompts(language: AppLanguage, onPersonaCached?: (current: number, total: number) => void): Promise<void> {
         const personas = await personaRepository.listPersonas();
         for (const [index, persona] of personas.entries()) {
             try {
-                await personaService.getAssembledSystemPrompt(persona.id, language);
+                await personaService.getAssembledPersonaPrompt(persona.id, language);
             }
             catch (error) {
                 console.error(pickLocalized(

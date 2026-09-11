@@ -32,6 +32,10 @@ export interface LocalizedPersonaPromptBody {
     localized_name: string;
     body: string;
 }
+export interface AssembledPersonaPrompt {
+    localized_name: string;
+    assembled_prompt: string;
+}
 export type LocalizedText = Record<AppLanguage | 'zh_tw', string>;
 export type LocalizedList = Record<AppLanguage | 'zh_tw', string[]>;
 export interface LocalizedDialogue {

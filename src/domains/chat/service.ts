@@ -3,17 +3,13 @@ import { pickLocalized } from '../../shared/i18n';
 import { createMonotonicTimestamp } from '../../shared/time';
 import type { AppLanguage } from '../../shared/types';
 import { knowledgeClient } from '../knowledge/client';
-import {
-    CHROME_PROMPT_MODEL_ID,
-    onDeviceRuntime,
-    type LanguageModelLanguagePlan,
-    type OnDeviceTextMessage,
-} from '../llm';
+import { chatModelRuntime, type OnDeviceTextMessage } from '../llm';
 import { modulesClient } from '../modules/client';
 import { personaService } from '../persona/service';
 import { settingsRepository } from '../settings/repository';
 import { styleClient } from '../style/client';
 import { createLexicalMemoryVector } from './memory';
+import { removeEmoji } from './output';
 import {
     CONSOLIDATION_INTERVAL,
     CONSOLIDATION_SOURCE_LIMIT,
@@ -30,7 +26,7 @@ import {
     buildTurnMemoryText,
 } from './prompt';
 import { chatRepository } from './repository';
-import type { ChatMessage, ChatRoom, ChatSendRequest } from './types';
+import type { ChatMessage, ChatRoom, ChatSendRequest, PersonaSystemPrompt } from './types';
 
 function toOnDeviceMessage(message: ChatMessage): OnDeviceTextMessage {
     return {
@@ -43,7 +39,7 @@ function insertBeforeLast(messages: OnDeviceTextMessage[], injected: OnDeviceTex
     messages.splice(Math.max(0, messages.length - 1), 0, injected);
 }
 
-async function recordTurnMemory(plan: LanguageModelLanguagePlan, personaId: string, userText: string, replyText: string): Promise<void> {
+async function recordTurnMemory(modelId: string, language: AppLanguage, personaId: string, userText: string, replyText: string): Promise<void> {
     const memoryText = buildTurnMemoryText(userText, replyText);
     if (memoryText !== null) {
         await chatRepository.insertEpisodicMemory({
@@ -64,8 +60,8 @@ async function recordTurnMemory(plan: LanguageModelLanguagePlan, personaId: stri
         return;
     }
     const previousSummary = await chatRepository.getSemanticMemory(personaId);
-    const prompt = buildConsolidationPrompt(plan.app_language, previousSummary, episodic.map((memory) => memory.memory_text));
-    const consolidated = (await onDeviceRuntime.promptOnce(plan, prompt)).trim();
+    const prompt = buildConsolidationPrompt(language, previousSummary, episodic.map((memory) => memory.memory_text));
+    const consolidated = removeEmoji(await chatModelRuntime.promptOnce(modelId, language, prompt)).trim();
     if (consolidated.length === 0) {
         return;
     }
@@ -90,8 +86,9 @@ export const chatService = {
         const existing = await chatRepository.findLatestGlobalSessionRoom(EVERTALK_SESSION_TITLE);
         return existing ?? chatService.createSessionRoom(EVERTALK_SESSION_TITLE, null);
     },
-    async buildPersonaBaseSystemPrompt(personaId: string, language: AppLanguage): Promise<string> {
-        let systemPrompt = await personaService.getAssembledSystemPrompt(personaId, language);
+    async buildPersonaBaseSystemPrompt(personaId: string, language: AppLanguage): Promise<PersonaSystemPrompt> {
+        const persona = await personaService.getAssembledPersonaPrompt(personaId, language);
+        let systemPrompt = persona.assembled_prompt;
         systemPrompt += await styleClient.getAssembledStylePrompt();
         const modulePrompt = await modulesClient.getActivePrompt();
         if (modulePrompt.trim().length > 0) {
@@ -101,22 +98,18 @@ export const chatService = {
         if (semanticMemory !== null) {
             systemPrompt += buildSemanticMemoryBlock(language, semanticMemory);
         }
-        return systemPrompt;
+        return { spirit_name: persona.localized_name, system_prompt: systemPrompt };
     },
     async focusPersonaSession(personaId: string): Promise<void> {
         const settings = await settingsRepository.readAppSettings();
-        const plan = await onDeviceRuntime.resolveLanguagePlan(settings.language);
-        const systemPrompt = await chatService.buildPersonaBaseSystemPrompt(personaId, settings.language);
-        await onDeviceRuntime.focusPersonaSession(personaId, plan, systemPrompt);
+        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, settings.language);
+        await chatModelRuntime.focusPersonaSession(settings.active_model, settings.language, personaId, persona.system_prompt);
     },
     async sendMessage(request: ChatSendRequest): Promise<ChatMessage> {
         const { room_id: roomId, persona_id: personaId, content, request_id: requestId, signal, handlers } = request;
         const settings = await settingsRepository.readAppSettings();
         const language = settings.language;
-        if (settings.active_model !== CHROME_PROMPT_MODEL_ID) {
-            throw new DomainError('invalid_model', settings.active_model);
-        }
-        const plan = await onDeviceRuntime.resolveLanguagePlan(language);
+        const modelId = settings.active_model;
         await chatRepository.insertMessage({
             id: crypto.randomUUID(),
             room_id: roomId,
@@ -126,7 +119,7 @@ export const chatService = {
             created_at: createMonotonicTimestamp(),
         });
 
-        const systemPrompt = await chatService.buildPersonaBaseSystemPrompt(personaId, language);
+        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language);
         const history = await chatRepository.listRecentMessagesForPersona(roomId, personaId, PROMPT_HISTORY_LIMIT);
         const messages = history.map(toOnDeviceMessage);
         const recalledMemories = await chatRepository.searchEpisodicMemories(
@@ -143,17 +136,23 @@ export const chatService = {
             insertBeforeLast(messages, { role: 'user', content: buildKnowledgeContext(knowledge.map((chunk) => chunk.chunk_text)) });
         }
 
-        const result = await onDeviceRuntime.generate({
+        let rawReply = '';
+        const result = await chatModelRuntime.generate(modelId, language, {
             request_id: requestId,
             persona_id: personaId,
-            language_plan: plan,
-            system_prompt: systemPrompt,
+            system_prompt: persona.system_prompt,
             messages,
-            behavior_instruction: buildBehaviorInstruction(language),
+            behavior_instruction: buildBehaviorInstruction(language, persona.spirit_name),
             signal,
-            handlers: { onChunk: handlers.onToken },
+            handlers: {
+                onChunk: (chunk) => {
+                    rawReply += chunk;
+                    handlers.onText(removeEmoji(rawReply));
+                },
+            },
         });
-        if (result.cancelled && result.text.trim().length === 0) {
+        const replyText = removeEmoji(result.text);
+        if (result.cancelled && replyText.trim().length === 0) {
             throw new DomainError('cancelled', requestId);
         }
 
@@ -162,11 +161,11 @@ export const chatService = {
             room_id: roomId,
             persona_id: personaId,
             role: 'assistant',
-            content: result.text,
+            content: replyText,
             created_at: createMonotonicTimestamp(),
         };
         await chatRepository.insertMessage(aiMessage);
-        void recordTurnMemory(plan, personaId, content, result.text).catch((error: unknown) => {
+        void recordTurnMemory(modelId, language, personaId, content, replyText).catch((error: unknown) => {
             console.error(pickLocalized(
                 language,
                 `정령 누적 기억 처리 실패: ${describeUnknownError(error)}`,

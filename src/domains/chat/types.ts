@@ -20,7 +20,11 @@ export interface ChatError {
     message: string;
 }
 export interface ChatStreamHandlers {
-    onToken: (token: string) => void;
+    onText: (text: string) => void;
+}
+export interface PersonaSystemPrompt {
+    spirit_name: string;
+    system_prompt: string;
 }
 export interface ChatSendRequest {
     room_id: string;

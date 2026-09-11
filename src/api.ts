@@ -20,7 +20,7 @@ export type AppApi = typeof api;
 export type { UserSession } from './domains/auth';
 export type { ChatMessage, ChatRoom } from './domains/chat';
 export type { KnowledgeChunk } from './domains/knowledge';
-export type { BuiltInModelCatalog, LlmStatus } from './domains/llm';
+export type { ChatModelCatalog, LlmStatus } from './domains/llm';
 export type { ImportedModule } from './domains/modules';
 export type { PersonaConfig } from './domains/persona';
 export type { StyleProfile } from './domains/style';

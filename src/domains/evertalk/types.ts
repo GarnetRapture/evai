@@ -1,7 +1,16 @@
 import type React from 'react';
-import type { AppLanguage, PlatformSupportStatus } from '../../shared/types';
+import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import type { ChatMessage, ChatRoom } from '../chat';
-import type { BuiltInModelCatalog, BuiltInModelEntry, LlmRequestStatus, LlmSessionStatus, LlmStatus, ModelPreparationState } from '../llm';
+import type {
+    ChatModelCatalog,
+    ChromePromptModelEntry,
+    LlmRequestStatus,
+    LlmSessionStatus,
+    LlmStatus,
+    LocalModelEngineKind,
+    LocalModelFileEntry,
+    ModelPreparationState,
+} from '../llm';
 import type { ImportedModule, ModuleControl } from '../modules';
 import type { BondRankingEntry, FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { AppSettings, ResetSummary, SetupPhase, SetupProgress } from '../settings';
@@ -147,12 +156,52 @@ export interface SystemStatusPanelProps {
     statuses: ApiStatusItem[];
     labels: EverTalkLabels;
 }
-export interface SettingsPanelProps {
-    open: boolean;
-    settings: AppSettings | null;
-    modelCatalog: BuiltInModelCatalog | null;
+export interface ModelCatalogSectionProps {
+    appPlatform: AppPlatform;
+    modelCatalog: ChatModelCatalog | null;
     modelCatalogError: string | null;
     modelPreparation: ModelPreparationState | null;
+    modelLoadingId: string | null;
+    labels: EverTalkLabels;
+    onRefreshModelCatalog: () => Promise<void>;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onPrepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
+    onInstallLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
+    onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
+}
+export interface LocalModelEntryGroup {
+    engine: LocalModelEngineKind;
+    entries: LocalModelFileEntry[];
+}
+export interface LocalModelSectionProps {
+    engine: LocalModelEngineKind;
+    entries: LocalModelFileEntry[];
+    modelPreparation: ModelPreparationState | null;
+    modelLoadingId: string | null;
+    labels: EverTalkLabels;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onInstallLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
+    onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
+}
+export interface ChromePromptModelItemProps {
+    entry: ChromePromptModelEntry;
+    modelPreparation: ModelPreparationState | null;
+    modelLoadingId: string | null;
+    labels: EverTalkLabels;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onPrepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
+}
+export interface LocalModelItemProps {
+    entry: LocalModelFileEntry;
+    busy: boolean;
+    modelLoadingId: string | null;
+    labels: EverTalkLabels;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
+}
+export interface SettingsPanelProps extends ModelCatalogSectionProps {
+    open: boolean;
+    settings: AppSettings | null;
     llmSessionStatuses: LlmSessionStatus[];
     llmRequestStatuses: LlmRequestStatus[];
     isResetting: boolean;
@@ -167,14 +216,10 @@ export interface SettingsPanelProps {
     backupMessage: string | null;
     backupError: string | null;
     backupDirectoryStatus: BackupDirectoryStatus | null;
-    labels: EverTalkLabels;
     onClose: () => void;
     onReset: () => void;
     onSetLanguage: (language: AppLanguage) => Promise<void>;
     onSetShowReasoning: (show: boolean) => Promise<void>;
-    onRefreshModelCatalog: () => Promise<void>;
-    onSelectChatModel: (modelId: string) => Promise<void>;
-    onPrepareModel: (entry: BuiltInModelEntry) => Promise<void>;
     onImportModule: () => Promise<void>;
     onSetModuleEnabled: (id: string, enabled: boolean) => Promise<void>;
     onDeleteModule: (id: string) => Promise<void>;
@@ -210,17 +255,20 @@ export interface SetupProgressPanelProps {
 }
 export interface SetupWizardProps {
     open: boolean;
+    appPlatform: AppPlatform;
     language: AppLanguage;
     labels: EverTalkLabels;
     onSelectLanguage: (language: AppLanguage) => Promise<void>;
     onCompleteSetup: () => Promise<void>;
 }
 export interface PlatformGuideNoticeProps {
+    appPlatform: AppPlatform;
     labels: EverTalkLabels;
     acknowledged: boolean;
     onAcknowledgedChange: (acknowledged: boolean) => void;
 }
 export interface PlatformGuideGateProps {
+    appPlatform: AppPlatform;
     labels: EverTalkLabels;
     onAcknowledge: () => Promise<void>;
 }
@@ -267,8 +315,9 @@ export interface EverTalkController {
     moduleManagementOpen: boolean;
     backgroundGalleryOpen: boolean;
     appSettings: AppSettings | null;
-    modelCatalog: BuiltInModelCatalog | null;
+    modelCatalog: ChatModelCatalog | null;
     modelCatalogError: string | null;
+    modelLoadingId: string | null;
     modelPreparation: ModelPreparationState | null;
     backupBusy: boolean;
     backupRestoreSummary: BackupRestoreSummary | null;
@@ -320,7 +369,9 @@ export interface EverTalkController {
     setShowReasoning: (show: boolean) => Promise<void>;
     refreshModelCatalog: () => Promise<void>;
     selectChatModel: (modelId: string) => Promise<void>;
-    prepareModel: (entry: BuiltInModelEntry) => Promise<void>;
+    prepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
+    installLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
+    removeLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     exportBackup: () => Promise<void>;
     importBackup: () => Promise<void>;
     linkBackupDirectory: () => Promise<void>;
@@ -339,6 +390,7 @@ export interface EverTalkController {
     setupStage: SetupPhase;
     completeSetup: () => Promise<void>;
     platformSupport: PlatformSupportStatus;
+    appPlatform: AppPlatform;
     platformGuideAcknowledged: boolean;
     acknowledgePlatformGuide: () => Promise<void>;
 }

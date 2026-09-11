@@ -2268,6 +2268,20 @@
   opacity: 0.6;
 }
 
+a.ever-settings-reset-button {
+  text-decoration: none;
+}
+
+.ever-model-guide {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 .tone-human { --tone: #e88c9d; }
 .tone-fairy { --tone: #78d6bf; }
 .tone-beast { --tone: #e5b26b; }

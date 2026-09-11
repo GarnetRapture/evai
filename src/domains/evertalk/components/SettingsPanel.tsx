@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import type { ChangeEvent } from 'react';
-import { Box, Download, FolderOpen, FolderPlus, History, RefreshCw, RotateCcw, Save, ShieldCheck, Trash2, Unlink, X } from 'lucide-react';
+import { Box, FolderOpen, FolderPlus, History, RotateCcw, Save, ShieldCheck, Trash2, Unlink, X } from 'lucide-react';
 import type { AppLanguage } from '../../../shared/types';
-import type { BuiltInModelEntry } from '../../llm';
 import { formatBackupFileMeta, formatDateTime, formatLanguageName } from '../logic';
 import type { SettingsPanelProps } from '../types';
+import { ModelCatalogSection } from './ModelCatalogSection';
 
-export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatalogError, modelPreparation, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, appPlatform, settings, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onRemoveLocalModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     if (!isOpen) {
         return null;
@@ -28,12 +28,6 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
     }
     const backupFolderLinked = backupDirectoryStatus?.linked ?? false;
     const backupFolderGranted = backupDirectoryStatus?.permission === 'granted';
-    function preparationLabel(entry: BuiltInModelEntry): string {
-        if (modelPreparation?.model_id === entry.id && modelPreparation.progress) {
-            return labels.modelPreparing(Math.round(modelPreparation.progress.ratio * 100));
-        }
-        return labels.modelPrepare;
-    }
     return (<div className="ever-settings-overlay" role="dialog" aria-modal="true">
       <div className="ever-settings-modal ever-settings-modal--wide">
         <header className="ever-settings-modal__header">
@@ -73,50 +67,7 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
           </label>
         </section>
 
-        <section className="ever-panel-section">
-          <h3>{labels.modelListTitle}</h3>
-          <div className="ever-settings-result">
-            <span>{labels.modelListDescription}</span>
-          </div>
-          {modelCatalogError && (<div className="ever-roster__error">
-              <span>{modelCatalogError}</span>
-            </div>)}
-          <div className="ever-model-list">
-            {(modelCatalog?.entries ?? []).map((entry) => {
-                const preparing = modelPreparation?.model_id === entry.id && modelPreparation.progress !== null;
-                const preparationError = modelPreparation?.model_id === entry.id ? modelPreparation.error : null;
-                const needsPreparation = entry.api_supported && (entry.availability === 'downloadable' || entry.availability === 'downloading');
-                return (<div key={entry.id} className={`ever-model-item ${entry.selected ? 'is-selected' : ''}`}>
-                    <div className="ever-model-item__main">
-                      <input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.api_supported} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>
-                      <span>
-                        <strong>{labels.modelRoleChat}</strong>
-                        <small>{entry.id}</small>
-                        <small>
-                          {entry.api_supported ? labels.modelAvailabilityDetail(entry.availability) : labels.modelApiUnsupported}
-                          {entry.context_window !== null ? ` · ${labels.modelContextWindow(entry.context_window)}` : ''}
-                          {entry.selected ? ` · ${labels.modelInUse}` : ''}
-                        </small>
-                        {entry.api_supported ? <small>{labels.modelLanguageSupport(entry.language_tag, entry.language_declared)}</small> : null}
-                        {preparationError && <small className="ever-model-item__error">{preparationError}</small>}
-                      </span>
-                    </div>
-                    {entry.availability === 'available' && entry.api_supported ? (<span className="ever-model-item__state">{labels.modelPrepared}</span>) : null}
-                    {needsPreparation ? (<button type="button" className="ever-settings-reset-button" disabled={modelPreparation !== null && modelPreparation.error === null} onClick={() => void onPrepareModel(entry)}>
-                        <Download aria-hidden="true" size={16}/>
-                        {preparing ? preparationLabel(entry) : labels.modelPrepare}
-                      </button>) : null}
-                    {preparing && modelPreparation?.progress ? (<div className="ever-model-item__progress">
-                        <div className="ever-model-item__progress-bar" style={{ width: `${Math.round(modelPreparation.progress.ratio * 100)}%` }}/>
-                      </div>) : null}
-                  </div>);
-            })}
-          </div>
-          <button type="button" className="ever-settings-reset-button" onClick={() => void onRefreshModelCatalog()}>
-            <RefreshCw aria-hidden="true" size={16}/>
-            {labels.modelRefresh}
-          </button>
-        </section>
+        <ModelCatalogSection appPlatform={appPlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareChromePromptModel={onPrepareChromePromptModel} onInstallLocalModel={onInstallLocalModel} onRemoveLocalModel={onRemoveLocalModel}/>
 
         <section className="ever-panel-section">
           <h3>{labels.modulesSectionTitle}</h3>

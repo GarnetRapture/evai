@@ -8,6 +8,7 @@ const LANGUAGE_OPTIONS: AppLanguage[] = ['ko', 'en', 'zh_cn'];
 
 export function SetupWizard({
     open,
+    appPlatform,
     language,
     labels,
     onSelectLanguage,
@@ -36,7 +37,7 @@ export function SetupWizard({
                             </button>
                         ))}
                     </div>
-                    <PlatformGuideNotice labels={labels} acknowledged={platformGuideAcknowledged} onAcknowledgedChange={setPlatformGuideAcknowledged}/>
+                    <PlatformGuideNotice appPlatform={appPlatform} labels={labels} acknowledged={platformGuideAcknowledged} onAcknowledgedChange={setPlatformGuideAcknowledged}/>
                     <button type="button" className="ever-setup-wizard__next" disabled={!platformGuideAcknowledged} onClick={() => void onCompleteSetup()}>
                         {labels.continue}
                     </button>

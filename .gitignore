@@ -27,3 +27,14 @@ CLAUDE.md
 RUST_SRC/
 package-lock.json
 tmp-claude/
+
+# Android
+android/.gradle/
+android/.kotlin/
+android/local.properties
+android/build/
+android/app/build/
+android/captures/
+android/**/*.jks
+android/**/*.keystore
+android/keystore.properties

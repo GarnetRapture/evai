@@ -7,6 +7,8 @@ export type DomainErrorCode =
     | 'cancelled'
     | 'invalid_format'
     | 'invalid_backup'
+    | 'invalid_model_file'
+    | 'native_runtime'
     | 'storage';
 
 export class DomainError extends Error {

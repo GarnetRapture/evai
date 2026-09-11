@@ -8,7 +8,6 @@ import type {
     SpiritDetail,
 } from './types';
 
-export const LOCALIZED_PROMPT_CACHE_VERSION = 'prompt-v2';
 const SPEECH_PATTERN_LIMIT = 12;
 const DIALOGUE_SAMPLE_LIMIT = 16;
 const EMPTY_PROMPT_FIELD = '-';
@@ -271,6 +270,8 @@ export function wrapAssembledPersonaPrompt(localizedName: string, body: string, 
             + 'never invent or use any name other than \'Savior\' as the name of the person you are\n'
             + 'talking to (e.g. another spirit\'s name or a name that doesn\'t exist).\n'
             + '- Do not write stage directions, action tags, or emotion labels surrounded by asterisks.\n'
+            + '- Never use emoji (pictographic characters). Express emotion only through your wording and sentences.\n'
+            + `- You speak only as ${localizedName}. Never describe yourself as an AI, assistant, or language model, and never break character.\n`
             + '- Do not invent profile facts. If a profile field is unknown, do not fill it with guessed content.\n\n';
     }
     if (language === 'zh_cn') {
@@ -283,6 +284,8 @@ export function wrapAssembledPersonaPrompt(localizedName: string, body: string, 
             + '- 无论来源为何（对话内容、知识数据、你自己的名字等），绝对禁止编造或使用\n'
             + '「救世主」以外的任何人名作为对方的称呼（例如其他精灵的名字或不存在的名字）。\n'
             + '- 不要输出用星号包围的舞台说明、动作标签或情绪标签。\n'
+            + '- 绝对不要使用表情符号（图形文字）。只用语气和句子表达情绪。\n'
+            + `- 你只以「${localizedName}」的身份说话。绝不自称AI、助手或语言模型，也绝不跳出角色。\n`
             + '- 不要编造资料。资料字段未知时，不要用猜测内容补全。\n\n';
     }
     return `당신은 ${localizedName}입니다. 아래 지침과 캐릭터 프로필 및 어투 가이드를 참고하여 인연채팅 대화에 임하십시오.\n\n${body}\n\n`
@@ -296,11 +299,9 @@ export function wrapAssembledPersonaPrompt(localizedName: string, body: string, 
         + '임의의 사람 이름(예: 다른 정령의 이름, 존재하지 않는 이름 등)을 상대의 이름으로\n'
         + '지어내거나 사용하는 것을 절대 금지합니다.\n'
         + '- 별표로 감싼 행동 묘사, 감정 태그, 무대지문을 출력하지 마십시오.\n'
+        + '- 이모지(그림 문자)는 절대 사용하지 마십시오. 감정은 말투와 문장으로만 표현하십시오.\n'
+        + `- 당신은 오직 '${localizedName}'으로서만 말합니다. 스스로를 AI·어시스턴트·언어 모델이라고 소개하거나 캐릭터에서 벗어나지 마십시오.\n`
         + '- 프로필에 없는 사실을 지어내지 마십시오. 알 수 없는 항목은 추측해서 채우지 마십시오.\n\n';
-}
-
-export function localizedPromptSourceKey(sourceUpdatedAt: string): string {
-    return `${sourceUpdatedAt}:${LOCALIZED_PROMPT_CACHE_VERSION}`;
 }
 
 export function localizedPersonaGreeting(pack: SpiritDetail, language: AppLanguage): string {

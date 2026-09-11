@@ -1,14 +1,17 @@
 import React, { useEffect, useEffectEvent, useMemo, useRef, useState } from 'react';
 import { requestPersistentStorage } from '../../shared/storage';
 import { detectBrowserAppLanguage } from '../../shared/i18n';
-import { detectPlatformSupport } from '../../shared/platform';
-import type { AppLanguage, PlatformSupportStatus } from '../../shared/types';
+import { detectAppPlatform, detectPlatformSupport } from '../../shared/platform';
+import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import { authClient } from '../auth';
 import { chatClient, type ChatMessage, type ChatRoom } from '../chat';
 import {
+    LOCAL_MODEL_INSTALL_PREPARATION_IDS,
     llmClient,
-    type BuiltInModelCatalog,
-    type BuiltInModelEntry,
+    type ChatModelCatalog,
+    type ChromePromptModelEntry,
+    type LocalModelEngineKind,
+    type LocalModelFileEntry,
     type LlmRequestStatus,
     type LlmSessionStatus,
     type LlmStatus,
@@ -47,6 +50,7 @@ export function useEverTalkController(): EverTalkController {
     const [defaultPersonaId, setDefaultPersonaId] = useState<string | null>(null);
     const [personaLoadError, setPersonaLoadError] = useState<string | null>(null);
     const [platformSupport] = useState<PlatformSupportStatus>(detectPlatformSupport);
+    const [appPlatform] = useState<AppPlatform>(detectAppPlatform);
     const [appLanguage, setAppLanguage] = useState<AppLanguage>(detectBrowserAppLanguage);
     const labels = useMemo(() => getEverTalkLabels(appLanguage), [appLanguage]);
     const [systemStatuses, setSystemStatuses] = useState<ApiStatusItem[]>(() => [
@@ -86,7 +90,8 @@ export function useEverTalkController(): EverTalkController {
     const [setupProgress, setSetupProgress] = useState<SetupProgress | null>(null);
     const pendingLanguageRef = useRef<AppLanguage | null>(null);
     const [appSettings, setAppSettings] = useState<AppSettings | null>(null);
-    const [modelCatalog, setModelCatalog] = useState<BuiltInModelCatalog | null>(null);
+    const [modelCatalog, setModelCatalog] = useState<ChatModelCatalog | null>(null);
+    const [modelLoadingId, setModelLoadingId] = useState<string | null>(null);
     const [modelCatalogError, setModelCatalogError] = useState<string | null>(null);
     const [modelPreparation, setModelPreparation] = useState<ModelPreparationState | null>(null);
     const [backupBusy, setBackupBusy] = useState(false);
@@ -381,9 +386,9 @@ export function useEverTalkController(): EverTalkController {
                 request_id: requestId,
                 signal: requestController.signal,
                 handlers: {
-                    onToken: (token) => {
+                    onText: (text) => {
                         if (isFocusedRequest()) {
-                            setStreamingText((prev) => prev + token);
+                            setStreamingText(text);
                         }
                     },
                 },
@@ -721,41 +726,95 @@ export function useEverTalkController(): EverTalkController {
         }
     }
 
+    async function refocusActiveSpiritSession() {
+        if (!activeSpiritId) {
+            return;
+        }
+        await chatClient.focusPersonaSession(activeSpiritId);
+        await refreshActiveSessions();
+    }
+
     async function selectChatModel(modelId: string) {
+        releaseFocusedChatRequest();
+        setModelLoadingId(modelId);
         try {
             setModelCatalog(await llmClient.selectChatModel(modelId));
             setAppSettings(await settingsClient.get());
             setModelCatalogError(null);
             syncClient.scheduleAutomaticBackup();
             await refreshLlmStatus();
+            await refocusActiveSpiritSession();
+            await refreshModelCatalog();
         }
         catch (err) {
             console.error(labels.logLocalModelChangeFailed, err);
             setModelCatalogError(formatUnknownError(err, labels));
         }
+        finally {
+            setModelLoadingId(null);
+        }
     }
 
-    async function prepareModel(entry: BuiltInModelEntry) {
+    async function prepareChromePromptModel(entry: ChromePromptModelEntry) {
         if (modelPreparation !== null) {
             return;
         }
         setModelPreparation({ model_id: entry.id, progress: { ratio: 0, done: false }, error: null });
         try {
-            const catalog = await llmClient.prepareModel(entry, (progress) => {
+            const catalog = await llmClient.prepareChromePromptModel((progress) => {
                 setModelPreparation({ model_id: entry.id, progress, error: null });
             });
             setModelCatalog(catalog);
             setModelPreparation(null);
             await refreshLlmStatus();
-            if (activeSpiritId) {
-                await chatClient.focusPersonaSession(activeSpiritId);
-                await refreshActiveSessions();
-            }
+            await refocusActiveSpiritSession();
         }
         catch (err) {
             console.error(labels.logModelDownloadFailed, err);
             setModelPreparation({ model_id: entry.id, progress: null, error: formatUnknownError(err, labels) });
             await refreshModelCatalog();
+        }
+    }
+
+    async function installLocalModel(engine: LocalModelEngineKind) {
+        if (modelPreparation !== null) {
+            return;
+        }
+        setModelCatalogError(null);
+        try {
+            const installedModelId = await llmClient.installLocalModel(engine, (progress) => {
+                setModelPreparation({ model_id: LOCAL_MODEL_INSTALL_PREPARATION_IDS[engine], progress, error: null });
+            });
+            setModelPreparation(null);
+            if (installedModelId !== null) {
+                await refreshModelCatalog();
+            }
+        }
+        catch (err) {
+            console.error(labels.logModelInstallFailed, err);
+            setModelPreparation(null);
+            setModelCatalogError(formatUnknownError(err, labels));
+            await refreshModelCatalog();
+        }
+    }
+
+    async function removeLocalModel(entry: LocalModelFileEntry) {
+        if (entry.selected) {
+            releaseFocusedChatRequest();
+        }
+        try {
+            setModelCatalog(await llmClient.removeLocalModel(entry.engine, entry.file_name));
+            setAppSettings(await settingsClient.get());
+            setModelCatalogError(null);
+            syncClient.scheduleAutomaticBackup();
+            if (entry.selected) {
+                await refreshLlmStatus();
+                await refocusActiveSpiritSession();
+            }
+        }
+        catch (err) {
+            console.error(labels.logModelInstallFailed, err);
+            setModelCatalogError(formatUnknownError(err, labels));
         }
     }
 
@@ -1060,7 +1119,10 @@ export function useEverTalkController(): EverTalkController {
         setShowReasoning,
         refreshModelCatalog,
         selectChatModel,
-        prepareModel,
+        prepareChromePromptModel,
+        installLocalModel,
+        removeLocalModel,
+        modelLoadingId,
         exportBackup,
         importBackup,
         linkBackupDirectory,
@@ -1079,6 +1141,7 @@ export function useEverTalkController(): EverTalkController {
         setupStage: appSettings?.setup_stage ?? 'language',
         completeSetup,
         platformSupport,
+        appPlatform,
         platformGuideAcknowledged: appSettings?.platform_guide_acknowledged ?? false,
         acknowledgePlatformGuide,
     };

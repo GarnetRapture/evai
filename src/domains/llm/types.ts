@@ -17,7 +17,10 @@ export interface LanguageModelLanguagePlan {
     declared_language_tag: string | null;
     availability: OnDeviceModelAvailability;
 }
-export interface BuiltInModelEntry {
+export type LocalModelEngineKind = 'gguf' | 'litert_lm';
+export type ChatModelEngineKind = 'chrome_prompt' | LocalModelEngineKind;
+export interface ChromePromptModelEntry {
+    engine: 'chrome_prompt';
     id: string;
     api_supported: boolean;
     availability: OnDeviceModelAvailability;
@@ -26,9 +29,65 @@ export interface BuiltInModelEntry {
     context_window: number | null;
     selected: boolean;
 }
-export interface BuiltInModelCatalog {
+export interface HuggingFaceModelSource {
+    repo: string;
+    file_name: string;
+    display_name: string;
+    size_bytes: number;
+    license: string;
+    gated: boolean;
+}
+export interface LocalModelFileEntry {
+    engine: LocalModelEngineKind;
+    id: string;
+    file_name: string;
+    display_name: string;
+    source: HuggingFaceModelSource | null;
+    page_url: string | null;
+    download_url: string | null;
+    installed: boolean;
+    installed_size_bytes: number | null;
+    loaded: boolean;
+    backend: string | null;
+    context_window: number | null;
+    selected: boolean;
+}
+export type ChatModelEntry = ChromePromptModelEntry | LocalModelFileEntry;
+export interface ChatModelCatalog {
     app_language: AppLanguage;
-    entries: BuiltInModelEntry[];
+    entries: ChatModelEntry[];
+}
+export interface InstalledModelFile {
+    file_name: string;
+    size_bytes: number;
+    installed_at: string;
+}
+export interface LocalModelLoadState {
+    file_name: string | null;
+    backend: string | null;
+    context_window: number | null;
+}
+export interface LocalModelStorage {
+    list(): Promise<InstalledModelFile[]>;
+    installFromLocalFile(onProgress: ModelDownloadProgressHandler): Promise<InstalledModelFile | null>;
+    remove(fileName: string): Promise<void>;
+}
+export interface GgufLoadedModel {
+    file_name: string;
+    context_window: number;
+}
+export interface GgufLoadingModel {
+    file_name: string;
+    promise: Promise<GgufLoadedModel>;
+}
+export interface LiteRtLmLoadedModel {
+    file_name: string;
+    backend: string | null;
+    context_window: number | null;
+}
+export interface LiteRtLmLoadingModel {
+    file_name: string;
+    promise: Promise<LiteRtLmLoadedModel>;
 }
 export interface ModelPreparationState {
     model_id: string;
@@ -40,8 +99,8 @@ export interface LlmRequestStatus {
     request_id: string;
     persona_id: string | null;
     state: LlmRequestState;
-    prompt_tokens: number;
-    generated_tokens: number;
+    prompt_tokens: number | null;
+    generated_tokens: number | null;
     reused_prefix_tokens: number;
     truncated_prompt_tokens: number;
     cache_reset: boolean;
@@ -73,7 +132,6 @@ export interface OnDeviceTextMessage {
 export interface OnDeviceGenerationRequest {
     request_id: string;
     persona_id: string;
-    language_plan: LanguageModelLanguagePlan;
     system_prompt: string;
     messages: OnDeviceTextMessage[];
     behavior_instruction: string;

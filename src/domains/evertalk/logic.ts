@@ -1,11 +1,12 @@
 import { isDomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
 import { EVERTALK_SESSION_TITLE, type ChatRoom } from '../chat';
+import type { ChatModelEntry, LocalModelFileEntry, ModelDownloadProgress } from '../llm';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, PreferredSpiritFamiliarity, SpiritRosterMeta, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, LocalModelEntryGroup, PreferredSpiritFamiliarity, SpiritRosterMeta, SystemStatusId, TalkChoice } from './types';
 export function filterSpirits(spirits: PersonaConfig[], searchQuery: string): PersonaConfig[] {
     const query = searchQuery.trim().toLowerCase();
     if (!query) {
@@ -114,6 +115,29 @@ export function formatDateTime(isoTimestamp: string, labels: EverTalkLabels): st
 }
 export function formatBackupFileMeta(file: BackupFileEntry, labels: EverTalkLabels): string {
     return labels.backupFileMeta(formatDateTime(file.modified_at, labels), Math.max(1, Math.ceil(file.size_bytes / 1024)));
+}
+export function formatProgressPercent(progress: ModelDownloadProgress): number {
+    return Math.round(progress.ratio * 100);
+}
+export function groupLocalModelEntries(entries: ChatModelEntry[]): LocalModelEntryGroup[] {
+    const groups: LocalModelEntryGroup[] = [];
+    for (const entry of entries) {
+        if (entry.engine === 'chrome_prompt') {
+            continue;
+        }
+        const localEntry: LocalModelFileEntry = entry;
+        const group = groups.find((candidate) => candidate.engine === localEntry.engine);
+        if (group) {
+            group.entries.push(localEntry);
+        }
+        else {
+            groups.push({ engine: localEntry.engine, entries: [localEntry] });
+        }
+    }
+    return groups;
+}
+export function formatMegabytes(bytes: number): number {
+    return Math.max(1, Math.round(bytes / (1024 * 1024)));
 }
 export function formatModelSettingsPath(labels: EverTalkLabels): string {
     return `${labels.settings} > ${labels.modelListTitle}`;

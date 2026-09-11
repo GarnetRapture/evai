@@ -1,28 +1,15 @@
 import { DomainError, describeUnknownError } from '../../shared/errors';
-import {
-    listDirectoryFiles,
-    openLocalFile,
-    pickLocalDirectory,
-    readDirectoryFile,
-    readDirectoryPermission,
-    removeDirectoryFile,
-    requestDirectoryPermission,
-    saveLocalFile,
-    writeDirectoryFile,
-    type LocalFileType,
-} from '../../shared/files';
+import { openLocalFile, saveLocalFile, type LocalFileType } from '../../shared/files';
 import {
     EVERSOUL_STORE,
     exportDatabaseSnapshot,
     getEverSoulDatabase,
     parseDatabaseSnapshot,
-    readBackupDirectoryHandle,
-    removeBackupDirectoryHandle,
     restoreDatabaseSnapshot,
-    saveBackupDirectoryHandle,
     type EverSoulDatabaseSnapshot,
 } from '../../shared/storage';
 import { createMonotonicTimestamp } from '../../shared/time';
+import { backupDirectoryAccess } from './directory';
 import type { BackupDirectoryStatus, BackupRestoreSummary, SyncMetadataKey } from './types';
 
 const BACKUP_FILE_PREFIX = 'eversoul-ai-chat-backup';
@@ -31,7 +18,6 @@ const BACKUP_LATEST_FILE_NAME = `${BACKUP_FILE_PREFIX}-latest${BACKUP_FILE_EXTEN
 const BACKUP_HISTORY_LIMIT = 10;
 const AUTOMATIC_BACKUP_DELAY_MS = 5_000;
 const BACKUP_FILE_PICKER_ID = 'eversoul-backup-file';
-const BACKUP_DIRECTORY_PICKER_ID = 'eversoul-backup-directory';
 
 export const BACKUP_FILE_TYPE: LocalFileType = {
     description: 'EverSoul AI Chat Backup',
@@ -82,28 +68,37 @@ function restoreSummary(snapshot: EverSoulDatabaseSnapshot): BackupRestoreSummar
     };
 }
 
-async function grantedBackupDirectory(): Promise<FileSystemDirectoryHandle | null> {
-    const directory = await readBackupDirectoryHandle();
-    if (!directory) {
-        return null;
-    }
-    return (await readDirectoryPermission(directory)) === 'granted' ? directory : null;
+async function isBackupDirectoryGranted(): Promise<boolean> {
+    return (await backupDirectoryAccess().state())?.permission === 'granted';
 }
 
-async function pruneBackupHistory(directory: FileSystemDirectoryHandle): Promise<void> {
-    const history = await listDirectoryFiles(directory, isHistoryBackupFile);
+async function ensureBackupDirectoryGranted(): Promise<void> {
+    const access = backupDirectoryAccess();
+    const state = await access.state();
+    if (!state) {
+        throw new DomainError('not_found', EVERSOUL_STORE.fileHandle);
+    }
+    if (state.permission !== 'granted' && (await access.requestPermission()) !== 'granted') {
+        throw new DomainError('storage', state.name);
+    }
+}
+
+async function pruneBackupHistory(): Promise<void> {
+    const access = backupDirectoryAccess();
+    const history = await access.list(isHistoryBackupFile);
     for (const entry of history.slice(BACKUP_HISTORY_LIMIT)) {
-        await removeDirectoryFile(directory, entry.name);
+        await access.remove(entry.name);
     }
 }
 
-async function writeSnapshotToDirectory(directory: FileSystemDirectoryHandle): Promise<string> {
+async function writeSnapshotToDirectory(): Promise<string> {
+    const access = backupDirectoryAccess();
     const snapshot = await exportDatabaseSnapshot();
-    const blob = snapshotBlob(snapshot);
+    const content = JSON.stringify(snapshot);
     const fileName = timestampedBackupFileName(snapshot.exported_at);
-    await writeDirectoryFile(directory, fileName, blob);
-    await writeDirectoryFile(directory, BACKUP_LATEST_FILE_NAME, blob);
-    await pruneBackupHistory(directory);
+    await access.write(fileName, content);
+    await access.write(BACKUP_LATEST_FILE_NAME, content);
+    await pruneBackupHistory();
     await setBackupMetadata('last_backup_at', snapshot.exported_at);
     await clearBackupError();
     return fileName;
@@ -119,14 +114,8 @@ export const backupService = {
         return file ? parseDatabaseSnapshot(await file.text()) : null;
     },
     async readDirectorySnapshot(fileName: string): Promise<EverSoulDatabaseSnapshot> {
-        const directory = await readBackupDirectoryHandle();
-        if (!directory) {
-            throw new DomainError('not_found', EVERSOUL_STORE.fileHandle);
-        }
-        if ((await readDirectoryPermission(directory)) !== 'granted' && (await requestDirectoryPermission(directory)) !== 'granted') {
-            throw new DomainError('storage', directory.name);
-        }
-        return parseDatabaseSnapshot(await (await readDirectoryFile(directory, fileName)).text());
+        await ensureBackupDirectoryGranted();
+        return parseDatabaseSnapshot(await backupDirectoryAccess().read(fileName));
     },
     async restoreSnapshot(snapshot: EverSoulDatabaseSnapshot): Promise<BackupRestoreSummary> {
         if (automaticBackupTimer !== null) {
@@ -137,12 +126,10 @@ export const backupService = {
         return restoreSummary(snapshot);
     },
     async linkDirectory(): Promise<BackupDirectoryStatus | null> {
-        const directory = await pickLocalDirectory(BACKUP_DIRECTORY_PICKER_ID);
-        if (!directory) {
+        if (!(await backupDirectoryAccess().link())) {
             return null;
         }
-        await saveBackupDirectoryHandle(directory);
-        await writeSnapshotToDirectory(directory);
+        await writeSnapshotToDirectory();
         return backupService.readDirectoryStatus();
     },
     async unlinkDirectory(): Promise<BackupDirectoryStatus> {
@@ -150,44 +137,38 @@ export const backupService = {
             window.clearTimeout(automaticBackupTimer);
             automaticBackupTimer = null;
         }
-        await removeBackupDirectoryHandle();
+        await backupDirectoryAccess().unlink();
         return backupService.readDirectoryStatus();
     },
     async grantDirectoryPermission(): Promise<BackupDirectoryStatus> {
-        const directory = await readBackupDirectoryHandle();
-        if (!directory) {
+        const access = backupDirectoryAccess();
+        if (!(await access.state())) {
             throw new DomainError('not_found', EVERSOUL_STORE.fileHandle);
         }
-        await requestDirectoryPermission(directory);
+        await access.requestPermission();
         return backupService.readDirectoryStatus();
     },
     async backupNow(): Promise<string> {
-        const directory = await readBackupDirectoryHandle();
-        if (!directory) {
-            throw new DomainError('not_found', EVERSOUL_STORE.fileHandle);
-        }
-        if ((await readDirectoryPermission(directory)) !== 'granted' && (await requestDirectoryPermission(directory)) !== 'granted') {
-            throw new DomainError('storage', directory.name);
-        }
-        return writeSnapshotToDirectory(directory);
+        await ensureBackupDirectoryGranted();
+        return writeSnapshotToDirectory();
     },
     async readDirectoryStatus(): Promise<BackupDirectoryStatus> {
-        const [directory, lastBackupAt, lastBackupError] = await Promise.all([
-            readBackupDirectoryHandle(),
+        const access = backupDirectoryAccess();
+        const [state, lastBackupAt, lastBackupError] = await Promise.all([
+            access.state(),
             readBackupMetadata('last_backup_at'),
             readBackupMetadata('last_backup_error'),
         ]);
-        if (!directory) {
+        if (!state) {
             return { linked: false, directory_name: null, permission: null, last_backup_at: lastBackupAt, last_backup_error: lastBackupError, files: [] };
         }
-        const permission = await readDirectoryPermission(directory);
         return {
             linked: true,
-            directory_name: directory.name,
-            permission,
+            directory_name: state.name,
+            permission: state.permission,
             last_backup_at: lastBackupAt,
             last_backup_error: lastBackupError,
-            files: permission === 'granted' ? await listDirectoryFiles(directory, isBackupFile) : [],
+            files: state.permission === 'granted' ? await access.list(isBackupFile) : [],
         };
     },
     scheduleAutomaticBackup(): void {
@@ -197,12 +178,11 @@ export const backupService = {
         automaticBackupTimer = window.setTimeout(() => {
             automaticBackupTimer = null;
             void (async () => {
-                const directory = await grantedBackupDirectory();
-                if (!directory) {
+                if (!(await isBackupDirectoryGranted())) {
                     return;
                 }
                 try {
-                    await writeSnapshotToDirectory(directory);
+                    await writeSnapshotToDirectory();
                 }
                 catch (error) {
                     await setBackupMetadata('last_backup_error', describeUnknownError(error));

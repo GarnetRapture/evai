@@ -31,6 +31,20 @@ export interface BackupDirectoryStatus {
     last_backup_error: string | null;
     files: BackupFileEntry[];
 }
+export interface BackupDirectoryAccessState {
+    name: string;
+    permission: PermissionState;
+}
+export interface BackupDirectoryAccess {
+    state(): Promise<BackupDirectoryAccessState | null>;
+    link(): Promise<boolean>;
+    unlink(): Promise<void>;
+    requestPermission(): Promise<PermissionState | null>;
+    write(fileName: string, content: string): Promise<void>;
+    read(fileName: string): Promise<string>;
+    list(matches: (fileName: string) => boolean): Promise<BackupFileEntry[]>;
+    remove(fileName: string): Promise<void>;
+}
 export interface SyncMetadataRecord {
     key: SyncMetadataKey;
     value: string;

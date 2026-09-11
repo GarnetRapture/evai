@@ -6,7 +6,8 @@ import {
     isChromeLanguageModelSupported,
     readChromeLanguageModelAvailability,
 } from './chrome';
-import { CHAT_RESPONSE_TOKEN_RESERVE, LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE, REQUEST_STATUS_HISTORY_LIMIT } from './constants';
+import { CHAT_RESPONSE_TOKEN_RESERVE, LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE } from './constants';
+import { createQueuedRequestStatus, recordRequestStatus } from './requests';
 import type {
     BaseModelSession,
     BudgetedMessages,
@@ -28,19 +29,6 @@ let baseSessionCreation: Promise<BaseModelSession> | null = null;
 let lastRuntimeError: string | null = null;
 let focusedPersonaSession: PersonaModelSession | null = null;
 let focusedPersonaSessionCreation: PersonaModelSessionCreation | null = null;
-const requestStatuses = new Map<string, LlmRequestStatus>();
-
-function recordRequestStatus(status: LlmRequestStatus): void {
-    requestStatuses.delete(status.request_id);
-    requestStatuses.set(status.request_id, status);
-    while (requestStatuses.size > REQUEST_STATUS_HISTORY_LIMIT) {
-        const oldest = requestStatuses.keys().next();
-        if (oldest.done) {
-            break;
-        }
-        requestStatuses.delete(oldest.value);
-    }
-}
 
 function modelNotReadyError(availability: Availability): DomainError {
     return new DomainError('model_not_ready', availability);
@@ -62,7 +50,7 @@ function isSamePersonaSession(entry: PersonaModelSessionIdentity, identity: Pers
 }
 
 async function createPersonaModelSession(identity: PersonaModelSessionIdentity, plan: LanguageModelLanguagePlan, cacheReset: boolean): Promise<PersonaModelSession> {
-    await onDeviceRuntime.ensureBaseSession(plan, null);
+    await chromePromptRuntime.ensureBaseSession(plan, null);
     const session = await createChromeLanguageModel({
         declaredLanguageTag: identity.declared_language_tag,
         systemPrompt: identity.system_prompt,
@@ -108,7 +96,7 @@ async function selectMessagesWithinBudget(
     return { messages: selectedNewestFirst.reverse(), truncated_tokens: truncatedTokens };
 }
 
-export const onDeviceRuntime = {
+export const chromePromptRuntime = {
     async resolveLanguagePlan(appLanguage: AppLanguage): Promise<LanguageModelLanguagePlan> {
         const languageTag = LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE[appLanguage];
         const declaredAvailability = await readChromeLanguageModelAvailability(languageTag);
@@ -211,24 +199,14 @@ export const onDeviceRuntime = {
         }
         return entry;
     },
-    async generate(request: OnDeviceGenerationRequest): Promise<OnDeviceGenerationResult> {
+    async generate(request: OnDeviceGenerationRequest, plan: LanguageModelLanguagePlan): Promise<OnDeviceGenerationResult> {
         const signal = request.signal;
-        const status: LlmRequestStatus = {
-            request_id: request.request_id,
-            persona_id: request.persona_id,
-            state: 'queued',
-            prompt_tokens: 0,
-            generated_tokens: 0,
-            reused_prefix_tokens: 0,
-            truncated_prompt_tokens: 0,
-            cache_reset: false,
-            error_message: null,
-        };
+        const status: LlmRequestStatus = createQueuedRequestStatus(request.request_id, request.persona_id);
         recordRequestStatus(status);
         let generatedText = '';
         let conversation: LanguageModel | null = null;
         try {
-            const entry = await onDeviceRuntime.focusPersonaSession(request.persona_id, request.language_plan, request.system_prompt);
+            const entry = await chromePromptRuntime.focusPersonaSession(request.persona_id, plan, request.system_prompt);
             conversation = await entry.session.clone({ signal });
             const reusedPrefixTokens = conversation.contextUsage;
             const budgeted = await selectMessagesWithinBudget(conversation, request.messages, request.behavior_instruction);
@@ -280,7 +258,7 @@ export const onDeviceRuntime = {
         }
     },
     async promptOnce(plan: LanguageModelLanguagePlan, prompt: string): Promise<string> {
-        const base = await onDeviceRuntime.ensureBaseSession(plan, null);
+        const base = await chromePromptRuntime.ensureBaseSession(plan, null);
         const conversation = await base.clone();
         try {
             return await conversation.prompt(prompt);
@@ -303,9 +281,6 @@ export const onDeviceRuntime = {
             last_access: focusedPersonaSession.last_access,
             last_generation: focusedPersonaSession.last_generation,
         }];
-    },
-    requestStatuses(): LlmRequestStatus[] {
-        return [...requestStatuses.values()].reverse();
     },
     baseContextWindow(plan: LanguageModelLanguagePlan): number | null {
         if (!baseSession || baseSession.declared_language_tag !== plan.declared_language_tag) {

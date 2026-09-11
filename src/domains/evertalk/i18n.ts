@@ -1,8 +1,18 @@
 import type { DomainErrorCode } from '../../shared/errors';
-import type { AppLanguage, PlatformSupportStatus } from '../../shared/types';
+import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
+import type { LocalModelEngineKind } from '../llm/types';
 import type { SpiritRaidEvent } from '../persona/types';
 
 export type PlatformBlockedReason = Exclude<PlatformSupportStatus, 'supported'>;
+
+export interface LocalModelSectionLabels {
+    title: string;
+    description: string;
+    installFile: string;
+    customModel: string;
+    guideTitle: string;
+    guideSteps: (downloadLabel: string, installLabel: string, useLabel: string, removeLabel: string) => string[];
+}
 
 export interface EverTalkLabels {
     languageGateTitle: string;
@@ -158,14 +168,14 @@ export interface EverTalkLabels {
     appInfoContact: string;
     appInfoWebsite: string;
     platformGuideTitle: string;
-    platformGuideItems: (modelSettingsPath: string) => string[];
-    platformGuideCheckbox: string;
+    platformGuideItems: Record<AppPlatform, (modelSettingsPath: string) => string[]>;
+    platformGuideCheckbox: Record<AppPlatform, string>;
     platformGuideConfirm: string;
     platformBlockedTitle: string;
     platformBlockedMessages: Record<PlatformBlockedReason, string>;
     platformBlockedHint: string;
     modelListTitle: string;
-    modelListDescription: string;
+    modelListDescription: Record<AppPlatform, string>;
     modelRoleChat: string;
     modelLanguageSupport: (languageTag: string, declared: boolean) => string;
     modelUseForChat: string;
@@ -176,10 +186,22 @@ export interface EverTalkLabels {
     modelApiUnsupported: string;
     modelContextWindow: (tokens: number) => string;
     modelRefresh: string;
+    modelLoading: string;
+    localModelSections: Record<LocalModelEngineKind, LocalModelSectionLabels>;
+    localModelInstalling: (percent: number) => string;
+    localModelInstalled: string;
+    localModelLoaded: string;
+    localModelNotInstalled: string;
+    localModelRemove: string;
+    localModelOpenPage: string;
+    localModelDownload: string;
+    localModelGated: string;
+    localModelBackend: (backend: string) => string;
+    localModelFileMeta: (fileName: string, sizeMb: number | null, license: string | null) => string;
     modelSessionStatus: string;
     modelRequestStatus: string;
     modelSessionDetail: (personaId: string, cachedTokens: number, contextWindow: number, reusedTokens: number) => string;
-    modelRequestDetail: (state: string, promptTokens: number, generatedTokens: number, truncatedTokens: number) => string;
+    modelRequestDetail: (state: string, promptTokens: number | null, generatedTokens: number | null, truncatedTokens: number) => string;
     backupTitle: string;
     backupDescription: string;
     backupExport: string;
@@ -246,6 +268,7 @@ export interface EverTalkLabels {
     logSettingsResetFailed: string;
     logLocalModelChangeFailed: string;
     logModelDownloadFailed: string;
+    logModelInstallFailed: string;
     logLocalModelStatusCheckFailed: string;
     logBondRankingFetchFailed: string;
     logFamiliarityFetchFailed: string;
@@ -426,13 +449,23 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         appInfoContact: '문의',
         appInfoWebsite: '웹사이트',
         platformGuideTitle: '이용 환경 안내',
-        platformGuideItems: (modelSettingsPath) => [
-            '에버톡 AI 채팅은 PC의 Chrome 브라우저에 내장된 온디바이스 AI(Gemini Nano)로만 동작합니다.',
-            '모바일 기기(스마트폰·태블릿)에서는 이용할 수 없습니다. 모바일을 사용 중이라면 반드시 PC의 Chrome 브라우저로 접속해야 합니다.',
-            'Chrome 이외의 브라우저(Edge, Firefox, Safari, Whale 등)에서는 접속할 수 없습니다.',
-            `처음 대화하기 전에 ${modelSettingsPath}에서 Chrome 온디바이스 모델을 내려받아 준비해야 합니다.`,
-        ],
-        platformGuideCheckbox: '위 안내를 확인했으며, PC Chrome 브라우저의 온디바이스 AI로만 이용할 수 있음을 이해했습니다.',
+        platformGuideItems: {
+            web_chrome: (modelSettingsPath) => [
+                '에버톡 AI 채팅은 PC의 Chrome 브라우저에 내장된 온디바이스 AI(Gemini Nano)로만 동작합니다.',
+                '모바일 기기(스마트폰·태블릿)에서는 이용할 수 없습니다. 모바일을 사용 중이라면 반드시 PC의 Chrome 브라우저로 접속해야 합니다.',
+                'Chrome 이외의 브라우저(Edge, Firefox, Safari, Whale 등)에서는 접속할 수 없습니다.',
+                `처음 대화하기 전에 ${modelSettingsPath}에서 Chrome 온디바이스 모델을 내려받아 준비해야 합니다.`,
+            ],
+            android_app: (modelSettingsPath) => [
+                '에버톡 AI 채팅 안드로이드 앱은 Google LiteRT-LM 온디바이스 엔진으로 이 기기 안에서 AI를 실행합니다. 대화와 모델 파일은 서버로 전송되지 않습니다.',
+                `처음 대화하기 전에 ${modelSettingsPath}에서 .litertlm 모델 파일을 설치하고 대화에 사용할 모델을 선택해야 합니다.`,
+                '모델은 기기의 GPU를 먼저 사용하고, GPU를 쓸 수 없으면 CPU로 실행되어 느려질 수 있습니다. 모델 파일 크기만큼의 여유 저장 공간과 충분한 메모리가 필요합니다.',
+            ],
+        },
+        platformGuideCheckbox: {
+            web_chrome: '위 안내를 확인했으며, PC Chrome 브라우저의 온디바이스 AI로만 이용할 수 있음을 이해했습니다.',
+            android_app: '위 안내를 확인했으며, 이 앱은 기기에 설치한 LiteRT-LM 모델로만 동작함을 이해했습니다.',
+        },
         platformGuideConfirm: '확인하고 입장',
         platformBlockedTitle: '지원하지 않는 이용 환경입니다',
         platformBlockedMessages: {
@@ -442,7 +475,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformBlockedHint: '지원 환경: Windows · macOS · Linux · ChromeOS의 Google Chrome 데스크톱 브라우저',
         messageSendFailed: '응답 생성에 실패했습니다. 다시 시도해 주세요.',
         modelListTitle: '온디바이스 모델 목록',
-        modelListDescription: '이 PC의 Chrome이 제공하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 선택하고, 필요한 모델은 여기서 내려받아 준비하세요. Gemini Nano의 크기와 GPU/CPU 백엔드는 Chrome이 기기 성능에 맞춰 자동으로 고릅니다.',
+        modelListDescription: {
+            web_chrome: '이 PC의 Chrome이 제공하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 선택하고, 필요한 모델은 여기서 내려받아 준비하세요. Gemini Nano의 크기와 GPU/CPU 백엔드는 Chrome이 기기 성능에 맞춰 자동으로 고릅니다.',
+            android_app: '이 기기에서 Google LiteRT-LM 엔진으로 실행하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 설치하고 선택하세요. 모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 사용할 수 없으면 CPU 백엔드로 실행합니다.',
+        },
         modelRoleChat: '대화 생성 · Prompt API (Gemini Nano)',
         modelLanguageSupport: (languageTag, declared) => declared
             ? `대화 언어 ${languageTag}: Chrome 공식 지원 언어로 세션 생성`
@@ -455,10 +491,51 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelApiUnsupported: '이 브라우저는 해당 API를 지원하지 않습니다',
         modelContextWindow: (tokens) => `컨텍스트 ${tokens} 토큰`,
         modelRefresh: '상태 새로고침',
+        modelLoading: '모델을 불러오는 중...',
+        localModelSections: {
+            gguf: {
+                title: 'Hugging Face GGUF 모델',
+                description: 'Chrome 온디바이스 모델 대신 Hugging Face의 GGUF 모델을 이 브라우저 안에서 실행할 수 있습니다. 모델 파일은 이 PC의 브라우저 저장소(OPFS)에만 보관되며, 대화·기억·페르소나·이모지 금지 규칙은 똑같이 적용됩니다.',
+                installFile: 'GGUF 파일 설치',
+                customModel: '직접 설치한 GGUF',
+                guideTitle: 'Hugging Face 모델 설치 가이드',
+                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
+                    `추천 모델의 "${downloadLabel}"를 눌러 Hugging Face에서 .gguf 파일을 PC에 내려받습니다. 약관 동의가 필요한 모델은 Hugging Face에 로그인해 모델 페이지에서 약관에 동의한 뒤 받을 수 있습니다.`,
+                    `"${installLabel}"을 눌러 내려받은 .gguf 파일을 고르면 이 브라우저 저장소(OPFS)로 복사됩니다. 복사가 끝나면 PC의 원본 파일은 지워도 됩니다. 파일 하나는 2GB 이하여야 하며, 다른 GGUF 파일도 같은 방법으로 설치할 수 있습니다.`,
+                    `설치된 모델의 "${useLabel}"를 고르면 모델을 불러옵니다. 불러오기가 끝나면 선택한 정령과 바로 대화할 수 있습니다.`,
+                    'Chrome의 WebGPU를 사용할 수 있으면 GPU로 실행하고, 사용할 수 없으면 CPU로 실행되어 느려집니다. 여러 CPU 스레드로 실행하려면 사이트가 Cross-Origin-Opener-Policy: same-origin 과 Cross-Origin-Embedder-Policy: require-corp 헤더로 제공되어야 합니다.',
+                    `다 쓴 모델은 "${removeLabel}"로 브라우저 저장소에서 지웁니다. 사용 중인 모델을 지우면 Chrome 온디바이스 모델로 돌아갑니다.`,
+                ],
+            },
+            litert_lm: {
+                title: 'Hugging Face LiteRT-LM 모델',
+                description: 'Google LiteRT-LM 엔진으로 Hugging Face litert-community의 .litertlm 모델을 이 기기 안에서 실행합니다. 모델 파일은 앱 내부 저장소에만 보관되며, 대화·기억·페르소나·이모지 금지 규칙은 똑같이 적용됩니다.',
+                installFile: 'LiteRT-LM 파일 설치',
+                customModel: '직접 설치한 LiteRT-LM',
+                guideTitle: 'LiteRT-LM 모델 설치 가이드',
+                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
+                    `추천 모델의 "${downloadLabel}"를 누르면 브라우저에서 Hugging Face가 열리고 .litertlm 파일을 이 기기에 내려받습니다. 약관 동의가 필요한 모델은 브라우저에서 Hugging Face에 로그인해 모델 페이지에서 약관에 동의한 뒤 받을 수 있습니다.`,
+                    `"${installLabel}"을 눌러 내려받은 .litertlm 파일을 고르면 앱 내부 저장소로 복사됩니다. 복사가 끝나면 다운로드 폴더의 원본 파일은 지워도 됩니다. 다른 .litertlm 파일도 같은 방법으로 설치할 수 있습니다.`,
+                    `설치된 모델의 "${useLabel}"를 고르면 모델을 불러옵니다. 불러오기가 끝나면 선택한 정령과 바로 대화할 수 있습니다.`,
+                    '모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 기기가 지원하지 않으면 CPU 백엔드로 실행되어 느려집니다. 사용 중인 백엔드와 컨텍스트 크기는 모델 목록에 표시됩니다.',
+                    `다 쓴 모델은 "${removeLabel}"로 앱 저장소에서 지웁니다. 사용 중인 모델을 지우면 다른 모델을 다시 선택해야 합니다.`,
+                ],
+            },
+        },
+        localModelInstalling: (percent) => `설치 중 ${percent}%`,
+        localModelInstalled: '설치됨',
+        localModelLoaded: '설치됨 · 불러옴',
+        localModelNotInstalled: '미설치 · 다운로드 후 설치하세요',
+        localModelRemove: '삭제',
+        localModelOpenPage: 'Hugging Face 페이지',
+        localModelDownload: '다운로드',
+        localModelGated: 'Hugging Face 로그인과 모델 약관 동의 후 다운로드할 수 있습니다',
+        localModelBackend: (backend) => `백엔드 ${backend}`,
+        localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `라이선스 ${license}`].filter((part) => part !== null).join(' · '),
         modelSessionStatus: '세션 상태',
         modelRequestStatus: '요청 상태',
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · 컨텍스트 ${cachedTokens}/${contextWindow} · 재사용 ${reusedTokens}`,
-        modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 입력 ${promptTokens} · 생성 ${generatedTokens} · 잘림 ${truncatedTokens}`,
+        modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 입력 ${promptTokens ?? '-'} · 생성 ${generatedTokens ?? '-'} · 잘림 ${truncatedTokens}`,
         backupTitle: '데이터 저장 · 불러오기',
         backupDescription: '대화, 정령 기억, 설정, 모듈 등 이 브라우저 IndexedDB의 데이터를 PC에 JSON 파일로 저장하거나, 저장한 파일을 다시 불러옵니다. 불러오면 현재 데이터가 파일 내용으로 교체됩니다.',
         backupExport: 'PC 파일로 내보내기',
@@ -548,15 +625,19 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'invalid_model':
                     return `지원하지 않는 모델입니다: ${detail}`;
                 case 'model_not_ready':
-                    return `Chrome 온디바이스 모델이 준비되지 않았습니다 (상태: ${detail}). 설정 > 온디바이스 모델 목록에서 준비하세요.`;
+                    return `대화 모델이 준비되지 않았습니다 (상태: ${detail}). 설정 > 온디바이스 모델 목록에서 모델을 준비하거나 선택하세요.`;
                 case 'cancelled':
                     return '응답 생성이 중지되었습니다.';
                 case 'invalid_format':
                     return `올바른 .risum 모듈 파일이 아닙니다 (${detail})`;
                 case 'invalid_backup':
                     return `지원하는 EverSoul 백업 파일이 아닙니다 (${detail})`;
+                case 'invalid_model_file':
+                    return `설치할 수 없는 모델 파일입니다. 웹에서는 2GB 이하의 .gguf 파일을, 안드로이드 앱에서는 .litertlm 파일을 고르세요 (${detail})`;
                 case 'storage':
                     return `폴더 접근 권한이 없습니다: ${detail}`;
+                case 'native_runtime':
+                    return `기기 AI 엔진에서 오류가 발생했습니다: ${detail}`;
             }
         },
         logStylePackLoadFailed: '스타일팩 DB 로드 실패',
@@ -574,6 +655,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logSettingsResetFailed: '설정 초기화 실패',
         logLocalModelChangeFailed: '대화 모델 변경 실패',
         logModelDownloadFailed: '온디바이스 모델 준비 실패',
+        logModelInstallFailed: '로컬 모델 설치·삭제 실패',
         logLocalModelStatusCheckFailed: '온디바이스 모델 상태 확인 실패',
         logBondRankingFetchFailed: '인연도 랭킹 조회 실패',
         logFamiliarityFetchFailed: '친밀도 조회 실패',
@@ -748,13 +830,23 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         appInfoContact: 'Contact',
         appInfoWebsite: 'Website',
         platformGuideTitle: 'Supported Environment',
-        platformGuideItems: (modelSettingsPath) => [
-            'EverTalk AI Chat runs only on the on-device AI (Gemini Nano) built into the Chrome browser on a PC.',
-            'It cannot be used on mobile devices (smartphones or tablets). If you are on mobile, you must connect with the Chrome browser on a PC.',
-            'Browsers other than Chrome (Edge, Firefox, Safari, Whale, etc.) cannot access the service.',
-            `Before your first chat, download and prepare the Chrome on-device model in ${modelSettingsPath}.`,
-        ],
-        platformGuideCheckbox: 'I have read the notice above and understand that this service works only with the on-device AI of Chrome on a PC.',
+        platformGuideItems: {
+            web_chrome: (modelSettingsPath) => [
+                'EverTalk AI Chat runs only on the on-device AI (Gemini Nano) built into the Chrome browser on a PC.',
+                'It cannot be used on mobile devices (smartphones or tablets). If you are on mobile, you must connect with the Chrome browser on a PC.',
+                'Browsers other than Chrome (Edge, Firefox, Safari, Whale, etc.) cannot access the service.',
+                `Before your first chat, download and prepare the Chrome on-device model in ${modelSettingsPath}.`,
+            ],
+            android_app: (modelSettingsPath) => [
+                'The EverTalk AI Chat Android app runs AI inside this device with the Google LiteRT-LM on-device engine. Conversations and model files are never sent to a server.',
+                `Before your first chat, install a .litertlm model file in ${modelSettingsPath} and choose the model to use for chat.`,
+                'Models use the device GPU first; if the GPU cannot be used they run on the CPU and may be slower. You need free storage at least as large as the model file and enough memory.',
+            ],
+        },
+        platformGuideCheckbox: {
+            web_chrome: 'I have read the notice above and understand that this service works only with the on-device AI of Chrome on a PC.',
+            android_app: 'I have read the notice above and understand that this app works only with LiteRT-LM models installed on this device.',
+        },
         platformGuideConfirm: 'Confirm and Enter',
         platformBlockedTitle: 'Unsupported Environment',
         platformBlockedMessages: {
@@ -764,7 +856,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformBlockedHint: 'Supported: Google Chrome desktop browser on Windows, macOS, Linux, or ChromeOS',
         messageSendFailed: 'Failed to generate a response. Please try again.',
         modelListTitle: 'On-device Models',
-        modelListDescription: 'On-device AI models provided by Chrome on this PC. Choose the model used for chat and download the models you need here. Chrome picks the Gemini Nano size and GPU/CPU backend automatically for this device.',
+        modelListDescription: {
+            web_chrome: 'On-device AI models provided by Chrome on this PC. Choose the model used for chat and download the models you need here. Chrome picks the Gemini Nano size and GPU/CPU backend automatically for this device.',
+            android_app: 'On-device AI models run on this device by the Google LiteRT-LM engine. Install and choose the model used for chat. Loading a model tries the GPU backend first and falls back to the CPU backend when the GPU cannot be used.',
+        },
         modelRoleChat: 'Chat generation · Prompt API (Gemini Nano)',
         modelLanguageSupport: (languageTag, declared) => declared
             ? `Chat language ${languageTag}: session created with a Chrome-supported language`
@@ -777,10 +872,51 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelApiUnsupported: 'This browser does not support this API',
         modelContextWindow: (tokens) => `Context ${tokens} tokens`,
         modelRefresh: 'Refresh status',
+        modelLoading: 'Loading model...',
+        localModelSections: {
+            gguf: {
+                title: 'Hugging Face GGUF Models',
+                description: 'Instead of the Chrome on-device model, you can run a Hugging Face GGUF model inside this browser. Model files are kept only in this PC browser\'s storage (OPFS), and conversations, memories, persona rules, and the no-emoji rule apply the same way.',
+                installFile: 'Install GGUF file',
+                customModel: 'Manually installed GGUF',
+                guideTitle: 'Hugging Face Model Installation Guide',
+                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
+                    `Press "${downloadLabel}" on a recommended model to download its .gguf file from Hugging Face to your PC. For models that require accepting terms, sign in to Hugging Face and accept the terms on the model page first.`,
+                    `Press "${installLabel}" and choose the downloaded .gguf file; it is copied into this browser's storage (OPFS). After the copy finishes you can delete the original file on your PC. Each file must be 2 GB or smaller, and any other GGUF file can be installed the same way.`,
+                    `Choose "${useLabel}" on an installed model to load it. When loading finishes, you can chat with the selected spirit right away.`,
+                    'If Chrome\'s WebGPU is available the model runs on the GPU; otherwise it runs on the CPU and is slower. To use multiple CPU threads, the site must be served with the Cross-Origin-Opener-Policy: same-origin and Cross-Origin-Embedder-Policy: require-corp headers.',
+                    `Remove models you no longer need with "${removeLabel}". Removing the model in use switches back to the Chrome on-device model.`,
+                ],
+            },
+            litert_lm: {
+                title: 'Hugging Face LiteRT-LM Models',
+                description: 'Runs .litertlm models from Hugging Face litert-community inside this device with the Google LiteRT-LM engine. Model files are kept only in the app\'s internal storage, and conversations, memories, persona rules, and the no-emoji rule apply the same way.',
+                installFile: 'Install LiteRT-LM file',
+                customModel: 'Manually installed LiteRT-LM',
+                guideTitle: 'LiteRT-LM Model Installation Guide',
+                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
+                    `Press "${downloadLabel}" on a recommended model to open Hugging Face in the browser and download its .litertlm file to this device. For models that require accepting terms, sign in to Hugging Face in the browser and accept the terms on the model page first.`,
+                    `Press "${installLabel}" and choose the downloaded .litertlm file; it is copied into the app's internal storage. After the copy finishes you can delete the original file in your Downloads folder. Any other .litertlm file can be installed the same way.`,
+                    `Choose "${useLabel}" on an installed model to load it. When loading finishes, you can chat with the selected spirit right away.`,
+                    'Loading a model tries the GPU backend first; if the device does not support it, the model runs on the CPU backend and is slower. The backend in use and the context size are shown in the model list.',
+                    `Remove models you no longer need with "${removeLabel}" to delete them from app storage. After removing the model in use, choose another model again.`,
+                ],
+            },
+        },
+        localModelInstalling: (percent) => `Installing ${percent}%`,
+        localModelInstalled: 'Installed',
+        localModelLoaded: 'Installed · Loaded',
+        localModelNotInstalled: 'Not installed · Download it, then install',
+        localModelRemove: 'Remove',
+        localModelOpenPage: 'Hugging Face page',
+        localModelDownload: 'Download',
+        localModelGated: 'Requires signing in to Hugging Face and accepting the model terms before downloading',
+        localModelBackend: (backend) => `Backend ${backend}`,
+        localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `License ${license}`].filter((part) => part !== null).join(' · '),
         modelSessionStatus: 'Session status',
         modelRequestStatus: 'Request status',
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · context ${cachedTokens}/${contextWindow} · reused ${reusedTokens}`,
-        modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · prompt ${promptTokens} · generated ${generatedTokens} · truncated ${truncatedTokens}`,
+        modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · prompt ${promptTokens ?? '-'} · generated ${generatedTokens ?? '-'} · truncated ${truncatedTokens}`,
         backupTitle: 'Save · Load Data',
         backupDescription: 'Save this browser\'s IndexedDB data (chats, soul memories, settings, modules) to a JSON file on your PC, or load a saved file. Loading replaces the current data with the file contents.',
         backupExport: 'Export to PC file',
@@ -870,15 +1006,19 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'invalid_model':
                     return `Unsupported model: ${detail}`;
                 case 'model_not_ready':
-                    return `The Chrome on-device model is not ready (status: ${detail}). Prepare it in Settings > On-device Models.`;
+                    return `The chat model is not ready (status: ${detail}). Prepare or choose a model in Settings > On-device Models.`;
                 case 'cancelled':
                     return 'Response generation was stopped.';
                 case 'invalid_format':
                     return `Not a valid .risum module file (${detail})`;
                 case 'invalid_backup':
                     return `Not a supported EverSoul backup file (${detail})`;
+                case 'invalid_model_file':
+                    return `This model file cannot be installed. Choose a .gguf file of 2 GB or less on the web, or a .litertlm file in the Android app (${detail})`;
                 case 'storage':
                     return `No folder access permission: ${detail}`;
+                case 'native_runtime':
+                    return `The on-device AI engine reported an error: ${detail}`;
             }
         },
         logStylePackLoadFailed: 'Failed to load style pack DB',
@@ -896,6 +1036,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logSettingsResetFailed: 'Settings reset failed',
         logLocalModelChangeFailed: 'Failed to change chat model',
         logModelDownloadFailed: 'Failed to prepare on-device model',
+        logModelInstallFailed: 'Failed to install or remove local model',
         logLocalModelStatusCheckFailed: 'Failed to check on-device model status',
         logBondRankingFetchFailed: 'Failed to fetch bond ranking',
         logFamiliarityFetchFailed: 'Failed to fetch familiarity',
@@ -1070,13 +1211,23 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         appInfoContact: '联系方式',
         appInfoWebsite: '网站',
         platformGuideTitle: '使用环境说明',
-        platformGuideItems: (modelSettingsPath) => [
-            'EverTalk AI 聊天仅能通过电脑 Chrome 浏览器内置的设备端 AI（Gemini Nano）运行。',
-            '无法在移动设备（智能手机、平板电脑）上使用。如果您正在使用移动设备，必须改用电脑上的 Chrome 浏览器访问。',
-            'Chrome 以外的浏览器（Edge、Firefox、Safari、Whale 等）无法访问。',
-            `首次对话前，请在“${modelSettingsPath}”中下载并准备 Chrome 设备端模型。`,
-        ],
-        platformGuideCheckbox: '我已阅读以上说明，并了解本服务仅能通过电脑 Chrome 浏览器的设备端 AI 使用。',
+        platformGuideItems: {
+            web_chrome: (modelSettingsPath) => [
+                'EverTalk AI 聊天仅能通过电脑 Chrome 浏览器内置的设备端 AI（Gemini Nano）运行。',
+                '无法在移动设备（智能手机、平板电脑）上使用。如果您正在使用移动设备，必须改用电脑上的 Chrome 浏览器访问。',
+                'Chrome 以外的浏览器（Edge、Firefox、Safari、Whale 等）无法访问。',
+                `首次对话前，请在“${modelSettingsPath}”中下载并准备 Chrome 设备端模型。`,
+            ],
+            android_app: (modelSettingsPath) => [
+                'EverTalk AI 聊天安卓应用通过 Google LiteRT-LM 设备端引擎在本设备内运行 AI。对话和模型文件不会发送到服务器。',
+                `首次对话前，请在“${modelSettingsPath}”中安装 .litertlm 模型文件，并选择用于对话的模型。`,
+                '模型会优先使用设备 GPU；无法使用 GPU 时会在 CPU 上运行，速度可能较慢。需要不小于模型文件大小的可用存储空间和足够的内存。',
+            ],
+        },
+        platformGuideCheckbox: {
+            web_chrome: '我已阅读以上说明，并了解本服务仅能通过电脑 Chrome 浏览器的设备端 AI 使用。',
+            android_app: '我已阅读以上说明，并了解本应用仅能使用安装在本设备上的 LiteRT-LM 模型运行。',
+        },
         platformGuideConfirm: '确认并进入',
         platformBlockedTitle: '不支持的使用环境',
         platformBlockedMessages: {
@@ -1086,7 +1237,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformBlockedHint: '支持环境：Windows、macOS、Linux、ChromeOS 上的 Google Chrome 桌面浏览器',
         messageSendFailed: '生成响应失败。请重试。',
         modelListTitle: '设备端模型列表',
-        modelListDescription: '这是本电脑 Chrome 提供的设备端 AI 模型。请选择用于对话的模型，并在此下载准备所需模型。Gemini Nano 的规格与 GPU/CPU 后端由 Chrome 根据设备性能自动选择。',
+        modelListDescription: {
+            web_chrome: '这是本电脑 Chrome 提供的设备端 AI 模型。请选择用于对话的模型，并在此下载准备所需模型。Gemini Nano 的规格与 GPU/CPU 后端由 Chrome 根据设备性能自动选择。',
+            android_app: '这是在本设备上由 Google LiteRT-LM 引擎运行的设备端 AI 模型。请安装并选择用于对话的模型。加载模型时会优先尝试 GPU 后端，无法使用时改用 CPU 后端运行。',
+        },
         modelRoleChat: '对话生成 · Prompt API (Gemini Nano)',
         modelLanguageSupport: (languageTag, declared) => declared
             ? `对话语言 ${languageTag}：以 Chrome 官方支持语言创建会话`
@@ -1099,10 +1253,51 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelApiUnsupported: '此浏览器不支持该 API',
         modelContextWindow: (tokens) => `上下文 ${tokens} tokens`,
         modelRefresh: '刷新状态',
+        modelLoading: '正在加载模型...',
+        localModelSections: {
+            gguf: {
+                title: 'Hugging Face GGUF 模型',
+                description: '除了 Chrome 设备端模型，你也可以在此浏览器中运行 Hugging Face 的 GGUF 模型。模型文件只保存在这台电脑的浏览器存储（OPFS）中，对话、记忆、角色设定和禁用表情符号的规则同样适用。',
+                installFile: '安装 GGUF 文件',
+                customModel: '手动安装的 GGUF',
+                guideTitle: 'Hugging Face 模型安装指南',
+                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
+                    `点击推荐模型的“${downloadLabel}”，从 Hugging Face 将 .gguf 文件下载到电脑。需要同意条款的模型，请先登录 Hugging Face 并在模型页面同意条款后再下载。`,
+                    `点击“${installLabel}”并选择下载的 .gguf 文件，文件会被复制到此浏览器的存储（OPFS）中。复制完成后可以删除电脑上的原始文件。单个文件必须不超过 2GB，其他 GGUF 文件也可以用同样的方法安装。`,
+                    `选择已安装模型的“${useLabel}”即可加载模型。加载完成后即可与所选精灵对话。`,
+                    '如果可以使用 Chrome 的 WebGPU，则在 GPU 上运行；否则在 CPU 上运行，速度较慢。若要使用多个 CPU 线程，网站必须以 Cross-Origin-Opener-Policy: same-origin 和 Cross-Origin-Embedder-Policy: require-corp 标头提供。',
+                    `不再需要的模型可以用“${removeLabel}”从浏览器存储中删除。删除正在使用的模型后会切换回 Chrome 设备端模型。`,
+                ],
+            },
+            litert_lm: {
+                title: 'Hugging Face LiteRT-LM 模型',
+                description: '通过 Google LiteRT-LM 引擎在本设备内运行 Hugging Face litert-community 的 .litertlm 模型。模型文件只保存在应用内部存储中，对话、记忆、角色设定和禁用表情符号的规则同样适用。',
+                installFile: '安装 LiteRT-LM 文件',
+                customModel: '手动安装的 LiteRT-LM',
+                guideTitle: 'LiteRT-LM 模型安装指南',
+                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
+                    `点击推荐模型的“${downloadLabel}”，会在浏览器中打开 Hugging Face，并将 .litertlm 文件下载到本设备。需要同意条款的模型，请先在浏览器中登录 Hugging Face 并在模型页面同意条款后再下载。`,
+                    `点击“${installLabel}”并选择下载的 .litertlm 文件，文件会被复制到应用内部存储中。复制完成后可以删除下载文件夹中的原始文件。其他 .litertlm 文件也可以用同样的方法安装。`,
+                    `选择已安装模型的“${useLabel}”即可加载模型。加载完成后即可与所选精灵对话。`,
+                    '加载模型时会优先尝试 GPU 后端；如果设备不支持，则在 CPU 后端运行，速度较慢。正在使用的后端和上下文大小会显示在模型列表中。',
+                    `不再需要的模型可以用“${removeLabel}”从应用存储中删除。删除正在使用的模型后，请重新选择其他模型。`,
+                ],
+            },
+        },
+        localModelInstalling: (percent) => `正在安装 ${percent}%`,
+        localModelInstalled: '已安装',
+        localModelLoaded: '已安装 · 已加载',
+        localModelNotInstalled: '未安装 · 请先下载再安装',
+        localModelRemove: '删除',
+        localModelOpenPage: 'Hugging Face 页面',
+        localModelDownload: '下载',
+        localModelGated: '需要登录 Hugging Face 并同意模型条款后才能下载',
+        localModelBackend: (backend) => `后端 ${backend}`,
+        localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `许可证 ${license}`].filter((part) => part !== null).join(' · '),
         modelSessionStatus: '会话状态',
         modelRequestStatus: '请求状态',
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · 上下文 ${cachedTokens}/${contextWindow} · 复用 ${reusedTokens}`,
-        modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 输入 ${promptTokens} · 生成 ${generatedTokens} · 截断 ${truncatedTokens}`,
+        modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 输入 ${promptTokens ?? '-'} · 生成 ${generatedTokens ?? '-'} · 截断 ${truncatedTokens}`,
         backupTitle: '数据保存 · 载入',
         backupDescription: '将本浏览器 IndexedDB 中的对话、精灵记忆、设置、模块等数据以 JSON 文件保存到电脑，或重新载入已保存的文件。载入时当前数据会被文件内容替换。',
         backupExport: '导出为电脑文件',
@@ -1192,15 +1387,19 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'invalid_model':
                     return `不支持的模型：${detail}`;
                 case 'model_not_ready':
-                    return `Chrome 设备端模型尚未就绪（状态：${detail}）。请在 设置 > 设备端模型列表 中准备。`;
+                    return `对话模型尚未就绪（状态：${detail}）。请在 设置 > 设备端模型列表 中准备或选择模型。`;
                 case 'cancelled':
                     return '已停止生成回复。';
                 case 'invalid_format':
                     return `不是有效的 .risum 模块文件（${detail}）`;
                 case 'invalid_backup':
                     return `不是受支持的 EverSoul 备份文件（${detail}）`;
+                case 'invalid_model_file':
+                    return `无法安装此模型文件。网页版请选择不超过 2GB 的 .gguf 文件，安卓应用请选择 .litertlm 文件（${detail}）`;
                 case 'storage':
                     return `没有文件夹访问权限：${detail}`;
+                case 'native_runtime':
+                    return `设备端 AI 引擎发生错误：${detail}`;
             }
         },
         logStylePackLoadFailed: '风格包数据库加载失败',
@@ -1218,6 +1417,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logSettingsResetFailed: '设置重置失败',
         logLocalModelChangeFailed: '对话模型切换失败',
         logModelDownloadFailed: '设备端模型准备失败',
+        logModelInstallFailed: '本地模型安装或删除失败',
         logLocalModelStatusCheckFailed: '设备端模型状态检查失败',
         logBondRankingFetchFailed: '羁绊排行查询失败',
         logFamiliarityFetchFailed: '亲密度查询失败',
