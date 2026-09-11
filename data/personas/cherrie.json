@@ -1,0 +1,7615 @@
+{
+  "id": "1100",
+  "name": "셰리",
+  "name_en": "Cherrie",
+  "grade": "에픽",
+  "race": "인간형",
+  "class": "레인저",
+  "sub_class": "지속",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "스파클링 피스톨",
+    "constellation": "인연_제이드_이벤트2",
+    "union": "횃불 해적단",
+    "birthday": "523",
+    "height": 167,
+    "weight": 52,
+    "cv_ko": "강시현",
+    "cv_jp": "Kaori Maeda",
+    "like": [
+      "세상의 모든 술"
+    ],
+    "dislike": [
+      "문어",
+      "바다 괴담"
+    ],
+    "hobby": [
+      "코르크 수집"
+    ],
+    "speciality": [
+      "아무데서나 잠들기"
+    ]
+  },
+  "personality": {
+    "description": "짜잔! '횃불 해적단'의 선장, 셰리야~!\n우리 횃불 해적단은 프리랜서 해적을 하고 있어!\n사실 해적단을 만드려고 한 건 아니었는데, 정신을 차려 보니 같이 다니고 싶다는 녀석들이 잔뜩 늘어났더라고~ 헤헤. \n\n어때, 구원자님도 우리 해적단에 들어 올래? \n뱃멀미가 나면 어떡하냐고? 그럼 나처럼 술을 마시면 돼~!\n…아니야? 그럴 리가 없는데?\n평소부터 눈이 뱅뱅 도는 훈련을 해 둬야 뱃멀미도 극복할 수 있는 거 아닌가?\n\n아무튼! \n저 바다 밑에 숨어 있다는 문어 괴물은 진~짜 무섭지만…\n어떻게든 다 잘 될 거야~! 이 셰리 선장님을 믿어!\n그럼, 출항~!!",
+    "greeting": "술 마시는 데엔 사계절의 풍경만으로도 충분하지!"
+  },
+  "speech_patterns": [
+    "ㅜ구어자임 나셰리",
+    "구언쟈님 안녀",
+    "이상하네 자판버튼이 너무??@# 조그맣네",
+    "그리구 이상하게 에버폰이 빙글빙글~~돌아",
+    "아이구 머리 울려~~",
+    "엥~그\r\n럴리가아",
+    "오늘은 쪼~~금 더 마시긴@했는데",
+    "아직멀쩡해멀쩡",
+    "그래서그런데 구원쟈님 환영ㅇ",
+    "환영인사로 한잔대접하구싶은데",
+    "시간 좀 내줏루있어? 이따 저녁에",
+    "응~~~된다니 다행이네 헤헤 그럼 이따만나",
+    "우헤헤",
+    "구원자님 진짜웃ㄱㅕ",
+    "몸으로 사례하라고 하니까",
+    "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ",
+    "응",
+    "아니?",
+    "웅",
+    "비~밀",
+    "구원자님 반응이",
+    "너무재밌는걸",
+    "이런 거에 진지하게 반응하다니",
+    "별로 중요한 것도 아ㄴ니데",
+    "ㅋㅋㅋㅋㅋㅋ",
+    "구원자님 가온은 처음 가봐?",
+    "그럼 놀러 가는 건 처음인거네~",
+    "우후후후훙",
+    "구원자님의 처♡음",
+    "내가 받아가는 거네에~~",
+    "오잉",
+    "학습능력이 좋네 구원쟈님",
+    "그럼 이런 온천여관에",
+    "이 선장님 같은 미녀랑",
+    "단둘이 같이 온 건????",
+    "처음?? 처음이야??? 처음이지????",
+    "…구원자니임?",
+    "구원자님~~~~~~",
+    "지금이야 트로이카의 절반이",
+    "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만",
+    "예전엔 제법 넓은 나라였거든??",
+    "당연히 트로이카의 뒷골목 사정도",
+    "좀… 아니 꽤~~ 복잡했구…",
+    "에일린하고는 그때쯤에 친해졌어",
+    "정령들이 줄어서 장물 수입도 줄었는데",
+    "에일린네가 물량을 꽤 늘려 줬거든",
+    "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게",
+    "편의도 잘 봐줬고",
+    "그리고 걔 은근히 술을 좀 하거든~~!!!",
+    "나만큼은 아니지만~~"
+  ],
+  "comments": [
+    {
+      "writer": "니콜",
+      "comment": "기억력이 엄청 좋아. 세 달 전에 빌린 3골드를 아직도 기억하더라니까."
+    },
+    {
+      "writer": "비비안",
+      "comment": "함께 자주 마시지만, '진짜로' 취한 모습을 본 적은 거의 없어. 강적이야~"
+    },
+    {
+      "writer": "레베카",
+      "comment": "쯧쯧, 젊은 처자가 대낮부터 취해서 비틀비틀 돌아다니면 쓰나!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "셰리",
+        "message": "ㅜ구어자임 나셰리"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구언쟈님 안녀"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이상하네 자판버튼이 너무??@# 조그맣네"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그리구 이상하게 에버폰이 빙글빙글~~돌아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "아이구 머리 울려~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 취했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 취했어"
+      },
+      {
+        "speaker": "셰리",
+        "message": "엥~그\r\n럴리가아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "오늘은 쪼~~금 더 마시긴@했는데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "아직멀쩡해멀쩡"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그래서그런데 구원쟈님 환영ㅇ"
+      },
+      {
+        "speaker": "셰리",
+        "message": "환영인사로 한잔대접하구싶은데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "시간 좀 내줏루있어? 이따 저녁에"
+      },
+      {
+        "speaker": "셰리",
+        "message": "응~~~된다니 다행이네 헤헤 그럼 이따만나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직 아무 대답도 안했는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직 아무 대답도 안했는데…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "우헤헤"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 진짜웃ㄱㅕ"
+      },
+      {
+        "speaker": "셰리",
+        "message": "몸으로 사례하라고 하니까"
+      },
+      {
+        "speaker": "셰리",
+        "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당연히 놀라지!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당연히 놀라지!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다른 정령들한테도 그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다른 정령들한테도 그래?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "응"
+      },
+      {
+        "speaker": "셰리",
+        "message": "아니?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "웅"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어느 쪽이야?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어느 쪽이야?!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "우헤헤"
+      },
+      {
+        "speaker": "셰리",
+        "message": "비~밀"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇게 놀려먹기만 하고!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇게 놀려먹기만 하고!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 반응이"
+      },
+      {
+        "speaker": "셰리",
+        "message": "너무재밌는걸"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이런 거에 진지하게 반응하다니"
+      },
+      {
+        "speaker": "셰리",
+        "message": "별로 중요한 것도 아ㄴ니데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "ㅋㅋㅋㅋㅋㅋ"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 가온은 처음 가봐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "처음은 아닌데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "처음은 아닌데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "출장으로만 가 봤어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "출장으로만 가 봤어"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그럼 놀러 가는 건 처음인거네~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "우후후후훙"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님의 처♡음"
+      },
+      {
+        "speaker": "셰리",
+        "message": "내가 받아가는 거네에~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이제 그런 거엔 안 놀라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이제 그런 거엔 안 놀라"
+      },
+      {
+        "speaker": "셰리",
+        "message": "오잉"
+      },
+      {
+        "speaker": "셰리",
+        "message": "학습능력이 좋네 구원쟈님"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그럼 이런 온천여관에"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이 선장님 같은 미녀랑"
+      },
+      {
+        "speaker": "셰리",
+        "message": "단둘이 같이 온 건????"
+      },
+      {
+        "speaker": "셰리",
+        "message": "처음?? 처음이야??? 처음이지????"
+      },
+      {
+        "speaker": "셰리",
+        "message": "…구원자니임?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님~~~~~~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "지금이야 트로이카의 절반이"
+      },
+      {
+        "speaker": "셰리",
+        "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+      },
+      {
+        "speaker": "셰리",
+        "message": "예전엔 제법 넓은 나라였거든??"
+      },
+      {
+        "speaker": "셰리",
+        "message": "당연히 트로이카의 뒷골목 사정도"
+      },
+      {
+        "speaker": "셰리",
+        "message": "좀… 아니 꽤~~ 복잡했구…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "에일린하고는 그때쯤에 친해졌어"
+      },
+      {
+        "speaker": "셰리",
+        "message": "정령들이 줄어서 장물 수입도 줄었는데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "에일린네가 물량을 꽤 늘려 줬거든"
+      },
+      {
+        "speaker": "셰리",
+        "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+      },
+      {
+        "speaker": "셰리",
+        "message": "편의도 잘 봐줬고"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "나만큼은 아니지만~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그게 제일 중요한 이유였구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그게 제일 중요한 이유였구나"
+      },
+      {
+        "speaker": "셰리",
+        "message": "헉 어떻게 알았어??"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 천재네!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그러고보니 구원자님"
+      },
+      {
+        "speaker": "셰리",
+        "message": "어제 그거 먹었어?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "장어말이랑 곤약소면이랑 산채나물이랑"
+      },
+      {
+        "speaker": "셰리",
+        "message": "유부무침이랑 생선회랑 계란찜!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…맛있었겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…맛있었겠네"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 안먹었어???"
+      },
+      {
+        "speaker": "셰리",
+        "message": "왜?????"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누구 때문이겠어??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누구 때문이겠어??"
+      },
+      {
+        "speaker": "셰리",
+        "message": "누구??????"
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "셰리",
+        "message": "에"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그럼 구원자님이 현관에서 잔 것도…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "셰리",
+        "message": "에헤… 헤헤헤…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "미, 미안……?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알면 됐어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알면 됐어"
+      },
+      {
+        "speaker": "셰리",
+        "message": "에헤헤헤…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "전에 배에서 마셨던 와인…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "코르크를 잃어버렸어…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그거 모으는 게 내 삶의 낙인데~~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "취미가 코르크 모으기였지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "취미가 코르크 모으기였지?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "웅웅"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이렇게 와인 테이스팅 할때도"
+      },
+      {
+        "speaker": "셰리",
+        "message": "코르크에 남은 잔향을 킁킁하면"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이 와인이 상했나 안 상했나 알 수 있기도 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "테이스팅 하는 거 멋지다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "테이스팅 하는 거 멋지다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "아니"
+      },
+      {
+        "speaker": "셰리",
+        "message": "솔직히 그냥 다 맛있어서…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이건 좀 시큼하게 맛있는 와인이구나~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이건 떫은 맛 나는 맛있는 와인이구나~~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이 정도"
+      },
+      {
+        "speaker": "셰리",
+        "message": "하아아아앙"
+      },
+      {
+        "speaker": "셰리",
+        "message": "상상하니까"
+      },
+      {
+        "speaker": "셰리",
+        "message": "와인 마시구 싶다"
+      },
+      {
+        "speaker": "셰리",
+        "message": "조만간 구원자님이랑 마셔야겠어!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "태초에 천족과 마족이 있었다…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "지상에서는 전쟁의 봉화가 불타오르고…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "??"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님이 추천해준 거 말고"
+      },
+      {
+        "speaker": "셰리",
+        "message": "다른 게임도 해 봤는데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "대뜸 이렇게 시작하길래"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이게 뭔 소리야?? 했거든?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "근데 생각해 보니까"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님이 에덴에 막 왔을 때"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이런 느낌이었으려나 싶더라구?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "나는 게임을 끌 수 있었지만"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님은 그럴 수가 없었잖아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그래서~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "힘들었겠구나~~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진지하게 걱정해 주는 거 맞지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진지하게 걱정해 주는 거 맞지?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "진짜야!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "깊게 생각하면"
+      },
+      {
+        "speaker": "셰리",
+        "message": "너무 막막해서 무서운걸"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 대단하네에에에"
+      },
+      {
+        "speaker": "구원자",
+        "message": "또 얼버무리네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "또 얼버무리네"
+      },
+      {
+        "speaker": "셰리",
+        "message": "흥"
+      },
+      {
+        "speaker": "셰리",
+        "message": "무서운걸 어떡해"
+      },
+      {
+        "speaker": "셰리",
+        "message": "횃불 해적단 말이야"
+      },
+      {
+        "speaker": "셰리",
+        "message": "어느새 이렇게 커져버렸지만"
+      },
+      {
+        "speaker": "셰리",
+        "message": "처음에는 정말 오합지졸이었거든~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "갈곳 없는 정령"
+      },
+      {
+        "speaker": "셰리",
+        "message": "배가 타고 싶은 정령"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그냥 집 나온 정령"
+      },
+      {
+        "speaker": "셰리",
+        "message": "나처럼 술 좋아하는 정령"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그런 녀석들이 대충 모이다 보니 이렇게 됐어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 제법 좋아하지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 제법 좋아하지?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그럼!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "내 해적단인걸"
+      },
+      {
+        "speaker": "셰리",
+        "message": "더 좋아하고 싶은데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그러지 못해서 속상한 거야아아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "또 그 버릇"
+      },
+      {
+        "speaker": "구원자",
+        "message": "또 그 버릇"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진지한 얘기 할 때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진지한 얘기 할 때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말꼬리 늘이는 버릇"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말꼬리 늘이는 버릇"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "셰리",
+        "message": "셰리 선장에 대해 너무 많이 알아버렸군"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그런 구원자님에게는"
+      },
+      {
+        "speaker": "셰리",
+        "message": "술주정 공격을 하겠습니다!!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "훙냐냐냐~~~~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "항상 술에 취해 있는 거"
+      },
+      {
+        "speaker": "구원자",
+        "message": "항상 술에 취해 있는 거"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+      },
+      {
+        "speaker": "구원자",
+        "message": "숨기기 위한 위장이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "숨기기 위한 위장이야?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "에에엥?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "술은 정말 좋아서 마시는 거야아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그리구우우"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그냥"
+      },
+      {
+        "speaker": "셰리",
+        "message": "좀 그렇잖아아아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "말로 하면 좀 나은데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "에버톡으로 보내면 기록이 남아서"
+      },
+      {
+        "speaker": "셰리",
+        "message": "나중에 다시 보게 되고"
+      },
+      {
+        "speaker": "셰리",
+        "message": "왠지 부끄러워어어ㅓ어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버톡은 취한 척을 못 하니까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버톡은 취한 척을 못 하니까?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "오늘 구원자님"
+      },
+      {
+        "speaker": "셰리",
+        "message": "엄청 날카롭네"
+      },
+      {
+        "speaker": "셰리",
+        "message": "흐음으음으으음음"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그 이해도를 치하하며"
+      },
+      {
+        "speaker": "셰리",
+        "message": "셰리학 박사학위를 수여하겠습니다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…고마워;"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…고마워;"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이제 셰리학의 권위자가 되셨으니"
+      },
+      {
+        "speaker": "셰리",
+        "message": "앞으로도 셰리 선장에 대해"
+      },
+      {
+        "speaker": "셰리",
+        "message": "깊게 탐구해 주쎄요오옹"
+      },
+      {
+        "speaker": "셰리",
+        "message": "바에 칵테일을 마시러 가면"
+      },
+      {
+        "speaker": "셰리",
+        "message": "목테일이라고"
+      },
+      {
+        "speaker": "셰리",
+        "message": "논알콜 칵테일 종류가 있는데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "생각보다 맛이 그럴싸해서 가끔 속아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "분명히 그걸 마시고 나서 알딸딸해졌는데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "나중에 가서 보니 논알콜일 때도 있고…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "분명 취한 기분이 들었는데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이 기분이 가짜라니 말도 안 되지 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다 마음먹기 달렸다는 거지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다 마음먹기 달렸다는 거지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러니까 셰리도 너무 걱정 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러니까 셰리도 너무 걱정 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니면 제자리라고 생각할 수 있는 곳을"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니면 제자리라고 생각할 수 있는 곳을"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 은근히"
+      },
+      {
+        "speaker": "셰리",
+        "message": "근성론자네?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그래도 그랬으면 좋겠다"
+      },
+      {
+        "speaker": "셰리",
+        "message": "찾을 수 있다고 생각하면"
+      },
+      {
+        "speaker": "셰리",
+        "message": "금방 찾아지겠지?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "셰리학 박사가 하는 말이니까"
+      },
+      {
+        "speaker": "셰리",
+        "message": "믿어 볼게~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "ㄴ ㅏ?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "나몰ㄹ ㅏ?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "셰리잔아~~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "트로이카 체고의 선 자ㅇ"
+      },
+      {
+        "speaker": "셰리",
+        "message": "아 한잔더해야지"
+      },
+      {
+        "speaker": "셰리",
+        "message": "암튼 놀러와아우앙"
+      },
+      {
+        "speaker": "셰리",
+        "message": "항구에 정박해있으니가~~~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 잃어버린 브로치"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그거 대충"
+      },
+      {
+        "speaker": "셰리",
+        "message": "대애애ㅐㅐ충"
+      },
+      {
+        "speaker": "셰리",
+        "message": "비슷한 거 차면 아무도 모를걸?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "솔직히이히히"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러고 싶지 않아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러고 싶지 않아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "범생이~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이런 건 의미가 중요한 거잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이런 건 의미가 중요한 거잖아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그래~?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "흐으으음"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그러면 구원자님은 성실하니깐"
+      },
+      {
+        "speaker": "셰리",
+        "message": "몸으로 팍팍 사례해 줄거지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…또 그 소리!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…또 그 소리!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "아 재밋어~~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "우햐햐햐~~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "여기 대욕장 진짜 좋다아"
+      },
+      {
+        "speaker": "셰리",
+        "message": "온천 물도 완전 보들보들하고"
+      },
+      {
+        "speaker": "셰리",
+        "message": "내가 들어간 쪽은 노천온천이 있었는데"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님 들어간 쪽은 어땠어? 거기도 있었어?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "내일은 우리 탕 바꿔서 들어가 보자!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "음~ 구원자님~"
+      },
+      {
+        "speaker": "셰리",
+        "message": "아직 씻고 있어~?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "우리 둘 뿐이니까"
+      },
+      {
+        "speaker": "셰리",
+        "message": "누구 눈치도 보지 않고"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님이 '진짜로 하고 싶은 것'"
+      },
+      {
+        "speaker": "셰리",
+        "message": "그걸 내게 말해줘"
+      },
+      {
+        "speaker": "셰리",
+        "message": "가온국은 지역마다 문화가 꽤 다르거든?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님이 전에 가본 곳하고"
+      },
+      {
+        "speaker": "셰리",
+        "message": "지금 우리가 와 있는 곳은 꽤 분위기가 다르지?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "오늘은 나랑 같이 여길 좀 산책해줘"
+      },
+      {
+        "speaker": "셰리",
+        "message": "게이이임?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "배 위에서도 카드 게임 같은 건 했었지만"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님이 말하는 건 이런 게 아닌 거지?"
+      },
+      {
+        "speaker": "셰리",
+        "message": "뭐, 일단 가보자고~!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님…!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "우리가 해냈어!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "우리가…!!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "내 자리가"
+      },
+      {
+        "speaker": "셰리",
+        "message": "어딘가 존재하긴 하는 걸지…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "혼자서는 잘 모르겠어…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이런 길을 선택하는 것도"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원자님이 알려준 방식이니까…"
+      },
+      {
+        "speaker": "셰리",
+        "message": "두 발을 땅에 딛을게♪"
+      },
+      {
+        "speaker": "셰리",
+        "message": "둥실둥실 떠다니던 망망대해도"
+      },
+      {
+        "speaker": "셰리",
+        "message": "마음 둘 곳 없던 고향 봉우리도 아닌"
+      },
+      {
+        "speaker": "셰리",
+        "message": "내가 속할 곳이 어딘지"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이제 알 것 같아."
+      },
+      {
+        "speaker": "셰리",
+        "message": "사랑이 가득한 하루야~♡"
+      },
+      {
+        "speaker": "셰리",
+        "message": "이럴 땐 달달한 스파클링 와인이 딱이지♪ 좋구만~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 많이 마시지는 마. 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 많이 마시지는 마. 고마워!"
+      },
+      {
+        "speaker": "셰리",
+        "message": "1년중 가쟝 행복한 날~♥"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구원쟈님 여기술이진짜많ㅇㅏ"
+      },
+      {
+        "speaker": "셰리",
+        "message": "구엉자님이랑도 한잔 하고싶네~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐, 얼마나 마신 거야…? 지금 갈게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐, 얼마나 마신 거야…? 지금 갈게"
+      },
+      {
+        "speaker": "셰리",
+        "message": "칠면조 구이와 와인 한 잔…\r\n상상만 해도 침이 줄줄 흐르는 거 있지♪"
+      },
+      {
+        "speaker": "셰리",
+        "message": "내년도 잘 부탁해, 우리 구원자님~♪"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 잘 부탁해. 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 잘 부탁해. 고마워"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "셰리",
+      "en": "Cherrie",
+      "zh_tw": "雪莉",
+      "zh_cn": "雪莉"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "인간형",
+      "en": "Humanlike",
+      "zh_tw": "人類型",
+      "zh_cn": "人類型"
+    },
+    "class": {
+      "ko": "레인저",
+      "en": "Ranger",
+      "zh_tw": "遊俠",
+      "zh_cn": "遊俠"
+    },
+    "sub_class": {
+      "ko": "지속",
+      "en": "DoT",
+      "zh_tw": "持續",
+      "zh_cn": "持續"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "스파클링 피스톨",
+        "en": "Sparkling Pistol",
+        "zh_tw": "火花之銃",
+        "zh_cn": "火花之銃"
+      },
+      "constellation": {
+        "ko": "인연_제이드_이벤트2",
+        "en": "인연_제이드_이벤트2",
+        "zh_tw": "雙子座",
+        "zh_cn": "雙子座"
+      },
+      "union": {
+        "ko": "횃불 해적단",
+        "en": "Torch Pirates",
+        "zh_tw": "火炬海賊團",
+        "zh_cn": "火炬海賊團"
+      },
+      "cv_ko": {
+        "ko": "강시현",
+        "en": "Shihyun Kang",
+        "zh_tw": "姜詩炫",
+        "zh_cn": "姜詩炫"
+      },
+      "cv_jp": {
+        "ko": "Kaori Maeda",
+        "en": "Kaori Maeda",
+        "zh_tw": "Kaori Maeda",
+        "zh_cn": "Kaori Maeda"
+      },
+      "like": {
+        "ko": [
+          "세상의 모든 술"
+        ],
+        "en": [
+          "All drinks in the world"
+        ],
+        "zh_tw": [
+          "世界上所有的飄飄飲"
+        ],
+        "zh_cn": [
+          "世界上所有的飄飄飲"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "문어",
+          "바다 괴담"
+        ],
+        "en": [
+          "Octopus",
+          "uncanny sea stories"
+        ],
+        "zh_tw": [
+          "章魚、大海怪談"
+        ],
+        "zh_cn": [
+          "章魚、大海怪談"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "코르크 수집"
+        ],
+        "en": [
+          "Collecting corks"
+        ],
+        "zh_tw": [
+          "收集軟木塞"
+        ],
+        "zh_cn": [
+          "收集軟木塞"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "아무데서나 잠들기"
+        ],
+        "en": [
+          "Falling asleep anywhere"
+        ],
+        "zh_tw": [
+          "隨地而睡"
+        ],
+        "zh_cn": [
+          "隨地而睡"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "짜잔! '횃불 해적단'의 선장, 셰리야~!\n우리 횃불 해적단은 프리랜서 해적을 하고 있어!\n사실 해적단을 만드려고 한 건 아니었는데, 정신을 차려 보니 같이 다니고 싶다는 녀석들이 잔뜩 늘어났더라고~ 헤헤. \n\n어때, 구원자님도 우리 해적단에 들어 올래? \n뱃멀미가 나면 어떡하냐고? 그럼 나처럼 술을 마시면 돼~!\n…아니야? 그럴 리가 없는데?\n평소부터 눈이 뱅뱅 도는 훈련을 해 둬야 뱃멀미도 극복할 수 있는 거 아닌가?\n\n아무튼! \n저 바다 밑에 숨어 있다는 문어 괴물은 진~짜 무섭지만…\n어떻게든 다 잘 될 거야~! 이 셰리 선장님을 믿어!\n그럼, 출항~!!",
+        "en": "Ta-da! I'm Cherrie, captain of the Torch Pirates!\r\nWe're freelance pirates, roamin' the seas!\r\nI never planned to form a pirate crew, but people just kept joinin' me.\r\n\r\nWhat do ye say, Savior? Wanna join my crew?\r\nAfraid of gettin' seasick? Drinkin' some booze will fix that!\r\nWhaddya mean that doesn't work? No way!\r\nYe've got to get used to bein' dizzy all the time to beat gettin' seasick!\r\n\r\nAnyways! \r\nThat octopus monster lurkin' under the sea is scary, but…\r\nWe'll be fine! Trust yer Captain Cherrie!\r\nNow, let's set sail!",
+        "zh_tw": "鏘鏘！我是「火炬海賊團」的船長，雪莉～！\r\n我們火炬海賊團是自由業海盜！\r\n其實我本來不是想成立海賊團的，但等到我回過神來，就多了一堆想跟我一起行動的傢伙～嘿嘿。\r\n\r\n怎麼樣？救援者要不要也加入我們的海賊團？\r\n你問我會暈船怎麼辦？那就像我一樣喝飄飄飲就好～！\r\n…不行嗎？怎麼可能？\r\n不是平常就要做些頭暈目眩的訓練，才能克服暈船嗎？\r\n\r\n總而言之！\r\n雖然聽說躲在海底的章魚怪物真～的很恐怖…\r\n但無論如何都會順利的～！相信我雪莉船長！\r\n那就啟航～！！",
+        "zh_cn": "鏘鏘！我是「火炬海賊團」的船長，雪莉～！\r\n我們火炬海賊團是自由業海盜！\r\n其實我本來不是想成立海賊團的，但等到我回過神來，就多了一堆想跟我一起行動的傢伙～嘿嘿。\r\n\r\n怎麼樣？救援者要不要也加入我們的海賊團？\r\n你問我會暈船怎麼辦？那就像我一樣喝飄飄飲就好～！\r\n…不行嗎？怎麼可能？\r\n不是平常就要做些頭暈目眩的訓練，才能克服暈船嗎？\r\n\r\n總而言之！\r\n雖然聽說躲在海底的章魚怪物真～的很恐怖…\r\n但無論如何都會順利的～！相信我雪莉船長！\r\n那就啟航～！！"
+      },
+      "greeting": {
+        "ko": "술 마시는 데엔 사계절의 풍경만으로도 충분하지!",
+        "en": "Watchin' the landscape of the four seasons is more than enough to enjoy the drinks!",
+        "zh_tw": "喝飄飄飲的地方只要有四季的景色就夠了！",
+        "zh_cn": "喝飄飄飲的地方只要有四季的景色就夠了！"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "ㅜ구어자임 나셰리"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "heI, sAvior."
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "久援這呃，我是雪莉。"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "久援這呃，我是雪莉。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "구언쟈님 안녀"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "SavIOR, hhi."
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "久遠者呃，泥好。"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "久遠者呃，泥好。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "이상하네 자판버튼이 너무??@# 조그맣네"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "It's weird. The keyboard is too small??@#"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "奇怪了，鍵盤太？？＠＃小了"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "奇怪了，鍵盤太？？＠＃小了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "그리구 이상하게 에버폰이 빙글빙글~~돌아"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "And the Everphone is strangely spinning…"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "還有奇怪的是EverPhone正轉啊～～轉"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "還有奇怪的是EverPhone正轉啊～～轉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "아이구 머리 울려~~"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "Aw, my head is ringing…"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "哎呦頭腦亂哄哄的～～"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "哎呦頭腦亂哄哄的～～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "엥~그\r\n럴리가아"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "Huh.\r\nNo way."
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "呃～怎\r\n麼可噁能。"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "呃～怎\r\n麼可噁能。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "오늘은 쪼~~금 더 마시긴@했는데"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "I drank more than@usual"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "今天只多@喝了一～～點的說"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "今天只多@喝了一～～點的說"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "아직멀쩡해멀쩡"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "but I'm still good."
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "還很清醒呢"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "還很清醒呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "그래서그런데 구원쟈님 환영ㅇ"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "In that sense, Saviooor,"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "所以那個啊，就原者歡迎ㄥ"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "所以那個啊，就原者歡迎ㄥ"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "환영인사로 한잔대접하구싶은데"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "I want to buy you a drink as a welcome gesture"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "我想請你喝一杯歡迎你的到來"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "我想請你喝一杯歡迎你的到來"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "시간 좀 내줏루있어? 이따 저녁에"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "can you make some tame for it? Later tonight."
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "能空處疑點時間嗎？晚上的時候"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "能空處疑點時間嗎？晚上的時候"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "응~~~된다니 다행이네 헤헤 그럼 이따만나"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "Oh… It's nice that you've time. Hehe. I'll see you later."
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "嗯～～～太好了謝謝你，嘿嘿，那等等見"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "嗯～～～太好了謝謝你，嘿嘿，那等等見"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "우헤헤"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "우헤헤"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "우헤헤"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "우헤헤"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "구원자님 진짜웃ㄱㅕ"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "구원자님 진짜웃ㄱㅕ"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "구원자님 진짜웃ㄱㅕ"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "구원자님 진짜웃ㄱㅕ"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "몸으로 사례하라고 하니까"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "몸으로 사례하라고 하니까"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "몸으로 사례하라고 하니까"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "몸으로 사례하라고 하니까"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "응"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "응"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "응"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "응"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "아니?"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "아니?"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "아니?"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "아니?"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "웅"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "웅"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "웅"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "웅"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "비~밀"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "비~밀"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "비~밀"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "비~밀"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "구원자님 반응이"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "구원자님 반응이"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "구원자님 반응이"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "구원자님 반응이"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "너무재밌는걸"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "너무재밌는걸"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "너무재밌는걸"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "너무재밌는걸"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "이런 거에 진지하게 반응하다니"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "이런 거에 진지하게 반응하다니"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "이런 거에 진지하게 반응하다니"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "이런 거에 진지하게 반응하다니"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "별로 중요한 것도 아ㄴ니데"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "별로 중요한 것도 아ㄴ니데"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "별로 중요한 것도 아ㄴ니데"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "별로 중요한 것도 아ㄴ니데"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "ㅋㅋㅋㅋㅋㅋ"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "ㅋㅋㅋㅋㅋㅋ"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "ㅋㅋㅋㅋㅋㅋ"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "ㅋㅋㅋㅋㅋㅋ"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "구원자님 가온은 처음 가봐?"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "구원자님 가온은 처음 가봐?"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "구원자님 가온은 처음 가봐?"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "구원자님 가온은 처음 가봐?"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "그럼 놀러 가는 건 처음인거네~"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "그럼 놀러 가는 건 처음인거네~"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "그럼 놀러 가는 건 처음인거네~"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "그럼 놀러 가는 건 처음인거네~"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "우후후후훙"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "우후후후훙"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "우후후후훙"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "우후후후훙"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "구원자님의 처♡음"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "구원자님의 처♡음"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "구원자님의 처♡음"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "구원자님의 처♡음"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "내가 받아가는 거네에~~"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "내가 받아가는 거네에~~"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "내가 받아가는 거네에~~"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "내가 받아가는 거네에~~"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "오잉"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "오잉"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "오잉"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "오잉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "학습능력이 좋네 구원쟈님"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "학습능력이 좋네 구원쟈님"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "학습능력이 좋네 구원쟈님"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "학습능력이 좋네 구원쟈님"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "그럼 이런 온천여관에"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "그럼 이런 온천여관에"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "그럼 이런 온천여관에"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "그럼 이런 온천여관에"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "이 선장님 같은 미녀랑"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "이 선장님 같은 미녀랑"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "이 선장님 같은 미녀랑"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "이 선장님 같은 미녀랑"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "단둘이 같이 온 건????"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "단둘이 같이 온 건????"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "단둘이 같이 온 건????"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "단둘이 같이 온 건????"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "처음?? 처음이야??? 처음이지????"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "처음?? 처음이야??? 처음이지????"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "처음?? 처음이야??? 처음이지????"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "처음?? 처음이야??? 처음이지????"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "…구원자니임?"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "…구원자니임?"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "…구원자니임?"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "…구원자니임?"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "구원자님~~~~~~"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "구원자님~~~~~~"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "구원자님~~~~~~"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "구원자님~~~~~~"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "지금이야 트로이카의 절반이"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "지금이야 트로이카의 절반이"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "지금이야 트로이카의 절반이"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "지금이야 트로이카의 절반이"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "예전엔 제법 넓은 나라였거든??"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "예전엔 제법 넓은 나라였거든??"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "예전엔 제법 넓은 나라였거든??"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "예전엔 제법 넓은 나라였거든??"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "당연히 트로이카의 뒷골목 사정도"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "당연히 트로이카의 뒷골목 사정도"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "당연히 트로이카의 뒷골목 사정도"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "당연히 트로이카의 뒷골목 사정도"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "좀… 아니 꽤~~ 복잡했구…"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "좀… 아니 꽤~~ 복잡했구…"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "좀… 아니 꽤~~ 복잡했구…"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "좀… 아니 꽤~~ 복잡했구…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "에일린하고는 그때쯤에 친해졌어"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "에일린하고는 그때쯤에 친해졌어"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "에일린하고는 그때쯤에 친해졌어"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "에일린하고는 그때쯤에 친해졌어"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "정령들이 줄어서 장물 수입도 줄었는데"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "정령들이 줄어서 장물 수입도 줄었는데"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "정령들이 줄어서 장물 수입도 줄었는데"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "정령들이 줄어서 장물 수입도 줄었는데"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "에일린네가 물량을 꽤 늘려 줬거든"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "에일린네가 물량을 꽤 늘려 줬거든"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "에일린네가 물량을 꽤 늘려 줬거든"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "에일린네가 물량을 꽤 늘려 줬거든"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "편의도 잘 봐줬고"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "편의도 잘 봐줬고"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "편의도 잘 봐줬고"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "편의도 잘 봐줬고"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "나만큼은 아니지만~~"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "나만큼은 아니지만~~"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "나만큼은 아니지만~~"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "나만큼은 아니지만~~"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "니콜",
+          "message": "기억력이 엄청 좋아. 세 달 전에 빌린 3골드를 아직도 기억하더라니까."
+        },
+        "en": {
+          "speaker": "Nicole",
+          "message": "She has a very good memory. She still remembers the 3 Gold I borrowed from her three months ago."
+        },
+        "zh_tw": {
+          "speaker": "妮可",
+          "message": "她記憶力真的很好，她還記得三個月前我跟她借的3金幣。"
+        },
+        "zh_cn": {
+          "speaker": "妮可",
+          "message": "她記憶力真的很好，她還記得三個月前我跟她借的3金幣。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비비안",
+          "message": "함께 자주 마시지만, '진짜로' 취한 모습을 본 적은 거의 없어. 강적이야~"
+        },
+        "en": {
+          "speaker": "Vivienne",
+          "message": "I often drink together with her, but I've hardly seen her \"really\" drunk. She is a formidable opponent!"
+        },
+        "zh_tw": {
+          "speaker": "薇薇安",
+          "message": "我很常跟她一起喝飄飄飲，但我沒看過她「真的」喝多的樣子。是厲害的對手～"
+        },
+        "zh_cn": {
+          "speaker": "薇薇安",
+          "message": "我很常跟她一起喝飄飄飲，但我沒看過她「真的」喝多的樣子。是厲害的對手～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "레베카",
+          "message": "쯧쯧, 젊은 처자가 대낮부터 취해서 비틀비틀 돌아다니면 쓰나!"
+        },
+        "en": {
+          "speaker": "Rebecca",
+          "message": "Tsk tsk, a young lady shouldn't get drunk and swagger along the street in broad daylight!"
+        },
+        "zh_tw": {
+          "speaker": "瑞貝卡",
+          "message": "嘖嘖，年輕小姐大白天就喝醉了，走路東倒西歪該如何是好！"
+        },
+        "zh_cn": {
+          "speaker": "瑞貝卡",
+          "message": "嘖嘖，年輕小姐大白天就喝醉了，走路東倒西歪該如何是好！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "ㅜ구어자임 나셰리"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "heI, sAvior."
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "久援這呃，我是雪莉。"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "久援這呃，我是雪莉。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구언쟈님 안녀"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "SavIOR, hhi."
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "久遠者呃，泥好。"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "久遠者呃，泥好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이상하네 자판버튼이 너무??@# 조그맣네"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "It's weird. The keyboard is too small??@#"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "奇怪了，鍵盤太？？＠＃小了"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "奇怪了，鍵盤太？？＠＃小了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그리구 이상하게 에버폰이 빙글빙글~~돌아"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "And the Everphone is strangely spinning…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "還有奇怪的是EverPhone正轉啊～～轉"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "還有奇怪的是EverPhone正轉啊～～轉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "아이구 머리 울려~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "Aw, my head is ringing…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "哎呦頭腦亂哄哄的～～"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "哎呦頭腦亂哄哄的～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 취했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're too drunk"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳喝很多"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳喝很多"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 취했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're too drunk"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳喝很多"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳喝很多"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "엥~그\r\n럴리가아"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "Huh.\r\nNo way."
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "呃～怎\r\n麼可噁能。"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "呃～怎\r\n麼可噁能。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "오늘은 쪼~~금 더 마시긴@했는데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "I drank more than@usual"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "今天只多@喝了一～～點的說"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "今天只多@喝了一～～點的說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "아직멀쩡해멀쩡"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "but I'm still good."
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "還很清醒呢"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "還很清醒呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그래서그런데 구원쟈님 환영ㅇ"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "In that sense, Saviooor,"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "所以那個啊，就原者歡迎ㄥ"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "所以那個啊，就原者歡迎ㄥ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "환영인사로 한잔대접하구싶은데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "I want to buy you a drink as a welcome gesture"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "我想請你喝一杯歡迎你的到來"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "我想請你喝一杯歡迎你的到來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "시간 좀 내줏루있어? 이따 저녁에"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "can you make some tame for it? Later tonight."
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "能空處疑點時間嗎？晚上的時候"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "能空處疑點時間嗎？晚上的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "응~~~된다니 다행이네 헤헤 그럼 이따만나"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "Oh… It's nice that you've time. Hehe. I'll see you later."
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "嗯～～～太好了謝謝你，嘿嘿，那等等見"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "嗯～～～太好了謝謝你，嘿嘿，那等等見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직 아무 대답도 안했는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I didn't answer yet…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我什麼都還沒回啊⋯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我什麼都還沒回啊⋯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직 아무 대답도 안했는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I didn't answer yet…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我什麼都還沒回啊⋯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我什麼都還沒回啊⋯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "우헤헤"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "우헤헤"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "우헤헤"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "우헤헤"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 진짜웃ㄱㅕ"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 진짜웃ㄱㅕ"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 진짜웃ㄱㅕ"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 진짜웃ㄱㅕ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "몸으로 사례하라고 하니까"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "몸으로 사례하라고 하니까"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "몸으로 사례하라고 하니까"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "몸으로 사례하라고 하니까"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "얼굴 완전 백짓장 ㅋㅋㅋㅋㅋㅋ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당연히 놀라지!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "당연히 놀라지!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "당연히 놀라지!"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "당연히 놀라지!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당연히 놀라지!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "당연히 놀라지!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "당연히 놀라지!"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "당연히 놀라지!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다른 정령들한테도 그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "다른 정령들한테도 그래?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "다른 정령들한테도 그래?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "다른 정령들한테도 그래?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다른 정령들한테도 그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "다른 정령들한테도 그래?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "다른 정령들한테도 그래?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "다른 정령들한테도 그래?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "응"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "응"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "응"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "아니?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "아니?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "아니?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "아니?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "웅"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "웅"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "웅"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "웅"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어느 쪽이야?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "어느 쪽이야?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "어느 쪽이야?!"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "어느 쪽이야?!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어느 쪽이야?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "어느 쪽이야?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "어느 쪽이야?!"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "어느 쪽이야?!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "우헤헤"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "우헤헤"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "우헤헤"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "우헤헤"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "비~밀"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "비~밀"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "비~밀"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "비~밀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇게 놀려먹기만 하고!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그렇게 놀려먹기만 하고!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그렇게 놀려먹기만 하고!"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그렇게 놀려먹기만 하고!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇게 놀려먹기만 하고!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그렇게 놀려먹기만 하고!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그렇게 놀려먹기만 하고!"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그렇게 놀려먹기만 하고!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 반응이"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 반응이"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 반응이"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 반응이"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "너무재밌는걸"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "너무재밌는걸"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "너무재밌는걸"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "너무재밌는걸"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이런 거에 진지하게 반응하다니"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이런 거에 진지하게 반응하다니"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이런 거에 진지하게 반응하다니"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이런 거에 진지하게 반응하다니"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "별로 중요한 것도 아ㄴ니데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "별로 중요한 것도 아ㄴ니데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "별로 중요한 것도 아ㄴ니데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "별로 중요한 것도 아ㄴ니데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "ㅋㅋㅋㅋㅋㅋ"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "ㅋㅋㅋㅋㅋㅋ"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "ㅋㅋㅋㅋㅋㅋ"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "ㅋㅋㅋㅋㅋㅋ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 가온은 처음 가봐?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 가온은 처음 가봐?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 가온은 처음 가봐?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 가온은 처음 가봐?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "처음은 아닌데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "처음은 아닌데"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "처음은 아닌데"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "처음은 아닌데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "처음은 아닌데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "처음은 아닌데"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "처음은 아닌데"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "처음은 아닌데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "출장으로만 가 봤어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "출장으로만 가 봤어"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "출장으로만 가 봤어"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "출장으로만 가 봤어"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "출장으로만 가 봤어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "출장으로만 가 봤어"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "출장으로만 가 봤어"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "출장으로만 가 봤어"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그럼 놀러 가는 건 처음인거네~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그럼 놀러 가는 건 처음인거네~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그럼 놀러 가는 건 처음인거네~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그럼 놀러 가는 건 처음인거네~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "우후후후훙"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "우후후후훙"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "우후후후훙"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "우후후후훙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님의 처♡음"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님의 처♡음"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님의 처♡음"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님의 처♡음"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "내가 받아가는 거네에~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "내가 받아가는 거네에~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "내가 받아가는 거네에~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "내가 받아가는 거네에~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이제 그런 거엔 안 놀라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "이제 그런 거엔 안 놀라"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "이제 그런 거엔 안 놀라"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "이제 그런 거엔 안 놀라"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이제 그런 거엔 안 놀라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "이제 그런 거엔 안 놀라"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "이제 그런 거엔 안 놀라"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "이제 그런 거엔 안 놀라"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "오잉"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "오잉"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "오잉"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "오잉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "학습능력이 좋네 구원쟈님"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "학습능력이 좋네 구원쟈님"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "학습능력이 좋네 구원쟈님"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "학습능력이 좋네 구원쟈님"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그럼 이런 온천여관에"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그럼 이런 온천여관에"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그럼 이런 온천여관에"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그럼 이런 온천여관에"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이 선장님 같은 미녀랑"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이 선장님 같은 미녀랑"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이 선장님 같은 미녀랑"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이 선장님 같은 미녀랑"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "단둘이 같이 온 건????"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "단둘이 같이 온 건????"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "단둘이 같이 온 건????"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "단둘이 같이 온 건????"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "처음?? 처음이야??? 처음이지????"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "처음?? 처음이야??? 처음이지????"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "처음?? 처음이야??? 처음이지????"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "처음?? 처음이야??? 처음이지????"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "…구원자니임?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "…구원자니임?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "…구원자니임?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "…구원자니임?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님~~~~~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님~~~~~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님~~~~~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님~~~~~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "지금이야 트로이카의 절반이"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "지금이야 트로이카의 절반이"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "지금이야 트로이카의 절반이"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "지금이야 트로이카의 절반이"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "게이트 현상 때문에 잃어버린 땅이 되어 버렸지만"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "예전엔 제법 넓은 나라였거든??"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "예전엔 제법 넓은 나라였거든??"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "예전엔 제법 넓은 나라였거든??"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "예전엔 제법 넓은 나라였거든??"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "당연히 트로이카의 뒷골목 사정도"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "당연히 트로이카의 뒷골목 사정도"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "당연히 트로이카의 뒷골목 사정도"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "당연히 트로이카의 뒷골목 사정도"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "좀… 아니 꽤~~ 복잡했구…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "좀… 아니 꽤~~ 복잡했구…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "좀… 아니 꽤~~ 복잡했구…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "좀… 아니 꽤~~ 복잡했구…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "에일린하고는 그때쯤에 친해졌어"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "에일린하고는 그때쯤에 친해졌어"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "에일린하고는 그때쯤에 친해졌어"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "에일린하고는 그때쯤에 친해졌어"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "정령들이 줄어서 장물 수입도 줄었는데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "정령들이 줄어서 장물 수입도 줄었는데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "정령들이 줄어서 장물 수입도 줄었는데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "정령들이 줄어서 장물 수입도 줄었는데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "에일린네가 물량을 꽤 늘려 줬거든"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "에일린네가 물량을 꽤 늘려 줬거든"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "에일린네가 물량을 꽤 늘려 줬거든"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "에일린네가 물량을 꽤 늘려 줬거든"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "또 우리가 입항할 때마다 쓸데없는 좀도둑들이 설치지 않게"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "편의도 잘 봐줬고"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "편의도 잘 봐줬고"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "편의도 잘 봐줬고"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "편의도 잘 봐줬고"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그리고 걔 은근히 술을 좀 하거든~~!!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "나만큼은 아니지만~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "나만큼은 아니지만~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "나만큼은 아니지만~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "나만큼은 아니지만~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그게 제일 중요한 이유였구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그게 제일 중요한 이유였구나"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그게 제일 중요한 이유였구나"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그게 제일 중요한 이유였구나"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그게 제일 중요한 이유였구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그게 제일 중요한 이유였구나"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그게 제일 중요한 이유였구나"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그게 제일 중요한 이유였구나"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "헉 어떻게 알았어??"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "헉 어떻게 알았어??"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "헉 어떻게 알았어??"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "헉 어떻게 알았어??"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 천재네!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 천재네!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 천재네!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 천재네!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그러고보니 구원자님"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그러고보니 구원자님"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그러고보니 구원자님"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그러고보니 구원자님"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "어제 그거 먹었어?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "어제 그거 먹었어?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "어제 그거 먹었어?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "어제 그거 먹었어?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "장어말이랑 곤약소면이랑 산채나물이랑"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "장어말이랑 곤약소면이랑 산채나물이랑"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "장어말이랑 곤약소면이랑 산채나물이랑"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "장어말이랑 곤약소면이랑 산채나물이랑"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "유부무침이랑 생선회랑 계란찜!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "유부무침이랑 생선회랑 계란찜!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "유부무침이랑 생선회랑 계란찜!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "유부무침이랑 생선회랑 계란찜!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…맛있었겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…맛있었겠네"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…맛있었겠네"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…맛있었겠네"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…맛있었겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…맛있었겠네"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…맛있었겠네"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…맛있었겠네"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 안먹었어???"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 안먹었어???"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 안먹었어???"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 안먹었어???"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "왜?????"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "왜?????"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "왜?????"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "왜?????"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누구 때문이겠어??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "누구 때문이겠어??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "누구 때문이겠어??"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "누구 때문이겠어??"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누구 때문이겠어??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "누구 때문이겠어??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "누구 때문이겠어??"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "누구 때문이겠어??"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "누구??????"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "누구??????"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "누구??????"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "누구??????"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "……."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……."
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "……."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……."
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "에"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "에"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "에"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "에"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그럼 구원자님이 현관에서 잔 것도…?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그럼 구원자님이 현관에서 잔 것도…?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그럼 구원자님이 현관에서 잔 것도…?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그럼 구원자님이 현관에서 잔 것도…?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "……."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……."
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "……."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……."
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "에헤… 헤헤헤…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "에헤… 헤헤헤…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "에헤… 헤헤헤…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "에헤… 헤헤헤…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "미, 미안……?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "미, 미안……?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "미, 미안……?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "미, 미안……?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알면 됐어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "알면 됐어"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "알면 됐어"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "알면 됐어"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알면 됐어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "알면 됐어"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "알면 됐어"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "알면 됐어"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "에헤헤헤…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "에헤헤헤…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "에헤헤헤…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "에헤헤헤…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "전에 배에서 마셨던 와인…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "전에 배에서 마셨던 와인…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "전에 배에서 마셨던 와인…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "전에 배에서 마셨던 와인…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "코르크를 잃어버렸어…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "코르크를 잃어버렸어…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "코르크를 잃어버렸어…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "코르크를 잃어버렸어…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그거 모으는 게 내 삶의 낙인데~~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그거 모으는 게 내 삶의 낙인데~~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그거 모으는 게 내 삶의 낙인데~~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그거 모으는 게 내 삶의 낙인데~~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "취미가 코르크 모으기였지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "취미가 코르크 모으기였지?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "취미가 코르크 모으기였지?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "취미가 코르크 모으기였지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "취미가 코르크 모으기였지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "취미가 코르크 모으기였지?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "취미가 코르크 모으기였지?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "취미가 코르크 모으기였지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "웅웅"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "웅웅"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "웅웅"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "웅웅"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이렇게 와인 테이스팅 할때도"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이렇게 와인 테이스팅 할때도"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이렇게 와인 테이스팅 할때도"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이렇게 와인 테이스팅 할때도"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "코르크에 남은 잔향을 킁킁하면"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "코르크에 남은 잔향을 킁킁하면"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "코르크에 남은 잔향을 킁킁하면"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "코르크에 남은 잔향을 킁킁하면"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이 와인이 상했나 안 상했나 알 수 있기도 해"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이 와인이 상했나 안 상했나 알 수 있기도 해"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이 와인이 상했나 안 상했나 알 수 있기도 해"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이 와인이 상했나 안 상했나 알 수 있기도 해"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "테이스팅 하는 거 멋지다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "테이스팅 하는 거 멋지다"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "테이스팅 하는 거 멋지다"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "테이스팅 하는 거 멋지다"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "테이스팅 하는 거 멋지다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "테이스팅 하는 거 멋지다"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "테이스팅 하는 거 멋지다"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "테이스팅 하는 거 멋지다"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "와인 맛의 미묘한 차이까지 다 느끼는 거야?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "아니"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "아니"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "아니"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "아니"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "솔직히 그냥 다 맛있어서…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "솔직히 그냥 다 맛있어서…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "솔직히 그냥 다 맛있어서…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "솔직히 그냥 다 맛있어서…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이건 좀 시큼하게 맛있는 와인이구나~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이건 좀 시큼하게 맛있는 와인이구나~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이건 좀 시큼하게 맛있는 와인이구나~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이건 좀 시큼하게 맛있는 와인이구나~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이건 떫은 맛 나는 맛있는 와인이구나~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이건 떫은 맛 나는 맛있는 와인이구나~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이건 떫은 맛 나는 맛있는 와인이구나~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이건 떫은 맛 나는 맛있는 와인이구나~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이 정도"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이 정도"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이 정도"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이 정도"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "하아아아앙"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "하아아아앙"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "하아아아앙"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "하아아아앙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "상상하니까"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "상상하니까"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "상상하니까"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "상상하니까"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "와인 마시구 싶다"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "와인 마시구 싶다"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "와인 마시구 싶다"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "와인 마시구 싶다"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "조만간 구원자님이랑 마셔야겠어!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "조만간 구원자님이랑 마셔야겠어!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "조만간 구원자님이랑 마셔야겠어!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "조만간 구원자님이랑 마셔야겠어!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "태초에 천족과 마족이 있었다…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "태초에 천족과 마족이 있었다…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "태초에 천족과 마족이 있었다…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "태초에 천족과 마족이 있었다…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "지상에서는 전쟁의 봉화가 불타오르고…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "지상에서는 전쟁의 봉화가 불타오르고…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "지상에서는 전쟁의 봉화가 불타오르고…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "지상에서는 전쟁의 봉화가 불타오르고…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "??"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "??"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "??"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "??"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님이 추천해준 거 말고"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님이 추천해준 거 말고"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님이 추천해준 거 말고"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님이 추천해준 거 말고"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "다른 게임도 해 봤는데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "다른 게임도 해 봤는데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "다른 게임도 해 봤는데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "다른 게임도 해 봤는데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "대뜸 이렇게 시작하길래"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "대뜸 이렇게 시작하길래"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "대뜸 이렇게 시작하길래"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "대뜸 이렇게 시작하길래"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이게 뭔 소리야?? 했거든?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이게 뭔 소리야?? 했거든?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이게 뭔 소리야?? 했거든?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이게 뭔 소리야?? 했거든?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "근데 생각해 보니까"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "근데 생각해 보니까"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "근데 생각해 보니까"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "근데 생각해 보니까"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님이 에덴에 막 왔을 때"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님이 에덴에 막 왔을 때"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님이 에덴에 막 왔을 때"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님이 에덴에 막 왔을 때"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이런 느낌이었으려나 싶더라구?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이런 느낌이었으려나 싶더라구?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이런 느낌이었으려나 싶더라구?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이런 느낌이었으려나 싶더라구?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "나는 게임을 끌 수 있었지만"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "나는 게임을 끌 수 있었지만"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "나는 게임을 끌 수 있었지만"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "나는 게임을 끌 수 있었지만"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님은 그럴 수가 없었잖아"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님은 그럴 수가 없었잖아"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님은 그럴 수가 없었잖아"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님은 그럴 수가 없었잖아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그래서~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그래서~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그래서~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그래서~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "힘들었겠구나~~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "힘들었겠구나~~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "힘들었겠구나~~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "힘들었겠구나~~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진지하게 걱정해 주는 거 맞지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "진지하게 걱정해 주는 거 맞지?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "진지하게 걱정해 주는 거 맞지?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "진지하게 걱정해 주는 거 맞지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진지하게 걱정해 주는 거 맞지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "진지하게 걱정해 주는 거 맞지?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "진지하게 걱정해 주는 거 맞지?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "진지하게 걱정해 주는 거 맞지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "진짜야!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "진짜야!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "진짜야!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "진짜야!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "깊게 생각하면"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "깊게 생각하면"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "깊게 생각하면"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "깊게 생각하면"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "너무 막막해서 무서운걸"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "너무 막막해서 무서운걸"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "너무 막막해서 무서운걸"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "너무 막막해서 무서운걸"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 대단하네에에에"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 대단하네에에에"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 대단하네에에에"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 대단하네에에에"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "또 얼버무리네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "또 얼버무리네"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "또 얼버무리네"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "또 얼버무리네"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "또 얼버무리네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "또 얼버무리네"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "또 얼버무리네"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "또 얼버무리네"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "흥"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "흥"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "흥"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "흥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "무서운걸 어떡해"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "무서운걸 어떡해"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "무서운걸 어떡해"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "무서운걸 어떡해"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "횃불 해적단 말이야"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "횃불 해적단 말이야"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "횃불 해적단 말이야"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "횃불 해적단 말이야"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "어느새 이렇게 커져버렸지만"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "어느새 이렇게 커져버렸지만"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "어느새 이렇게 커져버렸지만"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "어느새 이렇게 커져버렸지만"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "처음에는 정말 오합지졸이었거든~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "처음에는 정말 오합지졸이었거든~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "처음에는 정말 오합지졸이었거든~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "처음에는 정말 오합지졸이었거든~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "갈곳 없는 정령"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "갈곳 없는 정령"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "갈곳 없는 정령"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "갈곳 없는 정령"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "배가 타고 싶은 정령"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "배가 타고 싶은 정령"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "배가 타고 싶은 정령"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "배가 타고 싶은 정령"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그냥 집 나온 정령"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그냥 집 나온 정령"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그냥 집 나온 정령"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그냥 집 나온 정령"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "나처럼 술 좋아하는 정령"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "나처럼 술 좋아하는 정령"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "나처럼 술 좋아하는 정령"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "나처럼 술 좋아하는 정령"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그런 녀석들이 대충 모이다 보니 이렇게 됐어"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그런 녀석들이 대충 모이다 보니 이렇게 됐어"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그런 녀석들이 대충 모이다 보니 이렇게 됐어"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그런 녀석들이 대충 모이다 보니 이렇게 됐어"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "셰리는 해적단에 소속감을 못 느꼈다고 했지만"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 제법 좋아하지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그래도 제법 좋아하지?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그래도 제법 좋아하지?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그래도 제법 좋아하지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 제법 좋아하지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그래도 제법 좋아하지?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그래도 제법 좋아하지?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그래도 제법 좋아하지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그럼!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그럼!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그럼!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그럼!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "내 해적단인걸"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "내 해적단인걸"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "내 해적단인걸"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "내 해적단인걸"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "더 좋아하고 싶은데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "더 좋아하고 싶은데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "더 좋아하고 싶은데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "더 좋아하고 싶은데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그러지 못해서 속상한 거야아아"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그러지 못해서 속상한 거야아아"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그러지 못해서 속상한 거야아아"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그러지 못해서 속상한 거야아아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "또 그 버릇"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "또 그 버릇"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "또 그 버릇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "또 그 버릇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "또 그 버릇"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "또 그 버릇"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "또 그 버릇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "또 그 버릇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진지한 얘기 할 때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "진지한 얘기 할 때"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "진지한 얘기 할 때"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "진지한 얘기 할 때"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진지한 얘기 할 때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "진지한 얘기 할 때"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "진지한 얘기 할 때"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "진지한 얘기 할 때"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말꼬리 늘이는 버릇"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "말꼬리 늘이는 버릇"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "말꼬리 늘이는 버릇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "말꼬리 늘이는 버릇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말꼬리 늘이는 버릇"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "말꼬리 늘이는 버릇"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "말꼬리 늘이는 버릇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "말꼬리 늘이는 버릇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "셰리 선장에 대해 너무 많이 알아버렸군"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "셰리 선장에 대해 너무 많이 알아버렸군"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "셰리 선장에 대해 너무 많이 알아버렸군"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "셰리 선장에 대해 너무 많이 알아버렸군"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그런 구원자님에게는"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그런 구원자님에게는"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그런 구원자님에게는"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그런 구원자님에게는"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "술주정 공격을 하겠습니다!!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "술주정 공격을 하겠습니다!!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "술주정 공격을 하겠습니다!!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "술주정 공격을 하겠습니다!!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "훙냐냐냐~~~~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "훙냐냐냐~~~~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "훙냐냐냐~~~~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "훙냐냐냐~~~~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "항상 술에 취해 있는 거"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "항상 술에 취해 있는 거"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "항상 술에 취해 있는 거"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "항상 술에 취해 있는 거"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "항상 술에 취해 있는 거"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "항상 술에 취해 있는 거"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "항상 술에 취해 있는 거"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "항상 술에 취해 있는 거"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "혹시 이렇게 말꼬리 늘이는 버릇을"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "숨기기 위한 위장이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "숨기기 위한 위장이야?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "숨기기 위한 위장이야?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "숨기기 위한 위장이야?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "숨기기 위한 위장이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "숨기기 위한 위장이야?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "숨기기 위한 위장이야?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "숨기기 위한 위장이야?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "에에엥?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "에에엥?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "에에엥?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "에에엥?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "술은 정말 좋아서 마시는 거야아"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "술은 정말 좋아서 마시는 거야아"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "술은 정말 좋아서 마시는 거야아"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "술은 정말 좋아서 마시는 거야아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그리구우우"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그리구우우"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그리구우우"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그리구우우"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그냥"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그냥"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그냥"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그냥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "좀 그렇잖아아아"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "좀 그렇잖아아아"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "좀 그렇잖아아아"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "좀 그렇잖아아아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "말로 하면 좀 나은데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "말로 하면 좀 나은데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "말로 하면 좀 나은데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "말로 하면 좀 나은데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "에버톡으로 보내면 기록이 남아서"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "에버톡으로 보내면 기록이 남아서"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "에버톡으로 보내면 기록이 남아서"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "에버톡으로 보내면 기록이 남아서"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "나중에 다시 보게 되고"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "나중에 다시 보게 되고"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "나중에 다시 보게 되고"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "나중에 다시 보게 되고"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "왠지 부끄러워어어ㅓ어"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "왠지 부끄러워어어ㅓ어"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "왠지 부끄러워어어ㅓ어"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "왠지 부끄러워어어ㅓ어"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버톡은 취한 척을 못 하니까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "에버톡은 취한 척을 못 하니까?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "에버톡은 취한 척을 못 하니까?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "에버톡은 취한 척을 못 하니까?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버톡은 취한 척을 못 하니까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "에버톡은 취한 척을 못 하니까?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "에버톡은 취한 척을 못 하니까?"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "에버톡은 취한 척을 못 하니까?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "오늘 구원자님"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "오늘 구원자님"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "오늘 구원자님"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "오늘 구원자님"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "엄청 날카롭네"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "엄청 날카롭네"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "엄청 날카롭네"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "엄청 날카롭네"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "흐음으음으으음음"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "흐음으음으으음음"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "흐음으음으으음음"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "흐음으음으으음음"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그 이해도를 치하하며"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그 이해도를 치하하며"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그 이해도를 치하하며"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그 이해도를 치하하며"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "셰리학 박사학위를 수여하겠습니다"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "셰리학 박사학위를 수여하겠습니다"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "셰리학 박사학위를 수여하겠습니다"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "셰리학 박사학위를 수여하겠습니다"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…고마워;"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…고마워;"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…고마워;"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…고마워;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…고마워;"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…고마워;"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…고마워;"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…고마워;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이제 셰리학의 권위자가 되셨으니"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이제 셰리학의 권위자가 되셨으니"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이제 셰리학의 권위자가 되셨으니"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이제 셰리학의 권위자가 되셨으니"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "앞으로도 셰리 선장에 대해"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "앞으로도 셰리 선장에 대해"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "앞으로도 셰리 선장에 대해"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "앞으로도 셰리 선장에 대해"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "깊게 탐구해 주쎄요오옹"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "깊게 탐구해 주쎄요오옹"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "깊게 탐구해 주쎄요오옹"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "깊게 탐구해 주쎄요오옹"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "바에 칵테일을 마시러 가면"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "바에 칵테일을 마시러 가면"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "바에 칵테일을 마시러 가면"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "바에 칵테일을 마시러 가면"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "목테일이라고"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "목테일이라고"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "목테일이라고"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "목테일이라고"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "논알콜 칵테일 종류가 있는데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "논알콜 칵테일 종류가 있는데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "논알콜 칵테일 종류가 있는데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "논알콜 칵테일 종류가 있는데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "생각보다 맛이 그럴싸해서 가끔 속아"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "생각보다 맛이 그럴싸해서 가끔 속아"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "생각보다 맛이 그럴싸해서 가끔 속아"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "생각보다 맛이 그럴싸해서 가끔 속아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "분명히 그걸 마시고 나서 알딸딸해졌는데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "분명히 그걸 마시고 나서 알딸딸해졌는데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "분명히 그걸 마시고 나서 알딸딸해졌는데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "분명히 그걸 마시고 나서 알딸딸해졌는데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "나중에 가서 보니 논알콜일 때도 있고…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "나중에 가서 보니 논알콜일 때도 있고…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "나중에 가서 보니 논알콜일 때도 있고…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "나중에 가서 보니 논알콜일 때도 있고…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "분명 취한 기분이 들었는데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "분명 취한 기분이 들었는데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "분명 취한 기분이 들었는데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "분명 취한 기분이 들었는데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이 기분이 가짜라니 말도 안 되지 않아?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이 기분이 가짜라니 말도 안 되지 않아?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이 기분이 가짜라니 말도 안 되지 않아?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이 기분이 가짜라니 말도 안 되지 않아?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다 마음먹기 달렸다는 거지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "다 마음먹기 달렸다는 거지"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "다 마음먹기 달렸다는 거지"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "다 마음먹기 달렸다는 거지"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다 마음먹기 달렸다는 거지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "다 마음먹기 달렸다는 거지"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "다 마음먹기 달렸다는 거지"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "다 마음먹기 달렸다는 거지"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러니까 셰리도 너무 걱정 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그러니까 셰리도 너무 걱정 마"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그러니까 셰리도 너무 걱정 마"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그러니까 셰리도 너무 걱정 마"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러니까 셰리도 너무 걱정 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그러니까 셰리도 너무 걱정 마"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그러니까 셰리도 너무 걱정 마"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그러니까 셰리도 너무 걱정 마"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "셰리의 제자리도 금방 찾을 수 있을 거야"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니면 제자리라고 생각할 수 있는 곳을"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "아니면 제자리라고 생각할 수 있는 곳을"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "아니면 제자리라고 생각할 수 있는 곳을"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "아니면 제자리라고 생각할 수 있는 곳을"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니면 제자리라고 생각할 수 있는 곳을"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "아니면 제자리라고 생각할 수 있는 곳을"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "아니면 제자리라고 생각할 수 있는 곳을"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "아니면 제자리라고 생각할 수 있는 곳을"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 은근히"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 은근히"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 은근히"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 은근히"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "근성론자네?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "근성론자네?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "근성론자네?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "근성론자네?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그래도 그랬으면 좋겠다"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그래도 그랬으면 좋겠다"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그래도 그랬으면 좋겠다"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그래도 그랬으면 좋겠다"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "찾을 수 있다고 생각하면"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "찾을 수 있다고 생각하면"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "찾을 수 있다고 생각하면"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "찾을 수 있다고 생각하면"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "금방 찾아지겠지?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "금방 찾아지겠지?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "금방 찾아지겠지?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "금방 찾아지겠지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "셰리학 박사가 하는 말이니까"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "셰리학 박사가 하는 말이니까"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "셰리학 박사가 하는 말이니까"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "셰리학 박사가 하는 말이니까"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "믿어 볼게~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "믿어 볼게~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "믿어 볼게~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "믿어 볼게~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "ㄴ ㅏ?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "ㄴ ㅏ?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "ㄴ ㅏ?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "ㄴ ㅏ?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "나몰ㄹ ㅏ?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "나몰ㄹ ㅏ?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "나몰ㄹ ㅏ?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "나몰ㄹ ㅏ?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "셰리잔아~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "셰리잔아~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "셰리잔아~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "셰리잔아~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "트로이카 체고의 선 자ㅇ"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "트로이카 체고의 선 자ㅇ"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "트로이카 체고의 선 자ㅇ"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "트로이카 체고의 선 자ㅇ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "아 한잔더해야지"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "아 한잔더해야지"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "아 한잔더해야지"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "아 한잔더해야지"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "암튼 놀러와아우앙"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "암튼 놀러와아우앙"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "암튼 놀러와아우앙"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "암튼 놀러와아우앙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "항구에 정박해있으니가~~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "항구에 정박해있으니가~~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "항구에 정박해있으니가~~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "항구에 정박해있으니가~~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 잃어버린 브로치"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 잃어버린 브로치"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 잃어버린 브로치"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 잃어버린 브로치"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그거 대충"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그거 대충"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그거 대충"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그거 대충"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "대애애ㅐㅐ충"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "대애애ㅐㅐ충"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "대애애ㅐㅐ충"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "대애애ㅐㅐ충"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "비슷한 거 차면 아무도 모를걸?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "비슷한 거 차면 아무도 모를걸?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "비슷한 거 차면 아무도 모를걸?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "비슷한 거 차면 아무도 모를걸?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "솔직히이히히"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "솔직히이히히"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "솔직히이히히"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "솔직히이히히"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러고 싶지 않아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그러고 싶지 않아"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그러고 싶지 않아"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그러고 싶지 않아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러고 싶지 않아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "그러고 싶지 않아"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "그러고 싶지 않아"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "그러고 싶지 않아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "범생이~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "범생이~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "범생이~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "범생이~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이런 건 의미가 중요한 거잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "이런 건 의미가 중요한 거잖아"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "이런 건 의미가 중요한 거잖아"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "이런 건 의미가 중요한 거잖아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이런 건 의미가 중요한 거잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "이런 건 의미가 중요한 거잖아"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "이런 건 의미가 중요한 거잖아"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "이런 건 의미가 중요한 거잖아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그래~?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그래~?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그래~?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그래~?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "흐으으음"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "흐으으음"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "흐으으음"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "흐으으음"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그러면 구원자님은 성실하니깐"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그러면 구원자님은 성실하니깐"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그러면 구원자님은 성실하니깐"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그러면 구원자님은 성실하니깐"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "몸으로 팍팍 사례해 줄거지?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "몸으로 팍팍 사례해 줄거지?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "몸으로 팍팍 사례해 줄거지?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "몸으로 팍팍 사례해 줄거지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…또 그 소리!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…또 그 소리!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…또 그 소리!!"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…또 그 소리!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…또 그 소리!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…또 그 소리!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…또 그 소리!!"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…또 그 소리!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "아 재밋어~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "아 재밋어~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "아 재밋어~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "아 재밋어~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "우햐햐햐~~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "우햐햐햐~~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "우햐햐햐~~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "우햐햐햐~~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "여기 대욕장 진짜 좋다아"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "여기 대욕장 진짜 좋다아"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "여기 대욕장 진짜 좋다아"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "여기 대욕장 진짜 좋다아"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "온천 물도 완전 보들보들하고"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "온천 물도 완전 보들보들하고"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "온천 물도 완전 보들보들하고"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "온천 물도 완전 보들보들하고"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "내가 들어간 쪽은 노천온천이 있었는데"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "내가 들어간 쪽은 노천온천이 있었는데"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "내가 들어간 쪽은 노천온천이 있었는데"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "내가 들어간 쪽은 노천온천이 있었는데"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님 들어간 쪽은 어땠어? 거기도 있었어?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님 들어간 쪽은 어땠어? 거기도 있었어?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님 들어간 쪽은 어땠어? 거기도 있었어?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님 들어간 쪽은 어땠어? 거기도 있었어?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "내일은 우리 탕 바꿔서 들어가 보자!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "내일은 우리 탕 바꿔서 들어가 보자!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "내일은 우리 탕 바꿔서 들어가 보자!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "내일은 우리 탕 바꿔서 들어가 보자!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "음~ 구원자님~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "음~ 구원자님~"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "음~ 구원자님~"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "음~ 구원자님~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "아직 씻고 있어~?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "아직 씻고 있어~?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "아직 씻고 있어~?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "아직 씻고 있어~?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "우리 둘 뿐이니까"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "우리 둘 뿐이니까"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "우리 둘 뿐이니까"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "우리 둘 뿐이니까"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "누구 눈치도 보지 않고"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "누구 눈치도 보지 않고"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "누구 눈치도 보지 않고"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "누구 눈치도 보지 않고"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님이 '진짜로 하고 싶은 것'"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님이 '진짜로 하고 싶은 것'"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님이 '진짜로 하고 싶은 것'"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님이 '진짜로 하고 싶은 것'"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "그걸 내게 말해줘"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "그걸 내게 말해줘"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "그걸 내게 말해줘"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "그걸 내게 말해줘"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "가온국은 지역마다 문화가 꽤 다르거든?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "가온국은 지역마다 문화가 꽤 다르거든?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "가온국은 지역마다 문화가 꽤 다르거든?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "가온국은 지역마다 문화가 꽤 다르거든?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님이 전에 가본 곳하고"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님이 전에 가본 곳하고"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님이 전에 가본 곳하고"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님이 전에 가본 곳하고"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "지금 우리가 와 있는 곳은 꽤 분위기가 다르지?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "지금 우리가 와 있는 곳은 꽤 분위기가 다르지?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "지금 우리가 와 있는 곳은 꽤 분위기가 다르지?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "지금 우리가 와 있는 곳은 꽤 분위기가 다르지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "오늘은 나랑 같이 여길 좀 산책해줘"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "오늘은 나랑 같이 여길 좀 산책해줘"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "오늘은 나랑 같이 여길 좀 산책해줘"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "오늘은 나랑 같이 여길 좀 산책해줘"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "게이이임?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "게이이임?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "게이이임?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "게이이임?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "배 위에서도 카드 게임 같은 건 했었지만"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "배 위에서도 카드 게임 같은 건 했었지만"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "배 위에서도 카드 게임 같은 건 했었지만"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "배 위에서도 카드 게임 같은 건 했었지만"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님이 말하는 건 이런 게 아닌 거지?"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님이 말하는 건 이런 게 아닌 거지?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님이 말하는 건 이런 게 아닌 거지?"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님이 말하는 건 이런 게 아닌 거지?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "뭐, 일단 가보자고~!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "뭐, 일단 가보자고~!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "뭐, 일단 가보자고~!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "뭐, 일단 가보자고~!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님…!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님…!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님…!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님…!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "우리가 해냈어!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "우리가 해냈어!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "우리가 해냈어!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "우리가 해냈어!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "우리가…!!"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "우리가…!!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "우리가…!!"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "우리가…!!"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "내 자리가"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "내 자리가"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "내 자리가"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "내 자리가"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "어딘가 존재하긴 하는 걸지…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "어딘가 존재하긴 하는 걸지…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "어딘가 존재하긴 하는 걸지…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "어딘가 존재하긴 하는 걸지…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "혼자서는 잘 모르겠어…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "혼자서는 잘 모르겠어…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "혼자서는 잘 모르겠어…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "혼자서는 잘 모르겠어…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이런 길을 선택하는 것도"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이런 길을 선택하는 것도"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이런 길을 선택하는 것도"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이런 길을 선택하는 것도"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원자님이 알려준 방식이니까…"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "구원자님이 알려준 방식이니까…"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "구원자님이 알려준 방식이니까…"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "구원자님이 알려준 방식이니까…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "두 발을 땅에 딛을게♪"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "두 발을 땅에 딛을게♪"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "두 발을 땅에 딛을게♪"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "두 발을 땅에 딛을게♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "둥실둥실 떠다니던 망망대해도"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "둥실둥실 떠다니던 망망대해도"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "둥실둥실 떠다니던 망망대해도"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "둥실둥실 떠다니던 망망대해도"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "마음 둘 곳 없던 고향 봉우리도 아닌"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "마음 둘 곳 없던 고향 봉우리도 아닌"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "마음 둘 곳 없던 고향 봉우리도 아닌"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "마음 둘 곳 없던 고향 봉우리도 아닌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "내가 속할 곳이 어딘지"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "내가 속할 곳이 어딘지"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "내가 속할 곳이 어딘지"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "내가 속할 곳이 어딘지"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이제 알 것 같아."
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "이제 알 것 같아."
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "이제 알 것 같아."
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "이제 알 것 같아."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "사랑이 가득한 하루야~♡"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "Today is a day full of love!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "充滿愛的一天～♡"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "充滿愛的一天～♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "이럴 땐 달달한 스파클링 와인이 딱이지♪ 좋구만~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "And a sweet sparkling wine is perfect for the occasion♪ Perfect!"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "這種時候最適合喝甜甜的氣泡葡萄飄飄飲♪真棒～"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "這種時候最適合喝甜甜的氣泡葡萄飄飄飲♪真棒～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 많이 마시지는 마. 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't drink too much. And thanks!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不要喝太多了，謝謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不要喝太多了，謝謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 많이 마시지는 마. 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't drink too much. And thanks!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不要喝太多了，謝謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不要喝太多了，謝謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "1년중 가쟝 행복한 날~♥"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "The happiest day of the year ♥"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "一年中最幸福的日子～♥"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "一年中最幸福的日子～♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구원쟈님 여기술이진짜많ㅇㅏ"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "SaVioR, there's sooo much booze heeeere"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "救援遮這裡真的狠朵飄飄飲"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "救援遮這裡真的狠朵飄飄飲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "구엉자님이랑도 한잔 하고싶네~"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "WaNna driiink, SaVioRRRRR?"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "也想跟救淵者喝一杯呢～"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "也想跟救淵者喝一杯呢～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐, 얼마나 마신 거야…? 지금 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait, how much have you had…? I'm on my way"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等，妳是喝了多少啊…？我現在過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等，妳是喝了多少啊…？我現在過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐, 얼마나 마신 거야…? 지금 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait, how much have you had…? I'm on my way"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等，妳是喝了多少啊…？我現在過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等，妳是喝了多少啊…？我現在過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "칠면조 구이와 와인 한 잔…\r\n상상만 해도 침이 줄줄 흐르는 거 있지♪"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "Turkey and a glass of wine…\r\nMy mouth is watering even at the thought of it♪"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "烤火雞跟一杯葡萄飄飄飲…\r\n光是用想像的都口水直流了♪"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "烤火雞跟一杯葡萄飄飄飲…\r\n光是用想像的都口水直流了♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "셰리",
+            "message": "내년도 잘 부탁해, 우리 구원자님~♪"
+          },
+          "en": {
+            "speaker": "Cherrie",
+            "message": "Here's to another great year, Savior♪"
+          },
+          "zh_tw": {
+            "speaker": "雪莉",
+            "message": "明年也請多指教了，我們的救援者～♪"
+          },
+          "zh_cn": {
+            "speaker": "雪莉",
+            "message": "明年也請多指教了，我們的救援者～♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 잘 부탁해. 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks to you as well!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也請妳多多指教，謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也請妳多多指教，謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 잘 부탁해. 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks to you as well!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也請妳多多指教，謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也請妳多多指教，謝謝妳"
+          }
+        }
+      ]
+    }
+  }
+}

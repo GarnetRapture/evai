@@ -1,0 +1,5434 @@
+{
+  "id": "2010",
+  "name": "홍란",
+  "name_en": "Honglan",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "캐스터",
+  "sub_class": "광역",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "얼음달 나비",
+    "constellation": "인연_메피스토_이벤트2",
+    "union": "가온 사방신",
+    "birthday": "225",
+    "height": 163,
+    "weight": 51,
+    "cv_ko": "박시윤",
+    "cv_jp": "Yukana",
+    "like": [
+      "구름 과자"
+    ],
+    "dislike": [
+      "우박 (맞으면 아프다)"
+    ],
+    "hobby": [
+      "구름 빗어주기"
+    ],
+    "speciality": [
+      "몽상하기"
+    ]
+  },
+  "personality": {
+    "description": "구원자님 안녕…♪  \n이렇게 둥실둥실 구름 위에 누워있다 보면, 세상 근심은 다 녹아 없어지는 것 같아요.\n구원자님도 잠깐 함께 할래요…? 시간 가는 줄 모를 테죠. 참 좋을 것 같아요… \n한창 나른할 때 옆으로 굴렀더니, 구원자님의 얼굴이 가까이에 보이면… 후후…\n\n오늘도 가온에는 너무 많은 일이 일어나고 있지만… 제 마음은 항상 같아요…\n클로버 밭에서 한숨 폭 자고 일어나서 아기 토끼들이랑 얘기하고 싶어요…\n언젠가 그런 평화가 꼭, 찾아왔으면… 마치 어느 날 갑자기 제 앞에 나타난 구원자님처럼요♪",
+    "greeting": "세상 일이 모두 이 둥실둥실 구름 같으면 좋겠구나~"
+  },
+  "speech_patterns": [
+    "이게 구원자님 에버톡…?",
+    "구원자님이 도와줬으면 하는 일이 있는데…",
+    "바쁘세요…?",
+    "등 뒤에 개구리가 붙었는데…",
+    "안 내려가요…",
+    "눕고 싶은데",
+    "개구리가 눌릴까봐…",
+    "후후…",
+    "고맙습니다…♪",
+    "구원자님…",
+    "길을 가다가…",
+    "옷을 입은 강아지를 봤어요…",
+    "신기해…♪",
+    "토끼도 옷을 입으면 따뜻하려나…?",
+    "어머나…",
+    "흐음… 아기 토끼들은 옷 입는 걸 좋아할까…?",
+    "아직 화해한 건 아니지만…\r\n나중에 한 번 물어봐야지…",
+    "입이 너무 써요…",
+    "전에 토끼들이 풀을 너무 맛있게 먹어서…",
+    "오늘 심심해서 저도 먹어봤는데…",
+    "토끼들은 이런 걸 어떻게 먹는 걸까…",
+    "폭신폭신한 솜사탕이 그리워라…",
+    "*32ㅐ",
+    "아…",
+    "다람쥐가 에버폰 위로 올라갔어요…",
+    "보들보들한 꼬리가 화면을 눌러서…",
+    "후후… 귀여워라…♪",
+    "구원자님이 알려준 사진 찍는 법…\r\n꽤 익숙해졌어요…",
+    "이건 아케나인의 토끼에요…",
+    "네…",
+    "사진첩에 구름 사진이 가득…♪",
+    "유리아님도, 메피도 잔뜩 찍었는데…",
+    "클레르는 찍으려는 순간 어디론가 가버려서…",
+    "후응… 사진은 부끄러운 건가…?",
+    "잘 모르겠어…",
+    "이번엔 구원자님을 찍을래요… 후후…♪",
+    "(__)",
+    "이게 뭘까요…?",
+    "응…?",
+    "얼굴…? 흐음… 잘 모르겠어…",
+    "오히려 토끼를 닮았는데…",
+    "아… 정말이다…♪",
+    "아기 토끼를 닮았어…",
+    "후후…구원자님 대단해…♪",
+    "좋은 아침이에요… 구원자님…",
+    "하지만 지금 일어났는걸…",
+    "그러면… 좋은 밤…?",
+    "밤이면 자야 할 시간인데…",
+    "후응… 다시 잘게요…",
+    "잘 자요… 구원자님…♪"
+  ],
+  "comments": [
+    {
+      "writer": "클레르",
+      "comment": "위대한 정령이 저렇게 아무한테나 웃고 무방비하게 굴다니, 좀 지나치군요."
+    },
+    {
+      "writer": "캐서린",
+      "comment": "으음, 앞으로 많은 걸 알려드려야겠어요."
+    },
+    {
+      "writer": "하루",
+      "comment": "항상 주변에 인기가 많아. …웃는 얼굴 때문인가…"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "홍란",
+        "message": "이게 구원자님 에버톡…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 홍란"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 홍란"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님이 도와줬으면 하는 일이 있는데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "바쁘세요…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "등 뒤에 개구리가 붙었는데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "안 내려가요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "눕고 싶은데"
+      },
+      {
+        "speaker": "홍란",
+        "message": "개구리가 눌릴까봐…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 갈게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 갈게"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후후…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "고맙습니다…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "길을 가다가…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "옷을 입은 강아지를 봤어요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "신기해…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "토끼도 옷을 입으면 따뜻하려나…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴거야"
+      },
+      {
+        "speaker": "홍란",
+        "message": "어머나…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "흐음… 아기 토끼들은 옷 입는 걸 좋아할까…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "아직 화해한 건 아니지만…\r\n나중에 한 번 물어봐야지…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "입이 너무 써요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 그래?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "전에 토끼들이 풀을 너무 맛있게 먹어서…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "오늘 심심해서 저도 먹어봤는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맛이 없었구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맛이 없었구나"
+      },
+      {
+        "speaker": "홍란",
+        "message": "토끼들은 이런 걸 어떻게 먹는 걸까…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "폭신폭신한 솜사탕이 그리워라…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "*32ㅐ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "아…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "다람쥐가 에버폰 위로 올라갔어요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "보들보들한 꼬리가 화면을 눌러서…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후후… 귀여워라…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님이 알려준 사진 찍는 법…\r\n꽤 익숙해졌어요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "이건 아케나인의 토끼에요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연습했어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연습했어?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "네…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "사진첩에 구름 사진이 가득…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "유리아님도, 메피도 잔뜩 찍었는데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "클레르는 찍으려는 순간 어디론가 가버려서…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "부끄러웠을 수도 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "부끄러웠을 수도 있어"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후응… 사진은 부끄러운 건가…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "잘 모르겠어…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "이번엔 구원자님을 찍을래요… 후후…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "(__)"
+      },
+      {
+        "speaker": "홍란",
+        "message": "이게 뭘까요…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고개를 숙인 얼굴 이모티콘이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고개를 숙인 얼굴 이모티콘이야"
+      },
+      {
+        "speaker": "홍란",
+        "message": "응…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "얼굴…? 흐음… 잘 모르겠어…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "오히려 토끼를 닮았는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "()() 귀를 달아주면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "()() 귀를 달아주면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "(__) 토끼도 가능해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "(__) 토끼도 가능해"
+      },
+      {
+        "speaker": "홍란",
+        "message": "아… 정말이다…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "아기 토끼를 닮았어…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후후…구원자님 대단해…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "좋은 아침이에요… 구원자님…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금은 밤인데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금은 밤인데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "응…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "하지만 지금 일어났는걸…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "그러면… 좋은 밤…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "밤이면 자야 할 시간인데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후응… 다시 잘게요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐만…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐만…!"
+      },
+      {
+        "speaker": "홍란",
+        "message": "잘 자요… 구원자님…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "비가 올 것 같아요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직 화창한데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직 화창한데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "으응… 구름에 얼음조각이 맺혀있어요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "곧 녹아서 떨어질 것 같아…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "감기 걸리지 않게 조심해요…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님한테 주려던 눈꽃 결정…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "오다가 녹았어요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "슬퍼…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아. 마음만 받을게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아. 마음만 받을게"
+      },
+      {
+        "speaker": "홍란",
+        "message": "마음…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "마음은 어떻게 줘야 하지…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니, 그런 뜻이 아니라…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니, 그런 뜻이 아니라…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "클레르에게 마음을 주는 방법을 물어볼게요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "가져다드릴 테니 기다리세요… 구원자님…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "오늘 마을 아이가, 잠이 안 오면 양을 센다고…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "그래서 저도 양을 세어 봤는데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "3마리째에서 자꾸 잠들어버려요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란은 잘 자니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란은 잘 자니까"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후응…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "나도 양을 세고 싶은데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "좋아… 오늘은 5마리를 세어볼래요…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님은…\r\n주위 애들이 하는 말이"
+      },
+      {
+        "speaker": "홍란",
+        "message": "다 이해가 돼요…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란??"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후음… 여기가 아케나인…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어서와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어서와"
+      },
+      {
+        "speaker": "홍란",
+        "message": "여기도 풀밭이 있어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물론이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물론이야"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구름은요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "구름도 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "구름도 있어"
+      },
+      {
+        "speaker": "홍란",
+        "message": "좋은 곳이네…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "아케나인 마을 어린이가 \r\n산타클 로스가 진짜 있냐고 물었어요"
+      },
+      {
+        "speaker": "홍란",
+        "message": "대답해주려고 했는데…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "산타클 로스가 누구에요…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님도 모르나봐요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후음… 신비의 동물인가…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "토끼들은 착하고 순하다는 이미지가 있는 것 같지만…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "아니에요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "흥…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "다들 속고 있어…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "저는 봄 구름이 좋아요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "겨울 구름보다 좀 더 포근하고, 촉촉하고…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 차이가 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 차이가 있어?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "모르시는군요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "제가 다음에 덮어드릴게요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "잘 빗어놔야지…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "옷 입는 건 너무 귀찮아요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "앞 뒤가 어딘지도 한참 봐야하고…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "좋은 방법이 없을까요…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞뒤가 똑같은 옷을 찾아볼게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞뒤가 똑같은 옷을 찾아볼게"
+      },
+      {
+        "speaker": "홍란",
+        "message": "…!"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님… 똑똑해…♪"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "홍란",
+        "message": "뭐해요?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님~"
+      },
+      {
+        "speaker": "홍란",
+        "message": "……."
+      },
+      {
+        "speaker": "홍란",
+        "message": "심심해…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "메시지를 이제 봤어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "메시지를 이제 봤어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐 하는 중이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐 하는 중이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님은 파티에 가본 적 있어요…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "…오늘도 바쁘시구나…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "……."
+      },
+      {
+        "speaker": "홍란",
+        "message": "가온은, 이 무렵에 산불이 잘 나는 편이에요"
+      },
+      {
+        "speaker": "홍란",
+        "message": "그래서 가끔 비를 내려줘야하는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신경쓰여?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신경쓰여?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "……."
+      },
+      {
+        "speaker": "홍란",
+        "message": "네에…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "홍란",
+        "message": "더워요 힘들어요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "살려주세요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러고 보니까 유리아가…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러고 보니까 유리아가…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "유리아님이요…?"
+      },
+      {
+        "speaker": "홍란",
+        "message": "후음. 둥실둥실 낮잠보다 더 달콤한 것…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "구원자님, 오늘 뭐할 거에요…?\r\n저랑 만나요~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 만나러 갈게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 만나러 갈게!"
+      },
+      {
+        "speaker": "홍란",
+        "message": "뜨거운 건 힘들어요…"
+      },
+      {
+        "speaker": "홍란",
+        "message": "여름아… 안녕~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같이 여름에게 작별 인사하자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같이 여름에게 작별 인사하자!"
+      },
+      {
+        "speaker": "홍란",
+        "message": "흐흥…\r\n빙룡들도 기뻐하는 겨울날…♪"
+      },
+      {
+        "speaker": "구원자",
+        "message": "축하해, 빙룡들아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "축하해, 빙룡들아!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "홍란",
+      "en": "Honglan",
+      "zh_tw": "紅蘭",
+      "zh_cn": "紅蘭"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "캐스터",
+      "en": "Caster",
+      "zh_tw": "魔法師",
+      "zh_cn": "魔法師"
+    },
+    "sub_class": {
+      "ko": "광역",
+      "en": "AoE",
+      "zh_tw": "廣域",
+      "zh_cn": "廣域"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "얼음달 나비",
+        "en": "Ice Moon Butterfly",
+        "zh_tw": "冰凍月之蝶",
+        "zh_cn": "冰凍月之蝶"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_이벤트2",
+        "en": "인연_메피스토_이벤트2",
+        "zh_tw": "雙魚座",
+        "zh_cn": "雙魚座"
+      },
+      "union": {
+        "ko": "가온 사방신",
+        "en": "Four Divine Guardians of Gaon",
+        "zh_tw": "加溫四方守護神",
+        "zh_cn": "加溫四方守護神"
+      },
+      "cv_ko": {
+        "ko": "박시윤",
+        "en": "Siyoon Park",
+        "zh_tw": "朴詩允",
+        "zh_cn": "朴詩允"
+      },
+      "cv_jp": {
+        "ko": "Yukana",
+        "en": "Yukana",
+        "zh_tw": "Yukana",
+        "zh_cn": "Yukana"
+      },
+      "like": {
+        "ko": [
+          "구름 과자"
+        ],
+        "en": [
+          "Cloud cookies"
+        ],
+        "zh_tw": [
+          "雲形餅乾"
+        ],
+        "zh_cn": [
+          "雲形餅乾"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "우박 (맞으면 아프다)"
+        ],
+        "en": [
+          "Hail (hurts when hit)"
+        ],
+        "zh_tw": [
+          "冰雹（被打到會痛）"
+        ],
+        "zh_cn": [
+          "冰雹（被打到會痛）"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "구름 빗어주기"
+        ],
+        "en": [
+          "Brushing the clouds"
+        ],
+        "zh_tw": [
+          "梳理雲朵"
+        ],
+        "zh_cn": [
+          "梳理雲朵"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "몽상하기"
+        ],
+        "en": [
+          "Daydreaming"
+        ],
+        "zh_tw": [
+          "幻想"
+        ],
+        "zh_cn": [
+          "幻想"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "구원자님 안녕…♪  \n이렇게 둥실둥실 구름 위에 누워있다 보면, 세상 근심은 다 녹아 없어지는 것 같아요.\n구원자님도 잠깐 함께 할래요…? 시간 가는 줄 모를 테죠. 참 좋을 것 같아요… \n한창 나른할 때 옆으로 굴렀더니, 구원자님의 얼굴이 가까이에 보이면… 후후…\n\n오늘도 가온에는 너무 많은 일이 일어나고 있지만… 제 마음은 항상 같아요…\n클로버 밭에서 한숨 폭 자고 일어나서 아기 토끼들이랑 얘기하고 싶어요…\n언젠가 그런 평화가 꼭, 찾아왔으면… 마치 어느 날 갑자기 제 앞에 나타난 구원자님처럼요♪",
+        "en": "Hi, Savior…♪\nWhen I lie on the fluffy clouds, it seems all my worries about the world melt away.\nWould you stay with me for a while, Savior…? You would lose track of time. It would be great…\nFeeling so drowsy, I would roll to the side and see your face close to mine… Hehe…\n\nToo many things are happening in Gaon today, but…my heart remains the same…\nI want to wake up from a deep sleep in the clover field and talk to the baby rabbits…\nI hope someday such peace will come, just like you, Savior…who suddenly appeared before me one day.♪",
+        "zh_tw": "救援者，你好呀…♪\n躺在飄在天空的雲朵上，世界上所有煩心事似乎都會消失得一乾二淨。\n救援者要一起躺躺看嗎…？感受不到時間的流逝，感覺不錯…\n懶洋洋的時候往旁邊一滾，發現救援者的臉靠我很近…呵呵…\n\n今天加溫也發生了很多事情…但我的想法一如往常…\n我想睡在三葉草田上，睡醒後跟小兔子們聊聊天……\n那麼和平的日子總有一天會到來的…就像有天出然出現在我面前的救援者一樣♪",
+        "zh_cn": "救援者，你好呀…♪\n躺在飄在天空的雲朵上，世界上所有煩心事似乎都會消失得一乾二淨。\n救援者要一起躺躺看嗎…？感受不到時間的流逝，感覺不錯…\n懶洋洋的時候往旁邊一滾，發現救援者的臉靠我很近…呵呵…\n\n今天加溫也發生了很多事情…但我的想法一如往常…\n我想睡在三葉草田上，睡醒後跟小兔子們聊聊天……\n那麼和平的日子總有一天會到來的…就像有天出然出現在我面前的救援者一樣♪"
+      },
+      "greeting": {
+        "ko": "세상 일이 모두 이 둥실둥실 구름 같으면 좋겠구나~",
+        "en": "It'd be so nice if everything were fluffy and light like these clouds~",
+        "zh_tw": "希望世界上的事都能像這飄浮的雲朵般～",
+        "zh_cn": "希望世界上的事都能像這飄浮的雲朵般～"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "이게 구원자님 에버톡…?"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Is this your Evertalk…?"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "這個是救援者的EverTalk…？"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "這個是救援者的EverTalk…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "구원자님이 도와줬으면 하는 일이 있는데…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "There is something I want you to help me with…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "有件事希望救援者能幫我…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "有件事希望救援者能幫我…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "바쁘세요…?"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Are you busy…?"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "你在忙嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "你在忙嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "등 뒤에 개구리가 붙었는데…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "There's a frog on my back…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "我的背上黏著一隻青蛙…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "我的背上黏著一隻青蛙…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "안 내려가요…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "It refuses to go down…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "牠不離開…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "牠不離開…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "눕고 싶은데"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "I want to lie down"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "我想躺著"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "我想躺著"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "개구리가 눌릴까봐…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "but I'm afraid I might squish it…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "但怕壓到青蛙…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "但怕壓到青蛙…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "후후…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Hehe…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "呵呵…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "呵呵…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "고맙습니다…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Thank you…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "謝謝你…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "謝謝你…♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "구원자님…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Savior…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "救援者…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "救援者…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "길을 가다가…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "I was walking down the street…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "我走著走著…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "我走著走著…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "옷을 입은 강아지를 봤어요…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "and saw a puppy wearing clothes…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "看到穿衣服的小狗…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "看到穿衣服的小狗…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "신기해…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Interesting…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "真神奇…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "真神奇…♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "토끼도 옷을 입으면 따뜻하려나…?"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "I wonder if a rabbit would feel warm in clothes…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "兔子穿上衣服也會比較暖和嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "兔子穿上衣服也會比較暖和嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "어머나…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Oh…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "天啊…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "天啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "흐음… 아기 토끼들은 옷 입는 걸 좋아할까…?"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Hmm… Do baby rabbits like to dress?"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "嗯哼…小兔子們會喜歡穿衣服嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "嗯哼…小兔子們會喜歡穿衣服嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "아직 화해한 건 아니지만…\r\n나중에 한 번 물어봐야지…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "We haven't made up with each other yet…\r\nbut I'll ask later…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "雖然還沒和好…\r\n但之後要問問才行…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "雖然還沒和好…\r\n但之後要問問才行…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "입이 너무 써요…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "my mouth tastes so bitter…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "嘴巴好苦…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "嘴巴好苦…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "전에 토끼들이 풀을 너무 맛있게 먹어서…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "The rabbits were eating grass so deliciously…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "之前我看兔子們吃草吃得很開心…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "之前我看兔子們吃草吃得很開心…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "오늘 심심해서 저도 먹어봤는데…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "so I tried to taste it because I was bored…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "今天剛好沒事做，我就試著吃吃看…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "今天剛好沒事做，我就試著吃吃看…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "토끼들은 이런 걸 어떻게 먹는 걸까…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "How can rabbits eat this stuff…?"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "兔子們怎麼吃得下這種東西呢…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "兔子們怎麼吃得下這種東西呢…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "폭신폭신한 솜사탕이 그리워라…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "I miss fluffy cotton candy…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "好懷念軟綿綿的棉花糖…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "好懷念軟綿綿的棉花糖…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "*32ㅐ"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "*32"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "*32o"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "*32o"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "아…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Oh…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "啊…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "다람쥐가 에버폰 위로 올라갔어요…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "The squirrel went up to the Everphone…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "松鼠踩到EverPhone了…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "松鼠踩到EverPhone了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "보들보들한 꼬리가 화면을 눌러서…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Its soft tail touched the screen…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "用毛茸茸的尾巴觸碰畫面…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "用毛茸茸的尾巴觸碰畫面…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "후후… 귀여워라…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Hehe… So cute…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "呼呼…好可愛啊…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "呼呼…好可愛啊…♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "구원자님이 알려준 사진 찍는 법…\r\n꽤 익숙해졌어요…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "You taught me how to take pictures…\r\nI'm pretty used to it now…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "救援者告訴我的拍照方法…\r\n已經蠻熟悉的了…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "救援者告訴我的拍照方法…\r\n已經蠻熟悉的了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "이건 아케나인의 토끼에요…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "This is an Arkenine bunny…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "這是阿肯納因的兔子…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "這是阿肯納因的兔子…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "네…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "It was…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "是的…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "是的…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "사진첩에 구름 사진이 가득…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "My photo album is full of cloud pictures…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "相簿裡有一堆雲的照片…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "相簿裡有一堆雲的照片…♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "유리아님도, 메피도 잔뜩 찍었는데…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "I took a lot of pictures of Yuria and Mephi…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "還有很多張尤里婭和梅菲的照片…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "還有很多張尤里婭和梅菲的照片…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "클레르는 찍으려는 순간 어디론가 가버려서…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "But Claire left just when I was about to take a picture…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "但準備要拍克萊兒的時候，她就突然走了…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "但準備要拍克萊兒的時候，她就突然走了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "후응… 사진은 부끄러운 건가…?"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Huh… She might be embarrassed taking pictures."
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "嗯…拍照會害羞嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "嗯…拍照會害羞嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "잘 모르겠어…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "I'm not sure…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "不知道欸…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "不知道欸…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "이번엔 구원자님을 찍을래요… 후후…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "I want to take a picture of you now… Hehe…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "這次我要拍救援者…呵呵…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "這次我要拍救援者…呵呵…♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "(__)"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "(__)"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "(__)"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "(__)"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "이게 뭘까요…?"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "What do you think this is…?"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "這是什麼…？"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "這是什麼…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "응…?"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Huh…?"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "嗯…？"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "嗯…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "얼굴…? 흐음… 잘 모르겠어…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Face…? Hmm… I'm not sure…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "表情…？嗯…看不太出來欸…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "表情…？嗯…看不太出來欸…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "오히려 토끼를 닮았는데…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "It actually looks like a rabbit."
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "反而比較像兔子…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "反而比較像兔子…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "아… 정말이다…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Oh… That's true…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "啊…真的耶…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "啊…真的耶…♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "아기 토끼를 닮았어…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "It looks like a baby rabbit…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "好像小兔子…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "好像小兔子…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "후후…구원자님 대단해…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Hehe… Savior, you're awesome…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "呵呵…救援者好厲害啊…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "呵呵…救援者好厲害啊…♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "좋은 아침이에요… 구원자님…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Good morning… Savior…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "早安…救援者…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "早安…救援者…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "하지만 지금 일어났는걸…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "But I just woke up…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "但是我現在剛起床…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "但是我現在剛起床…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "그러면… 좋은 밤…?"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Then… good night…?"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "那…晚安…？"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "那…晚安…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "밤이면 자야 할 시간인데…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "I'm supposed to be sleeping at night…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "晚上是該睡覺的時間…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "晚上是該睡覺的時間…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "후응… 다시 잘게요…"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Hee… I'll go back to sleep…"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "呼嗯…我再去睡了…"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "呼嗯…我再去睡了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "잘 자요… 구원자님…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Good night… Savior…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "晚安…救援者…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "晚安…救援者…♪"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "위대한 정령이 저렇게 아무한테나 웃고 무방비하게 굴다니, 좀 지나치군요."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I can't believe a Soul can just laugh at anyone and act defenseless. It's a bit too much."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "偉大的精靈竟然對任何人都會露出笑容，還會毫無防備地滾來滾去，有點超過了。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "偉大的精靈竟然對任何人都會露出笑容，還會毫無防備地滾來滾去，有點超過了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린",
+          "message": "으음, 앞으로 많은 걸 알려드려야겠어요."
+        },
+        "en": {
+          "speaker": "Catherine",
+          "message": "Hmm, I have a lot to show you from now on."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳",
+          "message": "呃嗯，我以後再告訴你更多。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳",
+          "message": "呃嗯，我以後再告訴你更多。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "항상 주변에 인기가 많아. …웃는 얼굴 때문인가…"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "There are always a lot of folks around her. …Maybe it's because of her smiling face…?"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "她總是受到周圍的人的歡迎…是因為她的笑容嗎…"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "她總是受到周圍的人的歡迎…是因為她的笑容嗎…"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "이게 구원자님 에버톡…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Is this your Evertalk…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "這個是救援者的EverTalk…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "這個是救援者的EverTalk…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 홍란"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Honglan."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，紅蘭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，紅蘭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 홍란"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Honglan."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，紅蘭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，紅蘭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님이 도와줬으면 하는 일이 있는데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "There is something I want you to help me with…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "有件事希望救援者能幫我…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "有件事希望救援者能幫我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "바쁘세요…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Are you busy…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "你在忙嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "你在忙嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "등 뒤에 개구리가 붙었는데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "There's a frog on my back…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我的背上黏著一隻青蛙…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我的背上黏著一隻青蛙…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "안 내려가요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "It refuses to go down…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "牠不離開…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "牠不離開…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "눕고 싶은데"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I want to lie down"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我想躺著"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我想躺著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "개구리가 눌릴까봐…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "but I'm afraid I might squish it…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "但怕壓到青蛙…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "但怕壓到青蛙…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm on my way."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我現在過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我現在過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm on my way."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我現在過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我現在過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후후…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hehe…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "呵呵…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "呵呵…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "고맙습니다…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Thank you…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "謝謝你…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "謝謝你…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Savior…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "길을 가다가…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I was walking down the street…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我走著走著…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我走著走著…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "옷을 입은 강아지를 봤어요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "and saw a puppy wearing clothes…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "看到穿衣服的小狗…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "看到穿衣服的小狗…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "신기해…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Interesting…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "真神奇…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "真神奇…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "토끼도 옷을 입으면 따뜻하려나…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I wonder if a rabbit would feel warm in clothes…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "兔子穿上衣服也會比較暖和嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "兔子穿上衣服也會比較暖和嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think so."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該會喔"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該會喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think so."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該會喔"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該會喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "어머나…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Oh…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "天啊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "天啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "흐음… 아기 토끼들은 옷 입는 걸 좋아할까…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hmm… Do baby rabbits like to dress?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯哼…小兔子們會喜歡穿衣服嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯哼…小兔子們會喜歡穿衣服嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "아직 화해한 건 아니지만…\r\n나중에 한 번 물어봐야지…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "We haven't made up with each other yet…\r\nbut I'll ask later…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "雖然還沒和好…\r\n但之後要問問才行…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "雖然還沒和好…\r\n但之後要問問才行…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Savior…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "입이 너무 써요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "my mouth tastes so bitter…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嘴巴好苦…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嘴巴好苦…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "전에 토끼들이 풀을 너무 맛있게 먹어서…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "The rabbits were eating grass so deliciously…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "之前我看兔子們吃草吃得很開心…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "之前我看兔子們吃草吃得很開心…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "오늘 심심해서 저도 먹어봤는데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "so I tried to taste it because I was bored…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "今天剛好沒事做，我就試著吃吃看…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "今天剛好沒事做，我就試著吃吃看…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맛이 없었구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It wasn't good."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來不好吃啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來不好吃啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맛이 없었구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It wasn't good."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來不好吃啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來不好吃啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "토끼들은 이런 걸 어떻게 먹는 걸까…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "How can rabbits eat this stuff…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "兔子們怎麼吃得下這種東西呢…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "兔子們怎麼吃得下這種東西呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "폭신폭신한 솜사탕이 그리워라…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I miss fluffy cotton candy…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "好懷念軟綿綿的棉花糖…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "好懷念軟綿綿的棉花糖…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "*32ㅐ"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "*32"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "*32o"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "*32o"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "아…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Oh…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "啊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "다람쥐가 에버폰 위로 올라갔어요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "The squirrel went up to the Everphone…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "松鼠踩到EverPhone了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "松鼠踩到EverPhone了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "보들보들한 꼬리가 화면을 눌러서…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Its soft tail touched the screen…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "用毛茸茸的尾巴觸碰畫面…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "用毛茸茸的尾巴觸碰畫面…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후후… 귀여워라…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hehe… So cute…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "呼呼…好可愛啊…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "呼呼…好可愛啊…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님이 알려준 사진 찍는 법…\r\n꽤 익숙해졌어요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "You taught me how to take pictures…\r\nI'm pretty used to it now…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者告訴我的拍照方法…\r\n已經蠻熟悉的了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者告訴我的拍照方法…\r\n已經蠻熟悉的了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "이건 아케나인의 토끼에요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "This is an Arkenine bunny…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "這是阿肯納因的兔子…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "這是阿肯納因的兔子…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연습했어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you practice?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳練習了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳練習了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연습했어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you practice?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳練習了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳練習了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "네…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "It was…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "是的…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "是的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "사진첩에 구름 사진이 가득…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "My photo album is full of cloud pictures…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "相簿裡有一堆雲的照片…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "相簿裡有一堆雲的照片…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "유리아님도, 메피도 잔뜩 찍었는데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I took a lot of pictures of Yuria and Mephi…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "還有很多張尤里婭和梅菲的照片…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "還有很多張尤里婭和梅菲的照片…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "클레르는 찍으려는 순간 어디론가 가버려서…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "But Claire left just when I was about to take a picture…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "但準備要拍克萊兒的時候，她就突然走了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "但準備要拍克萊兒的時候，她就突然走了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "부끄러웠을 수도 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She was probably embarrassed."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能是害羞"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能是害羞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "부끄러웠을 수도 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She was probably embarrassed."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能是害羞"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能是害羞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후응… 사진은 부끄러운 건가…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Huh… She might be embarrassed taking pictures."
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯…拍照會害羞嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯…拍照會害羞嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "잘 모르겠어…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I'm not sure…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "不知道欸…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "不知道欸…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "이번엔 구원자님을 찍을래요… 후후…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I want to take a picture of you now… Hehe…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "這次我要拍救援者…呵呵…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "這次我要拍救援者…呵呵…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Savior…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "(__)"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "(__)"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "(__)"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "(__)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "이게 뭘까요…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "What do you think this is…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "這是什麼…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "這是什麼…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고개를 숙인 얼굴 이모티콘이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's a face emoji with the head down."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個是低頭的表情符號"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個是低頭的表情符號"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고개를 숙인 얼굴 이모티콘이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's a face emoji with the head down."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個是低頭的表情符號"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個是低頭的表情符號"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "응…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Huh…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "얼굴…? 흐음… 잘 모르겠어…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Face…? Hmm… I'm not sure…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "表情…？嗯…看不太出來欸…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "表情…？嗯…看不太出來欸…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "오히려 토끼를 닮았는데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "It actually looks like a rabbit."
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "反而比較像兔子…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "反而比較像兔子…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "()() 귀를 달아주면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "()() If you add ears,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "再加上耳朵()()的話"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "再加上耳朵()()的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "()() 귀를 달아주면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "()() If you add ears,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "再加上耳朵()()的話"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "再加上耳朵()()的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "(__) 토끼도 가능해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "(__) it could be a rabbit."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "(__)也能變成兔子"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "(__)也能變成兔子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "(__) 토끼도 가능해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "(__) it could be a rabbit."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "(__)也能變成兔子"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "(__)也能變成兔子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "아… 정말이다…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Oh… That's true…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "啊…真的耶…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "啊…真的耶…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "아기 토끼를 닮았어…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "It looks like a baby rabbit…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "好像小兔子…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "好像小兔子…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후후…구원자님 대단해…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hehe… Savior, you're awesome…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "呵呵…救援者好厲害啊…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "呵呵…救援者好厲害啊…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "좋은 아침이에요… 구원자님…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Good morning… Savior…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "早安…救援者…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "早安…救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금은 밤인데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's nighttime…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在是晚上…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在是晚上…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금은 밤인데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's nighttime…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在是晚上…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在是晚上…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "응…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Huh…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "하지만 지금 일어났는걸…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "But I just woke up…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "但是我現在剛起床…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "但是我現在剛起床…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "그러면… 좋은 밤…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Then… good night…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "那…晚安…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "那…晚安…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "밤이면 자야 할 시간인데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I'm supposed to be sleeping at night…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "晚上是該睡覺的時間…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "晚上是該睡覺的時間…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후응… 다시 잘게요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hee… I'll go back to sleep…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "呼嗯…我再去睡了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "呼嗯…我再去睡了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐만…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait…!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐만…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait…!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "잘 자요… 구원자님…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Good night… Savior…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "晚安…救援者…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "晚安…救援者…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "비가 올 것 같아요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I think it's going to rain…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "感覺要下雨了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "感覺要下雨了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직 화창한데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's still sunny…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在還很晴朗欸…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在還很晴朗欸…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직 화창한데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's still sunny…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在還很晴朗欸…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在還很晴朗欸…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "으응… 구름에 얼음조각이 맺혀있어요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Umm… There are ice cubes in the clouds…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯…雲裡有結冰的冰塊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯…雲裡有結冰的冰塊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "곧 녹아서 떨어질 것 같아…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "They're going to melt and fall soon…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "感覺馬上就會融化落下來…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "感覺馬上就會融化落下來…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "감기 걸리지 않게 조심해요…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Be careful not to catch a cold…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "小心不要感冒哦…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "小心不要感冒哦…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님한테 주려던 눈꽃 결정…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "The snowflake that I was going to give you…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "原本要給救援者的雪花結晶…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "原本要給救援者的雪花結晶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "오다가 녹았어요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "melted on the way here…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "在來的路上融化了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "在來的路上融化了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "슬퍼…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I'm sad…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "好難過…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "好難過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아. 마음만 받을게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay. I appreciate your gesture."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係，妳的心意我收到了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係，妳的心意我收到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아. 마음만 받을게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay. I appreciate your gesture."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係，妳的心意我收到了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係，妳的心意我收到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "마음…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Gesture…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "心意…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "心意…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "마음은 어떻게 줘야 하지…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "How do you give a gesture…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "心意要怎麼給呢…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "心意要怎麼給呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니, 그런 뜻이 아니라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, that's not what I meant…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是，不是那個意思…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是，不是那個意思…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니, 그런 뜻이 아니라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, that's not what I meant…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是，不是那個意思…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是，不是那個意思…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "클레르에게 마음을 주는 방법을 물어볼게요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I'll ask Claire how to give a gesture…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我去問克萊兒給心意的方法…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我去問克萊兒給心意的方法…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "가져다드릴 테니 기다리세요… 구원자님…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I'll get you one, so please wait… Savior…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我會把心意帶來的，等我哦…救援者…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我會把心意帶來的，等我哦…救援者…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "오늘 마을 아이가, 잠이 안 오면 양을 센다고…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Today, a village kid told me that he counts sheep when he can't sleep…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "今天村莊的小孩啊，說睡不著時可以數羊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "今天村莊的小孩啊，說睡不著時可以數羊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "그래서 저도 양을 세어 봤는데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "So I tried myself…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "所以我也試著數了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "所以我也試著數了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "3마리째에서 자꾸 잠들어버려요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I keep falling asleep at three…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "但每次算到第三隻就睡著了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "但每次算到第三隻就睡著了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란은 잘 자니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan, you fall asleep easily."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為紅蘭比較容易入睡"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為紅蘭比較容易入睡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란은 잘 자니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan, you fall asleep easily."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為紅蘭比較容易入睡"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為紅蘭比較容易入睡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후응…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "呼嗯…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "呼嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "나도 양을 세고 싶은데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I want to count sheep, too…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我也想數羊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我也想數羊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "좋아… 오늘은 5마리를 세어볼래요…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Great… I'll count five sheep today…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "好…我今天要數五隻羊…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "好…我今天要數五隻羊…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님은…\r\n주위 애들이 하는 말이"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "You are…\r\nwhat people around you are saying…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者…\r\n周圍的人說的話"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者…\r\n周圍的人說的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "다 이해가 돼요…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "do you understand all of it…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "你都聽得懂嗎？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "你都聽得懂嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후음…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯哼…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯哼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "紅蘭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "紅蘭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "紅蘭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "紅蘭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "紅蘭？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "紅蘭？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "紅蘭？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "紅蘭？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후음… 여기가 아케나인…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hmm… This is Arkenine…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "呼嗯…這裡是阿肯納因…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "呼嗯…這裡是阿肯納因…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어서와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Welcome."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "快過來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "快過來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어서와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Welcome."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "快過來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "快過來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "여기도 풀밭이 있어요?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Is there a field of grass around here, too?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "這裡也有草地嗎？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "這裡也有草地嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물론이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然有啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然有啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물론이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然有啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然有啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구름은요?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "What about clouds?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "那雲呢？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "那雲呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "구름도 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There's clouds here as well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也有雲"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也有雲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "구름도 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There's clouds here as well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也有雲"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也有雲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "좋은 곳이네…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "It's a nice place…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "真是個好地方…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "真是個好地方…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "아케나인 마을 어린이가 \r\n산타클 로스가 진짜 있냐고 물었어요"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "A kid from Arkenine Village \r\nasked me if Santacle Ross really exists."
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "阿肯納因村莊的小孩\r\n問我是不是真的有聖誕老人"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "阿肯納因村莊的小孩\r\n問我是不是真的有聖誕老人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "대답해주려고 했는데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I tried to answer…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我本來要回答的…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我本來要回答的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "산타클 로스가 누구에요…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "But who's Santacle Ross anyway?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "但是聖誕老人是誰啊…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "但是聖誕老人是誰啊…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님도 모르나봐요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I guess you don't know either…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "看來救援者也不知道啊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "看來救援者也不知道啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후음… 신비의 동물인가…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hmm… Is it some kind of mysterious animal…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "呼嗯…是神祕的動物嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "呼嗯…是神祕的動物嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "토끼들은 착하고 순하다는 이미지가 있는 것 같지만…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Rabbits seem to have this image of being nice and gentle…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "雖然兔子們好像有善良溫順的形象，但是…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "雖然兔子們好像有善良溫順的形象，但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "아니에요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "but they're not…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "並非如此…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "並非如此…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "흥…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hmph…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "다들 속고 있어…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Everyone is being fooled…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "大家都被騙了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "大家都被騙了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "저는 봄 구름이 좋아요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I like spring cloud."
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我喜歡春天的雲…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我喜歡春天的雲…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "겨울 구름보다 좀 더 포근하고, 촉촉하고…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "It's cozier, more moist than a winter cloud…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "比起冬天的雲稍微更柔軟、濕潤…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "比起冬天的雲稍微更柔軟、濕潤…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 차이가 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There's a difference?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有這種差異？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有這種差異？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 차이가 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There's a difference?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有這種差異？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有這種差異？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "모르시는군요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "You didn't know…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "原來你不知道呀…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "原來你不知道呀…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "제가 다음에 덮어드릴게요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I'll cover you up next time…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "我下次把雲蓋在你身上…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "我下次把雲蓋在你身上…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "잘 빗어놔야지…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I'll brush it well…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "要好好梳理一下了…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "要好好梳理一下了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "옷 입는 건 너무 귀찮아요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "It's so annoying to dress…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "穿衣服好煩…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "穿衣服好煩…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "앞 뒤가 어딘지도 한참 봐야하고…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I need to see which is the front and which is the back…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "還要花很多時間去看，哪裡是前、哪裡是後…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "還要花很多時間去看，哪裡是前、哪裡是後…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "좋은 방법이 없을까요…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Do you know a better way…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "有沒有什麼好方法…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "有沒有什麼好方法…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞뒤가 똑같은 옷을 찾아볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll look for clothes that have the same front and back."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我幫妳找找前後都一樣的衣服"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我幫妳找找前後都一樣的衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞뒤가 똑같은 옷을 찾아볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll look for clothes that have the same front and back."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我幫妳找找前後都一樣的衣服"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我幫妳找找前後都一樣的衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "…!"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "…!"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "…！"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님… 똑똑해…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Savior… You're smart…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者…好聰明…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者…好聰明…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "뭐해요?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "what are you up to?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "你在幹嘛？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "你在幹嘛？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님~"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者～"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "심심해…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "I'm bored."
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "好無聊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "好無聊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "메시지를 이제 봤어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just checked the message."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我現在才看到訊息"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我現在才看到訊息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "메시지를 이제 봤어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just checked the message."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我現在才看到訊息"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我現在才看到訊息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐 하는 중이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What are you doing?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳在幹嘛？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳在幹嘛？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐 하는 중이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What are you doing?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳在幹嘛？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳在幹嘛？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "紅蘭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "紅蘭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "紅蘭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "紅蘭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님은 파티에 가본 적 있어요…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Have you been to a party…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者有去過派對嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者有去過派對嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "…오늘도 바쁘시구나…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "…You're busy today, too…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "…你今天也很忙啊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "…你今天也很忙啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "가온은, 이 무렵에 산불이 잘 나는 편이에요"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "There are lots of wildfires around this time of the year in Gaon."
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "加溫在這時候很容易發生森林大火"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "加溫在這時候很容易發生森林大火"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "그래서 가끔 비를 내려줘야하는데…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "So it needs to rain sometimes."
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "所以偶爾需要下場雨…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "所以偶爾需要下場雨…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신경쓰여?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Does it bother you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很在意嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很在意嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신경쓰여?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Does it bother you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很在意嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很在意嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "네에…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Yes…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯嗯…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "더워요 힘들어요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "it's too hot. I'm dying…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "好熱，好難受…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "好熱，好難受…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "살려주세요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Please save me…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救救我…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救救我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러고 보니까 유리아가…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "By the way, Yuria is…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼說來，尤里婭…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼說來，尤里婭…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러고 보니까 유리아가…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "By the way, Yuria is…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼說來，尤里婭…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼說來，尤里婭…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "유리아님이요…?"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Yuria…?"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "尤里婭…？"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "尤里婭…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "후음. 둥실둥실 낮잠보다 더 달콤한 것…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hmm. Something sweeter than sweet slumber…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "呼嗯，比悠閒睡午覺更甜美的東西…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "呼嗯，比悠閒睡午覺更甜美的東西…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "구원자님, 오늘 뭐할 거에요…?\r\n저랑 만나요~"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "What are you up to today, Savior…?\r\nLet's meet!"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "救援者，你今天要做什麼…？\r\n跟我見面吧～"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "救援者，你今天要做什麼…？\r\n跟我見面吧～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 만나러 갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上去找妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上去找妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 만나러 갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上去找妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上去找妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "뜨거운 건 힘들어요…"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "The heat is unbearable…"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "天氣太熱好痛苦啊…"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "天氣太熱好痛苦啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "여름아… 안녕~"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Goodbye… Summer!"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "夏天…掰掰～"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "夏天…掰掰～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같이 여름에게 작별 인사하자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's say goodbye to summer!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一起告別夏天吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一起告別夏天吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같이 여름에게 작별 인사하자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's say goodbye to summer!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一起告別夏天吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一起告別夏天吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "홍란",
+            "message": "흐흥…\r\n빙룡들도 기뻐하는 겨울날…♪"
+          },
+          "en": {
+            "speaker": "Honglan",
+            "message": "Hmm…\r\nIce dragons love the winter…♪"
+          },
+          "zh_tw": {
+            "speaker": "紅蘭",
+            "message": "嗯哼…\r\n冰龍們也開心的冬天…♪"
+          },
+          "zh_cn": {
+            "speaker": "紅蘭",
+            "message": "嗯哼…\r\n冰龍們也開心的冬天…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "축하해, 빙룡들아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Congrats, ice dragons!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "恭喜，冰龍們！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "恭喜，冰龍們！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "축하해, 빙룡들아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Congrats, ice dragons!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "恭喜，冰龍們！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "恭喜，冰龍們！"
+          }
+        }
+      ]
+    }
+  }
+}

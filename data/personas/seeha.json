@@ -1,0 +1,4865 @@
+{
+  "id": "2040",
+  "name": "시하",
+  "name_en": "Seeha",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "서포터",
+  "sub_class": "치료",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "블루 프렐류드",
+    "constellation": "궁수자리",
+    "union": "베스티 프로덕션",
+    "birthday": "1222",
+    "height": 159,
+    "weight": 45,
+    "cv_ko": "이보희",
+    "cv_jp": "Yu Wakui",
+    "like": [
+      "부추빵"
+    ],
+    "dislike": [
+      "생선 회"
+    ],
+    "hobby": [
+      "마리모 키우기"
+    ],
+    "speciality": [
+      "심호흡",
+      "수영"
+    ]
+  },
+  "personality": {
+    "description": "아~♬ 아아~♪ 아아~♬ 아-아~♪~ \n아, 구원… 프로듀서님 안녕하세요.\n\n제 노래를 듣고 계셨군요. 팬 여러분들에게 저의 진심을 좀 더 전할 수 있도록 연습을 하고 있었어요. \n미카에게는 비밀로 해주세요. 요즘 조금 초조해하는 것 같아서…\n\n그래서 프로듀서님은 무슨 일로? 아하… 인터뷰하러 오셨다구요.\n\n좋아하는 취미요? 예쁜 조약돌을 찾는 걸 좋아해요. \n평범한 돌멩이일 뿐이지만 그 속에서도 빛나려고 노력하는 아이를 발견하면 무심코 손에 쥐고 싶어져요. \n어쩌면 저 혼자 동질감을 느끼고 있는 걸지도… 하핫.\n\n후후, 저에 대해서 알려고 노력해 주시는 팬분들의 그 마음에 보답할 수 있도록…\n꼭 멋진 가수가 될게요!",
+    "greeting": "마음을 담아 노래하면, 진심이 전해질 거라 믿어요."
+  },
+  "speech_patterns": [
+    "구원자님, 안녕하세요?",
+    "시하에요",
+    "하핫… 갑작스럽게 메세지를 보내서 놀라셨죠?",
+    "다름이 아니라 인사를 드리고 싶어서요\r\n인디 아이돌 활동을 하고 있는 시하에요",
+    "앞으로 잘 부탁드려요, 구원자님",
+    "구원자님의 소문을 처음 들었을 때부터\r\n그동안 남몰래 지켜보고 있었답니다",
+    "자주 메세지 할 테니까 답장 꼭 해주셔야 해요?",
+    "그럼 푹 쉬세요, 구원자님♪",
+    "오늘은 햇빛이 엄청 뜨겁네요…",
+    "이런 날씨엔 수영하고 싶어져요.\r\n그리고 바다에서 노래하면 엄청 기분 좋겠죠?",
+    "프로듀서님, \r\n괜찮으시면 나중에 함께 바다에 가실래요?",
+    "와~ 기대돼요♪",
+    "아, 혹시 수영복이 없으시면, \r\n그 때 제가 고를 수 있게 해주세요♪",
+    "요즘 제게 오는 팬레터에서\r\n간간히 프로듀서님 이야기도 보여요",
+    "프로듀서님과 함께 있을 때\r\n제가 정말 편해 보인다는 말이나…",
+    "인디에서 프로 지망으로 오면서\r\n방향 설정이 잘 될지 걱정했는데 \r\n잘 하고 있다거나…",
+    "칭찬의 말들이 써 있어요\r\n프로듀서님 무척 인기 많으시네요",
+    "하핫…이러다가 \r\n프로듀서님이 데뷔하시는 거 아니에요?",
+    "아하하! 만약 프로듀서님이 데뷔하신다면, \r\n무척 사랑받는 아이돌이 될 거에요",
+    "저는 확신할 수 있어요♪",
+    "팬 분께 리본 장식을 선물 받았어요",
+    "리본을 싫어하는 건 아니지만,\r\n역시 이런 귀여운 장신구를 보면…",
+    "저보다 미카같이 귀여운 친구한테 \r\n더 어울리지 않을까?하는 생각이 들어요",
+    "후후…",
+    "감사합니다. 말해놓고 보니…\r\n괜히 그런 말을 듣고 싶어서 \r\n얘기 꺼낸 것 같기도 해요. 하핫",
+    "팬 분이 주신 소중한 리본이니까…",
+    "다음 무대에 하고 나갈게요♪",
+    "프로듀서님, \r\n저 베이킹을 시작해보려고 하는데…",
+    "베이킹 도구 쇼핑에 \r\n같이 가주실 수 있나요?",
+    "와~ 감사합니다!",
+    "제가 만든 부추빵, \r\n팬분들한테 나눠드리고 싶거든요\r\n첫 시식은 프로듀서님이 해주세요~^^",
+    "프로듀서님, 시간 괜찮으신가요?",
+    "이번에 팬분들께 드리는 곡을 제작하고싶은데…",
+    "문득 마음에 드는 멜로디가 떠올라서요",
+    "음, 어떻게 들려드려야 할까…",
+    "아, 지금 전화 가능하세요?",
+    "그럼 전화로 들려드릴게요",
+    "하핫. 이상하게 긴장해서 \r\n잘 못 부르면 어떡하지?",
+    "프로듀서님한테만 들려드리는 거니까…",
+    "집중해서 잘 들어주시기에요? \r\n아셨죠?",
+    "프로듀서님, 그거 아세요?",
+    "새우와 마리모의 궁합이 좋대요",
+    "새우들이 마리모를 좋아한다고 해요",
+    "마리모에 착 붙어있는 귀여운 새우들이라니…",
+    "상상만 해도 평화로워지는 광경이네요♪",
+    "주말에, 축가를 부탁받아 \r\n결혼식에 다녀왔어요",
+    "공연은 많이 다녀봤지만\r\n역시 이런 곳은 특별한 것 같아요",
+    "신혼 부부의 행복한 표정과\r\n흩날리는 꽃잎…",
+    "그 사이에 있으면 \r\n마치 영화의 한 장면 속에 들어온 것 같아요",
+    "후후… 글쎄요\r\n저도 언젠가 결혼 하게 될까요?"
+  ],
+  "comments": [
+    {
+      "writer": "미카",
+      "comment": "너무 완벽하잖아… 이건 불공평해."
+    },
+    {
+      "writer": "메피스토펠레스",
+      "comment": "누, 눈을 뗄 수가 없어요… 왜일까요…"
+    },
+    {
+      "writer": "레베카",
+      "comment": "확실히, 저런 애는 자주 태어나진 않더라고. 몇백 년에 한 번 정도?"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "시하",
+        "message": "구원자님, 안녕하세요?"
+      },
+      {
+        "speaker": "시하",
+        "message": "시하에요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕 시하야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕 시하야"
+      },
+      {
+        "speaker": "시하",
+        "message": "하핫… 갑작스럽게 메세지를 보내서 놀라셨죠?"
+      },
+      {
+        "speaker": "시하",
+        "message": "다름이 아니라 인사를 드리고 싶어서요\r\n인디 아이돌 활동을 하고 있는 시하에요"
+      },
+      {
+        "speaker": "시하",
+        "message": "앞으로 잘 부탁드려요, 구원자님"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 잘 부탁해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 잘 부탁해"
+      },
+      {
+        "speaker": "시하",
+        "message": "구원자님의 소문을 처음 들었을 때부터\r\n그동안 남몰래 지켜보고 있었답니다"
+      },
+      {
+        "speaker": "시하",
+        "message": "자주 메세지 할 테니까 답장 꼭 해주셔야 해요?"
+      },
+      {
+        "speaker": "시하",
+        "message": "그럼 푹 쉬세요, 구원자님♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "오늘은 햇빛이 엄청 뜨겁네요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "시하",
+        "message": "이런 날씨엔 수영하고 싶어져요.\r\n그리고 바다에서 노래하면 엄청 기분 좋겠죠?"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, \r\n괜찮으시면 나중에 함께 바다에 가실래요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아"
+      },
+      {
+        "speaker": "시하",
+        "message": "와~ 기대돼요♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "아, 혹시 수영복이 없으시면, \r\n그 때 제가 고를 수 있게 해주세요♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "요즘 제게 오는 팬레터에서\r\n간간히 프로듀서님 이야기도 보여요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 이야기인데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 이야기인데?"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님과 함께 있을 때\r\n제가 정말 편해 보인다는 말이나…"
+      },
+      {
+        "speaker": "시하",
+        "message": "인디에서 프로 지망으로 오면서\r\n방향 설정이 잘 될지 걱정했는데 \r\n잘 하고 있다거나…"
+      },
+      {
+        "speaker": "시하",
+        "message": "칭찬의 말들이 써 있어요\r\n프로듀서님 무척 인기 많으시네요"
+      },
+      {
+        "speaker": "시하",
+        "message": "하핫…이러다가 \r\n프로듀서님이 데뷔하시는 거 아니에요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 어려울 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 어려울 것 같아"
+      },
+      {
+        "speaker": "시하",
+        "message": "아하하! 만약 프로듀서님이 데뷔하신다면, \r\n무척 사랑받는 아이돌이 될 거에요"
+      },
+      {
+        "speaker": "시하",
+        "message": "저는 확신할 수 있어요♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "팬 분께 리본 장식을 선물 받았어요"
+      },
+      {
+        "speaker": "시하",
+        "message": "리본을 싫어하는 건 아니지만,\r\n역시 이런 귀여운 장신구를 보면…"
+      },
+      {
+        "speaker": "시하",
+        "message": "저보다 미카같이 귀여운 친구한테 \r\n더 어울리지 않을까?하는 생각이 들어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "시하가 해도 예쁠 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "시하가 해도 예쁠 거야"
+      },
+      {
+        "speaker": "시하",
+        "message": "후후…"
+      },
+      {
+        "speaker": "시하",
+        "message": "감사합니다. 말해놓고 보니…\r\n괜히 그런 말을 듣고 싶어서 \r\n얘기 꺼낸 것 같기도 해요. 하핫"
+      },
+      {
+        "speaker": "시하",
+        "message": "팬 분이 주신 소중한 리본이니까…"
+      },
+      {
+        "speaker": "시하",
+        "message": "다음 무대에 하고 나갈게요♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, \r\n저 베이킹을 시작해보려고 하는데…"
+      },
+      {
+        "speaker": "시하",
+        "message": "베이킹 도구 쇼핑에 \r\n같이 가주실 수 있나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당연하지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당연하지"
+      },
+      {
+        "speaker": "시하",
+        "message": "와~ 감사합니다!"
+      },
+      {
+        "speaker": "시하",
+        "message": "제가 만든 부추빵, \r\n팬분들한테 나눠드리고 싶거든요\r\n첫 시식은 프로듀서님이 해주세요~^^"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, 시간 괜찮으신가요?"
+      },
+      {
+        "speaker": "시하",
+        "message": "이번에 팬분들께 드리는 곡을 제작하고싶은데…"
+      },
+      {
+        "speaker": "시하",
+        "message": "문득 마음에 드는 멜로디가 떠올라서요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "궁금하다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "궁금하다"
+      },
+      {
+        "speaker": "시하",
+        "message": "음, 어떻게 들려드려야 할까…"
+      },
+      {
+        "speaker": "시하",
+        "message": "아, 지금 전화 가능하세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "시하",
+        "message": "그럼 전화로 들려드릴게요"
+      },
+      {
+        "speaker": "시하",
+        "message": "하핫. 이상하게 긴장해서 \r\n잘 못 부르면 어떡하지?"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님한테만 들려드리는 거니까…"
+      },
+      {
+        "speaker": "시하",
+        "message": "집중해서 잘 들어주시기에요? \r\n아셨죠?"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, 그거 아세요?"
+      },
+      {
+        "speaker": "시하",
+        "message": "새우와 마리모의 궁합이 좋대요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "몰랐어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "몰랐어"
+      },
+      {
+        "speaker": "시하",
+        "message": "새우들이 마리모를 좋아한다고 해요"
+      },
+      {
+        "speaker": "시하",
+        "message": "마리모에 착 붙어있는 귀여운 새우들이라니…"
+      },
+      {
+        "speaker": "시하",
+        "message": "상상만 해도 평화로워지는 광경이네요♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "주말에, 축가를 부탁받아 \r\n결혼식에 다녀왔어요"
+      },
+      {
+        "speaker": "시하",
+        "message": "공연은 많이 다녀봤지만\r\n역시 이런 곳은 특별한 것 같아요"
+      },
+      {
+        "speaker": "시하",
+        "message": "신혼 부부의 행복한 표정과\r\n흩날리는 꽃잎…"
+      },
+      {
+        "speaker": "시하",
+        "message": "그 사이에 있으면 \r\n마치 영화의 한 장면 속에 들어온 것 같아요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "결혼에 관심 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "결혼에 관심 있어?"
+      },
+      {
+        "speaker": "시하",
+        "message": "후후… 글쎄요\r\n저도 언젠가 결혼 하게 될까요?"
+      },
+      {
+        "speaker": "시하",
+        "message": "정령은 아주 오래 사니까…"
+      },
+      {
+        "speaker": "시하",
+        "message": "만남과 이별을 반복하게 되겠죠?"
+      },
+      {
+        "speaker": "시하",
+        "message": "저는 가능하다면 \r\n단 하나의 사랑과 영원을 약속하고 싶어요"
+      },
+      {
+        "speaker": "시하",
+        "message": "새벽 운동을 하다 보면"
+      },
+      {
+        "speaker": "시하",
+        "message": "세상이 엄청 고요해서,\r\n꼭 혼자 있는 느낌이 들어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쓸쓸해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쓸쓸해?"
+      },
+      {
+        "speaker": "시하",
+        "message": "쓸쓸하다기보다…"
+      },
+      {
+        "speaker": "시하",
+        "message": "마음이 진정되는 느낌?"
+      },
+      {
+        "speaker": "시하",
+        "message": "일출을 보고 있으면, \r\n하루에 대한 의욕이 생기거든요"
+      },
+      {
+        "speaker": "시하",
+        "message": "아, 그렇지♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, \r\n다음에 저와 함께 일출을 보러 가실래요?"
+      },
+      {
+        "speaker": "시하",
+        "message": "제가 보는 풍경을, \r\n프로듀서님께도 보여드리고 싶어요"
+      },
+      {
+        "speaker": "시하",
+        "message": "미카를 보면…"
+      },
+      {
+        "speaker": "시하",
+        "message": "아이돌이라는 건 이런 거구나\r\n이래서 다들 아이돌을 좋아하는 거구나\r\n그런 생각이 들어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미카를 좋아하는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미카를 좋아하는구나"
+      },
+      {
+        "speaker": "시하",
+        "message": "그럼요. 후후…"
+      },
+      {
+        "speaker": "시하",
+        "message": "사실 라이벌로 봐주는 것도 기쁜데…"
+      },
+      {
+        "speaker": "시하",
+        "message": "티 내면 미카가 화내니까 비밀이에요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "결국 들킬 것 같긴 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "결국 들킬 것 같긴 해"
+      },
+      {
+        "speaker": "시하",
+        "message": "후후, 맞아요 \r\n어쩔 수 없네요"
+      },
+      {
+        "speaker": "시하",
+        "message": "이런 이야길 하다 보니까\r\n듀엣 공연이 하고 싶어졌어요♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀싱 2인분 \r\n잘 부탁드려요, 프로듀서님?"
+      },
+      {
+        "speaker": "시하",
+        "message": "구원자님! 혹시 오늘 식사 하셨나요?"
+      },
+      {
+        "speaker": "시하",
+        "message": "아직 식사 안 하셨으면… \r\n잠깐 모시고 싶은 곳이 있어요"
+      },
+      {
+        "speaker": "시하",
+        "message": "나오미랑 같이 기다릴게요"
+      },
+      {
+        "speaker": "시하",
+        "message": "밥은 먹지 말고 와주세요~"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님~ 뭐 하시나요?"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안 톡을 이제 봤어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안 톡을 이제 봤어"
+      },
+      {
+        "speaker": "시하",
+        "message": "후훗. 요즘 무척 바쁘시네요"
+      },
+      {
+        "speaker": "시하",
+        "message": "아마 저 때문에 바쁘신 걸테니까 죄송하지만…"
+      },
+      {
+        "speaker": "시하",
+        "message": "하지만, 무척 기뻐요!"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, 저 오늘은 평소보다 30분만 늦게 갈게요"
+      },
+      {
+        "speaker": "시하",
+        "message": "지금 쓰는 마이크가 상태가 안 좋아서요"
+      },
+      {
+        "speaker": "시하",
+        "message": "가게에 수리를 맡겨야할 것 같아요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오래 쓴 마이크야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오래 쓴 마이크야?"
+      },
+      {
+        "speaker": "시하",
+        "message": "네. 아무래도 길거리 라이브를 하다보면\r\n이리저리 험하게 쓸 때도 있어서요…"
+      },
+      {
+        "speaker": "시하",
+        "message": "조금만 기다려주세요!"
+      },
+      {
+        "speaker": "시하",
+        "message": "이따 뵈어요~"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님!"
+      },
+      {
+        "speaker": "시하",
+        "message": "오늘이 드디어 첫 경연이네요"
+      },
+      {
+        "speaker": "시하",
+        "message": "후후…"
+      },
+      {
+        "speaker": "시하",
+        "message": "무척 떨려요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘할 수 있을 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘할 수 있을 거야"
+      },
+      {
+        "speaker": "시하",
+        "message": "후훗. 네"
+      },
+      {
+        "speaker": "시하",
+        "message": "최선을 다할게요!"
+      },
+      {
+        "speaker": "시하",
+        "message": "꼭 지켜봐주세요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "시하야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "시하야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나오미가 찾는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나오미가 찾는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "일어났니?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "일어났니?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "시하야??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "시하야??"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, 오늘 오후에는 댄스 레슨에 다녀올게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 다녀와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 다녀와"
+      },
+      {
+        "speaker": "시하",
+        "message": "후훗. 네"
+      },
+      {
+        "speaker": "시하",
+        "message": "그러고 보니까 아까 나오미가 그러는데"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님 앞으로 편지가 왔대요"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님을 향한 팬레터인 걸까요…?"
+      },
+      {
+        "speaker": "시하",
+        "message": "인기가 많으시네요, 후훗"
+      },
+      {
+        "speaker": "시하",
+        "message": "S.I.S에서 무대하는 건…"
+      },
+      {
+        "speaker": "시하",
+        "message": "무척 떨리지만 그만큼 보람있어요"
+      },
+      {
+        "speaker": "시하",
+        "message": "저, 오늘도 열심히 할게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "화이팅!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "화이팅!"
+      },
+      {
+        "speaker": "시하",
+        "message": "후훗"
+      },
+      {
+        "speaker": "시하",
+        "message": "너무 긴장하지 말아야 하는데…"
+      },
+      {
+        "speaker": "시하",
+        "message": "이따 뵈어요!"
+      },
+      {
+        "speaker": "시하",
+        "message": "……."
+      },
+      {
+        "speaker": "시하",
+        "message": "……."
+      },
+      {
+        "speaker": "시하",
+        "message": "……."
+      },
+      {
+        "speaker": "시하",
+        "message": "로맨틱한 날엔, 로맨틱한 노래를…♪"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, 어떠신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대할게, 시하야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대할게, 시하야!"
+      },
+      {
+        "speaker": "시하",
+        "message": "오늘은 꼭 저를 위한 날 같네요~"
+      },
+      {
+        "speaker": "시하",
+        "message": "제가 프로듀서님께 얼마나 감사하는지\r\n꼭 전해드리고 싶어요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로 고마워!"
+      },
+      {
+        "speaker": "시하",
+        "message": "프로듀서님, 메리 크리스마스!"
+      },
+      {
+        "speaker": "시하",
+        "message": "흥에 겨워 캐롤을 부르고 싶네요\r\n후후, 들어주시겠어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대할게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대할게!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "시하",
+      "en": "Seeha",
+      "zh_tw": "西荷",
+      "zh_cn": "西荷"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "서포터",
+      "en": "Supporter",
+      "zh_tw": "輔助者",
+      "zh_cn": "輔助者"
+    },
+    "sub_class": {
+      "ko": "치료",
+      "en": "Heal",
+      "zh_tw": "治療",
+      "zh_cn": "治療"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "블루 프렐류드",
+        "en": "Blue Prelude",
+        "zh_tw": "蔚藍序曲",
+        "zh_cn": "蔚藍序曲"
+      },
+      "constellation": {
+        "ko": "궁수자리",
+        "en": "Sagittarius",
+        "zh_tw": "射手座",
+        "zh_cn": "射手座"
+      },
+      "union": {
+        "ko": "베스티 프로덕션",
+        "en": "Bestie Production",
+        "zh_tw": "最佳製作",
+        "zh_cn": "最佳製作"
+      },
+      "cv_ko": {
+        "ko": "이보희",
+        "en": "Bohee Lee",
+        "zh_tw": "李寶熙",
+        "zh_cn": "李寶熙"
+      },
+      "cv_jp": {
+        "ko": "Yu Wakui",
+        "en": "Yu Wakui",
+        "zh_tw": "Yu Wakui",
+        "zh_cn": "Yu Wakui"
+      },
+      "like": {
+        "ko": [
+          "부추빵"
+        ],
+        "en": [
+          "Leek bread"
+        ],
+        "zh_tw": [
+          "韭菜麵包"
+        ],
+        "zh_cn": [
+          "韭菜麵包"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "생선 회"
+        ],
+        "en": [
+          "Sliced raw fish"
+        ],
+        "zh_tw": [
+          "生魚片"
+        ],
+        "zh_cn": [
+          "生魚片"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "마리모 키우기"
+        ],
+        "en": [
+          "Keeping marimo"
+        ],
+        "zh_tw": [
+          "養球藻"
+        ],
+        "zh_cn": [
+          "養球藻"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "심호흡",
+          "수영"
+        ],
+        "en": [
+          "Deep breath",
+          "swimming"
+        ],
+        "zh_tw": [
+          "深呼吸、游泳"
+        ],
+        "zh_cn": [
+          "深呼吸、游泳"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "아~♬ 아아~♪ 아아~♬ 아-아~♪~ \n아, 구원… 프로듀서님 안녕하세요.\n\n제 노래를 듣고 계셨군요. 팬 여러분들에게 저의 진심을 좀 더 전할 수 있도록 연습을 하고 있었어요. \n미카에게는 비밀로 해주세요. 요즘 조금 초조해하는 것 같아서…\n\n그래서 프로듀서님은 무슨 일로? 아하… 인터뷰하러 오셨다구요.\n\n좋아하는 취미요? 예쁜 조약돌을 찾는 걸 좋아해요. \n평범한 돌멩이일 뿐이지만 그 속에서도 빛나려고 노력하는 아이를 발견하면 무심코 손에 쥐고 싶어져요. \n어쩌면 저 혼자 동질감을 느끼고 있는 걸지도… 하핫.\n\n후후, 저에 대해서 알려고 노력해 주시는 팬분들의 그 마음에 보답할 수 있도록…\n꼭 멋진 가수가 될게요!",
+        "en": "Ah~♬ Aaah~♪ Aaah~♬ Ah-ah~♪\nOh, Savi…hello, Mr. Producer.\n\nLooks like you were listening to my song. I was secretly practicing singing so that I could show my fans more of my true heart.\nPlease keep it a secret from Mica. She seemed a little anxious these days…\n\nSo, what brings you here? Oh, I see. You're here to interview me.\n\n\"My favorite hobby\"? I like to find pretty pebbles.\nThey may be just ordinary rocks, but when I find one trying to shine, I feel like holding it in my hand, unconsciously.\nPerhaps I'm the only one who identifies with it… Haha.\n\nI hope I can repay the love of my fans who are trying to get to know me…\nI will definitely become a great singer!",
+        "zh_tw": "啊～♬啊啊～♪啊啊～♬啊－啊～♪～\n啊，救援…製作人你好。\n\n原來你在聽我的歌呀。我正在偷偷練習，希望讓粉絲們更能感受到我的心意。\n請向米卡保密。她最近好像有點焦慮…\n\n話說回來，製作人來找我有什麼事嗎？啊哈，是來採訪我啊。\n\n我的興趣？我喜歡尋找美麗的鵝卵石。\n如果發現了一顆在平凡的石頭中努力發光的璞玉，我就會很想擁有。\n也許是覺得它有一部份跟我很像…哈哈。\n\n呵呵，為了報答那些努力想了解我的粉絲們…\n我一定會成為帥氣的歌手！",
+        "zh_cn": "啊～♬啊啊～♪啊啊～♬啊－啊～♪～\n啊，救援…製作人你好。\n\n原來你在聽我的歌呀。我正在偷偷練習，希望讓粉絲們更能感受到我的心意。\n請向米卡保密。她最近好像有點焦慮…\n\n話說回來，製作人來找我有什麼事嗎？啊哈，是來採訪我啊。\n\n我的興趣？我喜歡尋找美麗的鵝卵石。\n如果發現了一顆在平凡的石頭中努力發光的璞玉，我就會很想擁有。\n也許是覺得它有一部份跟我很像…哈哈。\n\n呵呵，為了報答那些努力想了解我的粉絲們…\n我一定會成為帥氣的歌手！"
+      },
+      "greeting": {
+        "ko": "마음을 담아 노래하면, 진심이 전해질 거라 믿어요.",
+        "en": "If I sing with all my heart, I'm sure my feelings will reach them.",
+        "zh_tw": "我相信只要用心唱歌就能傳達真心。",
+        "zh_cn": "我相信只要用心唱歌就能傳達真心。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "구원자님, 안녕하세요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Hello, Savior."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "救援者，你好嗎？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "救援者，你好嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "시하에요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "It's me, Seeha."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "我是西荷"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "我是西荷"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "하핫… 갑작스럽게 메세지를 보내서 놀라셨죠?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Haha… Were you surprised by my unexpected message?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "哈哈…突然收到我的訊息嚇到了吧？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "哈哈…突然收到我的訊息嚇到了吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "다름이 아니라 인사를 드리고 싶어서요\r\n인디 아이돌 활동을 하고 있는 시하에요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "I just wanted to say hi.\r\nIt's Seeha, working as an indie idol."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "不為別的，我只是想跟你打聲招呼。\r\n我是正在進行地下偶像活動的西荷"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "不為別的，我只是想跟你打聲招呼。\r\n我是正在進行地下偶像活動的西荷"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "앞으로 잘 부탁드려요, 구원자님"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Nice to meet you, Savior."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "以後請多指教，救援者"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "以後請多指教，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "구원자님의 소문을 처음 들었을 때부터\r\n그동안 남몰래 지켜보고 있었답니다"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Ever since I heard rumors of you,\r\nI've been keeping a close eye on you"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "這陣子我一直偷偷看著\r\n救援者在伊甸園活躍的模樣"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "這陣子我一直偷偷看著\r\n救援者在伊甸園活躍的模樣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "자주 메세지 할 테니까 답장 꼭 해주셔야 해요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "I'm gonna message you often, so please reply!"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "我會常常傳訊息給你，一定要回覆我哦？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "我會常常傳訊息給你，一定要回覆我哦？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "그럼 푹 쉬세요, 구원자님♪"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "So rest up for now, Savior♪"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "那麼好好休息哦，救援者♪"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "那麼好好休息哦，救援者♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "오늘은 햇빛이 엄청 뜨겁네요…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "The sunlight is so strong…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "今天的陽光好熱…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "今天的陽光好熱…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "이런 날씨엔 수영하고 싶어져요.\r\n그리고 바다에서 노래하면 엄청 기분 좋겠죠?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "I feel like going for a swim whenever the weather is like this.\r\nAnd it would also feel so nice to sing at the sea!"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "這種天氣就想游泳，\r\n而且在大海上唱歌的話，心情就會非常好吧？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "這種天氣就想游泳，\r\n而且在大海上唱歌的話，心情就會非常好吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "프로듀서님, \r\n괜찮으시면 나중에 함께 바다에 가실래요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Mr. Producer,\r\nif it's OK with you, would you like to go to out to sea sometime?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "製作人，\r\n可以的話要跟我一起去海邊嗎？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "製作人，\r\n可以的話要跟我一起去海邊嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "와~ 기대돼요♪"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Wow! I'm so excited♪"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "哇～好期待哦♪"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "哇～好期待哦♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "아, 혹시 수영복이 없으시면, \r\n그 때 제가 고를 수 있게 해주세요♪"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Ah, if you don't have a swimsuit yet,\r\nlet me choose one for you♪"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "啊，如果你沒有泳衣的話，\r\n請讓我幫你挑選♪"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "啊，如果你沒有泳衣的話，\r\n請讓我幫你挑選♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "요즘 제게 오는 팬레터에서\r\n간간히 프로듀서님 이야기도 보여요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "In the fan letters I get these days,\r\nI sometimes read stories about you."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "最近寄來給我的粉絲信裡面\r\n有時會提到製作人。"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "最近寄來給我的粉絲信裡面\r\n有時會提到製作人。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "프로듀서님과 함께 있을 때\r\n제가 정말 편해 보인다는 말이나…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "When I'm with you,\r\nI look so relaxed…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "有的說我跟製作人在一起的時候，\r\n看起來真的很放鬆⋯"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "有的說我跟製作人在一起的時候，\r\n看起來真的很放鬆⋯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "인디에서 프로 지망으로 오면서\r\n방향 설정이 잘 될지 걱정했는데 \r\n잘 하고 있다거나…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Or that they were worried when I came to an indie programme\r\nas an aspirant, worried that my direction setting would work…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "有的說他很擔心我從地下偶像轉型成專業練習生\r\n能不能成功，但我做得很好…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "有的說他很擔心我從地下偶像轉型成專業練習生\r\n能不能成功，但我做得很好…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "칭찬의 말들이 써 있어요\r\n프로듀서님 무척 인기 많으시네요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Or praises.\r\nMr. Producer, you are very popular."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "寫了很多稱讚的話。\r\n製作人非常受歡迎呢。"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "寫了很多稱讚的話。\r\n製作人非常受歡迎呢。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "하핫…이러다가 \r\n프로듀서님이 데뷔하시는 거 아니에요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Hehe… \r\nI think you could even debut."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "哈哈…這樣下去\r\n製作人不會就出道了吧？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "哈哈…這樣下去\r\n製作人不會就出道了吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "아하하! 만약 프로듀서님이 데뷔하신다면, \r\n무척 사랑받는 아이돌이 될 거에요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Ahaha! If you were to debut, \r\nyou would be a much loved idol."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "啊哈哈！假如製作人出道的話，\r\n會成為非常受到喜愛的偶像的"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "啊哈哈！假如製作人出道的話，\r\n會成為非常受到喜愛的偶像的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "저는 확신할 수 있어요♪"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "I can be complete."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "我可以確定哦♪"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "我可以確定哦♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "팬 분께 리본 장식을 선물 받았어요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "I got a ribbon as a gift from my fan."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "我從粉絲那收到了緞帶裝飾"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "我從粉絲那收到了緞帶裝飾"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "리본을 싫어하는 건 아니지만,\r\n역시 이런 귀여운 장신구를 보면…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "It's not that I hate ribbons,\r\nbut looking at these cute ornaments…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "雖然我不討厭緞帶，\r\n但看到這種可愛的飾品的話…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "雖然我不討厭緞帶，\r\n但看到這種可愛的飾品的話…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "저보다 미카같이 귀여운 친구한테 \r\n더 어울리지 않을까?하는 생각이 들어요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Wouldn't it look better on cute girls like… \r\nit would look better on her. That's how I think sometimes."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "還是覺得比起我，\r\n不會更適合像米卡那樣可愛的孩子吧？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "還是覺得比起我，\r\n不會更適合像米卡那樣可愛的孩子吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "후후…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Hehe…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "呼呼…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "呼呼…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "감사합니다. 말해놓고 보니…\r\n괜히 그런 말을 듣고 싶어서 \r\n얘기 꺼낸 것 같기도 해요. 하핫"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Thank you. Come to think of it…\r\nThat wasn't what I wanted to hear… \r\nso I said it on purpose. Haha…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "謝謝。說完我才發現…\r\n感覺我好像是為了聽到這種話，\r\n所以才開啟這個話題的，哈哈"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "謝謝。說完我才發現…\r\n感覺我好像是為了聽到這種話，\r\n所以才開啟這個話題的，哈哈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "팬 분이 주신 소중한 리본이니까…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "It's a precious ribbon from my fan…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "畢竟是粉絲送給我的珍貴緞帶…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "畢竟是粉絲送給我的珍貴緞帶…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "다음 무대에 하고 나갈게요♪"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "So I'll wear it for my next performance♪"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "下次表演的時候戴上吧♪"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "下次表演的時候戴上吧♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "프로듀서님, \r\n저 베이킹을 시작해보려고 하는데…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Mr. Producer, \r\nI'm trying to start baking…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "製作人，\r\n我打算開始學烘培…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "製作人，\r\n我打算開始學烘培…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "베이킹 도구 쇼핑에 \r\n같이 가주실 수 있나요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Do you mind going \r\nshopping for baking utensils with me?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "可以陪我一起去\r\n買烘培道具嗎？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "可以陪我一起去\r\n買烘培道具嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "와~ 감사합니다!"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Thank you!"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "哇～謝謝！"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "哇～謝謝！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "제가 만든 부추빵, \r\n팬분들한테 나눠드리고 싶거든요\r\n첫 시식은 프로듀서님이 해주세요~^^"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "This chive bread that I made, \r\nI want to hand it out to the fans.\r\nYou should try it first."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "我做的韭菜麵包，\r\n想分給粉絲們，\r\n第一次的試吃就請製作人來試試～^^"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "我做的韭菜麵包，\r\n想分給粉絲們，\r\n第一次的試吃就請製作人來試試～^^"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "프로듀서님, 시간 괜찮으신가요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Mr. Producer, do you got some time?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "製作人，你有空嗎？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "製作人，你有空嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "이번에 팬분들께 드리는 곡을 제작하고싶은데…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "I want to make a song for the fans…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "因為這次我想製作獻給粉絲的歌曲…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "因為這次我想製作獻給粉絲的歌曲…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "문득 마음에 드는 멜로디가 떠올라서요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "And I just came up with a melody"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "我想到了一段旋律。"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "我想到了一段旋律。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "음, 어떻게 들려드려야 할까…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Umm, how should I play it for you?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "嗯，要怎麼讓你聽呢…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "嗯，要怎麼讓你聽呢…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "아, 지금 전화 가능하세요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Can you call me right now?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "啊，現在方便講電話嗎？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "啊，現在方便講電話嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "그럼 전화로 들려드릴게요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "I'll call you."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "那我現在用電話唱給你聽"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "那我現在用電話唱給你聽"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "하핫. 이상하게 긴장해서 \r\n잘 못 부르면 어떡하지?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Haha. What if I somehow get nervous\r\nand can't sing well?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "哈哈，突然好緊張，\r\n如果唱不好的話怎麼辦？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "哈哈，突然好緊張，\r\n如果唱不好的話怎麼辦？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "프로듀서님한테만 들려드리는 거니까…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "It's only for you, Mr. Producer…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "因為我只唱給製作人聽…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "因為我只唱給製作人聽…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "집중해서 잘 들어주시기에요? \r\n아셨죠?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "So you have to listen carefully! \r\nOkay?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "所以要專心聽哦？\r\n知道嗎？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "所以要專心聽哦？\r\n知道嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "프로듀서님, 그거 아세요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Mr. Producer, did you know that"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "製作人，你知道嗎？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "製作人，你知道嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "새우와 마리모의 궁합이 좋대요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "shrimp and Marimo go well together?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "聽說蝦子跟毬藻的八字很合哦"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "聽說蝦子跟毬藻的八字很合哦"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "새우들이 마리모를 좋아한다고 해요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Shrimp likes Marimo."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "聽說蝦子喜歡毬藻。"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "聽說蝦子喜歡毬藻。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "마리모에 착 붙어있는 귀여운 새우들이라니…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Cute prawns sticking to Marimo…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "緊緊貼著毬藻的可愛蝦子們…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "緊緊貼著毬藻的可愛蝦子們…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "상상만 해도 평화로워지는 광경이네요♪"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Just imagining it makes me feel at peace♪"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "光是想像，就會讓心情平靜下來的景象呢♪"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "光是想像，就會讓心情平靜下來的景象呢♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "주말에, 축가를 부탁받아 \r\n결혼식에 다녀왔어요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "During the weekend, I was asked to sing at a wedding. \r\nSo I went to one."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "週末的時候，我受到委託\r\n到別人的結禮上唱了祝賀的歌曲"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "週末的時候，我受到委託\r\n到別人的結禮上唱了祝賀的歌曲"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "공연은 많이 다녀봤지만\r\n역시 이런 곳은 특별한 것 같아요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "I've been to a lot of concerts,\r\nplaces like this are special…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "雖然我進行過很多場公演，\r\n但還是覺得這種場合很特別"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "雖然我進行過很多場公演，\r\n但還是覺得這種場合很特別"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "신혼 부부의 행복한 표정과\r\n흩날리는 꽃잎…"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "The happy faces of the newlyweds\r\nand fluttering petals…"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "新婚夫婦幸福的表情和\r\n飄揚的花瓣…"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "新婚夫婦幸福的表情和\r\n飄揚的花瓣…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "그 사이에 있으면 \r\n마치 영화의 한 장면 속에 들어온 것 같아요"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "In between all this,\r\nit feels like I'm in a movie."
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "如果我置身其中的話，\r\n就好像進到電影裡的場景一樣呢"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "如果我置身其中的話，\r\n就好像進到電影裡的場景一樣呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "시하",
+          "message": "후후… 글쎄요\r\n저도 언젠가 결혼 하게 될까요?"
+        },
+        "en": {
+          "speaker": "Seeha",
+          "message": "Hehe… I don't know.\r\nWill I get married someday?"
+        },
+        "zh_tw": {
+          "speaker": "西荷",
+          "message": "呼呼…這個嘛\r\n總有一天我也會結婚吧？"
+        },
+        "zh_cn": {
+          "speaker": "西荷",
+          "message": "呼呼…這個嘛\r\n總有一天我也會結婚吧？"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "미카",
+          "message": "너무 완벽하잖아… 이건 불공평해."
+        },
+        "en": {
+          "speaker": "Mica",
+          "message": "She is so perfect… This is unfair."
+        },
+        "zh_tw": {
+          "speaker": "米卡",
+          "message": "太完美了吧…不公平。"
+        },
+        "zh_cn": {
+          "speaker": "米卡",
+          "message": "太完美了吧…不公平。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "누, 눈을 뗄 수가 없어요… 왜일까요…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I, I can't take my eyes off her… I wonder why…"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "無、無法移開目光…怎麼會這樣呢…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "無、無法移開目光…怎麼會這樣呢…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "레베카",
+          "message": "확실히, 저런 애는 자주 태어나진 않더라고. 몇백 년에 한 번 정도?"
+        },
+        "en": {
+          "speaker": "Rebecca",
+          "message": "Surely, someone like her doesn't come along very often. Maybe about once every few hundred years?"
+        },
+        "zh_tw": {
+          "speaker": "瑞貝卡",
+          "message": "老實說，那種孩子並不常見吧，大概幾百年會出現一位？"
+        },
+        "zh_cn": {
+          "speaker": "瑞貝卡",
+          "message": "老實說，那種孩子並不常見吧，大概幾百年會出現一位？"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "구원자님, 안녕하세요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Hello, Savior."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "救援者，你好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "救援者，你好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "시하에요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "It's me, Seeha."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我是西荷"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我是西荷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕 시하야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，西荷"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，西荷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕 시하야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，西荷"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，西荷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "하핫… 갑작스럽게 메세지를 보내서 놀라셨죠?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Haha… Were you surprised by my unexpected message?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "哈哈…突然收到我的訊息嚇到了吧？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "哈哈…突然收到我的訊息嚇到了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "다름이 아니라 인사를 드리고 싶어서요\r\n인디 아이돌 활동을 하고 있는 시하에요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I just wanted to say hi.\r\nIt's Seeha, working as an indie idol."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "不為別的，我只是想跟你打聲招呼。\r\n我是正在進行地下偶像活動的西荷"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "不為別的，我只是想跟你打聲招呼。\r\n我是正在進行地下偶像活動的西荷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "앞으로 잘 부탁드려요, 구원자님"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Nice to meet you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "以後請多指教，救援者"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "以後請多指教，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nice to meet you, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也請妳多多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也請妳多多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nice to meet you, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也請妳多多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也請妳多多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "구원자님의 소문을 처음 들었을 때부터\r\n그동안 남몰래 지켜보고 있었답니다"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Ever since I heard rumors of you,\r\nI've been keeping a close eye on you"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "這陣子我一直偷偷看著\r\n救援者在伊甸園活躍的模樣"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "這陣子我一直偷偷看著\r\n救援者在伊甸園活躍的模樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "자주 메세지 할 테니까 답장 꼭 해주셔야 해요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I'm gonna message you often, so please reply!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我會常常傳訊息給你，一定要回覆我哦？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我會常常傳訊息給你，一定要回覆我哦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "그럼 푹 쉬세요, 구원자님♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "So rest up for now, Savior♪"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "那麼好好休息哦，救援者♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "那麼好好休息哦，救援者♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "오늘은 햇빛이 엄청 뜨겁네요…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "The sunlight is so strong…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "今天的陽光好熱…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "今天的陽光好熱…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "이런 날씨엔 수영하고 싶어져요.\r\n그리고 바다에서 노래하면 엄청 기분 좋겠죠?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I feel like going for a swim whenever the weather is like this.\r\nAnd it would also feel so nice to sing at the sea!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "這種天氣就想游泳，\r\n而且在大海上唱歌的話，心情就會非常好吧？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "這種天氣就想游泳，\r\n而且在大海上唱歌的話，心情就會非常好吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, \r\n괜찮으시면 나중에 함께 바다에 가실래요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer,\r\nif it's OK with you, would you like to go to out to sea sometime?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，\r\n可以的話要跟我一起去海邊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，\r\n可以的話要跟我一起去海邊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Gladly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Gladly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "와~ 기대돼요♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Wow! I'm so excited♪"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "哇～好期待哦♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "哇～好期待哦♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "아, 혹시 수영복이 없으시면, \r\n그 때 제가 고를 수 있게 해주세요♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Ah, if you don't have a swimsuit yet,\r\nlet me choose one for you♪"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "啊，如果你沒有泳衣的話，\r\n請讓我幫你挑選♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "啊，如果你沒有泳衣的話，\r\n請讓我幫你挑選♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "요즘 제게 오는 팬레터에서\r\n간간히 프로듀서님 이야기도 보여요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "In the fan letters I get these days,\r\nI sometimes read stories about you."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "最近寄來給我的粉絲信裡面\r\n有時會提到製作人。"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "最近寄來給我的粉絲信裡面\r\n有時會提到製作人。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 이야기인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do they say?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說了什麼呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說了什麼呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 이야기인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do they say?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說了什麼呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說了什麼呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님과 함께 있을 때\r\n제가 정말 편해 보인다는 말이나…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "When I'm with you,\r\nI look so relaxed…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "有的說我跟製作人在一起的時候，\r\n看起來真的很放鬆⋯"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "有的說我跟製作人在一起的時候，\r\n看起來真的很放鬆⋯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "인디에서 프로 지망으로 오면서\r\n방향 설정이 잘 될지 걱정했는데 \r\n잘 하고 있다거나…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Or that they were worried when I came to an indie programme\r\nas an aspirant, worried that my direction setting would work…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "有的說他很擔心我從地下偶像轉型成專業練習生\r\n能不能成功，但我做得很好…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "有的說他很擔心我從地下偶像轉型成專業練習生\r\n能不能成功，但我做得很好…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "칭찬의 말들이 써 있어요\r\n프로듀서님 무척 인기 많으시네요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Or praises.\r\nMr. Producer, you are very popular."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "寫了很多稱讚的話。\r\n製作人非常受歡迎呢。"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "寫了很多稱讚的話。\r\n製作人非常受歡迎呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "하핫…이러다가 \r\n프로듀서님이 데뷔하시는 거 아니에요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Hehe… \r\nI think you could even debut."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "哈哈…這樣下去\r\n製作人不會就出道了吧？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "哈哈…這樣下去\r\n製作人不會就出道了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 어려울 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't think so…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那很困難"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那很困難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 어려울 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't think so…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那很困難"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那很困難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "아하하! 만약 프로듀서님이 데뷔하신다면, \r\n무척 사랑받는 아이돌이 될 거에요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Ahaha! If you were to debut, \r\nyou would be a much loved idol."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "啊哈哈！假如製作人出道的話，\r\n會成為非常受到喜愛的偶像的"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "啊哈哈！假如製作人出道的話，\r\n會成為非常受到喜愛的偶像的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "저는 확신할 수 있어요♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I can be complete."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我可以確定哦♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我可以確定哦♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "팬 분께 리본 장식을 선물 받았어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I got a ribbon as a gift from my fan."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我從粉絲那收到了緞帶裝飾"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我從粉絲那收到了緞帶裝飾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "리본을 싫어하는 건 아니지만,\r\n역시 이런 귀여운 장신구를 보면…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "It's not that I hate ribbons,\r\nbut looking at these cute ornaments…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "雖然我不討厭緞帶，\r\n但看到這種可愛的飾品的話…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "雖然我不討厭緞帶，\r\n但看到這種可愛的飾品的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "저보다 미카같이 귀여운 친구한테 \r\n더 어울리지 않을까?하는 생각이 들어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Wouldn't it look better on cute girls like… \r\nit would look better on her. That's how I think sometimes."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "還是覺得比起我，\r\n不會更適合像米卡那樣可愛的孩子吧？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "還是覺得比起我，\r\n不會更適合像米卡那樣可愛的孩子吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "시하가 해도 예쁠 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It would look good on you, too, Seeha."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "西荷戴上也會很漂亮的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "西荷戴上也會很漂亮的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "시하가 해도 예쁠 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It would look good on you, too, Seeha."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "西荷戴上也會很漂亮的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "西荷戴上也會很漂亮的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "후후…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Hehe…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "呼呼…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "呼呼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "감사합니다. 말해놓고 보니…\r\n괜히 그런 말을 듣고 싶어서 \r\n얘기 꺼낸 것 같기도 해요. 하핫"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Thank you. Come to think of it…\r\nThat wasn't what I wanted to hear… \r\nso I said it on purpose. Haha…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "謝謝。說完我才發現…\r\n感覺我好像是為了聽到這種話，\r\n所以才開啟這個話題的，哈哈"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "謝謝。說完我才發現…\r\n感覺我好像是為了聽到這種話，\r\n所以才開啟這個話題的，哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "팬 분이 주신 소중한 리본이니까…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "It's a precious ribbon from my fan…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "畢竟是粉絲送給我的珍貴緞帶…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "畢竟是粉絲送給我的珍貴緞帶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "다음 무대에 하고 나갈게요♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "So I'll wear it for my next performance♪"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "下次表演的時候戴上吧♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "下次表演的時候戴上吧♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, \r\n저 베이킹을 시작해보려고 하는데…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer, \r\nI'm trying to start baking…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，\r\n我打算開始學烘培…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，\r\n我打算開始學烘培…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "베이킹 도구 쇼핑에 \r\n같이 가주실 수 있나요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Do you mind going \r\nshopping for baking utensils with me?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "可以陪我一起去\r\n買烘培道具嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "可以陪我一起去\r\n買烘培道具嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당연하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然可以"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당연하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然可以"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "와~ 감사합니다!"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Thank you!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "哇～謝謝！"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "哇～謝謝！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "제가 만든 부추빵, \r\n팬분들한테 나눠드리고 싶거든요\r\n첫 시식은 프로듀서님이 해주세요~^^"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "This chive bread that I made, \r\nI want to hand it out to the fans.\r\nYou should try it first."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我做的韭菜麵包，\r\n想分給粉絲們，\r\n第一次的試吃就請製作人來試試～^^"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我做的韭菜麵包，\r\n想分給粉絲們，\r\n第一次的試吃就請製作人來試試～^^"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, 시간 괜찮으신가요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer, do you got some time?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，你有空嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，你有空嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "이번에 팬분들께 드리는 곡을 제작하고싶은데…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I want to make a song for the fans…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "因為這次我想製作獻給粉絲的歌曲…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "因為這次我想製作獻給粉絲的歌曲…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "문득 마음에 드는 멜로디가 떠올라서요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "And I just came up with a melody"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我想到了一段旋律。"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我想到了一段旋律。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "궁금하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm curious."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真好奇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真好奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "궁금하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm curious."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真好奇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真好奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "음, 어떻게 들려드려야 할까…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Umm, how should I play it for you?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "嗯，要怎麼讓你聽呢…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "嗯，要怎麼讓你聽呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "아, 지금 전화 가능하세요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Can you call me right now?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "啊，現在方便講電話嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "啊，現在方便講電話嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "그럼 전화로 들려드릴게요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I'll call you."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "那我現在用電話唱給你聽"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "那我現在用電話唱給你聽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "하핫. 이상하게 긴장해서 \r\n잘 못 부르면 어떡하지?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Haha. What if I somehow get nervous\r\nand can't sing well?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "哈哈，突然好緊張，\r\n如果唱不好的話怎麼辦？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "哈哈，突然好緊張，\r\n如果唱不好的話怎麼辦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님한테만 들려드리는 거니까…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "It's only for you, Mr. Producer…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "因為我只唱給製作人聽…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "因為我只唱給製作人聽…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "집중해서 잘 들어주시기에요? \r\n아셨죠?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "So you have to listen carefully! \r\nOkay?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "所以要專心聽哦？\r\n知道嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "所以要專心聽哦？\r\n知道嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, 그거 아세요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer, did you know that"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，你知道嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，你知道嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "새우와 마리모의 궁합이 좋대요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "shrimp and Marimo go well together?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "聽說蝦子跟毬藻的八字很合哦"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "聽說蝦子跟毬藻的八字很合哦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "몰랐어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I didn't know that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "몰랐어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I didn't know that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "새우들이 마리모를 좋아한다고 해요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Shrimp likes Marimo."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "聽說蝦子喜歡毬藻。"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "聽說蝦子喜歡毬藻。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "마리모에 착 붙어있는 귀여운 새우들이라니…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Cute prawns sticking to Marimo…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "緊緊貼著毬藻的可愛蝦子們…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "緊緊貼著毬藻的可愛蝦子們…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "상상만 해도 평화로워지는 광경이네요♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Just imagining it makes me feel at peace♪"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "光是想像，就會讓心情平靜下來的景象呢♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "光是想像，就會讓心情平靜下來的景象呢♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "주말에, 축가를 부탁받아 \r\n결혼식에 다녀왔어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "During the weekend, I was asked to sing at a wedding. \r\nSo I went to one."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "週末的時候，我受到委託\r\n到別人的結禮上唱了祝賀的歌曲"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "週末的時候，我受到委託\r\n到別人的結禮上唱了祝賀的歌曲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "공연은 많이 다녀봤지만\r\n역시 이런 곳은 특별한 것 같아요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I've been to a lot of concerts,\r\nplaces like this are special…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "雖然我進行過很多場公演，\r\n但還是覺得這種場合很特別"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "雖然我進行過很多場公演，\r\n但還是覺得這種場合很特別"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "신혼 부부의 행복한 표정과\r\n흩날리는 꽃잎…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "The happy faces of the newlyweds\r\nand fluttering petals…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "新婚夫婦幸福的表情和\r\n飄揚的花瓣…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "新婚夫婦幸福的表情和\r\n飄揚的花瓣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "그 사이에 있으면 \r\n마치 영화의 한 장면 속에 들어온 것 같아요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "In between all this,\r\nit feels like I'm in a movie."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "如果我置身其中的話，\r\n就好像進到電影裡的場景一樣呢"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "如果我置身其中的話，\r\n就好像進到電影裡的場景一樣呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "결혼에 관심 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you think about marriage?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要結婚嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要結婚嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "결혼에 관심 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you think about marriage?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要結婚嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要結婚嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "후후… 글쎄요\r\n저도 언젠가 결혼 하게 될까요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Hehe… I don't know.\r\nWill I get married someday?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "呼呼…這個嘛\r\n總有一天我也會結婚吧？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "呼呼…這個嘛\r\n總有一天我也會結婚吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "정령은 아주 오래 사니까…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "A Soul lives for a very long time…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "畢竟精靈活得很久…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "畢竟精靈活得很久…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "만남과 이별을 반복하게 되겠죠?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "so repeated meeting and parting, it's"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "會不斷經歷相遇與離別吧？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "會不斷經歷相遇與離別吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "저는 가능하다면 \r\n단 하나의 사랑과 영원을 약속하고 싶어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "However, if possible, \r\nI want to promise one love and eternity."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "可以的話，\r\n我想跟唯一的愛人相守到老"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "可以的話，\r\n我想跟唯一的愛人相守到老"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "새벽 운동을 하다 보면"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "When I exercise in the morning,"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "晨間運動到一半的時候"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "晨間運動到一半的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "세상이 엄청 고요해서,\r\n꼭 혼자 있는 느낌이 들어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "the world is so quiet,\r\nI feel like I'm all alone."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "會感覺這世界真寂靜，\r\n彷彿只有我一個人"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "會感覺這世界真寂靜，\r\n彷彿只有我一個人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쓸쓸해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you feel lonely?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "孤單嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "孤單嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쓸쓸해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you feel lonely?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "孤單嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "孤單嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "쓸쓸하다기보다…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Not like I'm lonely…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "比起孤單…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "比起孤單…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "마음이 진정되는 느낌?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "It's more like feeling calm."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "感覺更像心平靜下來了？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "感覺更像心平靜下來了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "일출을 보고 있으면, \r\n하루에 대한 의욕이 생기거든요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "When I see the sun rising, \r\nI'm motivated for the day."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "看著日出，\r\n就產生了對這一天的熱情"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "看著日出，\r\n就產生了對這一天的熱情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "아, 그렇지♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Oh, right♪"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "啊，對了♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "啊，對了♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, \r\n다음에 저와 함께 일출을 보러 가실래요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer, \r\nwould you go see the sunrise with me next time?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，\r\n下次要不要跟我一起去看日出呢？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，\r\n下次要不要跟我一起去看日出呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "제가 보는 풍경을, \r\n프로듀서님께도 보여드리고 싶어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "The scenery that I see, \r\nI want to show it to you."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我想把我看到的風景，\r\n也分享給製作人"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我想把我看到的風景，\r\n也分享給製作人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "미카를 보면…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "When I see Mica…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "看著米卡…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "看著米卡…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "아이돌이라는 건 이런 거구나\r\n이래서 다들 아이돌을 좋아하는 거구나\r\n그런 생각이 들어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I think…\r\nSo that's what an idol is\r\nThat's why everyone likes idols"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "就會覺得，\r\n所謂的偶像原來是這樣，\r\n所以大家才會喜歡偶像的啊"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "就會覺得，\r\n所謂的偶像原來是這樣，\r\n所以大家才會喜歡偶像的啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미카를 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You like Mica."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來你喜歡米卡啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來你喜歡米卡啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미카를 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You like Mica."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來你喜歡米卡啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來你喜歡米卡啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "그럼요. 후후…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Of course. Hoo-hoo…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "那當然，呼呼…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "那當然，呼呼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "사실 라이벌로 봐주는 것도 기쁜데…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Actually, I'm happy that she sees me as a rival…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "其實他能把我當作對手讓我很高興…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "其實他能把我當作對手讓我很高興…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "티 내면 미카가 화내니까 비밀이에요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "It's a secret because Mica would get mad if she found out."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "不過被發現的話米卡會生氣的，要保密喔"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "不過被發現的話米卡會生氣的，要保密喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "결국 들킬 것 같긴 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you'll be found out in the end."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺最後好像還是會被發現"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺最後好像還是會被發現"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "결국 들킬 것 같긴 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you'll be found out in the end."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺最後好像還是會被發現"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺最後好像還是會被發現"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "후후, 맞아요 \r\n어쩔 수 없네요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Tee hee, that's right. \r\nAlright… I guess there's nothing I can do about it."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "呼呼，對啊\r\n沒辦法嘛"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "呼呼，對啊\r\n沒辦法嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "이런 이야길 하다 보니까\r\n듀엣 공연이 하고 싶어졌어요♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "As we were talking,\r\nI realized I want to do a duet at the concert♪"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "這種話題聊著聊著，\r\n就想舉辦二重唱公演♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "這種話題聊著聊著，\r\n就想舉辦二重唱公演♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀싱 2인분 \r\n잘 부탁드려요, 프로듀서님?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Produced for 2 people, \r\nthanks in advance, Mr. Producer."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "就拜託你製作\r\n2人合唱的歌曲了，製作人？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "就拜託你製作\r\n2人合唱的歌曲了，製作人？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "구원자님! 혹시 오늘 식사 하셨나요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Savior! Have you eaten?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "救援者！你今天吃過飯了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "救援者！你今天吃過飯了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "아직 식사 안 하셨으면… \r\n잠깐 모시고 싶은 곳이 있어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "If you haven't… \r\nThere's a place I'd like to take you to."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "如果還沒…\r\n我想帶你去一個地方"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "如果還沒…\r\n我想帶你去一個地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "나오미랑 같이 기다릴게요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I will wait with Naomi."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我會跟直美一起等你的"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我會跟直美一起等你的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "밥은 먹지 말고 와주세요~"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Please come with an empty stomach!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "不要吃飯，直接過來哦～"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "不要吃飯，直接過來哦～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님~ 뭐 하시나요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer, what are you doing?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人～你在做什麼呢？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人～你在做什麼呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안 톡을 이제 봤어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just checked the message."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉，我現在才看到訊息。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉，我現在才看到訊息。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안 톡을 이제 봤어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just checked the message."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉，我現在才看到訊息。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉，我現在才看到訊息。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "후훗. 요즘 무척 바쁘시네요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Tee hee. You've been quite busy lately."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "呵呵，你最近很忙呢"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "呵呵，你最近很忙呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "아마 저 때문에 바쁘신 걸테니까 죄송하지만…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I'm sorry since you're probably busy because of me…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "大概是因為我才很忙的，有點不好意思…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "大概是因為我才很忙的，有點不好意思…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "하지만, 무척 기뻐요!"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "But I'm so happy!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "但是，我非常開心！"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "但是，我非常開心！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, 저 오늘은 평소보다 30분만 늦게 갈게요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer, I'll be there 30 minutes later than normal today."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，我今天會比平常晚三十分鐘過去"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，我今天會比平常晚三十分鐘過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "지금 쓰는 마이크가 상태가 안 좋아서요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "The microphone I'm using is faulty."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "因為我現在用的麥克風狀態不佳"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "因為我現在用的麥克風狀態不佳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "가게에 수리를 맡겨야할 것 같아요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I think I have to go get it fixed at the store."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "好像要交給商店修理"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "好像要交給商店修理"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오래 쓴 마이크야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you use it for a long time?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是用了很久的麥克風嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是用了很久的麥克風嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오래 쓴 마이크야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you use it for a long time?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是用了很久的麥克風嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是用了很久的麥克風嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "네. 아무래도 길거리 라이브를 하다보면\r\n이리저리 험하게 쓸 때도 있어서요…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Okay. Since I use it to do live shows on the streets,\r\nI sometimes get a little rough with it…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "對，因為不管怎麼說在街上現場表演，\r\n會有各種粗暴使用的情況…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "對，因為不管怎麼說在街上現場表演，\r\n會有各種粗暴使用的情況…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "조금만 기다려주세요!"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Please wait a moment!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "等我一下哦！"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "等我一下哦！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "이따 뵈어요~"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "See you later!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "等等見～"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "等等見～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님!"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人！"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "오늘이 드디어 첫 경연이네요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Today is the first contest."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "今天終於到了第一次比賽了呢"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "今天終於到了第一次比賽了呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "후후…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Hehe…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "呵呵…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "呵呵…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "무척 떨려요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "It's really worth watching."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "超緊張的"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "超緊張的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘할 수 있을 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Right, we'll be able to do it together."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳可以做好的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳可以做好的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘할 수 있을 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Right, we'll be able to do it together."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳可以做好的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳可以做好的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "후훗. 네"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Tee hee. Okay."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "呵呵，好"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "呵呵，好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "최선을 다할게요!"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "We'll do our best."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我會全力以赴的！"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我會全力以赴的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "꼭 지켜봐주세요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Please watch over me."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "要關心我哦"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "要關心我哦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "시하야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Seeha…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "西荷"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "西荷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "시하야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Seeha…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "西荷"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "西荷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나오미가 찾는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Naomi is looking for you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "直美找妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "直美找妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나오미가 찾는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Naomi is looking for you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "直美找妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "直美找妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "일어났니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you up?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "起床了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "起床了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "일어났니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you up?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "起床了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "起床了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "시하야??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Seeha…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "西荷？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "西荷？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "시하야??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Seeha…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "西荷？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "西荷？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, 오늘 오후에는 댄스 레슨에 다녀올게요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer, I'm going to a dance lesson in this evening."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，今天下午我會去上舞蹈課"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，今天下午我會去上舞蹈課"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 다녀와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have fun."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "路上小心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "路上小心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 다녀와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have fun."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "路上小心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "路上小心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "후훗. 네"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Tee hee. Okay."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "呵呵，好"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "呵呵，好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "그러고 보니까 아까 나오미가 그러는데"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "By the way, Naomi said earlier"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "這麼說來剛剛直美說啊"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "這麼說來剛剛直美說啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님 앞으로 편지가 왔대요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "That there's a letter for you."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "有給製作人的信"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "有給製作人的信"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님을 향한 팬레터인 걸까요…?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Maybe it's a fan letter…?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "會是粉絲寫給製作人的信嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "會是粉絲寫給製作人的信嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "인기가 많으시네요, 후훗"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "You're so popular, huhu."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "你很受歡迎呢，呵呵"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "你很受歡迎呢，呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "S.I.S에서 무대하는 건…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "The S.I.S. stage was…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "在S.I.S表演…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "在S.I.S表演…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "무척 떨리지만 그만큼 보람있어요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Very nerve racking, but just as worthwhile."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "雖然很緊張，但很值得去做"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "雖然很緊張，但很值得去做"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "저, 오늘도 열심히 할게요"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I should put in the effort today, too!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我，今天也會努力的"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我，今天也會努力的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "화이팅!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Way to go!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "加油！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "加油！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "화이팅!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Way to go!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "加油！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "加油！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "후훗"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Tee hee."
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "呵呵。"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "呵呵。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "너무 긴장하지 말아야 하는데…"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I shouldn't be too anxious…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "應該要放輕鬆的…"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "應該要放輕鬆的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "이따 뵈어요!"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "See you later!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "等會見！"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "等會見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "……."
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "……."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "……."
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "……."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "……."
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "……."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "로맨틱한 날엔, 로맨틱한 노래를…♪"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "On a romantic day, we sing romantic songs…♪"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "浪漫的日子，要浪漫的歌…♪"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "浪漫的日子，要浪漫的歌…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, 어떠신가요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "How about it, Producer?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，怎麼樣呢？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，怎麼樣呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대할게, 시하야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I look forward to it, Seeha!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會期待的，西荷！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會期待的，西荷！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대할게, 시하야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I look forward to it, Seeha!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會期待的，西荷！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會期待的，西荷！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "오늘은 꼭 저를 위한 날 같네요~"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "This is the day for someone like me!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "今天一定是為了我的日子～"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "今天一定是為了我的日子～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "제가 프로듀서님께 얼마나 감사하는지\r\n꼭 전해드리고 싶어요!"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I want to show you\r\nhow much I appreciate you, Producer!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我真的很想對製作人\r\n表達我的感激之情！"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我真的很想對製作人\r\n表達我的感激之情！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm also thankful!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳呢！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳呢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm also thankful!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳呢！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳呢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "프로듀서님, 메리 크리스마스!"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "Mr. Producer, merry Christmas!"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "製作人，聖誕快樂！"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "製作人，聖誕快樂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "시하",
+            "message": "흥에 겨워 캐롤을 부르고 싶네요\r\n후후, 들어주시겠어요?"
+          },
+          "en": {
+            "speaker": "Seeha",
+            "message": "I'm so happy I want to sing a carol.\r\nHehe, do you want to hear it?"
+          },
+          "zh_tw": {
+            "speaker": "西荷",
+            "message": "我想趁著興致好唱首聖誕頌歌呢。\r\n呼呼，你要聽聽看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "西荷",
+            "message": "我想趁著興致好唱首聖誕頌歌呢。\r\n呼呼，你要聽聽看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대할게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會期待的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會期待的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대할게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會期待的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會期待的！"
+          }
+        }
+      ]
+    }
+  }
+}

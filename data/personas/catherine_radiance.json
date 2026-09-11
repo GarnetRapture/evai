@@ -1,0 +1,5613 @@
+{
+  "id": "6510",
+  "name": "캐서린(광휘)",
+  "name_en": "Catherine (Radiance)",
+  "grade": "에픽",
+  "race": "혼돈형",
+  "class": "워리어",
+  "sub_class": "지속",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "희망의 불꽃",
+    "constellation": "인연_메피스토_엔딩",
+    "union": "솔레이 왕국",
+    "birthday": "405",
+    "height": 156,
+    "weight": 44,
+    "cv_ko": "이지영",
+    "cv_jp": "Kaori Nazuka",
+    "like": [
+      "따끈한 포토푀"
+    ],
+    "dislike": [
+      "후회",
+      "부상"
+    ],
+    "hobby": [
+      "과자 굽기"
+    ],
+    "speciality": [
+      "설교"
+    ]
+  },
+  "personality": {
+    "description": "안녕하세요, 구원자님. \n이 모습으로는 처음 인사드리네요. 캐서린이에요. \n\n구원자님께서 이 에덴에 오신 이후로 정말 많은 일이 있었죠. \n기쁜 일들도 많았지만, 그만큼 슬픈 일들도 많았어요. \n하지만… 우리는 이미 일어난 비극을 그저 한탄하며 절망에 빠져있을 수만은 없어요. \n\n중요한 건 앞으로 들이닥칠 비극에 저희가 어떻게 맞서 싸우느냐.\n어떻게 희망이라는 한 줄기 빛을 계속해서 유지할 것인가겠죠. \n\n이미 충분히 잘 알고 계실 테지만, \n그래도 다시 한번 말씀드리고 싶었어요. \n\n하지만 너무 걱정 마세요, 구원자님. \n그 어떠한 절망이 다가오더라도…\n저희는 분명 희망이라는 빛을 찾아낼 수 있을 테니까요.",
+    "greeting": "기도, 그리고 행동으로 이뤄내겠어요."
+  },
+  "speech_patterns": [
+    "안녕하세요, 구원자님. \r\n드디어 연락을 드릴 수 있었네요.",
+    "구원자님 쪽은 괜찮으신가요? \r\n상황이 상황이다보니 걱정이 앞서네요.",
+    "…저는 괜찮아요.",
+    "나중에 아케나인에 들르실 때 \r\n그동안 쌓인 이야기를 하고자 해요.",
+    "괜찮으시다면 제게 시간을 좀 내주시겠어요?",
+    "조금 부끄러운 얘기지만…",
+    "그동안 없던 날개가 갑자기 생겨서 \r\n살짝 곤란하답니다.",
+    "전부 제가 미숙한 탓이겠지만요…",
+    "그… 저도 모르게 날개가 있는 걸\r\n가끔 잊어버리기도 하거든요.",
+    "그래서… 날개가 끼여서 \r\n문에 부딪히거나 할 때가 있어요…",
+    "끄응…",
+    "…어머나!",
+    "후후. 위로해 주시는 건가요.",
+    "고마워요, 구원자님.",
+    "그런 상냥함에 \r\n저를 비롯한 많은 정령들이 구원받고 있답니다.",
+    "다른 천사형이나 악마형 정령 분들의 말에 따르면…",
+    "힘을 다루는 데에 익숙해질 수록 \r\n날개도 자유자재로 다룰 수 있게 된다고 하네요.",
+    "앞으로도 정진할게요, 구원자님.",
+    "갑작스럽지만…\r\n구원자님과 알게 되어 정말 기쁘답니다.",
+    "아뇨, 특별히 뭔가 있었던 건 아니지만…",
+    "제가 성당에서 직위가 올라갈 수록…\r\n그리고 섭정이 된 이래로…",
+    "남들이 저를 대하는 태도가 조금씩 달라지곤 했거든요.",
+    "하지만 구원자님께서는 \r\n이전도 지금도, 저를 항상 같게 대해주셔서…",
+    "그 점이 기쁘구나, 싶었어요.",
+    "후후",
+    "맞아요, \r\n저는 언제나 저죠.",
+    "그 사실은 앞으로도 변하지 않을 거예요.",
+    "알고 있어도… 때로는 그 사실을 \r\n가끔 잊을 뻔하고는 해서…",
+    "항상 변함없이 제게 친근하게 대해주시는 \r\n구원자님이나, 다른 동료 분들이…",
+    "제게는 정말로 소중하답니다.",
+    "그러고 보니…",
+    "최근에는 페이렌의 숲지기 분들이나 \r\n칼라르 암즈의 분들과 자주 이야기를 나누곤 한답니다.",
+    "사사로운 잡담을 하더라도, 확실히 솔레이 왕국과는 \r\n다른 환경에서 지내오신 게 느껴지더라구요.",
+    "이전에도 다른 나라의 정령 분들과\r\n교류하곤 했지만…",
+    "요즘처럼 단기간에 밀착해서 함께 \r\n업무를 진행한 적은 없다보니…",
+    "조금 새로운 느낌이 들었어요.",
+    "저도 모르게 구원자님과\r\n처음 만났을 때를 떠올려버렸지 뭐예요.",
+    "후후. 맞아요.",
+    "당시의 구원자님은 에덴에 소환되신지 얼마 안 되셔서 \r\n온갖 것들에 놀라곤 하셨죠.",
+    "최근 들어서는 에덴에도 익숙해지셔서 \r\n점점 놀라시는 일도 줄어들고 있지만…",
+    "그건 분명 구원자님께서 이 세상을, \r\n저희들을 더 알기 위해 많이 노력하신 덕분이겠죠.",
+    "그리 생각하면 조금은 마음이 따스해진답니다.",
+    "저희는 이 세상에 속해 있으니 \r\n구원자님께 다가가는 게 비교적 덜 무서웠지만…",
+    "구원자님 입장에서는 완전히 새로운 세상, \r\n새로운 존재, 새로운 관계를 시작하시는 거니까요.",
+    "정말 용기 있다고 생각해요.",
+    "저라면… 조금 어려웠을지도.",
+    "…후후. 네.",
+    "저는… 스스로가 도망치는 걸 용서할 수 없으니까요.",
+    "계속 맞서 싸울 거랍니다.",
+    "제가 새로이 얻은, \r\n이 생명이 다하는 날까지…"
+  ],
+  "comments": [
+    {
+      "writer": "클레르",
+      "comment": "수많은 역경을 극복해온 캐서린의 강인한 마음은 존경하지만,\n어째서인지 가끔 위태로워 보이기도 합니다."
+    },
+    {
+      "writer": "이디스",
+      "comment": "한없이 상냥하고, 그만큼 엄격하신 분. \n그 카리스마는 천부적인 재능이라고 느껴져요."
+    },
+    {
+      "writer": "조앤",
+      "comment": "목표를 위해 최선을 다하는 건 좋지만,\n부디 그 영혼마저 불살라버리지 않기를."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "안녕하세요, 구원자님. \r\n드디어 연락을 드릴 수 있었네요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님 쪽은 괜찮으신가요? \r\n상황이 상황이다보니 걱정이 앞서네요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "캐서린이야말로 큰 일인 것 같은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "캐서린이야말로 큰 일인 것 같은데"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "…저는 괜찮아요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "나중에 아케나인에 들르실 때 \r\n그동안 쌓인 이야기를 하고자 해요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "괜찮으시다면 제게 시간을 좀 내주시겠어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물론이지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물론이지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나중에 보자, 캐서린"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나중에 보자, 캐서린"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "조금 부끄러운 얘기지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그동안 없던 날개가 갑자기 생겨서 \r\n살짝 곤란하답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "전부 제가 미숙한 탓이겠지만요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "날개가 왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "날개가 왜?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그… 저도 모르게 날개가 있는 걸\r\n가끔 잊어버리기도 하거든요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그래서… 날개가 끼여서 \r\n문에 부딪히거나 할 때가 있어요…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "끄응…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…나는 날개가 없어도 부딪히는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…나는 날개가 없어도 부딪히는데…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "…어머나!"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후. 위로해 주시는 건가요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "고마워요, 구원자님."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그런 상냥함에 \r\n저를 비롯한 많은 정령들이 구원받고 있답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "다른 천사형이나 악마형 정령 분들의 말에 따르면…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "힘을 다루는 데에 익숙해질 수록 \r\n날개도 자유자재로 다룰 수 있게 된다고 하네요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "앞으로도 정진할게요, 구원자님."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "갑작스럽지만…\r\n구원자님과 알게 되어 정말 기쁘답니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 그래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 그래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "근데 진짜 갑작스럽긴 하다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "근데 진짜 갑작스럽긴 하다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있었어?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "아뇨, 특별히 뭔가 있었던 건 아니지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "제가 성당에서 직위가 올라갈 수록…\r\n그리고 섭정이 된 이래로…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "남들이 저를 대하는 태도가 조금씩 달라지곤 했거든요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "하지만 구원자님께서는 \r\n이전도 지금도, 저를 항상 같게 대해주셔서…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그 점이 기쁘구나, 싶었어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그야 캐서린은 캐서린이니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그야 캐서린은 캐서린이니까"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "맞아요, \r\n저는 언제나 저죠."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그 사실은 앞으로도 변하지 않을 거예요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "알고 있어도… 때로는 그 사실을 \r\n가끔 잊을 뻔하고는 해서…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "항상 변함없이 제게 친근하게 대해주시는 \r\n구원자님이나, 다른 동료 분들이…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "제게는 정말로 소중하답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그러고 보니…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "최근에는 페이렌의 숲지기 분들이나 \r\n칼라르 암즈의 분들과 자주 이야기를 나누곤 한답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "사사로운 잡담을 하더라도, 확실히 솔레이 왕국과는 \r\n다른 환경에서 지내오신 게 느껴지더라구요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "이전에도 다른 나라의 정령 분들과\r\n교류하곤 했지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "요즘처럼 단기간에 밀착해서 함께 \r\n업무를 진행한 적은 없다보니…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "조금 새로운 느낌이 들었어요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "저도 모르게 구원자님과\r\n처음 만났을 때를 떠올려버렸지 뭐예요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나랑 처음 만났을 때를?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나랑 처음 만났을 때를?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후. 맞아요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "당시의 구원자님은 에덴에 소환되신지 얼마 안 되셔서 \r\n온갖 것들에 놀라곤 하셨죠."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "최근 들어서는 에덴에도 익숙해지셔서 \r\n점점 놀라시는 일도 줄어들고 있지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그건 분명 구원자님께서 이 세상을, \r\n저희들을 더 알기 위해 많이 노력하신 덕분이겠죠."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그리 생각하면 조금은 마음이 따스해진답니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그야 모두 내게 친절하게 대해줬으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그야 모두 내게 친절하게 대해줬으니까"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "저희는 이 세상에 속해 있으니 \r\n구원자님께 다가가는 게 비교적 덜 무서웠지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님 입장에서는 완전히 새로운 세상, \r\n새로운 존재, 새로운 관계를 시작하시는 거니까요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "정말 용기 있다고 생각해요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "저라면… 조금 어려웠을지도."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "캐서린도 충분히 용감하다고 생각해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "캐서린도 충분히 용감하다고 생각해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계속 도망치지 않고 싸우고 있는걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계속 도망치지 않고 싸우고 있는걸"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "…후후. 네."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "저는… 스스로가 도망치는 걸 용서할 수 없으니까요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "계속 맞서 싸울 거랍니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "제가 새로이 얻은, \r\n이 생명이 다하는 날까지…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "모두를 위해서요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구, 구원자님. \r\n큰일났어요…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 그래?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 그래?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "설마 습격이라도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "설마 습격이라도"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "공무를 보던 도중 \r\n갑자기 병아리가 제 머리 위에…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "어, 어쩌죠… \r\n뜨겁지 않으려나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "즐기고 있는 거 같은데…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "즐기고 있는 거 같은데…?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "얼른 내려주고 싶은데…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "다들 웃기만 하고 \r\n내려주시질 않고 있어요…!"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "난 몰라…!"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "이전부터 유리아 님께서 \r\n몰래 매운 걸 즐겨 드시던 건 알고 있었지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "설마 이정도로 매울 줄은 \r\n정말 상상도 못했어요…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금 충격적이긴 하지…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금 충격적이긴 하지…?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "네. 하지만… \r\n그래도 싫지는 않았어요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "확실히 뭔가… 제 안에서 \r\n불이 나는 것 같은 그런 느낌이 있달까…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "땀을 흘려서 그런지, \r\n조금 개운한 것 같기도 해요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 살짝 중독될 거 같긴 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 살짝 중독될 거 같긴 해"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님께서는 제게 그런 \r\n매운 요리가 안맞는다고 하셨지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "다음에 한번쯤은 더 도전해보고 싶기도 하네요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그때도 같이 가주시겠어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "캐서린이 같이 가준다면야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "캐서린이 같이 가준다면야"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후. 든든하네요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "언젠가 유리아 님이 돌아오시고, \r\n메피 님도, 로제도 돌아오면…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "다음에는 다함께 같이 \r\n매운 걸 먹어보고 싶기도 하네요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꼭 그러자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꼭 그러자"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "네. 기대하고 있을게요♪"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "사실 고백하자면 \r\n최근에는 마음 놓고 외출하기 어려웠어요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "이전에도 많은 분이 저를 알아보고 \r\n인사를 건네시곤 하셨지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "섭정 일을 하게 된 이후로는…\r\n어쩐지 그 시선이 조금 부담스럽게 느껴지기도 해서…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "…후후. 이러면 안 되는데 말이죠."
+      },
+      {
+        "speaker": "구원자",
+        "message": "상황이 상황이니까 어쩔 수 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "상황이 상황이니까 어쩔 수 없어"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "…네. \r\n하지만 이제는 괜찮을 거 같아요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "외출을 생각하기 이전에 \r\n제게 주어진 일들부터 다 처리해야겠지만요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후. 그래도 구원자님 덕분에 \r\n조금은 마음이 가벼워졌답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "다음에 기회가 될 때 \r\n또 불러주시면 기쁠 것 같아요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님. \r\n잠시 굉장히 시시콜콜한 이야기를 해도 될까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "사실 어젯 밤에 구원자님이 \r\n제 꿈에 나오셨지 뭐예요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님은 제가 가르치는 학생이었고, \r\n저는 선생님이었는데…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "참 신기하죠? \r\n성당에서 정령들을 가르친 적은 있어도…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그런 식으로 교육 기관에서 \r\n누군가를 가르쳐본 적은 없는데 말이에요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 신기한 꿈이네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 신기한 꿈이네"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그쵸?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "게다가 어째서인지는 모르겠지만 \r\n평소 알고 지내는 다른 분들도 학생으로 나와서…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "왜 저만 선생님이었던 걸까 하고 \r\n조금 기묘하게 생각했답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "꿈에 안나온 다른 분들 중에는 \r\n저와 같은 선생님이신 분들도 계셨을까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴지도 몰라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴지도 몰라"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후. 그럼 좋겠어요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "제아무리 꿈 속이더라도…\r\n저 혼자만 선생님인건 조금 쓸쓸하니까요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "생각해 보면 구원자님도 \r\n선생님 역할이 잘 어울리실 것 같아요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "다른 분들께 설명을 잘하시니까요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러는 캐서린도 학생 역할이 어울릴 걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러는 캐서린도 학생 역할이 어울릴 걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청난 모범생일 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청난 모범생일 것 같아"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후. 글쎄요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "어쩌면 의외로 골칫덩이가 될지도 몰라요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "꿈 속의 저는 좀…\r\n많이 지쳐 보였거든요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "피곤해서 그런 거 아닐까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "피곤해서 그런 거 아닐까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "가끔씩은 푹 쉬어줘."
+      },
+      {
+        "speaker": "구원자",
+        "message": "가끔씩은 푹 쉬어줘."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후. 네."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님도 꼭 건강 챙겨주세요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그러고 보니… \r\n'이브'라는 정령이 나타났다고 말씀하셨죠."
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "…조금 복잡한 심정이네요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "저희 성당에서는 '이브' 님을 모든 정령들의 어머니, \r\n정령들의 신으로 섬기고 있으니…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "과연 제가 그 분을 직접 뵙게 되면…\r\n저는 평정심을 유지할 수 있을까요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 만나보지 않으면 모르지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 만나보지 않으면 모르지"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "…그렇겠죠?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그때를 예비하도록 할게요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "때가 왔을 때, \r\n최선의 행동을 취할 수 있게끔…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님. \r\n혹시 근시일 중에 시간 괜찮으실까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 왜?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "시간이 맞으실 때, \r\n조촐하게나마 함께 식사를 하고 싶어서요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "최근 요리를 할 기회가 별로 없는 데다가…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "로제가 잠든 이래로, \r\n주변 정령들과 함께 식사도 잘 못했어서…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "제 주변의 소중한 이들과 함께\r\n식탁을 둘러싸고 앉아 식사하고 싶었답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "저희 중에서는 구원자님께서 제일 바쁘시니…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님의 일정에 맞춰서 \r\n다함께 스케줄을 조정할까 했거든요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 기쁘네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 기쁘네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알아보고 바로 알려줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알아보고 바로 알려줄게"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "후후. 네."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "모두가 좋아하는 음식을 \r\n아주 정성스럽게 준비해서…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "작고 따스한 행복을 \r\n다함께 느껴요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "이 고난을 헤쳐나가기 위해서라도…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "함께 연대하고 서로를 지지해주는 것이 \r\n얼마나 개인을 행복하게 하는지…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "소중한 이들과 함께 보내는 시간이 \r\n얼마나 가치있는 것인지…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "다함께 곱씹는 시간을 가지고 싶네요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "저는 언제나처럼 \r\n아케나인 성에 있답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "여유가 되실 때 \r\n잠시 들러주시겠어요?"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님, \r\n저는 가능하면…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "제가 할 수 있는 한 \r\n구원자님의 짐을 덜어드리고 싶어요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "이전에 유리아 님께서 그러셨던 것처럼…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "구원자님께서 갑자기 \r\n나들이에 초대해 주셔서 조금 놀랐지만…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "그래도 정말 기쁘답니다."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "금방 오늘 일정을 마무리하고 \r\n약속 장소로 향할게요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "광장에서 조금만 기다려주세요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "금방 갈테니까요!"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "지극히 당연하지만, 아주 중요한 사실…"
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "하마터면 계속해서 잊어버린 채, \r\n모두의 마음을 헛되이 할 뻔했어요."
+      },
+      {
+        "speaker": "캐서린(광휘)",
+        "message": "고마워요, 구원자님.\r\n덕분에 저는 앞으로 나아갈 수 있어요."
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "캐서린(광휘)",
+      "en": "Catherine (Radiance)",
+      "zh_tw": "凱瑟琳（光輝）",
+      "zh_cn": "凱瑟琳（光輝）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "혼돈형",
+      "en": "Chaotic",
+      "zh_tw": "混沌型",
+      "zh_cn": "混沌型"
+    },
+    "class": {
+      "ko": "워리어",
+      "en": "Warrior",
+      "zh_tw": "戰士",
+      "zh_cn": "戰士"
+    },
+    "sub_class": {
+      "ko": "지속",
+      "en": "DoT",
+      "zh_tw": "持續",
+      "zh_cn": "持續"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "희망의 불꽃",
+        "en": "Flame of Hope",
+        "zh_tw": "希望花火",
+        "zh_cn": "希望花火"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_엔딩",
+        "en": "인연_메피스토_엔딩",
+        "zh_tw": "牡羊座",
+        "zh_cn": "牡羊座"
+      },
+      "union": {
+        "ko": "솔레이 왕국",
+        "en": "Kingdom of Solrey",
+        "zh_tw": "蘇萊伊王國",
+        "zh_cn": "蘇萊伊王國"
+      },
+      "cv_ko": {
+        "ko": "이지영",
+        "en": "Jiyoung Lee",
+        "zh_tw": "李智英",
+        "zh_cn": "李智英"
+      },
+      "cv_jp": {
+        "ko": "Kaori Nazuka",
+        "en": "Kaori Nazuka",
+        "zh_tw": "Kaori Nazuka",
+        "zh_cn": "Kaori Nazuka"
+      },
+      "like": {
+        "ko": [
+          "따끈한 포토푀"
+        ],
+        "en": [
+          "Hot pot-au-feu"
+        ],
+        "zh_tw": [
+          "熱呼呼的肉菜湯"
+        ],
+        "zh_cn": [
+          "熱呼呼的肉菜湯"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "후회",
+          "부상"
+        ],
+        "en": [
+          "Regrets",
+          "injuries"
+        ],
+        "zh_tw": [
+          "後悔、受傷"
+        ],
+        "zh_cn": [
+          "後悔、受傷"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "과자 굽기"
+        ],
+        "en": [
+          "Baking cookies"
+        ],
+        "zh_tw": [
+          "烤餅乾"
+        ],
+        "zh_cn": [
+          "烤餅乾"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "설교"
+        ],
+        "en": [
+          "Sermon"
+        ],
+        "zh_tw": [
+          "說教"
+        ],
+        "zh_cn": [
+          "說教"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "안녕하세요, 구원자님. \n이 모습으로는 처음 인사드리네요. 캐서린이에요. \n\n구원자님께서 이 에덴에 오신 이후로 정말 많은 일이 있었죠. \n기쁜 일들도 많았지만, 그만큼 슬픈 일들도 많았어요. \n하지만… 우리는 이미 일어난 비극을 그저 한탄하며 절망에 빠져있을 수만은 없어요. \n\n중요한 건 앞으로 들이닥칠 비극에 저희가 어떻게 맞서 싸우느냐.\n어떻게 희망이라는 한 줄기 빛을 계속해서 유지할 것인가겠죠. \n\n이미 충분히 잘 알고 계실 테지만, \n그래도 다시 한번 말씀드리고 싶었어요. \n\n하지만 너무 걱정 마세요, 구원자님. \n그 어떠한 절망이 다가오더라도…\n저희는 분명 희망이라는 빛을 찾아낼 수 있을 테니까요.",
+        "en": "Hello, Savior.\r\nI'm Catherine, just in a different form.\r\n\r\nSo much has happened since your arrival in Eden.\r\nThere have been many moments of happiness as well as moments of grief.\r\nStill, we cannot just wallow in despair over what has already happened.\r\n\r\nThe key is how we confront future tragedies and\r\nhow we manage to preserve even just a strand of hope. \r\n\r\nI'm sure you already know that,\r\nbut I just wanted to reiterate it.\r\n\r\nBut fear not, Savior.\r\nNo matter what despair comes upon us,\r\nwe will always find the light of hope.",
+        "zh_tw": "你好，救援者。\r\n第一次以這種樣貌跟你打招呼，我是凱瑟琳。\r\n\r\n救援者來到伊甸園以後，真的發生了很多事對吧？\r\n有很多開心的事，但相對地也有很多傷心的事。\r\n但是…我們不能只是感嘆著已經發生的悲劇，陷入絕望之中。\r\n\r\n重要的是，我們該如何面對並對抗未來的悲劇，\r\n以及該如何維持那一絲名為希望的光芒。\r\n\r\n你可能已經充分了解了，\r\n但我還是想再跟你說一次。\r\n\r\n不過也不用太擔心，救援者，\r\n不管是何種絕望來臨…\r\n我們一定都可以找出名為希望的光芒。",
+        "zh_cn": "你好，救援者。\r\n第一次以這種樣貌跟你打招呼，我是凱瑟琳。\r\n\r\n救援者來到伊甸園以後，真的發生了很多事對吧？\r\n有很多開心的事，但相對地也有很多傷心的事。\r\n但是…我們不能只是感嘆著已經發生的悲劇，陷入絕望之中。\r\n\r\n重要的是，我們該如何面對並對抗未來的悲劇，\r\n以及該如何維持那一絲名為希望的光芒。\r\n\r\n你可能已經充分了解了，\r\n但我還是想再跟你說一次。\r\n\r\n不過也不用太擔心，救援者，\r\n不管是何種絕望來臨…\r\n我們一定都可以找出名為希望的光芒。"
+      },
+      "greeting": {
+        "ko": "기도, 그리고 행동으로 이뤄내겠어요.",
+        "en": "I will make it happen through prayer and action.",
+        "zh_tw": "祈禱和行動會兌現諾言。",
+        "zh_cn": "祈禱和行動會兌現諾言。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "안녕하세요, 구원자님. \r\n드디어 연락을 드릴 수 있었네요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Hello, Savior.\r\nFinally, I was able to reach you."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "你好，救援者。\r\n終於可以聯絡你了。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "你好，救援者。\r\n終於可以聯絡你了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "구원자님 쪽은 괜찮으신가요? \r\n상황이 상황이다보니 걱정이 앞서네요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Is everything okay on your end, Savior?\r\nI'm a little worried, given the circumstances."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "救援者那邊還好嗎？\r\n目前的情況讓我很擔心。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "救援者那邊還好嗎？\r\n目前的情況讓我很擔心。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "…저는 괜찮아요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "... I'm fine."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "…我沒事。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "…我沒事。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "나중에 아케나인에 들르실 때 \r\n그동안 쌓인 이야기를 하고자 해요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Maybe next time you stop by Arkenine,\r\nwe can catch up."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "你以後來阿肯納因的時候，\r\n再跟你說這段時間發生的事。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "你以後來阿肯納因的時候，\r\n再跟你說這段時間發生的事。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "괜찮으시다면 제게 시간을 좀 내주시겠어요?"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Would you spare some time for me?"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "方便的話，可以空出點時間給我嗎？"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "方便的話，可以空出點時間給我嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "조금 부끄러운 얘기지만…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "This is a little embarrassing, but..."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "說來有點難為情…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "說來有點難為情…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그동안 없던 날개가 갑자기 생겨서 \r\n살짝 곤란하답니다."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I've suddenly grown wings\r\nthat I didn't have before."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但因為我突然有了以前沒有的翅膀，\r\n有點困擾。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但因為我突然有了以前沒有的翅膀，\r\n有點困擾。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "전부 제가 미숙한 탓이겠지만요…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I'm sure I have no one else but myself to blame for that..."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然都是因為我還不熟悉…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然都是因為我還不熟悉…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그… 저도 모르게 날개가 있는 걸\r\n가끔 잊어버리기도 하거든요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Well... I sometimes forget\r\nthat I have wings."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "就是…我偶爾會不自覺地\r\n忘記自己有翅膀。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "就是…我偶爾會不自覺地\r\n忘記自己有翅膀。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그래서… 날개가 끼여서 \r\n문에 부딪히거나 할 때가 있어요…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "So, sometimes they get stuck\r\nand I bump into doors and whatnot..."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "所以…有時候會因為翅膀卡住，\r\n撞到門上…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "所以…有時候會因為翅膀卡住，\r\n撞到門上…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "끄응…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Ugh..."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "呃嗯…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "呃嗯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "…어머나!"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "... Oh!"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "…天啊！"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "…天啊！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "후후. 위로해 주시는 건가요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Hoho. Are you trying to comfort me?"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "呵呵，這是在安慰我嗎？"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "呵呵，這是在安慰我嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "고마워요, 구원자님."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Thank you, Savior."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "謝謝你，救援者。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "謝謝你，救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그런 상냥함에 \r\n저를 비롯한 많은 정령들이 구원받고 있답니다."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Your kindness is saving\r\nme and many other Souls."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "你的溫柔拯救了\r\n包括我在內的許多精靈。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "你的溫柔拯救了\r\n包括我在內的許多精靈。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "다른 천사형이나 악마형 정령 분들의 말에 따르면…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "According to other Angel and Demon Souls,"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "根據其他天使型和惡魔型精靈的說法…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "根據其他天使型和惡魔型精靈的說法…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "힘을 다루는 데에 익숙해질 수록 \r\n날개도 자유자재로 다룰 수 있게 된다고 하네요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "the more you get used to handling your power,\r\nthe more comfortable you are with your wings."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "越是習慣如何控制力量，\r\n就越能自由自在地控制翅膀。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "越是習慣如何控制力量，\r\n就越能自由自在地控制翅膀。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "앞으로도 정진할게요, 구원자님."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I'll continue to work hard, Savior."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我以後也會繼續努力的，救援者。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我以後也會繼續努力的，救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "갑작스럽지만…\r\n구원자님과 알게 되어 정말 기쁘답니다."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I know it's sudden,\r\nbut I'm so glad to have gotten to know you."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然這樣很突然…\r\n但我真的很開心能認識救援者。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然這樣很突然…\r\n但我真的很開心能認識救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "아뇨, 특별히 뭔가 있었던 건 아니지만…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "No, not really, but..."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "沒有，沒有發生什麼特別的事…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "沒有，沒有發生什麼特別的事…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "제가 성당에서 직위가 올라갈 수록…\r\n그리고 섭정이 된 이래로…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "As I've moved up the ranks at the Cathedral,\r\nand since I've been made Regent,"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "隨著我在教堂的職位越來越高…\r\n還有自從當上攝政王以後…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "隨著我在教堂的職位越來越高…\r\n還有自從當上攝政王以後…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "남들이 저를 대하는 태도가 조금씩 달라지곤 했거든요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "people have treated me differently."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "別人對我的態度就慢慢轉變了。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "別人對我的態度就慢慢轉變了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "하지만 구원자님께서는 \r\n이전도 지금도, 저를 항상 같게 대해주셔서…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "But you've always treated me the same,\r\nbefore and since then,"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但是救援者從以前到現在，\r\n對待我的方式都始終不變…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但是救援者從以前到現在，\r\n對待我的方式都始終不變…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그 점이 기쁘구나, 싶었어요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "and I'm glad of that."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "那一點讓我很高興。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "那一點讓我很高興。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "후후"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Hoho"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "呵呵"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "呵呵"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "맞아요, \r\n저는 언제나 저죠."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Yes,\r\nI'm just me, always"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "對，\r\n我一直都是我。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "對，\r\n我一直都是我。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그 사실은 앞으로도 변하지 않을 거예요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "That will never change."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "而且這件事以後也不會改變。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "而且這件事以後也不會改變。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "알고 있어도… 때로는 그 사실을 \r\n가끔 잊을 뻔하고는 해서…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I know that, but sometimes\r\nI almost forget that."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然我很清楚…但偶爾還是會\r\n忘記這件事…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然我很清楚…但偶爾還是會\r\n忘記這件事…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "항상 변함없이 제게 친근하게 대해주시는 \r\n구원자님이나, 다른 동료 분들이…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "So, it means a lot to me that you\r\nand the rest of my colleagues"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "所以一直以來都對我很親切的救援者\r\n跟其他夥伴…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "所以一直以來都對我很親切的救援者\r\n跟其他夥伴…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "제게는 정말로 소중하답니다."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "are always there for me."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "對我來說都彌足珍貴。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "對我來說都彌足珍貴。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그러고 보니…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Come to think of it,"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "話說回來…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "話說回來…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "최근에는 페이렌의 숲지기 분들이나 \r\n칼라르 암즈의 분들과 자주 이야기를 나누곤 한답니다."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I've been talking to the Fayren Forest Keepers\r\nand the members of Chalar Arms a lot lately."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我最近常跟費倫的森林守護者，\r\n還有卡拉爾安茲公司的精靈聊天。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我最近常跟費倫的森林守護者，\r\n還有卡拉爾安茲公司的精靈聊天。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "사사로운 잡담을 하더라도, 확실히 솔레이 왕국과는 \r\n다른 환경에서 지내오신 게 느껴지더라구요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Even if it's just small talk, I can tell that they're living\r\nin a different environment than the Kingdom of Solrey."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然只是聊些瑣事，但我確實能感受到\r\n她們生活在和蘇萊伊王國不同的環境。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然只是聊些瑣事，但我確實能感受到\r\n她們生活在和蘇萊伊王國不同的環境。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "이전에도 다른 나라의 정령 분들과\r\n교류하곤 했지만…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I've interacted with Souls\r\nfrom other countries before,"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然以前也會跟\r\n其他國家的精靈交流…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然以前也會跟\r\n其他國家的精靈交流…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "요즘처럼 단기간에 밀착해서 함께 \r\n업무를 진행한 적은 없다보니…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "but I've never worked so closely\r\nwith them in such a short period of time."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但沒有像最近這樣，\r\n在短時間內密集地辦公過…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但沒有像最近這樣，\r\n在短時間內密集地辦公過…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "조금 새로운 느낌이 들었어요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "It's all a bit new to me."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "感覺有點新鮮。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "感覺有點新鮮。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "저도 모르게 구원자님과\r\n처음 만났을 때를 떠올려버렸지 뭐예요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I can't help but think back\r\nto the first time I met you."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我不知不覺想起了\r\n第一次遇見救援者的時候。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我不知不覺想起了\r\n第一次遇見救援者的時候。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "후후. 맞아요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Hoho, yes."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "呵呵，沒錯。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "呵呵，沒錯。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "당시의 구원자님은 에덴에 소환되신지 얼마 안 되셔서 \r\n온갖 것들에 놀라곤 하셨죠."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "You'd just been summoned to Eden.\r\nYou were surprised by everything."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "當時，救援者才剛被召喚來伊甸園，\r\n覺得所有事物都很不可思議。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "當時，救援者才剛被召喚來伊甸園，\r\n覺得所有事物都很不可思議。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "최근 들어서는 에덴에도 익숙해지셔서 \r\n점점 놀라시는 일도 줄어들고 있지만…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Nowadays, you've gotten used to it,\r\nso you're less likely to be surprised."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然你最近習慣伊甸園了，\r\n感到訝異的事情慢慢變少…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "雖然你最近習慣伊甸園了，\r\n感到訝異的事情慢慢變少…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그건 분명 구원자님께서 이 세상을, \r\n저희들을 더 알기 위해 많이 노력하신 덕분이겠죠."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I think that's because you've made a lot of effort\r\nto get to know this world and us."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但那一定是多虧了救援者\r\n為了更了解這個世界、更了解我們所付出的努力。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但那一定是多虧了救援者\r\n為了更了解這個世界、更了解我們所付出的努力。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "그리 생각하면 조금은 마음이 따스해진답니다."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "It warms my heart to think about that."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "想到這裡，我的內心就溫暖了起來。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "想到這裡，我的內心就溫暖了起來。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "저희는 이 세상에 속해 있으니 \r\n구원자님께 다가가는 게 비교적 덜 무서웠지만…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "We're in this world.\r\nSo, it's less scary for us to approach you."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "因為我們屬於這個世界，\r\n所以比較不會那麼害怕靠近救援者…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "因為我們屬於這個世界，\r\n所以比較不會那麼害怕靠近救援者…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "구원자님 입장에서는 완전히 새로운 세상, \r\n새로운 존재, 새로운 관계를 시작하시는 거니까요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "But you've started in a whole new world,\r\na whole new existence, whole new relationships."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但站在救援者的角度想，來到全新的世界，\r\n有了全新的身分，要展開一段全新的關係。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "但站在救援者的角度想，來到全新的世界，\r\n有了全新的身分，要展開一段全新的關係。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "정말 용기 있다고 생각해요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I think that's really brave."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我覺得你真的勇氣可嘉。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我覺得你真的勇氣可嘉。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "저라면… 조금 어려웠을지도."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "If I were you, it would be much harder."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "換作是我…可能會有點困難。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "換作是我…可能會有點困難。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "…후후. 네."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "... Hoho. Yes."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "…呵呵，對。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "…呵呵，對。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "저는… 스스로가 도망치는 걸 용서할 수 없으니까요."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I can't forgive myself for running away."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "因為…我沒辦法原諒逃跑的自己。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "因為…我沒辦法原諒逃跑的自己。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "계속 맞서 싸울 거랍니다."
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "I'll keep fighting."
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我會繼續奮戰下去。"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "我會繼續奮戰下去。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린(광휘)",
+          "message": "제가 새로이 얻은, \r\n이 생명이 다하는 날까지…"
+        },
+        "en": {
+          "speaker": "Catherine (Radiance)",
+          "message": "Until the day this new life\r\nI've been given runs out,"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "直到這個嶄新的生命\r\n走到盡頭為止…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳（光輝）",
+          "message": "直到這個嶄新的生命\r\n走到盡頭為止…"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "수많은 역경을 극복해온 캐서린의 강인한 마음은 존경하지만,\n어째서인지 가끔 위태로워 보이기도 합니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "While I have great respect for Catherine's resilient heart that has overcome numerous trials,\r\nthere are times when she seems rather shaky."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "雖然很尊敬凱瑟琳克服無數困境的堅定心志，\r\n但不知道為什麼，偶爾會看起來岌岌可危。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "雖然很尊敬凱瑟琳克服無數困境的堅定心志，\r\n但不知道為什麼，偶爾會看起來岌岌可危。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이디스",
+          "message": "한없이 상냥하고, 그만큼 엄격하신 분. \n그 카리스마는 천부적인 재능이라고 느껴져요."
+        },
+        "en": {
+          "speaker": "Edith",
+          "message": "Her infinite kindness is matched only by her strictness. \r\nThat charisma of hers seems like a natural gift."
+        },
+        "zh_tw": {
+          "speaker": "伊迪絲",
+          "message": "非常和藹可親，同時也很嚴格的精靈。\r\n感覺她的領導者特質是與生俱來的能力。"
+        },
+        "zh_cn": {
+          "speaker": "伊迪絲",
+          "message": "非常和藹可親，同時也很嚴格的精靈。\r\n感覺她的領導者特質是與生俱來的能力。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "조앤",
+          "message": "목표를 위해 최선을 다하는 건 좋지만,\n부디 그 영혼마저 불살라버리지 않기를."
+        },
+        "en": {
+          "speaker": "Joanne",
+          "message": "While it's wonderful to be dedicated to one's goals,\r\nI just hope she doesn't end up burning out her inner spirit."
+        },
+        "zh_tw": {
+          "speaker": "瓊",
+          "message": "為了目標全力以赴固然很好，\r\n但願不要連那靈魂都燃燒殆盡。"
+        },
+        "zh_cn": {
+          "speaker": "瓊",
+          "message": "為了目標全力以赴固然很好，\r\n但願不要連那靈魂都燃燒殆盡。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "안녕하세요, 구원자님. \r\n드디어 연락을 드릴 수 있었네요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hello, Savior.\r\nFinally, I was able to reach you."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "你好，救援者。\r\n終於可以聯絡你了。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "你好，救援者。\r\n終於可以聯絡你了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님 쪽은 괜찮으신가요? \r\n상황이 상황이다보니 걱정이 앞서네요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Is everything okay on your end, Savior?\r\nI'm a little worried, given the circumstances."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者那邊還好嗎？\r\n目前的情況讓我很擔心。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者那邊還好嗎？\r\n目前的情況讓我很擔心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "캐서린이야말로 큰 일인 것 같은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Catherine, I'm more worried about you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "凱瑟琳那邊的事好像比較麻煩"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "凱瑟琳那邊的事好像比較麻煩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "캐서린이야말로 큰 일인 것 같은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Catherine, I'm more worried about you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "凱瑟琳那邊的事好像比較麻煩"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "凱瑟琳那邊的事好像比較麻煩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "…저는 괜찮아요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "... I'm fine."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…我沒事。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…我沒事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "나중에 아케나인에 들르실 때 \r\n그동안 쌓인 이야기를 하고자 해요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Maybe next time you stop by Arkenine,\r\nwe can catch up."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "你以後來阿肯納因的時候，\r\n再跟你說這段時間發生的事。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "你以後來阿肯納因的時候，\r\n再跟你說這段時間發生的事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "괜찮으시다면 제게 시간을 좀 내주시겠어요?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Would you spare some time for me?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "方便的話，可以空出點時間給我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "方便的話，可以空出點時間給我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물론이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Absolutely"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물론이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Absolutely"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나중에 보자, 캐서린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "See you later, Catherine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "改天見，凱瑟琳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "改天見，凱瑟琳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나중에 보자, 캐서린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "See you later, Catherine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "改天見，凱瑟琳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "改天見，凱瑟琳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "조금 부끄러운 얘기지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "This is a little embarrassing, but..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "說來有點難為情…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "說來有點難為情…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그동안 없던 날개가 갑자기 생겨서 \r\n살짝 곤란하답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I've suddenly grown wings\r\nthat I didn't have before."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但因為我突然有了以前沒有的翅膀，\r\n有點困擾。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但因為我突然有了以前沒有的翅膀，\r\n有點困擾。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "전부 제가 미숙한 탓이겠지만요…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'm sure I have no one else but myself to blame for that..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然都是因為我還不熟悉…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然都是因為我還不熟悉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "날개가 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong with having wings?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "翅膀怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "翅膀怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "날개가 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong with having wings?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "翅膀怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "翅膀怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그… 저도 모르게 날개가 있는 걸\r\n가끔 잊어버리기도 하거든요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Well... I sometimes forget\r\nthat I have wings."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "就是…我偶爾會不自覺地\r\n忘記自己有翅膀。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "就是…我偶爾會不自覺地\r\n忘記自己有翅膀。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그래서… 날개가 끼여서 \r\n문에 부딪히거나 할 때가 있어요…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "So, sometimes they get stuck\r\nand I bump into doors and whatnot..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "所以…有時候會因為翅膀卡住，\r\n撞到門上…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "所以…有時候會因為翅膀卡住，\r\n撞到門上…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "끄응…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Ugh..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呃嗯…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呃嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…나는 날개가 없어도 부딪히는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... I don't have wings and I bump into things all the time"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…我沒有翅膀也會撞到耶…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…我沒有翅膀也會撞到耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…나는 날개가 없어도 부딪히는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... I don't have wings and I bump into things all the time"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…我沒有翅膀也會撞到耶…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…我沒有翅膀也會撞到耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "…어머나!"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "... Oh!"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…天啊！"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…天啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후. 위로해 주시는 건가요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho. Are you trying to comfort me?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，這是在安慰我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，這是在安慰我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "고마워요, 구원자님."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Thank you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "謝謝你，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "謝謝你，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그런 상냥함에 \r\n저를 비롯한 많은 정령들이 구원받고 있답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Your kindness is saving\r\nme and many other Souls."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "你的溫柔拯救了\r\n包括我在內的許多精靈。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "你的溫柔拯救了\r\n包括我在內的許多精靈。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "다른 천사형이나 악마형 정령 분들의 말에 따르면…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "According to other Angel and Demon Souls,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "根據其他天使型和惡魔型精靈的說法…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "根據其他天使型和惡魔型精靈的說法…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "힘을 다루는 데에 익숙해질 수록 \r\n날개도 자유자재로 다룰 수 있게 된다고 하네요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "the more you get used to handling your power,\r\nthe more comfortable you are with your wings."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "越是習慣如何控制力量，\r\n就越能自由自在地控制翅膀。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "越是習慣如何控制力量，\r\n就越能自由自在地控制翅膀。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "앞으로도 정진할게요, 구원자님."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'll continue to work hard, Savior."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我以後也會繼續努力的，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我以後也會繼續努力的，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "갑작스럽지만…\r\n구원자님과 알게 되어 정말 기쁘답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I know it's sudden,\r\nbut I'm so glad to have gotten to know you."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然這樣很突然…\r\n但我真的很開心能認識救援者。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然這樣很突然…\r\n但我真的很開心能認識救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也是"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也是"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "근데 진짜 갑작스럽긴 하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But it really is sudden"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過還真的很突然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過還真的很突然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "근데 진짜 갑작스럽긴 하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But it really is sudden"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過還真的很突然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過還真的很突然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did something happen?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did something happen?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "아뇨, 특별히 뭔가 있었던 건 아니지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "No, not really, but..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "沒有，沒有發生什麼特別的事…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "沒有，沒有發生什麼特別的事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "제가 성당에서 직위가 올라갈 수록…\r\n그리고 섭정이 된 이래로…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "As I've moved up the ranks at the Cathedral,\r\nand since I've been made Regent,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "隨著我在教堂的職位越來越高…\r\n還有自從當上攝政王以後…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "隨著我在教堂的職位越來越高…\r\n還有自從當上攝政王以後…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "남들이 저를 대하는 태도가 조금씩 달라지곤 했거든요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "people have treated me differently."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "別人對我的態度就慢慢轉變了。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "別人對我的態度就慢慢轉變了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "하지만 구원자님께서는 \r\n이전도 지금도, 저를 항상 같게 대해주셔서…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "But you've always treated me the same,\r\nbefore and since then,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但是救援者從以前到現在，\r\n對待我的方式都始終不變…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但是救援者從以前到現在，\r\n對待我的方式都始終不變…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그 점이 기쁘구나, 싶었어요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "and I'm glad of that."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "那一點讓我很高興。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "那一點讓我很高興。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그야 캐서린은 캐서린이니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because you're just you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是因為凱瑟琳還是凱瑟琳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是因為凱瑟琳還是凱瑟琳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그야 캐서린은 캐서린이니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because you're just you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是因為凱瑟琳還是凱瑟琳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是因為凱瑟琳還是凱瑟琳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "맞아요, \r\n저는 언제나 저죠."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Yes,\r\nI'm just me, always"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "對，\r\n我一直都是我。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "對，\r\n我一直都是我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그 사실은 앞으로도 변하지 않을 거예요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "That will never change."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "而且這件事以後也不會改變。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "而且這件事以後也不會改變。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "알고 있어도… 때로는 그 사실을 \r\n가끔 잊을 뻔하고는 해서…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I know that, but sometimes\r\nI almost forget that."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然我很清楚…但偶爾還是會\r\n忘記這件事…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然我很清楚…但偶爾還是會\r\n忘記這件事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "항상 변함없이 제게 친근하게 대해주시는 \r\n구원자님이나, 다른 동료 분들이…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "So, it means a lot to me that you\r\nand the rest of my colleagues"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "所以一直以來都對我很親切的救援者\r\n跟其他夥伴…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "所以一直以來都對我很親切的救援者\r\n跟其他夥伴…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "제게는 정말로 소중하답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "are always there for me."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "對我來說都彌足珍貴。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "對我來說都彌足珍貴。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그러고 보니…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Come to think of it,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "話說回來…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "話說回來…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "최근에는 페이렌의 숲지기 분들이나 \r\n칼라르 암즈의 분들과 자주 이야기를 나누곤 한답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I've been talking to the Fayren Forest Keepers\r\nand the members of Chalar Arms a lot lately."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我最近常跟費倫的森林守護者，\r\n還有卡拉爾安茲公司的精靈聊天。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我最近常跟費倫的森林守護者，\r\n還有卡拉爾安茲公司的精靈聊天。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "사사로운 잡담을 하더라도, 확실히 솔레이 왕국과는 \r\n다른 환경에서 지내오신 게 느껴지더라구요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Even if it's just small talk, I can tell that they're living\r\nin a different environment than the Kingdom of Solrey."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然只是聊些瑣事，但我確實能感受到\r\n她們生活在和蘇萊伊王國不同的環境。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然只是聊些瑣事，但我確實能感受到\r\n她們生活在和蘇萊伊王國不同的環境。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "이전에도 다른 나라의 정령 분들과\r\n교류하곤 했지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I've interacted with Souls\r\nfrom other countries before,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然以前也會跟\r\n其他國家的精靈交流…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然以前也會跟\r\n其他國家的精靈交流…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "요즘처럼 단기간에 밀착해서 함께 \r\n업무를 진행한 적은 없다보니…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "but I've never worked so closely\r\nwith them in such a short period of time."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但沒有像最近這樣，\r\n在短時間內密集地辦公過…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但沒有像最近這樣，\r\n在短時間內密集地辦公過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "조금 새로운 느낌이 들었어요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "It's all a bit new to me."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "感覺有點新鮮。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "感覺有點新鮮。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "저도 모르게 구원자님과\r\n처음 만났을 때를 떠올려버렸지 뭐예요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I can't help but think back\r\nto the first time I met you."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我不知不覺想起了\r\n第一次遇見救援者的時候。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我不知不覺想起了\r\n第一次遇見救援者的時候。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나랑 처음 만났을 때를?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The first time we met?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "第一次遇見我的時候？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "第一次遇見我的時候？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나랑 처음 만났을 때를?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The first time we met?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "第一次遇見我的時候？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "第一次遇見我的時候？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후. 맞아요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho, yes."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，沒錯。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，沒錯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "당시의 구원자님은 에덴에 소환되신지 얼마 안 되셔서 \r\n온갖 것들에 놀라곤 하셨죠."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "You'd just been summoned to Eden.\r\nYou were surprised by everything."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "當時，救援者才剛被召喚來伊甸園，\r\n覺得所有事物都很不可思議。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "當時，救援者才剛被召喚來伊甸園，\r\n覺得所有事物都很不可思議。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "최근 들어서는 에덴에도 익숙해지셔서 \r\n점점 놀라시는 일도 줄어들고 있지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Nowadays, you've gotten used to it,\r\nso you're less likely to be surprised."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然你最近習慣伊甸園了，\r\n感到訝異的事情慢慢變少…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然你最近習慣伊甸園了，\r\n感到訝異的事情慢慢變少…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그건 분명 구원자님께서 이 세상을, \r\n저희들을 더 알기 위해 많이 노력하신 덕분이겠죠."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I think that's because you've made a lot of effort\r\nto get to know this world and us."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但那一定是多虧了救援者\r\n為了更了解這個世界、更了解我們所付出的努力。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但那一定是多虧了救援者\r\n為了更了解這個世界、更了解我們所付出的努力。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그리 생각하면 조금은 마음이 따스해진답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "It warms my heart to think about that."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "想到這裡，我的內心就溫暖了起來。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "想到這裡，我的內心就溫暖了起來。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그야 모두 내게 친절하게 대해줬으니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No. It's because you've all been so kind to me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是因為大家都對我很親切"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是因為大家都對我很親切"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그야 모두 내게 친절하게 대해줬으니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No. It's because you've all been so kind to me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是因為大家都對我很親切"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是因為大家都對我很親切"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "저희는 이 세상에 속해 있으니 \r\n구원자님께 다가가는 게 비교적 덜 무서웠지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "We're in this world.\r\nSo, it's less scary for us to approach you."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "因為我們屬於這個世界，\r\n所以比較不會那麼害怕靠近救援者…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "因為我們屬於這個世界，\r\n所以比較不會那麼害怕靠近救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님 입장에서는 완전히 새로운 세상, \r\n새로운 존재, 새로운 관계를 시작하시는 거니까요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "But you've started in a whole new world,\r\na whole new existence, whole new relationships."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但站在救援者的角度想，來到全新的世界，\r\n有了全新的身分，要展開一段全新的關係。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但站在救援者的角度想，來到全新的世界，\r\n有了全新的身分，要展開一段全新的關係。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "정말 용기 있다고 생각해요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I think that's really brave."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我覺得你真的勇氣可嘉。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我覺得你真的勇氣可嘉。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "저라면… 조금 어려웠을지도."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "If I were you, it would be much harder."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "換作是我…可能會有點困難。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "換作是我…可能會有點困難。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you think so?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you think so?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "캐서린도 충분히 용감하다고 생각해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're brave enough already, Catherine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我覺得凱瑟琳也已經夠勇敢了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我覺得凱瑟琳也已經夠勇敢了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "캐서린도 충분히 용감하다고 생각해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're brave enough already, Catherine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我覺得凱瑟琳也已經夠勇敢了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我覺得凱瑟琳也已經夠勇敢了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계속 도망치지 않고 싸우고 있는걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You've been fighting instead of running away"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳一直都沒有逃跑，努力地奮戰"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳一直都沒有逃跑，努力地奮戰"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계속 도망치지 않고 싸우고 있는걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You've been fighting instead of running away"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳一直都沒有逃跑，努力地奮戰"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳一直都沒有逃跑，努力地奮戰"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "…후후. 네."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "... Hoho. Yes."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…呵呵，對。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…呵呵，對。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "저는… 스스로가 도망치는 걸 용서할 수 없으니까요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I can't forgive myself for running away."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "因為…我沒辦法原諒逃跑的自己。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "因為…我沒辦法原諒逃跑的自己。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "계속 맞서 싸울 거랍니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'll keep fighting."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我會繼續奮戰下去。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我會繼續奮戰下去。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "제가 새로이 얻은, \r\n이 생명이 다하는 날까지…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Until the day this new life\r\nI've been given runs out,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "直到這個嶄新的生命\r\n走到盡頭為止…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "直到這個嶄新的生命\r\n走到盡頭為止…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "모두를 위해서요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "for everyone."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "為了大家奮戰。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "為了大家奮戰。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구, 구원자님. \r\n큰일났어요…!"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "S-Savior!\r\nWh-what do I do?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救、救援者，\r\n大事不好了…！"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救、救援者，\r\n大事不好了…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 그래?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 그래?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "설마 습격이라도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are we under attack?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "該不會有襲擊吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "該不會有襲擊吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "설마 습격이라도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are we under attack?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "該不會有襲擊吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "該不會有襲擊吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "공무를 보던 도중 \r\n갑자기 병아리가 제 머리 위에…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I was handling my official duties\r\nwhen suddenly a chick landed on my head...!"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我辦公到一半，\r\n突然有小雞在我頭上…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我辦公到一半，\r\n突然有小雞在我頭上…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "어, 어쩌죠… \r\n뜨겁지 않으려나요?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Wh-what do I do?\r\nIsn't it hot up there?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "怎、怎麼辦…\r\n他不會覺得很燙嗎？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "怎、怎麼辦…\r\n他不會覺得很燙嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "즐기고 있는 거 같은데…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it's enjoying it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "他好像很享受耶…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "他好像很享受耶…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "즐기고 있는 거 같은데…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it's enjoying it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "他好像很享受耶…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "他好像很享受耶…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "얼른 내려주고 싶은데…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'd like it to come down now, but..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我想趕快讓他下來…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我想趕快讓他下來…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "다들 웃기만 하고 \r\n내려주시질 않고 있어요…!"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Everyone's just laughing\r\nand wouldn't help it down..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "大家都只顧著笑，\r\n不幫忙把他弄下去…！"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "大家都只顧著笑，\r\n不幫忙把他弄下去…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "난 몰라…!"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "What do I do?!"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我不管啦…！"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我不管啦…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "이전부터 유리아 님께서 \r\n몰래 매운 걸 즐겨 드시던 건 알고 있었지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I always knew\r\nYuria secretly enjoyed spicy food,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我以前就知道尤里婭\r\n會偷偷享受辣味美食…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我以前就知道尤里婭\r\n會偷偷享受辣味美食…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "설마 이정도로 매울 줄은 \r\n정말 상상도 못했어요…!"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "but I never thought\r\nit would be this spicy...!"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但真的無法想像\r\n居然會辣到這種程度…！"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但真的無法想像\r\n居然會辣到這種程度…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금 충격적이긴 하지…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A bit shocking, isn't it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "的確有點震驚吧…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "的確有點震驚吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금 충격적이긴 하지…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A bit shocking, isn't it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "的確有點震驚吧…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "的確有點震驚吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "네. 하지만… \r\n그래도 싫지는 않았어요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Yes, but...\r\nI didn't hate it."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "對。但…\r\n也不到討厭的程度。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "對。但…\r\n也不到討厭的程度。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "확실히 뭔가… 제 안에서 \r\n불이 나는 것 같은 그런 느낌이 있달까…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I felt like\r\nI was on fire."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但很明確的是…有某種東西\r\n在我體內燃燒起來的感覺…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但很明確的是…有某種東西\r\n在我體內燃燒起來的感覺…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "땀을 흘려서 그런지, \r\n조금 개운한 것 같기도 해요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Also, maybe it's because I sweated,\r\nI feel a bit refreshed."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "也許是流汗的緣故，\r\n感覺也有點清爽。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "也許是流汗的緣故，\r\n感覺也有點清爽。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 살짝 중독될 거 같긴 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I might be a little addicted to the taste"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我好像也有點上癮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我好像也有點上癮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 살짝 중독될 거 같긴 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I might be a little addicted to the taste"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我好像也有點上癮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我好像也有點上癮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님께서는 제게 그런 \r\n매운 요리가 안맞는다고 하셨지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "You said\r\nspicy food wasn't for me,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然救援者\r\n說我不適合辣味料理…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然救援者\r\n說我不適合辣味料理…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "다음에 한번쯤은 더 도전해보고 싶기도 하네요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "but I'd like to try it at least once more."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但下次想再挑戰一次看看。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但下次想再挑戰一次看看。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그때도 같이 가주시겠어요?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Will you come with me?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "之後你也會陪我去吧？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "之後你也會陪我去吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "캐서린이 같이 가준다면야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure, if you want me to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "凱瑟琳要一起去的話，我當然願意"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "凱瑟琳要一起去的話，我當然願意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "캐서린이 같이 가준다면야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure, if you want me to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "凱瑟琳要一起去的話，我當然願意"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "凱瑟琳要一起去的話，我當然願意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후. 든든하네요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho. You're so reliable."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，真是可靠。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，真是可靠。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "언젠가 유리아 님이 돌아오시고, \r\n메피 님도, 로제도 돌아오면…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Maybe someday when Yuria,\r\nMephi, and Rose come back,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "等到有一天尤里婭回來，\r\n梅菲、蘿絲也都回來的時候…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "等到有一天尤里婭回來，\r\n梅菲、蘿絲也都回來的時候…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "다음에는 다함께 같이 \r\n매운 걸 먹어보고 싶기도 하네요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "we can all try\r\nsomething spicy together."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "想再和大家一起去\r\n吃辣味美食。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "想再和大家一起去\r\n吃辣味美食。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꼭 그러자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's do that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一言為定"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一言為定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꼭 그러자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's do that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一言為定"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一言為定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "네. 기대하고 있을게요♪"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Okay. I'll look forward to it ♪"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "好，我會期待的♪"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "好，我會期待的♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "사실 고백하자면 \r\n최근에는 마음 놓고 외출하기 어려웠어요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "To be honest, it's been hard for me to go out\r\nwith confidence lately."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "老實說\r\n最近很難以平常心外出。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "老實說\r\n最近很難以平常心外出。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "이전에도 많은 분이 저를 알아보고 \r\n인사를 건네시곤 하셨지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Of course, many people\r\nused to recognize me and say hello,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然以前也有很多人認出我，\r\n也會向我打招呼…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "雖然以前也有很多人認出我，\r\n也會向我打招呼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "섭정 일을 하게 된 이후로는…\r\n어쩐지 그 시선이 조금 부담스럽게 느껴지기도 해서…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "but ever since I became Regent,\r\nI've been feeling a little overwhelmed by the stares."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但開始攝政後…\r\n不知為何那股視線就變得有點壓力…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但開始攝政後…\r\n不知為何那股視線就變得有點壓力…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "…후후. 이러면 안 되는데 말이죠."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho. I know I shouldn't."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…呵呵，不能這樣下去。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…呵呵，不能這樣下去。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "상황이 상황이니까 어쩔 수 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's just the way things are"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "情況就是這樣，我也無能為力"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "情況就是這樣，我也無能為力"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "상황이 상황이니까 어쩔 수 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's just the way things are"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "情況就是這樣，我也無能為力"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "情況就是這樣，我也無能為力"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "…네. \r\n하지만 이제는 괜찮을 거 같아요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "... I know.\r\nBut I think I'll be okay now."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…嗯。\r\n但現在已經沒關係了。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…嗯。\r\n但現在已經沒關係了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "외출을 생각하기 이전에 \r\n제게 주어진 일들부터 다 처리해야겠지만요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I need to take care of things\r\nbefore I can even think about going out, though."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "在苦惱外出的事之前，\r\n必須先完成交給我的所有任務。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "在苦惱外出的事之前，\r\n必須先完成交給我的所有任務。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후. 그래도 구원자님 덕분에 \r\n조금은 마음이 가벼워졌답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho. But thanks to you,\r\nI feel a little better now."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "哈哈，多虧了救援者，\r\n心情稍微放鬆了一點。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "哈哈，多虧了救援者，\r\n心情稍微放鬆了一點。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "다음에 기회가 될 때 \r\n또 불러주시면 기쁠 것 같아요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'd love to talk to you again\r\nwhen we have a chance."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "下次有機會再找我\r\n我會很開心的。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "下次有機會再找我\r\n我會很開心的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님. \r\n잠시 굉장히 시시콜콜한 이야기를 해도 될까요?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Savior, do you want to know\r\nsomething silly?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者，\r\n我可以和你聊一些非常瑣碎的小事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者，\r\n我可以和你聊一些非常瑣碎的小事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "사실 어젯 밤에 구원자님이 \r\n제 꿈에 나오셨지 뭐예요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "For some reason, you were\r\nin my dream last night."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "其實昨晚\r\n我夢到救援者了。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "其實昨晚\r\n我夢到救援者了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님은 제가 가르치는 학생이었고, \r\n저는 선생님이었는데…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I was a teacher,\r\nand you were a student of mine..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者是我教導的學生，\r\n我則是老師…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者是我教導的學生，\r\n我則是老師…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "참 신기하죠? \r\n성당에서 정령들을 가르친 적은 있어도…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "It's strange, though.\r\nI mean, I've taught Souls in the Cathedral,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "很神奇吧？\r\n即使曾在教堂教過精靈們…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "很神奇吧？\r\n即使曾在教堂教過精靈們…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그런 식으로 교육 기관에서 \r\n누군가를 가르쳐본 적은 없는데 말이에요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "but I've never taught anyone\r\nin a dedicated institution like that."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但從來沒有用那種方式\r\n在教育機構教過任何人。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "但從來沒有用那種方式\r\n在教育機構教過任何人。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 신기한 꿈이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That is strange"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真是奇妙的夢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真是奇妙的夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 신기한 꿈이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That is strange"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真是奇妙的夢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真是奇妙的夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그쵸?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "是吧？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "是吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "게다가 어째서인지는 모르겠지만 \r\n평소 알고 지내는 다른 분들도 학생으로 나와서…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "And there were\r\nother Souls I knew who were students, too."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "而且不知道為什麼，\r\n平常認識的其他人也變成學生…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "而且不知道為什麼，\r\n平常認識的其他人也變成學生…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "왜 저만 선생님이었던 걸까 하고 \r\n조금 기묘하게 생각했답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "It was a little weird that I was\r\nthe only one who was a teacher."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "不知道為什麼只有我是老師，\r\n覺得有點奇妙。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "不知道為什麼只有我是老師，\r\n覺得有點奇妙。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "꿈에 안나온 다른 분들 중에는 \r\n저와 같은 선생님이신 분들도 계셨을까요?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Maybe there were other Souls I didn't see in the dream,\r\nbut who were teachers like me?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "其他沒有出現在夢中的人，\r\n會不會有跟我一樣是老師的？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "其他沒有出現在夢中的人，\r\n會不會有跟我一樣是老師的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴지도 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也許會"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也許會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴지도 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也許會"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也許會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후. 그럼 좋겠어요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho. I hope so."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "哈哈，那樣就好了。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "哈哈，那樣就好了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "제아무리 꿈 속이더라도…\r\n저 혼자만 선생님인건 조금 쓸쓸하니까요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "It's a little lonely being the only teacher,\r\neven if it's only in my dreams."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "就算是在夢境裡…\r\n只有我自己是老師還是有點孤單。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "就算是在夢境裡…\r\n只有我自己是老師還是有點孤單。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "생각해 보면 구원자님도 \r\n선생님 역할이 잘 어울리실 것 같아요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I think you'd be a good fit\r\nas a teacher, too."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "仔細想想，救援者應該會\r\n很適合當老師。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "仔細想想，救援者應該會\r\n很適合當老師。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "다른 분들께 설명을 잘하시니까요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "You're good at explaining things to others."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "因為你很擅長解釋給別人聽。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "因為你很擅長解釋給別人聽。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러는 캐서린도 학생 역할이 어울릴 걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you'd be great as a student, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "凱瑟琳應該也很適合當學生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "凱瑟琳應該也很適合當學生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러는 캐서린도 학생 역할이 어울릴 걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you'd be great as a student, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "凱瑟琳應該也很適合當學生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "凱瑟琳應該也很適合當學生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청난 모범생일 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Probably the best in class"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺妳是很乖巧的模範生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺妳是很乖巧的模範生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청난 모범생일 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Probably the best in class"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺妳是很乖巧的模範生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺妳是很乖巧的模範生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후. 글쎄요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho. I don't know."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，不好說。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，不好說。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "어쩌면 의외로 골칫덩이가 될지도 몰라요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I could be a troublemaker."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "也許我會是個出乎意料的搗蛋鬼。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "也許我會是個出乎意料的搗蛋鬼。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "꿈 속의 저는 좀…\r\n많이 지쳐 보였거든요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "In my dream,\r\nI looked...exhausted."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "夢裡的我…\r\n看起來疲憊不堪。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "夢裡的我…\r\n看起來疲憊不堪。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "피곤해서 그런 거 아닐까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Probably because you're tired"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會不會是因為太累了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會不會是因為太累了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "피곤해서 그런 거 아닐까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Probably because you're tired"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會不會是因為太累了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會不會是因為太累了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "가끔씩은 푹 쉬어줘."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Give yourself a break once in a while"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "偶爾也要好好休息。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "偶爾也要好好休息。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "가끔씩은 푹 쉬어줘."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Give yourself a break once in a while"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "偶爾也要好好休息。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "偶爾也要好好休息。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후. 네."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho. Okay."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，好。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님도 꼭 건강 챙겨주세요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "You should take care of yourself, too, Savior."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者也要注意身體。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者也要注意身體。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그러고 보니… \r\n'이브'라는 정령이 나타났다고 말씀하셨죠."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Now that I think of it,\r\nyou said a Soul called Eve has appeared."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "是說…\r\n你說過叫「夏娃」的精靈出現了對吧？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "是說…\r\n你說過叫「夏娃」的精靈出現了對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "…조금 복잡한 심정이네요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "... I don't know how to feel about that."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…心情有點複雜。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…心情有點複雜。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "저희 성당에서는 '이브' 님을 모든 정령들의 어머니, \r\n정령들의 신으로 섬기고 있으니…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "The Cathedral worships Eve as the mother of all Souls,\r\nthe goddess of Souls."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "因為我們教堂把「夏娃」信奉為\r\n所有精靈之母和精靈的神…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "因為我們教堂把「夏娃」信奉為\r\n所有精靈之母和精靈的神…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "과연 제가 그 분을 직접 뵙게 되면…\r\n저는 평정심을 유지할 수 있을까요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Will I be able to keep my composure\r\nwhen I see her in person?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我親眼見到她的話…\r\n還能維持平常心嗎？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我親眼見到她的話…\r\n還能維持平常心嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 만나보지 않으면 모르지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You won't know until you see her"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒見到的話就不曉得"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒見到的話就不曉得"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 만나보지 않으면 모르지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You won't know until you see her"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒見到的話就不曉得"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒見到的話就不曉得"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "…그렇겠죠?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "... I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…對吧？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "…對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그때를 예비하도록 할게요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'd better prepare for that time,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我會準備應對那時候的。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我會準備應對那時候的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "때가 왔을 때, \r\n최선의 행동을 취할 수 있게끔…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "so that when it comes,\r\nI'll be on my best behavior..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "等到時機到來，\r\n我就能採取最佳的行動…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "等到時機到來，\r\n我就能採取最佳的行動…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님. \r\n혹시 근시일 중에 시간 괜찮으실까요?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Savior, could you spare some time\r\nfor me in the near future?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者，\r\n你最近有時間嗎？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者，\r\n你最近有時間嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure, but why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼突然這麼問？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼突然這麼問？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure, but why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼突然這麼問？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼突然這麼問？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "시간이 맞으실 때, \r\n조촐하게나마 함께 식사를 하고 싶어서요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'd like to dine with you\r\nwhen you have time."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "等你有空的時候，\r\n想跟你一起簡單吃頓飯。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "等你有空的時候，\r\n想跟你一起簡單吃頓飯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "최근 요리를 할 기회가 별로 없는 데다가…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Recently, I've had very little opportunity to cook,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我最近沒什麼機會下廚…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我最近沒什麼機會下廚…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "로제가 잠든 이래로, \r\n주변 정령들과 함께 식사도 잘 못했어서…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "and since Rose fell asleep,\r\nI haven't had much of a chance to dine with the others around me."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "而且自從蘿絲沉睡以後，\r\n都沒有跟周遭的精靈一起吃過飯…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "而且自從蘿絲沉睡以後，\r\n都沒有跟周遭的精靈一起吃過飯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "제 주변의 소중한 이들과 함께\r\n식탁을 둘러싸고 앉아 식사하고 싶었답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'd like to sit around the table\r\nand enjoy a meal with those I care about."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我想跟身邊珍貴的人們一起，\r\n圍著餐桌吃飯。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我想跟身邊珍貴的人們一起，\r\n圍著餐桌吃飯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "저희 중에서는 구원자님께서 제일 바쁘시니…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Since you're the busiest of us all,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "在我們當中，救援者最為忙碌…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "在我們當中，救援者最為忙碌…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님의 일정에 맞춰서 \r\n다함께 스케줄을 조정할까 했거든요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I thought we should arrange something\r\naround your schedule."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "所以想說要不要配合救援者的時間，\r\n調整一下大家的日程。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "所以想說要不要配合救援者的時間，\r\n調整一下大家的日程。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 기쁘네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd love that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那真讓我高興"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那真讓我高興"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 기쁘네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd love that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那真讓我高興"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那真讓我高興"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알아보고 바로 알려줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let me check my schedule and get back to you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我確認後馬上告訴妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我確認後馬上告訴妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알아보고 바로 알려줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let me check my schedule and get back to you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我確認後馬上告訴妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我確認後馬上告訴妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "후후. 네."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Hoho. Okay."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，好。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "呵呵，好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "모두가 좋아하는 음식을 \r\n아주 정성스럽게 준비해서…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "We'll make\r\neveryone's favorite food"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我會精心準備\r\n大家都喜歡的食物…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我會精心準備\r\n大家都喜歡的食物…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "작고 따스한 행복을 \r\n다함께 느껴요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "and share a little bit\r\nof warmth and happiness."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "和大家一起感受\r\n溫暖的小確幸。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "和大家一起感受\r\n溫暖的小確幸。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "이 고난을 헤쳐나가기 위해서라도…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'd like to take a moment to reflect on"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "就算是為了度過這道難關…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "就算是為了度過這道難關…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "함께 연대하고 서로를 지지해주는 것이 \r\n얼마나 개인을 행복하게 하는지…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "how important it is to spend time\r\nwith the people we care about"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我們團結起來、互相扶持，\r\n是件多麼讓人幸福的事…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我們團結起來、互相扶持，\r\n是件多麼讓人幸福的事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "소중한 이들과 함께 보내는 시간이 \r\n얼마나 가치있는 것인지…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "and how much it makes each of us happy\r\nto stand together and support each other,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "和珍貴的人們共度時光\r\n又是件多寶貴的事…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "和珍貴的人們共度時光\r\n又是件多寶貴的事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "다함께 곱씹는 시간을 가지고 싶네요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "especially in times of hardship like this."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "想和大家一起細細品味一下。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "想和大家一起細細品味一下。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "저는 언제나처럼 \r\n아케나인 성에 있답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'm in Arkenine Palace,\r\nas always."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我一直都待在\r\n阿肯納因城裡。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我一直都待在\r\n阿肯納因城裡。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "여유가 되실 때 \r\n잠시 들러주시겠어요?"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Would you be so kind as to stop by\r\nat your leisure?"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "你有空的時候，\r\n可以過來一趟嗎？"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "你有空的時候，\r\n可以過來一趟嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님, \r\n저는 가능하면…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Savior,\r\nI..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者，\r\n可以的話…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者，\r\n可以的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "제가 할 수 있는 한 \r\n구원자님의 짐을 덜어드리고 싶어요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I want to lighten your burden\r\nwhenever I can,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我想要盡我所能\r\n替救援者減輕負擔。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我想要盡我所能\r\n替救援者減輕負擔。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "이전에 유리아 님께서 그러셨던 것처럼…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "just as Yuria did for you before."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "就像尤里婭以前那樣…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "就像尤里婭以前那樣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "구원자님께서 갑자기 \r\n나들이에 초대해 주셔서 조금 놀랐지만…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I was a little surprised\r\nwhen you asked me to go on an outing,"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者突然邀請我約會，\r\n讓我有點訝異…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "救援者突然邀請我約會，\r\n讓我有點訝異…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "그래도 정말 기쁘답니다."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "but I'm also happy."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "不過，我真的很高興。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "不過，我真的很高興。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "금방 오늘 일정을 마무리하고 \r\n약속 장소로 향할게요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'll wrap up today's schedule soon\r\nand head to our meeting place."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我馬上就會結束今天的行程，\r\n前往約定的地點。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我馬上就會結束今天的行程，\r\n前往約定的地點。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "광장에서 조금만 기다려주세요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Please wait for me in the square."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "請在廣場稍等我一下。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "請在廣場稍等我一下。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "금방 갈테니까요!"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I'll be right there!"
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我馬上就過去！"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "我馬上就過去！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "지극히 당연하지만, 아주 중요한 사실…"
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "It's so obvious, but so important..."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "差點就把非常理所當然，卻又很重要的事實…"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "差點就把非常理所當然，卻又很重要的事實…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "하마터면 계속해서 잊어버린 채, \r\n모두의 마음을 헛되이 할 뻔했어요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "I keep forgetting it,\r\nand I almost made everyone's efforts in vain."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "忘得一乾二淨，\r\n白白浪費了大家的心意。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "忘得一乾二淨，\r\n白白浪費了大家的心意。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "캐서린(광휘)",
+            "message": "고마워요, 구원자님.\r\n덕분에 저는 앞으로 나아갈 수 있어요."
+          },
+          "en": {
+            "speaker": "Catherine (Radiance)",
+            "message": "Thank you, Savior.\r\nBecause of you, I can move forward."
+          },
+          "zh_tw": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "謝謝你，救援者。\r\n多虧有你，我才能繼續前行。"
+          },
+          "zh_cn": {
+            "speaker": "凱瑟琳（光輝）",
+            "message": "謝謝你，救援者。\r\n多虧有你，我才能繼續前行。"
+          }
+        }
+      ]
+    }
+  }
+}

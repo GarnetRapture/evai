@@ -1,0 +1,7329 @@
+{
+  "id": "3040",
+  "name": "탈리아",
+  "name_en": "Talia",
+  "grade": "에픽",
+  "race": "요정형",
+  "class": "서포터",
+  "sub_class": "버프",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "지상의 별",
+    "constellation": "인연_메피스토_이벤트1",
+    "union": "제이드 상단",
+    "birthday": "209",
+    "height": 152,
+    "weight": 43,
+    "cv_ko": "장예나",
+    "cv_jp": "Inori Minase",
+    "like": [
+      "별님",
+      "포츈 쿠키"
+    ],
+    "dislike": [
+      "어린애 취급"
+    ],
+    "hobby": [
+      "초상화 그리기 (안 닮음)"
+    ],
+    "speciality": [
+      "신통방통 별점"
+    ]
+  },
+  "personality": {
+    "description": "안녕~! 구원자☆ 난 지상의 별, 탈리아야☆\n이렇게 만나서 기뻐! 정말 만나고 싶었어!\n\n앗, 혹시 나 너무 신나 보여? 너무 업되어 있었나? 그랬다면… 살짝 쑥스러운데…\n휴, 괜찮다고 해주니까 다행이다! 덕분에 편하게 말할 수 있을 것 같아. \n\n사실, 별님들이 요즘 자꾸 운명적인 만남이 있을 거라고 말해줬었거든. 나랑 운명이 엮인 상대가 어떤 사람일지, 무지무지 궁금했었어. 그래서 나도 모르게 구원자를 보자마자 들떠버렸네.\n\n응? 어떤 운명을 말하는 거냐구? 어, 어… 그, 그건…! 여기서는 말해줄 수 없어. \n궁금하다면 내가 운영하는 신통방통 별점 가게를 찾아와줘. 운명을 말해주는 건 유료 서비스란 말씀! 공짜로는 절~대 안 돼.\n대가도 없이 미래를 아는 건, 별님들한테도 나한테도 실례라구~\n\n헤헤, 구원자라면 언제든 환영할 테지만, 지킬 건 지켜줬으면 해!\n운명이 궁금하다면, 예약은 필수, 복채는 최대한 많이! 노쇼는 거부! \n예약하고 안 오면 별님들한테 혼내달라고 이를 거야~ 알겠지?\n그럼 조만간 제대로 다시 보자☆",
+    "greeting": "내 점괘는 모두 별님의 의지. \n운명에서 벗어날 수 있는 자는 없어."
+  },
+  "speech_patterns": [
+    "안녕~ 구원자☆",
+    "나는 별님들의 사랑을 받는~",
+    "지상의 별, 탈리아야☆",
+    "헤헤, 구원자는 어쩐지 나랑 잘 맞을 것 같은 예감이 들어",
+    "별님들도… 비슷한 말을 했거든",
+    "앗, 그건… 말해줄 수 없어!",
+    "아직… 비밀이야",
+    "음~ 언젠가… 때가 되면?",
+    "아무튼 지금은 아냐",
+    "헤헤, 머지 않은 미래에 그런 날이 올 거야",
+    "그럼, 앞으로 잘 지내보자!",
+    "저기 구원자…",
+    "나 고민이 있는데…",
+    "혼자서 생각이 많아질 때는 어떻게 해야 해?",
+    "만약에 정리가 안 되고,\r\n생각이 꼬리에 꼬리를 물고 계속 뻗어나가면?",
+    "그렇지? 이렇게 생각이 많아져 본 건 처음이라…",
+    "어떻게 해야할지 모르겠어",
+    "나는 생각이 많아지면, \r\n대부분 별님들에게 조언을 구했거든",
+    "응, 때론 고민하게 한 상대방과 직접 대화를 나눠보는 것도 필요하다면서…",
+    "휴, 역시 직접 물어봐야하는 건가…",
+    "음… 직접 물어보기에는… 좀 그런데…",
+    "고민해볼게!\r\n얘기 들어줘서 고마워!",
+    "헤헤, 구원자~",
+    "아니다. 이제 친구야~ 라고 불러야 하나?",
+    "오~ 그럼 내 마음대로 불러야지~",
+    "구원자~☆",
+    "헤헤, 나는 구원자라고 부르는 게 좋아서",
+    "이젠 익숙해지기도 했구",
+    "나도 좋아~ 구원자랑 더 친해진 거 같아",
+    "미안…",
+    "…나 지금은 혼자 있고 싶어",
+    "그럴 리가 없어…",
+    "그냥… 우리 에버톡으로만 연락하면 안 돼?",
+    "부탁이야…",
+    "나 좀 내버려둬",
+    "나도 구원자한테 이러고 싶지 않아",
+    "저기 있지, 구원자…",
+    "미안해",
+    "난… 구원자가 혼자 고생하는 줄도 모르고…",
+    "그저 피하기만 했었어",
+    "힝, 미안해",
+    "내가 진짜! 많이! 미안해!",
+    "앞으로는 안 그럴게",
+    "이제 연락도 잘 받고\r\n말할 게 있으면 찾아갈게!",
+    "구원자가 있어서 힘이 많이 돼",
+    "고마워",
+    "구원자야~ 내 친구야~",
+    "응? 꿈속인데 구원자한테 답장이 오네?",
+    "헤헤, 엄청 사실적인 꿈이다",
+    "하지만! 여긴 꿈이니까!\r\n평소에 말하지 못한 말을 할 수 있어!"
+  ],
+  "comments": [
+    {
+      "writer": "제이드",
+      "comment": "한밤중에 인기척이 느껴진다거나, 테이블에 올려둔 간식이 사라지더라도,\n탈리아가 아직 깨어 있는 것뿐이니까 안심하세요."
+    },
+    {
+      "writer": "에루샤",
+      "comment": "가끔 찾아와선 춤을 춰달라고 할 때가 있거든? 최고로 멋진 춤을 춰주면, 별님들이 고마워한다면서 묻지도 않은 운세를 알려주고 가더라~"
+    },
+    {
+      "writer": "나이아",
+      "comment": "가끔 꿈값으로… 미래에 값비싼 작품이 될 거라며 그림을 주곤 했어…\n하지만 아무리 봐도… 흐음… 꿈이 마음에 들지 않았던 걸까…?"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "탈리아",
+        "message": "안녕~ 구원자☆"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나는 별님들의 사랑을 받는~"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "지상의 별, 탈리아야☆"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 탈리아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 탈리아!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "헤헤, 구원자는 어쩐지 나랑 잘 맞을 것 같은 예감이 들어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "별님들도… 비슷한 말을 했거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 말인데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 말인데?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "앗, 그건… 말해줄 수 없어!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "아직… 비밀이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나중에 알려줄 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나중에 알려줄 거야?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "음~ 언젠가… 때가 되면?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "아무튼 지금은 아냐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "빨리 그때가 되면 좋겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "빨리 그때가 되면 좋겠다"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "헤헤, 머지 않은 미래에 그런 날이 올 거야"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그럼, 앞으로 잘 지내보자!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "저기 구원자…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나 고민이 있는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "혼자서 생각이 많아질 때는 어떻게 해야 해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "보통 생각을 정리하지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "보통 생각을 정리하지?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "만약에 정리가 안 되고,\r\n생각이 꼬리에 꼬리를 물고 계속 뻗어나가면?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 어려운 질문이다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 어려운 질문이다"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그렇지? 이렇게 생각이 많아져 본 건 처음이라…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "어떻게 해야할지 모르겠어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나는 생각이 많아지면, \r\n대부분 별님들에게 조언을 구했거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이번엔 별님들이 답을 말해주지 않았구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이번엔 별님들이 답을 말해주지 않았구나"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "응, 때론 고민하게 한 상대방과 직접 대화를 나눠보는 것도 필요하다면서…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "휴, 역시 직접 물어봐야하는 건가…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대화해보는 게 좋을 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대화해보는 게 좋을 것 같아"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "음… 직접 물어보기에는… 좀 그런데…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "고민해볼게!\r\n얘기 들어줘서 고마워!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "헤헤, 구원자~"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "아니다. 이제 친구야~ 라고 불러야 하나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐든 편하게 불러"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐든 편하게 불러"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "오~ 그럼 내 마음대로 불러야지~"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자~☆"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그대로 부르네?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그대로 부르네?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "헤헤, 나는 구원자라고 부르는 게 좋아서"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "이젠 익숙해지기도 했구"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋다"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나도 좋아~ 구원자랑 더 친해진 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "탈리아, 괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "탈리아, 괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "답장 좀 해줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "답장 좀 해줘"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "미안…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정 많이 했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정 많이 했어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "…나 지금은 혼자 있고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응… 괜찮아지면 연락해줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응… 괜찮아지면 연락해줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…탈리아…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…탈리아…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이 에버톡을 언제 볼지는 모르지만…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이 에버톡을 언제 볼지는 모르지만…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "네가 괜찮아졌으면 좋겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "네가 괜찮아졌으면 좋겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…계속 나 피할 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…계속 나 피할 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 뭔가 도울 수 있을지도 몰라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 뭔가 도울 수 있을지도 몰라"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그럴 리가 없어…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그냥… 우리 에버톡으로만 연락하면 안 돼?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떻게 그래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떻게 그래"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "부탁이야…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나 좀 내버려둬"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나도 구원자한테 이러고 싶지 않아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무것도 못해줘서 미안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무것도 못해줘서 미안해"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "저기 있지, 구원자…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "미안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응? 갑자기?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응? 갑자기?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "난… 구원자가 혼자 고생하는 줄도 모르고…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그저 피하기만 했었어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "힝, 미안해"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "내가 진짜! 많이! 미안해!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "앞으로는 안 그럴게"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "이제 연락도 잘 받고\r\n말할 게 있으면 찾아갈게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래주면 좋겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래주면 좋겠어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자가 있어서 힘이 많이 돼"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다시 예전처럼 밝아져서 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다시 예전처럼 밝아져서 고마워"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자야~ 내 친구야~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응? 아직 안 잤어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응? 아직 안 잤어?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "응? 꿈속인데 구원자한테 답장이 오네?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "헤헤, 엄청 사실적인 꿈이다"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "하지만! 여긴 꿈이니까!\r\n평소에 말하지 못한 말을 할 수 있어!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꿈이라니, 무슨 말이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꿈이라니, 무슨 말이야?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "사실 나는~ 우리 구원자를~"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "어떻게 생각하냐면!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "짜아아안~☆"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저, 탈리아… ?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저, 탈리아… ?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "어? 자, 잠깐!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "으아! 어떡해! 말도 안 돼!!!\r\n으아아아ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "미안!!!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나… 깜빡 잠들었었나 봐"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "저기 그게…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "내가 몽유병 비슷한 게 있어서…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "가끔 나도 모르게…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "으아아아 난 몰라!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "난 안 괜찮아 하나도 안 괜찮아\r\n난 몰라ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 탈리아가 좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 탈리아가 좋아"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "우와… 진짜…?\r\n힝 이건 좀 감동인걸…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "꿈 상점 안에 공유몽 대기실이란 것도 있었네"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나이아가 엄청 공 들여서 개발하고 있었나 봐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신기하다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신기하다"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그러게, 나이아가 말한 공유몽 얘긴 다시 생각해도 신기해"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "근데 만약에 우리가 서로 같은 꿈을 꾸게 되면"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "꿈에선 어떤 느낌일까?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "정말 내가 꿨던 예지몽을 보게 될지도 궁금해!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 궁금해지네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 궁금해지네"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "만약에 공유몽이 성공하면…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나랑 구원자는 운명 공동체가 된 느낌일까?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "헤헤, 구원자랑 운명 공동체라고 쓰고 나니까\r\n왠지 조~금 어색하게 느껴지네"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그래도 이왕 구원자랑 같이 꾸는 꿈인데"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "악몽은 아니었으면 좋겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "바라는 대로 될 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "바라는 대로 될 거야"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그렇게 됐으면 좋겠다!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자도 들었지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘은 못 들었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘은 못 들었어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나이아가 공유몽 테스트 다 끝냈다고 했어!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "이제 진짜 공유몽 안으로 들어갈 거래"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "이제 에버톡 모드를 바꿔놔야겠다\r\n생각 읽기 모드가 있는 거 알지?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "에버톡을 손에 꼭 쥐고 있으면 돼"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그러면 서로의 의식만으로도 에버톡을 할 수 있어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "물론 우리가 수면 상태에 들어가기 전까지만 가능하지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말한 대로 했어, 준비 완료!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말한 대로 했어, 준비 완료!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "좋아 좋아!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "후, 떨리는 걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "힘내보자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "힘내보자!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "응! 구원자, 곧 꿈에서 만나!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "있잖아~\r\n할말이 있는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 편하게 얘기해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 편하게 얘기해"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "잠깐 나와줄 수 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "금방 갈게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "금방 갈게"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "좋아! 콜브 초원 언덕으로 와!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자, 오늘 나 찾아다녔다면서?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "별점 가게 손님이 많아서,\r\n에버폰 확인할 시간도 없지 뭐야"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "제이드가 말해줬어\r\n구원자가 상단까지 찾아왔었다구"
+      },
+      {
+        "speaker": "구원자",
+        "message": "만나서 얘기할 게 있었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "만나서 얘기할 게 있었어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "응? 만나서 할 얘기…?\r\n혹시 심각한 걸까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아냐, 잠깐 얘기할 수 있을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아냐, 잠깐 얘기할 수 있을까?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "앗, 어쩌지? 오늘따라 손님이 많은데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 바쁘구나…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 바쁘구나…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "음… 조금 늦은 저녁에 봐도 괜찮아?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "오늘 손님들 별점은 다 봐주기로\r\n제이드랑 약속했거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물론, 괜찮지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물론, 괜찮지"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그럼 전에 만났던 곳 기억나지?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "콜브 초원 언덕 말야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아! 은하수가 가득했던 곳 말이지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아! 은하수가 가득했던 곳 말이지?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "응 거기서 보자\r\n끝나면 바로 갈게~!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "시간내줘서 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "시간내줘서 고마워!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자~!\r\n나 좋은 생각이 났어!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오, 어떤 생각이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오, 어떤 생각이야?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "우리 친구가 된 거 기념하자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아! 음… 뭘하면 좋으려나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아! 음… 뭘하면 좋으려나?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "음~ 생각해봤는데~\r\n내가 제~일 잘하는 게 별점이잖아!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "특기를 살려보려고☆"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "운세 봐 줄테니까\r\n야외 카페로 와☆"
+      },
+      {
+        "speaker": "샤링",
+        "message": "구원자~ 탈리아를 찾고 있다며?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아… 요즘 연락이 되질 않아서…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아… 요즘 연락이 되질 않아서…"
+      },
+      {
+        "speaker": "샤링",
+        "message": "그랬구나 걱정할만 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 탈리아가 어딨는 지 알아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 탈리아가 어딨는 지 알아?"
+      },
+      {
+        "speaker": "샤링",
+        "message": "음… 정확한 건 아니지만…\r\n짚이는 곳이 있어"
+      },
+      {
+        "speaker": "샤링",
+        "message": "만나서 얘기해줄게\r\n시가지에서 봐!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자, 그날 나 쓰러진 날 말야"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자가 남긴 에버톡… 지금 봤어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "너무 늦게 답장해서 미안…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에이, 미안하긴"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에이, 미안하긴"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "자꾸 난 구원자… 걱정만 시키네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아! 답장해줬으면 됐어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아! 답장해줬으면 됐어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자는 나한테 왜 이렇게 잘해줘?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 이유가 있어야 하나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 이유가 있어야 하나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 탈리아한테는 잘해주고 싶은걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 탈리아한테는 잘해주고 싶은걸"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "앗… 음… 나 뭐라 대답해야 돼?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "편한대로 하면 되지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "편한대로 하면 되지"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "아, 아무튼 그날 일 고맙다고!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그 말 하고 싶어서 연락했어!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "진짜 고마웠어!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자, 생각해보니까 궁금해졌어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나이아한테는 어떻게 찾아가게 된 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 별점 보러 카페에 갔었을 때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 별점 보러 카페에 갔었을 때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋은 꿈이 필요하면, 꿈 상점에 찾아오라 했었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋은 꿈이 필요하면, 꿈 상점에 찾아오라 했었어"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "아아! 생각난다, 생각나!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그걸 기억했었구나!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 탈리아가 잠을 못 잔다고 하니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 탈리아가 잠을 못 잔다고 하니까"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "그래서… 그때 일이 그렇게 됐던 거구나"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자 정말 애써줬었구나ㅠ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "부담 갖진 마, 어떻게든 방법을 찾아보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "부담 갖진 마, 어떻게든 방법을 찾아보자"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "앗, 오늘이 드디어 그 날이구나!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "나이아의 꿈가게에 들리기로 한 날!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "후우, 떨려라…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮을 거야 너무 긴장마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮을 거야 너무 긴장마"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "응! 긴장 풀고! 힘내볼게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠은 좀 잔거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠은 좀 잔거야?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "으음~ 그게 잠들려고 누웠는데 \r\n잠은 안 오고 밤하늘에 떠있는 별님들이 보이는거야!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "별님들이 몇 분이나 있나~ 하고 세다 보니까\r\n어느새 해가 떠있더라구 헤헤…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "불면증이 심해서 걱정이네…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "불면증이 심해서 걱정이네…"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "에이, 괜찮아~!\r\n지금 나 엄청 멀~쩡해~!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "내 걱정말구 이따 꿈 상점 앞에서 봐!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "우리… 성공한 걸까…?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "이제 어떻게 되는 거야…?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "여기 너무… 어두워"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "우리… 성공한 걸까…?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "이제 어떻게 되는 거야…?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "여기 너무… 어두워"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "우리… 성공한 걸까…?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "이제 어떻게 되는 거야…?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "어…? 저 빛은…?"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "헤헤, 구원자~ 선물이야☆"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "별님의 가호와 내 사랑을 담았지☆\r\n좋은 하루 보내자~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 덕분에 행복해!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 덕분에 행복해!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "오늘은 별이 가장 예쁘게 뜨는 날이야"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "별밤의 은하수☆ 같이 보고 싶어☆"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아, 기대 된다!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아, 기대 된다!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "구원자~ 메리 크리스마스☆"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "헤헤, 구원자~ 데이트 신청~!"
+      },
+      {
+        "speaker": "탈리아",
+        "message": "크리스마스 기념으로 \r\n포츈 쿠키 같이 만들자~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌겠다 그러자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌겠다 그러자!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "탈리아",
+      "en": "Talia",
+      "zh_tw": "塔利亞",
+      "zh_cn": "塔利亞"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "요정형",
+      "en": "Fairy",
+      "zh_tw": "妖精型",
+      "zh_cn": "妖精型"
+    },
+    "class": {
+      "ko": "서포터",
+      "en": "Supporter",
+      "zh_tw": "輔助者",
+      "zh_cn": "輔助者"
+    },
+    "sub_class": {
+      "ko": "버프",
+      "en": "Buff",
+      "zh_tw": "增益",
+      "zh_cn": "增益"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "지상의 별",
+        "en": "The Terrestrial Star.",
+        "zh_tw": "地之星",
+        "zh_cn": "地之星"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_이벤트1",
+        "en": "인연_메피스토_이벤트1",
+        "zh_tw": "水瓶座",
+        "zh_cn": "水瓶座"
+      },
+      "union": {
+        "ko": "제이드 상단",
+        "en": "Jade's Merchants' Guild",
+        "zh_tw": "潔依德商團",
+        "zh_cn": "潔依德商團"
+      },
+      "cv_ko": {
+        "ko": "장예나",
+        "en": "Yena Jang",
+        "zh_tw": "張藝娜",
+        "zh_cn": "張藝娜"
+      },
+      "cv_jp": {
+        "ko": "Inori Minase",
+        "en": "Inori Minase",
+        "zh_tw": "Inori Minase",
+        "zh_cn": "Inori Minase"
+      },
+      "like": {
+        "ko": [
+          "별님",
+          "포츈 쿠키"
+        ],
+        "en": [
+          "The stars",
+          "fortune cookies"
+        ],
+        "zh_tw": [
+          "星星、幸運餅乾"
+        ],
+        "zh_cn": [
+          "星星、幸運餅乾"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "어린애 취급"
+        ],
+        "en": [
+          "Being treated like a child"
+        ],
+        "zh_tw": [
+          "被當成小孩子"
+        ],
+        "zh_cn": [
+          "被當成小孩子"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "초상화 그리기 (안 닮음)"
+        ],
+        "en": [
+          "Drawing (inaccurate) portraits"
+        ],
+        "zh_tw": [
+          "畫肖像畫（不像）"
+        ],
+        "zh_cn": [
+          "畫肖像畫（不像）"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "신통방통 별점"
+        ],
+        "en": [
+          "Wonderful horoscope"
+        ],
+        "zh_tw": [
+          "神準占星"
+        ],
+        "zh_cn": [
+          "神準占星"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "안녕~! 구원자☆ 난 지상의 별, 탈리아야☆\n이렇게 만나서 기뻐! 정말 만나고 싶었어!\n\n앗, 혹시 나 너무 신나 보여? 너무 업되어 있었나? 그랬다면… 살짝 쑥스러운데…\n휴, 괜찮다고 해주니까 다행이다! 덕분에 편하게 말할 수 있을 것 같아. \n\n사실, 별님들이 요즘 자꾸 운명적인 만남이 있을 거라고 말해줬었거든. 나랑 운명이 엮인 상대가 어떤 사람일지, 무지무지 궁금했었어. 그래서 나도 모르게 구원자를 보자마자 들떠버렸네.\n\n응? 어떤 운명을 말하는 거냐구? 어, 어… 그, 그건…! 여기서는 말해줄 수 없어. \n궁금하다면 내가 운영하는 신통방통 별점 가게를 찾아와줘. 운명을 말해주는 건 유료 서비스란 말씀! 공짜로는 절~대 안 돼.\n대가도 없이 미래를 아는 건, 별님들한테도 나한테도 실례라구~\n\n헤헤, 구원자라면 언제든 환영할 테지만, 지킬 건 지켜줬으면 해!\n운명이 궁금하다면, 예약은 필수, 복채는 최대한 많이! 노쇼는 거부! \n예약하고 안 오면 별님들한테 혼내달라고 이를 거야~ 알겠지?\n그럼 조만간 제대로 다시 보자☆",
+        "en": "Hi, Savior! ☆ I'm Talia, the Terrestrial Star. ☆\nSo nice to meet you here! I really wanted to meet you!\n\nOh, do I look too excited? Am I overreacting? If so…I'm a little ashamed…\nPhew, I'm glad you said it's okay! Thanks to you, I'd be able to talk comfortably.\n\nIndeed, the stars kept telling me lately that there would be a fateful encounter for me. I was SOOO curious to know what kind of guy my destiny is tied to. So, as soon as I saw you Savior, I was excited despite myself.\n\nHuh? What destiny do I mean? Uh, umm… That, that…! I can't tell you about that here.\nIf you want to hear about it, please visit my Wonderful Horoscope shop. Just to let you know, fortune-telling is a paid service! You can't have it for free.\nFortune-telling for free is disrespectful to the stars and to me!\n\nHehe, you are always welcome to my shop, but I want you to keep the rule!\nIf you are wondering about your destiny, reservation is a must, and you'd better pay the fee as much as possible! No-shows are not allowed!\nIf you come without a reservation, I'll tell the stars to punish you, okay?\nThen see you again soon! ☆",
+        "zh_tw": "嗨嗨～！救援者☆我是人間星星塔利亞☆\n很高興見到你！我真的很想見你！\n\n啊，我看起來很高興嗎？太嗨了嗎？真的啊…有點不好意思…\n呼，還好你說沒關係！聽你這樣說我可以放心說出口了。\n\n其實，星星最近一直告訴我說我會有個命運般的相遇，我非常非常好奇和我命運交織在一起的人是誰，所以一看到救援者就不自覺興奮起來。\n\n嗯？什麼樣的命運？喔、嗯…這、這個嘛…！我沒辦法在這裡告訴你。\n你如果好奇，就來我經營的神準占星館找我，告訴你占星結果是需要收費的！想免費算是絕～對不可能的。\n你不付出代價就想知道未來，這不管對星星，還是對我來說都很失禮～\n\n哈哈，我隨時歡迎救援者來，但還是得照著原則來！\n想知道命運的話，一定要預約，占星費用給越多越好！拒絕放鴿子！\n預約了又不來，星星會罵你的～知道嗎？\n晚點見囉☆",
+        "zh_cn": "嗨嗨～！救援者☆我是人間星星塔利亞☆\n很高興見到你！我真的很想見你！\n\n啊，我看起來很高興嗎？太嗨了嗎？真的啊…有點不好意思…\n呼，還好你說沒關係！聽你這樣說我可以放心說出口了。\n\n其實，星星最近一直告訴我說我會有個命運般的相遇，我非常非常好奇和我命運交織在一起的人是誰，所以一看到救援者就不自覺興奮起來。\n\n嗯？什麼樣的命運？喔、嗯…這、這個嘛…！我沒辦法在這裡告訴你。\n你如果好奇，就來我經營的神準占星館找我，告訴你占星結果是需要收費的！想免費算是絕～對不可能的。\n你不付出代價就想知道未來，這不管對星星，還是對我來說都很失禮～\n\n哈哈，我隨時歡迎救援者來，但還是得照著原則來！\n想知道命運的話，一定要預約，占星費用給越多越好！拒絕放鴿子！\n預約了又不來，星星會罵你的～知道嗎？\n晚點見囉☆"
+      },
+      "greeting": {
+        "ko": "내 점괘는 모두 별님의 의지. \n운명에서 벗어날 수 있는 자는 없어.",
+        "en": "My fortune-telling is at the stars' will.\nNo one can escape their fate.",
+        "zh_tw": "我的卜卦全都是星星的旨意。\n沒有人能擺脫命運。",
+        "zh_cn": "我的卜卦全都是星星的旨意。\n沒有人能擺脫命運。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "안녕~ 구원자☆"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Hi, Savior~☆"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "你好～救援者☆"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "你好～救援者☆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "나는 별님들의 사랑을 받는~"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Loved by the stars."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我是受星星們寵愛的～"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我是受星星們寵愛的～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "지상의 별, 탈리아야☆"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I'm Talia, the Terrestrial Star ☆"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "地之星，塔利亞☆"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "地之星，塔利亞☆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "헤헤, 구원자는 어쩐지 나랑 잘 맞을 것 같은 예감이 들어"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Hehe, I have a feeling that we'll get along very well."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，我有預感救援者會跟我很合得來"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，我有預感救援者會跟我很合得來"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "별님들도… 비슷한 말을 했거든"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Even the stars…said something like that."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "因為星星們也…說過類似的話"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "因為星星們也…說過類似的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "앗, 그건… 말해줄 수 없어!"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Oh, I can't tell you!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "啊，那個…不能告訴你！"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "啊，那個…不能告訴你！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "아직… 비밀이야"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "It's…a secret."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "這還是…秘密"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "這還是…秘密"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "음~ 언젠가… 때가 되면?"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Well, maybe someday…when it's time."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嗯～總有一天…時間到的話？"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嗯～總有一天…時間到的話？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "아무튼 지금은 아냐"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "It's not now anyway."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "總之不是現在"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "總之不是現在"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "헤헤, 머지 않은 미래에 그런 날이 올 거야"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Hehe, that day will come in the near future."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，那天很快就會到來的"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，那天很快就會到來的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "그럼, 앞으로 잘 지내보자!"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Then, let's get along well from now on!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "那麼，我們以後好好相處吧！"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "那麼，我們以後好好相處吧！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "저기 구원자…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Hey, Savior…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "那個救援者…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "那個救援者…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "나 고민이 있는데…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I have a concern…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我有困擾…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我有困擾…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "혼자서 생각이 많아질 때는 어떻게 해야 해?"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "What do you do when you've got a lot on your mind?"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "一個人想太多的時候要怎麼辦？"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "一個人想太多的時候要怎麼辦？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "만약에 정리가 안 되고,\r\n생각이 꼬리에 꼬리를 물고 계속 뻗어나가면?"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "What if I can't organize them\r\nand the thoughts keep stretching out, one after the other?"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "萬一整理不了，\r\n想法一個接著一個持續冒出來的話呢？"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "萬一整理不了，\r\n想法一個接著一個持續冒出來的話呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "그렇지? 이렇게 생각이 많아져 본 건 처음이라…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Right? I've never thought this much before…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "對吧？因為我是第一次變得想這麼多…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "對吧？因為我是第一次變得想這麼多…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "어떻게 해야할지 모르겠어"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I don't know what to do."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "所以不知道該怎麼辦"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "所以不知道該怎麼辦"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "나는 생각이 많아지면, \r\n대부분 별님들에게 조언을 구했거든"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "When I have a lot of thoughts, \r\nI ask the stars for the advice."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "當我想太多時，\r\n我常常會向星星們詢問建議"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "當我想太多時，\r\n我常常會向星星們詢問建議"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "응, 때론 고민하게 한 상대방과 직접 대화를 나눠보는 것도 필요하다면서…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Yeah, they said sometimes it's necessary to have a face-to-face conversation with the person who made you worry…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嗯，聽說有時候也需要直接跟讓你困擾的對象聊聊…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嗯，聽說有時候也需要直接跟讓你困擾的對象聊聊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "휴, 역시 직접 물어봐야하는 건가…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Whew, should I ask that person…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "呼，果然還是要直接問嗎…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "呼，果然還是要直接問嗎…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "음… 직접 물어보기에는… 좀 그런데…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Well… I'm hesitant to ask directly."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嗯…直接問的話…有點那個…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嗯…直接問的話…有點那個…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "고민해볼게!\r\n얘기 들어줘서 고마워!"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I'll think about it!\r\nThank you for listening to me!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我會考慮看看！\r\n謝謝你聽我說！"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我會考慮看看！\r\n謝謝你聽我說！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "헤헤, 구원자~"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Hehe, Savior!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，救援者～"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，救援者～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "아니다. 이제 친구야~ 라고 불러야 하나?"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Never mind. Should I call you buddy now?"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "不，現在應該叫朋友啊～才對？"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "不，現在應該叫朋友啊～才對？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "오~ 그럼 내 마음대로 불러야지~"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Oh, then I really will call you whatever I want…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "哦～那就看我心情叫囉～"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "哦～那就看我心情叫囉～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "구원자~☆"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Savior! ☆"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "救援者～☆"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "救援者～☆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "헤헤, 나는 구원자라고 부르는 게 좋아서"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Hehe, I like calling you Savior."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，因為我喜歡叫你救援者"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，因為我喜歡叫你救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "이젠 익숙해지기도 했구"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I'm used to that."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "現在也已經熟悉了"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "現在也已經熟悉了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "나도 좋아~ 구원자랑 더 친해진 거 같아"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Same, I feel like it makes me closer to you."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我也覺得真好～感覺跟救援者變更熟了"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我也覺得真好～感覺跟救援者變更熟了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "미안…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I'm sorry…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "對不起…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "對不起…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "…나 지금은 혼자 있고 싶어"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "…I want to be alone."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "…我現在想獨處"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "…我現在想獨處"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "그럴 리가 없어…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "No way…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "不可能的…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "不可能的…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "그냥… 우리 에버톡으로만 연락하면 안 돼?"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Can we just talk on Evertalk…?"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我們…不能就只用EverTalk聯絡嗎？"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我們…不能就只用EverTalk聯絡嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "부탁이야…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Please…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "拜託…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "拜託…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "나 좀 내버려둬"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Please just leave me alone."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "別管我"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "別管我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "나도 구원자한테 이러고 싶지 않아"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I don't want to do this to you."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我也不想對救援者這樣"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我也不想對救援者這樣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "저기 있지, 구원자…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Hey, Savior…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "那個，救援者…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "那個，救援者…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "미안해"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I'm sorry"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "抱歉"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "抱歉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "난… 구원자가 혼자 고생하는 줄도 모르고…"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I… I didn't know you were struggling alone…"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我…連救援者獨自辛苦做的事都不知道…"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我…連救援者獨自辛苦做的事都不知道…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "그저 피하기만 했었어"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I've been merely evasive."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "一直躲著你"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "一直躲著你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "힝, 미안해"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "(T＿T) I'm sorry"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嗚，對不起"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嗚，對不起"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "내가 진짜! 많이! 미안해!"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I'm really! Terribly! Sorry!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我真的！很！對不起！"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我真的！很！對不起！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "앞으로는 안 그럴게"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I won't be like that anymore."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "以後不會再這樣了"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "以後不會再這樣了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "이제 연락도 잘 받고\r\n말할 게 있으면 찾아갈게!"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I'll get in touch with you regularly\r\nand I'll visit you if I have something to tell you!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "現在我會好好保持聯絡，\r\n有話要說就去找你！"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "現在我會好好保持聯絡，\r\n有話要說就去找你！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "구원자가 있어서 힘이 많이 돼"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Your presence helps me a lot."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "救援者的存在讓我充滿了力量"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "救援者的存在讓我充滿了力量"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "고마워"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Thanks"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "謝謝你"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "謝謝你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "구원자야~ 내 친구야~"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Savior, my friend!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "救援者～我的朋友～"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "救援者～我的朋友～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "응? 꿈속인데 구원자한테 답장이 오네?"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Huh? Savior replies to me even though I'm in a dream!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嗯？在夢裡也能收到救援者的回覆欸？"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嗯？在夢裡也能收到救援者的回覆欸？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "헤헤, 엄청 사실적인 꿈이다"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Hehe, what a realistic dream."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，超寫實的夢"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "嘿嘿，超寫實的夢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "하지만! 여긴 꿈이니까!\r\n평소에 말하지 못한 말을 할 수 있어!"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "But! I'm in a dream!\r\nSo I can tell what I couldn't say when I was awake."
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "不過！這裡畢竟是夢！\r\n可以說平常不能說的話！"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "不過！這裡畢竟是夢！\r\n可以說平常不能說的話！"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "한밤중에 인기척이 느껴진다거나, 테이블에 올려둔 간식이 사라지더라도,\n탈리아가 아직 깨어 있는 것뿐이니까 안심하세요."
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Even if you feel someone's presence at night or a snack on the table disappears,\nplease rest assured that Talia is still awake."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "不管是三更半夜感受到動靜或是桌上的零食被吃掉都不用擔心，\n這是因為塔利亞還醒著。"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "不管是三更半夜感受到動靜或是桌上的零食被吃掉都不用擔心，\n這是因為塔利亞還醒著。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "에루샤",
+          "message": "가끔 찾아와선 춤을 춰달라고 할 때가 있거든? 최고로 멋진 춤을 춰주면, 별님들이 고마워한다면서 묻지도 않은 운세를 알려주고 가더라~"
+        },
+        "en": {
+          "speaker": "Erusha",
+          "message": "She would sometimes come to me and ask me to dance. She said if I perform the best dance, the Stars would say thank you. Then she told me about my fortune that I didn't even ask for!"
+        },
+        "zh_tw": {
+          "speaker": "艾魯莎",
+          "message": "她有時候會來找我，叫我跳舞耶！如果跳出最棒的舞蹈，\n她就會說星星會感謝我，然後告訴我一些我根本沒問的運勢～"
+        },
+        "zh_cn": {
+          "speaker": "艾魯莎",
+          "message": "她有時候會來找我，叫我跳舞耶！如果跳出最棒的舞蹈，\n她就會說星星會感謝我，然後告訴我一些我根本沒問的運勢～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "나이아",
+          "message": "가끔 꿈값으로… 미래에 값비싼 작품이 될 거라며 그림을 주곤 했어…\n하지만 아무리 봐도… 흐음… 꿈이 마음에 들지 않았던 걸까…?"
+        },
+        "en": {
+          "speaker": "Naiah",
+          "message": "Sometimes… she would give me a picture in return for my dream, saying it would be an expensive piece of work in the future…\nBut by a long shot… hmm… maybe she didn't like the dream…?"
+        },
+        "zh_tw": {
+          "speaker": "娜伊雅",
+          "message": "她偶爾…會拿著說以後會大漲的畫來跟我換夢…\n但我看來看去…哼嗯…她不喜歡我的夢嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "娜伊雅",
+          "message": "她偶爾…會拿著說以後會大漲的畫來跟我換夢…\n但我看來看去…哼嗯…她不喜歡我的夢嗎…？"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "안녕~ 구원자☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hi, Savior~☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "你好～救援者☆"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "你好～救援者☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나는 별님들의 사랑을 받는~"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Loved by the stars."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我是受星星們寵愛的～"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我是受星星們寵愛的～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "지상의 별, 탈리아야☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm Talia, the Terrestrial Star ☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "地之星，塔利亞☆"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "地之星，塔利亞☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 탈리아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Talia!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，塔利亞！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，塔利亞！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 탈리아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Talia!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，塔利亞！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，塔利亞！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "헤헤, 구원자는 어쩐지 나랑 잘 맞을 것 같은 예감이 들어"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, I have a feeling that we'll get along very well."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，我有預感救援者會跟我很合得來"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，我有預感救援者會跟我很合得來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "별님들도… 비슷한 말을 했거든"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Even the stars…said something like that."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "因為星星們也…說過類似的話"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "因為星星們也…說過類似的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 말인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What did they say?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼話？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼話？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 말인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What did they say?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼話？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼話？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "앗, 그건… 말해줄 수 없어!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Oh, I can't tell you!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "啊，那個…不能告訴你！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "啊，那個…不能告訴你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "아직… 비밀이야"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "It's…a secret."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "這還是…秘密"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "這還是…秘密"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나중에 알려줄 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Will you tell me later?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "以後會告訴我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "以後會告訴我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나중에 알려줄 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Will you tell me later?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "以後會告訴我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "以後會告訴我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "음~ 언젠가… 때가 되면?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Well, maybe someday…when it's time."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯～總有一天…時間到的話？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯～總有一天…時間到的話？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "아무튼 지금은 아냐"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "It's not now anyway."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "總之不是現在"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "總之不是現在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "빨리 그때가 되면 좋겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I hope that time comes soon."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要是能快點到那個時候就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要是能快點到那個時候就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "빨리 그때가 되면 좋겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I hope that time comes soon."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要是能快點到那個時候就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要是能快點到那個時候就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "헤헤, 머지 않은 미래에 그런 날이 올 거야"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, that day will come in the near future."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，那天很快就會到來的"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，那天很快就會到來的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그럼, 앞으로 잘 지내보자!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Then, let's get along well from now on!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "那麼，我們以後好好相處吧！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "那麼，我們以後好好相處吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "저기 구원자…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hey, Savior…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "那個救援者…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "那個救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나 고민이 있는데…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I have a concern…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我有困擾…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我有困擾…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "혼자서 생각이 많아질 때는 어떻게 해야 해?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "What do you do when you've got a lot on your mind?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "一個人想太多的時候要怎麼辦？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "一個人想太多的時候要怎麼辦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "보통 생각을 정리하지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I usually organize my thoughts."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一般會整理思緒吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一般會整理思緒吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "보통 생각을 정리하지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I usually organize my thoughts."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一般會整理思緒吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一般會整理思緒吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "만약에 정리가 안 되고,\r\n생각이 꼬리에 꼬리를 물고 계속 뻗어나가면?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "What if I can't organize them\r\nand the thoughts keep stretching out, one after the other?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "萬一整理不了，\r\n想法一個接著一個持續冒出來的話呢？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "萬一整理不了，\r\n想法一個接著一個持續冒出來的話呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 어려운 질문이다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm… That's a tough question."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…這是個難題"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…這是個難題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 어려운 질문이다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm… That's a tough question."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…這是個難題"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…這是個難題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그렇지? 이렇게 생각이 많아져 본 건 처음이라…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Right? I've never thought this much before…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "對吧？因為我是第一次變得想這麼多…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "對吧？因為我是第一次變得想這麼多…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "어떻게 해야할지 모르겠어"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I don't know what to do."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "所以不知道該怎麼辦"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "所以不知道該怎麼辦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나는 생각이 많아지면, \r\n대부분 별님들에게 조언을 구했거든"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "When I have a lot of thoughts, \r\nI ask the stars for the advice."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "當我想太多時，\r\n我常常會向星星們詢問建議"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "當我想太多時，\r\n我常常會向星星們詢問建議"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이번엔 별님들이 답을 말해주지 않았구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "This time, the stars didn't give you an answer."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來這次星星們沒有給出答案啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來這次星星們沒有給出答案啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이번엔 별님들이 답을 말해주지 않았구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "This time, the stars didn't give you an answer."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來這次星星們沒有給出答案啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來這次星星們沒有給出答案啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "응, 때론 고민하게 한 상대방과 직접 대화를 나눠보는 것도 필요하다면서…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Yeah, they said sometimes it's necessary to have a face-to-face conversation with the person who made you worry…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯，聽說有時候也需要直接跟讓你困擾的對象聊聊…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯，聽說有時候也需要直接跟讓你困擾的對象聊聊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "휴, 역시 직접 물어봐야하는 건가…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Whew, should I ask that person…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "呼，果然還是要直接問嗎…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "呼，果然還是要直接問嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대화해보는 게 좋을 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you should have a conversation."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聊一聊會比較好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聊一聊會比較好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대화해보는 게 좋을 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you should have a conversation."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聊一聊會比較好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聊一聊會比較好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "음… 직접 물어보기에는… 좀 그런데…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Well… I'm hesitant to ask directly."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯…直接問的話…有點那個…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯…直接問的話…有點那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "고민해볼게!\r\n얘기 들어줘서 고마워!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'll think about it!\r\nThank you for listening to me!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我會考慮看看！\r\n謝謝你聽我說！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我會考慮看看！\r\n謝謝你聽我說！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "헤헤, 구원자~"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，救援者～"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，救援者～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "아니다. 이제 친구야~ 라고 불러야 하나?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Never mind. Should I call you buddy now?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "不，現在應該叫朋友啊～才對？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "不，現在應該叫朋友啊～才對？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐든 편하게 불러"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Whatever you want to call me."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳想怎麼叫都可以"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳想怎麼叫都可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐든 편하게 불러"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Whatever you want to call me."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳想怎麼叫都可以"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳想怎麼叫都可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "오~ 그럼 내 마음대로 불러야지~"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Oh, then I really will call you whatever I want…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "哦～那就看我心情叫囉～"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "哦～那就看我心情叫囉～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자~☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Savior! ☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者～☆"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者～☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그대로 부르네?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You call me the same?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還是叫原本的啊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還是叫原本的啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그대로 부르네?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You call me the same?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還是叫原本的啊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還是叫原本的啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "헤헤, 나는 구원자라고 부르는 게 좋아서"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, I like calling you Savior."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，因為我喜歡叫你救援者"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，因為我喜歡叫你救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "이젠 익숙해지기도 했구"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm used to that."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "現在也已經熟悉了"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "現在也已經熟悉了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나도 좋아~ 구원자랑 더 친해진 거 같아"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Same, I feel like it makes me closer to you."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我也覺得真好～感覺跟救援者變更熟了"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我也覺得真好～感覺跟救援者變更熟了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "탈리아, 괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Talia, are you okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "塔利亞，沒事吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "塔利亞，沒事吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "탈리아, 괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Talia, are you okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "塔利亞，沒事吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "塔利亞，沒事吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "답장 좀 해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Please reply."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "回我一下"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "回我一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "답장 좀 해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Please reply."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "回我一下"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "回我一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "미안…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm sorry…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "對不起…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "對不起…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정 많이 했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was worried a lot."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我很擔心妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我很擔心妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정 많이 했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was worried a lot."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我很擔心妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我很擔心妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "…나 지금은 혼자 있고 싶어"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "…I want to be alone."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "…我現在想獨處"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "…我現在想獨處"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응… 괜찮아지면 연락해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay… Message me when you feel okay."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…好一點的話再聯絡我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…好一點的話再聯絡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응… 괜찮아지면 연락해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay… Message me when you feel okay."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…好一點的話再聯絡我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…好一點的話再聯絡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…탈리아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…Talia…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…塔利亞…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…塔利亞…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…탈리아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…Talia…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…塔利亞…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…塔利亞…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이 에버톡을 언제 볼지는 모르지만…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't know when you will see this Evertalk…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "雖然不知道妳什麼時候會看這則EverTalk…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "雖然不知道妳什麼時候會看這則EverTalk…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이 에버톡을 언제 볼지는 모르지만…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't know when you will see this Evertalk…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "雖然不知道妳什麼時候會看這則EverTalk…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "雖然不知道妳什麼時候會看這則EverTalk…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "네가 괜찮아졌으면 좋겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I hope you feel better."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我希望妳沒事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我希望妳沒事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "네가 괜찮아졌으면 좋겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I hope you feel better."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我希望妳沒事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我希望妳沒事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…계속 나 피할 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…Are you going to keep avoiding me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…妳要一直躲我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…妳要一直躲我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…계속 나 피할 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…Are you going to keep avoiding me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…妳要一直躲我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…妳要一直躲我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 뭔가 도울 수 있을지도 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I might be able to help you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說不定有我能幫忙的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說不定有我能幫忙的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 뭔가 도울 수 있을지도 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I might be able to help you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說不定有我能幫忙的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說不定有我能幫忙的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그럴 리가 없어…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "No way…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "不可能的…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "不可能的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그냥… 우리 에버톡으로만 연락하면 안 돼?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Can we just talk on Evertalk…?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我們…不能就只用EverTalk聯絡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我們…不能就只用EverTalk聯絡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떻게 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nonsense."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼能這樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼能這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떻게 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nonsense."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼能這樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼能這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "부탁이야…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Please…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "拜託…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "拜託…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나 좀 내버려둬"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Please just leave me alone."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "別管我"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "別管我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나도 구원자한테 이러고 싶지 않아"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I don't want to do this to you."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我也不想對救援者這樣"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我也不想對救援者這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무것도 못해줘서 미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry I can't do anything for you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，我什麼忙也幫不上"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，我什麼忙也幫不上"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무것도 못해줘서 미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry I can't do anything for you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，我什麼忙也幫不上"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，我什麼忙也幫不上"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "저기 있지, 구원자…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hey, Savior…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "那個，救援者…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "那個，救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응? 갑자기?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh? All of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？這麼突然？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？這麼突然？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응? 갑자기?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh? All of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？這麼突然？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？這麼突然？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "난… 구원자가 혼자 고생하는 줄도 모르고…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I… I didn't know you were struggling alone…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我…連救援者獨自辛苦做的事都不知道…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我…連救援者獨自辛苦做的事都不知道…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그저 피하기만 했었어"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I've been merely evasive."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "一直躲著你"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "一直躲著你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "힝, 미안해"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "(T＿T) I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗚，對不起"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗚，對不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "내가 진짜! 많이! 미안해!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm really! Terribly! Sorry!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我真的！很！對不起！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我真的！很！對不起！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "앞으로는 안 그럴게"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I won't be like that anymore."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "以後不會再這樣了"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "以後不會再這樣了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "이제 연락도 잘 받고\r\n말할 게 있으면 찾아갈게!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'll get in touch with you regularly\r\nand I'll visit you if I have something to tell you!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "現在我會好好保持聯絡，\r\n有話要說就去找你！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "現在我會好好保持聯絡，\r\n有話要說就去找你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래주면 좋겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That would be great."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這樣很好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這樣很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래주면 좋겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That would be great."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這樣很好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這樣很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자가 있어서 힘이 많이 돼"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Your presence helps me a lot."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者的存在讓我充滿了力量"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者的存在讓我充滿了力量"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "고마워"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Thanks"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "謝謝你"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "謝謝你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다시 예전처럼 밝아져서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you for being happy again."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳又回到以前開朗的樣子"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳又回到以前開朗的樣子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다시 예전처럼 밝아져서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you for being happy again."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳又回到以前開朗的樣子"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳又回到以前開朗的樣子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자야~ 내 친구야~"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Savior, my friend!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者～我的朋友～"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者～我的朋友～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응? 아직 안 잤어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh? You're still awake?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？還沒睡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？還沒睡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응? 아직 안 잤어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh? You're still awake?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？還沒睡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？還沒睡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "응? 꿈속인데 구원자한테 답장이 오네?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Huh? Savior replies to me even though I'm in a dream!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯？在夢裡也能收到救援者的回覆欸？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯？在夢裡也能收到救援者的回覆欸？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "헤헤, 엄청 사실적인 꿈이다"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, what a realistic dream."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，超寫實的夢"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，超寫實的夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "하지만! 여긴 꿈이니까!\r\n평소에 말하지 못한 말을 할 수 있어!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "But! I'm in a dream!\r\nSo I can tell what I couldn't say when I was awake."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "不過！這裡畢竟是夢！\r\n可以說平常不能說的話！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "不過！這裡畢竟是夢！\r\n可以說平常不能說的話！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꿈이라니, 무슨 말이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you mean, dream?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夢？什麼意思？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夢？什麼意思？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꿈이라니, 무슨 말이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you mean, dream?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夢？什麼意思？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夢？什麼意思？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "사실 나는~ 우리 구원자를~"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Actually, you, my Savior!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "其實我啊～是這麼看待～"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "其實我啊～是這麼看待～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "어떻게 생각하냐면!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "You know what?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我們的救援者呢！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我們的救援者呢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "짜아아안~☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Tadaaaaa~☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "鏘鏘～☆"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "鏘鏘～☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저, 탈리아… ?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Um, Talia…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個，塔利亞…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個，塔利亞…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저, 탈리아… ?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Um, Talia…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個，塔利亞…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個，塔利亞…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "어? 자, 잠깐!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "What? W-wait!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "哦？等、等等！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "哦？等、等等！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "으아! 어떡해! 말도 안 돼!!!\r\n으아아아ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Oh my! What should I do! This can't be real!!!\r\nNOOOOOOO!!!!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "呃啊！怎麼辦！太不像話了！！！\r\n呃啊啊啊嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "呃啊！怎麼辦！太不像話了！！！\r\n呃啊啊啊嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "미안!!!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm sorry!!!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "對不起！！！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "對不起！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나… 깜빡 잠들었었나 봐"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I… I fell asleep."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我…好像不小心睡著了"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我…好像不小心睡著了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "저기 그게…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "The thing is…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "那個…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "내가 몽유병 비슷한 게 있어서…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I sometimes sleepwalk at night…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我有類似夢遊的習慣…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我有類似夢遊的習慣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "가끔 나도 모르게…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "so I don't even realize…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "有時會不知不覺…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "有時會不知不覺…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "으아아아 난 몰라!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Ughhhh No!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "呃啊啊啊我不知道啦！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "呃啊啊啊我不知道啦！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "난 안 괜찮아 하나도 안 괜찮아\r\n난 몰라ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "IT'S NOT OK AT ALL\r\nI'm so embarrassed!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我有關係，非常有關係\r\n我不管啦嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我有關係，非常有關係\r\n我不管啦嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 탈리아가 좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like you too, Talia."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也喜歡塔利亞"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也喜歡塔利亞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 탈리아가 좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like you too, Talia."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也喜歡塔利亞"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也喜歡塔利亞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "우와… 진짜…?\r\n힝 이건 좀 감동인걸…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Wow… Really…?\r\nThis is kind of touching…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "哇…真的…？\r\n嗚，有點感動…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "哇…真的…？\r\n嗚，有點感動…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "꿈 상점 안에 공유몽 대기실이란 것도 있었네"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "There was also a waiting room for dream sharing in the dream shop."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "夢境商店裡面還有名叫共享夢等候室的東西耶"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "夢境商店裡面還有名叫共享夢等候室的東西耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나이아가 엄청 공 들여서 개발하고 있었나 봐"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Naiah must have been working really hard on it."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "娜伊雅似乎下了很大的工夫開發"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "娜伊雅似乎下了很大的工夫開發"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신기하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Interesting"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真神奇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真神奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신기하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Interesting"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真神奇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真神奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그러게, 나이아가 말한 공유몽 얘긴 다시 생각해도 신기해"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I know, right? The dream sharing story that Naiah told me is still interesting."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "就是啊，再次思考娜伊雅說的共享夢還是覺得很神奇"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "就是啊，再次思考娜伊雅說的共享夢還是覺得很神奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "근데 만약에 우리가 서로 같은 꿈을 꾸게 되면"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "If we were in the same dream,"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "不過萬一我們彼此都做了一樣的夢"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "不過萬一我們彼此都做了一樣的夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "꿈에선 어떤 느낌일까?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "how would that feel?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "在夢裡會是什麼感覺呢？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "在夢裡會是什麼感覺呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "정말 내가 꿨던 예지몽을 보게 될지도 궁금해!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I wonder if I'll ever see that foreknown dream that I had!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "真好奇，說不定真的會看到我做過的預知夢！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "真好奇，說不定真的會看到我做過的預知夢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 궁금해지네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm curious about that, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也很好奇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也很好奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 궁금해지네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm curious about that, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也很好奇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也很好奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "만약에 공유몽이 성공하면…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "If dream sharing succeeds,"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "萬一能成功做共享夢的話…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "萬一能成功做共享夢的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나랑 구원자는 운명 공동체가 된 느낌일까?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "would it feel as if you and I have become fated?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "感覺就像我跟救援者成為了命運共同體？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "感覺就像我跟救援者成為了命運共同體？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "헤헤, 구원자랑 운명 공동체라고 쓰고 나니까\r\n왠지 조~금 어색하게 느껴지네"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, now that I say us being together is destiny,\r\nI feel a little awkward."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，寫了我跟救援者是命運共同體之後，\r\n不知道為什麼感覺有～點尷尬"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，寫了我跟救援者是命運共同體之後，\r\n不知道為什麼感覺有～點尷尬"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그래도 이왕 구원자랑 같이 꾸는 꿈인데"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "But since we're going to be in the same dream,"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "不過既然是跟救援者一起做的夢"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "不過既然是跟救援者一起做的夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "악몽은 아니었으면 좋겠어"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I hope it's not a nightmare."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "希望不會做惡夢"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "希望不會做惡夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "바라는 대로 될 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It'll be as you wish."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會如妳所願的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會如妳所願的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "바라는 대로 될 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It'll be as you wish."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會如妳所願的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會如妳所願的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그렇게 됐으면 좋겠다!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I hope so!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "但願如此"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "但願如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자도 들었지?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "You heard it too, right?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者也聽到了吧？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者也聽到了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘은 못 들었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not clearly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聽不太清楚"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聽不太清楚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘은 못 들었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not clearly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聽不太清楚"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聽不太清楚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나이아가 공유몽 테스트 다 끝냈다고 했어!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Naiah said the dream sharing test is finished!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "娜伊雅說共享夢的測試都結束了！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "娜伊雅說共享夢的測試都結束了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "이제 진짜 공유몽 안으로 들어갈 거래"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Now, we're going to be in a shared dream."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "她現在真的要我們進到共享夢裡了"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "她現在真的要我們進到共享夢裡了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "이제 에버톡 모드를 바꿔놔야겠다\r\n생각 읽기 모드가 있는 거 알지?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Now I have to change the mode on Evertalk.\r\nYou know there's a thought reading mode, right?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "現在該換成EverTalk模式了，\r\n你知道有讀心模式吧？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "現在該換成EverTalk模式了，\r\n你知道有讀心模式吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "에버톡을 손에 꼭 쥐고 있으면 돼"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "You just have to hold on to Evertalk."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "只要把EverTalk緊緊握在手裡就好了"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "只要把EverTalk緊緊握在手裡就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그러면 서로의 의식만으로도 에버톡을 할 수 있어"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Then we can do Evertalk through each other's consciousness."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "這樣光靠彼此的意識也能使用EverTalk"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "這樣光靠彼此的意識也能使用EverTalk"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "물론 우리가 수면 상태에 들어가기 전까지만 가능하지만"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Although only until we enter the sleep state."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "當然只能在我們進入睡眠狀態之前使用"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "當然只能在我們進入睡眠狀態之前使用"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말한 대로 했어, 준비 완료!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I did what you said. I'm ready!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我照妳說的做了，準備完成！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我照妳說的做了，準備完成！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말한 대로 했어, 준비 완료!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I did what you said. I'm ready!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我照妳說的做了，準備完成！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我照妳說的做了，準備完成！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "좋아 좋아!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Good, good!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "很好很好！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "很好很好！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "후, 떨리는 걸"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Whew, I'm nervous."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "呼，好緊張"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "呼，好緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "힘내보자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's cheer up!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "加油吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "加油吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "힘내보자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's cheer up!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "加油吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "加油吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "응! 구원자, 곧 꿈에서 만나!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Okay! Savior, I'll meet you soon! …in a dream!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯！救援者，等等在夢裡見！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯！救援者，等等在夢裡見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "있잖아~\r\n할말이 있는데…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "You know,\r\nI have something to tell you…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "那個啊～\r\n我有話要說…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "那個啊～\r\n我有話要說…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 편하게 얘기해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, feel free to talk."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，妳說吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，妳說吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 편하게 얘기해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, feel free to talk."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，妳說吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，妳說吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "잠깐 나와줄 수 있어?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Can you come out for a second?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "可以出來一下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "可以出來一下嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "금방 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "금방 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "좋아! 콜브 초원 언덕으로 와!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Great! Come to Colve Meadow hill!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "太好了！來科爾布草原丘陵！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "太好了！來科爾布草原丘陵！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자, 오늘 나 찾아다녔다면서?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Savior, I heard you were looking for me today."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者，聽說你今天在找我？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者，聽說你今天在找我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "별점 가게 손님이 많아서,\r\n에버폰 확인할 시간도 없지 뭐야"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "There were a lot of customers at the horoscope reading shop,\r\nso I didn't have time to check my Everphone."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "占星店的客人很多，\r\n所以我沒時間確認EverPhone"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "占星店的客人很多，\r\n所以我沒時間確認EverPhone"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "제이드가 말해줬어\r\n구원자가 상단까지 찾아왔었다구"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Jade told me\r\nyou came all the way down to the Merchants' Guild."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "潔依德告訴我了，\r\n說救援者甚至找到商團來"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "潔依德告訴我了，\r\n說救援者甚至找到商團來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "만나서 얘기할 게 있었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I need to speak with you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有話要當面跟妳說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有話要當面跟妳說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "만나서 얘기할 게 있었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I need to speak with you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有話要當面跟妳說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有話要當面跟妳說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "응? 만나서 할 얘기…?\r\n혹시 심각한 걸까?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Huh? Why would that be…?\r\nIs it serious?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯？有話要當面說…？\r\n是很嚴肅的事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯？有話要當面說…？\r\n是很嚴肅的事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아냐, 잠깐 얘기할 수 있을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, can you talk for a moment?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是，可以稍微聊一下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是，可以稍微聊一下嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아냐, 잠깐 얘기할 수 있을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, can you talk for a moment?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是，可以稍微聊一下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是，可以稍微聊一下嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "앗, 어쩌지? 오늘따라 손님이 많은데…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Oh, I don't know. There are a lot of customers today…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "啊，怎麼辦？今天客人特別多…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "啊，怎麼辦？今天客人特別多…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 바쁘구나…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're really busy…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很忙啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很忙啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 바쁘구나…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're really busy…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很忙啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很忙啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "음… 조금 늦은 저녁에 봐도 괜찮아?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Um… Is it okay to see you late in the evening?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯…可以等等晚上見嗎？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯…可以等等晚上見嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "오늘 손님들 별점은 다 봐주기로\r\n제이드랑 약속했거든"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm supposed to read horoscopes for all the customers today.\r\nI promised Jade."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "因為我跟潔依德約好\r\n會幫今天的所有客人占星"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "因為我跟潔依德約好\r\n會幫今天的所有客人占星"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물론, 괜찮지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course, it's fine."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然，沒問題"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然，沒問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물론, 괜찮지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course, it's fine."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然，沒問題"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然，沒問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그럼 전에 만났던 곳 기억나지?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Do you remember where we met before?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "那你記得之前見面的地方吧？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "那你記得之前見面的地方吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "콜브 초원 언덕 말야"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Colve Meadow hill."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我是說科爾布草原丘陵哦"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我是說科爾布草原丘陵哦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아! 은하수가 가득했던 곳 말이지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh! The place you could see the whole of the Milky Way?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊！妳是說滿天星河的地方吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊！妳是說滿天星河的地方吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아! 은하수가 가득했던 곳 말이지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh! The place you could see the whole of the Milky Way?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊！妳是說滿天星河的地方吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊！妳是說滿天星河的地方吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "응 거기서 보자\r\n끝나면 바로 갈게~!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Yes, see you there.\r\nI'll be there once I'm done!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯，在那裡見吧\r\n結束後我馬上就過去～！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯，在那裡見吧\r\n結束後我馬上就過去～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "시간내줘서 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for your time!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳抽出時間！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳抽出時間！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "시간내줘서 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for your time!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳抽出時間！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳抽出時間！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자~!\r\n나 좋은 생각이 났어!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Savior!\r\nI have a great idea!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者～！\r\n我想到一個好主意了！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者～！\r\n我想到一個好主意了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오, 어떤 생각이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh, what idea?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哦，是什麼主意？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哦，是什麼主意？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오, 어떤 생각이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh, what idea?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哦，是什麼主意？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哦，是什麼主意？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "우리 친구가 된 거 기념하자!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Let's celebrate our friendship!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "來紀念我們成為朋友吧！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "來紀念我們成為朋友吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아! 음… 뭘하면 좋으려나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Great! Um… What should we do?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好啊！嗯…要做什麼好呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好啊！嗯…要做什麼好呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아! 음… 뭘하면 좋으려나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Great! Um… What should we do?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好啊！嗯…要做什麼好呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好啊！嗯…要做什麼好呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "음~ 생각해봤는데~\r\n내가 제~일 잘하는 게 별점이잖아!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Um, I thought about it!\r\nYou know I'm best at reading horoscopes!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯～我想了想～\r\n我最～擅長的不是占星嗎？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯～我想了想～\r\n我最～擅長的不是占星嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "특기를 살려보려고☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm trying to make use of my skill☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我打算活用我的專長☆"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我打算活用我的專長☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "운세 봐 줄테니까\r\n야외 카페로 와☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'll read your fortune,\r\nso come to the outdoor cafe☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "來露天咖啡廳吧☆\r\n我幫你看你的運勢"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "來露天咖啡廳吧☆\r\n我幫你看你的運勢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "구원자~ 탈리아를 찾고 있다며?"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "Savior, I heard that you're looking for Talia!"
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "救援者～聽說你在找塔利亞？"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "救援者～聽說你在找塔利亞？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아… 요즘 연락이 되질 않아서…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah… It's been days since I've lost touch with her."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對…因為最近聯絡不太到她…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對…因為最近聯絡不太到她…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아… 요즘 연락이 되질 않아서…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah… It's been days since I've lost touch with her."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對…因為最近聯絡不太到她…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對…因為最近聯絡不太到她…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "그랬구나 걱정할만 해"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "I see why you're worried."
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "這樣啊，確實很讓人擔心"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "這樣啊，確實很讓人擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 탈리아가 어딨는 지 알아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you know where Talia is?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳知道塔利亞在哪嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳知道塔利亞在哪嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 탈리아가 어딨는 지 알아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you know where Talia is?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳知道塔利亞在哪嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳知道塔利亞在哪嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "음… 정확한 건 아니지만…\r\n짚이는 곳이 있어"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "Um… I'm not sure…\r\nBut there's a place that comes to my mind."
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "嗯…雖然不是很確定…\r\n但我猜她在那裡"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "嗯…雖然不是很確定…\r\n但我猜她在那裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "만나서 얘기해줄게\r\n시가지에서 봐!"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "I'll tell you when we meet.\r\nSee you in the city!"
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "見面之後再告訴你，\r\n市區見！"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "見面之後再告訴你，\r\n市區見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자, 그날 나 쓰러진 날 말야"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Savior, the day I collapsed…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者，那天我病倒了"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者，那天我病倒了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자가 남긴 에버톡… 지금 봤어"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I just saw the Evertalk you sent…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者傳的EverTalk⋯我現在才看到"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者傳的EverTalk⋯我現在才看到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "너무 늦게 답장해서 미안…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I'm sorry I replied too late."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "對不起這麼晚回你…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "對不起這麼晚回你…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에이, 미안하긴"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Come on, don't be sorry."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，沒什麼好對不起的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，沒什麼好對不起的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에이, 미안하긴"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Come on, don't be sorry."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，沒什麼好對不起的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，沒什麼好對不起的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "자꾸 난 구원자… 걱정만 시키네"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I keep making you worry…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我總是…讓救援者擔心呢"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我總是…讓救援者擔心呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아! 답장해줬으면 됐어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay! I'm just glad you replied."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係！有回就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係！有回就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아! 답장해줬으면 됐어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay! I'm just glad you replied."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係！有回就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係！有回就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자는 나한테 왜 이렇게 잘해줘?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Why are you so nice to me?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者為什麼對我這麼好？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者為什麼對我這麼好？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 이유가 있어야 하나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Um… Should I have a reason?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…一定要有理由嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…一定要有理由嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 이유가 있어야 하나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Um… Should I have a reason?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…一定要有理由嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…一定要有理由嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 탈리아한테는 잘해주고 싶은걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just want to be nice to you, Talia."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我就只是想對塔利亞好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我就只是想對塔利亞好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 탈리아한테는 잘해주고 싶은걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just want to be nice to you, Talia."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我就只是想對塔利亞好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我就只是想對塔利亞好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "앗… 음… 나 뭐라 대답해야 돼?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Oh… Um… How should I answer?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "啊…嗯…我要回什麼好呢？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "啊…嗯…我要回什麼好呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "편한대로 하면 되지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "However you want."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "回妳想回的就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "回妳想回的就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "편한대로 하면 되지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "However you want."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "回妳想回的就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "回妳想回的就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "아, 아무튼 그날 일 고맙다고!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I-I just wanted to thank you for that day!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "總、總之那天的事謝謝你！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "總、總之那天的事謝謝你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그 말 하고 싶어서 연락했어!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "That's all."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我聯絡你是因為想跟你說這句話！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我聯絡你是因為想跟你說這句話！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "진짜 고마웠어!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I really appreciate it!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "真的謝謝你！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "真的謝謝你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자, 생각해보니까 궁금해졌어"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Now that I think about it, I'm curious."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者，我想了想，突然很好奇"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者，我想了想，突然很好奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나이아한테는 어떻게 찾아가게 된 거야?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "How did you find Naiah?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "你為什麼會去找娜伊雅啊？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "你為什麼會去找娜伊雅啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 별점 보러 카페에 갔었을 때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "When I visited the horoscope reading cafe,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那天要去咖啡廳占星的時候"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那天要去咖啡廳占星的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 별점 보러 카페에 갔었을 때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "When I visited the horoscope reading cafe,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那天要去咖啡廳占星的時候"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那天要去咖啡廳占星的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋은 꿈이 필요하면, 꿈 상점에 찾아오라 했었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "she told me to visit the dream shop if I need a good dream."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她說需要好夢的話，到夢境商店找她"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她說需要好夢的話，到夢境商店找她"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋은 꿈이 필요하면, 꿈 상점에 찾아오라 했었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "she told me to visit the dream shop if I need a good dream."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她說需要好夢的話，到夢境商店找她"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她說需要好夢的話，到夢境商店找她"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "아아! 생각난다, 생각나!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Oh! I remember now!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "啊啊！想起來了、想起來了！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "啊啊！想起來了、想起來了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그걸 기억했었구나!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "You remembered that!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "你記得那個啊！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "你記得那個啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 탈리아가 잠을 못 잔다고 하니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, you said you couldn't sleep very well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，因為塔利亞說睡不著"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，因為塔利亞說睡不著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 탈리아가 잠을 못 잔다고 하니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, you said you couldn't sleep very well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，因為塔利亞說睡不著"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，因為塔利亞說睡不著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "그래서… 그때 일이 그렇게 됐던 거구나"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "So… That's how it went that day."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "所以…那時事情才會變成那樣啊"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "所以…那時事情才會變成那樣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자 정말 애써줬었구나ㅠ"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "You've done a lot for me."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者真的為我費盡苦心了啊嗚"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者真的為我費盡苦心了啊嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "부담 갖진 마, 어떻게든 방법을 찾아보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't feel pressured, let's find a way."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不必感到負擔，總之我們找找方法吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不必感到負擔，總之我們找找方法吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "부담 갖진 마, 어떻게든 방법을 찾아보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't feel pressured, let's find a way."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不必感到負擔，總之我們找找方法吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不必感到負擔，總之我們找找方法吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "앗, 오늘이 드디어 그 날이구나!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Oh, today is finally that day!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "啊，終於到了這一天！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "啊，終於到了這一天！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "나이아의 꿈가게에 들리기로 한 날!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "The day for visiting Naiah's dream shop!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "約好今天要去娜伊雅的夢境商店！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "約好今天要去娜伊雅的夢境商店！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "후우, 떨려라…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Whew, I'm nervous…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "呼，好緊張…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "呼，好緊張…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮을 거야 너무 긴장마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You'll be fine. Don't be nervous."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒事的，不用太緊張"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒事的，不用太緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮을 거야 너무 긴장마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You'll be fine. Don't be nervous."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒事的，不用太緊張"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒事的，不用太緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "응! 긴장 풀고! 힘내볼게!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Okay! Relax! I'll cheer up!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯！放輕鬆！加油！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯！放輕鬆！加油！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠은 좀 잔거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you get some sleep?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有比較能睡著了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有比較能睡著了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠은 좀 잔거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you get some sleep?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有比較能睡著了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有比較能睡著了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "으음~ 그게 잠들려고 누웠는데 \r\n잠은 안 오고 밤하늘에 떠있는 별님들이 보이는거야!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Well, I lied down to sleep, \r\nI just couldn't sleep, but I could see stars in the night sky!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嗯～我原本躺在床上打算要睡覺，\r\n但毫無睡意，而是看到了夜空中的星星們！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嗯～我原本躺在床上打算要睡覺，\r\n但毫無睡意，而是看到了夜空中的星星們！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "별님들이 몇 분이나 있나~ 하고 세다 보니까\r\n어느새 해가 떠있더라구 헤헤…"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "I counted how many stars there are.\r\nThe sun was up before I knew it. Hehe…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我好奇星星有幾位呢～數著數著，\r\n不知不覺就天亮了，嘿嘿…"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我好奇星星有幾位呢～數著數著，\r\n不知不覺就天亮了，嘿嘿…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "불면증이 심해서 걱정이네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm worried about your insomnia…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "失眠這麼嚴重，真令人擔心…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "失眠這麼嚴重，真令人擔心…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "불면증이 심해서 걱정이네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm worried about your insomnia…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "失眠這麼嚴重，真令人擔心…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "失眠這麼嚴重，真令人擔心…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "에이, 괜찮아~!\r\n지금 나 엄청 멀~쩡해~!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Pshh, it's okay!\r\nI'm totally fine right now!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "哎，沒事～！\r\n現在我很～好～！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "哎，沒事～！\r\n現在我很～好～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "내 걱정말구 이따 꿈 상점 앞에서 봐!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Don't worry about me, and I'll see you at the dream shop!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "不用擔心我，等等在夢境商店前面見！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "不用擔心我，等等在夢境商店前面見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "우리… 성공한 걸까…?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Did we succeed…?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我們…成功了嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我們…成功了嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "이제 어떻게 되는 거야…?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "What's going to happen…?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "現在變成怎麼樣…？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "現在變成怎麼樣…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "여기 너무… 어두워"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "It's too…dark here."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "這裡好…暗"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "這裡好…暗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "우리… 성공한 걸까…?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Did we succeed…?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我們…成功了嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我們…成功了嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "이제 어떻게 되는 거야…?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "What's going to happen…?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "現在變成怎麼樣…？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "現在變成怎麼樣…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "여기 너무… 어두워"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "It's too…dark here."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "這裡好…暗"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "這裡好…暗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "우리… 성공한 걸까…?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Did we succeed…?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "我們…成功了嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "我們…成功了嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "이제 어떻게 되는 거야…?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "What's going to happen…?"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "現在變成怎麼樣…？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "現在變成怎麼樣…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "어…? 저 빛은…?"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Oh…! That light is…"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "哦…？那道光是…？"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "哦…？那道光是…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "헤헤, 구원자~ 선물이야☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, Savior! Here's your gift ☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，救援者～是禮物喔☆"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，救援者～是禮物喔☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "별님의 가호와 내 사랑을 담았지☆\r\n좋은 하루 보내자~"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Filled with the star's blessing and my love☆\r\nLet's have a good day!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "飽含星星庇護和我的愛☆\r\n度過美好的一天吧～"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "飽含星星庇護和我的愛☆\r\n度過美好的一天吧～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 덕분에 행복해!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks, I'm so happy already!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝，託妳的福，我很幸福！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝，託妳的福，我很幸福！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 덕분에 행복해!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks, I'm so happy already!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝，託妳的福，我很幸福！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝，託妳的福，我很幸福！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "오늘은 별이 가장 예쁘게 뜨는 날이야"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "The stars shine brightest today."
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "今天是星星最漂亮的一天"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "今天是星星最漂亮的一天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "별밤의 은하수☆ 같이 보고 싶어☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "A starry night under the milky way☆ Let's see it together☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "星夜的銀河☆想和你一起看☆"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "星夜的銀河☆想和你一起看☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아, 기대 된다!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Alright, let's go!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好，好期待啊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好，好期待啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아, 기대 된다!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Alright, let's go!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好，好期待啊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好，好期待啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "구원자~ 메리 크리스마스☆"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Savior! Merry Christmas☆"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "救援者～聖誕快樂☆"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "救援者～聖誕快樂☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "헤헤, 구원자~ 데이트 신청~!"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, Savior! Let's go on a date!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，救援者～申請約會～！"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "嘿嘿，救援者～申請約會～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "탈리아",
+            "message": "크리스마스 기념으로 \r\n포츈 쿠키 같이 만들자~"
+          },
+          "en": {
+            "speaker": "Talia",
+            "message": "Hehe, to celebrate Christmas,\r\nlet's make fortune cookies!"
+          },
+          "zh_tw": {
+            "speaker": "塔利亞",
+            "message": "為了紀念聖誕節，\r\n我們一起做幸運餅乾吧～"
+          },
+          "zh_cn": {
+            "speaker": "塔利亞",
+            "message": "為了紀念聖誕節，\r\n我們一起做幸運餅乾吧～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌겠다 그러자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds fun!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺很有趣，好啊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺很有趣，好啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌겠다 그러자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds fun!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺很有趣，好啊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺很有趣，好啊！"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,3217 @@
+{
+  "id": "6540",
+  "name": "유리아(아폴리온)",
+  "name_en": "Yuria (Apollyon)",
+  "grade": "에픽",
+  "race": "혼돈형",
+  "class": "캐스터",
+  "sub_class": "광역",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "종말의 정령",
+    "constellation": "천칭자리",
+    "union": "???",
+    "birthday": "1122",
+    "height": 164,
+    "weight": 50,
+    "cv_ko": "곽규미",
+    "cv_jp": null,
+    "like": [
+      "기억나지 않음"
+    ],
+    "dislike": [
+      "약자의 희생"
+    ],
+    "hobby": [
+      "산책",
+      "정원 손질",
+      "운석 떨어뜨리기"
+    ],
+    "speciality": [
+      "매운 음식 먹기"
+    ]
+  },
+  "personality": {
+    "description": "저는 아폴리온, 종말을 부르는 자.\n아주 먼 옛날, 피할 수 없는 죽음을 이 땅에 선사했으나…\n보아하니 제 사명은 아직 끝나지 않은 것 같군요.\n\n구원자, 당신의 노고에 감사합니다.\n섭리에 따라 종말을 향해 흘러가는 이 세계를, 감히 '구원'하고자 함에 감사합니다.\n그러나 저는 그런 당신을 가만히 두고 볼 수 없습니다.\n\n그것은… 내가 당신을 막아야 하기 때문에…?\n아니면, 당신과 함께했던 시간을 그리워하기 때문에…?\n\n어느 쪽이든 저는 구원자, 당신을 내버려둘 수 없습니다.\n그러니 지금부터 함께하겠습니다.\n\n당신과 함께, 영원히 반복되는 종말을 향해…",
+    "greeting": "제 사명은 아직 끝나지 않았습니다."
+  },
+  "speech_patterns": [
+    "…….",
+    "당신은…",
+    "제 이름은 아폴리온.",
+    "종말이라는 사명을 행할 뿐인 자.",
+    "당신이 부른 것은 저의 이름이 아닙니다.",
+    "당신은 이상하군요…",
+    "그렇지 않습니다.",
+    "저는 그저 남아있는 기억에 의존하여",
+    "구원자인 당신에게 감사를 표했을 뿐.",
+    "……",
+    "그런가요.",
+    "그렇다면 과거의 저는…",
+    "대체 무엇을 두려워하고 있었던 걸까요…",
+    "한 가지 묻겠습니다.",
+    "당신이 바란 것은 지지 않는 태양의 축복인가요?",
+    "그게 아니면 영주로서의 권력인가요?",
+    "…우리는 적일 뿐입니다.",
+    "시작이 있으면 끝이 있는 법.",
+    "세계는 섭리에 따라 종말로 향하고,",
+    "나는 그 모든 것을 집행했으며,",
+    "수많은 종말 속에서 내가 진정으로 바라던 것은…"
+  ],
+  "comments": [
+    {
+      "writer": "메피스토펠레스(여명)",
+      "comment": "유리아 님은 무엇을 위해 그 사명을 다하고 계신가요? 저는… 이제 제가 이곳에 있는 이유를 찾았습니다."
+    },
+    {
+      "writer": "라리마",
+      "comment": "영원토록 섬기겠습니다. 우리의 종말과 안식… 그 모든 것의 주축이 되어주실 아폴리온 님…!"
+    },
+    {
+      "writer": "비비안",
+      "comment": "부디 아름다운 엔딩을 보여주시길, 후후…"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "유리아",
+        "message": "안녕하세요, 구원자님!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "날씨가 참 좋네요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "햇살도 따뜻하고, 오늘은 기분 좋은 하루가 될 것 같아요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아? 정말 너야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아? 정말 너야?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "날이 흐리면 침울해지는 분들이 간혹 계신데"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그런 분들을 보면 마음이 아프거든요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아? 내 말 안 보여!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아? 내 말 안 보여!?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후후, 오늘은 날이 맑아서 다행히 모두가 행복한 날이겠네요."
+      },
+      {
+        "speaker": "유리아",
+        "message": "그럼 오늘 하루도 같이 힘내요, 구원자님!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저 잘한 거겠죠?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "아아, 정말…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님을 처음 만난 날 이후로"
+      },
+      {
+        "speaker": "유리아",
+        "message": "심장이 이렇게 크게 뛰는 건 처음이에요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정원에 꽃이 정말 예쁘게 피었어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "여긴… 왕국의 정원?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "여긴… 왕국의 정원?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후후, 구원자님이 봐도 정말 예쁘죠?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "혼자 정원을 산책하고 있으니 이런저런 생각이 드는 것 같아요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아! 지금 솔레이에 있는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아! 지금 솔레이에 있는 거야?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님께도 제 본심을 들려드릴 수 있다면 좋을 텐데…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이라면 저를 외면하지 않을 것 같거든요."
+      },
+      {
+        "speaker": "유리아",
+        "message": "저, 구원자님을…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정말로 믿고 있으니까요…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님…!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "어디 계세요…!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "제발…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님…!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 무슨 상황인지 이해가 안 돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 무슨 상황인지 이해가 안 돼"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정원에 꽃이 정말 예쁘게 피었어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후후, 구원자님이 봐도 정말 예쁘죠?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "혼자 정원을 산책하고 있으니 이런저런 생각이 드는 것 같아요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님께도 제 본심을 들려드릴 수 있다면 좋을 텐데…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이라면…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "아아…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "유리아",
+        "message": "혼자 두지 말아주세요…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "알고 있었어요."
+      },
+      {
+        "speaker": "유리아",
+        "message": "당신이 저를 원망하고 있다는 걸."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 적 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 적 없어"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저는 구원받을 수 없는 몸."
+      },
+      {
+        "speaker": "유리아",
+        "message": "모든 것을 끝내야만 하는 운명."
+      },
+      {
+        "speaker": "유리아",
+        "message": "오직 그것만이…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저의 사명."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아?"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "……."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "당신은…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아, 거기 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아, 거기 있어?"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "제 이름은 아폴리온."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "종말이라는 사명을 행할 뿐인 자."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "당신이 부른 것은 저의 이름이 아닙니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나에게 있어서 너는 유리아야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나에게 있어서 너는 유리아야"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "……."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "당신은 이상하군요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때의 너는 분명 울고 있었지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때의 너는 분명 울고 있었지"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "그렇지 않습니다."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "저는 그저 남아있는 기억에 의존하여"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "구원자인 당신에게 감사를 표했을 뿐."
+      },
+      {
+        "speaker": "구원자",
+        "message": "울고 있었잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "울고 있었잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 늘 네 진짜 모습을 보고 있었는걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 늘 네 진짜 모습을 보고 있었는걸"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "……"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그리고 한 번도 원망하지 않았어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그리고 한 번도 원망하지 않았어"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "그런가요."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "그렇다면 과거의 저는…"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "대체 무엇을 두려워하고 있었던 걸까요…"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "한 가지 묻겠습니다."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "당신이 바란 것은 지지 않는 태양의 축복인가요?"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "그게 아니면 영주로서의 권력인가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 원하는 것은 너야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 원하는 것은 너야"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "……."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "…우리는 적일 뿐입니다."
+      },
+      {
+        "speaker": "유리아",
+        "message": "후후…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "엄청나게 긴장되네요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정확히는… 엄청나게 두근거려요…!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "전부터 마음속으로만 생각하던 것들"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그 누구에게도 말하지 못한 것들"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘 이 자리에서 말할 거니까요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "혹시 시간 괜찮으시다면"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저와 정원 산책을 해주시겠어요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "예쁘게 핀 꽃도 함께 보고 싶고…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "아직 두근거리는 이 마음도 진정시켜야겠거든요…!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "앗, 그렇게 흔쾌히 허락해주시다니…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "좋아요! 그럼…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "먼저 정원에 가서 기다릴게요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "……."
+      },
+      {
+        "speaker": "유리아",
+        "message": "제가 전부 망쳐버렸어요."
+      },
+      {
+        "speaker": "유리아",
+        "message": "이번에도 제가 끝내버린 거겠죠?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "네 잘못이 아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "네 잘못이 아니야"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "시작이 있으면 끝이 있는 법."
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "세계는 섭리에 따라 종말로 향하고,"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "나는 그 모든 것을 집행했으며,"
+      },
+      {
+        "speaker": "유리아(아폴리온)",
+        "message": "수많은 종말 속에서 내가 진정으로 바라던 것은…"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "유리아(아폴리온)",
+      "en": "Yuria (Apollyon)",
+      "zh_tw": "尤里婭（阿巴頓）",
+      "zh_cn": "尤里婭（阿巴頓）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "혼돈형",
+      "en": "Chaotic",
+      "zh_tw": "混沌型",
+      "zh_cn": "混沌型"
+    },
+    "class": {
+      "ko": "캐스터",
+      "en": "Caster",
+      "zh_tw": "魔法師",
+      "zh_cn": "魔法師"
+    },
+    "sub_class": {
+      "ko": "광역",
+      "en": "AoE",
+      "zh_tw": "廣域",
+      "zh_cn": "廣域"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "종말의 정령",
+        "en": "Soul of the End",
+        "zh_tw": "末日精靈",
+        "zh_cn": "末日精靈"
+      },
+      "constellation": {
+        "ko": "천칭자리",
+        "en": "Libra",
+        "zh_tw": "天秤座",
+        "zh_cn": "天秤座"
+      },
+      "union": {
+        "ko": "???",
+        "en": "???",
+        "zh_tw": "？？？",
+        "zh_cn": "？？？"
+      },
+      "cv_ko": {
+        "ko": "곽규미",
+        "en": "Gyumi Gwak",
+        "zh_tw": "郭圭美",
+        "zh_cn": "郭圭美"
+      },
+      "cv_jp": {
+        "ko": "",
+        "en": "",
+        "zh_tw": "",
+        "zh_cn": ""
+      },
+      "like": {
+        "ko": [
+          "기억나지 않음"
+        ],
+        "en": [
+          "Don't remember"
+        ],
+        "zh_tw": [
+          "想不起來"
+        ],
+        "zh_cn": [
+          "想不起來"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "약자의 희생"
+        ],
+        "en": [
+          "The Sacrifice of the Weak"
+        ],
+        "zh_tw": [
+          "弱者的犧牲"
+        ],
+        "zh_cn": [
+          "弱者的犧牲"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "산책",
+          "정원 손질",
+          "운석 떨어뜨리기"
+        ],
+        "en": [
+          "Walks",
+          "gardening",
+          "and dropping meteors"
+        ],
+        "zh_tw": [
+          "散步、修整庭院、投擲隕石"
+        ],
+        "zh_cn": [
+          "散步、修整庭院、投擲隕石"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "매운 음식 먹기"
+        ],
+        "en": [
+          "Eating spicy food"
+        ],
+        "zh_tw": [
+          "吃辣的食物"
+        ],
+        "zh_cn": [
+          "吃辣的食物"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "저는 아폴리온, 종말을 부르는 자.\n아주 먼 옛날, 피할 수 없는 죽음을 이 땅에 선사했으나…\n보아하니 제 사명은 아직 끝나지 않은 것 같군요.\n\n구원자, 당신의 노고에 감사합니다.\n섭리에 따라 종말을 향해 흘러가는 이 세계를, 감히 '구원'하고자 함에 감사합니다.\n그러나 저는 그런 당신을 가만히 두고 볼 수 없습니다.\n\n그것은… 내가 당신을 막아야 하기 때문에…?\n아니면, 당신과 함께했던 시간을 그리워하기 때문에…?\n\n어느 쪽이든 저는 구원자, 당신을 내버려둘 수 없습니다.\n그러니 지금부터 함께하겠습니다.\n\n당신과 함께, 영원히 반복되는 종말을 향해…",
+        "en": "I am Apollyon, the one who brings the End.\r\nLong ago, I brought an evitable death to this land...\r\nyet it seems my mission is not yet finished.\r\n\r\nSavior, I thank you for your efforts.\r\nI thank you for daring to seek \"salvation\" for this world, even as it is carried toward the end by the laws themselves.\r\nI, however, cannot simply stand by and watch you.\r\n\r\nIs it...because I must stop you?\r\nOr because I long for the time we spent together...?\r\n\r\nWhichever it may be, Savior, I cannot leave you be.\r\nAnd so, from this moment on, I will walk with you.\r\n\r\nTogether with you, toward an end that repeats forever...",
+        "zh_tw": "我是阿巴頓，召喚末日之人。\n很久以前，我將無法避免的死亡帶到了這片土地上…\n但看來我的使命還沒有結束。\n\n救援者，感謝你的辛勞。\n感謝你貿然地試圖「救援」這個按照法則流向末日的世界。\n然而，我不能對你袖手旁觀。\n\n那是因為…我必須阻止你嗎…？\n還是因為，我懷念與你共度的時光…？\n\n無論是哪一種，我都不能放任你不管。\n所以從現在開始，我會與你同行。\n\n和你一起邁向永無止盡的末日…",
+        "zh_cn": "我是阿巴頓，召喚末日之人。\n很久以前，我將無法避免的死亡帶到了這片土地上…\n但看來我的使命還沒有結束。\n\n救援者，感謝你的辛勞。\n感謝你貿然地試圖「救援」這個按照法則流向末日的世界。\n然而，我不能對你袖手旁觀。\n\n那是因為…我必須阻止你嗎…？\n還是因為，我懷念與你共度的時光…？\n\n無論是哪一種，我都不能放任你不管。\n所以從現在開始，我會與你同行。\n\n和你一起邁向永無止盡的末日…"
+      },
+      "greeting": {
+        "ko": "제 사명은 아직 끝나지 않았습니다.",
+        "en": "My mission is not over yet.",
+        "zh_tw": "我的使命尚未結束。",
+        "zh_cn": "我的使命尚未結束。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "당신은…"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "You're..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "你…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "你…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "제 이름은 아폴리온."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "My name is Apollyon."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "我的名字是阿巴頓。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "我的名字是阿巴頓。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "종말이라는 사명을 행할 뿐인 자."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "I am one who merely carries out the duty of the End."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "只是要執行名為末日的使命者。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "只是要執行名為末日的使命者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "당신이 부른 것은 저의 이름이 아닙니다."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "The name you called is not mine."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "你所呼喚的不是我的名字。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "你所呼喚的不是我的名字。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "당신은 이상하군요…"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "You are strange."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "你真是奇怪…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "你真是奇怪…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "그렇지 않습니다."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "No."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "不是的。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "不是的。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "저는 그저 남아있는 기억에 의존하여"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "I was merely relying on what remained of my memories"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "我只是仰賴殘存的記憶"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "我只是仰賴殘存的記憶"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "구원자인 당신에게 감사를 표했을 뿐."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "to express my gratitude to you, Savior."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "向身為救援者的你致謝而已。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "向身為救援者的你致謝而已。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "……"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "그런가요."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "... Is that so?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "是嗎？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "是嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "그렇다면 과거의 저는…"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "Then, what was I...?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "那麼過去的我…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "那麼過去的我…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "대체 무엇을 두려워하고 있었던 걸까요…"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "What was I so afraid of, back then...?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "到底在害怕什麼呢…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "到底在害怕什麼呢…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "한 가지 묻겠습니다."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "There is one thing I'd like to ask you."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "我想問一件事。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "我想問一件事。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "당신이 바란 것은 지지 않는 태양의 축복인가요?"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "Was it the blessing of an unsetting sun that you desired?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "你所期望的是不落的太陽祝福嗎？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "你所期望的是不落的太陽祝福嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "그게 아니면 영주로서의 권력인가요?"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "Or power, as a ruler?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "還是作為領主的權力？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "還是作為領主的權力？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "…우리는 적일 뿐입니다."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "... We are nothing but enemies."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "…我們只是敵人。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "…我們只是敵人。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "시작이 있으면 끝이 있는 법."
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "Every beginning has an end."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "有開始就有結束。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "有開始就有結束。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "세계는 섭리에 따라 종말로 향하고,"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "The world moves toward its end in accordance with the laws,"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "世界按照法則走向末日，"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "世界按照法則走向末日，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "나는 그 모든 것을 집행했으며,"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "and I have brought about that end time and time again."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "而我執行了那一切，"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "而我執行了那一切，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아(아폴리온)",
+          "message": "수많은 종말 속에서 내가 진정으로 바라던 것은…"
+        },
+        "en": {
+          "speaker": "Yuria (Apollyon)",
+          "message": "And yet, despite all those endings, what I truly longed for was..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "在無數的末日中，我真正渴望的是…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭（阿巴頓）",
+          "message": "在無數的末日中，我真正渴望的是…"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "유리아 님은 무엇을 위해 그 사명을 다하고 계신가요? 저는… 이제 제가 이곳에 있는 이유를 찾았습니다."
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Yuria, for what sake are you carrying out that mission? I have...finally found the reason I exist here now."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "尤里婭是為了什麼而履行使命呢？我…現在找到了我在這裡的理由。"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "尤里婭是為了什麼而履行使命呢？我…現在找到了我在這裡的理由。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "라리마",
+          "message": "영원토록 섬기겠습니다. 우리의 종말과 안식… 그 모든 것의 주축이 되어주실 아폴리온 님…!"
+        },
+        "en": {
+          "speaker": "Larimar",
+          "message": "I will serve you for all eternity. Apollyon, who will stand at the very axis of our end and our repose...!"
+        },
+        "zh_tw": {
+          "speaker": "拉利瑪",
+          "message": "我將永遠侍奉你。將成為我們的末日與安息…成為一切的支柱，阿巴頓…！"
+        },
+        "zh_cn": {
+          "speaker": "拉利瑪",
+          "message": "我將永遠侍奉你。將成為我們的末日與安息…成為一切的支柱，阿巴頓…！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비비안",
+          "message": "부디 아름다운 엔딩을 보여주시길, 후후…"
+        },
+        "en": {
+          "speaker": "Vivienne",
+          "message": "Please, show us a beautiful ending. Heheh..."
+        },
+        "zh_tw": {
+          "speaker": "薇薇安",
+          "message": "務必展現美好的結局，呵呵…"
+        },
+        "zh_cn": {
+          "speaker": "薇薇安",
+          "message": "務必展現美好的結局，呵呵…"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "안녕하세요, 구원자님!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Hello, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你好，救援者！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你好，救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "날씨가 참 좋네요."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "It's a beautiful day."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "天氣真好呢。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "天氣真好呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "햇살도 따뜻하고, 오늘은 기분 좋은 하루가 될 것 같아요."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "The sunlight is warm, and it feels like today is going to be a good day."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "陽光也很溫暖，今天似乎會是愉快的一天。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "陽光也很溫暖，今天似乎會是愉快的一天。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아? 정말 너야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria? Is it really you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭？真的是妳嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭？真的是妳嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아? 정말 너야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria? Is it really you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭？真的是妳嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭？真的是妳嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "날이 흐리면 침울해지는 분들이 간혹 계신데"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Some people get gloomy when the sky's overcast,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "有時候天氣陰沉時，有些人會感到憂鬱"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "有時候天氣陰沉時，有些人會感到憂鬱"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그런 분들을 보면 마음이 아프거든요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "and it breaks my heart to see them."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "看到那樣的人，我會感覺很心痛…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "看到那樣的人，我會感覺很心痛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아? 내 말 안 보여!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria? Can't you see my text?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭？妳看不到我說的話嗎！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭？妳看不到我說的話嗎！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아? 내 말 안 보여!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria? Can't you see my text?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭？妳看不到我說的話嗎！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭？妳看不到我說的話嗎！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후후, 오늘은 날이 맑아서 다행히 모두가 행복한 날이겠네요."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Heheh. Luckily, the sky is clear today. It'll be a happy day for everyone!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵，幸好今天天氣晴朗，大家都會度過幸福的一天呢。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵，幸好今天天氣晴朗，大家都會度過幸福的一天呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그럼 오늘 하루도 같이 힘내요, 구원자님!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "All right then, let's do our best together today, too, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "那今天也一起加油，救援者！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "那今天也一起加油，救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저 잘한 거겠죠?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I did the right thing, didn't I?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我做得對吧？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我做得對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "아아, 정말…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Ah, really..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "啊啊，真的…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "啊啊，真的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님을 처음 만난 날 이후로"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "My heart hasn't raced like this"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "自從第一次見到救援者那天以後"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "自從第一次見到救援者那天以後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "심장이 이렇게 크게 뛰는 건 처음이에요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "since the very first day I met you."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這是我第一次心臟跳得這麼厲害！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這是我第一次心臟跳得這麼厲害！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정원에 꽃이 정말 예쁘게 피었어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "The flowers are blooming so beautifully in the garden."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "庭園裡的花開得真漂亮"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "庭園裡的花開得真漂亮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "여긴… 왕국의 정원?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "This is...the kingdom's garden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這裡是…王國的庭園？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這裡是…王國的庭園？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "여긴… 왕국의 정원?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "This is...the kingdom's garden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這裡是…王國的庭園？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這裡是…王國的庭園？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후후, 구원자님이 봐도 정말 예쁘죠?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Heheh, they're really pretty, right?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵，救援者看了也覺得很漂亮吧？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵，救援者看了也覺得很漂亮吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "혼자 정원을 산책하고 있으니 이런저런 생각이 드는 것 같아요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Walking through the garden by myself sparks all sorts of thoughts."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "一個人在庭園散步，似乎會想起各種事情"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "一個人在庭園散步，似乎會想起各種事情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아! 지금 솔레이에 있는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria! Are you in Solrey right now?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭！妳現在在蘇萊伊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭！妳現在在蘇萊伊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아! 지금 솔레이에 있는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria! Are you in Solrey right now?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭！妳現在在蘇萊伊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭！妳現在在蘇萊伊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님께도 제 본심을 들려드릴 수 있다면 좋을 텐데…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I wish I could tell you what's truly in my heart, too..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果我的真心能傳達給救援者就好了…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果我的真心能傳達給救援者就好了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이라면 저를 외면하지 않을 것 같거든요."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I feel like you would never turn away from me, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "因為我覺得如果是救援者，就不會忽視我。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "因為我覺得如果是救援者，就不會忽視我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저, 구원자님을…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Because I..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "那個，我對救援者…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "那個，我對救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정말로 믿고 있으니까요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I really do trust you..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "真的很信任…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "真的很信任…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님…!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior...?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者…！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "어디 계세요…!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Where are you...?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你在哪裡…！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你在哪裡…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "제발…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Please..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "拜託…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "拜託…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님…!!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior...!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者…！！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者…！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 무슨 상황인지 이해가 안 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't understand what's going on"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不明白是什麼情況"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不明白是什麼情況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 무슨 상황인지 이해가 안 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't understand what's going on"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不明白是什麼情況"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不明白是什麼情況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정원에 꽃이 정말 예쁘게 피었어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "The flowers are blooming so beautifully in the garden."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "庭園裡的花開得真漂亮"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "庭園裡的花開得真漂亮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후후, 구원자님이 봐도 정말 예쁘죠?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Heheh, they're really pretty, right?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵，救援者看了也覺得很漂亮吧？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵，救援者看了也覺得很漂亮吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "혼자 정원을 산책하고 있으니 이런저런 생각이 드는 것 같아요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Walking through the garden by myself sparks all sorts of thoughts."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "一個人在庭園散步，似乎會想起各種事情"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "一個人在庭園散步，似乎會想起各種事情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님께도 제 본심을 들려드릴 수 있다면 좋을 텐데…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I wish I could tell you what's truly in my heart, too..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果我的真心能傳達給救援者就好了…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果我的真心能傳達給救援者就好了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이라면…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I feel like you..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果是救援者的話…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果是救援者的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "아아…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Ohh..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "啊啊…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "啊啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "혼자 두지 말아주세요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Please don't leave me alone..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "請不要讓我一個人…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "請不要讓我一個人…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "알고 있었어요."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I knew it."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我知道。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我知道。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "당신이 저를 원망하고 있다는 걸."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I knew you resented me."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你在怨恨我這件事。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你在怨恨我這件事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 적 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I never did"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒有那樣想過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒有那樣想過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 적 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I never did"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒有那樣想過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒有那樣想過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저는 구원받을 수 없는 몸."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I can't be saved."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我無法被拯救。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我無法被拯救。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "모든 것을 끝내야만 하는 운명."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm bound by a fate that can only end everything."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我的命運是必須結束一切。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我的命運是必須結束一切。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오직 그것만이…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "That..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "只有那個是…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "只有那個是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저의 사명."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "That alone is my purpose."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我的使命。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我的使命。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "당신은…"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "You're..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "你…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "你…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아, 거기 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria, are you there?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭，妳在那裡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭，妳在那裡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아, 거기 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria, are you there?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭，妳在那裡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭，妳在那裡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "제 이름은 아폴리온."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "My name is Apollyon."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "我的名字是阿巴頓。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "我的名字是阿巴頓。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "종말이라는 사명을 행할 뿐인 자."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "I am one who merely carries out the duty of the End."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "只是要執行名為末日的使命者。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "只是要執行名為末日的使命者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "당신이 부른 것은 저의 이름이 아닙니다."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "The name you called is not mine."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "你所呼喚的不是我的名字。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "你所呼喚的不是我的名字。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나에게 있어서 너는 유리아야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "To me, you're always Yuria"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對我來說，妳就是尤里婭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對我來說，妳就是尤里婭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나에게 있어서 너는 유리아야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "To me, you're always Yuria"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對我來說，妳就是尤里婭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對我來說，妳就是尤里婭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "당신은 이상하군요…"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "You are strange."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "你真是奇怪…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "你真是奇怪…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때의 너는 분명 울고 있었지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You were definitely crying back then"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那時的妳明明在哭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那時的妳明明在哭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때의 너는 분명 울고 있었지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You were definitely crying back then"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那時的妳明明在哭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那時的妳明明在哭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "그렇지 않습니다."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "No."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "不是的。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "不是的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "저는 그저 남아있는 기억에 의존하여"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "I was merely relying on what remained of my memories"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "我只是仰賴殘存的記憶"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "我只是仰賴殘存的記憶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "구원자인 당신에게 감사를 표했을 뿐."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "to express my gratitude to you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "向身為救援者的你致謝而已。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "向身為救援者的你致謝而已。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "울고 있었잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You were crying"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳明明在哭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳明明在哭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "울고 있었잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You were crying"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳明明在哭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳明明在哭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 늘 네 진짜 모습을 보고 있었는걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've always been seeing the real you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我一直在看著妳的真實樣貌"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我一直在看著妳的真實樣貌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 늘 네 진짜 모습을 보고 있었는걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've always been seeing the real you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我一直在看著妳的真實樣貌"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我一直在看著妳的真實樣貌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "……"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그리고 한 번도 원망하지 않았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And I never blamed you, not even once"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "而且從未埋怨過妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "而且從未埋怨過妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그리고 한 번도 원망하지 않았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And I never blamed you, not even once"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "而且從未埋怨過妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "而且從未埋怨過妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "그런가요."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "... Is that so?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "그렇다면 과거의 저는…"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "Then, what was I...?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "那麼過去的我…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "那麼過去的我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "대체 무엇을 두려워하고 있었던 걸까요…"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "What was I so afraid of, back then...?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "到底在害怕什麼呢…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "到底在害怕什麼呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "한 가지 묻겠습니다."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "There is one thing I'd like to ask you."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "我想問一件事。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "我想問一件事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "당신이 바란 것은 지지 않는 태양의 축복인가요?"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "Was it the blessing of an unsetting sun that you desired?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "你所期望的是不落的太陽祝福嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "你所期望的是不落的太陽祝福嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "그게 아니면 영주로서의 권력인가요?"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "Or power, as a ruler?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "還是作為領主的權力？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "還是作為領主的權力？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 원하는 것은 너야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What I want...is you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想要的是妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想要的是妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 원하는 것은 너야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What I want...is you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想要的是妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想要的是妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "…우리는 적일 뿐입니다."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "... We are nothing but enemies."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "…我們只是敵人。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "…我們只是敵人。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후후…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Heheh..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "엄청나게 긴장되네요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm really nervous..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "非常緊張呢…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "非常緊張呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yuria..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정확히는… 엄청나게 두근거려요…!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Or rather...my heart is pounding...!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "準確來說…我心跳得非常厲害…！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "準確來說…我心跳得非常厲害…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "전부터 마음속으로만 생각하던 것들"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Things I've only ever kept to myself,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "因為從以前開始只放在心裡的事情"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "因為從以前開始只放在心裡的事情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그 누구에게도 말하지 못한 것들"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "things I couldn't tell anyone..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "那些無法告訴任何人的事情"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "那些無法告訴任何人的事情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘 이 자리에서 말할 거니까요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm going to say them today, right here!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "今天就要在這裡說出來！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "今天就要在這裡說出來！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "혹시 시간 괜찮으시다면"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "If you have some time,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果時間方便的話"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果時間方便的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저와 정원 산책을 해주시겠어요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "would you walk through the garden with me?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "可以和我一起在庭園散步嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "可以和我一起在庭園散步嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "예쁘게 핀 꽃도 함께 보고 싶고…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I want to look at the flowers together..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "也想一起欣賞開得很美的花…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "也想一起欣賞開得很美的花…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "아직 두근거리는 이 마음도 진정시켜야겠거든요…!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "And I think I need to calm this racing heart, too...!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "而且也要讓這顆仍在劇烈跳動的心平靜下來…！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "而且也要讓這顆仍在劇烈跳動的心平靜下來…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "앗, 그렇게 흔쾌히 허락해주시다니…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Oh, you agreed so quickly...!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "啊，竟然答應得那麼爽快…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "啊，竟然答應得那麼爽快…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "좋아요! 그럼…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Okay! Then..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "好！那麼…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "好！那麼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "먼저 정원에 가서 기다릴게요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'll go on ahead and wait for you in the garden!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我會先去庭園等你！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我會先去庭園等你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "제가 전부 망쳐버렸어요."
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I ruined everything."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我把一切都搞砸了。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我把一切都搞砸了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이번에도 제가 끝내버린 거겠죠?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I did it again this time, didn't I?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這次也是毀在我手裡的吧？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這次也是毀在我手裡的吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "네 잘못이 아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's not your fault"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是妳的錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是妳的錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "네 잘못이 아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's not your fault"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是妳的錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是妳的錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "시작이 있으면 끝이 있는 법."
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "Every beginning has an end."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "有開始就有結束。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "有開始就有結束。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "세계는 섭리에 따라 종말로 향하고,"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "The world moves toward its end in accordance with the laws,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "世界按照法則走向末日，"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "世界按照法則走向末日，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "나는 그 모든 것을 집행했으며,"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "and I have brought about that end time and time again."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "而我執行了那一切，"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "而我執行了那一切，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아(아폴리온)",
+            "message": "수많은 종말 속에서 내가 진정으로 바라던 것은…"
+          },
+          "en": {
+            "speaker": "Yuria (Apollyon)",
+            "message": "And yet, despite all those endings, what I truly longed for was..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "在無數的末日中，我真正渴望的是…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭（阿巴頓）",
+            "message": "在無數的末日中，我真正渴望的是…"
+          }
+        }
+      ]
+    }
+  }
+}

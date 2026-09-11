@@ -1,0 +1,3564 @@
+{
+  "id": "5080",
+  "name": "클라우디아(대천사)",
+  "name_en": "Claudia (Archangel)",
+  "grade": "에픽",
+  "race": "천사형",
+  "class": "워리어",
+  "sub_class": "광역",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "강림한 천사",
+    "constellation": "천칭자리",
+    "union": "에델 가드",
+    "birthday": "1019",
+    "height": 151,
+    "weight": 43,
+    "cv_ko": "이보희",
+    "cv_jp": "이보희",
+    "like": [
+      "밀크티"
+    ],
+    "dislike": [
+      "다혈질"
+    ],
+    "hobby": [
+      "복화술"
+    ],
+    "speciality": [
+      "온화한 미소 짓기"
+    ]
+  },
+  "personality": {
+    "description": "아우렐리아의 치천사가 아닌 구원자님만을 위한 대천사, 클라우디아입니다. \n저의 목소리가 당신에게 전해지기를. \n\n약하고 스스로를 숨기기 바빴던 제가 이제는 구원자님과 함께 정의를 집행하겠어요.\n구원자님 덕분이에요.\n저의 마음과 힘을 전부 드릴게요. \n다시 한번 저와 함께해주시겠어요?",
+    "greeting": "이것이 천사의 진정한 사명."
+  },
+  "speech_patterns": [
+    "구원자님 제 톡이 보이시나요?",
+    "다행이에요. 에버폰이 지난 전투에서 고장이 나서",
+    "이번에 새로 샀어요.",
+    "구원자님도 계속 전선에 나가 계시잖아요.",
+    "네 언제나 조심하셔야 해요.",
+    "무슨 일 있으면 에버톡 주세요.",
+    "ANIMA를 나누고 나서부터 부쩍 잠이 많아진 것 같아요.",
+    "그럴 때면 목소리가 들려요.",
+    "네…",
+    "어딘가 익숙한 듯 낯선 목소리가…",
+    "아니에요. 제가 잘못 들었나 봐요.",
+    "괜찮아요.",
+    "그럼요! 잠깐 피곤해서 그럴 거예요.",
+    "곧 괜찮아질 거랍니다.",
+    "구원자님, 들려요.",
+    "꿈이 아니에요.",
+    "저기 누군가가 저를 부르고 있어요.",
+    "보이세요?",
+    "…….",
+    "만월에 소원을 빌면 이루어진다던데 아세요?",
+    "정말요?",
+    "소원이라….",
+    "달무리가 생기면 다음 날 비가 오는 거 아세요?",
+    "달을 오랫동안 보면",
+    "자연스럽게 알게 되더라고요.",
+    "저는 덥거나 추운 건 괜찮은데",
+    "비가 많이 오는 날은 좀 힘든 것 같아요.",
+    "날개가 눅눅해지거든요.",
+    "구원자님, 지금 어디에 계세요?",
+    "구원자님!",
+    "이번에는 제가… 제가 구원자님에게 갈게요!",
+    "하늘을 오래 날아서 날개가 뻐근하네요…",
+    "스트레칭이라도 해야 할까요?",
+    "구원자님이 도와주시면 안 될까요?",
+    "네, 기다릴게요.",
+    "하나가 된다는 게 이런 걸까요?",
+    "정령 계약은 정말 낯선 느낌이었어요.",
+    "구원자님과 더 가까워진 기분이에요.",
+    "누군가와 이어진다는 건 기쁜 일이네요.",
+    "후훗~",
+    "구원자님, 곧 아우렐리아의 새로운 보충병이",
+    "넘어올 거라는 첩보가 있었어요.",
+    "헤이즐님, 이디스님 덕분에",
+    "어떻게든 막아내고 있지만…",
+    "아우렐리아 정령들의 저런 눈은 처음 봐요.",
+    "네. 감정이 전혀 느껴지지 않는 공허한 눈…",
+    "천사형 정령은 다 정의로운 편인데",
+    "그건 그 정령의 성격일까요?",
+    "아니면 그냥 천사형이라서?",
+    "저는 이제 잘 모르겠어요…"
+  ],
+  "comments": [
+    {
+      "writer": "레베카",
+      "comment": "아이참, 기다렸잖아! 걱정했다고? 그래도 돌아와서 다행이야, 클라우디아!"
+    },
+    {
+      "writer": "라리마",
+      "comment": "나는 항상 당신을 지켜보고 있답니다. 클라우디아."
+    },
+    {
+      "writer": "카넬리안",
+      "comment": "…제법이더군. 나를 따돌리고 갈 수 있을 줄이야."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님 제 톡이 보이시나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 보여."
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 보여."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "다행이에요. 에버폰이 지난 전투에서 고장이 나서"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "이번에 새로 샀어요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님도 계속 전선에 나가 계시잖아요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 아직 괜찮은 것 같아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 아직 괜찮은 것 같아."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "네 언제나 조심하셔야 해요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "무슨 일 있으면 에버톡 주세요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 클라우디아도."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 클라우디아도."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "ANIMA를 나누고 나서부터 부쩍 잠이 많아진 것 같아요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "그럴 때면 목소리가 들려요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "목소리?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "목소리?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "네…"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "어딘가 익숙한 듯 낯선 목소리가…"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "아니에요. 제가 잘못 들었나 봐요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "괜찮아요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 괜찮아?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "그럼요! 잠깐 피곤해서 그럴 거예요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "곧 괜찮아질 거랍니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정되는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정되는데…"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님, 들려요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "꿈이 아니에요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐라고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐라고?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "저기 누군가가 저를 부르고 있어요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "보이세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 달이잖아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 달이잖아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "방금 클라우디아 목소리가 들린 것 같았는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "방금 클라우디아 목소리가 들린 것 같았는데…"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "……."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "만월에 소원을 빌면 이루어진다던데 아세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 있던 곳에도 그런 말이 있었어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 있던 곳에도 그런 말이 있었어."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "정말요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 보름달에 소원을 빌면 이루어진대."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 보름달에 소원을 빌면 이루어진대."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "소원이라…."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "달무리가 생기면 다음 날 비가 오는 거 아세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래? 몰랐네."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래? 몰랐네."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 건 어떻게 알았어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 건 어떻게 알았어?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "달을 오랫동안 보면"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "자연스럽게 알게 되더라고요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "저는 덥거나 추운 건 괜찮은데"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "비가 많이 오는 날은 좀 힘든 것 같아요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떤 점이 힘든데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떤 점이 힘든데?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "날개가 눅눅해지거든요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "아하. 그렇겠네…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아하. 그렇겠네…"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님, 지금 어디에 계세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라우디아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라우디아?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님!"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "이번에는 제가… 제가 구원자님에게 갈게요!"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "하늘을 오래 날아서 날개가 뻐근하네요…"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "스트레칭이라도 해야 할까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 뻐근해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 뻐근해?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님이 도와주시면 안 될까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "네, 기다릴게요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "하나가 된다는 게 이런 걸까요?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "정령 계약은 정말 낯선 느낌이었어요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님과 더 가까워진 기분이에요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 진짜 클라우디아를 알게 된 것 같아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 진짜 클라우디아를 알게 된 것 같아."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "누군가와 이어진다는 건 기쁜 일이네요."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "후훗~"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님, 곧 아우렐리아의 새로운 보충병이"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "넘어올 거라는 첩보가 있었어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "헤이즐님, 이디스님 덕분에"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "어떻게든 막아내고 있지만…"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "아우렐리아 정령들의 저런 눈은 처음 봐요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "눈?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "눈?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "네. 감정이 전혀 느껴지지 않는 공허한 눈…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라우디아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라우디아!"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 어디야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 어디야?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "……."
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "천사형 정령은 다 정의로운 편인데"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "그건 그 정령의 성격일까요?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "아니면 그냥 천사형이라서?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄?"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "저는 이제 잘 모르겠어요…"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "구원자님!"
+      },
+      {
+        "speaker": "클라우디아(대천사)",
+        "message": "방금 구원자님이 절 부르셨나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "클라우디아(대천사)",
+      "en": "Claudia (Archangel)",
+      "zh_tw": "克勞迪婭（大天使）",
+      "zh_cn": "克勞迪婭（大天使）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "천사형",
+      "en": "Angel",
+      "zh_tw": "天使型",
+      "zh_cn": "天使型"
+    },
+    "class": {
+      "ko": "워리어",
+      "en": "Warrior",
+      "zh_tw": "戰士",
+      "zh_cn": "戰士"
+    },
+    "sub_class": {
+      "ko": "광역",
+      "en": "AoE",
+      "zh_tw": "廣域",
+      "zh_cn": "廣域"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "강림한 천사",
+        "en": "Descended Angel",
+        "zh_tw": "降臨的天使",
+        "zh_cn": "降臨的天使"
+      },
+      "constellation": {
+        "ko": "천칭자리",
+        "en": "Libra",
+        "zh_tw": "天秤座",
+        "zh_cn": "天秤座"
+      },
+      "union": {
+        "ko": "에델 가드",
+        "en": "Edel Guards",
+        "zh_tw": "埃德爾護衛隊",
+        "zh_cn": "埃德爾護衛隊"
+      },
+      "cv_ko": {
+        "ko": "이보희",
+        "en": "Bohee Lee",
+        "zh_tw": "李寶熙",
+        "zh_cn": "李寶熙"
+      },
+      "cv_jp": {
+        "ko": "이보희",
+        "en": "Bohee Lee",
+        "zh_tw": "李寶熙",
+        "zh_cn": "李寶熙"
+      },
+      "like": {
+        "ko": [
+          "밀크티"
+        ],
+        "en": [
+          "Milk tea"
+        ],
+        "zh_tw": [
+          "奶茶"
+        ],
+        "zh_cn": [
+          "奶茶"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "다혈질"
+        ],
+        "en": [
+          "Hot-blooded temper"
+        ],
+        "zh_tw": [
+          "衝動的人"
+        ],
+        "zh_cn": [
+          "衝動的人"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "복화술"
+        ],
+        "en": [
+          "Ventriloquism"
+        ],
+        "zh_tw": [
+          "腹語術"
+        ],
+        "zh_cn": [
+          "腹語術"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "온화한 미소 짓기"
+        ],
+        "en": [
+          "Making a gentle smile"
+        ],
+        "zh_tw": [
+          "露出溫和的微笑"
+        ],
+        "zh_cn": [
+          "露出溫和的微笑"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "아우렐리아의 치천사가 아닌 구원자님만을 위한 대천사, 클라우디아입니다. \n저의 목소리가 당신에게 전해지기를. \n\n약하고 스스로를 숨기기 바빴던 제가 이제는 구원자님과 함께 정의를 집행하겠어요.\n구원자님 덕분이에요.\n저의 마음과 힘을 전부 드릴게요. \n다시 한번 저와 함께해주시겠어요?",
+        "en": "I'm Claudia, not the seraphim of Aurelia, but an archangel devoted solely to you, Savior.\r\nMay my voice reach you.\r\n\r\nOnce weak and always busy hiding myself, I will now carry out justice together with you, Savior.\r\nIt's all thanks to you.\r\nI'll give you my heart and all my strength.\r\nWill you walk with me once more?",
+        "zh_tw": "我不是奧里利亞的熾天使，而是專屬救援者的大天使，克勞迪婭。\n希望我的聲音能傳達給你。\n\n曾經軟弱且忙於隱藏自己的我，現在將與救援者一起實現正義。\n這都多虧了救援者。\n我會把我的心和力量全部獻給你。\n能再次與我同行嗎？",
+        "zh_cn": "我不是奧里利亞的熾天使，而是專屬救援者的大天使，克勞迪婭。\n希望我的聲音能傳達給你。\n\n曾經軟弱且忙於隱藏自己的我，現在將與救援者一起實現正義。\n這都多虧了救援者。\n我會把我的心和力量全部獻給你。\n能再次與我同行嗎？"
+      },
+      "greeting": {
+        "ko": "이것이 천사의 진정한 사명.",
+        "en": "This is the true mission of an angel.",
+        "zh_tw": "這就是天使真正的使命。",
+        "zh_cn": "這就是天使真正的使命。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "구원자님 제 톡이 보이시나요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Savior, can you see my message?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者，你看得到我的訊息嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者，你看得到我的訊息嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "다행이에요. 에버폰이 지난 전투에서 고장이 나서"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "What a relief! My Everphone broke in the last battle"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "太好了，EverPhone在上次戰鬥中壞掉了"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "太好了，EverPhone在上次戰鬥中壞掉了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "이번에 새로 샀어요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "so I bought a new one this time."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "所以這次新買了一個。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "所以這次新買了一個。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "구원자님도 계속 전선에 나가 계시잖아요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "You've been heading to the front lines constantly as well, Savior."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者不也一直都在戰線上嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者不也一直都在戰線上嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "네 언제나 조심하셔야 해요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Good. You should always be careful."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "好，你一定要小心。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "好，你一定要小心。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "무슨 일 있으면 에버톡 주세요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "If anything happens, text me on Evertalk."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "有事的話，請用EverTalk聯絡我。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "有事的話，請用EverTalk聯絡我。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "ANIMA를 나누고 나서부터 부쩍 잠이 많아진 것 같아요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Ever since I split my ANIMA, I feel like I have been sleeping much more."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "自從分出了不滅之魂ANIMA後，似乎變得特別嗜睡。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "自從分出了不滅之魂ANIMA後，似乎變得特別嗜睡。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "그럴 때면 목소리가 들려요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "And when that happens, I hear a voice."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "那時就會聽到聲音。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "那時就會聽到聲音。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "네…"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Yes..."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "對…"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "對…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "어딘가 익숙한 듯 낯선 목소리가…"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "A voice that feels familiar, yet strange..."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "有點熟悉又陌生的聲音…"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "有點熟悉又陌生的聲音…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "아니에요. 제가 잘못 들었나 봐요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "No, never mind. I must have imagined it."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "沒什麼，可能是我聽錯了。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "沒什麼，可能是我聽錯了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "괜찮아요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "I'm fine."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "沒關係。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "沒關係。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "그럼요! 잠깐 피곤해서 그럴 거예요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Of course! I'm probably just a little tired."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "當然！應該是因為有點累才會那樣。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "當然！應該是因為有點累才會那樣。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "곧 괜찮아질 거랍니다."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "I'll be fine soon."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "很快就會好起來的。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "很快就會好起來的。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "구원자님, 들려요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Savior, I can hear it."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者，我聽到了。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者，我聽到了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "꿈이 아니에요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "This is not a dream."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "這不是夢。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "這不是夢。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "저기 누군가가 저를 부르고 있어요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Someone over there is calling out to me."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "那邊有人在叫我。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "那邊有人在叫我。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "보이세요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Can you see them?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "看到了嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "看到了嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "..."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "만월에 소원을 빌면 이루어진다던데 아세요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Do you know they say wishes come true if you make one on a full moon?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "你知道嗎？據說在滿月時許願，願望會實現。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "你知道嗎？據說在滿月時許願，願望會實現。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "정말요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Really?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "真的嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "真的嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "소원이라…."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "A wish..."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "願望啊…"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "願望啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "달무리가 생기면 다음 날 비가 오는 거 아세요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Did you know that when there is a halo around the moon, it rains the next day?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "你知道嗎？如果出現月暈，第二天就會下雨。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "你知道嗎？如果出現月暈，第二天就會下雨。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "달을 오랫동안 보면"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "If you look at the moon for a long time,"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "長時間看著月亮"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "長時間看著月亮"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "자연스럽게 알게 되더라고요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "you naturally come to know things like that."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "自然就知道了。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "自然就知道了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "저는 덥거나 추운 건 괜찮은데"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "I'm fine with heat or cold,"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "我不怕熱也不怕冷"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "我不怕熱也不怕冷"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "비가 많이 오는 날은 좀 힘든 것 같아요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "but I think I struggle a bit on days with heavy rain."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "但下大雨的日子有點難受。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "但下大雨的日子有點難受。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "날개가 눅눅해지거든요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "My wings get damp."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "因為翅膀會變得潮濕。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "因為翅膀會變得潮濕。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "구원자님, 지금 어디에 계세요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Savior, where are you now?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者，你現在在哪裡？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者，你現在在哪裡？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "구원자님!"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Savior!"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者！"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "이번에는 제가… 제가 구원자님에게 갈게요!"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "This time, I... I will come to you!"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "這次由我…我來找救援者！"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "這次由我…我來找救援者！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "하늘을 오래 날아서 날개가 뻐근하네요…"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Flying through the sky for so long has made my wings feel sore..."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "飛了很久，翅膀有點僵硬…"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "飛了很久，翅膀有點僵硬…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "스트레칭이라도 해야 할까요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Should I do some stretching?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "是不是要做點伸展運動呢？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "是不是要做點伸展運動呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "구원자님이 도와주시면 안 될까요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Could you help me, Savior?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者能幫我嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者能幫我嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "네, 기다릴게요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Yes. I'll be waiting."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "對，我會等你。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "對，我會等你。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "하나가 된다는 게 이런 걸까요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Is this what it means to become one?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "這就是合而為一的感覺嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "這就是合而為一的感覺嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "정령 계약은 정말 낯선 느낌이었어요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "The Soul Contract felt truly unfamiliar."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "之前覺得精靈契約真的很陌生。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "之前覺得精靈契約真的很陌生。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "구원자님과 더 가까워진 기분이에요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "I feel closer to you, though."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "感覺和救援者變得更親近。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "感覺和救援者變得更親近。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "누군가와 이어진다는 건 기쁜 일이네요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Sharing a bond with someone is a joyful thing."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "與某人連結是一件開心的事呢。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "與某人連結是一件開心的事呢。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "후훗~"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Hoho."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "呵呵～"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "呵呵～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "구원자님, 곧 아우렐리아의 새로운 보충병이"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Savior, there was intel that new reinforcements from Aurelia"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者，據情報顯示，奧里利亞的新補充兵"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "救援者，據情報顯示，奧里利亞的新補充兵"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "넘어올 거라는 첩보가 있었어요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "would be crossing over soon."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "很快就會過來。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "很快就會過來。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "헤이즐님, 이디스님 덕분에"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Thanks to Hazel and Edith,"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "雖然多虧了黑伊茲爾和伊迪絲"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "雖然多虧了黑伊茲爾和伊迪絲"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "어떻게든 막아내고 있지만…"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "we're managing to hold them back somehow, but..."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "有設法抵擋住…"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "有設法抵擋住…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "아우렐리아 정령들의 저런 눈은 처음 봐요."
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "I've never seen Aurelia's Souls with eyes like that before."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "但我第一次看到奧里利亞的精靈們露出那種眼神。"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "但我第一次看到奧里利亞的精靈們露出那種眼神。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "네. 감정이 전혀 느껴지지 않는 공허한 눈…"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Yes. Empty eyes, devoid of emotion."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "是的，完全感受不到情感的空洞眼神…"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "是的，完全感受不到情感的空洞眼神…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "천사형 정령은 다 정의로운 편인데"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "Angel Souls are all on the righteous side,"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "天使型精靈都比較正義"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "天使型精靈都比較正義"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "그건 그 정령의 성격일까요?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "but is that because of the Soul's own nature,"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "那是因為精靈自己的個性嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "那是因為精靈自己的個性嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "아니면 그냥 천사형이라서?"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "or simply because they are angel-type?"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "還是純粹因為她是天使型？"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "還是純粹因為她是天使型？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아(대천사)",
+          "message": "저는 이제 잘 모르겠어요…"
+        },
+        "en": {
+          "speaker": "Claudia (Archangel)",
+          "message": "I don't know anymore, either..."
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "我也搞不懂了…"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭（大天使）",
+          "message": "我也搞不懂了…"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "레베카",
+          "message": "아이참, 기다렸잖아! 걱정했다고? 그래도 돌아와서 다행이야, 클라우디아!"
+        },
+        "en": {
+          "speaker": "Rebecca",
+          "message": "Where have you been? I was so worried, you know. I'm so glad you're back, Claudia!"
+        },
+        "zh_tw": {
+          "speaker": "瑞貝卡",
+          "message": "哎呀，等妳很久了！我很擔心妳耶！不過妳回來就好，克勞迪婭！"
+        },
+        "zh_cn": {
+          "speaker": "瑞貝卡",
+          "message": "哎呀，等妳很久了！我很擔心妳耶！不過妳回來就好，克勞迪婭！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "라리마",
+          "message": "나는 항상 당신을 지켜보고 있답니다. 클라우디아."
+        },
+        "en": {
+          "speaker": "Larimar",
+          "message": "I'm always watching you, Claudia."
+        },
+        "zh_tw": {
+          "speaker": "拉利瑪",
+          "message": "我一直在觀察著妳，克勞迪婭。"
+        },
+        "zh_cn": {
+          "speaker": "拉利瑪",
+          "message": "我一直在觀察著妳，克勞迪婭。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "카넬리안",
+          "message": "…제법이더군. 나를 따돌리고 갈 수 있을 줄이야."
+        },
+        "en": {
+          "speaker": "Carnelian",
+          "message": "... Impressive. To think you could shake me off."
+        },
+        "zh_tw": {
+          "speaker": "卡內莉安",
+          "message": "…真是厲害，居然能甩開我。"
+        },
+        "zh_cn": {
+          "speaker": "卡內莉安",
+          "message": "…真是厲害，居然能甩開我。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님 제 톡이 보이시나요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Savior, can you see my message?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者，你看得到我的訊息嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者，你看得到我的訊息嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 보여."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I can see it clearly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有看到。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有看到。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 보여."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I can see it clearly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有看到。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有看到。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "다행이에요. 에버폰이 지난 전투에서 고장이 나서"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "What a relief! My Everphone broke in the last battle"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "太好了，EverPhone在上次戰鬥中壞掉了"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "太好了，EverPhone在上次戰鬥中壞掉了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "이번에 새로 샀어요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "so I bought a new one this time."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "所以這次新買了一個。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "所以這次新買了一個。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님도 계속 전선에 나가 계시잖아요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "You've been heading to the front lines constantly as well, Savior."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者不也一直都在戰線上嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者不也一直都在戰線上嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 아직 괜찮은 것 같아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I'm okay for now."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我感覺還可以。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我感覺還可以。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 아직 괜찮은 것 같아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I'm okay for now."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我感覺還可以。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我感覺還可以。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "네 언제나 조심하셔야 해요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Good. You should always be careful."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "好，你一定要小心。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "好，你一定要小心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "무슨 일 있으면 에버톡 주세요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "If anything happens, text me on Evertalk."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "有事的話，請用EverTalk聯絡我。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "有事的話，請用EverTalk聯絡我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 클라우디아도."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will. You, too, Claudia."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，克勞迪婭也是。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，克勞迪婭也是。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 클라우디아도."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will. You, too, Claudia."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，克勞迪婭也是。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，克勞迪婭也是。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "ANIMA를 나누고 나서부터 부쩍 잠이 많아진 것 같아요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Ever since I split my ANIMA, I feel like I have been sleeping much more."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "自從分出了不滅之魂ANIMA後，似乎變得特別嗜睡。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "自從分出了不滅之魂ANIMA後，似乎變得特別嗜睡。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "그럴 때면 목소리가 들려요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "And when that happens, I hear a voice."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "那時就會聽到聲音。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "那時就會聽到聲音。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "목소리?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A voice?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聲音？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聲音？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "목소리?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A voice?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聲音？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聲音？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "네…"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Yes..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "對…"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "對…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "어딘가 익숙한 듯 낯선 목소리가…"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "A voice that feels familiar, yet strange..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "有點熟悉又陌生的聲音…"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "有點熟悉又陌生的聲音…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "아니에요. 제가 잘못 들었나 봐요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "No, never mind. I must have imagined it."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "沒什麼，可能是我聽錯了。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "沒什麼，可能是我聽錯了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "괜찮아요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "I'm fine."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "沒關係。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "沒關係。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you sure you're okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的沒關係嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的沒關係嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you sure you're okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的沒關係嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的沒關係嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "그럼요! 잠깐 피곤해서 그럴 거예요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Of course! I'm probably just a little tired."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "當然！應該是因為有點累才會那樣。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "當然！應該是因為有點累才會那樣。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "곧 괜찮아질 거랍니다."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "I'll be fine soon."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "很快就會好起來的。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "很快就會好起來的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정되는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm worried..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有點擔心耶…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有點擔心耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정되는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm worried..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有點擔心耶…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有點擔心耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님, 들려요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Savior, I can hear it."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者，我聽到了。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者，我聽到了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "꿈이 아니에요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "This is not a dream."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "這不是夢。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "這不是夢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐라고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐라고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "저기 누군가가 저를 부르고 있어요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Someone over there is calling out to me."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "那邊有人在叫我。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "那邊有人在叫我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "보이세요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Can you see them?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "看到了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "看到了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 달이잖아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's just the moon."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不就是月亮而已嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不就是月亮而已嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 달이잖아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's just the moon."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不就是月亮而已嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不就是月亮而已嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you alright?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you alright?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "방금 클라우디아 목소리가 들린 것 같았는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I thought I just heard Claudia's voice..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "剛才好像聽到了克勞迪婭的聲音…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "剛才好像聽到了克勞迪婭的聲音…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "방금 클라우디아 목소리가 들린 것 같았는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I thought I just heard Claudia's voice..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "剛才好像聽到了克勞迪婭的聲音…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "剛才好像聽到了克勞迪婭的聲音…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "만월에 소원을 빌면 이루어진다던데 아세요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Do you know they say wishes come true if you make one on a full moon?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "你知道嗎？據說在滿月時許願，願望會實現。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "你知道嗎？據說在滿月時許願，願望會實現。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 있던 곳에도 그런 말이 있었어."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I heard something like that where I'm from, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我以前待的地方也有這種說法。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我以前待的地方也有這種說法。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 있던 곳에도 그런 말이 있었어."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I heard something like that where I'm from, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我以前待的地方也有這種說法。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我以前待的地方也有這種說法。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "정말요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 보름달에 소원을 빌면 이루어진대."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah, they say if you make a wish on a full moon, it'll come true."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，據說在滿月時許願就會實現。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，據說在滿月時許願就會實現。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 보름달에 소원을 빌면 이루어진대."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah, they say if you make a wish on a full moon, it'll come true."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，據說在滿月時許願就會實現。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，據說在滿月時許願就會實現。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "소원이라…."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "A wish..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "願望啊…"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "願望啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "달무리가 생기면 다음 날 비가 오는 거 아세요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Did you know that when there is a halo around the moon, it rains the next day?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "你知道嗎？如果出現月暈，第二天就會下雨。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "你知道嗎？如果出現月暈，第二天就會下雨。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래? 몰랐네."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really? I didn't know that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？我不知道。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？我不知道。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래? 몰랐네."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really? I didn't know that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？我不知道。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？我不知道。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 건 어떻게 알았어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How did you know that?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳怎麼知道的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳怎麼知道的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 건 어떻게 알았어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How did you know that?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳怎麼知道的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳怎麼知道的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "달을 오랫동안 보면"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "If you look at the moon for a long time,"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "長時間看著月亮"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "長時間看著月亮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "자연스럽게 알게 되더라고요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "you naturally come to know things like that."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "自然就知道了。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "自然就知道了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "저는 덥거나 추운 건 괜찮은데"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "I'm fine with heat or cold,"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "我不怕熱也不怕冷"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "我不怕熱也不怕冷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "비가 많이 오는 날은 좀 힘든 것 같아요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "but I think I struggle a bit on days with heavy rain."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "但下大雨的日子有點難受。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "但下大雨的日子有點難受。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떤 점이 힘든데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What makes it hard?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哪裡難受？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哪裡難受？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떤 점이 힘든데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What makes it hard?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哪裡難受？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哪裡難受？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "날개가 눅눅해지거든요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "My wings get damp."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "因為翅膀會變得潮濕。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "因為翅膀會變得潮濕。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아하. 그렇겠네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Ah, that makes sense."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊哈，對耶…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊哈，對耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아하. 그렇겠네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Ah, that makes sense."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊哈，對耶…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊哈，對耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님, 지금 어디에 계세요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Savior, where are you now?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者，你現在在哪裡？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者，你現在在哪裡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라우디아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Claudia?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克勞迪婭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克勞迪婭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라우디아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Claudia?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克勞迪婭？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克勞迪婭？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님!"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "이번에는 제가… 제가 구원자님에게 갈게요!"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "This time, I... I will come to you!"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "這次由我…我來找救援者！"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "這次由我…我來找救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "하늘을 오래 날아서 날개가 뻐근하네요…"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Flying through the sky for so long has made my wings feel sore..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "飛了很久，翅膀有點僵硬…"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "飛了很久，翅膀有點僵硬…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "스트레칭이라도 해야 할까요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Should I do some stretching?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "是不是要做點伸展運動呢？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "是不是要做點伸展運動呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 뻐근해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are they really that sore?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很僵硬嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很僵硬嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 뻐근해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are they really that sore?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很僵硬嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很僵硬嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님이 도와주시면 안 될까요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Could you help me, Savior?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者能幫我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者能幫我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Help you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Help you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "네, 기다릴게요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Yes. I'll be waiting."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "對，我會等你。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "對，我會等你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "하나가 된다는 게 이런 걸까요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Is this what it means to become one?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "這就是合而為一的感覺嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "這就是合而為一的感覺嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "정령 계약은 정말 낯선 느낌이었어요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "The Soul Contract felt truly unfamiliar."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "之前覺得精靈契約真的很陌生。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "之前覺得精靈契約真的很陌生。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님과 더 가까워진 기분이에요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "I feel closer to you, though."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "感覺和救援者變得更親近。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "感覺和救援者變得更親近。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 진짜 클라우디아를 알게 된 것 같아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I feel like I've gotten to know the real you, Claudia."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我似乎也真正了解了克勞迪婭。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我似乎也真正了解了克勞迪婭。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 진짜 클라우디아를 알게 된 것 같아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I feel like I've gotten to know the real you, Claudia."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我似乎也真正了解了克勞迪婭。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我似乎也真正了解了克勞迪婭。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "누군가와 이어진다는 건 기쁜 일이네요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Sharing a bond with someone is a joyful thing."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "與某人連結是一件開心的事呢。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "與某人連結是一件開心的事呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "후훗~"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Hoho."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "呵呵～"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "呵呵～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님, 곧 아우렐리아의 새로운 보충병이"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Savior, there was intel that new reinforcements from Aurelia"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者，據情報顯示，奧里利亞的新補充兵"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者，據情報顯示，奧里利亞的新補充兵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "넘어올 거라는 첩보가 있었어요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "would be crossing over soon."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "很快就會過來。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "很快就會過來。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "헤이즐님, 이디스님 덕분에"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Thanks to Hazel and Edith,"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "雖然多虧了黑伊茲爾和伊迪絲"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "雖然多虧了黑伊茲爾和伊迪絲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "어떻게든 막아내고 있지만…"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "we're managing to hold them back somehow, but..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "有設法抵擋住…"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "有設法抵擋住…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "아우렐리아 정령들의 저런 눈은 처음 봐요."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "I've never seen Aurelia's Souls with eyes like that before."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "但我第一次看到奧里利亞的精靈們露出那種眼神。"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "但我第一次看到奧里利亞的精靈們露出那種眼神。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "눈?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eyes?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "眼神？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "眼神？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "눈?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eyes?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "眼神？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "眼神？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "네. 감정이 전혀 느껴지지 않는 공허한 눈…"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Yes. Empty eyes, devoid of emotion."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "是的，完全感受不到情感的空洞眼神…"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "是的，完全感受不到情感的空洞眼神…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라우디아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Claudia!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克勞迪婭！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克勞迪婭！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라우디아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Claudia!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克勞迪婭！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克勞迪婭！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 어디야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳現在在哪？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳現在在哪？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 어디야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳現在在哪？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳現在在哪？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "천사형 정령은 다 정의로운 편인데"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Angel Souls are all on the righteous side,"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "天使型精靈都比較正義"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "天使型精靈都比較正義"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "그건 그 정령의 성격일까요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "but is that because of the Soul's own nature,"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "那是因為精靈自己的個性嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "那是因為精靈自己的個性嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "아니면 그냥 천사형이라서?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "or simply because they are angel-type?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "還是純粹因為她是天使型？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "還是純粹因為她是天使型？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not sure."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not sure."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "저는 이제 잘 모르겠어요…"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "I don't know anymore, either..."
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "我也搞不懂了…"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "我也搞不懂了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "구원자님!"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라우디아(대천사)",
+            "message": "방금 구원자님이 절 부르셨나요?"
+          },
+          "en": {
+            "speaker": "Claudia (Archangel)",
+            "message": "Did you just call my name?"
+          },
+          "zh_tw": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者剛才有叫我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克勞迪婭（大天使）",
+            "message": "救援者剛才有叫我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        }
+      ]
+    }
+  }
+}

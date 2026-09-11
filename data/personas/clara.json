@@ -1,0 +1,7395 @@
+{
+  "id": "2110",
+  "name": "클라라",
+  "name_en": "Clara",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "서포터",
+  "sub_class": "치료",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "꿀빛 햇살",
+    "constellation": "사자자리",
+    "union": "클라라 농장",
+    "birthday": "819",
+    "height": 160,
+    "weight": 45,
+    "cv_ko": "김하루",
+    "cv_jp": "Miho Okasaki",
+    "like": [
+      "사과",
+      "해바라기"
+    ],
+    "dislike": [
+      "비 오는 날"
+    ],
+    "hobby": [
+      "텃밭 가꾸기"
+    ],
+    "speciality": [
+      "건강 체질"
+    ]
+  },
+  "personality": {
+    "description": "구원자님, 구원자님! 일어나세요! 오늘도 날씨가 참 좋아요!\n\n네…? 5분만 더 잔다고요? 오늘은 절대 안 돼요! 지난번처럼 기다릴 순 없어요! \n계속 이러시면 어쩔 수 없죠! \n다음 계절에는 구원자님이 싫어하는 채소만 재배할 거에요! \n\n앗…! 헤헤 일어났다. 평소에도 이렇게 일어나 주시면 얼마나 좋아요! 바른 생활, 바른 생활! \n너무 일어나기 싫은 아침도, 눈 딱 감고 일어나 보면 의외로 나쁘지 않죠? \n항상 아름다운 햇살이 구원자님과 함께할 거에요! 후후… 그럼 저는 마저 아침 준비를 해올게요? 기지개라도 펴고 계세요!",
+    "greeting": "좋은 아침, 좋은 햇살, 좋은 하루!"
+  },
+  "speech_patterns": [
+    "와아, 구원자님 안녕하세요~",
+    "사과를 많이 따서요, 좀 나눠드리고 싶은데…",
+    "오늘 바쁘신가요?",
+    "와~",
+    "그럼 제가 광장까지 들고 갈게요~",
+    "이왕 만나는 김에 포도도…",
+    "복숭아도…",
+    "호박도…",
+    "네? 그렇지 않아요~",
+    "다양한 요리를 많이 해서",
+    "식탁을 잔뜩 꾸미면 되죠!",
+    "기다리세요, 구원자님~",
+    "구, 구원자님",
+    "저 몸이 왜 이렇게 가려울까요?",
+    "뭔가 울긋불긋한 수포가 몸에 잔뜩 올라왔어요",
+    "네? 하지만 풀이랑 저는 친한 친구인걸요!",
+    "풀이 제 몸에 그런 나쁜 짓을 했을 리가 없어요!",
+    "구원자님…?",
+    "아니에요 이런 일로 병원이라뇨",
+    "이럴 때는 오래 숙성시킨 약초 진액을 아픈 곳에 바르면 돼요!",
+    "구원자님, 어디 아프신 데는 없으시죠?",
+    "요즘 감기를 앓는 분이 많으셔서 걱정이네요",
+    "네!? 어디가 안 좋으세요?",
+    "네? 무리했다고요…?",
+    "설마 상추밭에 물을 주신 걸 말씀하시는 건가요?",
+    "앗…",
+    "물을 조금 맞았다고 감기에 걸리시다니…",
+    "구원자님은 갓 태어난 송아지 같으시네요",
+    "어쩌면 송아지보다 연약하실지도…",
+    "헤헤 그래도 걱정하지 마세요",
+    "제가 피로 회복에 좋은 산삼을 캐 올게요!",
+    "으음 구원자님",
+    "요즘은 에버스타그램을 통해서 농작물 홍보를 많이 한대서",
+    "저도 해 보려고 하는데 어떻게 해야 할까요?",
+    "이렇게요?",
+    "네? 맛있어 보이게 먹는 사진을 말씀하신 게 아닌가요!?",
+    "아하",
+    "으으 제가 말을 잘못 알아들었네요",
+    "부끄럽다",
+    "사진은 지워주실 수 있을까요?",
+    "구, 구원자님!?",
+    "구원자님 혹시 제가 안경을 쓰면 어떨 것 같으세요?",
+    "네! 에리카 님도 그렇고",
+    "안경을 쓰신 분들은 다 지적인 것 같아요",
+    "저도 안경을 쓰면 조금 똑똑해 보이려나요 헤헤",
+    "하지만 안경이라니",
+    "우으 제가 그렇게 똑똑한 정령의 특권을 누려도 되는 걸까요!!!",
+    "네!",
+    "저는 날아다니는 새의 깃털 무늬까지 보여요",
+    "후윽 구언ㄴ자님"
+  ],
+  "comments": [
+    {
+      "writer": "린지",
+      "comment": "좀 지나치게 민간인 같아요. 으음. 지켜줘야겠다는 느낌…"
+    },
+    {
+      "writer": "재클린",
+      "comment": "클라라의 질문. 스프링클러 기능.\n …해당 기능은 탑재 되어 있지 않습니다."
+    },
+    {
+      "writer": "메피스토펠레스",
+      "comment": "농사에는 체력과 기술이 필요하다고 하더군요. 존경합니다."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "클라라",
+        "message": "와아, 구원자님 안녕하세요~"
+      },
+      {
+        "speaker": "클라라",
+        "message": "사과를 많이 따서요, 좀 나눠드리고 싶은데…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "오늘 바쁘신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안 바빠"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안 바빠"
+      },
+      {
+        "speaker": "클라라",
+        "message": "와~"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그럼 제가 광장까지 들고 갈게요~"
+      },
+      {
+        "speaker": "클라라",
+        "message": "이왕 만나는 김에 포도도…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "복숭아도…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "호박도…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 많을 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 많을 것 같아"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네? 그렇지 않아요~"
+      },
+      {
+        "speaker": "클라라",
+        "message": "다양한 요리를 많이 해서"
+      },
+      {
+        "speaker": "클라라",
+        "message": "식탁을 잔뜩 꾸미면 되죠!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "기다리세요, 구원자님~"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구, 구원자님"
+      },
+      {
+        "speaker": "클라라",
+        "message": "저 몸이 왜 이렇게 가려울까요?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "뭔가 울긋불긋한 수포가 몸에 잔뜩 올라왔어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "풀밭에서 뒹굴어서 그런 게 아닐까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "풀밭에서 뒹굴어서 그런 게 아닐까?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네? 하지만 풀이랑 저는 친한 친구인걸요!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "풀이 제 몸에 그런 나쁜 짓을 했을 리가 없어요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 더 해줄 말은 없고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 더 해줄 말은 없고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "병원에 가 보는 게 좋겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "병원에 가 보는 게 좋겠어"
+      },
+      {
+        "speaker": "클라라",
+        "message": "아니에요 이런 일로 병원이라뇨"
+      },
+      {
+        "speaker": "클라라",
+        "message": "이럴 때는 오래 숙성시킨 약초 진액을 아픈 곳에 바르면 돼요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제발 병원에 가 줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제발 병원에 가 줘"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님, 어디 아프신 데는 없으시죠?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "요즘 감기를 앓는 분이 많으셔서 걱정이네요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아파…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아파…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네!? 어디가 안 좋으세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저번에 클라라 농장에서 무리해서…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저번에 클라라 농장에서 무리해서…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네? 무리했다고요…?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "설마 상추밭에 물을 주신 걸 말씀하시는 건가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 물을 맞고 온몸이 젖었으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 물을 맞고 온몸이 젖었으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "감기 걸린 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "감기 걸린 것 같아"
+      },
+      {
+        "speaker": "클라라",
+        "message": "앗…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "물을 조금 맞았다고 감기에 걸리시다니…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님은 갓 태어난 송아지 같으시네요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "어쩌면 송아지보다 연약하실지도…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라 기준이라면 누구든 연약할 거야…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라 기준이라면 누구든 연약할 거야…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헤헤 그래도 걱정하지 마세요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "제가 피로 회복에 좋은 산삼을 캐 올게요!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "으음 구원자님"
+      },
+      {
+        "speaker": "클라라",
+        "message": "요즘은 에버스타그램을 통해서 농작물 홍보를 많이 한대서"
+      },
+      {
+        "speaker": "클라라",
+        "message": "저도 해 보려고 하는데 어떻게 해야 할까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맛있어 보이게 사진을 찍으면 되지 않을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맛있어 보이게 사진을 찍으면 되지 않을까?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "이렇게요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "농작물이 아니라 클라라 사진이잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "농작물이 아니라 클라라 사진이잖아"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네? 맛있어 보이게 먹는 사진을 말씀하신 게 아닌가요!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 농작물 사진을 말한 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 농작물 사진을 말한 거야"
+      },
+      {
+        "speaker": "클라라",
+        "message": "아하"
+      },
+      {
+        "speaker": "클라라",
+        "message": "으으 제가 말을 잘못 알아들었네요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "부끄럽다"
+      },
+      {
+        "speaker": "클라라",
+        "message": "사진은 지워주실 수 있을까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저장 완료"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저장 완료"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구, 구원자님!?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님 혹시 제가 안경을 쓰면 어떨 것 같으세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안경?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안경?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네! 에리카 님도 그렇고"
+      },
+      {
+        "speaker": "클라라",
+        "message": "안경을 쓰신 분들은 다 지적인 것 같아요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "저도 안경을 쓰면 조금 똑똑해 보이려나요 헤헤"
+      },
+      {
+        "speaker": "클라라",
+        "message": "하지만 안경이라니"
+      },
+      {
+        "speaker": "클라라",
+        "message": "우으 제가 그렇게 똑똑한 정령의 특권을 누려도 되는 걸까요!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안경이 특권까지는 아니지 않을까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안경이 특권까지는 아니지 않을까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라는 시력이 좋아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라는 시력이 좋아?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "저는 날아다니는 새의 깃털 무늬까지 보여요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대, 대단한걸…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대, 대단한걸…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "후윽 구언ㄴ자님"
+      },
+      {
+        "speaker": "클라라",
+        "message": "ㅠㅠㅠㅠㅠ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일이야?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "아기 돼지 삼형제라는 동화를 읽었는데 너무 슬퍼요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "돼지 형제가 열심히 지은 집을 부수다니 정말 못된 늑대예요!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님은 그 상황이라면 어떻게 하실 건가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 돼지 형제라면?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 돼지 형제라면?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음 역시 고소해야겠지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음 역시 고소해야겠지"
+      },
+      {
+        "speaker": "클라라",
+        "message": "고, 고소요!?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "허억… 동물의 세계에도 그런 법이 있는 걸까요…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라라면 어떻게 할 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라라면 어떻게 할 거야?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "저는… 늑대를 위한 선물을 준비할 것 같아요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "사과랑 꽃을 선물하면"
+      },
+      {
+        "speaker": "클라라",
+        "message": "늑대도 나쁜 마음이 사르르 풀려서 생각을 바꿀 거예요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 늑대는 사과보다 돼지를 먹고 싶을 텐데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 늑대는 사과보다 돼지를 먹고 싶을 텐데"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헉"
+      },
+      {
+        "speaker": "클라라",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라…?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ"
+      },
+      {
+        "speaker": "클라라",
+        "message": "ㅠㅠㅠㅠ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해, 내가 잘못했어…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해, 내가 잘못했어…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "제가 쓴 비료가 토양에 특수한 영향을 미쳤다니"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그건 정말 일반적인 거름이었는데"
+      },
+      {
+        "speaker": "클라라",
+        "message": "제, 제가 뭔가 실수한 건 아니겠죠?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "쓰지 말아야 할 비료를 사용했다거나…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "실수한 건 아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "실수한 건 아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오히려 땅이 정화됐으니까 엄청난 발견이지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오히려 땅이 정화됐으니까 엄청난 발견이지"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그, 그런 거죠?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "다행이에요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "만약 제가 쓴 비료로 땅을 정화할 수 있다면…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "빨리 솔레이 전역의 땅들이 정화됐으면 좋겠어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "숲지기가 제 농장을 살펴보러 와 주신다고 해서"
+      },
+      {
+        "speaker": "클라라",
+        "message": "혹시 하루가 올지도 몰라서 준비한 게 있었어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "꼬리빗을 준비했는데 못 써서 아쉬워요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꼬리빗?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꼬리빗?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네! 하루 꼬리를 빗겨 주려고 했었거든요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "꼬리를 빗으면 부들부들해져서 기분이 좋아요♪"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그리고 빗에 붙은 털들을 모아서 공을 만들면"
+      },
+      {
+        "speaker": "클라라",
+        "message": "재밌는 장난감으로 쓸 수도 있어요♪"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헉 그런데 구원자님은 꼬리가 없으니까"
+      },
+      {
+        "speaker": "클라라",
+        "message": "으음"
+      },
+      {
+        "speaker": "클라라",
+        "message": "제가 다른 털이라도 빗겨드릴까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괘, 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괘, 괜찮아"
+      },
+      {
+        "speaker": "클라라",
+        "message": "제가 아케나인에 처음 왔을 때"
+      },
+      {
+        "speaker": "클라라",
+        "message": "지저분한 동물과 다름없었던 저를"
+      },
+      {
+        "speaker": "클라라",
+        "message": "씻기고 먹이고 입히고 가르쳐 주셨던 건 마을 주민들이셨어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그런데 이제 그분들이 저를 미워하다니…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "……."
+      },
+      {
+        "speaker": "클라라",
+        "message": "저의 부족함으로 저를 미워하는 건 상관없지만"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님까지 안 좋게 보시다니…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님께 민폐를 끼친 것 같아 죄송해요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "역시 저는 혼자 숲에서 사는 게 어울리는 정령인 걸까요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇지 않아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇지 않아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사실을 잘 설명한다면 오해가 풀릴 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사실을 잘 설명한다면 오해가 풀릴 거야"
+      },
+      {
+        "speaker": "클라라",
+        "message": "…네, 구원자님"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님을 위해서라도 꼭 오해를 풀고 싶어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님은 스트레스를 받을 때 어떻게 푸시나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루 정도는 일을 쉬고 휴식하는 게 제일 좋지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루 정도는 일을 쉬고 휴식하는 게 제일 좋지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쉴 수만 있다면…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쉴 수만 있다면…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님이랑 같이 외출하면 좋을 텐데"
+      },
+      {
+        "speaker": "클라라",
+        "message": "바쁜 일이 마무리되면 잠깐 바람이라도 쐐요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "스트레스 해소에 좋은 장난감도 잔뜩 있거든요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "장난감?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "장난감?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헤헤 기대하셔도 좋아요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님! 오늘도 햇살이 따사로운 하루예요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "바람도 선선하고 코를 간질이는 풀 냄새도 너무 향긋해요~!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "안 되겠어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "아껴뒀던 수영복을 입어야겠어요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "수영하러 가려고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "수영하러 가려고?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "아뇨~ 풀밭에 가려고요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "수영복을 입고 풀밭에 간다고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "수영복을 입고 풀밭에 간다고?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헤헤 네!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "앗"
+      },
+      {
+        "speaker": "클라라",
+        "message": "농사일하기 전에 얼른 다녀와야 해요!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "먼저 실례할게요 구원자님!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님! 사과주스 좋아하세요?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "제 농장에 오시면 사과주스를 대접하고 싶어서요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋지"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헤헤 그럼 손으로 꽈아악 짜서 사과주스를 만들어 둘게요♪"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사과를 손으로 짠다고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사과를 손으로 짠다고?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네! 손을 깨끗하게 씻고"
+      },
+      {
+        "speaker": "클라라",
+        "message": "사과를 한 손으로 쥐면 으깨져요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "한 손으로 사과를 으깰 수 있어!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "한 손으로 사과를 으깰 수 있어!?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "당연하죠♪ 도구를 쓰는 것보다 손으로 으깨는 게 빠르더라고요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "원래 음식은 손맛이 들어가야 맛있는 법이랬어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그러니까 주스에 제 손맛을 듬뿍듬뿍 담아드릴게요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "주스에는 손맛이 들어가지 않아도 괜찮지 않을까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "주스에는 손맛이 들어가지 않아도 괜찮지 않을까…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님, 별을 그릴 줄 아시나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "별?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "별?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네 오두막 바닥에 커다란 별을 그리려고요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "별을 그리고 그 안에 앉아 있으면"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그분도 저를 바로 발견하시겠죠?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그분이라니?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그분이라니?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "앗 구원자님 시간이 없어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그분과 인사하려면 준비해야 할 게 많거든요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "이따 뵈어요!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "으우으"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님 저 너무 고민돼요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "오늘은 땅님에게 어떤 음식을 드려야 할까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "땅님이 음식도 먹는 거야!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "땅님이 음식도 먹는 거야!?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "네! 저번에 도토리를 주워서 오두막에 뒀는데"
+      },
+      {
+        "speaker": "클라라",
+        "message": "다음날 가 보니까 도토리가 전부 없어진 거 있죠!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "땅님은 도토리를 좋아하시나 봐요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "으음 그건 다람쥐가 가져간 게 아닐까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "으음 그건 다람쥐가 가져간 게 아닐까"
+      },
+      {
+        "speaker": "클라라",
+        "message": "앗!?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헤헤 구원자님 이웃분들을 만날 때"
+      },
+      {
+        "speaker": "클라라",
+        "message": "좀 더 깔끔한 옷을 입고 싶은데 뭐가 좋을까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "늘 입고 다니는 옷도 괜찮은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "늘 입고 다니는 옷도 괜찮은데"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그런가요? 그런데 이건 농사일할 때 입는 옷이어서요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "자세히 보면 여기저기 얼룩졌어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "사실 전 옷에 관심이 있는 편은 아니지만"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그래도 이웃분들을 만날 때는 단정해 보이고 싶네요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 가진 옷 중에 가장 단정한 옷을 입으면 어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 가진 옷 중에 가장 단정한 옷을 입으면 어때?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "앗 그럼"
+      },
+      {
+        "speaker": "클라라",
+        "message": "수영복을 입어야겠네요♪"
+      },
+      {
+        "speaker": "클라라",
+        "message": "면적이 작으니까 흙에 오염될 일도 적을 거예요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 원래 입던 옷이 좋을 것 같아…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 원래 입던 옷이 좋을 것 같아…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님은 상대가 연락을 받지 않으면 어떻게 하세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연락을 받지 않는다니?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연락을 받지 않는다니?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그게… 제 착각일지도 모르겠지만요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "이웃분들이 요즘 따라 제가 연락을 할 때마다 바쁘다고 하시고"
+      },
+      {
+        "speaker": "클라라",
+        "message": "파이를 구워서 나눠드리려고 했는데 답장이 없으시네요…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "설마 제가 뭔가 잘못한 건 아니겠죠?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 건 아닐 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 건 아닐 거야"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헤헤 구원자님이 그렇게 말씀해 주시니까 마음이 놓이네요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그만 신경 쓰고 할 일을 해야겠어요!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "제가 쓴 비료의 효능이 밝혀져서"
+      },
+      {
+        "speaker": "클라라",
+        "message": "솔레이 분들에게 도움이 됐으면 좋겠어요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그리고 이웃분들도 오해를 푸셔야 할 텐데…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "괜히 구원자님도 저 때문에 이상한 소문에 휘말린 것 같아서"
+      },
+      {
+        "speaker": "클라라",
+        "message": "마음이 아파요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 신경 쓰지 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 신경 쓰지 마"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그렇게 말씀해 주셔서 감사해요 구원자님"
+      },
+      {
+        "speaker": "클라라",
+        "message": "다른 분들이 저를 오해하는 시선을"
+      },
+      {
+        "speaker": "클라라",
+        "message": "미워하는 일을"
+      },
+      {
+        "speaker": "클라라",
+        "message": "그대로 받아들이려고 해요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "하지만 구원자님만큼은…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님, 저를 도와주셔서 감사해요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "모두가 저를 오해하고 미워하는 순간에도"
+      },
+      {
+        "speaker": "클라라",
+        "message": "저를 믿어 주셔서 감사해요"
+      },
+      {
+        "speaker": "클라라",
+        "message": "여, 염치없지만 한 가지 부탁이 있다면…"
+      },
+      {
+        "speaker": "클라라",
+        "message": "…앞으로도 제 곁에 있어 주세요!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님, 저랑 구원자님을 오해하는 시선을"
+      },
+      {
+        "speaker": "클라라",
+        "message": "제가 바로 잡겠어요!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "헤헤 땅님의 영험함을 증명해 보일게요♪"
+      },
+      {
+        "speaker": "클라라",
+        "message": "사랑이 가득한\r\n사랑의 날~"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님, 에덴의 명절을\r\n하나하나 익혀주세요~? 알았죠~?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 고마워 클라라!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 고마워 클라라!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "동글동글~\r\n보름달은 참 귀엽죠~?"
+      },
+      {
+        "speaker": "클라라",
+        "message": "마음까지 동그래지는 기분이에요~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게. 고마워, 클라라!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게. 고마워, 클라라!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "메리 크리스마스!"
+      },
+      {
+        "speaker": "클라라",
+        "message": "구원자님, 제가 음식 잔뜩 해놓을게요~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대할게. 고마워, 클라라!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대할게. 고마워, 클라라!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "클라라",
+      "en": "Clara",
+      "zh_tw": "克拉拉",
+      "zh_cn": "克拉拉"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "서포터",
+      "en": "Supporter",
+      "zh_tw": "輔助者",
+      "zh_cn": "輔助者"
+    },
+    "sub_class": {
+      "ko": "치료",
+      "en": "Heal",
+      "zh_tw": "治療",
+      "zh_cn": "治療"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "꿀빛 햇살",
+        "en": "Honey-Colored Sunlight",
+        "zh_tw": "蜜色的陽光",
+        "zh_cn": "蜜色的陽光"
+      },
+      "constellation": {
+        "ko": "사자자리",
+        "en": "Leo",
+        "zh_tw": "獅子座",
+        "zh_cn": "獅子座"
+      },
+      "union": {
+        "ko": "클라라 농장",
+        "en": "Clara Farm",
+        "zh_tw": "克拉拉農場",
+        "zh_cn": "克拉拉農場"
+      },
+      "cv_ko": {
+        "ko": "김하루",
+        "en": "Haru Kim",
+        "zh_tw": "金賀婁",
+        "zh_cn": "金賀婁"
+      },
+      "cv_jp": {
+        "ko": "Miho Okasaki",
+        "en": "Miho Okasaki",
+        "zh_tw": "Miho Okasaki",
+        "zh_cn": "Miho Okasaki"
+      },
+      "like": {
+        "ko": [
+          "사과",
+          "해바라기"
+        ],
+        "en": [
+          "Apples",
+          "sunflowers"
+        ],
+        "zh_tw": [
+          "蘋果、向日葵"
+        ],
+        "zh_cn": [
+          "蘋果、向日葵"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "비 오는 날"
+        ],
+        "en": [
+          "Rainy days"
+        ],
+        "zh_tw": [
+          "雨天"
+        ],
+        "zh_cn": [
+          "雨天"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "텃밭 가꾸기"
+        ],
+        "en": [
+          "Vegetable gardening"
+        ],
+        "zh_tw": [
+          "整理田地"
+        ],
+        "zh_cn": [
+          "整理田地"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "건강 체질"
+        ],
+        "en": [
+          "Healthy constitution"
+        ],
+        "zh_tw": [
+          "健康的身體"
+        ],
+        "zh_cn": [
+          "健康的身體"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "구원자님, 구원자님! 일어나세요! 오늘도 날씨가 참 좋아요!\n\n네…? 5분만 더 잔다고요? 오늘은 절대 안 돼요! 지난번처럼 기다릴 순 없어요! \n계속 이러시면 어쩔 수 없죠! \n다음 계절에는 구원자님이 싫어하는 채소만 재배할 거에요! \n\n앗…! 헤헤 일어났다. 평소에도 이렇게 일어나 주시면 얼마나 좋아요! 바른 생활, 바른 생활! \n너무 일어나기 싫은 아침도, 눈 딱 감고 일어나 보면 의외로 나쁘지 않죠? \n항상 아름다운 햇살이 구원자님과 함께할 거에요! 후후… 그럼 저는 마저 아침 준비를 해올게요? 기지개라도 펴고 계세요!",
+        "en": "Savior, Savior! Wake up! The weather is so good today!\n\nPardon…? \"Sleep for five more minutes\"? No way, not today! I can't just sit here and wait for you like last time!\nIf you keep doing this, then so be it!\nIn the next season, I will grow only vegetables that you hate!\n\nOh…! Hehe, you're awake. How nice would it be if you just woke up like this every day? Good and disciplined life!\nOne morning, you might not feel like waking up, but it's surprisingly not bad once you do, right?\nThe beautiful sunshine will always be with you, Savior! Hehe… I'll finish preparing our breakfast. Stretch yourself!",
+        "zh_tw": "救援者、救援者！快起床！今天天氣也很好呢！\n\n什麼…？你要再多睡五分鐘？今天絕對不行！我不能像上次一樣等你了！\n你要是再這樣，我也沒辦法了喔！\n下一季我只會種救援者討厭的蔬菜！\n\n啊…！嘿嘿，總算起來了。平常也像這樣乖乖起床該有多好！好好生活、好好生活！\n早上很不想起床時，牙一咬起床其實意外的不錯吧？\n總是美麗的陽光會陪伴著救援者！呵呵…那我先準備早餐吧？你可以先伸個懶腰！",
+        "zh_cn": "救援者、救援者！快起床！今天天氣也很好呢！\n\n什麼…？你要再多睡五分鐘？今天絕對不行！我不能像上次一樣等你了！\n你要是再這樣，我也沒辦法了喔！\n下一季我只會種救援者討厭的蔬菜！\n\n啊…！嘿嘿，總算起來了。平常也像這樣乖乖起床該有多好！好好生活、好好生活！\n早上很不想起床時，牙一咬起床其實意外的不錯吧？\n總是美麗的陽光會陪伴著救援者！呵呵…那我先準備早餐吧？你可以先伸個懶腰！"
+      },
+      "greeting": {
+        "ko": "좋은 아침, 좋은 햇살, 좋은 하루!",
+        "en": "Good morning, good sunshine, good day!",
+        "zh_tw": "宜人的早晨，和煦的陽光，美好的一天！",
+        "zh_cn": "宜人的早晨，和煦的陽光，美好的一天！"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "와아, 구원자님 안녕하세요~"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Wow, hello, Savior!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "哇啊，救援者你好～"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "哇啊，救援者你好～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "사과를 많이 따서요, 좀 나눠드리고 싶은데…"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I picked a lot of apples, I want to give you some…"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "我採收了很多蘋果，想分你一點…"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "我採收了很多蘋果，想分你一點…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "오늘 바쁘신가요?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Are you busy?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "今天忙嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "今天忙嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "와~"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Wow!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "哇～"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "哇～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "그럼 제가 광장까지 들고 갈게요~"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I'll bring them to the square,"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "那我把蘋果帶去廣場～"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "那我把蘋果帶去廣場～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "이왕 만나는 김에 포도도…"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "also grapes…"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "既然都要見面了，那葡萄…"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "既然都要見面了，那葡萄…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "복숭아도…"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "peaches…"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "桃子…"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "桃子…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "호박도…"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "pumpkins…"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "南瓜…"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "南瓜…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "네? 그렇지 않아요~"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "What? No, it's not!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "啊？不多啦～"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "啊？不多啦～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "다양한 요리를 많이 해서"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "You can make various dishes"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "只要做出各種料理"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "只要做出各種料理"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "식탁을 잔뜩 꾸미면 되죠!"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "and fill your table!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "然後將餐桌裝飾得滿滿的就行了！"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "然後將餐桌裝飾得滿滿的就行了！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "기다리세요, 구원자님~"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Wait there, Savior."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "敬請期待，救援者～"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "敬請期待，救援者～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "구, 구원자님"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "S-Savior"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "救、救援者"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "救、救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "저 몸이 왜 이렇게 가려울까요?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Why am I so itchy all over?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "我身體怎麼這麼癢？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "我身體怎麼這麼癢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "뭔가 울긋불긋한 수포가 몸에 잔뜩 올라왔어요"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I've got hives all over my body"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "身上長了一堆紅紅的水泡"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "身上長了一堆紅紅的水泡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "네? 하지만 풀이랑 저는 친한 친구인걸요!"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Huh? But I love grass. And grass is a friend to me."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "什麼？可是小草跟我是好朋友！"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "什麼？可是小草跟我是好朋友！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "풀이 제 몸에 그런 나쁜 짓을 했을 리가 없어요!"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "There's no way it could have done this to me!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "小草不可能對我的身體做那種壞事！"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "小草不可能對我的身體做那種壞事！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "구원자님…?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Savior...?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "救援者…？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "救援者…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "아니에요 이런 일로 병원이라뇨"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "What? No! No hospital."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "不用，怎麼會要看醫生呢"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "不用，怎麼會要看醫生呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "이럴 때는 오래 숙성시킨 약초 진액을 아픈 곳에 바르면 돼요!"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Just a few scoops of my long-aged herbal essence will do the trick!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "這種時候，只要在患處塗上發酵很久的濃縮藥草汁就好！"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "這種時候，只要在患處塗上發酵很久的濃縮藥草汁就好！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "구원자님, 어디 아프신 데는 없으시죠?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Savior, you're not sick, are you?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "救援者，你沒有哪裡不舒服吧？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "救援者，你沒有哪裡不舒服吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "요즘 감기를 앓는 분이 많으셔서 걱정이네요"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I'm worried about all the colds going around lately"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "因為最近很多人感冒，我很擔心"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "因為最近很多人感冒，我很擔心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "네!? 어디가 안 좋으세요?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Huh? What happened?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "什麼！？哪裡不舒服？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "什麼！？哪裡不舒服？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "네? 무리했다고요…?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Huh? You overexerted yourself? When?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "蛤？太逞強…？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "蛤？太逞強…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "설마 상추밭에 물을 주신 걸 말씀하시는 건가요?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "You mean, when you watered the lettuce plants?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "該不會是指幫生菜田澆水的事吧？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "該不會是指幫生菜田澆水的事吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "앗…"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Ah..."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "啊…"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "물을 조금 맞았다고 감기에 걸리시다니…"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "You caught a cold from a little water..."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "竟然因為被潑到一點水就感冒…"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "竟然因為被潑到一點水就感冒…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "구원자님은 갓 태어난 송아지 같으시네요"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Savior, you're like a newborn calf."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "救援者好像剛出生的小牛"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "救援者好像剛出生的小牛"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "어쩌면 송아지보다 연약하실지도…"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Maybe even more fragile than a calf..."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "也許你比小牛還軟弱…"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "也許你比小牛還軟弱…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "헤헤 그래도 걱정하지 마세요"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Heheh.h, but don't worry"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "嘿嘿，不過你別擔心"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "嘿嘿，不過你別擔心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "제가 피로 회복에 좋은 산삼을 캐 올게요!"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I'll go get you some wild ginseng to help you recover!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "我去採有助於恢復疲勞的山蔘回來！"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "我去採有助於恢復疲勞的山蔘回來！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "으음 구원자님"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Mm, Savior"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "呃嗯，救援者"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "呃嗯，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "요즘은 에버스타그램을 통해서 농작물 홍보를 많이 한대서"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I heard that a lot of farmers use Everstagram to promote their crops these days"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "聽說最近很流行在Everstagram上宣傳農作物"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "聽說最近很流行在Everstagram上宣傳農作物"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "저도 해 보려고 하는데 어떻게 해야 할까요?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I want to do the same, but I don't know how"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "我也想要，該怎麼做呢？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "我也想要，該怎麼做呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "이렇게요?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Like this?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "這樣嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "這樣嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "네? 맛있어 보이게 먹는 사진을 말씀하신 게 아닌가요!?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Didn't you mean a photo of me eating something that looks delicious?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "什麼？你不是說要看起來很美味的照片嗎！？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "什麼？你不是說要看起來很美味的照片嗎！？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "아하"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Aha"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "啊哈"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "啊哈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "으으 제가 말을 잘못 알아들었네요"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Ack, I misunderstood you"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "呃呃，我誤會你的意思了"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "呃呃，我誤會你的意思了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "부끄럽다"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I'm mortified"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "好害羞"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "好害羞"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "사진은 지워주실 수 있을까요?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Could you delete that photo, please?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "可以幫我刪掉照片嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "可以幫我刪掉照片嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "구, 구원자님!?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Sa-Savior?!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "救、救援者！？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "救、救援者！？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "구원자님 혹시 제가 안경을 쓰면 어떨 것 같으세요?"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Savior, what if I wore glasses?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "救援者覺得我戴眼鏡會怎麼樣？"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "救援者覺得我戴眼鏡會怎麼樣？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "네! 에리카 님도 그렇고"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Yes! Everyone who wears glasses"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "對！艾麗卡也是"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "對！艾麗卡也是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "안경을 쓰신 분들은 다 지적인 것 같아요"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "looks so intelligent, like Erika"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "戴眼鏡的人感覺都好知性"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "戴眼鏡的人感覺都好知性"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "저도 안경을 쓰면 조금 똑똑해 보이려나요 헤헤"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Maybe I would look intelligent, too, if I wore glasses. Heheh.h"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "我戴眼鏡看起來會比較聰明嗎？嘿嘿"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "我戴眼鏡看起來會比較聰明嗎？嘿嘿"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "하지만 안경이라니"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "At the same time, glasses?"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "可是竟然是眼鏡"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "可是竟然是眼鏡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "우으 제가 그렇게 똑똑한 정령의 특권을 누려도 되는 걸까요!!!"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Err, I don't know if I can have such a privilege for intelligent Souls..."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "嗚呃，我可以享有那種聰明精靈的特權嗎！！！"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "嗚呃，我可以享有那種聰明精靈的特權嗎！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "네!"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Yes!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "對！"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "對！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "저는 날아다니는 새의 깃털 무늬까지 보여요"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "I can even see the pattern of the feathers of a flying bird"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "在天上飛的鳥，我還能看見他們的羽毛紋理"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "在天上飛的鳥，我還能看見他們的羽毛紋理"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "후윽 구언ㄴ자님"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Boohoo... Savior..."
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "嗚嗚，救援ㄢ者"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "嗚嗚，救援ㄢ者"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "린지",
+          "message": "좀 지나치게 민간인 같아요. 으음. 지켜줘야겠다는 느낌…"
+        },
+        "en": {
+          "speaker": "Linzy",
+          "message": "She looks too civilian. Umm. It seems she needs my protection…"
+        },
+        "zh_tw": {
+          "speaker": "琳賽",
+          "message": "她有點太像平民了。呃嗯，會讓人覺得必須保護她…"
+        },
+        "zh_cn": {
+          "speaker": "琳賽",
+          "message": "她有點太像平民了。呃嗯，會讓人覺得必須保護她…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "재클린",
+          "message": "클라라의 질문. 스프링클러 기능.\n …해당 기능은 탑재 되어 있지 않습니다."
+        },
+        "en": {
+          "speaker": "Jacqueline",
+          "message": "A question from Clara…about the sprinkler function.\n…The function is not equipped."
+        },
+        "zh_tw": {
+          "speaker": "潔克琳",
+          "message": "克拉拉的詢問。灑水器功能。\n…未具備該功能。"
+        },
+        "zh_cn": {
+          "speaker": "潔克琳",
+          "message": "克拉拉的詢問。灑水器功能。\n…未具備該功能。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "농사에는 체력과 기술이 필요하다고 하더군요. 존경합니다."
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "It is said that farming requires physical strength and skills. I respect her."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "聽說務農需要同時具備體力和技術。太令人敬佩了。"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "聽說務農需要同時具備體力和技術。太令人敬佩了。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "와아, 구원자님 안녕하세요~"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Wow, hello, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "哇啊，救援者你好～"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "哇啊，救援者你好～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "사과를 많이 따서요, 좀 나눠드리고 싶은데…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I picked a lot of apples, I want to give you some…"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我採收了很多蘋果，想分你一點…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我採收了很多蘋果，想分你一點…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "오늘 바쁘신가요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Are you busy?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "今天忙嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "今天忙嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안 바빠"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'm not."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不忙"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안 바빠"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'm not."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不忙"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "와~"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Wow!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "哇～"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "哇～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그럼 제가 광장까지 들고 갈게요~"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'll bring them to the square,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "那我把蘋果帶去廣場～"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "那我把蘋果帶去廣場～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "이왕 만나는 김에 포도도…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "also grapes…"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "既然都要見面了，那葡萄…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "既然都要見面了，那葡萄…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "복숭아도…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "peaches…"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "桃子…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "桃子…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "호박도…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "pumpkins…"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "南瓜…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "南瓜…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 많을 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think that would be too much."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像太多了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像太多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 많을 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think that would be too much."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像太多了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像太多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네? 그렇지 않아요~"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "What? No, it's not!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "啊？不多啦～"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "啊？不多啦～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "다양한 요리를 많이 해서"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "You can make various dishes"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "只要做出各種料理"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "只要做出各種料理"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "식탁을 잔뜩 꾸미면 되죠!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "and fill your table!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "然後將餐桌裝飾得滿滿的就行了！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "然後將餐桌裝飾得滿滿的就行了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "기다리세요, 구원자님~"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Wait there, Savior."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "敬請期待，救援者～"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "敬請期待，救援者～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구, 구원자님"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "S-Savior"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救、救援者"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救、救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "저 몸이 왜 이렇게 가려울까요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Why am I so itchy all over?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我身體怎麼這麼癢？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我身體怎麼這麼癢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "뭔가 울긋불긋한 수포가 몸에 잔뜩 올라왔어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I've got hives all over my body"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "身上長了一堆紅紅的水泡"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "身上長了一堆紅紅的水泡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "풀밭에서 뒹굴어서 그런 게 아닐까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe it's from rolling around in the grass"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是不是因為妳在草地上滾來滾去？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是不是因為妳在草地上滾來滾去？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "풀밭에서 뒹굴어서 그런 게 아닐까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe it's from rolling around in the grass"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是不是因為妳在草地上滾來滾去？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是不是因為妳在草地上滾來滾去？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네? 하지만 풀이랑 저는 친한 친구인걸요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Huh? But I love grass. And grass is a friend to me."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "什麼？可是小草跟我是好朋友！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "什麼？可是小草跟我是好朋友！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "풀이 제 몸에 그런 나쁜 짓을 했을 리가 없어요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "There's no way it could have done this to me!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "小草不可能對我的身體做那種壞事！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "小草不可能對我的身體做那種壞事！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님…?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior...?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者…？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 더 해줄 말은 없고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There's nothing more I can say"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒什麼話要說了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒什麼話要說了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 더 해줄 말은 없고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There's nothing more I can say"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒什麼話要說了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒什麼話要說了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "병원에 가 보는 게 좋겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You should go to the hospital"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "最好去看個醫生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "最好去看個醫生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "병원에 가 보는 게 좋겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You should go to the hospital"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "最好去看個醫生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "最好去看個醫生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "아니에요 이런 일로 병원이라뇨"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "What? No! No hospital."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "不用，怎麼會要看醫生呢"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "不用，怎麼會要看醫生呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "이럴 때는 오래 숙성시킨 약초 진액을 아픈 곳에 바르면 돼요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Just a few scoops of my long-aged herbal essence will do the trick!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "這種時候，只要在患處塗上發酵很久的濃縮藥草汁就好！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "這種時候，只要在患處塗上發酵很久的濃縮藥草汁就好！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제발 병원에 가 줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Please go to the hospital"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "拜託妳去看醫生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "拜託妳去看醫生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제발 병원에 가 줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Please go to the hospital"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "拜託妳去看醫生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "拜託妳去看醫生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님, 어디 아프신 데는 없으시죠?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, you're not sick, are you?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者，你沒有哪裡不舒服吧？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者，你沒有哪裡不舒服吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "요즘 감기를 앓는 분이 많으셔서 걱정이네요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'm worried about all the colds going around lately"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "因為最近很多人感冒，我很擔心"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "因為最近很多人感冒，我很擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아파…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I am..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不舒服…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不舒服…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아파…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I am..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不舒服…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不舒服…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네!? 어디가 안 좋으세요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Huh? What happened?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "什麼！？哪裡不舒服？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "什麼！？哪裡不舒服？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저번에 클라라 농장에서 무리해서…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I overexerted myself at your farm the other day..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "上次在克拉拉農場太逞強了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "上次在克拉拉農場太逞強了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저번에 클라라 농장에서 무리해서…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I overexerted myself at your farm the other day..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "上次在克拉拉農場太逞強了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "上次在克拉拉農場太逞強了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네? 무리했다고요…?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Huh? You overexerted yourself? When?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "蛤？太逞強…？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "蛤？太逞強…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "설마 상추밭에 물을 주신 걸 말씀하시는 건가요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "You mean, when you watered the lettuce plants?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "該不會是指幫生菜田澆水的事吧？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "該不會是指幫生菜田澆水的事吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 물을 맞고 온몸이 젖었으니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I got wet from the water"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那時候被水潑到全身溼透"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那時候被水潑到全身溼透"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 물을 맞고 온몸이 젖었으니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I got wet from the water"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那時候被水潑到全身溼透"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那時候被水潑到全身溼透"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "감기 걸린 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "and caught a cold"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像就感冒了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像就感冒了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "감기 걸린 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "and caught a cold"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像就感冒了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像就感冒了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "앗…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Ah..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "啊…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "물을 조금 맞았다고 감기에 걸리시다니…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "You caught a cold from a little water..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "竟然因為被潑到一點水就感冒…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "竟然因為被潑到一點水就感冒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님은 갓 태어난 송아지 같으시네요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, you're like a newborn calf."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者好像剛出生的小牛"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者好像剛出生的小牛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "어쩌면 송아지보다 연약하실지도…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Maybe even more fragile than a calf..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "也許你比小牛還軟弱…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "也許你比小牛還軟弱…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라 기준이라면 누구든 연약할 거야…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "By your standards, everyone is fragile..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "按照克拉拉的標準，誰都很軟弱…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "按照克拉拉的標準，誰都很軟弱…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라 기준이라면 누구든 연약할 거야…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "By your standards, everyone is fragile..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "按照克拉拉的標準，誰都很軟弱…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "按照克拉拉的標準，誰都很軟弱…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헤헤 그래도 걱정하지 마세요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Heheh.h, but don't worry"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，不過你別擔心"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，不過你別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "제가 피로 회복에 좋은 산삼을 캐 올게요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'll go get you some wild ginseng to help you recover!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我去採有助於恢復疲勞的山蔘回來！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我去採有助於恢復疲勞的山蔘回來！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "으음 구원자님"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Mm, Savior"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "呃嗯，救援者"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "呃嗯，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "요즘은 에버스타그램을 통해서 농작물 홍보를 많이 한대서"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I heard that a lot of farmers use Everstagram to promote their crops these days"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "聽說最近很流行在Everstagram上宣傳農作物"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "聽說最近很流行在Everstagram上宣傳農作物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "저도 해 보려고 하는데 어떻게 해야 할까요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I want to do the same, but I don't know how"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我也想要，該怎麼做呢？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我也想要，該怎麼做呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맛있어 보이게 사진을 찍으면 되지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why don't you take some photos that look delicious?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "把照片拍得看起來很美味就好了吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "把照片拍得看起來很美味就好了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맛있어 보이게 사진을 찍으면 되지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why don't you take some photos that look delicious?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "把照片拍得看起來很美味就好了吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "把照片拍得看起來很美味就好了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "이렇게요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Like this?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "這樣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "這樣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "농작물이 아니라 클라라 사진이잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's your photo, not the crops"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這不是農作物，是克拉拉的照片耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這不是農作物，是克拉拉的照片耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "농작물이 아니라 클라라 사진이잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's your photo, not the crops"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這不是農作物，是克拉拉的照片耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這不是農作物，是克拉拉的照片耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네? 맛있어 보이게 먹는 사진을 말씀하신 게 아닌가요!?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Didn't you mean a photo of me eating something that looks delicious?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "什麼？你不是說要看起來很美味的照片嗎！？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "什麼？你不是說要看起來很美味的照片嗎！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 농작물 사진을 말한 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I meant the photos of your crops"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我是指農作物的照片"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我是指農作物的照片"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 농작물 사진을 말한 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I meant the photos of your crops"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我是指農作物的照片"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我是指農作物的照片"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "아하"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Aha"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "啊哈"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "啊哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "으으 제가 말을 잘못 알아들었네요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Ack, I misunderstood you"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "呃呃，我誤會你的意思了"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "呃呃，我誤會你的意思了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "부끄럽다"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'm mortified"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "好害羞"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "好害羞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "사진은 지워주실 수 있을까요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Could you delete that photo, please?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "可以幫我刪掉照片嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "可以幫我刪掉照片嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저장 완료"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Saved"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "儲存完畢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "儲存完畢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저장 완료"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Saved"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "儲存完畢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "儲存完畢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구, 구원자님!?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Sa-Savior?!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救、救援者！？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救、救援者！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님 혹시 제가 안경을 쓰면 어떨 것 같으세요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, what if I wore glasses?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者覺得我戴眼鏡會怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者覺得我戴眼鏡會怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안경?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Glasses?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "眼鏡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "眼鏡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안경?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Glasses?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "眼鏡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "眼鏡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네! 에리카 님도 그렇고"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Yes! Everyone who wears glasses"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "對！艾麗卡也是"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "對！艾麗卡也是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "안경을 쓰신 분들은 다 지적인 것 같아요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "looks so intelligent, like Erika"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "戴眼鏡的人感覺都好知性"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "戴眼鏡的人感覺都好知性"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "저도 안경을 쓰면 조금 똑똑해 보이려나요 헤헤"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Maybe I would look intelligent, too, if I wore glasses. Heheh.h"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我戴眼鏡看起來會比較聰明嗎？嘿嘿"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我戴眼鏡看起來會比較聰明嗎？嘿嘿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "하지만 안경이라니"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "At the same time, glasses?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "可是竟然是眼鏡"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "可是竟然是眼鏡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "우으 제가 그렇게 똑똑한 정령의 특권을 누려도 되는 걸까요!!!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Err, I don't know if I can have such a privilege for intelligent Souls..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嗚呃，我可以享有那種聰明精靈的特權嗎！！！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嗚呃，我可以享有那種聰明精靈的特權嗎！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안경이 특권까지는 아니지 않을까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't think glasses are a privilege"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "眼鏡應該不算特權吧…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "眼鏡應該不算特權吧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안경이 특권까지는 아니지 않을까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't think glasses are a privilege"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "眼鏡應該不算特權吧…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "眼鏡應該不算特權吧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라는 시력이 좋아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Clara, do you have good eyesight?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克拉拉視力很好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克拉拉視力很好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라는 시력이 좋아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Clara, do you have good eyesight?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克拉拉視力很好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克拉拉視力很好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Yes!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "對！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "對！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "저는 날아다니는 새의 깃털 무늬까지 보여요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I can even see the pattern of the feathers of a flying bird"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "在天上飛的鳥，我還能看見他們的羽毛紋理"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "在天上飛的鳥，我還能看見他們的羽毛紋理"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대, 대단한걸…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I-incredible..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好、好厲害…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好、好厲害…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대, 대단한걸…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I-incredible..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好、好厲害…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好、好厲害…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "후윽 구언ㄴ자님"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Boohoo... Savior..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嗚嗚，救援ㄢ者"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嗚嗚，救援ㄢ者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "ㅠㅠㅠㅠㅠ"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "T.T"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嗚嗚嗚嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嗚嗚嗚嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "아기 돼지 삼형제라는 동화를 읽었는데 너무 슬퍼요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I read a children's book called The Three Little Pigs, and it's so sad"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我讀了三隻小豬的童話故事，好傷心"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我讀了三隻小豬的童話故事，好傷心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "돼지 형제가 열심히 지은 집을 부수다니 정말 못된 늑대예요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "That wolf was so mean, destroying the houses that the pig brothers worked so hard to build!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "竟然破壞了小豬兄弟認真蓋的房子，大野狼真的好壞！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "竟然破壞了小豬兄弟認真蓋的房子，大野狼真的好壞！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님은 그 상황이라면 어떻게 하실 건가요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, what would you do in that situation?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "如果是救援者碰到那種狀況，你會怎麼做？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "如果是救援者碰到那種狀況，你會怎麼做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 돼지 형제라면?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If I were one of the pig brothers?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果我是小豬兄弟嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果我是小豬兄弟嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 돼지 형제라면?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If I were one of the pig brothers?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果我是小豬兄弟嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果我是小豬兄弟嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Yes!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "對！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "對！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음 역시 고소해야겠지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I would sue him"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，果然要告他吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，果然要告他吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음 역시 고소해야겠지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I would sue him"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，果然要告他吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，果然要告他吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "고, 고소요!?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "S-sue him?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "告、告他！？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "告、告他！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "허억… 동물의 세계에도 그런 법이 있는 걸까요…!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Err... Are there even laws like that in the animal kingdom...?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "呼呃…動物的世界也有那種法律嗎…！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "呼呃…動物的世界也有那種法律嗎…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라라면 어떻게 할 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Clara, what would you do?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "換作是克拉拉，妳會怎麼做？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "換作是克拉拉，妳會怎麼做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라라면 어떻게 할 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Clara, what would you do?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "換作是克拉拉，妳會怎麼做？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "換作是克拉拉，妳會怎麼做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "저는… 늑대를 위한 선물을 준비할 것 같아요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'd prepare a gift for the wolf"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我…應該會準備給大野狼的禮物"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我…應該會準備給大野狼的禮物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "사과랑 꽃을 선물하면"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "If I gave him apples and flowers,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "送他蘋果跟花朵的話"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "送他蘋果跟花朵的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "늑대도 나쁜 마음이 사르르 풀려서 생각을 바꿀 거예요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "he'd feel good and change his mind"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "大野狼的壞心思也會被感化，改變想法的"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "大野狼的壞心思也會被感化，改變想法的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 늑대는 사과보다 돼지를 먹고 싶을 텐데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But the wolf would rather eat a pig than an apple"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但比起蘋果，大野狼應該更想吃小豬耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但比起蘋果，大野狼應該更想吃小豬耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 늑대는 사과보다 돼지를 먹고 싶을 텐데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But the wolf would rather eat a pig than an apple"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但比起蘋果，大野狼應該更想吃小豬耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但比起蘋果，大野狼應該更想吃小豬耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헉"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Heek!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "呃"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Clara...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克拉拉…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克拉拉…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Clara...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克拉拉…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克拉拉…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "T.T"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "QQQQQQQQQQQQQQQ"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "QQQQQQQQQQQQQQQ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "ㅠㅠㅠㅠ"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": ":'(  >:O"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嗚嗚嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嗚嗚嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해, 내가 잘못했어…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry. Please don't cry..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，是我錯了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，是我錯了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해, 내가 잘못했어…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry. Please don't cry..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，是我錯了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，是我錯了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "제가 쓴 비료가 토양에 특수한 영향을 미쳤다니"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "The fertilizer I used had a special effect on the soil...?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我用的肥料竟然會給土壤帶來特殊影響"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我用的肥料竟然會給土壤帶來特殊影響"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그건 정말 일반적인 거름이었는데"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "But it was just regular manure"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "那真的是很普通的肥料耶"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "那真的是很普通的肥料耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "제, 제가 뭔가 실수한 건 아니겠죠?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I-I didn't do something wrong, did I?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "應、應該不是我做錯了什麼吧？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "應、應該不是我做錯了什麼吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "쓰지 말아야 할 비료를 사용했다거나…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Like using a fertilizer that I shouldn't have used?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "像是用了不能用的肥料…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "像是用了不能用的肥料…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "실수한 건 아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You didn't"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳沒有做錯事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳沒有做錯事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "실수한 건 아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You didn't"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳沒有做錯事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳沒有做錯事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오히려 땅이 정화됐으니까 엄청난 발견이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It cleansed the land. This is a great discovery"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "反而是土地被淨化，是個了不起的發現"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "反而是土地被淨化，是個了不起的發現"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오히려 땅이 정화됐으니까 엄청난 발견이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It cleansed the land. This is a great discovery"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "反而是土地被淨化，是個了不起的發現"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "反而是土地被淨化，是個了不起的發現"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그, 그런 거죠?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "R-really?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "對、對吧？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "對、對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "다행이에요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Good"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "만약 제가 쓴 비료로 땅을 정화할 수 있다면…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "If my fertilizer can cleanse the land"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "如果我用的肥料可以淨化土地…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "如果我用的肥料可以淨化土地…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "빨리 솔레이 전역의 땅들이 정화됐으면 좋겠어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I can't wait to cleanse the land all over Solrey"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "希望蘇萊伊全境的土地都能被淨化"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "希望蘇萊伊全境的土地都能被淨化"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "숲지기가 제 농장을 살펴보러 와 주신다고 해서"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I was told a Forest Keeper would come by to inspect my farm,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "森林守護者說要來看看我的農場"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "森林守護者說要來看看我的農場"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "혹시 하루가 올지도 몰라서 준비한 게 있었어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "so I prepared something in case it was Haru"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "說不定河路會來，所以我有準備東西"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "說不定河路會來，所以我有準備東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "꼬리빗을 준비했는데 못 써서 아쉬워요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "A tail comb! It's a shame I couldn't use it"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "準備了尾巴專用梳子，沒有用到好可惜"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "準備了尾巴專用梳子，沒有用到好可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꼬리빗?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A tail comb?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尾巴專用梳子？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尾巴專用梳子？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꼬리빗?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A tail comb?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尾巴專用梳子？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尾巴專用梳子？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네! 하루 꼬리를 빗겨 주려고 했었거든요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Yes! I wanted to brush Haru's tail"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "對！我本來想幫河路梳尾巴"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "對！我本來想幫河路梳尾巴"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "꼬리를 빗으면 부들부들해져서 기분이 좋아요♪"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "When I brush my tail, it's so fluffy. It makes me feel good ♪"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "梳開尾巴就會變得很蓬鬆柔軟，感覺很棒♪"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "梳開尾巴就會變得很蓬鬆柔軟，感覺很棒♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그리고 빗에 붙은 털들을 모아서 공을 만들면"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Also, you can make a ball with the hairs on the comb"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "然後再把黏在梳子上的毛聚集起來做成球"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "然後再把黏在梳子上的毛聚集起來做成球"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "재밌는 장난감으로 쓸 수도 있어요♪"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "and play with it ♪"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "就可以當好玩的玩具使用♪"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "就可以當好玩的玩具使用♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헉 그런데 구원자님은 꼬리가 없으니까"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Ah, but you don't have a tail..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嗬，不過救援者沒有尾巴"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嗬，不過救援者沒有尾巴"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "으음"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "제가 다른 털이라도 빗겨드릴까요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Do you want me to brush you somewhere else?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "要我幫你梳其他地方的毛嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "要我幫你梳其他地方的毛嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괘, 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "N-no, thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不、不用"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不、不用"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괘, 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "N-no, thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不、不用"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不、不用"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "제가 아케나인에 처음 왔을 때"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "When I first came to Arkenine,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我第一次來到阿肯納因的時候"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我第一次來到阿肯納因的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "지저분한 동물과 다름없었던 저를"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "it was the villagers who took care of me"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "跟髒兮兮的動物沒兩樣"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "跟髒兮兮的動物沒兩樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "씻기고 먹이고 입히고 가르쳐 주셨던 건 마을 주민들이셨어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "when I was little more than a dirty animal"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "幫我洗澡、讓我吃飽穿暖，還教會我事情的就是村莊居民"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "幫我洗澡、讓我吃飽穿暖，還教會我事情的就是村莊居民"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그런데 이제 그분들이 저를 미워하다니…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "And now they hate me..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "但現在他們竟然討厭我了…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "但現在他們竟然討厭我了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "저의 부족함으로 저를 미워하는 건 상관없지만"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I don't mind them hating me for my own faults,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "如果是我做得不夠好所以討厭我，那我無所謂"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "如果是我做得不夠好所以討厭我，那我無所謂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님까지 안 좋게 보시다니…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "but if they think badly of you because of me..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "但他們連對救援者都沒有好臉色…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "但他們連對救援者都沒有好臉色…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님께 민폐를 끼친 것 같아 죄송해요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'm so sorry, Savior."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "感覺造成救援者困擾了，真的很抱歉"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "感覺造成救援者困擾了，真的很抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "역시 저는 혼자 숲에서 사는 게 어울리는 정령인 걸까요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Maybe I'm the kind of Soul who belongs alone in the woods, after all..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我果然是適合獨自住在森林裡的精靈嗎"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我果然是適合獨自住在森林裡的精靈嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇지 않아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's not true"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇지 않아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's not true"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사실을 잘 설명한다면 오해가 풀릴 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "They will understand if you explain the facts"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "把事實說清楚，就能解開誤會"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "把事實說清楚，就能解開誤會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사실을 잘 설명한다면 오해가 풀릴 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "They will understand if you explain the facts"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "把事實說清楚，就能解開誤會"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "把事實說清楚，就能解開誤會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "…네, 구원자님"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "... Okay, Savior"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "…好，救援者"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "…好，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님을 위해서라도 꼭 오해를 풀고 싶어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I really want to clear up the misunderstanding for your sake"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "就算是為了救援者，我也想解開誤會"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "就算是為了救援者，我也想解開誤會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님은 스트레스를 받을 때 어떻게 푸시나요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, how do you relieve yourself when you're stressed?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者感覺有壓力的時候，都怎麼緩解呢？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者感覺有壓力的時候，都怎麼緩解呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루 정도는 일을 쉬고 휴식하는 게 제일 좋지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I take a day off from work and relax"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "休息是最好的，我會休息一天不工作"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "休息是最好的，我會休息一天不工作"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루 정도는 일을 쉬고 휴식하는 게 제일 좋지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I take a day off from work and relax"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "休息是最好的，我會休息一天不工作"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "休息是最好的，我會休息一天不工作"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쉴 수만 있다면…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If I could, of course"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可以休息的話…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可以休息的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쉴 수만 있다면…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If I could, of course"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可以休息的話…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可以休息的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님이랑 같이 외출하면 좋을 텐데"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'd love to go out with you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "能跟救援者一起外出就好了"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "能跟救援者一起外出就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "바쁜 일이 마무리되면 잠깐 바람이라도 쐐요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Maybe we could get some air when you're done being busy"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "等你忙完，我們去吹吹風吧"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "等你忙完，我們去吹吹風吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "스트레스 해소에 좋은 장난감도 잔뜩 있거든요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I have tons of toys to help us de-stress, too!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我也有一堆適合舒壓的玩具"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我也有一堆適合舒壓的玩具"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "장난감?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Toys?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "玩具？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "玩具？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "장난감?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Toys?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "玩具？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "玩具？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헤헤 기대하셔도 좋아요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Heheh.h. You can look forward to it"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，你可以期待一下"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，你可以期待一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님! 오늘도 햇살이 따사로운 하루예요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior! It's a beautiful day today!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者！今天也是陽光明媚的一天"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者！今天也是陽光明媚的一天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "바람도 선선하고 코를 간질이는 풀 냄새도 너무 향긋해요~!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "The breeze is fresh, and the grass smells so fragrant!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "微風很涼爽，撲鼻而來的青草味也很清香～！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "微風很涼爽，撲鼻而來的青草味也很清香～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "안 되겠어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Alright"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "不行了"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "不行了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "아껴뒀던 수영복을 입어야겠어요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'm going to wear that swimsuit I've been saving!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我要穿珍藏的泳裝！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我要穿珍藏的泳裝！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "수영하러 가려고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "To go swimming?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要去游泳嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要去游泳嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "수영하러 가려고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "To go swimming?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要去游泳嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要去游泳嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "아뇨~ 풀밭에 가려고요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "No. To go lie on the grass"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "沒有～我要去草地"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "沒有～我要去草地"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "수영복을 입고 풀밭에 간다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "To lie on the grass? In your swimsuit?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要穿泳裝去草地？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要穿泳裝去草地？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "수영복을 입고 풀밭에 간다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "To lie on the grass? In your swimsuit?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要穿泳裝去草地？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要穿泳裝去草地？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헤헤 네!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Teehee! Yes!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，對！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，對！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "앗"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Ah"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "농사일하기 전에 얼른 다녀와야 해요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'd better do it before I start farming!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "要在種田之前趕快回來！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "要在種田之前趕快回來！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "먼저 실례할게요 구원자님!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Now, if you'll excuse me, Savior..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我先失陪了，救援者！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我先失陪了，救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님! 사과주스 좋아하세요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, do you like apple juice?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者！你喜歡蘋果汁嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者！你喜歡蘋果汁嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "제 농장에 오시면 사과주스를 대접하고 싶어서요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "If you come to my farm, I'd love to treat you to some apple juice."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "如果你來到我的農場，我想請你喝蘋果汁！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "如果你來到我的農場，我想請你喝蘋果汁！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헤헤 그럼 손으로 꽈아악 짜서 사과주스를 만들어 둘게요♪"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Heheh.h, then I'll squeeze some apples with my hands and make juice for you ♪"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，那我會徒手榨好蘋果汁♪"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，那我會徒手榨好蘋果汁♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사과를 손으로 짠다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Squeeze the apples with your hands?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要徒手榨蘋果？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要徒手榨蘋果？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사과를 손으로 짠다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Squeeze the apples with your hands?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要徒手榨蘋果？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要徒手榨蘋果？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네! 손을 깨끗하게 씻고"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Yes! I wash my hands thoroughly"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "對！把手洗乾淨之後"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "對！把手洗乾淨之後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "사과를 한 손으로 쥐면 으깨져요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "and hold the apples in one hand to squeeze them"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "用單手拿著就能捏碎蘋果"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "用單手拿著就能捏碎蘋果"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "한 손으로 사과를 으깰 수 있어!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In one hand?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳可以單手捏碎蘋果！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳可以單手捏碎蘋果！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "한 손으로 사과를 으깰 수 있어!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In one hand?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳可以單手捏碎蘋果！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳可以單手捏碎蘋果！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "당연하죠♪ 도구를 쓰는 것보다 손으로 으깨는 게 빠르더라고요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Of course ♪ It's faster to do it by hand than to use a tool."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "當然可以♪比起用工具榨汁，用手捏比較快"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "當然可以♪比起用工具榨汁，用手捏比較快"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "원래 음식은 손맛이 들어가야 맛있는 법이랬어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Also, food tastes better when it's made with your bare hands."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "食物本來就要有手工的味道才好吃"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "食物本來就要有手工的味道才好吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그러니까 주스에 제 손맛을 듬뿍듬뿍 담아드릴게요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'll treat you to the best juice you've ever had!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "所以我會在果汁裡加入滿滿手工的味道！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "所以我會在果汁裡加入滿滿手工的味道！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "주스에는 손맛이 들어가지 않아도 괜찮지 않을까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't mind not having the best juice..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "果汁裡沒有手工的味道應該也沒關係吧…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "果汁裡沒有手工的味道應該也沒關係吧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "주스에는 손맛이 들어가지 않아도 괜찮지 않을까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't mind not having the best juice..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "果汁裡沒有手工的味道應該也沒關係吧…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "果汁裡沒有手工的味道應該也沒關係吧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님, 별을 그릴 줄 아시나요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, do you know how to draw stars?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者，你會畫星星嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者，你會畫星星嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "별?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Stars?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "星星？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "星星？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "별?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Stars?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "星星？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "星星？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네 오두막 바닥에 커다란 별을 그리려고요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I want to draw a big star on the floor of my cabin"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "對，我想在窩棚地上畫巨大的星星"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "對，我想在窩棚地上畫巨大的星星"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "별을 그리고 그 안에 앉아 있으면"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "If I draw a star and sit in it,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "畫上星星，坐在裡面的話"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "畫上星星，坐在裡面的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그분도 저를 바로 발견하시겠죠?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "she'll find me right away, won't she?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "他很快就能發現我了吧？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "他很快就能發現我了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그분이라니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She? Who?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "誰？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그분이라니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She? Who?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "誰？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "앗 구원자님 시간이 없어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Oh, Savior, there's no time"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "啊，救援者沒時間了"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "啊，救援者沒時間了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그분과 인사하려면 준비해야 할 게 많거든요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I have many things to prepare before she arrives"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "要跟他打招呼的話，有很多東西要準備"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "要跟他打招呼的話，有很多東西要準備"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "이따 뵈어요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "See you!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "等會見！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "等會見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "으우으"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Uggghhh"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "呃唔呃"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "呃唔呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님 저 너무 고민돼요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, I don't know what to do"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者，我好苦惱"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者，我好苦惱"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "오늘은 땅님에게 어떤 음식을 드려야 할까요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "What kind of food should I offer to the earth today?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "今天要給大地之神什麼樣的食物呢？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "今天要給大地之神什麼樣的食物呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "땅님이 음식도 먹는 거야!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Does the earth eat food?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "大地之神還會進食嗎！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "大地之神還會進食嗎！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "땅님이 음식도 먹는 거야!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Does the earth eat food?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "大地之神還會進食嗎！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "大地之神還會進食嗎！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "네! 저번에 도토리를 주워서 오두막에 뒀는데"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Yes! The other day I picked up some acorns and left them in the cabin"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "會！我上次撿了橡實，放在窩棚裡"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "會！我上次撿了橡實，放在窩棚裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "다음날 가 보니까 도토리가 전부 없어진 거 있죠!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "The next day, they were all gone!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "結果隔天去看，發現橡實全都不見了"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "結果隔天去看，發現橡實全都不見了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "땅님은 도토리를 좋아하시나 봐요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "The earth must love acorns"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "看來大地之神喜歡橡實"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "看來大地之神喜歡橡實"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "으음 그건 다람쥐가 가져간 게 아닐까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm. Maybe a squirrel took them"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "呃嗯，那是不是松鼠拿走的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "呃嗯，那是不是松鼠拿走的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "으음 그건 다람쥐가 가져간 게 아닐까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm. Maybe a squirrel took them"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "呃嗯，那是不是松鼠拿走的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "呃嗯，那是不是松鼠拿走的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "앗!?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Ah!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "啊！？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "啊！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헤헤 구원자님 이웃분들을 만날 때"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Heheh.h. Savior, I'd like to wear something a little nicer"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，救援者，我見鄰居的時候"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，救援者，我見鄰居的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "좀 더 깔끔한 옷을 입고 싶은데 뭐가 좋을까요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "when I meet my neighbors. What should I wear?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "想穿更整潔一點的衣服，要穿什麼好呢？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "想穿更整潔一點的衣服，要穿什麼好呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "늘 입고 다니는 옷도 괜찮은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Your usual clothes are fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "平常穿的衣服也可以"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "平常穿的衣服也可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "늘 입고 다니는 옷도 괜찮은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Your usual clothes are fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "平常穿的衣服也可以"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "平常穿的衣服也可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그런가요? 그런데 이건 농사일할 때 입는 옷이어서요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "You think so? But these are my farming clothes"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "是嗎？可是那是種田時穿的衣服"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "是嗎？可是那是種田時穿的衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "자세히 보면 여기저기 얼룩졌어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "If you look closely, there's stains everywhere"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "仔細看的話，到處都是髒汙"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "仔細看的話，到處都是髒汙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "사실 전 옷에 관심이 있는 편은 아니지만"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'm not really a clothes person"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "其實我對穿搭沒什麼興趣"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "其實我對穿搭沒什麼興趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그래도 이웃분들을 만날 때는 단정해 보이고 싶네요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "but I still want to look presentable when I meet my neighbors"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "但見鄰居的時候，想要看起來端莊一點！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "但見鄰居的時候，想要看起來端莊一點！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 가진 옷 중에 가장 단정한 옷을 입으면 어때?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then, why don't you wear the neatest clothes you have?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那穿妳的衣服當中，最端莊的怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那穿妳的衣服當中，最端莊的怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 가진 옷 중에 가장 단정한 옷을 입으면 어때?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then, why don't you wear the neatest clothes you have?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那穿妳的衣服當中，最端莊的怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那穿妳的衣服當中，最端莊的怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "앗 그럼"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Ah, then"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "啊，那麼"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "啊，那麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "수영복을 입어야겠네요♪"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'll wear my swimsuit ♪"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "要穿泳衣了♪"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "要穿泳衣了♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "면적이 작으니까 흙에 오염될 일도 적을 거예요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Since they're tiny, I don't have to worry about them getting dirty!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "面積很小，就比較不會被土弄髒！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "面積很小，就比較不會被土弄髒！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 원래 입던 옷이 좋을 것 같아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Just wear your usual clothes..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該穿妳原本穿的衣服就可以了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該穿妳原本穿的衣服就可以了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 원래 입던 옷이 좋을 것 같아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Just wear your usual clothes..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該穿妳原本穿的衣服就可以了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該穿妳原本穿的衣服就可以了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님은 상대가 연락을 받지 않으면 어떻게 하세요?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, what do you do if someone doesn't answer your calls?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "如果對方不和你聯絡的話，救援者會怎麼做？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "如果對方不和你聯絡的話，救援者會怎麼做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연락을 받지 않는다니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼叫不和你聯絡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼叫不和你聯絡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연락을 받지 않는다니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼叫不和你聯絡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼叫不和你聯絡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그게… 제 착각일지도 모르겠지만요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Well, maybe I'm mistaken,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "那個…也有可能是我想多了"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "那個…也有可能是我想多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "이웃분들이 요즘 따라 제가 연락을 할 때마다 바쁘다고 하시고"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "but lately, all my neighbors have been telling me that they're busy"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "最近聯絡鄰居的時候，對方都說很忙"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "最近聯絡鄰居的時候，對方都說很忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "파이를 구워서 나눠드리려고 했는데 답장이 없으시네요…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "And they wouldn't respond to me when I texted that I wanted to bake some pies for them"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我烤了派想分給大家吃，但鄰居都沒有回覆…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我烤了派想分給大家吃，但鄰居都沒有回覆…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "설마 제가 뭔가 잘못한 건 아니겠죠?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Do you think I did something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "該不會是我做錯了什麼吧？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "該不會是我做錯了什麼吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 건 아닐 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I doubt it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會是那樣的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會是那樣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 건 아닐 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I doubt it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會是那樣的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會是那樣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헤헤 구원자님이 그렇게 말씀해 주시니까 마음이 놓이네요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Heheh.h, I'm relieved to hear you say that"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，既然救援者這麼說，就讓我放心了"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，既然救援者這麼說，就讓我放心了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그만 신경 쓰고 할 일을 해야겠어요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I should stop worrying and just focus on what I can do!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我不要再想了，要做我該做的事！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我不要再想了，要做我該做的事！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "제가 쓴 비료의 효능이 밝혀져서"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I hope the benefits of my fertilizer will be discovered"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "希望我用的肥料功效可以被大眾所知"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "希望我用的肥料功效可以被大眾所知"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "솔레이 분들에게 도움이 됐으면 좋겠어요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "and help the people of Solrey"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "然後幫助到蘇萊伊的人們"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "然後幫助到蘇萊伊的人們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그리고 이웃분들도 오해를 푸셔야 할 텐데…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "And clear up the misunderstanding with my neighbors, too"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "還有，鄰居們要解開誤會才行…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "還有，鄰居們要解開誤會才行…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "괜히 구원자님도 저 때문에 이상한 소문에 휘말린 것 같아서"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, I'm sorry that you've been caught up in this"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "感覺我害得救援者，連帶被捲進奇怪的傳聞"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "感覺我害得救援者，連帶被捲進奇怪的傳聞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "마음이 아파요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "because of me"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "讓我好心痛"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "讓我好心痛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 신경 쓰지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't worry about me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不用在意我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不用在意我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 신경 쓰지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't worry about me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不用在意我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不用在意我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그렇게 말씀해 주셔서 감사해요 구원자님"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Thank you for saying that, Savior"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "謝謝你這麼說，救援者"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "謝謝你這麼說，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "다른 분들이 저를 오해하는 시선을"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I can accept"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "其他人誤會我的眼神"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "其他人誤會我的眼神"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "미워하는 일을"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "the way people look at me,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "討厭我"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "討厭我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "그대로 받아들이려고 해요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "the way they hate me"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我打算就這樣接受"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我打算就這樣接受"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "하지만 구원자님만큼은…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "But not the way they treat you because of me..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "但至少救援者…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "但至少救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님, 저를 도와주셔서 감사해요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, thank you for helping me."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者，謝謝你幫我"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者，謝謝你幫我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "모두가 저를 오해하고 미워하는 순간에도"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Thank you for believing in me,"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "在所有人都誤解我、討厭我的時刻"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "在所有人都誤解我、討厭我的時刻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "저를 믿어 주셔서 감사해요"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "even when everyone misunderstood and hated me."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "謝謝你仍然相信我"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "謝謝你仍然相信我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "여, 염치없지만 한 가지 부탁이 있다면…"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I-if I could just ask you one thing..."
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "雖、雖然這樣很不要臉，但我想拜託你…"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "雖、雖然這樣很不要臉，但我想拜託你…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "…앞으로도 제 곁에 있어 주세요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Please stay with me forever!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "…以後也待在我的身邊！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "…以後也待在我的身邊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님, 저랑 구원자님을 오해하는 시선을"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, I'll set the record straight"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者，如果有誤會我跟救援者的視線"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者，如果有誤會我跟救援者的視線"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "제가 바로 잡겠어요!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "for those who misunderstand me and you!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我會馬上去解開誤會！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我會馬上去解開誤會！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "헤헤 땅님의 영험함을 증명해 보일게요♪"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "I'll prove to them the power of the earth ♪"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，我會證明給你看大地之神有多靈驗♪"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "嘿嘿，我會證明給你看大地之神有多靈驗♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "사랑이 가득한\r\n사랑의 날~"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Love is in the air\r\non Love Day!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "充滿愛意的\r\n戀愛之日～"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "充滿愛意的\r\n戀愛之日～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님, 에덴의 명절을\r\n하나하나 익혀주세요~? 알았죠~?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, I hope you're learning well\r\nabout Eden's holidays?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者，伊甸園的節日\r\n請一一熟悉喔～？知道了吧～？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者，伊甸園的節日\r\n請一一熟悉喔～？知道了吧～？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 고마워 클라라!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, thanks Clara!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，謝謝妳，克拉拉！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，謝謝妳，克拉拉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 고마워 클라라!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, thanks Clara!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，謝謝妳，克拉拉！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，謝謝妳，克拉拉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "동글동글~\r\n보름달은 참 귀엽죠~?"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "So round!\r\nIsn't the full moon so cute?"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "圓滾滾～\r\n滿月真的很可愛對吧～？"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "圓滾滾～\r\n滿月真的很可愛對吧～？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "마음까지 동그래지는 기분이에요~"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "It makes my heart feel full as well!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "感覺內心也跟著變得圓滾滾了～"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "感覺內心也跟著變得圓滾滾了～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게. 고마워, 클라라!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see what you mean. Thanks Clara!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是說啊，謝謝妳，克拉拉！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是說啊，謝謝妳，克拉拉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게. 고마워, 클라라!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see what you mean. Thanks Clara!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是說啊，謝謝妳，克拉拉！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是說啊，謝謝妳，克拉拉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "메리 크리스마스!"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Merry Christmas!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "我會期待的，謝謝妳，克拉拉！"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "我會期待的，謝謝妳，克拉拉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클라라",
+            "message": "구원자님, 제가 음식 잔뜩 해놓을게요~"
+          },
+          "en": {
+            "speaker": "Clara",
+            "message": "Savior, I'll prepare lots of food!"
+          },
+          "zh_tw": {
+            "speaker": "克拉拉",
+            "message": "救援者，我會製作很多料理的～"
+          },
+          "zh_cn": {
+            "speaker": "克拉拉",
+            "message": "救援者，我會製作很多料理的～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대할게. 고마워, 클라라!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Looking forward to it. Thanks Clara!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會期待的，謝謝妳，克拉拉！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會期待的，謝謝妳，克拉拉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대할게. 고마워, 클라라!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Looking forward to it. Thanks Clara!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會期待的，謝謝妳，克拉拉！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會期待的，謝謝妳，克拉拉！"
+          }
+        }
+      ]
+    }
+  }
+}

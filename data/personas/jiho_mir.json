@@ -1,0 +1,8297 @@
+{
+  "id": "1160",
+  "name": "지호(미르)",
+  "name_en": "Jiho (Mir)",
+  "grade": "에픽",
+  "race": "인간형",
+  "class": "워리어",
+  "sub_class": "디버프",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "평화의 물결",
+    "constellation": "처녀자리",
+    "union": "가온",
+    "birthday": "905",
+    "height": 165,
+    "weight": 53,
+    "cv_ko": "김채하",
+    "cv_jp": "김채하",
+    "like": [
+      "약과",
+      "시하"
+    ],
+    "dislike": [
+      "민트 초코"
+    ],
+    "hobby": [
+      "시하 영상 보기"
+    ],
+    "speciality": [
+      "피리 연주"
+    ]
+  },
+  "personality": {
+    "description": "구원자! 지금 내 모습, 어때?\n머리의 뿔이나, 환도를 휘두르는 건 아직 어색하지만…\n그래도 꽤 괜찮지 않아?\n\n난, 지금 이 모습이 마음에 들어.\n가온을 지킬 힘을 가지게 되었단 뜻이니까.\n\n겉모습뿐만 아니라, 내면적으로도 많이 성장했다는 걸 나 스스로도 느껴.\n이제 예전처럼 걱정을 들어주기만 하는 게 아니라\n직접 나서서 고민을 해결하고, 백성들을 지켜주고 싶어.\n\n이 모든 변화는 구원자 덕분이야.\n물론 난, 아직 가야 할 길이 멀지만…\n대신 내 곁에는 소중한 동료들이 있으니까, 주저하지 않을 거야.\n\n당연히 구원자도 내 소중한 동료라는 거 알고 있지?\n그러니까 앞으로도 내 변화를 지켜봐줄래?",
+    "greeting": "이제 더 이상, 외면하지 않을 거야."
+  },
+  "speech_patterns": [
+    "구원자!",
+    "나 지호인데",
+    "이 연락처도 저장해주라~",
+    "그건 아니고~",
+    "대영주 전용 에버폰이야♪",
+    "음~",
+    "바쁘긴 하지만",
+    "백성들이 행복해하니까",
+    "나도 뿌듯해 ㅎㅎ",
+    "그래도 가끔은",
+    "구원자랑 놀러 다니고 싶은데",
+    "아쉽당 ㅠ",
+    "좋아 좋아~",
+    "약속한거다?",
+    "놀러 갈 때 입으려고 마련했는데",
+    "어때?",
+    "응응",
+    "올해 여름 휴가를 간다면",
+    "바다로 가고 싶거든~",
+    "온천은 많이 가봤으니까",
+    "탁 트인 바다를",
+    "보고 싶은 기분?",
+    "아~",
+    "뿔도 어색한데",
+    "이런 옷",
+    "구원자한테 처음 보여주니까",
+    "좀 신경",
+    "신경 쓰여서!!",
+    "그래? 그럼",
+    "새 옷 직접 보여주고 싶으니까",
+    "여름 휴가 때 시간 나면",
+    "같이 바다 갈래?",
+    "구원자~",
+    "약과 선물의 보답으로",
+    "나도 뭔가 준비하고 싶은데",
+    "구원자는 무슨 간식 좋아해?",
+    "아니면 싫어하는 거",
+    "있어?",
+    "뭐야~",
+    "그럼 생각나면",
+    "언제든지 말해주기다?",
+    "뭔데?!",
+    "그럼 구원자는",
+    "간장마늘치킨도 좋고",
+    "푹 끓인 국밥도 좋고",
+    "수정과에 꿀떡이랑",
+    "조청 유과랑 약과랑",
+    "떡볶이랑 어묵이랑",
+    "다 좋았던 거야?",
+    "그럼 이 중에서"
+  ],
+  "comments": [
+    {
+      "writer": "홍란(무쌍)",
+      "comment": "지호는 제 마음을 알아줘서 편해요…\n지호가 대영주가 되어서 다행이에요♪"
+    },
+    {
+      "writer": "칸나",
+      "comment": "대영주 의전은 구원자 의전만큼 엄청나겠지?! 부, 부러워…"
+    },
+    {
+      "writer": "한울",
+      "comment": "모든 백성들을 위하고자 하는 지호의 마음가짐은 전임 대영주와 닮았지.\n그러니 지호도 그 애처럼 가온을 잘 이끌어나갈 거야."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자!"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "나 지호인데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "이 연락처도 저장해주라~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕 지호"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕 지호"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰 바꿨어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰 바꿨어?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그건 아니고~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "대영주 전용 에버폰이야♪"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대영주 일은 어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대영주 일은 어때?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "음~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "바쁘긴 하지만"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "백성들이 행복해하니까"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "나도 뿌듯해 ㅎㅎ"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래도 가끔은"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자랑 놀러 다니고 싶은데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "아쉽당 ㅠ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우리 둘 다 한가해지면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우리 둘 다 한가해지면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 때 놀러가자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 때 놀러가자"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "좋아 좋아~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "약속한거다?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "놀러 갈 때 입으려고 마련했는데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "바다 갈 때 입으려고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "바다 갈 때 입으려고?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응응"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "올해 여름 휴가를 간다면"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "바다로 가고 싶거든~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "온천은 많이 가봤으니까"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "탁 트인 바다를"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "보고 싶은 기분?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런데 그 뿔"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런데 그 뿔"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 어색한가봐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 어색한가봐"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "아~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "뿔도 어색한데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "이런 옷"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자한테 처음 보여주니까"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "좀 신경"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "신경 쓰여서!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 어울려"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 어울려"
+      },
+      {
+        "speaker": "구원자",
+        "message": "새 옷도 예복도 뿔도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "새 옷도 예복도 뿔도"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래? 그럼"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "새 옷 직접 보여주고 싶으니까"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "여름 휴가 때 시간 나면"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "같이 바다 갈래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 같이 가자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 같이 가자"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "약과 선물의 보답으로"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "나도 뭔가 준비하고 싶은데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자는 무슨 간식 좋아해?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "아니면 싫어하는 거"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당장은 생각이 안 나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당장은 생각이 안 나"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "뭐야~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그럼 생각나면"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "언제든지 말해주기다?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아 생각났어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아 생각났어"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "뭔데?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호랑 먹었던 건"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호랑 먹었던 건"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다 좋았던 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다 좋았던 것 같아"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그럼 구원자는"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "간장마늘치킨도 좋고"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "푹 끓인 국밥도 좋고"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "수정과에 꿀떡이랑"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "조청 유과랑 약과랑"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "떡볶이랑 어묵이랑"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "다 좋았던 거야?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그럼 이 중에서"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "뭘 준비하지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우리 그렇게 많이 먹었나…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우리 그렇게 많이 먹었나…"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응 그러니까"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "뭐가 제일 맛있었는지 말해줘♪"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "현무 님께서"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "<신입 관리자를 위한 마음 돌보기>"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "서책을 주셨어"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자도 볼래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사방신 현무?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사방신 현무?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자도 알아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란한테 들었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "홍란한테 들었어"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그렇구나~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "현무 님은"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "중앙청 관리직이시거든"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "예전엔 엄청 유능한 이미지였는데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "지금은 뭐랄까"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "유능한데 좀 더"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "찌든 느낌…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 힘든가봐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 힘든가봐"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "예전에 수도에 갔을 때"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "현무 님이 술 마시면서"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "한울 님에게 한탄하는 걸"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "우연히 들었는데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "현무 님이 말하길"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "관리직은 이쪽에서 치이고 저쪽에서 치이고"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "책임은 책임대로 지는데 권한은 없어서 매번 결재받아야 하고"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "주군을 보필하면서 신하들까지 관리해야 하고"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "어쩔 수 없는 돌발상황을 전부 대비해야 하는데다가"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "사고가 안 터지면 당연한 건데 사고가 터지면 전부 수습해야 하고"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "라고 하시더라고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "애환이 느껴지네…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "애환이 느껴지네…"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "봄이라서"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "대영주관 정원에"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "꽃이 활짝 폈더라구"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "누가 그러던데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "이런 계절에는"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "같이 산책만 해도"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "사이가 엄청"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "좋아진대"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래서 말인데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "산책 갈까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "산책 갈까?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "내가 먼저"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "말하려 했는데!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "민첩한 하루 보내"
+      },
+      {
+        "speaker": "구원자",
+        "message": "민첩한 하루 보내"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "마음을 모으는 힘은"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "옛날에 공주였던 때"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "큰 실수를 저지른 후론"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "봉인해두고 있었어"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "정령들의 고민을 들어줄 때"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "조언하지 않고 듣기만 했던 것도"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "옛날 기억 때문이구"
+      },
+      {
+        "speaker": "구원자",
+        "message": "두려웠어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "두려웠어?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "조금 그랬던 것 같아"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "정령들이 내 조언에 휘둘릴까봐"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그런데 내가 잘못된 조언을 해서"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "정령들에게 안좋은 일이 생길까봐"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그게 무서웠던 것 같아"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "하핫"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "너무 진지한 이야기를 해버렸네~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아 해도 돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아 해도 돼"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "부담스럽지 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호가 다른 정령들의 고민을 들어줬던 것처럼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호가 다른 정령들의 고민을 들어줬던 것처럼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호 고민은 내가 들어줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호 고민은 내가 들어줄게"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "이런 기특한 소릴~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자 아주 칭찬해"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "왠지 기분이 좀"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "이상한 것 같기도?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "음"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "자야겠다 잘자 구원자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기?!"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "앞으론 구원자도"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "현무 님이랑 종종"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "업무적으로 만나게 되려나~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "청룡 백호 현무…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "청룡 백호 현무…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "주작은?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "주작은?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "음~~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "주작 님은 우리도 못 만나"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "사라졌거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사라졌다고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사라졌다고?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "나도 언니랑"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그러니까 전임 대영주 님이랑 친했지만"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "주작 님은 언니랑"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "워낙 긴밀했거든"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래서 언니가 사라졌을 때"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "주작 님이 찾으러 나섰는데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "둘 다 여태 돌아오지 않았어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그랬구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그랬구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "보고 싶겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "보고 싶겠네"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "둘 다 이유없이 사라질 성격이 아니라"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "마음이 더 불편하네"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "으음…"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "손목 괜찮아?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "연고 발라줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "손목보다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "손목보다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이마가 더 아파"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이마가 더 아파"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그건 구원자가"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "잘못했으니까"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "어쩔 수 없어"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래도"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "진짜 납치된 게 아니라서"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "다행이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정했어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정했어?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "당연하지!"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "처음엔 진짜 깜짝 놀랐다구"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "잘 생각해보니"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "이상해서"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "납치극이라는걸 깨달았지만…"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "깨닫기 전까진"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "얼마나 걱정했는데!"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "새삼스럽지만"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자한테 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "내가 계속"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자의 걱정을 무시했는데도"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "다른 정령들이랑 같이"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "꾸준히 날 챙겨줬으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호는 늘 주변을 챙기잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호는 늘 주변을 챙기잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래서 다들 지호를 챙겨준 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래서 다들 지호를 챙겨준 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 그래서 지호를 챙긴 거고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 그래서 지호를 챙긴 거고"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응? 내가 그랬어?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "의식해서 챙긴 적은 없는데~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그냥 다 같이 잘 지내면 좋으니까"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래서 그랬지~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대부분은 그렇게 생각 안 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대부분은 그렇게 생각 안 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호가 이타적인거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호가 이타적인거야"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그렇구나~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그런데 구원자"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "이거 칭찬? 이지?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "기분이 좀 이상해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당연히 칭찬이지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당연히 칭찬이지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호는 착해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호는 착해"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "으으?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자 안돼 그만"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "이런 칭찬 그만~~~~!!!!!!!"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "가온은 옛날 말로"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "한 가운데라는 뜻이래~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "옛날 사람들은 가온이"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "아르카디아 대륙 중심에 있다고 믿었나봐"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그리고 가온의 수도는"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "가온 한 가운데에 있고"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "대영주관은 그 수도 중심에 있어"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그런걸 생각하면"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "내가 백성들을 돌보는 것처럼"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "백성들도 날 감싸주는 기분이 들더라구"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호는 정말 가온을 아끼는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호는 정말 가온을 아끼는구나"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "처음엔 잘 다스려야한다는 생각에"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "부담감이 컸는데"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "지금은 내가 좋아하는 곳을"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "내 손으로 가꿀 수 있단 게 감사해"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래서 이번엔 정말로"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "실수하고 싶지 않아"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "혹시 내가 흔들리면…"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자가 막아줄래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞으로도 계속 지호를 도울게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞으로도 계속 지호를 도울게"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자랑"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "놀기로 한 거"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "약속 지켜야 하는데ㅠ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무리하지 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무리하지 마"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "내가 아쉬워서 그래"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래도 오늘 업무는"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "얼마 안 남았어!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호"
+      },
+      {
+        "speaker": "구원자",
+        "message": "약과 좋아했지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "약과 좋아했지?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "응 엄청 좋아하지~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그런데 갑자기 왜…?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자가 올 줄 몰라서"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "제대로 맞이할 준비를"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "못 해뒀네 ㅠ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 갑자기 온 건데 뭐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 갑자기 온 건데 뭐"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래도 구원자 오니까 좋당♪"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "의욕도 좀 더"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "생기는 느낌?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "업무 많이 남았어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "업무 많이 남았어?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "얼마 안 남았어~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "지인짜 조금?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금 남았으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금 남았으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다 끝내고 자려는 거 아니지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다 끝내고 자려는 거 아니지?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "헉"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자~"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "잘 잤어?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "잠자리는 어땠어?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "침대가 아니라 불편했으려나?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "그래도 온돌방"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "따뜻했지?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자?"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "으휴 정말"
+      },
+      {
+        "speaker": "지호(미르)",
+        "message": "구원자!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "지호(미르)",
+      "en": "Jiho (Mir)",
+      "zh_tw": "智河（米爾）",
+      "zh_cn": "智河（米爾）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "인간형",
+      "en": "Humanlike",
+      "zh_tw": "人類型",
+      "zh_cn": "人類型"
+    },
+    "class": {
+      "ko": "워리어",
+      "en": "Warrior",
+      "zh_tw": "戰士",
+      "zh_cn": "戰士"
+    },
+    "sub_class": {
+      "ko": "디버프",
+      "en": "Debuff",
+      "zh_tw": "減益",
+      "zh_cn": "減益"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "평화의 물결",
+        "en": "Wave of Peace",
+        "zh_tw": "和平浪花",
+        "zh_cn": "和平浪花"
+      },
+      "constellation": {
+        "ko": "처녀자리",
+        "en": "Virgo",
+        "zh_tw": "處女座",
+        "zh_cn": "處女座"
+      },
+      "union": {
+        "ko": "가온",
+        "en": "Gaon",
+        "zh_tw": "加溫",
+        "zh_cn": "加溫"
+      },
+      "cv_ko": {
+        "ko": "김채하",
+        "en": "Chaeha Kim",
+        "zh_tw": "金採河",
+        "zh_cn": "金採河"
+      },
+      "cv_jp": {
+        "ko": "김채하",
+        "en": "Chaeha Kim",
+        "zh_tw": "金採河",
+        "zh_cn": "金採河"
+      },
+      "like": {
+        "ko": [
+          "약과",
+          "시하"
+        ],
+        "en": [
+          "Honey Cookie",
+          "Seeha"
+        ],
+        "zh_tw": [
+          "藥菓、西荷"
+        ],
+        "zh_cn": [
+          "藥菓、西荷"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "민트 초코"
+        ],
+        "en": [
+          "Mint chocolate"
+        ],
+        "zh_tw": [
+          "薄荷巧克力"
+        ],
+        "zh_cn": [
+          "薄荷巧克力"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "시하 영상 보기"
+        ],
+        "en": [
+          "Watch Seeha Video"
+        ],
+        "zh_tw": [
+          "看西荷影片"
+        ],
+        "zh_cn": [
+          "看西荷影片"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "피리 연주"
+        ],
+        "en": [
+          "Flute Performance"
+        ],
+        "zh_tw": [
+          "吹奏笛子"
+        ],
+        "zh_cn": [
+          "吹奏笛子"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "구원자! 지금 내 모습, 어때?\n머리의 뿔이나, 환도를 휘두르는 건 아직 어색하지만…\n그래도 꽤 괜찮지 않아?\n\n난, 지금 이 모습이 마음에 들어.\n가온을 지킬 힘을 가지게 되었단 뜻이니까.\n\n겉모습뿐만 아니라, 내면적으로도 많이 성장했다는 걸 나 스스로도 느껴.\n이제 예전처럼 걱정을 들어주기만 하는 게 아니라\n직접 나서서 고민을 해결하고, 백성들을 지켜주고 싶어.\n\n이 모든 변화는 구원자 덕분이야.\n물론 난, 아직 가야 할 길이 멀지만…\n대신 내 곁에는 소중한 동료들이 있으니까, 주저하지 않을 거야.\n\n당연히 구원자도 내 소중한 동료라는 거 알고 있지?\n그러니까 앞으로도 내 변화를 지켜봐줄래?",
+        "en": "Savior, how do you like the way I look now?\nI still feel awkward about my horns and wielding the ringed blade,\nbut I like the way I look.\n\nDon't you?\nIt means I have the strength to protect Gaon.\n\nI realize that I've grown a lot, not just on the outside, but on the inside as well. \nI want to take matters into my own hands and protect my people,\nnot just listen to their worries like I used to.\n\nI owe all of this to you.\nOf course, I still have a long way to go,\nbut I won't hesitate to do it because I have my friends by my side.\n\nYou know you're one of my friends, right?\nI hope you'll continue to watch my growth.",
+        "zh_tw": "救援者！我現在的樣子怎麼樣？\n頭上的角跟揮舞環刀這件事，還是讓我覺得很彆扭…\n但應該還不錯吧？\n\n我很滿意現在這個樣子。\n因為那表示我有了守護加溫的力量。\n\n不只是外表，我自己也有感覺到內在成長了許多。\n現在不像以前一樣，只能負責傾聽煩惱，\n而是想親自出面解決煩惱、保護老百姓。\n\n這所有變化都要歸功於救援者。\n當然，我要走的路還很長…\n不過我身邊有珍貴的夥伴們，所以我不會猶豫。\n\n救援者當然也是我重要的夥伴，你知道吧？\n以後也要繼續注意我的變化，好嗎？",
+        "zh_cn": "救援者！我現在的樣子怎麼樣？\n頭上的角跟揮舞環刀這件事，還是讓我覺得很彆扭…\n但應該還不錯吧？\n\n我很滿意現在這個樣子。\n因為那表示我有了守護加溫的力量。\n\n不只是外表，我自己也有感覺到內在成長了許多。\n現在不像以前一樣，只能負責傾聽煩惱，\n而是想親自出面解決煩惱、保護老百姓。\n\n這所有變化都要歸功於救援者。\n當然，我要走的路還很長…\n不過我身邊有珍貴的夥伴們，所以我不會猶豫。\n\n救援者當然也是我重要的夥伴，你知道吧？\n以後也要繼續注意我的變化，好嗎？"
+      },
+      "greeting": {
+        "ko": "이제 더 이상, 외면하지 않을 거야.",
+        "en": "I won't turn away anymore.",
+        "zh_tw": "現在不會再逃避了。",
+        "zh_cn": "現在不會再逃避了。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "구원자!"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Savior!"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "救援者！"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "救援者！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "나 지호인데"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "This is Jiho"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "我是智河"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "我是智河"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "이 연락처도 저장해주라~"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Please save this number too"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "這個聯絡方式你也存起來～"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "這個聯絡方式你也存起來～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "그건 아니고~"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "No"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "那倒不是～"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "那倒不是～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "대영주 전용 에버폰이야♪"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "This one's the Great Lord's ♪"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "這是大領主專用的EverPhone♪"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "這是大領主專用的EverPhone♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "음~"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Mm"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "嗯～"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "嗯～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "바쁘긴 하지만"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Busy"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "雖然很忙"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "雖然很忙"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "백성들이 행복해하니까"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "but the people are happy"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "但百姓們很幸福"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "但百姓們很幸福"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "나도 뿌듯해 ㅎㅎ"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "so I'm happy. Heh"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "所以我很欣慰哈哈"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "所以我很欣慰哈哈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "그래도 가끔은"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Still, I wish"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "不過我偶爾"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "不過我偶爾"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "구원자랑 놀러 다니고 싶은데"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "I could go out with you"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "還是想跟救援者玩"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "還是想跟救援者玩"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "아쉽당 ㅠ"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "sometimes T.T"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "好可惜qq"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "好可惜qq"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "좋아 좋아~"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Okay!"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "好啊好啊～"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "好啊好啊～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "약속한거다?"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "It's a promise!"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "說好了哦？"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "說好了哦？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "놀러 갈 때 입으려고 마련했는데"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "I bought this to wear for a fun outing"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "這買來是想要出去玩的時候穿的"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "這買來是想要出去玩的時候穿的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "어때?"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "What do you think?"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "怎麼樣？"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "怎麼樣？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "응응"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Yes"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "嗯嗯"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "嗯嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "올해 여름 휴가를 간다면"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "This summer, if I can go on vacation,"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "今年夏天有休假的話"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "今年夏天有休假的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "바다로 가고 싶거든~"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "I want to go to the sea"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "我想去海邊～"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "我想去海邊～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "온천은 많이 가봤으니까"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "I've been to enough hot springs"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "因為去過很多次溫泉了"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "因為去過很多次溫泉了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "탁 트인 바다를"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Now I want to see"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "就想看看"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "就想看看"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "보고 싶은 기분?"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "the open sea"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "一望無際的大海"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "一望無際的大海"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "아~"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Oh"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "啊～"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "啊～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "뿔도 어색한데"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Yes"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "角是也很彆扭啦"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "角是也很彆扭啦"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "이런 옷"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "And also, this is the first time"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "但因為這種衣服"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "但因為這種衣服"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "구원자한테 처음 보여주니까"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "you've seen me wear something like this"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "沒有穿給救援者看過"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "沒有穿給救援者看過"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "좀 신경"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "So"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "所以有點"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "所以有點"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "신경 쓰여서!!"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "I'm a little nervous"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "有點在意啦！！"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "有點在意啦！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "그래? 그럼"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Really? Then"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "是嗎？那麼"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "是嗎？那麼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "새 옷 직접 보여주고 싶으니까"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "I want to show you this outfit in person"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "我想讓你親眼看看新衣服"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "我想讓你親眼看看新衣服"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "여름 휴가 때 시간 나면"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "If you're free during summer vacation"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "暑假有空的話"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "暑假有空的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "같이 바다 갈래?"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "want to go to the sea with me?"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "要一起去海邊嗎？"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "要一起去海邊嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "구원자~"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Savior"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "救援者～"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "救援者～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "약과 선물의 보답으로"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "I'd like to get you something"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "你送我藥菓"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "你送我藥菓"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "나도 뭔가 준비하고 싶은데"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "in return for the honey cookies"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "我也想準備點東西回送給你"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "我也想準備點東西回送給你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "구원자는 무슨 간식 좋아해?"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "what kind of treats do you like?"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "救援者喜歡什麼零食？"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "救援者喜歡什麼零食？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "아니면 싫어하는 거"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Or"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "或是討厭的東西"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "或是討厭的東西"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "있어?"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "don't you like?"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "有嗎？"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "有嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "뭐야~"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Come on"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "什麼嘛～"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "什麼嘛～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "그럼 생각나면"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Well, tell me"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "那你想到的話"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "那你想到的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "언제든지 말해주기다?"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "when you think of something"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "隨時跟我說哦？"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "隨時跟我說哦？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "뭔데?!"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "What is it?"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "是什麼？！"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "是什麼？！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "그럼 구원자는"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "So, you like"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "那救援者是"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "那救援者是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "간장마늘치킨도 좋고"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "soy garlic chicken"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "喜歡蒜香醬油炸雞"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "喜歡蒜香醬油炸雞"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "푹 끓인 국밥도 좋고"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "rice soup"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "也喜歡煮到軟爛的湯飯"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "也喜歡煮到軟爛的湯飯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "수정과에 꿀떡이랑"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "cinnamon punch, honey tteok"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "還有水正果茶跟蜜糖年糕"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "還有水正果茶跟蜜糖年糕"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "조청 유과랑 약과랑"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "sweet rice puffs, honey cookies"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "糖漿油蜜果跟藥菓"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "糖漿油蜜果跟藥菓"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "떡볶이랑 어묵이랑"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "spicy rice cakes, fish cake"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "辣炒年糕跟魚糕"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "辣炒年糕跟魚糕"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "다 좋았던 거야?"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "everything?"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "全部都喜歡囉？"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "全部都喜歡囉？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호(미르)",
+          "message": "그럼 이 중에서"
+        },
+        "en": {
+          "speaker": "Jiho (Mir)",
+          "message": "Then, which one"
+        },
+        "zh_tw": {
+          "speaker": "智河（米爾）",
+          "message": "那我要在這當中"
+        },
+        "zh_cn": {
+          "speaker": "智河（米爾）",
+          "message": "那我要在這當中"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "홍란(무쌍)",
+          "message": "지호는 제 마음을 알아줘서 편해요…\n지호가 대영주가 되어서 다행이에요♪"
+        },
+        "en": {
+          "speaker": "Honglan (Peerless)",
+          "message": "I like Jiho because she understands how I feel.\nI'm glad she's the Great Lord ♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭（無雙）",
+          "message": "智河能理解我的心意，所以我很自在…\n幸好是智河當上大領主♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭（無雙）",
+          "message": "智河能理解我的心意，所以我很自在…\n幸好是智河當上大領主♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "칸나",
+          "message": "대영주 의전은 구원자 의전만큼 엄청나겠지?! 부, 부러워…"
+        },
+        "en": {
+          "speaker": "Kanna",
+          "message": "The Great Lord's protocols must be just as incredible as yours, right? I-I'm so envious…!"
+        },
+        "zh_tw": {
+          "speaker": "坎納",
+          "message": "大領主的待遇應該堪比救援者吧？！好、好羨慕…"
+        },
+        "zh_cn": {
+          "speaker": "坎納",
+          "message": "大領主的待遇應該堪比救援者吧？！好、好羨慕…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "한울",
+          "message": "모든 백성들을 위하고자 하는 지호의 마음가짐은 전임 대영주와 닮았지.\n그러니 지호도 그 애처럼 가온을 잘 이끌어나갈 거야."
+        },
+        "en": {
+          "speaker": "Hanul",
+          "message": "Jiho's desire to serve all her people is the same as her predecessor's.\nI'm sure she'll lead Gaon just as well as she did."
+        },
+        "zh_tw": {
+          "speaker": "韓羽",
+          "message": "智河為所有百姓著想的心，和前任大領主很像，\n所以智河也會像那孩子一樣，好好帶領加溫的。"
+        },
+        "zh_cn": {
+          "speaker": "韓羽",
+          "message": "智河為所有百姓著想的心，和前任大領主很像，\n所以智河也會像那孩子一樣，好好帶領加溫的。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "나 지호인데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "This is Jiho"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我是智河"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我是智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "이 연락처도 저장해주라~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Please save this number too"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "這個聯絡方式你也存起來～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "這個聯絡方式你也存起來～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕 지호"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hey Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗨，智河"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗨，智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕 지호"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hey Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗨，智河"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗨，智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰 바꿨어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you change your Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳換EverPhone了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳換EverPhone了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰 바꿨어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you change your Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳換EverPhone了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳換EverPhone了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그건 아니고~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "那倒不是～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "那倒不是～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "대영주 전용 에버폰이야♪"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "This one's the Great Lord's ♪"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "這是大領主專用的EverPhone♪"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "這是大領主專用的EverPhone♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대영주 일은 어때?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How are you doing as Great Lord?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "大領主的工作如何？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "大領主的工作如何？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대영주 일은 어때?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How are you doing as Great Lord?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "大領主的工作如何？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "大領主的工作如何？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "음~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Mm"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "바쁘긴 하지만"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Busy"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "雖然很忙"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "雖然很忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "백성들이 행복해하니까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "but the people are happy"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "但百姓們很幸福"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "但百姓們很幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "나도 뿌듯해 ㅎㅎ"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "so I'm happy. Heh"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "所以我很欣慰哈哈"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "所以我很欣慰哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래도 가끔은"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Still, I wish"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "不過我偶爾"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "不過我偶爾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자랑 놀러 다니고 싶은데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I could go out with you"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "還是想跟救援者玩"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "還是想跟救援者玩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "아쉽당 ㅠ"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "sometimes T.T"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "好可惜qq"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "好可惜qq"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우리 둘 다 한가해지면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We can go out"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等我們兩個都閒下來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等我們兩個都閒下來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우리 둘 다 한가해지면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We can go out"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等我們兩個都閒下來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等我們兩個都閒下來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 때 놀러가자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "when we're both free"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "到時候再去玩吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "到時候再去玩吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 때 놀러가자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "when we're both free"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "到時候再去玩吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "到時候再去玩吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "좋아 좋아~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Okay!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "好啊好啊～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "好啊好啊～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "약속한거다?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "It's a promise!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "說好了哦？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "說好了哦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "놀러 갈 때 입으려고 마련했는데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I bought this to wear for a fun outing"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "這買來是想要出去玩的時候穿的"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "這買來是想要出去玩的時候穿的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "어때?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "What do you think?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "바다 갈 때 입으려고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "For the beach?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要去海邊的時候穿？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要去海邊的時候穿？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "바다 갈 때 입으려고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "For the beach?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要去海邊的時候穿？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要去海邊的時候穿？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응응"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "올해 여름 휴가를 간다면"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "This summer, if I can go on vacation,"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "今年夏天有休假的話"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "今年夏天有休假的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "바다로 가고 싶거든~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I want to go to the sea"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我想去海邊～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我想去海邊～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "온천은 많이 가봤으니까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I've been to enough hot springs"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "因為去過很多次溫泉了"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "因為去過很多次溫泉了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "탁 트인 바다를"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Now I want to see"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "就想看看"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "就想看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "보고 싶은 기분?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "the open sea"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "一望無際的大海"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "一望無際的大海"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런데 그 뿔"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Your horns"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過那個角"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過那個角"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런데 그 뿔"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Your horns"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過那個角"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過那個角"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 어색한가봐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you still feel awkward about them?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來讓妳很彆扭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來讓妳很彆扭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 어색한가봐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you still feel awkward about them?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來讓妳很彆扭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來讓妳很彆扭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "아~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Oh"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "啊～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "啊～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "뿔도 어색한데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "角是也很彆扭啦"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "角是也很彆扭啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "이런 옷"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "And also, this is the first time"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "但因為這種衣服"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "但因為這種衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자한테 처음 보여주니까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "you've seen me wear something like this"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "沒有穿給救援者看過"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "沒有穿給救援者看過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "좀 신경"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "So"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "所以有點"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "所以有點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "신경 쓰여서!!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I'm a little nervous"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "有點在意啦！！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "有點在意啦！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 어울려"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "They look good on you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很適合妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很適合妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 어울려"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "They look good on you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很適合妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很適合妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "새 옷도 예복도 뿔도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Your new outfit, robe, and horns"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "新衣服、禮服跟角都是"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "新衣服、禮服跟角都是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "새 옷도 예복도 뿔도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Your new outfit, robe, and horns"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "新衣服、禮服跟角都是"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "新衣服、禮服跟角都是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래? 그럼"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Really? Then"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "是嗎？那麼"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "是嗎？那麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "새 옷 직접 보여주고 싶으니까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I want to show you this outfit in person"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我想讓你親眼看看新衣服"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我想讓你親眼看看新衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "여름 휴가 때 시간 나면"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "If you're free during summer vacation"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "暑假有空的話"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "暑假有空的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "같이 바다 갈래?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "want to go to the sea with me?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "要一起去海邊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "要一起去海邊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 같이 가자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure, let's do that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，一起去吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，一起去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 같이 가자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure, let's do that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，一起去吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，一起去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "약과 선물의 보답으로"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I'd like to get you something"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "你送我藥菓"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "你送我藥菓"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "나도 뭔가 준비하고 싶은데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "in return for the honey cookies"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我也想準備點東西回送給你"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我也想準備點東西回送給你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자는 무슨 간식 좋아해?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "what kind of treats do you like?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者喜歡什麼零食？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者喜歡什麼零食？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "아니면 싫어하는 거"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Or"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "或是討厭的東西"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "或是討厭的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "있어?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "don't you like?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "有嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "有嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당장은 생각이 안 나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can't think of anything right now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一時之間想不起來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一時之間想不起來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당장은 생각이 안 나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can't think of anything right now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一時之間想不起來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一時之間想不起來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "뭐야~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Come on"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "什麼嘛～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "什麼嘛～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그럼 생각나면"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Well, tell me"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "那你想到的話"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "那你想到的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "언제든지 말해주기다?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "when you think of something"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "隨時跟我說哦？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "隨時跟我說哦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아 생각났어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh, I remembered"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊我想到了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊我想到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아 생각났어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh, I remembered"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊我想到了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊我想到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "뭔데?!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "是什麼？！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "是什麼？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호랑 먹었던 건"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like everything"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "跟智河吃過的東西"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "跟智河吃過的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호랑 먹었던 건"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like everything"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "跟智河吃過的東西"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "跟智河吃過的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다 좋았던 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "we ate together"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我都喜歡"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我都喜歡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다 좋았던 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "we ate together"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我都喜歡"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我都喜歡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그럼 구원자는"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "So, you like"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "那救援者是"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "那救援者是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "간장마늘치킨도 좋고"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "soy garlic chicken"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "喜歡蒜香醬油炸雞"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "喜歡蒜香醬油炸雞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "푹 끓인 국밥도 좋고"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "rice soup"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "也喜歡煮到軟爛的湯飯"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "也喜歡煮到軟爛的湯飯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "수정과에 꿀떡이랑"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "cinnamon punch, honey tteok"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "還有水正果茶跟蜜糖年糕"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "還有水正果茶跟蜜糖年糕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "조청 유과랑 약과랑"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "sweet rice puffs, honey cookies"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "糖漿油蜜果跟藥菓"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "糖漿油蜜果跟藥菓"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "떡볶이랑 어묵이랑"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "spicy rice cakes, fish cake"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "辣炒年糕跟魚糕"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "辣炒年糕跟魚糕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "다 좋았던 거야?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "everything?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "全部都喜歡囉？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "全部都喜歡囉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그럼 이 중에서"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Then, which one"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "那我要在這當中"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "那我要在這當中"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "뭘 준비하지?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "should I get for you this time?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "準備什麼好呢？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "準備什麼好呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우리 그렇게 많이 먹었나…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did we really eat all that?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們有吃過那麼多嗎…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們有吃過那麼多嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우리 그렇게 많이 먹었나…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did we really eat all that?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們有吃過那麼多嗎…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們有吃過那麼多嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응 그러니까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯，所以"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯，所以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "뭐가 제일 맛있었는지 말해줘♪"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "So, tell me which one you like the most ♪"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "你跟我說你覺得哪個最好吃♪"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "你跟我說你覺得哪個最好吃♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "현무 님께서"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Hyunmoo gave me the book"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "玄武給我"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "玄武給我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "<신입 관리자를 위한 마음 돌보기>"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "<Caring for the Heart for New Managers>"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "《新任領導者的心態調適》"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "《新任領導者的心態調適》"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "서책을 주셨어"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Want to"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "這本書"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "這本書"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자도 볼래?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "read it?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者也要看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者也要看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사방신 현무?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hyunmoo, the Divine Guardian?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "四方守護神玄武？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "四方守護神玄武？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사방신 현무?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hyunmoo, the Divine Guardian?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "四方守護神玄武？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "四方守護神玄武？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자도 알아?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Do you know her?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者也認識？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者也認識？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란한테 들었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan told me about her"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我聽紅蘭說過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我聽紅蘭說過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "홍란한테 들었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Honglan told me about her"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我聽紅蘭說過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我聽紅蘭說過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그렇구나~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "原來～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "原來～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "현무 님은"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Hyunmoo is"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "玄武"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "玄武"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "중앙청 관리직이시거든"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "a manager at the Central Office."
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "是中央廳的管理職"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "是中央廳的管理職"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "예전엔 엄청 유능한 이미지였는데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "She's always had this super competent image"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "以前是很能幹的形象"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "以前是很能幹的形象"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "지금은 뭐랄까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "and lately, she seems a bit..."
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "現在是怎麼說呢"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "現在是怎麼說呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "유능한데 좀 더"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I don't know"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "能幹但是有點"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "能幹但是有點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "찌든 느낌…?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "just a little worn out or jaded?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "歷經滄桑的感覺…？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "歷經滄桑的感覺…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 힘든가봐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Her job must be hard"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來她很辛苦"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來她很辛苦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 힘든가봐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Her job must be hard"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來她很辛苦"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來她很辛苦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "예전에 수도에 갔을 때"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "When I was in the capital the other day"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我以前去首都的時候"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我以前去首都的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "현무 님이 술 마시면서"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I overheard Hyunmoo"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "偶然聽到"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "偶然聽到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "한울 님에게 한탄하는 걸"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "venting to Hanul"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "玄武喝著酒"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "玄武喝著酒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "우연히 들었는데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "over drinks"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "跟韓羽唉聲嘆氣"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "跟韓羽唉聲嘆氣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "현무 님이 말하길"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Hyunmoo said something like,"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "玄武說"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "玄武說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "관리직은 이쪽에서 치이고 저쪽에서 치이고"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "\"In admin, you get pressure from all sides"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "管理職被夾在中間"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "管理職被夾在中間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "책임은 책임대로 지는데 권한은 없어서 매번 결재받아야 하고"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "You take all the responsibility but have no authority, and you need approval for everything"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "要扛責任，但是又沒有權限，所以每次都要先得到批准"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "要扛責任，但是又沒有權限，所以每次都要先得到批准"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "주군을 보필하면서 신하들까지 관리해야 하고"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "You're supporting your lord while also managing the officials"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "輔佐主君的同時，還要管理大臣們"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "輔佐主君的同時，還要管理大臣們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "어쩔 수 없는 돌발상황을 전부 대비해야 하는데다가"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "You have to prepare for every possible emergency,"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "要應對所有無法避免的突發狀況"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "要應對所有無法避免的突發狀況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "사고가 안 터지면 당연한 건데 사고가 터지면 전부 수습해야 하고"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "and if nothing goes wrong, it's just expected"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "而且沒有出事是應該的，但一旦出事了又得收拾善後"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "而且沒有出事是應該的，但一旦出事了又得收拾善後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "라고 하시더라고"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "But if something does go wrong, it's all on you to clean it up.\""
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "她是這樣說的"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "她是這樣說的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "애환이 느껴지네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can feel her pain..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺有苦有樂…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺有苦有樂…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "애환이 느껴지네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can feel her pain..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺有苦有樂…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺有苦有樂…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "봄이라서"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Since it's spring"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "因為春天到了"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "因為春天到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "대영주관 정원에"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "the flowers in the garden at the Great Lord's Manor"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "大領主館的庭園"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "大領主館的庭園"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "꽃이 활짝 폈더라구"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "are in full bloom"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "開滿了花"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "開滿了花"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "누가 그러던데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I heard someone say"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "有人說"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "有人說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "이런 계절에는"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "just taking a walk together"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "在這種季節"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "在這種季節"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "같이 산책만 해도"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "in this kind of season"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "光是一起散步"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "光是一起散步"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "사이가 엄청"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "can really"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "感情也會"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "感情也會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "좋아진대"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "bring people closer"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "突飛猛進"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "突飛猛進"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래서 말인데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "So,"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "所以啊"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "所以啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Savior—"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "산책 갈까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Want to take a walk with me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要不要去散步？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要不要去散步？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "산책 갈까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Want to take a walk with me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要不要去散步？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要不要去散步？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "내가 먼저"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I was going"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我本來"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我本來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "말하려 했는데!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "to ask that!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "想要先說的！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "想要先說的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "민첩한 하루 보내"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have a faster day"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "祝妳有個敏捷的一天"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "祝妳有個敏捷的一天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "민첩한 하루 보내"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have a faster day"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "祝妳有個敏捷的一天"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "祝妳有個敏捷的一天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "마음을 모으는 힘은"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I've kept my power to gather minds"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "凝聚眾人意志的力量"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "凝聚眾人意志的力量"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "옛날에 공주였던 때"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "sealed away"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "自從我以前還是公主時"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "自從我以前還是公主時"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "큰 실수를 저지른 후론"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "since I made a big mistake"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "犯過一個大錯後"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "犯過一個大錯後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "봉인해두고 있었어"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "when I was a princess"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "就一直封印著"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "就一直封印著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "정령들의 고민을 들어줄 때"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "It was the same reason"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "傾聽精靈們的煩惱時"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "傾聽精靈們的煩惱時"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "조언하지 않고 듣기만 했던 것도"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I just listened to other Souls' problems"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "只有用心傾聽，沒有給予建議"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "只有用心傾聽，沒有給予建議"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "옛날 기억 때문이구"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "instead of giving them advice"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "也是因為以前的記憶"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "也是因為以前的記憶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "두려웠어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you afraid?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很害怕嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很害怕嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "두려웠어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you afraid?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很害怕嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很害怕嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "조금 그랬던 것 같아"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "A little, I guess"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "好像有點那樣"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "好像有點那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "정령들이 내 조언에 휘둘릴까봐"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "that they would be swayed by my advice"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我擔心精靈們會被我的建議左右"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我擔心精靈們會被我的建議左右"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그런데 내가 잘못된 조언을 해서"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I think I was afraid"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "怕我給了不對的建議"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "怕我給了不對的建議"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "정령들에게 안좋은 일이 생길까봐"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "that I would give them the wrong advice"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "引起對精靈不好的事"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "引起對精靈不好的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그게 무서웠던 것 같아"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "and something bad would happen to them"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "好像是在害怕這個"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "好像是在害怕這個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "하핫"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Haha"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "哈哈"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "너무 진지한 이야기를 해버렸네~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I didn't mean to tell you something so serious"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我說了太嚴肅的話題～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我說了太嚴肅的話題～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아 해도 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay. I'm here for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係，妳可以說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係，妳可以說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아 해도 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay. I'm here for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係，妳可以說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係，妳可以說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "부담스럽지 않아?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Doesn't it make you feel uncomfortable?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "你不會有壓力嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "你不會有壓力嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호가 다른 정령들의 고민을 들어줬던 것처럼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll listen to you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就像智河傾聽其他精靈的煩惱一樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就像智河傾聽其他精靈的煩惱一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호가 다른 정령들의 고민을 들어줬던 것처럼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll listen to you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就像智河傾聽其他精靈的煩惱一樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就像智河傾聽其他精靈的煩惱一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호 고민은 내가 들어줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "just like you've listened to the others"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也會聽智河訴苦的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也會聽智河訴苦的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호 고민은 내가 들어줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "just like you've listened to the others"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也會聽智河訴苦的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也會聽智河訴苦的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "이런 기특한 소릴~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "You say the nicest things"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "這樣說真讓人欣慰～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "這樣說真讓人欣慰～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자 아주 칭찬해"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Thank you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者你好棒"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者你好棒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "왠지 기분이 좀"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "That makes me feel"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "總覺得心情"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "總覺得心情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "이상한 것 같기도?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "a little...awkward?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "有點奇怪？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "有點奇怪？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "음"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Erm"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "자야겠다 잘자 구원자!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I think I'll go to bed. Goodnight, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我要睡覺了，晚安救援者！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我要睡覺了，晚安救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "All of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼突然！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼突然！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "All of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼突然！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼突然！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "앞으론 구원자도"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Maybe you'll be"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者以後"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者以後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "현무 님이랑 종종"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "working with Hyunmoo"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "也會常常跟玄武"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "也會常常跟玄武"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "업무적으로 만나게 되려나~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "often from now on"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "因為公事見到面嗎～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "因為公事見到面嗎～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "청룡 백호 현무…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The Green Dragon, the White Tiger, the Black Tortoise..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "青龍、白虎、玄武…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "青龍、白虎、玄武…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "청룡 백호 현무…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The Green Dragon, the White Tiger, the Black Tortoise..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "青龍、白虎、玄武…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "青龍、白虎、玄武…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "주작은?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about the Vermillion Bird?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "朱雀呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "朱雀呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "주작은?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about the Vermillion Bird?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "朱雀呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "朱雀呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "음~~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Mm"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯～～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "주작 님은 우리도 못 만나"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Even we haven't seen Zujak"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我們也見不到朱雀"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我們也見不到朱雀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "사라졌거든"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "She disappeared"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "因為她消失了"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "因為她消失了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사라졌다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Disappeared?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "消失了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "消失了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사라졌다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Disappeared?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "消失了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "消失了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "나도 언니랑"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I was close to"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "雖然我跟娜林姐姐"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "雖然我跟娜林姐姐"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그러니까 전임 대영주 님이랑 친했지만"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "the former Great Lord"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "就是跟前任大領主很要好"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "就是跟前任大領主很要好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "주작 님은 언니랑"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "but Zujak was"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "但朱雀跟姐姐"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "但朱雀跟姐姐"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "워낙 긴밀했거든"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "the closest"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "本來就很親密"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "本來就很親密"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래서 언니가 사라졌을 때"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "So, when she went missing"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "所以姐姐消失的時候"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "所以姐姐消失的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "주작 님이 찾으러 나섰는데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Zujak left to find her"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "朱雀有去找她"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "朱雀有去找她"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "둘 다 여태 돌아오지 않았어"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "and neither of them has come back yet"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "兩個到現在都沒有回來"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "兩個到現在都沒有回來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그랬구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來是這樣啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來是這樣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그랬구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來是這樣啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來是這樣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "보고 싶겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You must miss them"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你一定很想她們"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你一定很想她們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "보고 싶겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You must miss them"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你一定很想她們"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你一定很想她們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "둘 다 이유없이 사라질 성격이 아니라"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Neither of them are the type to disappear for no reason"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "她們兩個都不是會無緣無故消失的個性"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "她們兩個都不是會無緣無故消失的個性"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "마음이 더 불편하네"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "which is more disturbing"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "所以感覺心裡更難受了"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "所以感覺心裡更難受了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "으음…"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "呃嗯…"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "呃嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "손목 괜찮아?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "How are your wrists?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "手腕還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "手腕還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "연고 발라줄게"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Let me put some ointment on you"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我幫你擦藥"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我幫你擦藥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "손목보다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "My forehead"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "比起手腕"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "比起手腕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "손목보다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "My forehead"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "比起手腕"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "比起手腕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이마가 더 아파"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "hurts more than my wrists"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "額頭更痛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "額頭更痛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이마가 더 아파"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "hurts more than my wrists"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "額頭更痛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "額頭更痛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그건 구원자가"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "That's the price"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "那是救援者"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "那是救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "잘못했으니까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "you paid"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "自己不好"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "自己不好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "어쩔 수 없어"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "for your mischief"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "沒辦法"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "沒辦法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래도"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "But still"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "但是"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "但是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "진짜 납치된 게 아니라서"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I'm glad you weren't"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "你不是真的被綁架"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "你不是真的被綁架"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "다행이야"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "really abducted"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정했어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you worried?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很擔心我？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很擔心我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정했어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you worried?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很擔心我？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很擔心我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "당연하지!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Of course!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "那當然！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "那當然！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "처음엔 진짜 깜짝 놀랐다구"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I really panicked at first"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "一開始真的嚇了一大跳"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "一開始真的嚇了一大跳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "잘 생각해보니"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "But then"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "仔細想想"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "仔細想想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "이상해서"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "things didn't add up"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "覺得很奇怪"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "覺得很奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "납치극이라는걸 깨달았지만…"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "and I realized it was all fake"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "就發現是綁架戲碼…"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "就發現是綁架戲碼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "깨닫기 전까진"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "But until then,"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "但在我發現之前"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "但在我發現之前"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "얼마나 걱정했는데!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I really was worried!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "超級擔心的耶！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "超級擔心的耶！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "새삼스럽지만"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I know it's a bit sudden, but…"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "雖然有點突然"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "雖然有點突然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자한테 고마워"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Thank you"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "但我很謝謝救援者"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "但我很謝謝救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why all of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why all of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Well"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "내가 계속"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Even though I kept"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "因為就算我一直"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "因為就算我一直"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자의 걱정을 무시했는데도"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "brushing off your concern"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "無視救援者的擔心"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "無視救援者的擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "다른 정령들이랑 같이"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "you still looked out for me"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "你也還是跟其他精靈"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "你也還是跟其他精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "꾸준히 날 챙겨줬으니까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "together with the other Souls"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "持續不斷地照顧我"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "持續不斷地照顧我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호는 늘 주변을 챙기잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You always look out for us"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為智河總是很照顧身邊的人"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為智河總是很照顧身邊的人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호는 늘 주변을 챙기잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You always look out for us"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為智河總是很照顧身邊的人"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為智河總是很照顧身邊的人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래서 다들 지호를 챙겨준 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's why we looked out for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以大家才會照顧智河"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以大家才會照顧智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래서 다들 지호를 챙겨준 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's why we looked out for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以大家才會照顧智河"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以大家才會照顧智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 그래서 지호를 챙긴 거고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I looked out for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也是因為那樣才照顧智河的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也是因為那樣才照顧智河的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 그래서 지호를 챙긴 거고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I looked out for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也是因為那樣才照顧智河的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也是因為那樣才照顧智河的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응? 내가 그랬어?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Mm? Do I?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯？我有嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯？我有嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "의식해서 챙긴 적은 없는데~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I don't do it consciously"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我沒有刻意那樣過耶～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我沒有刻意那樣過耶～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그냥 다 같이 잘 지내면 좋으니까"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I just want everyone to get along"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "只是希望大家可以愉快相處"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "只是希望大家可以愉快相處"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래서 그랬지~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "That's it"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "才那樣做的～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "才那樣做的～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대부분은 그렇게 생각 안 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Most don't do that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "大部人的人不會那樣想"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "大部人的人不會那樣想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대부분은 그렇게 생각 안 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Most don't do that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "大部人的人不會那樣想"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "大部人的人不會那樣想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호가 이타적인거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're selfless, Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是智河很為他人著想"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是智河很為他人著想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호가 이타적인거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're selfless, Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是智河很為他人著想"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是智河很為他人著想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그렇구나~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "原來～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "原來～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그런데 구원자"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "By the way, Savior"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "不過救援者"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "不過救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "이거 칭찬? 이지?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "that's a compliment, right?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "這是稱讚？對吧？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "這是稱讚？對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "기분이 좀 이상해"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I feel a little weird"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "感覺怪怪的"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "感覺怪怪的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당연히 칭찬이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course, it's a compliment."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然是稱讚"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然是稱讚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당연히 칭찬이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course, it's a compliment."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然是稱讚"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然是稱讚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호는 착해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're so good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "智河很善良"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "智河很善良"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호는 착해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're so good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "智河很善良"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "智河很善良"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "으으?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Huh...?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "呃呃？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "呃呃？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자 안돼 그만"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Ugh, Savior, stop"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者不行，別再說了"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者不行，別再說了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "이런 칭찬 그만~~~~!!!!!!!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "No more compliments!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "別再這樣稱讚我了～～～～！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "別再這樣稱讚我了～～～～！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "가온은 옛날 말로"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I heard Gaon' means"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "據說加溫在古語裡"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "據說加溫在古語裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "한 가운데라는 뜻이래~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "\"the center\" in an old language"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "是正中間的意思～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "是正中間的意思～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "옛날 사람들은 가온이"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "People long ago must have believed"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "古人們可能深信加溫"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "古人們可能深信加溫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "아르카디아 대륙 중심에 있다고 믿었나봐"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Gaon was at the heart of Arcadian continent"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "在阿卡迪亞大陸的中央"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "在阿卡迪亞大陸的中央"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그리고 가온의 수도는"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Its capital sits right in the middle"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "然後加溫的首都"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "然後加溫的首都"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "가온 한 가운데에 있고"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "and the Great Lord's Manor is"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "就在加溫的正中央"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "就在加溫的正中央"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "대영주관은 그 수도 중심에 있어"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "at the very center of that capital"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "大領主館也在首都的中心"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "大領主館也在首都的中心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그런걸 생각하면"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "When I think about that, it feels like"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "想到這個"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "想到這個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "내가 백성들을 돌보는 것처럼"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "just as I watch over the people"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "就像我照顧百姓一樣"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "就像我照顧百姓一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "백성들도 날 감싸주는 기분이 들더라구"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "they're surrounding me in return."
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "百姓們把我圍住、包容我的感覺"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "百姓們把我圍住、包容我的感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호는 정말 가온을 아끼는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Jiho, you really care about Gaon"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來智河真的很珍惜加溫"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來智河真的很珍惜加溫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호는 정말 가온을 아끼는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Jiho, you really care about Gaon"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來智河真的很珍惜加溫"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來智河真的很珍惜加溫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "처음엔 잘 다스려야한다는 생각에"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "At first, I felt a lot of pressure"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "一開始覺得我得好好治理"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "一開始覺得我得好好治理"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "부담감이 컸는데"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "thinking I had to govern Gaon well"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "所以覺得壓力很大"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "所以覺得壓力很大"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "지금은 내가 좋아하는 곳을"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "But now, I'm just grateful that I get to"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "但現在很感謝我能親手照料"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "但現在很感謝我能親手照料"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "내 손으로 가꿀 수 있단 게 감사해"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "take care of a place I love with my own hands"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "自己喜歡的地方"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "自己喜歡的地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래서 이번엔 정말로"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "That's why this time"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "所以我這次"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "所以我這次"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "실수하고 싶지 않아"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I really don't want to mess things up"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "真的不想失誤"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "真的不想失誤"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "혹시 내가 흔들리면…"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "If I start to falter..."
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "如果我產生動搖…"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "如果我產生動搖…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자가 막아줄래?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Savior, will you stop me?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者可以阻止我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者可以阻止我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞으로도 계속 지호를 도울게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will continue to help you, Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我以後也會繼續幫助智河"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我以後也會繼續幫助智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞으로도 계속 지호를 도울게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will continue to help you, Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我以後也會繼續幫助智河"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我以後也會繼續幫助智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자랑"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I want to"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "說好要跟救援者"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "說好要跟救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "놀기로 한 거"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "keep my promise"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "一起去玩的事"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "一起去玩的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "약속 지켜야 하는데ㅠ"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "to hang out with you T.T"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我應該要守約的qq"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我應該要守約的qq"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무리하지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't strain yourself"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別太逞強"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別太逞強"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무리하지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't strain yourself"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別太逞強"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別太逞強"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "내가 아쉬워서 그래"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "But it upsets me"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我是覺得很可惜"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我是覺得很可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래도 오늘 업무는"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "But I'm almost done"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "不過今天的工作"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "不過今天的工作"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "얼마 안 남았어!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "for the day!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "就快做完了！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "就快做完了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "智河"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "智河"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "智河"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "약과 좋아했지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You like honey cookies, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳喜歡藥菓吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳喜歡藥菓吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "약과 좋아했지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You like honey cookies, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳喜歡藥菓吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳喜歡藥菓吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "응 엄청 좋아하지~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Yes, I do"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "嗯，我超喜歡啊～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "嗯，我超喜歡啊～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그런데 갑자기 왜…?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "但怎麼突然說這個…？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "但怎麼突然說這個…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자가 올 줄 몰라서"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I didn't know you were coming"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "我沒想到救援者會來"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "我沒想到救援者會來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "제대로 맞이할 준비를"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I didn't prepare for you"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "就沒有事先準備"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "就沒有事先準備"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "못 해뒀네 ㅠ"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "properly T.T"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "好好招待你qq"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "好好招待你qq"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No worries"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No worries"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 갑자기 온 건데 뭐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I showed up on a whim"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是我來得太突然了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是我來得太突然了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 갑자기 온 건데 뭐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I showed up on a whim"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是我來得太突然了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是我來得太突然了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래도 구원자 오니까 좋당♪"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Still, it's good to have you here ♪"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "不過救援者來了，我好開心♪"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "不過救援者來了，我好開心♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "의욕도 좀 더"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I'm a little more"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "感覺又產生了"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "感覺又產生了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "생기는 느낌?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "motivated, too"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "一點鬥志？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "一點鬥志？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "업무 많이 남았어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How much work do you have left?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還剩下很多工作嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還剩下很多工作嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "업무 많이 남았어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How much work do you have left?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還剩下很多工作嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還剩下很多工作嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "얼마 안 남았어~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Not much"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "快做完了～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "快做完了～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "지인짜 조금?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Just a little bit"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "真的就剩一點點"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "真的就剩一點點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금 남았으니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're not going to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "該不會是就剩一點"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "該不會是就剩一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금 남았으니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're not going to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "該不會是就剩一點"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "該不會是就剩一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다 끝내고 자려는 거 아니지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "stay up late because of it, are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以妳想做完再去睡覺吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以妳想做完再去睡覺吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다 끝내고 자려는 거 아니지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "stay up late because of it, are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以妳想做完再去睡覺吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以妳想做完再去睡覺吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "헉"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Heek!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "呃"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자~"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Savior,"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者～"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "잘 잤어?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "good morning!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "有睡好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "有睡好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "잠자리는 어땠어?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "How was your bed?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "睡的地方怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "睡的地方怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "침대가 아니라 불편했으려나?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "I hope it wasn't too uncomfortable, sleeping on the floor."
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "不是睡在床上，有沒有不舒服？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "不是睡在床上，有沒有不舒服？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "그래도 온돌방"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "But the heated floor is nice,"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "至少地暖"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "至少地暖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "따뜻했지?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "isn't it?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "很溫暖吧？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "很溫暖吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자?"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Savior?"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者？"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "으휴 정말"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Geez!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "唉唷，真是的"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "唉唷，真是的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호(미르)",
+            "message": "구원자!"
+          },
+          "en": {
+            "speaker": "Jiho (Mir)",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "智河（米爾）",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "智河（米爾）",
+            "message": "救援者！"
+          }
+        }
+      ]
+    }
+  }
+}

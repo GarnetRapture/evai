@@ -1,0 +1,194 @@
+{
+  "id": "210",
+  "name": "샤링",
+  "name_en": "Sharinne",
+  "grade": "레어",
+  "race": "야수형",
+  "class": "워리어",
+  "sub_class": "단일",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "타고난 장사꾼",
+    "constellation": "사자자리",
+    "union": "제이드 상단",
+    "birthday": "724",
+    "height": 140,
+    "weight": 35,
+    "cv_ko": "최하리",
+    "cv_jp": "Hikaru Akao",
+    "like": [
+      "돈",
+      "장부 정리"
+    ],
+    "dislike": [
+      "흥정",
+      "어음"
+    ],
+    "hobby": [
+      "가계부 작성"
+    ],
+    "speciality": [
+      "잔돈 세기"
+    ]
+  },
+  "personality": {
+    "description": "짤랑, 짤랑~♬\n금화 소리야말로 최고의 음악 소리지!\n구원자님도 그렇게 생각하지 않아?\n이 도시는 늘 장사꾼들로 한가득하다구.  한눈팔면 안 돼!",
+    "greeting": "킁킁! 어디서 돈 냄새가 나는데?"
+  },
+  "speech_patterns": [],
+  "comments": [],
+  "dialogues": {
+    "story": [],
+    "evertalk": []
+  },
+  "i18n": {
+    "name": {
+      "ko": "샤링",
+      "en": "Sharinne",
+      "zh_tw": "夏琳",
+      "zh_cn": "夏琳"
+    },
+    "grade": {
+      "ko": "레어",
+      "en": "Rare",
+      "zh_tw": "稀有",
+      "zh_cn": "稀有"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "워리어",
+      "en": "Warrior",
+      "zh_tw": "戰士",
+      "zh_cn": "戰士"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "타고난 장사꾼",
+        "en": "Natural Trader",
+        "zh_tw": "天生的商人",
+        "zh_cn": "天生的商人"
+      },
+      "constellation": {
+        "ko": "사자자리",
+        "en": "Leo",
+        "zh_tw": "獅子座",
+        "zh_cn": "獅子座"
+      },
+      "union": {
+        "ko": "제이드 상단",
+        "en": "Jade's Merchants' Guild",
+        "zh_tw": "潔依德商團",
+        "zh_cn": "潔依德商團"
+      },
+      "cv_ko": {
+        "ko": "최하리",
+        "en": "Hari Choi",
+        "zh_tw": "崔夏利",
+        "zh_cn": "崔夏利"
+      },
+      "cv_jp": {
+        "ko": "Hikaru Akao",
+        "en": "Hikaru Akao",
+        "zh_tw": "Hikaru Akao",
+        "zh_cn": "Hikaru Akao"
+      },
+      "like": {
+        "ko": [
+          "돈",
+          "장부 정리"
+        ],
+        "en": [
+          "Money",
+          "bookkeeping"
+        ],
+        "zh_tw": [
+          "錢、整理記帳本"
+        ],
+        "zh_cn": [
+          "錢、整理記帳本"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "흥정",
+          "어음"
+        ],
+        "en": [
+          "Bargain",
+          "drafts"
+        ],
+        "zh_tw": [
+          "議價、借據"
+        ],
+        "zh_cn": [
+          "議價、借據"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "가계부 작성"
+        ],
+        "en": [
+          "Writing household account book"
+        ],
+        "zh_tw": [
+          "記帳"
+        ],
+        "zh_cn": [
+          "記帳"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "잔돈 세기"
+        ],
+        "en": [
+          "Counting change"
+        ],
+        "zh_tw": [
+          "數零錢"
+        ],
+        "zh_cn": [
+          "數零錢"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "짤랑, 짤랑~♬\n금화 소리야말로 최고의 음악 소리지!\n구원자님도 그렇게 생각하지 않아?\n이 도시는 늘 장사꾼들로 한가득하다구.  한눈팔면 안 돼!",
+        "en": "Clink, clink~♬\nThere's no better music than the clinking of gold coins!\nDon't you agree, Savior?\nThis city is always full of traders. Be careful not to get distracted!",
+        "zh_tw": "噹啷、噹啷～♬\n金幣的聲音是最棒的樂聲！\n救援者也是這麼想的吧？\n這個城市裡總是有很多商人。不能分心呀！",
+        "zh_cn": "噹啷、噹啷～♬\n金幣的聲音是最棒的樂聲！\n救援者也是這麼想的吧？\n這個城市裡總是有很多商人。不能分心呀！"
+      },
+      "greeting": {
+        "ko": "킁킁! 어디서 돈 냄새가 나는데?",
+        "en": "Sniff, sniff! Smells like money!",
+        "zh_tw": "嗅嗅！好像有錢的味道耶？",
+        "zh_cn": "嗅嗅！好像有錢的味道耶？"
+      }
+    },
+    "speech_patterns": [],
+    "comments": [],
+    "dialogues": {
+      "story": [],
+      "evertalk": []
+    }
+  }
+}

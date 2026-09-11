@@ -1,0 +1,259 @@
+{
+  "id": "9960",
+  "name": "유리아",
+  "name_en": "Yuria",
+  "grade": "에픽",
+  "race": "천사형",
+  "class": "서포터",
+  "sub_class": "치료",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "영원한 태양",
+    "constellation": "전갈자리",
+    "union": "솔레이 왕국",
+    "birthday": "1122",
+    "height": 163,
+    "weight": 48,
+    "cv_ko": "곽규미",
+    "cv_jp": "Rina Honnizumi",
+    "like": [
+      "정령들의 미소"
+    ],
+    "dislike": [
+      "약자의 희생"
+    ],
+    "hobby": [
+      "산책",
+      "정원 손질"
+    ],
+    "speciality": [
+      "매운 음식 먹기"
+    ]
+  },
+  "personality": {
+    "description": "좋은 아침이에요, 구원자님. 오늘도 이곳의 태양은 참 찬란하죠? \n따뜻하고 밝은 아케나인 기후가 구원자님 마음에 드셨으면 좋겠어요.\n솔레이 왕국은 제가 정말 오랜 시간 동안 다스려온 나라랍니다.\n그리고 제 바람은 항상 같아요. \n\n이곳에서 살아가는 정령들이 그저 평범하게 살아가는 것.\n해가 지고 밤이 찾아와 정령들이 잠을 청하기 전, 불안한 마음 없이 눈을 감을 수 있는 것…\n그것이야말로 제 진정한 행복이자 영원한 숙명이에요.\n\n그리고, 저희에게 마치 선물처럼 나타나주신 구원자님이 지금 제 눈앞에 있네요…\n오직 구원자님께서만 지니신 그 진실된 힘을, 저는 믿고 있을게요.\n항상 진심을 보여주셔서 감사해요!",
+    "greeting": null
+  },
+  "speech_patterns": [],
+  "comments": [
+    {
+      "writer": "메피스토펠레스",
+      "comment": "유리아님, 너무 무리하지 않으셨으면 합니다. …제가 말하면 설득력이 없나요?"
+    },
+    {
+      "writer": "비비안",
+      "comment": "싫어도 곧 알게 될 거에요. 유리아 폐하의 운명 끝에 무엇이 기다리고 있는지…"
+    },
+    {
+      "writer": "클로이",
+      "comment": "헤헥, 우리 유리아님 최고! 유리아님이 계신 한 솔레이 왕국은 끄떡없다구요~!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": []
+  },
+  "i18n": {
+    "name": {
+      "ko": "유리아",
+      "en": "Yuria",
+      "zh_tw": "尤里婭",
+      "zh_cn": "尤里婭"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "천사형",
+      "en": "Angel",
+      "zh_tw": "天使型",
+      "zh_cn": "天使型"
+    },
+    "class": {
+      "ko": "서포터",
+      "en": "Supporter",
+      "zh_tw": "輔助者",
+      "zh_cn": "輔助者"
+    },
+    "sub_class": {
+      "ko": "치료",
+      "en": "Heal",
+      "zh_tw": "治療",
+      "zh_cn": "治療"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "영원한 태양",
+        "en": "Eternal Sun",
+        "zh_tw": "永恆的太陽",
+        "zh_cn": "永恆的太陽"
+      },
+      "constellation": {
+        "ko": "전갈자리",
+        "en": "Scorpio",
+        "zh_tw": "天蠍座",
+        "zh_cn": "天蠍座"
+      },
+      "union": {
+        "ko": "솔레이 왕국",
+        "en": "Kingdom of Solrey",
+        "zh_tw": "蘇萊伊王國",
+        "zh_cn": "蘇萊伊王國"
+      },
+      "cv_ko": {
+        "ko": "곽규미",
+        "en": "Gyumi Gwak",
+        "zh_tw": "郭圭美",
+        "zh_cn": "郭圭美"
+      },
+      "cv_jp": {
+        "ko": "Rina Honnizumi",
+        "en": "Rina Honnizumi",
+        "zh_tw": "Rina Honnizumi",
+        "zh_cn": "Rina Honnizumi"
+      },
+      "like": {
+        "ko": [
+          "정령들의 미소"
+        ],
+        "en": [
+          "Smiling Souls"
+        ],
+        "zh_tw": [
+          "精靈們的微笑"
+        ],
+        "zh_cn": [
+          "精靈們的微笑"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "약자의 희생"
+        ],
+        "en": [
+          "Loss of innocent lives"
+        ],
+        "zh_tw": [
+          "弱者的犧牲"
+        ],
+        "zh_cn": [
+          "弱者的犧牲"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "산책",
+          "정원 손질"
+        ],
+        "en": [
+          "Walks",
+          "gardening"
+        ],
+        "zh_tw": [
+          "散步、修整庭院"
+        ],
+        "zh_cn": [
+          "散步、修整庭院"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "매운 음식 먹기"
+        ],
+        "en": [
+          "Eating spicy food"
+        ],
+        "zh_tw": [
+          "吃辣的食物"
+        ],
+        "zh_cn": [
+          "吃辣的食物"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "좋은 아침이에요, 구원자님. 오늘도 이곳의 태양은 참 찬란하죠? \n따뜻하고 밝은 아케나인 기후가 구원자님 마음에 드셨으면 좋겠어요.\n솔레이 왕국은 제가 정말 오랜 시간 동안 다스려온 나라랍니다.\n그리고 제 바람은 항상 같아요. \n\n이곳에서 살아가는 정령들이 그저 평범하게 살아가는 것.\n해가 지고 밤이 찾아와 정령들이 잠을 청하기 전, 불안한 마음 없이 눈을 감을 수 있는 것…\n그것이야말로 제 진정한 행복이자 영원한 숙명이에요.\n\n그리고, 저희에게 마치 선물처럼 나타나주신 구원자님이 지금 제 눈앞에 있네요…\n오직 구원자님께서만 지니신 그 진실된 힘을, 저는 믿고 있을게요.\n항상 진심을 보여주셔서 감사해요!",
+        "en": "Good morning, Savior. The sun is shining quite radiantly today! \r\nI hope you're enjoying the bright and warm climate of Arkenine.\r\nI have been ruling over the Kingdom of Solrey for quite a long time.\r\nI always wish for one thing:\r\n\r\nthat the Souls here can all live a normal life.\r\nAs the sun rises and sets, I just want everyone to close their eyes without any worries in their hearts as they fall asleep at night…\r\nThat is what would make me happy, and it is my eternal duty to make sure that's how they live.\r\n\r\nAnd you, Savior. You are like a gift, and here you are standing right before me…\r\nI have faith in your powers.\r\nThank you for always being truthful and sincere!",
+        "zh_tw": "救援者，早安。今天這裡又是陽光普照的一天呢！\r\n期盼阿肯納因溫暖又明亮的氣候能溫暖救援者的心。\r\n我已經統治蘇萊伊王國很久了，\r\n而我的心願始終如一。\r\n\r\n那就是希望居住於此的精靈們能夠過著平凡簡單的生活。\r\n日落之後夜幕低垂時，精靈們在就寢前能夠安心地閉上雙眼…\r\n那對我來說才是真正的幸福及永遠的宿命。\r\n\r\n還有，如禮物般出現的救援者，此時此刻就在我的眼前…\r\n我相信那股只存在於救援者體內的真實力量。\r\n謝謝你總是以真心待我！",
+        "zh_cn": "救援者，早安。今天這裡又是陽光普照的一天呢！\r\n期盼阿肯納因溫暖又明亮的氣候能溫暖救援者的心。\r\n我已經統治蘇萊伊王國很久了，\r\n而我的心願始終如一。\r\n\r\n那就是希望居住於此的精靈們能夠過著平凡簡單的生活。\r\n日落之後夜幕低垂時，精靈們在就寢前能夠安心地閉上雙眼…\r\n那對我來說才是真正的幸福及永遠的宿命。\r\n\r\n還有，如禮物般出現的救援者，此時此刻就在我的眼前…\r\n我相信那股只存在於救援者體內的真實力量。\r\n謝謝你總是以真心待我！"
+      },
+      "greeting": {
+        "ko": "",
+        "en": "",
+        "zh_tw": "",
+        "zh_cn": ""
+      }
+    },
+    "speech_patterns": [],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "유리아님, 너무 무리하지 않으셨으면 합니다. …제가 말하면 설득력이 없나요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Yuria, I do not want you to overstrain yourself. I mean it."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "尤里婭，請不要太勉強自己…這句話從我口中說出來很沒有說服力嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "尤里婭，請不要太勉強自己…這句話從我口中說出來很沒有說服力嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비비안",
+          "message": "싫어도 곧 알게 될 거에요. 유리아 폐하의 운명 끝에 무엇이 기다리고 있는지…"
+        },
+        "en": {
+          "speaker": "Vivienne",
+          "message": "You cannot avoid what awaits at the end of your fate, Queen Yuria…"
+        },
+        "zh_tw": {
+          "speaker": "薇薇安",
+          "message": "就算你不想知道也很快就會知道，在尤里婭陛下的命運盡頭會有什麼等待著她…"
+        },
+        "zh_cn": {
+          "speaker": "薇薇安",
+          "message": "就算你不想知道也很快就會知道，在尤里婭陛下的命運盡頭會有什麼等待著她…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "헤헥, 우리 유리아님 최고! 유리아님이 계신 한 솔레이 왕국은 끄떡없다구요~!"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Heh, Yuria is the best! Solrey will be fine as long as you're here!"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "嘿嘿，尤里婭最棒了！只要有尤里婭在，蘇萊伊王國就屹立不搖～！"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "嘿嘿，尤里婭最棒了！只要有尤里婭在，蘇萊伊王國就屹立不搖～！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": []
+    }
+  }
+}

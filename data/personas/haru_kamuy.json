@@ -1,0 +1,6468 @@
+{
+  "id": "2170",
+  "name": "하루(카무이)",
+  "name_en": "Haru (Kamuy)",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "레인저",
+  "sub_class": "디버프",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "고독한 카무이",
+    "constellation": "인연_메피스토_엔딩",
+    "union": "???",
+    "birthday": "328",
+    "height": 158,
+    "weight": 43,
+    "cv_ko": "곽규미",
+    "cv_jp": "곽규미",
+    "like": [
+      "조용한 곳"
+    ],
+    "dislike": [
+      "매운 요리"
+    ],
+    "hobby": [
+      "제식 단검 손질"
+    ],
+    "speciality": [
+      "예민하게 소리 듣기"
+    ]
+  },
+  "personality": {
+    "description": "넌 누구야. 어떻게 이 산에 들어온 거지?\n꿈이라니 무슨 소리야? 여긴 현실이라고.\n게다가 구원자니 뭐니… 헛소리 그만 해.\n\n날 키워 주신 엄마랑 아빠가 돌아가신 후부터 이 산엔 아무도 못 들어왔어.\n내가 고독의 결계를 쳤으니까.\n그 후 다 세지도 못할 만큼 긴 세월이 지나는 동안 이 산의 눈이 녹고 풀이 돋아났지만, 나는 계속 혼자였어. \n\n그런데 자칭 구원자라는 네가 갑자기 이 산에 들어온 거야.\n게다가 날 구원하겠다며 다른 세계로 가자니… 그 말을 어떻게 믿으라는 거야?\n널 믿을 수 있는 증거라도 가져온다면 모르겠지만.\n\n아무튼 난 이 산, 이오루에서 안 나갈 거야.\n난 이오루의 수호자 '카무이'니까.",
+    "greeting": "지키겠어. 나의 새로운 이오루는 이곳이니까."
+  },
+  "speech_patterns": [
+    "―·-···―·",
+    "―――",
+    "···―···",
+    "너···―누···",
+    "―·-―···―·",
+    "―·-―···",
+    "으…",
+    "시끄러워",
+    "머릿속에 마구 울리니까 조용히 말해",
+    "무슨 소리야?",
+    "지금 내 머릿속에 말하고 있잖아",
+    "에버톡이 뭔데?",
+    "에버폰은 또 뭐고?",
+    "이상한 소리만 하는 걸 보니",
+    "너 그 녀석이구나",
+    "구원자인지 뭔지",
+    "날 괴롭히는 것도 정도껏 해",
+    "그만 꺼져",
+    "피곤하니까",
+    "아 아 아",
+    "어",
+    "바보 바보 바보",
+    "멍청이",
+    "―·-···꺼―·",
+    "·-―···―·",
+    "꺼져",
+    "어떻게 보내는지 알았다",
+    "꺼져 꺼져 꺼져",
+    "그러고 싶어도",
+    "잘·-―···―·····―·",
+    "잘 안 돼",
+    "그러고 싶지도 않지만",
+    "―·-···―·져―",
+    "너 말이야",
+    "꿈속에서 날 만나는 거라 했었지",
+    "지금도 꿈속이야?",
+    "그럼 너도 알겠네",
+    "내가 꿈속 존재가 아니라",
+    "진짜라는 거",
+    "―···―·",
+    "음",
+    "마음이 흔들리니 잘 안 들려",
+    "그쪽의 나는",
+    "어때?",
+    "뭐야",
+    "사이 좋네",
+    "흥",
+    "닥쳐",
+    "난 안 나가",
+    "엄마 아빠가 있던 이 산과 함께 죽을 거야"
+  ],
+  "comments": [
+    {
+      "writer": "니콜",
+      "comment": "처음 만났던 때의 하루가 생각나네. \n괜히 까칠하게 굴지만 카무이도 본성은 착한 아이야!"
+    },
+    {
+      "writer": "메피스토펠레스",
+      "comment": "페이렌 숲지기인 하루 님과, 다른 세계에서 온 또다른 하루 님이 공존할 수 있다니… \n이것도 구원자님의 힘 덕분이겠죠. 정말 놀랍습니다."
+    },
+    {
+      "writer": "라우라",
+      "comment": "다른 세계에서 온 정령도 웨리 님의 감시 대상일까요?\n아주 흥미로운 존재임다. 여러모로 관심이 많아요."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "하루(카무이)",
+        "message": "―·-···―·"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "―――"
+      },
+      {
+        "speaker": "구원자",
+        "message": "??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누구세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누구세요?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "···―···"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "너···―누···"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "―·-―···―·"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?????"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?????"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "―·-―···"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루??? 하루 맞지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루??? 하루 맞지?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "으…"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "시끄러워"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "머릿속에 마구 울리니까 조용히 말해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말 아닌데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말 아닌데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버톡인데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버톡인데"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "무슨 소리야?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "지금 내 머릿속에 말하고 있잖아"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "에버톡이 뭔데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰을 사용한 메신저 시스템…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰을 사용한 메신저 시스템…"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "에버폰은 또 뭐고?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "이상한 소리만 하는 걸 보니"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "너 그 녀석이구나"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "구원자인지 뭔지"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "날 괴롭히는 것도 정도껏 해"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그만 꺼져"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "피곤하니까"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "아 아 아"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "바보 바보 바보"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "멍청이"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저기"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저기"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "―·-···꺼―·"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "·-―···―·"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루? 들려?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루? 들려?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "꺼져"
+      },
+      {
+        "speaker": "구원자",
+        "message": "들리나 보네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "들리나 보네"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "어떻게 보내는지 알았다"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "꺼져 꺼져 꺼져"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좀 더 제대로 대화하면 안 돼?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좀 더 제대로 대화하면 안 돼?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그러고 싶어도"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "잘·-―···―·····―·"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "잘 안 돼"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그러고 싶지도 않지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무하네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무하네"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "―·-···―·져―"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "너 말이야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "꿈속에서 날 만나는 거라 했었지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "지금도 꿈속이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니, 현실이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니, 현실이야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그럼 너도 알겠네"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "내가 꿈속 존재가 아니라"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "진짜라는 거"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아마 이쪽 세계의 하루와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아마 이쪽 세계의 하루와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너는 다른 존재인 거겠지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너는 다른 존재인 거겠지"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "―···―·"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "음"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "마음이 흔들리니 잘 안 들려"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그쪽의 나는"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀엽고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀엽고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "종종 과일을 가져다 줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "종종 과일을 가져다 줘"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "뭐야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "사이 좋네"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "흥"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정령 계약 할 마음이 들었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정령 계약 할 마음이 들었어?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "닥쳐"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "난 안 나가"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "엄마 아빠가 있던 이 산과 함께 죽을 거야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "네가 왔다 간 뒤로 더 빠르게 붕괴하기 시작했으니까"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "이제 나한테 신경 꺼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 말야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 말야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 아무 것도 안 했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 아무 것도 안 했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "붕괴가 빨라진 건 사실"
+      },
+      {
+        "speaker": "구원자",
+        "message": "붕괴가 빨라진 건 사실"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루 때문 아냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루 때문 아냐?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "뭐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루의 마음이 흔들려서"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루의 마음이 흔들려서"
+      },
+      {
+        "speaker": "구원자",
+        "message": "붕괴가 더 빨라진 걸수도 있잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "붕괴가 더 빨라진 걸수도 있잖아"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "시끄러워"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "네가 뭘 안다고"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "·-―너 따위가···―·····"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "·―·-―···―··"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "정령 계약 말야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "다른 하루도 했어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "흐응"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그래?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇게 쉽게 하는 게 아냐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇게 쉽게 하는 게 아냐"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "나한텐 당장 하자고 했잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그땐 급했어서…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그땐 급했어서…"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그럼"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "다른 하루랑도 계약할 거야?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "앞으로"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 모르지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 모르지"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "흐으응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 그래?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그냥"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "난 엄마랑 아빠 말곤"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "너밖에 모르는데"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "왠지 치사하네 너"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "흥"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "이곳에서의 삶은 무료했어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "매일매일이 똑같고"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "새로운 것도, 사라지는 것도 없이"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그저 텅 빈 산 속에 나 혼자였어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그러다 어느 순간부터 하늘이 무너지기 시작했고"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "어쩌면 나는…"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "이 세계가 무너져 간다는 것에 안도했는지도 몰라"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "어떤 방향으로든 변화하고 있다는 것에…"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "끝으로 향하는 그 움직임에서"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "오히려 나는 미래와 변화를 보았던 걸지도"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그런데 갑자기 네가 나타나선"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "여기서 날 구하겠다고 떠들잖아"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "얼마나 당황스러웠는지"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "나참"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안…?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "됐어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "사과하지 마"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "ㄱ ㅜ 언자 안 녕"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "이거 어 려우ㅓ"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "에버포"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "에바폰"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "에버폰"
+      },
+      {
+        "speaker": "구원자",
+        "message": "카무이!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "카무이!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰을 쓸 수 있게 됐구나!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰을 쓸 수 있게 됐구나!"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "느려"
+      },
+      {
+        "speaker": "구원자",
+        "message": "금방 익숙해질 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "금방 익숙해질 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사용법도 알려 줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사용법도 알려 줄게"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "글ㅐ"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "그래"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "바부"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "구원자바보"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "바보 바부 바보"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰으로 보내게 됐어도 그건 꼭 보내는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰으로 보내게 됐어도 그건 꼭 보내는구나"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "ㅋㅋㅋ"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "하루가 알려 줘서"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "사진도 보낼 수 있게 됐어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "타자도 빨라졌고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루의 일기장이네?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루의 일기장이네?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "응"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "이 일기장은 앞으로"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "우리 둘의 교환일기장으로 쓰기로 했어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "하루씩 번갈아 쓸 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘됐다!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘됐다!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "둘이 많이 친해졌구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "둘이 많이 친해졌구나"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "구원자 욕을 잔뜩 쓰고 있어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "우리 둘이서"
+      },
+      {
+        "speaker": "구원자",
+        "message": "농담이지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "농담이지?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "응"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "하루는 참 착한 애야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "나긴 하지만"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "아무튼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "카무이는 내 욕 쓴 거야?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "카무이는 내 욕 쓴 거야?!"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "어느 쪽일지 맞춰 봐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 카무이를 믿을게…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 카무이를 믿을게…!"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "안 썼어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "휴"
+      },
+      {
+        "speaker": "구원자",
+        "message": "휴"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "아직"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "구원자가 준 옷"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "잘 입고 있어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "처음 입어보는 거라 낯설긴 한데"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "이런 것도 색다르네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 어울려서 다행이야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 어울려서 다행이야!"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "새로운 곳에서"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "새로운 차림으로"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "새로운 이들과"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "새로운 삶을 살게 된 거"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "다 구원자 덕분이야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오늘은 솔직하네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오늘은 솔직하네"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "오늘만이야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "앞으로도 잘 부탁해"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "나를 구원해 준"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "첫 구원자"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "넌 누구지?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "누군데 내 머릿속에 말을 거는 거야?"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "내 머릿속에서 나가!"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "너 때문이야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "너 때문에 더 빨라졌어"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "하늘의 붕괴가"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "널 만나고 나선"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "황당한 일들뿐이야"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "이젠 또 뭔…"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "처음 보는 세계엔"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "너도 있고"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "또 다른 나도 있겠지"
+      },
+      {
+        "speaker": "하루(카무이)",
+        "message": "나의 미래도…"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "하루(카무이)",
+      "en": "Haru (Kamuy)",
+      "zh_tw": "河路（神威）",
+      "zh_cn": "河路（神威）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "레인저",
+      "en": "Ranger",
+      "zh_tw": "遊俠",
+      "zh_cn": "遊俠"
+    },
+    "sub_class": {
+      "ko": "디버프",
+      "en": "Debuff",
+      "zh_tw": "減益",
+      "zh_cn": "減益"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "고독한 카무이",
+        "en": "Solitary Kamuy",
+        "zh_tw": "孤獨的神威",
+        "zh_cn": "孤獨的神威"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_엔딩",
+        "en": "인연_메피스토_엔딩",
+        "zh_tw": "牡羊座",
+        "zh_cn": "牡羊座"
+      },
+      "union": {
+        "ko": "???",
+        "en": "???",
+        "zh_tw": "？？？",
+        "zh_cn": "？？？"
+      },
+      "cv_ko": {
+        "ko": "곽규미",
+        "en": "Gyumi Gwak",
+        "zh_tw": "郭圭美",
+        "zh_cn": "郭圭美"
+      },
+      "cv_jp": {
+        "ko": "곽규미",
+        "en": "Gyumi Gwak",
+        "zh_tw": "郭圭美",
+        "zh_cn": "郭圭美"
+      },
+      "like": {
+        "ko": [
+          "조용한 곳"
+        ],
+        "en": [
+          "Quiet places"
+        ],
+        "zh_tw": [
+          "安靜的地方"
+        ],
+        "zh_cn": [
+          "安靜的地方"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "매운 요리"
+        ],
+        "en": [
+          "Spicy food"
+        ],
+        "zh_tw": [
+          "辣味料理"
+        ],
+        "zh_cn": [
+          "辣味料理"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "제식 단검 손질"
+        ],
+        "en": [
+          "Polish her ceremonial dagger"
+        ],
+        "zh_tw": [
+          "保養制式短劍"
+        ],
+        "zh_cn": [
+          "保養制式短劍"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "예민하게 소리 듣기"
+        ],
+        "en": [
+          "Listen carefully"
+        ],
+        "zh_tw": [
+          "聽覺敏銳"
+        ],
+        "zh_cn": [
+          "聽覺敏銳"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "넌 누구야. 어떻게 이 산에 들어온 거지?\n꿈이라니 무슨 소리야? 여긴 현실이라고.\n게다가 구원자니 뭐니… 헛소리 그만 해.\n\n날 키워 주신 엄마랑 아빠가 돌아가신 후부터 이 산엔 아무도 못 들어왔어.\n내가 고독의 결계를 쳤으니까.\n그 후 다 세지도 못할 만큼 긴 세월이 지나는 동안 이 산의 눈이 녹고 풀이 돋아났지만, 나는 계속 혼자였어. \n\n그런데 자칭 구원자라는 네가 갑자기 이 산에 들어온 거야.\n게다가 날 구원하겠다며 다른 세계로 가자니… 그 말을 어떻게 믿으라는 거야?\n널 믿을 수 있는 증거라도 가져온다면 모르겠지만.\n\n아무튼 난 이 산, 이오루에서 안 나갈 거야.\n난 이오루의 수호자 '카무이'니까.",
+        "en": "Who are you? How did you get into this mountain?\nA dream? What are you talking about? This is reality.\nAnd just stop it with this \"Savior\" nonsense, already.\n\nEver since my mom and dad, the ones who raised me, passed away, no one has set foot on this mountain.\nI cast a barrier of solitude to keep everyone out.\nSeasons passed, so many I lost count. The snow melted, grass began to grow, and I remained here, alone.\n\nAnd then, suddenly you show up, claiming to be some Savior,\ntalking about saving me and taking me to another world. How am I supposed to believe that?\nUnless you've got proof, something to prove I can trust you, don't expect me to follow you anywhere.\n\nEither way, I'm not leaving this mountain.\nThis is Ioru. And I am its guardian, \"Kamuy.\"",
+        "zh_tw": "你是誰？是怎麼進到這座山的？\n竟然說是作夢，你在說什麼？這裡可是現實世界。\n而且還說什麼救援者的…別再瞎扯了。\n\n自從養育我長大的爸媽過世以後，就沒有人能進到這座山裡。\n因為我設下了孤獨的結界。\n在那之後，在無法計數的漫長歲月中， 這座山的白雪消融、嫩葉發芽，但我一直都是孑然一身。\n\n不過自稱是救援者的你卻進到這座山中。\n而且還說要拯救我，要帶我去其他世界…是要我怎麼相信那番話？\n如果你把可信的證據拿來，可能就不好說了。\n\n總之，我不會離開這座山，不會離開伊奧魯的。\n因為我是伊奧魯的守護者「神威」。",
+        "zh_cn": "你是誰？是怎麼進到這座山的？\n竟然說是作夢，你在說什麼？這裡可是現實世界。\n而且還說什麼救援者的…別再瞎扯了。\n\n自從養育我長大的爸媽過世以後，就沒有人能進到這座山裡。\n因為我設下了孤獨的結界。\n在那之後，在無法計數的漫長歲月中， 這座山的白雪消融、嫩葉發芽，但我一直都是孑然一身。\n\n不過自稱是救援者的你卻進到這座山中。\n而且還說要拯救我，要帶我去其他世界…是要我怎麼相信那番話？\n如果你把可信的證據拿來，可能就不好說了。\n\n總之，我不會離開這座山，不會離開伊奧魯的。\n因為我是伊奧魯的守護者「神威」。"
+      },
+      "greeting": {
+        "ko": "지키겠어. 나의 새로운 이오루는 이곳이니까.",
+        "en": "I'll protect this place. It's my new Ioru now.",
+        "zh_tw": "我會堅守這裡，因為這裡就是我全新的伊奧魯。",
+        "zh_cn": "我會堅守這裡，因為這裡就是我全新的伊奧魯。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "―·-···―·"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "―·-···―·"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "―·-···―·"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "―·-···―·"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "―――"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "―――"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "―――"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "―――"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "···―···"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "···―···"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "···―···"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "···―···"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "너···―누···"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Who···―y···"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "你···―誰···"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "你···―誰···"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "―·-―···―·"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "―·-―···―·"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "―·-―···―·"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "―·-―···―·"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "―·-―···"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "―·-―···"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "―·-―···"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "―·-―···"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "으…"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Ugh..."
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "呃…"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "呃…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "시끄러워"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "You're so loud"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "吵死了"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "吵死了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "머릿속에 마구 울리니까 조용히 말해"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Keep your voice down. It's echoing inside my head"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "我的腦袋嗡嗡作響，你講話小聲點"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "我的腦袋嗡嗡作響，你講話小聲點"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "무슨 소리야?"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "What are you talking about?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "什麼意思？"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "什麼意思？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "지금 내 머릿속에 말하고 있잖아"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "You're literally speaking inside my head"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "你現在不就在我腦袋裡說話嗎"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "你現在不就在我腦袋裡說話嗎"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "에버톡이 뭔데?"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "What even is Evertalk?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "EverTalk是什麼東西？"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "EverTalk是什麼東西？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "에버폰은 또 뭐고?"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Everphone?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "EverPhone又是什麼？"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "EverPhone又是什麼？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "이상한 소리만 하는 걸 보니"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Now you're just making stuff up"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "看你滿嘴胡言亂語"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "看你滿嘴胡言亂語"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "너 그 녀석이구나"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "You're that Savior person"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "你就是那個傢伙啊"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "你就是那個傢伙啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "구원자인지 뭔지"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "or whatever, aren't you?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "叫救援者還什麼的"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "叫救援者還什麼的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "날 괴롭히는 것도 정도껏 해"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Can you stop tormenting me already?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "折磨我也要適可而止"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "折磨我也要適可而止"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "그만 꺼져"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Just leave me alone"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "你滾吧"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "你滾吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "피곤하니까"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "I'm tired"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "我累了"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "我累了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "아 아 아"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Ah ah ah"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "啊 啊 啊"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "啊 啊 啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "어"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Uh"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "呃"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "呃"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "바보 바보 바보"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Dummy dummy dummy"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "笨蛋 笨蛋 笨蛋"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "笨蛋 笨蛋 笨蛋"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "멍청이"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Stupid"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "白痴"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "白痴"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "―·-···꺼―·"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "―·-···Go a―· ·-―···―·"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "―·-···滾―·"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "―·-···滾―·"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "·-―···―·"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "·-―···―·"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "·-―···―·"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "·-―···―·"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "꺼져"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Go away"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "滾"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "滾"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "어떻게 보내는지 알았다"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "I figured out how to reply"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "我知道你是怎麼傳過來的了"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "我知道你是怎麼傳過來的了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "꺼져 꺼져 꺼져"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "GO AWAY GO AWAY GO AWAY"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "滾開 滾開 滾開"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "滾開 滾開 滾開"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "그러고 싶어도"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Even if I wanted to"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "就算我想那樣"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "就算我想那樣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "잘·-―···―·····―·"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "I―·-―···―·····―·"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "也·-―···―·····―·"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "也·-―···―·····―·"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "잘 안 돼"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "I can't"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "也做不太到"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "也做不太到"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "그러고 싶지도 않지만"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Not that I want to"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "更何況我不想"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "更何況我不想"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "―·-···―·져―"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "―·-···―·fa―"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "―·-···―·開―"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "―·-···―·開―"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "너 말이야"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "You"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "都是你"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "都是你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "꿈속에서 날 만나는 거라 했었지"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "You said you met me in a dream, right?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "你說過是在夢裡見到我的吧"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "你說過是在夢裡見到我的吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "지금도 꿈속이야?"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Is this...another dream?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "現在也是在夢裡嗎？"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "現在也是在夢裡嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "그럼 너도 알겠네"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Then, you get it now"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "那你應該也很清楚了吧"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "那你應該也很清楚了吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "내가 꿈속 존재가 아니라"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "I'm not just some dream version"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "我不是夢境裡的存在"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "我不是夢境裡的存在"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "진짜라는 거"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "I'm real"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "是真實的存在"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "是真實的存在"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "―···―·"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "―···―·"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "―···―·"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "―···―·"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "음"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Mm"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "嗯"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "마음이 흔들리니 잘 안 들려"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "My thoughts are getting noisy. It's hard to hear you"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "我的內心不穩定，聽不太清楚"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "我的內心不穩定，聽不太清楚"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "그쪽의 나는"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "What's the me"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "那邊的我"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "那邊的我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "어때?"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "in your world like?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "怎麼樣？"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "怎麼樣？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "뭐야"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "What?"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "什麼啊"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "什麼啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "사이 좋네"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Sounds like you two get along great"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "感情真好"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "感情真好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "흥"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Tch"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "哼"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "哼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "닥쳐"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "Shut up"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "閉嘴"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "閉嘴"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "난 안 나가"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "I'm not leaving"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "我不會離開的"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "我不會離開的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루(카무이)",
+          "message": "엄마 아빠가 있던 이 산과 함께 죽을 거야"
+        },
+        "en": {
+          "speaker": "Haru (Kamuy)",
+          "message": "I'm going to die with this mountain, where Mom and Dad lived"
+        },
+        "zh_tw": {
+          "speaker": "河路（神威）",
+          "message": "我要跟爸媽以前住的山一起死去"
+        },
+        "zh_cn": {
+          "speaker": "河路（神威）",
+          "message": "我要跟爸媽以前住的山一起死去"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "니콜",
+          "message": "처음 만났던 때의 하루가 생각나네. \n괜히 까칠하게 굴지만 카무이도 본성은 착한 아이야!"
+        },
+        "en": {
+          "speaker": "Nicole",
+          "message": "I remember the first time I met that Haru.\nKamuy acts all prickly, but deep down, she's a good Soul."
+        },
+        "zh_tw": {
+          "speaker": "妮可",
+          "message": "讓我想起了初見時的河路。\n為人挑剔難搞，但神威骨子裡也是個善良的孩子！"
+        },
+        "zh_cn": {
+          "speaker": "妮可",
+          "message": "讓我想起了初見時的河路。\n為人挑剔難搞，但神威骨子裡也是個善良的孩子！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "페이렌 숲지기인 하루 님과, 다른 세계에서 온 또다른 하루 님이 공존할 수 있다니… \n이것도 구원자님의 힘 덕분이겠죠. 정말 놀랍습니다."
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "To think Haru, the Fayren Forest Keeper, and another Haru from an entirely different world could coexist...\nThis must be thanks to your power, Savior. It's truly remarkable."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "森林守護者河路和來自其他世界的另一個河路，竟然能同時存在著…\n這應該也是多虧了救援者吧，真是令人訝異。"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "森林守護者河路和來自其他世界的另一個河路，竟然能同時存在著…\n這應該也是多虧了救援者吧，真是令人訝異。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "라우라",
+          "message": "다른 세계에서 온 정령도 웨리 님의 감시 대상일까요?\n아주 흥미로운 존재임다. 여러모로 관심이 많아요."
+        },
+        "en": {
+          "speaker": "Laura",
+          "message": "I wonder if a Soul from another world still fall under Wheri's surveillance.\nShe's quite the intriguing presence. I have a lot of questions."
+        },
+        "zh_tw": {
+          "speaker": "蘿拉",
+          "message": "來自其他世界的精靈也是威里的監視對象嗎？\n她是非常有趣的存在，在各方面引起了我的興趣。"
+        },
+        "zh_cn": {
+          "speaker": "蘿拉",
+          "message": "來自其他世界的精靈也是威里的監視對象嗎？\n她是非常有趣的存在，在各方面引起了我的興趣。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "―·-···―·"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "―·-···―·"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "―·-···―·"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "―·-···―·"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "―――"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "―――"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "―――"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "―――"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누구세요?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Who is this?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "請問妳是？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "請問妳是？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누구세요?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Who is this?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "請問妳是？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "請問妳是？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "···―···"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "···―···"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "···―···"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "···―···"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "너···―누···"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Who···―y···"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你···―誰···"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你···―誰···"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "―·-―···―·"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "―·-―···―·"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "―·-―···―·"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "―·-―···―·"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?????"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?????"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？？？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？？？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?????"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?????"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？？？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？？？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "―·-―···"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "―·-―···"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "―·-―···"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "―·-―···"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Haru?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Haru?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루??? 하루 맞지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Haru?? It's you, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路？？？妳是河路吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路？？？妳是河路吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루??? 하루 맞지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Haru?? It's you, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路？？？妳是河路吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路？？？妳是河路吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "으…"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Ugh..."
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "呃…"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "呃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "시끄러워"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "You're so loud"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "吵死了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "吵死了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "머릿속에 마구 울리니까 조용히 말해"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Keep your voice down. It's echoing inside my head"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我的腦袋嗡嗡作響，你講話小聲點"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我的腦袋嗡嗡作響，你講話小聲點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말 아닌데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's not my voice"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒有講話"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒有講話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말 아닌데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's not my voice"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒有講話"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒有講話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버톡인데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "This is Evertalk"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是EverTalk"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是EverTalk"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버톡인데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "This is Evertalk"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是EverTalk"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是EverTalk"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "무슨 소리야?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "What are you talking about?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "什麼意思？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "什麼意思？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "지금 내 머릿속에 말하고 있잖아"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "You're literally speaking inside my head"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你現在不就在我腦袋裡說話嗎"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你現在不就在我腦袋裡說話嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "에버톡이 뭔데?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "What even is Evertalk?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "EverTalk是什麼東西？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "EverTalk是什麼東西？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰을 사용한 메신저 시스템…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A messaging system that uses the Everphone..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "透過EverPhone使用的聊天系統…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "透過EverPhone使用的聊天系統…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰을 사용한 메신저 시스템…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A messaging system that uses the Everphone..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "透過EverPhone使用的聊天系統…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "透過EverPhone使用的聊天系統…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "에버폰은 또 뭐고?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "EverPhone又是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "EverPhone又是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "이상한 소리만 하는 걸 보니"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Now you're just making stuff up"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "看你滿嘴胡言亂語"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "看你滿嘴胡言亂語"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "너 그 녀석이구나"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "You're that Savior person"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你就是那個傢伙啊"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你就是那個傢伙啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "구원자인지 뭔지"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "or whatever, aren't you?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "叫救援者還什麼的"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "叫救援者還什麼的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "날 괴롭히는 것도 정도껏 해"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Can you stop tormenting me already?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "折磨我也要適可而止"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "折磨我也要適可而止"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그만 꺼져"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Just leave me alone"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你滾吧"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你滾吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "피곤하니까"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I'm tired"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我累了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我累了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "아 아 아"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Ah ah ah"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "啊 啊 啊"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "啊 啊 啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Uh"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "呃"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "바보 바보 바보"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Dummy dummy dummy"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "笨蛋 笨蛋 笨蛋"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "笨蛋 笨蛋 笨蛋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "멍청이"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Stupid"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "白痴"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "白痴"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저기"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hey"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저기"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hey"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "―·-···꺼―·"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "―·-···Go a―· ·-―···―·"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "―·-···滾―·"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "―·-···滾―·"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "·-―···―·"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "·-―···―·"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "·-―···―·"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "·-―···―·"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루? 들려?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Haru? Can you hear me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路？妳聽得到嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路？妳聽得到嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루? 들려?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Haru? Can you hear me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路？妳聽得到嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路？妳聽得到嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "꺼져"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Go away"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "滾"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "滾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "들리나 보네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So, you can hear me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳聽得到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳聽得到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "들리나 보네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So, you can hear me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳聽得到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳聽得到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "어떻게 보내는지 알았다"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I figured out how to reply"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我知道你是怎麼傳過來的了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我知道你是怎麼傳過來的了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "꺼져 꺼져 꺼져"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "GO AWAY GO AWAY GO AWAY"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "滾開 滾開 滾開"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "滾開 滾開 滾開"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좀 더 제대로 대화하면 안 돼?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can we just have a normal conversation?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們不能再好好談談嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們不能再好好談談嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좀 더 제대로 대화하면 안 돼?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can we just have a normal conversation?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們不能再好好談談嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們不能再好好談談嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그러고 싶어도"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Even if I wanted to"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "就算我想那樣"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "就算我想那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "잘·-―···―·····―·"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I―·-―···―·····―·"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "也·-―···―·····―·"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "也·-―···―·····―·"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "잘 안 돼"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I can't"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "也做不太到"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "也做不太到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그러고 싶지도 않지만"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Not that I want to"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "更何況我不想"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "更何況我不想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무하네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's kind of harsh..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太過分了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太過分了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무하네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's kind of harsh..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太過分了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太過分了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "―·-···―·져―"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "―·-···―·fa―"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "―·-···―·開―"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "―·-···―·開―"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "너 말이야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "You"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "都是你"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "都是你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "꿈속에서 날 만나는 거라 했었지"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "You said you met me in a dream, right?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你說過是在夢裡見到我的吧"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你說過是在夢裡見到我的吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "지금도 꿈속이야?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Is this...another dream?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "現在也是在夢裡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "現在也是在夢裡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니, 현실이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No. This is real"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是，這是現實世界"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是，這是現實世界"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니, 현실이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No. This is real"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是，這是現實世界"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是，這是現實世界"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그럼 너도 알겠네"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Then, you get it now"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "那你應該也很清楚了吧"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "那你應該也很清楚了吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "내가 꿈속 존재가 아니라"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I'm not just some dream version"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我不是夢境裡的存在"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我不是夢境裡的存在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "진짜라는 거"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I'm real"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "是真實的存在"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "是真實的存在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아마 이쪽 세계의 하루와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You and the Haru of this world"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳大概跟這個世界的河路"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳大概跟這個世界的河路"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아마 이쪽 세계의 하루와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You and the Haru of this world"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳大概跟這個世界的河路"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳大概跟這個世界的河路"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너는 다른 존재인 거겠지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're different beings"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是不一樣的存在吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是不一樣的存在吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너는 다른 존재인 거겠지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're different beings"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是不一樣的存在吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是不一樣的存在吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "―···―·"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "―···―·"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "―···―·"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "―···―·"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "음"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Mm"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "마음이 흔들리니 잘 안 들려"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "My thoughts are getting noisy. It's hard to hear you"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我的內心不穩定，聽不太清楚"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我的內心不穩定，聽不太清楚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그쪽의 나는"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "What's the me"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "那邊的我"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "那邊的我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "어때?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "in your world like?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀엽고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀엽고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "종종 과일을 가져다 줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sometimes she brings me fruit, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "常常拿水果給我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "常常拿水果給我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "종종 과일을 가져다 줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sometimes she brings me fruit, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "常常拿水果給我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "常常拿水果給我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "뭐야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "什麼啊"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "什麼啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "사이 좋네"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Sounds like you two get along great"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "感情真好"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "感情真好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "흥"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Tch"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "哼"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "哼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정령 계약 할 마음이 들었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you thinking about making a Soul Contract with me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "想跟我簽精靈契約了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "想跟我簽精靈契約了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정령 계약 할 마음이 들었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you thinking about making a Soul Contract with me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "想跟我簽精靈契約了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "想跟我簽精靈契約了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "닥쳐"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Shut up"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "閉嘴"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "閉嘴"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "난 안 나가"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I'm not leaving"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我不會離開的"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我不會離開的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "엄마 아빠가 있던 이 산과 함께 죽을 거야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I'm going to die with this mountain, where Mom and Dad lived"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我要跟爸媽以前住的山一起死去"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我要跟爸媽以前住的山一起死去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "네가 왔다 간 뒤로 더 빠르게 붕괴하기 시작했으니까"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Ever since you came, the collapse sped up"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你走之後，這裡就開始加速崩塌"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你走之後，這裡就開始加速崩塌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "이제 나한테 신경 꺼"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "So, quit bothering me"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "現在就別再管我了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "現在就別再管我了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 말야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "About that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "關於那件事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "關於那件事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 말야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "About that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "關於那件事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "關於那件事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 아무 것도 안 했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I didn't do anything"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我什麼都沒做"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我什麼都沒做"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 아무 것도 안 했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I didn't do anything"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我什麼都沒做"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我什麼都沒做"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "붕괴가 빨라진 건 사실"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe the collapse got faster"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "之所以會加速崩塌"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "之所以會加速崩塌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "붕괴가 빨라진 건 사실"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe the collapse got faster"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "之所以會加速崩塌"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "之所以會加速崩塌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루 때문 아냐?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "because you started wavering"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會不會其實是因為河路？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會不會其實是因為河路？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루 때문 아냐?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "because you started wavering"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會不會其實是因為河路？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會不會其實是因為河路？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "뭐?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루의 마음이 흔들려서"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Your heart's not steady"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為河路的內心產生動搖"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為河路的內心產生動搖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루의 마음이 흔들려서"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Your heart's not steady"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為河路的內心產生動搖"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為河路的內心產生動搖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "붕괴가 더 빨라진 걸수도 있잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe that's what sped it up"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能會讓崩塌加速啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能會讓崩塌加速啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "붕괴가 더 빨라진 걸수도 있잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe that's what sped it up"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能會讓崩塌加速啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能會讓崩塌加速啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "시끄러워"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Shut up"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "吵死了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "吵死了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "네가 뭘 안다고"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "You don't know anything"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你懂什麼"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你懂什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "·-―너 따위가···―·····"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "·-―Someone like you···―·····"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "·-―你這種人···―·····"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "·-―你這種人···―·····"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "·―·-―···―··"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "·―·-―···―··"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "·―·-―···―··"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "·―·-―···―··"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "정령 계약 말야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "This Soul Contract thing"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "那個精靈契約啊"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "那個精靈契約啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "다른 하루도 했어?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Did the other Haru do it?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "另一個河路也有簽嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "另一個河路也有簽嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "흐응"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "哼嗯"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "哼嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "No?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Why not?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇게 쉽게 하는 게 아냐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's not something you just do casually"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那不是可以說簽就簽的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那不是可以說簽就簽的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇게 쉽게 하는 게 아냐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's not something you just do casually"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那不是可以說簽就簽的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那不是可以說簽就簽的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "나한텐 당장 하자고 했잖아"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "But you tried to do it with me right away"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你不是當場就叫我簽嗎"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你不是當場就叫我簽嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그땐 급했어서…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was desperate back then..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為那時候很緊急…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為那時候很緊急…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그땐 급했어서…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was desperate back then..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為那時候很緊急…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為那時候很緊急…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그럼"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "So what,"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "那"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "那"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "다른 하루랑도 계약할 거야?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "are you going to make a contract with her, too?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你也會跟另一個河路簽約嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你也會跟另一個河路簽約嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "앞으로"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "In the future?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我是說以後"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我是說以後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 모르지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不曉得啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不曉得啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 모르지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不曉得啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不曉得啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "흐으응"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Hmm"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "哼呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "哼呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그냥"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Nothing"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "就是"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "就是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "난 엄마랑 아빠 말곤"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Other than Mom and Dad"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我除了爸爸媽媽以外"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我除了爸爸媽媽以外"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "너밖에 모르는데"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "you're the only one I've ever known"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "只認識你"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "只認識你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "왠지 치사하네 너"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "That's kind of unfair of you, you know"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "莫名覺得你很卑鄙"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "莫名覺得你很卑鄙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "흥"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Hmpf"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "哼"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "哼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "이곳에서의 삶은 무료했어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Life here was dull"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "在這裡的生活很無聊"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "在這裡的生活很無聊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "매일매일이 똑같고"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Every day was the same"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "日復一日，沒有變化"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "日復一日，沒有變化"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "새로운 것도, 사라지는 것도 없이"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Nothing new, nothing gone"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "沒有新鮮事，也沒有東西消逝"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "沒有新鮮事，也沒有東西消逝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그저 텅 빈 산 속에 나 혼자였어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Just me, alone in this empty mountain"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "就只是我獨自一人住在這空蕩蕩的山中"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "就只是我獨自一人住在這空蕩蕩的山中"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그러다 어느 순간부터 하늘이 무너지기 시작했고"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "And then, one day, the sky began to collapse"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "接著在某一瞬間，天空開始崩塌"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "接著在某一瞬間，天空開始崩塌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "어쩌면 나는…"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Maybe..."
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "說不定…"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "說不定…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "이 세계가 무너져 간다는 것에 안도했는지도 몰라"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Maybe I was relieved that the world was collapsing"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "這個世界快要瓦解，反而讓我鬆一口氣"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "這個世界快要瓦解，反而讓我鬆一口氣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "어떤 방향으로든 변화하고 있다는 것에…"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "That something was changing"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "正在朝著某個方向變化的這點…"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "正在朝著某個方向變化的這點…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "끝으로 향하는 그 움직임에서"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Even if it was the end, at least it meant something was moving"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "邁向盡頭的動向"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "邁向盡頭的動向"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "오히려 나는 미래와 변화를 보았던 걸지도"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Maybe I saw a future in the world's unraveling"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "反而讓我看見了未來和變化"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "反而讓我看見了未來和變化"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그런데 갑자기 네가 나타나선"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Then, you showed up out of nowhere,"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "但是你突然出現"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "但是你突然出現"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "여기서 날 구하겠다고 떠들잖아"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "shouting about saving me"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "吵著說要把我從這裡救出去"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "吵著說要把我從這裡救出去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "얼마나 당황스러웠는지"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Do you know how confusing"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "有夠讓人不知所措"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "有夠讓人不知所措"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "나참"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "that was?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "真是"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "真是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "됐어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Forget it"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "算了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "算了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "사과하지 마"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Don't apologize"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "不要道歉"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "不要道歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "ㄱ ㅜ 언자 안 녕"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "h rllo s a v I or"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "機淵者 哈 囉"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "機淵者 哈 囉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "이거 어 려우ㅓ"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "this is h a r d"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "這個好南"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "這個好南"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "에버포"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "evepho"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "EverPone"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "EverPone"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "에바폰"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Evphon"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "EvarPhone"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "EvarPhone"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "에버폰"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Everphone"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "EverPhone"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "EverPhone"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "카무이!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Kamuy!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "神威！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "神威！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "카무이!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Kamuy!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "神威！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "神威！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰을 쓸 수 있게 됐구나!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're using the Everphone now!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳會用EverPhone了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳會用EverPhone了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰을 쓸 수 있게 됐구나!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're using the Everphone now!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳會用EverPhone了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳會用EverPhone了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "느려"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Slowly"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "好慢"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "好慢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "금방 익숙해질 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You'll get the hang of it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很快就會上手的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很快就會上手的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "금방 익숙해질 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You'll get the hang of it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很快就會上手的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很快就會上手的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사용법도 알려 줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll teach you how to use it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我教妳怎麼用"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我教妳怎麼用"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사용법도 알려 줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll teach you how to use it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我教妳怎麼用"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我教妳怎麼用"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "글ㅐ"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "oKe"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "豪"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "豪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "그래"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "sure"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "바부"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "idio"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "笨盪"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "笨盪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "구원자바보"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Savior idot"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "救援者笨蛋"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "救援者笨蛋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "바보 바부 바보"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Dummy dmm dummy"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "笨蛋 笨盪 笨蛋"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "笨蛋 笨盪 笨蛋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰으로 보내게 됐어도 그건 꼭 보내는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Even with the Everphone, you still make sure to send that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳就算用EverPhone也非得傳這句啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳就算用EverPhone也非得傳這句啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰으로 보내게 됐어도 그건 꼭 보내는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Even with the Everphone, you still make sure to send that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳就算用EverPhone也非得傳這句啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳就算用EverPhone也非得傳這句啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "ㅋㅋㅋ"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "haha"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "哈哈哈"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "哈哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "하루가 알려 줘서"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Haru taught me"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "河路教我的"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "河路教我的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "사진도 보낼 수 있게 됐어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "how to send photos"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我現在會傳照片了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我現在會傳照片了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "타자도 빨라졌고"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I'm getting faster at typing too"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "打字速度也變快了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "打字速度也變快了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루의 일기장이네?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's Haru's journal"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是河路的日記本耶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是河路的日記本耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루의 일기장이네?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's Haru's journal"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是河路的日記本耶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是河路的日記本耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "이 일기장은 앞으로"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "We've decided to turn this journal"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我決定以後要把這個日記本"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我決定以後要把這個日記本"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "우리 둘의 교환일기장으로 쓰기로 했어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "into a shared diary"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "當作我們兩個的交換日記"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "當作我們兩個的交換日記"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "하루씩 번갈아 쓸 거야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "We're going to take turns writing in it, one day each"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "每天輪流寫"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "每天輪流寫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘됐다!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's great!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太棒了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太棒了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘됐다!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's great!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太棒了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太棒了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "둘이 많이 친해졌구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds like you two are getting along well"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來妳們兩個變這麼要好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來妳們兩個變這麼要好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "둘이 많이 친해졌구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds like you two are getting along well"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來妳們兩個變這麼要好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來妳們兩個變這麼要好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "구원자 욕을 잔뜩 쓰고 있어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "We've been filling it with all kinds of complaints about you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "上面寫了一堆救援者的壞話"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "上面寫了一堆救援者的壞話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "우리 둘이서"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Both of us"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "只有我們兩個知道"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "只有我們兩個知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "농담이지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're joking...right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是開玩笑的吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是開玩笑的吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "농담이지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're joking...right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是開玩笑的吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是開玩笑的吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "하루는 참 착한 애야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Haru's really sweet"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "河路真是個乖孩子"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "河路真是個乖孩子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "나긴 하지만"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Well, she is me, but still"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "雖然她就是我"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "雖然她就是我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "아무튼"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Anyway..."
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "總之"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "總之"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "카무이는 내 욕 쓴 거야?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait, did you write anything bad about me, Kamuy?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是神威寫了我的壞話嗎？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是神威寫了我的壞話嗎？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "카무이는 내 욕 쓴 거야?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait, did you write anything bad about me, Kamuy?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是神威寫了我的壞話嗎？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是神威寫了我的壞話嗎？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "어느 쪽일지 맞춰 봐"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Why don't you guess?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你猜猜看是誰寫的"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你猜猜看是誰寫的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 카무이를 믿을게…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I believe in you, Kamuy...!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我選擇相信神威…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我選擇相信神威…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 카무이를 믿을게…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I believe in you, Kamuy...!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我選擇相信神威…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我選擇相信神威…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "안 썼어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I didn't write anything bad"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我沒寫"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我沒寫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "휴"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Whew!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "呼"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "휴"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Whew!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "呼"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "아직"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "... Yet."
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我現在"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我現在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "구원자가 준 옷"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "I've been wearing"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "還穿著"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "還穿著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "잘 입고 있어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "the clothes you gave me"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "救援者給的衣服"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "救援者給的衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "처음 입어보는 거라 낯설긴 한데"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "They still feel a little strange since it's my first time wearing anything like this"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "沒穿過這種衣服，感覺很彆扭"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "沒穿過這種衣服，感覺很彆扭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "이런 것도 색다르네"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "but it's a nice kind of unfamiliar"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "但這樣也別有風味"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "但這樣也別有風味"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 어울려서 다행이야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm glad they suit you!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "幸好很適合妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "幸好很適合妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 어울려서 다행이야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm glad they suit you!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "幸好很適合妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "幸好很適合妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "새로운 곳에서"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "A new place"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "我可以在新的環境"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "我可以在新的環境"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "새로운 차림으로"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "new clothes"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "以一身全新的打扮"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "以一身全新的打扮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "새로운 이들과"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "new people..."
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "和新認識的人們"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "和新認識的人們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "새로운 삶을 살게 된 거"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "and a new life"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "一起過上嶄新的生活"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "一起過上嶄新的生活"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "다 구원자 덕분이야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "It's all thanks to you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "全是多虧了救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "全是多虧了救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "고마워"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Thank you"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오늘은 솔직하네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're being pretty honest today"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳今天好坦承"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳今天好坦承"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오늘은 솔직하네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're being pretty honest today"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳今天好坦承"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳今天好坦承"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "오늘만이야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Just for today"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "僅限今天"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "僅限今天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "앞으로도 잘 부탁해"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "From now on, take care of me"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "以後就多多指教了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "以後就多多指教了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "나를 구원해 준"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "my first Savior"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "拯救我的"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "拯救我的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "첫 구원자"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "the one who saved me"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "第一個救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "第一個救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "넌 누구지?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Who are you?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你是誰？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你是誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "누군데 내 머릿속에 말을 거는 거야?"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Why are you talking inside my head?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "你是誰？在我腦袋裡跟我講話？"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "你是誰？在我腦袋裡跟我講話？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "내 머릿속에서 나가!"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Get out of my mind!"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "滾出我的腦袋！"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "滾出我的腦袋！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "너 때문이야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "It's your fault"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "都是你"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "都是你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "너 때문에 더 빨라졌어"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "The sky's collapsing faster"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "都是你讓它提前了"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "都是你讓它提前了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "하늘의 붕괴가"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "because of you"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "天空的崩塌"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "天空的崩塌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "널 만나고 나선"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Ever since I met you"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "自從遇見你之後"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "自從遇見你之後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "황당한 일들뿐이야"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "everything's been weird"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "就全都是些鳥事"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "就全都是些鳥事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "이젠 또 뭔…"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "Now what...?"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "現在又是怎樣…"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "現在又是怎樣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "처음 보는 세계엔"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "In this new world you're talking about"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "在陌生的世界裡"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "在陌生的世界裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "너도 있고"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "there's you"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "應該會有你"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "應該會有你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "또 다른 나도 있겠지"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "and another me"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "還有另一個我吧"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "還有另一個我吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루(카무이)",
+            "message": "나의 미래도…"
+          },
+          "en": {
+            "speaker": "Haru (Kamuy)",
+            "message": "and maybe... a different future for me, too"
+          },
+          "zh_tw": {
+            "speaker": "河路（神威）",
+            "message": "以及我的未來…"
+          },
+          "zh_cn": {
+            "speaker": "河路（神威）",
+            "message": "以及我的未來…"
+          }
+        }
+      ]
+    }
+  }
+}

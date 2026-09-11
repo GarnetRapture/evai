@@ -1,0 +1,7156 @@
+{
+  "id": "2130",
+  "name": "사쿠요",
+  "name_en": "Sakuyo",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "워리어",
+  "sub_class": "단일",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "오만의 검",
+    "constellation": "인연_제이드_이벤트2",
+    "union": "가온",
+    "birthday": "612",
+    "height": 141,
+    "weight": 35,
+    "cv_ko": "신나리",
+    "cv_jp": "Yukimura Eri",
+    "like": [
+      "사탕",
+      "나비"
+    ],
+    "dislike": [
+      "하극상",
+      "쓴맛"
+    ],
+    "hobby": [
+      "원예",
+      "검수집"
+    ],
+    "speciality": [
+      "큰소리로 연설하기"
+    ]
+  },
+  "personality": {
+    "description": "호오? 네가 그 구원자라는 녀석이더냐?\n에덴의 구원자에 아케나인의 영주까지 맡고 있다고 들었는데, 지위에 비해 위엄이 너무 없어 보이는구나. \n위엄이 없으면 아랫것들이 기어오를 텐데 괜찮은 것이냐? 초면이지만 바로 걱정이 드는구나.\n\n아차, 짐의 소개를 깜빡할 뻔했군. \n그래, 짐 또한 네 녀석처럼 영지 하나를 다스리고 있는 영주이니라. 누구처럼 임명받아 된 게 아닌, 스스로 쟁취해서 얻은 자리지. 그러니 같은 영주라고 생각하는 무례를 범하지 말도록.\n\n뭐, 그렇다고 적대적으로 굴겠다는 뜻은 아니니라. 짐은 영지와 영지, 국가와 국가 간의 교류를 중요시 하니까 말이다. 네 녀석이 짐을 아케나인으로 초대한다면 기꺼이 응할 것이고, 반대로 짐도 네 녀석을 기꺼운 마음으로 가온에 있는 짐의 영지에 초대할 생각이 있느니라. \n\n짐이 친히 이런 말을 먼저 해야 한다니, 원. 네 녀석은 짐의 이런 호의를 영광으로 알아야 한다, 알겠느냐?\n\n앞으로 구원자, 네 녀석은 짐이 잘 지켜보도록 하겠다. 크흠.",
+    "greeting": "누추한 곳에 기꺼이 왔으니,\n아주 감사히 여기거라."
+  },
+  "speech_patterns": [
+    "크흠흠!",
+    "네 녀석이 그 소문의 구원자더냐?",
+    "게다가 영주 직도 맡고 있다지?",
+    "천하의 사쿠요, 같은 영주로서 인사하마.",
+    "설마 구원자라고 짐이 하대하는 게 불편한 건 아니겠지?",
+    "호오? 듣던 대로 서글서글한 성격이구나.",
+    "나중에 한번 아케나인으로 행차하겠다.",
+    "함부로 짐의 이름을 부르지 마라.",
+    "그리고 더는 짐을 귀찮게 하지 말고.",
+    "답장은 하지 말거라.",
+    "여봐라, 구원자야.",
+    "그 시녀에게 짐이 입던 옷 좀 가져오라고 하거라.",
+    "이 요상한 옷은 더 입고 싶지 않구나.",
+    "짐이 남의 시녀한테까지 말을 건네야겠느냐?",
+    "체면 떨어진다!",
+    "하, 세 치 혀로 별말을 다 하는구나.",
+    "됐다, 짐이 네 녀석과 뭘 이야기하겠느냐.",
+    "에잉~",
+    "그러고 보니 물어볼 것이 있었다.",
+    "그 너의 시녀는 음식 솜씨가 왜 그런 것이냐?",
+    "전골에서 나면 안 되는 맛이 났단 말이다!",
+    "보통 전골을 망친다고 하면",
+    "싱겁거나 짜거나 둘 중 하나인데",
+    "어째서 쓴맛이 난다더냐?",
+    "영양제…?",
+    "그 쓰디쓴 알약들 말이냐?",
+    "…….",
+    "짐은 굶어 죽는 한이 있더라도…",
+    "그 시녀 음식은 입에 대지 않겠느니라…….",
+    "에휴",
+    "네 시녀가 한 음식을 먹었더니…",
+    "괜히 가온의 음식이 더 생각난다.",
+    "성에서 요리하는 놈들의 얼굴이 떠오를 정도구나.",
+    "전골에 알약을 타는 정신 나간 시녀도 있건만,",
+    "짐은 그 녀석들을 들들 볶기만 했다.",
+    "그만큼 챙겨주기야 했지만,\r\n조금 후회되는구나.",
+    "하!",
+    "이 고얀 것, 아주 애 취급을 하는구나.",
+    "짐이 원래대로 돌아오면 아주 각오하는게 좋을거다.",
+    "지금 짐을 우롱한 것을 후회하게 해줄 것이야.",
+    "흘려듣는 게 여기서도 보이는구나, 고얀지고.",
+    "구원자야.",
+    "그 시녀… 아니, 벨레드가 짐에게 이런 이상한 것을 시켰다.",
+    "이게 도대체 무슨 의미냐…?",
+    "벨레드가 감히 짐에게 고양이 포즈를 시켰단 말이냐?",
+    "시녀 주제에 짐을 능멸하다니…",
+    "가만두지 않겠다!",
+    "당장 그 가녀린 팔을…",
+    "아주 세게 물어버릴 것이야!",
+    "고양이 아니라니까!!!"
+  ],
+  "comments": [
+    {
+      "writer": "아야메",
+      "comment": "말투는 거만해 보여도, 속은 다정하신 분이셔요."
+    },
+    {
+      "writer": "마농",
+      "comment": "사쿠요 님은 품위 유지비라고 둘러대시지만,\n제가 보기엔 그냥 과소비에요."
+    },
+    {
+      "writer": "벨레드",
+      "comment": "헤헷, 사나운 작은 고양이 같아서 귀여워요♪"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "사쿠요",
+        "message": "크흠흠!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "네 녀석이 그 소문의 구원자더냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 맞아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 맞아"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "게다가 영주 직도 맡고 있다지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응응"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "천하의 사쿠요, 같은 영주로서 인사하마."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "설마 구원자라고 짐이 하대하는 게 불편한 건 아니겠지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계속 편하게 대해줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계속 편하게 대해줘"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "호오? 듣던 대로 서글서글한 성격이구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "나중에 한번 아케나인으로 행차하겠다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "꼭 놀러 와!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꼭 놀러 와!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "함부로 짐의 이름을 부르지 마라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그리고 더는 짐을 귀찮게 하지 말고."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "답장은 하지 말거라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "여봐라, 구원자야."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 시녀에게 짐이 입던 옷 좀 가져오라고 하거라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이 요상한 옷은 더 입고 싶지 않구나."
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨레드에게 직접 말하면 되지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨레드에게 직접 말하면 되지"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐이 남의 시녀한테까지 말을 건네야겠느냐?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "체면 떨어진다!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨레드는 내 시녀가 아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨레드는 내 시녀가 아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그리고 그 옷 사쿠요한테 잘 어울려"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그리고 그 옷 사쿠요한테 잘 어울려"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "하, 세 치 혀로 별말을 다 하는구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "됐다, 짐이 네 녀석과 뭘 이야기하겠느냐."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "에잉~"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그러고 보니 물어볼 것이 있었다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 너의 시녀는 음식 솜씨가 왜 그런 것이냐?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "전골에서 나면 안 되는 맛이 났단 말이다!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "보통 전골을 망친다고 하면"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "싱겁거나 짜거나 둘 중 하나인데"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "어째서 쓴맛이 난다더냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아마 영양제를 넣어서 그럴 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아마 영양제를 넣어서 그럴 거야"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "영양제…?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 쓰디쓴 알약들 말이냐?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "……."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐은 굶어 죽는 한이 있더라도…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 시녀 음식은 입에 대지 않겠느니라……."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "에휴"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "네 시녀가 한 음식을 먹었더니…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "괜히 가온의 음식이 더 생각난다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "성에서 요리하는 놈들의 얼굴이 떠오를 정도구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "전골에 알약을 타는 정신 나간 시녀도 있건만,"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐은 그 녀석들을 들들 볶기만 했다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그만큼 챙겨주기야 했지만,\r\n조금 후회되는구나."
+      },
+      {
+        "speaker": "구원자",
+        "message": "반찬 투정은 나쁜 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "반찬 투정은 나쁜 거야"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "하!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이 고얀 것, 아주 애 취급을 하는구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐이 원래대로 돌아오면 아주 각오하는게 좋을거다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "지금 짐을 우롱한 것을 후회하게 해줄 것이야."
+      },
+      {
+        "speaker": "구원자",
+        "message": "알았어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알았어"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "흘려듣는 게 여기서도 보이는구나, 고얀지고."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "구원자야."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 시녀… 아니, 벨레드가 짐에게 이런 이상한 것을 시켰다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이게 도대체 무슨 의미냐…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고양이 포즈네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고양이 포즈네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀여운데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀여운데?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "벨레드가 감히 짐에게 고양이 포즈를 시켰단 말이냐?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "시녀 주제에 짐을 능멸하다니…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "가만두지 않겠다!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "당장 그 가녀린 팔을…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "아주 세게 물어버릴 것이야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "완전 고양이네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "완전 고양이네"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "고양이 아니라니까!!!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이제 이 요상한 의복도 적응이 되는군."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "생각보다 활동하기 편하더구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "원래 입던 옷은 좀 치렁치렁한 감이 있어서 그런가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨레드한테 다른 옷도 구해보라고 할까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨레드한테 다른 옷도 구해보라고 할까?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "됐다, 그럴 필요까지 있겠느냐."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이래저래 바빠 보이던데 놔두거라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그리고 벨레드 그 녀석은 그럴 시간에 요리 연습을 더 해야 한다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그런 의미에서 오늘 저녁은 네가 사거라."
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "나중에 가온으로 돌아가면 다 갚을 것이다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "알았어 메모해 둘게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알았어 메모해 둘게"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "에잉, 정 없는 녀석."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "구원자야, 짐의 키가 그렇게 작더냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "작고 아담하지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "작고 아담하지"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "크윽"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "장신으로만 살다가 이렇게 되니,\r\n너무 사는 게 불편하구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "찬장에 있는 물건 하나,\r\n제대로 꺼낼 수 없는 몸이라니…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 꺼내야 할 물건이 있는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 꺼내야 할 물건이 있는 거야?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그, 그게…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "방주 부엌에 있는…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "사탕 든 상자가 보이길래…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐이 그것을 꺼내려다가…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "크윽…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 다쳤어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 다쳤어?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그냥 가볍게 넘어졌을 뿐이니라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "전장에서 다치는 것에 비하면,\r\n아무것도 아니지."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이 정도 생채기는 쉬면 낫는다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 사탕도 꺼내주고 반창고도 붙여줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 사탕도 꺼내주고 반창고도 붙여줄게"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "녀석, 호들갑은."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그럼 빨리 부엌으로 오든가 하거라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "며칠간 네 녀석을 지켜보는데 말이다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "너에게 예를 갖추지 않는 정령들이 꽤 되더구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "하대하는 정령은 없지만,\r\n친구처럼 맞먹으려는 정령들이 아주 많아."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "정령들 좀 모아다가 교육해야하는 것 아니냐?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이렇게 놔두다간 끝없이 기어오를 것이다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "네 녀석이 이런 거에 경각심이 없으니, 원…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나한테 가장 무례하게 구는 건…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나한테 가장 무례하게 구는 건…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요인데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요인데?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐은 짐이니까 그런 거다!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이 멍청한 녀석."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "네 녀석은 은퇴를 생각해 본 적이 있느냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐은 원래 은퇴 같은 건 생각하지 않았다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "하지만 이렇게 강제로 한가해지니,\r\n생각이 많아지는구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "정말 몇백 년간은 앞만 보고 달렸다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "평범하게 살았던 게 언제였는지,\r\n완전히 잊어버린 채로 말이다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "눈앞의 문제들을 해결하고,\r\n지정한 목표들을 달성하는 동안…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 이후에는 무엇이 있을지 생각하지 못했구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "평화가 찾아오면,\r\n짐은 무엇을 할 수 있을지…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "평화를 즐기면서 살면 되지 않을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "평화를 즐기면서 살면 되지 않을까?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "평화를 즐긴다라…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "단순하면서도 명료한 말이구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그래, 그때가 되면 마음껏 즐겨봐야겠다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이건 거짓말, 거짓말이다!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이럴 리가 없다, 이럴 리가 없어!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "여봐라, 구원자야!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "빨리 다른 거울을 가져오너라!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "방주에 있는 거울들은 다 보여줬어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "방주에 있는 거울들은 다 보여줬어"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "…큭"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "네 눈에도 짐이…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "작아 보이느냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "아니다, 이건 짐의 모습이…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "아니란 말이다!!!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "크아아아악!!!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "여봐라, 구원자야."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "시녀에게 식사 좀 그만 권하라고 하거라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐은 아무것도 먹고 싶지 않다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무리 그래도 밥은 먹어야지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무리 그래도 밥은 먹어야지"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "끼니 좀 거른다고 정령석이 되는 것도 아닌데"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "왜 그렇게 유난들이냐?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "가온으로 돌아갈 때까지,\r\n아무것도 먹지 않을 테니 그리 알고 있거라!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 아직 모습이 돌아오지 않았잖아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 아직 모습이 돌아오지 않았잖아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그대로 돌아가면 정령들이 못 알아보지 않을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그대로 돌아가면 정령들이 못 알아보지 않을까?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "시끄럽다!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "정말이지, 귀찮게 하지 말라니까!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "저기…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "구원자야."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "아니, 왜 바로 답장을 하느냐!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "하루 종일 에버폰만 보는 것이냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래서 무슨 일이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래서 무슨 일이야?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "어…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그러니까…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 아까 일은…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "……."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "됐다, 잠이나 자거라."
+      },
+      {
+        "speaker": "구원자",
+        "message": "할 말이 있는 게 아니었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "할 말이 있는 게 아니었어?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "있었지만, 하지 않을 것이다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이유는 묻지 말고 잠이나 자거라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "여봐라, 구원자야."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "혹시 사탕은 좀 먹느냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "묻는 말에 대답만 하면 되지"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "뭘 그렇게 캐묻느냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이유를 알고 싶을 수도 있지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이유를 알고 싶을 수도 있지"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "어디서 자꾸 따박따박 말대꾸냐!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "됐다, 짐이 무슨 말을 더 하겠느냐."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "일이나 봐라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "사탕… 줬다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "네 녀석의 부탁대로 했으니 됐지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누구한테?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누구한테?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 네 시녀… 한테 줬지, 누굴 줬겠느냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이름으로 말해줘야지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이름으로 말해줘야지"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "뭐라고?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐이 시녀의 이름까지 기억하고 있겠느냐?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "벨레드인지 뭔지 그걸 짐이 알아야 하냔 말이다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "기억하고 있네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기억하고 있네"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "아"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이, 발칙한 것! 짐을 말리게 하다니…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "으으으! 분하다, 분해!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "정말 신기하단 말이지."
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그 종이 뭉치들을 보면서 졸지 않다니…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "어찌 그럴 수 있단 말이더냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "졸려도 참고 하는 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "졸려도 참고 하는 거야"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "짐은 도저히 참기가 힘들었는데…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "구원자, 네 녀석한테 배울 점이 있구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "배신감이라는 것은 지워지지 않는 얼룩 같구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "아무리 문질러도 사라지지 않고,\r\n잘못하면 얼룩이 더 번지기도 하지."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그것들을 이해하고 싶으면서도,\r\n이해하고 싶지 않은…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "하루에도 수십번 바뀌는 이 마음이,\r\n너무나도 괴롭다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "네 녀석이라도 있어서 다행이야."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "그렇지 않았다면…"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "……."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "구원자야, 잘 지내고 있느냐?"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "이렇게 연락하는 것도 오랜만이구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "아마 지금쯤이면 짐의 가신들이,\r\n그곳에 도착했을 것이다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "너를 모셔 오라고 보낸 것이니 겁먹지 말거라."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "본래 귀한 손님은 이렇게 모시는 것이니 말이다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "구원자야, 이번에도 허탕이다."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "용하다는 의원을 찾아갔는데,\r\n거기에서도 짐의 몸을 되돌릴 수 없다고 하더구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "정말 시간이 약이란 말인가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 조바심 가지지 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 조바심 가지지 마"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "눈치 없는 녀석."
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 한 약속 지키러 가고 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 한 약속 지키러 가고 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디 가지 말고 기다려줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디 가지 말고 기다려줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "금방 갈 테니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "금방 갈 테니까"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "사랑의 날이라니, 별 날이 다 있구나."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "대충 챙겼으니 알아서 쓰거라!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "챙겨줘서 고마워, 사쿠요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "챙겨줘서 고마워, 사쿠요!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "아하하하! 무예의 날이 왔구나!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "도검 수집가에겐 더할 나위 없이 기쁜 날이다!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요가 즐거워하니까 나도 기뻐."
+      },
+      {
+        "speaker": "구원자",
+        "message": "사쿠요가 즐거워하니까 나도 기뻐."
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "해, 해피 이브데이~!"
+      },
+      {
+        "speaker": "사쿠요",
+        "message": "라고 하면 되는 것이냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 이브데이, 사쿠요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 이브데이, 사쿠요!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "사쿠요",
+      "en": "Sakuyo",
+      "zh_tw": "櫻世",
+      "zh_cn": "櫻世"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "워리어",
+      "en": "Warrior",
+      "zh_tw": "戰士",
+      "zh_cn": "戰士"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "오만의 검",
+        "en": "Sword of Hubris",
+        "zh_tw": "傲慢之劍",
+        "zh_cn": "傲慢之劍"
+      },
+      "constellation": {
+        "ko": "인연_제이드_이벤트2",
+        "en": "인연_제이드_이벤트2",
+        "zh_tw": "雙子座",
+        "zh_cn": "雙子座"
+      },
+      "union": {
+        "ko": "가온",
+        "en": "Gaon",
+        "zh_tw": "加溫",
+        "zh_cn": "加溫"
+      },
+      "cv_ko": {
+        "ko": "신나리",
+        "en": "Shin Nari",
+        "zh_tw": "申娜莉",
+        "zh_cn": "申娜莉"
+      },
+      "cv_jp": {
+        "ko": "Yukimura Eri",
+        "en": "Yukimura Eri",
+        "zh_tw": "幸村惠理",
+        "zh_cn": "幸村惠理"
+      },
+      "like": {
+        "ko": [
+          "사탕",
+          "나비"
+        ],
+        "en": [
+          "Candy and butterflies"
+        ],
+        "zh_tw": [
+          "糖果、蝴蝶"
+        ],
+        "zh_cn": [
+          "糖果、蝴蝶"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "하극상",
+          "쓴맛"
+        ],
+        "en": [
+          "Mutiny and bitter taste"
+        ],
+        "zh_tw": [
+          "以下犯上、苦味"
+        ],
+        "zh_cn": [
+          "以下犯上、苦味"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "원예",
+          "검수집"
+        ],
+        "en": [
+          "Horticulture and sword collecting"
+        ],
+        "zh_tw": [
+          "園藝、收集劍"
+        ],
+        "zh_cn": [
+          "園藝、收集劍"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "큰소리로 연설하기"
+        ],
+        "en": [
+          "Resonating public speech"
+        ],
+        "zh_tw": [
+          "大聲演講"
+        ],
+        "zh_cn": [
+          "大聲演講"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "호오? 네가 그 구원자라는 녀석이더냐?\n에덴의 구원자에 아케나인의 영주까지 맡고 있다고 들었는데, 지위에 비해 위엄이 너무 없어 보이는구나. \n위엄이 없으면 아랫것들이 기어오를 텐데 괜찮은 것이냐? 초면이지만 바로 걱정이 드는구나.\n\n아차, 짐의 소개를 깜빡할 뻔했군. \n그래, 짐 또한 네 녀석처럼 영지 하나를 다스리고 있는 영주이니라. 누구처럼 임명받아 된 게 아닌, 스스로 쟁취해서 얻은 자리지. 그러니 같은 영주라고 생각하는 무례를 범하지 말도록.\n\n뭐, 그렇다고 적대적으로 굴겠다는 뜻은 아니니라. 짐은 영지와 영지, 국가와 국가 간의 교류를 중요시 하니까 말이다. 네 녀석이 짐을 아케나인으로 초대한다면 기꺼이 응할 것이고, 반대로 짐도 네 녀석을 기꺼운 마음으로 가온에 있는 짐의 영지에 초대할 생각이 있느니라. \n\n짐이 친히 이런 말을 먼저 해야 한다니, 원. 네 녀석은 짐의 이런 호의를 영광으로 알아야 한다, 알겠느냐?\n\n앞으로 구원자, 네 녀석은 짐이 잘 지켜보도록 하겠다. 크흠.",
+        "en": "Oh, are you that vaunted Savior?\nI've heard you're the Savior of Eden and lord of Arkenine, but you seem to lack the gravitas such titles demand.\nWithout dignity, usurpers may challenge you. I only just met you, but I already feel cause for concern.\n\nAh, I'm forgetting my manners.\nLike you, I am a sovereign of a territory, though my domain was wrested, not bestowed. You'd do well to be mindful of that distinction.\n\nNow, I'm not saying that to be hostile. I value the fellowship between lands and kingdoms. Should you invite me to Arkenine, I'd gladly accept, and likewise, my doors in Gaon shall be open to you.\n\nIt's rather preposterous that I have to bring this up first. Recognize this gesture as the honor it is, understood?\n\nNow, I will keep a close watch on you, Savior. Ahem.",
+        "zh_tw": "哦？你就是那個叫救援者的傢伙嗎？\n聽說你不只是伊甸園的救援者，還擔任阿肯納因的領主，和你的地位相比，看起來太沒有威嚴了。\n要是沒有威嚴，下面的人就會爬到你頭上，沒關係嗎？我們是第一次見面，但你已經開始讓我擔憂了。\n\n唉呀，朕差點忘了自我介紹。\n對，朕也跟你這傢伙一樣，是統治某領地的領主，但不是被誰任命的，是我自己爭取到這個位子，所以你別無禮地認為我們是同樣的領主。\n\n不過我也沒有敵意，因為朕很重視領地與領地、國家與國家之間的交流，如果你這傢伙邀請我到阿肯納因，我會欣然答應。而朕也很樂意邀請你到朕在加溫的領地。\n\n朕竟然要親自開口說這些，真是的。你這傢伙要知道，朕釋出這種善意是你的榮幸，懂嗎？\n\n朕以後會好好觀察救援者你這傢伙的，咳咳。",
+        "zh_cn": "哦？你就是那個叫救援者的傢伙嗎？\n聽說你不只是伊甸園的救援者，還擔任阿肯納因的領主，和你的地位相比，看起來太沒有威嚴了。\n要是沒有威嚴，下面的人就會爬到你頭上，沒關係嗎？我們是第一次見面，但你已經開始讓我擔憂了。\n\n唉呀，朕差點忘了自我介紹。\n對，朕也跟你這傢伙一樣，是統治某領地的領主，但不是被誰任命的，是我自己爭取到這個位子，所以你別無禮地認為我們是同樣的領主。\n\n不過我也沒有敵意，因為朕很重視領地與領地、國家與國家之間的交流，如果你這傢伙邀請我到阿肯納因，我會欣然答應。而朕也很樂意邀請你到朕在加溫的領地。\n\n朕竟然要親自開口說這些，真是的。你這傢伙要知道，朕釋出這種善意是你的榮幸，懂嗎？\n\n朕以後會好好觀察救援者你這傢伙的，咳咳。"
+      },
+      "greeting": {
+        "ko": "누추한 곳에 기꺼이 왔으니,\n아주 감사히 여기거라.",
+        "en": "Deem it a great honor to be graced with\nmy presence in your humble abode.",
+        "zh_tw": "我願意來到這個破地方，\n你要心懷感激。",
+        "zh_cn": "我願意來到這個破地方，\n你要心懷感激。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "크흠흠!"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Kahem, kahem!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "咳咳咳！"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "咳咳咳！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "네 녀석이 그 소문의 구원자더냐?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "So, are you the rumored Savior?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "你這傢伙就是傳說中的救援者嗎？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "你這傢伙就是傳說中的救援者嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "게다가 영주 직도 맡고 있다지?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "And you're also a lord?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "而且還是個領主對吧？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "而且還是個領主對吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "천하의 사쿠요, 같은 영주로서 인사하마."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "My name is Sakuyo, and I greet you as a fellow lord."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "天下的櫻世，同樣身為領主，來跟你打聲招呼"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "天下的櫻世，同樣身為領主，來跟你打聲招呼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "설마 구원자라고 짐이 하대하는 게 불편한 건 아니겠지?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "You don't mind my speaking to you so casually, do you?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "該不會因為你是救援者，就因為朕待你不周而感到不暢快吧？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "該不會因為你是救援者，就因為朕待你不周而感到不暢快吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "호오? 듣던 대로 서글서글한 성격이구나."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Ah, you're just as easy-going as I've heard."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "哦？你的個性就跟我聽到的一樣溫和"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "哦？你的個性就跟我聽到的一樣溫和"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "나중에 한번 아케나인으로 행차하겠다."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "I'll be visiting Arkenine soon."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "之後我會出巡到阿肯納因看看"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "之後我會出巡到阿肯納因看看"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "함부로 짐의 이름을 부르지 마라."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Don't you dare speak my name so casually."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "不要隨便呼喊朕的名諱"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "不要隨便呼喊朕的名諱"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "그리고 더는 짐을 귀찮게 하지 말고."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "And don't bother me anymore, either."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "還有，不要再來煩朕"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "還有，不要再來煩朕"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "답장은 하지 말거라."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "You don't have to reply."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "不用回我"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "不用回我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "여봐라, 구원자야."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Hey, Savior."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "喂，救援者"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "喂，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "그 시녀에게 짐이 입던 옷 좀 가져오라고 하거라."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Tell your maid to bring me my old clothes."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "叫那個侍女把朕穿過的衣服拿來"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "叫那個侍女把朕穿過的衣服拿來"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "이 요상한 옷은 더 입고 싶지 않구나."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "I don't want to wear these strange clothes anymore."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "我不想再穿這麼奇怪的衣服了"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "我不想再穿這麼奇怪的衣服了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "짐이 남의 시녀한테까지 말을 건네야겠느냐?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Why should I speak to someone else's maid?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "朕還得跟別人的侍女講話嗎？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "朕還得跟別人的侍女講話嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "체면 떨어진다!"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "That would be beneath me!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "很沒面子！"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "很沒面子！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "하, 세 치 혀로 별말을 다 하는구나."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Hah, you're such a good liar."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "哈，真是三寸不爛之舌"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "哈，真是三寸不爛之舌"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "됐다, 짐이 네 녀석과 뭘 이야기하겠느냐."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Forget it. I don't want to talk to you."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "算了，朕跟你這傢伙沒什麼好說的"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "算了，朕跟你這傢伙沒什麼好說的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "에잉~"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Guh!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "咦～"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "咦～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "그러고 보니 물어볼 것이 있었다."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "By the way, I wanted to ask you something."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "話說回來，我有事要問你"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "話說回來，我有事要問你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "그 너의 시녀는 음식 솜씨가 왜 그런 것이냐?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "What's wrong with your maid's cooking skills?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "你侍女的廚藝怎麼是那副德性？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "你侍女的廚藝怎麼是那副德性？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "전골에서 나면 안 되는 맛이 났단 말이다!"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "The stew tasted like it shouldn't have!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "有火鍋裡不應該有的味道！"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "有火鍋裡不應該有的味道！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "보통 전골을 망친다고 하면"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Normally, stews are"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "通常火鍋煮壞的話"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "通常火鍋煮壞的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "싱겁거나 짜거나 둘 중 하나인데"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "either bland or salty."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "都是太淡或太鹹"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "都是太淡或太鹹"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "어째서 쓴맛이 난다더냐?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Why did it taste bitter?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "怎麼會出現苦味呢？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "怎麼會出現苦味呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "영양제…?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Supplements...?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "保健食品…？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "保健食品…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "그 쓰디쓴 알약들 말이냐?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "You mean, those bitter pills?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "你是說那些苦到不行的藥丸？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "你是說那些苦到不行的藥丸？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "..."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "짐은 굶어 죽는 한이 있더라도…"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Even if I starve to death,"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "朕寧可餓死…"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "朕寧可餓死…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "그 시녀 음식은 입에 대지 않겠느니라……."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "I will never touch that maid's food again..."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "也不要碰那侍女的食物……"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "也不要碰那侍女的食物……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "에휴"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Ugh"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "唉"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "唉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "네 시녀가 한 음식을 먹었더니…"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "After eating your maid's food,"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "吃了你侍女做的食物後…"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "吃了你侍女做的食物後…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "괜히 가온의 음식이 더 생각난다."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "I'm longing for the food of Gaon,"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "就莫名更想念加溫的食物了"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "就莫名更想念加溫的食物了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "성에서 요리하는 놈들의 얼굴이 떠오를 정도구나."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "And I miss the cooks at my castle."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "想念到會浮現城裡廚師的臉"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "想念到會浮現城裡廚師的臉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "전골에 알약을 타는 정신 나간 시녀도 있건만,"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Had I known there were some crazy maids who put pills in their stew,"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "既然有神智不清的侍女會把藥丸丟進火鍋煮"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "既然有神智不清的侍女會把藥丸丟進火鍋煮"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "짐은 그 녀석들을 들들 볶기만 했다."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "I wouldn't have been so hard on them."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "是朕對那些傢伙太苛刻了"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "是朕對那些傢伙太苛刻了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "그만큼 챙겨주기야 했지만,\r\n조금 후회되는구나."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Of course, I took great care of them,\r\nbut still I regret it a bit."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "雖然我也很照顧他們，\r\n但有點後悔"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "雖然我也很照顧他們，\r\n但有點後悔"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "하!"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Hah!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "哈！"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "哈！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "이 고얀 것, 아주 애 취급을 하는구나."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "How dare you treat me like a child?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "看來你這小子把我當小孩看待"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "看來你這小子把我當小孩看待"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "짐이 원래대로 돌아오면 아주 각오하는게 좋을거다."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "You'd better watch out when I return to my normal self."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "等朕恢復原樣，你最好做好心理準備"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "等朕恢復原樣，你最好做好心理準備"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "지금 짐을 우롱한 것을 후회하게 해줄 것이야."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "I'll make you regret your insolence."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "我會讓你後悔現在捉弄朕"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "我會讓你後悔現在捉弄朕"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "흘려듣는 게 여기서도 보이는구나, 고얀지고."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Don't just be fine with it, you jerk!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "你又把我的話當耳邊風了，真放肆"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "你又把我的話當耳邊風了，真放肆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "구원자야."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Savior."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "救援者"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "그 시녀… 아니, 벨레드가 짐에게 이런 이상한 것을 시켰다."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Your maid—no, Beleth made me do this strange thing."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "那個侍女…不對，貝萊德要朕做這種奇怪的事"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "那個侍女…不對，貝萊德要朕做這種奇怪的事"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "이게 도대체 무슨 의미냐…?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "What does this mean...?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "這到底是什麼意思…？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "這到底是什麼意思…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "벨레드가 감히 짐에게 고양이 포즈를 시켰단 말이냐?"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "How dare Beleth make me pose as a cat?"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "貝萊德竟敢要朕擺出貓咪的姿勢？"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "貝萊德竟敢要朕擺出貓咪的姿勢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "시녀 주제에 짐을 능멸하다니…"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "That maid belittled me."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "區區一個侍女，竟敢欺侮朕…"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "區區一個侍女，竟敢欺侮朕…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "가만두지 않겠다!"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "I will not stand for it!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "我不會放過她！"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "我不會放過她！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "당장 그 가녀린 팔을…"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "I will..."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "我要馬上把那纖細的手臂…"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "我要馬上把那纖細的手臂…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "아주 세게 물어버릴 것이야!"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Bite her slender arm very hard right now!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "狠狠地咬下來！"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "狠狠地咬下來！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "고양이 아니라니까!!!"
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "No, I am not!"
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "就說了我不是貓咪！！！"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "就說了我不是貓咪！！！"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "아야메",
+          "message": "말투는 거만해 보여도, 속은 다정하신 분이셔요."
+        },
+        "en": {
+          "speaker": "Ayame",
+          "message": "Her words may be haughty, but her heart is actually tender."
+        },
+        "zh_tw": {
+          "speaker": "綾織",
+          "message": "雖然語氣聽起來很高傲，但內心是很溫柔的人。"
+        },
+        "zh_cn": {
+          "speaker": "綾織",
+          "message": "雖然語氣聽起來很高傲，但內心是很溫柔的人。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "마농",
+          "message": "사쿠요 님은 품위 유지비라고 둘러대시지만,\n제가 보기엔 그냥 과소비에요."
+        },
+        "en": {
+          "speaker": "Manon",
+          "message": "Sakuyo claims her expenses are necessary for preserving dignity,\nbut I see it as simply splurging."
+        },
+        "zh_tw": {
+          "speaker": "瑪儂",
+          "message": "雖然櫻世狡辯說是品味維持費，\n但我覺得她只是在過度消費。"
+        },
+        "zh_cn": {
+          "speaker": "瑪儂",
+          "message": "雖然櫻世狡辯說是品味維持費，\n但我覺得她只是在過度消費。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨레드",
+          "message": "헤헷, 사나운 작은 고양이 같아서 귀여워요♪"
+        },
+        "en": {
+          "speaker": "Beleth",
+          "message": "Heheh, I think she's cute like a fierce little cat ♪"
+        },
+        "zh_tw": {
+          "speaker": "貝萊德",
+          "message": "嘿嘿，感覺像很凶狠的小貓，很可愛♪"
+        },
+        "zh_cn": {
+          "speaker": "貝萊德",
+          "message": "嘿嘿，感覺像很凶狠的小貓，很可愛♪"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "크흠흠!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Kahem, kahem!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "咳咳咳！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "咳咳咳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "네 녀석이 그 소문의 구원자더냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "So, are you the rumored Savior?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你這傢伙就是傳說中的救援者嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你這傢伙就是傳說中的救援者嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "게다가 영주 직도 맡고 있다지?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "And you're also a lord?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "而且還是個領主對吧？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "而且還是個領主對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "천하의 사쿠요, 같은 영주로서 인사하마."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "My name is Sakuyo, and I greet you as a fellow lord."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "天下的櫻世，同樣身為領主，來跟你打聲招呼"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "天下的櫻世，同樣身為領主，來跟你打聲招呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "설마 구원자라고 짐이 하대하는 게 불편한 건 아니겠지?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "You don't mind my speaking to you so casually, do you?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "該不會因為你是救援者，就因為朕待你不周而感到不暢快吧？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "該不會因為你是救援者，就因為朕待你不周而感到不暢快吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계속 편하게 대해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not at all. Treat me as you would a friend"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "繼續隨意待我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "繼續隨意待我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계속 편하게 대해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not at all. Treat me as you would a friend"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "繼續隨意待我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "繼續隨意待我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "호오? 듣던 대로 서글서글한 성격이구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Ah, you're just as easy-going as I've heard."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "哦？你的個性就跟我聽到的一樣溫和"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "哦？你的個性就跟我聽到的一樣溫和"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "나중에 한번 아케나인으로 행차하겠다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I'll be visiting Arkenine soon."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "之後我會出巡到阿肯納因看看"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "之後我會出巡到阿肯納因看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꼭 놀러 와!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You'd better!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定要來玩！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定要來玩！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꼭 놀러 와!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You'd better!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定要來玩！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定要來玩！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sakuyo?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "櫻世？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "櫻世？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sakuyo?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "櫻世？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "櫻世？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "함부로 짐의 이름을 부르지 마라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Don't you dare speak my name so casually."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "不要隨便呼喊朕的名諱"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "不要隨便呼喊朕的名諱"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그리고 더는 짐을 귀찮게 하지 말고."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "And don't bother me anymore, either."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "還有，不要再來煩朕"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "還有，不要再來煩朕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "답장은 하지 말거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "You don't have to reply."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "不用回我"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "不用回我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "여봐라, 구원자야."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Hey, Savior."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "喂，救援者"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "喂，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 시녀에게 짐이 입던 옷 좀 가져오라고 하거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Tell your maid to bring me my old clothes."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "叫那個侍女把朕穿過的衣服拿來"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "叫那個侍女把朕穿過的衣服拿來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이 요상한 옷은 더 입고 싶지 않구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I don't want to wear these strange clothes anymore."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我不想再穿這麼奇怪的衣服了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我不想再穿這麼奇怪的衣服了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨레드에게 직접 말하면 되지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can talk to Beleth yourself"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "直接告訴貝萊德就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "直接告訴貝萊德就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨레드에게 직접 말하면 되지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can talk to Beleth yourself"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "直接告訴貝萊德就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "直接告訴貝萊德就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐이 남의 시녀한테까지 말을 건네야겠느냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Why should I speak to someone else's maid?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕還得跟別人的侍女講話嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕還得跟別人的侍女講話嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "체면 떨어진다!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "That would be beneath me!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "很沒面子！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "很沒面子！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨레드는 내 시녀가 아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Beleth is not my maid"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝萊德不是我的侍女"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝萊德不是我的侍女"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨레드는 내 시녀가 아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Beleth is not my maid"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝萊德不是我的侍女"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝萊德不是我的侍女"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그리고 그 옷 사쿠요한테 잘 어울려"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And that outfit looks great on you, Sakuyo"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "而且那件衣服很適合櫻世"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "而且那件衣服很適合櫻世"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그리고 그 옷 사쿠요한테 잘 어울려"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And that outfit looks great on you, Sakuyo"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "而且那件衣服很適合櫻世"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "而且那件衣服很適合櫻世"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "하, 세 치 혀로 별말을 다 하는구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Hah, you're such a good liar."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "哈，真是三寸不爛之舌"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "哈，真是三寸不爛之舌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "됐다, 짐이 네 녀석과 뭘 이야기하겠느냐."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Forget it. I don't want to talk to you."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "算了，朕跟你這傢伙沒什麼好說的"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "算了，朕跟你這傢伙沒什麼好說的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "에잉~"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Guh!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "咦～"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "咦～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그러고 보니 물어볼 것이 있었다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "By the way, I wanted to ask you something."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "話說回來，我有事要問你"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "話說回來，我有事要問你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 너의 시녀는 음식 솜씨가 왜 그런 것이냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "What's wrong with your maid's cooking skills?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你侍女的廚藝怎麼是那副德性？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你侍女的廚藝怎麼是那副德性？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "전골에서 나면 안 되는 맛이 났단 말이다!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "The stew tasted like it shouldn't have!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "有火鍋裡不應該有的味道！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "有火鍋裡不應該有的味道！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "보통 전골을 망친다고 하면"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Normally, stews are"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "通常火鍋煮壞的話"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "通常火鍋煮壞的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "싱겁거나 짜거나 둘 중 하나인데"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "either bland or salty."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "都是太淡或太鹹"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "都是太淡或太鹹"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "어째서 쓴맛이 난다더냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Why did it taste bitter?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "怎麼會出現苦味呢？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "怎麼會出現苦味呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아마 영양제를 넣어서 그럴 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She probably put supplements in it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該是因為放了保健食品才會那樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該是因為放了保健食品才會那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아마 영양제를 넣어서 그럴 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She probably put supplements in it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該是因為放了保健食品才會那樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該是因為放了保健食品才會那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "영양제…?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Supplements...?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "保健食品…？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "保健食品…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 쓰디쓴 알약들 말이냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "You mean, those bitter pills?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你是說那些苦到不行的藥丸？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你是說那些苦到不行的藥丸？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐은 굶어 죽는 한이 있더라도…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Even if I starve to death,"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕寧可餓死…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕寧可餓死…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 시녀 음식은 입에 대지 않겠느니라……."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I will never touch that maid's food again..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "也不要碰那侍女的食物……"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "也不要碰那侍女的食物……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "에휴"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Ugh"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "唉"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "唉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "네 시녀가 한 음식을 먹었더니…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "After eating your maid's food,"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "吃了你侍女做的食物後…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "吃了你侍女做的食物後…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "괜히 가온의 음식이 더 생각난다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I'm longing for the food of Gaon,"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "就莫名更想念加溫的食物了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "就莫名更想念加溫的食物了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "성에서 요리하는 놈들의 얼굴이 떠오를 정도구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "And I miss the cooks at my castle."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "想念到會浮現城裡廚師的臉"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "想念到會浮現城裡廚師的臉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "전골에 알약을 타는 정신 나간 시녀도 있건만,"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Had I known there were some crazy maids who put pills in their stew,"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "既然有神智不清的侍女會把藥丸丟進火鍋煮"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "既然有神智不清的侍女會把藥丸丟進火鍋煮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐은 그 녀석들을 들들 볶기만 했다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I wouldn't have been so hard on them."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "是朕對那些傢伙太苛刻了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "是朕對那些傢伙太苛刻了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그만큼 챙겨주기야 했지만,\r\n조금 후회되는구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Of course, I took great care of them,\r\nbut still I regret it a bit."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "雖然我也很照顧他們，\r\n但有點後悔"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "雖然我也很照顧他們，\r\n但有點後悔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "반찬 투정은 나쁜 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Being a picky eater is not good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "挑食不好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "挑食不好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "반찬 투정은 나쁜 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Being a picky eater is not good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "挑食不好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "挑食不好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "하!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Hah!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "哈！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "哈！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이 고얀 것, 아주 애 취급을 하는구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "How dare you treat me like a child?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "看來你這小子把我當小孩看待"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "看來你這小子把我當小孩看待"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐이 원래대로 돌아오면 아주 각오하는게 좋을거다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "You'd better watch out when I return to my normal self."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "等朕恢復原樣，你最好做好心理準備"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "等朕恢復原樣，你最好做好心理準備"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "지금 짐을 우롱한 것을 후회하게 해줄 것이야."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I'll make you regret your insolence."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我會讓你後悔現在捉弄朕"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我會讓你後悔現在捉弄朕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "흘려듣는 게 여기서도 보이는구나, 고얀지고."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Don't just be fine with it, you jerk!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你又把我的話當耳邊風了，真放肆"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你又把我的話當耳邊風了，真放肆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "구원자야."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 시녀… 아니, 벨레드가 짐에게 이런 이상한 것을 시켰다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Your maid—no, Beleth made me do this strange thing."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "那個侍女…不對，貝萊德要朕做這種奇怪的事"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "那個侍女…不對，貝萊德要朕做這種奇怪的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이게 도대체 무슨 의미냐…?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "What does this mean...?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "這到底是什麼意思…？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "這到底是什麼意思…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고양이 포즈네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's the cat pose"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是貓咪的姿勢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是貓咪的姿勢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고양이 포즈네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's the cat pose"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是貓咪的姿勢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是貓咪的姿勢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀여운데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可愛啊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可愛啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀여운데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可愛啊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可愛啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "벨레드가 감히 짐에게 고양이 포즈를 시켰단 말이냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "How dare Beleth make me pose as a cat?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "貝萊德竟敢要朕擺出貓咪的姿勢？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "貝萊德竟敢要朕擺出貓咪的姿勢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "시녀 주제에 짐을 능멸하다니…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "That maid belittled me."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "區區一個侍女，竟敢欺侮朕…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "區區一個侍女，竟敢欺侮朕…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "가만두지 않겠다!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I will not stand for it!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我不會放過她！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我不會放過她！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "당장 그 가녀린 팔을…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I will..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我要馬上把那纖細的手臂…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我要馬上把那纖細的手臂…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "아주 세게 물어버릴 것이야!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Bite her slender arm very hard right now!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "狠狠地咬下來！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "狠狠地咬下來！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "완전 고양이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're just like a cat"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "根本是貓咪耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "根本是貓咪耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "완전 고양이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're just like a cat"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "根本是貓咪耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "根本是貓咪耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "고양이 아니라니까!!!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "No, I am not!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "就說了我不是貓咪！！！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "就說了我不是貓咪！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이제 이 요상한 의복도 적응이 되는군."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I'm getting used to this weird outfit."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我現在連這身奇裝異服都習慣了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我現在連這身奇裝異服都習慣了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "생각보다 활동하기 편하더구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "It's more comfortable than I thought it would be."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "活動起來比想像中還要方便"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "活動起來比想像中還要方便"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "원래 입던 옷은 좀 치렁치렁한 감이 있어서 그런가?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Maybe it's because my old clothes were a little too long and baggy."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "是因為原本穿的衣服有點鬆垮垮的感覺嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "是因為原本穿的衣服有點鬆垮垮的感覺嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨레드한테 다른 옷도 구해보라고 할까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Want me to ask Beleth to find you some other clothes?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要不要叫貝萊德幫妳找其他衣服？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要不要叫貝萊德幫妳找其他衣服？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨레드한테 다른 옷도 구해보라고 할까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Want me to ask Beleth to find you some other clothes?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要不要叫貝萊德幫妳找其他衣服？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要不要叫貝萊德幫妳找其他衣服？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "됐다, 그럴 필요까지 있겠느냐."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "No, that's not necessary."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "不用，哪需要做到那樣"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "不用，哪需要做到那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이래저래 바빠 보이던데 놔두거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "She seems busy. Let her be."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "她看起來忙得暈頭轉向，別吵她"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "她看起來忙得暈頭轉向，別吵她"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그리고 벨레드 그 녀석은 그럴 시간에 요리 연습을 더 해야 한다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Also, if she has time for it, she should practice cooking more instead."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "而且，叫貝萊德那傢伙有時間就好好精進廚藝"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "而且，叫貝萊德那傢伙有時間就好好精進廚藝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그런 의미에서 오늘 저녁은 네가 사거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "In that sense, you should buy dinner tonight."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "所以今天晚餐你請客"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "所以今天晚餐你請客"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "All of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "All of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "나중에 가온으로 돌아가면 다 갚을 것이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I'll pay you back when I go back to Gaon."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "等我以後回到加溫，就會還你"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "等我以後回到加溫，就會還你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알았어 메모해 둘게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay, I'll make a note"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了，我會記下來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了，我會記下來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알았어 메모해 둘게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay, I'll make a note"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了，我會記下來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了，我會記下來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "에잉, 정 없는 녀석."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Sheesh, you're so heartless."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "唉唷，你這無情的傢伙"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "唉唷，你這無情的傢伙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "구원자야, 짐의 키가 그렇게 작더냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Savior, am I so short?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "救援者，朕的身高有那麼矮嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "救援者，朕的身高有那麼矮嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "작고 아담하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're small and petite"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "小巧玲瓏啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "小巧玲瓏啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "작고 아담하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're small and petite"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "小巧玲瓏啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "小巧玲瓏啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "크윽"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Gah"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "咳呃"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "咳呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "장신으로만 살다가 이렇게 되니,\r\n너무 사는 게 불편하구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I'm so uncomfortable living like this\r\nafter being so tall."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "一直過著高個子的生活，卻突然變這樣，\r\n真的好不方便。"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "一直過著高個子的生活，卻突然變這樣，\r\n真的好不方便。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "찬장에 있는 물건 하나,\r\n제대로 꺼낼 수 없는 몸이라니…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I can't get anything\r\nout of the cupboard..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "這副身體竟然連天花板的東西\r\n都拿不太到…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "這副身體竟然連天花板的東西\r\n都拿不太到…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 꺼내야 할 물건이 있는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there something you need right now?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳有東西要現在拿嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳有東西要現在拿嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 꺼내야 할 물건이 있는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there something you need right now?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳有東西要現在拿嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳有東西要現在拿嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그, 그게…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Th-that's..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "那、那個…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "那、那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "방주 부엌에 있는…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I saw..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我在方舟廚房…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我在方舟廚房…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "사탕 든 상자가 보이길래…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "A box of candy in the ark's kitchen, so..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "看到一個裝糖果的箱子…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "看到一個裝糖果的箱子…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐이 그것을 꺼내려다가…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I reached for it, and..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕想把那個拿出來，結果…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕想把那個拿出來，結果…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "크윽…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Gah!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "咳呃…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "咳呃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 다쳤어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you hurt?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "受傷了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "受傷了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 다쳤어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you hurt?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "受傷了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "受傷了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그냥 가볍게 넘어졌을 뿐이니라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "It was only a light fall."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "只是輕微地跌倒了一下"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "只是輕微地跌倒了一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "전장에서 다치는 것에 비하면,\r\n아무것도 아니지."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Compared to getting hurt on the battlefield,\r\nit's nothing."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "跟在戰場上受的傷比起來，\r\n這不算什麼。"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "跟在戰場上受的傷比起來，\r\n這不算什麼。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이 정도 생채기는 쉬면 낫는다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "A scratch like this will heal after a bit of rest."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "這點皮肉傷休息一下就好了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "這點皮肉傷休息一下就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 사탕도 꺼내주고 반창고도 붙여줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll get you some candy and put a bandage on it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我幫妳把糖果拿出來，再幫妳貼OK蹦"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我幫妳把糖果拿出來，再幫妳貼OK蹦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 사탕도 꺼내주고 반창고도 붙여줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll get you some candy and put a bandage on it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我幫妳把糖果拿出來，再幫妳貼OK蹦"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我幫妳把糖果拿出來，再幫妳貼OK蹦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "녀석, 호들갑은."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Hey, don't be so fussy."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "臭小子，大驚小怪的"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "臭小子，大驚小怪的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그럼 빨리 부엌으로 오든가 하거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Now, get your butt in the kitchen."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "那你快點來廚房啊"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "那你快點來廚房啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "며칠간 네 녀석을 지켜보는데 말이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I've been watching you for days."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我觀察你好幾天了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我觀察你好幾天了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "너에게 예를 갖추지 않는 정령들이 꽤 되더구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Quite a few Souls don't behave properly to you."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我發現有好多精靈對你很失禮"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我發現有好多精靈對你很失禮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "하대하는 정령은 없지만,\r\n친구처럼 맞먹으려는 정령들이 아주 많아."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "None of them disrespect you, but a lot of them\r\nact as if they're your friends."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "雖然沒有精靈對你不敬，\r\n但有很多精靈想像朋友一樣跟你平起平坐"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "雖然沒有精靈對你不敬，\r\n但有很多精靈想像朋友一樣跟你平起平坐"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "정령들 좀 모아다가 교육해야하는 것 아니냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Shouldn't you gather them and educate them?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "是不是該把精靈集合起來訓話啊？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "是不是該把精靈集合起來訓話啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이렇게 놔두다간 끝없이 기어오를 것이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "If you leave them like this, they'll continue to misbehave."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "要是這樣放任下去，她們會爬到你頭上"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "要是這樣放任下去，她們會爬到你頭上"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "네 녀석이 이런 거에 경각심이 없으니, 원…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Tsk, tsk. You're so insensitive to things like this."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你這傢伙對這種事就是沒有警覺心，受不了…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你這傢伙對這種事就是沒有警覺心，受不了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나한테 가장 무례하게 구는 건…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The rudest of them all is..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對我最沒有禮貌的…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對我最沒有禮貌的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나한테 가장 무례하게 구는 건…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The rudest of them all is..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對我最沒有禮貌的…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對我最沒有禮貌的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You, Sakuyo"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是櫻世耶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是櫻世耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You, Sakuyo"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是櫻世耶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是櫻世耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐은 짐이니까 그런 거다!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "That's because I'm a lord!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "因為朕是朕，才會對你那樣！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "因為朕是朕，才會對你那樣！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이 멍청한 녀석."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "You fool."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你這愚蠢的傢伙"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你這愚蠢的傢伙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "네 녀석은 은퇴를 생각해 본 적이 있느냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Have you ever thought of retiring?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你這傢伙有想過要退休嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你這傢伙有想過要退休嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐은 원래 은퇴 같은 건 생각하지 않았다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I never really thought about retirement."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕本來沒有考慮過退休這種事"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕本來沒有考慮過退休這種事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "하지만 이렇게 강제로 한가해지니,\r\n생각이 많아지는구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "But now that I'm forced to be idle like this,\r\nI'm thinking about it a lot."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "但因為像這樣被強迫無所事事，\r\n讓我開始思考很多事"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "但因為像這樣被強迫無所事事，\r\n讓我開始思考很多事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "정말 몇백 년간은 앞만 보고 달렸다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I've spent the last couple hundred years looking ahead."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我這好幾百年來都只顧著往前跑"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我這好幾百年來都只顧著往前跑"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "평범하게 살았던 게 언제였는지,\r\n완전히 잊어버린 채로 말이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I completely forgot how it was\r\nlike to live a normal life."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "已經不記得\r\n平凡度日是什麼時候了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "已經不記得\r\n平凡度日是什麼時候了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "눈앞의 문제들을 해결하고,\r\n지정한 목표들을 달성하는 동안…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Solving the problems in front of me,\r\naccomplishing the goals I set for myself,"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "解決眼前的問題、\r\n達成指定目標的期間…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "解決眼前的問題、\r\n達成指定目標的期間…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 이후에는 무엇이 있을지 생각하지 못했구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I never thought about what came after."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "沒能考慮到之後有什麼樣的東西在等我"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "沒能考慮到之後有什麼樣的東西在等我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "평화가 찾아오면,\r\n짐은 무엇을 할 수 있을지…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "When peace comes,\r\nwhat will I be able to do...?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "和平到來後，\r\n朕能做些什麼…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "和平到來後，\r\n朕能做些什麼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "평화를 즐기면서 살면 되지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why not just enjoy the peace?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "享受和平就好了吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "享受和平就好了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "평화를 즐기면서 살면 되지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why not just enjoy the peace?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "享受和平就好了吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "享受和平就好了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "평화를 즐긴다라…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Enjoy the peace..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "享受和平啊…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "享受和平啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "단순하면서도 명료한 말이구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Simple and clear."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "很單純又簡單明瞭的話"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "很單純又簡單明瞭的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그래, 그때가 되면 마음껏 즐겨봐야겠다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Okay, when that time comes, I'll enjoy it to the fullest."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "好，到時候我要盡情享受"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "好，到時候我要盡情享受"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이건 거짓말, 거짓말이다!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "No! Noooh!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "這是騙人的，騙人的！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "這是騙人的，騙人的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이럴 리가 없다, 이럴 리가 없어!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "This can't be true! No way!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "不可能會這樣，不可能會這樣！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "不可能會這樣，不可能會這樣！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "여봐라, 구원자야!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "喂，救援者！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "喂，救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "빨리 다른 거울을 가져오너라!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Hurry and get me another mirror!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "快拿其他鏡子過來！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "快拿其他鏡子過來！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "방주에 있는 거울들은 다 보여줬어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've shown you all the mirrors on the ark"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我已經給妳看方舟的所有鏡子了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我已經給妳看方舟的所有鏡子了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "방주에 있는 거울들은 다 보여줬어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've shown you all the mirrors on the ark"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我已經給妳看方舟的所有鏡子了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我已經給妳看方舟的所有鏡子了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "…큭"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "... Gah!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "…咳"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "…咳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "네 눈에도 짐이…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Do I look..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你也覺得朕…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你也覺得朕…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "작아 보이느냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Small even to you?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "很嬌小嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "很嬌小嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "아니다, 이건 짐의 모습이…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "No, this isn't me..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "不對，這才不是…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "不對，這才不是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "아니란 말이다!!!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "This is not me!!!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕的樣子！！！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕的樣子！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "크아아아악!!!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Aaaaaahhh!!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "呃啊啊啊啊！！！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "呃啊啊啊啊！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "여봐라, 구원자야."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Hey, Savior."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "喂，救援者"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "喂，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "시녀에게 식사 좀 그만 권하라고 하거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Tell your maid to stop trying to feed me."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "叫侍女不要再勸我吃飯了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "叫侍女不要再勸我吃飯了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐은 아무것도 먹고 싶지 않다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I don't want to eat anything."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕什麼都不想吃"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕什麼都不想吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무리 그래도 밥은 먹어야지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You have to eat"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不管怎麼樣，飯還是要吃"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不管怎麼樣，飯還是要吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무리 그래도 밥은 먹어야지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You have to eat"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不管怎麼樣，飯還是要吃"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不管怎麼樣，飯還是要吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "끼니 좀 거른다고 정령석이 되는 것도 아닌데"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "It's not like skipping a meal will turn me into a Soul Stone."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "又不會因為沒吃幾頓飯，就變成精靈石"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "又不會因為沒吃幾頓飯，就變成精靈石"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "왜 그렇게 유난들이냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Stop being so fussy."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你幹嘛那麼神經質？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你幹嘛那麼神經質？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "가온으로 돌아갈 때까지,\r\n아무것도 먹지 않을 테니 그리 알고 있거라!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I am not going to eat anything\r\nuntil I return to Gaon. Period!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "回到加溫之前，\r\n我什麼都不會吃，先跟你說一聲！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "回到加溫之前，\r\n我什麼都不會吃，先跟你說一聲！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 아직 모습이 돌아오지 않았잖아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But you haven't gotten back to yourself yet"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但妳還沒恢復原樣啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但妳還沒恢復原樣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 아직 모습이 돌아오지 않았잖아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But you haven't gotten back to yourself yet"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但妳還沒恢復原樣啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但妳還沒恢復原樣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그대로 돌아가면 정령들이 못 알아보지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If you go back, the Souls won't recognize you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就那樣回去的話，精靈們應該認不出妳吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就那樣回去的話，精靈們應該認不出妳吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그대로 돌아가면 정령들이 못 알아보지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If you go back, the Souls won't recognize you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就那樣回去的話，精靈們應該認不出妳吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就那樣回去的話，精靈們應該認不出妳吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "시끄럽다!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Silence!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "吵死了！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "吵死了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "정말이지, 귀찮게 하지 말라니까!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Seriously, stop bothering me!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "真是的，我叫你不要煩我！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "真是的，我叫你不要煩我！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "저기…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Hey..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "那個…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "구원자야."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "아니, 왜 바로 답장을 하느냐!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Why did you reply right away?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "拜託，幹嘛秒回啊！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "拜託，幹嘛秒回啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "하루 종일 에버폰만 보는 것이냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Do you just look at your Everphone all day?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你整天盯著EverPhone看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你整天盯著EverPhone看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래서 무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So, what's going on?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以妳有什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以妳有什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래서 무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So, what's going on?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以妳有什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以妳有什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "어…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Erm..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "哦…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "哦…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그러니까…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "So..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "就是…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "就是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 아까 일은…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "What happened earlier..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "剛才的事…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "剛才的事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "됐다, 잠이나 자거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Forget it. Go to bed."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "算了，還是睡覺吧"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "算了，還是睡覺吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "할 말이 있는 게 아니었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't you have anything to say?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳不是有話要說嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳不是有話要說嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "할 말이 있는 게 아니었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't you have anything to say?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳不是有話要說嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳不是有話要說嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "있었지만, 하지 않을 것이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I do, but I won't."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "本來有的，但我不跟你說了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "本來有的，但我不跟你說了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이유는 묻지 말고 잠이나 자거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Don't ask me why. Go to sleep."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "不要問為什麼，睡你的覺吧"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "不要問為什麼，睡你的覺吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "여봐라, 구원자야."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Hey, Savior."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "喂，救援者"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "喂，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "혹시 사탕은 좀 먹느냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Do you eat candy by any chance?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你吃糖果嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你吃糖果嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "묻는 말에 대답만 하면 되지"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Just answer the question."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "問你話你回答就對了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "問你話你回答就對了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "뭘 그렇게 캐묻느냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Why do you want to know?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "幹嘛一直追問？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "幹嘛一直追問？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이유를 알고 싶을 수도 있지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because I want to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也會想知道原因啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也會想知道原因啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이유를 알고 싶을 수도 있지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because I want to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也會想知道原因啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也會想知道原因啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "어디서 자꾸 따박따박 말대꾸냐!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Stop talking back to me!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "還敢跟我頂嘴！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "還敢跟我頂嘴！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "됐다, 짐이 무슨 말을 더 하겠느냐."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Forget it. I shouldn't even have asked."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "算了，朕還能說什麼呢"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "算了，朕還能說什麼呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "일이나 봐라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "You're dismissed."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "還是工作吧"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "還是工作吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "사탕… 줬다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I gave her...candy."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "糖果…已經給了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "糖果…已經給了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "네 녀석의 부탁대로 했으니 됐지?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Just as you asked. Happy now?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我已經照你這傢伙的請求去辦，可以了吧？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我已經照你這傢伙的請求去辦，可以了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누구한테?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Who's she?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "給誰？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "給誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누구한테?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Who's she?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "給誰？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "給誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 네 시녀… 한테 줬지, 누굴 줬겠느냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Your maid. Who else?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "給了那個…你的侍女，還能給誰？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "給了那個…你的侍女，還能給誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이름으로 말해줘야지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Tell me by name"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要說名字啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要說名字啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이름으로 말해줘야지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Tell me by name"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要說名字啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要說名字啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "뭐라고?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Say what?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐이 시녀의 이름까지 기억하고 있겠느냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Do I even have to memorize maids' names now?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕還得記得侍女的名字嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕還得記得侍女的名字嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "벨레드인지 뭔지 그걸 짐이 알아야 하냔 말이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Why should I know her name is Beleth, for goodness's sake?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "難道朕要記得她是叫貝萊德還是什麼的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "難道朕要記得她是叫貝萊德還是什麼的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기억하고 있네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So, you know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳記得呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳記得呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기억하고 있네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So, you know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳記得呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳記得呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Ah"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이, 발칙한 것! 짐을 말리게 하다니…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Y-you! How dare you trick me like that?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "你，放肆！竟敢玩弄朕…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "你，放肆！竟敢玩弄朕…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "으으으! 분하다, 분해!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Gaah! You're so infuriating!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "呃呃呃！好生氣，好生氣！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "呃呃呃！好生氣，好生氣！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "정말 신기하단 말이지."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "How interesting!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "真的好神奇"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "真的好神奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그 종이 뭉치들을 보면서 졸지 않다니…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "How is it possible to look at those papers"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "看著那些小紙團竟然不會想睡…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "看著那些小紙團竟然不會想睡…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "어찌 그럴 수 있단 말이더냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "and not doze off?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "怎麼能做到那樣呢？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "怎麼能做到那樣呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "졸려도 참고 하는 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm trying hard not to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是想睡但忍著睏意"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是想睡但忍著睏意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "졸려도 참고 하는 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm trying hard not to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是想睡但忍著睏意"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是想睡但忍著睏意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "짐은 도저히 참기가 힘들었는데…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "It was impossible for me."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕根本沒辦法忍耐…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕根本沒辦法忍耐…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "구원자, 네 녀석한테 배울 점이 있구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Savior, I could learn something from you."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "救援者，你身上也有值得我學習的地方"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "救援者，你身上也有值得我學習的地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "배신감이라는 것은 지워지지 않는 얼룩 같구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Betrayal is like a stain that won't go away,"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "所謂的背叛感就像無法抹滅的汙點"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "所謂的背叛感就像無法抹滅的汙點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "아무리 문질러도 사라지지 않고,\r\n잘못하면 얼룩이 더 번지기도 하지."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "no matter how much you scrub.\r\nAnd if you do it wrong, you'll just make it worse."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "不管怎麼揉都不會消失，\r\n一不小心還會讓汙點擴散"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "不管怎麼揉都不會消失，\r\n一不小心還會讓汙點擴散"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그것들을 이해하고 싶으면서도,\r\n이해하고 싶지 않은…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I want to understand them.\r\nAt the same time, I don't want to..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "想理解他們，\r\n卻又不想理解…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "想理解他們，\r\n卻又不想理解…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "하루에도 수십번 바뀌는 이 마음이,\r\n너무나도 괴롭다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "It's so painful, my mind that changes\r\ndozens of times a day."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "一天改變數十次的心意，\r\n實在是太痛苦了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "一天改變數十次的心意，\r\n實在是太痛苦了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sakuyo..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "櫻世…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "櫻世…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sakuyo..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "櫻世…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "櫻世…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "네 녀석이라도 있어서 다행이야."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I'm glad I have you by my side."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "有你這傢伙在真是太好了。"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "有你這傢伙在真是太好了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "그렇지 않았다면…"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Or..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "不然的話…"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "不然的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "구원자야, 잘 지내고 있느냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Savior, how are you?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "救援者，是否安好？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "救援者，是否安好？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "이렇게 연락하는 것도 오랜만이구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "It's been a while since we've spoken."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "許久未曾像這樣聯絡你了。"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "許久未曾像這樣聯絡你了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "아마 지금쯤이면 짐의 가신들이,\r\n그곳에 도착했을 것이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "My vassals have probably\r\narrived there by now."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "朕的家臣們現在差不多\r\n應該已經到那裡了"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "朕的家臣們現在差不多\r\n應該已經到那裡了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "너를 모셔 오라고 보낸 것이니 겁먹지 말거라."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I've sent them to fetch you, so don't be afraid,"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "是朕派去接你的，別驚慌"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "是朕派去接你的，別驚慌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "본래 귀한 손님은 이렇게 모시는 것이니 말이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "for this is how honored guests are treated."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "這本來就是接待貴客的方式"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "這本來就是接待貴客的方式"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "구원자야, 이번에도 허탕이다."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Savior, it's all for naught again."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "救援者，這次也是徒勞無功"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "救援者，這次也是徒勞無功"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "용하다는 의원을 찾아갔는데,\r\n거기에서도 짐의 몸을 되돌릴 수 없다고 하더구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "I went to a famous doctor,\r\nand even he said my condition could not be reversed."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "去找了醫術高明的大夫，\r\n但對方也說朕的身體無可救藥"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "去找了醫術高明的大夫，\r\n但對方也說朕的身體無可救藥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "정말 시간이 약이란 말인가?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Do I really just have to wait?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "時間真的是良藥嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "時間真的是良藥嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 조바심 가지지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No need to be impatient"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別太著急"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別太著急"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 조바심 가지지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No need to be impatient"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別太著急"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別太著急"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "눈치 없는 녀석."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "You're so clueless, aren't you?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "白目的傢伙"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "白目的傢伙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sakuyo"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "櫻世"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "櫻世"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sakuyo"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "櫻世"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "櫻世"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 한 약속 지키러 가고 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm on my way to fulfill my promise"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我要去實現當時的約定"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我要去實現當時的約定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 한 약속 지키러 가고 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm on my way to fulfill my promise"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我要去實現當時的約定"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我要去實現當時的約定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디 가지 말고 기다려줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't go anywhere. Wait for me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳別亂跑，等我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳別亂跑，等我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디 가지 말고 기다려줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't go anywhere. Wait for me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳別亂跑，等我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳別亂跑，等我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "금방 갈 테니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be right there"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上就過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上就過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "금방 갈 테니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be right there"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上就過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上就過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "사랑의 날이라니, 별 날이 다 있구나."
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Love Day. There's a day for everything."
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "竟然是戀愛之日，真是什麼日子都有。"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "竟然是戀愛之日，真是什麼日子都有。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "대충 챙겼으니 알아서 쓰거라!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Here's a little something for you!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "我隨便準備了一下，你自己拿去用！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "我隨便準備了一下，你自己拿去用！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "챙겨줘서 고마워, 사쿠요!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for the gift, Sakuyo!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，櫻世！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，櫻世！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "챙겨줘서 고마워, 사쿠요!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for the gift, Sakuyo!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，櫻世！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，櫻世！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "아하하하! 무예의 날이 왔구나!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Mwahaha! Martial Arts Day is here!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "啊哈哈哈！武術之日到了！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "啊哈哈哈！武術之日到了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "도검 수집가에겐 더할 나위 없이 기쁜 날이다!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "What a happy day for a sword collector!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "這對刀劍收藏家來說，是再高興不過的日子！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "這對刀劍收藏家來說，是再高興不過的日子！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요가 즐거워하니까 나도 기뻐."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm happy that you're happy."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看櫻世這麼開心，我也很高興。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看櫻世這麼開心，我也很高興。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사쿠요가 즐거워하니까 나도 기뻐."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm happy that you're happy."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看櫻世這麼開心，我也很高興。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看櫻世這麼開心，我也很高興。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "해, 해피 이브데이~!"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "H-Happy Eve Day...!"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "夏、夏娃之日快樂～！"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "夏、夏娃之日快樂～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "사쿠요",
+            "message": "라고 하면 되는 것이냐?"
+          },
+          "en": {
+            "speaker": "Sakuyo",
+            "message": "Is that what I should say?"
+          },
+          "zh_tw": {
+            "speaker": "櫻世",
+            "message": "這樣說就好了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "櫻世",
+            "message": "這樣說就好了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 이브데이, 사쿠요!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve Day, Sakuyo!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，櫻世！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，櫻世！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 이브데이, 사쿠요!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve Day, Sakuyo!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，櫻世！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，櫻世！"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7690 @@
+{
+  "id": "4100",
+  "name": "페트라",
+  "name_en": "Petra",
+  "grade": "에픽",
+  "race": "불사형",
+  "class": "디펜더",
+  "sub_class": "디버프",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "망자의 인도자",
+    "constellation": "인연_제이드_이벤트1",
+    "union": "팀 언더테이커",
+    "birthday": "423",
+    "height": 144,
+    "weight": 39,
+    "cv_ko": "여민정",
+    "cv_jp": "Himika Akaneya",
+    "like": [
+      "반짝이는 것",
+      "장난"
+    ],
+    "dislike": [
+      "구속",
+      "강요"
+    ],
+    "hobby": [
+      "멍하니 있기",
+      "빛나는 것 모으기"
+    ],
+    "speciality": [
+      "땅 파기",
+      "어둠 속에서 길 찾기"
+    ]
+  },
+  "personality": {
+    "description": "안녕, 구원자. 나는 「죽음의 신」 페트라…\n…거짓말이야. 구원자는 잘 속네…\n음… 아니, 「죽음의 신」이라는 게 가짜… '페트라'라는 건 진짜야.\n\n구원자는 인간이야…? 그럼 '죽음'이라는 게 뭔지 알고 있어…? \n이 묘지의 영혼들은 너무 오래전부터 이곳에 있었어, 그래서…\n이제는 자신이 누군지도 잊은 영혼들이 대부분이야…\n그러니까 영혼들에게 물어보더라도… 내가 정말로 원하는 대답은 들을 수가 없어…\n구원자라면… 대답해 줄 수 있을까, 응…?",
+    "greeting": "…응, 거짓말이야…\n……'페트라'는 진짜야."
+  },
+  "speech_patterns": [
+    "구원자",
+    "안녕",
+    "페트라예요",
+    "응",
+    "앞으로 잘부탁해 응",
+    "구원자 말너무빨라",
+    "이거어려워서 대답못해",
+    "그래 안녕",
+    "!ㅣㅏㅏㄴ @ 123;",
+    "ㅂ유531뮤ㅗㅓㄴ",
+    "ㄴㅇ[",
+    "…",
+    "음",
+    "다람쥐가 에버폰을 가져가더니",
+    "멋대로사진과 메세지를 보내버렸어",
+    "얼마못가서 버리고도망치길래",
+    "다시 주웠어",
+    "딱히없어도 상관없으니까",
+    "으음 귀찮은데…",
+    "생각해보고…",
+    "여행 선물론 뭐가 좋을까",
+    "무명이랑",
+    "카렌이랑",
+    "니니한테 줄거야",
+    "찻잎?",
+    "그런건 묘지에도 많아",
+    "뜯어서주면 되려나",
+    "시끄러운 건 싫지만",
+    "불꽃놀이는 나쁘지 않아",
+    "으응… 아니",
+    "가까이서 본 적은 없어",
+    "묘지나 산길 같은데서봐 멀리서",
+    "조용하니까 좋아",
+    "반짝반짝하고…",
+    "…응",
+    "생각해볼게",
+    "긍정적으로",
+    "많이 오해하는게 있는데",
+    "잡초는 한 식물만을 지칭하는단어가 아냐",
+    "묘지 주변을 보면 알수있어",
+    "이름은 잡초지만",
+    "반짝거리는 예쁜꽃이 피기도해",
+    "계란을 닮은 작은꽃이나",
+    "꺾으면 노란 즙이 나오는 풀이나",
+    "트리같이 생긴 풀…",
+    "민들레도 흔해",
+    "민들레랑 비슷한 거.",
+    "민들레를 닮았는데 팔이 여섯 개거나",
+    "보통 민들레보다 꽃이 3배정도 큰 자이언트민들레나",
+    "머리가 두 개 달린 민들레"
+  ],
+  "comments": [
+    {
+      "writer": "니니",
+      "comment": "…같이 있으면 편해.\n장난을 좀 많이 치긴 하지만…"
+    },
+    {
+      "writer": "카렌",
+      "comment": "이 기나긴 시간 끝에, 무엇이 우릴 기다리고 있을까…"
+    },
+    {
+      "writer": "셰리",
+      "comment": "아 정말~! 마주칠 때마다 괴담을 얘기하지 말란 말이야~!!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "페트라",
+        "message": "구원자"
+      },
+      {
+        "speaker": "페트라",
+        "message": "안녕"
+      },
+      {
+        "speaker": "페트라",
+        "message": "페트라예요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 페트라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 페트라"
+      },
+      {
+        "speaker": "페트라",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라",
+        "message": "안녕"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰을 다루는 게 익숙하지가 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰을 다루는 게 익숙하지가 않아?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "앞으로 잘부탁해 응"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자 말너무빨라"
+      },
+      {
+        "speaker": "페트라",
+        "message": "이거어려워서 대답못해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞으로 천천히 할게. 나도 잘 부탁해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞으로 천천히 할게. 나도 잘 부탁해"
+      },
+      {
+        "speaker": "페트라",
+        "message": "그래 안녕"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "!ㅣㅏㅏㄴ @ 123;"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "ㅂ유531뮤ㅗㅓㄴ"
+      },
+      {
+        "speaker": "페트라",
+        "message": "ㄴㅇ["
+      },
+      {
+        "speaker": "페트라",
+        "message": "…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제발 진정해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제발 진정해"
+      },
+      {
+        "speaker": "페트라",
+        "message": "음"
+      },
+      {
+        "speaker": "페트라",
+        "message": "다람쥐가 에버폰을 가져가더니"
+      },
+      {
+        "speaker": "페트라",
+        "message": "멋대로사진과 메세지를 보내버렸어"
+      },
+      {
+        "speaker": "페트라",
+        "message": "얼마못가서 버리고도망치길래"
+      },
+      {
+        "speaker": "페트라",
+        "message": "다시 주웠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰을 도난당했는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰을 도난당했는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 태연한 거 아니야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 태연한 거 아니야?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "딱히없어도 상관없으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 준 거니까 소중히 해줘…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 준 거니까 소중히 해줘…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "으음 귀찮은데…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "생각해보고…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "여행 선물론 뭐가 좋을까"
+      },
+      {
+        "speaker": "페트라",
+        "message": "무명이랑"
+      },
+      {
+        "speaker": "페트라",
+        "message": "카렌이랑"
+      },
+      {
+        "speaker": "페트라",
+        "message": "니니한테 줄거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "찻잎이라거나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "찻잎이라거나?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "찻잎?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "그런건 묘지에도 많아"
+      },
+      {
+        "speaker": "페트라",
+        "message": "뜯어서주면 되려나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잡초는 찻잎이 아니야…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잡초는 찻잎이 아니야…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "시끄러운 건 싫지만"
+      },
+      {
+        "speaker": "페트라",
+        "message": "불꽃놀이는 나쁘지 않아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "찾아가서 보기도 해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "찾아가서 보기도 해?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "으응… 아니"
+      },
+      {
+        "speaker": "페트라",
+        "message": "가까이서 본 적은 없어"
+      },
+      {
+        "speaker": "페트라",
+        "message": "묘지나 산길 같은데서봐 멀리서"
+      },
+      {
+        "speaker": "페트라",
+        "message": "조용하니까 좋아"
+      },
+      {
+        "speaker": "페트라",
+        "message": "반짝반짝하고…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에도 같이 보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에도 같이 보자"
+      },
+      {
+        "speaker": "페트라",
+        "message": "…응"
+      },
+      {
+        "speaker": "페트라",
+        "message": "생각해볼게"
+      },
+      {
+        "speaker": "페트라",
+        "message": "긍정적으로"
+      },
+      {
+        "speaker": "페트라",
+        "message": "많이 오해하는게 있는데"
+      },
+      {
+        "speaker": "페트라",
+        "message": "잡초는 한 식물만을 지칭하는단어가 아냐"
+      },
+      {
+        "speaker": "페트라",
+        "message": "묘지 주변을 보면 알수있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 식물들이 다 잡초구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 식물들이 다 잡초구나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라",
+        "message": "이름은 잡초지만"
+      },
+      {
+        "speaker": "페트라",
+        "message": "반짝거리는 예쁜꽃이 피기도해"
+      },
+      {
+        "speaker": "페트라",
+        "message": "계란을 닮은 작은꽃이나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "꺾으면 노란 즙이 나오는 풀이나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "트리같이 생긴 풀…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "민들레도 흔해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "또 뭐가 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "또 뭐가 있어?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "민들레랑 비슷한 거."
+      },
+      {
+        "speaker": "페트라",
+        "message": "민들레를 닮았는데 팔이 여섯 개거나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "보통 민들레보다 꽃이 3배정도 큰 자이언트민들레나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "머리가 두 개 달린 민들레"
+      },
+      {
+        "speaker": "페트라",
+        "message": "꺾으면 비명을지르는 민들레"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 게 묘지에 있어도 되는 거야…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 게 묘지에 있어도 되는 거야…?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자"
+      },
+      {
+        "speaker": "페트라",
+        "message": "행복이라는게 정확히 뭐야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 왜?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "행복하다는게 뭔지 궁금해서"
+      },
+      {
+        "speaker": "페트라",
+        "message": "흔히들 '행복을 찾는다'는 얘길하는데"
+      },
+      {
+        "speaker": "페트라",
+        "message": "어떻게 찾는 거야?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "보물찾기처럼 땅을파서 찾고그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 그렇다기보다는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 그렇다기보다는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "행복해지기 위해 노력하는 태도 아닐까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "행복해지기 위해 노력하는 태도 아닐까?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "행복해지기 위해 노력하는 태도…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내게 행복이라는 건…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내게 행복이라는 건…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "'소중한 이들과 함께 지내는 하루하루'"
+      },
+      {
+        "speaker": "구원자",
+        "message": "'소중한 이들과 함께 지내는 하루하루'"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같은 느낌이려나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같은 느낌이려나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "흠…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "그렇구나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자 행복한거축하해"
+      },
+      {
+        "speaker": "페트라",
+        "message": "예요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "지금 나랑 함께니까"
+      },
+      {
+        "speaker": "페트라",
+        "message": "엄청 행복한거 아냐?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…맞아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…맞아!"
+      },
+      {
+        "speaker": "페트라",
+        "message": "소금"
+      },
+      {
+        "speaker": "페트라",
+        "message": "빗자루"
+      },
+      {
+        "speaker": "페트라",
+        "message": "경첩"
+      },
+      {
+        "speaker": "페트라",
+        "message": "비료"
+      },
+      {
+        "speaker": "페트라",
+        "message": "물뿌리개"
+      },
+      {
+        "speaker": "구원자",
+        "message": "여긴 메모장이 아닙니다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "여긴 메모장이 아닙니다"
+      },
+      {
+        "speaker": "페트라",
+        "message": "아"
+      },
+      {
+        "speaker": "페트라",
+        "message": "치약이랑비누 까먹었다"
+      },
+      {
+        "speaker": "페트라",
+        "message": "예전에 광장을 돌아다니다"
+      },
+      {
+        "speaker": "페트라",
+        "message": "결혼식하는 광경을 봤어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어땠어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어땠어?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "반짝반짝했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "의외로 후한 감상이네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "의외로 후한 감상이네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라도 결혼에 관심이 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라도 결혼에 관심이 있어?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "결혼?결혼식이라면 해본적있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?!?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?!?!"
+      },
+      {
+        "speaker": "페트라",
+        "message": "정확히는 시켜준거지만"
+      },
+      {
+        "speaker": "페트라",
+        "message": "영혼결혼식이라고 알아? 사혼식이라고도 하는데"
+      },
+      {
+        "speaker": "페트라",
+        "message": "아주아주 가끔이지만 의뢰가 들어와"
+      },
+      {
+        "speaker": "페트라",
+        "message": "보통은 잠든 정령석들의 넋을 달래기위해"
+      },
+      {
+        "speaker": "페트라",
+        "message": "두 정령석들간에 이루어지는 결혼식이지만"
+      },
+      {
+        "speaker": "페트라",
+        "message": "가끔은 살아있는 정령과"
+      },
+      {
+        "speaker": "페트라",
+        "message": "언제 깨어날지모르는 정령석간의결혼도…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "자, 잠깐만!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "자, 잠깐만!"
+      },
+      {
+        "speaker": "페트라",
+        "message": "왜? 무서워?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자 겁쟁이네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오싹했어…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오싹했어…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "하지만 결혼식… 관심 있을지도 몰라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어? 정말로?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어? 정말로?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "응 그야"
+      },
+      {
+        "speaker": "페트라",
+        "message": "'결혼은 무덤이다'라는 말이 있으니까"
+      },
+      {
+        "speaker": "페트라",
+        "message": "그 말은 좋아해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 걸로 괜찮은 거야?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 걸로 괜찮은 거야?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라도 두려움이라는 감정을 느껴?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라도 두려움이라는 감정을 느껴?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "두려움…?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "별로… 느낀적 없는 거 같은데"
+      },
+      {
+        "speaker": "페트라",
+        "message": "두려운 건 어떤 느낌?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 손발에 땀이 나고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 손발에 땀이 나고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "심장이 두근대는 느낌?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "심장이 두근대는 느낌?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "음 그런거라면있을지도"
+      },
+      {
+        "speaker": "페트라",
+        "message": "반짝이는 거"
+      },
+      {
+        "speaker": "페트라",
+        "message": "보면 심장이 작게 쿵쿵거려"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건… 조금 다르지 않나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건… 조금 다르지 않나?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "그래?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "아… 또 있다"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자 눈"
+      },
+      {
+        "speaker": "페트라",
+        "message": "보고 있으면 반짝반짝해서 이상한 기분"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내 눈…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내 눈…?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라",
+        "message": "어둡고 투명하고"
+      },
+      {
+        "speaker": "페트라",
+        "message": "일렁일렁해서"
+      },
+      {
+        "speaker": "페트라",
+        "message": "조금 무서울지도 몰라"
+      },
+      {
+        "speaker": "페트라",
+        "message": "시간이 흐르면서"
+      },
+      {
+        "speaker": "페트라",
+        "message": "묘지의 비석이 풍화되는 것처럼"
+      },
+      {
+        "speaker": "페트라",
+        "message": "삶이 길어질수록 영혼도 조금씩마모되어가"
+      },
+      {
+        "speaker": "페트라",
+        "message": "마모된영혼들은 어디로흩어졌을까"
+      },
+      {
+        "speaker": "페트라",
+        "message": "민들레 홀씨처럼 여행하는 걸까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "민들레 홀씨라…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "민들레 홀씨라…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "있지 나 카렌과 처음 만났을 때"
+      },
+      {
+        "speaker": "페트라",
+        "message": "한눈에 서로가 같은 의문과"
+      },
+      {
+        "speaker": "페트라",
+        "message": "호기심을 가지고 있다는걸 알았어"
+      },
+      {
+        "speaker": "페트라",
+        "message": "삶은 얼마나 이어지는지"
+      },
+      {
+        "speaker": "페트라",
+        "message": "그리고 그끝에는 무엇이 기다리고있을지"
+      },
+      {
+        "speaker": "페트라",
+        "message": "우릴 맞이하는 건 반짝이는엔딩일수도 있고"
+      },
+      {
+        "speaker": "페트라",
+        "message": "어쩌면 누군가의기대가 무색할만큼\r\n허무한 결말일지도몰라"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자는 어떻게 생각해?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자는 나한테 답을 줄수있어?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자"
+      },
+      {
+        "speaker": "페트라",
+        "message": "짐챙겼어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다 챙겼어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다 챙겼어"
+      },
+      {
+        "speaker": "페트라",
+        "message": "내가 준것도?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무리 그래도 비석은 가방에 안 들어가…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무리 그래도 비석은 가방에 안 들어가…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "왜?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "여행 어디로 가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물어볼 만한 누군가가 있으면 좋겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물어볼 만한 누군가가 있으면 좋겠네"
+      },
+      {
+        "speaker": "페트라",
+        "message": "음…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "아"
+      },
+      {
+        "speaker": "페트라",
+        "message": "있어"
+      },
+      {
+        "speaker": "페트라",
+        "message": "단원들"
+      },
+      {
+        "speaker": "페트라",
+        "message": "우리집으로 부를게"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자"
+      },
+      {
+        "speaker": "페트라",
+        "message": "오늘도 가자"
+      },
+      {
+        "speaker": "페트라",
+        "message": "맛있는 거 먹으러"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잔뜩 먹자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잔뜩 먹자"
+      },
+      {
+        "speaker": "페트라",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라",
+        "message": "어제 부딪힌 정령"
+      },
+      {
+        "speaker": "페트라",
+        "message": "뭔가 이상했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떤 점이?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떤 점이?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "음"
+      },
+      {
+        "speaker": "페트라",
+        "message": "엄청 급해 보이고"
+      },
+      {
+        "speaker": "페트라",
+        "message": "눈치도 보고…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 급한 일이 있던 정령이었을지도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 급한 일이 있던 정령이었을지도"
+      },
+      {
+        "speaker": "페트라",
+        "message": "……"
+      },
+      {
+        "speaker": "페트라",
+        "message": "뭔가 달라…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "마차라는 건"
+      },
+      {
+        "speaker": "페트라",
+        "message": "어쨌든 바퀴만있으면 굴러가는가보네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "페트라",
+        "message": "지붕이없어도 나쁘지 않아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "비만 안 오면 좋겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "비만 안 오면 좋겠다"
+      },
+      {
+        "speaker": "페트라",
+        "message": "소문 들었어"
+      },
+      {
+        "speaker": "페트라",
+        "message": "아우렐리아는"
+      },
+      {
+        "speaker": "페트라",
+        "message": "천사형이랑악마형만 출입가능하다는 말이있대"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자 날개있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아쉽게도 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아쉽게도 없어"
+      },
+      {
+        "speaker": "페트라",
+        "message": "흐음……"
+      },
+      {
+        "speaker": "페트라",
+        "message": "리젤로테한테 빌려볼까?날개"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 빌릴 수 있는 거였어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 빌릴 수 있는 거였어?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "아케나인의 산길은 그렇게 가파르진 않지만"
+      },
+      {
+        "speaker": "페트라",
+        "message": "비오는 날은 위험해"
+      },
+      {
+        "speaker": "페트라",
+        "message": "뭐 구원자라면 어디든 위험할지도"
+      },
+      {
+        "speaker": "페트라",
+        "message": "평지를 걷더라도 함정에 걸려 넘어지겠지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 함정을 파는 범인이 보통 너잖아…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 함정을 파는 범인이 보통 너잖아…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "음."
+      },
+      {
+        "speaker": "페트라",
+        "message": "그랬어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라, 일어났어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라, 일어났어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페트라?"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자 엄청 잘자네"
+      },
+      {
+        "speaker": "페트라",
+        "message": "자는 얼굴 바보같아"
+      },
+      {
+        "speaker": "페트라",
+        "message": "빨리 일어나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "보여줄 거 있으니까…"
+      },
+      {
+        "speaker": "페트라",
+        "message": "…구원자, 결국 이렇게 허무하게 갔구나"
+      },
+      {
+        "speaker": "페트라",
+        "message": "거기서도 잘 지내야 해"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자와의 추억들 기억할 테니까"
+      },
+      {
+        "speaker": "페트라",
+        "message": "이를테면온천에서 몸을 담구고 있다가"
+      },
+      {
+        "speaker": "페트라",
+        "message": "귀뚜라미를 보고 놀라 알몸으로 뛰쳐나왔던 일"
+      },
+      {
+        "speaker": "페트라",
+        "message": "길가던 정령한테 '작업'걸었다가"
+      },
+      {
+        "speaker": "페트라",
+        "message": "변태로오해받고 신고당했던 일까지"
+      },
+      {
+        "speaker": "페트라",
+        "message": "전부 기억할게"
+      },
+      {
+        "speaker": "페트라",
+        "message": "보고 싶을 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직 살아 있고 그런 적도 없어!!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직 살아 있고 그런 적도 없어!!!!"
+      },
+      {
+        "speaker": "페트라",
+        "message": "사랑을 기념하는 날이래"
+      },
+      {
+        "speaker": "페트라",
+        "message": "사랑이 없는 정령은 기념 못 해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우정을 기념해도 돼. 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우정을 기념해도 돼. 고마워"
+      },
+      {
+        "speaker": "페트라",
+        "message": "트릭오어트릿"
+      },
+      {
+        "speaker": "페트라",
+        "message": "선물 줬으니까 장난칠래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔가 좀 다르긴 하지만… 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔가 좀 다르긴 하지만… 고마워"
+      },
+      {
+        "speaker": "페트라",
+        "message": "구원자 이거"
+      },
+      {
+        "speaker": "페트라",
+        "message": "피로 물든 붉은 모자와 털옷을 입은 노인이 주고 갔어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 혹시… 산타?\r\n어쨌든 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 혹시… 산타?\r\n어쨌든 고마워"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "페트라",
+      "en": "Petra",
+      "zh_tw": "佩特拉",
+      "zh_cn": "佩特拉"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "불사형",
+      "en": "Undead",
+      "zh_tw": "不死型",
+      "zh_cn": "不死型"
+    },
+    "class": {
+      "ko": "디펜더",
+      "en": "Defender",
+      "zh_tw": "捍衛者",
+      "zh_cn": "捍衛者"
+    },
+    "sub_class": {
+      "ko": "디버프",
+      "en": "Debuff",
+      "zh_tw": "減益",
+      "zh_cn": "減益"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "망자의 인도자",
+        "en": "Guide of the Dead",
+        "zh_tw": "亡者引路人",
+        "zh_cn": "亡者引路人"
+      },
+      "constellation": {
+        "ko": "인연_제이드_이벤트1",
+        "en": "인연_제이드_이벤트1",
+        "zh_tw": "金牛座",
+        "zh_cn": "金牛座"
+      },
+      "union": {
+        "ko": "팀 언더테이커",
+        "en": "Team Undertaker",
+        "zh_tw": "送葬者小組",
+        "zh_cn": "送葬者小組"
+      },
+      "cv_ko": {
+        "ko": "여민정",
+        "en": "Minjeong Yeo",
+        "zh_tw": "余敏靜",
+        "zh_cn": "余敏靜"
+      },
+      "cv_jp": {
+        "ko": "Himika Akaneya",
+        "en": "Himika Akaneya",
+        "zh_tw": "Himika Akaneya",
+        "zh_cn": "Himika Akaneya"
+      },
+      "like": {
+        "ko": [
+          "반짝이는 것",
+          "장난"
+        ],
+        "en": [
+          "Shiny things",
+          "pranks"
+        ],
+        "zh_tw": [
+          "閃亮的東西、玩笑"
+        ],
+        "zh_cn": [
+          "閃亮的東西、玩笑"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "구속",
+          "강요"
+        ],
+        "en": [
+          "Restraint",
+          "coercion"
+        ],
+        "zh_tw": [
+          "拘禁、強迫"
+        ],
+        "zh_cn": [
+          "拘禁、強迫"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "멍하니 있기",
+          "빛나는 것 모으기"
+        ],
+        "en": [
+          "Being absent-minded",
+          "collecting shiny things"
+        ],
+        "zh_tw": [
+          "發呆、收集閃亮的東西"
+        ],
+        "zh_cn": [
+          "發呆、收集閃亮的東西"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "땅 파기",
+          "어둠 속에서 길 찾기"
+        ],
+        "en": [
+          "Digging",
+          "navigating in the dark"
+        ],
+        "zh_tw": [
+          "挖地、在黑暗中找路"
+        ],
+        "zh_cn": [
+          "挖地、在黑暗中找路"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "안녕, 구원자. 나는 「죽음의 신」 페트라…\n…거짓말이야. 구원자는 잘 속네…\n음… 아니, 「죽음의 신」이라는 게 가짜… '페트라'라는 건 진짜야.\n\n구원자는 인간이야…? 그럼 '죽음'이라는 게 뭔지 알고 있어…? \n이 묘지의 영혼들은 너무 오래전부터 이곳에 있었어, 그래서…\n이제는 자신이 누군지도 잊은 영혼들이 대부분이야…\n그러니까 영혼들에게 물어보더라도… 내가 정말로 원하는 대답은 들을 수가 없어…\n구원자라면… 대답해 줄 수 있을까, 응…?",
+        "en": "Hello, Savior. I'm Petra, the \"goddess of death…\"\n…That was a joke. You are easy to fool…\nUm… No, I was joking when I said I'm the \"goddess of death,\" but I really am \"Petra.\"\n\nAre you a human, Savior? Then, do you know what \"death\" is?\nAll the Souls of this cemetery have been here for so long…\nthat most of them already forgot who they are.\nSo asking them will be useless… I won't get the answer I'm looking for…\nBut if it is you, Savior… Will you be able to give me the answer?",
+        "zh_tw": "你好，救援者。我是「死亡之神」佩特拉…\n…騙你的啦，救援者你還真容易被騙…\n嗯…不是，「死亡之神」是假的…但我真的叫「佩特拉」。\n\n救援者是人類嗎…？那你知道什麼是「死亡」嗎…？\n這群墓地的靈魂從很久以前就在這個地方了，所以…\n大部分的靈魂現在都忘了自己是誰…\n所以就算問這些靈魂…也無法聽到我真的想要的回答…　\n如果是救援者的話…可以回答我嗎，嗯…？",
+        "zh_cn": "你好，救援者。我是「死亡之神」佩特拉…\n…騙你的啦，救援者你還真容易被騙…\n嗯…不是，「死亡之神」是假的…但我真的叫「佩特拉」。\n\n救援者是人類嗎…？那你知道什麼是「死亡」嗎…？\n這群墓地的靈魂從很久以前就在這個地方了，所以…\n大部分的靈魂現在都忘了自己是誰…\n所以就算問這些靈魂…也無法聽到我真的想要的回答…　\n如果是救援者的話…可以回答我嗎，嗯…？"
+      },
+      "greeting": {
+        "ko": "…응, 거짓말이야…\n……'페트라'는 진짜야.",
+        "en": "I was just joking…\nI'm \"Petra.\"",
+        "zh_tw": "…嗯，是騙人的…\n……「佩特拉」是真的。",
+        "zh_cn": "…嗯，是騙人的…\n……「佩特拉」是真的。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "구원자"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Savior"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "救援者"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "안녕"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Hello"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "你好"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "你好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "페트라예요"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "It's me, Petra."
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "我是佩特拉"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "我是佩特拉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "응"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Yup"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "嗯"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "앞으로 잘부탁해 응"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Nice to meet you."
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "以後請多指教喔"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "以後請多指教喔"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "구원자 말너무빨라"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Savior, you type too fast"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "救援者打字好快"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "救援者打字好快"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "이거어려워서 대답못해"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "It's too hard to handle this thing"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "這個好難，沒辦法回訊息"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "這個好難，沒辦法回訊息"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "그래 안녕"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Yeah, hello."
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "好，再見"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "好，再見"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "!ㅣㅏㅏㄴ @ 123;"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "!lkks @ 123;"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "！ㄚㄚㄚㄋ@ 123;"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "！ㄚㄚㄚㄋ@ 123;"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "ㅂ유531뮤ㅗㅓㄴ"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "qdb531anhjs"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "ㄅ李531木ㄛㄥㄋ"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "ㄅ李531木ㄛㄥㄋ"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "ㄴㅇ["
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "sd["
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "ㄋㄣ["
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "ㄋㄣ["
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "…"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "..."
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "…"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "음"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Erm"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "嗯"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "다람쥐가 에버폰을 가져가더니"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "A squirrel took my Everphone"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "松鼠把我的手機拿走"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "松鼠把我的手機拿走"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "멋대로사진과 메세지를 보내버렸어"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "and sent a photo and some messages"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "擅自傳了照片跟訊息"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "擅自傳了照片跟訊息"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "얼마못가서 버리고도망치길래"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "It dropped my phone after a while and ran away"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "沒多久就丟著逃跑了"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "沒多久就丟著逃跑了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "다시 주웠어"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "so I just picked it up"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "我就撿回來了"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "我就撿回來了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "딱히없어도 상관없으니까"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Well, I don't really need it"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "畢竟沒手機也無所謂"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "畢竟沒手機也無所謂"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "으음 귀찮은데…"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Eh, sounds like a hassle..."
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "呃嗯，好麻煩…"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "呃嗯，好麻煩…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "생각해보고…"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "I'll think about it..."
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "考慮一下…"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "考慮一下…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "여행 선물론 뭐가 좋을까"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "What kind of souvenirs should I get?"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "要送什麼旅行禮物好呢"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "要送什麼旅行禮物好呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "무명이랑"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Something for Nameless"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "要送給無名"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "要送給無名"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "카렌이랑"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "something for Karen"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "卡倫"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "卡倫"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "니니한테 줄거야"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "and something for Nini"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "還有妮妮"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "還有妮妮"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "찻잎?"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Loose leaf tea?"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "茶葉？"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "茶葉？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "그런건 묘지에도 많아"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "You can find a lot of those around the graveyard"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "那種東西墓地也有很多"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "那種東西墓地也有很多"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "뜯어서주면 되려나"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "I suppose I could collect some"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "拔下來給她們就好了嗎"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "拔下來給她們就好了嗎"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "시끄러운 건 싫지만"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "I don't like loud noises"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "雖然我很討厭吵雜的環境"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "雖然我很討厭吵雜的環境"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "불꽃놀이는 나쁘지 않아"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "but fireworks aren't so bad"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "但放煙火還不錯"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "但放煙火還不錯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "으응… 아니"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Erm...no"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "呃嗯…不會"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "呃嗯…不會"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "가까이서 본 적은 없어"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Never seen them up close"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "我沒有近看過"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "我沒有近看過"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "묘지나 산길 같은데서봐 멀리서"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "I watch from places like graveyards or mountain trails"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "只有在墓地或山路之類的遠遠地看過"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "只有在墓地或山路之類的遠遠地看過"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "조용하니까 좋아"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "I like how it's quiet"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "很安靜，很棒"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "很安靜，很棒"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "반짝반짝하고…"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "and sparkly"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "還會閃閃發亮…"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "還會閃閃發亮…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "…응"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Okay"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "…嗯"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "…嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "생각해볼게"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "I'll think about it"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "考慮一下"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "考慮一下"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "긍정적으로"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Leaning yes"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "我確定"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "我確定"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "많이 오해하는게 있는데"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "There's a common misunderstanding"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "你誤會大了"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "你誤會大了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "잡초는 한 식물만을 지칭하는단어가 아냐"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "that \"weed\" refers to a specific plant, but that's not the case"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "雜草不是單指一種植物"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "雜草不是單指一種植物"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "묘지 주변을 보면 알수있어"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "A careful look around the graveyard can prove it"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "看墓地周遭就知道了"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "看墓地周遭就知道了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "이름은 잡초지만"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "They may be called weeds,"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "雖然名字叫雜草"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "雖然名字叫雜草"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "반짝거리는 예쁜꽃이 피기도해"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "but some bloom into radiant, pretty flowers"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "但也會開出閃閃發亮的漂亮花朵"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "但也會開出閃閃發亮的漂亮花朵"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "계란을 닮은 작은꽃이나"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Tiny flowers that look like eggs"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "像是跟雞蛋很像的小花"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "像是跟雞蛋很像的小花"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "꺾으면 노란 즙이 나오는 풀이나"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Grass oozing yellow sap when snapped"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "或是掰開會流出黃色汁液的草"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "或是掰開會流出黃色汁液的草"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "트리같이 생긴 풀…"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Leaves that look like little trees..."
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "或是長得像樹一樣的草…"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "或是長得像樹一樣的草…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "민들레도 흔해"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Dandelions are common, too"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "蒲公英也很常見"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "蒲公英也很常見"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "민들레랑 비슷한 거."
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Other weeds similar to dandelions"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "類似蒲公英的"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "類似蒲公英的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "민들레를 닮았는데 팔이 여섯 개거나"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Dandelions with six arms"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "很像蒲公英，但是有六隻手"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "很像蒲公英，但是有六隻手"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "보통 민들레보다 꽃이 3배정도 큰 자이언트민들레나"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Giant dandelions that are about three times the size of regular dandelions"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "或是花朵比一般蒲公英大3倍的巨大蒲公英"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "或是花朵比一般蒲公英大3倍的巨大蒲公英"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "머리가 두 개 달린 민들레"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "Two-headed dandelions"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "或是雙頭蒲公英"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "或是雙頭蒲公英"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "니니",
+          "message": "…같이 있으면 편해.\n장난을 좀 많이 치긴 하지만…"
+        },
+        "en": {
+          "speaker": "Nini",
+          "message": "…I feel at ease with her.\nThough she plays jokes a lot…"
+        },
+        "zh_tw": {
+          "speaker": "妮妮",
+          "message": "…雖然常常搗蛋，\n但跟她在一起很愉快…"
+        },
+        "zh_cn": {
+          "speaker": "妮妮",
+          "message": "…雖然常常搗蛋，\n但跟她在一起很愉快…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "카렌",
+          "message": "이 기나긴 시간 끝에, 무엇이 우릴 기다리고 있을까…"
+        },
+        "en": {
+          "speaker": "Karen",
+          "message": "After the end of this long time, what would await us…?"
+        },
+        "zh_tw": {
+          "speaker": "卡倫",
+          "message": "悠長時間的盡頭，有什麼在等著我們呢…"
+        },
+        "zh_cn": {
+          "speaker": "卡倫",
+          "message": "悠長時間的盡頭，有什麼在等著我們呢…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "아 정말~! 마주칠 때마다 괴담을 얘기하지 말란 말이야~!!"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "Oh God! Don't tell me a ghost story every time you see me!!"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "啊真是的～！不要每次見面的時候都說可怕的故事～！！"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "啊真是的～！不要每次見面的時候都說可怕的故事～！！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "안녕"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Hello"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "你好"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "你好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "페트라예요"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "It's me, Petra."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我是佩特拉"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我是佩特拉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 페트라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Petra."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你好，佩特拉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你好，佩特拉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 페트라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Petra."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你好，佩特拉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你好，佩特拉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "안녕"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Hello"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "你好"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "你好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰을 다루는 게 익숙하지가 않아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you not used to using Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你還不太會用EverPhone嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你還不太會用EverPhone嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰을 다루는 게 익숙하지가 않아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you not used to using Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你還不太會用EverPhone嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你還不太會用EverPhone嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "앞으로 잘부탁해 응"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Nice to meet you."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "以後請多指教喔"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "以後請多指教喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자 말너무빨라"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior, you type too fast"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者打字好快"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者打字好快"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "이거어려워서 대답못해"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "It's too hard to handle this thing"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "這個好難，沒辦法回訊息"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "這個好難，沒辦法回訊息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞으로 천천히 할게. 나도 잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll slow down. Nice to meet you, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "以後我會慢慢回的，也請多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "以後我會慢慢回的，也請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞으로 천천히 할게. 나도 잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll slow down. Nice to meet you, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "以後我會慢慢回的，也請多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "以後我會慢慢回的，也請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "그래 안녕"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Yeah, hello."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "好，再見"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "好，再見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "!ㅣㅏㅏㄴ @ 123;"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "!lkks @ 123;"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "！ㄚㄚㄚㄋ@ 123;"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "！ㄚㄚㄚㄋ@ 123;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Petra?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Petra?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "ㅂ유531뮤ㅗㅓㄴ"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "qdb531anhjs"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "ㄅ李531木ㄛㄥㄋ"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "ㄅ李531木ㄛㄥㄋ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "ㄴㅇ["
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "sd["
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "ㄋㄣ["
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "ㄋㄣ["
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제발 진정해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Calm down"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "拜託妳冷靜點"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "拜託妳冷靜點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제발 진정해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Calm down"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "拜託妳冷靜點"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "拜託妳冷靜點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "음"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Erm"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "다람쥐가 에버폰을 가져가더니"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "A squirrel took my Everphone"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "松鼠把我的手機拿走"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "松鼠把我的手機拿走"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "멋대로사진과 메세지를 보내버렸어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "and sent a photo and some messages"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "擅自傳了照片跟訊息"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "擅自傳了照片跟訊息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "얼마못가서 버리고도망치길래"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "It dropped my phone after a while and ran away"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "沒多久就丟著逃跑了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "沒多久就丟著逃跑了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "다시 주웠어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "so I just picked it up"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我就撿回來了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我就撿回來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰을 도난당했는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You lost your Everphone"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "手機被偷走"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "手機被偷走"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰을 도난당했는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You lost your Everphone"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "手機被偷走"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "手機被偷走"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 태연한 거 아니야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "and you're so calm about it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "未免也太淡定了吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "未免也太淡定了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 태연한 거 아니야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "and you're so calm about it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "未免也太淡定了吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "未免也太淡定了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "딱히없어도 상관없으니까"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Well, I don't really need it"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "畢竟沒手機也無所謂"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "畢竟沒手機也無所謂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 준 거니까 소중히 해줘…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Please take good care of it since I gave it to you..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是我給妳的，好好珍惜…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是我給妳的，好好珍惜…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 준 거니까 소중히 해줘…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Please take good care of it since I gave it to you..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是我給妳的，好好珍惜…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是我給妳的，好好珍惜…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "으음 귀찮은데…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Eh, sounds like a hassle..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "呃嗯，好麻煩…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "呃嗯，好麻煩…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "생각해보고…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I'll think about it..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "考慮一下…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "考慮一下…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "여행 선물론 뭐가 좋을까"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "What kind of souvenirs should I get?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "要送什麼旅行禮物好呢"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "要送什麼旅行禮物好呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "무명이랑"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Something for Nameless"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "要送給無名"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "要送給無名"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "카렌이랑"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "something for Karen"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "卡倫"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "卡倫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "니니한테 줄거야"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "and something for Nini"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "還有妮妮"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "還有妮妮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "찻잎이라거나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How about some loose leaf tea?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "茶葉之類的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "茶葉之類的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "찻잎이라거나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How about some loose leaf tea?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "茶葉之類的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "茶葉之類的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "찻잎?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Loose leaf tea?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "茶葉？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "茶葉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "그런건 묘지에도 많아"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "You can find a lot of those around the graveyard"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "那種東西墓地也有很多"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "那種東西墓地也有很多"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "뜯어서주면 되려나"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I suppose I could collect some"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "拔下來給她們就好了嗎"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "拔下來給她們就好了嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잡초는 찻잎이 아니야…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Weeds are no tea..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "雜草不是茶葉…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "雜草不是茶葉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잡초는 찻잎이 아니야…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Weeds are no tea..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "雜草不是茶葉…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "雜草不是茶葉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "시끄러운 건 싫지만"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I don't like loud noises"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "雖然我很討厭吵雜的環境"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "雖然我很討厭吵雜的環境"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "불꽃놀이는 나쁘지 않아"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "but fireworks aren't so bad"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "但放煙火還不錯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "但放煙火還不錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "찾아가서 보기도 해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you ever go out to see them?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳會特地去看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳會特地去看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "찾아가서 보기도 해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you ever go out to see them?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳會特地去看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳會特地去看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "으응… 아니"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Erm...no"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "呃嗯…不會"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "呃嗯…不會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "가까이서 본 적은 없어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Never seen them up close"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我沒有近看過"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我沒有近看過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "묘지나 산길 같은데서봐 멀리서"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I watch from places like graveyards or mountain trails"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "只有在墓地或山路之類的遠遠地看過"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "只有在墓地或山路之類的遠遠地看過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "조용하니까 좋아"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I like how it's quiet"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "很安靜，很棒"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "很安靜，很棒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "반짝반짝하고…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "and sparkly"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "還會閃閃發亮…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "還會閃閃發亮…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에도 같이 보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We can watch them together again next time"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次一起看吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次一起看吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에도 같이 보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We can watch them together again next time"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次一起看吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次一起看吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "…응"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Okay"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "…嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "…嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "생각해볼게"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I'll think about it"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "考慮一下"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "考慮一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "긍정적으로"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Leaning yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我確定"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我確定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "많이 오해하는게 있는데"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "There's a common misunderstanding"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "你誤會大了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "你誤會大了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "잡초는 한 식물만을 지칭하는단어가 아냐"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "that \"weed\" refers to a specific plant, but that's not the case"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "雜草不是單指一種植物"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "雜草不是單指一種植物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "묘지 주변을 보면 알수있어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "A careful look around the graveyard can prove it"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "看墓地周遭就知道了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "看墓地周遭就知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 식물들이 다 잡초구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So, all those plants are weed?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來那些植物都是雜草"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來那些植物都是雜草"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 식물들이 다 잡초구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So, all those plants are weed?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來那些植物都是雜草"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來那些植物都是雜草"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "이름은 잡초지만"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "They may be called weeds,"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "雖然名字叫雜草"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "雖然名字叫雜草"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "반짝거리는 예쁜꽃이 피기도해"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "but some bloom into radiant, pretty flowers"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "但也會開出閃閃發亮的漂亮花朵"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "但也會開出閃閃發亮的漂亮花朵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "계란을 닮은 작은꽃이나"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Tiny flowers that look like eggs"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "像是跟雞蛋很像的小花"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "像是跟雞蛋很像的小花"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "꺾으면 노란 즙이 나오는 풀이나"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Grass oozing yellow sap when snapped"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "或是掰開會流出黃色汁液的草"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "或是掰開會流出黃色汁液的草"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "트리같이 생긴 풀…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Leaves that look like little trees..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "或是長得像樹一樣的草…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "或是長得像樹一樣的草…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "민들레도 흔해"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Dandelions are common, too"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "蒲公英也很常見"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "蒲公英也很常見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "또 뭐가 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What else is there?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還有什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還有什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "또 뭐가 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What else is there?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還有什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還有什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "민들레랑 비슷한 거."
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Other weeds similar to dandelions"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "類似蒲公英的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "類似蒲公英的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "민들레를 닮았는데 팔이 여섯 개거나"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Dandelions with six arms"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "很像蒲公英，但是有六隻手"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "很像蒲公英，但是有六隻手"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "보통 민들레보다 꽃이 3배정도 큰 자이언트민들레나"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Giant dandelions that are about three times the size of regular dandelions"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "或是花朵比一般蒲公英大3倍的巨大蒲公英"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "或是花朵比一般蒲公英大3倍的巨大蒲公英"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "머리가 두 개 달린 민들레"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Two-headed dandelions"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "或是雙頭蒲公英"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "或是雙頭蒲公英"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "꺾으면 비명을지르는 민들레"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Dandelions that scream when snapped"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "還有折斷會發出尖叫聲的蒲公英"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "還有折斷會發出尖叫聲的蒲公英"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 게 묘지에 있어도 되는 거야…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Should they be growing around the graveyard...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那種東西可以長在墓地嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那種東西可以長在墓地嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 게 묘지에 있어도 되는 거야…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Should they be growing around the graveyard...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那種東西可以長在墓地嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那種東西可以長在墓地嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior,"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "행복이라는게 정확히 뭐야?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "what exactly is happiness?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "所謂的幸福，準確來說是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "所謂的幸福，準確來說是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why do you ask?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼突然這麼問？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼突然這麼問？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why do you ask?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼突然這麼問？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼突然這麼問？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "행복하다는게 뭔지 궁금해서"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I'm just curious about what it means to be happy"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "因為我想知道什麼叫幸福"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "因為我想知道什麼叫幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "흔히들 '행복을 찾는다'는 얘길하는데"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "People often talk about their \"pursuit of happiness\""
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "大家常說「尋找幸福」"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "大家常說「尋找幸福」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "어떻게 찾는 거야?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "How do you find it?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "要怎麼找？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "要怎麼找？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "보물찾기처럼 땅을파서 찾고그래?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Do you dig around like you do for treasure?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "是像尋寶一樣挖地尋找嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "是像尋寶一樣挖地尋找嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 그렇다기보다는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, not exactly"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…比起那樣說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…比起那樣說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 그렇다기보다는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, not exactly"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…比起那樣說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…比起那樣說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "행복해지기 위해 노력하는 태도 아닐까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it's more about the mindset of working towards happiness"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該是指努力變幸福的態度吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該是指努力變幸福的態度吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "행복해지기 위해 노력하는 태도 아닐까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it's more about the mindset of working towards happiness"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該是指努力變幸福的態度吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該是指努力變幸福的態度吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "행복해지기 위해 노력하는 태도…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "The mindset of working towards happiness..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "努力變幸福的態度…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "努力變幸福的態度…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내게 행복이라는 건…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "For me, happiness is something like..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "幸福對我來說是…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "幸福對我來說是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내게 행복이라는 건…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "For me, happiness is something like..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "幸福對我來說是…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "幸福對我來說是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "'소중한 이들과 함께 지내는 하루하루'"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "\"spending each day with loved ones\""
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "「跟珍貴的人們度過的每一天」"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "「跟珍貴的人們度過的每一天」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "'소중한 이들과 함께 지내는 하루하루'"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "\"spending each day with loved ones\""
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "「跟珍貴的人們度過的每一天」"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "「跟珍貴的人們度過的每一天」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같은 느낌이려나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "or something like that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "類似這種感覺"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "類似這種感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같은 느낌이려나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "or something like that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "類似這種感覺"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "類似這種感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "흠…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Hmm..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "그렇구나"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자 행복한거축하해"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior, congratulations on being happy"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "恭喜救援者很幸福"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "恭喜救援者很幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "예요"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "sincerely"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "恭喜您"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "恭喜您"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "지금 나랑 함께니까"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "You're with me right now"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "現在跟我待在一起"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "現在跟我待在一起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "엄청 행복한거 아냐?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Doesn't that make you really happy?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "不是超級幸福嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "不是超級幸福嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…맞아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, you're right!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…沒錯！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…沒錯！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…맞아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, you're right!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…沒錯！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…沒錯！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "소금"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Salt"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "鹽巴"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "鹽巴"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "빗자루"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Broom"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "掃把"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "掃把"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "경첩"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Hinges"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "鉸鏈"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "鉸鏈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "비료"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Fertilizer"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "肥料"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "肥料"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "물뿌리개"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Watering Can"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "澆花器"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "澆花器"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "여긴 메모장이 아닙니다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "This is not your note app"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這裡不是備忘錄"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這裡不是備忘錄"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "여긴 메모장이 아닙니다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "This is not your note app"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這裡不是備忘錄"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這裡不是備忘錄"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Oops"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "치약이랑비누 까먹었다"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I forgot toothpaste and soap"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "忘記牙膏跟肥皂了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "忘記牙膏跟肥皂了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "예전에 광장을 돌아다니다"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "One time, I was walking in the square"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "以前走在廣場的時候"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "以前走在廣場的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "결혼식하는 광경을 봤어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "and saw a wedding"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "看過舉辦婚禮的景象"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "看過舉辦婚禮的景象"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어땠어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How was it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어땠어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How was it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "반짝반짝했어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "It was so sparkly"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "亮晶晶的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "亮晶晶的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "의외로 후한 감상이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's a rather positive observation"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感觸意外地很深呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感觸意外地很深呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "의외로 후한 감상이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's a rather positive observation"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感觸意外地很深呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感觸意外地很深呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라도 결혼에 관심이 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you fancy a wedding, too?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉也對結婚有興趣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉也對結婚有興趣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라도 결혼에 관심이 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you fancy a wedding, too?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉也對結婚有興趣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉也對結婚有興趣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "결혼?결혼식이라면 해본적있어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Wedding? I did have a wedding before"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "結婚？婚禮我是有辦過"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "結婚？婚禮我是有辦過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?!?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?!?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？！？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？！？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?!?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?!?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？！？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？！？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "정확히는 시켜준거지만"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Well, I officiated one, to be exact"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "準確來說是讓別人辦啦"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "準確來說是讓別人辦啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "영혼결혼식이라고 알아? 사혼식이라고도 하는데"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Have you heard of soul weddings? They're also called ghost weddings"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "你知道靈魂婚禮嗎？又叫做冥婚"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "你知道靈魂婚禮嗎？又叫做冥婚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "아주아주 가끔이지만 의뢰가 들어와"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "It's really rare, but requests do come through"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "非常偶爾會接到委託"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "非常偶爾會接到委託"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "보통은 잠든 정령석들의 넋을 달래기위해"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Normally, the wedding is for two Soul Stones"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "雖然通常是為了撫慰沉睡的精靈石靈魂"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "雖然通常是為了撫慰沉睡的精靈石靈魂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "두 정령석들간에 이루어지는 결혼식이지만"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "to soothe their dormant spirits,"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "讓兩個精靈石舉辦婚禮"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "讓兩個精靈石舉辦婚禮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "가끔은 살아있는 정령과"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "but sometimes, it's the union of a living Soul"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "但偶爾也會有活著的精靈"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "但偶爾也會有活著的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "언제 깨어날지모르는 정령석간의결혼도…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "a Soul Stone that may never wake up..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "跟不知道何時會醒來的精靈石舉辦婚禮…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "跟不知道何時會醒來的精靈石舉辦婚禮…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "자, 잠깐만!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "H-hold on!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等、等一下！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等、等一下！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "자, 잠깐만!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "H-hold on!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等、等一下！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等、等一下！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "왜? 무서워?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Why, are you scared?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "怎麼了？會害怕嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "怎麼了？會害怕嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자 겁쟁이네"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior is a scaredy-cat!"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者是膽小鬼"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者是膽小鬼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오싹했어…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It gave me the chills..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "起雞皮疙瘩了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "起雞皮疙瘩了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오싹했어…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It gave me the chills..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "起雞皮疙瘩了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "起雞皮疙瘩了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "하지만 결혼식… 관심 있을지도 몰라"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "At any rate, I might fancy a wedding..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "但說不定…我也對婚禮有興趣"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "但說不定…我也對婚禮有興趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어? 정말로?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh? Are you serious?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哦？真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哦？真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어? 정말로?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh? Are you serious?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哦？真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哦？真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "응 그야"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Well, you know"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯，因為"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯，因為"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "'결혼은 무덤이다'라는 말이 있으니까"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "they say \"till death do us part\""
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "有句話說「婚姻是愛情的墳墓」"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "有句話說「婚姻是愛情的墳墓」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "그 말은 좋아해"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I do like that phrase"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我喜歡那句話"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我喜歡那句話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 걸로 괜찮은 거야?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is that really all you care about?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳喜歡這種的？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳喜歡這種的？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 걸로 괜찮은 거야?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is that really all you care about?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳喜歡這種的？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳喜歡這種的？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라도 두려움이라는 감정을 느껴?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you ever feel fear, Petra?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉也有害怕的情感嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉也有害怕的情感嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라도 두려움이라는 감정을 느껴?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you ever feel fear, Petra?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉也有害怕的情感嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉也有害怕的情感嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "두려움…?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Fear?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "害怕…？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "害怕…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "별로… 느낀적 없는 거 같은데"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I don't think so..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "好像…沒什麼感受過"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "好像…沒什麼感受過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "두려운 건 어떤 느낌?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "What is it like?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "害怕是什麼樣的感覺？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "害怕是什麼樣的感覺？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 손발에 땀이 나고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, your hands and feet get clammy"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…四肢都會冒汗"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…四肢都會冒汗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 손발에 땀이 나고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, your hands and feet get clammy"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…四肢都會冒汗"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…四肢都會冒汗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "심장이 두근대는 느낌?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "and your heart starts racing"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "心臟撲通撲通跳的感覺？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "心臟撲通撲通跳的感覺？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "심장이 두근대는 느낌?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "and your heart starts racing"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "心臟撲通撲通跳的感覺？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "心臟撲通撲通跳的感覺？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "음 그런거라면있을지도"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I think I have experienced that"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯，那樣的話，說不定我有過"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯，那樣的話，說不定我有過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "반짝이는 거"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "When I see something shiny"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我看到亮晶晶的東西"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我看到亮晶晶的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "보면 심장이 작게 쿵쿵거려"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "my heart starts thumping wildly"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "心臟就會有點撲通撲通跳"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "心臟就會有點撲通撲通跳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건… 조금 다르지 않나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think that's a little different"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個…應該不太一樣吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個…應該不太一樣吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건… 조금 다르지 않나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think that's a little different"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個…應該不太一樣吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個…應該不太一樣吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Is it?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "아… 또 있다"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Ah, got another example"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "喔…還有"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "喔…還有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자 눈"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Your eyes, Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "看著救援者的眼睛"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "看著救援者的眼睛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "보고 있으면 반짝반짝해서 이상한 기분"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Watching them twinkle casts an odd sensation over me"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "因為亮晶晶的，就會有很奇怪的感覺"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "因為亮晶晶的，就會有很奇怪的感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내 눈…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "My eyes?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我的眼睛…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我的眼睛…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내 눈…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "My eyes?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我的眼睛…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我的眼睛…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "어둡고 투명하고"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "They're dark and translucent"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "深沉又透明"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "深沉又透明"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "일렁일렁해서"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "with a shimmer"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "眼神蕩漾著"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "眼神蕩漾著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "조금 무서울지도 몰라"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "that may instill some fear"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "好像有點可怕"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "好像有點可怕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "시간이 흐르면서"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "With the passage of time,"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "隨著時間流逝"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "隨著時間流逝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "묘지의 비석이 풍화되는 것처럼"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "tombstones in graveyards weather away"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "就像墓地的石碑風化一樣"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "就像墓地的石碑風化一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "삶이 길어질수록 영혼도 조금씩마모되어가"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Likewise, souls gradually wear down as life stretches on"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "生命在流逝的過程中，靈魂也會慢慢損耗"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "生命在流逝的過程中，靈魂也會慢慢損耗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "마모된영혼들은 어디로흩어졌을까"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I wonder where these worn souls drift off to"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "被損耗的靈魂都到哪裡去了呢"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "被損耗的靈魂都到哪裡去了呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "민들레 홀씨처럼 여행하는 걸까"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Do they wander around like dandelion seeds?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "是像蒲公英種子一樣去旅行了嗎"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "是像蒲公英種子一樣去旅行了嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "민들레 홀씨라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dandelion seeds..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "蒲公英種子啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "蒲公英種子啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "민들레 홀씨라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dandelion seeds..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "蒲公英種子啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "蒲公英種子啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "있지 나 카렌과 처음 만났을 때"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "You know, when I first met Karen,"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "跟你說，我第一次見到卡倫的時候"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "跟你說，我第一次見到卡倫的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "한눈에 서로가 같은 의문과"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "we could tell right away that we harbored"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "一眼就看出彼此有一樣的疑問"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "一眼就看出彼此有一樣的疑問"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "호기심을 가지고 있다는걸 알았어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "the same questions and wonders about life"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "跟一樣的好奇心"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "跟一樣的好奇心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "삶은 얼마나 이어지는지"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "How long does life go on"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "生命會延續多久"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "生命會延續多久"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "그리고 그끝에는 무엇이 기다리고있을지"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "and what awaits at its end?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "還有那盡頭有什麼在等著"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "還有那盡頭有什麼在等著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "우릴 맞이하는 건 반짝이는엔딩일수도 있고"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Maybe we'll have a glamorous ending"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "等待我們的可能是閃閃發亮的結局"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "等待我們的可能是閃閃發亮的結局"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "어쩌면 누군가의기대가 무색할만큼\r\n허무한 결말일지도몰라"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "or an empty conclusion\r\nthat renders all anticipation moot"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "但也許是虛無的結局，\r\n足以讓某人的期待化為烏有"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "但也許是虛無的結局，\r\n足以讓某人的期待化為烏有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자는 어떻게 생각해?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "What do you think?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者覺得呢？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者覺得呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자는 나한테 답을 줄수있어?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Can you give me the answer?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者能給我答案嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者能給我答案嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior,"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "짐챙겼어?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "are you all packed?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "帶好行李了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "帶好行李了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다 챙겼어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I'm ready"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "都帶好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "都帶好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다 챙겼어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I'm ready"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "都帶好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "都帶好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "내가 준것도?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Including my gift?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我給你的也帶了？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我給你的也帶了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무리 그래도 비석은 가방에 안 들어가…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can't expect a tombstone to fit in a bag..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "再怎麼樣，石碑都裝不進包包…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "再怎麼樣，石碑都裝不進包包…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무리 그래도 비석은 가방에 안 들어가…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can't expect a tombstone to fit in a bag..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "再怎麼樣，石碑都裝不進包包…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "再怎麼樣，石碑都裝不進包包…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Why not?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "여행 어디로 가?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Where are we traveling to?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "要去哪裡旅行？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "要去哪裡旅行？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물어볼 만한 누군가가 있으면 좋겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I wish we could ask someone"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "希望有可以問的對象"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "希望有可以問的對象"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물어볼 만한 누군가가 있으면 좋겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I wish we could ask someone"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "希望有可以問的對象"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "希望有可以問的對象"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Hmm..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Ah"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "있어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I know"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "有"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "단원들"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "we can ask my team members"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我讓團員們"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我讓團員們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "우리집으로 부를게"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I'll invite them over"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "來我們家"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "來我們家"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior,"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "오늘도 가자"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "let's go"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "今天也去吧"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "今天也去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "맛있는 거 먹으러"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "grab something yummy"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "去吃好吃的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "去吃好吃的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잔뜩 먹자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's have a feast"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "吃個痛快"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "吃個痛快"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잔뜩 먹자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's have a feast"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "吃個痛快"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "吃個痛快"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Yeah"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "어제 부딪힌 정령"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "The Soul I ran into yesterday"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "昨天撞到的精靈"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "昨天撞到的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "뭔가 이상했어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "was rather fishy"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "有點奇怪"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "有點奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떤 점이?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In what way?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼說？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼說？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떤 점이?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In what way?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼說？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼說？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "음"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Umm..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "엄청 급해 보이고"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "She seemed to be in a hurry"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "看起來非常著急"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "看起來非常著急"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "눈치도 보고…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "and was glancing around warily..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "還一直看人臉色…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "還一直看人臉色…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 급한 일이 있던 정령이었을지도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe she just had an emergency"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說不定只是單純很著急的精靈"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說不定只是單純很著急的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 급한 일이 있던 정령이었을지도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe she just had an emergency"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說不定只是單純很著急的精靈"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說不定只是單純很著急的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "……"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "뭔가 달라…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "It was more than that..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "不太一樣…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "不太一樣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "마차라는 건"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I guess a carriage"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "看來所謂的馬車"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "看來所謂的馬車"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "어쨌든 바퀴만있으면 굴러가는가보네"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "can move as long as it's got wheels"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "只要有輪子就能前進"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "只要有輪子就能前進"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Apparently, yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Apparently, yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "지붕이없어도 나쁘지 않아"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "It's not bad without a roof"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "沒有車頂也不錯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "沒有車頂也不錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "비만 안 오면 좋겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "As long as it doesn't rain"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不要下雨就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不要下雨就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "비만 안 오면 좋겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "As long as it doesn't rain"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不要下雨就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不要下雨就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "소문 들었어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I have heard"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我聽說了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我聽說了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "아우렐리아는"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "that Aurelia"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "奧里利亞"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "奧里利亞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "천사형이랑악마형만 출입가능하다는 말이있대"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "is only accessible to Angel Souls and Demon Souls"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "只有天使型跟惡魔型才可以進出"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "只有天使型跟惡魔型才可以進出"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자 날개있어?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior, do you have wings?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者有翅膀嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者有翅膀嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아쉽게도 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nope, I wish"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可惜，我沒有"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可惜，我沒有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아쉽게도 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nope, I wish"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可惜，我沒有"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可惜，我沒有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "흐음……"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Hmm..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "呃嗯……"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "呃嗯……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "리젤로테한테 빌려볼까?날개"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Maybe we could borrow them from Lizelotte?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "要跟莉澤洛特借一下嗎？借翅膀"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "要跟莉澤洛特借一下嗎？借翅膀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 빌릴 수 있는 거였어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can you actually borrow wings?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是可以借的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是可以借的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 빌릴 수 있는 거였어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can you actually borrow wings?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是可以借的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是可以借的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "아케나인의 산길은 그렇게 가파르진 않지만"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "While the mountain paths of Arkenine aren't that steep,"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "阿肯納因的山路沒有那麼陡峭"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "阿肯納因的山路沒有那麼陡峭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "비오는 날은 위험해"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "they can be dangerous on rainy days"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "但下雨天的時候很危險"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "但下雨天的時候很危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "뭐 구원자라면 어디든 위험할지도"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I guess, for someone like you, everywhere is dangerous"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯，不過救援者好像不管到哪都很危險"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯，不過救援者好像不管到哪都很危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "평지를 걷더라도 함정에 걸려 넘어지겠지"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "You'd fall into a trap even on the flattest lands"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "走在平地應該也會被陷阱絆倒"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "走在平地應該也會被陷阱絆倒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 함정을 파는 범인이 보통 너잖아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're the one who digs those traps..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "設下那陷阱的通常都是妳啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "設下那陷阱的通常都是妳啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 함정을 파는 범인이 보통 너잖아…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're the one who digs those traps..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "設下那陷阱的通常都是妳啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "設下那陷阱的通常都是妳啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "음."
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Umm..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "그랬어?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Is that so?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "是喔？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "是喔？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라, 일어났어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Petra, are you up?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉，妳起來了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉，妳起來了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라, 일어났어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Petra, are you up?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉，妳起來了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉，妳起來了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳在哪？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳在哪？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳在哪？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳在哪？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Petra?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페트라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Petra?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "佩特拉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "佩特拉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자 엄청 잘자네"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior, you're sound asleep"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者睡得好香"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者睡得好香"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "자는 얼굴 바보같아"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "You look so dorky when you're sleeping"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "睡著的樣子好像笨蛋"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "睡著的樣子好像笨蛋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "빨리 일어나"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Get up already"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "快起來"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "快起來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "보여줄 거 있으니까…"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I've got something to show you..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我有東西要給你看…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我有東西要給你看…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "…구원자, 결국 이렇게 허무하게 갔구나"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Savior, I see you're gone just like that"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "…救援者，結果就這樣虛無地離開了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "…救援者，結果就這樣虛無地離開了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "거기서도 잘 지내야 해"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Hope you'll be fine over there"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "在那邊也要好好過"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "在那邊也要好好過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자와의 추억들 기억할 테니까"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I'll cherish my memories with you"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我會記得跟救援者共度的回憶"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我會記得跟救援者共度的回憶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "이를테면온천에서 몸을 담구고 있다가"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Like how you were soaking in a hot spring"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "既然如此，我會記得身體泡在溫泉裡"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "既然如此，我會記得身體泡在溫泉裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "귀뚜라미를 보고 놀라 알몸으로 뛰쳐나왔던 일"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "and then jumped out naked over seeing a cricket"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "結果看到蟋蟀後，嚇得裸體跑出來的事"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "結果看到蟋蟀後，嚇得裸體跑出來的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "길가던 정령한테 '작업'걸었다가"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "or how you hit on a passing Soul"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "還有「搭訕」路過的精靈"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "還有「搭訕」路過的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "변태로오해받고 신고당했던 일까지"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "and got reported for being a pervert"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "被誤會成是變態，被檢舉的事"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "被誤會成是變態，被檢舉的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "전부 기억할게"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I'll remember them all"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我全都會記住的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我全都會記住的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "보고 싶을 거야"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I'll miss you"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "我會想你"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "我會想你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직 살아 있고 그런 적도 없어!!!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm still alive, and those things never happened!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我還活著，而且沒做過那些事！！！！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我還活著，而且沒做過那些事！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직 살아 있고 그런 적도 없어!!!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm still alive, and those things never happened!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我還活著，而且沒做過那些事！！！！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我還活著，而且沒做過那些事！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "사랑을 기념하는 날이래"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Today is a day to celebrate love"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "說是紀念愛情的日子呢"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "說是紀念愛情的日子呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "사랑이 없는 정령은 기념 못 해?"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "How about a Soul without love?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "沒有愛情的精靈不能紀念嗎?"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "沒有愛情的精靈不能紀念嗎?"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우정을 기념해도 돼. 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can celebrate friendship. Thanks."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也可以紀念友誼。謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也可以紀念友誼。謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우정을 기념해도 돼. 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can celebrate friendship. Thanks."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也可以紀念友誼。謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也可以紀念友誼。謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "트릭오어트릿"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Trick or Treat"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "不給糖就搗蛋"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "不給糖就搗蛋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "선물 줬으니까 장난칠래"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "I gave you treats, now time for some tricks"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "既然送了禮物，那我要搗蛋"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "既然送了禮物，那我要搗蛋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔가 좀 다르긴 하지만… 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's a little different… But thanks."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "雖然感覺有點不同…謝謝"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "雖然感覺有點不同…謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔가 좀 다르긴 하지만… 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's a little different… But thanks."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "雖然感覺有點不同…謝謝"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "雖然感覺有點不同…謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "구원자 이거"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "Here Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "救援者這個"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "救援者這個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라",
+            "message": "피로 물든 붉은 모자와 털옷을 입은 노인이 주고 갔어"
+          },
+          "en": {
+            "speaker": "Petra",
+            "message": "An old man wearing a blooded hat and suit gave it to me"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉",
+            "message": "是一位穿著被血染紅的帽子還有毛衣的老人送來的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉",
+            "message": "是一位穿著被血染紅的帽子還有毛衣的老人送來的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 혹시… 산타?\r\n어쨌든 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You mean… Santa?\r\nThanks anyways."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那難道…是聖誕老人？\r\n總之謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那難道…是聖誕老人？\r\n總之謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 혹시… 산타?\r\n어쨌든 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You mean… Santa?\r\nThanks anyways."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那難道…是聖誕老人？\r\n總之謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那難道…是聖誕老人？\r\n總之謝謝妳"
+          }
+        }
+      ]
+    }
+  }
+}

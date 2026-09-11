@@ -1,0 +1,7304 @@
+{
+  "id": "2070",
+  "name": "플린",
+  "name_en": "Flynn",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "레인저",
+  "sub_class": "버프",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "광란의 폭발",
+    "constellation": "인연_메피스토_이벤트2",
+    "union": "???",
+    "birthday": "317",
+    "height": 147,
+    "weight": 38,
+    "cv_ko": "장미",
+    "cv_jp": "Mayumi Shintani",
+    "like": [
+      "화르륵! (못 함)"
+    ],
+    "dislike": [
+      "파인애플 피자"
+    ],
+    "hobby": [
+      "쾅! (대답을)"
+    ],
+    "speciality": [
+      "퍼엉! (듣지)"
+    ]
+  },
+  "personality": {
+    "description": "흐~히힛! 전부 불타버려! 펑~! 폭발하는 거야~! 히힛, 내 비장의 폭탄! 로켓군! 터져라!!! \n\n으악, 뭐, 뭐야? 왜 안 터져!? 안 터질 리가 없는데… 누구야!? 누가 방해하고 있는 거…!? 윽, 뭐야… 구원자, 너였어? 칫, 이번엔 또 뭐 때문에 나타난 건대!? 잔소리할 거면, 폭탄 던진다~ 히힛, 맞기 싫으면 저리 가!\n\n음? 기다려보라고? 할 말이 있어? 뭔데? …주변에서 폭발 금지 요청 민원이 들어왔다니… 으갸악!!! 폭탄의 멋짐도 모르는 녀석들!!! 대체 어떤 녀석들이 그런 신고를 해!?\n\n크윽, 아무래도 얼른 완성해야겠어. 세상에서 가장 완벽한 폭탄을 만드는 일! 가장 완벽한 폭탄으로 가장 멋진 폭발을 보여주고 나면, 그땐 다들 나한테 애원하게 되겠지? 한 번만 더 화려한 폭발을 보여달라고 말야. 히힛, 생각만 해도 신난다!\n\n잠깐, 말 나온 김에 구원자도 보는 게 어때? 내가 만든 화려한 폭발!!! 흐힛, 이 참에 느껴보자고! 폭탄이 터질 때, 고민이든 뭐든 흔적도 없이 사라지는 게 얼마나 좋은지!\n\n이렇게나 폭탄에 진심인 이유가 이해되지 않는다고? 굳이 설명해야 할까? 그냥~ 나는 세상에서 가장 완벽한 폭탄을 만들고 싶어! 어떤 상황에서도 화려하게 터지고야 마는 아름다운 폭탄을!!! \n그때까지 나는 계속 폭탄을 만들고 터뜨릴 거야. 크히힛. 그러니까~ 구원자, 방해할 생각말라고~!",
+    "greeting": "펑! 펑! 펑! 히힛! 전부 불타버려…!"
+  },
+  "speech_patterns": [
+    "펑~펑퍼퍼퍼펑~ 펑펑펑!",
+    "크힛~ 날 불러낸 바보가 너구나!?",
+    "흐으으음?",
+    "아니 필요 없어! 크히힛!!!",
+    "다 터뜨려 버릴 거니까!!!",
+    "왜!? 폭탄 터뜨리기 좋은 날인데!!!",
+    "펑~이다!!!",
+    "히힛~! 맞아!!",
+    "엄청난 기계들이 만들어지는 곳이라고~?",
+    "칼라르를?",
+    "인간에겐 엄~청 추울지도 모르는데?",
+    "구원자가 추워하면 폭탄을 펑!!펑!!! 터뜨려서",
+    "따뜻하게 만들어야지 크히힛!!!",
+    "난 열이 많거든",
+    "거기가 시원하고 딱 좋았는데",
+    "으엑… 아케나인은 너무 더워",
+    "하지만 폭탄 들고 다니기엔 이 옷이 최고라서 말야~",
+    "필요할 때 탁!!! 꺼내기도 편하고!!!",
+    "다음에 보여줄까?!",
+    "얼마나 빠르게 터뜨릴 수 있는지 알면 깜짝 놀랄걸!!",
+    "이상해",
+    "이렇게 멋진 폭탄이",
+    "위험하다니",
+    "말도 안 돼",
+    "으갹!! 답답해!!!",
+    "신체를 강철로 만들어 버리는 물약은 없나??",
+    "그러면 마음껏 만들 수 있을 텐데!!",
+    "크히히힛…!!!",
+    "위력에 한계가 없어질 거야…!",
+    "최고야!!!",
+    "에리카한테 만들어달라고 해야지!!!",
+    "구원자",
+    "◁ㅁㅁㅁ[)",
+    "이게 뭐게",
+    "아 이것도 몰라?!",
+    "딱 봐도 볼트잖아!!",
+    "조수가 이런 것도 몰라서야~!!",
+    "빨리 공부해!!",
+    "〔〕",
+    "너트",
+    "┌□== 파이프렌치",
+    "응",
+    "이거 보여줄까?",
+    "아카데미카 다닐 때",
+    "그냥 구석에서 발견했는데",
+    "조수니까 특별히 보여준다",
+    "아카데미카엔 규칙이 있거든 우엑",
+    "옷 똑바로 입어라 머리 단정히 해라",
+    "터뜨리지마라 망가트리지 마라",
+    "얼마나 규칙이 많았는데! 짜증 나~!"
+  ],
+  "comments": [
+    {
+      "writer": "셰리",
+      "comment": "참 마음에 드는 눈빛을 가졌어~ 뭔가에 흠뻑 심취해 있는 눈이랄까~♥\n후훗, 친해져 보고 싶네~"
+    },
+    {
+      "writer": "에리카",
+      "comment": "휴, 아직도 주변에서 폭발음이 들리면… 심장이 '쿵' 하고 내려앉아.\n아카데미카 재학 시절에 플린이 내 실험실을 통째로 날려버렸거든…!"
+    },
+    {
+      "writer": "메피스토펠레스",
+      "comment": "100002번째 경고. 연무장과 성곽에 설치된 폭탄 철거를 요청합니다.\n…듣고 계시나요?"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "플린",
+        "message": "펑~펑퍼퍼퍼펑~ 펑펑펑!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…!?"
+      },
+      {
+        "speaker": "플린",
+        "message": "크힛~ 날 불러낸 바보가 너구나!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "플린",
+        "message": "흐으으음?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내 소개부터 할까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내 소개부터 할까?"
+      },
+      {
+        "speaker": "플린",
+        "message": "아니 필요 없어! 크히힛!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "다 터뜨려 버릴 거니까!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진정해, 사고치면 곤란해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진정해, 사고치면 곤란해"
+      },
+      {
+        "speaker": "플린",
+        "message": "왜!? 폭탄 터뜨리기 좋은 날인데!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐 얘기 좀 하는게 어때!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐 얘기 좀 하는게 어때!?"
+      },
+      {
+        "speaker": "플린",
+        "message": "펑~이다!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린! 지금 어딨어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린! 지금 어딨어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린!???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린!???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린은 칼라르에서 왔다며?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린은 칼라르에서 왔다며?"
+      },
+      {
+        "speaker": "플린",
+        "message": "히힛~! 맞아!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "엄청난 기계들이 만들어지는 곳이라고~?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "한번 가보고 싶다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "한번 가보고 싶다"
+      },
+      {
+        "speaker": "플린",
+        "message": "칼라르를?"
+      },
+      {
+        "speaker": "플린",
+        "message": "인간에겐 엄~청 추울지도 모르는데?"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자가 추워하면 폭탄을 펑!!펑!!! 터뜨려서"
+      },
+      {
+        "speaker": "플린",
+        "message": "따뜻하게 만들어야지 크히힛!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린은 안 추워?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린은 안 추워?"
+      },
+      {
+        "speaker": "플린",
+        "message": "난 열이 많거든"
+      },
+      {
+        "speaker": "플린",
+        "message": "거기가 시원하고 딱 좋았는데"
+      },
+      {
+        "speaker": "플린",
+        "message": "으엑… 아케나인은 너무 더워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "더운데 외투를 입고 다니는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "더운데 외투를 입고 다니는 거야?"
+      },
+      {
+        "speaker": "플린",
+        "message": "하지만 폭탄 들고 다니기엔 이 옷이 최고라서 말야~"
+      },
+      {
+        "speaker": "플린",
+        "message": "필요할 때 탁!!! 꺼내기도 편하고!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "다음에 보여줄까?!"
+      },
+      {
+        "speaker": "플린",
+        "message": "얼마나 빠르게 터뜨릴 수 있는지 알면 깜짝 놀랄걸!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괘 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괘 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사양할게;;"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사양할게;;"
+      },
+      {
+        "speaker": "플린",
+        "message": "이상해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐가?"
+      },
+      {
+        "speaker": "플린",
+        "message": "이렇게 멋진 폭탄이"
+      },
+      {
+        "speaker": "플린",
+        "message": "위험하다니"
+      },
+      {
+        "speaker": "플린",
+        "message": "말도 안 돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘못하면 다칠 수 있잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘못하면 다칠 수 있잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조심해야지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조심해야지"
+      },
+      {
+        "speaker": "플린",
+        "message": "으갹!! 답답해!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "신체를 강철로 만들어 버리는 물약은 없나??"
+      },
+      {
+        "speaker": "플린",
+        "message": "그러면 마음껏 만들 수 있을 텐데!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "크히히힛…!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "위력에 한계가 없어질 거야…!"
+      },
+      {
+        "speaker": "플린",
+        "message": "최고야!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "에리카한테 만들어달라고 해야지!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말로 간 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말로 간 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린??"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자"
+      },
+      {
+        "speaker": "플린",
+        "message": "◁ㅁㅁㅁ[)"
+      },
+      {
+        "speaker": "플린",
+        "message": "이게 뭐게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 모르겠는데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 모르겠는데?"
+      },
+      {
+        "speaker": "플린",
+        "message": "아 이것도 몰라?!"
+      },
+      {
+        "speaker": "플린",
+        "message": "딱 봐도 볼트잖아!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "조수가 이런 것도 몰라서야~!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "빨리 공부해!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "〔〕"
+      },
+      {
+        "speaker": "플린",
+        "message": "너트"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린"
+      },
+      {
+        "speaker": "플린",
+        "message": "┌□== 파이프렌치"
+      },
+      {
+        "speaker": "구원자",
+        "message": "수리하기 싫구나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "수리하기 싫구나?"
+      },
+      {
+        "speaker": "플린",
+        "message": "응"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자"
+      },
+      {
+        "speaker": "플린",
+        "message": "이거 보여줄까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언제 찍은 사진이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언제 찍은 사진이야?"
+      },
+      {
+        "speaker": "플린",
+        "message": "아카데미카 다닐 때"
+      },
+      {
+        "speaker": "플린",
+        "message": "그냥 구석에서 발견했는데"
+      },
+      {
+        "speaker": "플린",
+        "message": "조수니까 특별히 보여준다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금이랑 분위기가 다르네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금이랑 분위기가 다르네"
+      },
+      {
+        "speaker": "플린",
+        "message": "아카데미카엔 규칙이 있거든 우엑"
+      },
+      {
+        "speaker": "플린",
+        "message": "옷 똑바로 입어라 머리 단정히 해라"
+      },
+      {
+        "speaker": "플린",
+        "message": "터뜨리지마라 망가트리지 마라"
+      },
+      {
+        "speaker": "플린",
+        "message": "얼마나 규칙이 많았는데! 짜증 나~!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 사진 보니 열심히 다닌 것 같네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 사진 보니 열심히 다닌 것 같네"
+      },
+      {
+        "speaker": "플린",
+        "message": "그게…"
+      },
+      {
+        "speaker": "플린",
+        "message": "과제 완성 못 하면"
+      },
+      {
+        "speaker": "플린",
+        "message": "연구실 못 쓰게 한다고 해서…"
+      },
+      {
+        "speaker": "플린",
+        "message": "어쩔 수 없었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅋㅋㅋㅋㅋㅋㅋㅋ귀여운 학생이었네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅋㅋㅋㅋㅋㅋㅋㅋ귀여운 학생이었네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 얘기 좀 더 해줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 얘기 좀 더 해줘"
+      },
+      {
+        "speaker": "플린",
+        "message": "몰라"
+      },
+      {
+        "speaker": "플린",
+        "message": "기억 안 나"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자 바보"
+      },
+      {
+        "speaker": "플린",
+        "message": "난 다시 작업하러 갈래"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자"
+      },
+      {
+        "speaker": "플린",
+        "message": "몸은 괜찮아?"
+      },
+      {
+        "speaker": "플린",
+        "message": "혹시 어지러워?"
+      },
+      {
+        "speaker": "플린",
+        "message": "앞은 잘 보여?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린 걱정마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린 걱정마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇게 크게 다친 거 아냐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇게 크게 다친 거 아냐"
+      },
+      {
+        "speaker": "플린",
+        "message": "하지만 인간의 몸은 쉽게 회복 안 되잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞으로 조심하면 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞으로 조심하면 괜찮아"
+      },
+      {
+        "speaker": "플린",
+        "message": "알았어"
+      },
+      {
+        "speaker": "플린",
+        "message": "약속…"
+      },
+      {
+        "speaker": "플린",
+        "message": "꼭 지킬게"
+      },
+      {
+        "speaker": "플린",
+        "message": "절대절대 꼭 지킬게"
+      },
+      {
+        "speaker": "플린",
+        "message": "못 지키면 내가 다치더라도…"
+      },
+      {
+        "speaker": "플린",
+        "message": "어떻게든 약속은 지킬 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린…?"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자한테서"
+      },
+      {
+        "speaker": "플린",
+        "message": "기름 냄새 난다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금?"
+      },
+      {
+        "speaker": "플린",
+        "message": "아니"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자가 안아줬을 때"
+      },
+      {
+        "speaker": "플린",
+        "message": "조금 났어"
+      },
+      {
+        "speaker": "플린",
+        "message": "크히힛"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자도 제법 조수 같아졌구나?"
+      },
+      {
+        "speaker": "플린",
+        "message": "작업복에서 기름 냄새도 나고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "인정해 주는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "인정해 주는 거야?"
+      },
+      {
+        "speaker": "플린",
+        "message": "그럴 리가!"
+      },
+      {
+        "speaker": "플린",
+        "message": "아직 멀었지!"
+      },
+      {
+        "speaker": "플린",
+        "message": "찌든 내가 날 때까지"
+      },
+      {
+        "speaker": "플린",
+        "message": "노력하도록 해!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페퍼로니 피자가 다 팔렸대"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페퍼로니 피자가 다 팔렸대"
+      },
+      {
+        "speaker": "플린",
+        "message": "뭐?!"
+      },
+      {
+        "speaker": "플린",
+        "message": "그럼 어떡해!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다른 음식은 안 되는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다른 음식은 안 되는 거야?"
+      },
+      {
+        "speaker": "플린",
+        "message": "안돼애애"
+      },
+      {
+        "speaker": "플린",
+        "message": "오늘은 완전 피자가 먹고 싶었단 말야!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "아!"
+      },
+      {
+        "speaker": "플린",
+        "message": "냉장고에 있던 피자빵 먹어야겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 상한 것 같던데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 상한 것 같던데?"
+      },
+      {
+        "speaker": "플린",
+        "message": "괜찮아!"
+      },
+      {
+        "speaker": "플린",
+        "message": "한 이틀 정도 배 아프면 끝나!"
+      },
+      {
+        "speaker": "플린",
+        "message": "크히히!!! 맛있겠다~!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린! 기다려!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린! 기다려!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다른 곳에서 페퍼로니 사 갈게!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다른 곳에서 페퍼로니 사 갈게!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린 제발 조금만 기다려!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린 제발 조금만 기다려!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "칼라르에선 송하제 불꽃놀이가 유명하다며?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "칼라르에선 송하제 불꽃놀이가 유명하다며?"
+      },
+      {
+        "speaker": "플린",
+        "message": "엉"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린도 참여해 본 적 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린도 참여해 본 적 있어?"
+      },
+      {
+        "speaker": "플린",
+        "message": "아니?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오로라 폭죽 기계가 잘 만들어지면 참여해 보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오로라 폭죽 기계가 잘 만들어지면 참여해 보자"
+      },
+      {
+        "speaker": "플린",
+        "message": "뭐어?!"
+      },
+      {
+        "speaker": "플린",
+        "message": "거긴 기술력 수준이 엄청나다고"
+      },
+      {
+        "speaker": "플린",
+        "message": "그리고 칼라르 정령들은 맨날 보는 오로라고…"
+      },
+      {
+        "speaker": "플린",
+        "message": "내껀 쳐다도 안 볼걸?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나랑 여행 갈 수 있는 기회인데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나랑 여행 갈 수 있는 기회인데?"
+      },
+      {
+        "speaker": "플린",
+        "message": "그"
+      },
+      {
+        "speaker": "플린",
+        "message": "그건"
+      },
+      {
+        "speaker": "플린",
+        "message": "좀 재밌을 것 같네"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자"
+      },
+      {
+        "speaker": "플린",
+        "message": "나 역시 돌아가야겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린! 어디 갔어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린! 어디 갔어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 사라져서 놀랐잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 사라져서 놀랐잖아"
+      },
+      {
+        "speaker": "플린",
+        "message": "역시 불꽃놀이는 못 볼 것 같아"
+      },
+      {
+        "speaker": "플린",
+        "message": "미안해"
+      },
+      {
+        "speaker": "플린",
+        "message": "다음에 봐!!!!!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 불꽃놀이 시간이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 불꽃놀이 시간이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금만 버텨보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금만 버텨보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 무슨 일이 있어도 달려간다고 약속했잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 무슨 일이 있어도 달려간다고 약속했잖아"
+      },
+      {
+        "speaker": "플린",
+        "message": "……."
+      },
+      {
+        "speaker": "플린",
+        "message": "계속 내 옆에 있어 줄 거지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "플린",
+        "message": "손도 잡아 줄 거지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물론이지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물론이지"
+      },
+      {
+        "speaker": "플린",
+        "message": "배고프니까 초코소세지빵도 사줄 거지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼그럼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼그럼"
+      },
+      {
+        "speaker": "플린",
+        "message": "솜사탕 파는 포장마차 뒤에 있으니까"
+      },
+      {
+        "speaker": "플린",
+        "message": "빨리 와"
+      },
+      {
+        "speaker": "플린",
+        "message": "비켜비켜비켜~!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "크히힛 다 터뜨려 주마~!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "아 진짜 깜짝이야!"
+      },
+      {
+        "speaker": "플린",
+        "message": "뭐야, 놀랐잖아!"
+      },
+      {
+        "speaker": "플린",
+        "message": "넌 누군데 실험을 방해하고 그래!"
+      },
+      {
+        "speaker": "플린",
+        "message": "아~ 혹시 혹시??"
+      },
+      {
+        "speaker": "플린",
+        "message": "폭탄에 관심 있어?!"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자~!"
+      },
+      {
+        "speaker": "플린",
+        "message": "아니 조수!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "내일 내 연구실로 와!"
+      },
+      {
+        "speaker": "플린",
+        "message": "최대한 빨리 와야 해! 알았지?"
+      },
+      {
+        "speaker": "플린",
+        "message": "빨리빨ㄹㅣㅃ리리"
+      },
+      {
+        "speaker": "플린",
+        "message": "이제 오지 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "플린?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "폭죽 수리 안 할 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "폭죽 수리 안 할 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일인데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일인데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나 연구실로 간다??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나 연구실로 간다??"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "설계도 수정 다 했어"
+      },
+      {
+        "speaker": "플린",
+        "message": "연구실에서 설명해 줄게"
+      },
+      {
+        "speaker": "플린",
+        "message": "그리고 오늘부터 본 작업 시작이니까"
+      },
+      {
+        "speaker": "플린",
+        "message": "늦지 말고 와!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "크히히히히히"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자아"
+      },
+      {
+        "speaker": "플린",
+        "message": "언제 와~??"
+      },
+      {
+        "speaker": "플린",
+        "message": "나 거꾸로 스파게티 먹는 법 알아냈다?!"
+      },
+      {
+        "speaker": "플린",
+        "message": "빨리 와!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "으으으으…"
+      },
+      {
+        "speaker": "플린",
+        "message": "이, 이제…"
+      },
+      {
+        "speaker": "플린",
+        "message": "이것만 연결하면…!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "조용히 해…"
+      },
+      {
+        "speaker": "플린",
+        "message": "다들 조용히 해…!!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "역시 폭죽 따위는 만드는 게 아니었어!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자가 옆에 있으니까"
+      },
+      {
+        "speaker": "플린",
+        "message": "덜 떨리는 것 같다"
+      },
+      {
+        "speaker": "플린",
+        "message": "고마워, 구원자"
+      },
+      {
+        "speaker": "플린",
+        "message": "구 구원자!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "어떡해!!! 곧 시작이야!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "어쩌지?어쩌지?어쩌지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진정해, 분명 잘될 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진정해, 분명 잘될 거야"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자가 그렇게 말하니까 그렇겠지?!"
+      },
+      {
+        "speaker": "플린",
+        "message": "으갹!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자~!!! 오늘이 사랑의 날이래!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "내가 골라본 건데 어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 좋아. 고마워, 플린"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 좋아. 고마워, 플린"
+      },
+      {
+        "speaker": "플린",
+        "message": "감사의 날?"
+      },
+      {
+        "speaker": "플린",
+        "message": "뭐 그런 거라는데?"
+      },
+      {
+        "speaker": "플린",
+        "message": "조수가 되어줘서 고마워, 구원자!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 고용해 줘서 고마워, 플린"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 고용해 줘서 고마워, 플린"
+      },
+      {
+        "speaker": "플린",
+        "message": "구원자~ 드디어 이브의 날이야~!!!"
+      },
+      {
+        "speaker": "플린",
+        "message": "특별 폭죽 터뜨릴 건데 올 거지??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼! 금방 갈게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼! 금방 갈게"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "플린",
+      "en": "Flynn",
+      "zh_tw": "弗林",
+      "zh_cn": "弗林"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "레인저",
+      "en": "Ranger",
+      "zh_tw": "遊俠",
+      "zh_cn": "遊俠"
+    },
+    "sub_class": {
+      "ko": "버프",
+      "en": "Buff",
+      "zh_tw": "增益",
+      "zh_cn": "增益"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "광란의 폭발",
+        "en": "Frenzy Explosion",
+        "zh_tw": "瘋狂的爆發",
+        "zh_cn": "瘋狂的爆發"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_이벤트2",
+        "en": "인연_메피스토_이벤트2",
+        "zh_tw": "雙魚座",
+        "zh_cn": "雙魚座"
+      },
+      "union": {
+        "ko": "???",
+        "en": "???",
+        "zh_tw": "？？？",
+        "zh_cn": "？？？"
+      },
+      "cv_ko": {
+        "ko": "장미",
+        "en": "Jang Mi",
+        "zh_tw": "張美",
+        "zh_cn": "張美"
+      },
+      "cv_jp": {
+        "ko": "Mayumi Shintani",
+        "en": "Mayumi Shintani",
+        "zh_tw": "Mayumi Shintani",
+        "zh_cn": "Mayumi Shintani"
+      },
+      "like": {
+        "ko": [
+          "화르륵! (못 함)"
+        ],
+        "en": [
+          "Fwoosh! (…her answer.)"
+        ],
+        "zh_tw": [
+          "嘩啦啦！（回答）"
+        ],
+        "zh_cn": [
+          "嘩啦啦！（回答）"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "파인애플 피자"
+        ],
+        "en": [
+          "Pineapple pizza"
+        ],
+        "zh_tw": [
+          "鳳梨披薩"
+        ],
+        "zh_cn": [
+          "鳳梨披薩"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "쾅! (대답을)"
+        ],
+        "en": [
+          "Boom! (Huge explosions…)"
+        ],
+        "zh_tw": [
+          "哐！（聽不到）"
+        ],
+        "zh_cn": [
+          "哐！（聽不到）"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "퍼엉! (듣지)"
+        ],
+        "en": [
+          "Bang! (…muffle…)"
+        ],
+        "zh_tw": [
+          "砰！（她的）"
+        ],
+        "zh_cn": [
+          "砰！（她的）"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "흐~히힛! 전부 불타버려! 펑~! 폭발하는 거야~! 히힛, 내 비장의 폭탄! 로켓군! 터져라!!! \n\n으악, 뭐, 뭐야? 왜 안 터져!? 안 터질 리가 없는데… 누구야!? 누가 방해하고 있는 거…!? 윽, 뭐야… 구원자, 너였어? 칫, 이번엔 또 뭐 때문에 나타난 건대!? 잔소리할 거면, 폭탄 던진다~ 히힛, 맞기 싫으면 저리 가!\n\n음? 기다려보라고? 할 말이 있어? 뭔데? …주변에서 폭발 금지 요청 민원이 들어왔다니… 으갸악!!! 폭탄의 멋짐도 모르는 녀석들!!! 대체 어떤 녀석들이 그런 신고를 해!?\n\n크윽, 아무래도 얼른 완성해야겠어. 세상에서 가장 완벽한 폭탄을 만드는 일! 가장 완벽한 폭탄으로 가장 멋진 폭발을 보여주고 나면, 그땐 다들 나한테 애원하게 되겠지? 한 번만 더 화려한 폭발을 보여달라고 말야. 히힛, 생각만 해도 신난다!\n\n잠깐, 말 나온 김에 구원자도 보는 게 어때? 내가 만든 화려한 폭발!!! 흐힛, 이 참에 느껴보자고! 폭탄이 터질 때, 고민이든 뭐든 흔적도 없이 사라지는 게 얼마나 좋은지!\n\n이렇게나 폭탄에 진심인 이유가 이해되지 않는다고? 굳이 설명해야 할까? 그냥~ 나는 세상에서 가장 완벽한 폭탄을 만들고 싶어! 어떤 상황에서도 화려하게 터지고야 마는 아름다운 폭탄을!!! \n그때까지 나는 계속 폭탄을 만들고 터뜨릴 거야. 크히힛. 그러니까~ 구원자, 방해할 생각말라고~!",
+        "en": "Hehehe! Let everything burn!! Kaboom~! Let them explode~! Hehe, this is my secret bomb, \"Mr. Rocket\"! Explode!!!\n\nArgh, wha, what? Why isn't it working?! Who's there? Who's trying to mess with me…?! Ugh, oh… It was you, Savior. Tsk, what brings you here this time? I'll drop a bomb if you start nagging at me! Hehe. Go away if you don't want to get hurt!\n\nHmm? Give you a moment? Is there anything you want to say? …You received complaints from the neighborhood to ban explosions? Argh!!! Who could possibly make such complaints?! They just don't understand how cool explosions can be!!!\n\nDarn it, I should hurry up and complete my task: to make the world's most perfect bomb! Once I complete it and show the most splendid explosion to everyone, they will come to beg me for more. \"Please, we want to see that spectacular explosion one more time!\" they will say for sure. Hehe. Sounds awesome!\n\nWait, speaking of which, won't you see my spectacular explosion, too, Savior?! Hehe, experience it for yourself. How all your worries disappear when a bomb explodes!\n\nYou don't understand why I'm so serious about bombs? Do I really need to explain it? It's simple: I want to make the world's most perfect bomb! A beautiful bomb that'd explode spectacularly in any situation!!!\nI'll continue making bombs until I accomplish this dream. Hehe. So let me tell you in advance, Savior: don't you ever think of stopping me!",
+        "zh_tw": "呵～嘻嘻！全都燃燒殆盡吧！砰～！要爆炸了～！嘻嘻，我珍藏的炸彈！炸彈君！爆炸吧！！！\n\n呃啊，怎、怎麼一回事？為什麼沒爆炸？！怎麼可能…是誰！？是誰在妨礙我…！？呃，搞什麼，原來是救援者啊？哼，這次出現又是為了什麼！？如果是要嘮叨，炸彈會爆炸喔～西西，不想被炸到就滾邊去！\n\n嗯？要我等一下？你有話要說嗎？是什麼？…收到周遭要求禁止爆炸的投訴…呃啊啊！！！這些不懂炸彈魅力的傢伙！！！到底是哪些傢伙投訴的！？\n\n嘻嘻，總之得盡快完成了。製作出世界上最完美的炸彈！用最完美的炸彈展現出最帥氣的爆炸，到時候大家就會哀求我了吧？要求我再更華麗的爆炸給他們看。嘻嘻，光想就很興奮！\n\n等等，既然都提到了，救援者要不要也看看？我打造的華麗爆炸！！！嘻嘻，趁機體驗看看吧！炸彈爆炸時，不管是煩惱還是什麼東西，都會消失得無影無蹤的美妙感覺！\n\n你不能理解我為什麼那麼重視炸彈？一定要解釋嗎？就是～我想製作出世界上最完美的炸彈！在任何情況下，都會華麗引爆的美麗炸彈！！\n到製作出來前，我會繼續製作並引爆炸彈。呵呵呵。所以～救援者，別想妨礙我～！",
+        "zh_cn": "呵～嘻嘻！全都燃燒殆盡吧！砰～！要爆炸了～！嘻嘻，我珍藏的炸彈！炸彈君！爆炸吧！！！\n\n呃啊，怎、怎麼一回事？為什麼沒爆炸？！怎麼可能…是誰！？是誰在妨礙我…！？呃，搞什麼，原來是救援者啊？哼，這次出現又是為了什麼！？如果是要嘮叨，炸彈會爆炸喔～西西，不想被炸到就滾邊去！\n\n嗯？要我等一下？你有話要說嗎？是什麼？…收到周遭要求禁止爆炸的投訴…呃啊啊！！！這些不懂炸彈魅力的傢伙！！！到底是哪些傢伙投訴的！？\n\n嘻嘻，總之得盡快完成了。製作出世界上最完美的炸彈！用最完美的炸彈展現出最帥氣的爆炸，到時候大家就會哀求我了吧？要求我再更華麗的爆炸給他們看。嘻嘻，光想就很興奮！\n\n等等，既然都提到了，救援者要不要也看看？我打造的華麗爆炸！！！嘻嘻，趁機體驗看看吧！炸彈爆炸時，不管是煩惱還是什麼東西，都會消失得無影無蹤的美妙感覺！\n\n你不能理解我為什麼那麼重視炸彈？一定要解釋嗎？就是～我想製作出世界上最完美的炸彈！在任何情況下，都會華麗引爆的美麗炸彈！！\n到製作出來前，我會繼續製作並引爆炸彈。呵呵呵。所以～救援者，別想妨礙我～！"
+      },
+      "greeting": {
+        "ko": "펑! 펑! 펑! 히힛! 전부 불타버려…!",
+        "en": "Boom! Boom! Boom! Hehe! Burn…!",
+        "zh_tw": "砰！砰！砰！嘻嘻！全部燃燒殆盡…！",
+        "zh_cn": "砰！砰！砰！嘻嘻！全部燃燒殆盡…！"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "펑~펑퍼퍼퍼펑~ 펑펑펑!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "Boom! Booooooom! Booooom!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "砰～砰砰砰砰砰～砰砰砰！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "砰～砰砰砰砰砰～砰砰砰！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "크힛~ 날 불러낸 바보가 너구나!?"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "Hehe! Are you the fool who called me?!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "嘻嘻～叫我來的笨蛋就是妳嗎！？"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "嘻嘻～叫我來的笨蛋就是妳嗎！？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "흐으으음?"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "Hmm?"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "嗯？"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "嗯？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "아니 필요 없어! 크히힛!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "No need to! Hahaha!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "不，不需要！嘻嘻嘻！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "不，不需要！嘻嘻嘻！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "다 터뜨려 버릴 거니까!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "I'll blow everything up anyways!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "我會把這裡全都炸掉！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "我會把這裡全都炸掉！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "왜!? 폭탄 터뜨리기 좋은 날인데!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "Why?! It's a perfect day to explode bombs!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "為什麼！？今天是用炸彈的好日子耶！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "為什麼！？今天是用炸彈的好日子耶！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "펑~이다!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "Boooom!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "砰～！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "砰～！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "히힛~! 맞아!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "hehe~! that's right!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "嘻嘻～！沒錯！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "嘻嘻～！沒錯！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "엄청난 기계들이 만들어지는 곳이라고~?"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "they make incredible machines there~!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "是製造很厲害的機器的地方哦~"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "是製造很厲害的機器的地方哦~"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "칼라르를?"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "to Chalar?"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "你是說卡拉爾嗎？"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "你是說卡拉爾嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "인간에겐 엄~청 추울지도 모르는데?"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "that place should be really cold for humans!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "說不定對人類來說非～常冷耶？"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "說不定對人類來說非～常冷耶？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "구원자가 추워하면 폭탄을 펑!!펑!!! 터뜨려서"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "well, if you're cold, I'll explode my bombs"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "如果救援者覺得冷的話，就要砰！！砰！！！引爆炸彈"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "如果救援者覺得冷的話，就要砰！！砰！！！引爆炸彈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "따뜻하게 만들어야지 크히힛!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "and make you warm! hehehe!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "讓你暖和起來，嘻嘻嘻！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "讓你暖和起來，嘻嘻嘻！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "난 열이 많거든"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "I'm very feverish"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "我的身體本來就很熱"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "我的身體本來就很熱"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "거기가 시원하고 딱 좋았는데"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "I liked it there since it was cool, just right for me"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "所以那裡很涼爽，剛剛好"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "所以那裡很涼爽，剛剛好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "으엑… 아케나인은 너무 더워"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "eek... Arkenine is too hot"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "呃呃…阿肯納因太熱了"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "呃呃…阿肯納因太熱了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "하지만 폭탄 들고 다니기엔 이 옷이 최고라서 말야~"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "because it's convenient to carry my bombs in these clothes~!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "但是帶炸彈出門時，這件衣服是最棒的～"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "但是帶炸彈出門時，這件衣服是最棒的～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "필요할 때 탁!!! 꺼내기도 편하고!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "I can take it out when I need one!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "需要的時候就噠！！！拿出來也很方便！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "需要的時候就噠！！！拿出來也很方便！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "다음에 보여줄까?!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "shall I show it to you next time?!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "下次要給你看嗎？"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "下次要給你看嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "얼마나 빠르게 터뜨릴 수 있는지 알면 깜짝 놀랄걸!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "you'll be surprised to see how fast I can explode a bomb!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "知道可以多快爆炸的話，你一定會嚇一跳！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "知道可以多快爆炸的話，你一定會嚇一跳！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "이상해"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "this is odd"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "好奇怪"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "好奇怪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "이렇게 멋진 폭탄이"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "for a bomb to be this amazing"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "這麼帥氣的炸彈"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "這麼帥氣的炸彈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "위험하다니"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "yet dangerous"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "你竟然說很危險"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "你竟然說很危險"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "말도 안 돼"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "it can't be real"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "太不像話了"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "太不像話了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "으갹!! 답답해!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "ahhh!! how frustrating!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "呃啊！！好煩！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "呃啊！！好煩！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "신체를 강철로 만들어 버리는 물약은 없나??"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "isn't there a potion that turns your body into steel??"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "有沒有把身體變成鋼鐵的藥水？？"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "有沒有把身體變成鋼鐵的藥水？？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "그러면 마음껏 만들 수 있을 텐데!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "then I could make as many bombs as I want!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "那樣就可以盡情進行實驗了！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "那樣就可以盡情進行實驗了！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "크히히힛…!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "hehehehe...!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "嘻嘻嘻嘻…！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "嘻嘻嘻嘻…！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "위력에 한계가 없어질 거야…!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "their power will have no limit...!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "威力就不會受限…！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "威力就不會受限…！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "최고야!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "it'd be the best!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "太棒了！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "太棒了！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "에리카한테 만들어달라고 해야지!!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "I'll ask Erika to make one!!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "我要請艾麗卡製造藥水！！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "我要請艾麗卡製造藥水！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "구원자"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "Savior"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "救援者"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "◁ㅁㅁㅁ[)"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "◁ㅁㅁㅁ[)"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "◁ㅁㅁㅁ[)"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "◁ㅁㅁㅁ[)"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "이게 뭐게"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "guess what this is"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "你猜這是什麼"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "你猜這是什麼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "아 이것도 몰라?!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "oh, come on!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "啊，你連這個都不知道？！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "啊，你連這個都不知道？！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "딱 봐도 볼트잖아!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "it's a bolt!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "一看就是螺絲啊！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "一看就是螺絲啊！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "조수가 이런 것도 몰라서야~!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "still you call yourself my assistant~?!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "助手連這個都不知道～！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "助手連這個都不知道～！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "빨리 공부해!!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "make sure you study all these!!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "快點讀書吧！！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "快點讀書吧！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "〔〕"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "〔〕"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "〔〕"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "〔〕"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "너트"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "nut"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "螺帽"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "螺帽"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "┌□== 파이프렌치"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "┌□== pipe wrench"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "┌□==管子鉗"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "┌□==管子鉗"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "응"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "that's right"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "嗯"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "이거 보여줄까?"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "want me to show you something?"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "你要看這個嗎？"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "你要看這個嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "아카데미카 다닐 때"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "when I was in the academy"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "我在阿卡戴米卡就學的時候"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "我在阿卡戴米卡就學的時候"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "그냥 구석에서 발견했는데"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "I just happened to find it"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "我在角落發現的"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "我在角落發現的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "조수니까 특별히 보여준다"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "and I'm showing it to you since you're my assistant"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "你是助手，我才特別給你看"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "你是助手，我才特別給你看"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "아카데미카엔 규칙이 있거든 우엑"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "they have rules in the academy, ugh"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "阿卡戴米卡有規定，吼"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "阿卡戴米卡有規定，吼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "옷 똑바로 입어라 머리 단정히 해라"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "dress properly, comb your hair neatly,"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "服儀要端正、頭髮要整齊"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "服儀要端正、頭髮要整齊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "터뜨리지마라 망가트리지 마라"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "don't explode this, don't break that,"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "不可以爆破、不可以搞破壞"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "不可以爆破、不可以搞破壞"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "플린",
+          "message": "얼마나 규칙이 많았는데! 짜증 나~!"
+        },
+        "en": {
+          "speaker": "Flynn",
+          "message": "they had so many rules! it was so annoying!"
+        },
+        "zh_tw": {
+          "speaker": "弗林",
+          "message": "規定超級多！很煩～！"
+        },
+        "zh_cn": {
+          "speaker": "弗林",
+          "message": "規定超級多！很煩～！"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "참 마음에 드는 눈빛을 가졌어~ 뭔가에 흠뻑 심취해 있는 눈이랄까~♥\n후훗, 친해져 보고 싶네~"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "I love her eyes~ Those are infatuated eyes, I'd say~♥\nI'd love to get to know her~!"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "我很喜歡她的眼神～就像盡情沉醉在某個東西之中～♥\n呵呵，我想跟她變熟～"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "我很喜歡她的眼神～就像盡情沉醉在某個東西之中～♥\n呵呵，我想跟她變熟～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "에리카",
+          "message": "휴, 아직도 주변에서 폭발음이 들리면… 심장이 '쿵' 하고 내려앉아.\n아카데미카 재학 시절에 플린이 내 실험실을 통째로 날려버렸거든…!"
+        },
+        "en": {
+          "speaker": "Erika",
+          "message": "Sigh, whenever I hear an explosion…my heart sinks.\nFlynn blew up my lab once, back in my academy days…!"
+        },
+        "zh_tw": {
+          "speaker": "艾麗卡",
+          "message": "呼，現在聽到周遭有報炸聲…還是會膽戰心驚。\n弗林在阿卡戴米卡就學期間，曾經把我的實驗室整個炸飛…！"
+        },
+        "zh_cn": {
+          "speaker": "艾麗卡",
+          "message": "呼，現在聽到周遭有報炸聲…還是會膽戰心驚。\n弗林在阿卡戴米卡就學期間，曾經把我的實驗室整個炸飛…！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "100002번째 경고. 연무장과 성곽에 설치된 폭탄 철거를 요청합니다.\n…듣고 계시나요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "100,002nd warning. Requesting the disposal of the bombs planted at the drill hall and the castle.\n…Are you there?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "第100002次警告。請移除安裝在修練場和城牆的炸彈。\n妳有在聽嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "第100002次警告。請移除安裝在修練場和城牆的炸彈。\n妳有在聽嗎？"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "펑~펑퍼퍼퍼펑~ 펑펑펑!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Boom! Booooooom! Booooom!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "砰～砰砰砰砰砰～砰砰砰！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "砰～砰砰砰砰砰～砰砰砰！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "크힛~ 날 불러낸 바보가 너구나!?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Hehe! Are you the fool who called me?!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嘻嘻～叫我來的笨蛋就是妳嗎！？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嘻嘻～叫我來的笨蛋就是妳嗎！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "흐으으음?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Hmm?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내 소개부터 할까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Shall I introduce myself first?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我要先自我介紹嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我要先自我介紹嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내 소개부터 할까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Shall I introduce myself first?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我要先自我介紹嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我要先自我介紹嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아니 필요 없어! 크히힛!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "No need to! Hahaha!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "不，不需要！嘻嘻嘻！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "不，不需要！嘻嘻嘻！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "다 터뜨려 버릴 거니까!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'll blow everything up anyways!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我會把這裡全都炸掉！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我會把這裡全都炸掉！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진정해, 사고치면 곤란해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Calm down, I don't want any trouble"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "冷靜一點，闖禍的話很麻煩"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "冷靜一點，闖禍的話很麻煩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진정해, 사고치면 곤란해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Calm down, I don't want any trouble"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "冷靜一點，闖禍的話很麻煩"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "冷靜一點，闖禍的話很麻煩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "왜!? 폭탄 터뜨리기 좋은 날인데!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Why?! It's a perfect day to explode bombs!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "為什麼！？今天是用炸彈的好日子耶！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "為什麼！？今天是用炸彈的好日子耶！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐 얘기 좀 하는게 어때!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can we talk for a second?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們要不要先聊一下！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們要不要先聊一下！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐 얘기 좀 하는게 어때!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can we talk for a second?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們要不要先聊一下！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們要不要先聊一下！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "펑~이다!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Boooom!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "砰～！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "砰～！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린! 지금 어딨어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn! Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林！妳現在在哪裡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林！妳現在在哪裡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린! 지금 어딨어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn! Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林！妳現在在哪裡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林！妳現在在哪裡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린!???"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn!???"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林！？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林！？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린!???"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn!???"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林！？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林！？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린은 칼라르에서 왔다며?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I heard you're from Chalar, Flynn."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聽說弗林是從卡拉爾來的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聽說弗林是從卡拉爾來的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린은 칼라르에서 왔다며?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I heard you're from Chalar, Flynn."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聽說弗林是從卡拉爾來的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聽說弗林是從卡拉爾來的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "히힛~! 맞아!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "hehe~! that's right!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嘻嘻～！沒錯！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嘻嘻～！沒錯！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "엄청난 기계들이 만들어지는 곳이라고~?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "they make incredible machines there~!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "是製造很厲害的機器的地方哦~"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "是製造很厲害的機器的地方哦~"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "한번 가보고 싶다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd like to go there once."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想去去看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想去去看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "한번 가보고 싶다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd like to go there once."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想去去看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想去去看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "칼라르를?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "to Chalar?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你是說卡拉爾嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你是說卡拉爾嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "인간에겐 엄~청 추울지도 모르는데?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "that place should be really cold for humans!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "說不定對人類來說非～常冷耶？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "說不定對人類來說非～常冷耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자가 추워하면 폭탄을 펑!!펑!!! 터뜨려서"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "well, if you're cold, I'll explode my bombs"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "如果救援者覺得冷的話，就要砰！！砰！！！引爆炸彈"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "如果救援者覺得冷的話，就要砰！！砰！！！引爆炸彈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "따뜻하게 만들어야지 크히힛!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "and make you warm! hehehe!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "讓你暖和起來，嘻嘻嘻！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "讓你暖和起來，嘻嘻嘻！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린은 안 추워?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wasn't it cold for you, Flynn?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林不冷嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林不冷嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린은 안 추워?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wasn't it cold for you, Flynn?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林不冷嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林不冷嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "난 열이 많거든"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'm very feverish"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我的身體本來就很熱"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我的身體本來就很熱"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "거기가 시원하고 딱 좋았는데"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I liked it there since it was cool, just right for me"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "所以那裡很涼爽，剛剛好"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "所以那裡很涼爽，剛剛好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "으엑… 아케나인은 너무 더워"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "eek... Arkenine is too hot"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "呃呃…阿肯納因太熱了"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "呃呃…阿肯納因太熱了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "더운데 외투를 입고 다니는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why are you always wearing a jacket, then?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼熱還穿外套嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼熱還穿外套嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "더운데 외투를 입고 다니는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why are you always wearing a jacket, then?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼熱還穿外套嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼熱還穿外套嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "하지만 폭탄 들고 다니기엔 이 옷이 최고라서 말야~"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "because it's convenient to carry my bombs in these clothes~!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "但是帶炸彈出門時，這件衣服是最棒的～"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "但是帶炸彈出門時，這件衣服是最棒的～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "필요할 때 탁!!! 꺼내기도 편하고!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I can take it out when I need one!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "需要的時候就噠！！！拿出來也很方便！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "需要的時候就噠！！！拿出來也很方便！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "다음에 보여줄까?!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "shall I show it to you next time?!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "下次要給你看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "下次要給你看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "얼마나 빠르게 터뜨릴 수 있는지 알면 깜짝 놀랄걸!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "you'll be surprised to see how fast I can explode a bomb!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "知道可以多快爆炸的話，你一定會嚇一跳！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "知道可以多快爆炸的話，你一定會嚇一跳！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괘 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "N-no thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒、沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒、沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괘 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "N-no thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒、沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒、沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사양할게;;"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm alright..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我拒絕……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我拒絕……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사양할게;;"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm alright..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我拒絕……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我拒絕……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "이상해"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "this is odd"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "好奇怪"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "好奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼東西？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼東西？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼東西？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼東西？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "이렇게 멋진 폭탄이"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "for a bomb to be this amazing"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "這麼帥氣的炸彈"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "這麼帥氣的炸彈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "위험하다니"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "yet dangerous"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你竟然說很危險"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你竟然說很危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "말도 안 돼"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "it can't be real"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "太不像話了"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "太不像話了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘못하면 다칠 수 있잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You could get hurt"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一不小心就會受傷啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一不小心就會受傷啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘못하면 다칠 수 있잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You could get hurt"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一不小心就會受傷啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一不小心就會受傷啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조심해야지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "if you are not careful"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要小心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要小心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조심해야지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "if you are not careful"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要小心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要小心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "으갹!! 답답해!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "ahhh!! how frustrating!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "呃啊！！好煩！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "呃啊！！好煩！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "신체를 강철로 만들어 버리는 물약은 없나??"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "isn't there a potion that turns your body into steel??"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "有沒有把身體變成鋼鐵的藥水？？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "有沒有把身體變成鋼鐵的藥水？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그러면 마음껏 만들 수 있을 텐데!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "then I could make as many bombs as I want!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "那樣就可以盡情進行實驗了！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "那樣就可以盡情進行實驗了！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "크히히힛…!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "hehehehe...!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻嘻…！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻嘻…！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "위력에 한계가 없어질 거야…!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "their power will have no limit...!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "威力就不會受限…！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "威力就不會受限…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "최고야!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "it'd be the best!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "太棒了！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "太棒了！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "에리카한테 만들어달라고 해야지!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'll ask Erika to make one!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我要請艾麗卡製造藥水！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我要請艾麗卡製造藥水！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말로 간 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you really gone?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的走掉了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的走掉了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말로 간 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you really gone?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的走掉了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的走掉了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "◁ㅁㅁㅁ[)"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "◁ㅁㅁㅁ[)"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "◁ㅁㅁㅁ[)"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "◁ㅁㅁㅁ[)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "이게 뭐게"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "guess what this is"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你猜這是什麼"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你猜這是什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 모르겠는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I have no idea."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道耶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 모르겠는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I have no idea."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道耶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아 이것도 몰라?!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "oh, come on!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "啊，你連這個都不知道？！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "啊，你連這個都不知道？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "딱 봐도 볼트잖아!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "it's a bolt!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "一看就是螺絲啊！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "一看就是螺絲啊！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "조수가 이런 것도 몰라서야~!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "still you call yourself my assistant~?!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "助手連這個都不知道～！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "助手連這個都不知道～！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "빨리 공부해!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "make sure you study all these!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "快點讀書吧！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "快點讀書吧！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "〔〕"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "〔〕"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "〔〕"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "〔〕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "너트"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "nut"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "螺帽"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "螺帽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "┌□== 파이프렌치"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "┌□== pipe wrench"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "┌□==管子鉗"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "┌□==管子鉗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "수리하기 싫구나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You don't feel like fixing anything, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳不想修理啊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳不想修理啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "수리하기 싫구나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You don't feel like fixing anything, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳不想修理啊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳不想修理啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "that's right"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "이거 보여줄까?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "want me to show you something?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你要看這個嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你要看這個嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언제 찍은 사진이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "When did you take this picture?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是什麼時候拍的照片？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是什麼時候拍的照片？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언제 찍은 사진이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "When did you take this picture?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是什麼時候拍的照片？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是什麼時候拍的照片？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아카데미카 다닐 때"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "when I was in the academy"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我在阿卡戴米卡就學的時候"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我在阿卡戴米卡就學的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그냥 구석에서 발견했는데"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I just happened to find it"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我在角落發現的"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我在角落發現的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "조수니까 특별히 보여준다"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "and I'm showing it to you since you're my assistant"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你是助手，我才特別給你看"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你是助手，我才特別給你看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금이랑 분위기가 다르네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You look different from now."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "跟現在散發的氛圍不一樣耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "跟現在散發的氛圍不一樣耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금이랑 분위기가 다르네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You look different from now."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "跟現在散發的氛圍不一樣耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "跟現在散發的氛圍不一樣耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아카데미카엔 규칙이 있거든 우엑"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "they have rules in the academy, ugh"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "阿卡戴米卡有規定，吼"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "阿卡戴米卡有規定，吼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "옷 똑바로 입어라 머리 단정히 해라"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "dress properly, comb your hair neatly,"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "服儀要端正、頭髮要整齊"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "服儀要端正、頭髮要整齊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "터뜨리지마라 망가트리지 마라"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "don't explode this, don't break that,"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "不可以爆破、不可以搞破壞"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "不可以爆破、不可以搞破壞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "얼마나 규칙이 많았는데! 짜증 나~!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "they had so many rules! it was so annoying!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "規定超級多！很煩～！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "規定超級多！很煩～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 사진 보니 열심히 다닌 것 같네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But this picture tells me that you were a good student"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過妳的照片看起來很認真上課"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過妳的照片看起來很認真上課"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 사진 보니 열심히 다닌 것 같네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But this picture tells me that you were a good student"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過妳的照片看起來很認真上課"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過妳的照片看起來很認真上課"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그게…"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "well..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "因為…"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "因為…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "과제 완성 못 하면"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "they wouldn't let me use the lab"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "作業沒寫完的話"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "作業沒寫完的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "연구실 못 쓰게 한다고 해서…"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "if I didn't do the assignments..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "就不能用研究室…"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "就不能用研究室…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "어쩔 수 없었어"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "it couldn't be helped"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我別無選擇"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我別無選擇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅋㅋㅋㅋㅋㅋㅋㅋ귀여운 학생이었네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hahahahaha you were a cute student."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哈哈哈哈哈哈哈哈好可愛的學生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哈哈哈哈哈哈哈哈好可愛的學生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅋㅋㅋㅋㅋㅋㅋㅋ귀여운 학생이었네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hahahahaha you were a cute student."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哈哈哈哈哈哈哈哈好可愛的學生"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哈哈哈哈哈哈哈哈好可愛的學生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 얘기 좀 더 해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Tell me more about then."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "再多告訴我一點那時候的故事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "再多告訴我一點那時候的故事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 얘기 좀 더 해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Tell me more about then."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "再多告訴我一點那時候的故事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "再多告訴我一點那時候的故事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "몰라"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I won't tell you"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "不知道"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "不知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "기억 안 나"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I don't remember a thing"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "不記得了"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "不記得了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자 바보"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "idiot"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者是笨蛋"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者是笨蛋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "난 다시 작업하러 갈래"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'll go back to work now"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我要回去工作了"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我要回去工作了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "몸은 괜찮아?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "are you feeling alright?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你身體還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你身體還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "혹시 어지러워?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "are you maybe dizzy?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "會頭暈嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "會頭暈嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "앞은 잘 보여?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "do you see well?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "看得清楚前面嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "看得清楚前面嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린 걱정마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't worry, Flynn."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林，妳別擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林，妳別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린 걱정마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't worry, Flynn."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林，妳別擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林，妳別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇게 크게 다친 거 아냐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The injury isn't serious."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒有受重傷"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒有受重傷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇게 크게 다친 거 아냐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The injury isn't serious."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒有受重傷"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒有受重傷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "하지만 인간의 몸은 쉽게 회복 안 되잖아"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "but the human body doesn't recover easily"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "但是人類的身體不容易復原啊"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "但是人類的身體不容易復原啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞으로 조심하면 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be careful from now on"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次注意就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次注意就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞으로 조심하면 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be careful from now on"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次注意就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次注意就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "알았어"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "okay"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "약속…"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I will..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "約定…"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "約定…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "꼭 지킬게"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "keep my promise"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我一定會遵守"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我一定會遵守"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "절대절대 꼭 지킬게"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I really, really will"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我一定一定會遵守"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我一定一定會遵守"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "못 지키면 내가 다치더라도…"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I will keep my promise no matter what"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "沒有遵守的話就算會弄傷自己…"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "沒有遵守的話就算會弄傷自己…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "어떻게든 약속은 지킬 거야"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "even at the cost of myself if necessary..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我也無論如何都會守約"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我也無論如何都會守約"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자한테서"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者身上"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者身上"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "기름 냄새 난다"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "you smell like oil"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "有汽油味"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "有汽油味"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Now?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Now?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아니"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "no"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "不是"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "不是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자가 안아줬을 때"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I smelled it"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者抱我的時候"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者抱我的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "조금 났어"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "when you hugged me"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "有一點"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "有一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "크히힛"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "hehehe"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자도 제법 조수 같아졌구나?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "you've become quite the assistant!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者也很有助手的樣子嘛！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者也很有助手的樣子嘛！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "작업복에서 기름 냄새도 나고"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "your working clothes smell like oil"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "工作服還會散發汽油味"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "工作服還會散發汽油味"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "인정해 주는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you finally acknowledging me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳在認可我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳在認可我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "인정해 주는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you finally acknowledging me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳在認可我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳在認可我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그럴 리가!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "of course not!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "怎麼可能！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "怎麼可能！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아직 멀었지!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "you still have a long way to go!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "還早得很！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "還早得很！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "찌든 내가 날 때까지"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "work hard"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你要一直努力到"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你要一直努力到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "노력하도록 해!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "until you reek of oil!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "全身散發汽油味為止！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "全身散發汽油味為止！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페퍼로니 피자가 다 팔렸대"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Pepperoni pizza is sold out."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "臘腸披薩都賣完了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "臘腸披薩都賣完了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페퍼로니 피자가 다 팔렸대"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Pepperoni pizza is sold out."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "臘腸披薩都賣完了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "臘腸披薩都賣完了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "뭐?!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "what?!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "什麼？！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "什麼？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그럼 어떡해!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "what are we going to do, then?!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "那怎麼辦！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "那怎麼辦！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다른 음식은 안 되는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can't we have something else?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不能吃別的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不能吃別的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다른 음식은 안 되는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can't we have something else?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不能吃別的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不能吃別的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "안돼애애"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "nooo"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "不行啦"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "不行啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "오늘은 완전 피자가 먹고 싶었단 말야!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I was feeling like eating pizza today!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我今天超想吃披薩！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我今天超想吃披薩！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "oh!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "對了！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "對了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "냉장고에 있던 피자빵 먹어야겠다"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'll have the pizza bread that's in the fridge"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我要吃冰箱裡的披薩麵包"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我要吃冰箱裡的披薩麵包"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 상한 것 같던데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think that bread has gone bad."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那應該壞掉了吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那應該壞掉了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 상한 것 같던데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think that bread has gone bad."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那應該壞掉了吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那應該壞掉了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "괜찮아!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "it's alright!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "沒關係！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "沒關係！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "한 이틀 정도 배 아프면 끝나!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'll just have a stomach ache for a day or two!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "拉肚子兩天就沒事了！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "拉肚子兩天就沒事了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "크히히!!! 맛있겠다~!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "hehehe!!! yummy~!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻！！！一定很好吃～！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻！！！一定很好吃～！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린! 기다려!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn! Wait!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林！等一下！！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林！等一下！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린! 기다려!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn! Wait!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林！等一下！！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林！等一下！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다른 곳에서 페퍼로니 사 갈게!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll get a pepperoni pizza from another place!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我去其他地方買臘腸披薩！！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我去其他地方買臘腸披薩！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다른 곳에서 페퍼로니 사 갈게!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll get a pepperoni pizza from another place!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我去其他地方買臘腸披薩！！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我去其他地方買臘腸披薩！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린 제발 조금만 기다려!!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn, just wait for me!!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林拜託妳等一下！！！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林拜託妳等一下！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린 제발 조금만 기다려!!!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn, just wait for me!!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林拜託妳等一下！！！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林拜託妳等一下！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "칼라르에선 송하제 불꽃놀이가 유명하다며?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I heard Chalar's Songha Festival is known for its fireworks show."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳說卡拉爾送夏之日的煙火很有名？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳說卡拉爾送夏之日的煙火很有名？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "칼라르에선 송하제 불꽃놀이가 유명하다며?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I heard Chalar's Songha Festival is known for its fireworks show."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳說卡拉爾送夏之日的煙火很有名？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳說卡拉爾送夏之日的煙火很有名？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "엉"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "yup"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린도 참여해 본 적 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have you ever participated in the show?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林也有參加過嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林也有參加過嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린도 참여해 본 적 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have you ever participated in the show?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林也有參加過嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林也有參加過嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아니?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "no"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "沒有耶"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "沒有耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오로라 폭죽 기계가 잘 만들어지면 참여해 보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then let's participate if we get to complete the aurora firework machine."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "極光煙火機器做好的話，去參加一下吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "極光煙火機器做好的話，去參加一下吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오로라 폭죽 기계가 잘 만들어지면 참여해 보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then let's participate if we get to complete the aurora firework machine."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "極光煙火機器做好的話，去參加一下吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "極光煙火機器做好的話，去參加一下吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "뭐어?!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "what?!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "什麼？！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "什麼？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "거긴 기술력 수준이 엄청나다고"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Chalar's technology is way above our level"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "那裡的技術水準超高"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "那裡的技術水準超高"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그리고 칼라르 정령들은 맨날 보는 오로라고…"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "and the Souls of Chalar see the aurora almost every day..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "而且卡拉爾精靈們每天都看得到極光…"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "而且卡拉爾精靈們每天都看得到極光…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "내껀 쳐다도 안 볼걸?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "they won't be interested in mine at all"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "應該根本不想看我做的吧？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "應該根本不想看我做的吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나랑 여행 갈 수 있는 기회인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But it'll be your chance to go travel with me!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是可以跟我去旅行的機會耶！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是可以跟我去旅行的機會耶！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나랑 여행 갈 수 있는 기회인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But it'll be your chance to go travel with me!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是可以跟我去旅行的機會耶！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是可以跟我去旅行的機會耶！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "but"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "那"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "那"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그건"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "that"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "좀 재밌을 것 같네"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "sounds fun"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "感覺很好玩"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "感覺很好玩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "나 역시 돌아가야겠어"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I need to go back"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我果然得回去了"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我果然得回去了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린! 어디 갔어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn! Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林！妳去哪裡了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林！妳去哪裡了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린! 어디 갔어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn! Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林！妳去哪裡了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林！妳去哪裡了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 사라져서 놀랐잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't suddenly disappear. You surprised me."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳突然消失，嚇到我了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳突然消失，嚇到我了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 사라져서 놀랐잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't suddenly disappear. You surprised me."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳突然消失，嚇到我了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳突然消失，嚇到我了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "역시 불꽃놀이는 못 볼 것 같아"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I can't watch the firework with you"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我沒辦法看煙火"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我沒辦法看煙火"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "對不起"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "對不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "다음에 봐!!!!!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "see you!!!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "下次見！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "下次見！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 불꽃놀이 시간이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The fireworks show will begin soon."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就快到放煙火的時間了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就快到放煙火的時間了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 불꽃놀이 시간이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The fireworks show will begin soon."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就快到放煙火的時間了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就快到放煙火的時間了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금만 버텨보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's wait just a little longer."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "再撐一下"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "再撐一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금만 버텨보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's wait just a little longer."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "再撐一下"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "再撐一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 무슨 일이 있어도 달려간다고 약속했잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I promised you that I'd be next to you, no matter what happened."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不是跟妳約好，不管發生什麼事都會跑過去嗎"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不是跟妳約好，不管發生什麼事都會跑過去嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 무슨 일이 있어도 달려간다고 약속했잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I promised you that I'd be next to you, no matter what happened."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不是跟妳約好，不管發生什麼事都會跑過去嗎"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不是跟妳約好，不管發生什麼事都會跑過去嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "계속 내 옆에 있어 줄 거지?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "are you going to stay by my side?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你會一直待在我身邊吧？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你會一直待在我身邊吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "손도 잡아 줄 거지?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "and hold my hand?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "也會牽我的手吧？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "也會牽我的手吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물론이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물론이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "배고프니까 초코소세지빵도 사줄 거지?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "and also buy me a chocolate sausage bun since I'm hungry?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我肚子餓了，你會買巧克力香腸麵包給我吧？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我肚子餓了，你會買巧克力香腸麵包給我吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼그럼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, yup."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然當然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然當然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼그럼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, yup."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然當然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然當然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "솜사탕 파는 포장마차 뒤에 있으니까"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'm right behind the cotton candy shop"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "賣棉花糖的布帳馬車後面有"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "賣棉花糖的布帳馬車後面有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "빨리 와"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "come, quickly"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "快點來"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "快點來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "비켜비켜비켜~!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "move move move~!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "讓開讓開讓開～！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "讓開讓開讓開～！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "크히힛 다 터뜨려 주마~!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "hehehe I'll blow up everything~!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻，我要把全部都炸掉～！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻，我要把全部都炸掉～！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아 진짜 깜짝이야!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "ahhh you surprised me!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "唉唷，真的嚇我一跳！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "唉唷，真的嚇我一跳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "뭐야, 놀랐잖아!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "what the!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "搞什麼，嚇到我了！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "搞什麼，嚇到我了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "넌 누군데 실험을 방해하고 그래!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "how dare you interrupt my experiment!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "妳是誰？妨礙我進行實驗！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "妳是誰？妨礙我進行實驗！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아~ 혹시 혹시??"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "oh~ don't tell me..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "啊～難道妳？？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "啊～難道妳？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "폭탄에 관심 있어?!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "are you interested in bombs?!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "對炸彈有興趣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "對炸彈有興趣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자~!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior~!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者～！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "아니 조수!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I mean, assistant!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "不對，助手！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "不對，助手！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "내일 내 연구실로 와!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "meet me at my lab tomorrow!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "明天來我的研究室！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "明天來我的研究室！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "최대한 빨리 와야 해! 알았지?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "don't be late, alright? you have to be QUICK!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "盡量早點來！知道了吧？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "盡量早點來！知道了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "빨리빨ㄹㅣㅃ리리"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "quickquickquickquack"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "快點快點快ㄉ一ㄢ快點"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "快點快點快ㄉ一ㄢ快點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "이제 오지 마"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "don't come to my lab again"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你以後不要再來了"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你以後不要再來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "플린?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Flynn?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗林？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗林？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "폭죽 수리 안 할 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you not going to fix the firework?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳不修理煙火機器了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳不修理煙火機器了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "폭죽 수리 안 할 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you not going to fix the firework?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳不修理煙火機器了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳不修理煙火機器了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일인데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나 연구실로 간다??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm going to the laboratory, okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我要去研究室了喔？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我要去研究室了喔？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나 연구실로 간다??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm going to the laboratory, okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我要去研究室了喔？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我要去研究室了喔？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "설계도 수정 다 했어"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'm done fixing the blueprint"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "設計圖改好了"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "設計圖改好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "연구실에서 설명해 줄게"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'll explain it to you in the lab"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我在研究室解釋給你聽"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我在研究室解釋給你聽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "그리고 오늘부터 본 작업 시작이니까"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "and the real work starts today,"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "今天會正式開始動工"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "今天會正式開始動工"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "늦지 말고 와!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "so don't be late!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你不要遲到！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你不要遲到！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "크히히히히히"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "hehehehehehe"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻嘻嘻嘻"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "嘻嘻嘻嘻嘻嘻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자아"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "언제 와~??"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "when are you coming~??"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "你什麼時候來～？？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "你什麼時候來～？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "나 거꾸로 스파게티 먹는 법 알아냈다?!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I figured out how to eat spaghetti upside down!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我學會怎麼倒過來吃義大利麵了"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我學會怎麼倒過來吃義大利麵了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "빨리 와!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "come, quickly!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "快點來！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "快點來！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "으으으으…"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "ughhh..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "呃呃呃呃…"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "呃呃呃呃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "이, 이제…"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "n-now..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "現、現在…"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "現、現在…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "이것만 연결하면…!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "if I connect this...!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "只要連接這個…！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "只要連接這個…！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "조용히 해…"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "be quiet..."
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "安靜…"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "安靜…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "다들 조용히 해…!!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "everyone, be quiet...!!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "大家都給我安靜…！！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "大家都給我安靜…！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "역시 폭죽 따위는 만드는 게 아니었어!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I shouldn't have made something like a firework!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我果然不應該製造煙火什麼的！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我果然不應該製造煙火什麼的！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자가 옆에 있으니까"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I think I'm less nervous"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "因為救援者在我的旁邊"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "因為救援者在我的旁邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "덜 떨리는 것 같다"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "because you're next to me"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我感覺沒有那麼緊張"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我感覺沒有那麼緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "고마워, 구원자"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "thank you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "謝謝你，救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "謝謝你，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구 구원자!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "S-Savior!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救、救援者！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救、救援者！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "어떡해!!! 곧 시작이야!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "what should I do?!!! it's going to start!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "怎麼辦！！！快開始了！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "怎麼辦！！！快開始了！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "어쩌지?어쩌지?어쩌지?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "what should I do? what should I do? what should I do?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "怎麼辦？怎麼辦？怎麼辦？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "怎麼辦？怎麼辦？怎麼辦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진정해, 분명 잘될 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Calm down, it will be alright."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "冷靜一點，一定會成功"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "冷靜一點，一定會成功"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진정해, 분명 잘될 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Calm down, it will be alright."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "冷靜一點，一定會成功"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "冷靜一點，一定會成功"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자가 그렇게 말하니까 그렇겠지?!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "well, if you say so! since you are never wrong!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "既然救援者那麼說，那應該會成功吧？！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "既然救援者那麼說，那應該會成功吧？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "으갹!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "aghhh!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "呃啊！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "呃啊！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자~!!! 오늘이 사랑의 날이래!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior~!!! I heard it's Love Day today!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者～！！！今天是戀愛之日！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者～！！！今天是戀愛之日！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "내가 골라본 건데 어때?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I picked it myself, what do you think?"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "這是我挑選的，怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "這是我挑選的，怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 좋아. 고마워, 플린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I love it! Thank you, Flynn."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太棒了，謝謝妳，弗林"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太棒了，謝謝妳，弗林"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 좋아. 고마워, 플린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I love it! Thank you, Flynn."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太棒了，謝謝妳，弗林"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太棒了，謝謝妳，弗林"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "감사의 날?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "it's Appreciation Day today"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "感謝之日？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "感謝之日？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "뭐 그런 거라는데?"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "or something like that, I heard"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "聽說是這樣"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "聽說是這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "조수가 되어줘서 고마워, 구원자!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "thank you for being my assistant, Savior!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "謝謝你當我的助手，救援者！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "謝謝你當我的助手，救援者！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 고용해 줘서 고마워, 플린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And thank you for hiring me, Flynn."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳雇用我，弗林"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳雇用我，弗林"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 고용해 줘서 고마워, 플린"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And thank you for hiring me, Flynn."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳雇用我，弗林"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳雇用我，弗林"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "구원자~ 드디어 이브의 날이야~!!!"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "Savior~! finally, its Eve's Day~!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "救援者～夏娃之日終於到了～！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "救援者～夏娃之日終於到了～！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "플린",
+            "message": "특별 폭죽 터뜨릴 건데 올 거지??"
+          },
+          "en": {
+            "speaker": "Flynn",
+            "message": "I'll light a special firework today! you're coming, right??"
+          },
+          "zh_tw": {
+            "speaker": "弗林",
+            "message": "我要放特別煙火，你會來吧？？"
+          },
+          "zh_cn": {
+            "speaker": "弗林",
+            "message": "我要放特別煙火，你會來吧？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼! 금방 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course! I'll be right there."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然！我馬上到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然！我馬上到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼! 금방 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course! I'll be right there."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然！我馬上到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然！我馬上到"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7681 @@
+{
+  "id": "4010",
+  "name": "비올레트",
+  "name_en": "Violette",
+  "grade": "에픽",
+  "race": "불사형",
+  "class": "캐스터",
+  "sub_class": "디버프",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "재앙의 숨결",
+    "constellation": "전갈자리",
+    "union": "밤의 일족",
+    "birthday": "1121",
+    "height": 169,
+    "weight": 54,
+    "cv_ko": "정혜원",
+    "cv_jp": "Mie Sonozaki",
+    "like": [
+      "구속",
+      "복종"
+    ],
+    "dislike": [
+      "바람둥이"
+    ],
+    "hobby": [
+      "귀염둥이(구원자) 괴롭히기"
+    ],
+    "speciality": [
+      "애교 섞인 비음"
+    ]
+  },
+  "personality": {
+    "description": "하아… 구원자가 이렇게 귀여운 사람이라니. 아주 기쁜 일이네. 마음에 쏙 들어.\n\n내 이름은 비올레트. 후훗, 재앙의 숨결이자, 살아 있는 것들의 고통과 절망을 품은 정령이란다.\n\n후후, 내 소개가 무서웠을까? 겁에 질린 얼굴도 아주 귀엽네. 날 너무 두려워하진 말아. 내가 하는 말만 구원자가 잘 듣는다면… 나는 꽤 관대해질 수 있단다. 후훗, 네가 나만의 달링이 된다면, 그보다 더한 것도 해줄 수 있어.\n\n내가 어떤 정령인지 호기심이 생기지 않아? 원한다면 하나 하나, 친절하게, 천천히 가르쳐 줄 의향이 있는데…\n우리… 귀염둥이 생각은 어때?\n\n흐음, 대답이 늦네. 뭐, 좋아. 당장 대답하지 않아도 괜찮아. 시간은 충분하니까. 사랑을 담아서 천천히 구속하고, 제약해줄게. 우리 둘의 생각이 비슷해질 때까지 말이야. 특. 별. 하. 게. 길들여줄테니, 기쁘게 받아들이렴.",
+    "greeting": "후후후, 너는 어떤 비명을 들려줄 거니?"
+  },
+  "speech_patterns": [
+    "네가 날 소환한 자로구나",
+    "귀엽기도 하지",
+    "흐음, 내가 언제 내 이름을 불러도 된다고 허락했지?",
+    "그렇게 바로 주눅 들면, 재미없지",
+    "후훗, 귀염둥이 같으니라고",
+    "넌 가르칠 게 많겠어",
+    "우리, 앞으로 자주 봐",
+    "구원자?",
+    "구원자??",
+    "감히, 내 말을 무시해?",
+    "…….",
+    "하아, 내가 계약한 게 정령술사인지, \r\n바보인지 모르겠네",
+    "지금 만나",
+    "사설이… 기네?",
+    "만나자니까?",
+    "그래, 뭐 좋아",
+    "언제까지 그렇게 나올 수 있을까?",
+    "귀염둥이는 무슨 음식을 좋아하지?",
+    "…정말 따분한 대답이네",
+    "넌 취향이란 거 없어?",
+    "특별히 좋아하는 음식이든 싫어하는 음식이든 뭐라도 있을 거 아냐",
+    "흐음, 이 대답은 좀 마음에 드네",
+    "내 취향을 맞춰주겠단 거지?",
+    "후훗, 좋아",
+    "나중에 이 말한 거, 후회하기 없기야",
+    "귀염둥이, 깨어났어?",
+    "흐음, 읽었는데 왜 대답이 없지?\r\n무시하는 거야?",
+    "답장하지 않을 거면, 차라리 읽지 않는 게 낫지 않아?",
+    "?",
+    "뭐야, 너 누구야?",
+    "어째서 귀염둥이 에버톡을 네가 답장하는 거지?",
+    "…여러모로 거슬리는군",
+    "잠깐 맡겨두는 거니까, 잘 데리고 있어",
+    "고리타분하게 구는 건 너나 구원자나 똑같네",
+    "네 녀석이랑 할 얘긴 더 이상 없으니까\r\n우리 귀염둥이 에버폰 그만 내려놓지?",
+    "깨어나면 찾아갈 거라고만 전해",
+    "알겠으니까, 그만 답장해",
+    "물약 효과는 어때?",
+    "그럼, 당연히 최고여야지",
+    "안경잡이 연금술사한테서 특별히 주문한 건데",
+    "얼른 일어나",
+    "신경 쓰게 하지 말고",
+    "그래? 잘됐네",
+    "흐음, 어쩐 일로 먼저 연락했을까?",
+    "뭐야, 말로만 묻는 거야?",
+    "그런 건 직접 찾아와서 물어봐야지",
+    "됐. 어.",
+    "엎드려 절 받기 같잖아",
+    "뭐, 굳이 온다면 말리진 않을게",
+    "영지로 와"
+  ],
+  "comments": [
+    {
+      "writer": "레베카",
+      "comment": "신기한 광경을 보고 싶어? 그럼 비올레트를 따라서 뒷골목으로 가봐.\n거기 있는 무뢰배들의 얼굴이 전부 보랏빛으로 질리는 걸 볼 수 있을 거야."
+    },
+    {
+      "writer": "미리암",
+      "comment": "비올레트! 내 단골 가게의 샌드위치를 모욕한 숙적!\n내 눈앞에서 최애 샌드위치를 샌드위치였던 것으로 바꿔버렸어…!"
+    },
+    {
+      "writer": "메피스토펠레스",
+      "comment": "사랑과 복종의 개념… 제게는 생소한 것 같기도 합니다."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "비올레트",
+        "message": "네가 날 소환한 자로구나"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀엽기도 하지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 비올레트"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 비올레트"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "흐음, 내가 언제 내 이름을 불러도 된다고 허락했지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무례했다면, 사과할게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무례했다면, 사과할게"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그렇게 바로 주눅 들면, 재미없지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그, 그런가…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그, 그런가…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "후훗, 귀염둥이 같으니라고"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "넌 가르칠 게 많겠어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "우리, 앞으로 자주 봐"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "구원자?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "구원자??"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "감히, 내 말을 무시해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안, 긴장해서 에버폰을 떨어뜨렸어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안, 긴장해서 에버폰을 떨어뜨렸어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "……."
+      },
+      {
+        "speaker": "비올레트",
+        "message": "하아, 내가 계약한 게 정령술사인지, \r\n바보인지 모르겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "할 말이 있는 거 같은데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "할 말이 있는 거 같은데…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "지금 만나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앗, 지금은 일이 있는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앗, 지금은 일이 있는데…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "사설이… 기네?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "만나자니까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안! 다음에 보자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안! 다음에 보자!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그래, 뭐 좋아"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "언제까지 그렇게 나올 수 있을까?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이는 무슨 음식을 좋아하지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 다 잘 먹어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 다 잘 먹어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "…정말 따분한 대답이네"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "넌 취향이란 거 없어?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "특별히 좋아하는 음식이든 싫어하는 음식이든 뭐라도 있을 거 아냐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "비올레트가 먹고 싶은 걸로!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "비올레트가 먹고 싶은 걸로!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "흐음, 이 대답은 좀 마음에 드네"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "내 취향을 맞춰주겠단 거지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 맞아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 맞아"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "후훗, 좋아"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "나중에 이 말한 거, 후회하기 없기야"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이, 깨어났어?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "흐음, 읽었는데 왜 대답이 없지?\r\n무시하는 거야?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "답장하지 않을 거면, 차라리 읽지 않는 게 낫지 않아?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님은 아직 주무시고 계십니다"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "뭐야, 너 누구야?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "메피스토펠레스입니다"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "어째서 귀염둥이 에버톡을 네가 답장하는 거지?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "실례인 건 알지만"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님의 에버폰이 계속 울려서\r\n확인을 안할 수가 없었습니다"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "…여러모로 거슬리는군"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "잠깐 맡겨두는 거니까, 잘 데리고 있어"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "…구원자님은 맡기는 물건 같은 게 아닙니다만"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "고리타분하게 구는 건 너나 구원자나 똑같네"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "네 녀석이랑 할 얘긴 더 이상 없으니까\r\n우리 귀염둥이 에버폰 그만 내려놓지?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "깨어나면 찾아갈 거라고만 전해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "네, 구원자님께서 깨어나시면\r\n말씀 전해드리겠습니다"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "알겠으니까, 그만 답장해"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "물약 효과는 어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "최고야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "최고야!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그럼, 당연히 최고여야지"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "안경잡이 연금술사한테서 특별히 주문한 건데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신경 써줘서 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신경 써줘서 고마워"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "얼른 일어나"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "신경 쓰게 하지 말고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나 이제 다 나았어!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나 이제 다 나았어!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그래? 잘됐네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋은 아침이야, 비올레트"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋은 아침이야, 비올레트"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "흐음, 어쩐 일로 먼저 연락했을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "머리 아픈 건 괜찮아졌어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "머리 아픈 건 괜찮아졌어?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "뭐야, 말로만 묻는 거야?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그런 건 직접 찾아와서 물어봐야지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안, 지금 갈게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안, 지금 갈게!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "됐. 어."
+      },
+      {
+        "speaker": "비올레트",
+        "message": "엎드려 절 받기 같잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 지금 갈게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 지금 갈게"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "뭐, 굳이 온다면 말리진 않을게"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "영지로 와"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "날 신경 쓰고 있다면, 제대로 성의를 보여"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이, 나랑 해보고 싶은 거 없어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음, 해보고 싶은 거라…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음, 해보고 싶은 거라…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "어머? 대답 느린 것 봐"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "정말 발칙하네"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "바로 떠오르는 게 없어? 하나도?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 많아서 정리가 잘 안돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 많아서 정리가 잘 안돼"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이… 요즘 말발이 좀 는 거 같다?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진심이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진심이야"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "일단 뭐든 좋으니 말해봐"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "답답하게 굴지 말고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같이 걷고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같이 걷고 싶어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "뜸 들인 것 치고, 시시하네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난, 얼굴 볼 수 있어서 좋은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난, 얼굴 볼 수 있어서 좋은데"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "이 반응… 귀염둥이답지 않아"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "말발이 아주 늘었네, 늘었어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 비올레트"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 비올레트"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "걷고 싶다며, 나와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디로 갈까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디로 갈까?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "우리가 처음 만난 곳"
+      },
+      {
+        "speaker": "구원자",
+        "message": "달빛 호숫가!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "달빛 호숫가!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "먼저 걷고 있을게"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "밤이슬이 맺혀서, 공기가 아주 좋네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "밤공기를 좋아하는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "밤공기를 좋아하는구나"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그래, 난 이런 날이 좋아"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "이런 날 너와 걷는 것도"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이, 아직도 적응할 시간이 필요해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니, 지금도 충분해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니, 지금도 충분해"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "근데 왜 나랑 있을 때면"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "내 눈을 똑바로 못 쳐다보는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "에버톡인데도 티나네\r\n잔뜩 당황한게"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "긴장할 필요 없어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "아무 생각 말고, 내게 모든 걸 맡겨"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "넌 내가 이끄는 대로 흐름을 타면 돼"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "나는 원하는 건 꼭 가져야 해"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "지금 내가 제일 원하는 게 뭔지 알아?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "알고 있지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "얘기해줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "얘기해줘"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "후후, 내가 직접 말해주길 원해?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "좋아, 특별히 사랑을 담아 표현해줄게"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "처음 본 순간부터 지금까지"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "계속 쭉 너였어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "널 원해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "날 좋아해 줘서 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "날 좋아해 줘서 고마워"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그러니까 이제, 선택의 시간이야"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "네 마음을 내게 알려줘"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이, 안녕"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 비올레트"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 비올레트"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "후후, 널 위해 특별히 해 줄 얘기가 있어…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 얘기일까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 얘기일까?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "재미 없게 미리 말할 순 없지"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "해가 지면, 호숫가로 와"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "흐음, 귀염둥이"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "내가 알아채지 못할 거라 생각했어?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "네가 날 피하고 있단 거…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "지금도 답장도 없이 읽고만 있구나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴만한 이유가 있었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴만한 이유가 있었어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "긴 말 않겠어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "종달새 숲으로 나와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앗, 지금 회의중인데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앗, 지금 회의중인데…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "나와. 기다릴 거니까"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "이번에도 피하면…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "각오해"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이~?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "…?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "메세지를 봤으면 바로 대답해야지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "입력하는 중이었어!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "입력하는 중이었어!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "약속 잊지 않았지?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "레스토랑으로 와"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "늦. 지. 말. 고. 와."
+      },
+      {
+        "speaker": "구원자",
+        "message": "바로 갈게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "바로 갈게!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "정신이 들어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 그때는 미안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 그때는 미안해"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "미안한 줄은 아네\r\n음식 한 입 먹어놓고 말이야"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "나약하기는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "비올레트",
+        "message": "시간 비워놔"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응? 시간?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응? 시간?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "갈 거니까 시간 비워두라구"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앗, 너무 갑작스러운데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앗, 너무 갑작스러운데…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "난 미리 얘기했어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "도착했을 때, 없기만 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…기다릴게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…기다릴게!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "지금 뭐해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사령부 회의 중이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사령부 회의 중이야"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "흐음, 그렇단 말이지…?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그건, 언제 끝나는데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음, 얼마나 걸리려나…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음, 얼마나 걸리려나…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "곧 성 앞에 도착해"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "나와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직 회의중인데!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직 회의중인데!?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "안 나오면 찾아 갈거야"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "빨. 리. 끝. 내."
+      },
+      {
+        "speaker": "비올레트",
+        "message": "뭐, 보는 이가 많은 곳에서\r\n괴롭혀도 나쁘진 않겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "금방 끝낼게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "금방 끝낼게!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "5분 뒤에 도착이야"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이, 메세지 확인해"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "셋 세기 전에~ 답. 장."
+      },
+      {
+        "speaker": "비올레트",
+        "message": "1"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "2"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅎㅇ!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅎㅇ!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "ㅎㅇ?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "ㅎㅇ!???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "확인! 급해서 그만…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "확인! 급해서 그만…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "푸훗, 귀엽기는"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "다음엔 제대로 눌러"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 그럴게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 그럴게!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "내일 12시, 시가지에서 보는거다?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앗, 무슨 일로?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앗, 무슨 일로?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "만나는데 이유가 필요해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미, 미안"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미, 미안"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "약속 잊지 마"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "이왕이면 공복으로 오고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알겠어! 내일 봐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알겠어! 내일 봐!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "귀염둥이, 오늘이 무슨 날일까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음? 오늘 무슨 날이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음? 오늘 무슨 날이야?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "……뭐야…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "고민하는 성의는 보여야지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "답장이 느리면 싫어할 것 같아서…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "답장이 느리면 싫어할 것 같아서…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "하아, 정말이지…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안… 무슨 날인지 모르겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안… 무슨 날인지 모르겠어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "이렇게 어수룩해서야…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "뭐, 이것도 귀염둥이 매력이니까 넘어가줄게"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "무슨 날인지 한번 맞춰봐"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "내가 뭔가 해주기로 한 날이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔가 해주기로 한 날…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔가 해주기로 한 날…?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "……."
+      },
+      {
+        "speaker": "비올레트",
+        "message": "음. 식."
+      },
+      {
+        "speaker": "구원자",
+        "message": "아…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아…!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "후후, 오늘 밤,\r\n호숫가에서 만나"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "특별한 저녁이 될 거야"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "……."
+      },
+      {
+        "speaker": "비올레트",
+        "message": "…어째서 이런… 선택을 한 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "비올레트… 내 말 좀 들어봐…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "비올레트… 내 말 좀 들어봐…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "…변명은…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "필. 요. 없. 어."
+      },
+      {
+        "speaker": "비올레트",
+        "message": "후후, 귀염둥이…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "내가 말한대로 해주는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당연하지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "당연하지"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "하아, 착하기도 하지"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "그럼… 이제…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "상을 줄 시간이네?"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "후후, 귀염둥이…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "내가 말한대로 해주는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 비올레트가 한 말이니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 비올레트가 한 말이니까"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "하아, 착하기도 하지"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "착한 아이에겐…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "상을 줘야겠네♥"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "특별히 준비했어\r\n우리… 귀염둥이를 위해서♡"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "내 사랑, 잘 가지고 있어\r\n하나도 빠. 짐. 없. 이."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응! 잘 가지고 있을게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응! 잘 가지고 있을게!"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "해피 할로윈, 귀염둥이♡"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "오늘은 어떤 소리를 들려줄래?\r\n이왕이면 특별한 비명이 듣고 싶은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하, 하… 비올레트…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하, 하… 비올레트…"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "오늘을 위해 준비했어"
+      },
+      {
+        "speaker": "비올레트",
+        "message": "후훗, 원한다면 \r\n이거보다 더 특별한 선물… 줄 수 있는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그, 그거 받아도 될까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그, 그거 받아도 될까?"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "비올레트",
+      "en": "Violette",
+      "zh_tw": "薇奧蕾特",
+      "zh_cn": "薇奧蕾特"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "불사형",
+      "en": "Undead",
+      "zh_tw": "不死型",
+      "zh_cn": "不死型"
+    },
+    "class": {
+      "ko": "캐스터",
+      "en": "Caster",
+      "zh_tw": "魔法師",
+      "zh_cn": "魔法師"
+    },
+    "sub_class": {
+      "ko": "디버프",
+      "en": "Debuff",
+      "zh_tw": "減益",
+      "zh_cn": "減益"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "재앙의 숨결",
+        "en": "Breath of Disaster",
+        "zh_tw": "災厄氣息",
+        "zh_cn": "災厄氣息"
+      },
+      "constellation": {
+        "ko": "전갈자리",
+        "en": "Scorpio",
+        "zh_tw": "天蠍座",
+        "zh_cn": "天蠍座"
+      },
+      "union": {
+        "ko": "밤의 일족",
+        "en": "Nightbloods",
+        "zh_tw": "夜之族",
+        "zh_cn": "夜之族"
+      },
+      "cv_ko": {
+        "ko": "정혜원",
+        "en": "Hyewon Jung",
+        "zh_tw": "鄭惠媛",
+        "zh_cn": "鄭惠媛"
+      },
+      "cv_jp": {
+        "ko": "Mie Sonozaki",
+        "en": "Mie Sonozaki",
+        "zh_tw": "Mie Sonozaki",
+        "zh_cn": "Mie Sonozaki"
+      },
+      "like": {
+        "ko": [
+          "구속",
+          "복종"
+        ],
+        "en": [
+          "Restraint",
+          "obedience"
+        ],
+        "zh_tw": [
+          "拘束、服從"
+        ],
+        "zh_cn": [
+          "拘束、服從"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "바람둥이"
+        ],
+        "en": [
+          "Playboys"
+        ],
+        "zh_tw": [
+          "花心鬼"
+        ],
+        "zh_cn": [
+          "花心鬼"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "귀염둥이(구원자) 괴롭히기"
+        ],
+        "en": [
+          "Teasing cutie (Savior)"
+        ],
+        "zh_tw": [
+          "欺負小可愛（救援者）"
+        ],
+        "zh_cn": [
+          "欺負小可愛（救援者）"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "애교 섞인 비음"
+        ],
+        "en": [
+          "Charming twang"
+        ],
+        "zh_tw": [
+          "帶鼻音的撒嬌"
+        ],
+        "zh_cn": [
+          "帶鼻音的撒嬌"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "하아… 구원자가 이렇게 귀여운 사람이라니. 아주 기쁜 일이네. 마음에 쏙 들어.\n\n내 이름은 비올레트. 후훗, 재앙의 숨결이자, 살아 있는 것들의 고통과 절망을 품은 정령이란다.\n\n후후, 내 소개가 무서웠을까? 겁에 질린 얼굴도 아주 귀엽네. 날 너무 두려워하진 말아. 내가 하는 말만 구원자가 잘 듣는다면… 나는 꽤 관대해질 수 있단다. 후훗, 네가 나만의 달링이 된다면, 그보다 더한 것도 해줄 수 있어.\n\n내가 어떤 정령인지 호기심이 생기지 않아? 원한다면 하나 하나, 친절하게, 천천히 가르쳐 줄 의향이 있는데…\n우리… 귀염둥이 생각은 어때?\n\n흐음, 대답이 늦네. 뭐, 좋아. 당장 대답하지 않아도 괜찮아. 시간은 충분하니까. 사랑을 담아서 천천히 구속하고, 제약해줄게. 우리 둘의 생각이 비슷해질 때까지 말이야. 특. 별. 하. 게. 길들여줄테니, 기쁘게 받아들이렴.",
+        "en": "Hahh… I didn't know you were such a cute guy, Savior. I'm very pleased. I really like you.\n\nMy name is Violette. I am the breath of disaster and the Soul harboring the pain and despair of living things.\n\nHehe. Did my self-introduction scare you? Even your scared face looks very cute. Don't be too afraid of me. If you listen to what I say…I could be pretty generous. And if you become my only darling, I could do more than that for you.\n\nAren't you curious about what kind of Soul I am? If you want, I am willing to teach you about it, one by one, kindly and slowly…\nCutie…what do you think?\n\nHmm, you are slow to reply. Well, that's fine. It's okay if you don't answer right away. There's enough time. I will bind and restrain you slowly with my love until the two of us come to think alike. Since you are special, I shall tame you, so accept it with pleasure.",
+        "zh_tw": "哈哈…救援者竟然是這麼可愛的人啊，真令人高興。我很滿意。\n\n我叫薇奧蕾特。呵呵，我是災厄的氣息，蘊含了所有生物的痛苦與絕望的精靈。\n\n呵呵，我的自我介紹很可怕嗎？你害怕的模樣也很可愛呢，不需要太怕我，只要救援者照我說的做…我會寬待你的。呵呵，如果你可以成為專屬於我的愛人，我還可以為你做更多事。\n\n你不好奇我是什麼樣的精靈嗎？你願意的話，我會一個個、親切地、慢慢地告訴你…\n我們…小可愛覺得怎麼樣呢？\n\n嗯哼，回答的太慢了。沒關係，不需要馬上回覆我，還有很多時間。我會用愛慢慢地束縛你、限制你，直到我們兩個的想法雷同。我會特·別·關·照你，你就滿懷欣喜地接受吧。",
+        "zh_cn": "哈哈…救援者竟然是這麼可愛的人啊，真令人高興。我很滿意。\n\n我叫薇奧蕾特。呵呵，我是災厄的氣息，蘊含了所有生物的痛苦與絕望的精靈。\n\n呵呵，我的自我介紹很可怕嗎？你害怕的模樣也很可愛呢，不需要太怕我，只要救援者照我說的做…我會寬待你的。呵呵，如果你可以成為專屬於我的愛人，我還可以為你做更多事。\n\n你不好奇我是什麼樣的精靈嗎？你願意的話，我會一個個、親切地、慢慢地告訴你…\n我們…小可愛覺得怎麼樣呢？\n\n嗯哼，回答的太慢了。沒關係，不需要馬上回覆我，還有很多時間。我會用愛慢慢地束縛你、限制你，直到我們兩個的想法雷同。我會特·別·關·照你，你就滿懷欣喜地接受吧。"
+      },
+      "greeting": {
+        "ko": "후후후, 너는 어떤 비명을 들려줄 거니?",
+        "en": "Hahaha, scream for me, cutie!",
+        "zh_tw": "呵呵呵，你會讓我聽到什麼樣的悲鳴呢？",
+        "zh_cn": "呵呵呵，你會讓我聽到什麼樣的悲鳴呢？"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "네가 날 소환한 자로구나"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "You're the one who summoned me."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "你就是召喚我的人啊"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "你就是召喚我的人啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "귀엽기도 하지"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "How cute."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "還真可愛"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "還真可愛"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "흐음, 내가 언제 내 이름을 불러도 된다고 허락했지?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Well, when did I let you call me by my name?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "哼，我什麼時候準許你叫我的名字了？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "哼，我什麼時候準許你叫我的名字了？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "그렇게 바로 주눅 들면, 재미없지"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "It's no fun if you're intimidated right away."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "這樣就退縮，不好玩"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "這樣就退縮，不好玩"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "후훗, 귀염둥이 같으니라고"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Hehe, you're such a cutie…"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "呵呵，真像小可愛"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "呵呵，真像小可愛"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "넌 가르칠 게 많겠어"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "You have a lot to learn."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "我要教你的可多了"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "我要教你的可多了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "우리, 앞으로 자주 봐"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "I'll see you more often."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "我們，以後常常見面吧"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "我們，以後常常見面吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "구원자?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Savior?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "救援者？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "救援者？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "구원자??"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Savior??"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "救援者？？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "救援者？？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "감히, 내 말을 무시해?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "How dare you ignore me?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "竟敢無視我的訊息？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "竟敢無視我的訊息？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "…"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "하아, 내가 계약한 게 정령술사인지, \r\n바보인지 모르겠네"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Phew, I don't know if I made a contract with a Soul Master\r\nor an idiot."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "哈，跟我立下契約的不知道是精靈術士，\r\n還是笨蛋呢"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "哈，跟我立下契約的不知道是精靈術士，\r\n還是笨蛋呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "지금 만나"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Let's meet right now."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "現在見面吧"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "現在見面吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "사설이… 기네?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "So?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "你的藉口…很多呢？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "你的藉口…很多呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "만나자니까?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Let's meet!"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "我說見面吧？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "我說見面吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "그래, 뭐 좋아"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "All right, fine."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "好，嗯很好"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "好，嗯很好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "언제까지 그렇게 나올 수 있을까?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "I'll see how long you're going to be like that."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "你什麼時候才會聽話呢？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "你什麼時候才會聽話呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "귀염둥이는 무슨 음식을 좋아하지?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "What food do you like, cutie?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "小可愛喜歡什麼食物呢？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "小可愛喜歡什麼食物呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "…정말 따분한 대답이네"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "…What a boring answer."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "…真乏味的回答"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "…真乏味的回答"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "넌 취향이란 거 없어?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "You don't have a preference?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "你沒有喜好嗎？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "你沒有喜好嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "특별히 좋아하는 음식이든 싫어하는 음식이든 뭐라도 있을 거 아냐"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "There's got to be something that you like or even hate."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "不是會有特別喜歡的食物、\r\n討厭的食物之類的嗎"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "不是會有特別喜歡的食物、\r\n討厭的食物之類的嗎"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "흐음, 이 대답은 좀 마음에 드네"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Hm, I like that answer."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "嗯，這個回答讓人有點滿意呢"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "嗯，這個回答讓人有點滿意呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "내 취향을 맞춰주겠단 거지?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "You're trying to match my taste."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "意思是你會配合我的喜好吧？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "意思是你會配合我的喜好吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "후훗, 좋아"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Hehe, awesome."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "呵呵，很好"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "呵呵，很好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "나중에 이 말한 거, 후회하기 없기야"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Don't regret what you just said."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "你說這句之後不準後悔"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "你說這句之後不準後悔"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "귀염둥이, 깨어났어?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Cutie, are you up?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "小可愛，醒來了？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "小可愛，醒來了？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "흐음, 읽었는데 왜 대답이 없지?\r\n무시하는 거야?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Hm, you read it but why is there no answer?\r\nAre you ignoring me?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "嗯，既然讀了為什麼不回覆呢？\r\n是在無視我嗎？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "嗯，既然讀了為什麼不回覆呢？\r\n是在無視我嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "답장하지 않을 거면, 차라리 읽지 않는 게 낫지 않아?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "If you're not going to reply, isn't it better just to not read it?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "既然不回覆的話，乾脆不要讀不是更好？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "既然不回覆的話，乾脆不要讀不是更好？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "뭐야, 너 누구야?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "What, who are you?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "什麼呀，你誰啊？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "什麼呀，你誰啊？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "어째서 귀염둥이 에버톡을 네가 답장하는 거지?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "How come you're replying to cutie's Evertalk?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "為什麼是妳在回小可愛的EverTalk？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "為什麼是妳在回小可愛的EverTalk？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "…여러모로 거슬리는군"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "…You annoy me."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "…各方面都令人反感啊"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "…各方面都令人反感啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "잠깐 맡겨두는 거니까, 잘 데리고 있어"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "I'm leaving him for a while, so take good care of him."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "我就把他暫時託給你保管了，好好帶著"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "我就把他暫時託給你保管了，好好帶著"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "고리타분하게 구는 건 너나 구원자나 똑같네"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "You two are both boring."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "但你跟救援者酸人的方式沒兩樣呢"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "但你跟救援者酸人的方式沒兩樣呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "네 녀석이랑 할 얘긴 더 이상 없으니까\r\n우리 귀염둥이 에버폰 그만 내려놓지?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "I don't have anything to say to you\r\nso why don't you put down his Everphone?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "我跟妳無話可說了，\r\n快放下我小可愛的EverPhone吧？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "我跟妳無話可說了，\r\n快放下我小可愛的EverPhone吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "깨어나면 찾아갈 거라고만 전해"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Just let him know I'll come over when he wakes up."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "他醒來之後，告訴他我會去找他"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "他醒來之後，告訴他我會去找他"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "알겠으니까, 그만 답장해"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "All right, stop replying."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "知道了，妳別再回覆了"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "知道了，妳別再回覆了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "물약 효과는 어때?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "How's the potion doing?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "藥水效果如何？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "藥水效果如何？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "그럼, 당연히 최고여야지"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "It should be great."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "當然，一定很棒"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "當然，一定很棒"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "안경잡이 연금술사한테서 특별히 주문한 건데"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "I made a special order to the alchemist with glasses."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "我特別跟戴眼鏡的鍊金術師訂的"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "我特別跟戴眼鏡的鍊金術師訂的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "얼른 일어나"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Get up right now."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "快好起來"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "快好起來"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "신경 쓰게 하지 말고"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Don't make me worry."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "別讓我擔心"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "別讓我擔心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "그래? 잘됐네"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Oh yeah? Good for you."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "是嗎？太好了"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "是嗎？太好了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "흐음, 어쩐 일로 먼저 연락했을까?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Boy, messaging me before I message you? What a surprise."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "嗯，先聯絡我有什麼事啊？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "嗯，先聯絡我有什麼事啊？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "뭐야, 말로만 묻는 거야?"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Why are you asking me through the phone?"
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "什麼啊，你只用訊息問？"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "什麼啊，你只用訊息問？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "그런 건 직접 찾아와서 물어봐야지"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "You should ask me in person."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "這種事應該要直接來找我問吧"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "這種事應該要直接來找我問吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "됐. 어."
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Don't. Excuse."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "算、了。"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "算、了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "엎드려 절 받기 같잖아"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "It looks like I'm forcing you."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "這樣不就像是我逼你的嗎"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "這樣不就像是我逼你的嗎"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "뭐, 굳이 온다면 말리진 않을게"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "If you insist, I won't stop you."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "反正，你硬要來的話我也不會攔你"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "反正，你硬要來的話我也不會攔你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비올레트",
+          "message": "영지로 와"
+        },
+        "en": {
+          "speaker": "Violette",
+          "message": "Come to the town."
+        },
+        "zh_tw": {
+          "speaker": "薇奧蕾特",
+          "message": "來領地"
+        },
+        "zh_cn": {
+          "speaker": "薇奧蕾特",
+          "message": "來領地"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "레베카",
+          "message": "신기한 광경을 보고 싶어? 그럼 비올레트를 따라서 뒷골목으로 가봐.\n거기 있는 무뢰배들의 얼굴이 전부 보랏빛으로 질리는 걸 볼 수 있을 거야."
+        },
+        "en": {
+          "speaker": "Rebecca",
+          "message": "Want to see something interesting? Then follow Violette to the back alley.\nYou could see the faces of the ruffians there are all getting frightened in purple."
+        },
+        "zh_tw": {
+          "speaker": "瑞貝卡",
+          "message": "想看看神奇的景象嗎？跟著薇奧蕾特去後巷吧。\n你會看到那些無賴之徒都被嚇到臉色發白。"
+        },
+        "zh_cn": {
+          "speaker": "瑞貝卡",
+          "message": "想看看神奇的景象嗎？跟著薇奧蕾特去後巷吧。\n你會看到那些無賴之徒都被嚇到臉色發白。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "비올레트! 내 단골 가게의 샌드위치를 모욕한 숙적!\n내 눈앞에서 최애 샌드위치를 샌드위치였던 것으로 바꿔버렸어…!"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Violette! The arch-rival who insulted my favorite shop's sandwich!\nShe turned my favorite sandwich into a sandwich in name only right before my eyes…!"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "薇奧蕾特！是我的宿敵，她汙辱了我愛店賣的三明治！\n竟然在我眼前把我最愛的三明治換成其他三明治…！"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "薇奧蕾特！是我的宿敵，她汙辱了我愛店賣的三明治！\n竟然在我眼前把我最愛的三明治換成其他三明治…！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "사랑과 복종의 개념… 제게는 생소한 것 같기도 합니다."
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "The concept of love and obedience… It seems unfamiliar to me."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "愛與服從的概念…對我來說也很陌生。"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "愛與服從的概念…對我來說也很陌生。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "네가 날 소환한 자로구나"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You're the one who summoned me."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你就是召喚我的人啊"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你就是召喚我的人啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀엽기도 하지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "How cute."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "還真可愛"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "還真可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 비올레트"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Violette."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，薇奧蕾特"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，薇奧蕾特"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 비올레트"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Violette."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，薇奧蕾特"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，薇奧蕾特"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "흐음, 내가 언제 내 이름을 불러도 된다고 허락했지?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Well, when did I let you call me by my name?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "哼，我什麼時候準許你叫我的名字了？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "哼，我什麼時候準許你叫我的名字了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무례했다면, 사과할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I apologize if I was rude."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "冒犯到妳的話，我向妳道歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "冒犯到妳的話，我向妳道歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무례했다면, 사과할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I apologize if I was rude."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "冒犯到妳的話，我向妳道歉。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "冒犯到妳的話，我向妳道歉。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그렇게 바로 주눅 들면, 재미없지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "It's no fun if you're intimidated right away."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "這樣就退縮，不好玩"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "這樣就退縮，不好玩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그, 그런가…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是、是這樣嗎…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是、是這樣嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그, 그런가…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是、是這樣嗎…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是、是這樣嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "후훗, 귀염둥이 같으니라고"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hehe, you're such a cutie…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，真像小可愛"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，真像小可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "넌 가르칠 게 많겠어"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You have a lot to learn."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我要教你的可多了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我要教你的可多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "우리, 앞으로 자주 봐"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I'll see you more often."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我們，以後常常見面吧"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我們，以後常常見面吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "구원자?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Savior?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "救援者？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "救援者？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "구원자??"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Savior??"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "救援者？？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "救援者？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "감히, 내 말을 무시해?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "How dare you ignore me?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "竟敢無視我的訊息？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "竟敢無視我的訊息？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안, 긴장해서 에버폰을 떨어뜨렸어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry, I got nervous, dropped my Everphone."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，\r\n我太緊張，把EverPhone弄掉了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，\r\n我太緊張，把EverPhone弄掉了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안, 긴장해서 에버폰을 떨어뜨렸어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry, I got nervous, dropped my Everphone."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，\r\n我太緊張，把EverPhone弄掉了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，\r\n我太緊張，把EverPhone弄掉了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "하아, 내가 계약한 게 정령술사인지, \r\n바보인지 모르겠네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Phew, I don't know if I made a contract with a Soul Master\r\nor an idiot."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "哈，跟我立下契約的不知道是精靈術士，\r\n還是笨蛋呢"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "哈，跟我立下契約的不知道是精靈術士，\r\n還是笨蛋呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "할 말이 있는 거 같은데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Seems like you've something to say…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像有話想說…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像有話想說…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "할 말이 있는 거 같은데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Seems like you've something to say…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像有話想說…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像有話想說…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "지금 만나"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Let's meet right now."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "現在見面吧"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "現在見面吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앗, 지금은 일이 있는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, I have work to do now…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，我現在有事…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，我現在有事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앗, 지금은 일이 있는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, I have work to do now…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，我現在有事…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，我現在有事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "사설이… 기네?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "So?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你的藉口…很多呢？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你的藉口…很多呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "만나자니까?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Let's meet!"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我說見面吧？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我說見面吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안! 다음에 보자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry! I'll see you next time."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起！下次見吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起！下次見吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안! 다음에 보자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry! I'll see you next time."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起！下次見吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起！下次見吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그래, 뭐 좋아"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "All right, fine."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "好，嗯很好"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "好，嗯很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "언제까지 그렇게 나올 수 있을까?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I'll see how long you're going to be like that."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你什麼時候才會聽話呢？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你什麼時候才會聽話呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이는 무슨 음식을 좋아하지?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "What food do you like, cutie?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛喜歡什麼食物呢？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛喜歡什麼食物呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 다 잘 먹어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can eat anything."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不挑食"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不挑食"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 다 잘 먹어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can eat anything."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不挑食"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不挑食"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "…정말 따분한 대답이네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…What a boring answer."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "…真乏味的回答"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "…真乏味的回答"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "넌 취향이란 거 없어?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You don't have a preference?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你沒有喜好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你沒有喜好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "특별히 좋아하는 음식이든 싫어하는 음식이든 뭐라도 있을 거 아냐"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "There's got to be something that you like or even hate."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "不是會有特別喜歡的食物、\r\n討厭的食物之類的嗎"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "不是會有特別喜歡的食物、\r\n討厭的食物之類的嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "비올레트가 먹고 싶은 걸로!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Anything Violette wants to eat!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就吃薇奧蕾特想吃的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就吃薇奧蕾特想吃的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "비올레트가 먹고 싶은 걸로!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Anything Violette wants to eat!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就吃薇奧蕾特想吃的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就吃薇奧蕾特想吃的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "흐음, 이 대답은 좀 마음에 드네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hm, I like that answer."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯，這個回答讓人有點滿意呢"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯，這個回答讓人有點滿意呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "내 취향을 맞춰주겠단 거지?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You're trying to match my taste."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "意思是你會配合我的喜好吧？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "意思是你會配合我的喜好吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, that's right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, that's right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "후훗, 좋아"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hehe, awesome."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，很好"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "나중에 이 말한 거, 후회하기 없기야"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't regret what you just said."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你說這句之後不準後悔"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你說這句之後不準後悔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이, 깨어났어?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Cutie, are you up?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，醒來了？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，醒來了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "흐음, 읽었는데 왜 대답이 없지?\r\n무시하는 거야?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hm, you read it but why is there no answer?\r\nAre you ignoring me?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯，既然讀了為什麼不回覆呢？\r\n是在無視我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯，既然讀了為什麼不回覆呢？\r\n是在無視我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "답장하지 않을 거면, 차라리 읽지 않는 게 낫지 않아?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "If you're not going to reply, isn't it better just to not read it?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "既然不回覆的話，乾脆不要讀不是更好？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "既然不回覆的話，乾脆不要讀不是更好？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님은 아직 주무시고 계십니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior is still asleep."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者還在休息"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者還在休息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "뭐야, 너 누구야?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "What, who are you?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "什麼呀，你誰啊？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "什麼呀，你誰啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "메피스토펠레스입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "It's me, Mephistopheles."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我是梅菲斯托佩萊斯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我是梅菲斯托佩萊斯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "어째서 귀염둥이 에버톡을 네가 답장하는 거지?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "How come you're replying to cutie's Evertalk?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "為什麼是妳在回小可愛的EverTalk？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "為什麼是妳在回小可愛的EverTalk？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "실례인 건 알지만"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I know it's rude,"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我知道這很失禮"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我知道這很失禮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님의 에버폰이 계속 울려서\r\n확인을 안할 수가 없었습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "But Savior's Everphone kept ringing\r\nso I couldn't help but check it."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "不過救援者的EverTalk一直在響，\r\n所以我沒辦法不看"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "不過救援者的EverTalk一直在響，\r\n所以我沒辦法不看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "…여러모로 거슬리는군"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…You annoy me."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "…各方面都令人反感啊"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "…各方面都令人反感啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "잠깐 맡겨두는 거니까, 잘 데리고 있어"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I'm leaving him for a while, so take good care of him."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我就把他暫時託給你保管了，好好帶著"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我就把他暫時託給你保管了，好好帶著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "…구원자님은 맡기는 물건 같은 게 아닙니다만"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…Savior is not just a thing you can leave."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…救援者不是可以被保管的物品。"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…救援者不是可以被保管的物品。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "고리타분하게 구는 건 너나 구원자나 똑같네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You two are both boring."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "但你跟救援者酸人的方式沒兩樣呢"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "但你跟救援者酸人的方式沒兩樣呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "네 녀석이랑 할 얘긴 더 이상 없으니까\r\n우리 귀염둥이 에버폰 그만 내려놓지?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I don't have anything to say to you\r\nso why don't you put down his Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我跟妳無話可說了，\r\n快放下我小可愛的EverPhone吧？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我跟妳無話可說了，\r\n快放下我小可愛的EverPhone吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "깨어나면 찾아갈 거라고만 전해"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Just let him know I'll come over when he wakes up."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "他醒來之後，告訴他我會去找他"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "他醒來之後，告訴他我會去找他"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "네, 구원자님께서 깨어나시면\r\n말씀 전해드리겠습니다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure. When Savior wakes up,\r\nI'll let him know."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好的，救援者醒來後，\r\n我會轉告他的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好的，救援者醒來後，\r\n我會轉告他的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "알겠으니까, 그만 답장해"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "All right, stop replying."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "知道了，妳別再回覆了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "知道了，妳別再回覆了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "물약 효과는 어때?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "How's the potion doing?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "藥水效果如何？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "藥水效果如何？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "최고야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's great!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "效果超的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "效果超的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "최고야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's great!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "效果超棒的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "效果超棒的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그럼, 당연히 최고여야지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "It should be great."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "當然，一定很棒"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "當然，一定很棒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "안경잡이 연금술사한테서 특별히 주문한 건데"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I made a special order to the alchemist with glasses."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我特別跟戴眼鏡的鍊金術師訂的"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我特別跟戴眼鏡的鍊金術師訂的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신경 써줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for caring."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳這麼擔心我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳這麼擔心我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신경 써줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for caring."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳這麼擔心我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳這麼擔心我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "얼른 일어나"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Get up right now."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "快好起來"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "快好起來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "신경 쓰게 하지 말고"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't make me worry."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "別讓我擔心"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "別讓我擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나 이제 다 나았어!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm all healed now!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我現在全好了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我現在全好了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나 이제 다 나았어!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm all healed now!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我現在全好了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我現在全好了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그래? 잘됐네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Oh yeah? Good for you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "是嗎？太好了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "是嗎？太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋은 아침이야, 비올레트"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Good morning, Violette."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "早上好，薇奧蕾特"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "早上好，薇奧蕾特"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋은 아침이야, 비올레트"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Good morning, Violette."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "早上好，薇奧蕾特"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "早上好，薇奧蕾特"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "흐음, 어쩐 일로 먼저 연락했을까?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Boy, messaging me before I message you? What a surprise."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯，先聯絡我有什麼事啊？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯，先聯絡我有什麼事啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "머리 아픈 건 괜찮아졌어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How's your headache?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳的頭痛好了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳的頭痛好了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "머리 아픈 건 괜찮아졌어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How's your headache?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳的頭痛好了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳的頭痛好了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "뭐야, 말로만 묻는 거야?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Why are you asking me through the phone?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "什麼啊，你只用訊息問？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "什麼啊，你只用訊息問？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그런 건 직접 찾아와서 물어봐야지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You should ask me in person."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "這種事應該要直接來找我問吧"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "這種事應該要直接來找我問吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안, 지금 갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry, I'm on my way!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，馬上過去！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，馬上過去！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안, 지금 갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry, I'm on my way!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，馬上過去！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，馬上過去！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "됐. 어."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't. Excuse."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "算、了。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "算、了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "엎드려 절 받기 같잖아"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "It looks like I'm forcing you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "這樣不就像是我逼你的嗎"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "這樣不就像是我逼你的嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 지금 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Even so, I'm coming."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我還是現在過去吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我還是現在過去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 지금 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Even so, I'm coming."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我還是現在過去吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我還是現在過去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "뭐, 굳이 온다면 말리진 않을게"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "If you insist, I won't stop you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "反正，你硬要來的話我也不會攔你"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "反正，你硬要來的話我也不會攔你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "영지로 와"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Come to the town."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "來領地"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "來領地"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "날 신경 쓰고 있다면, 제대로 성의를 보여"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "If you care about me, show your sincerity."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "擔心我的話，就好好展現你的誠意"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "擔心我的話，就好好展現你的誠意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이, 나랑 해보고 싶은 거 없어?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Cutie, is there anything you want to do with me?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，有什麼事情是想和我一起的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，有什麼事情是想和我一起的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음, 해보고 싶은 거라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm, anything I want to do…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，想一起做的啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，想一起做的啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음, 해보고 싶은 거라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm, anything I want to do…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，想一起做的啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，想一起做的啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "어머? 대답 느린 것 봐"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Wow! Look how slow you reply."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "哎唷？看你回得這麼慢"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "哎唷？看你回得這麼慢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "정말 발칙하네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "How sassy."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "真放肆啊"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "真放肆啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "바로 떠오르는 게 없어? 하나도?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You can't think of anything right away? Not even one thing?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "沒馬上想到的？一個也沒有？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "沒馬上想到的？一個也沒有？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 많아서 정리가 잘 안돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There are too many things, so it's hard to choose."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太多了，所以整理不出頭緒來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太多了，所以整理不出頭緒來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 많아서 정리가 잘 안돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There are too many things, so it's hard to choose."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太多了，所以整理不出頭緒來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太多了，所以整理不出頭緒來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이… 요즘 말발이 좀 는 거 같다?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Cutie… You're getting better at talking."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛…最近好像會開玩笑了啊？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛…最近好像會開玩笑了啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진심이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I mean it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我是認真的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我是認真的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진심이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I mean it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我是認真的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我是認真的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "일단 뭐든 좋으니 말해봐"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Just tell me anything."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "是什麼都行，先說看看"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "是什麼都行，先說看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "답답하게 굴지 말고"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't stall so much."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "別急死人了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "別急死人了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같이 걷고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to take a walk with you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想跟妳一起散步"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想跟妳一起散步"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같이 걷고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to take a walk with you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想跟妳一起散步"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想跟妳一起散步"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "뜸 들인 것 치고, 시시하네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Boring, considering how long you've stalled."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "以你賣的關子來說，挺微不足道的"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "以你賣的關子來說，挺微不足道的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난, 얼굴 볼 수 있어서 좋은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like it because I can see you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我只要能看到妳的臉就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我只要能看到妳的臉就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난, 얼굴 볼 수 있어서 좋은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like it because I can see you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我只要能看到妳的臉就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我只要能看到妳的臉就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "이 반응… 귀염둥이답지 않아"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "This reaction… It's not the usual cutie I know."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "這反應…不像小可愛"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "這反應…不像小可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "말발이 아주 늘었네, 늘었어"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You've become a smooth talker."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "口才進步了呢，進步了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "口才進步了呢，進步了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Cutie."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 비올레트"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, Violette."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，薇奧蕾特"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，薇奧蕾特"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 비올레트"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, Violette."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，薇奧蕾特"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，薇奧蕾特"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "걷고 싶다며, 나와"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Come out. You said you want to walk."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "不是說想散步，出來"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "不是說想散步，出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디로 갈까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where should we meet?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要去哪？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要去哪？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디로 갈까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where should we meet?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要去哪？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要去哪？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "우리가 처음 만난 곳"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "The place where we first met."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我們初次見面的地方"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我們初次見面的地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "달빛 호숫가!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Moonlit Lakeside!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "月光湖畔！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "月光湖畔！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "달빛 호숫가!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Moonlit Lakeside!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "月光湖畔！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "月光湖畔！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "먼저 걷고 있을게"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I'll be taking a walk first."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我邊散步邊等你"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我邊散步邊等你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "밤이슬이 맺혀서, 공기가 아주 좋네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "The air is very nice because of the night dew."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "因為晚上露珠凝結，所以空氣非常好啊"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "因為晚上露珠凝結，所以空氣非常好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "밤공기를 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You like the air at night."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來妳喜歡夜晚的空氣啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來妳喜歡夜晚的空氣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "밤공기를 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You like the air at night."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來妳喜歡夜晚的空氣啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來妳喜歡夜晚的空氣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그래, 난 이런 날이 좋아"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Yeah, I like this kind of day"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "是啊，我喜歡這樣的天氣"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "是啊，我喜歡這樣的天氣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "이런 날 너와 걷는 것도"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "and walking with you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "也喜歡在這樣的天氣跟你一起散步"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "也喜歡在這樣的天氣跟你一起散步"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이, 아직도 적응할 시간이 필요해?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Cutie, do you still need time to adjust?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，還需要適應的時間嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，還需要適應的時間嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니, 지금도 충분해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really, I've had enough time to do so."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不，已經夠了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不，已經夠了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니, 지금도 충분해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really, I've had enough time to do so."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不，已經夠了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不，已經夠了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "근데 왜 나랑 있을 때면"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Then when you're with me,"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "但是為什麼你和我在一起的時候"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "但是為什麼你和我在一起的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "내 눈을 똑바로 못 쳐다보는 거야?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "why can't you look me in the eye?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "沒辦法直視我的眼睛呢？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "沒辦法直視我的眼睛呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But that's…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But that's…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "에버톡인데도 티나네\r\n잔뜩 당황한게"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I can feel you're taken aback\r\neven through Evertalk."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "噗哧，EverTalk也會漏餡\r\n真令人慌張"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "噗哧，EverTalk也會漏餡\r\n真令人慌張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "긴장할 필요 없어"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't be so nervous."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "別緊張"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "別緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "아무 생각 말고, 내게 모든 걸 맡겨"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't think about anything, leave everything to me."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "什麼都不要想，把所有的事都交給我"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "什麼都不要想，把所有的事都交給我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "넌 내가 이끄는 대로 흐름을 타면 돼"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Just let things flow as I lead."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你只要跟隨我的引導就可以了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你只要跟隨我的引導就可以了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "나는 원하는 건 꼭 가져야 해"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I should get what I want."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我想要的就一定要擁有"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我想要的就一定要擁有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "지금 내가 제일 원하는 게 뭔지 알아?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Do you know what I want the most right now?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你知道我現在最想要的是什麼嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你知道我現在最想要的是什麼嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "알고 있지?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You know what it is, right?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "知道吧？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "知道吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "얘기해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Tell me."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "告訴我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "얘기해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Tell me."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "告訴我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "후후, 내가 직접 말해주길 원해?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You want me to tell you directly?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，想要我直接告訴你嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，想要我直接告訴你嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "좋아, 특별히 사랑을 담아 표현해줄게"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Fine, I'll express it lovingly."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "好，我就特別用愛表達給你看"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "好，我就特別用愛表達給你看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "처음 본 순간부터 지금까지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "From the moment I first saw you until now,"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "從第一次看到你的瞬間開始到現在為止"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "從第一次看到你的瞬間開始到現在為止"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "계속 쭉 너였어"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "it's always been you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "一直都是你"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "一直都是你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "널 원해"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I want you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "想要的是你"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "想要的是你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "날 좋아해 줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you for liking me."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝你喜歡我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝你喜歡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "날 좋아해 줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you for liking me."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝你喜歡我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝你喜歡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그러니까 이제, 선택의 시간이야"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "So now, it's time to make a choice."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "到了該做出選擇的時候了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "到了該做出選擇的時候了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "네 마음을 내게 알려줘"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Tell me how you feel."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "讓我知道你的心意"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "讓我知道你的心意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이, 안녕"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hi, cutie."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，你好"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，你好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 비올레트"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Violette."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，薇奧蕾特"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，薇奧蕾特"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 비올레트"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Violette."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，薇奧蕾特"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，薇奧蕾特"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "후후, 널 위해 특별히 해 줄 얘기가 있어…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hehe, I have a special story just for you…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，我有話要特別跟你說…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，我有話要特別跟你說…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 얘기일까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是什麼話？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是什麼話？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 얘기일까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是什麼話？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是什麼話？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "재미 없게 미리 말할 순 없지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I can't spoil it, that's no fun."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "不能這麼無趣地提前告訴你啊"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "不能這麼無趣地提前告訴你啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "해가 지면, 호숫가로 와"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "When the sun goes down, come to the lake."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "太陽下山之後，到湖邊來。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "太陽下山之後，到湖邊來。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "흐음, 귀염둥이"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hm, cutie…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯哼，小可愛"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯哼，小可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "내가 알아채지 못할 거라 생각했어?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You thought I wouldn't notice?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你以為我沒察覺到嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你以為我沒察覺到嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "네가 날 피하고 있단 거…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "That you're avoiding me…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你在躲我…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你在躲我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "지금도 답장도 없이 읽고만 있구나?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You read my messages, but don't reply, don't you?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "現在也不回覆，已讀不回嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "現在也不回覆，已讀不回嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴만한 이유가 있었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There was a reason."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會這樣做是有理由的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會這樣做是有理由的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴만한 이유가 있었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There was a reason."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會這樣做是有理由的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會這樣做是有理由的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "긴 말 않겠어"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I won't say much."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我不想多說了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我不想多說了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "종달새 숲으로 나와"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Come to the Skylark Forest."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "來雲雀之林吧"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "來雲雀之林吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앗, 지금 회의중인데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh, I'm in the middle of a meeting…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，我現在在開會耶…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，我現在在開會耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앗, 지금 회의중인데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh, I'm in the middle of a meeting…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，我現在在開會耶…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，我現在在開會耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "나와. 기다릴 거니까"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I said come. I'll be waiting."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "出來，我等你"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "出來，我等你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "이번에도 피하면…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "If you avoid me again…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "這次也躲我的話…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "這次也躲我的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "각오해"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Get ready."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "就做好覺悟吧"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "就做好覺悟吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이~?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hey, cutie-pie?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛～？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛～？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "메세지를 봤으면 바로 대답해야지?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "When you read my message, you should answer me right away."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "讀了訊息就要馬上回覆吧？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "讀了訊息就要馬上回覆吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "입력하는 중이었어!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was typing!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我剛剛在輸入！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我剛剛在輸入！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "입력하는 중이었어!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was typing!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我剛剛在輸入！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我剛剛在輸入！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "약속 잊지 않았지?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You didn't forget, right?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "沒忘記我們的約定吧？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "沒忘記我們的約定吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "레스토랑으로 와"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Come to the restaurant."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "來餐廳"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "來餐廳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "늦. 지. 말. 고. 와."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't. Be. Late. And. Come."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "不、要、遲、到、了。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "不、要、遲、到、了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "바로 갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm coming right now!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上過去！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上過去！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "바로 갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm coming right now!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上過去！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上過去！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "정신이 들어?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You okay?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你醒了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你醒了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 그때는 미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, sorry about that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，我很抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，我很抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 그때는 미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, sorry about that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，我很抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，我很抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "미안한 줄은 아네\r\n음식 한 입 먹어놓고 말이야"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "At least you're sorry.\r\nYou only had a bite."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你也知道對不起啊。\r\n只吃一口食物就丟在那"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你也知道對不起啊。\r\n只吃一口食物就丟在那"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "나약하기는"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Pathetic."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "真脆弱"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "真脆弱"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "시간 비워놔"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Clear your schedule."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "把時間空出來"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "把時間空出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응? 시간?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh? Schedule?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？時間？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？時間？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응? 시간?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh? Schedule?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？時間？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？時間？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "갈 거니까 시간 비워두라구"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I'll be there, so clear your schedule."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我會過去，所以你把時間空出來"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我會過去，所以你把時間空出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앗, 너무 갑작스러운데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, this is so sudden…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，太突然了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，太突然了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앗, 너무 갑작스러운데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, this is so sudden…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，太突然了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，太突然了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "난 미리 얘기했어"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I told you in advance."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我話說在前頭"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我話說在前頭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "도착했을 때, 없기만 해"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You'd better be there when I arrive."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我到的時候，你最好人在那裡"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我到的時候，你最好人在那裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…기다릴게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…I'll wait!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…我會等妳的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…我會等妳的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…기다릴게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…I'll wait!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…我會等你的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…我會等你的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "지금 뭐해?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "What are you doing?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "在做什麼？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "在做什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사령부 회의 중이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm in a headquarters meeting."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "正在進行司令部會議"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "正在進行司令部會議"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사령부 회의 중이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm in a headquarters meeting."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "正在進行司令部會議"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "正在進行司令部會議"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "흐음, 그렇단 말이지…?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hm, you are…?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯哼，這樣啊…？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "嗯哼，這樣啊…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그건, 언제 끝나는데?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "When does it end?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "那個，什麼時候結束？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "那個，什麼時候結束？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음, 얼마나 걸리려나…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Um, how long will it take…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，要多久呢…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，要多久呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음, 얼마나 걸리려나…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Um, how long will it take…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，要多久呢…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，要多久呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "곧 성 앞에 도착해"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I'll be at the castle soon."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我馬上就要到城的前方了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我馬上就要到城的前方了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "나와"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Come out."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "出來"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직 회의중인데!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But… I'm still in a meeting!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我還在開會耶！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我還在開會耶！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직 회의중인데!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But… I'm still in a meeting!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我還在開會耶！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我還在開會耶！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "안 나오면 찾아 갈거야"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "If you don't come out, I'll come up."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "不出來的話我就去找你"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "不出來的話我就去找你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "빨. 리. 끝. 내."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hurry. Up. Finish. Quickly."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "快、點、結、束。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "快、點、結、束。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "뭐, 보는 이가 많은 곳에서\r\n괴롭혀도 나쁘진 않겠네"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Well, in a place with a lot of people watching,\r\nit's not such a bad idea to pick on you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "反正，在大家面前\r\n欺負你好像也不錯。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "反正，在大家面前\r\n欺負你好像也不錯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "금방 끝낼게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上結束！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上結束！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "금방 끝낼게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上結束！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上結束！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "5분 뒤에 도착이야"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Give me 5 minutes."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "五分鐘後我就到了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "五分鐘後我就到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이, 메세지 확인해"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Check the message, cutie."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，看訊息"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，看訊息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "셋 세기 전에~ 답. 장."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Before I count to three… Answer. Me."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "數到三之前～回、話。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "數到三之前～回、話。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "1"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "1"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "一"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "一"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "2"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "2"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "二"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "二"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅎㅇ!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "ㄎㄉㄌ！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "ㄎㄉㄌ！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅎㅇ!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "ㄎㄉㄌ！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "ㄎㄉㄌ！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "ㅎㅇ?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hi?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "ㄎㄉㄌ？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "ㄎㄉㄌ？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "ㅎㅇ!???"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hi?!!"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "ㄎㄉㄌ！？？？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "ㄎㄉㄌ！？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "확인! 급해서 그만…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Checked! I was in a hurry…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看到了！有急事所以我先…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看到了！有急事所以我先…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "확인! 급해서 그만…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Checked! I was in a hurry…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看到了！有急事所以我先…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看到了！有急事所以我先…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "푸훗, 귀엽기는"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Pfft, that's cute."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "噗哧，好可愛"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "噗哧，好可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "다음엔 제대로 눌러"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Next time, answer well."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "下次好好打字"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "下次好好打字"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 그럴게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay, I will!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，我會的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，我會的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 그럴게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay, I will!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，我會的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，我會的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "내일 12시, 시가지에서 보는거다?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "See you tomorrow at 12 in the city!"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "明天12點，在市區見？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "明天12點，在市區見？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앗, 무슨 일로?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Uh, why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，有什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，有什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앗, 무슨 일로?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Uh, why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊，有什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊，有什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "만나는데 이유가 필요해?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Do we need a reason to meet?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "見面需要理由？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "見面需要理由？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미, 미안"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I-I'm sorry."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對、對不起"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對、對不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미, 미안"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I-I'm sorry."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對、對不起"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對、對不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "약속 잊지 마"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't forget."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "別忘了約定"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "別忘了約定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "이왕이면 공복으로 오고"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "And try not to eat anything before then."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "既然這樣就空腹來"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "既然這樣就空腹來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알겠어! 내일 봐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Got it! See you tomorrow!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了！明天見！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了！明天見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알겠어! 내일 봐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Got it! See you tomorrow!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了！明天見！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了！明天見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "귀염둥이, 오늘이 무슨 날일까?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Cutie, do you know what day today is?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，今天是什麼日子呢？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "小可愛，今天是什麼日子呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음? 오늘 무슨 날이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Umm? Today?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？今天是什麼日子？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？今天是什麼日子？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음? 오늘 무슨 날이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Umm? Today?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？今天是什麼日子？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？今天是什麼日子？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "……뭐야…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…What…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "……什麼啊…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "……什麼啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "고민하는 성의는 보여야지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You should at least act like you're thinking."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "至少要讓我看到你動腦想吧"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "至少要讓我看到你動腦想吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "답장이 느리면 싫어할 것 같아서…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I thought you wouldn't like it if I don't reply immediately…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像不太喜歡我回得太慢…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像不太喜歡我回得太慢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "답장이 느리면 싫어할 것 같아서…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I thought you wouldn't like it if I don't reply immediately…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像不太喜歡我回得太慢…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像不太喜歡我回得太慢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "하아, 정말이지…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Phew, you are so…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "唉，真的嗎…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "唉，真的嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안… 무슨 날인지 모르겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry… I don't know what day it is."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起…我不知道是什麼日子"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起…我不知道是什麼日子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안… 무슨 날인지 모르겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry… I don't know what day it is."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起…我不知道是什麼日子"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起…我不知道是什麼日子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "이렇게 어수룩해서야…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "You're so naive…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "這麼傻要怎麼…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "這麼傻要怎麼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "뭐, 이것도 귀염둥이 매력이니까 넘어가줄게"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Well, this is also your charm, so I'll let it slide."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "算了，這也算是小可愛的魅力，就不多說了"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "算了，這也算是小可愛的魅力，就不多說了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "무슨 날인지 한번 맞춰봐"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Guess what day is it."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "猜猜看是什麼日子"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "猜猜看是什麼日子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "내가 뭔가 해주기로 한 날이야"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I'm supposed to do something for you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "是我說好要做什麼的日子"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "是我說好要做什麼的日子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔가 해주기로 한 날…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A day you're supposed to do something for me…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說好要做什麼的日子…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說好要做什麼的日子…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔가 해주기로 한 날…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A day you're supposed to do something for me…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說好要做什麼的日子…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說好要做什麼的日子…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "음. 식."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Umm. To eat."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "料、理。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "料、理。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh…!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh…!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "啊…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "啊…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "후후, 오늘 밤,\r\n호숫가에서 만나"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Tonight,\r\nI'll see you by the lake."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，今晚，\r\n湖邊見"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，今晚，\r\n湖邊見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "특별한 저녁이 될 거야"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "It's going to be a special night."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "會是很特別的一晚的"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "會是很特別的一晚的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "…어째서 이런… 선택을 한 거야?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…Why did you make this choice?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "…怎麼會…做出這種選擇呢？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "…怎麼會…做出這種選擇呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "비올레트… 내 말 좀 들어봐…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Violette… Please listen to me…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "薇奧蕾特…你聽我說…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "薇奧蕾特…你聽我說…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "비올레트… 내 말 좀 들어봐…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Violette… Please listen to me…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "薇奧蕾特…你聽我說…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "薇奧蕾特…你聽我說…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "…변명은…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "…I"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "…不需要…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "…不需要…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "필. 요. 없. 어."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Don't. Need. Any. Excuse."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你、的、辯、解。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你、的、辯、解。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "후후, 귀염둥이…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hehe, cutie…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，小可愛…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，小可愛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "내가 말한대로 해주는 거야?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Are you going to do as I say?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你會照我說的做？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你會照我說的做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당연하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "당연하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "當然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "當然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "하아, 착하기도 하지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Awww, how nice of you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "哈哈，很乖嘛"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "哈哈，很乖嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "그럼… 이제…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Then…now…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "那…現在…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "那…現在…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "상을 줄 시간이네?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I have to give you a reward."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "是獎勵時間呢？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "是獎勵時間呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "후후, 귀염둥이…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hehe, cutie…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，小可愛…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "呵呵，小可愛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "내가 말한대로 해주는 거야?"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Are you going to do as I say?"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "你會照我說的做？"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "你會照我說的做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 비올레트가 한 말이니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, anything you want."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，因為是薇奧蕾特說的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，因為是薇奧蕾特說的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 비올레트가 한 말이니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, anything you want."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，因為是薇奧蕾特說的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，因為是薇奧蕾特說的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "하아, 착하기도 하지"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Awww, how nice of you."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "哈哈，很乖嘛"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "哈哈，很乖嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "착한 아이에겐…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "A good kid like you…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "看來要給乖孩子…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "看來要給乖孩子…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "상을 줘야겠네♥"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "deserves a reward ♥"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "獎勵呢♥"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "獎勵呢♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "특별히 준비했어\r\n우리… 귀염둥이를 위해서♡"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I've specially prepared this.\r\nFor my…Cutie♡"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我特別準備了\r\n為了我們…小可愛♡"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我特別準備了\r\n為了我們…小可愛♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "내 사랑, 잘 가지고 있어\r\n하나도 빠. 짐. 없. 이."
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hold on to my love.\r\nEvery. Single. One."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我的愛，好好保管\r\n一、個、都、不、漏。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我的愛，好好保管\r\n一、個、都、不、漏。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응! 잘 가지고 있을게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup! I'll hold on to them!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯！我會好好保管的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯！我會好好保管的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응! 잘 가지고 있을게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup! I'll hold on to them!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯！我會好好保管的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯！我會好好保管的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "해피 할로윈, 귀염둥이♡"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Happy Halloween, cutie♡"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "萬聖節快樂，小可愛♡"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "萬聖節快樂，小可愛♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "오늘은 어떤 소리를 들려줄래?\r\n이왕이면 특별한 비명이 듣고 싶은데"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "What will you let me hear today?\r\nI fancy a special scream today."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "今天要讓我聽什麼聲音？\r\n既然如此，我想聽特別的慘叫聲。"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "今天要讓我聽什麼聲音？\r\n既然如此，我想聽特別的慘叫聲。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하, 하… 비올레트…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Ah, ha… Violette…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哈，哈…薇奧蕾特…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哈，哈…薇奧蕾特…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하, 하… 비올레트…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Ah, ha… Violette…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哈，哈…薇奧蕾特…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哈，哈…薇奧蕾特…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "오늘을 위해 준비했어"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "I've prepared this for today."
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "我為了今天準備的"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "我為了今天準備的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "비올레트",
+            "message": "후훗, 원한다면 \r\n이거보다 더 특별한 선물… 줄 수 있는데…"
+          },
+          "en": {
+            "speaker": "Violette",
+            "message": "Hehe, if you want,\r\nI can give you… Something more special…"
+          },
+          "zh_tw": {
+            "speaker": "薇奧蕾特",
+            "message": "呼呼，如果你要的話\r\n我可以給你…比這個更特別的禮物…"
+          },
+          "zh_cn": {
+            "speaker": "薇奧蕾特",
+            "message": "呼呼，如果你要的話\r\n我可以給你…比這個更特別的禮物…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그, 그거 받아도 될까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "C-can I take that?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我、我可以收下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我、我可以收下嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그, 그거 받아도 될까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "C-can I take that?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我、我可以收下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我、我可以收下嗎？"
+          }
+        }
+      ]
+    }
+  }
+}

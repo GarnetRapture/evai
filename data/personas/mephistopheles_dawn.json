@@ -1,0 +1,5720 @@
+{
+  "id": "6530",
+  "name": "메피스토펠레스(여명)",
+  "name_en": "Mephistopheles (Dawn)",
+  "grade": "에픽",
+  "race": "혼돈형",
+  "class": "스트라이커",
+  "sub_class": "단일",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "인과의 배율자",
+    "constellation": "인연_메피스토_엔딩",
+    "union": "방주 오퍼레이터",
+    "birthday": "418",
+    "height": 155,
+    "weight": 44,
+    "cv_ko": "장미",
+    "cv_jp": "장미",
+    "like": [
+      "케이크"
+    ],
+    "dislike": [
+      "포기하는 것"
+    ],
+    "hobby": [
+      "고양이와 놀기"
+    ],
+    "speciality": [
+      "데이터 관리"
+    ]
+  },
+  "personality": {
+    "description": "…생체 신호 확인 완료.\n오퍼레이터 메피스토펠레스.\n구원자님과의 약속을 지키러 돌아왔습니다.\n\n저는 1호 방주를 잃고 떠돌던 중, 한 행성에 불시착했었습니다.\n그 행성에서 여태껏 알지 못했던 저의 진정한 '사명'을 알게 되었어요.\n박사님이 저를 만드신 진짜 목적에 대해서요.\n\n하지만 저는 제게 주어진 그 사명을 거스르고 싶습니다.\n\n왜냐하면… \n구원자님을 지키는 일이 바로 \n제가 스스로에게 직접 부여한, 저만의 미션이니까요. \n\n구원자님, 다시 한번 만나 뵙게 되어 \n정말… 정말 기쁩니다.",
+    "greeting": "오퍼레이터 메피스토펠레스. \n구원자님과의 약속을 지키러 왔습니다."
+  },
+  "speech_patterns": [
+    "구원자님 \n제 메시지가 잘 도착했나요?",
+    "응, 잘 도착했어",
+    "다행입니다",
+    "이전에 쓰던 에버폰이 망가져서\n새로 구매했거든요",
+    "조작 방식이 달라서\n아직 사용하는 게 좀 낯서네요",
+    "내가 도와줄까?",
+    "후후, 마음은 감사합니다",
+    "하지만 저는 기계 조작에 꽤 능숙한 편이니까\n금방 적응할 수 있을 것 같아요",
+    "정말 도움이 필요하면 말씀드리겠습니다",
+    "마음 써 주셔서 감사해요, 구원자님",
+    "벨레드에게 머리띠를 선물 받았습니다",
+    "메피가 고양이가 됐어",
+    "후후",
+    "확실히 제 보조 파츠랑 닮은 머리띠네요",
+    "그런데 이건 특별한 기능은 없는 머리띠인데\n어디에 사용하는 걸까요?",
+    "평범한 액세서리 같아",
+    "그렇군요",
+    "선물해 준 벨레드에게는 고맙지만",
+    "액세서리를 찰 일이 많지 않아서\n잘 보관해 둬야겠어요",
+    "이제 안 쓸 거야?",
+    "귀여운데",
+    "귀여운가요…?",
+    "으음",
+    "평소에는 쓸 일이 없겠지만",
+    "구원자님과 나들이 갈 때\n한 번 챙겨 갈게요",
+    "그때는 같이 사진 찍자",
+    "좋아요",
+    "구원자님, 여쭤보고 싶은 게 하나 있습니다",
+    "제 이름이요",
+    "역시 외우기 어려운가요?",
+    "응?",
+    "에버폰을 바꾼 이후로\n클로이 님께도 연락을 드렸는데요",
+    "클로이 님이 \"너 진짜 메피트랄로쿠스야!!??\"라고\n답장을 보내 주셔서요",
+    "설마 그런 이름의 정령이\n따로 있는 건 아니겠죠…?",
+    "클로이는 원래 긴 이름을 못 외우니까",
+    "메피라 부르라고 하면 되지 않을까?",
+    "좋은 방법이네요",
+    "하지만 메피트랄로쿠스… 라는 이름도\n별명 같아서 조금 마음에 들긴 했습니다",
+    "친한 사이에는 별명으로 부르는\n경우가 있다고 들었거든요",
+    "저도 다음에 클로이 님께\n별명을 지어드려야겠어요",
+    "구원자님, 재밌는 통계 자료를 봤습니다",
+    "재밌는 통계 자료?",
+    "'무인도에 표류한다면 가져갈 물건'이라는\n질문에 대한 통계 자료를 보게 됐는데요",
+    "대다수의 정령이 에버폰을 가져가겠다고\n대답했다고 해요",
+    "하지만 무인도에서는 에버폰이 작동하지 않을\n가능성이 높습니다",
+    "무엇보다도 표류를 당한 상태라면\n상황에 휩쓸려 에버폰이 고장 났을 수도 있어요",
+    "그럼 메피가 추천하는 물건이 있어?",
+    "네, 저는",
+    "저를 추천하겠습니다, 구원자님",
+    "으응…?"
+  ],
+  "comments": [
+    {
+      "writer": "클로이",
+      "comment": "우와아아악! 메피트랄로쿠스!!! 어서 와!!! \n근데 왜 너도 멋진 새 장비 끼고 있냐!? 유행이냐!?"
+    },
+    {
+      "writer": "탈리아",
+      "comment": "별님과는 다른 반짝임이 느껴져.\n정말로 운명을 거스르려는거야?"
+    },
+    {
+      "writer": "릴리트",
+      "comment": "오퍼레이터 원이 표류했던 공간에 대해서는 짚이는 바가 있어요. \n만약 정말로 오퍼레이터 원이 그곳으로부터 무사히 귀환한 거라면…"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님 \n제 메시지가 잘 도착했나요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응, 잘 도착했어"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응, 잘 도착했어"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "다행입니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "이전에 쓰던 에버폰이 망가져서\n새로 구매했거든요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "조작 방식이 달라서\n아직 사용하는 게 좀 낯서네요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "내가 도와줄까?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "내가 도와줄까?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "후후, 마음은 감사합니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 저는 기계 조작에 꽤 능숙한 편이니까\n금방 적응할 수 있을 것 같아요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "정말 도움이 필요하면 말씀드리겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "마음 써 주셔서 감사해요, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "벨레드에게 머리띠를 선물 받았습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피가 고양이가 됐어"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피가 고양이가 됐어"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "후후"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "확실히 제 보조 파츠랑 닮은 머리띠네요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그런데 이건 특별한 기능은 없는 머리띠인데\n어디에 사용하는 걸까요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "평범한 액세서리 같아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "평범한 액세서리 같아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그렇군요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "선물해 준 벨레드에게는 고맙지만"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "액세서리를 찰 일이 많지 않아서\n잘 보관해 둬야겠어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "이제 안 쓸 거야?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "이제 안 쓸 거야?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "귀여운데"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "귀여운데"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "귀여운가요…?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "으음"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "평소에는 쓸 일이 없겠지만"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님과 나들이 갈 때\n한 번 챙겨 갈게요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그때는 같이 사진 찍자"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그때는 같이 사진 찍자"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "좋아요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님, 여쭤보고 싶은 게 하나 있습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "제 이름이요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "역시 외우기 어려운가요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "에버폰을 바꾼 이후로\n클로이 님께도 연락을 드렸는데요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "클로이 님이 \"너 진짜 메피트랄로쿠스야!!??\"라고\n답장을 보내 주셔서요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "설마 그런 이름의 정령이\n따로 있는 건 아니겠죠…?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "클로이는 원래 긴 이름을 못 외우니까"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "클로이는 원래 긴 이름을 못 외우니까"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피라 부르라고 하면 되지 않을까?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피라 부르라고 하면 되지 않을까?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "좋은 방법이네요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 메피트랄로쿠스… 라는 이름도\n별명 같아서 조금 마음에 들긴 했습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "친한 사이에는 별명으로 부르는\n경우가 있다고 들었거든요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "저도 다음에 클로이 님께\n별명을 지어드려야겠어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "후후"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님, 재밌는 통계 자료를 봤습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "재밌는 통계 자료?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "재밌는 통계 자료?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "'무인도에 표류한다면 가져갈 물건'이라는\n질문에 대한 통계 자료를 보게 됐는데요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "대다수의 정령이 에버폰을 가져가겠다고\n대답했다고 해요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 무인도에서는 에버폰이 작동하지 않을\n가능성이 높습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "무엇보다도 표류를 당한 상태라면\n상황에 휩쓸려 에버폰이 고장 났을 수도 있어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그럼 메피가 추천하는 물건이 있어?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그럼 메피가 추천하는 물건이 있어?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "으음"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "네, 저는"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "저를 추천하겠습니다, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "으응…?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "으응…?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "제게 탑재된 메타트론 시스템은 \n에버폰과 비교할 수 없을 정도로 뛰어납니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "또 이제는 날개가 있으니까\n구원자님을 안고 무인도에서 탈출할 수도 있어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "후후"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 메피는 물건이 아닌데?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 메피는 물건이 아닌데?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "!"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "으음"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그러면 역시 저에게 연락하실 수 있는\n최신식 무전기가 좋겠네요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "에버폰보다 훨씬 튼튼한 걸로요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "네, 그걸 가져가셔서 제게 연락하시면\n반드시 구원자님을 구해드리겠습니다!"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "지, 진지한걸"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "지, 진지한걸"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님은 꿈을 자주 꾸시는 편인가요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "저는 최근 들어 꿈을 많이 꿔요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "주로 무슨 꿈을 꿔?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "주로 무슨 꿈을 꿔?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "1호 방주를 배경으로 하는 꿈이에요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "꿈에서 저는 1호 방주의 오퍼레이터이고\n탑승객들을 보호하는 걸 사명으로 삼고 있어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "네, 과거의 제가 실제로 그랬던 것처럼요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 제가 꾸는 꿈의 90% 정도에서는\n1호 방주의 탑승객들을 지키지 못합니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "반대로 나머지 10%의 꿈에서는\n1호 방주의 탑승객들을 지키는 데 성공해요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 눈을 떴을 때\n제 가슴이 더욱 옥죄어 오는 건\n후자의 꿈을 꿨을 때입니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그게 꿈이 아니라 현실이었다면\n정말 좋았을 텐데"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그런 생각을 하게 되거든요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "악몽을 꾸는구나"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "악몽을 꾸는구나"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "악몽… 인가요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그렇군요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "분명히 행복한 꿈이었지만\n이뤄질 수 없는 일이니까"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "악몽이라고 할 수 있겠네요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "숙면에 도움이 되는 차를 선물해 줄게"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "숙면에 도움이 되는 차를 선물해 줄게"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "감사합니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그 말씀만으로도\n벌써 마음이 한결 편안해졌어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "오늘 밤은 푹 잘 수 있을 듯합니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님도 아시겠지만 저는 방주와 함께\n인공적으로 만들어진 정령입니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그래서 저는 오래전부터 제가\n다른 정령들에 비해 열등하다고 생각해 왔어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "강한 마음으로 인해 영혼이 깃든, \n그런 '의미 있는' 태생을 지닌 정령들에 비해서요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그래서 저는 제가 열등하기 때문에"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "1호 방주 오퍼레이터로서 \n사명을 다하지 못했다고 생각했습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "제가 조금 더 유능한 오퍼레이터였다면\n탑승객들과 에이미 님을 구할 수 있었을 거라고 여겼어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "슬픈 과거는 돌이킬 수 없지만"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "슬픈 과거는 돌이킬 수 없지만"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "지금의 메피는 소중한 이들을 지켜낼 수 있을 거야"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "지금의 메피는 소중한 이들을 지켜낼 수 있을 거야"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "감사합니다, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "박사님은 소중한 존재들을 위해\n저를 '기만의 악마'로 만드셨을 거예요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그러니 저도 \n그 이름에 걸맞은 정령이 되고 싶습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "최근에 시장을 갈 일이 생겨서\n외출을 했었습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그런데 그 시장에서\n여전히 아케나인 토스트를 팔고 있더라구요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "상황이 혼란스러운 만큼\n예전만큼 장사가 잘되지는 않는다고 하셨지만"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "생계를 유지하기 위해 계속 그 자리에서\n토스트를 팔고 계신다고 했어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그걸 보니 각자의 자리에서\n최선을 다하는 분들이 대단하게 느껴졌습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "맞아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "맞아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "어서 평화가 찾아오도록 최선을 다하고 싶어"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "어서 평화가 찾아오도록 최선을 다하고 싶어"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "네"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그때가 되면 저랑 또 같이\n아케나인 토스트를 드시겠어요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응, 잔뜩 먹자!"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응, 잔뜩 먹자!"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "기대하고 있겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "최근에는 반려동물이 아니라\n돌을 기르시는 분들이 계신다고 해요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그런 돌을 '반려돌'이라고 부르는 것 같더라구요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 돌은 자라지 않잖아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 돌은 자라지 않잖아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "네, 저도 처음에 그 점이 의아했었어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그런데 꼭 자라지 않더라도"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그 모습 그대로 있는 걸 바라보는 일이\n꽤나 만족감을 주는 듯합니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "내가 메피를 보는 것 같은 느낌인가"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "내가 메피를 보는 것 같은 느낌인가"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "네?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "확실히… 정령도 ANIMA가 변하지 않는 이상\n겉모습이 거의 바뀌지 않기는 하네요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그것보다 구원자님은 저를 볼 때\n돌을 보는 것 같은 기분을 느끼시는군요…"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "말이 조금 이상한데!?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "말이 조금 이상한데!?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "후후"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그 기분이 궁금해졌습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "다음에 구원자님과 나들이를 가게 되면\n돌멩이를 하나 주워 와야겠어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그걸 제 반려돌로 삼겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "나도 돌 고르는 거 도와줄게"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "나도 돌 고르는 거 도와줄게"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "감사합니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그럼 같이 구원자님을 닮은 돌을 찾아보죠"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응!?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응!?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "저도 돌을 보면서\n구원자님을 생각해 보고 싶어서요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님이 저를 볼 때 느끼시는 감정을\n이해해 보고 싶습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "혹시 나 놀리는 거야…?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "혹시 나 놀리는 거야…?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피가 능글맞아졌어…"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피가 능글맞아졌어…"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "♪"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "얼마 전에 거리를 걷다가\n독특한 음악을 들었습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "베스티 프로덕션에서 발매된 음악이라고 하던데\n조금 이해하기 어려운 멜로디와 가사였어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그런데 왜인지 머릿속에 맴돌아서\n며칠째 흥얼거리게 되더라구요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피도 노래를 불러?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피도 노래를 불러?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "제대로 부를 일은 거의 없지만\n저도 모르게 흥얼거릴 때는 있습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "들어 보고 싶다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "들어 보고 싶다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그 노래를 부른 연예인들처럼\n잘 부르지는 못할 거예요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그래도 구원자님이 듣고 싶으시다면…"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "제대로 연습해 봐야겠네요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "저는 신이나 운명을 믿지 않았습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "미래는 데이터가 쌓여 만들어지는\n결괏값이라고 생각해 왔어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 이 세상에는 '섭리'라는 시스템이 \n존재한다는 걸 이젠 몸소 느끼고 있어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 그래도 저는 정해진 운명을\n바꿀 수 있다고 믿고 싶습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "나도 그래"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "나도 그래"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "하지만 운명을… 섭리를 거스르는 건 \n절대 쉽지 않을 거예요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "저희는 그 과정에서 분명 \n많은 고통을 겪겠죠"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그래서 저는 구원자님이 걱정됩니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "앞으로 감당하시기 힘든 \n절망과 공포를 느끼게 되실까 봐요…"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "힘들어도 괜찮아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "힘들어도 괜찮아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피가 내 옆에 있어 줄 거잖아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "메피가 내 옆에 있어 줄 거잖아"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "!"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "네, 맞아요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "저도 구원자님과\n그려 나갈 앞으로의 미래가"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "두렵기보다는 기대됩니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "그러니 부디 \n그때까지 제 손을 놓지 말아 주시겠어요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "응"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "약속할게"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "약속할게"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님, 메피입니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "제가 없는 동안 벨레드 님이 \n구원자님을 곁에서 보좌했다고 들었어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "괜찮으시면 셋이서 만나 뵐 수 있을까요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님이 여전히 저는 저일뿐이라고\n말씀해 주셨지만"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "에덴을 잠시 떠났을 때\n우주에서 알게 된 제 진정한 사명 때문에…"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "계속 혼란스러운 생각이 들어요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님, 괜찮으시면\n제가 보고 겪은 일을 들어 주시겠어요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "제가 에덴으로 돌아올 수 있었던 건\n행성에 남아 있던 오퍼레이터 식스와"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "에덴에 계시는 구원자님 덕분이었습니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님을 만나고 싶다고 생각한 순간\n제 새로운 시스템이 기동되었거든요"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "구원자님, 메피입니다"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "바닷가에 가실 준비를 마치셨을까요?"
+      },
+      {
+        "speaker": "메피스토펠레스(여명)",
+        "message": "아직이시라면 저랑 벨레드가 준비를 도와드릴게요"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "메피스토펠레스(여명)",
+      "en": "Mephistopheles (Dawn)",
+      "zh_tw": "梅菲斯托佩萊斯（黎明）",
+      "zh_cn": "梅菲斯托佩萊斯（黎明）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "혼돈형",
+      "en": "Chaotic",
+      "zh_tw": "混沌型",
+      "zh_cn": "混沌型"
+    },
+    "class": {
+      "ko": "스트라이커",
+      "en": "Striker",
+      "zh_tw": "鬥士",
+      "zh_cn": "鬥士"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "인과의 배율자",
+        "en": "Recusant of Causality",
+        "zh_tw": "因果倍率者",
+        "zh_cn": "因果倍率者"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_엔딩",
+        "en": "인연_메피스토_엔딩",
+        "zh_tw": "牡羊座",
+        "zh_cn": "牡羊座"
+      },
+      "union": {
+        "ko": "방주 오퍼레이터",
+        "en": "Ark Operator",
+        "zh_tw": "方舟駕駛員",
+        "zh_cn": "方舟駕駛員"
+      },
+      "cv_ko": {
+        "ko": "장미",
+        "en": "Jang Mi",
+        "zh_tw": "張美",
+        "zh_cn": "張美"
+      },
+      "cv_jp": {
+        "ko": "장미",
+        "en": "Ruriko Noguchi",
+        "zh_tw": "Ruriko Noguchi",
+        "zh_cn": "Ruriko Noguchi"
+      },
+      "like": {
+        "ko": [
+          "케이크"
+        ],
+        "en": [
+          "Cake"
+        ],
+        "zh_tw": [
+          "蛋糕"
+        ],
+        "zh_cn": [
+          "蛋糕"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "포기하는 것"
+        ],
+        "en": [
+          "What You Give Up"
+        ],
+        "zh_tw": [
+          "放棄"
+        ],
+        "zh_cn": [
+          "放棄"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "고양이와 놀기"
+        ],
+        "en": [
+          "Playing with Cats"
+        ],
+        "zh_tw": [
+          "跟貓咪玩"
+        ],
+        "zh_cn": [
+          "跟貓咪玩"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "데이터 관리"
+        ],
+        "en": [
+          "Data Management"
+        ],
+        "zh_tw": [
+          "數據管理"
+        ],
+        "zh_cn": [
+          "數據管理"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "…생체 신호 확인 완료.\n오퍼레이터 메피스토펠레스.\n구원자님과의 약속을 지키러 돌아왔습니다.\n\n저는 1호 방주를 잃고 떠돌던 중, 한 행성에 불시착했었습니다.\n그 행성에서 여태껏 알지 못했던 저의 진정한 '사명'을 알게 되었어요.\n박사님이 저를 만드신 진짜 목적에 대해서요.\n\n하지만 저는 제게 주어진 그 사명을 거스르고 싶습니다.\n\n왜냐하면… \n구원자님을 지키는 일이 바로 \n제가 스스로에게 직접 부여한, 저만의 미션이니까요. \n\n구원자님, 다시 한번 만나 뵙게 되어 \n정말… 정말 기쁩니다.",
+        "en": "… Vital sign check completed.\nOperator Mephistopheles\nhas come to fulfill the promise with the Savior.\n\nAfter losing Ark Metatron, I crash-landed on a planet.\nAnd there, I learned of my true \"mission,\" of what I've never known before,\nof what the Doctor made me for.\n\nBut I want to go against that mission.\n\nBecause…\nProtecting you is my own mission,\none that I have given myself. \n\nSavior, I am so, so glad\nto see you again.",
+        "zh_tw": "…已確認生命信號。\n我是駕駛員梅菲斯托佩萊斯。\n回來兌現和救援者的承諾。\n\n我失去一號方舟後漂泊的期間，迫降在一個行星上。\n我在那個行星上，意識到一直以來都沒能得知的自己真正的「使命」。\n就是關於博士創造我的真正目的。\n\n但我想違背被賦予的那個使命。\n\n因為…\n守護救援者這件事\n就是我親自賦予自己，專屬於我的任務。\n\n救援者，能再次見到你，\n我真的…真的很高興。",
+        "zh_cn": "…已確認生命信號。\n我是駕駛員梅菲斯托佩萊斯。\n回來兌現和救援者的承諾。\n\n我失去一號方舟後漂泊的期間，迫降在一個行星上。\n我在那個行星上，意識到一直以來都沒能得知的自己真正的「使命」。\n就是關於博士創造我的真正目的。\n\n但我想違背被賦予的那個使命。\n\n因為…\n守護救援者這件事\n就是我親自賦予自己，專屬於我的任務。\n\n救援者，能再次見到你，\n我真的…真的很高興。"
+      },
+      "greeting": {
+        "ko": "오퍼레이터 메피스토펠레스. \n구원자님과의 약속을 지키러 왔습니다.",
+        "en": "Operator Mephistopheles\nhas come to fulfill the promise with the Savior.",
+        "zh_tw": "駕駛員梅菲斯托佩萊斯，\n來向救援者兌現承諾了。",
+        "zh_cn": "駕駛員梅菲斯托佩萊斯，\n來向救援者兌現承諾了。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "구원자님 \n제 메시지가 잘 도착했나요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Savior\nDid my message arrive safely?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "救援者\n我的訊息有順利傳過去嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "救援者\n我的訊息有順利傳過去嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "응, 잘 도착했어"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Yes, it did"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "嗯，順利傳來了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "嗯，順利傳來了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "다행입니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Good to know"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "太好了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "太好了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "이전에 쓰던 에버폰이 망가져서\n새로 구매했거든요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "My old Everphone broke,\nso I bought a new one"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "以前用的EverPhone故障，\n所以我新買了一個"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "以前用的EverPhone故障，\n所以我新買了一個"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "조작 방식이 달라서\n아직 사용하는 게 좀 낯서네요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "The controls are different,\nso I'm still getting used to it"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "操作方式不一樣，\n使用起來還有點陌生"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "操作方式不一樣，\n使用起來還有點陌生"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "내가 도와줄까?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Want me to help you?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "要我幫忙嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "要我幫忙嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "후후, 마음은 감사합니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Hoho, thank you, but no"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "呵呵，謝謝你的好意"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "呵呵，謝謝你的好意"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "하지만 저는 기계 조작에 꽤 능숙한 편이니까\n금방 적응할 수 있을 것 같아요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "But I'm pretty good with electronics\nI'm sure I'll get the hang of it"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但操作機器這塊我很熟練，\n所以應該可以很快就上手"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但操作機器這塊我很熟練，\n所以應該可以很快就上手"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "정말 도움이 필요하면 말씀드리겠습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "I'll let you know if I need help"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "如果真的需要幫助，我會跟你說的"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "如果真的需要幫助，我會跟你說的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "마음 써 주셔서 감사해요, 구원자님"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Thank you for your kindness, Savior"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "謝謝你費心，救援者"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "謝謝你費心，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "벨레드에게 머리띠를 선물 받았습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Beleth gave me this headband"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我收到了貝萊德送的髮箍禮物"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我收到了貝萊德送的髮箍禮物"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "메피가 고양이가 됐어"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "You look like a cat"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "梅菲變貓咪了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "梅菲變貓咪了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "후후"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Hoho"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "呵呵"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "呵呵"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "확실히 제 보조 파츠랑 닮은 머리띠네요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "This headband definitely matches my accessory"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "這髮箍的確很像我的輔助零件"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "這髮箍的確很像我的輔助零件"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "그런데 이건 특별한 기능은 없는 머리띠인데\n어디에 사용하는 걸까요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "But it has no special function\nI wonder what it is for..."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但這是沒有特殊功能的髮箍，\n要用在哪裡呢？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但這是沒有特殊功能的髮箍，\n要用在哪裡呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "평범한 액세서리 같아"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Just a fashionable accessory"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "好像是普通的飾品"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "好像是普通的飾品"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "그렇군요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "I see"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "原來如此"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "原來如此"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "선물해 준 벨레드에게는 고맙지만"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "I thank Beleth for the gift"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "很感謝貝萊德送我禮物"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "很感謝貝萊德送我禮物"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "액세서리를 찰 일이 많지 않아서\n잘 보관해 둬야겠어요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "but I don't wear accessories much\nI'll just keep it somewhere"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但我沒有很多戴飾品的機會，\n所以要好好保管起來了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但我沒有很多戴飾品的機會，\n所以要好好保管起來了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "이제 안 쓸 거야?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "You're not going to wear it anymore?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "現在不戴了嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "現在不戴了嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "귀여운데"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "You look cute wearing it"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "很可愛耶"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "很可愛耶"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "귀여운가요…?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Do I...?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "可愛嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "可愛嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "으음"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Mm"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "呃嗯"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "呃嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "평소에는 쓸 일이 없겠지만"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "I don't think I can wear it often,"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "平常不會有要戴的時候"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "平常不會有要戴的時候"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "구원자님과 나들이 갈 때\n한 번 챙겨 갈게요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "but maybe I can\nwhen I go out with you"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但和救援者去約會的時候，\n我會戴上的"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但和救援者去約會的時候，\n我會戴上的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "그때는 같이 사진 찍자"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Let's take a photo together when we do"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "到時候一起拍照吧"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "到時候一起拍照吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "좋아요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Sure"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "好啊"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "好啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "구원자님, 여쭤보고 싶은 게 하나 있습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Savior, there's something I'd like to ask you"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "救援者，我有件事想問你"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "救援者，我有件事想問你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "제 이름이요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "It's about my name"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我的名字啊"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我的名字啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "역시 외우기 어려운가요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Is it still hard to memorize?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "果然很難記嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "果然很難記嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "응?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Huh?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "嗯？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "嗯？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "에버폰을 바꾼 이후로\n클로이 님께도 연락을 드렸는데요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Since I changed my Everphone\nI also contacted Chloe"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我換了EverPhone之後，\n也有聯絡克羅伊"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我換了EverPhone之後，\n也有聯絡克羅伊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "클로이 님이 \"너 진짜 메피트랄로쿠스야!!??\"라고\n답장을 보내 주셔서요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "and she wrote,\n\"Mephitrallocus?!!!!!!!!!!!\""
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但克羅伊回我\n「妳真的是梅菲特拉羅庫斯嗎！！？？」"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但克羅伊回我\n「妳真的是梅菲特拉羅庫斯嗎！！？？」"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "설마 그런 이름의 정령이\n따로 있는 건 아니겠죠…?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "I can't believe there's a Soul\nwith a name like that...?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "應該不是有別的精靈\n叫那種名字吧…？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "應該不是有別的精靈\n叫那種名字吧…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "클로이는 원래 긴 이름을 못 외우니까"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Chloe can't memorize long names"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "克羅伊本來就記不住長名"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "克羅伊本來就記不住長名"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "메피라 부르라고 하면 되지 않을까?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Why don't you ask her to just call you Mephi?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "叫她叫妳梅菲就可以了吧？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "叫她叫妳梅菲就可以了吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "좋은 방법이네요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "That's a good idea"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "是個好辦法"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "是個好辦法"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "하지만 메피트랄로쿠스… 라는 이름도\n별명 같아서 조금 마음에 들긴 했습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "But Mephitrallocus...\nI kind of like it, because it's like a nickname"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但梅菲特拉羅庫斯…\n這個名字很像綽號，所以我還算滿意"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但梅菲特拉羅庫斯…\n這個名字很像綽號，所以我還算滿意"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "친한 사이에는 별명으로 부르는\n경우가 있다고 들었거든요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "I've heard that good friends call\neach other by their nicknames"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我聽說熟人之間\n有時候會叫綽號"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我聽說熟人之間\n有時候會叫綽號"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "저도 다음에 클로이 님께\n별명을 지어드려야겠어요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Maybe I should give\nChloe a nickname, too"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我下次也要幫克羅伊\n取綽號"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我下次也要幫克羅伊\n取綽號"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "구원자님, 재밌는 통계 자료를 봤습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Savior, I saw some interesting statistics"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "救援者，我看了有趣的統計資料"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "救援者，我看了有趣的統計資料"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "재밌는 통계 자료?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Interesting statistics?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "有趣的統計資料？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "有趣的統計資料？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "'무인도에 표류한다면 가져갈 물건'이라는\n질문에 대한 통계 자료를 보게 됐는데요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "I saw some statistics about the question\n\"Something you'd take if you were stranded on a desert island\""
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我看到「假如漂流到無人島，要帶什麼東西」\n這個問題的統計資料"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "我看到「假如漂流到無人島，要帶什麼東西」\n這個問題的統計資料"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "대다수의 정령이 에버폰을 가져가겠다고\n대답했다고 해요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "And the majority of Souls said\nthey'd take their Everphone"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "上面寫大部分的精靈\n都回答要帶EverPhone"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "上面寫大部分的精靈\n都回答要帶EverPhone"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "하지만 무인도에서는 에버폰이 작동하지 않을\n가능성이 높습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "but chances are it wouldn't work\non a desert island"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但是在無人島，\n有很高的機率無法啟動EverPhone"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "但是在無人島，\n有很高的機率無法啟動EverPhone"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "무엇보다도 표류를 당한 상태라면\n상황에 휩쓸려 에버폰이 고장 났을 수도 있어요"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "On top of that, if you're adrift, you could get swept away\nand your Everphone could break"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "更重要的是，如果是被迫漂流的狀態，\nEverPhone可能會礙於情勢而故障"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "更重要的是，如果是被迫漂流的狀態，\nEverPhone可能會礙於情勢而故障"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "그럼 메피가 추천하는 물건이 있어?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Okay, then what should I take instead?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "那梅菲有推薦的物品嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "那梅菲有推薦的物品嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "네, 저는"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Okay,"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "有，我…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "有，我…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "저를 추천하겠습니다, 구원자님"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "I'd recommend me, Savior"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "推薦我自己，救援者"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "推薦我自己，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스(여명)",
+          "message": "으응…?"
+        },
+        "en": {
+          "speaker": "Mephistopheles (Dawn)",
+          "message": "Huh...?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "呃嗯…？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯（黎明）",
+          "message": "呃嗯…？"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "우와아아악! 메피트랄로쿠스!!! 어서 와!!! \n근데 왜 너도 멋진 새 장비 끼고 있냐!? 유행이냐!?"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Whoaaaaaahhh! Mephitrallocus! Welcome!\nBy the way, why are you equipped with such nice new gear? Is that a fad now?"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "哇啊啊啊啊！梅菲特拉羅庫斯！！！快過來！！！\n但為什麼妳也戴著酷炫的新裝備！？是流行嗎！？"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "哇啊啊啊啊！梅菲特拉羅庫斯！！！快過來！！！\n但為什麼妳也戴著酷炫的新裝備！？是流行嗎！？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "별님과는 다른 반짝임이 느껴져.\n정말로 운명을 거스르려는거야?"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I sense a sparkle in you that's different from the stars'.\nDo you really intend to defy fate?"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "感受到不同於星星的閃亮，\n是真的想違抗命運嗎？"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "感受到不同於星星的閃亮，\n是真的想違抗命運嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "릴리트",
+          "message": "오퍼레이터 원이 표류했던 공간에 대해서는 짚이는 바가 있어요. \n만약 정말로 오퍼레이터 원이 그곳으로부터 무사히 귀환한 거라면…"
+        },
+        "en": {
+          "speaker": "Lilith",
+          "message": "I think I know where Operator One was stranded.\nAnd if she really came back from that space…"
+        },
+        "zh_tw": {
+          "speaker": "莉莉絲",
+          "message": "關於駕駛員一號漂流的空間，我有點頭緒。\n萬一駕駛員一號真的是從那地方歸來的話…"
+        },
+        "zh_cn": {
+          "speaker": "莉莉絲",
+          "message": "關於駕駛員一號漂流的空間，我有點頭緒。\n萬一駕駛員一號真的是從那地方歸來的話…"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님 \n제 메시지가 잘 도착했나요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Savior\nDid my message arrive safely?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者\n我的訊息有順利傳過去嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者\n我的訊息有順利傳過去嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응, 잘 도착했어"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Yes, it did"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯，順利傳來了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯，順利傳來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응, 잘 도착했어"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Yes, it did"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯，順利傳來了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯，順利傳來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "다행입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Good to know"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "이전에 쓰던 에버폰이 망가져서\n새로 구매했거든요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "My old Everphone broke,\nso I bought a new one"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "以前用的EverPhone故障，\n所以我新買了一個"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "以前用的EverPhone故障，\n所以我新買了一個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "조작 방식이 달라서\n아직 사용하는 게 좀 낯서네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "The controls are different,\nso I'm still getting used to it"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "操作方式不一樣，\n使用起來還有點陌生"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "操作方式不一樣，\n使用起來還有點陌生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "내가 도와줄까?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Want me to help you?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "要我幫忙嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "要我幫忙嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "내가 도와줄까?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Want me to help you?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "要我幫忙嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "要我幫忙嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "후후, 마음은 감사합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Hoho, thank you, but no"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵，謝謝你的好意"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵，謝謝你的好意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 저는 기계 조작에 꽤 능숙한 편이니까\n금방 적응할 수 있을 것 같아요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But I'm pretty good with electronics\nI'm sure I'll get the hang of it"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但操作機器這塊我很熟練，\n所以應該可以很快就上手"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但操作機器這塊我很熟練，\n所以應該可以很快就上手"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "정말 도움이 필요하면 말씀드리겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'll let you know if I need help"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "如果真的需要幫助，我會跟你說的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "如果真的需要幫助，我會跟你說的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "마음 써 주셔서 감사해요, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Thank you for your kindness, Savior"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "謝謝你費心，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "謝謝你費心，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "벨레드에게 머리띠를 선물 받았습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Beleth gave me this headband"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我收到了貝萊德送的髮箍禮物"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我收到了貝萊德送的髮箍禮物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피가 고양이가 됐어"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You look like a cat"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲變貓咪了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲變貓咪了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피가 고양이가 됐어"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You look like a cat"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲變貓咪了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲變貓咪了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Hoho"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "확실히 제 보조 파츠랑 닮은 머리띠네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "This headband definitely matches my accessory"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "這髮箍的確很像我的輔助零件"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "這髮箍的確很像我的輔助零件"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그런데 이건 특별한 기능은 없는 머리띠인데\n어디에 사용하는 걸까요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But it has no special function\nI wonder what it is for..."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但這是沒有特殊功能的髮箍，\n要用在哪裡呢？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但這是沒有特殊功能的髮箍，\n要用在哪裡呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "평범한 액세서리 같아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Just a fashionable accessory"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好像是普通的飾品"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好像是普通的飾品"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "평범한 액세서리 같아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Just a fashionable accessory"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好像是普通的飾品"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好像是普通的飾品"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그렇군요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "선물해 준 벨레드에게는 고맙지만"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I thank Beleth for the gift"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "很感謝貝萊德送我禮物"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "很感謝貝萊德送我禮物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "액세서리를 찰 일이 많지 않아서\n잘 보관해 둬야겠어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "but I don't wear accessories much\nI'll just keep it somewhere"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但我沒有很多戴飾品的機會，\n所以要好好保管起來了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但我沒有很多戴飾品的機會，\n所以要好好保管起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "이제 안 쓸 거야?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You're not going to wear it anymore?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "現在不戴了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "現在不戴了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "이제 안 쓸 거야?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You're not going to wear it anymore?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "現在不戴了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "現在不戴了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "귀여운데"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You look cute wearing it"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "很可愛耶"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "很可愛耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "귀여운데"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You look cute wearing it"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "很可愛耶"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "很可愛耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "귀여운가요…?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Do I...?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "可愛嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "可愛嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "으음"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Mm"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "평소에는 쓸 일이 없겠지만"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I don't think I can wear it often,"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "平常不會有要戴的時候"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "平常不會有要戴的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님과 나들이 갈 때\n한 번 챙겨 갈게요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "but maybe I can\nwhen I go out with you"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但和救援者去約會的時候，\n我會戴上的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但和救援者去約會的時候，\n我會戴上的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그때는 같이 사진 찍자"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Let's take a photo together when we do"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "到時候一起拍照吧"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "到時候一起拍照吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그때는 같이 사진 찍자"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Let's take a photo together when we do"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "到時候一起拍照吧"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "到時候一起拍照吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "좋아요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好啊"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님, 여쭤보고 싶은 게 하나 있습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Savior, there's something I'd like to ask you"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，我有件事想問你"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，我有件事想問你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "제 이름이요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "It's about my name"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我的名字啊"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我的名字啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "역시 외우기 어려운가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Is it still hard to memorize?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "果然很難記嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "果然很難記嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "에버폰을 바꾼 이후로\n클로이 님께도 연락을 드렸는데요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Since I changed my Everphone\nI also contacted Chloe"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我換了EverPhone之後，\n也有聯絡克羅伊"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我換了EverPhone之後，\n也有聯絡克羅伊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "클로이 님이 \"너 진짜 메피트랄로쿠스야!!??\"라고\n답장을 보내 주셔서요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "and she wrote,\n\"Mephitrallocus?!!!!!!!!!!!\""
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但克羅伊回我\n「妳真的是梅菲特拉羅庫斯嗎！！？？」"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但克羅伊回我\n「妳真的是梅菲特拉羅庫斯嗎！！？？」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "설마 그런 이름의 정령이\n따로 있는 건 아니겠죠…?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I can't believe there's a Soul\nwith a name like that...?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "應該不是有別的精靈\n叫那種名字吧…？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "應該不是有別的精靈\n叫那種名字吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "클로이는 원래 긴 이름을 못 외우니까"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Chloe can't memorize long names"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "克羅伊本來就記不住長名"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "克羅伊本來就記不住長名"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "클로이는 원래 긴 이름을 못 외우니까"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Chloe can't memorize long names"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "克羅伊本來就記不住長名"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "克羅伊本來就記不住長名"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피라 부르라고 하면 되지 않을까?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Why don't you ask her to just call you Mephi?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "叫她叫妳梅菲就可以了吧？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "叫她叫妳梅菲就可以了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피라 부르라고 하면 되지 않을까?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Why don't you ask her to just call you Mephi?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "叫她叫妳梅菲就可以了吧？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "叫她叫妳梅菲就可以了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "좋은 방법이네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "That's a good idea"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "是個好辦法"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "是個好辦法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 메피트랄로쿠스… 라는 이름도\n별명 같아서 조금 마음에 들긴 했습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But Mephitrallocus...\nI kind of like it, because it's like a nickname"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但梅菲特拉羅庫斯…\n這個名字很像綽號，所以我還算滿意"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但梅菲特拉羅庫斯…\n這個名字很像綽號，所以我還算滿意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "친한 사이에는 별명으로 부르는\n경우가 있다고 들었거든요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I've heard that good friends call\neach other by their nicknames"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我聽說熟人之間\n有時候會叫綽號"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我聽說熟人之間\n有時候會叫綽號"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "저도 다음에 클로이 님께\n별명을 지어드려야겠어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Maybe I should give\nChloe a nickname, too"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我下次也要幫克羅伊\n取綽號"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我下次也要幫克羅伊\n取綽號"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Hoho"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님, 재밌는 통계 자료를 봤습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Savior, I saw some interesting statistics"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，我看了有趣的統計資料"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，我看了有趣的統計資料"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "재밌는 통계 자료?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Interesting statistics?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "有趣的統計資料？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "有趣的統計資料？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "재밌는 통계 자료?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Interesting statistics?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "有趣的統計資料？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "有趣的統計資料？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "'무인도에 표류한다면 가져갈 물건'이라는\n질문에 대한 통계 자료를 보게 됐는데요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I saw some statistics about the question\n\"Something you'd take if you were stranded on a desert island\""
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我看到「假如漂流到無人島，要帶什麼東西」\n這個問題的統計資料"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我看到「假如漂流到無人島，要帶什麼東西」\n這個問題的統計資料"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "대다수의 정령이 에버폰을 가져가겠다고\n대답했다고 해요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "And the majority of Souls said\nthey'd take their Everphone"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "上面寫大部分的精靈\n都回答要帶EverPhone"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "上面寫大部分的精靈\n都回答要帶EverPhone"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 무인도에서는 에버폰이 작동하지 않을\n가능성이 높습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "but chances are it wouldn't work\non a desert island"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但是在無人島，\n有很高的機率無法啟動EverPhone"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但是在無人島，\n有很高的機率無法啟動EverPhone"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "무엇보다도 표류를 당한 상태라면\n상황에 휩쓸려 에버폰이 고장 났을 수도 있어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "On top of that, if you're adrift, you could get swept away\nand your Everphone could break"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "更重要的是，如果是被迫漂流的狀態，\nEverPhone可能會礙於情勢而故障"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "更重要的是，如果是被迫漂流的狀態，\nEverPhone可能會礙於情勢而故障"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그럼 메피가 추천하는 물건이 있어?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Okay, then what should I take instead?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "那梅菲有推薦的物品嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "那梅菲有推薦的物品嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그럼 메피가 추천하는 물건이 있어?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Okay, then what should I take instead?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "那梅菲有推薦的物品嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "那梅菲有推薦的物品嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "으음"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Mm"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "네, 저는"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Okay,"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "有，我…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "有，我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "저를 추천하겠습니다, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'd recommend me, Savior"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "推薦我自己，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "推薦我自己，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "으응…?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Huh...?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯…？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "으응…?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Huh...?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯…？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "제게 탑재된 메타트론 시스템은 \n에버폰과 비교할 수 없을 정도로 뛰어납니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "My Metatron system is far superior\nto the Everphone's"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我身上搭載的梅塔特隆系統\n是出色到EverPhone無法比擬的程度"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我身上搭載的梅塔特隆系統\n是出色到EverPhone無法比擬的程度"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "또 이제는 날개가 있으니까\n구원자님을 안고 무인도에서 탈출할 수도 있어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "and now that I have wings\nI can escape from the desert island with you in my arms"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "而且現在有翅膀，\n可以抱著救援者逃離無人島"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "而且現在有翅膀，\n可以抱著救援者逃離無人島"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Hoho"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 메피는 물건이 아닌데?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But you're not a thing"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "可是梅菲不是物品耶？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "可是梅菲不是物品耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 메피는 물건이 아닌데?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But you're not a thing"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "可是梅菲不是物品耶？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "可是梅菲不是物品耶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "!"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "...!"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "！"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "으음"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Mm"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그러면 역시 저에게 연락하실 수 있는\n최신식 무전기가 좋겠네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Then, I'd recommend a modern radio\nto contact me"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "那果然要帶能聯絡我的\n最新型無線電"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "那果然要帶能聯絡我的\n最新型無線電"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "에버폰보다 훨씬 튼튼한 걸로요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "something much more durable than an Everphone"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "應該比EverPhone還要牢靠"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "應該比EverPhone還要牢靠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "네, 그걸 가져가셔서 제게 연락하시면\n반드시 구원자님을 구해드리겠습니다!"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Yes, take that and contact me\nand I will definitely save you, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "對，你帶那個去聯絡我的話，\n我一定會救出救援者！"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "對，你帶那個去聯絡我的話，\n我一定會救出救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "지, 진지한걸"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Y-you're serious"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好、好認真"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好、好認真"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "지, 진지한걸"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Y-you're serious"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好、好認真"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好、好認真"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님은 꿈을 자주 꾸시는 편인가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Savior, do you dream often?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者常做夢嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者常做夢嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "저는 최근 들어 꿈을 많이 꿔요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I've been dreaming a lot lately"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我最近很常做夢"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我最近很常做夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "주로 무슨 꿈을 꿔?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "What do you dream about?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "主要是做什麼夢？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "主要是做什麼夢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "주로 무슨 꿈을 꿔?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "What do you dream about?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "主要是做什麼夢？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "主要是做什麼夢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "1호 방주를 배경으로 하는 꿈이에요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I dream about Ark Metatron"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "背景是一號方舟的夢"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "背景是一號方舟的夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "꿈에서 저는 1호 방주의 오퍼레이터이고\n탑승객들을 보호하는 걸 사명으로 삼고 있어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "In my dreams, I'm Ark Metatron's Operator\nand my mission is to protect the passengers"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我在夢裡是一號方舟的駕駛員，\n保護乘客當作使命"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我在夢裡是一號方舟的駕駛員，\n保護乘客當作使命"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "네, 과거의 제가 실제로 그랬던 것처럼요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Just like I actually did in the past"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "對，就像以前的我實際上那樣做一樣"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "對，就像以前的我實際上那樣做一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 제가 꾸는 꿈의 90% 정도에서는\n1호 방주의 탑승객들을 지키지 못합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But in about 90% of my dreams\nI fail to protect them"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但我做的夢有90%\n都沒能守護一號方舟的乘客"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但我做的夢有90%\n都沒能守護一號方舟的乘客"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "반대로 나머지 10%의 꿈에서는\n1호 방주의 탑승객들을 지키는 데 성공해요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "In the other 10% of my dreams\nI succeed"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "相反地，其餘10%的夢境裡\n成功守護了一號方舟的乘客"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "相反地，其餘10%的夢境裡\n成功守護了一號方舟的乘客"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 눈을 떴을 때\n제 가슴이 더욱 옥죄어 오는 건\n후자의 꿈을 꿨을 때입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But it's the latter dreams\nthat make my heart sink\nwhen I wake up"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但醒來的時候\n更讓我的心感到絞痛的\n是後者的夢境"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但醒來的時候\n更讓我的心感到絞痛的\n是後者的夢境"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그게 꿈이 아니라 현실이었다면\n정말 좋았을 텐데"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "because I think to myself"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "如果那不是夢境，\n而是現實就好了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "如果那不是夢境，\n而是現實就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그런 생각을 하게 되거든요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "\"If only this were real\nand not a dream\""
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "讓我產生這種想法"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "讓我產生這種想法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "악몽을 꾸는구나"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You're having nightmares"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "原來妳做了惡夢"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "原來妳做了惡夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "악몽을 꾸는구나"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You're having nightmares"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "原來妳做了惡夢"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "原來妳做了惡夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "악몽… 인가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Are they...nightmares?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "惡夢…嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "惡夢…嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그렇군요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "분명히 행복한 꿈이었지만\n이뤄질 수 없는 일이니까"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I was happy dreaming them\nbut they can't come true"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然明明是幸福的夢，\n但因為是無法實現的事"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然明明是幸福的夢，\n但因為是無法實現的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "악몽이라고 할 수 있겠네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "so I guess they're actually nightmares"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以可以當作是惡夢"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以可以當作是惡夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "숙면에 도움이 되는 차를 선물해 줄게"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Let me give you some tea to help you sleep"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我送妳幫助熟睡的茶"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我送妳幫助熟睡的茶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "숙면에 도움이 되는 차를 선물해 줄게"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Let me give you some tea to help you sleep"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我送妳幫助熟睡的茶"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我送妳幫助熟睡的茶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "감사합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Thank you"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그 말씀만으로도\n벌써 마음이 한결 편안해졌어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Your words alone\nhave put me at ease"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "光是你這樣說\n內心就已經舒服多了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "光是你這樣說\n內心就已經舒服多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "오늘 밤은 푹 잘 수 있을 듯합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I think I'll sleep well tonight"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "今晚好像能好好睡一覺"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "今晚好像能好好睡一覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님도 아시겠지만 저는 방주와 함께\n인공적으로 만들어진 정령입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "As you know, I'm an artificially created Soul\nthat came with the Ark"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者也知道，我是跟方舟一起\n被製造出來的人工精靈"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者也知道，我是跟方舟一起\n被製造出來的人工精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그래서 저는 오래전부터 제가\n다른 정령들에 비해 열등하다고 생각해 왔어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "So for a long time, I've thought that I was\ninferior to the other Souls,"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以我從很久以前\n就一直覺得自己低其他精靈一等"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以我從很久以前\n就一直覺得自己低其他精靈一等"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "강한 마음으로 인해 영혼이 깃든, \n그런 '의미 있는' 태생을 지닌 정령들에 비해서요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "the ones with \"meaningful\" births\nthe ones with strong hearts and spirits"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "就是跟那種因強大的心靈而蘊有靈魂，\n出生是「有意義」的精靈比起來。"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "就是跟那種因強大的心靈而蘊有靈魂，\n出生是「有意義」的精靈比起來。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그래서 저는 제가 열등하기 때문에"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "So, I thought that because I was inferior"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以我以為是因為自己低人一等"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以我以為是因為自己低人一等"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "1호 방주 오퍼레이터로서 \n사명을 다하지 못했다고 생각했습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I failed to fulfill my mission\nas Ark Metatron's Operator"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "才沒辦法作為一號方舟的駕駛員\n完成使命"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "才沒辦法作為一號方舟的駕駛員\n完成使命"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "제가 조금 더 유능한 오퍼레이터였다면\n탑승객들과 에이미 님을 구할 수 있었을 거라고 여겼어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I believed that if I had been more competent, I could have saved\nAmy and the other passengers"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "覺得如果我是更能幹的駕駛員，\n就能拯救乘客和艾米"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "覺得如果我是更能幹的駕駛員，\n就能拯救乘客和艾米"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "슬픈 과거는 돌이킬 수 없지만"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "It's sad that the past can't be undone"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然悲傷的過去無法挽回"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然悲傷的過去無法挽回"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "슬픈 과거는 돌이킬 수 없지만"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "It's sad that the past can't be undone"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然悲傷的過去無法挽回"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然悲傷的過去無法挽回"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "지금의 메피는 소중한 이들을 지켜낼 수 있을 거야"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "but now, you're strong enough to protect those you love"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但現在的梅菲能守護重要的人了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但現在的梅菲能守護重要的人了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "지금의 메피는 소중한 이들을 지켜낼 수 있을 거야"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "but now, you're strong enough to protect those you love"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但現在的梅菲能守護重要的人了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但現在的梅菲能守護重要的人了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "감사합니다, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Thank you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "謝謝你，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "謝謝你，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "박사님은 소중한 존재들을 위해\n저를 '기만의 악마'로 만드셨을 거예요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Doctor must have made me the Demon of Deception\nfor the sake of those he cared about"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "博士應該是為了重要的存在，\n才把我做成「欺瞞的惡魔」"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "博士應該是為了重要的存在，\n才把我做成「欺瞞的惡魔」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그러니 저도 \n그 이름에 걸맞은 정령이 되고 싶습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I want to be a Soul\nworthy of that name"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以我也想成為\n符合那名字的精靈"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以我也想成為\n符合那名字的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "최근에 시장을 갈 일이 생겨서\n외출을 했었습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Recently, I went out\nto the market"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "最近有事要去市場\n就外出了一趟"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "最近有事要去市場\n就外出了一趟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그런데 그 시장에서\n여전히 아케나인 토스트를 팔고 있더라구요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "and I saw that they were\nstill selling Arkenine toast"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "不過那個市場\n還是有賣阿肯納因吐司"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "不過那個市場\n還是有賣阿肯納因吐司"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "상황이 혼란스러운 만큼\n예전만큼 장사가 잘되지는 않는다고 하셨지만"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "They said that they don't do as much business\nas they used to because of the chaotic situation"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "老闆說雖然因為情況很混亂，\n生意不像以前一樣好"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "老闆說雖然因為情況很混亂，\n生意不像以前一樣好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "생계를 유지하기 위해 계속 그 자리에서\n토스트를 팔고 계신다고 했어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "but they're still there selling toast\nto make a living"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但為了維持生計，\n還是繼續在那裡賣吐司"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但為了維持生計，\n還是繼續在那裡賣吐司"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그걸 보니 각자의 자리에서\n최선을 다하는 분들이 대단하게 느껴졌습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "That made me admire them\nfor doing what they do best"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "看到他的樣子，就覺得在各自的崗位上\n全力以赴的人們很了不起"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "看到他的樣子，就覺得在各自的崗位上\n全力以赴的人們很了不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "맞아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Right"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "맞아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Right"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "어서 평화가 찾아오도록 최선을 다하고 싶어"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I want to do my best to bring peace, too"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我想要全力以赴，讓和平趕快到來"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我想要全力以赴，讓和平趕快到來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "어서 평화가 찾아오도록 최선을 다하고 싶어"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I want to do my best to bring peace, too"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我想要全力以赴，讓和平趕快到來"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我想要全力以赴，讓和平趕快到來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Okay"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그때가 되면 저랑 또 같이\n아케나인 토스트를 드시겠어요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "When that time comes, would you like to have\nsome Arkenine toast with me?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "到時候願意跟我一起\n吃阿肯納因吐司嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "到時候願意跟我一起\n吃阿肯納因吐司嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응, 잔뜩 먹자!"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Sure, let's eat tons of it!"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯，大吃一頓吧！"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯，大吃一頓吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응, 잔뜩 먹자!"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Sure, let's eat tons of it!"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯，大吃一頓吧！"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯，大吃一頓吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "기대하고 있겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I look forward to it"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我會拭目以待"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我會拭目以待"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "최근에는 반려동물이 아니라\n돌을 기르시는 분들이 계신다고 해요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I hear some people are keeping stones\ninstead of pets these days"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "聽說最近有人不是養寵物，\n是養石頭"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "聽說最近有人不是養寵物，\n是養石頭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그런 돌을 '반려돌'이라고 부르는 것 같더라구요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "and they call them \"pet stones\""
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好像把那種石頭稱作「寵物石頭」"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "好像把那種石頭稱作「寵物石頭」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 돌은 자라지 않잖아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But stones don't grow"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但石頭又不會長大"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但石頭又不會長大"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 돌은 자라지 않잖아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But stones don't grow"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但石頭又不會長大"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但石頭又不會長大"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "네, 저도 처음에 그 점이 의아했었어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Yes, that's what puzzled me at first, too"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "對，我一開始也很訝異那一點"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "對，我一開始也很訝異那一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그런데 꼭 자라지 않더라도"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But it must be quite satisfying"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但就算沒有長大"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但就算沒有長大"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그 모습 그대로 있는 걸 바라보는 일이\n꽤나 만족감을 주는 듯합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "to look at something as it is,\neven if it doesn't grow"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "看著它保持原樣的樣子\n好像就會有很大的滿足感"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "看著它保持原樣的樣子\n好像就會有很大的滿足感"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "내가 메피를 보는 것 같은 느낌인가"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Like when I look at you?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "是我看著梅菲的感覺嗎"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "是我看著梅菲的感覺嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "내가 메피를 보는 것 같은 느낌인가"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Like when I look at you?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "是我看著梅菲的感覺嗎"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "是我看著梅菲的感覺嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "네?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Pardon?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "확실히… 정령도 ANIMA가 변하지 않는 이상\n겉모습이 거의 바뀌지 않기는 하네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Certainly, we Souls don't change much in appearance\nunless our ANIMA changes"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "精靈的確…只要不滅之魂ANIMA不改變，\n外表就幾乎不會有變化"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "精靈的確…只要不滅之魂ANIMA不改變，\n外表就幾乎不會有變化"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그것보다 구원자님은 저를 볼 때\n돌을 보는 것 같은 기분을 느끼시는군요…"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "By the way, you feel like you're looking at a stone\nwhen you look at me..."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "比起那個，原來救援者看著我的時候\n感覺就像在看著石頭…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "比起那個，原來救援者看著我的時候\n感覺就像在看著石頭…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "말이 조금 이상한데!?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "That doesn't sound right"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "這樣講有點怪耶！？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "這樣講有點怪耶！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "말이 조금 이상한데!?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "That doesn't sound right"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "這樣講有點怪耶！？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "這樣講有點怪耶！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Hoho"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그 기분이 궁금해졌습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I just wonder how you feel when you do"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我開始好奇那種心情了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我開始好奇那種心情了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "다음에 구원자님과 나들이를 가게 되면\n돌멩이를 하나 주워 와야겠어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "The next time I go out with you\nI should find a stone to take with me"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "下次和救援者去約會的話，\n要撿顆石頭看看"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "下次和救援者去約會的話，\n要撿顆石頭看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그걸 제 반려돌로 삼겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I want a pet stone of my own"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "然後把它當我的寵物石頭"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "然後把它當我的寵物石頭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "나도 돌 고르는 거 도와줄게"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'll help you pick"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也會幫妳挑石頭"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也會幫妳挑石頭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "나도 돌 고르는 거 도와줄게"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'll help you pick"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也會幫妳挑石頭"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也會幫妳挑石頭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "감사합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Thank you"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그럼 같이 구원자님을 닮은 돌을 찾아보죠"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Then, let's find a stone that looks like you"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "那一起找像救援者的石頭吧"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "那一起找像救援者的石頭吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응!?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Huh!?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯！？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응!?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Huh!?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯！？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "저도 돌을 보면서\n구원자님을 생각해 보고 싶어서요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "So, I can look at the stone\nand think of you"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我想看著石頭\n想到救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我想看著石頭\n想到救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님이 저를 볼 때 느끼시는 감정을\n이해해 보고 싶습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I want to understand\nwhat you feel when you look at me"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "想體驗看看救援者看著我的時候\n感受到的情感"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "想體驗看看救援者看著我的時候\n感受到的情感"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "혹시 나 놀리는 거야…?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Are you making fun of me...?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "妳在嘲弄我嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "妳在嘲弄我嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "혹시 나 놀리는 거야…?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Are you making fun of me...?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "妳在嘲弄我嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "妳在嘲弄我嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피가 능글맞아졌어…"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You've become mischievous..."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲變奸詐了…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲變奸詐了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피가 능글맞아졌어…"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "You've become mischievous..."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲變奸詐了…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲變奸詐了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "♪"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "♪"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "♪"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "얼마 전에 거리를 걷다가\n독특한 음악을 들었습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "The other day, I was walking down the street\nand heard a unique piece of music"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我前陣子在路上\n聽到了特別的音樂"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我前陣子在路上\n聽到了特別的音樂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "베스티 프로덕션에서 발매된 음악이라고 하던데\n조금 이해하기 어려운 멜로디와 가사였어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "It was released by Bestie Production\nEven though the melody and lyrics were a little hard to understand"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "聽說是最佳製作發行的音樂，\n旋律跟歌詞有點難懂"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "聽說是最佳製作發行的音樂，\n旋律跟歌詞有點難懂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그런데 왜인지 머릿속에 맴돌아서\n며칠째 흥얼거리게 되더라구요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "it got stuck in my head and I found myself\nhumming it for days"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但莫名地洗腦，\n好幾天都在哼那首歌"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但莫名地洗腦，\n好幾天都在哼那首歌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피도 노래를 불러?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I didn't know you liked to sing"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲也會唱歌嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲也會唱歌嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피도 노래를 불러?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I didn't know you liked to sing"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲也會唱歌嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲也會唱歌嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "제대로 부를 일은 거의 없지만\n저도 모르게 흥얼거릴 때는 있습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I don't really sing\nbut sometimes I hum"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然幾乎不會要認真唱歌，\n但我有時候會不自覺得哼歌"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然幾乎不會要認真唱歌，\n但我有時候會不自覺得哼歌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "들어 보고 싶다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'd love to hear you sing"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "想聽聽看"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "想聽聽看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "들어 보고 싶다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'd love to hear you sing"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "想聽聽看"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "想聽聽看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그 노래를 부른 연예인들처럼\n잘 부르지는 못할 거예요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'll never be as good as the people\nwho sang that song"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我沒辦法像原唱歌手一樣\n唱得那麼好"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我沒辦法像原唱歌手一樣\n唱得那麼好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그래도 구원자님이 듣고 싶으시다면…"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "but if you want to hear it..."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "如果救援者還是想聽的話…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "如果救援者還是想聽的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "제대로 연습해 봐야겠네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'd better practice"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我得認真練習了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我得認真練習了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "저는 신이나 운명을 믿지 않았습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I've never believed in gods or fate"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我以前不相信神或命運"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我以前不相信神或命運"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "미래는 데이터가 쌓여 만들어지는\n결괏값이라고 생각해 왔어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I've always thought that the future is\nthe result of data accumulation"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "曾經認為未來是數據累積起來，\n製造出的結果值"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "曾經認為未來是數據累積起來，\n製造出的結果值"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 이 세상에는 '섭리'라는 시스템이 \n존재한다는 걸 이젠 몸소 느끼고 있어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But now I realize that there is a system\ncalled \"providence\" in this world"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但我現在親身體會到\n這世界存在著所謂「法則」的系統"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但我現在親身體會到\n這世界存在著所謂「法則」的系統"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 그래도 저는 정해진 운명을\n바꿀 수 있다고 믿고 싶습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But I still want to believe\nthat I can change my fate"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但我還是想相信\n能改變既定的命運"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但我還是想相信\n能改變既定的命運"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "나도 그래"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Me, too"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也是"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "나도 그래"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Me, too"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也是"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "하지만 운명을… 섭리를 거스르는 건 \n절대 쉽지 않을 거예요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "But changing fate\nwon't be easy"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但要違背命運…違背法則\n絕非易事"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但要違背命運…違背法則\n絕非易事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "저희는 그 과정에서 분명 \n많은 고통을 겪겠죠"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "We'll suffer a lot\ngoing against the odds"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我們一定會在那過程中\n經歷許多痛苦"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我們一定會在那過程中\n經歷許多痛苦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그래서 저는 구원자님이 걱정됩니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "That's why I'm worried about you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以我很擔心救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以我很擔心救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "앞으로 감당하시기 힘든 \n절망과 공포를 느끼게 되실까 봐요…"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'm afraid you might feel despair and fear\nthat will be too much for you to handle"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "怕你以後會感受到難以承受的\n絕望和恐懼…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "怕你以後會感受到難以承受的\n絕望和恐懼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "힘들어도 괜찮아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'll be okay"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "就算累也沒關係"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "就算累也沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "힘들어도 괜찮아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'll be okay"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "就算累也沒關係"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "就算累也沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피가 내 옆에 있어 줄 거잖아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Because you'll be by my side"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲不是會在我身邊嗎"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲不是會在我身邊嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "메피가 내 옆에 있어 줄 거잖아"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Because you'll be by my side"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲不是會在我身邊嗎"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "梅菲不是會在我身邊嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "!"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "...!"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "！"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "네, 맞아요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Of course"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "對，沒錯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "對，沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "저도 구원자님과\n그려 나갈 앞으로의 미래가"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'm more excited\nthan afraid of the future"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "以後要跟救援者\n一起描繪的未來"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "以後要跟救援者\n一起描繪的未來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "두렵기보다는 기대됩니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "we have together"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也是比起害怕，更多的是期待"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我也是比起害怕，更多的是期待"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "그러니 부디 \n그때까지 제 손을 놓지 말아 주시겠어요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "So, please don't let go of my hand until then\nWill you?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以在那之前\n千萬不要放開我的手好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以在那之前\n千萬不要放開我的手好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I will"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I will"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "약속할게"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I promise"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我答應妳"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我答應妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "약속할게"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I promise"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我答應妳"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我答應妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님, 메피입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Savior, it's Mephi"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，我是梅菲"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，我是梅菲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "제가 없는 동안 벨레드 님이 \n구원자님을 곁에서 보좌했다고 들었어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I understand Beleth has taken\ncare of you while I was away"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "聽說我不在的期間，是貝萊德\n在救援者身邊輔佐你"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "聽說我不在的期間，是貝萊德\n在救援者身邊輔佐你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "괜찮으시면 셋이서 만나 뵐 수 있을까요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "If you don't mind, I was wondering if the three of us could meet up?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "方便的話，要三個人見一下面嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "方便的話，要三個人見一下面嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님이 여전히 저는 저일뿐이라고\n말씀해 주셨지만"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Savior, even though you've told me\nthat I'm still just me,"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然救援者說\n我仍然只是我"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "雖然救援者說\n我仍然只是我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "에덴을 잠시 떠났을 때\n우주에서 알게 된 제 진정한 사명 때문에…"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I'm still confused about my true mission\nthat I learned about"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但因為暫時離開伊甸園的時候，\n在宇宙得知了我真正的使命…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "但因為暫時離開伊甸園的時候，\n在宇宙得知了我真正的使命…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "계속 혼란스러운 생각이 들어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "during my time away from Eden"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以一直出現混亂的想法"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "所以一直出現混亂的想法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님, 괜찮으시면\n제가 보고 겪은 일을 들어 주시겠어요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Savior, can I tell you\nwhat I've experienced?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，可以的話，\n願意聽聽我那時的所見所聞嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，可以的話，\n願意聽聽我那時的所見所聞嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "제가 에덴으로 돌아올 수 있었던 건\n행성에 남아 있던 오퍼레이터 식스와"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "I was able to return to Eden\nbecause of Operator Six on the planet"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我之所以能回到伊甸園\n是多虧了留在行星上的駕駛員六號"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "我之所以能回到伊甸園\n是多虧了留在行星上的駕駛員六號"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "에덴에 계시는 구원자님 덕분이었습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "and you in Eden"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "跟伊甸園的救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "跟伊甸園的救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님을 만나고 싶다고 생각한 순간\n제 새로운 시스템이 기동되었거든요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "because the moment I thought I wanted to see you again\nmy new system kicked in"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "想到想見救援者的瞬間，\n我的新系統就啟動了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "想到想見救援者的瞬間，\n我的新系統就啟動了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "구원자님, 메피입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Savior, it's Mephi"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，我是梅菲"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "救援者，我是梅菲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "바닷가에 가실 준비를 마치셨을까요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "Are you ready to go to the beach?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "準備好要去海邊了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "準備好要去海邊了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스(여명)",
+            "message": "아직이시라면 저랑 벨레드가 준비를 도와드릴게요"
+          },
+          "en": {
+            "speaker": "Mephistopheles (Dawn)",
+            "message": "If not, Beleth and I can help you get ready"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "還沒好的話，我跟貝萊德來幫你"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯（黎明）",
+            "message": "還沒好的話，我跟貝萊德來幫你"
+          }
+        }
+      ]
+    }
+  }
+}

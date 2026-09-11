@@ -1,0 +1,8096 @@
+{
+  "id": "3150",
+  "name": "웨리",
+  "name_en": "Wheri",
+  "grade": "에픽",
+  "race": "요정형",
+  "class": "서포터",
+  "sub_class": "보호",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "라플라스의 관측자",
+    "constellation": "인연_제이드_이벤트1",
+    "union": "페이렌 연합국",
+    "birthday": "512",
+    "height": 169,
+    "weight": null,
+    "cv_ko": "홍수정",
+    "cv_jp": "Ohnishi Ayaka",
+    "like": [
+      "생물"
+    ],
+    "dislike": [
+      "잠"
+    ],
+    "hobby": [
+      "뜨개질"
+    ],
+    "speciality": [
+      "미래 예측"
+    ]
+  },
+  "personality": {
+    "description": "만나서 반가워요, 구원자.\n저는 페이렌 연합국의 대현자 웨리예요.\n\n페이렌 숲은 수많은 생명과 정령들이 탄생하는 곳이에요.\n저는 이 사랑스러운 아이들을 수호하고 돕는 역할을 하고 있어요.\n이 에덴에서 오랜 시간 동안 다양한 탄생과 죽음을 지켜봤지만… \n살아 숨쉬는 인간을 곁에서 지켜본 건 처음이네요.\n\n당신은 정말 흥미로운 존재예요, 구원자. \n\n실은, 당신을 만나기 전부터 지켜보고 있었어요.\n페이렌의 모든 생물은 제 눈과 귀가 되어주고 있거든요.\n너무 자세히 보진 않았으니 걱정하지 마세요, 후후…\n\n구원자도 절 지켜봐 주실 건가요?\n그럼… 기다리고 있을게요, 구원자.",
+    "greeting": "페이렌의 대현자, 웨리입니다.\n드디어 만났네요, 구원자."
+  },
+  "speech_patterns": [
+    "반가워요, 구원자.",
+    "당신의 연락처라고 들었는데 맞나요?",
+    "후후… 페이렌의 대현자 웨리예요.",
+    "잘 연락이 닿아서 다행이네요.",
+    "당신이 있는 곳은 잘 읽히지 않아서 확신이 없었는데…",
+    "아녜요.",
+    "앞으로 잘 부탁해요.",
+    "구원자.",
+    "네, 무슨 일이시죠?",
+    "조금",
+    "황당한 이야기네요.",
+    "좀 더 자세히 말해주시겠어요?",
+    "후후… 구원자.",
+    "물론 개구리는 고양이와 달라요.",
+    "하지만 개구리도 마음에 드는 일이 있을 땐 꽤 적극적이랍니다.",
+    "개구리가 구원자를 마음에 들어 했나 봐요.",
+    "다른 아이들도 구원자에게 말 걸지도 모르니",
+    "주변을 주의 깊게 둘러보세요.",
+    "구원자,",
+    "좋아하는 차가 있으신가요?",
+    "구원자가 찾아올 때를 대비해 미리 준비해 두려고요.",
+    "제 온실의 첫 손님인데 좋은 차로 대접하고 싶어요.",
+    "이런…",
+    "저… 조금 들뜬 것 같네요.",
+    "이런 경우가 별로 없는데, \n구원자가 찾아와서 좋았나 봐요.",
+    "어머, 반가운 이야기네요.",
+    "하지만 무리는 하지 말아주세요.",
+    "구원자, 라우라를 만나셨나요?",
+    "어떠셨나요?",
+    "라우라가 그러던가요?",
+    "그건 라우라의 개인적인 취미예요.",
+    "페이렌 정령들은 숲에서 다양한 놀이를 하지만,",
+    "그 아이처럼 특이한 취향은 드물어요.",
+    "혹시 '구덩이 놀이'에 관심이 생기신 거라면…",
+    "제가 라우라에게 전달해 줄게요.",
+    "부작용이 사라진다면요?",
+    "음… 그럴 일은 없겠지만",
+    "만약 사라진다면 일출을 보고 싶어요.",
+    "네, 해가 떠오르기 시작하면",
+    "동물들이 잠에서 깨어나 머릿속이 복잡해지거든요.",
+    "그래서 항상 해가 완전히 떠오르는 걸 천천히…",
+    "아주 느긋하게 보고 싶다고 생각했어요.",
+    "아름다운 페이렌 숲이 깨어나는걸",
+    "처음부터 끝까지 지켜보는 거죠.",
+    "고마워요.",
+    "언젠가 보게 된다면,",
+    "당신께 꼭 감상을 알려드릴게요.",
+    "마물 토벌이 어느 정도 정리가 되면",
+    "가보고 싶은 곳이 있나요?",
+    "그래도 페이렌까지 와주셨는데"
+  ],
+  "comments": [
+    {
+      "writer": "아야메",
+      "comment": "손재주가 몹시 좋은 분이라고 들었사옵니다. 함께 매듭을 만들어보고 싶사와요."
+    },
+    {
+      "writer": "탈리아",
+      "comment": "나랑은 다른 방식으로 운명을 읽을 수 있는 정령이야. 어떤 미래를 보고 있는 걸까?"
+    },
+    {
+      "writer": "도미니크",
+      "comment": "무, 무척 다정한 분이세요. 하, 하지만 가끔… 무, 무서워요… 왜 그럴까요…?"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "웨리",
+        "message": "반가워요, 구원자."
+      },
+      {
+        "speaker": "웨리",
+        "message": "당신의 연락처라고 들었는데 맞나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "누구야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누구야?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "후후… 페이렌의 대현자 웨리예요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "잘 연락이 닿아서 다행이네요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "당신이 있는 곳은 잘 읽히지 않아서 확신이 없었는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "읽히지 않는다고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "읽히지 않는다고?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "아녜요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "앞으로 잘 부탁해요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 잘 부탁해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 잘 부탁해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리, 혹시…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리, 혹시…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "네, 무슨 일이시죠?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 페이렌에서 개구리는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 페이렌에서 개구리는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "길고양이 같은 존재야…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "길고양이 같은 존재야…?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "조금"
+      },
+      {
+        "speaker": "웨리",
+        "message": "황당한 이야기네요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "좀 더 자세히 말해주시겠어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "개구리가 날 막 따라오고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "개구리가 날 막 따라오고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "날 부르고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "날 부르고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "자길 따라오라고 했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "자길 따라오라고 했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "보통 개구리는 안 그렇잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "보통 개구리는 안 그렇잖아"
+      },
+      {
+        "speaker": "웨리",
+        "message": "후후… 구원자."
+      },
+      {
+        "speaker": "웨리",
+        "message": "물론 개구리는 고양이와 달라요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "하지만 개구리도 마음에 드는 일이 있을 땐 꽤 적극적이랍니다."
+      },
+      {
+        "speaker": "웨리",
+        "message": "개구리가 구원자를 마음에 들어 했나 봐요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "다른 아이들도 구원자에게 말 걸지도 모르니"
+      },
+      {
+        "speaker": "웨리",
+        "message": "주변을 주의 깊게 둘러보세요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 사방에서 날 감시하는 듯한 기분이…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 사방에서 날 감시하는 듯한 기분이…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "좋아하는 차가 있으신가요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자가 찾아올 때를 대비해 미리 준비해 두려고요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 아무거나 괜찮은데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 아무거나 괜찮은데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신경 써줘서 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신경 써줘서 고마워"
+      },
+      {
+        "speaker": "웨리",
+        "message": "아녜요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "제 온실의 첫 손님인데 좋은 차로 대접하고 싶어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "이런…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "저… 조금 들뜬 것 같네요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "이런 경우가 별로 없는데, \n구원자가 찾아와서 좋았나 봐요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 시간 나면 종종 찾아갈게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 시간 나면 종종 찾아갈게"
+      },
+      {
+        "speaker": "웨리",
+        "message": "어머, 반가운 이야기네요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "하지만 무리는 하지 말아주세요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자, 라우라를 만나셨나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 만났어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 만났어"
+      },
+      {
+        "speaker": "웨리",
+        "message": "어떠셨나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좀 특이했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좀 특이했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "흥미로운 구덩이가 있으면 뛰어든다고 하던데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "흥미로운 구덩이가 있으면 뛰어든다고 하던데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페이렌 정령들은 원래 구덩이에서 놀아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페이렌 정령들은 원래 구덩이에서 놀아?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "라우라가 그러던가요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그건 라우라의 개인적인 취미예요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "페이렌 정령들은 숲에서 다양한 놀이를 하지만,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그 아이처럼 특이한 취향은 드물어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 특이하네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 특이하네"
+      },
+      {
+        "speaker": "웨리",
+        "message": "혹시 '구덩이 놀이'에 관심이 생기신 거라면…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "제가 라우라에게 전달해 줄게요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "아냐 괜찮아;"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아냐 괜찮아;"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리, 만약 능력의 부작용이 사라진다면…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리, 만약 능력의 부작용이 사라진다면…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제일 해보고 싶은 게 뭐야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제일 해보고 싶은 게 뭐야?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "부작용이 사라진다면요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "음… 그럴 일은 없겠지만"
+      },
+      {
+        "speaker": "웨리",
+        "message": "만약 사라진다면 일출을 보고 싶어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "일출을?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "일출을?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "네, 해가 떠오르기 시작하면"
+      },
+      {
+        "speaker": "웨리",
+        "message": "동물들이 잠에서 깨어나 머릿속이 복잡해지거든요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그래서 항상 해가 완전히 떠오르는 걸 천천히…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "아주 느긋하게 보고 싶다고 생각했어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "아름다운 페이렌 숲이 깨어나는걸"
+      },
+      {
+        "speaker": "웨리",
+        "message": "처음부터 끝까지 지켜보는 거죠."
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 멋진 풍경이겠다…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 멋진 풍경이겠다…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언젠가 볼 수 있으면 좋겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언젠가 볼 수 있으면 좋겠네"
+      },
+      {
+        "speaker": "웨리",
+        "message": "고마워요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "언젠가 보게 된다면,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "당신께 꼭 감상을 알려드릴게요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "마물 토벌이 어느 정도 정리가 되면"
+      },
+      {
+        "speaker": "웨리",
+        "message": "가보고 싶은 곳이 있나요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그래도 페이렌까지 와주셨는데"
+      },
+      {
+        "speaker": "웨리",
+        "message": "궁금한 곳이 있다면 안내해 드릴게요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페이렌에 관광할 만한 곳이 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페이렌에 관광할 만한 곳이 있어?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "음… 글쎄요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "북부 지역의 온천이 인기가 많은 편이죠."
+      },
+      {
+        "speaker": "구원자",
+        "message": "온천이 있었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "온천이 있었어?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "네, 화산이 있거든요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "화산 온천이라니 신기하다~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "화산 온천이라니 신기하다~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에 같이 가보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에 같이 가보자"
+      },
+      {
+        "speaker": "웨리",
+        "message": "후후… 좋아요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "온천을 같이 가지고 말해준 것도 구원자가 처음이에요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자는 대담한 면이 있으시네요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자의 수영복… 기대할게요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐, 같이 들어가게?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐, 같이 들어가게?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 당연히 따로 들어가는 줄 알고…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 당연히 따로 들어가는 줄 알고…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리…?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리…?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "식사 도중에 나가서 미안해…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "식사 도중에 나가서 미안해…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "괜찮아요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "급한 일이 있으셨던 것 같던데"
+      },
+      {
+        "speaker": "웨리",
+        "message": "신경 쓰지 마세요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "아냐 미안…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아냐 미안…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리도 거의 먹지 않은 것 같던데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리도 거의 먹지 않은 것 같던데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "아…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "저는 원래 잘 못 먹어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "이유가 있는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이유가 있는 거야?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "이유라…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "아마 구원자를 포함한 다른 정령들은 느끼지 못하겠지만"
+      },
+      {
+        "speaker": "웨리",
+        "message": "저는 식재료가 제 식탁에 올라올 때까지"
+      },
+      {
+        "speaker": "웨리",
+        "message": "어떤 삶을 살았는지 전부 보여서 말이죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "식사 때마다 정보량이 너무 많아져 힘들어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 힘들겠네…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 힘들겠네…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "너무 안타까워하지 마세요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "나름 재밌는 사실도 알게 되거든요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그거 아시나요, 구원자?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "생물이 어떤 삶을 살았는지에 따라 맛이 전부 달라요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "기나긴 삶이 쌓여서 '맛'으로 나타나는 것이죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그래서 음식을 입으로 씹다 보면…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "으악! 잠깐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "으악! 잠깐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이 이상은 들으면 안 될 것 같아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이 이상은 들으면 안 될 것 같아!"
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자는 어떻게 아케나인의 영주가 됐나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나? 나는…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나? 나는…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아의 제안으로 영주가 됐어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아의 제안으로 영주가 됐어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리는 어떻게 대현자가 된 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리는 어떻게 대현자가 된 거야?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "후후… 제 이야기도 궁금하신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말하기 어렵다면 말 안 해줘도 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말하기 어렵다면 말 안 해줘도 괜찮아"
+      },
+      {
+        "speaker": "웨리",
+        "message": "아녜요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "저에 대해 궁금하셨다니 기쁜걸요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "저는, 선대 대현자님 밑에서 일하는 정령 중 하나였어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그러던 어느 날"
+      },
+      {
+        "speaker": "웨리",
+        "message": "한 악마형 정령의 폭주로 한 마을 전체가 오염되는 큰 사건이 일어났어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그 오염 속도가 어찌나 빠른지"
+      },
+      {
+        "speaker": "웨리",
+        "message": "마을 뿐만 아니라 그 주변 숲까지 모두 집어삼켰죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그대로 두었다간 페이렌 숲이 망가질 것 같아"
+      },
+      {
+        "speaker": "웨리",
+        "message": "제 개인적인 판단으로 마을과 숲, 미처 도망치지 못한 정령까지"
+      },
+      {
+        "speaker": "웨리",
+        "message": "통째로 봉인시켰어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "대현자님께 허락도 받지 않고 제 개인적인 판단으로 말이죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그 뒤로 선대 대현자님께서 절 눈여겨보시더니"
+      },
+      {
+        "speaker": "웨리",
+        "message": "후대 대현자로 추천하시더군요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리가 좋은 판단을 내렸나 보네."
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리가 좋은 판단을 내렸나 보네."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그 상황에서 최선의 판단을 내렸을 뿐."
+      },
+      {
+        "speaker": "웨리",
+        "message": "좋은 판단인지는 모르겠네요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "최선의 판단이"
+      },
+      {
+        "speaker": "구원자",
+        "message": "최선의 판단이"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언제나 좋은 판단이 되는 건 아니지…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언제나 좋은 판단이 되는 건 아니지…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "역시 구원자는 이해하시는군요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "고마워요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "제 첫인상을 알려줘요, 구원자."
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리의 첫인상은…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리의 첫인상은…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기계 같다고 생각했어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "기계 같다고 생각했어."
+      },
+      {
+        "speaker": "웨리",
+        "message": "잘 파악하셨네요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "내 첫인상은 어땠어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내 첫인상은 어땠어?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자의 첫인상이요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "당신을 알게 된 순간부터"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그 이후 펼쳐질 미래의 가능성을 보느라"
+      },
+      {
+        "speaker": "웨리",
+        "message": "사실 구원자에 대한 첫인상은 흐릿해요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "하지만 온실에 찾아온 당신을 처음 봤을 땐,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "솔직히 좋은 분이라고 생각했어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "제가 상상한 것 보다 좀 더."
+      },
+      {
+        "speaker": "웨리",
+        "message": "이런 것도 첫인상으로 쳐주시나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응. 쳐줄게."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응. 쳐줄게."
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋게 봐줘서 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋게 봐줘서 고마워"
+      },
+      {
+        "speaker": "웨리",
+        "message": "당신이 잠든 걸 본 적 있어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "정확히 말하자면 '보인'거죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "참고로 전 누군가가 잠든 모습을 구경하는 취미는 없어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "수면에 대한 관심도 없고요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "하지만 구원자가 잠든 모습을 보니,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "어쩐지 옆에서 계속 바라보고 싶다는 생각이 들었어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 잠든 모습을…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 잠든 모습을…?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "규칙적으로 오르락내리락하는 몸과"
+      },
+      {
+        "speaker": "웨리",
+        "message": "가끔씩 움찔거리는 표정을 보면서…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자가 눈을 떠 저를 바라봐줄 때까지"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그저 조용히 바라보고 싶다는 생각이 들었어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "…그냥, 그렇다고요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "토벌 작전을 도와주셔서 감사해요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "페이렌에 머무는 동안 편히 지내주세요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그럼, 이만."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자."
+      },
+      {
+        "speaker": "웨리",
+        "message": "제 온실로 오는 길은 잘 기억하고 있죠?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 잘 기억하고 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 잘 기억하고 있어"
+      },
+      {
+        "speaker": "웨리",
+        "message": "좋아요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "제가 필요해지면…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그 길을 따라와 주세요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "전 언제나 이곳에 있으니까요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리, 뜨개질 좋아해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리, 뜨개질 좋아해?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "후후… 제 뜨개질 바구니를 보셨군요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "네, 맞아요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "최근 뜨개질에 푹 빠져있답니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘하는 편이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘하는 편이야?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "제가 뜨개질을 몇 년이나 했는지 알게 된다면"
+      },
+      {
+        "speaker": "웨리",
+        "message": "깜짝 놀라실걸요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "주변에 있는 것들은 대부분 만들 수 있어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "우와…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우와…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 뜨개질을 좋아하는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 뜨개질을 좋아하는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇다면…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇다면…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나 좀 가르쳐줄래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나 좀 가르쳐줄래?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "좋아요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "당신의 부탁인데 거절할 이유가 없죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "요즘 악몽은 어떠신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 좋아졌어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 좋아졌어"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그런가요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "하지만 당신 얼굴은…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "전보다 더 피곤해 보여요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자, 잘 들어갔나요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "지난번에 하던 이야기를 마저 하고 싶어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "시간 나면 온실에 찾아와주세요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "기다리고 있을게요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "지난밤엔 온실에 오지 않으셨네요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "악몽이 사라지셨나요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "아니면 혹시 절 보기 어려우셨나요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "이유가 무엇이든 괜찮아요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "오늘 식사 시간에 늦지 않게 와주세요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "기다리고 있을게요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "잠드셨나요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그곳의 저를 만나러 떠나셨나요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "그렇다면 저도…"
+      },
+      {
+        "speaker": "웨리",
+        "message": "당신을 마중 나갈게요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자는 운명을 믿으시나요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "운명은 믿고 말고 할 수 있는 게 아니죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "우리는 모두 운명이라는 질긴 실 위에 서 있으니까요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "일어날 미래는 일어날 것이고,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "아무리 원망하고 애원해도 과거는 변하지 않죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그러니 구원자,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "절 원망하고 미워해 주세요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "그 또한 우리의 운명이니까요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자, 제게 졸음이 찾아왔어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "이제 곧 겨울이군요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "약속한 시간이 끝나간다는 뜻이겠죠."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자."
+      },
+      {
+        "speaker": "웨리",
+        "message": "수고했어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자, 오고 계신가요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "오늘 나이아를 페이렌에 초대했어요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "당신이 알려준 방법을 사용해 볼 예정이에요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "제가 잘할 수 있을까요?"
+      },
+      {
+        "speaker": "웨리",
+        "message": "사랑스러운 나의 구원자,"
+      },
+      {
+        "speaker": "웨리",
+        "message": "사랑의 날인데… 절 혼자 두진 않으실 거죠?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "가는 중이야, 웨리!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "가는 중이야, 웨리!"
+      },
+      {
+        "speaker": "웨리",
+        "message": "새 생명이 피어나는 날을 축하해요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "구원자에게 행복이 가득하길."
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리도 행복하길"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨리도 행복하길"
+      },
+      {
+        "speaker": "웨리",
+        "message": "이제 올해도 끝나가네요."
+      },
+      {
+        "speaker": "웨리",
+        "message": "올해도 당신과 함께해서 더 특별했어요."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도, 웨리와 함께해서 좋았어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도, 웨리와 함께해서 좋았어."
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "웨리",
+      "en": "Wheri",
+      "zh_tw": "威里",
+      "zh_cn": "威里"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "요정형",
+      "en": "Fairy",
+      "zh_tw": "妖精型",
+      "zh_cn": "妖精型"
+    },
+    "class": {
+      "ko": "서포터",
+      "en": "Supporter",
+      "zh_tw": "輔助者",
+      "zh_cn": "輔助者"
+    },
+    "sub_class": {
+      "ko": "보호",
+      "en": "Protect",
+      "zh_tw": "保護",
+      "zh_cn": "保護"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "라플라스의 관측자",
+        "en": "Laplace's Observer",
+        "zh_tw": "拉普拉斯觀測者",
+        "zh_cn": "拉普拉斯觀測者"
+      },
+      "constellation": {
+        "ko": "인연_제이드_이벤트1",
+        "en": "인연_제이드_이벤트1",
+        "zh_tw": "金牛座",
+        "zh_cn": "金牛座"
+      },
+      "union": {
+        "ko": "페이렌 연합국",
+        "en": "Fayren Union",
+        "zh_tw": "費倫聯合國",
+        "zh_cn": "費倫聯合國"
+      },
+      "cv_ko": {
+        "ko": "홍수정",
+        "en": "Soojung Hong",
+        "zh_tw": "洪秀晶",
+        "zh_cn": "洪秀晶"
+      },
+      "cv_jp": {
+        "ko": "Ohnishi Ayaka",
+        "en": "Ohnishi Ayaka",
+        "zh_tw": "大西禮芳",
+        "zh_cn": "大西禮芳"
+      },
+      "like": {
+        "ko": [
+          "생물"
+        ],
+        "en": [
+          "Creatures"
+        ],
+        "zh_tw": [
+          "生物"
+        ],
+        "zh_cn": [
+          "生物"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "잠"
+        ],
+        "en": [
+          "Sleep"
+        ],
+        "zh_tw": [
+          "睡覺"
+        ],
+        "zh_cn": [
+          "睡覺"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "뜨개질"
+        ],
+        "en": [
+          "Knitting"
+        ],
+        "zh_tw": [
+          "編織"
+        ],
+        "zh_cn": [
+          "編織"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "미래 예측"
+        ],
+        "en": [
+          "Future Prediction"
+        ],
+        "zh_tw": [
+          "預測未來"
+        ],
+        "zh_cn": [
+          "預測未來"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "만나서 반가워요, 구원자.\n저는 페이렌 연합국의 대현자 웨리예요.\n\n페이렌 숲은 수많은 생명과 정령들이 탄생하는 곳이에요.\n저는 이 사랑스러운 아이들을 수호하고 돕는 역할을 하고 있어요.\n이 에덴에서 오랜 시간 동안 다양한 탄생과 죽음을 지켜봤지만… \n살아 숨쉬는 인간을 곁에서 지켜본 건 처음이네요.\n\n당신은 정말 흥미로운 존재예요, 구원자. \n\n실은, 당신을 만나기 전부터 지켜보고 있었어요.\n페이렌의 모든 생물은 제 눈과 귀가 되어주고 있거든요.\n너무 자세히 보진 않았으니 걱정하지 마세요, 후후…\n\n구원자도 절 지켜봐 주실 건가요?\n그럼… 기다리고 있을게요, 구원자.",
+        "en": "It's a pleasure to meet you, Savior.\nI'm Wheri, the Great Sage of the Fayren Union.\n\nThe Fayren Forest is the birthplace of many lives and Souls,\nand I'm here to protect and help these lovely creatures.\nI've seen many births and deaths in my time in Eden,\nbut this is the first time I've ever been around a living, breathing human.\n\nYou're a very interesting being, Savior.\n\nTo tell you the truth, I've been watching you before I even met you.\nAfter all, all the creatures of Fayren can serve as my eyes and ears.\nBut don't worry. I haven't been watching too closely. Hoho.\n\nWill you be watching me, too?\nThen, I'll be waiting for you, Savior.",
+        "zh_tw": "救援者，很高興見到你。\n我是費倫聯合國的大賢者威里。\n\n費倫森林是無數生命和精靈誕生的地方，\n我扮演著守護和幫助這些可愛孩子們的角色。\n雖然長時間以來在伊甸園看見各式各樣的誕生與死亡…\n但這還是第一次在身邊關注活生生的人類。\n\n救援者，你是個很有趣的存在。\n\n其實，在遇見你之前，我就一直在關注你了。\n費倫的所有生物都是我的眼睛和耳朵。\n沒有看得太仔細，所以不用擔心，呵呵…\n\n救援者也會關注我嗎？\n那麼…我會等你的，救援者。",
+        "zh_cn": "救援者，很高興見到你。\n我是費倫聯合國的大賢者威里。\n\n費倫森林是無數生命和精靈誕生的地方，\n我扮演著守護和幫助這些可愛孩子們的角色。\n雖然長時間以來在伊甸園看見各式各樣的誕生與死亡…\n但這還是第一次在身邊關注活生生的人類。\n\n救援者，你是個很有趣的存在。\n\n其實，在遇見你之前，我就一直在關注你了。\n費倫的所有生物都是我的眼睛和耳朵。\n沒有看得太仔細，所以不用擔心，呵呵…\n\n救援者也會關注我嗎？\n那麼…我會等你的，救援者。"
+      },
+      "greeting": {
+        "ko": "페이렌의 대현자, 웨리입니다.\n드디어 만났네요, 구원자.",
+        "en": "I am Wheri, the Great Sage of Fayren.\nFinally, we meet, Savior.",
+        "zh_tw": "我是費倫的大賢者，威里。\n終於見面了，救援者。",
+        "zh_cn": "我是費倫的大賢者，威里。\n終於見面了，救援者。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "반가워요, 구원자."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Greeting, Savior."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "幸會，救援者。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "幸會，救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "당신의 연락처라고 들었는데 맞나요?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "I heard this was your contact. Am I right?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "聽說這是你的聯絡方式，對嗎？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "聽說這是你的聯絡方式，對嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "후후… 페이렌의 대현자 웨리예요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Haha... I'm Wheri the Great Sage of Fayren."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "呵呵…我是費倫的大賢者威里。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "呵呵…我是費倫的大賢者威里。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "잘 연락이 닿아서 다행이네요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "I'm relieved to have reached you."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "幸好順利聯絡上你。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "幸好順利聯絡上你。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "당신이 있는 곳은 잘 읽히지 않아서 확신이 없었는데…"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "I wasn't sure since it's hard to track where you are..."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "因為讀不太到你所在的地方，所以不確定…"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "因為讀不太到你所在的地方，所以不確定…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "아녜요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "It's nothing."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "沒事。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "沒事。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "앞으로 잘 부탁해요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "I look forward to us working together,"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "之後請多指教，"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "之後請多指教，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "구원자."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Savior."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "救援者。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "네, 무슨 일이시죠?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Yes, what is it?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "是，有什麼事嗎？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "是，有什麼事嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "조금"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "That's"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "這話"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "這話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "황당한 이야기네요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "quite an odd thing to say."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "有點荒唐。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "有點荒唐。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "좀 더 자세히 말해주시겠어요?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Could you explain in more detail?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "你能再說得詳細一點嗎？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "你能再說得詳細一點嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "후후… 구원자."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Haha...Savior."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "呵呵…救援者。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "呵呵…救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "물론 개구리는 고양이와 달라요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Obviously, frogs aren't like cats."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "青蛙當然跟貓咪不一樣。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "青蛙當然跟貓咪不一樣。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "하지만 개구리도 마음에 드는 일이 있을 땐 꽤 적극적이랍니다."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "But when something catches their interest, they tend to go after it with real enthusiasm."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "但是遇到稱心如意的事，青蛙也會很積極。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "但是遇到稱心如意的事，青蛙也會很積極。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "개구리가 구원자를 마음에 들어 했나 봐요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "It seems this frog took a liking to you, Savior."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "看來青蛙喜歡救援者。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "看來青蛙喜歡救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "다른 아이들도 구원자에게 말 걸지도 모르니"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Other frogs may try to talk to you,"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "其他的孩子說不定也會跟救援者說話"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "其他的孩子說不定也會跟救援者說話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "주변을 주의 깊게 둘러보세요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "So, keep an eye on your surroundings."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "請你要仔細看看周遭。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "請你要仔細看看周遭。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "구원자,"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Savior,"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "救援者，"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "救援者，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "좋아하는 차가 있으신가요?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Do you have a favorite tea?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "你有喜歡喝的茶嗎？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "你有喜歡喝的茶嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "구원자가 찾아올 때를 대비해 미리 준비해 두려고요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "I'd like to have it ready for when you visit."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "我打算在救援者來的時候事先準備好。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "我打算在救援者來的時候事先準備好。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "제 온실의 첫 손님인데 좋은 차로 대접하고 싶어요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "You're the very first guest in my greenhouse, so I'd like to serve you something nice."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "你是我溫室的第一個客人，我想用好茶接待。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "你是我溫室的第一個客人，我想用好茶接待。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "이런…"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Oh my..."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "唉呀…"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "唉呀…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "저… 조금 들뜬 것 같네요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "I...think I've gotten myself a little too excited over this."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "我…好像有點興奮了。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "我…好像有點興奮了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "이런 경우가 별로 없는데, \n구원자가 찾아와서 좋았나 봐요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "This doesn't happen often, but I suppose\nI'm just happy you're visiting, Savior."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "這種情況不常有，\n可能是救援者來了，所以很開心。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "這種情況不常有，\n可能是救援者來了，所以很開心。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "어머, 반가운 이야기네요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Oh, that's wonderful to hear."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "哎呀，這麼說真令人開心。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "哎呀，這麼說真令人開心。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "하지만 무리는 하지 말아주세요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "But prioritize your health."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "但是請你不要勉強。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "但是請你不要勉強。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "구원자, 라우라를 만나셨나요?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Savior, have you met Laura?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "救援者，你見過蘿拉嗎？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "救援者，你見過蘿拉嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "어떠셨나요?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "What did you think?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "覺得怎麼樣？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "覺得怎麼樣？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "라우라가 그러던가요?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Did Laura say that?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "蘿拉是這樣說的嗎？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "蘿拉是這樣說的嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "그건 라우라의 개인적인 취미예요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "That's just her personal hobby."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "那是蘿拉個人的愛好。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "那是蘿拉個人的愛好。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "페이렌 정령들은 숲에서 다양한 놀이를 하지만,"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Souls in Fayren enjoy various games in the forest."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "雖然費倫的精靈們會在森林玩各式各樣的遊戲，"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "雖然費倫的精靈們會在森林玩各式各樣的遊戲，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "그 아이처럼 특이한 취향은 드물어요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "But she's a rare kind of person with unusual tastes."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "但很少有像那孩子一樣特別的愛好。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "但很少有像那孩子一樣特別的愛好。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "혹시 '구덩이 놀이'에 관심이 생기신 거라면…"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "If you're interested in playing in pits..."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "要是你對「坑洞遊戲」感興趣的話…"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "要是你對「坑洞遊戲」感興趣的話…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "제가 라우라에게 전달해 줄게요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "I can let Laura know."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "我會轉告蘿拉。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "我會轉告蘿拉。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "부작용이 사라진다면요?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "If the side effects disappeared?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "副作用消失的話？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "副作用消失的話？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "음… 그럴 일은 없겠지만"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Hmm... It's unlikely that would happen."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "嗯…雖然不會發生那種事，"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "嗯…雖然不會發生那種事，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "만약 사라진다면 일출을 보고 싶어요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "But if they did, I'd like to watch a sunrise."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "但要是消失的話，我想看日出。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "但要是消失的話，我想看日出。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "네, 해가 떠오르기 시작하면"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Yes. As soon as the sun begins to rise,"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "對，太陽開始升起的話，"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "對，太陽開始升起的話，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "동물들이 잠에서 깨어나 머릿속이 복잡해지거든요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Animals wake up, and my mind fills with noise."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "動物就會從睡夢甦醒，腦袋變得很複雜。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "動物就會從睡夢甦醒，腦袋變得很複雜。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "그래서 항상 해가 완전히 떠오르는 걸 천천히…"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "So, I've always wanted to watch the sunrise slowly..."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "所以我一直想慢慢地…"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "所以我一直想慢慢地…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "아주 느긋하게 보고 싶다고 생각했어요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Just really savoring it."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "非常緩慢地看太陽完全升起。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "非常緩慢地看太陽完全升起。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "아름다운 페이렌 숲이 깨어나는걸"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Watching the beautiful Fayren Forest"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "美麗的費倫森林甦醒"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "美麗的費倫森林甦醒"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "처음부터 끝까지 지켜보는 거죠."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Awaken from start to finish."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "要從頭看到尾。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "要從頭看到尾。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "고마워요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Thank you."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "謝謝。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "謝謝。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "언젠가 보게 된다면,"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "If I ever do,"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "要是總有一天看到，"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "要是總有一天看到，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "당신께 꼭 감상을 알려드릴게요."
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "I'll be sure to tell you all about it."
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "我一定會告訴你感想。"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "我一定會告訴你感想。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "마물 토벌이 어느 정도 정리가 되면"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Once we've made good progress with the monster subjugation,"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "魔物討伐告一個段落的話"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "魔物討伐告一個段落的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "가보고 싶은 곳이 있나요?"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Is there somewhere you'd like to go?"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "你有想去的地方嗎？"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "你有想去的地方嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "웨리",
+          "message": "그래도 페이렌까지 와주셨는데"
+        },
+        "en": {
+          "speaker": "Wheri",
+          "message": "Since you've come all the way to Fayren,"
+        },
+        "zh_tw": {
+          "speaker": "威里",
+          "message": "你都來到費倫了"
+        },
+        "zh_cn": {
+          "speaker": "威里",
+          "message": "你都來到費倫了"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "아야메",
+          "message": "손재주가 몹시 좋은 분이라고 들었사옵니다. 함께 매듭을 만들어보고 싶사와요."
+        },
+        "en": {
+          "speaker": "Ayame",
+          "message": "I've heard that you're very good with your hands. I'd love to tie knots with you."
+        },
+        "zh_tw": {
+          "speaker": "綾織",
+          "message": "聽說她的手藝精湛，我想和她一起做繩結。"
+        },
+        "zh_cn": {
+          "speaker": "綾織",
+          "message": "聽說她的手藝精湛，我想和她一起做繩結。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "나랑은 다른 방식으로 운명을 읽을 수 있는 정령이야. 어떤 미래를 보고 있는 걸까?"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "She can read destiny in a different way than I can. What kind of future does she see?"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "是個能用跟我不同的方式識讀命運的精靈，在看著什麼樣的未來呢？"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "是個能用跟我不同的方式識讀命運的精靈，在看著什麼樣的未來呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "무, 무척 다정한 분이세요. 하, 하지만 가끔… 무, 무서워요… 왜 그럴까요…?"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Sh-she's so kind, b-but…sometimes she can be very scary… I wonder why…"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "是、是個很溫柔的人，但、但是偶爾…很、很可怕…為什麼呢…？"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "是、是個很溫柔的人，但、但是偶爾…很、很可怕…為什麼呢…？"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "반가워요, 구원자."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Greeting, Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "幸會，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "幸會，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "당신의 연락처라고 들었는데 맞나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I heard this was your contact. Am I right?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "聽說這是你的聯絡方式，對嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "聽說這是你的聯絡方式，對嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You are."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You are."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누구야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Who is this?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是誰？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누구야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Who is this?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是誰？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "후후… 페이렌의 대현자 웨리예요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Haha... I'm Wheri the Great Sage of Fayren."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "呵呵…我是費倫的大賢者威里。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "呵呵…我是費倫的大賢者威里。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "잘 연락이 닿아서 다행이네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'm relieved to have reached you."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "幸好順利聯絡上你。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "幸好順利聯絡上你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "당신이 있는 곳은 잘 읽히지 않아서 확신이 없었는데…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I wasn't sure since it's hard to track where you are..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "因為讀不太到你所在的地方，所以不確定…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "因為讀不太到你所在的地方，所以不確定…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "읽히지 않는다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hard to track?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "讀不太到？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "讀不太到？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "읽히지 않는다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hard to track?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "讀不太到？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "讀不太到？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아녜요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "It's nothing."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "沒事。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "沒事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "앞으로 잘 부탁해요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I look forward to us working together,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "之後請多指教，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "之後請多指教，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I look forward to it as well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也請妳多多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也請妳多多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I look forward to it as well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也請妳多多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也請妳多多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리, 혹시…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Um, Wheri..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里，那個…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里，那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리, 혹시…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Um, Wheri..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里，那個…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里，那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "네, 무슨 일이시죠?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Yes, what is it?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "是，有什麼事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "是，有什麼事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 페이렌에서 개구리는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In Fayren, are frogs"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "青蛙在費倫"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "青蛙在費倫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 페이렌에서 개구리는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In Fayren, are frogs"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "青蛙在費倫"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "青蛙在費倫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "길고양이 같은 존재야…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "kind of like stray cats?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是像流浪貓般的存在嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是像流浪貓般的存在嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "길고양이 같은 존재야…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "kind of like stray cats?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是像流浪貓般的存在嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是像流浪貓般的存在嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "조금"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "That's"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "這話"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "這話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "황당한 이야기네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "quite an odd thing to say."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "有點荒唐。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "有點荒唐。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "좀 더 자세히 말해주시겠어요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Could you explain in more detail?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你能再說得詳細一點嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你能再說得詳細一點嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "개구리가 날 막 따라오고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A frog was following me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "青蛙一直跟著我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "青蛙一直跟著我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "개구리가 날 막 따라오고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A frog was following me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "青蛙一直跟著我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "青蛙一直跟著我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "날 부르고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It was calling to me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "叫我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "叫我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "날 부르고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It was calling to me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "叫我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "叫我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "자길 따라오라고 했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And telling me to follow it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "然後要我跟著牠"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "然後要我跟著牠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "자길 따라오라고 했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And telling me to follow it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "然後要我跟著牠"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "然後要我跟著牠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "보통 개구리는 안 그렇잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Normally, frogs don't do that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "青蛙通常不會這樣吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "青蛙通常不會這樣吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "보통 개구리는 안 그렇잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Normally, frogs don't do that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "青蛙通常不會這樣吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "青蛙通常不會這樣吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "후후… 구원자."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Haha...Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "呵呵…救援者。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "呵呵…救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "물론 개구리는 고양이와 달라요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Obviously, frogs aren't like cats."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "青蛙當然跟貓咪不一樣。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "青蛙當然跟貓咪不一樣。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "하지만 개구리도 마음에 드는 일이 있을 땐 꽤 적극적이랍니다."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "But when something catches their interest, they tend to go after it with real enthusiasm."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "但是遇到稱心如意的事，青蛙也會很積極。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "但是遇到稱心如意的事，青蛙也會很積極。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "개구리가 구원자를 마음에 들어 했나 봐요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "It seems this frog took a liking to you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "看來青蛙喜歡救援者。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "看來青蛙喜歡救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "다른 아이들도 구원자에게 말 걸지도 모르니"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Other frogs may try to talk to you,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "其他的孩子說不定也會跟救援者說話"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "其他的孩子說不定也會跟救援者說話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "주변을 주의 깊게 둘러보세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "So, keep an eye on your surroundings."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "請你要仔細看看周遭。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "請你要仔細看看周遭。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 사방에서 날 감시하는 듯한 기분이…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Suddenly, I feel like I'm being watched from every direction..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "突然有種像是四周有人在監視我的感覺…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "突然有種像是四周有人在監視我的感覺…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 사방에서 날 감시하는 듯한 기분이…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Suddenly, I feel like I'm being watched from every direction..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "突然有種像是四周有人在監視我的感覺…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "突然有種像是四周有人在監視我的感覺…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "좋아하는 차가 있으신가요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Do you have a favorite tea?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你有喜歡喝的茶嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你有喜歡喝的茶嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자가 찾아올 때를 대비해 미리 준비해 두려고요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'd like to have it ready for when you visit."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我打算在救援者來的時候事先準備好。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我打算在救援者來的時候事先準備好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 아무거나 괜찮은데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm fine with anything..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我什麼都能喝…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我什麼都能喝…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 아무거나 괜찮은데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm fine with anything..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我什麼都能喝…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我什麼都能喝…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신경 써줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for putting in the extra thought."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳這麼費心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳這麼費心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신경 써줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for putting in the extra thought."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳這麼費心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳這麼費心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아녜요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Oh, it's nothing."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "別這麼說。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "別這麼說。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제 온실의 첫 손님인데 좋은 차로 대접하고 싶어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "You're the very first guest in my greenhouse, so I'd like to serve you something nice."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你是我溫室的第一個客人，我想用好茶接待。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你是我溫室的第一個客人，我想用好茶接待。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "이런…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Oh my..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "唉呀…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "唉呀…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "저… 조금 들뜬 것 같네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I...think I've gotten myself a little too excited over this."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我…好像有點興奮了。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我…好像有點興奮了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "이런 경우가 별로 없는데, \n구원자가 찾아와서 좋았나 봐요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "This doesn't happen often, but I suppose\nI'm just happy you're visiting, Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "這種情況不常有，\n可能是救援者來了，所以很開心。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "這種情況不常有，\n可能是救援者來了，所以很開心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wheri..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wheri..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 시간 나면 종종 찾아갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll drop by when I have some time."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要是有時間我會常常去找妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要是有時間我會常常去找妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 시간 나면 종종 찾아갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll drop by when I have some time."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要是有時間我會常常去找妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要是有時間我會常常去找妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "어머, 반가운 이야기네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Oh, that's wonderful to hear."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "哎呀，這麼說真令人開心。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "哎呀，這麼說真令人開心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "하지만 무리는 하지 말아주세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "But prioritize your health."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "但是請你不要勉強。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "但是請你不要勉強。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자, 라우라를 만나셨나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior, have you met Laura?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，你見過蘿拉嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，你見過蘿拉嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 만났어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I have."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，見過了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，見過了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 만났어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I have."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，見過了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，見過了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "어떠셨나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "What did you think?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "覺得怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "覺得怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좀 특이했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She was a bit unique."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有點特別"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有點特別"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좀 특이했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She was a bit unique."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有點特別"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有點特別"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "흥미로운 구덩이가 있으면 뛰어든다고 하던데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She told me she'll jump into any pit that she finds interesting..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說是有有趣的坑洞就會跳進去…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說是有有趣的坑洞就會跳進去…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "흥미로운 구덩이가 있으면 뛰어든다고 하던데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She told me she'll jump into any pit that she finds interesting..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說是有有趣的坑洞就會跳進去…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說是有有趣的坑洞就會跳進去…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페이렌 정령들은 원래 구덩이에서 놀아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do Souls in Fayren usually play in pits?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "費倫的精靈們本來就是在坑洞裡玩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "費倫的精靈們本來就是在坑洞裡玩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페이렌 정령들은 원래 구덩이에서 놀아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do Souls in Fayren usually play in pits?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "費倫的精靈們本來就是在坑洞裡玩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "費倫的精靈們本來就是在坑洞裡玩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "라우라가 그러던가요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Did Laura say that?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "蘿拉是這樣說的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "蘿拉是這樣說的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그건 라우라의 개인적인 취미예요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "That's just her personal hobby."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "那是蘿拉個人的愛好。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "那是蘿拉個人的愛好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "페이렌 정령들은 숲에서 다양한 놀이를 하지만,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Souls in Fayren enjoy various games in the forest."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "雖然費倫的精靈們會在森林玩各式各樣的遊戲，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "雖然費倫的精靈們會在森林玩各式各樣的遊戲，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그 아이처럼 특이한 취향은 드물어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "But she's a rare kind of person with unusual tastes."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "但很少有像那孩子一樣特別的愛好。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "但很少有像那孩子一樣特別的愛好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 특이하네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She's definitely one of a kind."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的很特別呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的很特別呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 특이하네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She's definitely one of a kind."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的很特別呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的很特別呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "혹시 '구덩이 놀이'에 관심이 생기신 거라면…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "If you're interested in playing in pits..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "要是你對「坑洞遊戲」感興趣的話…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "要是你對「坑洞遊戲」感興趣的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제가 라우라에게 전달해 줄게요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I can let Laura know."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我會轉告蘿拉。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我會轉告蘿拉。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아냐 괜찮아;"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Uh, no, that's okay."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不用了，沒關係。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不用了，沒關係。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아냐 괜찮아;"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Uh, no, that's okay."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不用了，沒關係。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不用了，沒關係。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리, 만약 능력의 부작용이 사라진다면…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wheri, if the side effects of your powers disappeared..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里，如果能力的副作用消失…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里，如果能力的副作用消失…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리, 만약 능력의 부작용이 사라진다면…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wheri, if the side effects of your powers disappeared..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里，如果能力的副作用消失…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里，如果能力的副作用消失…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제일 해보고 싶은 게 뭐야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's the one thing you'd want to do?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳最想嘗試什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳最想嘗試什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제일 해보고 싶은 게 뭐야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's the one thing you'd want to do?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳最想嘗試什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳最想嘗試什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "부작용이 사라진다면요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "If the side effects disappeared?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "副作用消失的話？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "副作用消失的話？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "음… 그럴 일은 없겠지만"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Hmm... It's unlikely that would happen."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "嗯…雖然不會發生那種事，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "嗯…雖然不會發生那種事，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "만약 사라진다면 일출을 보고 싶어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "But if they did, I'd like to watch a sunrise."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "但要是消失的話，我想看日出。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "但要是消失的話，我想看日出。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "일출을?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sunrise?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看日出？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看日出？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "일출을?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sunrise?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看日出？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看日出？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "네, 해가 떠오르기 시작하면"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Yes. As soon as the sun begins to rise,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "對，太陽開始升起的話，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "對，太陽開始升起的話，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "동물들이 잠에서 깨어나 머릿속이 복잡해지거든요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Animals wake up, and my mind fills with noise."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "動物就會從睡夢甦醒，腦袋變得很複雜。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "動物就會從睡夢甦醒，腦袋變得很複雜。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그래서 항상 해가 완전히 떠오르는 걸 천천히…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "So, I've always wanted to watch the sunrise slowly..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "所以我一直想慢慢地…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "所以我一直想慢慢地…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아주 느긋하게 보고 싶다고 생각했어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Just really savoring it."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "非常緩慢地看太陽完全升起。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "非常緩慢地看太陽完全升起。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아름다운 페이렌 숲이 깨어나는걸"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Watching the beautiful Fayren Forest"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "美麗的費倫森林甦醒"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "美麗的費倫森林甦醒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "처음부터 끝까지 지켜보는 거죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Awaken from start to finish."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "要從頭看到尾。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "要從頭看到尾。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 멋진 풍경이겠다…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That would be such a beautiful view..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該是很壯觀的景色…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該是很壯觀的景色…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 멋진 풍경이겠다…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That would be such a beautiful view..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該是很壯觀的景色…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該是很壯觀的景色…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언젠가 볼 수 있으면 좋겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I hope you get the chance to see it someday."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "希望總有一天能看到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "希望總有一天能看到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언젠가 볼 수 있으면 좋겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I hope you get the chance to see it someday."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "希望總有一天能看到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "希望總有一天能看到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "고마워요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Thank you."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "謝謝。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "謝謝。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "언젠가 보게 된다면,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "If I ever do,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "要是總有一天看到，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "要是總有一天看到，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "당신께 꼭 감상을 알려드릴게요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'll be sure to tell you all about it."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我一定會告訴你感想。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我一定會告訴你感想。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "마물 토벌이 어느 정도 정리가 되면"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Once we've made good progress with the monster subjugation,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "魔物討伐告一個段落的話"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "魔物討伐告一個段落的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "가보고 싶은 곳이 있나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Is there somewhere you'd like to go?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你有想去的地方嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你有想去的地方嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그래도 페이렌까지 와주셨는데"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Since you've come all the way to Fayren,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你都來到費倫了"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你都來到費倫了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "궁금한 곳이 있다면 안내해 드릴게요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'd be glad to show you around if there's anything of interest."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "如果有好奇的地方，我會帶你去。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "如果有好奇的地方，我會帶你去。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페이렌에 관광할 만한 곳이 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are there any tourist attractions in Fayren?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "費倫有值得觀光的地方嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "費倫有值得觀光的地方嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페이렌에 관광할 만한 곳이 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are there any tourist attractions in Fayren?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "費倫有值得觀光的地方嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "費倫有值得觀光的地方嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "음… 글쎄요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Hm... Let's see."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "嗯…這個嘛。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "嗯…這個嘛。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "북부 지역의 온천이 인기가 많은 편이죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "The hot springs in the northern area are a popular choice."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "北部地區的溫泉很受歡迎。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "北部地區的溫泉很受歡迎。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "온천이 있었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There are hot springs here?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有溫泉嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有溫泉嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "온천이 있었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "There are hot springs here?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有溫泉嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有溫泉嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "네, 화산이 있거든요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Yes, there's a volcano nearby."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "對，因為有火山。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "對，因為有火山。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "화산 온천이라니 신기하다~"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A volcanic hot spring? That's amazing!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "居然是火山溫泉，好神奇～"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "居然是火山溫泉，好神奇～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "화산 온천이라니 신기하다~"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A volcanic hot spring? That's amazing!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "居然是火山溫泉，好神奇～"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "居然是火山溫泉，好神奇～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에 같이 가보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go together next time."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次一起去吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次一起去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에 같이 가보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go together next time."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次一起去吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次一起去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "후후… 좋아요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Haha... Sounds good."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "呵呵…好。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "呵呵…好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "온천을 같이 가지고 말해준 것도 구원자가 처음이에요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "You're the first person to suggest going to a hot spring with me."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者也是第一個約我一起去泡溫泉的人。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者也是第一個約我一起去泡溫泉的人。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자는 대담한 면이 있으시네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "You've got quite a bold side, Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "看來救援者有大膽的一面呢。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "看來救援者有大膽的一面呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자의 수영복… 기대할게요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'll look forward to seeing your swimsuit..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我會期待…救援者的泳裝。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我會期待…救援者的泳裝。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐, 같이 들어가게?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait, we're going in together!?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等，要一起進去泡？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等，要一起進去泡？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐, 같이 들어가게?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait, we're going in together!?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等，要一起進去泡？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等，要一起進去泡？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 당연히 따로 들어가는 줄 알고…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I thought there'd be separate sides...!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我以為當然是分開進去泡…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我以為當然是分開進去泡…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 당연히 따로 들어가는 줄 알고…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I thought there'd be separate sides...!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我以為當然是分開進去泡…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我以為當然是分開進去泡…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리…?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wheri...!?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里…？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里…？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리…?!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wheri...!?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里…？！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里…？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "식사 도중에 나가서 미안해…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry for leaving while we were dining together..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "吃飯途中離開很抱歉…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "吃飯途中離開很抱歉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "식사 도중에 나가서 미안해…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry for leaving while we were dining together..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "吃飯途中離開很抱歉…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "吃飯途中離開很抱歉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "괜찮아요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "It's alright."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "沒關係。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "沒關係。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "급한 일이 있으셨던 것 같던데"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "It seemed like you had something urgent to do."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你好像是有急事，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你好像是有急事，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "신경 쓰지 마세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Don't worry about it."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "不用在意。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "不用在意。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아냐 미안…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'm sorry..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不，抱歉…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不，抱歉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아냐 미안…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'm sorry..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不，抱歉…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不，抱歉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리도 거의 먹지 않은 것 같던데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It seemed like you hardly ate anything."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我看威里也幾乎沒吃"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我看威里也幾乎沒吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리도 거의 먹지 않은 것 같던데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It seemed like you hardly ate anything."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我看威里也幾乎沒吃"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我看威里也幾乎沒吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is everything alright?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is everything alright?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Oh..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "啊…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "저는 원래 잘 못 먹어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I typically don't eat much."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我本來就不太能吃。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我本來就不太能吃。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이유가 있는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there a reason?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有原因嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有原因嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이유가 있는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there a reason?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有原因嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有原因嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "이유라…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Reason..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "原因…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "原因…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아마 구원자를 포함한 다른 정령들은 느끼지 못하겠지만"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "It's something other Souls and you wouldn't experience."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "包含你在內的其他精靈應該感受不到，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "包含你在內的其他精靈應該感受不到，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "저는 식재료가 제 식탁에 올라올 때까지"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I can see the entire life of an ingredient"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "但直到食材端上桌的時候為止"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "但直到食材端上桌的時候為止"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "어떤 삶을 살았는지 전부 보여서 말이죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Before it reaches my plate."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "過得是什麼樣的生活，我都看得見。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "過得是什麼樣的生活，我都看得見。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "식사 때마다 정보량이 너무 많아져 힘들어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "It's overwhelming to process so much information every meal."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "每次吃飯資訊量都太大了，覺得很累。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "每次吃飯資訊量都太大了，覺得很累。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 힘들겠네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That must be tough..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那應該很累…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那應該很累…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 힘들겠네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That must be tough..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那應該很累…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那應該很累…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "너무 안타까워하지 마세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Don't feel too bad."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "不用感到太惋惜。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "不用感到太惋惜。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "나름 재밌는 사실도 알게 되거든요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I learn some rather interesting things that way."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "因為我也得知很有趣的事。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "因為我也得知很有趣的事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그거 아시나요, 구원자?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Did you know, Savior?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，你知道嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，你知道嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "생물이 어떤 삶을 살았는지에 따라 맛이 전부 달라요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "The taste of a living being depends entirely on the life it's experienced."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "根據生物過著什麼樣的生活，味道都會不一樣。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "根據生物過著什麼樣的生活，味道都會不一樣。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "기나긴 삶이 쌓여서 '맛'으로 나타나는 것이죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Its whole life accumulates and comes out as \"flavor.\""
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "漫長的生活累積後，以「味道」出現。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "漫長的生活累積後，以「味道」出現。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그래서 음식을 입으로 씹다 보면…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "So, when I start to chew..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "所以用嘴巴咀嚼食物的話…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "所以用嘴巴咀嚼食物的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "으악! 잠깐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Ack! Wait!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "呃啊！等等！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "呃啊！等等！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "으악! 잠깐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Ack! Wait!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "呃啊！等等！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "呃啊！等等！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이 이상은 들으면 안 될 것 같아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I really don't think I need to hear any more!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺不能再聽下去了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺不能再聽下去了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이 이상은 들으면 안 될 것 같아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I really don't think I need to hear any more!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺不能再聽下去了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺不能再聽下去了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자는 어떻게 아케나인의 영주가 됐나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior, how did you end up as the Lord of Arkenine?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者是怎麼成為阿肯納因的領主？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者是怎麼成為阿肯納因的領主？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나? 나는…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me? Well..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我嗎？我…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我嗎？我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나? 나는…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me? Well..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我嗎？我…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我嗎？我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아의 제안으로 영주가 됐어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I became a lord at Yuria's suggestion."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是因為尤里婭的提議成為領主"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是因為尤里婭的提議成為領主"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아의 제안으로 영주가 됐어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I became a lord at Yuria's suggestion."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是因為尤里婭的提議成為領主"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是因為尤里婭的提議成為領主"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리는 어떻게 대현자가 된 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How did you end up becoming the Great Sage?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里是怎麼成為大賢者的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里是怎麼成為大賢者的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리는 어떻게 대현자가 된 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How did you end up becoming the Great Sage?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里是怎麼成為大賢者的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里是怎麼成為大賢者的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "후후… 제 이야기도 궁금하신가요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Haha... Are you curious about my story?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "呵呵…你也好奇我的故事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "呵呵…你也好奇我的故事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말하기 어렵다면 말 안 해줘도 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If it's difficult to share, you don't have to."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要是很難說出口，不說也沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要是很難說出口，不說也沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말하기 어렵다면 말 안 해줘도 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If it's difficult to share, you don't have to."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要是很難說出口，不說也沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要是很難說出口，不說也沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아녜요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "No, it's fine."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "不是的。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "不是的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "저에 대해 궁금하셨다니 기쁜걸요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'm glad you're curious about me."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你居然對我感到好奇，我很開心。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你居然對我感到好奇，我很開心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "저는, 선대 대현자님 밑에서 일하는 정령 중 하나였어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I was once one of the Souls who served the former Great Sage."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我本來是在前任大賢者底下工作的其中一個精靈。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我本來是在前任大賢者底下工作的其中一個精靈。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그러던 어느 날"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "But one day"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "然後某一天"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "然後某一天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "한 악마형 정령의 폭주로 한 마을 전체가 오염되는 큰 사건이 일어났어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "A Demon Soul went on a rampage, causing a major incident that contaminated an entire village."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "因為一個惡魔型精靈暴走，發生了整個村莊被汙染的重大事件。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "因為一個惡魔型精靈暴走，發生了整個村莊被汙染的重大事件。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그 오염 속도가 어찌나 빠른지"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "The spread was so fast that"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "汙染速度非常迅速"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "汙染速度非常迅速"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "마을 뿐만 아니라 그 주변 숲까지 모두 집어삼켰죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "It engulfed not only the village but the entire nearby forest."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "不只是村莊，就連周邊的森林全都吞噬了。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "不只是村莊，就連周邊的森林全都吞噬了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그대로 두었다간 페이렌 숲이 망가질 것 같아"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Fearing Fayren Forest would be ruined,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "繼續這樣放任不管，費倫森林應該會毀掉。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "繼續這樣放任不管，費倫森林應該會毀掉。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제 개인적인 판단으로 마을과 숲, 미처 도망치지 못한 정령까지"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I made the decision on my own to seal the village, the forest,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我憑藉個人的判斷，把村莊、森林，還有沒能逃跑的精靈"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我憑藉個人的判斷，把村莊、森林，還有沒能逃跑的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "통째로 봉인시켰어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "And even the Souls who couldn't escape."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "全都封印起來了。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "全都封印起來了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "대현자님께 허락도 받지 않고 제 개인적인 판단으로 말이죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I did it without the Great Sage's permission, purely on my own judgment."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "未經大賢者的允許，憑藉自己個人的判斷。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "未經大賢者的允許，憑藉自己個人的判斷。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그 뒤로 선대 대현자님께서 절 눈여겨보시더니"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Afterward, the former Great Sage took an interest in me"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "在那之後，前任大賢者對我另眼相看，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "在那之後，前任大賢者對我另眼相看，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "후대 대현자로 추천하시더군요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "And recommended me as the next Great Sage."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "就推薦我為下一任大賢者。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "就推薦我為下一任大賢者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리가 좋은 판단을 내렸나 보네."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds like you made the right choice."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來威里做出了不錯的判斷。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來威里做出了不錯的判斷。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리가 좋은 판단을 내렸나 보네."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds like you made the right choice."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來威里做出了不錯的判斷。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來威里做出了不錯的判斷。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그 상황에서 최선의 판단을 내렸을 뿐."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I simply made the best call I could in that moment."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我只是做出在那情況下最佳的判斷。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我只是做出在那情況下最佳的判斷。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "좋은 판단인지는 모르겠네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Whether it was a good decision, I can't say."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "不知道是不是不錯的判斷。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "不知道是不是不錯的判斷。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "최선의 판단이"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The best decision"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "最佳的判斷"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "最佳的判斷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "최선의 판단이"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The best decision"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "最佳的判斷"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "最佳的判斷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언제나 좋은 판단이 되는 건 아니지…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Isn't always a good decision..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "並不是每次都會成為不錯的判斷…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "並不是每次都會成為不錯的判斷…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언제나 좋은 판단이 되는 건 아니지…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Isn't always a good decision..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "並不是每次都會成為不錯的判斷…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "並不是每次都會成為不錯的判斷…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "역시 구원자는 이해하시는군요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "So, you understand."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者果然能理解。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者果然能理解。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "고마워요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Thank you."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "謝謝你。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "謝謝你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제 첫인상을 알려줘요, 구원자."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Tell me your first impression of me, Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，跟我說我的第一印象。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，跟我說我的第一印象。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리의 첫인상은…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "My first impression of you..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里的第一印象…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里的第一印象…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리의 첫인상은…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "My first impression of you..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里的第一印象…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里的第一印象…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기계 같다고 생각했어."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Was that you felt mechanical."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我覺得很像機器。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我覺得很像機器。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기계 같다고 생각했어."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Was that you felt mechanical."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我覺得很像機器。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我覺得很像機器。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "잘 파악하셨네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "That was very observant of you."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你掌握得很清楚呢。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你掌握得很清楚呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내 첫인상은 어땠어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about mine?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我的第一印象怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我的第一印象怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내 첫인상은 어땠어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about mine?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我的第一印象怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我的第一印象怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자의 첫인상이요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "My first impression of you?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者的第一印象嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者的第一印象嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "당신을 알게 된 순간부터"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "From the moment I met you,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "從認識你的那一刻開始，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "從認識你的那一刻開始，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그 이후 펼쳐질 미래의 가능성을 보느라"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I was focused on all the future possibilities that lay ahead"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "為了看那之後的未來可能性"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "為了看那之後的未來可能性"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "사실 구원자에 대한 첫인상은 흐릿해요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "So my first impression of you is a bit fuzzy."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "其實我對救援者第一印象很模糊。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "其實我對救援者第一印象很模糊。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "하지만 온실에 찾아온 당신을 처음 봤을 땐,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "But when I first saw you in the greenhouse,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "但是第一次見到來溫室的你時，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "但是第一次見到來溫室的你時，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "솔직히 좋은 분이라고 생각했어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I thought you were a genuinely good person."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "老實說我覺得是個好人。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "老實說我覺得是個好人。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제가 상상한 것 보다 좀 더."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "More so than I'd imagined."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "比我想像中更好。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "比我想像中更好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "이런 것도 첫인상으로 쳐주시나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Does that count as a first impression?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "這樣也算是第一印象嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "這樣也算是第一印象嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응. 쳐줄게."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Uh-huh, sure."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，算。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，算。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응. 쳐줄게."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Uh-huh, sure."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，算。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，算。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋게 봐줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you for seeing me that way."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳看好我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳看好我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋게 봐줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you for seeing me that way."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳看好我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳看好我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "당신이 잠든 걸 본 적 있어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I watched when you were sleeping before."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我看過你入睡的樣子。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我看過你入睡的樣子。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "정확히 말하자면 '보인'거죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "To be precise, it was something that just \"came into view.\""
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "準確來說是「看到」。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "準確來說是「看到」。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "참고로 전 누군가가 잠든 모습을 구경하는 취미는 없어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Just so you know, I don't have any habit of watching people sleep."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "做為參考，我沒有興趣觀賞別人入睡的樣子，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "做為參考，我沒有興趣觀賞別人入睡的樣子，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "수면에 대한 관심도 없고요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Nor am I especially interested in sleep itself."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "也對睡眠不感興趣。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "也對睡眠不感興趣。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "하지만 구원자가 잠든 모습을 보니,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "But when I saw you sleeping,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "但看到救援者入睡的樣子，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "但看到救援者入睡的樣子，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "어쩐지 옆에서 계속 바라보고 싶다는 생각이 들었어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I found myself wanting to stay by your side and just watch."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "就莫名有種想一直在旁邊繼續望著的念頭。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "就莫名有種想一直在旁邊繼續望著的念頭。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 잠든 모습을…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me...sleeping...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看我入睡的樣子…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看我入睡的樣子…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 잠든 모습을…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me...sleeping...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看我入睡的樣子…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看我入睡的樣子…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "규칙적으로 오르락내리락하는 몸과"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Watching your chest rise and fall steadily,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "看著規律地上下起伏的身體"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "看著規律地上下起伏的身體"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "가끔씩 움찔거리는 표정을 보면서…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "And the occasional twitch on your face..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "和偶爾動彈的表情…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "和偶爾動彈的表情…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자가 눈을 떠 저를 바라봐줄 때까지"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I just wanted to keep quietly watching"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "有種直到救援者睜開眼睛望著我為止"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "有種直到救援者睜開眼睛望著我為止"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그저 조용히 바라보고 싶다는 생각이 들었어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "until you opened your eyes and looked at me."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "只想靜靜地望著你的念頭。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "只想靜靜地望著你的念頭。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "…그냥, 그렇다고요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "... That's all, really."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "…就只是說說而已。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "…就只是說說而已。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "토벌 작전을 도와주셔서 감사해요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Thank you for helping with the extermination mission."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "謝謝你幫忙討伐作戰。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "謝謝你幫忙討伐作戰。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "페이렌에 머무는 동안 편히 지내주세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Please make yourself at home while you're in Fayren."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "停留在費倫的期間，就請你自便。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "停留在費倫的期間，就請你自便。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그럼, 이만."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Well, goodbye."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "那就先告辭了。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "那就先告辭了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제 온실로 오는 길은 잘 기억하고 있죠?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "You remember the way to my greenhouse, don't you?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你還記得要怎麼來我的溫室吧？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你還記得要怎麼來我的溫室吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 잘 기억하고 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I remember it well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，我記得很清楚。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，我記得很清楚。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 잘 기억하고 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I remember it well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，我記得很清楚。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，我記得很清楚。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "좋아요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Good."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "好。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제가 필요해지면…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "When you need me..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "需要我的話…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "需要我的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그 길을 따라와 주세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Just follow that path."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "就請沿著那條路。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "就請沿著那條路。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "전 언제나 이곳에 있으니까요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'll always be here."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我一直都在這裡。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我一直都在這裡。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리, 뜨개질 좋아해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wheri, do you like knitting?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里，妳喜歡編織嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里，妳喜歡編織嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리, 뜨개질 좋아해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wheri, do you like knitting?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "威里，妳喜歡編織嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "威里，妳喜歡編織嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "후후… 제 뜨개질 바구니를 보셨군요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Haha... So, you saw my knitting basket?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "呵呵…你看到我的編織籃了啊？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "呵呵…你看到我的編織籃了啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "네, 맞아요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I have."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "對，沒錯。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "對，沒錯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "최근 뜨개질에 푹 빠져있답니다."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I've been very into knitting lately."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我最近迷上了編織。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我最近迷上了編織。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘하는 편이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you any good at it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很擅長嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很擅長嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘하는 편이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you any good at it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很擅長嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很擅長嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제가 뜨개질을 몇 년이나 했는지 알게 된다면"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "If you knew how many years I've been knitting,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "要是你知道我編織編了幾年"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "要是你知道我編織編了幾年"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "깜짝 놀라실걸요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "You'd be surprised."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "應該會嚇一大跳。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "應該會嚇一大跳。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "주변에 있는 것들은 대부분 만들 수 있어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I can make just about anything around me."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "周遭的東西大部分都能做。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "周遭的東西大部分都能做。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우와…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wow..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗚哇…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗚哇…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우와…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wow..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗚哇…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗚哇…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 뜨개질을 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You really do love knitting, don't you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳真的很喜歡編織"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳真的很喜歡編織"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 뜨개질을 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You really do love knitting, don't you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳真的很喜歡編織"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳真的很喜歡編織"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇다면…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這樣的話…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這樣的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇다면…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這樣的話…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這樣的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나 좀 가르쳐줄래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Will you teach me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "能教我一下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "能教我一下嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나 좀 가르쳐줄래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Will you teach me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "能教我一下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "能教我一下嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "좋아요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Certainly."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "好。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "당신의 부탁인데 거절할 이유가 없죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "How could I refuse a request from you?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我沒理由拒絕你的請求。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我沒理由拒絕你的請求。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "요즘 악몽은 어떠신가요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "How have your nightmares been lately?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "最近惡夢情況如何？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "最近惡夢情況如何？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 좋아졌어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Much better now."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好很多了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好很多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 좋아졌어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Much better now."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好很多了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好很多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그런가요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Is that so?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "하지만 당신 얼굴은…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "But you..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "但是你的臉色…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "但是你的臉色…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "전보다 더 피곤해 보여요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Look even more worn out than before."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "看起來比之前更疲倦。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "看起來比之前更疲倦。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자, 잘 들어갔나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior, did you get back safely?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，你平安回去了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，你平安回去了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "지난번에 하던 이야기를 마저 하고 싶어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'd love to finish the conversation from last time."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我想把上次說的話說完。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我想把上次說的話說完。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "시간 나면 온실에 찾아와주세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "If you have time, please come by the greenhouse."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "有時間的話就來溫室找我。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "有時間的話就來溫室找我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "기다리고 있을게요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'll be here, waiting."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我在這裡等你。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我在這裡等你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "지난밤엔 온실에 오지 않으셨네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "You didn't come to the greenhouse last night."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你昨晚沒有來溫室。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你昨晚沒有來溫室。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "악몽이 사라지셨나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Did the nightmares go away?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "惡夢消失了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "惡夢消失了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아니면 혹시 절 보기 어려우셨나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Or...was it perhaps difficult for you to see me?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "還是沒辦法見我？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "還是沒辦法見我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "이유가 무엇이든 괜찮아요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Whatever the reason, it's okay."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "不管是什麼理由都沒關係。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "不管是什麼理由都沒關係。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "오늘 식사 시간에 늦지 않게 와주세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Just please come on time so we can eat together today."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "今天吃飯時間不要遲到。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "今天吃飯時間不要遲到。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "기다리고 있을게요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'll be waiting."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我會等你。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我會等你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "잠드셨나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Have you fallen asleep?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你睡著了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你睡著了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그곳의 저를 만나러 떠나셨나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Have you gone to meet me in that place?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "你去見那裡的我了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "你去見那裡的我了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그렇다면 저도…"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "If so..."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "這樣的話…"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "這樣的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "당신을 마중 나갈게요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'll go greet you there."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我也要去迎接你。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我也要去迎接你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자는 운명을 믿으시나요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior, do you believe in fate?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者相信命運嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者相信命運嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "운명은 믿고 말고 할 수 있는 게 아니죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Fate isn't something you can choose to believe or not believe in."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "這不是相不相信命運就能做到的事。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "這不是相不相信命運就能做到的事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "우리는 모두 운명이라는 질긴 실 위에 서 있으니까요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "We all tread on the unbreakable threads of fate."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我們全都站在命運這條堅韌的線上。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我們全都站在命運這條堅韌的線上。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "일어날 미래는 일어날 것이고,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Whatever future is meant to unfold will do so,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "該發生的未來就會發生，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "該發生的未來就會發生，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "아무리 원망하고 애원해도 과거는 변하지 않죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "And no amount of pleading can alter the past."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "就算再怎麼埋怨和哀嘆，過去也不會改變。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "就算再怎麼埋怨和哀嘆，過去也不會改變。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그러니 구원자,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "So, Savior,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "所以救援者，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "所以救援者，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "절 원망하고 미워해 주세요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Please resent me, hate me."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "請你不要埋怨和討厭我。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "請你不要埋怨和討厭我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "그 또한 우리의 운명이니까요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "For that, too, is our fate."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "因為這也是我們的命運。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "因為這也是我們的命運。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자, 제게 졸음이 찾아왔어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior, I feel sleepiness coming over me."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，我睏了。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，我睏了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "이제 곧 겨울이군요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Winter is drawing near."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "現在馬上就要冬天了。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "現在馬上就要冬天了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "약속한 시간이 끝나간다는 뜻이겠죠."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I suppose that means the time we promised each other is coming to a close."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "意思應該是約定的時間快要結束。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "意思應該是約定的時間快要結束。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "수고했어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "You've done well."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "辛苦了。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "辛苦了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자, 오고 계신가요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Savior, are you on your way?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "救援者，你在來的路上嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "救援者，你在來的路上嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "오늘 나이아를 페이렌에 초대했어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I invited Naiah to Fayren today."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我今天邀請娜伊雅來費倫。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我今天邀請娜伊雅來費倫。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "당신이 알려준 방법을 사용해 볼 예정이에요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "I'll be trying out the method you taught me."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "打算用用看你告訴我的方法。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "打算用用看你告訴我的方法。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "제가 잘할 수 있을까요?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Do you think I'll do okay?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我能做得好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我能做得好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "사랑스러운 나의 구원자,"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "My sweet Savior,"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "我親愛的救援者，"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "我親愛的救援者，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "사랑의 날인데… 절 혼자 두진 않으실 거죠?"
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "It's Love Day today... You won't leave me all alone, will you?"
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "今天是戀愛之日…你不會丟下我一個人吧？"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "今天是戀愛之日…你不會丟下我一個人吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "가는 중이야, 웨리!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm on my way, Wheri!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在路上了，威里！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在路上了，威里！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "가는 중이야, 웨리!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm on my way, Wheri!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在路上了，威里！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在路上了，威里！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "새 생명이 피어나는 날을 축하해요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Wishing you joy on this day of new life coming into bloom."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "祝賀新生命綻放的日子。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "祝賀新生命綻放的日子。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "구원자에게 행복이 가득하길."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "May your life be filled with happiness, Savior."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "願救援者幸福滿滿。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "願救援者幸福滿滿。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리도 행복하길"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And I hope happiness fills yours as well, Wheri."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也希望威里幸福"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也希望威里幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨리도 행복하길"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And I hope happiness fills yours as well, Wheri."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也希望威里幸福"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也希望威里幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "이제 올해도 끝나가네요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "The year is coming to a close."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "今年也快結束了呢。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "今年也快結束了呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "웨리",
+            "message": "올해도 당신과 함께해서 더 특별했어요."
+          },
+          "en": {
+            "speaker": "Wheri",
+            "message": "Sharing it with you made it all the more special."
+          },
+          "zh_tw": {
+            "speaker": "威里",
+            "message": "今年也因為跟你在一起，所以更特別了。"
+          },
+          "zh_cn": {
+            "speaker": "威里",
+            "message": "今年也因為跟你在一起，所以更特別了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도, 웨리와 함께해서 좋았어."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm glad I got to share it with you, Wheri."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也是，和威里在一起很開心。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也是，和威里在一起很開心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도, 웨리와 함께해서 좋았어."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm glad I got to share it with you, Wheri."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也是，和威里在一起很開心。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也是，和威里在一起很開心。"
+          }
+        }
+      ]
+    }
+  }
+}

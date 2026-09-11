@@ -1,0 +1,5217 @@
+{
+  "id": "1120",
+  "name": "지호",
+  "name_en": "Jiho",
+  "grade": "에픽",
+  "race": "인간형",
+  "class": "서포터",
+  "sub_class": "치료",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "행복의 울림",
+    "constellation": "처녀자리",
+    "union": "가온",
+    "birthday": "905",
+    "height": 165,
+    "weight": 53,
+    "cv_ko": "김채하",
+    "cv_jp": "Jiena Tomomi Sumi",
+    "like": [
+      "마늘 치킨",
+      "국밥"
+    ],
+    "dislike": [
+      "민트 초코"
+    ],
+    "hobby": [
+      "시하 팬질하기"
+    ],
+    "speciality": [
+      "달고나 뽑기"
+    ]
+  },
+  "personality": {
+    "description": "안녕 구원자! 연이은 업무 과중으로 인한 불면증이 고민이라고…? 그걸 어째!\n\n…있잖아, 혹시 대금 불어본 적 있어? 리코더나 다른 피리들에 비해서 소리 내기 좀 어렵지?\n그건 다 소리를 내고 싶어서, 마음이 급해져서 그런 거야.\n사실은 아주 약간의 요령만 터득하면 돼. \n구원자의 숨결을 아주 조금, 적절한 방향으로 불어넣는 게 다야…\n마음 편하게 가지고… 자연스럽게.\n\n세상만사가 다 그래. 구원자는 있는 그대로 편하게 행동하면 돼.\n그럼 구원자가 가진 본연의 힘이 드러날 거야. \n너무 걱정 마! 결국 다 잘 될 거니까.\n\n마지막으로 연주 한 곡 해줄게♪ 노래는 뭐가 좋을까… 그래, 우리 시하 솔로곡으로!",
+    "greeting": "고민이 있다구? 내가 들어줄게!"
+  },
+  "speech_patterns": [
+    "구원자 안녕! 난 지호야~",
+    "만나서 반가워! \r\n앞으로 종종 연락하자?",
+    "나도나도~",
+    "근데 구원자는 에버폰 케이스 뭐 써?",
+    "나 요즘 바꾸고 싶더라구",
+    "아니 그냥",
+    "직접 만나서 보여달라고 해야겠다!",
+    "이따가 시간 되면 연락줘~",
+    "내가 찾아갈게!",
+    "구원자",
+    "시하 노래 스트리밍해줘",
+    "우리 같이 시하 노래를 들어서",
+    "시하의 음원 순위를 올리는 거야",
+    "우린 할 수 있어",
+    "구원자 알았지? 믿는다?",
+    "의욕 있는 자세 아주 좋아~",
+    "딱 기다려",
+    "내가 직접 가서 알려줄게!",
+    "에버폰 풀충전하고 있어!",
+    "머리모양 바꿔볼까…",
+    "가끔은 하나로 묶을까 싶어",
+    "맞아맞아. 바로 그거야~",
+    "근데 있잖아",
+    "트윈테일하면 모발 무게가 양쪽으로 분산돼서",
+    "하나로 묶는 것보다 두피 건강에 좋대",
+    "알고 있었어?",
+    "구원자도 트윈테일 한 번 해볼래?",
+    "내가 도와줄게~",
+    "구원자 혹시…",
+    "시하 에버톡 연락처도 알아…?",
+    "아, 아니야",
+    "대답하지 말아봐",
+    "만약 구원자가 시하 에버톡 프사를 볼 수 있다면…",
+    "질투로 정말 미쳐버릴지도 모르니깐…",
+    "응",
+    "조용히 있어",
+    "가온의 정령들이 행복했으면 좋겠어",
+    "하지만…",
+    "…….",
+    "에구. 모르겠다",
+    "잠깐 억새밭에서 산책 다녀올까 해",
+    "구원자, 안 바쁘면 나와줄 수 있어?",
+    "부탁이야",
+    "메피는 단 거 진짜 잘 먹더라!",
+    "단 걸 좋아하는 게 아니라 케익을 좋아하는 거라고 하긴 하던데…",
+    "하긴, 나도 달고나를 좋아하는 거지",
+    "달아서 좋아하는 건 아니긴 해",
+    "솜사탕이나 달고나처럼 먹을 때 재밌는 게 좋아",
+    "호박엿도 좋아~! 쭈욱 늘어나잖아!",
+    "응응"
+  ],
+  "comments": [
+    {
+      "writer": "유리아",
+      "comment": "그렇게 큰일을 마주하게 되면, 좀처럼 결심이 서지 않죠… 저는 그냥 조용히 응원할게요."
+    },
+    {
+      "writer": "루테",
+      "comment": "양이랑 새들이 지호 씨의 피리 소리를 마음에 들어 하는 것 같아요… 헤헷."
+    },
+    {
+      "writer": "미카",
+      "comment": "…나는?!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "지호",
+        "message": "구원자 안녕! 난 지호야~"
+      },
+      {
+        "speaker": "지호",
+        "message": "만나서 반가워! \r\n앞으로 종종 연락하자?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 부탁해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 부탁해"
+      },
+      {
+        "speaker": "지호",
+        "message": "나도나도~"
+      },
+      {
+        "speaker": "지호",
+        "message": "근데 구원자는 에버폰 케이스 뭐 써?"
+      },
+      {
+        "speaker": "지호",
+        "message": "나 요즘 바꾸고 싶더라구"
+      },
+      {
+        "speaker": "지호",
+        "message": "아니 그냥"
+      },
+      {
+        "speaker": "지호",
+        "message": "직접 만나서 보여달라고 해야겠다!"
+      },
+      {
+        "speaker": "지호",
+        "message": "이따가 시간 되면 연락줘~"
+      },
+      {
+        "speaker": "지호",
+        "message": "내가 찾아갈게!"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자"
+      },
+      {
+        "speaker": "지호",
+        "message": "시하 노래 스트리밍해줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "스트리밍?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "스트리밍?"
+      },
+      {
+        "speaker": "지호",
+        "message": "우리 같이 시하 노래를 들어서"
+      },
+      {
+        "speaker": "지호",
+        "message": "시하의 음원 순위를 올리는 거야"
+      },
+      {
+        "speaker": "지호",
+        "message": "우린 할 수 있어"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자 알았지? 믿는다?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떻게 하는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떻게 하는 거야?"
+      },
+      {
+        "speaker": "지호",
+        "message": "의욕 있는 자세 아주 좋아~"
+      },
+      {
+        "speaker": "지호",
+        "message": "딱 기다려"
+      },
+      {
+        "speaker": "지호",
+        "message": "내가 직접 가서 알려줄게!"
+      },
+      {
+        "speaker": "지호",
+        "message": "에버폰 풀충전하고 있어!"
+      },
+      {
+        "speaker": "지호",
+        "message": "머리모양 바꿔볼까…"
+      },
+      {
+        "speaker": "지호",
+        "message": "가끔은 하나로 묶을까 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "포니테일?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "포니테일?"
+      },
+      {
+        "speaker": "지호",
+        "message": "맞아맞아. 바로 그거야~"
+      },
+      {
+        "speaker": "지호",
+        "message": "근데 있잖아"
+      },
+      {
+        "speaker": "지호",
+        "message": "트윈테일하면 모발 무게가 양쪽으로 분산돼서"
+      },
+      {
+        "speaker": "지호",
+        "message": "하나로 묶는 것보다 두피 건강에 좋대"
+      },
+      {
+        "speaker": "지호",
+        "message": "알고 있었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇구나"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자도 트윈테일 한 번 해볼래?"
+      },
+      {
+        "speaker": "지호",
+        "message": "내가 도와줄게~"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자 혹시…"
+      },
+      {
+        "speaker": "지호",
+        "message": "시하 에버톡 연락처도 알아…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "지호",
+        "message": "아, 아니야"
+      },
+      {
+        "speaker": "지호",
+        "message": "대답하지 말아봐"
+      },
+      {
+        "speaker": "지호",
+        "message": "만약 구원자가 시하 에버톡 프사를 볼 수 있다면…"
+      },
+      {
+        "speaker": "지호",
+        "message": "질투로 정말 미쳐버릴지도 모르니깐…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대답하지 말아야 해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대답하지 말아야 해?"
+      },
+      {
+        "speaker": "지호",
+        "message": "응"
+      },
+      {
+        "speaker": "지호",
+        "message": "조용히 있어"
+      },
+      {
+        "speaker": "지호",
+        "message": "가온의 정령들이 행복했으면 좋겠어"
+      },
+      {
+        "speaker": "지호",
+        "message": "하지만…"
+      },
+      {
+        "speaker": "지호",
+        "message": "……."
+      },
+      {
+        "speaker": "지호",
+        "message": "에구. 모르겠다"
+      },
+      {
+        "speaker": "지호",
+        "message": "잠깐 억새밭에서 산책 다녀올까 해"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자, 안 바쁘면 나와줄 수 있어?"
+      },
+      {
+        "speaker": "지호",
+        "message": "부탁이야"
+      },
+      {
+        "speaker": "지호",
+        "message": "메피는 단 거 진짜 잘 먹더라!"
+      },
+      {
+        "speaker": "지호",
+        "message": "단 걸 좋아하는 게 아니라 케익을 좋아하는 거라고 하긴 하던데…"
+      },
+      {
+        "speaker": "지호",
+        "message": "하긴, 나도 달고나를 좋아하는 거지"
+      },
+      {
+        "speaker": "지호",
+        "message": "달아서 좋아하는 건 아니긴 해"
+      },
+      {
+        "speaker": "지호",
+        "message": "솜사탕이나 달고나처럼 먹을 때 재밌는 게 좋아"
+      },
+      {
+        "speaker": "지호",
+        "message": "호박엿도 좋아~! 쭈욱 늘어나잖아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌는 음식을 좋아하나봐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌는 음식을 좋아하나봐"
+      },
+      {
+        "speaker": "지호",
+        "message": "응응"
+      },
+      {
+        "speaker": "지호",
+        "message": "먹는 재미가 없으면 사는 맛이 없지♪"
+      },
+      {
+        "speaker": "지호",
+        "message": "신기한 거 보면 구원자도 나한테 알려줘!"
+      },
+      {
+        "speaker": "지호",
+        "message": "약속이야~"
+      },
+      {
+        "speaker": "지호",
+        "message": "시하 콘서트 추첨에서 떨어졌어…"
+      },
+      {
+        "speaker": "지호",
+        "message": "진짜 우울하다"
+      },
+      {
+        "speaker": "지호",
+        "message": "하아…"
+      },
+      {
+        "speaker": "지호",
+        "message": "지금 상태에선 톡해봤자 징징대기만 할 거야…"
+      },
+      {
+        "speaker": "지호",
+        "message": "잠깐 혼자 있게 해줄래…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "징징대도 돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "징징대도 돼"
+      },
+      {
+        "speaker": "지호",
+        "message": "ㅠ"
+      },
+      {
+        "speaker": "지호",
+        "message": "ㅠㅠ"
+      },
+      {
+        "speaker": "지호",
+        "message": "ㅠㅠㅠ"
+      },
+      {
+        "speaker": "지호",
+        "message": "ㅠㅠㅠㅠ"
+      },
+      {
+        "speaker": "지호",
+        "message": "ㅠㅠㅠㅠㅠ"
+      },
+      {
+        "speaker": "지호",
+        "message": "속상해~!!!"
+      },
+      {
+        "speaker": "지호",
+        "message": "나 서서 그네 타는거 진짜 잘 해"
+      },
+      {
+        "speaker": "지호",
+        "message": "한 번 보여주고 싶다!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대단하다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대단하다"
+      },
+      {
+        "speaker": "지호",
+        "message": "순이는 내가 그네 타는 거 보고"
+      },
+      {
+        "speaker": "지호",
+        "message": "그렇게 위험하게 살지 좀 말라고 했는데…"
+      },
+      {
+        "speaker": "지호",
+        "message": "내 생각엔 순이가 쫄려서 나를 부러워 하는 거야~"
+      },
+      {
+        "speaker": "지호",
+        "message": "그네를 타고 높이 높이 올라가면\r\n얼마나 기분이 좋은데!"
+      },
+      {
+        "speaker": "지호",
+        "message": "달까지도 닿을 수 있을 것 같다구!"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자, 나 사실 유당 불내증 있어"
+      },
+      {
+        "speaker": "지호",
+        "message": "그래서 우유나 치즈 들어간 거 먹으면"
+      },
+      {
+        "speaker": "지호",
+        "message": "배가 아프더라 ㅠ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안타깝다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안타깝다"
+      },
+      {
+        "speaker": "지호",
+        "message": "내말이~"
+      },
+      {
+        "speaker": "지호",
+        "message": "배가 아파서 그렇지 맛 자체를 싫어하는 건 아니거든"
+      },
+      {
+        "speaker": "지호",
+        "message": "으으"
+      },
+      {
+        "speaker": "지호",
+        "message": "그냥 눈 딱 감고 먹고 싶다!"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자 구원자"
+      },
+      {
+        "speaker": "지호",
+        "message": "밥 먹었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직"
+      },
+      {
+        "speaker": "지호",
+        "message": "왜 아직도 안 먹었어~"
+      },
+      {
+        "speaker": "지호",
+        "message": "하지만 잘 됐다!"
+      },
+      {
+        "speaker": "지호",
+        "message": "나랑 먹자"
+      },
+      {
+        "speaker": "지호",
+        "message": "내가 \"밥 먹자\"고 하는 건 언제나 진심이야"
+      },
+      {
+        "speaker": "지호",
+        "message": "알았지, 구원자?"
+      },
+      {
+        "speaker": "지호",
+        "message": "\"언제 밥 한 번 먹자\"는 인사치례라는 애들도 있지만…"
+      },
+      {
+        "speaker": "지호",
+        "message": "내 말은 항상 진심이니까"
+      },
+      {
+        "speaker": "지호",
+        "message": "절대로 의심하면 안 돼!"
+      },
+      {
+        "speaker": "지호",
+        "message": "알았지?"
+      },
+      {
+        "speaker": "지호",
+        "message": "^^♡"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자!"
+      },
+      {
+        "speaker": "지호",
+        "message": "아케나인 시장 말인데\r\n맛있는 게 진짜 많은 것 같아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아"
+      },
+      {
+        "speaker": "지호",
+        "message": "그러고보니 구원자는 아케나인의 영주랬지?"
+      },
+      {
+        "speaker": "지호",
+        "message": "조만간 놀러갈까~"
+      },
+      {
+        "speaker": "유리아",
+        "message": "요즘 지호와 교류하기 시작하셨군요, 구원자님"
+      },
+      {
+        "speaker": "유리아",
+        "message": "솔레이뿐만아니라 \r\n여러 나라의 정령들과 친분을 쌓는 일…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후훗, 멋져요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 지호랑 친해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 지호랑 친해?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "으음. 사실 그렇게 가까운 사이는 아니에요…\r\n아쉽지만요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "아, 하지만 최근에 아마…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "지난 주에 있었던 일인데,\r\n메피가요…"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자~!"
+      },
+      {
+        "speaker": "지호",
+        "message": "있잖아… 요즘 바빠?"
+      },
+      {
+        "speaker": "지호",
+        "message": "나 부탁하고 싶은 게 있는데 ㅎㅎ…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "지호",
+        "message": "카메라맨이 필요해!!"
+      },
+      {
+        "speaker": "지호",
+        "message": "나 좀 도와줘, 구원자~!"
+      },
+      {
+        "speaker": "지호",
+        "message": "아케나인 광장에서 기다릴게!"
+      },
+      {
+        "speaker": "지호",
+        "message": "요즘 피리 부는 법을 가르쳐달라고 찾아오는 \r\n마을 어린이들이 부쩍 늘었는데…"
+      },
+      {
+        "speaker": "지호",
+        "message": "뭐 때문에 그런 건지 원인을 잘 모르겠어"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자, 혹시 어디서 내 얘기 하고 다녔어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "피리 소리가 듣기 좋아서"
+      },
+      {
+        "speaker": "구원자",
+        "message": "피리 소리가 듣기 좋아서"
+      },
+      {
+        "speaker": "지호",
+        "message": "아하~"
+      },
+      {
+        "speaker": "지호",
+        "message": "어쩐지. 구원자 때문에 입소문 탄 거였네!"
+      },
+      {
+        "speaker": "지호",
+        "message": "하핫. 고마워!"
+      },
+      {
+        "speaker": "지호",
+        "message": "으음…"
+      },
+      {
+        "speaker": "지호",
+        "message": "세상엔 정말, 쉽지 않은 일들 투성이네…"
+      },
+      {
+        "speaker": "지호",
+        "message": "……."
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자가 날 먼저 불러내다니 드문 일이네~"
+      },
+      {
+        "speaker": "지호",
+        "message": "왜 그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호와 대화를 하고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호와 대화를 하고 싶어"
+      },
+      {
+        "speaker": "지호",
+        "message": "……."
+      },
+      {
+        "speaker": "지호",
+        "message": "하핫… 구원자는 참 착하네"
+      },
+      {
+        "speaker": "지호",
+        "message": "그럼, 잠깐 어디서 차라도 마실까?"
+      },
+      {
+        "speaker": "지호",
+        "message": "이런 미신같은 걸 진심으로 믿다니"
+      },
+      {
+        "speaker": "지호",
+        "message": "너무 바보같지?"
+      },
+      {
+        "speaker": "지호",
+        "message": "하하…"
+      },
+      {
+        "speaker": "지호",
+        "message": "그래도…"
+      },
+      {
+        "speaker": "지호",
+        "message": "확인해보고 싶어"
+      },
+      {
+        "speaker": "지호",
+        "message": "이런 미신같은 걸 진심으로 믿다니"
+      },
+      {
+        "speaker": "지호",
+        "message": "너무 바보같지?"
+      },
+      {
+        "speaker": "지호",
+        "message": "하하…"
+      },
+      {
+        "speaker": "지호",
+        "message": "그래도…"
+      },
+      {
+        "speaker": "지호",
+        "message": "확인해보고 싶어"
+      },
+      {
+        "speaker": "지호",
+        "message": "이런 미신같은 걸 진심으로 믿다니"
+      },
+      {
+        "speaker": "지호",
+        "message": "너무 바보같지?"
+      },
+      {
+        "speaker": "지호",
+        "message": "하하…"
+      },
+      {
+        "speaker": "지호",
+        "message": "그래도…"
+      },
+      {
+        "speaker": "지호",
+        "message": "확인해보고 싶어"
+      },
+      {
+        "speaker": "지호",
+        "message": "오늘은~ \r\n아주아주 달콤한 사랑의 날!"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자는 사랑받기 위해 태어난 사람이란 걸 \r\n절대 잊지 마~!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 지호야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 지호야!"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자~! 항상 고마워!"
+      },
+      {
+        "speaker": "지호",
+        "message": "평소에도 말하고 싶었는데…\r\n이틈을 타서 전할게?"
+      },
+      {
+        "speaker": "지호",
+        "message": "구원자는 나한테\r\n참 고마운 존재란 거! 잊지 마!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 고마워, 지호야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 고마워, 지호야!"
+      },
+      {
+        "speaker": "지호",
+        "message": "아, 재밌겠다.\r\n오늘 진짜 바쁠 것 같아!"
+      },
+      {
+        "speaker": "지호",
+        "message": "분명 엄청 즐거운 이브의 날이 되겠지?\r\n기다려, 구원자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 이브의 날, 지호야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 이브의 날, 지호야!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "지호",
+      "en": "Jiho",
+      "zh_tw": "智河",
+      "zh_cn": "智河"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "인간형",
+      "en": "Humanlike",
+      "zh_tw": "人類型",
+      "zh_cn": "人類型"
+    },
+    "class": {
+      "ko": "서포터",
+      "en": "Supporter",
+      "zh_tw": "輔助者",
+      "zh_cn": "輔助者"
+    },
+    "sub_class": {
+      "ko": "치료",
+      "en": "Heal",
+      "zh_tw": "治療",
+      "zh_cn": "治療"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "행복의 울림",
+        "en": "Echo of Happiness",
+        "zh_tw": "幸福的共鳴",
+        "zh_cn": "幸福的共鳴"
+      },
+      "constellation": {
+        "ko": "처녀자리",
+        "en": "Virgo",
+        "zh_tw": "處女座",
+        "zh_cn": "處女座"
+      },
+      "union": {
+        "ko": "가온",
+        "en": "Gaon",
+        "zh_tw": "加溫",
+        "zh_cn": "加溫"
+      },
+      "cv_ko": {
+        "ko": "김채하",
+        "en": "Chaeha Kim",
+        "zh_tw": "金採河",
+        "zh_cn": "金採河"
+      },
+      "cv_jp": {
+        "ko": "Jiena Tomomi Sumi",
+        "en": "Jiena Tomomi Sumi",
+        "zh_tw": "Jiena Tomomi Sumi",
+        "zh_cn": "Jiena Tomomi Sumi"
+      },
+      "like": {
+        "ko": [
+          "마늘 치킨",
+          "국밥"
+        ],
+        "en": [
+          "Garlic chicken",
+          "rice soup"
+        ],
+        "zh_tw": [
+          "蒜味炸雞、湯飯"
+        ],
+        "zh_cn": [
+          "蒜味炸雞、湯飯"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "민트 초코"
+        ],
+        "en": [
+          "Mint chocolate"
+        ],
+        "zh_tw": [
+          "薄荷巧克力"
+        ],
+        "zh_cn": [
+          "薄荷巧克力"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "시하 팬질하기"
+        ],
+        "en": [
+          "Fangirling over Seeha"
+        ],
+        "zh_tw": [
+          "追星(西荷)"
+        ],
+        "zh_cn": [
+          "追星(西荷)"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "달고나 뽑기"
+        ],
+        "en": [
+          "Dalgona picking"
+        ],
+        "zh_tw": [
+          "戳椪糖"
+        ],
+        "zh_cn": [
+          "戳椪糖"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "안녕 구원자! 연이은 업무 과중으로 인한 불면증이 고민이라고…? 그걸 어째!\n\n…있잖아, 혹시 대금 불어본 적 있어? 리코더나 다른 피리들에 비해서 소리 내기 좀 어렵지?\n그건 다 소리를 내고 싶어서, 마음이 급해져서 그런 거야.\n사실은 아주 약간의 요령만 터득하면 돼. \n구원자의 숨결을 아주 조금, 적절한 방향으로 불어넣는 게 다야…\n마음 편하게 가지고… 자연스럽게.\n\n세상만사가 다 그래. 구원자는 있는 그대로 편하게 행동하면 돼.\n그럼 구원자가 가진 본연의 힘이 드러날 거야. \n너무 걱정 마! 결국 다 잘 될 거니까.\n\n마지막으로 연주 한 곡 해줄게♪ 노래는 뭐가 좋을까… 그래, 우리 시하 솔로곡으로!",
+        "en": "Hi, Savior! You're worried about insomnia because of continuous overwork…? Oh my!\n\n…Hey, have you ever played a Daegeum flute before? Isn't it more difficult to make a sound with it than with a recorder or any other flute?\nThat's because you are trying to make a sound in a hurry.\nWhat you need is to just learn a few tricks.\nIt's all about blowing a little bit of breath in the right direction…\nTake it easy…and go natural.\n\nEverything in the world works like that. Just relax and be yourself, Savior.\nThen your original power as Savior will reveal itself.\nDon't worry too much! Everything will be fine in the end.\n\nNow, let me play a song for you!♪ Which song should I play…? Yeah, Seeha's solo song!",
+        "zh_tw": "你好啊救援者！因為接二連三的業務負荷量過重而失眠…？怎麼會！\n\n…這個嘛，你有吹過大笒嗎？跟直笛或其他笛子相比，大笒更難吹，對吧？\n這都是因為你內心急於想要發出聲音。\n其實只需要掌握一個小小的訣竅。\n救援者只要微微調整自己的呼吸，往正確的方向吹氣就行了…\n放輕鬆…自然地。\n\n世界上所有的事情都是如此，救援者只要照著自己的節奏行動即可。\n那麼救援者就可以釋放自己原有的力量。\n別擔心！船到橋頭自然直。\n\n最後就讓我來為你演奏一曲♪要演奏什麼歌曲呢…嗯，就演奏一首我們西荷的個人單曲吧！",
+        "zh_cn": "你好啊救援者！因為接二連三的業務負荷量過重而失眠…？怎麼會！\n\n…這個嘛，你有吹過大笒嗎？跟直笛或其他笛子相比，大笒更難吹，對吧？\n這都是因為你內心急於想要發出聲音。\n其實只需要掌握一個小小的訣竅。\n救援者只要微微調整自己的呼吸，往正確的方向吹氣就行了…\n放輕鬆…自然地。\n\n世界上所有的事情都是如此，救援者只要照著自己的節奏行動即可。\n那麼救援者就可以釋放自己原有的力量。\n別擔心！船到橋頭自然直。\n\n最後就讓我來為你演奏一曲♪要演奏什麼歌曲呢…嗯，就演奏一首我們西荷的個人單曲吧！"
+      },
+      "greeting": {
+        "ko": "고민이 있다구? 내가 들어줄게!",
+        "en": "You have worries? I'll hear you out!",
+        "zh_tw": "你說有苦惱嗎？我來聽你說！",
+        "zh_cn": "你說有苦惱嗎？我來聽你說！"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "구원자 안녕! 난 지호야~"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Savior, hi! I'm Jiho."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "救援者你好！我是智河～"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "救援者你好！我是智河～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "만나서 반가워! \r\n앞으로 종종 연락하자?"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Nice to meet you!\r\nLet's keep in touch!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "很高興見到你！\r\n以後常常聯絡吧？"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "很高興見到你！\r\n以後常常聯絡吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "나도나도~"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Me too!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我也是～"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我也是～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "근데 구원자는 에버폰 케이스 뭐 써?"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Hey, what Everphone case do you use?"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "不過救援者EverPhone用什麼殼？"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "不過救援者EverPhone用什麼殼？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "나 요즘 바꾸고 싶더라구"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I want to change it."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我最近想換殼"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我最近想換殼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "아니 그냥"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Never mind."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "啊乾脆"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "啊乾脆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "직접 만나서 보여달라고 해야겠다!"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I want to see it myself!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "直接見面請你給我看好了！"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "直接見面請你給我看好了！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "이따가 시간 되면 연락줘~"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Please call me later when you've time!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "等等有空的話聯絡我～"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "等等有空的話聯絡我～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "내가 찾아갈게!"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I'll come over!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我去找你！"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我去找你！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "구원자"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Savior"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "救援者"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "시하 노래 스트리밍해줘"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Please stream Seeha's song."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "請你幫忙刷一下西荷的音源"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "請你幫忙刷一下西荷的音源"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "우리 같이 시하 노래를 들어서"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Let's listen to Seeha's song together"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我們一起聽西荷的歌"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我們一起聽西荷的歌"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "시하의 음원 순위를 올리는 거야"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "and raise Seeha's music ranking."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "然後提升西荷的歌曲排名"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "然後提升西荷的歌曲排名"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "우린 할 수 있어"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "We can do it."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我們做得到的"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我們做得到的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "구원자 알았지? 믿는다?"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "You got this? I can trust you, right?"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "救援者知道了吧？我就相信你囉？"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "救援者知道了吧？我就相信你囉？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "의욕 있는 자세 아주 좋아~"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "That's the spirit!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我喜歡你充滿鬥志的態度"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我喜歡你充滿鬥志的態度"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "딱 기다려"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Wait right there."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "等我"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "等我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "내가 직접 가서 알려줄게!"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I'll teach you myself."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我直接過去教你！"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我直接過去教你！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "에버폰 풀충전하고 있어!"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Fully charge your Everphone!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "先把EverPhone充飽電！"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "先把EverPhone充飽電！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "머리모양 바꿔볼까…"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Should I change my hairstyle…"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "要不要換髮型呢…"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "要不要換髮型呢…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "가끔은 하나로 묶을까 싶어"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Sometimes I think about tying it back."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "有時候想綁成一條"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "有時候想綁成一條"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "맞아맞아. 바로 그거야~"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Yes. That's the one."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "沒錯沒錯，就是那個～"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "沒錯沒錯，就是那個～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "근데 있잖아"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "But you know,"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "不過那個啊"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "不過那個啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "트윈테일하면 모발 무게가 양쪽으로 분산돼서"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "If you do pigtails, the weight of your hair is distributed to both sides"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "聽說綁雙馬尾的話，頭髮的重量就會分散到兩邊"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "聽說綁雙馬尾的話，頭髮的重量就會分散到兩邊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "하나로 묶는 것보다 두피 건강에 좋대"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "so it's better for the health of your scalp than a ponytail."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "對頭皮來說比綁一條還要健康"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "對頭皮來說比綁一條還要健康"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "알고 있었어?"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Did you know that?"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "你原本就知道？"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "你原本就知道？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "구원자도 트윈테일 한 번 해볼래?"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Savior, do you want to do pigtails?"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "救援者，要不要嘗試綁雙馬尾呢？"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "救援者，要不要嘗試綁雙馬尾呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "내가 도와줄게~"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I can help!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我幫你～"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我幫你～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "구원자 혹시…"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Savior, by any chance…"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "救援者你…"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "救援者你…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "시하 에버톡 연락처도 알아…?"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Do you know Seeha's Evertalk number…?"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "知道西荷EverTalk的聯絡方式嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "知道西荷EverTalk的聯絡方式嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "아, 아니야"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Oh, nothing."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "啊，算了"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "啊，算了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "대답하지 말아봐"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Don't answer."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "不要回答我"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "不要回答我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "만약 구원자가 시하 에버톡 프사를 볼 수 있다면…"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Savior, if you can see Seeha's Evertalk profile picture…"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "萬一救援者看得到西荷EverTalk的大頭照…"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "萬一救援者看得到西荷EverTalk的大頭照…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "질투로 정말 미쳐버릴지도 모르니깐…"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I might go crazy with jealousy…"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "說不定我真的會嫉妒到瘋掉…"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "說不定我真的會嫉妒到瘋掉…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "응"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Yup"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "嗯"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "조용히 있어"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Just be quiet"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "安靜待著"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "安靜待著"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "가온의 정령들이 행복했으면 좋겠어"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I hope the Souls of Gaon are happy."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "但願加溫的精靈們能幸福"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "但願加溫的精靈們能幸福"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "하지만…"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "But…"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "不過…"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "不過…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "…"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "에구. 모르겠다"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Ah. I don't know."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "哎唷，不管啦"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "哎唷，不管啦"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "잠깐 억새밭에서 산책 다녀올까 해"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I'm thinking of taking a walk in the wild grass field."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我在想要不要去紫芒田散步一下"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我在想要不要去紫芒田散步一下"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "구원자, 안 바쁘면 나와줄 수 있어?"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Savior, can you come out if you're not busy?"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "救援者，你不忙的話要一起去嗎？"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "救援者，你不忙的話要一起去嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "부탁이야"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Please"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "拜託"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "拜託"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "메피는 단 거 진짜 잘 먹더라!"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Mephi really eats sweet things quite well!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "梅菲真的很能吃甜的！"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "梅菲真的很能吃甜的！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "단 걸 좋아하는 게 아니라 케익을 좋아하는 거라고 하긴 하던데…"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I heard she doesn't like sweet things but loves cake…"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "雖然她說過不是喜歡吃甜的，而是喜歡吃蛋糕⋯"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "雖然她說過不是喜歡吃甜的，而是喜歡吃蛋糕⋯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "하긴, 나도 달고나를 좋아하는 거지"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Well, I like dalgona,"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "也是，我也喜歡椪糖"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "也是，我也喜歡椪糖"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "달아서 좋아하는 건 아니긴 해"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "but not because it's sweet."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "確實也不是因為甜才喜歡的"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "確實也不是因為甜才喜歡的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "솜사탕이나 달고나처럼 먹을 때 재밌는 게 좋아"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "Whether it's cotton candy or dalgona, I like to have fun while I'm eating."
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "我喜歡吃棉花糖或椪糖時好玩的感覺"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "我喜歡吃棉花糖或椪糖時好玩的感覺"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "호박엿도 좋아~! 쭈욱 늘어나잖아!"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I like pumpkin malt candy, too! Because it's stretchy!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "也喜歡南瓜飴糖～！可以拉得很長！"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "也喜歡南瓜飴糖～！可以拉得很長！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "지호",
+          "message": "응응"
+        },
+        "en": {
+          "speaker": "Jiho",
+          "message": "I do!"
+        },
+        "zh_tw": {
+          "speaker": "智河",
+          "message": "嗯嗯"
+        },
+        "zh_cn": {
+          "speaker": "智河",
+          "message": "嗯嗯"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "그렇게 큰일을 마주하게 되면, 좀처럼 결심이 서지 않죠… 저는 그냥 조용히 응원할게요."
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "When faced with something so big, it's hard to make up your mind… I'll just quietly cheer for you."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "遇到這麼大的事情，一定很難下定決心吧…我會默默為她加油。"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "遇到這麼大的事情，一定很難下定決心吧…我會默默為她加油。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "루테",
+          "message": "양이랑 새들이 지호 씨의 피리 소리를 마음에 들어 하는 것 같아요… 헤헷."
+        },
+        "en": {
+          "speaker": "Lute",
+          "message": "The sheep and birds seem to enjoy the sound of Jiho's flute… Hehe."
+        },
+        "zh_tw": {
+          "speaker": "魯特",
+          "message": "羊和鳥好像都很喜歡智河的笛聲…嘿嘿。"
+        },
+        "zh_cn": {
+          "speaker": "魯特",
+          "message": "羊和鳥好像都很喜歡智河的笛聲…嘿嘿。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미카",
+          "message": "…나는?!"
+        },
+        "en": {
+          "speaker": "Mica",
+          "message": "…What about me?!"
+        },
+        "zh_tw": {
+          "speaker": "米卡",
+          "message": "…我呢？！"
+        },
+        "zh_cn": {
+          "speaker": "米卡",
+          "message": "…我呢？！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자 안녕! 난 지호야~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior, hi! I'm Jiho."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者你好！我是智河～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者你好！我是智河～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "만나서 반가워! \r\n앞으로 종종 연락하자?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Nice to meet you!\r\nLet's keep in touch!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "很高興見到你！\r\n以後常常聯絡吧？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "很高興見到你！\r\n以後常常聯絡吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, same here. I will!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "請多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, same here. I will!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "請多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "나도나도~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Me too!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我也是～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我也是～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "근데 구원자는 에버폰 케이스 뭐 써?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Hey, what Everphone case do you use?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不過救援者EverPhone用什麼殼？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不過救援者EverPhone用什麼殼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "나 요즘 바꾸고 싶더라구"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I want to change it."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我最近想換殼"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我最近想換殼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "아니 그냥"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Never mind."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "啊乾脆"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "啊乾脆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "직접 만나서 보여달라고 해야겠다!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I want to see it myself!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "直接見面請你給我看好了！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "直接見面請你給我看好了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "이따가 시간 되면 연락줘~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Please call me later when you've time!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "等等有空的話聯絡我～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "等等有空的話聯絡我～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "내가 찾아갈게!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'll come over!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我去找你！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我去找你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "시하 노래 스트리밍해줘"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Please stream Seeha's song."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "請你幫忙刷一下西荷的音源"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "請你幫忙刷一下西荷的音源"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "스트리밍?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Stream?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "刷音源？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "刷音源？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "스트리밍?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Stream?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "刷音源？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "刷音源？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "우리 같이 시하 노래를 들어서"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Let's listen to Seeha's song together"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我們一起聽西荷的歌"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我們一起聽西荷的歌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "시하의 음원 순위를 올리는 거야"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "and raise Seeha's music ranking."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "然後提升西荷的歌曲排名"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "然後提升西荷的歌曲排名"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "우린 할 수 있어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "We can do it."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我們做得到的"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我們做得到的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자 알았지? 믿는다?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "You got this? I can trust you, right?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者知道了吧？我就相信你囉？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者知道了吧？我就相信你囉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떻게 하는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How do I do it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要怎麼做？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要怎麼做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떻게 하는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How do I do it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要怎麼做？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要怎麼做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "의욕 있는 자세 아주 좋아~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "That's the spirit!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我喜歡你充滿鬥志的態度"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我喜歡你充滿鬥志的態度"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "딱 기다려"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Wait right there."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "等我"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "等我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "내가 직접 가서 알려줄게!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'll teach you myself."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我直接過去教你！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我直接過去教你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "에버폰 풀충전하고 있어!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Fully charge your Everphone!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "先把EverPhone充飽電！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "先把EverPhone充飽電！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "머리모양 바꿔볼까…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Should I change my hairstyle…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "要不要換髮型呢…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "要不要換髮型呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "가끔은 하나로 묶을까 싶어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Sometimes I think about tying it back."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "有時候想綁成一條"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "有時候想綁成一條"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "포니테일?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In a ponytail?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "馬尾？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "馬尾？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "포니테일?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In a ponytail?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "馬尾？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "馬尾？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "맞아맞아. 바로 그거야~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Yes. That's the one."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "沒錯沒錯，就是那個～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "沒錯沒錯，就是那個～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "근데 있잖아"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "But you know,"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不過那個啊"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不過那個啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "트윈테일하면 모발 무게가 양쪽으로 분산돼서"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "If you do pigtails, the weight of your hair is distributed to both sides"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "聽說綁雙馬尾的話，頭髮的重量就會分散到兩邊"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "聽說綁雙馬尾的話，頭髮的重量就會分散到兩邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하나로 묶는 것보다 두피 건강에 좋대"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "so it's better for the health of your scalp than a ponytail."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "對頭皮來說比綁一條還要健康"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "對頭皮來說比綁一條還要健康"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "알고 있었어?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Did you know that?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "你原本就知道？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "你原本就知道？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "For real?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "For real?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자도 트윈테일 한 번 해볼래?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior, do you want to do pigtails?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者，要不要嘗試綁雙馬尾呢？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者，要不要嘗試綁雙馬尾呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "내가 도와줄게~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I can help!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我幫你～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我幫你～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자 혹시…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior, by any chance…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者你…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者你…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "시하 에버톡 연락처도 알아…?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Do you know Seeha's Evertalk number…?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "知道西荷EverTalk的聯絡方式嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "知道西荷EverTalk的聯絡方式嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "아, 아니야"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Oh, nothing."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "啊，算了"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "啊，算了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "대답하지 말아봐"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Don't answer."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不要回答我"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不要回答我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "만약 구원자가 시하 에버톡 프사를 볼 수 있다면…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior, if you can see Seeha's Evertalk profile picture…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "萬一救援者看得到西荷EverTalk的大頭照…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "萬一救援者看得到西荷EverTalk的大頭照…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "질투로 정말 미쳐버릴지도 모르니깐…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I might go crazy with jealousy…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "說不定我真的會嫉妒到瘋掉…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "說不定我真的會嫉妒到瘋掉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대답하지 말아야 해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I won't answer, okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不該回答嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不該回答嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대답하지 말아야 해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I won't answer, okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不該回答嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不該回答嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "조용히 있어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Just be quiet"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "安靜待著"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "安靜待著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "가온의 정령들이 행복했으면 좋겠어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I hope the Souls of Gaon are happy."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "但願加溫的精靈們能幸福"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "但願加溫的精靈們能幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하지만…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "But…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不過…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "에구. 모르겠다"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Ah. I don't know."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "哎唷，不管啦"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "哎唷，不管啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "잠깐 억새밭에서 산책 다녀올까 해"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'm thinking of taking a walk in the wild grass field."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我在想要不要去紫芒田散步一下"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我在想要不要去紫芒田散步一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자, 안 바쁘면 나와줄 수 있어?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior, can you come out if you're not busy?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者，你不忙的話要一起去嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者，你不忙的話要一起去嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "부탁이야"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Please"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "拜託"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "拜託"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "메피는 단 거 진짜 잘 먹더라!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Mephi really eats sweet things quite well!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "梅菲真的很能吃甜的！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "梅菲真的很能吃甜的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "단 걸 좋아하는 게 아니라 케익을 좋아하는 거라고 하긴 하던데…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I heard she doesn't like sweet things but loves cake…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "雖然她說過不是喜歡吃甜的，而是喜歡吃蛋糕⋯"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "雖然她說過不是喜歡吃甜的，而是喜歡吃蛋糕⋯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하긴, 나도 달고나를 좋아하는 거지"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Well, I like dalgona,"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "也是，我也喜歡椪糖"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "也是，我也喜歡椪糖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "달아서 좋아하는 건 아니긴 해"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "but not because it's sweet."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "確實也不是因為甜才喜歡的"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "確實也不是因為甜才喜歡的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "솜사탕이나 달고나처럼 먹을 때 재밌는 게 좋아"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Whether it's cotton candy or dalgona, I like to have fun while I'm eating."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我喜歡吃棉花糖或椪糖時好玩的感覺"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我喜歡吃棉花糖或椪糖時好玩的感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "호박엿도 좋아~! 쭈욱 늘어나잖아!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I like pumpkin malt candy, too! Because it's stretchy!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "也喜歡南瓜飴糖～！可以拉得很長！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "也喜歡南瓜飴糖～！可以拉得很長！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌는 음식을 좋아하나봐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I guess you like fun food."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來你喜歡好玩的食物"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來你喜歡好玩的食物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌는 음식을 좋아하나봐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I guess you like fun food."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來你喜歡好玩的食物"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來你喜歡好玩的食物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "응응"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I do!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "먹는 재미가 없으면 사는 맛이 없지♪"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "If it's not fun to eat, it's not fun to live♪"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "沒有吃的樂趣，就沒有活著的滋味了♪"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "沒有吃的樂趣，就沒有活著的滋味了♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "신기한 거 보면 구원자도 나한테 알려줘!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "If you see something interesting, let me know!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "如果有看到神奇的東西，救援者也要告訴我喔！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "如果有看到神奇的東西，救援者也要告訴我喔！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "약속이야~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Promise!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "約好了哦～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "約好了哦～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "시하 콘서트 추첨에서 떨어졌어…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I didn't get lucky in the draw for Seeha's concert."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "沒抽到西荷的演唱會…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "沒抽到西荷的演唱會…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "진짜 우울하다"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'm depressed."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "真鬱悶"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "真鬱悶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하아…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Hah…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "哈…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "哈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "지금 상태에선 톡해봤자 징징대기만 할 거야…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'll just whine if I text you in this mood…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "以現在這個狀態傳訊息也只會發牢騷…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "以現在這個狀態傳訊息也只會發牢騷…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "잠깐 혼자 있게 해줄래…?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Can you leave me alone for a moment…?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "能讓我獨處一下嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "能讓我獨處一下嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "징징대도 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can whine."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發牢騷也沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發牢騷也沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "징징대도 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can whine."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發牢騷也沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發牢騷也沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "ㅠ"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "TT"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "嗚"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "ㅠㅠ"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "TT_TT"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "ㅠㅠㅠ"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "TT_TT_TT"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "嗚嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "嗚嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "ㅠㅠㅠㅠ"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "TT_TT_TT_TT"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "嗚嗚嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "嗚嗚嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "ㅠㅠㅠㅠㅠ"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "TT_TT_TT_TT_TT_TT"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "嗚嗚嗚嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "嗚嗚嗚嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "속상해~!!!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'm sad!!!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "好傷心～！！！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "好傷心～！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "나 서서 그네 타는거 진짜 잘 해"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I can stand on a swing really, really well."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我真的很擅長站著盪鞦韆"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我真的很擅長站著盪鞦韆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "한 번 보여주고 싶다!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I wanna show you!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "好想讓你看看！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "好想讓你看看！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대단하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's great."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真厲害"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真厲害"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대단하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's great."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真厲害"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真厲害"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "순이는 내가 그네 타는 거 보고"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Soonie saw me on the swing"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "順伊看了我盪鞦韆的樣子"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "順伊看了我盪鞦韆的樣子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그렇게 위험하게 살지 좀 말라고 했는데…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "and told me not to live so dangerously…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "叫我不要活得那麼驚險…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "叫我不要活得那麼驚險…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "내 생각엔 순이가 쫄려서 나를 부러워 하는 거야~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I think Soonie is jealous because she's scared."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我覺得是因為順伊很膽小，才會羨慕我～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我覺得是因為順伊很膽小，才會羨慕我～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그네를 타고 높이 높이 올라가면\r\n얼마나 기분이 좋은데!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "If you go up high on the swing,\r\nit feels great!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "盪鞦韆盪得很高，\r\n多開心啊！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "盪鞦韆盪得很高，\r\n多開心啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "달까지도 닿을 수 있을 것 같다구!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I think I can reach the moon!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "感覺連月亮都碰得到欸！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "感覺連月亮都碰得到欸！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자, 나 사실 유당 불내증 있어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior, I'm lactose-intolerant."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者，我其實有乳糖不耐症"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者，我其實有乳糖不耐症"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그래서 우유나 치즈 들어간 거 먹으면"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "So when I eat something with milk or cheese,"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "所以吃了含有牛奶或起司的東西的話"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "所以吃了含有牛奶或起司的東西的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "배가 아프더라 ㅠ"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "my stomach hurts."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "肚子就會痛嗚"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "肚子就會痛嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안타깝다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's too bad."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真可惜"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안타깝다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's too bad."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真可惜"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "내말이~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I know."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "就是說啊～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "就是說啊～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "배가 아파서 그렇지 맛 자체를 싫어하는 건 아니거든"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "It's because my stomach hurts, not that I don't like the taste."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "是因為會肚子痛，不是因為不喜歡這個味道"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "是因為會肚子痛，不是因為不喜歡這個味道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "으으"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Ugh."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "呃呃"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "呃呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그냥 눈 딱 감고 먹고 싶다!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I just want to ignore it and eat it anyway!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "好想什麼都不管直接吃掉！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "好想什麼都不管直接吃掉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자 구원자"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior, Savior."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者救援者"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "밥 먹었어?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Have you eaten?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "吃過飯了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "吃過飯了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not yet."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還沒"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還沒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not yet."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還沒"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還沒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "왜 아직도 안 먹었어~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Why haven't you eaten yet?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "為什麼還沒吃～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "為什麼還沒吃～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하지만 잘 됐다!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "But that's good!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不過正好！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不過正好！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "나랑 먹자"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Eat with me."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "跟我一起吃吧"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "跟我一起吃吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "내가 \"밥 먹자\"고 하는 건 언제나 진심이야"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "When I say let's eat, I always mean it."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "無論何時，我說「吃飯吧」都是認真的"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "無論何時，我說「吃飯吧」都是認真的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "알았지, 구원자?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "You got it, Savior?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "你知道吧，救援者？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "你知道吧，救援者？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "\"언제 밥 한 번 먹자\"는 인사치례라는 애들도 있지만…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Some people say, \"Let's have a meal sometime\" just as a courtesy…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "雖然有些人會說「哪天吃個飯吧」這種客套話…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "雖然有些人會說「哪天吃個飯吧」這種客套話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "내 말은 항상 진심이니까"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "But I always mean it."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "但我是認真的"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "但我是認真的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "절대로 의심하면 안 돼!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Never doubt it!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "絕對不能懷疑我哦！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "絕對不能懷疑我哦！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "알았지?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Okay?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "知道嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "知道嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "^^♡"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": ":)♡"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "^^♡"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "^^♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "아케나인 시장 말인데\r\n맛있는 게 진짜 많은 것 같아!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Speaking of the Arkenine Market,\r\nI think they have lots of yummy food!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "阿肯納因市場啊，\r\n好像有很多好吃的！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "阿肯納因市場啊，\r\n好像有很多好吃的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Totally"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Totally"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그러고보니 구원자는 아케나인의 영주랬지?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior is the Lord of Arkenine, right?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "對了，救援者你說過你是阿肯納因的領主吧？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "對了，救援者你說過你是阿肯納因的領主吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "조만간 놀러갈까~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I can visit there soon."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "最近要不要去玩呢～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "最近要不要去玩呢～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "요즘 지호와 교류하기 시작하셨군요, 구원자님"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "You've been interacting with Jiho lately, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你最近開始跟智河交流了呀，救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你最近開始跟智河交流了呀，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "솔레이뿐만아니라 \r\n여러 나라의 정령들과 친분을 쌓는 일…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Not just with Solrey, \r\nmaking friends with Souls of various countries."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "除了蘇萊伊之外，\r\n還跟許多國家的精靈們培養交情…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "除了蘇萊伊之外，\r\n還跟許多國家的精靈們培養交情…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후훗, 멋져요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Hehe, that's nice!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵，好帥啊！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵，好帥啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 지호랑 친해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you close with Jiho?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳跟智河熟嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳跟智河熟嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 지호랑 친해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you close with Jiho?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳跟智河熟嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳跟智河熟嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "으음. 사실 그렇게 가까운 사이는 아니에요…\r\n아쉽지만요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Um. We're not that close…\r\nUnfortunately."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "嗯，可惜不太熟…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "嗯，可惜不太熟…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "아, 하지만 최근에 아마…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Oh, but recently, maybe…"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "啊，不過最近可能⋯"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "啊，不過最近可能⋯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "지난 주에 있었던 일인데,\r\n메피가요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "it happened last week,\r\nMephi…"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這是上週發生的事，\r\n梅菲啊…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這是上週發生的事，\r\n梅菲啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자~!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者～！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "있잖아… 요즘 바빠?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Hey… Are you busy these days?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "那個…最近忙嗎？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "那個…最近忙嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "나 부탁하고 싶은 게 있는데 ㅎㅎ…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I need to ask you a favor…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我有事想拜託你哈哈…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我有事想拜託你哈哈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "카메라맨이 필요해!!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I need a cameraman!!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我需要攝影師！！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我需要攝影師！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "나 좀 도와줘, 구원자~!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I need help, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者，幫我一下～！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者，幫我一下～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "아케나인 광장에서 기다릴게!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'll be waiting at Arkenine Square!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我在阿肯納因廣場等你！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我在阿肯納因廣場等你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "요즘 피리 부는 법을 가르쳐달라고 찾아오는 \r\n마을 어린이들이 부쩍 늘었는데…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "These days, more village kids are visiting me\r\ntelling me to teach them how to play flute…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "最近一下子來了很多村莊的小孩\r\n要我教他們怎麼吹笛子…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "最近一下子來了很多村莊的小孩\r\n要我教他們怎麼吹笛子…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "뭐 때문에 그런 건지 원인을 잘 모르겠어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I don't know why."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不知道為什麼會這樣"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不知道為什麼會這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자, 혹시 어디서 내 얘기 하고 다녔어?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Savior, have you been talking about me?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者，你是不是有在哪裡提到我啊？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者，你是不是有在哪裡提到我啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "피리 소리가 듣기 좋아서"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like to hear you play flute."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為笛聲很悅耳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為笛聲很悅耳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "피리 소리가 듣기 좋아서"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like to hear you play flute."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為笛聲很悅耳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為笛聲很悅耳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "아하~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Aha."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "啊哈～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "啊哈～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "어쩐지. 구원자 때문에 입소문 탄 거였네!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "That's why. You, Savior, made me famous!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "難怪，原來是救援者傳出去的啊！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "難怪，原來是救援者傳出去的啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하핫. 고마워!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Haha. Thank you!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "哈哈，謝啦！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "哈哈，謝啦！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "으음…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Um…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "嗯嗯…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "嗯嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "세상엔 정말, 쉽지 않은 일들 투성이네…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "The world is really full of difficult things…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "這個世界上，真的充滿了許多不容易的事啊…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "這個世界上，真的充滿了許多不容易的事啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자가 날 먼저 불러내다니 드문 일이네~"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "It's rare for you to call me first."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者居然主動先找我，好難得～"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者居然主動先找我，好難得～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "왜 그래?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호와 대화를 하고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to talk with you, Jiho."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想跟智河聊天"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想跟智河聊天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호와 대화를 하고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to talk with you, Jiho."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想跟智河聊天"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想跟智河聊天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하핫… 구원자는 참 착하네"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Haha… Savior, you're so kind."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "哈哈…救援者真善良"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "哈哈…救援者真善良"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그럼, 잠깐 어디서 차라도 마실까?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Shall we get some tea somewhere for a moment?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "那，要不要找個地方喝杯茶？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "那，要不要找個地方喝杯茶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "이런 미신같은 걸 진심으로 믿다니"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Believing in such a superstition,"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我竟然真心相信這種像是迷信的東西"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我竟然真心相信這種像是迷信的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "너무 바보같지?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'm so stupid, right?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我很笨吧？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我很笨吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하하…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Haha…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "哈哈…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "哈哈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그래도…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Still…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不過…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "확인해보고 싶어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I want to find out."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我還是想確認看看"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我還是想確認看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "이런 미신같은 걸 진심으로 믿다니"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Believing in such a superstition,"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我竟然真心相信這種像是迷信的東西"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我竟然真心相信這種像是迷信的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "너무 바보같지?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'm so stupid, right?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我很笨吧？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我很笨吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하하…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Haha…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "哈哈…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "哈哈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그래도…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Still…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不過…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "확인해보고 싶어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I want to find out."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我還是想確認看看"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我還是想確認看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "이런 미신같은 걸 진심으로 믿다니"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Believing in such a superstition,"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我竟然真心相信這種像是迷信的東西"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我竟然真心相信這種像是迷信的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "너무 바보같지?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I'm so stupid, right?"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我很笨吧？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我很笨吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "하하…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Haha…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "哈哈…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "哈哈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "그래도…"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Still…"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "不過…"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "不過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "확인해보고 싶어"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I want to find out."
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "我還是想確認看看"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "我還是想確認看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "오늘은~ \r\n아주아주 달콤한 사랑의 날!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Today's Love Day!\r\nA sweet sweet day!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "今天是～\r\n非常非常甜蜜的戀愛之日！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "今天是～\r\n非常非常甜蜜的戀愛之日！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자는 사랑받기 위해 태어난 사람이란 걸 \r\n절대 잊지 마~!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Don't forget!\r\nYou were born to be loved, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者是為了被愛而生的，\r\n絕對不要忘記～！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者是為了被愛而生的，\r\n絕對不要忘記～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 지호야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Jiho!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳啊，智河！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳啊，智河！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 지호야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Jiho!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳啊，智河！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳啊，智河！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자~! 항상 고마워!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Thanks Savior! You're da best!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者～！總是很感謝你！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者～！總是很感謝你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "평소에도 말하고 싶었는데…\r\n이틈을 타서 전할게?"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "There's been something I wanted to always tell you…\r\nI think now's the best time!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "平常也很想跟你說這句話…\r\n就藉著今天表達我的感謝吧？"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "平常也很想跟你說這句話…\r\n就藉著今天表達我的感謝吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "구원자는 나한테\r\n참 고마운 존재란 거! 잊지 마!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "I want you to never forget\r\nhow much I appreciate you! Don't forget it!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "救援者對我來說\r\n是非常令人感激的存在！別忘了！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "救援者對我來說\r\n是非常令人感激的存在！別忘了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 고마워, 지호야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me too Jiho!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也很感謝妳啊，智河！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也很感謝妳啊，智河！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 고마워, 지호야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me too Jiho!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也很感謝妳啊，智河！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也很感謝妳啊，智河！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "아, 재밌겠다.\r\n오늘 진짜 바쁠 것 같아!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "Oh so exciting.\r\nToday's gonna be so busy!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "啊，一定很好玩。\r\n今天應該會很忙吧！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "啊，一定很好玩。\r\n今天應該會很忙吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "지호",
+            "message": "분명 엄청 즐거운 이브의 날이 되겠지?\r\n기다려, 구원자!"
+          },
+          "en": {
+            "speaker": "Jiho",
+            "message": "It's gonna be an exciting Eve's Day right?\r\nBe excited, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "智河",
+            "message": "一定會是一個超級好玩的夏娃之日？\r\n救援者，我等你！"
+          },
+          "zh_cn": {
+            "speaker": "智河",
+            "message": "一定會是一個超級好玩的夏娃之日？\r\n救援者，我等你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 이브의 날, 지호야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day, Jiho!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "快樂夏娃之日，智河！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "快樂夏娃之日，智河！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 이브의 날, 지호야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day, Jiho!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "快樂夏娃之日，智河！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "快樂夏娃之日，智河！"
+          }
+        }
+      ]
+    }
+  }
+}

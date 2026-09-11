@@ -1,0 +1,191 @@
+{
+  "id": "120",
+  "name": "로제",
+  "name_en": "Rose",
+  "grade": "레어",
+  "race": "인간형",
+  "class": "캐스터",
+  "sub_class": "치료",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "석양빛 베일",
+    "constellation": "인연_제이드_이벤트2",
+    "union": "태양 기사단",
+    "birthday": "610",
+    "height": 160,
+    "weight": 46,
+    "cv_ko": "이명호",
+    "cv_jp": "Rena Maeda",
+    "like": [
+      "바게트빵",
+      "이타적 행동"
+    ],
+    "dislike": [
+      "추위"
+    ],
+    "hobby": [
+      "향초 태우기"
+    ],
+    "speciality": [
+      "지팡이 돌리기"
+    ]
+  },
+  "personality": {
+    "description": "안녕하세요, 구원자님? 저는 로제라고 해요.\n신의 제단을 가꾸는 일은 몹시 보람 있답니다.\n이제부터 구원자님이 이끌어주실 이 에덴의 모습도 무척 기대되네요.\n지난번엔 정말 많은 신세를 졌어요. 앞으로도 잘 부탁드려요.\n감사를 한차례 전했으니… 잠깐 아케나인 거리로 산책이라도 나갈까요?\n린지와 클로이도 구원자님에 대해 궁금한 점이 참 많아 보였어요.\n앞으로 여러모로 질문드리고 싶네요. 후후… 함께해 주실 거죠?",
+    "greeting": "제 기도가 닿지 않는 곳은 없답니다."
+  },
+  "speech_patterns": [],
+  "comments": [],
+  "dialogues": {
+    "story": [],
+    "evertalk": []
+  },
+  "i18n": {
+    "name": {
+      "ko": "로제",
+      "en": "Rose",
+      "zh_tw": "蘿絲",
+      "zh_cn": "蘿絲"
+    },
+    "grade": {
+      "ko": "레어",
+      "en": "Rare",
+      "zh_tw": "稀有",
+      "zh_cn": "稀有"
+    },
+    "race": {
+      "ko": "인간형",
+      "en": "Humanlike",
+      "zh_tw": "人類型",
+      "zh_cn": "人類型"
+    },
+    "class": {
+      "ko": "캐스터",
+      "en": "Caster",
+      "zh_tw": "魔法師",
+      "zh_cn": "魔法師"
+    },
+    "sub_class": {
+      "ko": "치료",
+      "en": "Heal",
+      "zh_tw": "治療",
+      "zh_cn": "治療"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "석양빛 베일",
+        "en": "Sunset Veil",
+        "zh_tw": "餘暉的面紗",
+        "zh_cn": "餘暉的面紗"
+      },
+      "constellation": {
+        "ko": "인연_제이드_이벤트2",
+        "en": "인연_제이드_이벤트2",
+        "zh_tw": "雙子座",
+        "zh_cn": "雙子座"
+      },
+      "union": {
+        "ko": "태양 기사단",
+        "en": "Order of Sun",
+        "zh_tw": "太陽騎士團",
+        "zh_cn": "太陽騎士團"
+      },
+      "cv_ko": {
+        "ko": "이명호",
+        "en": "Myeongho Lee",
+        "zh_tw": "李敏好",
+        "zh_cn": "李敏好"
+      },
+      "cv_jp": {
+        "ko": "Rena Maeda",
+        "en": "Rena Maeda",
+        "zh_tw": "Rena Maeda",
+        "zh_cn": "Rena Maeda"
+      },
+      "like": {
+        "ko": [
+          "바게트빵",
+          "이타적 행동"
+        ],
+        "en": [
+          "Baguette",
+          "altruism"
+        ],
+        "zh_tw": [
+          "法國麵包、利他行動"
+        ],
+        "zh_cn": [
+          "法國麵包、利他行動"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "추위"
+        ],
+        "en": [
+          "Cold"
+        ],
+        "zh_tw": [
+          "寒冷"
+        ],
+        "zh_cn": [
+          "寒冷"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "향초 태우기"
+        ],
+        "en": [
+          "Burning scented candles"
+        ],
+        "zh_tw": [
+          "點燃蠟燭"
+        ],
+        "zh_cn": [
+          "點燃蠟燭"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "지팡이 돌리기"
+        ],
+        "en": [
+          "Staff spinning"
+        ],
+        "zh_tw": [
+          "旋轉魔杖"
+        ],
+        "zh_cn": [
+          "旋轉魔杖"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "안녕하세요, 구원자님? 저는 로제라고 해요.\n신의 제단을 가꾸는 일은 몹시 보람 있답니다.\n이제부터 구원자님이 이끌어주실 이 에덴의 모습도 무척 기대되네요.\n지난번엔 정말 많은 신세를 졌어요. 앞으로도 잘 부탁드려요.\n감사를 한차례 전했으니… 잠깐 아케나인 거리로 산책이라도 나갈까요?\n린지와 클로이도 구원자님에 대해 궁금한 점이 참 많아 보였어요.\n앞으로 여러모로 질문드리고 싶네요. 후후… 함께해 주실 거죠?",
+        "en": "Hello, Savior, I'm Rose.\nIt is very rewarding for me to care for the altar of God.\nI'm very much looking forward to seeing this Eden that you will lead from now on.\nI really owe you one from last time. Let me pay you back someday.\nNow that I gave you my thanks… Shall we go for a short walk down the street in Arkenine?\nIt seemed Linzy and Chloe also have a lot of questions about you, Savior.\nI'll be looking forward to asking you many questions from now on. You'll be there for us, right?.",
+        "zh_tw": "你好，救援者？我叫蘿絲。\n打理神的祭壇是一件非常有意義的事情。\n我很期待伊甸園在救援者的帶領之下，會變成什麼模樣。\n上次給你添了很多麻煩，以後也請你多多關照。\n我已經向你道謝了…要不要去阿肯納因街上逛逛呢？\n琳賽跟克羅伊也對救援者充滿好奇。\n以後有很多問題想問你。呵呵…你會回答我吧？",
+        "zh_cn": "你好，救援者？我叫蘿絲。\n打理神的祭壇是一件非常有意義的事情。\n我很期待伊甸園在救援者的帶領之下，會變成什麼模樣。\n上次給你添了很多麻煩，以後也請你多多關照。\n我已經向你道謝了…要不要去阿肯納因街上逛逛呢？\n琳賽跟克羅伊也對救援者充滿好奇。\n以後有很多問題想問你。呵呵…你會回答我吧？"
+      },
+      "greeting": {
+        "ko": "제 기도가 닿지 않는 곳은 없답니다.",
+        "en": "Nothing is beyond the reach of my prayer.",
+        "zh_tw": "沒有祈禱觸及不了的地方。",
+        "zh_cn": "沒有祈禱觸及不了的地方。"
+      }
+    },
+    "speech_patterns": [],
+    "comments": [],
+    "dialogues": {
+      "story": [],
+      "evertalk": []
+    }
+  }
+}

@@ -1,0 +1,6028 @@
+{
+  "id": "1030",
+  "name": "클레르",
+  "name_en": "Claire",
+  "grade": "에픽",
+  "race": "인간형",
+  "class": "디펜더",
+  "sub_class": "버프",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "꺾이지 않는 신념",
+    "constellation": "인연_제이드_이벤트1",
+    "union": "태양 기사단",
+    "birthday": "517",
+    "height": 161,
+    "weight": 46,
+    "cv_ko": "이새아",
+    "cv_jp": "Ikumi Hasegawa",
+    "like": [
+      "단체 생활"
+    ],
+    "dislike": [
+      "거짓말"
+    ],
+    "hobby": [
+      "독서"
+    ],
+    "speciality": [
+      "나무 조각하기"
+    ]
+  },
+  "personality": {
+    "description": "구원자님 안녕하세요. 클레르입니다. 평소 유리아 님 호위와 태양 기사단의 기사단장을 맡고 있습니다.\n\n저는 가끔 고지식하다는 말을 듣곤 합니다. \n스스로는 잘 공감이 안 됩니다만… 융통성이 결여되었다는 뜻일까요. 그건 곤란한데…\n어떤 상황에도 잘 대처할 수 있는 존재가 되고 싶습니다. 꼭 지키고 싶은 장소가 있으니까요.\n\n취미요? 나무 조각하는 걸 좋아합니다. 나무를 파고 있다 보면 마음이 차분해져요. 아무리 혼란스러운 때라도, 결국엔 나아갈 길이 보이는 느낌. 그 느낌을 좋아합니다.\n구원자님도 관심이 있으시다면, 언젠가 찾아와 주세요. 준비해두겠습니다.\n항상 저와 모든 기사단원들이, 구원자님의 길에 함께할 것입니다.",
+    "greeting": "급할수록 이성적으로 판단해야 합니다. 모두를 위해서."
+  },
+  "speech_patterns": [
+    "구원자님 안녕하세요.\r\n태양 기사단 클레르 인사드립니다.",
+    "지난 번에 구원자님께서 보여주신 활약,\r\n무척 인상 깊었습니다.",
+    "앞으로도 잘 부탁드립니다.",
+    "네. 앞으로 공무를 통해 \r\n자주 얼굴을 뵙게 되겠지만….",
+    "급할 때에는 에버톡을 통해서도 \r\n보고 드리겠습니다.",
+    "?",
+    "그런가요? \r\n아주 당연한 말을 했을 뿐인데요….",
+    "그럼 오늘 하루도 건강하시기를.",
+    "구원자님, 책을 읽는 건 휴식이라 할 수 있을까요?",
+    "그렇군요.",
+    "그러고 보니 클로이는 \r\n책 읽을 때 고문당하는 표정이었고….",
+    "로제나 린지는 평온한 표정으로 책을 읽었습니다.",
+    "저는…\r\n평온한 쪽인 것 같습니다.",
+    "그렇겠군요.\r\n답변 감사드립니다.",
+    "구원자님,\r\n그때 식당에서 영업방해를 했던 정령 기억하시나요?",
+    "예, 맞습니다.\r\n그 정령이 이번에도 또 비슷한 일을 했다고 합니다.",
+    "한 두번 그런 게 아니라서,\r\n이번에는 클로이와 리타가 직접 연행했다고 하더군요.",
+    "제 지인이라는 거짓말도 또 했다던데…\r\n거짓말로 무엇을 얻으려 하다니, 참 어리석습니다.",
+    "엇",
+    "제가 거짓말을 싫어하는 것을 기억하고 계셨습니까?",
+    "맞아요, 기사단원들에게도 언제나 정직을 강조하고 있죠.",
+    "거짓으로 얻은 것은 금방 사라지고,\r\n얻은 것보다 더 많은 것을 잃어버리게 되니까요.",
+    "구원자님.",
+    "구원자님!",
+    "어디 계세요?",
+    "제 톡 보이십니까?",
+    "답장이 와야 할텐데… 이런…",
+    "그런데 왜 구원자님한테만 에버톡이 보내지는 거지?",
+    "클로이나 린지한테는 에버톡 자체가 안 가네…",
+    "어떡하지? 구원요청을 보낼 수 없어…",
+    "구원자님을 구해야하는데…!",
+    "비비안이 저희를 얼마나 더 괴롭힐지 모르겠군요.",
+    "솔레이의 궁정 마도사였을 때도 장난을 많이 쳐서,\r\n여간 골치아픈게 아니었습니다.",
+    "클레르한테도 장난을 많이 쳤었어?",
+    "…아주 많이요.",
+    "제가 조각한 목상을 살아서 움직이게 만들고,\r\n갑옷을 파렴치한 드레스로 만들고…",
+    "아, 제 목소리도 변조시킨 적도 있었네요.",
+    "그때만 생각하면 다시 화가 치밀어오릅니다.",
+    "클레르의 반응이 재미있었나봐",
+    "비비안이 정확히 그렇게 말했었습니다.",
+    "하아.",
+    "구원자님~♥",
+    "저 햇빛이 너무 뜨거워서…",
+    "등 뒤에 오일 좀 발라주실 수 있나요?",
+    "그래",
+    "어머나, 적극적이시네요~",
+    "그럼 기다리고 있을게요 ♪",
+    "뭐야",
+    "이게 뭐야",
+    "이거 왜 혼자 켜져서 이상한 걸 보낸거야"
+  ],
+  "comments": [
+    {
+      "writer": "홍란",
+      "comment": "흐흥. 항상 옷매무새를 고쳐주는 클레르…♪"
+    },
+    {
+      "writer": "레베카",
+      "comment": "관찰력이 엄청 좋더라구. 기사단장님이라서 그런가? 은근 섬세해~"
+    },
+    {
+      "writer": "하루",
+      "comment": "가만 보면 시시한 말장난에 엄청 웃더라. 의외야. 그렇게 안 보이는데."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "클레르",
+        "message": "구원자님 안녕하세요.\r\n태양 기사단 클레르 인사드립니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "지난 번에 구원자님께서 보여주신 활약,\r\n무척 인상 깊었습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "앞으로도 잘 부탁드립니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 부탁해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 부탁해"
+      },
+      {
+        "speaker": "클레르",
+        "message": "네. 앞으로 공무를 통해 \r\n자주 얼굴을 뵙게 되겠지만…."
+      },
+      {
+        "speaker": "클레르",
+        "message": "급할 때에는 에버톡을 통해서도 \r\n보고 드리겠습니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "믿음직스럽네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "믿음직스럽네"
+      },
+      {
+        "speaker": "클레르",
+        "message": "?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그런가요? \r\n아주 당연한 말을 했을 뿐인데요…."
+      },
+      {
+        "speaker": "클레르",
+        "message": "그럼 오늘 하루도 건강하시기를."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님, 책을 읽는 건 휴식이라 할 수 있을까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 사람 아니 정령마다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 사람 아니 정령마다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다를 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다를 것 같아"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그렇군요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "그러고 보니 클로이는 \r\n책 읽을 때 고문당하는 표정이었고…."
+      },
+      {
+        "speaker": "클레르",
+        "message": "로제나 린지는 평온한 표정으로 책을 읽었습니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "클레르는 어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클레르는 어때?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "저는…\r\n평온한 쪽인 것 같습니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 클레르에겐 책 읽기가 휴식인거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 클레르에겐 책 읽기가 휴식인거야"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그렇겠군요.\r\n답변 감사드립니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님,\r\n그때 식당에서 영업방해를 했던 정령 기억하시나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "머리카락이 나왔다고 우긴 정령"
+      },
+      {
+        "speaker": "구원자",
+        "message": "머리카락이 나왔다고 우긴 정령"
+      },
+      {
+        "speaker": "클레르",
+        "message": "예, 맞습니다.\r\n그 정령이 이번에도 또 비슷한 일을 했다고 합니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "한 두번 그런 게 아니라서,\r\n이번에는 클로이와 리타가 직접 연행했다고 하더군요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "제 지인이라는 거짓말도 또 했다던데…\r\n거짓말로 무엇을 얻으려 하다니, 참 어리석습니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "클레르가 싫어하는 행동을 했네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클레르가 싫어하는 행동을 했네"
+      },
+      {
+        "speaker": "클레르",
+        "message": "엇"
+      },
+      {
+        "speaker": "클레르",
+        "message": "제가 거짓말을 싫어하는 것을 기억하고 계셨습니까?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "맞아요, 기사단원들에게도 언제나 정직을 강조하고 있죠."
+      },
+      {
+        "speaker": "클레르",
+        "message": "거짓으로 얻은 것은 금방 사라지고,\r\n얻은 것보다 더 많은 것을 잃어버리게 되니까요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님!"
+      },
+      {
+        "speaker": "클레르",
+        "message": "어디 계세요?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "제 톡 보이십니까?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "답장이 와야 할텐데… 이런…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그런데 왜 구원자님한테만 에버톡이 보내지는 거지?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "클로이나 린지한테는 에버톡 자체가 안 가네…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "어떡하지? 구원요청을 보낼 수 없어…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님을 구해야하는데…!"
+      },
+      {
+        "speaker": "클레르",
+        "message": "비비안이 저희를 얼마나 더 괴롭힐지 모르겠군요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "솔레이의 궁정 마도사였을 때도 장난을 많이 쳐서,\r\n여간 골치아픈게 아니었습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르한테도 장난을 많이 쳤었어?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르한테도 장난을 많이 쳤었어?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "…아주 많이요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "제가 조각한 목상을 살아서 움직이게 만들고,\r\n갑옷을 파렴치한 드레스로 만들고…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "아, 제 목소리도 변조시킨 적도 있었네요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "그때만 생각하면 다시 화가 치밀어오릅니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르의 반응이 재미있었나봐"
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르의 반응이 재미있었나봐"
+      },
+      {
+        "speaker": "클레르",
+        "message": "비비안이 정확히 그렇게 말했었습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "하아."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님~♥"
+      },
+      {
+        "speaker": "클레르",
+        "message": "저 햇빛이 너무 뜨거워서…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "등 뒤에 오일 좀 발라주실 수 있나요?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그래"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그래"
+      },
+      {
+        "speaker": "클레르",
+        "message": "어머나, 적극적이시네요~"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그럼 기다리고 있을게요 ♪"
+      },
+      {
+        "speaker": "클레르",
+        "message": "뭐야"
+      },
+      {
+        "speaker": "클레르",
+        "message": "이게 뭐야"
+      },
+      {
+        "speaker": "클레르",
+        "message": "이거 왜 혼자 켜져서 이상한 걸 보낸거야"
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님 이거 저 아닙니다"
+      },
+      {
+        "speaker": "클레르",
+        "message": "이런 사진은 언제 찍힌거지?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "비비안, 비비안인가봅니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "오일 발라주러 갈게"
+      },
+      {
+        "speaker": "클레르",
+        "message": "오일 발라주러 갈게"
+      },
+      {
+        "speaker": "클레르",
+        "message": "괜찮습니다!!!!!!!"
+      },
+      {
+        "speaker": "클레르",
+        "message": "비비안이 어떤 장난을 친건지 모르겠는데,\r\n요트에 제 여분 옷이 보이지 않습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "정말 이 섬을 나갈 때까지 이 수영복을 입어야 하는 건지…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "잘 어울리는데"
+      },
+      {
+        "speaker": "클레르",
+        "message": "잘 어울리는데"
+      },
+      {
+        "speaker": "클레르",
+        "message": "…말씀은 감사하지만, 솔직히 발가벗은 기분입니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "홍란과 루테에게 그렇게 옷차림으로 잔소리해놓고,\r\n지금 이런 모습이라니…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "여러모로 부끄럽습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "우리말고는 아무도 모르는 모습인걸"
+      },
+      {
+        "speaker": "클레르",
+        "message": "우리말고는 아무도 모르는 모습인걸"
+      },
+      {
+        "speaker": "클레르",
+        "message": "…그 말을 들으니 더 부끄러워집니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "역시 풀과 나뭇잎으로 겉옷이라도 만들어야겠습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "그러고 보니 이 섬에는 네발달린 동물들이 보이지 않네요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "토끼나 돼지, 사슴이 있으면 바베큐를 해먹을 수 있을텐데…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "채소들을 찾으면 스튜 같은 것도 만들 수도 있고요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르는 요리를 잘 하나봐"
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르는 요리를 잘 하나봐"
+      },
+      {
+        "speaker": "클레르",
+        "message": "요리하는 것을 좋아하긴 합니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "고향에서는 다같이 모여 요리를 해먹는 게 일상이었거든요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "저는 스튜나 구운고기 요리를 만들고,\r\n다른 친구들은 디저트나 곁들임 메뉴를 만들고…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그렇게 한 상 가득차리고 모두 둘러 앉아 식사를 하던 시간이…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그립네요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "솔레이로 돌아가면 다같이 홈파티라도 할까?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "솔레이로 돌아가면 다같이 홈파티라도 할까?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그럴까요?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "많이 먹는 친구들도 있으니 많이 만들어야 겠네요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님, 이 섬에는 본 적 없는 꽃들이 참 많습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "이런 꽃들로 화관을 만들어도 예쁠 것 같습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "화관도 만들 줄 알아?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "화관도 만들 줄 알아?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "예, 예전에 고향 친구들에게 자주 만들어줬습니다.\r\n목걸이, 반지, 팔찌도 다 꽃으로 만들었죠."
+      },
+      {
+        "speaker": "클레르",
+        "message": "그때는 들판에 피어있는 꽃들이 영롱한 보석,\r\n그 이상이었습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "이따 같이 만들어보실래요?\r\n알려드릴게요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "응 그러자"
+      },
+      {
+        "speaker": "클레르",
+        "message": "응 그러자"
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르는 남은 휴가를 어떻게 보낼거야?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르는 남은 휴가를 어떻게 보낼거야?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "남은 휴가요?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "아, 이 섬을 떠나도 제 휴가는 남는군요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "글쎄요…\r\n아직 별 다른 계획은 없습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "고향에 가볼까도 생각했지만,\r\n스스로 다짐같은 걸 한 게 있어서 어려울 것 같고…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "다짐?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "다짐?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "이렇게 말하자니, 부끄럽지만…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "더는 게이트가 열리지 않을 때까지는,\r\n고향 땅을 밟지 않겠다는 다짐입니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "숭고한 뜻이 있는 건 아니고,\r\n고향에 가면 마음이 약해질 것 같아서 그랬습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "아무리 일중독이라 해도,\r\n노는 게 더 좋은 것이 당연하잖아요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "평화가 찾아오면 그때 제대로 쉬어야지, 라고 생각했습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "그래서 남은 휴가를 어떻게 보낼 지…\r\n더 막막하긴 하군요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "도움이 필요하면 언제든지 말해"
+      },
+      {
+        "speaker": "클레르",
+        "message": "도움이 필요하면 언제든지 말해"
+      },
+      {
+        "speaker": "클레르",
+        "message": "또 신세를 질 수는 없지만,\r\n말씀만은 정말 감사드립니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "아, 영화관은 한번 더 데려가주세요.\r\n이번엔 집중해서 보겠습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "응 내가 또 예매할게"
+      },
+      {
+        "speaker": "클레르",
+        "message": "응 내가 또 예매할게"
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님, 바쁘신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니 괜찮아"
+      },
+      {
+        "speaker": "클레르",
+        "message": "혹시 쉬는 법에 관해 아세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쉬는 법?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쉬는 법?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "먹고 자고 노는 게 쉬는 거지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "먹고 자고 노는 게 쉬는 거지"
+      },
+      {
+        "speaker": "클레르",
+        "message": "……."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님,\r\n오늘 뵙기로 한 날이라 연락드렸습니다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "벌써 일어난 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벌써 일어난 거야?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "일어난 건 세시간 전에 일어났습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "언제나 같은 시간에 일어나니까요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "약속시간이 남아서 개인정비를 하고 있었습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "그런데 오늘 저희의 일정은 어떻게 되는 걸까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오늘 일정의 컨셉은 시내투어야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오늘 일정의 컨셉은 시내투어야"
+      },
+      {
+        "speaker": "클레르",
+        "message": "시내투어요?\r\n그렇군요…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그럼, 기대하고 있겠습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "오늘이 바로 트로이카로 떠나는 날이군요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "가는 배를 따로 예약하지 않았는데 괜찮을까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우린 요트를 타고 간다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우린 요트를 타고 간다"
+      },
+      {
+        "speaker": "클레르",
+        "message": "요트요?\r\n그런 비싼 이동수단을 어디서…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "거절할 수 없는 제안을 받아들였어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "거절할 수 없는 제안을 받아들였어"
+      },
+      {
+        "speaker": "클레르",
+        "message": "……."
+      },
+      {
+        "speaker": "클레르",
+        "message": "잘 모르겠지만, 불법적인 일만 아니면 좋겠군요…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님, 오두막은 거의 완성되어 갑니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "식량 준비도 순조로워"
+      },
+      {
+        "speaker": "클레르",
+        "message": "식량 준비도 순조로워"
+      },
+      {
+        "speaker": "클레르",
+        "message": "다행이네요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "그럼, 저는 모닥불에 불을 먼저 붙여보겠습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "이따 봬요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님, 저는 다시 나무를 구해 오두막을 짓겠습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "밤이 늦었으니 돌아와 클레르"
+      },
+      {
+        "speaker": "클레르",
+        "message": "밤이 늦었으니 돌아와 클레르"
+      },
+      {
+        "speaker": "클레르",
+        "message": "하지만, 이대로 밤을 보내면 위험합니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "침낭이 있잖아"
+      },
+      {
+        "speaker": "클레르",
+        "message": "침낭이 있잖아"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그건 없는 선택지라고 생각하고 싶습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "정 안되면, 구원자님이라도 침낭에 들어가시죠."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님, 별일 없으십니까?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "응 평화로워"
+      },
+      {
+        "speaker": "클레르",
+        "message": "응 평화로워"
+      },
+      {
+        "speaker": "클레르",
+        "message": "다행입니다. 저도 아직까진 별일이 없습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "물론 또 비비안이 방해를 한다면…\r\n그때는 기필코 검을 들 것입니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "평화로운 휴가와 배신자 처단.\r\n두 마리의 토끼를 잡을 수 있겠습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "호전적인걸"
+      },
+      {
+        "speaker": "클레르",
+        "message": "호전적인걸"
+      },
+      {
+        "speaker": "클레르",
+        "message": "배신자를 잡으면 자신의 죄목이 적힌 팻말을 들게 할 것입니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "다시는 장난을 못 치게 만들어주겠어."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님, 주무십니까?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "아니 아직"
+      },
+      {
+        "speaker": "클레르",
+        "message": "아니 아직"
+      },
+      {
+        "speaker": "클레르",
+        "message": "무슨 일이야?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "무슨 일이야?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "……."
+      },
+      {
+        "speaker": "클레르",
+        "message": "아닙니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "생각 정리되면 말해줘"
+      },
+      {
+        "speaker": "클레르",
+        "message": "생각 정리되면 말해줘"
+      },
+      {
+        "speaker": "클레르",
+        "message": "알겠습니다, 쉬세요."
+      },
+      {
+        "speaker": "클레르",
+        "message": "유리아 님께는 저희 둘다 길게 기절해있었다, 라고\r\n보고 드리면 될 것 같습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "구원자님도 제이드 님께 그렇게 설명해주시면 감사하겠습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "…섬에서 있던 일은 모두 잊겠습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "클레르…"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그동안 챙겨주셔서, 정말 감사했습니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "이제 저를 그렇게 챙겨주실 일은…\r\n없을 겁니다."
+      },
+      {
+        "speaker": "클레르",
+        "message": "자, 자기!"
+      },
+      {
+        "speaker": "클레르",
+        "message": "어, 언제 끝납니까!"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그러니까, 일 말입니다!"
+      },
+      {
+        "speaker": "클레르",
+        "message": "지금으로부터 한시간 쯤?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "지금으로부터 한시간 쯤?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "알겠습니다!\r\n맞춰서 데리러 가겠습니다!"
+      },
+      {
+        "speaker": "클레르",
+        "message": "오늘 각오 단단히 하는 게 좋을겁니다.\r\n자기!"
+      },
+      {
+        "speaker": "클레르",
+        "message": "???"
+      },
+      {
+        "speaker": "클레르",
+        "message": "???"
+      },
+      {
+        "speaker": "클레르",
+        "message": "자기, 일어났어요?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "응 오늘 중요한 날이니까 한시간 전에 일어났어"
+      },
+      {
+        "speaker": "클레르",
+        "message": "응 오늘 중요한 날이니까 한시간 전에 일어났어"
+      },
+      {
+        "speaker": "클레르",
+        "message": "웬일이에요?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "못 일어났으면, 깨워주러 가려고 했는데."
+      },
+      {
+        "speaker": "클레르",
+        "message": "다시 잠들까?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "다시 잠들까?"
+      },
+      {
+        "speaker": "클레르",
+        "message": "그러기만 해봐요, 평생 뭐라할지도 몰라요."
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "클레르",
+      "en": "Claire",
+      "zh_tw": "克萊兒",
+      "zh_cn": "克萊兒"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "인간형",
+      "en": "Humanlike",
+      "zh_tw": "人類型",
+      "zh_cn": "人類型"
+    },
+    "class": {
+      "ko": "디펜더",
+      "en": "Defender",
+      "zh_tw": "捍衛者",
+      "zh_cn": "捍衛者"
+    },
+    "sub_class": {
+      "ko": "버프",
+      "en": "Buff",
+      "zh_tw": "增益",
+      "zh_cn": "增益"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "꺾이지 않는 신념",
+        "en": "Unyielding Belief",
+        "zh_tw": "不屈的信念",
+        "zh_cn": "不屈的信念"
+      },
+      "constellation": {
+        "ko": "인연_제이드_이벤트1",
+        "en": "인연_제이드_이벤트1",
+        "zh_tw": "金牛座",
+        "zh_cn": "金牛座"
+      },
+      "union": {
+        "ko": "태양 기사단",
+        "en": "Order of Sun",
+        "zh_tw": "太陽騎士團",
+        "zh_cn": "太陽騎士團"
+      },
+      "cv_ko": {
+        "ko": "이새아",
+        "en": "Saeah Lee",
+        "zh_tw": "李世雅",
+        "zh_cn": "李世雅"
+      },
+      "cv_jp": {
+        "ko": "Ikumi Hasegawa",
+        "en": "Ikumi Hasegawa",
+        "zh_tw": "Ikumi Hasegawa",
+        "zh_cn": "Ikumi Hasegawa"
+      },
+      "like": {
+        "ko": [
+          "단체 생활"
+        ],
+        "en": [
+          "Group life"
+        ],
+        "zh_tw": [
+          "團體生活"
+        ],
+        "zh_cn": [
+          "團體生活"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "거짓말"
+        ],
+        "en": [
+          "Lies"
+        ],
+        "zh_tw": [
+          "謊話"
+        ],
+        "zh_cn": [
+          "謊話"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "독서"
+        ],
+        "en": [
+          "Reading"
+        ],
+        "zh_tw": [
+          "看書"
+        ],
+        "zh_cn": [
+          "看書"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "나무 조각하기"
+        ],
+        "en": [
+          "Wood carving"
+        ],
+        "zh_tw": [
+          "雕刻木頭"
+        ],
+        "zh_cn": [
+          "雕刻木頭"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "구원자님 안녕하세요. 클레르입니다. 평소 유리아 님 호위와 태양 기사단의 기사단장을 맡고 있습니다.\n\n저는 가끔 고지식하다는 말을 듣곤 합니다. \n스스로는 잘 공감이 안 됩니다만… 융통성이 결여되었다는 뜻일까요. 그건 곤란한데…\n어떤 상황에도 잘 대처할 수 있는 존재가 되고 싶습니다. 꼭 지키고 싶은 장소가 있으니까요.\n\n취미요? 나무 조각하는 걸 좋아합니다. 나무를 파고 있다 보면 마음이 차분해져요. 아무리 혼란스러운 때라도, 결국엔 나아갈 길이 보이는 느낌. 그 느낌을 좋아합니다.\n구원자님도 관심이 있으시다면, 언젠가 찾아와 주세요. 준비해두겠습니다.\n항상 저와 모든 기사단원들이, 구원자님의 길에 함께할 것입니다.",
+        "en": "Hello, Savior. I'm Claire. I'm the commander of the Order of Sun and my usual duty is to escort Yuria.\n\nI'm sometimes said to be uptight.\nI don't quite understand that, but…perhaps they mean I lack flexibility. Well, that's not good…\nI want to be someone who can deal with any kind of situation well. Because there is a place I want to protect, no matter what.\n\nHobbies? I like to carve wood. When I'm carving wood, my mind feels relaxed. No matter how chaotic times may be, it feels like I could see a way forward in the end. I like that feeling.\nIf you are interested, please come visit me someday. I'll make preparations for you.\nAll the knights of the Order of Sun and I will always be with you on your path, Savior.",
+        "zh_tw": "救援者你好，我是克萊兒。我平時負責保護尤里婭，是太陽騎士團的團長。\n\n我偶爾會聽到人家說我做事一板一眼。\n我自己不是很有共鳴…意思是我不知變通嗎？這樣不太好啊…\n我想成為無論在什麼情況下都能好好應對的人，因為有個想要守護的地方。\n\n興趣嗎？我喜歡木雕。雕刻木頭會讓內心平靜下來。不管是再怎麼混亂的時期，感覺最後都能看見前進的道路。我喜歡這種感覺。\n如果救援者也感興趣，就請你隨時來找我，我會先做好準備。\n我和所有的騎士團團員將會一直與救援者同行。",
+        "zh_cn": "救援者你好，我是克萊兒。我平時負責保護尤里婭，是太陽騎士團的團長。\n\n我偶爾會聽到人家說我做事一板一眼。\n我自己不是很有共鳴…意思是我不知變通嗎？這樣不太好啊…\n我想成為無論在什麼情況下都能好好應對的人，因為有個想要守護的地方。\n\n興趣嗎？我喜歡木雕。雕刻木頭會讓內心平靜下來。不管是再怎麼混亂的時期，感覺最後都能看見前進的道路。我喜歡這種感覺。\n如果救援者也感興趣，就請你隨時來找我，我會先做好準備。\n我和所有的騎士團團員將會一直與救援者同行。"
+      },
+      "greeting": {
+        "ko": "급할수록 이성적으로 판단해야 합니다. 모두를 위해서.",
+        "en": "We need to be more rational when we're in a hurry. For everyone.",
+        "zh_tw": "越是急迫就越該理性判斷，\n為了所有人著想。",
+        "zh_cn": "越是急迫就越該理性判斷，\n為了所有人著想。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "구원자님 안녕하세요.\r\n태양 기사단 클레르 인사드립니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Hello, Savior.\r\nI'm Claire, from the Order of Sun."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "救援者你好。\r\n太陽騎士團的克萊兒向你問好。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "救援者你好。\r\n太陽騎士團的克萊兒向你問好。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "지난 번에 구원자님께서 보여주신 활약,\r\n무척 인상 깊었습니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I saw you in action last time.\r\nI was quite impressed."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "上次救援者展現的活躍表現，\r\n十分令人印象深刻。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "上次救援者展現的活躍表現，\r\n十分令人印象深刻。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "앞으로도 잘 부탁드립니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Hope you keep up the good work."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "日後也請多指教。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "日後也請多指教。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "네. 앞으로 공무를 통해 \r\n자주 얼굴을 뵙게 되겠지만…."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Okay. I'm sure we'll run into each other often for work…"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "是，雖然日後會透過公務\r\n經常見面…"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "是，雖然日後會透過公務\r\n經常見面…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "급할 때에는 에버톡을 통해서도 \r\n보고 드리겠습니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "If I'm in a hurry, I'll report to you\r\nthrough Evertalk."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "但有急事的時候也會用EverTalk\r\n向你報告的。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "但有急事的時候也會用EverTalk\r\n向你報告的。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그런가요? \r\n아주 당연한 말을 했을 뿐인데요…."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Is that so?\r\nI just said what I had to say…"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "是嗎？\r\n我只是說了非常理所當然的話…"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "是嗎？\r\n我只是說了非常理所當然的話…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그럼 오늘 하루도 건강하시기를."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I hope you stay healthy today."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "那麼祝你今天也身體健康。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "那麼祝你今天也身體健康。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "구원자님, 책을 읽는 건 휴식이라 할 수 있을까요?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Savior, can reading a book be considered relaxation?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "救援者，讀書可以稱做是休息嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "救援者，讀書可以稱做是休息嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그렇군요."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I see."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "這樣啊。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "這樣啊。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그러고 보니 클로이는 \r\n책 읽을 때 고문당하는 표정이었고…."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Come to think of it,\r\r\nChloe looked tortured when she read,"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "這麼說起來，克羅伊讀書的時候\r\r\n是一臉被拷問的表情…"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "這麼說起來，克羅伊讀書的時候\r\r\n是一臉被拷問的表情…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "로제나 린지는 평온한 표정으로 책을 읽었습니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "while Rose and Linzy looked peaceful."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "蘿絲和琳賽則是平靜地念書。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "蘿絲和琳賽則是平靜地念書。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "저는…\r\n평온한 쪽인 것 같습니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I'm...\r\r\nI think I'm more on the peaceful side."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "我…\r\r\n好像是偏平靜。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "我…\r\r\n好像是偏平靜。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그렇겠군요.\r\n답변 감사드립니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I see.\r\r\nThank you for your answer."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "應該是，\r\r\n感謝你的回覆。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "應該是，\r\r\n感謝你的回覆。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "구원자님,\r\n그때 식당에서 영업방해를 했던 정령 기억하시나요?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Savior, remember that Soul\r\r\nwho caused a disturbance at the restaurant?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "救援者，\r\r\n你記得那時候在餐廳妨礙營業的精靈嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "救援者，\r\r\n你記得那時候在餐廳妨礙營業的精靈嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "예, 맞습니다.\r\n그 정령이 이번에도 또 비슷한 일을 했다고 합니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Yes,\r\r\nand he did it again."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "是的，沒錯。\r\r\n聽說那個精靈這次又做了類似的事情。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "是的，沒錯。\r\r\n聽說那個精靈這次又做了類似的事情。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "한 두번 그런 게 아니라서,\r\n이번에는 클로이와 리타가 직접 연행했다고 하더군요."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "He was a repeat offender.\r\r\nThis time, Chloe and Rita arrested him in person."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "因為她不是一、兩次這樣了，\r\r\n所以這次是由克羅伊和麗塔親自帶走她。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "因為她不是一、兩次這樣了，\r\r\n所以這次是由克羅伊和麗塔親自帶走她。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "제 지인이라는 거짓말도 또 했다던데…\r\n거짓말로 무엇을 얻으려 하다니, 참 어리석습니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "He lied again about being my friend, too.\r\r\nI don't know what he hoped to gain by lying."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "她好像又撒謊說是我認識的人…\r\r\n竟然想用謊言得到一些東西，真是愚蠢。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "她好像又撒謊說是我認識的人…\r\r\n竟然想用謊言得到一些東西，真是愚蠢。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "엇"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Ah,"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "哦"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "哦"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "제가 거짓말을 싫어하는 것을 기억하고 계셨습니까?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "did you remember that I hate lying?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "你記得我說過不喜歡謊話嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "你記得我說過不喜歡謊話嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "맞아요, 기사단원들에게도 언제나 정직을 강조하고 있죠."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Yes. I can't stress enough the importance of honesty, even to the Knights."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "沒錯，我經常向騎士團團員們強調要正直。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "沒錯，我經常向騎士團團員們強調要正直。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "거짓으로 얻은 것은 금방 사라지고,\r\n얻은 것보다 더 많은 것을 잃어버리게 되니까요."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Because what you gain by lying is quickly lost,\r\r\nand you lose more than you gain."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "因為透過謊言獲得的很快就會蕩然無存，\r\r\n而且失去的會比得到的更多。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "因為透過謊言獲得的很快就會蕩然無存，\r\r\n而且失去的會比得到的更多。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "구원자님."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Savior."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "救援者。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "구원자님!"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Savior!"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "救援者！"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "救援者！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "어디 계세요?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Where are you?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "你在哪裡？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "你在哪裡？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "제 톡 보이십니까?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Did you read my message?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "有看見我的訊息嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "有看見我的訊息嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "답장이 와야 할텐데… 이런…"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I hope he replies soon. Oh, no..."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "應該要回我的…糟糕…"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "應該要回我的…糟糕…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그런데 왜 구원자님한테만 에버톡이 보내지는 거지?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "By the way, why can I message the Savior only on Evertalk?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "不過EverTalk怎麼會只傳給救援者呢？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "不過EverTalk怎麼會只傳給救援者呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "클로이나 린지한테는 에버톡 자체가 안 가네…"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I can't message Chloe or Linzy at all."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "沒辦法傳給克羅伊跟琳賽EverTalk耶…"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "沒辦法傳給克羅伊跟琳賽EverTalk耶…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "어떡하지? 구원요청을 보낼 수 없어…"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "What do I do? I can't send a rescue request."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "怎麼辦？我沒辦法傳送救援請求…"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "怎麼辦？我沒辦法傳送救援請求…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "구원자님을 구해야하는데…!"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I must save the Savior!"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "要救救援者才行…！"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "要救救援者才行…！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "비비안이 저희를 얼마나 더 괴롭힐지 모르겠군요."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I don't know how much longer Vivienne is going to torment us."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "不知道薇薇安還會折磨我們多久。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "不知道薇薇安還會折磨我們多久。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "솔레이의 궁정 마도사였을 때도 장난을 많이 쳐서,\r\n여간 골치아픈게 아니었습니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Even when she was Solrey's court mage,\r\nshe got into a lot of mischief."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "她還是蘇萊伊的宮廷魔導士時就很常搗蛋，\r\n不是普通的傷腦筋。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "她還是蘇萊伊的宮廷魔導士時就很常搗蛋，\r\n不是普通的傷腦筋。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "클레르한테도 장난을 많이 쳤었어?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Claire, were you one of them?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "她也對克萊兒開了很多玩笑嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "她也對克萊兒開了很多玩笑嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "…아주 많이요."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "... Yes. A lot of times."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "…非常多。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "…非常多。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "제가 조각한 목상을 살아서 움직이게 만들고,\r\n갑옷을 파렴치한 드레스로 만들고…"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "She's made my sculptures come to life,\r\r\nturned my armor into skimpy dresses..."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "她讓我做的木雕動起來，\r\r\n還把鎧甲做成羞恥的禮服…"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "她讓我做的木雕動起來，\r\r\n還把鎧甲做成羞恥的禮服…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "아, 제 목소리도 변조시킨 적도 있었네요."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Oh, and even altered my voice."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "對了，她還讓我變聲過。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "對了，她還讓我變聲過。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그때만 생각하면 다시 화가 치밀어오릅니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Just thinking about that makes me angry again."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "只要想到那時候，我心裡就湧上一把火。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "只要想到那時候，我心裡就湧上一把火。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "클레르의 반응이 재미있었나봐"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "She must have enjoyed your reaction."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "可能是克萊兒的反應很有趣"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "可能是克萊兒的反應很有趣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "비비안이 정확히 그렇게 말했었습니다."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Well, that's what she said."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "薇薇安的確是這麼說的。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "薇薇安的確是這麼說的。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "하아."
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Sigh."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "唉。"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "唉。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "구원자님~♥"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Savior ♥"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "救援者～♥"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "救援者～♥"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "저 햇빛이 너무 뜨거워서…"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Could you put some oil on my back?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "陽光太熱了…"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "陽光太熱了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "등 뒤에 오일 좀 발라주실 수 있나요?"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "That sunlight is so hot."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "你可以幫我在背上抹點油嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "你可以幫我在背上抹點油嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그래"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Sure."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "好"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "어머나, 적극적이시네요~"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Oh my, you're so enthusiastic."
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "唉唷，你真積極～"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "唉唷，你真積極～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "그럼 기다리고 있을게요 ♪"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "I'll be waiting for you, then. ♪"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "那我會等你 ♪"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "那我會等你 ♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "뭐야"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "What the...?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "怎麼回事"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "怎麼回事"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "이게 뭐야"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "What is this?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "這是怎樣"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "這是怎樣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클레르",
+          "message": "이거 왜 혼자 켜져서 이상한 걸 보낸거야"
+        },
+        "en": {
+          "speaker": "Claire",
+          "message": "Why did it turn on by itself and send out weird stuff?"
+        },
+        "zh_tw": {
+          "speaker": "克萊兒",
+          "message": "這為什麼自己打開，傳了些怪東西"
+        },
+        "zh_cn": {
+          "speaker": "克萊兒",
+          "message": "這為什麼自己打開，傳了些怪東西"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "홍란",
+          "message": "흐흥. 항상 옷매무새를 고쳐주는 클레르…♪"
+        },
+        "en": {
+          "speaker": "Honglan",
+          "message": "Hehe. Claire always adjusts my dress…♪"
+        },
+        "zh_tw": {
+          "speaker": "紅蘭",
+          "message": "呵嗯。總是幫我整理儀容的克萊兒…♪"
+        },
+        "zh_cn": {
+          "speaker": "紅蘭",
+          "message": "呵嗯。總是幫我整理儀容的克萊兒…♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "레베카",
+          "message": "관찰력이 엄청 좋더라구. 기사단장님이라서 그런가? 은근 섬세해~"
+        },
+        "en": {
+          "speaker": "Rebecca",
+          "message": "She is very observant. Is it maybe because she's the leader of the knights? She's quite delicate~"
+        },
+        "zh_tw": {
+          "speaker": "瑞貝卡",
+          "message": "觀察力驚人。因為是騎士團團長嗎？感覺心思蠻細膩～"
+        },
+        "zh_cn": {
+          "speaker": "瑞貝卡",
+          "message": "觀察力驚人。因為是騎士團團長嗎？感覺心思蠻細膩～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "가만 보면 시시한 말장난에 엄청 웃더라. 의외야. 그렇게 안 보이는데."
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "I saw her laughing out loud at silly puns. That was kind of a surprise. She doesn't look like that."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "認識久了就會發現，無聊的玩笑她也會笑得很開心。\n這讓我有點意外，她看起來不像是這種人。"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "認識久了就會發現，無聊的玩笑她也會笑得很開心。\n這讓我有點意外，她看起來不像是這種人。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님 안녕하세요.\r\n태양 기사단 클레르 인사드립니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Hello, Savior.\r\nI'm Claire, from the Order of Sun."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者你好。\r\n太陽騎士團的克萊兒向你問好。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者你好。\r\n太陽騎士團的克萊兒向你問好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "지난 번에 구원자님께서 보여주신 활약,\r\n무척 인상 깊었습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I saw you in action last time.\r\nI was quite impressed."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "上次救援者展現的活躍表現，\r\n十分令人印象深刻。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "上次救援者展現的活躍表現，\r\n十分令人印象深刻。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "앞으로도 잘 부탁드립니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Hope you keep up the good work."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "日後也請多指教。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "日後也請多指教。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, same here. I will!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "請多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 부탁해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, same here. I will!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "請多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "네. 앞으로 공무를 통해 \r\n자주 얼굴을 뵙게 되겠지만…."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Okay. I'm sure we'll run into each other often for work…"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "是，雖然日後會透過公務\r\n經常見面…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "是，雖然日後會透過公務\r\n經常見面…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "급할 때에는 에버톡을 통해서도 \r\n보고 드리겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "If I'm in a hurry, I'll report to you\r\nthrough Evertalk."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "但有急事的時候也會用EverTalk\r\n向你報告的。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "但有急事的時候也會用EverTalk\r\n向你報告的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "믿음직스럽네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're so reliable"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可靠呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可靠呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "믿음직스럽네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're so reliable"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可靠呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可靠呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그런가요? \r\n아주 당연한 말을 했을 뿐인데요…."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Is that so?\r\nI just said what I had to say…"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "是嗎？\r\n我只是說了非常理所當然的話…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "是嗎？\r\n我只是說了非常理所當然的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그럼 오늘 하루도 건강하시기를."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I hope you stay healthy today."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "那麼祝你今天也身體健康。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "那麼祝你今天也身體健康。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님, 책을 읽는 건 휴식이라 할 수 있을까요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, can reading a book be considered relaxation?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，讀書可以稱做是休息嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，讀書可以稱做是休息嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 사람 아니 정령마다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it depends"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個好像因人，不對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個好像因人，不對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 사람 아니 정령마다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it depends"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個好像因人，不對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個好像因人，不對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다를 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "on the person-I mean, the Soul."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因精靈而異吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因精靈而異吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다를 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "on the person-I mean, the Soul."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因精靈而異吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因精靈而異吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그렇군요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I see."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "這樣啊。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "這樣啊。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그러고 보니 클로이는 \r\n책 읽을 때 고문당하는 표정이었고…."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Come to think of it,\r\r\nChloe looked tortured when she read,"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "這麼說起來，克羅伊讀書的時候\r\r\n是一臉被拷問的表情…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "這麼說起來，克羅伊讀書的時候\r\r\n是一臉被拷問的表情…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "로제나 린지는 평온한 표정으로 책을 읽었습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "while Rose and Linzy looked peaceful."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "蘿絲和琳賽則是平靜地念書。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "蘿絲和琳賽則是平靜地念書。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클레르는 어때?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about you, Claire?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克萊兒呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克萊兒呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클레르는 어때?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about you, Claire?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克萊兒呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克萊兒呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "저는…\r\n평온한 쪽인 것 같습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'm...\r\r\nI think I'm more on the peaceful side."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我…\r\r\n好像是偏平靜。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我…\r\r\n好像是偏平靜。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 클레르에겐 책 읽기가 휴식인거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then, for you, reading is relaxation."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那對克萊兒來說，讀書就是休息"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那對克萊兒來說，讀書就是休息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 클레르에겐 책 읽기가 휴식인거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then, for you, reading is relaxation."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那對克萊兒來說，讀書就是休息"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那對克萊兒來說，讀書就是休息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그렇겠군요.\r\n답변 감사드립니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I see.\r\r\nThank you for your answer."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "應該是，\r\r\n感謝你的回覆。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "應該是，\r\r\n感謝你的回覆。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님,\r\n그때 식당에서 영업방해를 했던 정령 기억하시나요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, remember that Soul\r\r\nwho caused a disturbance at the restaurant?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，\r\r\n你記得那時候在餐廳妨礙營業的精靈嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，\r\r\n你記得那時候在餐廳妨礙營業的精靈嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "머리카락이 나왔다고 우긴 정령"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The one that claimed to have hair in his food?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "堅持自己吃到頭髮的精靈"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "堅持自己吃到頭髮的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "머리카락이 나왔다고 우긴 정령"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The one that claimed to have hair in his food?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "堅持自己吃到頭髮的精靈"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "堅持自己吃到頭髮的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "예, 맞습니다.\r\n그 정령이 이번에도 또 비슷한 일을 했다고 합니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Yes,\r\r\nand he did it again."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "是的，沒錯。\r\r\n聽說那個精靈這次又做了類似的事情。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "是的，沒錯。\r\r\n聽說那個精靈這次又做了類似的事情。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "한 두번 그런 게 아니라서,\r\n이번에는 클로이와 리타가 직접 연행했다고 하더군요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "He was a repeat offender.\r\r\nThis time, Chloe and Rita arrested him in person."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "因為她不是一、兩次這樣了，\r\r\n所以這次是由克羅伊和麗塔親自帶走她。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "因為她不是一、兩次這樣了，\r\r\n所以這次是由克羅伊和麗塔親自帶走她。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "제 지인이라는 거짓말도 또 했다던데…\r\n거짓말로 무엇을 얻으려 하다니, 참 어리석습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "He lied again about being my friend, too.\r\r\nI don't know what he hoped to gain by lying."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "她好像又撒謊說是我認識的人…\r\r\n竟然想用謊言得到一些東西，真是愚蠢。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "她好像又撒謊說是我認識的人…\r\r\n竟然想用謊言得到一些東西，真是愚蠢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클레르가 싫어하는 행동을 했네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, you don't like that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她做了克萊兒討厭的舉動呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她做了克萊兒討厭的舉動呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클레르가 싫어하는 행동을 했네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, you don't like that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她做了克萊兒討厭的舉動呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她做了克萊兒討厭的舉動呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "엇"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Ah,"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "哦"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "哦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "제가 거짓말을 싫어하는 것을 기억하고 계셨습니까?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "did you remember that I hate lying?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "你記得我說過不喜歡謊話嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "你記得我說過不喜歡謊話嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "맞아요, 기사단원들에게도 언제나 정직을 강조하고 있죠."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Yes. I can't stress enough the importance of honesty, even to the Knights."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "沒錯，我經常向騎士團團員們強調要正直。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "沒錯，我經常向騎士團團員們強調要正直。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "거짓으로 얻은 것은 금방 사라지고,\r\n얻은 것보다 더 많은 것을 잃어버리게 되니까요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Because what you gain by lying is quickly lost,\r\r\nand you lose more than you gain."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "因為透過謊言獲得的很快就會蕩然無存，\r\r\n而且失去的會比得到的更多。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "因為透過謊言獲得的很快就會蕩然無存，\r\r\n而且失去的會比得到的更多。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님!"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "어디 계세요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "你在哪裡？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "你在哪裡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "제 톡 보이십니까?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Did you read my message?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "有看見我的訊息嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "有看見我的訊息嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "답장이 와야 할텐데… 이런…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I hope he replies soon. Oh, no..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "應該要回我的…糟糕…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "應該要回我的…糟糕…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그런데 왜 구원자님한테만 에버톡이 보내지는 거지?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "By the way, why can I message the Savior only on Evertalk?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "不過EverTalk怎麼會只傳給救援者呢？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "不過EverTalk怎麼會只傳給救援者呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클로이나 린지한테는 에버톡 자체가 안 가네…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I can't message Chloe or Linzy at all."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "沒辦法傳給克羅伊跟琳賽EverTalk耶…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "沒辦法傳給克羅伊跟琳賽EverTalk耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "어떡하지? 구원요청을 보낼 수 없어…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "What do I do? I can't send a rescue request."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "怎麼辦？我沒辦法傳送救援請求…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "怎麼辦？我沒辦法傳送救援請求…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님을 구해야하는데…!"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I must save the Savior!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "要救救援者才行…！"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "要救救援者才行…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "비비안이 저희를 얼마나 더 괴롭힐지 모르겠군요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I don't know how much longer Vivienne is going to torment us."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "不知道薇薇安還會折磨我們多久。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "不知道薇薇安還會折磨我們多久。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "솔레이의 궁정 마도사였을 때도 장난을 많이 쳐서,\r\n여간 골치아픈게 아니었습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Even when she was Solrey's court mage,\r\nshe got into a lot of mischief."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "她還是蘇萊伊的宮廷魔導士時就很常搗蛋，\r\n不是普通的傷腦筋。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "她還是蘇萊伊的宮廷魔導士時就很常搗蛋，\r\n不是普通的傷腦筋。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르한테도 장난을 많이 쳤었어?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Claire, were you one of them?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "她也對克萊兒開了很多玩笑嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "她也對克萊兒開了很多玩笑嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르한테도 장난을 많이 쳤었어?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Claire, were you one of them?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "她也對克萊兒開了很多玩笑嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "她也對克萊兒開了很多玩笑嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "…아주 많이요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "... Yes. A lot of times."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "…非常多。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "…非常多。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "제가 조각한 목상을 살아서 움직이게 만들고,\r\n갑옷을 파렴치한 드레스로 만들고…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "She's made my sculptures come to life,\r\r\nturned my armor into skimpy dresses..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "她讓我做的木雕動起來，\r\r\n還把鎧甲做成羞恥的禮服…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "她讓我做的木雕動起來，\r\r\n還把鎧甲做成羞恥的禮服…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "아, 제 목소리도 변조시킨 적도 있었네요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Oh, and even altered my voice."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "對了，她還讓我變聲過。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "對了，她還讓我變聲過。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그때만 생각하면 다시 화가 치밀어오릅니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Just thinking about that makes me angry again."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "只要想到那時候，我心裡就湧上一把火。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "只要想到那時候，我心裡就湧上一把火。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르의 반응이 재미있었나봐"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "She must have enjoyed your reaction."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "可能是克萊兒的反應很有趣"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "可能是克萊兒的反應很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르의 반응이 재미있었나봐"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "She must have enjoyed your reaction."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "可能是克萊兒的反應很有趣"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "可能是克萊兒的反應很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "비비안이 정확히 그렇게 말했었습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Well, that's what she said."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "薇薇安的確是這麼說的。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "薇薇安的確是這麼說的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "하아."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Sigh."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "唉。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "唉。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님~♥"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior ♥"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者～♥"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者～♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "저 햇빛이 너무 뜨거워서…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Could you put some oil on my back?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "陽光太熱了…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "陽光太熱了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "등 뒤에 오일 좀 발라주실 수 있나요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "That sunlight is so hot."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "你可以幫我在背上抹點油嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "你可以幫我在背上抹點油嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그래"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Sure."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그래"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Sure."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "어머나, 적극적이시네요~"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Oh my, you're so enthusiastic."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "唉唷，你真積極～"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "唉唷，你真積極～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그럼 기다리고 있을게요 ♪"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'll be waiting for you, then. ♪"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "那我會等你 ♪"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "那我會等你 ♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "뭐야"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "What the...?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "怎麼回事"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "怎麼回事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "이게 뭐야"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "What is this?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "這是怎樣"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "這是怎樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "이거 왜 혼자 켜져서 이상한 걸 보낸거야"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Why did it turn on by itself and send out weird stuff?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "這為什麼自己打開，傳了些怪東西"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "這為什麼自己打開，傳了些怪東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님 이거 저 아닙니다"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, that wasn't me."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者這不是我"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者這不是我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "이런 사진은 언제 찍힌거지?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "When was this photo taken?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我是什麼時候被拍這種照片的？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我是什麼時候被拍這種照片的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "비비안, 비비안인가봅니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Vivienne. It's got to be Vivienne!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "薇薇安，看來是薇薇安。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "薇薇安，看來是薇薇安。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "오일 발라주러 갈게"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'll come put some oil on you."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我去幫妳抹油"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我去幫妳抹油"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "오일 발라주러 갈게"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'll come put some oil on you."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我去幫妳抹油"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我去幫妳抹油"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "괜찮습니다!!!!!!!"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "It's okay!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "不用了！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "不用了！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "비비안이 어떤 장난을 친건지 모르겠는데,\r\n요트에 제 여분 옷이 보이지 않습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I don't know what Vivienne is up to,\r\r\nbut I don't see any of my spare clothes on the yacht."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "不知道薇薇安耍了什麼把戲，\r\r\n我沒有在遊艇上看到我的換洗衣物。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "不知道薇薇安耍了什麼把戲，\r\r\n我沒有在遊艇上看到我的換洗衣物。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "정말 이 섬을 나갈 때까지 이 수영복을 입어야 하는 건지…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Do I really have to wear this swimsuit until we get off the island?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我真的要穿著這件泳衣，一直到離開這座島為止嗎…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我真的要穿著這件泳衣，一直到離開這座島為止嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "잘 어울리는데"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "It looks good on you."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "很適合妳啊"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "很適合妳啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "잘 어울리는데"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "It looks good on you."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "很適合妳啊"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "很適合妳啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "…말씀은 감사하지만, 솔직히 발가벗은 기분입니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "...Thank you for the kind words, but frankly, I feel naked."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "…謝謝你這麼說。但老實說，我感覺很赤裸。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "…謝謝你這麼說。但老實說，我感覺很赤裸。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "홍란과 루테에게 그렇게 옷차림으로 잔소리해놓고,\r\n지금 이런 모습이라니…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "After nagging Honglan and Lute about how they dressed,\r\r\nI have to look like this..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我那麼常碎念紅蘭跟魯特的穿著打扮，\r\r\n現在卻是這副模樣…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我那麼常碎念紅蘭跟魯特的穿著打扮，\r\r\n現在卻是這副模樣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "여러모로 부끄럽습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'm ashamed in more ways than one."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "各方面上都讓我很害羞。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "各方面上都讓我很害羞。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "우리말고는 아무도 모르는 모습인걸"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "No one else sees it, but us."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "除了我們以外，誰都不會看到"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "除了我們以外，誰都不會看到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "우리말고는 아무도 모르는 모습인걸"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "No one else sees it, but us."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "除了我們以外，誰都不會看到"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "除了我們以外，誰都不會看到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "…그 말을 들으니 더 부끄러워집니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "...Hearing that makes me feel even more ashamed."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "…這番話讓我更害羞了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "…這番話讓我更害羞了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "역시 풀과 나뭇잎으로 겉옷이라도 만들어야겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I should make some cover-up out of grass and leaves."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我果然得用草跟樹葉做件外套。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我果然得用草跟樹葉做件外套。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그러고 보니 이 섬에는 네발달린 동물들이 보이지 않네요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Now that I think about it, I don't see any four-legged animals on this island."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "話說回來，這座島上沒有看見四足動物呢。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "話說回來，這座島上沒有看見四足動物呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "토끼나 돼지, 사슴이 있으면 바베큐를 해먹을 수 있을텐데…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "If we could find a rabbit, pig, or deer, we could make a barbecue."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "如果有兔子、豬或是小鹿的話，就可以烤肉來吃了…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "如果有兔子、豬或是小鹿的話，就可以烤肉來吃了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "채소들을 찾으면 스튜 같은 것도 만들 수도 있고요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "If we find some vegetables, we could also make a stew."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "找到蔬菜的話，還可以做燉菜之類的。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "找到蔬菜的話，還可以做燉菜之類的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르는 요리를 잘 하나봐"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Claire, can you cook?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "克萊兒好像很會下廚"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "克萊兒好像很會下廚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르는 요리를 잘 하나봐"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Claire, can you cook?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "克萊兒好像很會下廚"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "克萊兒好像很會下廚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "요리하는 것을 좋아하긴 합니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I like to cook."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我的確喜歡下廚。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我的確喜歡下廚。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "고향에서는 다같이 모여 요리를 해먹는 게 일상이었거든요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "In my hometown, we used to get together and cook."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我在故鄉的日常就是大家聚在一起做飯。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我在故鄉的日常就是大家聚在一起做飯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "저는 스튜나 구운고기 요리를 만들고,\r\n다른 친구들은 디저트나 곁들임 메뉴를 만들고…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'd make a stew or a roast,\r\r\nand my friends would make a dessert or a side dish."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我負責做燉菜或是烤肉，\r\r\n其他人則是準備甜點或配菜…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我負責做燉菜或是烤肉，\r\r\n其他人則是準備甜點或配菜…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그렇게 한 상 가득차리고 모두 둘러 앉아 식사를 하던 시간이…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "And then we'd have a big plate full and we'd all sit around and eat."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "擺滿一桌菜之後，大家圍坐在一起用餐的時光…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "擺滿一桌菜之後，大家圍坐在一起用餐的時光…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그립네요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I miss those days."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "真想念。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "真想念。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "솔레이로 돌아가면 다같이 홈파티라도 할까?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Should we have a house party when we get back to Solrey?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "回到蘇萊伊之後，要不要開家庭派對？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "回到蘇萊伊之後，要不要開家庭派對？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "솔레이로 돌아가면 다같이 홈파티라도 할까?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Should we have a house party when we get back to Solrey?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "回到蘇萊伊之後，要不要開家庭派對？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "回到蘇萊伊之後，要不要開家庭派對？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그럴까요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Sure, why not?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "要嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "要嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "많이 먹는 친구들도 있으니 많이 만들어야 겠네요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I have friends who eat a lot. I'll make a lot of food."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "有些朋友食量很大，我得做很多人份了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "有些朋友食量很大，我得做很多人份了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님, 이 섬에는 본 적 없는 꽃들이 참 많습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, there are so many flowers on this island that I've never seen before."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，這座島上有好多沒看過的花。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，這座島上有好多沒看過的花。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "이런 꽃들로 화관을 만들어도 예쁠 것 같습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "They'd make a beautiful wreath."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "用這些花做成花冠好像會很漂亮。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "用這些花做成花冠好像會很漂亮。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "화관도 만들 줄 알아?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Do you know how to make a wreath?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "妳會做花冠嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "妳會做花冠嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "화관도 만들 줄 알아?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Do you know how to make a wreath?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "妳會做花冠嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "妳會做花冠嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "예, 예전에 고향 친구들에게 자주 만들어줬습니다.\r\n목걸이, 반지, 팔찌도 다 꽃으로 만들었죠."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Yes, I used to make them for my friends back home.\r\r\nI also know how to make necklaces, rings, and bracelets with flowers."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "對，我以前很常做給故鄉的朋友。\r\r\n項鍊、戒指、手環，全都是用花做的。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "對，我以前很常做給故鄉的朋友。\r\r\n項鍊、戒指、手環，全都是用花做的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그때는 들판에 피어있는 꽃들이 영롱한 보석,\r\n그 이상이었습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Back then, the flowers in the fields\r\r\nlooked like sparkling jewelry."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "那時在田野盛開的花朵\r\r\n比璀璨的寶石還美。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "那時在田野盛開的花朵\r\r\n比璀璨的寶石還美。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "이따 같이 만들어보실래요?\r\n알려드릴게요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Would you like to make one with me later?\r\r\nI'll show you how."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "待會要不要一起做？\r\r\n我教你。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "待會要不要一起做？\r\r\n我教你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "응 그러자"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Sure."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "嗯，好啊"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "嗯，好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "응 그러자"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Sure."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "嗯，好啊"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "嗯，好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르는 남은 휴가를 어떻게 보낼거야?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Claire, how are you going to spend the rest of your vacation?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "克萊兒打算怎麼度過剩下的假期？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "克萊兒打算怎麼度過剩下的假期？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르는 남은 휴가를 어떻게 보낼거야?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Claire, how are you going to spend the rest of your vacation?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "克萊兒打算怎麼度過剩下的假期？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "克萊兒打算怎麼度過剩下的假期？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "남은 휴가요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "The rest of my vacation?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "剩下的假期？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "剩下的假期？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "아, 이 섬을 떠나도 제 휴가는 남는군요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Oh, I'll still have my vacation when I leave the island."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "喔，離開這座島後，我還可以繼續休假。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "喔，離開這座島後，我還可以繼續休假。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "글쎄요…\r\n아직 별 다른 계획은 없습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Well...\r\r\nI don't really have any plans yet."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "不曉得…\r\r\n我還沒有特別的計畫。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "不曉得…\r\r\n我還沒有特別的計畫。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "고향에 가볼까도 생각했지만,\r\n스스로 다짐같은 걸 한 게 있어서 어려울 것 같고…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I thought about going back home,\r\r\nbut I made a promise to myself, so..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "雖然也想過要回故鄉，\r\r\n但我有跟自己的承諾，所以有點難…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "雖然也想過要回故鄉，\r\r\n但我有跟自己的承諾，所以有點難…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "다짐?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "A promise?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "承諾？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "承諾？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "다짐?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "A promise?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "承諾？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "承諾？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "이렇게 말하자니, 부끄럽지만…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'm embarrassed to say it, but..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "這麼說起來有點害羞…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "這麼說起來有點害羞…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "더는 게이트가 열리지 않을 때까지는,\r\n고향 땅을 밟지 않겠다는 다짐입니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I've promised myself that I won't set foot on my hometown soil\r\r\nuntil the Gate is no longer open."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我告訴自己在傳送門不再開啟之前，\r\r\n我都不會踏進故鄉一步。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我告訴自己在傳送門不再開啟之前，\r\r\n我都不會踏進故鄉一步。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "숭고한 뜻이 있는 건 아니고,\r\n고향에 가면 마음이 약해질 것 같아서 그랬습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "It's not that I'm trying to be noble;\r\r\nit's just that I feel like going home would weaken me."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "沒有什麼崇高的含義，\r\r\n只是感覺我回到故鄉就會變得心軟。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "沒有什麼崇高的含義，\r\r\n只是感覺我回到故鄉就會變得心軟。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "아무리 일중독이라 해도,\r\n노는 게 더 좋은 것이 당연하잖아요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "It's natural for anyone, even a workaholic,\r\r\nto be tempted to play more."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "就算我再怎麼是工作狂，\r\r\n我當然還是更喜歡玩耍。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "就算我再怎麼是工作狂，\r\r\n我當然還是更喜歡玩耍。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "평화가 찾아오면 그때 제대로 쉬어야지, 라고 생각했습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "And I thought, \"When peace comes, I'll rest properly.\""
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我想等和平到來之後，再好好休息。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我想等和平到來之後，再好好休息。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그래서 남은 휴가를 어떻게 보낼 지…\r\n더 막막하긴 하군요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "So...I'm not sure how I'm going to spend\r\nthe rest of my vacation."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "所以要怎麼度過剩下的假期…\r\n就讓我更茫然了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "所以要怎麼度過剩下的假期…\r\n就讓我更茫然了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "도움이 필요하면 언제든지 말해"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Let me know if you need help."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "需要幫忙的話，隨時告訴我"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "需要幫忙的話，隨時告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "도움이 필요하면 언제든지 말해"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Let me know if you need help."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "需要幫忙的話，隨時告訴我"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "需要幫忙的話，隨時告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "또 신세를 질 수는 없지만,\r\n말씀만은 정말 감사드립니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I don't want to bother you again,\r\r\nbut I really appreciate the offer."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我不能再麻煩你了，\r\r\n但真的很謝謝你這麼說。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我不能再麻煩你了，\r\r\n但真的很謝謝你這麼說。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "아, 영화관은 한번 더 데려가주세요.\r\n이번엔 집중해서 보겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Oh, but I want to go to the movies again.\r\r\nI'll pay attention next time."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "對了，請你再帶我去一次電影院，\r\r\n我這次會專心看的。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "對了，請你再帶我去一次電影院，\r\r\n我這次會專心看的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "응 내가 또 예매할게"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Sure, I'll book another one."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "嗯，我再買票"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "嗯，我再買票"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "응 내가 또 예매할게"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Sure, I'll book another one."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "嗯，我再買票"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "嗯，我再買票"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님, 바쁘신가요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, are you busy?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，你忙嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，你忙嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'm not."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會，還好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會，還好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'm not."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會，還好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會，還好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "혹시 쉬는 법에 관해 아세요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Do you know how to rest?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "你知道要怎麼休息嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "你知道要怎麼休息嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쉬는 법?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How to rest?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼休息？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼休息？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쉬는 법?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How to rest?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼休息？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼休息？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "먹고 자고 노는 게 쉬는 거지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eat, sleep, and play is rest."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "吃東西、睡覺、玩耍就是休息啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "吃東西、睡覺、玩耍就是休息啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "먹고 자고 노는 게 쉬는 거지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eat, sleep, and play is rest."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "吃東西、睡覺、玩耍就是休息啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "吃東西、睡覺、玩耍就是休息啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님,\r\n오늘 뵙기로 한 날이라 연락드렸습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, I'm messaging you\r\r\nbecause we were supposed to meet today."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，\r\r\n我們約好今天要見面，所以來聯絡你。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，\r\r\n我們約好今天要見面，所以來聯絡你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벌써 일어난 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you up already?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳已經起床了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳已經起床了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벌써 일어난 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you up already?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳已經起床了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳已經起床了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "일어난 건 세시간 전에 일어났습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I woke up three hours ago."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我三小時前就起床了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我三小時前就起床了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "언제나 같은 시간에 일어나니까요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I always wake up at the same time."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我總是在一樣的時間起床。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我總是在一樣的時間起床。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "약속시간이 남아서 개인정비를 하고 있었습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I had some time to kill before our meeting, so I was doing some personal maintenance."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "因為還沒到約好的時間，所以我在整頓自己。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "因為還沒到約好的時間，所以我在整頓自己。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그런데 오늘 저희의 일정은 어떻게 되는 걸까요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "So, what's our schedule today?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "不過我們今天的行程是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "不過我們今天的行程是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오늘 일정의 컨셉은 시내투어야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The idea of today's itinerary is to travel around the city."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "今天的行程是市區觀光"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "今天的行程是市區觀光"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오늘 일정의 컨셉은 시내투어야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The idea of today's itinerary is to travel around the city."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "今天的行程是市區觀光"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "今天的行程是市區觀光"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "시내투어요?\r\n그렇군요…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Travel around the city?\r\r\nI see."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "市區觀光？\r\r\n這樣啊…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "市區觀光？\r\r\n這樣啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그럼, 기대하고 있겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Well, I'm looking forward to it."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "那我會期待的。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "那我會期待的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "오늘이 바로 트로이카로 떠나는 날이군요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "So, today is the day we're going to Troyca."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "今天就是出發去特羅伊卡的日子了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "今天就是出發去特羅伊卡的日子了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "가는 배를 따로 예약하지 않았는데 괜찮을까요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "But we didn't book a boat to get there. How do we get there?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我沒有另外預約船隻，沒關係嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我沒有另外預約船隻，沒關係嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't worry."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't worry."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우린 요트를 타고 간다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We're taking a yacht."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們搭遊艇過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們搭遊艇過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우린 요트를 타고 간다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We're taking a yacht."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們搭遊艇過去"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們搭遊艇過去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "요트요?\r\n그런 비싼 이동수단을 어디서…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "A yacht?\r\r\nHow did you get such an expensive mode of transportation?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "遊艇？\r\r\n怎麼有這麼貴的交通工具…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "遊艇？\r\r\n怎麼有這麼貴的交通工具…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "거절할 수 없는 제안을 받아들였어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I got an offer I couldn't refuse."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為我接受了無法拒絕的提議"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為我接受了無法拒絕的提議"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "거절할 수 없는 제안을 받아들였어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I got an offer I couldn't refuse."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為我接受了無法拒絕的提議"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為我接受了無法拒絕的提議"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "잘 모르겠지만, 불법적인 일만 아니면 좋겠군요…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Whatever it is, I hope it's not illegal."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "雖然我不太清楚，但希望不是非法勾當…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "雖然我不太清楚，但希望不是非法勾當…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님, 오두막은 거의 완성되어 갑니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, the hut is nearing completion."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，窩棚快要完成了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，窩棚快要完成了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "식량 준비도 순조로워"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Food preparation is well underway as well."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "糧食也準備得很順利"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "糧食也準備得很順利"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "식량 준비도 순조로워"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Food preparation is well underway as well."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "糧食也準備得很順利"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "糧食也準備得很順利"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "다행이네요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Good."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "太好了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "太好了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그럼, 저는 모닥불에 불을 먼저 붙여보겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Then, I'm going to light the bonfire."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "那我來生營火。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "那我來生營火。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "이따 봬요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "See you later."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "等會見。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "等會見。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님, 저는 다시 나무를 구해 오두막을 짓겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, I'm going to go get some wood and rebuild the hut."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，我再去找木材重蓋窩棚。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，我再去找木材重蓋窩棚。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "밤이 늦었으니 돌아와 클레르"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Come back, Claire. It's late at night."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "克萊兒，很晚了，回來吧"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "克萊兒，很晚了，回來吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "밤이 늦었으니 돌아와 클레르"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Come back, Claire. It's late at night."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "克萊兒，很晚了，回來吧"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "克萊兒，很晚了，回來吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "하지만, 이대로 밤을 보내면 위험합니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "But it's dangerous to spend the night like this."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "但是就這樣過夜會很危險。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "但是就這樣過夜會很危險。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "침낭이 있잖아"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "We've got a sleeping bag."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "有睡袋啊"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "有睡袋啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "침낭이 있잖아"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "We've got a sleeping bag."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "有睡袋啊"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "有睡袋啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그건 없는 선택지라고 생각하고 싶습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'd like to think that's not an option."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我想把那個當逼不得已的選擇。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我想把那個當逼不得已的選擇。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "정 안되면, 구원자님이라도 침낭에 들어가시죠."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "If all else fails, Savior, you can use the sleeping bag."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "真的不行的話，救援者睡睡袋吧。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "真的不行的話，救援者睡睡袋吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님, 별일 없으십니까?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, how are you?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，沒什麼事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，沒什麼事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "응 평화로워"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "So far, so good."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "嗯，很平靜"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "嗯，很平靜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "응 평화로워"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "So far, so good."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "嗯，很平靜"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "嗯，很平靜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "다행입니다. 저도 아직까진 별일이 없습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Good. Same here."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "太好了，我目前也沒什麼事。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "太好了，我目前也沒什麼事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "물론 또 비비안이 방해를 한다면…\r\n그때는 기필코 검을 들 것입니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Of course, if Vivienne interferes again,\r\r\nI'll be sure to raise my sword."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "當然，如果薇薇安再來搗亂…\r\r\n我到時候一定會拿起劍來。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "當然，如果薇薇安再來搗亂…\r\r\n我到時候一定會拿起劍來。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "평화로운 휴가와 배신자 처단.\r\n두 마리의 토끼를 잡을 수 있겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "A peaceful vacation and a traitor killed.\r\r\nTwo birds with one stone."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "平靜的假期和處決叛徒，\r\r\n一舉兩得。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "平靜的假期和處決叛徒，\r\r\n一舉兩得。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "호전적인걸"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Ooo, scary!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "妳真好戰"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "妳真好戰"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "호전적인걸"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Ooo, scary!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "妳真好戰"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "妳真好戰"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "배신자를 잡으면 자신의 죄목이 적힌 팻말을 들게 할 것입니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "When I catch the traitor, I'll make her hold up a sign that says she's guilty."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "抓到叛徒後，我會讓她舉著寫有自己罪狀的牌子。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "抓到叛徒後，我會讓她舉著寫有自己罪狀的牌子。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "다시는 장난을 못 치게 만들어주겠어."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I'll make sure she can't get into mischief again."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我要讓她不能再惡作劇。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我要讓她不能再惡作劇。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님, 주무십니까?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, are you sleeping?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者，你睡了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者，你睡了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "아니 아직"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "No, not yet."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "沒有，還沒"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "沒有，還沒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "아니 아직"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "No, not yet."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "沒有，還沒"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "沒有，還沒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "What's up?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "What's up?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "아닙니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Nothing."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "沒事。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "沒事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "생각 정리되면 말해줘"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Then, tell me whenever."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "等妳想好了再告訴我"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "等妳想好了再告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "생각 정리되면 말해줘"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Then, tell me whenever."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "等妳想好了再告訴我"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "等妳想好了再告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "알겠습니다, 쉬세요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I will. Enjoy your rest."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "好，你休息吧。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "好，你休息吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "유리아 님께는 저희 둘다 길게 기절해있었다, 라고\r\n보고 드리면 될 것 같습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I think we can report to Her Majesty Yuria\r\r\nthat we were both knocked out for a long time."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "跟尤里婭報告說我們兩個昏倒了很久，\r\r\n應該就可以了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "跟尤里婭報告說我們兩個昏倒了很久，\r\r\n應該就可以了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "구원자님도 제이드 님께 그렇게 설명해주시면 감사하겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Savior, I'd appreciate it if you said the same to Jade."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "救援者也跟潔依德這樣解釋的話，我會感激不盡。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "救援者也跟潔依德這樣解釋的話，我會感激不盡。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "…섬에서 있던 일은 모두 잊겠습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "...I'll forget everything that happened on the island."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "…我會把在島上的事全都忘記。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "…我會把在島上的事全都忘記。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Claire..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "克萊兒…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "克萊兒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "클레르…"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Claire..."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "克萊兒…"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "克萊兒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그동안 챙겨주셔서, 정말 감사했습니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Thank you so much for looking out for me so far."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "真的很謝謝你這段時間的照顧。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "真的很謝謝你這段時間的照顧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "이제 저를 그렇게 챙겨주실 일은…\r\n없을 겁니다."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Now, you don't have to look out for me\r\r\nlike that anymore."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "你以後就不用…\r\r\n對我那麼費心了。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "你以後就不用…\r\r\n對我那麼費心了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "자, 자기!"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "B-babe!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "親、親愛的！"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "親、親愛的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "어, 언제 끝납니까!"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Wh-when is it over?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "什、什麼時候結束！"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "什、什麼時候結束！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그러니까, 일 말입니다!"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I mean, work!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我是說工作！"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我是說工作！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "지금으로부터 한시간 쯤?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "About an hour from now?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "大概再一個小時？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "大概再一個小時？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "지금으로부터 한시간 쯤?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "About an hour from now?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "大概再一個小時？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "大概再一個小時？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "알겠습니다!\r\n맞춰서 데리러 가겠습니다!"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Okay, I'll be there\r\r\nto pick you up in time."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "好！\r\r\n我會準時去接你！"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "好！\r\r\n我會準時去接你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "오늘 각오 단단히 하는 게 좋을겁니다.\r\n자기!"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "You better be on your game today.\r\r\nBabe!"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "你今天最好做好心理準備，\r\r\n親愛的！"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "你今天最好做好心理準備，\r\r\n親愛的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "???"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "？？？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "???"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "？？？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "자기, 일어났어요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Babe, are you awake?"
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "親愛的，你醒了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "親愛的，你醒了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "응 오늘 중요한 날이니까 한시간 전에 일어났어"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Yes, I woke up an hour ago. Today's a big day."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "嗯，今天是重要的日子，所以我一小時前就起來了"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "嗯，今天是重要的日子，所以我一小時前就起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "응 오늘 중요한 날이니까 한시간 전에 일어났어"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "Yes, I woke up an hour ago. Today's a big day."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "嗯，今天是重要的日子，所以我一小時前就起來了"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "嗯，今天是重要的日子，所以我一小時前就起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "웬일이에요?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "That's a first."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "怎麼回事？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "怎麼回事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "못 일어났으면, 깨워주러 가려고 했는데."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I was going to go wake you up."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我本來還打算你起不來的話，就要去叫你。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我本來還打算你起不來的話，就要去叫你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "다시 잠들까?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I can always go back to sleep."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我要繼續睡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我要繼續睡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "다시 잠들까?"
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "I can always go back to sleep."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "我要繼續睡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "我要繼續睡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클레르",
+            "message": "그러기만 해봐요, 평생 뭐라할지도 몰라요."
+          },
+          "en": {
+            "speaker": "Claire",
+            "message": "You'd better not. You wouldn't hear the end of it."
+          },
+          "zh_tw": {
+            "speaker": "克萊兒",
+            "message": "你敢繼續睡試試看，我可能會念你一輩子。"
+          },
+          "zh_cn": {
+            "speaker": "克萊兒",
+            "message": "你敢繼續睡試試看，我可能會念你一輩子。"
+          }
+        }
+      ]
+    }
+  }
+}

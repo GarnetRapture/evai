@@ -1,0 +1,191 @@
+{
+  "id": "27413",
+  "name": "조앤",
+  "name_en": "Joanne",
+  "grade": "에픽",
+  "race": "불사형",
+  "class": "서포터",
+  "sub_class": "치료",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "전장의 의사",
+    "constellation": "인연_메피스토_엔딩",
+    "union": "칼라르 암즈 코퍼레이션",
+    "birthday": "413",
+    "height": 165,
+    "weight": 51,
+    "cv_ko": "김율",
+    "cv_jp": "Maki Kawase",
+    "like": [
+      "새로운 치료법"
+    ],
+    "dislike": [
+      "말 안듣는 환자"
+    ],
+    "hobby": [
+      "논문 읽기"
+    ],
+    "speciality": [
+      "커피 내리기",
+      "외과 수술"
+    ]
+  },
+  "personality": {
+    "description": "그래. 네가 바로 구원자라고? \n만나서 반갑다. 암즈 코퍼레이션의 조앤이다. \n지금은 바이스 님의 지시에 따라 정령 연합군에 의료 컨설턴트를 겸직하고 있지. \n\n날 부를 때에는 존경과 경애, 그리고 친근감을 담아 조앤 씨나 조앤 선생님이라고 부르도록.\n이름만 부르는 쪽이 더 편하면 뭐, 좋을 대로 해.\n\n뭐 내가 왔다고 해서 바로 네 팔자가 활짝 피거나 그러지야 않겠지만,\n적어도 네가 할만한 건강이나 의료, 부상자 관련 고민은 좀 덜어줄 수는 있으면 좋겠군. \n안 그래도 신경 쓸 게 많을 테니까 말이야. \n\n그래서 난 지금부터 어떤 작업을 중점으로 착수하면 되지? \n그동안 있었던 일이나 앞으로 해야 할일들…\n너와는 할 이야기도 많겠다, 이참에 커피 한 잔 어때? \n\n조앤 씨와 친해지는 맨 첫걸음은\n네가 다스리는 이 아케나인에서 제일 유명한 커피집을 소개시켜 주는 걸로 장식해주면 좋겠군.",
+    "greeting": "자, 어떤 녀석부터 치료해줄까?"
+  },
+  "speech_patterns": [],
+  "comments": [],
+  "dialogues": {
+    "story": [],
+    "evertalk": []
+  },
+  "i18n": {
+    "name": {
+      "ko": "조앤",
+      "en": "Joanne",
+      "zh_tw": "瓊",
+      "zh_cn": "瓊"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "불사형",
+      "en": "Undead",
+      "zh_tw": "不死型",
+      "zh_cn": "不死型"
+    },
+    "class": {
+      "ko": "서포터",
+      "en": "Supporter",
+      "zh_tw": "輔助者",
+      "zh_cn": "輔助者"
+    },
+    "sub_class": {
+      "ko": "치료",
+      "en": "Heal",
+      "zh_tw": "治療",
+      "zh_cn": "治療"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "전장의 의사",
+        "en": "Combat Medic",
+        "zh_tw": "戰地醫生",
+        "zh_cn": "戰地醫生"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_엔딩",
+        "en": "인연_메피스토_엔딩",
+        "zh_tw": "牡羊座",
+        "zh_cn": "牡羊座"
+      },
+      "union": {
+        "ko": "칼라르 암즈 코퍼레이션",
+        "en": "Chalar Arms Corporation",
+        "zh_tw": "卡拉爾安茲公司",
+        "zh_cn": "卡拉爾安茲公司"
+      },
+      "cv_ko": {
+        "ko": "김율",
+        "en": "Kim Yool",
+        "zh_tw": "金律",
+        "zh_cn": "金律"
+      },
+      "cv_jp": {
+        "ko": "Maki Kawase",
+        "en": "Maki Kawase",
+        "zh_tw": "河瀨茉希",
+        "zh_cn": "河瀨茉希"
+      },
+      "like": {
+        "ko": [
+          "새로운 치료법"
+        ],
+        "en": [
+          "New type of treatment"
+        ],
+        "zh_tw": [
+          "新的治療方法"
+        ],
+        "zh_cn": [
+          "新的治療方法"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "말 안듣는 환자"
+        ],
+        "en": [
+          "Uncooperative patients"
+        ],
+        "zh_tw": [
+          "不聽話的病人"
+        ],
+        "zh_cn": [
+          "不聽話的病人"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "논문 읽기"
+        ],
+        "en": [
+          "Reading research papers"
+        ],
+        "zh_tw": [
+          "閱讀論文"
+        ],
+        "zh_cn": [
+          "閱讀論文"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "커피 내리기",
+          "외과 수술"
+        ],
+        "en": [
+          "Coffee-brewing",
+          "surgery"
+        ],
+        "zh_tw": [
+          "沖泡咖啡、外科手術"
+        ],
+        "zh_cn": [
+          "沖泡咖啡、外科手術"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "그래. 네가 바로 구원자라고? \n만나서 반갑다. 암즈 코퍼레이션의 조앤이다. \n지금은 바이스 님의 지시에 따라 정령 연합군에 의료 컨설턴트를 겸직하고 있지. \n\n날 부를 때에는 존경과 경애, 그리고 친근감을 담아 조앤 씨나 조앤 선생님이라고 부르도록.\n이름만 부르는 쪽이 더 편하면 뭐, 좋을 대로 해.\n\n뭐 내가 왔다고 해서 바로 네 팔자가 활짝 피거나 그러지야 않겠지만,\n적어도 네가 할만한 건강이나 의료, 부상자 관련 고민은 좀 덜어줄 수는 있으면 좋겠군. \n안 그래도 신경 쓸 게 많을 테니까 말이야. \n\n그래서 난 지금부터 어떤 작업을 중점으로 착수하면 되지? \n그동안 있었던 일이나 앞으로 해야 할일들…\n너와는 할 이야기도 많겠다, 이참에 커피 한 잔 어때? \n\n조앤 씨와 친해지는 맨 첫걸음은\n네가 다스리는 이 아케나인에서 제일 유명한 커피집을 소개시켜 주는 걸로 장식해주면 좋겠군.",
+        "en": "So, you must be the Savior.\nIt's nice to meet you. I'm Joanne of the Arms Corporation.\nFor now, I'm also acting as a medical advisor for the Soul Alliance under the orders of Weiss.\n\nWhen addressing me, make sure to do so with respect, admiration, and affection by calling me Miss Joanne or Dr. Joanne.\nIf you prefer to just call me by my first name, that's fine, too.\n\nWhile my arrival won't magically solve all your problems,\nI aim to at least take some weight off your shoulders concerning health, medical issues, or the wounded.\nI'm sure you've got enough on your plate already.\n\nNow, what tasks should I focus on as I start my work here?\nWhat has it been like around here, and what new things can we expect?\nIt seems we have much to discuss, so why don't we start with a cup of coffee?\n\nThe first step to bonding with Miss Joanne could be\nshowing me the most famous coffee shop here in Arkenine.",
+        "zh_tw": "好，你就是救援者嗎？\n很高興見到你，我是安茲公司的瓊。\n現在按照拜斯的指示，兼任精靈聯軍的醫療顧問。\n\n喊我的時候，要帶著尊敬、敬愛跟親切感，稱呼我瓊小姐或瓊醫生。\n如果只喊名字比較方便的話，想怎麼喊就怎麼喊吧。\n\n雖然不會因為我來了，你就會開運之類的，\n但希望至少能減輕一點你會有的健康、醫療或傷患相關的苦惱。\n因為你本來要煩的事就已經夠多了。\n\n所以我現在要以什麼工作為主開始著手呢？\n這段時間發生過的事跟以後要做的事…\n有很多事要跟你聊，要不要趁這機會一起喝杯咖啡？\n\n跟瓊小姐變親近的第一步，\n就用你治理的阿肯納因裡，最有名的咖啡廳來襯托吧。",
+        "zh_cn": "好，你就是救援者嗎？\n很高興見到你，我是安茲公司的瓊。\n現在按照拜斯的指示，兼任精靈聯軍的醫療顧問。\n\n喊我的時候，要帶著尊敬、敬愛跟親切感，稱呼我瓊小姐或瓊醫生。\n如果只喊名字比較方便的話，想怎麼喊就怎麼喊吧。\n\n雖然不會因為我來了，你就會開運之類的，\n但希望至少能減輕一點你會有的健康、醫療或傷患相關的苦惱。\n因為你本來要煩的事就已經夠多了。\n\n所以我現在要以什麼工作為主開始著手呢？\n這段時間發生過的事跟以後要做的事…\n有很多事要跟你聊，要不要趁這機會一起喝杯咖啡？\n\n跟瓊小姐變親近的第一步，\n就用你治理的阿肯納因裡，最有名的咖啡廳來襯托吧。"
+      },
+      "greeting": {
+        "ko": "자, 어떤 녀석부터 치료해줄까?",
+        "en": "Alright, who should I treat first?",
+        "zh_tw": "嗯，要從哪個傢伙開始治療呢？",
+        "zh_cn": "嗯，要從哪個傢伙開始治療呢？"
+      }
+    },
+    "speech_patterns": [],
+    "comments": [],
+    "dialogues": {
+      "story": [],
+      "evertalk": []
+    }
+  }
+}

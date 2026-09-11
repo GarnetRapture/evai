@@ -1,0 +1,7461 @@
+{
+  "id": "3170",
+  "name": "미리암(잔영)",
+  "name_en": "Miriam (Afterimage)",
+  "grade": "에픽",
+  "race": "요정형",
+  "class": "스트라이커",
+  "sub_class": "암살",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "차가운 그림자",
+    "constellation": "처녀자리",
+    "union": "칼라르 암즈 코퍼레이션",
+    "birthday": "823",
+    "height": 161,
+    "weight": 44,
+    "cv_ko": "박시윤",
+    "cv_jp": "박시윤",
+    "like": [
+      "토스트",
+      "체리"
+    ],
+    "dislike": [
+      "비밀★"
+    ],
+    "hobby": [
+      "정리정돈"
+    ],
+    "speciality": [
+      "초집중"
+    ]
+  },
+  "personality": {
+    "description": "안녕, 구원자.\n새 기어로 파워 업한 미리암이야. \n\n이제 나름대로 회사 생활도 착실하게 하고 있고, \n연합군 일도 돕고 있는 만큼 가능한 예전처럼 싸우고 싶지는 않았지만…\n상황이 상황인 만큼 어쩔 수 없겠지.\n\n그러니 기왕 이렇게 되어 버린 거, 네게 도움이 될 수 있다면 좋겠네.\n지금의 나는 그 어떤 타깃이라도 놓치지 않을 자신이 있거든.\n\n예전의 나는 내 힘을 어찌 사용하면 좋을지, \n어떻게 하면 남들처럼 '옳은' 방법으로 살아갈 수 있을지 고민하기도 했어.\n\n하지만 지금의 나는 그 답을 알아.\n내 힘은 내게 소중한 모두를 지키기 위해, \n그들에게 가해지는 위협을 제거하기 위해 있는 거야.\n\n그리고 구원자, 너 또한 내게 소중한 존재야.\n그러니, 나는 너를 지키기 위해서라면 망설이지 않겠어.\n\n휴. 답답한 소리 오래 했네.\n그러니까 요는, 무슨 일 있으면 나한테 말해주기다? 알겠지?",
+    "greeting": "그럼 어디, 오랜만에 솜씨 좀 부려볼까?"
+  },
+  "speech_patterns": [
+    "안녕 구원자",
+    "이번에 새로 지급받은 단말로 \n별도 에버톡 파서 연락처 남겨",
+    "ㅇㅇ",
+    "에버폰을 매번 들고다니면서 \n연락하기 불편할 거 같다고",
+    "무전기를 겸해 쓸 수 있게 \n르네가 초소형 기기를 제작해 줬거든",
+    "귀걸이 형태에다가 \n음성을 인식해서 기동하거든",
+    "기동하면 홀로그램 형태의 판넬이 떠서 \n그걸로 에버톡도 할 수 있고",
+    "여러모로 복잡하긴 하지만 \n쓸만한 거 같아",
+    "그치? ㅋㅋ \n나도 신기해",
+    "하여튼 그래서 이쪽으로 연락주면 \n평소보다 좀 더 빠르게 답변할 수 있을 거야",
+    "그럼 조만간 또 보자, 구원자!",
+    "어우 잘먹었다",
+    "구원자는 좀 어때? 괜찮아?",
+    "ㅎㅎ 그거 다행이네",
+    "그럼 아까 말한대로 \n내일 오전에 보면 될까?",
+    "좋았어~",
+    "그러면 내일 오전에 일어나고 \n옷 다 갈아입었을 때 연락줘",
+    "그때 맞춰서 내가 광장으로 데리러 나갈게",
+    "어때?",
+    "굿~",
+    "그럼 내일 봐, 구원자!",
+    "페트라 말인데",
+    "진짜 잘먹더라…",
+    "아니 그야 난 원래 \n페트라에 대해 잘 몰랐으니까",
+    "이번 기회에 연을 트게 되어서 좋달까",
+    "그 정도로 잘 먹으면 \n데리고 다닐 맛이 좀 나겠어",
+    "ㅋㅋ 미리암 씨한테 그걸 빼놓으면 섭하지",
+    "가고 싶은 곳에 따라 데리고 가고 싶은 멤버도 \n다 다르단 말씀",
+    "ㅎㅎ 걱정 마 구원자",
+    "구원자는 내가 엄선한 곳에 \n데려가고 있으니까",
+    "오…",
+    "구원자도 은근 모험 정신이 있구나?",
+    "ㅇㅋ 그러면",
+    "다음에 페트라랑 같이 완전 새로운 곳 뚫어보자",
+    "이거 기대되네♪",
+    "크흠…",
+    "아까는 조앤쌤이 갑자기 와서 \n중간에 설명이 끊겼는데",
+    "구원자만 괜찮으면 우리 회사 \n전투 부문에 대해서도 좀 이야기할까 싶은데",
+    "ㅇㅋ",
+    "그럼 간략하게 설명하면",
+    "전투 관련 부문은 크게 팀단위로 움직이는데",
+    "팀 알파부터 팀 오메가까지 \n총 24개 팀이 있어",
+    "듣기로는 뭐 옛날 고문자에서 따온 \n분류명이라고 하는데…",
+    "각 팀마다 특기 분야가 좀 다르긴 해",
+    "예를 들면 내 델타 팀은 별동대거든 \n그때그때 필요한 사항을 다루는 유격 부대지",
+    "알파, 베타, 감마, 델타까지가 \n바이스 님 직속 팀이고",
+    "팀 아래에는 '스쿼드'라고 불리는 \n작은 팀이 여러 개 존재하기도 해.",
+    "기본적으로 얘네들은 팀에 정식 소속하기엔 \n어려운 인재들이 모여있는 인재 풀 같은 건데",
+    "각자 지니고 있는 특기 분야에 따라 \n그때그때 다른 스쿼드가 임무에 동행하기도 해",
+    "예를 들면 마물 섬멸같은 업무가 들어왔을 때 \n굳이 우리 팀이 출동한다면"
+  ],
+  "comments": [
+    {
+      "writer": "바이스",
+      "comment": "스카우트했을 땐 모험이었지만, 결과적으로는 아주 탁월한 선택이었지."
+    },
+    {
+      "writer": "페트라(각혼)",
+      "comment": "의외의 인연. 조금은… 친해졌을지도."
+    },
+    {
+      "writer": "르네(백은)",
+      "comment": "미리암이 사용하는 걸 전제로 한다면 장비 개발에도 많은 제약이 풀리지. \n모든 걸 수동 조작 처리해도 되면 그만큼 화력에 투자할 수 있거든!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "미리암(잔영)",
+        "message": "안녕 구원자"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "이번에 새로 지급받은 단말로 \n별도 에버톡 파서 연락처 남겨"
+      },
+      {
+        "speaker": "구원자",
+        "message": "새 단말?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "새 단말?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅇ"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "에버폰을 매번 들고다니면서 \n연락하기 불편할 거 같다고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "무전기를 겸해 쓸 수 있게 \n르네가 초소형 기기를 제작해 줬거든"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "귀걸이 형태에다가 \n음성을 인식해서 기동하거든"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "기동하면 홀로그램 형태의 판넬이 떠서 \n그걸로 에버톡도 할 수 있고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "여러모로 복잡하긴 하지만 \n쓸만한 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 신기하다…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 신기하다…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그치? ㅋㅋ \n나도 신기해"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "하여튼 그래서 이쪽으로 연락주면 \n평소보다 좀 더 빠르게 답변할 수 있을 거야"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그럼 조만간 또 보자, 구원자!"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "어우 잘먹었다"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자는 좀 어때? 괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "완전 멀쩡해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "완전 멀쩡해"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅎㅎ 그거 다행이네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그럼 아까 말한대로 \n내일 오전에 보면 될까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 그게 좋을 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 그게 좋을 거 같아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "좋았어~"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그러면 내일 오전에 일어나고 \n옷 다 갈아입었을 때 연락줘"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그때 맞춰서 내가 광장으로 데리러 나갈게"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅇㅋ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅇㅋ"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "굿~"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그럼 내일 봐, 구원자!"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "페트라 말인데"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "진짜 잘먹더라…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "아니 그야 난 원래 \n페트라에 대해 잘 몰랐으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "이번 기회에 연을 트게 되어서 좋달까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그 정도로 잘 먹으면 \n데리고 다닐 맛이 좀 나겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같이 맛집 투어 하게?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같이 맛집 투어 하게?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅋㅋ 미리암 씨한테 그걸 빼놓으면 섭하지"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "가고 싶은 곳에 따라 데리고 가고 싶은 멤버도 \n다 다르단 말씀"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇구나"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅎㅎ 걱정 마 구원자"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자는 내가 엄선한 곳에 \n데려가고 있으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그것도 기쁘긴 하지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그것도 기쁘긴 하지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기왕이면 나도 새로운 곳을 같이 개척하고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기왕이면 나도 새로운 곳을 같이 개척하고 싶어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "오…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자도 은근 모험 정신이 있구나?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅋ 그러면"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "다음에 페트라랑 같이 완전 새로운 곳 뚫어보자"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "이거 기대되네♪"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "크흠…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "아까는 조앤쌤이 갑자기 와서 \n중간에 설명이 끊겼는데"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자만 괜찮으면 우리 회사 \n전투 부문에 대해서도 좀 이야기할까 싶은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야 좋지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야 좋지"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅋ"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그럼 간략하게 설명하면"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "전투 관련 부문은 크게 팀단위로 움직이는데"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "팀 알파부터 팀 오메가까지 \n총 24개 팀이 있어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "듣기로는 뭐 옛날 고문자에서 따온 \n분류명이라고 하는데…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "각 팀마다 특기 분야가 좀 다르긴 해"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "예를 들면 내 델타 팀은 별동대거든 \n그때그때 필요한 사항을 다루는 유격 부대지"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "알파, 베타, 감마, 델타까지가 \n바이스 님 직속 팀이고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신기하다…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "신기하다…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "팀 아래에는 '스쿼드'라고 불리는 \n작은 팀이 여러 개 존재하기도 해."
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "기본적으로 얘네들은 팀에 정식 소속하기엔 \n어려운 인재들이 모여있는 인재 풀 같은 건데"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "각자 지니고 있는 특기 분야에 따라 \n그때그때 다른 스쿼드가 임무에 동행하기도 해"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "예를 들면 마물 섬멸같은 업무가 들어왔을 때 \n굳이 우리 팀이 출동한다면"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "휘하에 있는 스쿼드 중 '섬멸 특화 스쿼드'를 \n같이 데리고 나가는 느낌이지"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "스쿼드는 계약직 형태로 근무하는데 \n거기서 활약하면 정사원이 될 수도 있어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "뭐, 되기 싫은 애들은 거절하기도 하지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…내가 이해한 게 맞으면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…내가 이해한 게 맞으면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 칸나는 그럼 초 엘리트인 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 칸나는 그럼 초 엘리트인 거야?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅇ 맞아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "스쿼드 생활 안하고 바로 정규직으로 채용됐으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "게다가 하위 팀이 아니라 \n바로 델타로 들어왔으니 꽤 대단하지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 팀장인 미리암도 대단하고…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 팀장인 미리암도 대단하고…?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅋㅋ; 나야 뭐 일개 중간관리직인걸"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그래도 흠…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자가 칭찬해주니 나쁘진 않네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "앞으로도 미리암 씨를 잘 부탁해~"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "아까 조앤쌤이 놀리긴 했지만…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자는 어때?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "나랑 같은 회사 다니면 재밌을 거 같아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떠려나…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떠려나…?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "뭐 별 의미는 없긴 한데"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "문득 생각이 들어서"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자랑 같이 회사다니면 \n좀 재밌겠다 싶어가지고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "내가 선배일 수도 있고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "아니면 구원자가 선배일 수도 있고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "…아니면 뭐 같은 타이밍에 입사한 \n동기일 수도 있고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "서로 힘들면 일에 대해 궁시렁거리기도 하고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "좋은 일 있으면 같이 한 잔 걸치러 가고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "가끔 같은 회의 들어가기도 하고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "지금보다야 얼굴 자주 볼테니까…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "말했다시피 벼, 별 의미는 없다?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "생각해본 적은 없는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "생각해본 적은 없는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암이랑 같은 회사면 재밌을거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암이랑 같은 회사면 재밌을거 같아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "지, 진짜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 미리암 자주 보면 좋으니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 미리암 자주 보면 좋으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "흐음…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그래? 그렇구나?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "뭐… 그렇다고 해서 구원자가 \n우리 회사에 입사할 수 있는 상황은 아니긴 하지만"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "뭔가… 그런 말 들으니 \n은근 기쁘긴 하네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅋㅋ; 좀 간지럽다"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "아까 구원자한테 준 캔스프 말고도"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "통조림이 진짜 무지 많아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "예전에도 말한 적 있지?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "칼라르는 통조림이 많이 발달했다고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅇㅇ 기억나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅇㅇ 기억나"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그래서 한때는 통조림으로 \n코스를 만드는게 유행하기도 했어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "이런식으로"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우와!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우와!"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "크림 스프 - 통올리브 - 스테이크 라이스 - 체리 파이"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "꽤 자신 있는 조합이야"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자도 언제 한번 \n직접 메뉴 만들어 보면 어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌겠다!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌겠다!"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅋ 그럼 결정"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자 돌아가기 전에 \n마트 가서 통조림 코스 짜보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "콜!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "콜!"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "문득 생각한 건데"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자를 만난 게 \n지금의 나라서 정말 다행인 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 갑자기 왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 갑자기 왜?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "음… 이전의 나는 새로운 만남을 \n두려워했으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "이렇게 구원자랑 연이 이어지지 못했을 거 같거든"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그저 지나가는 경호대상 1으로 생각했겠지"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그렇게 생각하면 좀 아쉽거든"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자는 되게 재밌으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "너랑 친해질 기회가 없다 생각하면 손해잖아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 미리암이랑 친해져서 기뻐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 미리암이랑 친해져서 기뻐"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅇ 진짜 이렇게 친해질 줄은 몰랐지"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "정령 계약까지 하고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "서로가 서로를 위해서 국경도 건너고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "게다가 어지간해선 얘기 안하는 \n과거 얘기도 하고 ㅎㅎ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 과거의 미리암을 만났다면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 과거의 미리암을 만났다면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계속 신경쓰였을 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계속 신경쓰였을 거 같아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅇ? 어떤 면이?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암이 과거에 행복하지 않았다고 하니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암이 과거에 행복하지 않았다고 하니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그게 드러났을 거 같아서"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그게 드러났을 거 같아서"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "헤에…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "하긴 그렇다"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "내가 구원자에게 관심이 없어도 \n구원자가 내게 관심을 가졌다면"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "어쩌면 이렇게 또 친해졌을 수도 있겠어 ㅋㅋ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그치?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그치?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "네가 그런 녀석이라서 마음에 들긴 하지만"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "쩝… 이거 앞으로도 쉽지 않겠네…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "에구구"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그래도 이제 구원자도 곧 칼라르를 떠나면"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "나도 또 여길 떠서 다른 임무를 하러 가겠네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "좀 골아프긴 했어도 \n간만에 와서 좋았네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "또 출장 가는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "또 출장 가는 거야?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅇ 할 일이 있으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그래도 어지간해선 \n아케나인에 배속되지 않을까 싶어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "솔레이랑은 동맹 관계에 있는 데다가"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "어쨌건 나는 네 계약 정령이니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "바이스 님도 나는 가급적이면 \n네 곁에 있는 게 좋겠다고 하셨거든"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그러니까 헤어져도 금방 다시 보게 될 걸?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 희소식이네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 희소식이네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅋㅋ 그래 나도 기뻐"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "비록 이 세상 구하는 게 정말 힘든 일이긴 하지만"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그래도 친한 애들하고 같이 붙어서 \n최선을 다한다면"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "어떻게든 되겠지"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "우리가 그렇게 할 거고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그치?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅇ 네 얼굴 보면 기운이 솟으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "아;;;;"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅋㅋㅋㅋ;;;"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "특별한 뜻 아니고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "너랑 친하니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "친한 애 보면 기분 좋아지잖아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "왜"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그런 느낌이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "? 나도 미리암 보면 좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "? 나도 미리암 보면 좋아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅋ;;;"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그런 거임 ㅇㅇ"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그럼 이만 줄인다;;;"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "다른 회사 정령들하고도 친하고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "동료는 모두 소중하게 여기지만"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "개중에서도 조앤쌤은 좀 각별하긴 해"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "내 롤모델이라고 해야 하려나"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "되게 멋있지 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 착한 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 착한 거 같아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "ㅇㅇ 그치"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "근데 그게 쉽지 않거든"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "사실 그런 면에서는 \n르네도 대단하긴 한데"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "걔는 좀 초인처럼 느껴지긴 해"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "조앤쌤도 사실 초인이라면 초인인데"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "르네에 비해선 좀 더 감정이 보인다고 해야 하나"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그런 면도 포함해서 주변 정령들을 편안하게 해줘서"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "되게 좋은 거 같아"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "스스로한테 솔직하면서도 \n그렇게 남에게 친절할 수 있다는 게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암도 되게 멋있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암도 되게 멋있어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "나???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암 칭찬도 꽤 자주 듣거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암 칭찬도 꽤 자주 듣거든"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "내가???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅇㅇ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅇㅇ"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": ";;;;;;; 의외네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "뭐 잘 하려고 열심히 노력은 하고 있으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그게 결실을 맺은 거 같아서 좀 기쁘긴 하다"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "옛날엔 진짜 사고 잔뜩 치고 다녀서"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "협업 매너가 안좋다고 엄청 까였거든"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "르네가 나 대신 커뮤니케이션 많이 해주고"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "조앤쌤이 날 붙잡고 하루종일 가르쳐서 망정이지"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "으윽 지금 생각해도 흑역사야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 덕분에 지금의 미리암이 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 덕분에 지금의 미리암이 있어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "맞는 말이야"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "휴… 멋있어지고 싶다~"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "남들이 의지할 수 있는 멋진 정령이 되고 싶어~"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자 너는"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "정령들을 구하기 위해 이 에덴에 왔지만"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "가끔 생각하긴 해"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "만일 네가 구원을 필요로 한다면"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "너에게도 구원자라는 존재가 생길까? 하고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "음……."
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "내가 저번에도 말했지만"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "나는 엄청 대단한 힘을 가진 게 아니라서"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "이 세상 전부를 구할 수는 없어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "하지만…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "적어도 내 힘이 닿는 한은"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "내 친구인 '너'를 구하기 위해"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "최선을 다해 발버둥치고 싶네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": ";;;;;"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "갑자기 이러니까 좀 부끄럽다"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "여튼 뭐"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "힘들때"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "울고 싶을 때"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "뭐 어떤 때건"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "미리암 씨는 '너'를 신경 쓰고 있으니까"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "언제든지 연락해 줘"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "반드시 응답할 테니까 ㅎㅎ"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "알았지?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "약속이다!"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "이번 작전은 정말 수고 많았어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "바이스 님이 크게 한턱 쏘신다고 하시네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "본사 근처에 있는 \n<셀부로즈>라는 레스토랑으로 오면 돼"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그럼 이따 봐!"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "광장 앞에 도착했어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "검은 정장 입고 있으니까 \n평소랑 다른 옷이라고 너무 놀라지 마라?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "으으…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "오늘 묘하게 좀 어수선하네"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "미안"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "평소엔 이렇게 허둥대지 않는데…"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "구원자"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "너는 삶의 목표나 하고 싶은 일이 있어?"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "나는 있어"
+      },
+      {
+        "speaker": "미리암(잔영)",
+        "message": "그건 바로…"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "미리암(잔영)",
+      "en": "Miriam (Afterimage)",
+      "zh_tw": "米里昂（殘影）",
+      "zh_cn": "米里昂（殘影）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "요정형",
+      "en": "Fairy",
+      "zh_tw": "妖精型",
+      "zh_cn": "妖精型"
+    },
+    "class": {
+      "ko": "스트라이커",
+      "en": "Striker",
+      "zh_tw": "鬥士",
+      "zh_cn": "鬥士"
+    },
+    "sub_class": {
+      "ko": "암살",
+      "en": "Assassination",
+      "zh_tw": "暗殺",
+      "zh_cn": "暗殺"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "차가운 그림자",
+        "en": "Cold Shadow",
+        "zh_tw": "冰冷暗影",
+        "zh_cn": "冰冷暗影"
+      },
+      "constellation": {
+        "ko": "처녀자리",
+        "en": "Virgo",
+        "zh_tw": "處女座",
+        "zh_cn": "處女座"
+      },
+      "union": {
+        "ko": "칼라르 암즈 코퍼레이션",
+        "en": "Chalar Arms Corporation",
+        "zh_tw": "卡拉爾安茲公司",
+        "zh_cn": "卡拉爾安茲公司"
+      },
+      "cv_ko": {
+        "ko": "박시윤",
+        "en": "Siyoon Park",
+        "zh_tw": "朴詩允",
+        "zh_cn": "朴詩允"
+      },
+      "cv_jp": {
+        "ko": "박시윤",
+        "en": "Siyoon Park",
+        "zh_tw": "朴詩允",
+        "zh_cn": "朴詩允"
+      },
+      "like": {
+        "ko": [
+          "토스트",
+          "체리"
+        ],
+        "en": [
+          "Toast",
+          "cherries"
+        ],
+        "zh_tw": [
+          "吐司、櫻桃"
+        ],
+        "zh_cn": [
+          "吐司、櫻桃"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "비밀★"
+        ],
+        "en": [
+          "Secret ★"
+        ],
+        "zh_tw": [
+          "祕密★"
+        ],
+        "zh_cn": [
+          "祕密★"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "정리정돈"
+        ],
+        "en": [
+          "Tidying up"
+        ],
+        "zh_tw": [
+          "整理東西"
+        ],
+        "zh_cn": [
+          "整理東西"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "초집중"
+        ],
+        "en": [
+          "Extreme Focus"
+        ],
+        "zh_tw": [
+          "超專注"
+        ],
+        "zh_cn": [
+          "超專注"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "안녕, 구원자.\n새 기어로 파워 업한 미리암이야. \n\n이제 나름대로 회사 생활도 착실하게 하고 있고, \n연합군 일도 돕고 있는 만큼 가능한 예전처럼 싸우고 싶지는 않았지만…\n상황이 상황인 만큼 어쩔 수 없겠지.\n\n그러니 기왕 이렇게 되어 버린 거, 네게 도움이 될 수 있다면 좋겠네.\n지금의 나는 그 어떤 타깃이라도 놓치지 않을 자신이 있거든.\n\n예전의 나는 내 힘을 어찌 사용하면 좋을지, \n어떻게 하면 남들처럼 '옳은' 방법으로 살아갈 수 있을지 고민하기도 했어.\n\n하지만 지금의 나는 그 답을 알아.\n내 힘은 내게 소중한 모두를 지키기 위해, \n그들에게 가해지는 위협을 제거하기 위해 있는 거야.\n\n그리고 구원자, 너 또한 내게 소중한 존재야.\n그러니, 나는 너를 지키기 위해서라면 망설이지 않겠어.\n\n휴. 답답한 소리 오래 했네.\n그러니까 요는, 무슨 일 있으면 나한테 말해주기다? 알겠지?",
+        "en": "Hey, Savior.\nIt's Miriam, powered up with new gear.\n\nNow that I'm managing my work life pretty well these days\nand also helping the Alliance, I'm not as eager to fight as before,\nbut I guess that's the way things are.\n\nSo, since it's come to this, I hope I can be useful to you.\nRight now, I'm confident I won't miss any target.\n\nThere was a time when I wasn't sure how to use my strength,\nwhen I wondered how I could live the \"right way,\" like everyone else.\n\nBut now I know the answer.\nMy power exists to protect the people I care about,\nand to take down any threat that comes their way.\n\nAnd Savior, you're one of those precious people to me.\nSo, if it's to protect you, I won't hesitate.\n\nWhew, that got a bit heavy.\nAnyway, the point is, if anything happens, let me know. Okay?",
+        "zh_tw": "嗨，救援者。\n我是有了新裝備後升級的米里昂。\n\n現在還算是在認真上班，\n也有在幫忙聯軍的工作，想盡可能地避免像以前一樣戰鬥…\n但局勢如此，我也沒辦法。\n\n所以既然變成這樣了，希望能幫上你的忙。\n現在的我有自信不會錯過任何目標。\n\n以前的我會苦惱該如何使用自己的力量、\n要怎麼做才能像別人一樣用「正確的方法」活下去。\n\n但現在的我知道那個答案。\n我的力量是為了守護所有我重要的人，\n是為了消除對他們的威脅。\n\n還有救援者，你也是我重要的人。\n所以，只要是為了守護你，我就不會猶豫。\n\n呼，說了好多沉重的事情。\n總之重點是，發生什麼事都要跟我說哦，知道了吧？",
+        "zh_cn": "嗨，救援者。\n我是有了新裝備後升級的米里昂。\n\n現在還算是在認真上班，\n也有在幫忙聯軍的工作，想盡可能地避免像以前一樣戰鬥…\n但局勢如此，我也沒辦法。\n\n所以既然變成這樣了，希望能幫上你的忙。\n現在的我有自信不會錯過任何目標。\n\n以前的我會苦惱該如何使用自己的力量、\n要怎麼做才能像別人一樣用「正確的方法」活下去。\n\n但現在的我知道那個答案。\n我的力量是為了守護所有我重要的人，\n是為了消除對他們的威脅。\n\n還有救援者，你也是我重要的人。\n所以，只要是為了守護你，我就不會猶豫。\n\n呼，說了好多沉重的事情。\n總之重點是，發生什麼事都要跟我說哦，知道了吧？"
+      },
+      "greeting": {
+        "ko": "그럼 어디, 오랜만에 솜씨 좀 부려볼까?",
+        "en": "Let's see if I can show off my skills, shall we?",
+        "zh_tw": "要久違地大展身手一番嗎？",
+        "zh_cn": "要久違地大展身手一番嗎？"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "안녕 구원자"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Hey, Savior"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "你好，救援者"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "你好，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "이번에 새로 지급받은 단말로 \n별도 에버톡 파서 연락처 남겨"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "I got a new device from the company\nI'm messaging you through the Evertalk account I created for it"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "我用這次新配發的終端機\n另外辦了新的EverTalk聯絡你"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "我用這次新配發的終端機\n另外辦了新的EverTalk聯絡你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "ㅇㅇ"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Yeah"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "嗯嗯"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "嗯嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "에버폰을 매번 들고다니면서 \n연락하기 불편할 거 같다고"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "They figured carrying around an Everphone all the time\nwould be too much of a hassle"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "每次都要帶著EverPhone才能聯絡\n好像有點不太方便"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "每次都要帶著EverPhone才能聯絡\n好像有點不太方便"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "무전기를 겸해 쓸 수 있게 \n르네가 초소형 기기를 제작해 줬거든"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "So, Renee built this ultra-compact gadget\nthat also works as a walkie-talkie"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "勒內做了一個\n可以兼作對講機的微型裝置"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "勒內做了一個\n可以兼作對講機的微型裝置"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "귀걸이 형태에다가 \n음성을 인식해서 기동하거든"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "It's shaped like an earring\nand activates through voice recognition"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "長得像耳環\n用語音辨識就能開啟了喔"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "長得像耳環\n用語音辨識就能開啟了喔"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "기동하면 홀로그램 형태의 판넬이 떠서 \n그걸로 에버톡도 할 수 있고"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Once it's on, a holographic panel pops up,\nso you can use it for Evertalk and other things"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "開啟之後會浮現出全息面板\n還可以用那個來使用EverTalk"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "開啟之後會浮現出全息面板\n還可以用那個來使用EverTalk"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "여러모로 복잡하긴 하지만 \n쓸만한 거 같아"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "It's a bit complex,\nbut it's pretty useful"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "雖然聽起來有點複雜\n但還滿值得用用看"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "雖然聽起來有點複雜\n但還滿值得用用看"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "그치? ㅋㅋ \n나도 신기해"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Right? Haha\nI thought so, too"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "是吧？哈哈\n我也覺得"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "是吧？哈哈\n我也覺得"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "하여튼 그래서 이쪽으로 연락주면 \n평소보다 좀 더 빠르게 답변할 수 있을 거야"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Anyway, if you contact me through this channel,\nI'll probably be able to respond faster than usual"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "反正，用這個聯絡我的話\n我會比平常更快回覆"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "反正，用這個聯絡我的話\n我會比平常更快回覆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "그럼 조만간 또 보자, 구원자!"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Talk to you again soon, Savior!"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "那待會再聊吧，救援者！"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "那待會再聊吧，救援者！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "어우 잘먹었다"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Whew, that really hit the spot"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "唉唷吃得好飽"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "唉唷吃得好飽"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "구원자는 좀 어때? 괜찮아?"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "How about you, Savior? Feeling okay?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "救援者你還好嗎？沒事嗎？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "救援者你還好嗎？沒事嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "ㅎㅎ 그거 다행이네"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Heh, glad to hear it"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "呵呵那就好"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "呵呵那就好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "그럼 아까 말한대로 \n내일 오전에 보면 될까?"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "So, like we said,\nshould we meet up tomorrow morning?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "那就像剛才說的\n明天早上見囉？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "那就像剛才說的\n明天早上見囉？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "좋았어~"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Perfect"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "很好～"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "很好～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "그러면 내일 오전에 일어나고 \n옷 다 갈아입었을 때 연락줘"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Then, when you're up and dressed tomorrow,\njust send me a message"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "那你明天早上起來\n換好衣服之後記得聯絡我"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "那你明天早上起來\n換好衣服之後記得聯絡我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "그때 맞춰서 내가 광장으로 데리러 나갈게"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "I'll meet you at the square around that time"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "我會看好時間去廣場接你"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "我會看好時間去廣場接你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "어때?"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Sound good?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "怎麼樣？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "怎麼樣？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "굿~"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Good"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "Good～"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "Good～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "그럼 내일 봐, 구원자!"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "See you tomorrow, Savior!"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "那明天見，救援者！"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "那明天見，救援者！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "페트라 말인데"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "About Petra"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "說到佩特拉"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "說到佩特拉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "진짜 잘먹더라…"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "She can really eat..."
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "真的很能吃…"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "真的很能吃…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "아니 그야 난 원래 \n페트라에 대해 잘 몰랐으니까"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Well, I mean, I didn't really\nknow her that well before"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "不是\n我本來跟佩特拉就不太熟"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "不是\n我本來跟佩特拉就不太熟"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "이번 기회에 연을 트게 되어서 좋달까"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "I'm glad we finally got a chance to connect"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "這次有機會認識，感覺挺不錯的"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "這次有機會認識，感覺挺不錯的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "그 정도로 잘 먹으면 \n데리고 다닐 맛이 좀 나겠어"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "And since she loves to eat so much,\nI'd love to take her to many different places"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "吃得這麼香\n帶出來真的會很值得耶"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "吃得這麼香\n帶出來真的會很值得耶"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "ㅋㅋ 미리암 씨한테 그걸 빼놓으면 섭하지"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Haha, you know I can't resist that kind of thing."
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "哈哈那可不能少了米里昂"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "哈哈那可不能少了米里昂"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "가고 싶은 곳에 따라 데리고 가고 싶은 멤버도 \n다 다르단 말씀"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Depending on the destination,\nthere's a perfect Soul to bring along"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "想去的地方不同\n想帶上的成員當然也會不一樣"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "想去的地方不同\n想帶上的成員當然也會不一樣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "ㅎㅎ 걱정 마 구원자"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Heh, don't worry, Savior"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "呵呵別擔心救援者"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "呵呵別擔心救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "구원자는 내가 엄선한 곳에 \n데려가고 있으니까"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "I'm only taking you to places\nI personally vetted"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "我可是特地挑選好地方\n才帶救援者去的喔"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "我可是特地挑選好地方\n才帶救援者去的喔"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "오…"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Oh..."
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "哦…"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "哦…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "구원자도 은근 모험 정신이 있구나?"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "So, you've got a bit of an adventurous side, huh?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "救援者你也挺有冒險精神的嘛？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "救援者你也挺有冒險精神的嘛？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "ㅇㅋ 그러면"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "OK, then"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "歐虧不然的話"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "歐虧不然的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "다음에 페트라랑 같이 완전 새로운 곳 뚫어보자"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Next time, let's go explore someplace completely new with Petra"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "下次和佩特拉一起去全新的地方踩點吧"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "下次和佩特拉一起去全新的地方踩點吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "이거 기대되네♪"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Now, this is gonna be fun ♪"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "真期待♪"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "真期待♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "크흠…"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Ahem..."
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "咳…"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "咳…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "아까는 조앤쌤이 갑자기 와서 \n중간에 설명이 끊겼는데"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Joanne kind of barged in earlier,\nso I didn't get to finish explaining"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "剛才瓊醫生突然過來\n打斷了說明"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "剛才瓊醫生突然過來\n打斷了說明"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "구원자만 괜찮으면 우리 회사 \n전투 부문에 대해서도 좀 이야기할까 싶은데"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "If you're up for it, I thought I'd tell you a bit more\nabout my company's Combat division"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "要是救援者願意的話\n我還想跟你聊聊我們公司的戰鬥部門"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "要是救援者願意的話\n我還想跟你聊聊我們公司的戰鬥部門"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "ㅇㅋ"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "OK"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "歐虧"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "歐虧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "그럼 간략하게 설명하면"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "So, here's a quick rundown"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "那就簡單說明一下"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "那就簡單說明一下"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "전투 관련 부문은 크게 팀단위로 움직이는데"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "The Combat division is mostly organized into teams"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "戰鬥相關部門大致上以小組為單位行動"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "戰鬥相關部門大致上以小組為單位行動"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "팀 알파부터 팀 오메가까지 \n총 24개 팀이 있어"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "There's a total of 24 teams,\nfrom Team Alpha to Team Omega"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "從Alpha到Omega小組\n一共有24個組"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "從Alpha到Omega小組\n一共有24個組"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "듣기로는 뭐 옛날 고문자에서 따온 \n분류명이라고 하는데…"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "I heard the names were borrowed\nfrom some ancient script or something..."
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "聽說這個分類名稱\n源自於古老的文字…"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "聽說這個分類名稱\n源自於古老的文字…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "각 팀마다 특기 분야가 좀 다르긴 해"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Each team has its own specialty"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "每個小組的專長略有不同"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "每個小組的專長略有不同"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "예를 들면 내 델타 팀은 별동대거든 \n그때그때 필요한 사항을 다루는 유격 부대지"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "For example, my Delta Team is a rapid-response unit\nWe handle whatever needs handling on short notice"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "比如說，我的Delta小組就是機動部隊\n是根據當下需求處理各種狀況的游擊小組"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "比如說，我的Delta小組就是機動部隊\n是根據當下需求處理各種狀況的游擊小組"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "알파, 베타, 감마, 델타까지가 \n바이스 님 직속 팀이고"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Alpha, Beta, Gamma, and Delta are\nall directly under Weiss"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "從Alpha、Beta、Gamma到Delta\n都是拜斯直屬的小組"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "從Alpha、Beta、Gamma到Delta\n都是拜斯直屬的小組"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "팀 아래에는 '스쿼드'라고 불리는 \n작은 팀이 여러 개 존재하기도 해."
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Each team also has a bunch of\nsmaller groups called \"squads\""
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "在每個小組底下\n還有好幾個被稱為「分隊」的小型部隊存在"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "在每個小組底下\n還有好幾個被稱為「分隊」的小型部隊存在"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "기본적으로 얘네들은 팀에 정식 소속하기엔 \n어려운 인재들이 모여있는 인재 풀 같은 건데"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "They're kind of like a talent pool,\nof those who aren't officially assigned to any team"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "基本上他們是一群難以正式加入團隊的人才\n可以說是一個類似人才庫的存在"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "基本上他們是一群難以正式加入團隊的人才\n可以說是一個類似人才庫的存在"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "각자 지니고 있는 특기 분야에 따라 \n그때그때 다른 스쿼드가 임무에 동행하기도 해"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "Depending on their skill set, different squads\nget attached to missions as needed"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "根據他們各自擅長的領域\n每次執行任務時會有不同的分隊共同參與"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "根據他們各自擅長的領域\n每次執行任務時會有不同的分隊共同參與"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "예를 들면 마물 섬멸같은 업무가 들어왔을 때 \n굳이 우리 팀이 출동한다면"
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "So, let's say if we get a monster annihilation request\nand Delta Team gets dispatched,"
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "例如接到像是殲滅魔物這類的任務時\n如果我們小組非得出動的話"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "例如接到像是殲滅魔物這類的任務時\n如果我們小組非得出動的話"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "바이스",
+          "message": "스카우트했을 땐 모험이었지만, 결과적으로는 아주 탁월한 선택이었지."
+        },
+        "en": {
+          "speaker": "Weiss",
+          "message": "Scouting her was a gamble, but it turned out to be an excellent choice."
+        },
+        "zh_tw": {
+          "speaker": "拜斯",
+          "message": "挖角的時候是場賭注，但以結果來說是非常明智的選擇。"
+        },
+        "zh_cn": {
+          "speaker": "拜斯",
+          "message": "挖角的時候是場賭注，但以結果來說是非常明智的選擇。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "의외의 인연. 조금은… 친해졌을지도."
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "An unexpected meeting. We might have gotten a little…close."
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "意料之外的緣分，可能…有變熟一點吧。"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "意料之外的緣分，可能…有變熟一點吧。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "르네(백은)",
+          "message": "미리암이 사용하는 걸 전제로 한다면 장비 개발에도 많은 제약이 풀리지. \n모든 걸 수동 조작 처리해도 되면 그만큼 화력에 투자할 수 있거든!"
+        },
+        "en": {
+          "speaker": "Renee (Argent)",
+          "message": "Having Miriam use it frees up a lot of constraints on equipment development.\nIf I can get away with doing everything manually, I can invest in more firepower!"
+        },
+        "zh_tw": {
+          "speaker": "勒內（白銀）",
+          "message": "以米里昂使用作為前提，在裝備開發上解除了很多限制。\n如果全都能用手動操作，那就能投入更多火力！"
+        },
+        "zh_cn": {
+          "speaker": "勒內（白銀）",
+          "message": "以米里昂使用作為前提，在裝備開發上解除了很多限制。\n如果全都能用手動操作，那就能投入更多火力！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "안녕 구원자"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Hey, Savior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "你好，救援者"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "你好，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "이번에 새로 지급받은 단말로 \n별도 에버톡 파서 연락처 남겨"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I got a new device from the company\nI'm messaging you through the Evertalk account I created for it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我用這次新配發的終端機\n另外辦了新的EverTalk聯絡你"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我用這次新配發的終端機\n另外辦了新的EverTalk聯絡你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "새 단말?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A new device?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "新的終端機？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "新的終端機？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "새 단말?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A new device?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "新的終端機？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "新的終端機？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅇ"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Yeah"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "에버폰을 매번 들고다니면서 \n연락하기 불편할 거 같다고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "They figured carrying around an Everphone all the time\nwould be too much of a hassle"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "每次都要帶著EverPhone才能聯絡\n好像有點不太方便"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "每次都要帶著EverPhone才能聯絡\n好像有點不太方便"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "무전기를 겸해 쓸 수 있게 \n르네가 초소형 기기를 제작해 줬거든"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "So, Renee built this ultra-compact gadget\nthat also works as a walkie-talkie"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "勒內做了一個\n可以兼作對講機的微型裝置"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "勒內做了一個\n可以兼作對講機的微型裝置"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "귀걸이 형태에다가 \n음성을 인식해서 기동하거든"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "It's shaped like an earring\nand activates through voice recognition"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "長得像耳環\n用語音辨識就能開啟了喔"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "長得像耳環\n用語音辨識就能開啟了喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "기동하면 홀로그램 형태의 판넬이 떠서 \n그걸로 에버톡도 할 수 있고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Once it's on, a holographic panel pops up,\nso you can use it for Evertalk and other things"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "開啟之後會浮現出全息面板\n還可以用那個來使用EverTalk"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "開啟之後會浮現出全息面板\n還可以用那個來使用EverTalk"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "여러모로 복잡하긴 하지만 \n쓸만한 거 같아"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "It's a bit complex,\nbut it's pretty useful"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然聽起來有點複雜\n但還滿值得用用看"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然聽起來有點複雜\n但還滿值得用用看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 신기하다…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's seriously cool..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也太神奇了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也太神奇了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 신기하다…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's seriously cool..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也太神奇了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也太神奇了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그치? ㅋㅋ \n나도 신기해"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Right? Haha\nI thought so, too"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "是吧？哈哈\n我也覺得"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "是吧？哈哈\n我也覺得"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "하여튼 그래서 이쪽으로 연락주면 \n평소보다 좀 더 빠르게 답변할 수 있을 거야"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Anyway, if you contact me through this channel,\nI'll probably be able to respond faster than usual"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "反正，用這個聯絡我的話\n我會比平常更快回覆"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "反正，用這個聯絡我的話\n我會比平常更快回覆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그럼 조만간 또 보자, 구원자!"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Talk to you again soon, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那待會再聊吧，救援者！"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那待會再聊吧，救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "어우 잘먹었다"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Whew, that really hit the spot"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "唉唷吃得好飽"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "唉唷吃得好飽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자는 좀 어때? 괜찮아?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "How about you, Savior? Feeling okay?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者你還好嗎？沒事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者你還好嗎？沒事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "완전 멀쩡해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Totally fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "完全沒事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "完全沒事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "완전 멀쩡해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Totally fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "完全沒事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "完全沒事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅎㅎ 그거 다행이네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Heh, glad to hear it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "呵呵那就好"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "呵呵那就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그럼 아까 말한대로 \n내일 오전에 보면 될까?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "So, like we said,\nshould we meet up tomorrow morning?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那就像剛才說的\n明天早上見囉？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那就像剛才說的\n明天早上見囉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 그게 좋을 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, that sounds good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯那樣會比較好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯那樣會比較好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 그게 좋을 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, that sounds good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯那樣會比較好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯那樣會比較好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "좋았어~"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Perfect"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "很好～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "很好～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그러면 내일 오전에 일어나고 \n옷 다 갈아입었을 때 연락줘"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Then, when you're up and dressed tomorrow,\njust send me a message"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那你明天早上起來\n換好衣服之後記得聯絡我"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那你明天早上起來\n換好衣服之後記得聯絡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그때 맞춰서 내가 광장으로 데리러 나갈게"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'll meet you at the square around that time"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我會看好時間去廣場接你"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我會看好時間去廣場接你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "어때?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Sound good?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅇㅋ"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "OK"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "歐虧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "歐虧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅇㅋ"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "OK"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "歐虧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "歐虧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "굿~"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Good"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "Good～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "Good～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그럼 내일 봐, 구원자!"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "See you tomorrow, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那明天見，救援者！"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那明天見，救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "페트라 말인데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "About Petra"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "說到佩特拉"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "說到佩特拉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "진짜 잘먹더라…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "She can really eat..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "真的很能吃…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "真的很能吃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where did that come from?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where did that come from?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼突然？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "아니 그야 난 원래 \n페트라에 대해 잘 몰랐으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Well, I mean, I didn't really\nknow her that well before"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "不是\n我本來跟佩特拉就不太熟"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "不是\n我本來跟佩特拉就不太熟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "이번 기회에 연을 트게 되어서 좋달까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'm glad we finally got a chance to connect"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "這次有機會認識，感覺挺不錯的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "這次有機會認識，感覺挺不錯的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그 정도로 잘 먹으면 \n데리고 다닐 맛이 좀 나겠어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "And since she loves to eat so much,\nI'd love to take her to many different places"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "吃得這麼香\n帶出來真的會很值得耶"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "吃得這麼香\n帶出來真的會很值得耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같이 맛집 투어 하게?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Like on a food tour?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳們要一起去探訪美食嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳們要一起去探訪美食嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같이 맛집 투어 하게?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Like on a food tour?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳們要一起去探訪美食嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳們要一起去探訪美食嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅋㅋ 미리암 씨한테 그걸 빼놓으면 섭하지"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Haha, you know I can't resist that kind of thing."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "哈哈那可不能少了米里昂"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "哈哈那可不能少了米里昂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "가고 싶은 곳에 따라 데리고 가고 싶은 멤버도 \n다 다르단 말씀"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Depending on the destination,\nthere's a perfect Soul to bring along"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "想去的地方不同\n想帶上的成員當然也會不一樣"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "想去的地方不同\n想帶上的成員當然也會不一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅎㅎ 걱정 마 구원자"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Heh, don't worry, Savior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "呵呵別擔心救援者"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "呵呵別擔心救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자는 내가 엄선한 곳에 \n데려가고 있으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'm only taking you to places\nI personally vetted"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我可是特地挑選好地方\n才帶救援者去的喔"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我可是特地挑選好地方\n才帶救援者去的喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그것도 기쁘긴 하지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's nice, but..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是不錯可是"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是不錯可是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그것도 기쁘긴 하지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's nice, but..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是不錯可是"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是不錯可是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기왕이면 나도 새로운 곳을 같이 개척하고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd like to discover some new spots with you, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "即然這樣，我想和妳一起探索新地方"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "即然這樣，我想和妳一起探索新地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기왕이면 나도 새로운 곳을 같이 개척하고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd like to discover some new spots with you, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "即然這樣，我想和妳一起探索新地方"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "即然這樣，我想和妳一起探索新地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "오…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Oh..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "哦…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "哦…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자도 은근 모험 정신이 있구나?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "So, you've got a bit of an adventurous side, huh?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者你也挺有冒險精神的嘛？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者你也挺有冒險精神的嘛？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅋ 그러면"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "OK, then"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "歐虧不然的話"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "歐虧不然的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "다음에 페트라랑 같이 완전 새로운 곳 뚫어보자"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Next time, let's go explore someplace completely new with Petra"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "下次和佩特拉一起去全新的地方踩點吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "下次和佩特拉一起去全新的地方踩點吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "이거 기대되네♪"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Now, this is gonna be fun ♪"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "真期待♪"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "真期待♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "크흠…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Ahem..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "咳…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "咳…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "아까는 조앤쌤이 갑자기 와서 \n중간에 설명이 끊겼는데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Joanne kind of barged in earlier,\nso I didn't get to finish explaining"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "剛才瓊醫生突然過來\n打斷了說明"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "剛才瓊醫生突然過來\n打斷了說明"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자만 괜찮으면 우리 회사 \n전투 부문에 대해서도 좀 이야기할까 싶은데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "If you're up for it, I thought I'd tell you a bit more\nabout my company's Combat division"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "要是救援者願意的話\n我還想跟你聊聊我們公司的戰鬥部門"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "要是救援者願意的話\n我還想跟你聊聊我們公司的戰鬥部門"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야 좋지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd love that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我當然好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我當然好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야 좋지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd love that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我當然好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我當然好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅋ"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "OK"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "歐虧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "歐虧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그럼 간략하게 설명하면"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "So, here's a quick rundown"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那就簡單說明一下"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那就簡單說明一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "전투 관련 부문은 크게 팀단위로 움직이는데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "The Combat division is mostly organized into teams"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "戰鬥相關部門大致上以小組為單位行動"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "戰鬥相關部門大致上以小組為單位行動"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "팀 알파부터 팀 오메가까지 \n총 24개 팀이 있어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "There's a total of 24 teams,\nfrom Team Alpha to Team Omega"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "從Alpha到Omega小組\n一共有24個組"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "從Alpha到Omega小組\n一共有24個組"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "듣기로는 뭐 옛날 고문자에서 따온 \n분류명이라고 하는데…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I heard the names were borrowed\nfrom some ancient script or something..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "聽說這個分類名稱\n源自於古老的文字…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "聽說這個分類名稱\n源自於古老的文字…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "각 팀마다 특기 분야가 좀 다르긴 해"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Each team has its own specialty"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "每個小組的專長略有不同"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "每個小組的專長略有不同"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "예를 들면 내 델타 팀은 별동대거든 \n그때그때 필요한 사항을 다루는 유격 부대지"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "For example, my Delta Team is a rapid-response unit\nWe handle whatever needs handling on short notice"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "比如說，我的Delta小組就是機動部隊\n是根據當下需求處理各種狀況的游擊小組"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "比如說，我的Delta小組就是機動部隊\n是根據當下需求處理各種狀況的游擊小組"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "알파, 베타, 감마, 델타까지가 \n바이스 님 직속 팀이고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Alpha, Beta, Gamma, and Delta are\nall directly under Weiss"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "從Alpha、Beta、Gamma到Delta\n都是拜斯直屬的小組"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "從Alpha、Beta、Gamma到Delta\n都是拜斯直屬的小組"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신기하다…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's really cool..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真神奇…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真神奇…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "신기하다…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's really cool..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真神奇…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真神奇…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "팀 아래에는 '스쿼드'라고 불리는 \n작은 팀이 여러 개 존재하기도 해."
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Each team also has a bunch of\nsmaller groups called \"squads\""
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "在每個小組底下\n還有好幾個被稱為「分隊」的小型部隊存在"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "在每個小組底下\n還有好幾個被稱為「分隊」的小型部隊存在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "기본적으로 얘네들은 팀에 정식 소속하기엔 \n어려운 인재들이 모여있는 인재 풀 같은 건데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "They're kind of like a talent pool,\nof those who aren't officially assigned to any team"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "基本上他們是一群難以正式加入團隊的人才\n可以說是一個類似人才庫的存在"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "基本上他們是一群難以正式加入團隊的人才\n可以說是一個類似人才庫的存在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "각자 지니고 있는 특기 분야에 따라 \n그때그때 다른 스쿼드가 임무에 동행하기도 해"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Depending on their skill set, different squads\nget attached to missions as needed"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "根據他們各自擅長的領域\n每次執行任務時會有不同的分隊共同參與"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "根據他們各自擅長的領域\n每次執行任務時會有不同的分隊共同參與"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "예를 들면 마물 섬멸같은 업무가 들어왔을 때 \n굳이 우리 팀이 출동한다면"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "So, let's say if we get a monster annihilation request\nand Delta Team gets dispatched,"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "例如接到像是殲滅魔物這類的任務時\n如果我們小組非得出動的話"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "例如接到像是殲滅魔物這類的任務時\n如果我們小組非得出動的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "휘하에 있는 스쿼드 중 '섬멸 특화 스쿼드'를 \n같이 데리고 나가는 느낌이지"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "we'd probably bring along a squad\nthat specializes in annihilation to help us out"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "就會帶上自己麾下的「殲滅特化分隊」\n一起出動的感覺"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "就會帶上自己麾下的「殲滅特化分隊」\n一起出動的感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "스쿼드는 계약직 형태로 근무하는데 \n거기서 활약하면 정사원이 될 수도 있어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Squads work on a contract basis,\nand if they do well, they can be promoted to full-time staff"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "分隊採用約聘制，但如果表現優異\n就可以成為正職員工"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "分隊採用約聘制，但如果表現優異\n就可以成為正職員工"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "뭐, 되기 싫은 애들은 거절하기도 하지만"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Of course, some of them turn it down if they don't want to go full-time"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯，不願意的傢伙也可以拒絕就是了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯，不願意的傢伙也可以拒絕就是了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…내가 이해한 게 맞으면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... So, if I'm understanding this right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…如果我的理解沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…如果我的理解沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…내가 이해한 게 맞으면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... So, if I'm understanding this right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…如果我的理解沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…如果我的理解沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 칸나는 그럼 초 엘리트인 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Kanna's basically ultra-elite?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "難道坎納是那種超菁英嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "難道坎納是那種超菁英嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 칸나는 그럼 초 엘리트인 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Kanna's basically ultra-elite?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "難道坎納是那種超菁英嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "難道坎納是那種超菁英嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅇ 맞아"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Yep, exactly"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯對啊"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯對啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "스쿼드 생활 안하고 바로 정규직으로 채용됐으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "She skipped squad duty and got directly hired as a full-timer"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "因為沒有經歷分隊生活，直接以正職錄取"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "因為沒有經歷分隊生活，直接以正職錄取"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "게다가 하위 팀이 아니라 \n바로 델타로 들어왔으니 꽤 대단하지"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "And not just any team, either\nShe went straight into Delta. Pretty impressive, huh?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "而且她不是從底層小組開始\n而是直接加入Delta，還挺厲害的呢"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "而且她不是從底層小組開始\n而是直接加入Delta，還挺厲害的呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 팀장인 미리암도 대단하고…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So that means you, the team lead, are even more impressive"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那身為隊長的米里昂也很厲害了…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那身為隊長的米里昂也很厲害了…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 팀장인 미리암도 대단하고…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So that means you, the team lead, are even more impressive"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那身為隊長的米里昂也很厲害了…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那身為隊長的米里昂也很厲害了…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅋㅋ; 나야 뭐 일개 중간관리직인걸"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "LOL Nah, I'm just your average middle manager"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "ㄎㄎ…我不過只是中階管理職"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "ㄎㄎ…我不過只是中階管理職"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그래도 흠…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Still..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但也是呃…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但也是呃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자가 칭찬해주니 나쁘진 않네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "It's not bad hearing praise from you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "受到救援者的稱讚也不錯啦"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "受到救援者的稱讚也不錯啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "앞으로도 미리암 씨를 잘 부탁해~"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Thank you for looking after Miss Miriam"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "以後米里昂也要請你多多指教～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "以後米里昂也要請你多多指教～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "아까 조앤쌤이 놀리긴 했지만…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Doc was just teasing, but..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然剛才瓊醫生鬧了一下…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然剛才瓊醫生鬧了一下…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자는 어때?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "What do you think, Savior?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "不過救援者覺得怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "不過救援者覺得怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "나랑 같은 회사 다니면 재밌을 거 같아?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "You think it'd be fun if we worked at the same company?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "你覺得和我一起上班會好玩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "你覺得和我一起上班會好玩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떠려나…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm...hard to say"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會怎麼樣呢…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會怎麼樣呢…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떠려나…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm...hard to say"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會怎麼樣呢…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會怎麼樣呢…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "뭐 별 의미는 없긴 한데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "It doesn't really mean anything"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然沒什麼別的意思"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然沒什麼別的意思"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "문득 생각이 들어서"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "but I just suddenly thought"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但我突然有這樣的想法"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但我突然有這樣的想法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자랑 같이 회사다니면 \n좀 재밌겠다 싶어가지고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "maybe it'd be kind of fun,\nworking with you"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "要是和救援者一起上班\n應該會滿有趣的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "要是和救援者一起上班\n應該會滿有趣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "내가 선배일 수도 있고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Maybe I'd be your senior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我可能是前輩"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我可能是前輩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "아니면 구원자가 선배일 수도 있고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Or you'd be mine"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者也可能是前輩"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者也可能是前輩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "…아니면 뭐 같은 타이밍에 입사한 \n동기일 수도 있고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "... Or we could have started\nat the same time"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "…或是同時入職的\n同期也有可能"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "…或是同時入職的\n同期也有可能"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "서로 힘들면 일에 대해 궁시렁거리기도 하고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "We'd complain about work when it gets tough"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "彼此辛苦的時候，互相抱怨工作"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "彼此辛苦的時候，互相抱怨工作"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "좋은 일 있으면 같이 한 잔 걸치러 가고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "grab drinks together when something good happens"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "如果有好事發生就一起去喝一杯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "如果有好事發生就一起去喝一杯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "가끔 같은 회의 들어가기도 하고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Maybe even sit in on the same meetings sometimes"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "偶爾也會共同參與會議"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "偶爾也會共同參與會議"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "지금보다야 얼굴 자주 볼테니까…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "We'd probably see each other a lot more than we do now"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "會比現在更常見到面…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "會比現在更常見到面…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "말했다시피 벼, 별 의미는 없다?!"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "B-but like I said, it doesn't mean anything, okay!?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "就像剛才說的，沒、沒有別的意思哦？！"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "就像剛才說的，沒、沒有別的意思哦？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "생각해본 적은 없는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've never really thought about it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我從來沒想過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我從來沒想過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "생각해본 적은 없는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've never really thought about it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我從來沒想過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我從來沒想過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암이랑 같은 회사면 재밌을거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I think it'd be fun working with you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "和米里昂一起上班好像會很有趣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "和米里昂一起上班好像會很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암이랑 같은 회사면 재밌을거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I think it'd be fun working with you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "和米里昂一起上班好像會很有趣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "和米里昂一起上班好像會很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "지, 진짜?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "R-really?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "真、真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "真、真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 미리암 자주 보면 좋으니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure, I'd love to see you more often"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "能常常見到米里昂我也會很開心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "能常常見到米里昂我也會很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 미리암 자주 보면 좋으니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure, I'd love to see you more often"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "能常常見到米里昂我也會很開心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "能常常見到米里昂我也會很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "흐음…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Hmm..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그래? 그렇구나?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I see... Is that so?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "是嗎？原來如此？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "是嗎？原來如此？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "뭐… 그렇다고 해서 구원자가 \n우리 회사에 입사할 수 있는 상황은 아니긴 하지만"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Well...not like you could actually\njoin my company or anything..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯…話是這麼說\n但救援者也不是真的能進入我們公司就是了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯…話是這麼說\n但救援者也不是真的能進入我們公司就是了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "뭔가… 그런 말 들으니 \n은근 기쁘긴 하네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "But still... hearing that kind of thing\nkinda makes me happy"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但聽你這麼說…好像\n心裡還是有點開心"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但聽你這麼說…好像\n心裡還是有點開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅋㅋ; 좀 간지럽다"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "LOL Feels a little embarrassing, though"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "ㄎㄎ…有點肉麻"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "ㄎㄎ…有點肉麻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "아까 구원자한테 준 캔스프 말고도"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Besides the canned soup I gave you earlier"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "除了我剛才給救援者的罐裝濃湯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "除了我剛才給救援者的罐裝濃湯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "통조림이 진짜 무지 많아"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I've actually got a ton of other canned goods"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我還有超多罐頭"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我還有超多罐頭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "예전에도 말한 적 있지?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Remember what I told you before?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "之前有跟你說過吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "之前有跟你說過吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "칼라르는 통조림이 많이 발달했다고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Chalar's really big on canned food"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "卡拉爾的罐頭很先進"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "卡拉爾的罐頭很先進"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅇㅇ 기억나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah, I remember"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯嗯我記得"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯嗯我記得"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅇㅇ 기억나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah, I remember"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯嗯我記得"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯嗯我記得"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그래서 한때는 통조림으로 \n코스를 만드는게 유행하기도 했어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "There was even a trend where Souls would\nput together full-course meals using only canned food"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "所以有一陣子流行\n用罐頭來做套餐"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "所以有一陣子流行\n用罐頭來做套餐"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "이런식으로"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Like this"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "像這樣"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "像這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우와!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Whoa!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哇啊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哇啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우와!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Whoa!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哇啊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哇啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "크림 스프 - 통올리브 - 스테이크 라이스 - 체리 파이"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Cream soup, whole olives, steak rice, and cherry pie"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "奶油濃湯－整罐橄欖－牛排飯－櫻桃派"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "奶油濃湯－整罐橄欖－牛排飯－櫻桃派"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "꽤 자신 있는 조합이야"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'm actually kinda proud of this combo"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "相當有自信的組合吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "相當有自信的組合吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자도 언제 한번 \n직접 메뉴 만들어 보면 어때?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "How about you try putting together\nyour own menu sometime?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者也直接\n做一份菜單如何？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者也直接\n做一份菜單如何？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌겠다!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That sounds fun!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很好玩！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很好玩！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌겠다!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That sounds fun!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很好玩！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很好玩！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅋ 그럼 결정"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "OK It's settled then"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "歐虧那就決定了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "歐虧那就決定了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자 돌아가기 전에 \n마트 가서 통조림 코스 짜보자"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Before you head back, let's hit the market\nand build your own canned food course"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "在救援者回去之前\n去超市挑些罐頭來組個套餐吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "在救援者回去之前\n去超市挑些罐頭來組個套餐吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "콜!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm in!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒問題！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒問題！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "콜!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm in!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒問題！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒問題！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "문득 생각한 건데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I just realized something"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "突然想到"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "突然想到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자를 만난 게 \n지금의 나라서 정말 다행인 거 같아"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'm really glad\nI met you as who I am now"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "真的幸好是現在的我\n遇見救援者"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "真的幸好是現在的我\n遇見救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's kind of out of the blue"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼突然這樣說？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼突然這樣說？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's kind of out of the blue"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼突然這樣說？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼突然這樣說？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "음… 이전의 나는 새로운 만남을 \n두려워했으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Back then, I was afraid of\nmaking new connections"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯…因為以前的我\n害怕結交新的緣份"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯…因為以前的我\n害怕結交新的緣份"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "이렇게 구원자랑 연이 이어지지 못했을 거 같거든"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "If I met you then, I don't think I would have gotten close to you like this"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "所以感覺不會跟救援者有所往來"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "所以感覺不會跟救援者有所往來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그저 지나가는 경호대상 1으로 생각했겠지"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I probably would have just seen you as some VIP I had to guard"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "大概只會把你當作一個過路的保護對象1號而已吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "大概只會把你當作一個過路的保護對象1號而已吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그렇게 생각하면 좀 아쉽거든"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "And honestly, that would have been a shame"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "這樣想的話，有點可惜"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "這樣想的話，有點可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자는 되게 재밌으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "You're so interesting,"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "因為救援者非常有趣"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "因為救援者非常有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "너랑 친해질 기회가 없다 생각하면 손해잖아?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "missing the chance to get to know you would have been a real loss"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "想著要是沒機會跟你變親近，不就太吃虧了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "想著要是沒機會跟你變親近，不就太吃虧了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 미리암이랑 친해져서 기뻐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm glad we got close, too, Miriam"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "能和米里昂變親近，我也很開心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "能和米里昂變親近，我也很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 미리암이랑 친해져서 기뻐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm glad we got close, too, Miriam"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "能和米里昂變親近，我也很開心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "能和米里昂變親近，我也很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅇ 진짜 이렇게 친해질 줄은 몰랐지"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Me, too. I never thought we'd end up this close"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯真沒想到能變這麼要好"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯真沒想到能變這麼要好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "정령 계약까지 하고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Entering a Soul Contract"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "甚至締結了精靈契約"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "甚至締結了精靈契約"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "서로가 서로를 위해서 국경도 건너고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Crossing borders for each other"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "為了彼此越過邊境"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "為了彼此越過邊境"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "게다가 어지간해선 얘기 안하는 \n과거 얘기도 하고 ㅎㅎ"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "And even talking about the past,\nstuff I usually never bring up LOL"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "而且我們還聊了\n平常不聊的過去ㄏㄏ"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "而且我們還聊了\n平常不聊的過去ㄏㄏ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 과거의 미리암을 만났다면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If I had met the old you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果我遇見過去的米里昂"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果我遇見過去的米里昂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 과거의 미리암을 만났다면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If I had met the old you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果我遇見過去的米里昂"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果我遇見過去的米里昂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계속 신경쓰였을 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I still would have been drawn to you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該會一直擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該會一直擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계속 신경쓰였을 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I still would have been drawn to you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該會一直擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該會一直擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅇ? 어떤 면이?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Oh yeah? Why's that?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯？哪方面？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯？哪方面？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암이 과거에 행복하지 않았다고 하니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You said you weren't happy back then"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為米里昂曾說過去並不幸福"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為米里昂曾說過去並不幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암이 과거에 행복하지 않았다고 하니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You said you weren't happy back then"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為米里昂曾說過去並不幸福"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為米里昂曾說過去並不幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그게 드러났을 거 같아서"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I would have noticed"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以應該會不自覺地流露出來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以應該會不自覺地流露出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그게 드러났을 거 같아서"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I would have noticed"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以應該會不自覺地流露出來"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以應該會不自覺地流露出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "헤에…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Heh..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "하긴 그렇다"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I guess that's true"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "的確也是"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "的確也是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "내가 구원자에게 관심이 없어도 \n구원자가 내게 관심을 가졌다면"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Even if I didn't care about you,\nif you cared about me"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "就算我對救援者沒興趣\n只要救援者對我有興趣的話"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "就算我對救援者沒興趣\n只要救援者對我有興趣的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "어쩌면 이렇게 또 친해졌을 수도 있겠어 ㅋㅋ"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "we would have ended up close, anyway LOL"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "或許我們還是有可能像現在這樣變親近哈哈"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "或許我們還是有可能像現在這樣變親近哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그치?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그치?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "네가 그런 녀석이라서 마음에 들긴 하지만"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "That's what I like about you, you know"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然你是那種個性，讓我挺喜歡的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然你是那種個性，讓我挺喜歡的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "쩝… 이거 앞으로도 쉽지 않겠네…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Bah... This is gonna be tough moving forward"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但是，嘖…將來應該也不容易…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但是，嘖…將來應該也不容易…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "에구구"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Aw"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "哎呀呀"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "哎呀呀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그래도 이제 구원자도 곧 칼라르를 떠나면"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Anyway, you'll be leaving Chalar soon"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "反正現在救援者馬上就要離開卡拉爾"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "反正現在救援者馬上就要離開卡拉爾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "나도 또 여길 떠서 다른 임무를 하러 가겠네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "And I'll be off again on another assignment"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我也要離開這裡，去執行另一個任務"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我也要離開這裡，去執行另一個任務"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "좀 골아프긴 했어도 \n간만에 와서 좋았네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "It was kind of a headache,\nbut still nice to be back for a bit"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然有點讓人頭痛\n不過好久沒來，還是覺得不錯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然有點讓人頭痛\n不過好久沒來，還是覺得不錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "또 출장 가는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Another business trip?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "又要去出差嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "又要去出差嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "또 출장 가는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Another business trip?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "又要去出差嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "又要去出差嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅇ 할 일이 있으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Yeah, duty calls"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯有事要處理"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯有事要處理"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그래도 어지간해선 \n아케나인에 배속되지 않을까 싶어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "But I'll probably be assigned\nnear Arkenine again"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "不過我覺得\n應該還是會被分配到阿肯納因"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "不過我覺得\n應該還是會被分配到阿肯納因"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "솔레이랑은 동맹 관계에 있는 데다가"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Since we're allied with Solrey"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "因為和蘇萊伊有著結盟關係"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "因為和蘇萊伊有著結盟關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "어쨌건 나는 네 계약 정령이니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "and I'm your Contract Soul, after all"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "而且不管怎樣，我都是你的契約精靈"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "而且不管怎樣，我都是你的契約精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "바이스 님도 나는 가급적이면 \n네 곁에 있는 게 좋겠다고 하셨거든"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Weiss also said it'd be best\nif I stayed close to you when possible"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "拜斯也說過\n希望我盡可能待在你身邊會比較好"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "拜斯也說過\n希望我盡可能待在你身邊會比較好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그러니까 헤어져도 금방 다시 보게 될 걸?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "So, even if we part ways, I'll probably see you again soon"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "所以即使分離也馬上就能再見面了吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "所以即使分離也馬上就能再見面了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 희소식이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's good news"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那倒是好消息"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那倒是好消息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 희소식이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's good news"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那倒是好消息"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那倒是好消息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅋㅋ 그래 나도 기뻐"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Heheh, I'm happy, too"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "哈哈對啊我也很開心"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "哈哈對啊我也很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "비록 이 세상 구하는 게 정말 힘든 일이긴 하지만"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Saving the world isn't easy"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然拯救這個世界是一項非常艱鉅的任務"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然拯救這個世界是一項非常艱鉅的任務"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그래도 친한 애들하고 같이 붙어서 \n최선을 다한다면"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "But if we give it our all\nand stick together"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但如果和好朋友團結在一起\n並盡最大努力"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但如果和好朋友團結在一起\n並盡最大努力"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "어떻게든 되겠지"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I think we'll manage somehow"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "總會有辦法的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "總會有辦法的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "우리가 그렇게 할 거고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "We will manage"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我們會這麼做"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我們會這麼做"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그치?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Right?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "對吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅇ 네 얼굴 보면 기운이 솟으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Mhm. Seeing your face gives me strength"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯畢竟一看到你的臉就有精神了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯畢竟一看到你的臉就有精神了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Ah"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "아;;;;"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Ah;;;;"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "啊……"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "啊……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅋㅋㅋㅋ;;;"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "LOL"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "哈哈哈哈…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "哈哈哈哈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "특별한 뜻 아니고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I didn't mean anything weird by that"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "沒有別的意思"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "沒有別的意思"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I just"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "너랑 친하니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "You know, we're close and all"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "因為和你很熟"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "因為和你很熟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "친한 애 보면 기분 좋아지잖아"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Seeing a friend cheers you up, right?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "看到熟人心情都會變好嘛"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "看到熟人心情都會變好嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "왜"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "That's all"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "就是"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "就是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그런 느낌이야"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I meant"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那種感覺啦"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那種感覺啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "? 나도 미리암 보면 좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "? I feel the same when I see you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？我看到米里昂也很開心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？我看到米里昂也很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "? 나도 미리암 보면 좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "? I feel the same when I see you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？我看到米里昂也很開心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？我看到米里昂也很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅋ;;;"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "O-okay"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "歐虧…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "歐虧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그런 거임 ㅇㅇ"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Yeah... That's it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "就是這樣嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "就是這樣嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그럼 이만 줄인다;;;"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "... I'll just stop talking now"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那就先聊到這裡…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那就先聊到這裡…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "다른 회사 정령들하고도 친하고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I try to get along with all my coworkers"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然我和公司其他精靈也很熟"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然我和公司其他精靈也很熟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "동료는 모두 소중하게 여기지만"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "And I value every teammate"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "都很重視所有同事"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "都很重視所有同事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "개중에서도 조앤쌤은 좀 각별하긴 해"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "But if I had to name someone special, it'd be Doctor Joanne"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但在那之中，瓊醫生還是有點特別的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但在那之中，瓊醫生還是有點特別的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "내 롤모델이라고 해야 하려나"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "She's kind of my role model"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "應該說是我的榜樣吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "應該說是我的榜樣吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "되게 멋있지 않아?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Don't you think she's amazing?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "不覺得她很帥氣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "不覺得她很帥氣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 착한 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She seems really kind"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我覺得她真的超溫柔的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我覺得她真的超溫柔的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 착한 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She seems really kind"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我覺得她真的超溫柔的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我覺得她真的超溫柔的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "ㅇㅇ 그치"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Right? I know"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯沒錯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯嗯沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "근데 그게 쉽지 않거든"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "And that's not something just anyone can do"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "不過那可不簡單喔"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "不過那可不簡單喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "사실 그런 면에서는 \n르네도 대단하긴 한데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "In that sense,\nRenee is amazing, too"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "其實在那方面\n勒內也很了不起呢"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "其實在那方面\n勒內也很了不起呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "걔는 좀 초인처럼 느껴지긴 해"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "But she kinda feels...surreal?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我覺得她有點像超人"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我覺得她有點像超人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "조앤쌤도 사실 초인이라면 초인인데"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Joanne is a little like that too, I guess"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "其實瓊醫生也可以說是超人沒錯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "其實瓊醫生也可以說是超人沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "르네에 비해선 좀 더 감정이 보인다고 해야 하나"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "But you can still see her emotions"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但跟勒內比起來，她的情感比較容易流露出來吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但跟勒內比起來，她的情感比較容易流露出來吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그런 면도 포함해서 주변 정령들을 편안하게 해줘서"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "That makes it easier for others to relax around her"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "包括這一點在內，她能讓身邊的精靈們都感到安心"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "包括這一點在內，她能讓身邊的精靈們都感到安心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "되게 좋은 거 같아"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I like that about her"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我覺得這一點真的很棒"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我覺得這一點真的很棒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "스스로한테 솔직하면서도 \n그렇게 남에게 친절할 수 있다는 게"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "She's honest with herself,\nand still kind to everyone"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "能對自己誠實\n同時又能這麼溫柔地對待別人"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "能對自己誠實\n同時又能這麼溫柔地對待別人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암도 되게 멋있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're amazing, too, Miriam"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "米里昂也很帥氣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "米里昂也很帥氣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암도 되게 멋있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're amazing, too, Miriam"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "米里昂也很帥氣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "米里昂也很帥氣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "나???"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Me?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我？？？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암 칭찬도 꽤 자주 듣거든"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "People say good things about you a lot, you know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也常常聽到對米里昂的稱讚"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也常常聽到對米里昂的稱讚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암 칭찬도 꽤 자주 듣거든"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "People say good things about you a lot, you know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也常常聽到對米里昂的稱讚"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也常常聽到對米里昂的稱讚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "내가???"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Me???"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我嗎？？？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我嗎？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅇㅇ"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅇㅇ"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": ";;;;;;; 의외네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": ";;;;;;; Thats...unexpected"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "………真意外"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "………真意外"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "뭐 잘 하려고 열심히 노력은 하고 있으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "But I have been trying really hard to do better..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯畢竟我也一直很努力地想把事情做好"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗯畢竟我也一直很努力地想把事情做好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그게 결실을 맺은 거 같아서 좀 기쁘긴 하다"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "So, hearing that, it feels like maybe it's paying off"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "現在看到有了成果，心裡還是有點開心的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "現在看到有了成果，心裡還是有點開心的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "옛날엔 진짜 사고 잔뜩 치고 다녀서"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I used to be a total mess"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "以前我真的到處惹麻煩"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "以前我真的到處惹麻煩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "협업 매너가 안좋다고 엄청 까였거든"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "People said I was terrible at teamwork"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "還常被罵說完全沒有團隊精神"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "還常被罵說完全沒有團隊精神"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "르네가 나 대신 커뮤니케이션 많이 해주고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Renee had to do most of the talking for me"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "多虧了勒內幫我代為溝通很多事情"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "多虧了勒內幫我代為溝通很多事情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "조앤쌤이 날 붙잡고 하루종일 가르쳐서 망정이지"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Doctor Joanne dragged me around and taught me nonstop"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "還有瓊醫生一天到晚拉著我教我東西"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "還有瓊醫生一天到晚拉著我教我東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "으윽 지금 생각해도 흑역사야"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Ugh, total cringe when I think about it now"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗚嗚，現在想想都覺得是黑歷史啊"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "嗚嗚，現在想想都覺得是黑歷史啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 덕분에 지금의 미리암이 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But all that made you who you are now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但多虧如此才有了現在的米里昂"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但多虧如此才有了現在的米里昂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 덕분에 지금의 미리암이 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But all that made you who you are now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但多虧如此才有了現在的米里昂"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但多虧如此才有了現在的米里昂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "맞는 말이야"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Right"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "你說的對"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "你說的對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "휴… 멋있어지고 싶다~"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Ugh, I want to be cool, too"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "呼…我想變得更帥氣～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "呼…我想變得更帥氣～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "남들이 의지할 수 있는 멋진 정령이 되고 싶어~"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I want to be the kind of Soul that people can count on"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "想成為能讓別人依靠的帥氣精靈～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "想成為能讓別人依靠的帥氣精靈～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자 너는"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者你"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "정령들을 구하기 위해 이 에덴에 왔지만"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "You came to Eden to save the Souls"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然是為了拯救精靈們才來到伊甸園"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "雖然是為了拯救精靈們才來到伊甸園"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "가끔 생각하긴 해"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Sometimes I wonder"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但我偶爾也會思考"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但我偶爾也會思考"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "만일 네가 구원을 필요로 한다면"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "What if you ever needed saving?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "如果你需要救援的話"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "如果你需要救援的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "너에게도 구원자라는 존재가 생길까? 하고"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Would someone appear to be your savior, too?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "也會出現一位屬於你的救援者嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "也會出現一位屬於你的救援者嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "내가 저번에도 말했지만"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Like I said before"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我上次也說過了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我上次也說過了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "나는 엄청 대단한 힘을 가진 게 아니라서"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'm not someone with incredible powers or anything"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我並不是擁有什麼特別厲害的力量"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我並不是擁有什麼特別厲害的力量"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "이 세상 전부를 구할 수는 없어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I can't save the whole world"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "也沒辦法拯救全世界"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "也沒辦法拯救全世界"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "하지만…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "But..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "但是…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "적어도 내 힘이 닿는 한은"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "As long as I can do something"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "至少在我力所能及的範圍內"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "至少在我力所能及的範圍內"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "내 친구인 '너'를 구하기 위해"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I want to fight with everything I have"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "為了拯救我的朋友「你」"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "為了拯救我的朋友「你」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "최선을 다해 발버둥치고 싶네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "To save you, my friend"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我想拼盡全力"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我想拼盡全力"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": ";;;;;"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": ";;;;;;;"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "갑자기 이러니까 좀 부끄럽다"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Okay, that got kinda embarrassing out of nowhere"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "突然這麼說有點不好意思"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "突然這麼說有點不好意思"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "여튼 뭐"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Anyway"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "反正那個"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "反正那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "힘들때"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "If you're ever struggling"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "很累的時候"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "很累的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "울고 싶을 때"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "If you ever feel like crying"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "想哭的時候"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "想哭的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "뭐 어떤 때건"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "No matter when it is"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "呃任何時候"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "呃任何時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "미리암 씨는 '너'를 신경 쓰고 있으니까"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Just know that Miss Miriam is always thinking of you"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "米里昂都會關心「你」"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "米里昂都會關心「你」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "언제든지 연락해 줘"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "So, reach out to me, anytime"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "所以隨時都可以聯絡我"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "所以隨時都可以聯絡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "반드시 응답할 테니까 ㅎㅎ"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'll always answer. Heheh"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我一定會回覆你的哈哈"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我一定會回覆你的哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "알았지?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Okay?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "知道嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "知道嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "약속이다!"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "It's a promise!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "約好囉！"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "約好囉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "이번 작전은 정말 수고 많았어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Great work on the operation this time"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "這次作戰真的辛苦了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "這次作戰真的辛苦了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "바이스 님이 크게 한턱 쏘신다고 하시네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Weiss said she's treating everyone to a big meal"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "拜斯說他會好好慰勞大家"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "拜斯說他會好好慰勞大家"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "본사 근처에 있는 \n<셀부로즈>라는 레스토랑으로 오면 돼"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Just head over to this restaurant\nnear HQ called \"Selburose\""
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "只要來總公司附近那間\n＜歇布羅斯＞餐廳就好"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "只要來總公司附近那間\n＜歇布羅斯＞餐廳就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그럼 이따 봐!"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "See you there!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那等等見！"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那等等見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "광장 앞에 도착했어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'm at the square"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我到廣場前了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我到廣場前了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "검은 정장 입고 있으니까 \n평소랑 다른 옷이라고 너무 놀라지 마라?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'm wearing a black suit today\nDon't be surprised because I look different"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我穿了和平常不一樣的黑色正裝\n別嚇到哦！"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我穿了和平常不一樣的黑色正裝\n別嚇到哦！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "으으…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Ugh..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "呃呃…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "呃呃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "오늘 묘하게 좀 어수선하네"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Today feels weirdly all over the place"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "今天莫名地有點亂糟糟的呢"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "今天莫名地有點亂糟糟的呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "미안"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Sorry"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "평소엔 이렇게 허둥대지 않는데…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I'm not usually this flustered..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我平常不會這麼慌張…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我平常不會這麼慌張…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "너는 삶의 목표나 하고 싶은 일이 있어?"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "Do you have a goal in life? Something you really want to do?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "你的人生有什麼目標或想做的事情嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "你的人生有什麼目標或想做的事情嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "나는 있어"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "I do"
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "我有"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "我有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암(잔영)",
+            "message": "그건 바로…"
+          },
+          "en": {
+            "speaker": "Miriam (Afterimage)",
+            "message": "And that's..."
+          },
+          "zh_tw": {
+            "speaker": "米里昂（殘影）",
+            "message": "那就是…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂（殘影）",
+            "message": "那就是…"
+          }
+        }
+      ]
+    }
+  }
+}

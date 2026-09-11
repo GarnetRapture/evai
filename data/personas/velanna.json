@@ -1,0 +1,3366 @@
+{
+  "id": "4080",
+  "name": "벨라나",
+  "name_en": "Velanna",
+  "grade": "에픽",
+  "race": "불사형",
+  "class": "워리어",
+  "sub_class": "광역",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "장미의 독",
+    "constellation": "전갈자리",
+    "union": "???",
+    "birthday": "1104",
+    "height": 175,
+    "weight": 56,
+    "cv_ko": "방연지",
+    "cv_jp": "Saori Oonishi",
+    "like": [
+      "개인 공간"
+    ],
+    "dislike": [
+      "변수"
+    ],
+    "hobby": [
+      "비밀"
+    ],
+    "speciality": [
+      "뱀 사육"
+    ]
+  },
+  "personality": {
+    "description": "구원자? 무슨 낯짝으로 그런 소릴 지껄이는 거야.\n네가 스스로 붙인 이름은 아니라고? 흐응. 악취나는 변명이네. 거슬려.\n묻겠는데, 너 스스로의 힘으로 무엇 하나라도 구해본 적 있어?\n주위 정령들에게 환심을 사려고 발버둥 치면서 그렇게 하하 호호 둥글게 굴다 보면 사는 보람이 느껴지나 봐.\n참 잘된 일이네, 대단하신 구원자님.\n\n너랑 긴 얘기는 하고 싶지 않아. 내 시야에서 허락 없이 얼쩡대지 마.",
+    "greeting": "이번에야말로, 내 손으로 끝을 내겠어."
+  },
+  "speech_patterns": [
+    "…뭐야",
+    "애초에 왜 네가 내 연락처를 알고 있지?",
+    "고귀하신 유리아님이 사방팔방에 뿌리기라도 한 건가?",
+    "연락하지 마",
+    "하긴, 그래봤자 \r\n스스로의 존재가 우스워질 뿐이겠지…",
+    "아까 장미 정원에서 너를 봤어",
+    "왜 끊임없이 찾아오는 거야?",
+    "그건 순전히 네 감정이잖아",
+    "이기적이구나",
+    "정령들은 네게 속고 있을 뿐이야",
+    "광장에서 클라라라는 애가 말을 걸더라",
+    "그것도 네 수작이야?",
+    "딱 너같이 생긴 애가",
+    "너같이 생긴 헤픈 말을 했어",
+    "같이 차 마시러 가지 않겠냐는 그런 소리였어",
+    "장미 정원이 궁금하다고 하더군",
+    "우스워",
+    "아야메는 전투 방식이 꽤 마음에 들어",
+    "내가 선호하는 타입이야",
+    "그러고보니, 그 애도 평범한 애는 아닌 것 같더군",
+    "가끔 분위기가 바뀌던데…",
+    "넌 뭔가 알고 있어?",
+    "…….",
+    "에버폰 그냥 버리지 그래?",
+    "내 장미 정원에는 꿀벌들이 많이 살아",
+    "이리저리 날면서 앵앵대기도 하고\r\n거슬릴 때가 없는 건 아니지만…",
+    "그래도 너보단 낫지",
+    "하다못해 꿀벌은 장미의 번식을 돕기라도 하잖아?",
+    "사실을 말했다고 \r\n바로 또 기죽는 점도 눈에 거슬려",
+    "좋아하는 시집이 있어\r\n인간이 쓴 시였어",
+    "너랑 같은 종족 개체의 뇌로 썼다고는 \r\n생각하기 어려울 만큼",
+    "의미있는 내용을 담고 있었어",
+    "네가 원래 있던 과거 세계의 학교에서는\r\n시를 공부했어?",
+    "뭐라도 하나 추천해봐",
+    "내 마음에 들면, 나도 알려줄게",
+    "그정도 노력은 해야지 않겠어. 안 그래?",
+    "널 보고 싶지 않아",
+    "널 시야에서 치우고 싶어",
+    "가능하면 내 머릿속에서도",
+    "수고롭지 않게 \r\n네가 알아서 스스로 사라져 줘",
+    "안 그러면…",
+    "널 생각하면 건조한 느낌이 들어",
+    "입술이 메마르고",
+    "무슨 말을 해야할지 잘 모르겠어",
+    "그래도…",
+    "언젠가 다시 만날 수도 있겠지",
+    "안녕",
+    "멍청한 표정으로 잠들었군…",
+    "거슬려",
+    "넌 정말 쓸데없는 궁금증이 많구나"
+  ],
+  "comments": [
+    {
+      "writer": "메피스토펠레스",
+      "comment": "딱히 악감정은 없습니다만… 구원자님을 위협하지 말아주세요."
+    },
+    {
+      "writer": "하루",
+      "comment": "요즘은 잘 모르겠지만 예전에는 시를 읽고 있었어. 생각이 많아 보여."
+    },
+    {
+      "writer": "아야메",
+      "comment": "으음, 처음에는… 소녀가 벨라나 님의 기분을 거슬리게 할까 봐 많이 긴장했사오나… 함께 싸울 땐 의외로 친절하신 것 같사옵니다."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "구원자",
+        "message": "벨라나, 안녕"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나, 안녕"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "…뭐야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "애초에 왜 네가 내 연락처를 알고 있지?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "고귀하신 유리아님이 사방팔방에 뿌리기라도 한 건가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "연락하지 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 너같은 녀석이 구원자로 선택된 걸까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 이유를 생각해본 적 있어?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "하긴, 그래봤자 \r\n스스로의 존재가 우스워질 뿐이겠지…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "아까 장미 정원에서 너를 봤어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "왜 끊임없이 찾아오는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나를 만나고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나를 만나고 싶어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "그건 순전히 네 감정이잖아"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "이기적이구나"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "정령들은 네게 속고 있을 뿐이야"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "광장에서 클라라라는 애가 말을 걸더라"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "그것도 네 수작이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클라라?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "딱 너같이 생긴 애가"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "너같이 생긴 헤픈 말을 했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤픈 말…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤픈 말…?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "같이 차 마시러 가지 않겠냐는 그런 소리였어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "장미 정원이 궁금하다고 하더군"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "우스워"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "아야메는 전투 방식이 꽤 마음에 들어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "내가 선호하는 타입이야"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "그러고보니, 그 애도 평범한 애는 아닌 것 같더군"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "가끔 분위기가 바뀌던데…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "넌 뭔가 알고 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "둘이 친해지면 어떨까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "둘이 친해지면 어떨까"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "……."
+      },
+      {
+        "speaker": "벨라나",
+        "message": "에버폰 그냥 버리지 그래?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "내 장미 정원에는 꿀벌들이 많이 살아"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "이리저리 날면서 앵앵대기도 하고\r\n거슬릴 때가 없는 건 아니지만…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "그래도 너보단 낫지"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "하다못해 꿀벌은 장미의 번식을 돕기라도 하잖아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "벨라나",
+        "message": "사실을 말했다고 \r\n바로 또 기죽는 점도 눈에 거슬려"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "좋아하는 시집이 있어\r\n인간이 쓴 시였어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "너랑 같은 종족 개체의 뇌로 썼다고는 \r\n생각하기 어려울 만큼"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "의미있는 내용을 담고 있었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무척 궁금해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무척 궁금해"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "네가 원래 있던 과거 세계의 학교에서는\r\n시를 공부했어?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "뭐라도 하나 추천해봐"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "내 마음에 들면, 나도 알려줄게"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "그정도 노력은 해야지 않겠어. 안 그래?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "널 보고 싶지 않아"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "널 시야에서 치우고 싶어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "가능하면 내 머릿속에서도"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "수고롭지 않게 \r\n네가 알아서 스스로 사라져 줘"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "안 그러면…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "……."
+      },
+      {
+        "speaker": "벨라나",
+        "message": "널 생각하면 건조한 느낌이 들어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "입술이 메마르고"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "무슨 말을 해야할지 잘 모르겠어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "그래도…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "언젠가 다시 만날 수도 있겠지"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "안녕"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "멍청한 표정으로 잠들었군…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "거슬려"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "넌 정말 쓸데없는 궁금증이 많구나"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "도대체 무슨 생각을 하는 건지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나, 케이크 먹을래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나, 케이크 먹을래?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "메피가 사왔어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "메피가 사왔어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "먹을 리가 없잖아…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "단 것도 싫고"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "너도 싫어"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "……."
+      },
+      {
+        "speaker": "벨라나",
+        "message": "말 섞고 싶지 않아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나, 뭐해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나, 뭐해?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "[이 사용자와 더이상 대화할 수 없습니다]"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "정말 짜증나.\r\n네 말 한마디 한마디가…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "…드디어…"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "이 지경에 와서도 내 목적이 아직 궁금하다니"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "…알고 있었어?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나? 이게 뭐야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나? 이게 뭐야?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나? 나 주는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나? 나 주는 거야?"
+      },
+      {
+        "speaker": "벨라나",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나, 혹시 시간 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벨라나, 혹시 시간 있어?"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "벨라나",
+      "en": "Velanna",
+      "zh_tw": "貝拉納",
+      "zh_cn": "貝拉納"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "불사형",
+      "en": "Undead",
+      "zh_tw": "不死型",
+      "zh_cn": "不死型"
+    },
+    "class": {
+      "ko": "워리어",
+      "en": "Warrior",
+      "zh_tw": "戰士",
+      "zh_cn": "戰士"
+    },
+    "sub_class": {
+      "ko": "광역",
+      "en": "AoE",
+      "zh_tw": "廣域",
+      "zh_cn": "廣域"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "장미의 독",
+        "en": "Rose Poison",
+        "zh_tw": "薔薇之毒",
+        "zh_cn": "薔薇之毒"
+      },
+      "constellation": {
+        "ko": "전갈자리",
+        "en": "Scorpio",
+        "zh_tw": "天蠍座",
+        "zh_cn": "天蠍座"
+      },
+      "union": {
+        "ko": "???",
+        "en": "???",
+        "zh_tw": "？？？",
+        "zh_cn": "？？？"
+      },
+      "cv_ko": {
+        "ko": "방연지",
+        "en": "Yeonji Bang",
+        "zh_tw": "房蓮知",
+        "zh_cn": "房蓮知"
+      },
+      "cv_jp": {
+        "ko": "Saori Oonishi",
+        "en": "Saori Oonishi",
+        "zh_tw": "Saori Oonishi",
+        "zh_cn": "Saori Oonishi"
+      },
+      "like": {
+        "ko": [
+          "개인 공간"
+        ],
+        "en": [
+          "Private space"
+        ],
+        "zh_tw": [
+          "私人空間"
+        ],
+        "zh_cn": [
+          "私人空間"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "변수"
+        ],
+        "en": [
+          "Variables"
+        ],
+        "zh_tw": [
+          "變數"
+        ],
+        "zh_cn": [
+          "變數"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "비밀"
+        ],
+        "en": [
+          "Secret"
+        ],
+        "zh_tw": [
+          "祕密"
+        ],
+        "zh_cn": [
+          "祕密"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "뱀 사육"
+        ],
+        "en": [
+          "Snake breeding"
+        ],
+        "zh_tw": [
+          "養蛇"
+        ],
+        "zh_cn": [
+          "養蛇"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "구원자? 무슨 낯짝으로 그런 소릴 지껄이는 거야.\n네가 스스로 붙인 이름은 아니라고? 흐응. 악취나는 변명이네. 거슬려.\n묻겠는데, 너 스스로의 힘으로 무엇 하나라도 구해본 적 있어?\n주위 정령들에게 환심을 사려고 발버둥 치면서 그렇게 하하 호호 둥글게 굴다 보면 사는 보람이 느껴지나 봐.\n참 잘된 일이네, 대단하신 구원자님.\n\n너랑 긴 얘기는 하고 싶지 않아. 내 시야에서 허락 없이 얼쩡대지 마.",
+        "en": "Savior? How dare you say that?\n\"It isn't a self-proclaimed title\", you say… Hmm. That sounds like a stinking excuse. How annoying.\nLet me ask you a question: Have you ever saved anyone on your own?\nWhile you struggle to win the favor of other Souls around you and get along well with them, you feel life is worthwhile, huh?\nThat's a good thing, you great Savior.\n\nI don't want to waste time with you. Get out of my sight.",
+        "zh_tw": "救援者？你怎麼有臉這樣自稱啊。\n你說這不是你取的稱號？嗯，好爛的藉口。真礙眼。\n我問你，你有靠自己的力量救過任何東西嗎？\n看來你是拚命討好周遭的精靈，嘻皮笑臉處事圓滑的人啊。\n太棒了，救援者你還真厲害啊。\n\n我不想跟你聊太久，沒我的允許，不要在我眼前晃來晃去。",
+        "zh_cn": "救援者？你怎麼有臉這樣自稱啊。\n你說這不是你取的稱號？嗯，好爛的藉口。真礙眼。\n我問你，你有靠自己的力量救過任何東西嗎？\n看來你是拚命討好周遭的精靈，嘻皮笑臉處事圓滑的人啊。\n太棒了，救援者你還真厲害啊。\n\n我不想跟你聊太久，沒我的允許，不要在我眼前晃來晃去。"
+      },
+      "greeting": {
+        "ko": "이번에야말로, 내 손으로 끝을 내겠어.",
+        "en": "I'll put an end to this with my own hands this time for sure.",
+        "zh_tw": "這次由我親手了結。",
+        "zh_cn": "這次由我親手了結。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "…뭐야"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "…What?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "…什麼啊。"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "…什麼啊。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "애초에 왜 네가 내 연락처를 알고 있지?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "How did you get my number?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "不過為什麼你會知道我的聯絡方式？"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "不過為什麼你會知道我的聯絡方式？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "고귀하신 유리아님이 사방팔방에 뿌리기라도 한 건가?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Did the noble Yuria spread it all over the place?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "是高貴的尤里婭四處宣傳的嗎？"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "是高貴的尤里婭四處宣傳的嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "연락하지 마"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Don't message me."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "別聯絡我"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "別聯絡我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "하긴, 그래봤자 \r\n스스로의 존재가 우스워질 뿐이겠지…"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Well,\r\nthat would only make your existence ridiculous."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "也是，就算那樣\r\n也只會讓你自身的存在變得很可笑吧…"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "也是，就算那樣\r\n也只會讓你自身的存在變得很可笑吧…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "아까 장미 정원에서 너를 봤어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "I saw you in the rose garden earlier."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "我剛剛在玫瑰庭園看到你了"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "我剛剛在玫瑰庭園看到你了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "왜 끊임없이 찾아오는 거야?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Why do you keep visiting me?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "為什麼要不停找我？"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "為什麼要不停找我？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "그건 순전히 네 감정이잖아"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "That's just how you feel."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "那個完全是你一廂情願不是嗎"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "那個完全是你一廂情願不是嗎"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "이기적이구나"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "You're selfish."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "真自私啊"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "真自私啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "정령들은 네게 속고 있을 뿐이야"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "You're fooling all Souls."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "精靈們被你蒙在鼓裡"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "精靈們被你蒙在鼓裡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "광장에서 클라라라는 애가 말을 걸더라"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Clara talked to me in the square."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "廣場上有一個叫克拉拉的孩子跟我搭話"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "廣場上有一個叫克拉拉的孩子跟我搭話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "그것도 네 수작이야?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Was that a scheme of yours, too?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "那也是你耍的手段嗎？"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "那也是你耍的手段嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "딱 너같이 생긴 애가"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "The one that looks just like you"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "一個長得跟你一模一樣的孩子。"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "一個長得跟你一模一樣的孩子。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "너같이 생긴 헤픈 말을 했어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "said cheap things, just like you."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "跟你一樣說著很隨便的話。"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "跟你一樣說著很隨便的話。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "같이 차 마시러 가지 않겠냐는 그런 소리였어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "She asked if I'd like to go drink tea."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "問我要不要一起去喝茶"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "問我要不要一起去喝茶"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "장미 정원이 궁금하다고 하더군"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "She said she was curious about the rose garden."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "說她對玫瑰庭園很好奇"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "說她對玫瑰庭園很好奇"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "우스워"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Pathetic"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "真可笑"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "真可笑"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "아야메는 전투 방식이 꽤 마음에 들어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "I like Ayame's fighting style."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "我很喜歡綾織的戰鬥方式"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "我很喜歡綾織的戰鬥方式"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "내가 선호하는 타입이야"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "She's my type."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "是我喜好的類型"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "是我喜好的類型"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "그러고보니, 그 애도 평범한 애는 아닌 것 같더군"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "She didn't seem like an ordinary girl either."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "這麼看來，那個孩子好像也不是平凡的孩子啊"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "這麼看來，那個孩子好像也不是平凡的孩子啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "가끔 분위기가 바뀌던데…"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Sometimes air around her changes…"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "有時氣質會有所不同…"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "有時氣質會有所不同…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "넌 뭔가 알고 있어?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Do you know something?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "你知道些什麼嗎？"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "你知道些什麼嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "…"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "에버폰 그냥 버리지 그래?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Why don't you get rid of your Everphone?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "怎麼不直接把EverPhone丟了？"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "怎麼不直接把EverPhone丟了？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "내 장미 정원에는 꿀벌들이 많이 살아"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "There are many bees living in my rose garden."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "我的玫瑰庭園裡住著很多蜜蜂"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "我的玫瑰庭園裡住著很多蜜蜂"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "이리저리 날면서 앵앵대기도 하고\r\n거슬릴 때가 없는 건 아니지만…"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "They fly around and make a buzzing sound\r\nand sometimes I get annoyed…"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "到處嗡嗡嗡地飛，\r\n沒有一刻不令人反感的，不過…"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "到處嗡嗡嗡地飛，\r\n沒有一刻不令人反感的，不過…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "그래도 너보단 낫지"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "But better them than you."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "還是比你好多了"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "還是比你好多了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "하다못해 꿀벌은 장미의 번식을 돕기라도 하잖아?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "At least the bees help the roses grow."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "至少蜜蜂還會幫助玫瑰的繁殖呢！"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "至少蜜蜂還會幫助玫瑰的繁殖呢！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "사실을 말했다고 \r\n바로 또 기죽는 점도 눈에 거슬려"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "It's the truth. \r\nIt also bothers me that you feel discouraged right away."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "在我說了實話之後，\r\n你馬上就又洩氣的模樣也讓人反感"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "在我說了實話之後，\r\n你馬上就又洩氣的模樣也讓人反感"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "좋아하는 시집이 있어\r\n인간이 쓴 시였어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "I have a book of poems\r\nwritten by a human"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "我喜歡一部詩集，\r\n是人類寫的詩"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "我喜歡一部詩集，\r\n是人類寫的詩"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "너랑 같은 종족 개체의 뇌로 썼다고는 \r\n생각하기 어려울 만큼"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "It was written by an individual of your own race, \r\nsomething that I had found hard to believe,"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "很難想像\r\n那是用跟你同種族個體的頭腦寫出來的"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "很難想像\r\n那是用跟你同種族個體的頭腦寫出來的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "의미있는 내용을 담고 있었어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "and it contained so much meaning."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "其中蘊含了富有意義的內容"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "其中蘊含了富有意義的內容"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "네가 원래 있던 과거 세계의 학교에서는\r\n시를 공부했어?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "In the school where you were from,\r\ndid you study poetry?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "你在原本過去世界的學校裡\r\n有學過詩嗎？"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "你在原本過去世界的學校裡\r\n有學過詩嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "뭐라도 하나 추천해봐"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Recommend something to me."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "推薦給我看看吧"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "推薦給我看看吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "내 마음에 들면, 나도 알려줄게"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "If I like something, I'll tell you."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "如果我滿意的話，就會告訴你的"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "如果我滿意的話，就會告訴你的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "그정도 노력은 해야지 않겠어. 안 그래?"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Don't you think you should at least try that? Right?"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "至少要有這種程度的努力，不是嗎？"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "至少要有這種程度的努力，不是嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "널 보고 싶지 않아"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "I don't want to see you."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "我不想看到你"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "我不想看到你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "널 시야에서 치우고 싶어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "I want you out of my sight."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "我想把你從視線中清除掉"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "我想把你從視線中清除掉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "가능하면 내 머릿속에서도"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "If possible, out of my head as well."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "可以的話，也從我的腦海裡清除掉"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "可以的話，也從我的腦海裡清除掉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "수고롭지 않게 \r\n네가 알아서 스스로 사라져 줘"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Without troubling yourself too much, \r\nplease get out of my sight on your own."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "為了不要讓我太辛苦，\r\n你自己看著辦，消失吧"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "為了不要讓我太辛苦，\r\n你自己看著辦，消失吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "안 그러면…"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Or…"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "不然的話…"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "不然的話…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "널 생각하면 건조한 느낌이 들어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "When I think of you, I feel dry."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "想到你就有種乾燥的感覺"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "想到你就有種乾燥的感覺"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "입술이 메마르고"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "My lips gets dry."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "嘴唇乾燥"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "嘴唇乾燥"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "무슨 말을 해야할지 잘 모르겠어"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "And I don't know what to say."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "不知道該說什麼好"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "不知道該說什麼好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "그래도…"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Still…"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "不過…"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "不過…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "언젠가 다시 만날 수도 있겠지"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Maybe we can meet again someday."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "總有一天可能會再見的吧"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "總有一天可能會再見的吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "안녕"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "Hello"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "再見"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "再見"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "멍청한 표정으로 잠들었군…"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "… Hee fell asleep with such a silly face…"
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "用傻里傻氣的表情睡著了啊…"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "用傻里傻氣的表情睡著了啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "거슬려"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "It's annoying."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "真令人反感"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "真令人反感"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "벨라나",
+          "message": "넌 정말 쓸데없는 궁금증이 많구나"
+        },
+        "en": {
+          "speaker": "Velanna",
+          "message": "You're curious about so many things."
+        },
+        "zh_tw": {
+          "speaker": "貝拉納",
+          "message": "你真的是充滿了無用的好奇心啊"
+        },
+        "zh_cn": {
+          "speaker": "貝拉納",
+          "message": "你真的是充滿了無用的好奇心啊"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "딱히 악감정은 없습니다만… 구원자님을 위협하지 말아주세요."
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I really have no ill feeling toward her… Just don't threaten the Savior, please."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我沒有什麼惡意…但請不要威脅到救援者。"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我沒有什麼惡意…但請不要威脅到救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "요즘은 잘 모르겠지만 예전에는 시를 읽고 있었어. 생각이 많아 보여."
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "She used to read a lot of poetry. Not sure about these days. She seemed like she had a lot on her mind."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "最近我不太清楚，但她以前會讀詩，\n好像有許多想法。"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "最近我不太清楚，但她以前會讀詩，\n好像有許多想法。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아야메",
+          "message": "으음, 처음에는… 소녀가 벨라나 님의 기분을 거슬리게 할까 봐 많이 긴장했사오나… 함께 싸울 땐 의외로 친절하신 것 같사옵니다."
+        },
+        "en": {
+          "speaker": "Ayame",
+          "message": "Umm… At first, I was afraid I'd get on her nerves…but when we were fighting on the same team, she seemed kinder than I thought."
+        },
+        "zh_tw": {
+          "speaker": "綾織",
+          "message": "嗯，我原本…還很擔心會惹貝拉納不高興…\n但和她一起戰鬥的時候，她出乎意料之外地親切…"
+        },
+        "zh_cn": {
+          "speaker": "綾織",
+          "message": "嗯，我原本…還很擔心會惹貝拉納不高興…\n但和她一起戰鬥的時候，她出乎意料之外地親切…"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나, 안녕"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Velanna."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나, 안녕"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Velanna."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "…뭐야"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…What?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "…什麼啊。"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "…什麼啊。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "애초에 왜 네가 내 연락처를 알고 있지?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "How did you get my number?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "不過為什麼你會知道我的聯絡方式？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "不過為什麼你會知道我的聯絡方式？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "고귀하신 유리아님이 사방팔방에 뿌리기라도 한 건가?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Did the noble Yuria spread it all over the place?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "是高貴的尤里婭四處宣傳的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "是高貴的尤里婭四處宣傳的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "연락하지 마"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Don't message me."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "別聯絡我"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "別聯絡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 너같은 녀석이 구원자로 선택된 걸까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I wonder why you were chosen as Savior."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "才會將你這樣的人選為救援者呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "才會將你這樣的人選為救援者呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 이유를 생각해본 적 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have you ever thought why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你有想過為什麼嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你有想過為什麼嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "하긴, 그래봤자 \r\n스스로의 존재가 우스워질 뿐이겠지…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Well,\r\nthat would only make your existence ridiculous."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "也是，就算那樣\r\n也只會讓你自身的存在變得很可笑吧…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "也是，就算那樣\r\n也只會讓你自身的存在變得很可笑吧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "아까 장미 정원에서 너를 봤어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I saw you in the rose garden earlier."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "我剛剛在玫瑰庭園看到你了"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "我剛剛在玫瑰庭園看到你了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "왜 끊임없이 찾아오는 거야?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Why do you keep visiting me?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "為什麼要不停找我？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "為什麼要不停找我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나를 만나고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to see Velanna."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想見貝拉納"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想見貝拉納"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나를 만나고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to see Velanna."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想見貝拉納"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想見貝拉納"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "그건 순전히 네 감정이잖아"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "That's just how you feel."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "那個完全是你一廂情願不是嗎"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "那個完全是你一廂情願不是嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "이기적이구나"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "You're selfish."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "真自私啊"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "真自私啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "정령들은 네게 속고 있을 뿐이야"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "You're fooling all Souls."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "精靈們被你蒙在鼓裡"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "精靈們被你蒙在鼓裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "광장에서 클라라라는 애가 말을 걸더라"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Clara talked to me in the square."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "廣場上有一個叫克拉拉的孩子跟我搭話"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "廣場上有一個叫克拉拉的孩子跟我搭話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "그것도 네 수작이야?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Was that a scheme of yours, too?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "那也是你耍的手段嗎？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "那也是你耍的手段嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Clara?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克拉拉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克拉拉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클라라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Clara?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克拉拉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克拉拉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "딱 너같이 생긴 애가"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "The one that looks just like you"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "一個長得跟你一模一樣的孩子。"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "一個長得跟你一模一樣的孩子。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "너같이 생긴 헤픈 말을 했어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "said cheap things, just like you."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "跟你一樣說著很隨便的話。"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "跟你一樣說著很隨便的話。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤픈 말…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Cheap things…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "隨便的話…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "隨便的話…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤픈 말…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Cheap things…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "隨便的話…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "隨便的話…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "같이 차 마시러 가지 않겠냐는 그런 소리였어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "She asked if I'd like to go drink tea."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "問我要不要一起去喝茶"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "問我要不要一起去喝茶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "장미 정원이 궁금하다고 하더군"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "She said she was curious about the rose garden."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "說她對玫瑰庭園很好奇"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "說她對玫瑰庭園很好奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "우스워"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Pathetic"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "真可笑"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "真可笑"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "아야메는 전투 방식이 꽤 마음에 들어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I like Ayame's fighting style."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "我很喜歡綾織的戰鬥方式"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "我很喜歡綾織的戰鬥方式"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "내가 선호하는 타입이야"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "She's my type."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "是我喜好的類型"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "是我喜好的類型"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "그러고보니, 그 애도 평범한 애는 아닌 것 같더군"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "She didn't seem like an ordinary girl either."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "這麼看來，那個孩子好像也不是平凡的孩子啊"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "這麼看來，那個孩子好像也不是平凡的孩子啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "가끔 분위기가 바뀌던데…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Sometimes air around her changes…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "有時氣質會有所不同…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "有時氣質會有所不同…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "넌 뭔가 알고 있어?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Do you know something?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "你知道些什麼嗎？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "你知道些什麼嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "둘이 친해지면 어떨까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What if you two become friends?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你們要不要交個朋友"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你們要不要交個朋友"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "둘이 친해지면 어떨까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What if you two become friends?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你們要不要交個朋友"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你們要不要交個朋友"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "에버폰 그냥 버리지 그래?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Why don't you get rid of your Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "怎麼不直接把EverPhone丟了？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "怎麼不直接把EverPhone丟了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "내 장미 정원에는 꿀벌들이 많이 살아"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "There are many bees living in my rose garden."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "我的玫瑰庭園裡住著很多蜜蜂"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "我的玫瑰庭園裡住著很多蜜蜂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "이리저리 날면서 앵앵대기도 하고\r\n거슬릴 때가 없는 건 아니지만…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "They fly around and make a buzzing sound\r\nand sometimes I get annoyed…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "到處嗡嗡嗡地飛，\r\n沒有一刻不令人反感的，不過…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "到處嗡嗡嗡地飛，\r\n沒有一刻不令人反感的，不過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "그래도 너보단 낫지"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "But better them than you."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "還是比你好多了"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "還是比你好多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "하다못해 꿀벌은 장미의 번식을 돕기라도 하잖아?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "At least the bees help the roses grow."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "至少蜜蜂還會幫助玫瑰的繁殖呢！"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "至少蜜蜂還會幫助玫瑰的繁殖呢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "사실을 말했다고 \r\n바로 또 기죽는 점도 눈에 거슬려"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "It's the truth. \r\nIt also bothers me that you feel discouraged right away."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "在我說了實話之後，\r\n你馬上就又洩氣的模樣也讓人反感"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "在我說了實話之後，\r\n你馬上就又洩氣的模樣也讓人反感"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "좋아하는 시집이 있어\r\n인간이 쓴 시였어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I have a book of poems\r\nwritten by a human"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "我喜歡一部詩集，\r\n是人類寫的詩"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "我喜歡一部詩集，\r\n是人類寫的詩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "너랑 같은 종족 개체의 뇌로 썼다고는 \r\n생각하기 어려울 만큼"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "It was written by an individual of your own race, \r\nsomething that I had found hard to believe,"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "很難想像\r\n那是用跟你同種族個體的頭腦寫出來的"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "很難想像\r\n那是用跟你同種族個體的頭腦寫出來的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "의미있는 내용을 담고 있었어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "and it contained so much meaning."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "其中蘊含了富有意義的內容"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "其中蘊含了富有意義的內容"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무척 궁금해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to know so bad."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我好想知道"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我好想知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무척 궁금해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to know so bad."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我好想知道"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我好想知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "네가 원래 있던 과거 세계의 학교에서는\r\n시를 공부했어?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "In the school where you were from,\r\ndid you study poetry?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "你在原本過去世界的學校裡\r\n有學過詩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "你在原本過去世界的學校裡\r\n有學過詩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "뭐라도 하나 추천해봐"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Recommend something to me."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "推薦給我看看吧"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "推薦給我看看吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "내 마음에 들면, 나도 알려줄게"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "If I like something, I'll tell you."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "如果我滿意的話，就會告訴你的"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "如果我滿意的話，就會告訴你的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "그정도 노력은 해야지 않겠어. 안 그래?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Don't you think you should at least try that? Right?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "至少要有這種程度的努力，不是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "至少要有這種程度的努力，不是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "널 보고 싶지 않아"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I don't want to see you."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "我不想看到你"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "我不想看到你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "널 시야에서 치우고 싶어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I want you out of my sight."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "我想把你從視線中清除掉"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "我想把你從視線中清除掉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "가능하면 내 머릿속에서도"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "If possible, out of my head as well."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "可以的話，也從我的腦海裡清除掉"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "可以的話，也從我的腦海裡清除掉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "수고롭지 않게 \r\n네가 알아서 스스로 사라져 줘"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Without troubling yourself too much, \r\nplease get out of my sight on your own."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "為了不要讓我太辛苦，\r\n你自己看著辦，消失吧"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "為了不要讓我太辛苦，\r\n你自己看著辦，消失吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "안 그러면…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Or…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "不然的話…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "不然的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "널 생각하면 건조한 느낌이 들어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "When I think of you, I feel dry."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "想到你就有種乾燥的感覺"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "想到你就有種乾燥的感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "입술이 메마르고"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "My lips gets dry."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "嘴唇乾燥"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "嘴唇乾燥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "무슨 말을 해야할지 잘 모르겠어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "And I don't know what to say."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "不知道該說什麼好"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "不知道該說什麼好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "그래도…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Still…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "不過…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "不過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "언젠가 다시 만날 수도 있겠지"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Maybe we can meet again someday."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "總有一天可能會再見的吧"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "總有一天可能會再見的吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "안녕"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "Hello"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "再見"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "再見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "멍청한 표정으로 잠들었군…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "… Hee fell asleep with such a silly face…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "用傻里傻氣的表情睡著了啊…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "用傻里傻氣的表情睡著了啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "거슬려"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "It's annoying."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "真令人反感"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "真令人反感"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "넌 정말 쓸데없는 궁금증이 많구나"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "You're curious about so many things."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "你真的是充滿了無用的好奇心啊"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "你真的是充滿了無用的好奇心啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "도대체 무슨 생각을 하는 건지"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I wonder what you're thinking."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "究竟是在想什麼"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "究竟是在想什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나, 케이크 먹을래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna, would you like some cake?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納，要不要吃蛋糕？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納，要不要吃蛋糕？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나, 케이크 먹을래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna, would you like some cake?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納，要不要吃蛋糕？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納，要不要吃蛋糕？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "메피가 사왔어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mephi brought it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是梅菲買的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是梅菲買的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "메피가 사왔어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mephi brought it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是梅菲買的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是梅菲買的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "먹을 리가 없잖아…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "There's no way I would eat it…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "我不可能會吃的…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "我不可能會吃的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "단 것도 싫고"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I don't like anything sweet…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "我討厭甜的"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "我討厭甜的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "너도 싫어"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "and I don't like you."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "也討厭你"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "也討厭你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "말 섞고 싶지 않아"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I don't want to talk to you."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "不想跟他交談"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "不想跟他交談"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나, 뭐해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna, what are you up to?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳在幹嘛？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳在幹嘛？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나, 뭐해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna, what are you up to?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳在幹嘛？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳在幹嘛？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "[이 사용자와 더이상 대화할 수 없습니다]"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "[You can no longer talk to this user]"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "［無法再與此使用者對話］"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "［無法再與此使用者對話］"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "정말 짜증나.\r\n네 말 한마디 한마디가…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "So annoying.\r\nEvery word you say…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "真令人煩躁。\r\n你一句又一句話…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "真令人煩躁。\r\n你一句又一句話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "…드디어…"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…Finally…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "…終於…"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "…終於…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "이 지경에 와서도 내 목적이 아직 궁금하다니"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "I can't believe you're still curious about my purpose."
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "你到了這個地步竟然還好奇我的目的是什麼"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "你到了這個地步竟然還好奇我的目的是什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "…알고 있었어?"
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…Did you know that?"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "…一直都知道嗎？"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "…一直都知道嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나? 이게 뭐야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna, what is this?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納？這是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納？這是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나? 이게 뭐야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna, what is this?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納？這是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納？這是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나? 나 주는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna? Is this for me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納？這是要給我的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納？這是要給我的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나? 나 주는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna? Is this for me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納？這是要給我的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納？這是要給我的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "벨라나",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Velanna",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "貝拉納",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "貝拉納",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나, 혹시 시간 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna, do you have some time to spare?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳有空嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳有空嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벨라나, 혹시 시간 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Velanna, do you have some time to spare?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳有空嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貝拉納，妳有空嗎？"
+          }
+        }
+      ]
+    }
+  }
+}

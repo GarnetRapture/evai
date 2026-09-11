@@ -1,0 +1,6166 @@
+{
+  "id": "3090",
+  "name": "미리암",
+  "name_en": "Miriam",
+  "grade": "에픽",
+  "race": "요정형",
+  "class": "레인저",
+  "sub_class": "단일",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "빗발치는 탄환",
+    "constellation": "처녀자리",
+    "union": "칼라르 암즈 코퍼레이션",
+    "birthday": "823",
+    "height": 161,
+    "weight": 44,
+    "cv_ko": "박시윤",
+    "cv_jp": "Chiwa Saitou",
+    "like": [
+      "토스트",
+      "체리"
+    ],
+    "dislike": [
+      "사생활 침해"
+    ],
+    "hobby": [
+      "정리정돈",
+      "맛집 투어"
+    ],
+    "speciality": [
+      "총 돌리기"
+    ]
+  },
+  "personality": {
+    "description": "미리암, 내 이름이야. 잘 기억해 둬.\n구원자가 열심히 하는 모습 종종 보고 있어. 힘들 땐 연락해. 혼자 무리하다 너무 힘 빼지 말고 말이야.\n세상살이 애써봤자 안 되는 일도 있어. 적당히를 알자구, 우리. 알았지?\n\n뭐, 말은 이렇게 하고 있지만… 구원자 입장에선 마냥 그럴 수도 없다는 거 알아.\n호칭이 무려 '구원자'니까 말이지. 하하… 누군가가 나를 그렇게 부른다면, 정말 숨 막힐 것 같네. \n그런 의미에서는 존경하고 있어, 구원자. 하다못해 가끔 맛있는 거 먹으면서 한숨 돌리자. \n어때, 그 정돈 할 수 있겠지? 구원자가 에덴에 오고 나서 나도 제법 즐거우니까 말이야. 보답 좀 하게 해줘.\n그럼 오늘 하루도 즐겁게 보내. 도움이 필요하면 부르고!",
+    "greeting": "알아서 조심해.\n내 탄환은 빗나가지 않으니까."
+  },
+  "speech_patterns": [
+    "구원자, 개인톡으론 처음 인사하지?",
+    "미리암이야. 안녕",
+    "좋아. 무사히 연락처 교환했네",
+    "지금? \r\n방정리 하고 있었어",
+    "출장을 좀 길게 했더니 \r\n방에 먼지가 쌓였지 뭐야",
+    "의외로 깨끗한 걸 좋아하는 성격이거든, 내가",
+    "이제 커튼만 빨면 돼",
+    "요령? 글쎄?",
+    "흠…",
+    "루틴으로 만드는 거려나",
+    "꾸준히 자잘하게 습관적으로 하는 거야",
+    "그치? ㅋㅋ",
+    "그럼 난 잠깐 세탁하러 다녀올게",
+    "또 보자구~",
+    "이번에 새로 생긴 \r\n꼬치구이집을 가봤는데 말야",
+    "내 점수는…\r\n7점 정도?",
+    "꼬치구이를 거리가 아닌 \r\n가게에서 먹는건 신선하긴 한데",
+    "또 그게 되려 아쉽기도 하거든?",
+    "그치!?",
+    "실내에서 먹는 꼬치구이에 대해서\r\n꽤 열띤 토론을 할 수 있을 거 같아",
+    "시간 날 때 한 번 해보자구",
+    "ㅎㅎ",
+    "좋아",
+    "그럼 시간 되는 날에 \r\n꼬치구이 먹으러 같이 가기다~!",
+    "난 같은 옷을 여러벌 구비해두고",
+    "잘 다림질 해서 입는 편이야",
+    "애들이랑 놀러 나갈 때마다 \r\n항상 똑같은 옷이라고 뭐라 그러는데",
+    "깨끗하고 잘 어울리면 괜찮지 않아?",
+    "ㅋㅋ 고마워",
+    "뭐 그래도",
+    "가끔 다른 옷 입으면\r\n기분전환 될지도 모르겠네",
+    "구원자 혹시 주위에 \r\n매운 거 잘먹는 애 알아?",
+    "새로 생긴 식당 가보고 싶은데",
+    "주변에 매운거 먹을 수 있는 애들이 별로 없네",
+    "메피는 아닌척해도 매운 거 못먹고",
+    "칸나도 못먹고",
+    "르네는 먹을 수는 있는데\r\n그럴 바엔 다른 거 먹자고 빼고",
+    "…어?",
+    "여왕 폐하? 진짜?",
+    "몰랐네…",
+    "고급 정보 고마워",
+    "구원자 통조림 좋아해?",
+    "다른건 아니고 짐정리하다가 \r\n통조림이 무더기로 나와서",
+    "저번에 칼라르로 돌아갔을 때 잔뜩 사놨거든",
+    "우리 전통 문화인데\r\n창작 통조림 대회를 열어",
+    "내가 충동구매해놓은 게",
+    "많아도 너무 많지 뭐야",
+    "그치? 내 고향이지만 가끔 \r\n진짜 이상한 짓을 한다 싶긴 해",
+    "성에 갖다줄테니까 \r\n메피랑 다른 애들이랑 나눠먹어",
+    "내가 추천하는 건 \r\n'메이플 소스 플레시아 차우더'"
+  ],
+  "comments": [
+    {
+      "writer": "나이아",
+      "comment": "하아암… 미리암 씨… 졸려 보이는 눈…"
+    },
+    {
+      "writer": "르네",
+      "comment": "흠. 나만큼은 아니지만 갈고닦으면 참 빛날 재목이야. \n숨은 팬이 많더라고."
+    },
+    {
+      "writer": "도라",
+      "comment": "나한테 벌꿀 주스를 추천해줬는데 엄청 맛있었어…!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "미리암",
+        "message": "구원자, 개인톡으론 처음 인사하지?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "미리암이야. 안녕"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 미리암"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 미리암"
+      },
+      {
+        "speaker": "미리암",
+        "message": "좋아. 무사히 연락처 교환했네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 뭐하고 있었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 뭐하고 있었어?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "지금? \r\n방정리 하고 있었어"
+      },
+      {
+        "speaker": "미리암",
+        "message": "출장을 좀 길게 했더니 \r\n방에 먼지가 쌓였지 뭐야"
+      },
+      {
+        "speaker": "미리암",
+        "message": "의외로 깨끗한 걸 좋아하는 성격이거든, 내가"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이제 커튼만 빨면 돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "청소하는 데에 뭔가 요령이라도 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "청소하는 데에 뭔가 요령이라도 있어?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "요령? 글쎄?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "흠…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "루틴으로 만드는 거려나"
+      },
+      {
+        "speaker": "미리암",
+        "message": "꾸준히 자잘하게 습관적으로 하는 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쉬운 건지 어려운 건지 잘 모르겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쉬운 건지 어려운 건지 잘 모르겠어"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그치? ㅋㅋ"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그럼 난 잠깐 세탁하러 다녀올게"
+      },
+      {
+        "speaker": "미리암",
+        "message": "또 보자구~"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이번에 새로 생긴 \r\n꼬치구이집을 가봤는데 말야"
+      },
+      {
+        "speaker": "미리암",
+        "message": "내 점수는…\r\n7점 정도?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "꼬치구이를 거리가 아닌 \r\n가게에서 먹는건 신선하긴 한데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "또 그게 되려 아쉽기도 하거든?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알 거 같아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그치!?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "실내에서 먹는 꼬치구이에 대해서\r\n꽤 열띤 토론을 할 수 있을 거 같아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "시간 날 때 한 번 해보자구"
+      },
+      {
+        "speaker": "구원자",
+        "message": "열심히 스케줄 조정해볼게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "열심히 스케줄 조정해볼게!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "ㅎㅎ"
+      },
+      {
+        "speaker": "미리암",
+        "message": "좋아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그럼 시간 되는 날에 \r\n꼬치구이 먹으러 같이 가기다~!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "난 같은 옷을 여러벌 구비해두고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "잘 다림질 해서 입는 편이야"
+      },
+      {
+        "speaker": "미리암",
+        "message": "애들이랑 놀러 나갈 때마다 \r\n항상 똑같은 옷이라고 뭐라 그러는데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "깨끗하고 잘 어울리면 괜찮지 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 어울리니까 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 어울리니까 괜찮아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "ㅋㅋ 고마워"
+      },
+      {
+        "speaker": "미리암",
+        "message": "뭐 그래도"
+      },
+      {
+        "speaker": "미리암",
+        "message": "가끔 다른 옷 입으면\r\n기분전환 될지도 모르겠네"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자 혹시 주위에 \r\n매운 거 잘먹는 애 알아?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "새로 생긴 식당 가보고 싶은데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "주변에 매운거 먹을 수 있는 애들이 별로 없네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진짜? 의외다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "진짜? 의외다"
+      },
+      {
+        "speaker": "미리암",
+        "message": "메피는 아닌척해도 매운 거 못먹고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "칸나도 못먹고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "르네는 먹을 수는 있는데\r\n그럴 바엔 다른 거 먹자고 빼고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내 주변엔 유리아가 잘 먹는 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내 주변엔 유리아가 잘 먹는 것 같아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "…어?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "여왕 폐하? 진짜?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "몰랐네…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "고급 정보 고마워"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자 통조림 좋아해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "통조림…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "통조림…?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "다른건 아니고 짐정리하다가 \r\n통조림이 무더기로 나와서"
+      },
+      {
+        "speaker": "미리암",
+        "message": "저번에 칼라르로 돌아갔을 때 잔뜩 사놨거든"
+      },
+      {
+        "speaker": "미리암",
+        "message": "우리 전통 문화인데\r\n창작 통조림 대회를 열어"
+      },
+      {
+        "speaker": "미리암",
+        "message": "내가 충동구매해놓은 게"
+      },
+      {
+        "speaker": "미리암",
+        "message": "많아도 너무 많지 뭐야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "창작 통조림 대회라니 신기하네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "창작 통조림 대회라니 신기하네"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그치? 내 고향이지만 가끔 \r\n진짜 이상한 짓을 한다 싶긴 해"
+      },
+      {
+        "speaker": "미리암",
+        "message": "성에 갖다줄테니까 \r\n메피랑 다른 애들이랑 나눠먹어"
+      },
+      {
+        "speaker": "미리암",
+        "message": "내가 추천하는 건 \r\n'메이플 소스 플레시아 차우더'"
+      },
+      {
+        "speaker": "미리암",
+        "message": "비스킷이랑 같이 먹으면 맛있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 먹을게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 먹을게!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "ㅎㅎ"
+      },
+      {
+        "speaker": "미리암",
+        "message": "나중에 어땠는지 \r\n감상 들려줘"
+      },
+      {
+        "speaker": "미리암",
+        "message": "퇴근"
+      },
+      {
+        "speaker": "미리암",
+        "message": "퇴근하고싶다"
+      },
+      {
+        "speaker": "미리암",
+        "message": "정말 매우 아주 퇴근하고싶다"
+      },
+      {
+        "speaker": "미리암",
+        "message": "진심으로 퇴근하고싶다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아니 딱히"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그런 건 아닌데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "뭐 그냥 일하기 싫은 날이란게 있잖아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 날도 있긴 하지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 날도 있긴 하지"
+      },
+      {
+        "speaker": "미리암",
+        "message": "미리암 씨도 일하기 싫을 때가 있다고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "농땡이 피우고 싶을 땐 스스로한테 솔직해져야돼"
+      },
+      {
+        "speaker": "미리암",
+        "message": "안그러면 병난다 병"
+      },
+      {
+        "speaker": "미리암",
+        "message": "하~~ 퇴근하고싶다~"
+      },
+      {
+        "speaker": "미리암",
+        "message": "방이 너무 삭막하다고 \r\n르네한테 화분을 선물받았는데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "어떻게 키워야할지 막막하네"
+      },
+      {
+        "speaker": "미리암",
+        "message": "식물이 있는 방은 보기에 예쁘고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "보니까 꽃가루도 거의 안날리는거 같긴 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "식물 키워본 적 없어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "식물 키워본 적 없어?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아무래도 일이 일이다보니까?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "감찰관이 되기 전에는 용병 일을 했어서 \r\n어디 오래 정착하질 않았거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 확실히 식물은 키우기 어려웠겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 확실히 식물은 키우기 어려웠겠다"
+      },
+      {
+        "speaker": "미리암",
+        "message": "흠"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이거 엄청 오랜 시간이 지나야 \r\n꽃이 피는 종인거 같던데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이거 꽃 필 쯤에도 구원자가 여기 있으려나"
+      },
+      {
+        "speaker": "미리암",
+        "message": "뭐, 잘 돌보면 일찍 필지도 모르겠네"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자, 장수해.\r\n알았지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "노력해볼게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "노력해볼게!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그래그래~ 옳지 옳지♪"
+      },
+      {
+        "speaker": "미리암",
+        "message": "머리카락이 길면 가끔"
+      },
+      {
+        "speaker": "미리암",
+        "message": "면 요리 먹을 때 불편해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "머리를 묶고 먹어야겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "머리를 묶고 먹어야겠네"
+      },
+      {
+        "speaker": "미리암",
+        "message": "맞아;"
+      },
+      {
+        "speaker": "미리암",
+        "message": "과일 꼬치처럼 끈적한거 먹으면 \r\n머리카락에 달라붙고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그냥 확 자를까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러면 아까울 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러면 아까울 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암 긴머리 잘 어울리니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암 긴머리 잘 어울리니까"
+      },
+      {
+        "speaker": "미리암",
+        "message": "…그래?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그럼 까짓거"
+      },
+      {
+        "speaker": "미리암",
+        "message": "먹는 스킬을 더 단련하지 뭐"
+      },
+      {
+        "speaker": "미리암",
+        "message": "후후 그럼 바로 연습하러 가볼까♪\r\n따라올래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갈래!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갈래!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "후…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "현장에 나가는 건 괜찮은데 \r\n보고서 쓰기가 진짜 귀찮아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자도 본 적 있지?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "글자는 많은데 \r\n무슨 소리 하는건지 모르겠는 보고서"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사실 별로 못 본 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사실 별로 못 본 거 같아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "진짜? 완전 부럽네"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자 주변엔 유능한 애들밖에 없나봐"
+      },
+      {
+        "speaker": "미리암",
+        "message": "현장에서 본 걸 곧이곧대로 디테일하게 쓰는걸 \r\n좋아하는 상사들도 있지만"
+      },
+      {
+        "speaker": "미리암",
+        "message": "보통 다들 시간이 없으니까 말이야"
+      },
+      {
+        "speaker": "미리암",
+        "message": "읽는 상대의 입장을 고려해서 \r\n필요한 정보만 간추리는거도 중요한 능력이지"
+      },
+      {
+        "speaker": "미리암",
+        "message": "갑자기 왜 이런 말을 하냐면…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자용 보고서하고 \r\n헤이즐 님용 보고서하고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "조앤용 보고서를 \r\n따로 써야하거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "항상 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "항상 고마워"
+      },
+      {
+        "speaker": "미리암",
+        "message": "에휴~~~"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그래 그렇게 고마워하니까 됐다"
+      },
+      {
+        "speaker": "미리암",
+        "message": "힘내서 마저 쓰고 올게~"
+      },
+      {
+        "speaker": "미리암",
+        "message": "흠"
+      },
+      {
+        "speaker": "미리암",
+        "message": "사실 나 사진 찍는 거 별로 안 좋아하거든"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그래서 내 사진이 별로 없는데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "요즘은 좀 후회되네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 왜?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아니 뭐, 그냥"
+      },
+      {
+        "speaker": "미리암",
+        "message": "때로는 의미있는 기록이었겠구나 싶어서"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그런 의미로 나중에 \r\n구원자 사진이나 하나 받아야겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 서로 교환할까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 서로 교환할까?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "ㅋㅋ 그럴까"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그럼 사진 잘 찍어놔라!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "기대하고 있을게"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이건 내 방 사진이야"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아까 청소를 끝냈어\r\n깔끔하지? 후후"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아케나인은 솔레이의 임시 수도지만"
+      },
+      {
+        "speaker": "미리암",
+        "message": "맛집이 쟁쟁한 걸로 치면"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구 수도인 엘나스에도 뒤지지 않기로 \r\n원래부터 유명했어"
+      },
+      {
+        "speaker": "미리암",
+        "message": "어때"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이곳의 영주를 맡은 게\r\n꽤 행운인 것 같지 않아?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "후"
+      },
+      {
+        "speaker": "미리암",
+        "message": "정령 연합군 일은 보람차지만"
+      },
+      {
+        "speaker": "미리암",
+        "message": "필요한 서류가 너무 많아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "조금만 방심하면 일이 \r\n엄청 많이 쌓인다니까…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "오늘은"
+      },
+      {
+        "speaker": "미리암",
+        "message": "전부터 계속 궁금했던 걸 \r\n구원자 너한테 물어보고 싶어"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아 근데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "진짜 별 거 아니니까"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이상한 생각은 하지 말고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그냥 단순한 질문일 뿐이니까!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "예상 밖의 상황이네"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이를 어쩐다…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "린지랑 나는 제법 죽이 잘 맞는 편이야"
+      },
+      {
+        "speaker": "미리암",
+        "message": "항상 같이 다닐 정도는 아니어도…\r\n제법 꾸준히 만나서 얘기하는 사이지"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자도 린지랑 꽤 친하지?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "옛날이면 몰라도 요즘은\r\n나보다 구원자가 린지랑 더 친할 수도 있겠다"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그런가?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그런가?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "하핫"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그럼 오늘도\r\n영주 일 힘내라구"
+      },
+      {
+        "speaker": "미리암",
+        "message": "요즘 잠들기 전에 뭔가 심란한데…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "하아…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아니"
+      },
+      {
+        "speaker": "미리암",
+        "message": "아무것도 아니야"
+      },
+      {
+        "speaker": "미리암",
+        "message": "미안"
+      },
+      {
+        "speaker": "미리암",
+        "message": "요즘 뭔가 일이 많아져서 말이야"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그래서 연락하기 쉽지 않네, 하하"
+      },
+      {
+        "speaker": "미리암",
+        "message": "연락이 잘 안되면 걱정돼"
+      },
+      {
+        "speaker": "미리암",
+        "message": "연락이 잘 안되면 걱정돼"
+      },
+      {
+        "speaker": "미리암",
+        "message": "…응"
+      },
+      {
+        "speaker": "미리암",
+        "message": "뭐, 한차례 정리되면 \r\n또 톡 보낼게"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그때까지 잘 지내라구, 구원자"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그, 요즘은 잘…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "시간이 안 나더라고"
+      },
+      {
+        "speaker": "미리암",
+        "message": "하하…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "……."
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자는 벚꽃이 피는 걸"
+      },
+      {
+        "speaker": "미리암",
+        "message": "미리 알아보고\r\n손꼽아 기다리는 편이야?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "나는…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "생각해봤는데"
+      },
+      {
+        "speaker": "미리암",
+        "message": "재밌을 것 같아"
+      },
+      {
+        "speaker": "미리암",
+        "message": "광장으로 나가면 돼?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "그리고…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "둘이서 가고 싶어"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이런 기념일 특유의 들뜬 분위기…"
+      },
+      {
+        "speaker": "미리암",
+        "message": "좀 낯간지러운 것 같긴해"
+      },
+      {
+        "speaker": "미리암",
+        "message": "자, 받아 구원자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "챙겨줘서 고마워, 미리암!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "챙겨줘서 고마워, 미리암!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "구원자는 꼭 다시 만나고 싶은 상대가 있어?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "오늘은 그런 상대를 추억하는 날이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알려줘서 고마워, 미리암!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알려줘서 고마워, 미리암!"
+      },
+      {
+        "speaker": "미리암",
+        "message": "이브의 날은 큰 명절이지. \r\n구원자, 맛있는 음식은 좀 먹었어?"
+      },
+      {
+        "speaker": "미리암",
+        "message": "미식가는 절대 이 시기를 놓치면 안된다구. 하핫"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알겠어, 유념할게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알겠어, 유념할게!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "미리암",
+      "en": "Miriam",
+      "zh_tw": "米里昂",
+      "zh_cn": "米里昂"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "요정형",
+      "en": "Fairy",
+      "zh_tw": "妖精型",
+      "zh_cn": "妖精型"
+    },
+    "class": {
+      "ko": "레인저",
+      "en": "Ranger",
+      "zh_tw": "遊俠",
+      "zh_cn": "遊俠"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "빗발치는 탄환",
+        "en": "Bullet Shower",
+        "zh_tw": "槍林彈雨",
+        "zh_cn": "槍林彈雨"
+      },
+      "constellation": {
+        "ko": "처녀자리",
+        "en": "Virgo",
+        "zh_tw": "處女座",
+        "zh_cn": "處女座"
+      },
+      "union": {
+        "ko": "칼라르 암즈 코퍼레이션",
+        "en": "Chalar Arms Corporation",
+        "zh_tw": "卡拉爾安茲公司",
+        "zh_cn": "卡拉爾安茲公司"
+      },
+      "cv_ko": {
+        "ko": "박시윤",
+        "en": "Siyoon Park",
+        "zh_tw": "朴詩允",
+        "zh_cn": "朴詩允"
+      },
+      "cv_jp": {
+        "ko": "Chiwa Saitou",
+        "en": "Chiwa Saitou",
+        "zh_tw": "Chiwa Saitou",
+        "zh_cn": "Chiwa Saitou"
+      },
+      "like": {
+        "ko": [
+          "토스트",
+          "체리"
+        ],
+        "en": [
+          "Toast",
+          "cherries"
+        ],
+        "zh_tw": [
+          "吐司、櫻桃"
+        ],
+        "zh_cn": [
+          "吐司、櫻桃"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "사생활 침해"
+        ],
+        "en": [
+          "Violation of privacy"
+        ],
+        "zh_tw": [
+          "侵犯隱私"
+        ],
+        "zh_cn": [
+          "侵犯隱私"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "정리정돈",
+          "맛집 투어"
+        ],
+        "en": [
+          "Tidying up",
+          "trying nice food"
+        ],
+        "zh_tw": [
+          "整理東西、探訪美食"
+        ],
+        "zh_cn": [
+          "整理東西、探訪美食"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "총 돌리기"
+        ],
+        "en": [
+          "Spinning rifle"
+        ],
+        "zh_tw": [
+          "轉槍"
+        ],
+        "zh_cn": [
+          "轉槍"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "미리암, 내 이름이야. 잘 기억해 둬.\n구원자가 열심히 하는 모습 종종 보고 있어. 힘들 땐 연락해. 혼자 무리하다 너무 힘 빼지 말고 말이야.\n세상살이 애써봤자 안 되는 일도 있어. 적당히를 알자구, 우리. 알았지?\n\n뭐, 말은 이렇게 하고 있지만… 구원자 입장에선 마냥 그럴 수도 없다는 거 알아.\n호칭이 무려 '구원자'니까 말이지. 하하… 누군가가 나를 그렇게 부른다면, 정말 숨 막힐 것 같네. \n그런 의미에서는 존경하고 있어, 구원자. 하다못해 가끔 맛있는 거 먹으면서 한숨 돌리자. \n어때, 그 정돈 할 수 있겠지? 구원자가 에덴에 오고 나서 나도 제법 즐거우니까 말이야. 보답 좀 하게 해줘.\n그럼 오늘 하루도 즐겁게 보내. 도움이 필요하면 부르고!",
+        "en": "Miriam is my name. Make sure you remember it.\nI often see you working hard, Savior. Contact me when you feel troubled. Don't push yourself too hard.\nThere are things in the world that can't be done no matter how hard you try. Let's learn to be moderate. Okay?\n\nWell, I'm making it sound easy…but I know it can't be like that for you, Savior.\nBecause you're the mighty and great \"Savior,\" right? Haha… If I were called by such a name, I'd feel suffocated. That's why I respect you in some way, Savior. Let's take a breather and eat tasty food from time to time.\nHow does that sound? I guess you could at least do that. I've been enjoying myself since you came to Eden, so let me repay you that much.\nThen have a good day today. Call me if you need help!",
+        "zh_tw": "我叫米里昂，好好記住。\n我一直看著救援者努力工作的模樣。感到疲憊時就連絡我吧。不需要自己硬撐。\n人生在世有很多事情即使付出也得不到回報，我們適可而止就好，知道了嗎？\n\n話雖如此…但我也知道以救援者的立場可能很難做到。\n因為「救援者」這個稱號啊，呵呵…要是我聽到有人這樣叫我，我可能會喘不過氣。\n所以我非常尊敬你，救援者。偶爾覺得累的時候，別忘了要吃點好吃的東西休息一下。\n怎麼樣，做得到吧？我很高興救援者可以來到伊甸園，讓我有機會報答你。\n祝你有個美好的一天。需要幫助的時候就呼叫我吧！",
+        "zh_cn": "我叫米里昂，好好記住。\n我一直看著救援者努力工作的模樣。感到疲憊時就連絡我吧。不需要自己硬撐。\n人生在世有很多事情即使付出也得不到回報，我們適可而止就好，知道了嗎？\n\n話雖如此…但我也知道以救援者的立場可能很難做到。\n因為「救援者」這個稱號啊，呵呵…要是我聽到有人這樣叫我，我可能會喘不過氣。\n所以我非常尊敬你，救援者。偶爾覺得累的時候，別忘了要吃點好吃的東西休息一下。\n怎麼樣，做得到吧？我很高興救援者可以來到伊甸園，讓我有機會報答你。\n祝你有個美好的一天。需要幫助的時候就呼叫我吧！"
+      },
+      "greeting": {
+        "ko": "알아서 조심해.\n내 탄환은 빗나가지 않으니까.",
+        "en": "Be careful,\nbecause my bullets never miss the mark.",
+        "zh_tw": "自己小心點，\n我的子彈是不會射偏的。",
+        "zh_cn": "自己小心點，\n我的子彈是不會射偏的。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "구원자, 개인톡으론 처음 인사하지?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Savior, it's our first time talking in a personal chat, right?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "救援者，這是我第一次私訊你吧？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "救援者，這是我第一次私訊你吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "미리암이야. 안녕"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I'm Miriam. Hi."
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我是米里昂，你好"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我是米里昂，你好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "좋아. 무사히 연락처 교환했네"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Nice. We saved each other's contact info"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "好，順利交換聯絡方式了"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "好，順利交換聯絡方式了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "지금? \r\n방정리 하고 있었어"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Now?\r\nI was cleaning up my room"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "現在？\r\n我在整理房間"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "現在？\r\n我在整理房間"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "출장을 좀 길게 했더니 \r\n방에 먼지가 쌓였지 뭐야"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I was away for a long time\r\nso my room is such a messssss"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "這次出差太久\r\n房間都積了灰塵，真是的"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "這次出差太久\r\n房間都積了灰塵，真是的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "의외로 깨끗한 걸 좋아하는 성격이거든, 내가"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "This might surprise you, but I'm really clean ya know?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我啊，令人意外地是個喜歡乾淨的性格"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我啊，令人意外地是個喜歡乾淨的性格"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "이제 커튼만 빨면 돼"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Now I just need to wash my curtains"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "現在只要洗窗簾就行了"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "現在只要洗窗簾就行了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "요령? 글쎄?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Tricks? Hmm."
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "要領？應該吧？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "要領？應該吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "흠…"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Hmm…"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "嗯…"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "嗯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "루틴으로 만드는 거려나"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Maybe the way I make it into a routine"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "應該是要把它變成例行公事吧"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "應該是要把它變成例行公事吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "꾸준히 자잘하게 습관적으로 하는 거야"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I just stay consistent and make it a habit"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "就是要養成習慣，經常一點點地做"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "就是要養成習慣，經常一點點地做"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "그치? ㅋㅋ"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Right? heh"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "對吧？呵呵"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "對吧？呵呵"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "그럼 난 잠깐 세탁하러 다녀올게"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I'll be back. Off to do laundry!"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "那我先去洗一下窗簾"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "那我先去洗一下窗簾"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "또 보자구~"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "See ya!"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "再見～"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "再見～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "이번에 새로 생긴 \r\n꼬치구이집을 가봤는데 말야"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "There's this new place that does grilled skewers"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我這次去了新開的\r\n串燒店"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我這次去了新開的\r\n串燒店"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "내 점수는…\r\n7점 정도?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I rate it 7/10\r\nwould kinda recommend"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我給…\r\n大概七分？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我給…\r\n大概七分？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "꼬치구이를 거리가 아닌 \r\n가게에서 먹는건 신선하긴 한데"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "It's kinda cool to eat inside for once\r\nunlike the other outdoor skewer places"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "在店面而不是在街道吃串燒\r\n確實是新鮮的體驗"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "在店面而不是在街道吃串燒\r\n確實是新鮮的體驗"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "또 그게 되려 아쉽기도 하거든?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "but then again I kinda prefer eating outdoors too ya know?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "但又覺得有點可惜欸？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "但又覺得有點可惜欸？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "그치!?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Right?!"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "對吧！？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "對吧！？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "실내에서 먹는 꼬치구이에 대해서\r\n꽤 열띤 토론을 할 수 있을 거 같아"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I feel like we could have a full-on debate\r\nabout eating skewers indoors"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "針對在室內吃的串燒\r\n感覺可以進行一波熱烈的討論"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "針對在室內吃的串燒\r\n感覺可以進行一波熱烈的討論"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "시간 날 때 한 번 해보자구"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "We should discuss it sometime"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "有空的話試試看吧"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "有空的話試試看吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "ㅎㅎ"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "hehe"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "哈哈"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "哈哈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "좋아"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Gladly."
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我知道了"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我知道了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "그럼 시간 되는 날에 \r\n꼬치구이 먹으러 같이 가기다~!"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "It's settled!\r\nWe will get skewers when you have time!"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "那有空的時候，\r\n一起去吃串燒吧～！"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "那有空的時候，\r\n一起去吃串燒吧～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "난 같은 옷을 여러벌 구비해두고"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I buy multiples of the same clothes"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我是會準備好幾件一樣的衣服"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我是會準備好幾件一樣的衣服"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "잘 다림질 해서 입는 편이야"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "and then iron them all up"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "而且燙得整整齊齊後再穿的類型。"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "而且燙得整整齊齊後再穿的類型。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "애들이랑 놀러 나갈 때마다 \r\n항상 똑같은 옷이라고 뭐라 그러는데"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Everyone says something about how I always wear the same clothes"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "每次和大家出去玩的時候\r\n總是說我穿一樣的衣服"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "每次和大家出去玩的時候\r\n總是說我穿一樣的衣服"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "깨끗하고 잘 어울리면 괜찮지 않아?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "but as long as it's clean and looks good on me it's fine, right?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "但乾淨又適合的話，就沒關係吧？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "但乾淨又適合的話，就沒關係吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "ㅋㅋ 고마워"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "thanks lol"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "哈哈，謝謝"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "哈哈，謝謝"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "뭐 그래도"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "But still"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "不過"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "不過"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "가끔 다른 옷 입으면\r\n기분전환 될지도 모르겠네"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "maybe I would feel new and refreshed\r\nif I wore something different sometimes"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "偶爾穿其他衣服\r\n說不定能轉換心情呢"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "偶爾穿其他衣服\r\n說不定能轉換心情呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "구원자 혹시 주위에 \r\n매운 거 잘먹는 애 알아?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Savior do you know anyone\r\nwho really likes spicy food?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "救援者，你有認識\r\n很會吃辣的人嗎？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "救援者，你有認識\r\n很會吃辣的人嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "새로 생긴 식당 가보고 싶은데"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I want to check out this new place"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我想去新開的餐廳"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我想去新開的餐廳"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "주변에 매운거 먹을 수 있는 애들이 별로 없네"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "but nobody I know can really handle spicy food"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "但身邊沒有幾個能吃辣的"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "但身邊沒有幾個能吃辣的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "메피는 아닌척해도 매운 거 못먹고"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Mephi acts like she can, but she can't really eat spicy food"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "梅菲雖然裝作很會吃辣，但其實不太能吃辣"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "梅菲雖然裝作很會吃辣，但其實不太能吃辣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "칸나도 못먹고"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "neither can Kanna"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "坎納也不能吃辣"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "坎納也不能吃辣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "르네는 먹을 수는 있는데\r\n그럴 바엔 다른 거 먹자고 빼고"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Renee can handle it\r\nbut she always prefers to eat something else"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "勒內雖然可以吃辣的，\r\n但她說與其要吃辣的，不如吃別的"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "勒內雖然可以吃辣的，\r\n但她說與其要吃辣的，不如吃別的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "…어?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Huh?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "…喔？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "…喔？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "여왕 폐하? 진짜?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Her Highness? For reals?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "女王陛下？真的嗎？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "女王陛下？真的嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "몰랐네…"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I never knew…"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "沒想到啊…"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "沒想到啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "고급 정보 고마워"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Thanks for the info"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "謝謝你的高級情報"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "謝謝你的高級情報"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "구원자 통조림 좋아해?"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Savior! Do you like canned food?"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "救援者喜歡罐頭嗎？"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "救援者喜歡罐頭嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "다른건 아니고 짐정리하다가 \r\n통조림이 무더기로 나와서"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I was cleaning some stuff up\r\nand found a bunch of canned food"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "因為我在整理行李的時候\r\n發現了一堆罐頭"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "因為我在整理行李的時候\r\n發現了一堆罐頭"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "저번에 칼라르로 돌아갔을 때 잔뜩 사놨거든"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I bought them in bulk when I went to Chalar the other time"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我去卡拉爾出差的時候買了一大堆"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我去卡拉爾出差的時候買了一大堆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "우리 전통 문화인데\r\n창작 통조림 대회를 열어"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "It's a tradition to hold a\r\ncreative canned food competition here"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "舉辦罐頭裝飾大會\r\n是我們的傳統文化"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "舉辦罐頭裝飾大會\r\n是我們的傳統文化"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "내가 충동구매해놓은 게"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "It was an impulse purchase"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我衝動購買的東西"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我衝動購買的東西"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "많아도 너무 많지 뭐야"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I just bought way too many"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "也太多了吧"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "也太多了吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "그치? 내 고향이지만 가끔 \r\n진짜 이상한 짓을 한다 싶긴 해"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "Right? Sure this is my home\r\nbut even I'm surprised at the type of events they have"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "對吧？雖然是我的故鄉\r\n但我有時會覺得真的在做奇怪的事"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "對吧？雖然是我的故鄉\r\n但我有時會覺得真的在做奇怪的事"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "성에 갖다줄테니까 \r\n메피랑 다른 애들이랑 나눠먹어"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I'll leave some at the palace\r\nso share it with Mephi and the rest"
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我會送去城裡，\r\n你可以跟梅菲和大家一起分著吃"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我會送去城裡，\r\n你可以跟梅菲和大家一起分著吃"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "내가 추천하는 건 \r\n'메이플 소스 플레시아 차우더'"
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "I recommend\r\n\"maple sauce chowder\""
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "我推薦\r\n「楓糖醬巧達濃湯」"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "我推薦\r\n「楓糖醬巧達濃湯」"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "나이아",
+          "message": "하아암… 미리암 씨… 졸려 보이는 눈…"
+        },
+        "en": {
+          "speaker": "Naiah",
+          "message": "Yaawwwn… Miriam… Her eyes look sleepy…"
+        },
+        "zh_tw": {
+          "speaker": "娜伊雅",
+          "message": "呵哈啊…米里昂小姐…眼神看起來很睏啊…"
+        },
+        "zh_cn": {
+          "speaker": "娜伊雅",
+          "message": "呵哈啊…米里昂小姐…眼神看起來很睏啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "르네",
+          "message": "흠. 나만큼은 아니지만 갈고닦으면 참 빛날 재목이야. \n숨은 팬이 많더라고."
+        },
+        "en": {
+          "speaker": "Renee",
+          "message": "Hmm. She's not as good as me, but she has talent that will shine with more training. \nShe has many hidden fans."
+        },
+        "zh_tw": {
+          "speaker": "勒內",
+          "message": "哼，雖然比不過我，但還算是個可造之材。\n有很多隱藏的粉絲。"
+        },
+        "zh_cn": {
+          "speaker": "勒內",
+          "message": "哼，雖然比不過我，但還算是個可造之材。\n有很多隱藏的粉絲。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도라",
+          "message": "나한테 벌꿀 주스를 추천해줬는데 엄청 맛있었어…!"
+        },
+        "en": {
+          "speaker": "Dora",
+          "message": "She recommended honey juice to me and it was very tasty…!"
+        },
+        "zh_tw": {
+          "speaker": "朵菈",
+          "message": "她推薦我喝蜂蜜果汁，真的很好喝…！"
+        },
+        "zh_cn": {
+          "speaker": "朵菈",
+          "message": "她推薦我喝蜂蜜果汁，真的很好喝…！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자, 개인톡으론 처음 인사하지?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Savior, it's our first time talking in a personal chat, right?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者，這是我第一次私訊你吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者，這是我第一次私訊你吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "미리암이야. 안녕"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I'm Miriam. Hi."
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我是米里昂，你好"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我是米里昂，你好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 미리암"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi Miriam"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，米里昂"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，米里昂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 미리암"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi Miriam"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，米里昂"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，米里昂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "좋아. 무사히 연락처 교환했네"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Nice. We saved each other's contact info"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "好，順利交換聯絡方式了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "好，順利交換聯絡方式了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 뭐하고 있었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What are you up to?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳現在做什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳現在做什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 뭐하고 있었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What are you up to?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳現在做什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳現在做什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "지금? \r\n방정리 하고 있었어"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Now?\r\nI was cleaning up my room"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "現在？\r\n我在整理房間"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "現在？\r\n我在整理房間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "출장을 좀 길게 했더니 \r\n방에 먼지가 쌓였지 뭐야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I was away for a long time\r\nso my room is such a messssss"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "這次出差太久\r\n房間都積了灰塵，真是的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "這次出差太久\r\n房間都積了灰塵，真是的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "의외로 깨끗한 걸 좋아하는 성격이거든, 내가"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "This might surprise you, but I'm really clean ya know?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我啊，令人意外地是個喜歡乾淨的性格"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我啊，令人意外地是個喜歡乾淨的性格"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이제 커튼만 빨면 돼"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Now I just need to wash my curtains"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "現在只要洗窗簾就行了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "現在只要洗窗簾就行了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "청소하는 데에 뭔가 요령이라도 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you have any tricks to how you clean?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你有什麼打掃要領嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你有什麼打掃要領嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "청소하는 데에 뭔가 요령이라도 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you have any tricks to how you clean?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你有什麼打掃要領嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你有什麼打掃要領嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "요령? 글쎄?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Tricks? Hmm."
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "要領？應該吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "要領？應該吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "흠…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "루틴으로 만드는 거려나"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Maybe the way I make it into a routine"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "應該是要把它變成例行公事吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "應該是要把它變成例行公事吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "꾸준히 자잘하게 습관적으로 하는 거야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I just stay consistent and make it a habit"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "就是要養成習慣，經常一點點地做"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "就是要養成習慣，經常一點點地做"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쉬운 건지 어려운 건지 잘 모르겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm not sure if that's easy or if it's hard"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道這算是簡單還是困難"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道這算是簡單還是困難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쉬운 건지 어려운 건지 잘 모르겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm not sure if that's easy or if it's hard"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道這算是簡單還是困難"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道這算是簡單還是困難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그치? ㅋㅋ"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Right? heh"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "對吧？呵呵"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "對吧？呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그럼 난 잠깐 세탁하러 다녀올게"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I'll be back. Off to do laundry!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "那我先去洗一下窗簾"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "那我先去洗一下窗簾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "또 보자구~"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "See ya!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "再見～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "再見～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이번에 새로 생긴 \r\n꼬치구이집을 가봤는데 말야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "There's this new place that does grilled skewers"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我這次去了新開的\r\n串燒店"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我這次去了新開的\r\n串燒店"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "내 점수는…\r\n7점 정도?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I rate it 7/10\r\nwould kinda recommend"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我給…\r\n大概七分？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我給…\r\n大概七分？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "꼬치구이를 거리가 아닌 \r\n가게에서 먹는건 신선하긴 한데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "It's kinda cool to eat inside for once\r\nunlike the other outdoor skewer places"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "在店面而不是在街道吃串燒\r\n確實是新鮮的體驗"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "在店面而不是在街道吃串燒\r\n確實是新鮮的體驗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "또 그게 되려 아쉽기도 하거든?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "but then again I kinda prefer eating outdoors too ya know?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "但又覺得有點可惜欸？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "但又覺得有點可惜欸？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I know what you mean"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我好像明白了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我好像明白了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I know what you mean"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我好像明白了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我好像明白了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그치!?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Right?!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "對吧！？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "對吧！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "실내에서 먹는 꼬치구이에 대해서\r\n꽤 열띤 토론을 할 수 있을 거 같아"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I feel like we could have a full-on debate\r\nabout eating skewers indoors"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "針對在室內吃的串燒\r\n感覺可以進行一波熱烈的討論"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "針對在室內吃的串燒\r\n感覺可以進行一波熱烈的討論"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "시간 날 때 한 번 해보자구"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "We should discuss it sometime"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "有空的話試試看吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "有空的話試試看吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "열심히 스케줄 조정해볼게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll make time for it!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會盡量調整行程！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會盡量調整行程！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "열심히 스케줄 조정해볼게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll make time for it!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會盡量調整行程！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會盡量調整行程！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "ㅎㅎ"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "hehe"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "哈哈"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Gladly."
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我知道了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그럼 시간 되는 날에 \r\n꼬치구이 먹으러 같이 가기다~!"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "It's settled!\r\nWe will get skewers when you have time!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "那有空的時候，\r\n一起去吃串燒吧～！"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "那有空的時候，\r\n一起去吃串燒吧～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "난 같은 옷을 여러벌 구비해두고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I buy multiples of the same clothes"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我是會準備好幾件一樣的衣服"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我是會準備好幾件一樣的衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "잘 다림질 해서 입는 편이야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "and then iron them all up"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "而且燙得整整齊齊後再穿的類型。"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "而且燙得整整齊齊後再穿的類型。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "애들이랑 놀러 나갈 때마다 \r\n항상 똑같은 옷이라고 뭐라 그러는데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Everyone says something about how I always wear the same clothes"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "每次和大家出去玩的時候\r\n總是說我穿一樣的衣服"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "每次和大家出去玩的時候\r\n總是說我穿一樣的衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "깨끗하고 잘 어울리면 괜찮지 않아?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "but as long as it's clean and looks good on me it's fine, right?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "但乾淨又適合的話，就沒關係吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "但乾淨又適合的話，就沒關係吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 어울리니까 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It looks great on you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "適合就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "適合就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 어울리니까 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It looks great on you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "適合就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "適合就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "ㅋㅋ 고마워"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "thanks lol"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "哈哈，謝謝"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "哈哈，謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "뭐 그래도"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "But still"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "不過"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "不過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "가끔 다른 옷 입으면\r\n기분전환 될지도 모르겠네"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "maybe I would feel new and refreshed\r\nif I wore something different sometimes"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "偶爾穿其他衣服\r\n說不定能轉換心情呢"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "偶爾穿其他衣服\r\n說不定能轉換心情呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자 혹시 주위에 \r\n매운 거 잘먹는 애 알아?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Savior do you know anyone\r\nwho really likes spicy food?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者，你有認識\r\n很會吃辣的人嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者，你有認識\r\n很會吃辣的人嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "새로 생긴 식당 가보고 싶은데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I want to check out this new place"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我想去新開的餐廳"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我想去新開的餐廳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "주변에 매운거 먹을 수 있는 애들이 별로 없네"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "but nobody I know can really handle spicy food"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "但身邊沒有幾個能吃辣的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "但身邊沒有幾個能吃辣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진짜? 의외다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really? I'm surprised"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的嗎？好意外"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的嗎？好意外"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "진짜? 의외다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really? I'm surprised"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的嗎？好意外"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的嗎？好意外"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "메피는 아닌척해도 매운 거 못먹고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Mephi acts like she can, but she can't really eat spicy food"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "梅菲雖然裝作很會吃辣，但其實不太能吃辣"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "梅菲雖然裝作很會吃辣，但其實不太能吃辣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "칸나도 못먹고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "neither can Kanna"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "坎納也不能吃辣"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "坎納也不能吃辣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "르네는 먹을 수는 있는데\r\n그럴 바엔 다른 거 먹자고 빼고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Renee can handle it\r\nbut she always prefers to eat something else"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "勒內雖然可以吃辣的，\r\n但她說與其要吃辣的，不如吃別的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "勒內雖然可以吃辣的，\r\n但她說與其要吃辣的，不如吃別的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내 주변엔 유리아가 잘 먹는 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think Yuria would enjoy it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭好像很能吃辣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭好像很能吃辣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내 주변엔 유리아가 잘 먹는 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think Yuria would enjoy it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭好像很能吃辣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭好像很能吃辣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "…어?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "…喔？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "…喔？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "여왕 폐하? 진짜?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Her Highness? For reals?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "女王陛下？真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "女王陛下？真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "몰랐네…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I never knew…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "沒想到啊…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "沒想到啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "고급 정보 고마워"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Thanks for the info"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "謝謝你的高級情報"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "謝謝你的高級情報"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자 통조림 좋아해?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Savior! Do you like canned food?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者喜歡罐頭嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者喜歡罐頭嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "통조림…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Canned food…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "罐頭…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "罐頭…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "통조림…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Canned food…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "罐頭…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "罐頭…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "다른건 아니고 짐정리하다가 \r\n통조림이 무더기로 나와서"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I was cleaning some stuff up\r\nand found a bunch of canned food"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "因為我在整理行李的時候\r\n發現了一堆罐頭"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "因為我在整理行李的時候\r\n發現了一堆罐頭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "저번에 칼라르로 돌아갔을 때 잔뜩 사놨거든"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I bought them in bulk when I went to Chalar the other time"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我去卡拉爾出差的時候買了一大堆"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我去卡拉爾出差的時候買了一大堆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "우리 전통 문화인데\r\n창작 통조림 대회를 열어"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "It's a tradition to hold a\r\ncreative canned food competition here"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "舉辦罐頭裝飾大會\r\n是我們的傳統文化"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "舉辦罐頭裝飾大會\r\n是我們的傳統文化"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "내가 충동구매해놓은 게"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "It was an impulse purchase"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我衝動購買的東西"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我衝動購買的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "많아도 너무 많지 뭐야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I just bought way too many"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "也太多了吧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "也太多了吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "창작 통조림 대회라니 신기하네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Creative canned food competition? Interesting."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "罐頭裝飾大會？好神奇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "罐頭裝飾大會？好神奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "창작 통조림 대회라니 신기하네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Creative canned food competition? Interesting."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "罐頭裝飾大會？好神奇"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "罐頭裝飾大會？好神奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그치? 내 고향이지만 가끔 \r\n진짜 이상한 짓을 한다 싶긴 해"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Right? Sure this is my home\r\nbut even I'm surprised at the type of events they have"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "對吧？雖然是我的故鄉\r\n但我有時會覺得真的在做奇怪的事"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "對吧？雖然是我的故鄉\r\n但我有時會覺得真的在做奇怪的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "성에 갖다줄테니까 \r\n메피랑 다른 애들이랑 나눠먹어"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I'll leave some at the palace\r\nso share it with Mephi and the rest"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我會送去城裡，\r\n你可以跟梅菲和大家一起分著吃"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我會送去城裡，\r\n你可以跟梅菲和大家一起分著吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "내가 추천하는 건 \r\n'메이플 소스 플레시아 차우더'"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I recommend\r\n\"maple sauce chowder\""
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我推薦\r\n「楓糖醬巧達濃湯」"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我推薦\r\n「楓糖醬巧達濃湯」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "비스킷이랑 같이 먹으면 맛있어"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "it's just perfect with biscuits"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "很適合配餅乾一起吃"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "很適合配餅乾一起吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 먹을게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds tasty!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會好好享用的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會好好享用的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 먹을게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds tasty!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會好好享用的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會好好享用的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "ㅎㅎ"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "hehe"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "哈哈"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "나중에 어땠는지 \r\n감상 들려줘"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Tell me later\r\nwhat you think"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "之後再跟我說感想"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "之後再跟我說感想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "퇴근"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I wanna leave"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "下班"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "下班"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "퇴근하고싶다"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I wanna leave work"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "好想下班"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "好想下班"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "정말 매우 아주 퇴근하고싶다"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I really wanna very much leave work"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "真的超級無敵想下班"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "真的超級無敵想下班"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "진심으로 퇴근하고싶다"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I so seriously want to leave work"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "真的好想下班"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "真的好想下班"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아니 딱히"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Eh well"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "沒什麼"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "沒什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그런 건 아닌데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Not really"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "不是那樣的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "不是那樣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "뭐 그냥 일하기 싫은 날이란게 있잖아?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "There's just some days when you don't wanna work, ya know?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "不是會有那種單純不想工作的日子嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "不是會有那種單純不想工作的日子嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 날도 있긴 하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, some days are just like that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 날도 있긴 하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, some days are just like that"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "미리암 씨도 일하기 싫을 때가 있다고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "and some days I just don't feel like it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "米里昂也有不想工作的時候"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "米里昂也有不想工作的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "농땡이 피우고 싶을 땐 스스로한테 솔직해져야돼"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I have to be honest with myself when I just wanna be lazyyyyy"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "想偷懶的時候就要對自己誠實"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "想偷懶的時候就要對自己誠實"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "안그러면 병난다 병"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "or else I'd just get so sick and tired"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "不然會生病的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "不然會生病的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "하~~ 퇴근하고싶다~"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Ah~~ lemme go home~"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "哈～～好想下班～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "哈～～好想下班～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "방이 너무 삭막하다고 \r\n르네한테 화분을 선물받았는데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Renee got a plant for me\r\nshe said my room is just too depressing"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我說房間太冷清\r\n結果收到了勒內送的花盆"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我說房間太冷清\r\n結果收到了勒內送的花盆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "어떻게 키워야할지 막막하네"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I don't know how to take care of it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "但不知道要怎麼照顧"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "但不知道要怎麼照顧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "식물이 있는 방은 보기에 예쁘고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "My room looks prettier with the plant"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "有植物的房間看起來很漂亮"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "有植物的房間看起來很漂亮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "보니까 꽃가루도 거의 안날리는거 같긴 해"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "and I think it doesn't have pollen flying around"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "看起來也不太會有花粉亂飛"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "看起來也不太會有花粉亂飛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "식물 키워본 적 없어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have you ever taken care of a plant?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你有種過植物嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你有種過植物嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "식물 키워본 적 없어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have you ever taken care of a plant?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "你有種過植物嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "你有種過植物嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아무래도 일이 일이다보니까?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Well I was busy with my own work"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "不管怎麼說工作就是工作吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "不管怎麼說工作就是工作吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "감찰관이 되기 전에는 용병 일을 했어서 \r\n어디 오래 정착하질 않았거든"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "and I worked as a mercenary before I became an inspector\r\nso I never settled at a single place for long"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我在成為觀察者之前原本是傭兵\r\n不會在某個地方久住"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我在成為觀察者之前原本是傭兵\r\n不會在某個地方久住"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 확실히 식물은 키우기 어려웠겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It must've been hard for you to take care of a plant then"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那要養植物確實會比較難"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那要養植物確實會比較難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 확실히 식물은 키우기 어려웠겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It must've been hard for you to take care of a plant then"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那要養植物確實會比較難"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那要養植物確實會比較難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "흠"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Hmm"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이거 엄청 오랜 시간이 지나야 \r\n꽃이 피는 종인거 같던데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "This one takes a loooong time\r\nfor its flower to bloom"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "這個好像要等很久\r\n才會開花"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "這個好像要等很久\r\n才會開花"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이거 꽃 필 쯤에도 구원자가 여기 있으려나"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I wonder if you'll still be here when it blooms"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "花開的時候救援者還會在這裡嗎"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "花開的時候救援者還會在這裡嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "뭐, 잘 돌보면 일찍 필지도 모르겠네"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Well I guess if I took good care of it…it might bloom early"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "好好照顧的話，說不定會早一點開呢"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "好好照顧的話，說不定會早一點開呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자, 장수해.\r\n알았지?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "You gotta live for a loooong time, Savior.\r\nAlright?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者，要活得久一點唷。\r\n知道了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者，要活得久一點唷。\r\n知道了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "노력해볼게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll try!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會努力看看的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會努力看看的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "노력해볼게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll try!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會努力看看的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會努力看看的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그래그래~ 옳지 옳지♪"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Okay okay~ great♪"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "很好～就是這樣♪"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "很好～就是這樣♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "머리카락이 길면 가끔"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "My hair is so long"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "頭髮太長的話"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "頭髮太長的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "면 요리 먹을 때 불편해"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "sometimes it gets in the way when I eat noodles"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "常常會妨礙我吃麵"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "常常會妨礙我吃麵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "머리를 묶고 먹어야겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You need to tie your hair"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來吃麵前要先把頭髮綁起來了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來吃麵前要先把頭髮綁起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "머리를 묶고 먹어야겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You need to tie your hair"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來吃麵前要先把頭髮綁起來了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來吃麵前要先把頭髮綁起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "맞아;"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I know right;"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "沒錯；"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "沒錯；"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "과일 꼬치처럼 끈적한거 먹으면 \r\n머리카락에 달라붙고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Whenever I eat fruit skewers\r\nit sticks to my hair"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "吃像水果串之類黏黏的東西的話\r\n還會黏在頭髮上"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "吃像水果串之類黏黏的東西的話\r\n還會黏在頭髮上"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그냥 확 자를까…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Maybe I should just cut it…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "還是乾脆剪掉…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "還是乾脆剪掉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러면 아까울 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you'll regret it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但這樣有點可惜"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但這樣有點可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러면 아까울 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you'll regret it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但這樣有點可惜"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但這樣有點可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암 긴머리 잘 어울리니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You look great with long hair"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為米里昂很適合長髮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為米里昂很適合長髮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암 긴머리 잘 어울리니까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You look great with long hair"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為米里昂很適合長髮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為米里昂很適合長髮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "…그래?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "…You think so?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "…是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "…是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그럼 까짓거"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Ehh well"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "那就算了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "那就算了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "먹는 스킬을 더 단련하지 뭐"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I guess I could work on my eating skills instead then"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "要再鍛鍊一下吃東西的技能了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "要再鍛鍊一下吃東西的技能了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "후후 그럼 바로 연습하러 가볼까♪\r\n따라올래?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Hehe you know what? I should go practice right away♪\r\nWanna come?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "呵呵，那我馬上去練習♪\r\n你要來嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "呵呵，那我馬上去練習♪\r\n你要來嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갈래!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I wanna go!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我要去！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我要去！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갈래!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I wanna go!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我要去！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我要去！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "후…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Sigh…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "呼…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "呼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "현장에 나가는 건 괜찮은데 \r\n보고서 쓰기가 진짜 귀찮아"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I like going onsite for work\r\nbut I just HATE writing up the reports"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "去現場還好\r\n但寫報告真的很麻煩"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "去現場還好\r\n但寫報告真的很麻煩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자도 본 적 있지?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "You've seen it Savior?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者也看過吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者也看過吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "글자는 많은데 \r\n무슨 소리 하는건지 모르겠는 보고서"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "You know the report\r\nwith all the gibberish"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "雖然有很多字，但是不知道在說什麼的報告"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "雖然有很多字，但是不知道在說什麼的報告"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사실 별로 못 본 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't think I've seen it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "其實我沒看過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "其實我沒看過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사실 별로 못 본 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't think I've seen it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "其實我沒看過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "其實我沒看過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "진짜? 완전 부럽네"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Really? I'm jealous"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "真的嗎？好羨慕喔"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "真的嗎？好羨慕喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자 주변엔 유능한 애들밖에 없나봐"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Everyone around you must be competent"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "看來救援者身邊全都是能幹的人"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "看來救援者身邊全都是能幹的人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "현장에서 본 걸 곧이곧대로 디테일하게 쓰는걸 \r\n좋아하는 상사들도 있지만"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Some bosses like to see all\r\nthe small details in the report"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "雖然有些上司喜歡一五一十\r\n寫得很仔細的報告"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "雖然有些上司喜歡一五一十\r\n寫得很仔細的報告"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "보통 다들 시간이 없으니까 말이야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "but most of them don't have time"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "但通常大家都沒有時間"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "但通常大家都沒有時間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "읽는 상대의 입장을 고려해서 \r\n필요한 정보만 간추리는거도 중요한 능력이지"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "so it's important to know who you are reporting to\r\nand sum things up with just the gist of it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "考慮到讀的人的立場\r\n篩選必要的資訊也是很重要的能力"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "考慮到讀的人的立場\r\n篩選必要的資訊也是很重要的能力"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "갑자기 왜 이런 말을 하냐면…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I'm bringing this up because…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "至於為什麼說這些話呢…."
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "至於為什麼說這些話呢…."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자용 보고서하고 \r\n헤이즐 님용 보고서하고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I need to write up a report for you,\r\none for Hazel,"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "給救援者的報告跟\r\n給黑伊茲爾的報告跟"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "給救援者的報告跟\r\n給黑伊茲爾的報告跟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "조앤용 보고서를 \r\n따로 써야하거든"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "and one for Joanne…\r\nall separately"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "給瓊的報告都要分開寫"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "給瓊的報告都要分開寫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "항상 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I really appreciate it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳常常幫我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳常常幫我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "항상 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I really appreciate it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳常常幫我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳常常幫我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "에휴~~~"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Sigh~~~"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "唉～～～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "唉～～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그래 그렇게 고마워하니까 됐다"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Well I'm glad you appreciate it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "是啊，既然你都這麼感謝我，那就算了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "是啊，既然你都這麼感謝我，那就算了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "힘내서 마저 쓰고 올게~"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "that should give me just enough motivation to write up today's~"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我先去努力趕報告～"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我先去努力趕報告～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "흠"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Hmm"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "사실 나 사진 찍는 거 별로 안 좋아하거든"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "You know, I actually don't like taking pictures"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "其實我不太喜歡拍照"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "其實我不太喜歡拍照"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그래서 내 사진이 별로 없는데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "that's why I don't have a lot of pictures of me"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "所以我的照片很少"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "所以我的照片很少"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "요즘은 좀 후회되네"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "but these days I kinda regret not taking many…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "最近有點後悔"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "最近有點後悔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why do you ask all of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why do you ask all of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아니 뭐, 그냥"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Well, it's just that…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "沒什麼，就是"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "沒什麼，就是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "때로는 의미있는 기록이었겠구나 싶어서"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I just think sometimes such pics might've been meaningful to have as records"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "偶爾覺得其實是有意義的記錄"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "偶爾覺得其實是有意義的記錄"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그런 의미로 나중에 \r\n구원자 사진이나 하나 받아야겠다"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "You know what?\r\nYou should send me your pic sometime"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "在這種意義上\r\n以後得拿一張救援者的照片了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "在這種意義上\r\n以後得拿一張救援者的照片了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 서로 교환할까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Shall we exchange pics?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那就互相交換吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那就互相交換吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 서로 교환할까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Shall we exchange pics?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那就互相交換吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那就互相交換吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "ㅋㅋ 그럴까"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Shall we? lol"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "呵呵好啊"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "呵呵好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그럼 사진 잘 찍어놔라!"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Make sure you take some good pics then!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "那就好好拍照吧！"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "那就好好拍照吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "기대하고 있을게"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I'll be looking forward to it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "好期待啊"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "好期待啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이건 내 방 사진이야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "This is a picture of my room"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "這是我房間的照片"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "這是我房間的照片"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아까 청소를 끝냈어\r\n깔끔하지? 후후"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I just cleaned it.\r\nIsn't it clean? Haha"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "剛剛打掃完了，\r\n很乾淨吧？呵呵"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "剛剛打掃完了，\r\n很乾淨吧？呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아케나인은 솔레이의 임시 수도지만"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Arkenine is Solrey's temporary capital city"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "阿肯納因雖然是蘇萊伊的臨時首都"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "阿肯納因雖然是蘇萊伊的臨時首都"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "맛집이 쟁쟁한 걸로 치면"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "but it has so many good places to eat"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "但本來就以美味的餐廳"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "但本來就以美味的餐廳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구 수도인 엘나스에도 뒤지지 않기로 \r\n원래부터 유명했어"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "it's always been known to have great food\r\njust like the old capital Elnath"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "不亞於舊首都艾爾納斯而聞名"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "不亞於舊首都艾爾納斯而聞名"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "어때"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "so what's it like"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "怎麼樣"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "怎麼樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이곳의 영주를 맡은 게\r\n꽤 행운인 것 같지 않아?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "don't you think you're quite lucky\r\nto be the Lord of such a place?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "你不覺得擔任這裡的領主\r\n蠻幸運的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "你不覺得擔任這裡的領主\r\n蠻幸運的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "후"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Sigh"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "呼"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "정령 연합군 일은 보람차지만"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "The Soul Alliance work is great and all…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "精靈聯軍的工作雖然很有意義"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "精靈聯軍的工作雖然很有意義"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "필요한 서류가 너무 많아"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "but there's just TOO much paperwork to do"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "但資訊量太大了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "但資訊量太大了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "조금만 방심하면 일이 \r\n엄청 많이 쌓인다니까…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Blink for a second\r\nand the work just piles up…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "只要稍微分心，\r\n工作就會大量累積…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "只要稍微分心，\r\n工作就會大量累積…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "오늘은"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "You know"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "今天"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "今天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "전부터 계속 궁금했던 걸 \r\n구원자 너한테 물어보고 싶어"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I've been meaning to\r\nask you something Savior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我從很久以前就很好奇這件事情\r\n想問問救援者"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我從很久以前就很好奇這件事情\r\n想問問救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Oh"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아 근데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "But…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "啊但是"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "啊但是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "진짜 별 거 아니니까"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "It's nothing serious"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "不是什麼重要的事"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "不是什麼重要的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이상한 생각은 하지 말고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Don't read too deeply into it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "也不什麼奇怪的問題"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "也不什麼奇怪的問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그냥 단순한 질문일 뿐이니까!"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "It's just that I'm curious!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "就只是純粹想問問而已"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "就只是純粹想問問而已"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "예상 밖의 상황이네"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I just didn't see this coming…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "意料之外的狀況"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "意料之外的狀況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이를 어쩐다…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "So…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "該怎麼辦呢…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "該怎麼辦呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "린지랑 나는 제법 죽이 잘 맞는 편이야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Linzy and I are pretty tight"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我跟琳賽個性算是滿合拍的"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我跟琳賽個性算是滿合拍的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "항상 같이 다닐 정도는 아니어도…\r\n제법 꾸준히 만나서 얘기하는 사이지"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "It's not like we ALWAYS hang out…but we always keep in touch"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "雖然不是天天見面…\r\n但我們也算很常見面聊天"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "雖然不是天天見面…\r\n但我們也算很常見面聊天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자도 린지랑 꽤 친하지?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "You're pretty close to Linzy too, aren't you?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者也跟琳賽很熟吧？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者也跟琳賽很熟吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "옛날이면 몰라도 요즘은\r\n나보다 구원자가 린지랑 더 친할 수도 있겠다"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I feel these days\r\nshe's closer with you than she is with me"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "現在救援者有可能比我跟琳賽更熟"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "現在救援者有可能比我跟琳賽更熟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그런가?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그런가?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "하핫"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Haha"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "哈哈"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그럼 오늘도\r\n영주 일 힘내라구"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Anyway, good luck on your Lord duty today!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "今天也要認真\r\n做領主的工作喔"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "今天也要認真\r\n做領主的工作喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "요즘 잠들기 전에 뭔가 심란한데…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I just feel so anxious before I sleep lately…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "這陣子睡前都有點心煩意亂…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "這陣子睡前都有點心煩意亂…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "하아…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Hah…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "哈…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "哈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아니"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "No no"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "沒事"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "沒事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "아무것도 아니야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Never mind"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "什麼事都沒有"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "什麼事都沒有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "미안"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "요즘 뭔가 일이 많아져서 말이야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I just have so much on my plate these days"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我最近太忙了"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我最近太忙了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그래서 연락하기 쉽지 않네, 하하"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I have a hard keeping in touch haha"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "很難跟你聯絡，哈哈"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "很難跟你聯絡，哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "연락이 잘 안되면 걱정돼"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I get worried if we don't keep in touch"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "沒有收到妳的訊息\r\n讓我有點擔心"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "沒有收到妳的訊息\r\n讓我有點擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "연락이 잘 안되면 걱정돼"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I get worried if we don't keep in touch"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "沒有收到妳的訊息\r\n讓我有點擔心"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "沒有收到妳的訊息\r\n讓我有點擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "…응"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "…yup"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "…嗯"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "…嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "뭐, 한차례 정리되면 \r\n또 톡 보낼게"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Well, I'll text ya\r\nwhen things settle a bit"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "還好，過陣子整理好之後\r\n我再傳訊息給你"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "還好，過陣子整理好之後\r\n我再傳訊息給你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그때까지 잘 지내라구, 구원자"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Look out for my messages, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者，你可要好好過日子喔"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者，你可要好好過日子喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그, 요즘은 잘…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "These days…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "那個，最近過得…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "那個，最近過得…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "시간이 안 나더라고"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I just don't have much time"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "沒時間啊"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "沒時間啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "하하…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Haha…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "哈哈…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "哈哈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "……."
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "……."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자는 벚꽃이 피는 걸"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Savior, about cherry blossoms…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者會先看準花季時間"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者會先看準花季時間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "미리 알아보고\r\n손꼽아 기다리는 편이야?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Are you the type to\r\ncount the days until they bloom?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "再去賞花嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "再去賞花嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "나는…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "我…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "생각해봤는데"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I thought about it"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "思考了一下"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "思考了一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "재밌을 것 같아"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "and I think it'll be fun"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "似乎很有趣"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "似乎很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "광장으로 나가면 돼?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Meet ya at the square?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "可以去趟廣場嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "可以去趟廣場嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "그리고…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "And…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "還有…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "還有…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "둘이서 가고 싶어"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "I want to go with you. Just the two of us."
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "想跟你單獨兩個人一起去"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "想跟你單獨兩個人一起去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이런 기념일 특유의 들뜬 분위기…"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "This feeling you get on holidays…"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "這種紀念日特有的興奮氣氛…"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "這種紀念日特有的興奮氣氛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "좀 낯간지러운 것 같긴해"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "It's a little too much for me"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "確實有點害羞"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "確實有點害羞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "자, 받아 구원자"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Here, it's for you Savior"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "來，收下吧，救援者"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "來，收下吧，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "챙겨줘서 고마워, 미리암!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for the gift Miriam!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，米里昂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，米里昂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "챙겨줘서 고마워, 미리암!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for the gift Miriam!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，米里昂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，米里昂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "구원자는 꼭 다시 만나고 싶은 상대가 있어?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Do you have anyone you wish to meet again, Savior?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "救援者有想再見一面的對象嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "救援者有想再見一面的對象嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "오늘은 그런 상대를 추억하는 날이야"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Today is the day you think of those people"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "今天是回憶那種對象的日子"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "今天是回憶那種對象的日子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알려줘서 고마워, 미리암!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for letting me know, Miriam!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳告訴我，米里昂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳告訴我，米里昂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알려줘서 고마워, 미리암!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for letting me know, Miriam!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳告訴我，米里昂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳告訴我，米里昂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "이브의 날은 큰 명절이지. \r\n구원자, 맛있는 음식은 좀 먹었어?"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "Eve's Day is a big holiday.\r\nSavior, did you eat anything nice?"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "夏娃之日是個大節日。\r\n救援者，你有吃好吃東西嗎？"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "夏娃之日是個大節日。\r\n救援者，你有吃好吃東西嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "미리암",
+            "message": "미식가는 절대 이 시기를 놓치면 안된다구. 하핫"
+          },
+          "en": {
+            "speaker": "Miriam",
+            "message": "A gourmet must never miss out on the occasion. Haha"
+          },
+          "zh_tw": {
+            "speaker": "米里昂",
+            "message": "美食家絕對不能錯過這個時節，哈哈"
+          },
+          "zh_cn": {
+            "speaker": "米里昂",
+            "message": "美食家絕對不能錯過這個時節，哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알겠어, 유념할게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Got it!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了，我會注意的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了，我會注意的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알겠어, 유념할게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Got it!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了，我會注意的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了，我會注意的！"
+          }
+        }
+      ]
+    }
+  }
+}

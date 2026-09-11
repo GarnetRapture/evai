@@ -1,0 +1,6826 @@
+{
+  "id": "2120",
+  "name": "소연",
+  "name_en": "Xiaolian",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "스트라이커",
+  "sub_class": "단일",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "천하제일 배달원",
+    "constellation": "천칭자리",
+    "union": "대성만두",
+    "birthday": "1010",
+    "height": 154,
+    "weight": 43,
+    "cv_ko": "이다은",
+    "cv_jp": "Yuuki Takada",
+    "like": [
+      "만두"
+    ],
+    "dislike": [
+      "복잡한 것",
+      "바보 취급"
+    ],
+    "hobby": [
+      "자전거 타기"
+    ],
+    "speciality": [
+      "만두 많이 먹기",
+      "체술"
+    ]
+  },
+  "personality": {
+    "description": "오, 안녕! 네가 구원자구나?\n난 아케나인 최고의 맛집인 「대성만두」의 배달부! 소연이야.\n\n내가 좋아하는 거? 그건 고민할 필요도 없이 만두지!\n만두는 진~짜로 완벽한 음식이라니까? 자, 말 나온 김에 너도 하나 먹어봐.\n어때? 맛있지? 헤헷.\n\n시간이 되면 우리 가게 한번 놀러 와. 사장은 악덕 영감이지만 맛 하나는 보장할 수 있으니까.\n그리고… 너만 괜찮다면 내 동생들도 소개해 줄게. 다들 착하고 귀여운 애들이야.\n\n앗, 배달 들어왔다!\n그럼 난 이만 가볼게. 다음에 봐!",
+    "greeting": "빠른 배달은 맡겨만 주시라!"
+  },
+  "speech_patterns": [
+    "안녕 구원자",
+    "흠",
+    "진짜 잘 보내지고 있는거 맞나?",
+    "와",
+    "깜짝이야",
+    "잘 가고 있었구나",
+    "이거 처음 써봐서",
+    "동생한테 한참 배워써",
+    "배웠어",
+    "헤헤…그래?",
+    "뭐…\r\n앞으로 잘 부탁행♡",
+    "아",
+    "잠깐만 실수",
+    "느낌표 쓸려고했는데",
+    "하트 ㄴ아니고 느낌표야",
+    "아 쫌!!!!!",
+    "놀리지마 진짜 때린다",
+    "너 이따 두고봐",
+    "악",
+    "만두 떨궜어",
+    "흑바닥에",
+    "ㅇㅇ 그거",
+    "5분안에 주웠으니까",
+    "먹어도 되겠지",
+    "에이 설마",
+    "그럼 먹을 수 있는게 거의 없다는 거잖아",
+    "5분이겠지",
+    "걱정마셔",
+    "내 위장은 튼튼하니까 문제 없다구~",
+    "만두 종류가 엄청 많은 거 알아?",
+    "요리 방법도 그렇지만",
+    "재료나 모양에 따라서도 다 이름이 다르다구",
+    "나?",
+    "나는…",
+    "흠…",
+    "아 이거 어렵네…",
+    "그렇게까지 고민할 문제야…?",
+    "무슨 소리야 이런 진지한 질문에",
+    "대충 대답하는 건 만두에 대한 모욕이야!!",
+    "으으음...",
+    "기다려봐 내일까지 대답해줄테니까",
+    "음… \r\n질문 취소해도 돼?",
+    "안돼! \r\n딱 기다려!",
+    "구원자 이거 봐",
+    "둘째 동생이 그려줬어",
+    "그치????",
+    "재능이 있는 것 같아",
+    "미술학원을 알아봐야되나",
+    "으히히",
+    "소중한게 많다는 건 분명 좋은 건데"
+  ],
+  "comments": [
+    {
+      "writer": "레베카",
+      "comment": "현상 유지라…\n바라는 마음은 알겠지만 아무래도 어렵지, 흠."
+    },
+    {
+      "writer": "무명",
+      "comment": "크르륵… 바보다… 크륵…!"
+    },
+    {
+      "writer": "클라라",
+      "comment": "항상 야채를 거래해 주시는 고마운 분!\n앞으로도 신선한 야채만 공급해 드릴게요~♪"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "소연",
+        "message": "안녕 구원자"
+      },
+      {
+        "speaker": "소연",
+        "message": "흠"
+      },
+      {
+        "speaker": "소연",
+        "message": "진짜 잘 보내지고 있는거 맞나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 소연"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 소연"
+      },
+      {
+        "speaker": "소연",
+        "message": "와"
+      },
+      {
+        "speaker": "소연",
+        "message": "깜짝이야"
+      },
+      {
+        "speaker": "소연",
+        "message": "잘 가고 있었구나"
+      },
+      {
+        "speaker": "소연",
+        "message": "이거 처음 써봐서"
+      },
+      {
+        "speaker": "소연",
+        "message": "동생한테 한참 배워써"
+      },
+      {
+        "speaker": "소연",
+        "message": "배웠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 하는 것 같은데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 하는 것 같은데?"
+      },
+      {
+        "speaker": "소연",
+        "message": "헤헤…그래?"
+      },
+      {
+        "speaker": "소연",
+        "message": "뭐…\r\n앞으로 잘 부탁행♡"
+      },
+      {
+        "speaker": "소연",
+        "message": "아"
+      },
+      {
+        "speaker": "소연",
+        "message": "잠깐만 실수"
+      },
+      {
+        "speaker": "소연",
+        "message": "느낌표 쓸려고했는데"
+      },
+      {
+        "speaker": "소연",
+        "message": "하트 ㄴ아니고 느낌표야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 잘 부탁해 ♡"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 잘 부탁해 ♡"
+      },
+      {
+        "speaker": "소연",
+        "message": "아 쫌!!!!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "놀리지마 진짜 때린다"
+      },
+      {
+        "speaker": "소연",
+        "message": "너 이따 두고봐"
+      },
+      {
+        "speaker": "소연",
+        "message": "악"
+      },
+      {
+        "speaker": "소연",
+        "message": "만두 떨궜어"
+      },
+      {
+        "speaker": "소연",
+        "message": "흑바닥에"
+      },
+      {
+        "speaker": "구원자",
+        "message": "흙바닥 말하는 거지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "흙바닥 말하는 거지?"
+      },
+      {
+        "speaker": "소연",
+        "message": "ㅇㅇ 그거"
+      },
+      {
+        "speaker": "소연",
+        "message": "5분안에 주웠으니까"
+      },
+      {
+        "speaker": "소연",
+        "message": "먹어도 되겠지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거… 원래는 5초 아니야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거… 원래는 5초 아니야?"
+      },
+      {
+        "speaker": "소연",
+        "message": "에이 설마"
+      },
+      {
+        "speaker": "소연",
+        "message": "그럼 먹을 수 있는게 거의 없다는 거잖아"
+      },
+      {
+        "speaker": "소연",
+        "message": "5분이겠지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "모쪼록 탈 안 나게 조심해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "모쪼록 탈 안 나게 조심해"
+      },
+      {
+        "speaker": "소연",
+        "message": "걱정마셔"
+      },
+      {
+        "speaker": "소연",
+        "message": "내 위장은 튼튼하니까 문제 없다구~"
+      },
+      {
+        "speaker": "소연",
+        "message": "만두 종류가 엄청 많은 거 알아?"
+      },
+      {
+        "speaker": "소연",
+        "message": "요리 방법도 그렇지만"
+      },
+      {
+        "speaker": "소연",
+        "message": "재료나 모양에 따라서도 다 이름이 다르다구"
+      },
+      {
+        "speaker": "구원자",
+        "message": "소연이 제일 좋아하는 만두는 뭐야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "소연이 제일 좋아하는 만두는 뭐야?"
+      },
+      {
+        "speaker": "소연",
+        "message": "나?"
+      },
+      {
+        "speaker": "소연",
+        "message": "나는…"
+      },
+      {
+        "speaker": "소연",
+        "message": "흠…"
+      },
+      {
+        "speaker": "소연",
+        "message": "아 이거 어렵네…"
+      },
+      {
+        "speaker": "소연",
+        "message": "그렇게까지 고민할 문제야…?"
+      },
+      {
+        "speaker": "소연",
+        "message": "그렇게까지 고민할 문제야…?"
+      },
+      {
+        "speaker": "소연",
+        "message": "무슨 소리야 이런 진지한 질문에"
+      },
+      {
+        "speaker": "소연",
+        "message": "대충 대답하는 건 만두에 대한 모욕이야!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "으으음..."
+      },
+      {
+        "speaker": "구원자",
+        "message": "흐으음~~~~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하아… 오늘 안에 답 안 나오는 문제야 이건"
+      },
+      {
+        "speaker": "소연",
+        "message": "기다려봐 내일까지 대답해줄테니까"
+      },
+      {
+        "speaker": "소연",
+        "message": "음… \r\n질문 취소해도 돼?"
+      },
+      {
+        "speaker": "소연",
+        "message": "음… \r\n질문 취소해도 돼?"
+      },
+      {
+        "speaker": "소연",
+        "message": "안돼! \r\n딱 기다려!"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자 이거 봐"
+      },
+      {
+        "speaker": "소연",
+        "message": "둘째 동생이 그려줬어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 귀엽다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 귀엽다"
+      },
+      {
+        "speaker": "소연",
+        "message": "그치????"
+      },
+      {
+        "speaker": "소연",
+        "message": "재능이 있는 것 같아"
+      },
+      {
+        "speaker": "소연",
+        "message": "미술학원을 알아봐야되나"
+      },
+      {
+        "speaker": "소연",
+        "message": "으히히"
+      },
+      {
+        "speaker": "소연",
+        "message": "소중한게 많다는 건 분명 좋은 건데"
+      },
+      {
+        "speaker": "소연",
+        "message": "뭔가 가끔 무서워"
+      },
+      {
+        "speaker": "소연",
+        "message": "내가 지킬 수 있을까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지킬 수 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지킬 수 있어"
+      },
+      {
+        "speaker": "소연",
+        "message": "응…"
+      },
+      {
+        "speaker": "소연",
+        "message": "누가 뭐래도 소중한 것들을 지킬 거야"
+      },
+      {
+        "speaker": "소연",
+        "message": "그러기 위해서라면 난…"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자"
+      },
+      {
+        "speaker": "소연",
+        "message": "부탁이 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭔데?"
+      },
+      {
+        "speaker": "소연",
+        "message": "내가 진짜 가끔 바보같은 짓을 할 때가 있거든?"
+      },
+      {
+        "speaker": "소연",
+        "message": "그럴 땐 제대로 말해줘"
+      },
+      {
+        "speaker": "소연",
+        "message": "겸워히 받아들일테니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 말할 거 생겼어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 말할 거 생겼어"
+      },
+      {
+        "speaker": "소연",
+        "message": "!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "뭐 뭔데 말해봐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "'겸워히'가 아니라 '겸허히'야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "'겸워히'가 아니라 '겸허히'야"
+      },
+      {
+        "speaker": "소연",
+        "message": "아씨"
+      },
+      {
+        "speaker": "소연",
+        "message": "그런 거 말한 거 아니라고!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "그리고 몰라서 잘못 쓴 거 아니거든?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래그래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래그래"
+      },
+      {
+        "speaker": "소연",
+        "message": "아~~~진짜"
+      },
+      {
+        "speaker": "소연",
+        "message": "너 나 바보라고 생각했지!!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자 지금 뭐해?"
+      },
+      {
+        "speaker": "소연",
+        "message": "산책가자"
+      },
+      {
+        "speaker": "소연",
+        "message": "밖에 날씨 진짜 좋아"
+      },
+      {
+        "speaker": "소연",
+        "message": "자전거로 공원 한 바퀴 돌자"
+      },
+      {
+        "speaker": "소연",
+        "message": "내 자전거 뒤에 태워줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "날 태워준다고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "날 태워준다고?"
+      },
+      {
+        "speaker": "소연",
+        "message": "왜? 자전거 뒤에 처음 타봐?"
+      },
+      {
+        "speaker": "소연",
+        "message": "무서우면 내 허리 꽉 잡아"
+      },
+      {
+        "speaker": "소연",
+        "message": "걱정마 분명 재밌을테니까"
+      },
+      {
+        "speaker": "소연",
+        "message": "히히"
+      },
+      {
+        "speaker": "구원자",
+        "message": "소연. 오늘은 자전거 안 타?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "소연. 오늘은 자전거 안 타?"
+      },
+      {
+        "speaker": "소연",
+        "message": "아"
+      },
+      {
+        "speaker": "소연",
+        "message": "타야지"
+      },
+      {
+        "speaker": "소연",
+        "message": "또 태워달라고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 재밌었어서…\r\n왜, 싫어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 재밌었어서…\r\n왜, 싫어?"
+      },
+      {
+        "speaker": "소연",
+        "message": "아니 그건 아닌데..."
+      },
+      {
+        "speaker": "소연",
+        "message": "그때 니가 내 허리를 너무 꽉 잡아서"
+      },
+      {
+        "speaker": "소연",
+        "message": "엄청 간지러웠단 말야"
+      },
+      {
+        "speaker": "소연",
+        "message": "그니까 이번엔 니가 태워줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아"
+      },
+      {
+        "speaker": "소연",
+        "message": "너무 선뜻 알겠다고 하니까 당황스러운데..."
+      },
+      {
+        "speaker": "소연",
+        "message": "또 자전거 고장내면 안된다?!"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자~"
+      },
+      {
+        "speaker": "소연",
+        "message": "영감이 신메뉴 연구한다고"
+      },
+      {
+        "speaker": "소연",
+        "message": "만두를 엄청 많이 만들어서"
+      },
+      {
+        "speaker": "소연",
+        "message": "좀 나눠주겠다는데"
+      },
+      {
+        "speaker": "소연",
+        "message": "대성만두로 올래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아, 맛있겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아, 맛있겠다"
+      },
+      {
+        "speaker": "소연",
+        "message": "오면 바로 먹을 수 있도록 준비해둘게"
+      },
+      {
+        "speaker": "소연",
+        "message": "조심히 와!"
+      },
+      {
+        "speaker": "소연",
+        "message": "대성만두에 네가 없으면"
+      },
+      {
+        "speaker": "소연",
+        "message": "어쩐지… 좀 이상해"
+      },
+      {
+        "speaker": "소연",
+        "message": "요새 맨날 와서 그런가…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쓸쓸해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "쓸쓸해?"
+      },
+      {
+        "speaker": "소연",
+        "message": "쓰"
+      },
+      {
+        "speaker": "소연",
+        "message": "쓸쓸한 것 까진 아니거든"
+      },
+      {
+        "speaker": "소연",
+        "message": "그냥 좀 허전함?"
+      },
+      {
+        "speaker": "소연",
+        "message": "뭐 그런거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "소연이 쓸쓸하지 않게 빨리 갈게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "소연이 쓸쓸하지 않게 빨리 갈게"
+      },
+      {
+        "speaker": "소연",
+        "message": "너 또 놀리지"
+      },
+      {
+        "speaker": "소연",
+        "message": "우씨..."
+      },
+      {
+        "speaker": "소연",
+        "message": "됐으니까 올거면 빨리 와!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "큰일 났어!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "아직 니가 뿌순 자전거 살 돈도 못 모았는데!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨일이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨일이야?"
+      },
+      {
+        "speaker": "소연",
+        "message": "설명하자면 기ㄹ어"
+      },
+      {
+        "speaker": "소연",
+        "message": "얼른 대성만두로 와!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "무명반점 녀석들"
+      },
+      {
+        "speaker": "소연",
+        "message": "대체 어떤 녀석들일지 궁금해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "힘을 숨기고 있던 베테랑일지도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "힘을 숨기고 있던 베테랑일지도"
+      },
+      {
+        "speaker": "소연",
+        "message": "그치?!"
+      },
+      {
+        "speaker": "소연",
+        "message": "만두만 몇백년 만든 도인이 나올지도 몰라"
+      },
+      {
+        "speaker": "소연",
+        "message": "그래도 안 질거지만!"
+      },
+      {
+        "speaker": "소연",
+        "message": "영감이 나한테 요리사는 꿈도 꾸지 말라고 했었는데"
+      },
+      {
+        "speaker": "소연",
+        "message": "난 아직 경험이 별로 없는 거지"
+      },
+      {
+        "speaker": "소연",
+        "message": "하면 잘 할수 있거든?"
+      },
+      {
+        "speaker": "소연",
+        "message": "두고 봐"
+      },
+      {
+        "speaker": "소연",
+        "message": "영감의 만두보다 더 맛있는 걸 만들어줄테다"
+      },
+      {
+        "speaker": "소연",
+        "message": "예전에 말했었지?"
+      },
+      {
+        "speaker": "소연",
+        "message": "동생이 세 명 있다고"
+      },
+      {
+        "speaker": "소연",
+        "message": "응 들었어"
+      },
+      {
+        "speaker": "소연",
+        "message": "응 들었어"
+      },
+      {
+        "speaker": "소연",
+        "message": "그... 애들이 좀 활발해서"
+      },
+      {
+        "speaker": "소연",
+        "message": "시끄러울 수도 있어"
+      },
+      {
+        "speaker": "소연",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "소연",
+        "message": "문제 없어"
+      },
+      {
+        "speaker": "소연",
+        "message": "문제 없어"
+      },
+      {
+        "speaker": "소연",
+        "message": "그럼 다행이야"
+      },
+      {
+        "speaker": "소연",
+        "message": "이따봐, 구원자."
+      },
+      {
+        "speaker": "소연",
+        "message": "대성만두는 틀리지 않았어."
+      },
+      {
+        "speaker": "소연",
+        "message": "바뀌어야할 건 대성만두가 아닌데,"
+      },
+      {
+        "speaker": "소연",
+        "message": "아닐텐데…"
+      },
+      {
+        "speaker": "소연",
+        "message": "모르겠어…"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "아직 집에 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니, 방금 밖에 나왔는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니, 방금 밖에 나왔는데…"
+      },
+      {
+        "speaker": "소연",
+        "message": "그럼 거기서 기다려!"
+      },
+      {
+        "speaker": "소연",
+        "message": "어디 가면 안 돼?\r\n내가 금방 갈테니까!"
+      },
+      {
+        "speaker": "소연",
+        "message": "야…"
+      },
+      {
+        "speaker": "소연",
+        "message": "너… 봤어? 못 봤지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭘?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭘?"
+      },
+      {
+        "speaker": "소연",
+        "message": "그"
+      },
+      {
+        "speaker": "소연",
+        "message": "그거… 무늬…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "바나나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "바나나?"
+      },
+      {
+        "speaker": "소연",
+        "message": "%*"
+      },
+      {
+        "speaker": "소연",
+        "message": "조용히해"
+      },
+      {
+        "speaker": "소연",
+        "message": "너 그거"
+      },
+      {
+        "speaker": "소연",
+        "message": "누구한테 말하지마"
+      },
+      {
+        "speaker": "소연",
+        "message": "지금 당장 잊어!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "노력은 해볼게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "노력은 해볼게"
+      },
+      {
+        "speaker": "소연",
+        "message": "아 진짜~!!!!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "다행이야 구원자"
+      },
+      {
+        "speaker": "소연",
+        "message": "이대로 계속 가면 \r\n예전 대성만두의 명성을 되찾을 수 있을지도"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자 덕분이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금 걱정 되네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금 걱정 되네"
+      },
+      {
+        "speaker": "소연",
+        "message": "에이 뭘 걱정해"
+      },
+      {
+        "speaker": "소연",
+        "message": "노력은 성공의 어머니라는 말이 있잖아"
+      },
+      {
+        "speaker": "소연",
+        "message": "어머니가 아니라 아버지였나? \r\n뭐 아무튼"
+      },
+      {
+        "speaker": "소연",
+        "message": "열심히 했으니까"
+      },
+      {
+        "speaker": "소연",
+        "message": "천재지변이라도 생기지 않는 이상"
+      },
+      {
+        "speaker": "소연",
+        "message": "별일 없을 거야"
+      },
+      {
+        "speaker": "소연",
+        "message": "요즘 영감 주책 장난 아냐"
+      },
+      {
+        "speaker": "소연",
+        "message": "왜 저러는거야 정말"
+      },
+      {
+        "speaker": "구원자",
+        "message": "가게가 잘 되고 있으니 \r\n황 사장님도 기분이 좋으신가 봐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "가게가 잘 되고 있으니 \r\n황 사장님도 기분이 좋으신가 봐"
+      },
+      {
+        "speaker": "소연",
+        "message": "그…\r\n그건 나도 그렇지만"
+      },
+      {
+        "speaker": "소연",
+        "message": "자꾸 널 이상하게 부르잖아"
+      },
+      {
+        "speaker": "소연",
+        "message": "저기 뭐냐…\r\n구원자"
+      },
+      {
+        "speaker": "소연",
+        "message": "영감이 하는 주접 그냥 무시해"
+      },
+      {
+        "speaker": "소연",
+        "message": "알겠지?!"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자, 오고 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "거의 다 왔어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "거의 다 왔어"
+      },
+      {
+        "speaker": "소연",
+        "message": "좋았어"
+      },
+      {
+        "speaker": "소연",
+        "message": "혹시 몸 안 좋으면 바로바로 말해"
+      },
+      {
+        "speaker": "소연",
+        "message": "영감이 너는 무조건 쉬게 해준대"
+      },
+      {
+        "speaker": "소연",
+        "message": "쉬는 날에도 일당 준다더라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "호화롭네…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "호화롭네…"
+      },
+      {
+        "speaker": "소연",
+        "message": "내 말이"
+      },
+      {
+        "speaker": "소연",
+        "message": "오래 일한 나한테는 푸대접이면서!!"
+      },
+      {
+        "speaker": "소연",
+        "message": "아무튼 널 다른 가게에 뺏길까 봐 불안해하더라"
+      },
+      {
+        "speaker": "소연",
+        "message": "솔직히 그건 이해가 가"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대성만두엔 소연이 있으니까 다른 가게로는 안 가"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대성만두엔 소연이 있으니까 다른 가게로는 안 가"
+      },
+      {
+        "speaker": "소연",
+        "message": "야너는"
+      },
+      {
+        "speaker": "소연",
+        "message": "넌쫌 그런말 아무렇지않게하지마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "소연",
+        "message": "그냥 좀 이상해"
+      },
+      {
+        "speaker": "소연",
+        "message": "뭔가 명치쪽이 간지러운 것 같단말야…"
+      },
+      {
+        "speaker": "소연",
+        "message": "사랑의 날이라니 이름부터 낯간지러워..."
+      },
+      {
+        "speaker": "소연",
+        "message": "그.. 말해두지만 이거 그냥 주는거다?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 받을게, 소연"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 받을게, 소연"
+      },
+      {
+        "speaker": "소연",
+        "message": "여름도 이제 곧 끝나는건가~"
+      },
+      {
+        "speaker": "소연",
+        "message": "가을도 좋지만~ \r\n여름이 끝나는 건 어쩐지 아쉬운것 같단 말이지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "가을에도 잘 부탁해, 소연"
+      },
+      {
+        "speaker": "구원자",
+        "message": "가을에도 잘 부탁해, 소연"
+      },
+      {
+        "speaker": "소연",
+        "message": "만두가 제일 잘 팔리는 계절~♪"
+      },
+      {
+        "speaker": "소연",
+        "message": "구원자. 항상 도와줘서 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로. 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로. 고마워!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "소연",
+      "en": "Xiaolian",
+      "zh_tw": "小蓮",
+      "zh_cn": "小蓮"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "스트라이커",
+      "en": "Striker",
+      "zh_tw": "鬥士",
+      "zh_cn": "鬥士"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "천하제일 배달원",
+        "en": "Unrivaled Deliverer",
+        "zh_tw": "天下第一外送員",
+        "zh_cn": "天下第一外送員"
+      },
+      "constellation": {
+        "ko": "천칭자리",
+        "en": "Libra",
+        "zh_tw": "天秤座",
+        "zh_cn": "天秤座"
+      },
+      "union": {
+        "ko": "대성만두",
+        "en": "Daesung Dumplings",
+        "zh_tw": "大成包子",
+        "zh_cn": "大成包子"
+      },
+      "cv_ko": {
+        "ko": "이다은",
+        "en": "Daeun Lee",
+        "zh_tw": "李多恩",
+        "zh_cn": "李多恩"
+      },
+      "cv_jp": {
+        "ko": "Yuuki Takada",
+        "en": "Yuuki Takada",
+        "zh_tw": "Yuuki Takada",
+        "zh_cn": "Yuuki Takada"
+      },
+      "like": {
+        "ko": [
+          "만두"
+        ],
+        "en": [
+          "Dumplings"
+        ],
+        "zh_tw": [
+          "包子"
+        ],
+        "zh_cn": [
+          "包子"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "복잡한 것",
+          "바보 취급"
+        ],
+        "en": [
+          "Complicated things",
+          "being taken a fool"
+        ],
+        "zh_tw": [
+          "複雜的事物、被當成笨蛋"
+        ],
+        "zh_cn": [
+          "複雜的事物、被當成笨蛋"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "자전거 타기"
+        ],
+        "en": [
+          "Ride Bike"
+        ],
+        "zh_tw": [
+          "騎腳踏車"
+        ],
+        "zh_cn": [
+          "騎腳踏車"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "만두 많이 먹기",
+          "체술"
+        ],
+        "en": [
+          "Eating a lot of dumplings",
+          "martial arts"
+        ],
+        "zh_tw": [
+          "吃很多包子、體術"
+        ],
+        "zh_cn": [
+          "吃很多包子、體術"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "오, 안녕! 네가 구원자구나?\n난 아케나인 최고의 맛집인 「대성만두」의 배달부! 소연이야.\n\n내가 좋아하는 거? 그건 고민할 필요도 없이 만두지!\n만두는 진~짜로 완벽한 음식이라니까? 자, 말 나온 김에 너도 하나 먹어봐.\n어때? 맛있지? 헤헷.\n\n시간이 되면 우리 가게 한번 놀러 와. 사장은 악덕 영감이지만 맛 하나는 보장할 수 있으니까.\n그리고… 너만 괜찮다면 내 동생들도 소개해 줄게. 다들 착하고 귀여운 애들이야.\n\n앗, 배달 들어왔다!\n그럼 난 이만 가볼게. 다음에 봐!",
+        "en": "Oh, hello! You must be the Savior!\r\nI'm in charge of deliveries for \"Daesung Dumplings,\" the best place to eat in Arkenine!\r\n\r\nMy favorite food? Dumplings, of course!\r\nIt's just the perfect food! Here, just try one.\r\nWell? Tasty, isn't it? Hehe.\r\n\r\nCome visit the restaurant when you have time sometime. The boss is a greedy old man, but he sure can make a perfect dumpling.\r\nOh, and if you don't mind, I'll introduce you to some of my friends. They're all so cute and nice.\r\n\r\nOh, I need to make a delivery!\r\nSee you later!",
+        "zh_tw": "哦，哈囉！你就是救援者啊？\r\n阿肯納因最好吃的美食餐廳，中華料理「大成包子」外送員就是我！我叫小蓮。\r\n\r\n你問我喜歡什麼？完全不需要猶豫，就是包子！\r\n包子真～的是完美的食物！來，既然提到了，你也吃一個看看。\r\n怎麼樣？好吃吧？嘿嘿。\r\n\r\n有空的話來我們的店看看，雖然老闆是缺德老頭，但餐點真的很好吃。\r\n還有…你願意的話，我再介紹我的弟弟妹妹們給你認識，他們都是乖巧可愛的孩子。\r\n\r\n啊，有外送訂單了！\r\n那我先走了，下次見！",
+        "zh_cn": "哦，哈囉！你就是救援者啊？\r\n阿肯納因最好吃的美食餐廳，中華料理「大成包子」外送員就是我！我叫小蓮。\r\n\r\n你問我喜歡什麼？完全不需要猶豫，就是包子！\r\n包子真～的是完美的食物！來，既然提到了，你也吃一個看看。\r\n怎麼樣？好吃吧？嘿嘿。\r\n\r\n有空的話來我們的店看看，雖然老闆是缺德老頭，但餐點真的很好吃。\r\n還有…你願意的話，我再介紹我的弟弟妹妹們給你認識，他們都是乖巧可愛的孩子。\r\n\r\n啊，有外送訂單了！\r\n那我先走了，下次見！"
+      },
+      "greeting": {
+        "ko": "빠른 배달은 맡겨만 주시라!",
+        "en": "Quick delivery is my specialty!",
+        "zh_tw": "迅速配送就包在我身上！",
+        "zh_cn": "迅速配送就包在我身上！"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "안녕 구원자"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "hi Savior"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "你好，救援者"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "你好，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "흠"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "hmm"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "嗯"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "진짜 잘 보내지고 있는거 맞나?"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "I wonder if my messages are getting through"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "真的有傳出去嗎？"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "真的有傳出去嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "와"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "ahh"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "哇"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "哇"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "깜짝이야"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "you surprised me"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "嚇我一跳"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "嚇我一跳"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "잘 가고 있었구나"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "so it's working"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "原來有傳出去"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "原來有傳出去"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "이거 처음 써봐서"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "it's my first time using this"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "我第一次用這個"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "我第一次用這個"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "동생한테 한참 배워써"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "my little sister taught me how yo"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "跟弟弟妹妹學了好就"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "跟弟弟妹妹學了好就"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "배웠어"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "how to"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "好久"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "好久"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "헤헤…그래?"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "hehe... really?"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "嘿嘿…是嗎？"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "嘿嘿…是嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "뭐…\r\n앞으로 잘 부탁행♡"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "well...\r\r\nnice to meet ya ♡"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "嗯…\r\r\n以後請多指教囉♡"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "嗯…\r\r\n以後請多指教囉♡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "아"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "ah"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "啊"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "잠깐만 실수"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "wait that was a mistake"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "按錯了"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "按錯了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "느낌표 쓸려고했는데"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "I tried to enter exclamation mark"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "我想用的是驚嘆號"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "我想用的是驚嘆號"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "하트 ㄴ아니고 느낌표야"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "not heart bit exclamation mark"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "不是愛心ㄌ是驚嘆號"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "不是愛心ㄌ是驚嘆號"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "아 쫌!!!!!"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "stop!!!!!"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "哎唷！！！！！"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "哎唷！！！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "놀리지마 진짜 때린다"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "don't make fun of me otherwise I'll beat you to a pulp"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "不要捉弄我，我真的會揍你"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "不要捉弄我，我真的會揍你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "너 이따 두고봐"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "you wait and see"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "你等著瞧"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "你等著瞧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "악"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "argh"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "啊"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "만두 떨궜어"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "I dropped a dumpling"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "包子掉了"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "包子掉了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "흑바닥에"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "to the gfound"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "掉到迷地上"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "掉到迷地上"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "ㅇㅇ 그거"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "yea that"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "嗯嗯對"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "嗯嗯對"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "5분안에 주웠으니까"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "but I picked it up in 5 minutes"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "我5分鐘之內就撿起來了"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "我5分鐘之內就撿起來了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "먹어도 되겠지"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "so it's safe"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "應該可以吃吧"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "應該可以吃吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "에이 설마"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "no way"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "唉唷怎麼可能"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "唉唷怎麼可能"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "그럼 먹을 수 있는게 거의 없다는 거잖아"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "then there'd be almost nothing to eat"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "那樣就幾乎沒東西可以吃啦"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "那樣就幾乎沒東西可以吃啦"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "5분이겠지"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "it's 5 minutes I'm sure"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "應該是5分鐘吧"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "應該是5分鐘吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "걱정마셔"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "don't worry"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "別擔心"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "別擔心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "내 위장은 튼튼하니까 문제 없다구~"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "I have a strong stomach so there's no problem!"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "我的腸胃很強壯，沒問題啦～"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "我的腸胃很強壯，沒問題啦～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "만두 종류가 엄청 많은 거 알아?"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "do you know there are many kinds of dumplings?"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "你知道包子有超多種類嗎？"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "你知道包子有超多種類嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "요리 방법도 그렇지만"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "the way you cook them are different"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "烹調方式也是"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "烹調方式也是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "재료나 모양에 따라서도 다 이름이 다르다구"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "their ingredients and shapes are different"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "但不同食材和形狀，都有不一樣的名字哦"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "但不同食材和形狀，都有不一樣的名字哦"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "나?"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "me?"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "我？"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "我？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "나는…"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "I..."
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "我…"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "我…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "흠…"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "hmm..."
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "嗯…"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "嗯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "아 이거 어렵네…"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "oh this is hard..."
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "這有點難耶…"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "這有點難耶…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "그렇게까지 고민할 문제야…?"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "I don't think it's a hard question to answer..."
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "這問題需要這麼苦惱嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "這問題需要這麼苦惱嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "무슨 소리야 이런 진지한 질문에"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "but what are you saying? not giving a serious answer"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "你在說什麼，這種正經的問題"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "你在說什麼，這種正經的問題"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "대충 대답하는 건 만두에 대한 모욕이야!!"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "to such a question is an insult to the dumplings!!"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "隨便回答可是對包子的侮辱！！"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "隨便回答可是對包子的侮辱！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "으으음..."
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "umm..."
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "呃呃呃…"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "呃呃呃…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "기다려봐 내일까지 대답해줄테니까"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "just wait and I'll reply you by tomorrow"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "你等我，明天會回答你的"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "你等我，明天會回答你的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "음… \r\n질문 취소해도 돼?"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "Umm...\r\r\nCan I cancel my question?"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "嗯…\r\r\n我能收回問題嗎？"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "嗯…\r\r\n我能收回問題嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "안돼! \r\n딱 기다려!"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "no, you can't!\r\r\njust wait!"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "不行！\r\r\n你等著！"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "不行！\r\r\n你等著！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "구원자 이거 봐"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "Savior look"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "救援者你看這個"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "救援者你看這個"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "둘째 동생이 그려줬어"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "my second youngest sister drew it for me"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "這是我二妹畫的"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "這是我二妹畫的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "그치????"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "right?!!!"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "對吧？？？？"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "對吧？？？？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "재능이 있는 것 같아"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "I think she has a talent"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "好像有天賦"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "好像有天賦"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "미술학원을 알아봐야되나"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "should I look for an art school?"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "該去打聽一下美術班了嗎"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "該去打聽一下美術班了嗎"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "으히히"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "hehe"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "呃嘻嘻"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "呃嘻嘻"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "소연",
+          "message": "소중한게 많다는 건 분명 좋은 건데"
+        },
+        "en": {
+          "speaker": "Xiaolian",
+          "message": "I know it's good to have many things to treasure"
+        },
+        "zh_tw": {
+          "speaker": "小蓮",
+          "message": "有很多珍貴的東西明明是好事"
+        },
+        "zh_cn": {
+          "speaker": "小蓮",
+          "message": "有很多珍貴的東西明明是好事"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "레베카",
+          "message": "현상 유지라…\n바라는 마음은 알겠지만 아무래도 어렵지, 흠."
+        },
+        "en": {
+          "speaker": "Rebecca",
+          "message": "Maintaining things as they are?\r\nIt's easier said than done. Hmm."
+        },
+        "zh_tw": {
+          "speaker": "瑞貝卡",
+          "message": "維持現狀啊…\r\n我能理解她懇切的心，但還是很難做到，嗯。"
+        },
+        "zh_cn": {
+          "speaker": "瑞貝卡",
+          "message": "維持現狀啊…\r\n我能理解她懇切的心，但還是很難做到，嗯。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "무명",
+          "message": "크르륵… 바보다… 크륵…!"
+        },
+        "en": {
+          "speaker": "Nameless",
+          "message": "Grrrg… Not too smart… Grr…!"
+        },
+        "zh_tw": {
+          "speaker": "無名",
+          "message": "咳嚕嚕…她是笨蛋…咔嚕…！"
+        },
+        "zh_cn": {
+          "speaker": "無名",
+          "message": "咳嚕嚕…她是笨蛋…咔嚕…！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "항상 야채를 거래해 주시는 고마운 분!\n앞으로도 신선한 야채만 공급해 드릴게요~♪"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "So thankful for all the vegetables you buy from me!\r\nI'll always provide you with the freshest veggies~♪"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "她常常和我買蔬菜，我很感謝她！\r\n我以後也會提供她新鮮的蔬菜～♪"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "她常常和我買蔬菜，我很感謝她！\r\n我以後也會提供她新鮮的蔬菜～♪"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "안녕 구원자"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hi Savior"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你好，救援者"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你好，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "흠"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hmm"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "진짜 잘 보내지고 있는거 맞나?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I wonder if my messages are getting through"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "真的有傳出去嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "真的有傳出去嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 소연"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Xiaolian"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，小蓮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，小蓮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 소연"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Xiaolian"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，小蓮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，小蓮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "와"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "ahh"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "哇"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "哇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "깜짝이야"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you surprised me"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嚇我一跳"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嚇我一跳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "잘 가고 있었구나"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "so it's working"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "原來有傳出去"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "原來有傳出去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "이거 처음 써봐서"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it's my first time using this"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我第一次用這個"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我第一次用這個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "동생한테 한참 배워써"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "my little sister taught me how yo"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "跟弟弟妹妹學了好就"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "跟弟弟妹妹學了好就"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "배웠어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "how to"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "好久"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "好久"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 하는 것 같은데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you're doing good!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像很會用啊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像很會用啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 하는 것 같은데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you're doing good!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像很會用啊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像很會用啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "헤헤…그래?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hehe... really?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嘿嘿…是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嘿嘿…是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "뭐…\r\n앞으로 잘 부탁행♡"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "well...\r\r\nnice to meet ya ♡"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯…\r\r\n以後請多指教囉♡"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯…\r\r\n以後請多指教囉♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "ah"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "잠깐만 실수"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "wait that was a mistake"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "按錯了"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "按錯了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "느낌표 쓸려고했는데"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I tried to enter exclamation mark"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我想用的是驚嘆號"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我想用的是驚嘆號"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "하트 ㄴ아니고 느낌표야"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "not heart bit exclamation mark"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不是愛心ㄌ是驚嘆號"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不是愛心ㄌ是驚嘆號"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 잘 부탁해 ♡"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nice to meet you, too ♡"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也請妳多多指教♡"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也請妳多多指教♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 잘 부탁해 ♡"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nice to meet you, too ♡"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也請妳多多指教♡"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也請妳多多指教♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아 쫌!!!!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "stop!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "哎唷！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "哎唷！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "놀리지마 진짜 때린다"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "don't make fun of me otherwise I'll beat you to a pulp"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不要捉弄我，我真的會揍你"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不要捉弄我，我真的會揍你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "너 이따 두고봐"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you wait and see"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你等著瞧"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你等著瞧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "악"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "argh"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "만두 떨궜어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I dropped a dumpling"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "包子掉了"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "包子掉了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "흑바닥에"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "to the gfound"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "掉到迷地上"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "掉到迷地上"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "흙바닥 말하는 거지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You mean ground?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是說泥地吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是說泥地吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "흙바닥 말하는 거지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You mean ground?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是說泥地吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是說泥地吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "ㅇㅇ 그거"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "yea that"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯嗯對"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯嗯對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "5분안에 주웠으니까"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "but I picked it up in 5 minutes"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我5分鐘之內就撿起來了"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我5分鐘之內就撿起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "먹어도 되겠지"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "so it's safe"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "應該可以吃吧"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "應該可以吃吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거… 원래는 5초 아니야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Isn't that...5 seconds?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個…應該是5秒內才能吃吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個…應該是5秒內才能吃吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거… 원래는 5초 아니야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Isn't that...5 seconds?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那個…應該是5秒內才能吃吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那個…應該是5秒內才能吃吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "에이 설마"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "no way"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "唉唷怎麼可能"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "唉唷怎麼可能"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그럼 먹을 수 있는게 거의 없다는 거잖아"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "then there'd be almost nothing to eat"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "那樣就幾乎沒東西可以吃啦"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "那樣就幾乎沒東西可以吃啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "5분이겠지"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it's 5 minutes I'm sure"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "應該是5分鐘吧"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "應該是5分鐘吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "모쪼록 탈 안 나게 조심해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Just make sure you don't get sick"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "總之，小心別吃壞肚子了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "總之，小心別吃壞肚子了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "모쪼록 탈 안 나게 조심해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Just make sure you don't get sick"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "總之，小心別吃壞肚子了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "總之，小心別吃壞肚子了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "걱정마셔"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "don't worry"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "別擔心"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "내 위장은 튼튼하니까 문제 없다구~"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I have a strong stomach so there's no problem!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我的腸胃很強壯，沒問題啦～"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我的腸胃很強壯，沒問題啦～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "만두 종류가 엄청 많은 거 알아?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "do you know there are many kinds of dumplings?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你知道包子有超多種類嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你知道包子有超多種類嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "요리 방법도 그렇지만"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "the way you cook them are different"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "烹調方式也是"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "烹調方式也是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "재료나 모양에 따라서도 다 이름이 다르다구"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "their ingredients and shapes are different"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "但不同食材和形狀，都有不一樣的名字哦"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "但不同食材和形狀，都有不一樣的名字哦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "소연이 제일 좋아하는 만두는 뭐야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's your favorite dumpling?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "小蓮最喜歡什麼包子？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "小蓮最喜歡什麼包子？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "소연이 제일 좋아하는 만두는 뭐야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's your favorite dumpling?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "小蓮最喜歡什麼包子？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "小蓮最喜歡什麼包子？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "나?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "me?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "나는…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "흠…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hmm..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아 이거 어렵네…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "oh this is hard..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "這有點難耶…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "這有點難耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그렇게까지 고민할 문제야…?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I don't think it's a hard question to answer..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "這問題需要這麼苦惱嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "這問題需要這麼苦惱嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그렇게까지 고민할 문제야…?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I don't think it's a hard question to answer..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "這問題需要這麼苦惱嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "這問題需要這麼苦惱嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "무슨 소리야 이런 진지한 질문에"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "but what are you saying? not giving a serious answer"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你在說什麼，這種正經的問題"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你在說什麼，這種正經的問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "대충 대답하는 건 만두에 대한 모욕이야!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "to such a question is an insult to the dumplings!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "隨便回答可是對包子的侮辱！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "隨便回答可是對包子的侮辱！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "으으음..."
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "umm..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "呃呃呃…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "呃呃呃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "흐으음~~~~~"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "hmm~~~~~"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哼嗯嗯 ～～～～～"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哼嗯嗯 ～～～～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하아… 오늘 안에 답 안 나오는 문제야 이건"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "sigh... I can't give you an answer by today"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "唉…我今天答不出這個問題"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "唉…我今天答不出這個問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "기다려봐 내일까지 대답해줄테니까"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "just wait and I'll reply you by tomorrow"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你等我，明天會回答你的"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你等我，明天會回答你的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "음… \r\n질문 취소해도 돼?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Umm...\r\r\nCan I cancel my question?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯…\r\r\n我能收回問題嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯…\r\r\n我能收回問題嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "음… \r\n질문 취소해도 돼?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Umm...\r\r\nCan I cancel my question?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯…\r\r\n我能收回問題嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯…\r\r\n我能收回問題嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "안돼! \r\n딱 기다려!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "no, you can't!\r\r\njust wait!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不行！\r\r\n你等著！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不行！\r\r\n你等著！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자 이거 봐"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Savior look"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "救援者你看這個"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "救援者你看這個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "둘째 동생이 그려줬어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "my second youngest sister drew it for me"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "這是我二妹畫的"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "這是我二妹畫的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 귀엽다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's really cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 귀엽다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's really cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그치????"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "right?!!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "對吧？？？？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "對吧？？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "재능이 있는 것 같아"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I think she has a talent"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "好像有天賦"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "好像有天賦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "미술학원을 알아봐야되나"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "should I look for an art school?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "該去打聽一下美術班了嗎"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "該去打聽一下美術班了嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "으히히"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hehe"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "呃嘻嘻"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "呃嘻嘻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "소중한게 많다는 건 분명 좋은 건데"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I know it's good to have many things to treasure"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "有很多珍貴的東西明明是好事"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "有很多珍貴的東西明明是好事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "뭔가 가끔 무서워"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "but it scares me sometimes"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "但我總覺得好害怕"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "但我總覺得好害怕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "내가 지킬 수 있을까"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "can I really protect them?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我能守護他們嗎"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我能守護他們嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지킬 수 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course you can"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳可以的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳可以的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지킬 수 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course you can"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳可以的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳可以的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "응…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "yeah..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "누가 뭐래도 소중한 것들을 지킬 거야"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I'll protect all those precious things no matter what"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "無論別人說什麼，我都會守護珍貴的東西"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "無論別人說什麼，我都會守護珍貴的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그러기 위해서라면 난…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "for that, I'll..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "只要是為了那點，我…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "只要是為了那點，我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "부탁이 있어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I have a favor to ask you"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "有件事要拜託你"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "有件事要拜託你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "내가 진짜 가끔 바보같은 짓을 할 때가 있거든?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you see, there are times when I do something really stupid"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我很偶爾會做出傻傻的舉動"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我很偶爾會做出傻傻的舉動"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그럴 땐 제대로 말해줘"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "can you let me know when that happens?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "那種時候你要明確地告訴我"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "那種時候你要明確地告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "겸워히 받아들일테니까"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I'll mumbly admit my mistake"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我會舒心接受的"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我會舒心接受的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 말할 거 생겼어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I need to tell you something right now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我現在就要告訴妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我現在就要告訴妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 말할 거 생겼어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I need to tell you something right now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我現在就要告訴妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我現在就要告訴妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "뭐 뭔데 말해봐!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "what, what is it?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "什、什麼事，你說！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "什、什麼事，你說！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "'겸워히'가 아니라 '겸허히'야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's not \"mumbly\" but \"humbly\""
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是「舒心」，是「虛心」"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是「舒心」，是「虛心」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "'겸워히'가 아니라 '겸허히'야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's not \"mumbly\" but \"humbly\""
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是「舒心」，是「虛心」"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是「舒心」，是「虛心」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아씨"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "argh"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "可惡"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "可惡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그런 거 말한 거 아니라고!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "that's not what I was referring to!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我沒有要那樣講啦！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我沒有要那樣講啦！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그리고 몰라서 잘못 쓴 거 아니거든?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "and it's not like I didn't know!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "而且我也不是不知道才會寫錯好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "而且我也不是不知道才會寫錯好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Right, right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Right, right"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아~~~진짜"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "argh~~~ you!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "唉唷～～～真是的"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "唉唷～～～真是的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "너 나 바보라고 생각했지!!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you just thought I was a fool, right?!!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你覺得我是笨蛋對吧！！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你覺得我是笨蛋對吧！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자 지금 뭐해?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Savior, what are you doing?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "救援者，你在做什麼？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "救援者，你在做什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "산책가자"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "let's go for a walk"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我們去散步吧"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我們去散步吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "밖에 날씨 진짜 좋아"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "the weather is really nice today"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "外面天氣很好"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "外面天氣很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "자전거로 공원 한 바퀴 돌자"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "we could take a ride around the park on my bike"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "騎腳踏車去公園繞繞吧"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "騎腳踏車去公園繞繞吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "내 자전거 뒤에 태워줄게"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I'll let you sit on the back"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我用腳踏車載你"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我用腳踏車載你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "날 태워준다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "On the back of your bike?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要載我？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要載我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "날 태워준다고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "On the back of your bike?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要載我？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要載我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "왜? 자전거 뒤에 처음 타봐?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "what? you've never sit on the back of a bike?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "怎麼了？你第一次坐腳踏車後座嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "怎麼了？你第一次坐腳踏車後座嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "무서우면 내 허리 꽉 잡아"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hold me tightly by the waist if it's scary"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "害怕的話，就抱緊我的腰"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "害怕的話，就抱緊我的腰"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "걱정마 분명 재밌을테니까"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "don't worry, it'll be fun"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "別擔心，一定會很有趣的"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "別擔心，一定會很有趣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "히히"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hehe"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嘻嘻"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嘻嘻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "소연. 오늘은 자전거 안 타?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Xiaolian, you're not riding your bike today?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "小蓮，今天不騎腳踏車嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "小蓮，今天不騎腳踏車嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "소연. 오늘은 자전거 안 타?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Xiaolian, you're not riding your bike today?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "小蓮，今天不騎腳踏車嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "小蓮，今天不騎腳踏車嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "oh"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "타야지"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I am"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "要騎啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "要騎啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "또 태워달라고?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you want me to take you for a ride again?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你又要我載你？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你又要我載你？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 재밌었어서…\r\n왜, 싫어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Since it was fun last time...\r\r\nWhat, you don't want to?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為上次很有趣…\r\r\n怎麼了？妳不想？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為上次很有趣…\r\r\n怎麼了？妳不想？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 재밌었어서…\r\n왜, 싫어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Since it was fun last time...\r\r\nWhat, you don't want to?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為上次很有趣…\r\r\n怎麼了？妳不想？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為上次很有趣…\r\r\n怎麼了？妳不想？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아니 그건 아닌데..."
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "no, it's not that..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "沒有啦，沒有不想…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "沒有啦，沒有不想…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그때 니가 내 허리를 너무 꽉 잡아서"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you held my waist too tightly last time"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "只是那時候你抱我的腰抱太緊了"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "只是那時候你抱我的腰抱太緊了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "엄청 간지러웠단 말야"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it was really ticklish"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "害我超級癢"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "害我超級癢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그니까 이번엔 니가 태워줘"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "so, you take me for a ride this time"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "所以這次你來載我吧"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "所以這次你來載我吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Alright"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Alright"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "너무 선뜻 알겠다고 하니까 당황스러운데..."
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you sound so willing that it baffles me..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你答應得太乾脆了，讓我有點慌張耶…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你答應得太乾脆了，讓我有點慌張耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "또 자전거 고장내면 안된다?!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "and don't break the bike, okay?!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不可以又弄壞腳踏車喔！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不可以又弄壞腳踏車喔！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자~"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Savior~"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "救援者～"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "救援者～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "영감이 신메뉴 연구한다고"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "old man made too many dumplings"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "老頭說要研發新菜單"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "老頭說要研發新菜單"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "만두를 엄청 많이 만들어서"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "while he was trying to make a new menu"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "做了超多包子"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "做了超多包子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "좀 나눠주겠다는데"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "and asked me to share them around"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "要分給大家吃"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "要分給大家吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "대성만두로 올래?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you want to come to Daesung Dumplings?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你要來大成包子嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你要來大成包子嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아, 맛있겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I'm sure it'll be delicious"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好，一定很好吃"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好，一定很好吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아, 맛있겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I'm sure it'll be delicious"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好，一定很好吃"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好，一定很好吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "오면 바로 먹을 수 있도록 준비해둘게"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I'll then get them ready for you"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我會準備好，讓你一來就可以吃"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我會準備好，讓你一來就可以吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "조심히 와!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "don't rush!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "路上小心！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "路上小心！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "대성만두에 네가 없으면"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "when you're not here in Daesung Dumplings"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你不在大成包子"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你不在大成包子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "어쩐지… 좀 이상해"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it feels a little...strange"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "就莫名地…有點奇怪"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "就莫名地…有點奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "요새 맨날 와서 그런가…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "maybe it's because you've been coming over non-stop these days?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "是因為你最近每天都來嗎…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "是因為你最近每天都來嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쓸쓸해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you feel lonely?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "覺得孤單？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "覺得孤單？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "쓸쓸해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you feel lonely?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "覺得孤單？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "覺得孤單？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "쓰"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "lo"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "ㄅ"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "ㄅ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "쓸쓸한 것 까진 아니거든"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "not lonely"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不至於覺得孤單啦"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不至於覺得孤單啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그냥 좀 허전함?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it just feels a little empty"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "就是有點空虛？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "就是有點空虛？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "뭐 그런거야"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "that's it"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "就是那樣"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "就是那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "소연이 쓸쓸하지 않게 빨리 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there right away so that you don't feel lonely"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會趕快過去，不讓小蓮覺得孤單的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會趕快過去，不讓小蓮覺得孤單的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "소연이 쓸쓸하지 않게 빨리 갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there right away so that you don't feel lonely"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會趕快過去，不讓小蓮覺得孤單的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會趕快過去，不讓小蓮覺得孤單的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "너 또 놀리지"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you're making fun of me again"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你又再捉弄我吧？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你又再捉弄我吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "우씨..."
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "argh..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "可惡…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "可惡…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "됐으니까 올거면 빨리 와!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "just do it quickly!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "算了，你要來就快點！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "算了，你要來就快點！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Savior!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "救援者！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "救援者！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "큰일 났어!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I'm in trouble!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "大事不好了！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "大事不好了！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아직 니가 뿌순 자전거 살 돈도 못 모았는데!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I still haven't even saved enough to buy the bike you broke!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "都還沒存到你弄壞的腳踏車錢耶！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "都還沒存到你弄壞的腳踏車錢耶！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "설명하자면 기ㄹ어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it's a lomg story"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "說來ㄏ話長"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "說來ㄏ話長"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "얼른 대성만두로 와!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "come to Daesung Dumplings, quickly!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你先來大成包子"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你先來大成包子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "무명반점 녀석들"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "those Nameless Garden folks"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "真好奇無名飯店"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "真好奇無名飯店"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "대체 어떤 녀석들일지 궁금해"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I wonder what they are like"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "都是些什麼樣的傢伙"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "都是些什麼樣的傢伙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "힘을 숨기고 있던 베테랑일지도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "They could be veterans who've been concealing their true powers"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說不定是深藏不露的老手"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說不定是深藏不露的老手"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "힘을 숨기고 있던 베테랑일지도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "They could be veterans who've been concealing their true powers"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說不定是深藏不露的老手"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說不定是深藏不露的老手"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그치?!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "right?!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "對吧？！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "對吧？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "만두만 몇백년 만든 도인이 나올지도 몰라"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "something like dumpling masters with hundreds years of experience"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "也許會出現做幾百年包子的道士"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "也許會出現做幾百年包子的道士"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그래도 안 질거지만!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "still, I won't lose to them!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "但我也不會輸的！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "但我也不會輸的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "영감이 나한테 요리사는 꿈도 꾸지 말라고 했었는데"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "old man told me not to even dream of becoming a cook"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "老頭竟然和我說休想當廚師"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "老頭竟然和我說休想當廚師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "난 아직 경험이 별로 없는 거지"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "but I simply lack experience"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我只是沒經驗而已啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我只是沒經驗而已啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "하면 잘 할수 있거든?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "if they let me do it, I can do it well"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "要我做我也可以做得很好！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "要我做我也可以做得很好！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "두고 봐"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "he can just wait and see"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "等著瞧"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "等著瞧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "영감의 만두보다 더 맛있는 걸 만들어줄테다"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I'll make something much more delicious than his dumplings"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我做的包子會比老頭還美味"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我做的包子會比老頭還美味"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "예전에 말했었지?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you remember I told you last time"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我以前有和你說過吧？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我以前有和你說過吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "동생이 세 명 있다고"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "that I have three little sisters"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我有三個弟弟妹妹"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我有三個弟弟妹妹"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "응 들었어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Yes, I remember"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯，妳說過"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯，妳說過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "응 들었어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Yes, I remember"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "嗯，妳說過"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "嗯，妳說過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그... 애들이 좀 활발해서"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "um... they are very energetic"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "那個…他們有點活潑"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "那個…他們有點活潑"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "시끄러울 수도 있어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "and can be noisy"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "可能會很吵"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "可能會很吵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "is that okay with you?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你沒關係嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你沒關係嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "문제 없어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "沒問題"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "沒問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "문제 없어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "沒問題"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "沒問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그럼 다행이야"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I'm glad to hear that"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "이따봐, 구원자."
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "see you later, Savior"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "待會見，救援者"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "待會見，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "대성만두는 틀리지 않았어."
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Daesung Dumplings isn't wrong."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "大成包子沒有錯。"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "大成包子沒有錯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "바뀌어야할 건 대성만두가 아닌데,"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it isn't Daesung Dumplings that should change"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "要改變的不是大成包子耶…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "要改變的不是大成包子耶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아닐텐데…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it isn't, but..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不是的…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不是的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "모르겠어…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I don't know..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我搞不懂…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我搞不懂…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Savior!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "救援者！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "救援者！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아직 집에 있어?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "are you still home?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你還在家嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你還在家嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니, 방금 밖에 나왔는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I just came outside..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有，我剛出門…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有，我剛出門…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니, 방금 밖에 나왔는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I just came outside..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有，我剛出門…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有，我剛出門…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그럼 거기서 기다려!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "then, wait me there!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "那你在那裡等我！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "那你在那裡等我！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "어디 가면 안 돼?\r\n내가 금방 갈테니까!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "don't move, okay?\r\r\nI'll be there right away!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不能亂跑喔！\r\r\n我馬上就到！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不能亂跑喔！\r\r\n我馬上就到！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "야…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hey..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "喂…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "喂…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "너… 봤어? 못 봤지?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you...did you see it? you didn't, right?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你…看見了嗎？沒看見吧？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你…看見了嗎？沒看見吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭘?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看見什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看見什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭘?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看見什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看見什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "that"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그거… 무늬…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "the...pattern..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "那個…花紋…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "那個…花紋…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "바나나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Bananas?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "香蕉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "香蕉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "바나나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Bananas?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "香蕉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "香蕉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "%*"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "%*"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "%*"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "%*"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "조용히해"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "you shh"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "給我安靜點"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "給我安靜點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "너 그거"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "don't"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "누구한테 말하지마"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "don't say that to anyone"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不准跟別人說"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不准跟別人說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "지금 당장 잊어!!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "erase it from your head!!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "現在馬上忘掉！！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "現在馬上忘掉！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "노력은 해볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll give it a try"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我努力看看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我努力看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "노력은 해볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll give it a try"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我努力看看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我努力看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아 진짜~!!!!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "argh you~!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "唉唷，真是的～！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "唉唷，真是的～！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "다행이야 구원자"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I'm glad, Savior"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "太好了，救援者"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "太好了，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "이대로 계속 가면 \r\n예전 대성만두의 명성을 되찾을 수 있을지도"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "we might recover Daesung Dumplings's past reputation\r\r\nat this rate"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "照這樣繼續下去的話\r\r\n也許能重拾大成包子從前的名聲"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "照這樣繼續下去的話\r\r\n也許能重拾大成包子從前的名聲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자 덕분이야"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it's all thanks to you"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "都是多虧了救援者"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "都是多虧了救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금 걱정 되네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm a bit worried"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有點擔心呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有點擔心呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금 걱정 되네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm a bit worried"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有點擔心呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有點擔心呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "에이 뭘 걱정해"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "my, worried about what?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "唉唷，擔心什麼啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "唉唷，擔心什麼啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "노력은 성공의 어머니라는 말이 있잖아"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "they say \"effort is but a stepping stone to success\""
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "不是有句話說努力就是成功之母嗎"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "不是有句話說努力就是成功之母嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "어머니가 아니라 아버지였나? \r\n뭐 아무튼"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "was it stair and not stone?\r\r\nwell, anyways"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "還是成功之父啊？\r\r\n總之"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "還是成功之父啊？\r\r\n總之"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "열심히 했으니까"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "we did our best"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我們努力過了"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我們努力過了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "천재지변이라도 생기지 않는 이상"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "so everything will be okay"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "只要不發生天災"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "只要不發生天災"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "별일 없을 거야"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "unless some inevitable accident happens"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "就不會有事的"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "就不會有事的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "요즘 영감 주책 장난 아냐"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "old man's been so silly these days"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "老頭最近真是不知分寸"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "老頭最近真是不知分寸"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "왜 저러는거야 정말"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "what's wrong with him"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "到底幹嘛那樣啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "到底幹嘛那樣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "가게가 잘 되고 있으니 \r\n황 사장님도 기분이 좋으신가 봐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The restaurant is doing well,\r\r\nso he's happy"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能是因為生意興隆\r\n黃老闆也很開心吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能是因為生意興隆\r\n黃老闆也很開心吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "가게가 잘 되고 있으니 \r\n황 사장님도 기분이 좋으신가 봐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The restaurant is doing well,\r\r\nso he's happy"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能是因為生意興隆\r\n黃老闆也很開心吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能是因為生意興隆\r\n黃老闆也很開心吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그…\r\n그건 나도 그렇지만"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "that...\r\r\nI know that, but"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "我…\r\r\n我也很開心啦"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "我…\r\r\n我也很開心啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "자꾸 널 이상하게 부르잖아"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "he keeps calling you in a weird way"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "但他老是把你叫得很奇怪啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "但他老是把你叫得很奇怪啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "저기 뭐냐…\r\n구원자"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hey, um...\r\r\nSavior"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "那個什麼…\r\r\n救援者"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "那個什麼…\r\r\n救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "영감이 하는 주접 그냥 무시해"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "whatever silly thing he says, just ignore it"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你別理會老頭的吹捧"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你別理會老頭的吹捧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "알겠지?!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "got it?!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "知道了吧？！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "知道了吧？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자, 오고 있어?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Savior, where are you?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "救援者，你在路上嗎？"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "救援者，你在路上嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "거의 다 왔어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm almost there"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我快到了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我快到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "거의 다 왔어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm almost there"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我快到了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我快到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "좋았어"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "good"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "혹시 몸 안 좋으면 바로바로 말해"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "let me know if you don't feel well"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "如果你不舒服，要馬上告訴我"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "如果你不舒服，要馬上告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "영감이 너는 무조건 쉬게 해준대"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "old man said he'd let you rest whenever you want"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "老頭說一定會讓你休息"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "老頭說一定會讓你休息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "쉬는 날에도 일당 준다더라"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "he even said he'd pay you for your days off"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "還說休息日也會支薪"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "還說休息日也會支薪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "호화롭네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That sounds awesome..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真闊氣…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真闊氣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "호화롭네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That sounds awesome..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真闊氣…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真闊氣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "내 말이"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "I agree"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "就是說啊"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "就是說啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "오래 일한 나한테는 푸대접이면서!!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "and I'm treated poorly when I've worked for so long!!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "明明對工作很久的我很吝嗇！！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "明明對工作很久的我很吝嗇！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "아무튼 널 다른 가게에 뺏길까 봐 불안해하더라"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "anyways, he was afraid someone else might take you away"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "總之，他很怕你被其他店挖角"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "總之，他很怕你被其他店挖角"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "솔직히 그건 이해가 가"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "but I do understand how he'd feel"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "其實我能理解"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "其實我能理解"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대성만두엔 소연이 있으니까 다른 가게로는 안 가"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm not going anywhere since you are here in Daesung Dumplings"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "既然小蓮在大成包子，我就不會去其他店"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "既然小蓮在大成包子，我就不會去其他店"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대성만두엔 소연이 있으니까 다른 가게로는 안 가"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm not going anywhere since you are here in Daesung Dumplings"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "既然小蓮在大成包子，我就不會去其他店"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "既然小蓮在大成包子，我就不會去其他店"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "야너는"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "hey you"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "喂，你…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "喂，你…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "넌쫌 그런말 아무렇지않게하지마"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "can you just not say something like that so easily?"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "你別這麼若無其事地講出那種話"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "你別這麼若無其事地講出那種話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그냥 좀 이상해"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it feels strange"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "就是有點奇怪"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "就是有點奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "뭔가 명치쪽이 간지러운 것 같단말야…"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "it's like I have butterflies in my chest..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "感覺心窩有點癢癢的…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "感覺心窩有點癢癢的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "사랑의 날이라니 이름부터 낯간지러워..."
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "why is it called \"Love Day?\" Even the name is awkward..."
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "竟然叫戀愛之日，光是名字就有點肉麻…"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "竟然叫戀愛之日，光是名字就有點肉麻…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "그.. 말해두지만 이거 그냥 주는거다?"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "uh... this is only a gift, just so you know"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "那個…我先說，這個是送你的哦！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "那個…我先說，這個是送你的哦！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 받을게, 소연"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks, Xiaolian"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我收下了，小蓮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我收下了，小蓮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 받을게, 소연"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks, Xiaolian"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我收下了，小蓮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我收下了，小蓮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "여름도 이제 곧 끝나는건가~"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "summer is about to end~"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "夏天也快要結束了嗎～"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "夏天也快要結束了嗎～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "가을도 좋지만~ \r\n여름이 끝나는 건 어쩐지 아쉬운것 같단 말이지"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "fall is nice, too,\r\r\nbut I kind of feel sad at the end of summer"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "雖然我也喜歡秋天～\r\n但總覺得夏天要結束了很可惜"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "雖然我也喜歡秋天～\r\n但總覺得夏天要結束了很可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "가을에도 잘 부탁해, 소연"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Looking forward to this fall with you, Xiaolian"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "秋天也要請妳多多指教了，小蓮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "秋天也要請妳多多指教了，小蓮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "가을에도 잘 부탁해, 소연"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Looking forward to this fall with you, Xiaolian"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "秋天也要請妳多多指教了，小蓮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "秋天也要請妳多多指教了，小蓮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "만두가 제일 잘 팔리는 계절~♪"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "the season of dumplings has come~♪"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "包子銷路最好的季節～♪"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "包子銷路最好的季節～♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "소연",
+            "message": "구원자. 항상 도와줘서 고마워!"
+          },
+          "en": {
+            "speaker": "Xiaolian",
+            "message": "Savior, thank you for always helping me out!"
+          },
+          "zh_tw": {
+            "speaker": "小蓮",
+            "message": "救援者，謝謝你幫我！"
+          },
+          "zh_cn": {
+            "speaker": "小蓮",
+            "message": "救援者，謝謝你幫我！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로. 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, too!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로. 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, too!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳！"
+          }
+        }
+      ]
+    }
+  }
+}

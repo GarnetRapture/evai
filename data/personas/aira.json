@@ -1,0 +1,6361 @@
+{
+  "id": "2030",
+  "name": "아이라",
+  "name_en": "Aira",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "워리어",
+  "sub_class": "치료",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "자유로운 야성",
+    "constellation": "사자자리",
+    "union": "???",
+    "birthday": "811",
+    "height": 160,
+    "weight": 46,
+    "cv_ko": "정혜원",
+    "cv_jp": "Misaki Watada",
+    "like": [
+      "쓰담쓰담",
+      "턱 긁어 주기"
+    ],
+    "dislike": [
+      "예절 교육"
+    ],
+    "hobby": [
+      "높은 곳 올라가기"
+    ],
+    "speciality": [
+      "물구나무 서기"
+    ]
+  },
+  "personality": {
+    "description": "구원자, 안녕? 난 아이라. 쓰담쓰담 좋아하고, 턱 긁어주는 것도 좋아해!\n나는 야수형 중에서도 힘이 세고 몸도 튼튼해. 아, 중요한 거 알려줄게. \n난 기분이 좋으면 \"가르르…\", 기분이 나쁘면 \"그르릉…\" 이야. \n똑같지 않아! 잘 들으면 달라. \n…가르르, 그르릉… 아직 어려워?\n\n괜찮아. 나랑 조금만 같이 지내면, 다들 금방 알 수 있어. \n난 기분이 나쁘면 바로 물어버리니까! \n구원자가 좀 눈치가 없어도, 금방 배울 수 있을 거야~ \n그럼 앞으로 잘 부탁해, 구원자! 같이 잔뜩 놀자~",
+    "greeting": "하암… 햇살이 따뜻해서 졸린데…턱 긁어줘!"
+  },
+  "speech_patterns": [
+    "흠냐흠냐",
+    "아케나인 성은 생각보다 좁네!",
+    "약간~",
+    "그러니까 지루하지 않게 나랑 많이 놀아줘야 해~",
+    "맛있는 것도 많이 주고!",
+    "약속!",
+    "좋아 좋아~",
+    "흠. 심심한데 광장에 풍선 받으러 가야지!",
+    "구원자 것도 챙겨올게~",
+    "굿~",
+    "예전에 찍어둔 사진인데",
+    "아이라 이빨 뾰족해?",
+    "후냥!?",
+    "보통 이렇게 뾰족하지는 않나…?",
+    "진짜!?",
+    "그럼 고기는 어떻게 뜯어 먹어?",
+    "함정에 걸렸을 때 밧줄은 뭐로 뜯고?",
+    "으으음~~ 연약해~",
+    "주인",
+    "주이이이이이이인",
+    "쭈이이이이이이이이이이인!",
+    "아이라 여기 가둬 놨으니까 책임져",
+    "놀아줘~~~",
+    "일~~?",
+    "일이 아이라랑 노는 거보다 중요해?",
+    "에잇",
+    "다 캬아앙 해버릴까보다~!!!",
+    "히히",
+    "주인~ 기대해!",
+    "내가 어떤 벌을 내릴지!",
+    "으음",
+    "잠깐만 구속구를 풀 수 있으면",
+    "주인을 잔~뜩 간지럽히고 싶다!",
+    "히히힛",
+    "정령들은 왜 이렇게 옷으로 몸을 가려?",
+    "옷으로 살을 대부분 가리잖아~",
+    "다칠까 봐 그런가?",
+    "아이라는 강해서 그런 옷은 필요없지롱~!",
+    "그리고 그런 옷들 너무 답답해",
+    "사실 아이라는 지금도 옷 안 입고 싶은데",
+    "그럼 마녀가 아이라 잡혀갈 수도 있다고 했어~",
+    "왜 그런 거야~?",
+    "으음~ 어려워~~",
+    "주인도 마녀를 싫어해?",
+    "다들 마녀를 싫어해",
+    "마녀가 배신자라고…",
+    "하지만 내가 아는 마녀는 그런 애 아니야",
+    "오히려 마녀는",
+    "아무도 도와주지 않는 불쌍한 애야",
+    "그러니까 주인도 마녀 너무 미워하지 마!"
+  ],
+  "comments": [
+    {
+      "writer": "캐서린",
+      "comment": "성 바닥에 앉아서 밥을 먹으시면 안 돼요~"
+    },
+    {
+      "writer": "니콜",
+      "comment": "…하핫. 좀 놀라게 했다가 펀치! 당해버렸지 뭐야.\n 깜짝 놀라면 주먹이 먼저 나간대. 다시는 장난치지 말아야지…"
+    },
+    {
+      "writer": "클로이",
+      "comment": "얘를 보면 내가 참 얌전하고 차분하게 느껴져."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "아이라",
+        "message": "흠냐흠냐"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아케나인 성은 생각보다 좁네!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "답답해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "답답해?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "약간~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그러니까 지루하지 않게 나랑 많이 놀아줘야 해~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "맛있는 것도 많이 주고!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "약속!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "약속할게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "약속할게"
+      },
+      {
+        "speaker": "아이라",
+        "message": "좋아 좋아~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "흠. 심심한데 광장에 풍선 받으러 가야지!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "구원자 것도 챙겨올게~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워"
+      },
+      {
+        "speaker": "아이라",
+        "message": "굿~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "예전에 찍어둔 사진인데"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라 이빨 뾰족해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 날카롭네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 날카롭네"
+      },
+      {
+        "speaker": "아이라",
+        "message": "후냥!?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "보통 이렇게 뾰족하지는 않나…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 나랑 달라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 나랑 달라"
+      },
+      {
+        "speaker": "아이라",
+        "message": "진짜!?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그럼 고기는 어떻게 뜯어 먹어?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "함정에 걸렸을 때 밧줄은 뭐로 뜯고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "밧줄을 치아로 뜯는 경우는 거의 없지 않을까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "밧줄을 치아로 뜯는 경우는 거의 없지 않을까…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "으으음~~ 연약해~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주이이이이이이인"
+      },
+      {
+        "speaker": "아이라",
+        "message": "쭈이이이이이이이이이이인!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜 그래?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라 여기 가둬 놨으니까 책임져"
+      },
+      {
+        "speaker": "아이라",
+        "message": "놀아줘~~~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "일이 있어서"
+      },
+      {
+        "speaker": "구원자",
+        "message": "일이 있어서"
+      },
+      {
+        "speaker": "아이라",
+        "message": "일~~?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "일이 아이라랑 노는 거보다 중요해?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "에잇"
+      },
+      {
+        "speaker": "아이라",
+        "message": "다 캬아앙 해버릴까보다~!!!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "히히"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인~ 기대해!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대하라니?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대하라니?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "내가 어떤 벌을 내릴지!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "으음"
+      },
+      {
+        "speaker": "아이라",
+        "message": "잠깐만 구속구를 풀 수 있으면"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인을 잔~뜩 간지럽히고 싶다!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "히히힛"
+      },
+      {
+        "speaker": "아이라",
+        "message": "정령들은 왜 이렇게 옷으로 몸을 가려?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그게 무슨 말이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그게 무슨 말이야?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "옷으로 살을 대부분 가리잖아~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "다칠까 봐 그런가?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라는 강해서 그런 옷은 필요없지롱~!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그리고 그런 옷들 너무 답답해"
+      },
+      {
+        "speaker": "아이라",
+        "message": "사실 아이라는 지금도 옷 안 입고 싶은데"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그럼 마녀가 아이라 잡혀갈 수도 있다고 했어~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "왜 그런 거야~?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무래도 사회적 합의라는 게 있으니까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무래도 사회적 합의라는 게 있으니까…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "으음~ 어려워~~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인도 마녀를 싫어해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 말이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 말이야?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "다들 마녀를 싫어해"
+      },
+      {
+        "speaker": "아이라",
+        "message": "마녀가 배신자라고…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "하지만 내가 아는 마녀는 그런 애 아니야"
+      },
+      {
+        "speaker": "아이라",
+        "message": "오히려 마녀는"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아무도 도와주지 않는 불쌍한 애야"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그러니까 주인도 마녀 너무 미워하지 마!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인! 자장가라는 거 알아?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "잘 자라고 불러 주는 노래래"
+      },
+      {
+        "speaker": "아이라",
+        "message": "근데 노래를 듣는데 어떻게 잠이 오지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 조용한 노래거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청 조용한 노래거든"
+      },
+      {
+        "speaker": "아이라",
+        "message": "으음~ 그래?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인도 아는 자장가 있어?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "히히 다음에 아이라한테 불러 줘!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그럼 나도 주인한테 불러 줄게♪"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴게"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인이랑 나는 친구잖아"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라는 강하니까 주인을 지켜줄게!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그러니까 주인은 내 걱정하지 마!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이라가 강한 건 알지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이라가 강한 건 알지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 도와주고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 도와주고 싶어"
+      },
+      {
+        "speaker": "아이라",
+        "message": "헤헷"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인이랑 나는 같은 마음인가 보네♪"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그렇지만…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인 힘든 건 싫어"
+      },
+      {
+        "speaker": "아이라",
+        "message": "내 마음 알아줄 거지!?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "마녀는 잘 지낼까"
+      },
+      {
+        "speaker": "아이라",
+        "message": "나 없어서 갑옷이랑만 얘기할 텐데"
+      },
+      {
+        "speaker": "아이라",
+        "message": "갑옷이 은근 답답하단 말이야~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑옷이?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑옷이?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이라는 비비안 걱정을 많이 하는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이라는 비비안 걱정을 많이 하는구나"
+      },
+      {
+        "speaker": "아이라",
+        "message": "헤헤"
+      },
+      {
+        "speaker": "아이라",
+        "message": "마녀랑 나는 되~게 친한 친구거든!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "마녀가 없었으면 아이라는 낮잠도 못 자고"
+      },
+      {
+        "speaker": "아이라",
+        "message": "나무 타는 재미도 몰랐을 거야"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라를 자유롭게 해 준 건 마녀였거든"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그러니까 주인도 마녀랑 잘 지내 줘!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "비비안은 무슨 생각을 하는지 모르겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "비비안은 무슨 생각을 하는지 모르겠어"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그건 나도 그렇지만"
+      },
+      {
+        "speaker": "아이라",
+        "message": "마녀가 그랬어"
+      },
+      {
+        "speaker": "아이라",
+        "message": "언젠가 모든 답을 얻게 되는 날이 올 거라고"
+      },
+      {
+        "speaker": "아이라",
+        "message": "후냥~ 아이라는 어려워서 무슨 말인지 모르겠지만"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라는 동산을 하나 만들고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "동산?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "동산?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "응!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "거기서 뭐든 하는 거지"
+      },
+      {
+        "speaker": "아이라",
+        "message": "맛있는 것도 잔뜩 먹을 수 있고"
+      },
+      {
+        "speaker": "아이라",
+        "message": "사냥도 할 수 있고"
+      },
+      {
+        "speaker": "아이라",
+        "message": "덫을 놓기도 하고~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그러다 지치면 낮잠을 자는 거야♪"
+      },
+      {
+        "speaker": "구원자",
+        "message": "여행을 가고 싶다는 거지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "여행을 가고 싶다는 거지?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "후냥!? 그런 건가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "모든 일이 해결되면 언젠가 꼭 같이 가자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "모든 일이 해결되면 언젠가 꼭 같이 가자"
+      },
+      {
+        "speaker": "아이라",
+        "message": "헤헤"
+      },
+      {
+        "speaker": "아이라",
+        "message": "약속이야!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "ㅏㅣ"
+      },
+      {
+        "speaker": "아이라",
+        "message": "ㅁㄴㅇ"
+      },
+      {
+        "speaker": "아이라",
+        "message": "ㅓㅑㅓㅣㅏ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이라?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이라?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일이야?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "헤헤 구원자"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아니"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계속 주인이라고 부를 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계속 주인이라고 부를 거야?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "응! 배고픈 아이라한테 맛있는 거 나눠줬잖아"
+      },
+      {
+        "speaker": "아이라",
+        "message": "물론 아이라 묶어둔 건 조금 밉지만"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그래도 안전을 위해서랬지?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "끄응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰은 쓰게 해 줬으니까 참아 줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰은 쓰게 해 줬으니까 참아 줘"
+      },
+      {
+        "speaker": "아이라",
+        "message": "끄으으으으으응"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아아아아악"
+      },
+      {
+        "speaker": "아이라",
+        "message": "따분해"
+      },
+      {
+        "speaker": "아이라",
+        "message": "심심해"
+      },
+      {
+        "speaker": "아이라",
+        "message": "재미없어!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "다 캬아앙 해버릴 거야~!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇지만 아이라를 풀어 줄 수는 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇지만 아이라를 풀어 줄 수는 없어"
+      },
+      {
+        "speaker": "아이라",
+        "message": "몰라~~~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라는 놀고 싶어!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "놀아 줘! 주인!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "방법을 생각해 볼게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "방법을 생각해 볼게"
+      },
+      {
+        "speaker": "아이라",
+        "message": "후후"
+      },
+      {
+        "speaker": "아이라",
+        "message": "후후후후후후후후"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인! 준비됐어?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라한테 그거 받기로 했잖아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거라니?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거라니?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "설마 깜빡한 건 아니지?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "기대하라구"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라가 엄청난 벌을 준비했으니까!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청난 벌이라…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "엄청난 벌이라…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "나 배고파"
+      },
+      {
+        "speaker": "아이라",
+        "message": "여기 갇혀 있는 거 싫어"
+      },
+      {
+        "speaker": "아이라",
+        "message": "하루 종일 주인이 오기만 기다리는 거"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라는 싫단 말이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "또 안전을 위해서라고 할 거지?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그런 건 됐으니까"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아이라를 혼자 두지 말아 줘"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인"
+      },
+      {
+        "speaker": "아이라",
+        "message": "미안해 나 때문에"
+      },
+      {
+        "speaker": "아이라",
+        "message": "보러 가고 싶은데"
+      },
+      {
+        "speaker": "아이라",
+        "message": "마음대로 여기서 나갈 수도 없어서…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "괜찮아야 해"
+      },
+      {
+        "speaker": "아이라",
+        "message": "가끔 나 주인이랑"
+      },
+      {
+        "speaker": "아이라",
+        "message": "같은 꿈을 꾸는 것 같을 때가 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같은 꿈?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같은 꿈?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "응 주인이 겪었던 일 같은데"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그때 주인의 감정이 생생히 전해져서"
+      },
+      {
+        "speaker": "아이라",
+        "message": "뭔가 하나로 이어진 기분이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계약 때문인가"
+      },
+      {
+        "speaker": "구원자",
+        "message": "계약 때문인가"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그래서 주인이 말하지 않아도 알 수 있어"
+      },
+      {
+        "speaker": "아이라",
+        "message": "요즘 엄청 피곤하지?"
+      },
+      {
+        "speaker": "아이라",
+        "message": "걱정돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정하지 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "걱정하지 마"
+      },
+      {
+        "speaker": "아이라",
+        "message": "그래도…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "나… 더 이상은…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인 사실은"
+      },
+      {
+        "speaker": "아이라",
+        "message": "나 괴물이 되고 싶지 않아"
+      },
+      {
+        "speaker": "아이라",
+        "message": "주인이 나를 포기하지 않아 줬으면 좋겠어"
+      },
+      {
+        "speaker": "아이라",
+        "message": "…이기적이라고 해도…"
+      },
+      {
+        "speaker": "아이라",
+        "message": "헤헷 주인"
+      },
+      {
+        "speaker": "아이라",
+        "message": "아니 구원자"
+      },
+      {
+        "speaker": "아이라",
+        "message": "내가 내릴 또 다른 벌이 있어♪"
+      },
+      {
+        "speaker": "아이라",
+        "message": "새해가 밝았어, 크릉!!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "기념으로 나랑 달리기 경주하자!!! \r\n캬오옹~!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이라는 기운이 넘치는구나!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이라는 기운이 넘치는구나!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "사랑의 날!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "축제 좋아!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같이 가자, 아이라!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "같이 가자, 아이라!"
+      },
+      {
+        "speaker": "아이라",
+        "message": "빨간 장식이 엄청 많네~"
+      },
+      {
+        "speaker": "아이라",
+        "message": "피투성이 파티를 하는 거야~?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야, 내가 이따가 알려줄게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야, 내가 이따가 알려줄게!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "아이라",
+      "en": "Aira",
+      "zh_tw": "艾拉",
+      "zh_cn": "艾拉"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "워리어",
+      "en": "Warrior",
+      "zh_tw": "戰士",
+      "zh_cn": "戰士"
+    },
+    "sub_class": {
+      "ko": "치료",
+      "en": "Heal",
+      "zh_tw": "治療",
+      "zh_cn": "治療"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "자유로운 야성",
+        "en": "Wild Beast",
+        "zh_tw": "自由的野性",
+        "zh_cn": "自由的野性"
+      },
+      "constellation": {
+        "ko": "사자자리",
+        "en": "Leo",
+        "zh_tw": "獅子座",
+        "zh_cn": "獅子座"
+      },
+      "union": {
+        "ko": "???",
+        "en": "???",
+        "zh_tw": "？？？",
+        "zh_cn": "？？？"
+      },
+      "cv_ko": {
+        "ko": "정혜원",
+        "en": "Hyewon Jung",
+        "zh_tw": "鄭惠媛",
+        "zh_cn": "鄭惠媛"
+      },
+      "cv_jp": {
+        "ko": "Misaki Watada",
+        "en": "Misaki Watada",
+        "zh_tw": "Misaki Watada",
+        "zh_cn": "Misaki Watada"
+      },
+      "like": {
+        "ko": [
+          "쓰담쓰담",
+          "턱 긁어 주기"
+        ],
+        "en": [
+          "Patting",
+          "chin scratching"
+        ],
+        "zh_tw": [
+          "摸頭、搔下巴"
+        ],
+        "zh_cn": [
+          "摸頭、搔下巴"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "예절 교육"
+        ],
+        "en": [
+          "Etiquette lessons"
+        ],
+        "zh_tw": [
+          "禮節教育"
+        ],
+        "zh_cn": [
+          "禮節教育"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "높은 곳 올라가기"
+        ],
+        "en": [
+          "Going up to high places"
+        ],
+        "zh_tw": [
+          "登高"
+        ],
+        "zh_cn": [
+          "登高"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "물구나무 서기"
+        ],
+        "en": [
+          "Handstanding"
+        ],
+        "zh_tw": [
+          "倒立"
+        ],
+        "zh_cn": [
+          "倒立"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "구원자, 안녕? 난 아이라. 쓰담쓰담 좋아하고, 턱 긁어주는 것도 좋아해!\n나는 야수형 중에서도 힘이 세고 몸도 튼튼해. 아, 중요한 거 알려줄게. \n난 기분이 좋으면 \"가르르…\", 기분이 나쁘면 \"그르릉…\" 이야. \n똑같지 않아! 잘 들으면 달라. \n…가르르, 그르릉… 아직 어려워?\n\n괜찮아. 나랑 조금만 같이 지내면, 다들 금방 알 수 있어. \n난 기분이 나쁘면 바로 물어버리니까! \n구원자가 좀 눈치가 없어도, 금방 배울 수 있을 거야~ \n그럼 앞으로 잘 부탁해, 구원자! 같이 잔뜩 놀자~",
+        "en": "Savior, hello! I'm Aira. I like to be patted, and I also like to be scratched on my chin!\r\nI am the strong one among the beasts and I have a sturdy body. Oh, let me tell you something important.\r\nWhen I feel good, I make a \"purrrr…\" sound, but when feel bad, I make a \"grrrrr…\" sound.\r\nIt's not the same. They sound different if you listen carefully:\r\n…purrrr, grrrrr… Is it still difficult to tell the difference?\r\n\r\nThat's alright. Stay with me for a little while and you will know that soon enough,\r\nbecause when I feel bad, I bite right away!\r\nEven if you are slow, I'm sure you will be able to learn it quickly.\r\nAll the best, Savior! Let's have a lot of fun together~!",
+        "zh_tw": "救援者，你好嗎？我是艾拉。我喜歡被摸頭，也喜歡被搔下巴！\r\n我算是獸人之中力氣很大、身體強壯的。啊，我再告訴你一件重要的事情。\r\n我心情好的時候會「嘎嚕嚕…」、心情不好的時候會「咖嚕嚨…」。\r\n兩個不一樣！仔細聽就會聽出差別。\r\n…嘎嚕嚕、咖嚕嚨…還是很難分辨嗎？\r\n\r\n沒關係，大家和我多相處一下很快就會知道。\r\n我心情不好就會馬上咬人！\r\n就算救援者不太會看臉色，也很快就會學會的～\r\n那麼以後請多多關照，救援者！一起玩吧～",
+        "zh_cn": "救援者，你好嗎？我是艾拉。我喜歡被摸頭，也喜歡被搔下巴！\r\n我算是獸人之中力氣很大、身體強壯的。啊，我再告訴你一件重要的事情。\r\n我心情好的時候會「嘎嚕嚕…」、心情不好的時候會「咖嚕嚨…」。\r\n兩個不一樣！仔細聽就會聽出差別。\r\n…嘎嚕嚕、咖嚕嚨…還是很難分辨嗎？\r\n\r\n沒關係，大家和我多相處一下很快就會知道。\r\n我心情不好就會馬上咬人！\r\n就算救援者不太會看臉色，也很快就會學會的～\r\n那麼以後請多多關照，救援者！一起玩吧～"
+      },
+      "greeting": {
+        "ko": "하암… 햇살이 따뜻해서 졸린데…턱 긁어줘!",
+        "en": "Yawn… The sunshine is so warm that it makes me sleepy… Scratch my chin!",
+        "zh_tw": "哈啊…陽光好溫暖覺得好睏…搔我的下巴吧！",
+        "zh_cn": "哈啊…陽光好溫暖覺得好睏…搔我的下巴吧！"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "흠냐흠냐"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Hmm."
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "嗯嗯嗯嗯"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "嗯嗯嗯嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "아케나인 성은 생각보다 좁네!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Arkenine Palace is smaller than I thought!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "阿肯納因城比想像窄欸！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "阿肯納因城比想像窄欸！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "약간~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "A little bit."
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "有點～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "有點～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "그러니까 지루하지 않게 나랑 많이 놀아줘야 해~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "So, you have to hang out with me a lot so I don't get bored…"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "為了不讓我那麼無聊，你要陪我玩～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "為了不讓我那麼無聊，你要陪我玩～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "맛있는 것도 많이 주고!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "and give me lots of yummy food!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "還要給我很多好吃的！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "還要給我很多好吃的！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "약속!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Promise!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "答應我！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "答應我！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "좋아 좋아~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Good, good!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "好耶好耶"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "好耶好耶"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "흠. 심심한데 광장에 풍선 받으러 가야지!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Hmm. I'm bored, so I'm going to get some balloons at the square!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "哼，真無聊，我要去廣場拿氣球！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "哼，真無聊，我要去廣場拿氣球！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "구원자 것도 챙겨올게~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "I'll get yours, too!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "我也會幫救援者拿～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "我也會幫救援者拿～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "굿~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Good!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "Good～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "Good～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "예전에 찍어둔 사진인데"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "This is an old photo, but"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "這是我以前拍的照片"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "這是我以前拍的照片"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "아이라 이빨 뾰족해?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "do Aira's teeth look sharp?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "艾拉的牙齒很尖嗎？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "艾拉的牙齒很尖嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "후냥!?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Hm-nya?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "呼喵！？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "呼喵！？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "보통 이렇게 뾰족하지는 않나…?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Aren't they all this sharp...?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "通常不會這麼尖銳嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "通常不會這麼尖銳嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "진짜!?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Really?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "真假！？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "真假！？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "그럼 고기는 어떻게 뜯어 먹어?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Then, how do you eat meat?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "那你要怎麼撕肉來吃？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "那你要怎麼撕肉來吃？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "함정에 걸렸을 때 밧줄은 뭐로 뜯고?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "What do you use to break a rope when you get caught in a trap?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "掉進陷阱的時候又要用什麼咬斷繩子？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "掉進陷阱的時候又要用什麼咬斷繩子？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "으으음~~ 연약해~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Mm... Too fragile"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "呃呃嗯～～好柔弱～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "呃呃嗯～～好柔弱～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "주인"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Master"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "主人"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "主人"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "주이이이이이이인"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Masterrrr"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "主人～～～～～～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "主人～～～～～～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "쭈이이이이이이이이이이인!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "MAZTERRRR!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "主人～～～～～～～～～～！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "主人～～～～～～～～～～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "아이라 여기 가둬 놨으니까 책임져"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Aira, you locked her up in here. You're responsible for her"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "你把艾拉關在這裡，要對我負責"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "你把艾拉關在這裡，要對我負責"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "놀아줘~~~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Play with Aira!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "陪我玩～～～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "陪我玩～～～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "일~~?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Worrrkk?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "有事～～？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "有事～～？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "일이 아이라랑 노는 거보다 중요해?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Is work more important than playing with Aira?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "事情比陪艾拉玩還重要嗎？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "事情比陪艾拉玩還重要嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "에잇"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Grr"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "吼唷"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "吼唷"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "다 캬아앙 해버릴까보다~!!!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "I'm gonna howl!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "要不要讓我「喀啊昂」一口咬下去～！！！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "要不要讓我「喀啊昂」一口咬下去～！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "히히"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "heheh"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "嘻嘻"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "嘻嘻"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "주인~ 기대해!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Master, you just wait"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "主人～要期待哦！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "主人～要期待哦！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "내가 어떤 벌을 내릴지!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "For a punishment!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "期待我會給你什麼懲罰！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "期待我會給你什麼懲罰！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "으음"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Erm"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "呃嗯"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "呃嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "잠깐만 구속구를 풀 수 있으면"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "If I can just get my restraints off for a moment"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "等一下，可以解開束縛的話"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "等一下，可以解開束縛的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "주인을 잔~뜩 간지럽히고 싶다!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "I'd love to tickle Master!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "就想盡情地～搔主人癢癢！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "就想盡情地～搔主人癢癢！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "히히힛"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Heheheh!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "嘻嘻嘻"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "嘻嘻嘻"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "정령들은 왜 이렇게 옷으로 몸을 가려?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Why do Souls cover themselves with clothes like this?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "為什麼精靈都要這樣穿衣服遮住身體？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "為什麼精靈都要這樣穿衣服遮住身體？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "옷으로 살을 대부분 가리잖아~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "They cover most of their body with their clothes, for the most part"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "她們都用衣服遮住大部分的肉啦～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "她們都用衣服遮住大部分的肉啦～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "다칠까 봐 그런가?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Is it because they're afraid of getting hurt?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "是因為怕會受傷嗎？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "是因為怕會受傷嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "아이라는 강해서 그런 옷은 필요없지롱~!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Aira is strong and doesn't need clothes!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "艾拉很強大，所以不需要那種衣服～！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "艾拉很強大，所以不需要那種衣服～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "그리고 그런 옷들 너무 답답해"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "And clothes are stuffy."
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "而且那種衣服都太悶了"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "而且那種衣服都太悶了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "사실 아이라는 지금도 옷 안 입고 싶은데"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "In fact, Aira doesn't even want to wear them anymore"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "其實艾拉現在也不想穿衣服"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "其實艾拉現在也不想穿衣服"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "그럼 마녀가 아이라 잡혀갈 수도 있다고 했어~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "but the Witch said Aira might be taken away"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "但因為魔女可能會把艾拉抓走～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "但因為魔女可能會把艾拉抓走～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "왜 그런 거야~?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Why is that?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "為什麼呢～？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "為什麼呢～？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "으음~ 어려워~~"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Mm... Difficult..."
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "呃嗯～好難喔～～"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "呃嗯～好難喔～～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "주인도 마녀를 싫어해?"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Do you hate the Witch, too?"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "主人也討厭魔女嗎？"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "主人也討厭魔女嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "다들 마녀를 싫어해"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Because everyone hates the Witch"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "大家都討厭魔女"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "大家都討厭魔女"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "마녀가 배신자라고…"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "They say she's a traitor..."
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "都說魔女是叛徒…"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "都說魔女是叛徒…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "하지만 내가 아는 마녀는 그런 애 아니야"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "But the Witch I know is not like that."
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "但我認識的魔女不是那種人"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "但我認識的魔女不是那種人"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "오히려 마녀는"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "Rather, I think it's a pity since"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "魔女反而是"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "魔女反而是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "아무도 도와주지 않는 불쌍한 애야"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "she can't get anyone to help her"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "誰都不幫她的可憐孩子"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "誰都不幫她的可憐孩子"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "아이라",
+          "message": "그러니까 주인도 마녀 너무 미워하지 마!"
+        },
+        "en": {
+          "speaker": "Aira",
+          "message": "So, don't hate her too much, Master!"
+        },
+        "zh_tw": {
+          "speaker": "艾拉",
+          "message": "所以主人也別太討厭魔女！"
+        },
+        "zh_cn": {
+          "speaker": "艾拉",
+          "message": "所以主人也別太討厭魔女！"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "캐서린",
+          "message": "성 바닥에 앉아서 밥을 먹으시면 안 돼요~"
+        },
+        "en": {
+          "speaker": "Catherine",
+          "message": "You shouldn't sit on the castle floor when eating~"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳",
+          "message": "不能坐在城堡的地板上吃飯～"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳",
+          "message": "不能坐在城堡的地板上吃飯～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "니콜",
+          "message": "…하핫. 좀 놀라게 했다가 펀치! 당해버렸지 뭐야.\n 깜짝 놀라면 주먹이 먼저 나간대. 다시는 장난치지 말아야지…"
+        },
+        "en": {
+          "speaker": "Nicole",
+          "message": "…Haha. She punched me when I tried to surprise her once.\nShe said she just naturally throws a punch when she gets startled. I'll never mess with her again…"
+        },
+        "zh_tw": {
+          "speaker": "妮可",
+          "message": "…唉，想嚇她卻反被揍一拳！什麼嘛。\n她被嚇到就會先出拳，最好不要再開玩笑了…"
+        },
+        "zh_cn": {
+          "speaker": "妮可",
+          "message": "…唉，想嚇她卻反被揍一拳！什麼嘛。\n她被嚇到就會先出拳，最好不要再開玩笑了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "얘를 보면 내가 참 얌전하고 차분하게 느껴져."
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Watching her makes me realize how calm and cool I am."
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "看著她會讓我覺得自己很乖巧又安分。"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "看著她會讓我覺得自己很乖巧又安分。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "흠냐흠냐"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Hmm."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嗯嗯嗯嗯"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嗯嗯嗯嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아케나인 성은 생각보다 좁네!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Arkenine Palace is smaller than I thought!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "阿肯納因城比想像窄欸！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "阿肯納因城比想像窄欸！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "답답해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it a bit stifling?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "無聊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "無聊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "답답해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it a bit stifling?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "無聊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "無聊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "약간~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "A little bit."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "有點～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "有點～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그러니까 지루하지 않게 나랑 많이 놀아줘야 해~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "So, you have to hang out with me a lot so I don't get bored…"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "為了不讓我那麼無聊，你要陪我玩～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "為了不讓我那麼無聊，你要陪我玩～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "맛있는 것도 많이 주고!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "and give me lots of yummy food!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "還要給我很多好吃的！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "還要給我很多好吃的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "약속!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Promise!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "答應我！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "答應我！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "약속할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I promise."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我答應妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我答應妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "약속할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I promise."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我答應妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我答應妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "좋아 좋아~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Good, good!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "好耶好耶"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "好耶好耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "흠. 심심한데 광장에 풍선 받으러 가야지!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Hmm. I'm bored, so I'm going to get some balloons at the square!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "哼，真無聊，我要去廣場拿氣球！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "哼，真無聊，我要去廣場拿氣球！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "구원자 것도 챙겨올게~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I'll get yours, too!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我也會幫救援者拿～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我也會幫救援者拿～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "굿~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Good!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "Good～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "Good～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "예전에 찍어둔 사진인데"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "This is an old photo, but"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "這是我以前拍的照片"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "這是我以前拍的照片"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라 이빨 뾰족해?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "do Aira's teeth look sharp?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "艾拉的牙齒很尖嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "艾拉的牙齒很尖嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 날카롭네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Look pretty sharp"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "超級尖銳欸"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "超級尖銳欸"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 날카롭네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Look pretty sharp"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "超級尖銳欸"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "超級尖銳欸"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "후냥!?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Hm-nya?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呼喵！？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呼喵！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "보통 이렇게 뾰족하지는 않나…?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aren't they all this sharp...?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "通常不會這麼尖銳嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "通常不會這麼尖銳嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 나랑 달라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No. At least not mine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，跟我不一樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，跟我不一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 나랑 달라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No. At least not mine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，跟我不一樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，跟我不一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "진짜!?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "真假！？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "真假！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그럼 고기는 어떻게 뜯어 먹어?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Then, how do you eat meat?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "那你要怎麼撕肉來吃？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "那你要怎麼撕肉來吃？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "함정에 걸렸을 때 밧줄은 뭐로 뜯고?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "What do you use to break a rope when you get caught in a trap?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "掉進陷阱的時候又要用什麼咬斷繩子？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "掉進陷阱的時候又要用什麼咬斷繩子？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "밧줄을 치아로 뜯는 경우는 거의 없지 않을까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I doubt anyone would ever rip a rope with their teeth..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "幾乎不會碰到要用牙齒咬斷繩子的狀況吧…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "幾乎不會碰到要用牙齒咬斷繩子的狀況吧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "밧줄을 치아로 뜯는 경우는 거의 없지 않을까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I doubt anyone would ever rip a rope with their teeth..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "幾乎不會碰到要用牙齒咬斷繩子的狀況吧…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "幾乎不會碰到要用牙齒咬斷繩子的狀況吧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "으으음~~ 연약해~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Mm... Too fragile"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呃呃嗯～～好柔弱～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呃呃嗯～～好柔弱～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주이이이이이이인"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Masterrrr"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人～～～～～～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人～～～～～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "쭈이이이이이이이이이이인!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "MAZTERRRR!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人～～～～～～～～～～！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人～～～～～～～～～～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜 그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라 여기 가둬 놨으니까 책임져"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aira, you locked her up in here. You're responsible for her"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "你把艾拉關在這裡，要對我負責"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "你把艾拉關在這裡，要對我負責"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "놀아줘~~~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Play with Aira!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "陪我玩～～～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "陪我玩～～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Give me a moment"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等一下"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Give me a moment"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等一下"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "일이 있어서"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let me take care of some work first"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我有點事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我有點事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "일이 있어서"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let me take care of some work first"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我有點事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我有點事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "일~~?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Worrrkk?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "有事～～？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "有事～～？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "일이 아이라랑 노는 거보다 중요해?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Is work more important than playing with Aira?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "事情比陪艾拉玩還重要嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "事情比陪艾拉玩還重要嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "에잇"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Grr"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "吼唷"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "吼唷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "다 캬아앙 해버릴까보다~!!!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I'm gonna howl!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "要不要讓我「喀啊昂」一口咬下去～！！！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "要不要讓我「喀啊昂」一口咬下去～！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "히히"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "heheh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嘻嘻"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嘻嘻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인~ 기대해!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master, you just wait"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人～要期待哦！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人～要期待哦！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대하라니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait for what?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "期待什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "期待什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대하라니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait for what?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "期待什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "期待什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "내가 어떤 벌을 내릴지!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "For a punishment!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "期待我會給你什麼懲罰！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "期待我會給你什麼懲罰！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "으음"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Erm"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "잠깐만 구속구를 풀 수 있으면"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "If I can just get my restraints off for a moment"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "等一下，可以解開束縛的話"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "等一下，可以解開束縛的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인을 잔~뜩 간지럽히고 싶다!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I'd love to tickle Master!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "就想盡情地～搔主人癢癢！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "就想盡情地～搔主人癢癢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "히히힛"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheheh!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嘻嘻嘻"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嘻嘻嘻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "정령들은 왜 이렇게 옷으로 몸을 가려?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Why do Souls cover themselves with clothes like this?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "為什麼精靈都要這樣穿衣服遮住身體？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "為什麼精靈都要這樣穿衣服遮住身體？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그게 무슨 말이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you mean?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼意思？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼意思？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그게 무슨 말이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you mean?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼意思？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼意思？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "옷으로 살을 대부분 가리잖아~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "They cover most of their body with their clothes, for the most part"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "她們都用衣服遮住大部分的肉啦～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "她們都用衣服遮住大部分的肉啦～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "다칠까 봐 그런가?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Is it because they're afraid of getting hurt?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "是因為怕會受傷嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "是因為怕會受傷嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라는 강해서 그런 옷은 필요없지롱~!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aira is strong and doesn't need clothes!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "艾拉很強大，所以不需要那種衣服～！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "艾拉很強大，所以不需要那種衣服～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그리고 그런 옷들 너무 답답해"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "And clothes are stuffy."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "而且那種衣服都太悶了"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "而且那種衣服都太悶了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "사실 아이라는 지금도 옷 안 입고 싶은데"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "In fact, Aira doesn't even want to wear them anymore"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "其實艾拉現在也不想穿衣服"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "其實艾拉現在也不想穿衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그럼 마녀가 아이라 잡혀갈 수도 있다고 했어~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "but the Witch said Aira might be taken away"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "但因為魔女可能會把艾拉抓走～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "但因為魔女可能會把艾拉抓走～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "왜 그런 거야~?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Why is that?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "為什麼呢～？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "為什麼呢～？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무래도 사회적 합의라는 게 있으니까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because there's a social consensus..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "畢竟還是有所謂的約定俗成…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "畢竟還是有所謂的約定俗成…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무래도 사회적 합의라는 게 있으니까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because there's a social consensus..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "畢竟還是有所謂的約定俗成…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "畢竟還是有所謂的約定俗成…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "으음~ 어려워~~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Mm... Difficult..."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呃嗯～好難喔～～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呃嗯～好難喔～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인도 마녀를 싫어해?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Do you hate the Witch, too?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人也討厭魔女嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人也討厭魔女嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 말이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you mean?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼意思？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼意思？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 말이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you mean?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼意思？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼意思？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "다들 마녀를 싫어해"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Because everyone hates the Witch"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "大家都討厭魔女"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "大家都討厭魔女"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "마녀가 배신자라고…"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "They say she's a traitor..."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "都說魔女是叛徒…"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "都說魔女是叛徒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "하지만 내가 아는 마녀는 그런 애 아니야"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "But the Witch I know is not like that."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "但我認識的魔女不是那種人"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "但我認識的魔女不是那種人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "오히려 마녀는"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Rather, I think it's a pity since"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "魔女反而是"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "魔女反而是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아무도 도와주지 않는 불쌍한 애야"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "she can't get anyone to help her"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "誰都不幫她的可憐孩子"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "誰都不幫她的可憐孩子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그러니까 주인도 마녀 너무 미워하지 마!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "So, don't hate her too much, Master!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "所以主人也別太討厭魔女！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "所以主人也別太討厭魔女！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인! 자장가라는 거 알아?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master, do you know what a lullaby is?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人！你知道所謂的搖籃曲嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人！你知道所謂的搖籃曲嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "잘 자라고 불러 주는 노래래"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "It's a song to help you sleep"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "聽說是唱來祝人好夢的歌曲"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "聽說是唱來祝人好夢的歌曲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "근데 노래를 듣는데 어떻게 잠이 오지?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "But how can you fall asleep listening to it?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "但是聽歌要怎麼想睡呢？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "但是聽歌要怎麼想睡呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 조용한 노래거든"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's a very quiet song"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是很安靜的歌"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是很安靜的歌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청 조용한 노래거든"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's a very quiet song"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是很安靜的歌"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是很安靜的歌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "으음~ 그래?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Mm... Really?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呃嗯～是哦？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呃嗯～是哦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인도 아는 자장가 있어?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Do you know any lullabies?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人也有會唱的搖籃曲嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人也有會唱的搖籃曲嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "히히 다음에 아이라한테 불러 줘!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheh. Sing it to Aira later!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嘻嘻，下次唱給艾拉聽！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嘻嘻，下次唱給艾拉聽！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그럼 나도 주인한테 불러 줄게♪"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aira will sing it to you, too ♪"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "那我也會唱給主人聽的♪"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "那我也會唱給主人聽的♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인이랑 나는 친구잖아"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master and I are friends"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人跟我是朋友嘛"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人跟我是朋友嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라는 강하니까 주인을 지켜줄게!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aira is strong, so she'll protect you!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "艾拉很強大，會保護主人的！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "艾拉很強大，會保護主人的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그러니까 주인은 내 걱정하지 마!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "So, don't worry, Master!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "所以主人不用擔心我！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "所以主人不用擔心我！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이라가 강한 건 알지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know you're strong"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我知道艾拉很厲害"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我知道艾拉很厲害"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이라가 강한 건 알지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know you're strong"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我知道艾拉很厲害"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我知道艾拉很厲害"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 도와주고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I still want to help you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我還是想幫忙"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我還是想幫忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 도와주고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I still want to help you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我還是想幫忙"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我還是想幫忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "헤헷"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嘿嘿"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嘿嘿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인이랑 나는 같은 마음인가 보네♪"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I guess you and I are of the same mind ♪"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "看來主人的想法跟我一樣♪"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "看來主人的想法跟我一樣♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그렇지만…"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "But..."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "但是…"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인 힘든 건 싫어"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I don't want you to suffer"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我不喜歡主人太辛苦"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我不喜歡主人太辛苦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "내 마음 알아줄 거지!?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "You know how I feel, right?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "你能理解我的心意吧！？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "你能理解我的心意吧！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "마녀는 잘 지낼까"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I wonder how the Witch is doing"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "魔女過得好不好呢"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "魔女過得好不好呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "나 없어서 갑옷이랑만 얘기할 텐데"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Without me, she'll only have that Armor to talk to"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我不在，她應該只能跟盔甲講話"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我不在，她應該只能跟盔甲講話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "갑옷이 은근 답답하단 말이야~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "And the Armor is quite... boring"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "盔甲隱約有點讓人煩悶欸～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "盔甲隱約有點讓人煩悶欸～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑옷이?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The Armor?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "盔甲？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "盔甲？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑옷이?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The Armor?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "盔甲？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "盔甲？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이라는 비비안 걱정을 많이 하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Aira, you worry about Vivienne a lot"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來艾拉很擔心薇薇安"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來艾拉很擔心薇薇安"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이라는 비비안 걱정을 많이 하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Aira, you worry about Vivienne a lot"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來艾拉很擔心薇薇安"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來艾拉很擔心薇薇安"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "헤헤"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嘿嘿"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嘿嘿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "마녀랑 나는 되~게 친한 친구거든!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "The Witch and I are best friends!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "魔女跟我是非～常要好的朋友！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "魔女跟我是非～常要好的朋友！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "마녀가 없었으면 아이라는 낮잠도 못 자고"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "If it weren't for the Witch, Aira wouldn't have known"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "要是沒有魔女，艾拉就不能睡午覺"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "要是沒有魔女，艾拉就不能睡午覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "나무 타는 재미도 몰랐을 거야"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "what it was like to take a nap or how to climb trees"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "也不會懂得爬樹的樂趣"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "也不會懂得爬樹的樂趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라를 자유롭게 해 준 건 마녀였거든"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "It was the Witch who set Aira free"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "讓艾拉自由自在的可是魔女哦"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "讓艾拉自由自在的可是魔女哦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그러니까 주인도 마녀랑 잘 지내 줘!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "So, you should be nice to her, too!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "所以請主人也跟魔女好好相處！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "所以請主人也跟魔女好好相處！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "비비안은 무슨 생각을 하는지 모르겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't know what Vivienne is thinking"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道薇薇安是怎麼想的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道薇薇安是怎麼想的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "비비안은 무슨 생각을 하는지 모르겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't know what Vivienne is thinking"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道薇薇安是怎麼想的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道薇薇安是怎麼想的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그건 나도 그렇지만"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Neither do I"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我也不知道"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我也不知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "마녀가 그랬어"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "But the witch said"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "但魔女說過"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "但魔女說過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "언젠가 모든 답을 얻게 되는 날이 올 거라고"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "that one day we'll have all the answers"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "總有一天，會得到所有解答的"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "總有一天，會得到所有解答的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "후냥~ 아이라는 어려워서 무슨 말인지 모르겠지만"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Hm-nya, Aira doesn't understand what she's saying, though"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呼喵～艾拉覺得很難，不懂那是什麼意思"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呼喵～艾拉覺得很難，不懂那是什麼意思"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라는 동산을 하나 만들고 싶어"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aira wants to make a garden"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "艾拉想打造一個樂園"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "艾拉想打造一個樂園"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "동산?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A garden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "樂園？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "樂園？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "동산?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A garden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "樂園？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "樂園？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "응!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Yes!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嗯！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嗯！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "거기서 뭐든 하는 거지"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "She can do anything there"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "可以在那裡做任何事"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "可以在那裡做任何事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "맛있는 것도 잔뜩 먹을 수 있고"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "She can eat all kinds of delicious things"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "可以盡情享用美食"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "可以盡情享用美食"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "사냥도 할 수 있고"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "She can hunt"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "還可以狩獵"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "還可以狩獵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "덫을 놓기도 하고~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "She can set traps"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "還可以設下陷阱～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "還可以設下陷阱～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그러다 지치면 낮잠을 자는 거야♪"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "And when she gets tired, she takes a nap ♪"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "然後累了的話，就睡午覺♪"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "然後累了的話，就睡午覺♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "여행을 가고 싶다는 거지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You want to go traveling, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是想去旅行吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是想去旅行吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "여행을 가고 싶다는 거지?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You want to go traveling, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是想去旅行吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是想去旅行吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "후냥!? 그런 건가?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Hm-nya? Do I?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呼喵！？是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呼喵！？是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "모든 일이 해결되면 언젠가 꼭 같이 가자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "When everything's settled, we'll go together someday"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等一切都解決之後，一定要一起去旅行"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等一切都解決之後，一定要一起去旅行"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "모든 일이 해결되면 언젠가 꼭 같이 가자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "When everything's settled, we'll go together someday"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等一切都解決之後，一定要一起去旅行"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等一切都解決之後，一定要一起去旅行"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "헤헤"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嘿嘿"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嘿嘿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "약속이야!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "It's a promise!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "約好囉！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "約好囉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "ㅏㅣ"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "#b G"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "ㄚㄧ"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "ㄚㄧ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "ㅁㄴㅇ"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "d O \\"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "ㄇㄋㄎ"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "ㄇㄋㄎ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "ㅓㅑㅓㅣㅏ"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "mE t le q"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "ㄛㄚㄡㄧㄚ"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "ㄛㄚㄡㄧㄚ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Aira?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "艾拉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "艾拉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Aira?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "艾拉？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "艾拉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's going on?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's going on?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "헤헤 구원자"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheh savior"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嘿嘿，救援者"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嘿嘿，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아니"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "不對"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "不對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인!!!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "MASTER!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人！！！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계속 주인이라고 부를 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you going to keep calling me Master?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要繼續叫我主人嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要繼續叫我主人嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계속 주인이라고 부를 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you going to keep calling me Master?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要繼續叫我主人嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要繼續叫我主人嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "응! 배고픈 아이라한테 맛있는 거 나눠줬잖아"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Yes! You gave Aira something delicious to eat when she was hungry"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嗯！畢竟你把好吃的分給肚子餓的艾拉嘛"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嗯！畢竟你把好吃的分給肚子餓的艾拉嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "물론 아이라 묶어둔 건 조금 밉지만"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Of course, she doesn't like it when you tie her up"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我的確有點討厭你把艾拉綁起來"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我的確有點討厭你把艾拉綁起來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그래도 안전을 위해서랬지?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "But it's for her safety, right?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "但你說是為了安全著想吧？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "但你說是為了安全著想吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "끄응"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Ugh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰은 쓰게 해 줬으니까 참아 줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I let you use the Everphone, so you'll have to forgive me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "既然讓妳用EverPhone了，妳就忍忍吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "既然讓妳用EverPhone了，妳就忍忍吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰은 쓰게 해 줬으니까 참아 줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I let you use the Everphone, so you'll have to forgive me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "既然讓妳用EverPhone了，妳就忍忍吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "既然讓妳用EverPhone了，妳就忍忍吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "끄으으으으으응"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Gurrgggghhhh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呃呃呃呃呃呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呃呃呃呃呃呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아아아아악"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aaaaaahhh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "啊啊啊啊啊"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "啊啊啊啊啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "따분해"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Bored"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "好無聊"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "好無聊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "심심해"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Boring"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "好無趣"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "好無趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "재미없어!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "BORING!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "不好玩！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "不好玩！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "다 캬아앙 해버릴 거야~!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I'm gonna howl and make all your ears hurt!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我要一口全部咬下來～！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我要一口全部咬下來～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇지만 아이라를 풀어 줄 수는 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I can't let you go"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我還是不能幫艾拉鬆綁"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我還是不能幫艾拉鬆綁"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇지만 아이라를 풀어 줄 수는 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I can't let you go"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我還是不能幫艾拉鬆綁"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我還是不能幫艾拉鬆綁"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "몰라~~~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Whatever"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "不管～～～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "不管～～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라는 놀고 싶어!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aira wants to play!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "艾拉想玩耍！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "艾拉想玩耍！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "놀아 줘! 주인!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Play with her, Master!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "陪我玩！主人！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "陪我玩！主人！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "방법을 생각해 볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll think of a way"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想想辦法"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想想辦法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "방법을 생각해 볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll think of a way"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我想想辦法"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我想想辦法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "후후후후후후후후"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheheheheheh"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "呵呵呵呵呵呵呵呵"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "呵呵呵呵呵呵呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인! 준비됐어?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master! Are you ready?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人！準備好了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人！準備好了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라한테 그거 받기로 했잖아?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "You know, for what Aira promised you"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "不是說好要接受艾拉的那個嗎？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "不是說好要接受艾拉的那個嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거라니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哪個？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哪個？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거라니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哪個？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哪個？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "설마 깜빡한 건 아니지?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "You didn't forget, did you?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "你該不會忘記了吧？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "你該不會忘記了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "기대하라구"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "You just wait"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "你要好好期待"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "你要好好期待"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라가 엄청난 벌을 준비했으니까!!!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Because Aira has prepared a great punishment!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "因為艾拉準備了超厲害的處罰！！！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "因為艾拉準備了超厲害的處罰！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청난 벌이라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A great punishment..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "超厲害的處罰啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "超厲害的處罰啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "엄청난 벌이라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A great punishment..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "超厲害的處罰啊…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "超厲害的處罰啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인…"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master..."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人…"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "나 배고파"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I'm hungry"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我肚子餓"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我肚子餓"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "여기 갇혀 있는 거 싫어"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I hate being locked up here"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "不喜歡被關在這裡"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "不喜歡被關在這裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "하루 종일 주인이 오기만 기다리는 거"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Aira doesn't like waiting all day"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "一整天只等著主人過來"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "一整天只等著主人過來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라는 싫단 말이야"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "for Master to come home"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "艾拉不喜歡這樣"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "艾拉不喜歡這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "또 안전을 위해서라고 할 거지?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "You're gonna say it's for my safety again, aren't you?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "你又要說是為了安全著想吧？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "你又要說是為了安全著想吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그런 건 됐으니까"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Enough of that"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "不用管那些"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "不用管那些"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아이라를 혼자 두지 말아 줘"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Please don't leave Aira alone"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "不要丟艾拉一個人"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "不要丟艾拉一個人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "미안해 나 때문에"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "對不起，都是我害的"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "對不起，都是我害的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "보러 가고 싶은데"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I want to go see you"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我想去看你"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我想去看你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "마음대로 여기서 나갈 수도 없어서…"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "But I can't. I can't leave here"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "但我不能隨便離開這裡…"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "但我不能隨便離開這裡…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "괜찮아야 해"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "You should be okay"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "你要沒事哦"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "你要沒事哦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "가끔 나 주인이랑"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Sometimes I feel like"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我偶爾會感覺跟主人"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我偶爾會感覺跟主人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "같은 꿈을 꾸는 것 같을 때가 있어"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I'm having the same dream as you, Master"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "做一樣的夢"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "做一樣的夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같은 꿈?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The same dream?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一樣的夢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一樣的夢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같은 꿈?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The same dream?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一樣的夢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一樣的夢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "응 주인이 겪었던 일 같은데"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Yes. I think it's something you went through"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嗯，好像是主人經歷過的事"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嗯，好像是主人經歷過的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그때 주인의 감정이 생생히 전해져서"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I can feel your emotions"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人當時的情感很清楚地傳達給我"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人當時的情感很清楚地傳達給我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "뭔가 하나로 이어진 기분이야"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "so I feel like we're connected"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "總覺得我們成為一體了"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "總覺得我們成為一體了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계약 때문인가"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it the contract?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是因為契約的關係嗎"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是因為契約的關係嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "계약 때문인가"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it the contract?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是因為契約的關係嗎"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是因為契約的關係嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그래서 주인이 말하지 않아도 알 수 있어"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "So, I can tell even if you don't tell me"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "所以主人不用說，我也都能知道"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "所以主人不用說，我也都能知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "요즘 엄청 피곤하지?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "You've been very tired lately, haven't you?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "你最近超級累吧？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "你最近超級累吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "걱정돼"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I'm worried"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "好擔心"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "好擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정하지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "걱정하지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "그래도…"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Still..."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "可是…"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "可是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인…"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master..."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人…"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "나… 더 이상은…"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I... No more..."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我…再也…"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我…再也…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인 사실은"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Master, to tell you the truth"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "主人，其實"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "主人，其實"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "나 괴물이 되고 싶지 않아"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I don't want to be a monster"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我不想變成怪物"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我不想變成怪物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "주인이 나를 포기하지 않아 줬으면 좋겠어"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Please don't give up on me"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "希望主人不要放棄我"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "希望主人不要放棄我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "…이기적이라고 해도…"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "... Call me selfish, but..."
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "…就算你覺得我這樣很自私…"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "…就算你覺得我這樣很自私…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "헤헷 주인"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Heheh Master"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "嘿嘿，主人"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "嘿嘿，主人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "아니 구원자"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "No, Savior"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "不對，救援者"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "不對，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "내가 내릴 또 다른 벌이 있어♪"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I have another punishment for you ♪"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "我還要給你其他處罰♪"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "我還要給你其他處罰♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "새해가 밝았어, 크릉!!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "It's a new year, crrr!!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "新的一年到來了，咳哼！！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "新的一年到來了，咳哼！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "기념으로 나랑 달리기 경주하자!!! \r\n캬오옹~!!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "To celebrate, let us race!!!\r\nRawrrrr!!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "作為紀念跟我比賽賽跑吧！！！\r\n咖喔嗚～！！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "作為紀念跟我比賽賽跑吧！！！\r\n咖喔嗚～！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이라는 기운이 넘치는구나!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Aira is full of energy!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "艾拉精力旺盛呢！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "艾拉精力旺盛呢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이라는 기운이 넘치는구나!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Aira is full of energy!!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "艾拉精力旺盛呢！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "艾拉精力旺盛呢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "사랑의 날!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Love Day!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "戀愛之日！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "戀愛之日！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "축제 좋아!!!"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "I love festival!!!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "喜歡慶典！！！"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "喜歡慶典！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같이 가자, 아이라!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go, Aira!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一起去吧，艾拉！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一起去吧，艾拉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "같이 가자, 아이라!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go, Aira!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一起去吧，艾拉！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一起去吧，艾拉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "빨간 장식이 엄청 많네~"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "So many red decoration!"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "紅色的裝飾好多啊～"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "紅色的裝飾好多啊～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "아이라",
+            "message": "피투성이 파티를 하는 거야~?"
+          },
+          "en": {
+            "speaker": "Aira",
+            "message": "Are we having a blood party?"
+          },
+          "zh_tw": {
+            "speaker": "艾拉",
+            "message": "開一個血淋淋的派對嗎～？"
+          },
+          "zh_cn": {
+            "speaker": "艾拉",
+            "message": "開一個血淋淋的派對嗎～？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야, 내가 이따가 알려줄게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'll explain later!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是啦，我等一下告訴妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是啦，我等一下告訴妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야, 내가 이따가 알려줄게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'll explain later!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是啦，我等一下告訴妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是啦，我等一下告訴妳！"
+          }
+        }
+      ]
+    }
+  }
+}

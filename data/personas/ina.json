@@ -1,0 +1,682 @@
+{
+  "id": "3020",
+  "name": "이나",
+  "name_en": "Ina",
+  "grade": "에픽",
+  "race": "요정형",
+  "class": "디펜더",
+  "sub_class": "버프",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "사랑스러운 선율",
+    "constellation": "인연_제이드_엔딩",
+    "union": "클라라 농장",
+    "birthday": "714",
+    "height": 137,
+    "weight": 34,
+    "cv_ko": "???",
+    "cv_jp": null,
+    "like": [
+      "클로버",
+      "친구"
+    ],
+    "dislike": [
+      "마녀"
+    ],
+    "hobby": [
+      "숨바꼭질"
+    ],
+    "speciality": [
+      "동물과 대화하기"
+    ]
+  },
+  "personality": {
+    "description": "자기 소개 임시 데이터.",
+    "greeting": "고양이랑 강아지 중에, 누가 더 착할까요?"
+  },
+  "speech_patterns": [
+    "구원자님. 사랑의 날이에요.\r\n이거 드릴게요.",
+    "많이 사랑하세요~",
+    "구원자님. 감사의 날이에요.",
+    "감사합니다~",
+    "이렇게 하는 거 맞아요?",
+    "구원자님. 이브의 날이에요",
+    "해피 이브 데이\r\n이거 드릴게요!"
+  ],
+  "comments": [
+    {
+      "writer": "멜피스",
+      "comment": "좀 잘 울긴 해도 같이 놀면 재밌어."
+    },
+    {
+      "writer": "브라이스",
+      "comment": "…멜피스와 친한 게 마음에 안 들어요. 동물들도 날 안 좋아해요."
+    },
+    {
+      "writer": "캐서린",
+      "comment": "어리고 마음이 약해서, 유난히 신경 써서 돌보게 되네요.\n한 아이에게만 이러면 안 되는데…"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "이나",
+        "message": "구원자님. 사랑의 날이에요.\r\n이거 드릴게요."
+      },
+      {
+        "speaker": "이나",
+        "message": "많이 사랑하세요~"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 이나도!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 이나도!"
+      },
+      {
+        "speaker": "이나",
+        "message": "구원자님. 감사의 날이에요."
+      },
+      {
+        "speaker": "이나",
+        "message": "감사합니다~"
+      },
+      {
+        "speaker": "이나",
+        "message": "이렇게 하는 거 맞아요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 이나에게 항상 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 이나에게 항상 고마워!"
+      },
+      {
+        "speaker": "이나",
+        "message": "구원자님. 이브의 날이에요"
+      },
+      {
+        "speaker": "이나",
+        "message": "해피 이브 데이\r\n이거 드릴게요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이나야, 해피 이브 데이!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이나야, 해피 이브 데이!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "이나",
+      "en": "Ina",
+      "zh_tw": "伊娜",
+      "zh_cn": "伊娜"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "요정형",
+      "en": "Fairy",
+      "zh_tw": "妖精型",
+      "zh_cn": "妖精型"
+    },
+    "class": {
+      "ko": "디펜더",
+      "en": "Defender",
+      "zh_tw": "捍衛者",
+      "zh_cn": "捍衛者"
+    },
+    "sub_class": {
+      "ko": "버프",
+      "en": "Buff",
+      "zh_tw": "增益",
+      "zh_cn": "增益"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "사랑스러운 선율",
+        "en": "Lovely Melody",
+        "zh_tw": "令人喜愛的旋律",
+        "zh_cn": "令人喜愛的旋律"
+      },
+      "constellation": {
+        "ko": "인연_제이드_엔딩",
+        "en": "인연_제이드_엔딩",
+        "zh_tw": "巨蟹座",
+        "zh_cn": "巨蟹座"
+      },
+      "union": {
+        "ko": "클라라 농장",
+        "en": "Clara Farm",
+        "zh_tw": "克拉拉農場",
+        "zh_cn": "克拉拉農場"
+      },
+      "cv_ko": {
+        "ko": "???",
+        "en": "???",
+        "zh_tw": "？？？",
+        "zh_cn": "？？？"
+      },
+      "cv_jp": {
+        "ko": "",
+        "en": "",
+        "zh_tw": "",
+        "zh_cn": ""
+      },
+      "like": {
+        "ko": [
+          "클로버",
+          "친구"
+        ],
+        "en": [
+          "Clover",
+          "friends"
+        ],
+        "zh_tw": [
+          "三葉草、朋友"
+        ],
+        "zh_cn": [
+          "三葉草、朋友"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "마녀"
+        ],
+        "en": [
+          "Witch"
+        ],
+        "zh_tw": [
+          "魔女"
+        ],
+        "zh_cn": [
+          "魔女"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "숨바꼭질"
+        ],
+        "en": [
+          "Hide-and-seek"
+        ],
+        "zh_tw": [
+          "捉迷藏"
+        ],
+        "zh_cn": [
+          "捉迷藏"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "동물과 대화하기"
+        ],
+        "en": [
+          "Talking with animals"
+        ],
+        "zh_tw": [
+          "和動物說話"
+        ],
+        "zh_cn": [
+          "和動物說話"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "자기 소개 임시 데이터.",
+        "en": "Temporary self-introduction data.",
+        "zh_tw": "自我介紹臨時數據。",
+        "zh_cn": "自我介紹臨時數據。"
+      },
+      "greeting": {
+        "ko": "고양이랑 강아지 중에, 누가 더 착할까요?",
+        "en": "Which is nicer, a kitten or a puppy?",
+        "zh_tw": "貓咪和小狗當中，哪個更乖呢？",
+        "zh_cn": "貓咪和小狗當中，哪個更乖呢？"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "이나",
+          "message": "구원자님. 사랑의 날이에요.\r\n이거 드릴게요."
+        },
+        "en": {
+          "speaker": "Ina",
+          "message": "It's Love Day, Savior.\r\nHere. This is for you!"
+        },
+        "zh_tw": {
+          "speaker": "伊娜",
+          "message": "救援者，今天日戀愛之日，\r\n這個給你。"
+        },
+        "zh_cn": {
+          "speaker": "伊娜",
+          "message": "救援者，今天日戀愛之日，\r\n這個給你。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이나",
+          "message": "많이 사랑하세요~"
+        },
+        "en": {
+          "speaker": "Ina",
+          "message": "Spread the love!"
+        },
+        "zh_tw": {
+          "speaker": "伊娜",
+          "message": "希望你今天開開心心地度過～"
+        },
+        "zh_cn": {
+          "speaker": "伊娜",
+          "message": "希望你今天開開心心地度過～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이나",
+          "message": "구원자님. 감사의 날이에요."
+        },
+        "en": {
+          "speaker": "Ina",
+          "message": "Savior, it's Appreciation Day!"
+        },
+        "zh_tw": {
+          "speaker": "伊娜",
+          "message": "救援者，今天是感謝之日。"
+        },
+        "zh_cn": {
+          "speaker": "伊娜",
+          "message": "救援者，今天是感謝之日。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이나",
+          "message": "감사합니다~"
+        },
+        "en": {
+          "speaker": "Ina",
+          "message": "Thank you!"
+        },
+        "zh_tw": {
+          "speaker": "伊娜",
+          "message": "謝謝你～"
+        },
+        "zh_cn": {
+          "speaker": "伊娜",
+          "message": "謝謝你～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이나",
+          "message": "이렇게 하는 거 맞아요?"
+        },
+        "en": {
+          "speaker": "Ina",
+          "message": "Am I doing this right?"
+        },
+        "zh_tw": {
+          "speaker": "伊娜",
+          "message": "今天是要傳達謝意對吧？"
+        },
+        "zh_cn": {
+          "speaker": "伊娜",
+          "message": "今天是要傳達謝意對吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이나",
+          "message": "구원자님. 이브의 날이에요"
+        },
+        "en": {
+          "speaker": "Ina",
+          "message": "Savior, it's Eve's Day"
+        },
+        "zh_tw": {
+          "speaker": "伊娜",
+          "message": "救援者，今天是夏娃之日。"
+        },
+        "zh_cn": {
+          "speaker": "伊娜",
+          "message": "救援者，今天是夏娃之日。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이나",
+          "message": "해피 이브 데이\r\n이거 드릴게요!"
+        },
+        "en": {
+          "speaker": "Ina",
+          "message": "Happy Eve's Day!\r\nThis is for you!"
+        },
+        "zh_tw": {
+          "speaker": "伊娜",
+          "message": "夏娃之日快樂，\r\n這個給你！"
+        },
+        "zh_cn": {
+          "speaker": "伊娜",
+          "message": "夏娃之日快樂，\r\n這個給你！"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "멜피스",
+          "message": "좀 잘 울긴 해도 같이 놀면 재밌어."
+        },
+        "en": {
+          "speaker": "Melfice",
+          "message": "Even if she is apt to shed tears, it's fun for me to play with her."
+        },
+        "zh_tw": {
+          "speaker": "梅爾菲斯",
+          "message": "雖然很愛哭，但和她一起玩耍也很有趣。"
+        },
+        "zh_cn": {
+          "speaker": "梅爾菲斯",
+          "message": "雖然很愛哭，但和她一起玩耍也很有趣。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "…멜피스와 친한 게 마음에 안 들어요. 동물들도 날 안 좋아해요."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "…I don't like the fact that she is friends with Melfice. Animals don't like me either."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "…我不喜歡她跟梅爾菲斯太好，動物們也不太喜歡我。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "…我不喜歡她跟梅爾菲斯太好，動物們也不太喜歡我。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린",
+          "message": "어리고 마음이 약해서, 유난히 신경 써서 돌보게 되네요.\n한 아이에게만 이러면 안 되는데…"
+        },
+        "en": {
+          "speaker": "Catherine",
+          "message": "She is young and weak at heart, so I'm taking special care of her.\nI shouldn't be doing that just for one…"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳",
+          "message": "因為年紀比較小、心靈又很脆弱，所以特別用心照顧她。\n不能只對一個孩子偏心呀…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳",
+          "message": "因為年紀比較小、心靈又很脆弱，所以特別用心照顧她。\n不能只對一個孩子偏心呀…"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "이나",
+            "message": "구원자님. 사랑의 날이에요.\r\n이거 드릴게요."
+          },
+          "en": {
+            "speaker": "Ina",
+            "message": "It's Love Day, Savior.\r\nHere. This is for you!"
+          },
+          "zh_tw": {
+            "speaker": "伊娜",
+            "message": "救援者，今天日戀愛之日，\r\n這個給你。"
+          },
+          "zh_cn": {
+            "speaker": "伊娜",
+            "message": "救援者，今天日戀愛之日，\r\n這個給你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이나",
+            "message": "많이 사랑하세요~"
+          },
+          "en": {
+            "speaker": "Ina",
+            "message": "Spread the love!"
+          },
+          "zh_tw": {
+            "speaker": "伊娜",
+            "message": "希望你今天開開心心地度過～"
+          },
+          "zh_cn": {
+            "speaker": "伊娜",
+            "message": "希望你今天開開心心地度過～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 이나도!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks! You too, Ina!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，伊娜也是！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，伊娜也是！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 이나도!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks! You too, Ina!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，伊娜也是！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，伊娜也是！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이나",
+            "message": "구원자님. 감사의 날이에요."
+          },
+          "en": {
+            "speaker": "Ina",
+            "message": "Savior, it's Appreciation Day!"
+          },
+          "zh_tw": {
+            "speaker": "伊娜",
+            "message": "救援者，今天是感謝之日。"
+          },
+          "zh_cn": {
+            "speaker": "伊娜",
+            "message": "救援者，今天是感謝之日。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이나",
+            "message": "감사합니다~"
+          },
+          "en": {
+            "speaker": "Ina",
+            "message": "Thank you!"
+          },
+          "zh_tw": {
+            "speaker": "伊娜",
+            "message": "謝謝你～"
+          },
+          "zh_cn": {
+            "speaker": "伊娜",
+            "message": "謝謝你～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이나",
+            "message": "이렇게 하는 거 맞아요?"
+          },
+          "en": {
+            "speaker": "Ina",
+            "message": "Am I doing this right?"
+          },
+          "zh_tw": {
+            "speaker": "伊娜",
+            "message": "今天是要傳達謝意對吧？"
+          },
+          "zh_cn": {
+            "speaker": "伊娜",
+            "message": "今天是要傳達謝意對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 이나에게 항상 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm always thankful for you too, Ina!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也很感謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也很感謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 이나에게 항상 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm always thankful for you too, Ina!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也很感謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也很感謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이나",
+            "message": "구원자님. 이브의 날이에요"
+          },
+          "en": {
+            "speaker": "Ina",
+            "message": "Savior, it's Eve's Day"
+          },
+          "zh_tw": {
+            "speaker": "伊娜",
+            "message": "救援者，今天是夏娃之日。"
+          },
+          "zh_cn": {
+            "speaker": "伊娜",
+            "message": "救援者，今天是夏娃之日。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이나",
+            "message": "해피 이브 데이\r\n이거 드릴게요!"
+          },
+          "en": {
+            "speaker": "Ina",
+            "message": "Happy Eve's Day!\r\nThis is for you!"
+          },
+          "zh_tw": {
+            "speaker": "伊娜",
+            "message": "夏娃之日快樂，\r\n這個給你！"
+          },
+          "zh_cn": {
+            "speaker": "伊娜",
+            "message": "夏娃之日快樂，\r\n這個給你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이나야, 해피 이브 데이!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day, Ina!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "伊娜，夏娃之日快樂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "伊娜，夏娃之日快樂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이나야, 해피 이브 데이!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day, Ina!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "伊娜，夏娃之日快樂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "伊娜，夏娃之日快樂！"
+          }
+        }
+      ]
+    }
+  }
+}

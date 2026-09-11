@@ -1,0 +1,7483 @@
+{
+  "id": "2090",
+  "name": "하루",
+  "name_en": "Haru",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "스트라이커",
+  "sub_class": "단일",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "고독한 함정",
+    "constellation": "인연_메피스토_엔딩",
+    "union": "페이렌 숲지기",
+    "birthday": "328",
+    "height": 158,
+    "weight": 43,
+    "cv_ko": "곽규미",
+    "cv_jp": "Momoyo Koyama",
+    "like": [
+      "관심",
+      "어두운 곳"
+    ],
+    "dislike": [
+      "외로움"
+    ],
+    "hobby": [
+      "꼬리 손질"
+    ],
+    "speciality": [
+      "비밀 장소 만들기"
+    ]
+  },
+  "personality": {
+    "description": "거기, 누구야! …당장 멈춰. 함부로 다가오지 마! \n\n……뭐야, 구원자였어? …흥. 내게 다가올 땐 조심하라고 이야기했던 것 같은데. \n제대로 듣지 않은 건지, 아니면 들어도 잊어버린 건지 모르겠지만… \n거기서 움직이지 마. 방금 구원자가 트랩을 밟았으니까, 움직이면 터질 거야. \n…말할 게 있으면 그냥 거기서 해. 다 들려.\n\n칫. 할 말도 없는데 왜 온 거야? 너도 어차피 우리가 얼마나 잘 싸우는지가 제일 중요할 텐데, 방주에서 기록이나 보면 될걸. 바보 같아. \n…말 나온 김에 미리 말해두는데, 난 네가 기대하는 전투 같은 건 못 해. 내가 무리 짓는 건 생존을 위해서일 뿐이야. \n다른 정령들처럼 진심을 다해 함께 싸운다느니, 서로를 믿는다느니 그런 거 말이야. 그래. 비겁한 방법밖에 모른다는 뜻이야. \n지금처럼 함정으로 나만의 굴을 만들고, 거기 틀어박혀서 혼자 살아남는 것. 당당하지 못하다고 해도 어쩔 수 없어. \n\n…뭐야. 표정이 왜 그래? 난 아무렇지도 않다고 했잖아. 마음대로 생각하지 …마치… 날 생각해 주는 것처럼 굴지 말란 말이야! … \n됐어, 더 이야기하기 싫으니까 거기 얌전히 있어.\n\n자, 트랩은 치웠어. 이제 가버려. 그리고 다시는 오지 마. …뭐? 구원자, 내 말을 듣긴 한 거야?!\n하아, 도망은 잘 가네. …내일 또 오기만 해봐라.",
+    "greeting": "이게 내가 싸우는 방식이야."
+  },
+  "speech_patterns": [
+    "…이게 구원자의 연락처야?",
+    "흐응…",
+    "으, 깜짝이야",
+    "답장이 왜 이렇게 빨라",
+    "…사과할 것 까진 없잖아…",
+    "뭐, 앞으로도 잘 부탁해",
+    "숲 근처에 오면 말하라구\r\n안내정돈 해줄게",
+    "그럼… 또 봐",
+    "숲지기 순찰 중에 영 따분할 땐",
+    "나뭇잎 사이로 흘러드는 햇빛을 바라보곤 해",
+    "새어드는 햇빛의 모양이 아기 새 같을 때도 있고",
+    "강아지 같을 때도 있고…",
+    "엄청 재밌는 건 아니고… 그냥 시간 때우기지 뭐",
+    "흠…",
+    "다음에 구원자 모양도 찾으면",
+    "사진 보내 줄게",
+    "아빠도 참 무슨 말을 하는 건지…",
+    "구원자도 진지하게 받아들이지 마!!",
+    "시… 신랑감이라니",
+    "그나저나 정말로 부모님이 돌아오다니",
+    "아무리 일주일만이라지만",
+    "앞으로 다시는 못볼 줄 알았는데",
+    "정말… 정말 기뻐",
+    "역시 구원자 덕분인 거겠지?",
+    "진심으로 고마워, 구원자",
+    "이거 봐봐",
+    "이거 누구게",
+    "뭐?",
+    "나 말고",
+    "내가 눈으로 만든 거",
+    "엄마게, 아빠게?",
+    "나 말고 눈인형을 보라니까?",
+    "나참…",
+    "뭐야",
+    "나 안 귀여워",
+    "……",
+    "…………",
+    "집어치워",
+    "그러고보니 구원자는 씻을 때",
+    "어디부터 씻어?",
+    "심리테스트가 있더라고",
+    "머리부터 감는다면 연인에게 휘둘리는 타입",
+    "세수부터 한다면 연인을 잘 배려해 주는 타입",
+    "몸부터 씻는다면 바람 피우지 않는 해바라기 타입",
+    "이부터 닦는다면 연애에 신중한 타입",
+    "이래",
+    "…그러고 보니 그러네",
+    "나는…",
+    "음………",
+    "꼬리"
+  ],
+  "comments": [
+    {
+      "writer": "클라라",
+      "comment": "다가가기 어렵다는 건 편견 아닐까요?\n입으론 남이 불편하다 시지만, 꼬리를 보면 티가 나거든요!"
+    },
+    {
+      "writer": "프림",
+      "comment": "공연 중 열렬한 시선을 느꼈어♥ 내 마술쇼에 관심 있나 봐☆"
+    },
+    {
+      "writer": "니니",
+      "comment": "같은 부류라고 생각했는데에에… 하아아…"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "하루",
+        "message": "…이게 구원자의 연락처야?"
+      },
+      {
+        "speaker": "하루",
+        "message": "흐응…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕"
+      },
+      {
+        "speaker": "하루",
+        "message": "으, 깜짝이야"
+      },
+      {
+        "speaker": "하루",
+        "message": "답장이 왜 이렇게 빨라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안"
+      },
+      {
+        "speaker": "하루",
+        "message": "…사과할 것 까진 없잖아…"
+      },
+      {
+        "speaker": "하루",
+        "message": "뭐, 앞으로도 잘 부탁해"
+      },
+      {
+        "speaker": "하루",
+        "message": "숲 근처에 오면 말하라구\r\n안내정돈 해줄게"
+      },
+      {
+        "speaker": "하루",
+        "message": "그럼… 또 봐"
+      },
+      {
+        "speaker": "하루",
+        "message": "숲지기 순찰 중에 영 따분할 땐"
+      },
+      {
+        "speaker": "하루",
+        "message": "나뭇잎 사이로 흘러드는 햇빛을 바라보곤 해"
+      },
+      {
+        "speaker": "하루",
+        "message": "새어드는 햇빛의 모양이 아기 새 같을 때도 있고"
+      },
+      {
+        "speaker": "하루",
+        "message": "강아지 같을 때도 있고…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재미있겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재미있겠다"
+      },
+      {
+        "speaker": "하루",
+        "message": "엄청 재밌는 건 아니고… 그냥 시간 때우기지 뭐"
+      },
+      {
+        "speaker": "하루",
+        "message": "흠…"
+      },
+      {
+        "speaker": "하루",
+        "message": "다음에 구원자 모양도 찾으면"
+      },
+      {
+        "speaker": "하루",
+        "message": "사진 보내 줄게"
+      },
+      {
+        "speaker": "하루",
+        "message": "아빠도 참 무슨 말을 하는 건지…"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자도 진지하게 받아들이지 마!!"
+      },
+      {
+        "speaker": "하루",
+        "message": "시… 신랑감이라니"
+      },
+      {
+        "speaker": "구원자",
+        "message": "으, 응…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "으, 응…"
+      },
+      {
+        "speaker": "하루",
+        "message": "그나저나 정말로 부모님이 돌아오다니"
+      },
+      {
+        "speaker": "하루",
+        "message": "아무리 일주일만이라지만"
+      },
+      {
+        "speaker": "하루",
+        "message": "앞으로 다시는 못볼 줄 알았는데"
+      },
+      {
+        "speaker": "하루",
+        "message": "정말… 정말 기뻐"
+      },
+      {
+        "speaker": "하루",
+        "message": "역시 구원자 덕분인 거겠지?"
+      },
+      {
+        "speaker": "하루",
+        "message": "진심으로 고마워, 구원자"
+      },
+      {
+        "speaker": "하루",
+        "message": "이거 봐봐"
+      },
+      {
+        "speaker": "하루",
+        "message": "이거 누구게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "목도리 한 하루"
+      },
+      {
+        "speaker": "구원자",
+        "message": "목도리 한 하루"
+      },
+      {
+        "speaker": "하루",
+        "message": "뭐?"
+      },
+      {
+        "speaker": "하루",
+        "message": "나 말고"
+      },
+      {
+        "speaker": "하루",
+        "message": "내가 눈으로 만든 거"
+      },
+      {
+        "speaker": "하루",
+        "message": "엄마게, 아빠게?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루 목도리 잘 어울린다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루 목도리 잘 어울린다"
+      },
+      {
+        "speaker": "하루",
+        "message": "나 말고 눈인형을 보라니까?"
+      },
+      {
+        "speaker": "하루",
+        "message": "나참…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀여워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀여워"
+      },
+      {
+        "speaker": "하루",
+        "message": "뭐야"
+      },
+      {
+        "speaker": "하루",
+        "message": "나 안 귀여워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니 눈인형이"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니 눈인형이"
+      },
+      {
+        "speaker": "하루",
+        "message": "……"
+      },
+      {
+        "speaker": "하루",
+        "message": "…………"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루도 귀여워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루도 귀여워"
+      },
+      {
+        "speaker": "하루",
+        "message": "집어치워"
+      },
+      {
+        "speaker": "하루",
+        "message": "그러고보니 구원자는 씻을 때"
+      },
+      {
+        "speaker": "하루",
+        "message": "어디부터 씻어?"
+      },
+      {
+        "speaker": "하루",
+        "message": "심리테스트가 있더라고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄, 어디부터 씻었더라…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄, 어디부터 씻었더라…"
+      },
+      {
+        "speaker": "하루",
+        "message": "머리부터 감는다면 연인에게 휘둘리는 타입"
+      },
+      {
+        "speaker": "하루",
+        "message": "세수부터 한다면 연인을 잘 배려해 주는 타입"
+      },
+      {
+        "speaker": "하루",
+        "message": "몸부터 씻는다면 바람 피우지 않는 해바라기 타입"
+      },
+      {
+        "speaker": "하루",
+        "message": "이부터 닦는다면 연애에 신중한 타입"
+      },
+      {
+        "speaker": "하루",
+        "message": "이래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연애 스타일 심리테스트야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연애 스타일 심리테스트야?"
+      },
+      {
+        "speaker": "하루",
+        "message": "…그러고 보니 그러네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루는 어디부터 씻어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루는 어디부터 씻어?"
+      },
+      {
+        "speaker": "하루",
+        "message": "나는…"
+      },
+      {
+        "speaker": "하루",
+        "message": "음………"
+      },
+      {
+        "speaker": "하루",
+        "message": "꼬리"
+      },
+      {
+        "speaker": "하루",
+        "message": "진짜 개운하다"
+      },
+      {
+        "speaker": "하루",
+        "message": "눈 쌓인 곳에서 하는 뜨끈한 온천욕은"
+      },
+      {
+        "speaker": "하루",
+        "message": "뭔가 특별한 효과가 있는 것 같아"
+      },
+      {
+        "speaker": "하루",
+        "message": "그냥 뜨거운 물일 뿐일텐데 신기해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "실제로 효과가 있을걸?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "실제로 효과가 있을걸?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물 속에 녹아있는 여러가지 성분이"
+      },
+      {
+        "speaker": "구원자",
+        "message": "물 속에 녹아있는 여러가지 성분이"
+      },
+      {
+        "speaker": "구원자",
+        "message": "몸에 좋다고 들었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "몸에 좋다고 들었어"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자같은 인간이 아니라"
+      },
+      {
+        "speaker": "하루",
+        "message": "나같은 정령한테도 그럴까?"
+      },
+      {
+        "speaker": "하루",
+        "message": "아무튼 물 속은 뜨거운데"
+      },
+      {
+        "speaker": "하루",
+        "message": "물 밖에 있는 부분은 차갑고"
+      },
+      {
+        "speaker": "하루",
+        "message": "그게 왠지 기분좋아"
+      },
+      {
+        "speaker": "하루",
+        "message": "그렇게 가만히 온천욕을 하다 보면"
+      },
+      {
+        "speaker": "하루",
+        "message": "해가 지고 별이 총총 뜰때"
+      },
+      {
+        "speaker": "하루",
+        "message": "깜짝 놀라곤 하지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 아름다워서?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 아름다워서?"
+      },
+      {
+        "speaker": "하루",
+        "message": "아니"
+      },
+      {
+        "speaker": "하루",
+        "message": "또 온천욕하다 늦게 들어가서"
+      },
+      {
+        "speaker": "하루",
+        "message": "엄마한테 혼나겠구나"
+      },
+      {
+        "speaker": "하루",
+        "message": "하고"
+      },
+      {
+        "speaker": "하루",
+        "message": "예전에 자주 그랬어"
+      },
+      {
+        "speaker": "하루",
+        "message": "진짜 별것도 아니었는데"
+      },
+      {
+        "speaker": "하루",
+        "message": "내가 왜 그랬을까"
+      },
+      {
+        "speaker": "하루",
+        "message": "…후회돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 걱정하지 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 걱정하지 마"
+      },
+      {
+        "speaker": "구원자",
+        "message": "인간들도 종종 그래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "인간들도 종종 그래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "특히 '사춘기' 때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "특히 '사춘기' 때"
+      },
+      {
+        "speaker": "하루",
+        "message": "인간도 이렇게 예민해지는 시기가 있어?"
+      },
+      {
+        "speaker": "하루",
+        "message": "이 계절쯤엔 다들 그런 건가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 계절마다 그런 건 아니고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음… 계절마다 그런 건 아니고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "주로 10대 때 이러곤 하지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "주로 10대 때 이러곤 하지"
+      },
+      {
+        "speaker": "하루",
+        "message": "뭐? 10대?"
+      },
+      {
+        "speaker": "하루",
+        "message": "내가 그런"
+      },
+      {
+        "speaker": "하루",
+        "message": "갓난아기 같다는 거야?"
+      },
+      {
+        "speaker": "하루",
+        "message": "자존심 상해"
+      },
+      {
+        "speaker": "하루",
+        "message": "난 그냥…"
+      },
+      {
+        "speaker": "하루",
+        "message": "엄마랑 아빠랑"
+      },
+      {
+        "speaker": "하루",
+        "message": "좀 더 함께 있고 싶어"
+      },
+      {
+        "speaker": "하루",
+        "message": "욕심인 건 알아"
+      },
+      {
+        "speaker": "하루",
+        "message": "이미 몇백 년도 더 전에 돌아가셨고"
+      },
+      {
+        "speaker": "하루",
+        "message": "지금 다시 만난 건"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자 덕분에 일어난 기적이라는 것도"
+      },
+      {
+        "speaker": "하루",
+        "message": "그런데 자꾸 욕심이 나고"
+      },
+      {
+        "speaker": "하루",
+        "message": "그 욕심을 이룰 수 없는 현실에 화가 나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이해해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이해해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 조금만 진정해 보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 조금만 진정해 보자"
+      },
+      {
+        "speaker": "하루",
+        "message": "아빠도 자꾸 구원자한테"
+      },
+      {
+        "speaker": "하루",
+        "message": "신랑감 소리나 하고…"
+      },
+      {
+        "speaker": "하루",
+        "message": "미안…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 괜찮아"
+      },
+      {
+        "speaker": "하루",
+        "message": "응…"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자가 차분하게 들어주니"
+      },
+      {
+        "speaker": "하루",
+        "message": "나도 좀 진정이 되는 것 같아"
+      },
+      {
+        "speaker": "하루",
+        "message": "고마워…"
+      },
+      {
+        "speaker": "하루",
+        "message": "그런 쿠션 만들 생각은 어떻게 한 거야?"
+      },
+      {
+        "speaker": "하루",
+        "message": "정말 깜짝 놀랐어"
+      },
+      {
+        "speaker": "하루",
+        "message": "쿠션에 쓴 구원자 옷 정말 고급이던데"
+      },
+      {
+        "speaker": "하루",
+        "message": "그렇게 써도 괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도움이 됐다면 얼마든지 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도움이 됐다면 얼마든지 괜찮아"
+      },
+      {
+        "speaker": "하루",
+        "message": "우리 가족 털을 구원자 옷으로 감싼 게"
+      },
+      {
+        "speaker": "하루",
+        "message": "왠지… 지금 우리 상황 같아서"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자가 우리 가족을 하나로 묶어준 것 같은"
+      },
+      {
+        "speaker": "하루",
+        "message": "그런 기분이 들었어"
+      },
+      {
+        "speaker": "하루",
+        "message": "그 쿠션…"
+      },
+      {
+        "speaker": "하루",
+        "message": "부모님이 다시 사라진 후에도"
+      },
+      {
+        "speaker": "하루",
+        "message": "계속 남아 있으려나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그랬으면 좋겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그랬으면 좋겠다"
+      },
+      {
+        "speaker": "하루",
+        "message": "응"
+      },
+      {
+        "speaker": "하루",
+        "message": "이 순간의 증거로 남았으면 좋겠어"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자가 나를 책임지고"
+      },
+      {
+        "speaker": "하루",
+        "message": "행복하게 해주겠다는 말"
+      },
+      {
+        "speaker": "하루",
+        "message": "새삼 무거운 말인 것 같아"
+      },
+      {
+        "speaker": "하루",
+        "message": "책임…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 살던 시절의 어떤 언어에서는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 살던 시절의 어떤 언어에서는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "책임을 표현할 때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "책임을 표현할 때"
+      },
+      {
+        "speaker": "구원자",
+        "message": "'응답할 수 있는 능력'이라고 했었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "'응답할 수 있는 능력'이라고 했었어"
+      },
+      {
+        "speaker": "하루",
+        "message": "응답할 수 있는 능력?"
+      },
+      {
+        "speaker": "하루",
+        "message": "흠…"
+      },
+      {
+        "speaker": "하루",
+        "message": "맞는 말인 것 같아"
+      },
+      {
+        "speaker": "하루",
+        "message": "그렇다면 구원자에겐"
+      },
+      {
+        "speaker": "하루",
+        "message": "나를 행복하게 해줄 수 있는"
+      },
+      {
+        "speaker": "하루",
+        "message": "능력이 있다는 거네?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "히, 힘내 볼게…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "히, 힘내 볼게…!"
+      },
+      {
+        "speaker": "하루",
+        "message": "ㅋㅋㅋ"
+      },
+      {
+        "speaker": "하루",
+        "message": "장난이야"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자와 이렇게 잔뜩 이야기하는 게"
+      },
+      {
+        "speaker": "하루",
+        "message": "나를 행복하게 해주는"
+      },
+      {
+        "speaker": "하루",
+        "message": "방법일거야"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자"
+      },
+      {
+        "speaker": "하루",
+        "message": "페이렌 숲의 햇과일 따러 갈 건데"
+      },
+      {
+        "speaker": "하루",
+        "message": "혹시… 관심 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "햇과일? 좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "햇과일? 좋아"
+      },
+      {
+        "speaker": "하루",
+        "message": "잘 됐네"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자한텐 생소한 과일들일지도 모르겠지만"
+      },
+      {
+        "speaker": "하루",
+        "message": "숲의 제철 과일들은 정말 맛있거든"
+      },
+      {
+        "speaker": "하루",
+        "message": "이 기회에 구원자도 한번 먹어봐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워"
+      },
+      {
+        "speaker": "하루",
+        "message": "대신 수확은 직접 해야 해"
+      },
+      {
+        "speaker": "하루",
+        "message": "그 정도 노동은 각오하라구"
+      },
+      {
+        "speaker": "하루",
+        "message": "부모님하고 같이 살던 건 꽤 오래 전이야"
+      },
+      {
+        "speaker": "하루",
+        "message": "게이트 현상이 시작되기 전에 두분 다 돌아가셨으니까"
+      },
+      {
+        "speaker": "하루",
+        "message": "어떻게 생각하면 차라리 잘 된 걸지도"
+      },
+      {
+        "speaker": "하루",
+        "message": "지금의 에덴을 보면 깜짝 놀라시려나…"
+      },
+      {
+        "speaker": "하루",
+        "message": "뭐, 그럴 일은 없겠지만 말야."
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자"
+      },
+      {
+        "speaker": "하루",
+        "message": "어때? 휴가 연장할 수 있대?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "메피 허락 받았어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "메피 허락 받았어"
+      },
+      {
+        "speaker": "하루",
+        "message": "정말?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응. 휴가 일주일 연장했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응. 휴가 일주일 연장했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대신 돌아가면 엄청 일해야해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "대신 돌아가면 엄청 일해야해"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자가 좀 힘들긴 하겠지만"
+      },
+      {
+        "speaker": "하루",
+        "message": "같이 남아줘서 고마워…"
+      },
+      {
+        "speaker": "하루",
+        "message": "답례라고 하긴 뭐하지만"
+      },
+      {
+        "speaker": "하루",
+        "message": "오늘 맛있는 거 사냥하러 가자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맛있는 거?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맛있는 거?"
+      },
+      {
+        "speaker": "하루",
+        "message": "이곳 설산에만 사는 눈토끼가 진짜 맛있거든"
+      },
+      {
+        "speaker": "하루",
+        "message": "너무 어두워지기 전에 빨리 잡으러 가자"
+      },
+      {
+        "speaker": "하루",
+        "message": "눈토끼 통구이 진짜 맛있었다…"
+      },
+      {
+        "speaker": "하루",
+        "message": "또 먹을 수 있을 줄 몰랐어"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자 덕에 오랜만에 맛봤네…"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자는 어땠어? 맛있었어?"
+      },
+      {
+        "speaker": "하루",
+        "message": "설산에서 몸을 데우려면"
+      },
+      {
+        "speaker": "하루",
+        "message": "두 가지 방법이 있는데"
+      },
+      {
+        "speaker": "하루",
+        "message": "하나는 불을 피우는 것"
+      },
+      {
+        "speaker": "하루",
+        "message": "또 하나는"
+      },
+      {
+        "speaker": "하루",
+        "message": "뜨끈한 온천욕을 하는 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대된다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기대된다"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자는 재도 뒤집어써서 새카매졌으니까"
+      },
+      {
+        "speaker": "하루",
+        "message": "밖에서 한번 더 씻고 들어가자"
+      },
+      {
+        "speaker": "하루",
+        "message": "목욕할 준비 됐지?"
+      },
+      {
+        "speaker": "하루",
+        "message": "엄마는 노래를 잘해"
+      },
+      {
+        "speaker": "하루",
+        "message": "자장가도 많이 불러 줬어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루도 노래 잘할 것 같은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루도 노래 잘할 것 같은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "목소리 예쁘잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "목소리 예쁘잖아"
+      },
+      {
+        "speaker": "하루",
+        "message": "난 못해"
+      },
+      {
+        "speaker": "하루",
+        "message": "불러본 적도 별로 없고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "한번 노래 불러 주면 안돼?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "한번 노래 불러 주면 안돼?"
+      },
+      {
+        "speaker": "하루",
+        "message": "뭐? 내가 왜?"
+      },
+      {
+        "speaker": "하루",
+        "message": "딱히 생존에 필요한 것도 아니고"
+      },
+      {
+        "speaker": "하루",
+        "message": "못해도 문제 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "못해도 돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "못해도 돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 내가 듣고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 내가 듣고 싶어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루 노랫소리"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하루 노랫소리"
+      },
+      {
+        "speaker": "하루",
+        "message": "…구원자 넌 진짜 이상해"
+      },
+      {
+        "speaker": "하루",
+        "message": "살아남는 데 그런 건 필요 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "살아남는 데엔 필요 없어도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "살아남는 데엔 필요 없어도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "즐겁게 살아가는 데엔 필요해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "즐겁게 살아가는 데엔 필요해"
+      },
+      {
+        "speaker": "하루",
+        "message": "흠…"
+      },
+      {
+        "speaker": "하루",
+        "message": "말은 잘하네"
+      },
+      {
+        "speaker": "하루",
+        "message": "나중에 생각해볼게"
+      },
+      {
+        "speaker": "하루",
+        "message": "갑자기 꼬리를 빌려달라니"
+      },
+      {
+        "speaker": "하루",
+        "message": "내, 내 꼬리로 뭔 짓을 하려는 거야?"
+      },
+      {
+        "speaker": "하루",
+        "message": "이상한 짓 하면 가만두지 않을 거야!!"
+      },
+      {
+        "speaker": "하루",
+        "message": "…결국 이 날이 왔네…"
+      },
+      {
+        "speaker": "하루",
+        "message": "다 정리해야겠지"
+      },
+      {
+        "speaker": "하루",
+        "message": "동굴도… 내 마음도…"
+      },
+      {
+        "speaker": "하루",
+        "message": "허락해 주실까…?"
+      },
+      {
+        "speaker": "하루",
+        "message": "뭐, 중요한 건 우리 마음이겠지만…"
+      },
+      {
+        "speaker": "하루",
+        "message": "좋아, 인사드리러 가자…!"
+      },
+      {
+        "speaker": "하루",
+        "message": "정말 행복한 일주일이었어"
+      },
+      {
+        "speaker": "하루",
+        "message": "다 구원자 덕분이야…"
+      },
+      {
+        "speaker": "하루",
+        "message": "구원자라면…"
+      },
+      {
+        "speaker": "하루",
+        "message": "앞으로도 날"
+      },
+      {
+        "speaker": "하루",
+        "message": "행복하게 해줄 수… 있지?"
+      },
+      {
+        "speaker": "하루",
+        "message": "…이런 날을 기념하게 될 줄은\r\n정말 몰랐는데…"
+      },
+      {
+        "speaker": "하루",
+        "message": "…받아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 하루야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 하루야!"
+      },
+      {
+        "speaker": "하루",
+        "message": "오늘은 무예의 날이야"
+      },
+      {
+        "speaker": "하루",
+        "message": "무기를 평소보다 좀 더 \r\n열심히 정비해야겠어…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "멋지다, 챙겨줘서 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "멋지다, 챙겨줘서 고마워!"
+      },
+      {
+        "speaker": "하루",
+        "message": "떠들썩한 크리스마스 파티…\r\n즐거워 보이네"
+      },
+      {
+        "speaker": "하루",
+        "message": "해피 이브 데이, 구원자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 관심 있으면 이따가 만나자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 관심 있으면 이따가 만나자!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "하루",
+      "en": "Haru",
+      "zh_tw": "河路",
+      "zh_cn": "河路"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "스트라이커",
+      "en": "Striker",
+      "zh_tw": "鬥士",
+      "zh_cn": "鬥士"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "고독한 함정",
+        "en": "Lonely but Deadly",
+        "zh_tw": "孤獨的陷阱",
+        "zh_cn": "孤獨的陷阱"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_엔딩",
+        "en": "인연_메피스토_엔딩",
+        "zh_tw": "牡羊座",
+        "zh_cn": "牡羊座"
+      },
+      "union": {
+        "ko": "페이렌 숲지기",
+        "en": "Fayren Forest Keeper",
+        "zh_tw": "費倫森林守護者",
+        "zh_cn": "費倫森林守護者"
+      },
+      "cv_ko": {
+        "ko": "곽규미",
+        "en": "Gyumi Gwak",
+        "zh_tw": "郭圭美",
+        "zh_cn": "郭圭美"
+      },
+      "cv_jp": {
+        "ko": "Momoyo Koyama",
+        "en": "Momoyo Koyama",
+        "zh_tw": "Momoyo Koyama",
+        "zh_cn": "Momoyo Koyama"
+      },
+      "like": {
+        "ko": [
+          "관심",
+          "어두운 곳"
+        ],
+        "en": [
+          "Attention",
+          "dark places"
+        ],
+        "zh_tw": [
+          "關心、陰暗的地方"
+        ],
+        "zh_cn": [
+          "關心、陰暗的地方"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "외로움"
+        ],
+        "en": [
+          "Loneliness"
+        ],
+        "zh_tw": [
+          "寂寞"
+        ],
+        "zh_cn": [
+          "寂寞"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "꼬리 손질"
+        ],
+        "en": [
+          "Tail trimming"
+        ],
+        "zh_tw": [
+          "修整尾巴"
+        ],
+        "zh_cn": [
+          "修整尾巴"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "비밀 장소 만들기"
+        ],
+        "en": [
+          "Making a secret place"
+        ],
+        "zh_tw": [
+          "打造祕密基地"
+        ],
+        "zh_cn": [
+          "打造祕密基地"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "거기, 누구야! …당장 멈춰. 함부로 다가오지 마! \n\n……뭐야, 구원자였어? …흥. 내게 다가올 땐 조심하라고 이야기했던 것 같은데. \n제대로 듣지 않은 건지, 아니면 들어도 잊어버린 건지 모르겠지만… \n거기서 움직이지 마. 방금 구원자가 트랩을 밟았으니까, 움직이면 터질 거야. \n…말할 게 있으면 그냥 거기서 해. 다 들려.\n\n칫. 할 말도 없는데 왜 온 거야? 너도 어차피 우리가 얼마나 잘 싸우는지가 제일 중요할 텐데, 방주에서 기록이나 보면 될걸. 바보 같아. \n…말 나온 김에 미리 말해두는데, 난 네가 기대하는 전투 같은 건 못 해. 내가 무리 짓는 건 생존을 위해서일 뿐이야. \n다른 정령들처럼 진심을 다해 함께 싸운다느니, 서로를 믿는다느니 그런 거 말이야. 그래. 비겁한 방법밖에 모른다는 뜻이야. \n지금처럼 함정으로 나만의 굴을 만들고, 거기 틀어박혀서 혼자 살아남는 것. 당당하지 못하다고 해도 어쩔 수 없어. \n\n…뭐야. 표정이 왜 그래? 난 아무렇지도 않다고 했잖아. 마음대로 생각하지 …마치… 날 생각해 주는 것처럼 굴지 말란 말이야! … \n됐어, 더 이야기하기 싫으니까 거기 얌전히 있어.\n\n자, 트랩은 치웠어. 이제 가버려. 그리고 다시는 오지 마. …뭐? 구원자, 내 말을 듣긴 한 거야?!\n하아, 도망은 잘 가네. …내일 또 오기만 해봐라.",
+        "en": "Who's out there? …Stop, right now. Don't you dare get near me!\n\n…What, Savior? …Hmpf. I remember telling you to be careful when approaching me.\nI don't know if you didn't hear me or if you forgot what I said…but don't move.\nSavior, you've just stepped on a trap, so it will explode if you move.\n…If you have something to say, just do it there. I can hear you.\n\nTch. If you have nothing to say, then why are you here? I assume what matters to you the most is finding out how well we fight, and for that, you could just look at the records from the Ark. How stupid.\n…Speaking of which, let me tell you in advance. I can't fight battles as you'd expect. I only work with others for survival.\nUnlike other Souls, I'm poor at things like fighting together with all my heart, trusting each other, or whatever. That's right. It means that I know nothing but cowardly ways.\nMaking my own den with traps just like now, and locking myself in there to survive alone. I can't help it even though I'm not proud about it. \n\n…What. What's with that face? I said I don't care. Don't think whatever you want. …Don't…don't act as if you care for me!\n…All right, I don't want to talk anymore, so just stay there.\n\nI've cleared the trap. Go away now. And don't you ever come back. …What? Savior, did you even hear me?!…\nHah, you're good at running away. …Don't you dare come back tomorrow.",
+        "zh_tw": "是誰在那裡！…站住。不准隨便靠近！\n\n……搞什麼，原來是救援者啊？…哼，我好像有跟你說過靠近我的時候要小心。\n不曉得你是沒聽清楚，還是聽過卻忘了…\n站在那裡不要動，救援者剛剛已經踩到陷阱了，要是亂動就會爆炸。\n…你有話要說就站在那裡說，我都聽得到。\n\n呿。你沒有話要說幹嘛過來？反正你最在乎的是我們多會戰鬥，那你看方舟上的紀錄就好了，像個笨蛋一樣。\n…剛好說到這件事，我就先說了，我做不到你所期待的戰鬥。我之所以成群結隊，只是為了生存。\n做不到像其他精靈一樣付出真心共同戰鬥、信任彼此。老實說，我只會卑鄙的方法。\n就像現在一樣用陷阱製造出我自己的窩，並待在那裡獨自活下去。就算你說我不夠光明磊落我也沒辦法。\n\n…怎樣，為什麼要露出那種表情？我剛剛不是說沒關係了嗎？不要隨便臆測…彷彿…是在為我著想一樣！…\n算了，我不想再說了，你就乖乖待在那。\n\n好，我解除陷阱了，你走吧。還有，別再回來了…喂？救援者，你有聽到我說的話嗎？！\n哈啊，逃得可真快…你明天敢再來就試試看。",
+        "zh_cn": "是誰在那裡！…站住。不准隨便靠近！\n\n……搞什麼，原來是救援者啊？…哼，我好像有跟你說過靠近我的時候要小心。\n不曉得你是沒聽清楚，還是聽過卻忘了…\n站在那裡不要動，救援者剛剛已經踩到陷阱了，要是亂動就會爆炸。\n…你有話要說就站在那裡說，我都聽得到。\n\n呿。你沒有話要說幹嘛過來？反正你最在乎的是我們多會戰鬥，那你看方舟上的紀錄就好了，像個笨蛋一樣。\n…剛好說到這件事，我就先說了，我做不到你所期待的戰鬥。我之所以成群結隊，只是為了生存。\n做不到像其他精靈一樣付出真心共同戰鬥、信任彼此。老實說，我只會卑鄙的方法。\n就像現在一樣用陷阱製造出我自己的窩，並待在那裡獨自活下去。就算你說我不夠光明磊落我也沒辦法。\n\n…怎樣，為什麼要露出那種表情？我剛剛不是說沒關係了嗎？不要隨便臆測…彷彿…是在為我著想一樣！…\n算了，我不想再說了，你就乖乖待在那。\n\n好，我解除陷阱了，你走吧。還有，別再回來了…喂？救援者，你有聽到我說的話嗎？！\n哈啊，逃得可真快…你明天敢再來就試試看。"
+      },
+      "greeting": {
+        "ko": "이게 내가 싸우는 방식이야.",
+        "en": "This is how I fight.",
+        "zh_tw": "這就是我的戰鬥方式。",
+        "zh_cn": "這就是我的戰鬥方式。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "…이게 구원자의 연락처야?"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "…Is this your contact number?"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "…這是救援者的聯絡方式啊？"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "…這是救援者的聯絡方式啊？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "흐응…"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Hehe…"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "呃嗯…"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "呃嗯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "으, 깜짝이야"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Oh, my!"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "呃，嚇我一跳"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "呃，嚇我一跳"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "답장이 왜 이렇게 빨라"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Why are you replying so fast?"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "怎麼回這麼快"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "怎麼回這麼快"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "…사과할 것 까진 없잖아…"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "…You don't have to apologize…"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "…不需要道歉吧…"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "…不需要道歉吧…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "뭐, 앞으로도 잘 부탁해"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Anyway, nice meeting you."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "反正以後請多指教"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "反正以後請多指教"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "숲 근처에 오면 말하라구\r\n안내정돈 해줄게"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Tell me when you're near the woods.\r\nI could at least give you a quick tour."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "你來森林附近的話告訴我\r\n我可以當你的嚮導"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "你來森林附近的話告訴我\r\n我可以當你的嚮導"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "그럼… 또 봐"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "I'll see you later."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "那…再見"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "那…再見"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "숲지기 순찰 중에 영 따분할 땐"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "When I'm bored while patrolling the forest"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "在森林巡視覺得很無聊的時候"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "在森林巡視覺得很無聊的時候"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "나뭇잎 사이로 흘러드는 햇빛을 바라보곤 해"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "I watch the sunlight shining through the leaves"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "我會看著從樹葉縫隙撒下的陽光"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "我會看著從樹葉縫隙撒下的陽光"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "새어드는 햇빛의 모양이 아기 새 같을 때도 있고"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "sometimes, its shape looks like a baby bird"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "有時候灑下來的陽光像小鳥的形狀"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "有時候灑下來的陽光像小鳥的形狀"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "강아지 같을 때도 있고…"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "and sometimes like a puppy..."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "有時候像小狗…"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "有時候像小狗…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "엄청 재밌는 건 아니고… 그냥 시간 때우기지 뭐"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "It's not super fun...but that's how I pass the time"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "也沒有超好玩…只是可以打發時間"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "也沒有超好玩…只是可以打發時間"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "흠…"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "hmm..."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "嗯…"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "嗯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "다음에 구원자 모양도 찾으면"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "I will send you a picture next time"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "下次找到像救援者一樣的陽光的話"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "下次找到像救援者一樣的陽光的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "사진 보내 줄게"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "if I get to see one that looks like you"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "再傳照片給你"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "再傳照片給你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "아빠도 참 무슨 말을 하는 건지…"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Dad...just what is he saying...?"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "爸爸到底在說什麼…"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "爸爸到底在說什麼…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "구원자도 진지하게 받아들이지 마!!"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "don't take it seriously, Savior!!"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "救援者也不要太認真聽！！"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "救援者也不要太認真聽！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "시… 신랑감이라니"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "s-soon-to-be husband...that's"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "怎…怎麼能說是準新郎"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "怎…怎麼能說是準新郎"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "그나저나 정말로 부모님이 돌아오다니"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Anyway, my parents are really back"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "話說回來，我父母竟然真的回來了"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "話說回來，我父母竟然真的回來了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "아무리 일주일만이라지만"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "although it'll be only for a week"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "雖然只有一週而已"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "雖然只有一週而已"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "앞으로 다시는 못볼 줄 알았는데"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "I thought I'd never get to see them again"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "但我以為再也見不到他們了"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "但我以為再也見不到他們了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "정말… 정말 기뻐"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "I'm so...so happy"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "真的…真的很開心"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "真的…真的很開心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "역시 구원자 덕분인 거겠지?"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "it's thanks to you, Savior"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "果然是多虧了救援者吧？"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "果然是多虧了救援者吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "진심으로 고마워, 구원자"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "thank you"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "真的很感謝你，救援者"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "真的很感謝你，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "이거 봐봐"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Look"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "你看這個"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "你看這個"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "이거 누구게"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Guess who this is"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "你猜這是誰"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "你猜這是誰"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "뭐?"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "What?"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "什麼？"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "什麼？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "나 말고"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "not me"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "不是我"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "不是我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "내가 눈으로 만든 거"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "the one I made with snow"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "我用雪做的"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "我用雪做的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "엄마게, 아빠게?"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "is it my mom or dad? try guessing"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "你猜是我媽媽還是爸爸？"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "你猜是我媽媽還是爸爸？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "나 말고 눈인형을 보라니까?"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "look at the snow doll, not me!"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "不要看著我，我要你看雪人"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "不要看著我，我要你看雪人"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "나참…"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "my..."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "真是的…"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "真是的…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "뭐야"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "what"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "什麼嘛"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "什麼嘛"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "나 안 귀여워"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "I'm not cute"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "我不可愛"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "我不可愛"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "……"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "..."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "…………"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "......"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "…………"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "…………"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "집어치워"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Stop it"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "算了吧"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "算了吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "그러고보니 구원자는 씻을 때"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "By the way Savior, when you shower"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "話說回來，救援者洗澡的時候"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "話說回來，救援者洗澡的時候"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "어디부터 씻어?"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "where do you start washing?"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "從哪裡開始洗？"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "從哪裡開始洗？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "심리테스트가 있더라고"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "there's a psychological test about it"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "我聽過有種心理測驗"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "我聽過有種心理測驗"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "머리부터 감는다면 연인에게 휘둘리는 타입"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "If you wash your hair first, you are the type who is swayed by your lover"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "先洗頭是會為戀人著迷的類型"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "先洗頭是會為戀人著迷的類型"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "세수부터 한다면 연인을 잘 배려해 주는 타입"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "if you wash your face first, you are the type who is kind to your lover"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "先洗臉是會為戀人著想的類型"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "先洗臉是會為戀人著想的類型"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "몸부터 씻는다면 바람 피우지 않는 해바라기 타입"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "if you wash your body first, you are the type who is faithful to your lover"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "先洗身體是不會出軌的向日葵類型"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "先洗身體是不會出軌的向日葵類型"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "이부터 닦는다면 연애에 신중한 타입"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "and if you brush your teeth first, you are the type who is careful about romantic relationships"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "先刷牙是謹慎戀愛的類型"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "先刷牙是謹慎戀愛的類型"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "이래"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "that's what the test says"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "聽說是這樣"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "聽說是這樣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "…그러고 보니 그러네"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "... Looks like it"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "…聽你這麼一說好像是"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "…聽你這麼一說好像是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "나는…"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "Me...?"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "我…"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "我…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "음………"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "hmm..."
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "嗯………"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "嗯………"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "하루",
+          "message": "꼬리"
+        },
+        "en": {
+          "speaker": "Haru",
+          "message": "my tail"
+        },
+        "zh_tw": {
+          "speaker": "河路",
+          "message": "尾巴"
+        },
+        "zh_cn": {
+          "speaker": "河路",
+          "message": "尾巴"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "클라라",
+          "message": "다가가기 어렵다는 건 편견 아닐까요?\n입으론 남이 불편하다 시지만, 꼬리를 보면 티가 나거든요!"
+        },
+        "en": {
+          "speaker": "Clara",
+          "message": "Is it really true that she's not approachable?\nShe claims others make her uncomfortable, but her tail suggests otherwise!"
+        },
+        "zh_tw": {
+          "speaker": "克拉拉",
+          "message": "說她很難親近，這應該是偏見吧？\n雖然嘴上說著別人讓她感到不自在，但要是看到尾巴就知道了吧！"
+        },
+        "zh_cn": {
+          "speaker": "克拉拉",
+          "message": "說她很難親近，這應該是偏見吧？\n雖然嘴上說著別人讓她感到不自在，但要是看到尾巴就知道了吧！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "공연 중 열렬한 시선을 느꼈어♥ 내 마술쇼에 관심 있나 봐☆"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I felt her enthusiastic gaze during my performance! ♥ It looks like she is interested in my magic show. ☆"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "表演時會感受到她熾熱的眼神♥看來她對我的魔術秀很感興趣呢☆"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "表演時會感受到她熾熱的眼神♥看來她對我的魔術秀很感興趣呢☆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "니니",
+          "message": "같은 부류라고 생각했는데에에… 하아아…"
+        },
+        "en": {
+          "speaker": "Nini",
+          "message": "I thought she would be in the same class as mine, but… hah…"
+        },
+        "zh_tw": {
+          "speaker": "妮妮",
+          "message": "我還以為我們是同類呢…哈啊啊…"
+        },
+        "zh_cn": {
+          "speaker": "妮妮",
+          "message": "我還以為我們是同類呢…哈啊啊…"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…이게 구원자의 연락처야?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "…Is this your contact number?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…這是救援者的聯絡方式啊？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…這是救援者的聯絡方式啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "흐응…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Hehe…"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "呃嗯…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "呃嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hello"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hello"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "으, 깜짝이야"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Oh, my!"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "呃，嚇我一跳"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "呃，嚇我一跳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "답장이 왜 이렇게 빨라"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Why are you replying so fast?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "怎麼回這麼快"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "怎麼回這麼快"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…사과할 것 까진 없잖아…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "…You don't have to apologize…"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…不需要道歉吧…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…不需要道歉吧…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뭐, 앞으로도 잘 부탁해"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Anyway, nice meeting you."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "反正以後請多指教"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "反正以後請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "숲 근처에 오면 말하라구\r\n안내정돈 해줄게"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Tell me when you're near the woods.\r\nI could at least give you a quick tour."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你來森林附近的話告訴我\r\n我可以當你的嚮導"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你來森林附近的話告訴我\r\n我可以當你的嚮導"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그럼… 또 봐"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I'll see you later."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "那…再見"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "那…再見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "숲지기 순찰 중에 영 따분할 땐"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "When I'm bored while patrolling the forest"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "在森林巡視覺得很無聊的時候"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "在森林巡視覺得很無聊的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나뭇잎 사이로 흘러드는 햇빛을 바라보곤 해"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I watch the sunlight shining through the leaves"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我會看著從樹葉縫隙撒下的陽光"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我會看著從樹葉縫隙撒下的陽光"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "새어드는 햇빛의 모양이 아기 새 같을 때도 있고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "sometimes, its shape looks like a baby bird"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "有時候灑下來的陽光像小鳥的形狀"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "有時候灑下來的陽光像小鳥的形狀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "강아지 같을 때도 있고…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and sometimes like a puppy..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "有時候像小狗…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "有時候像小狗…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재미있겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds fun"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재미있겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds fun"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "엄청 재밌는 건 아니고… 그냥 시간 때우기지 뭐"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "It's not super fun...but that's how I pass the time"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "也沒有超好玩…只是可以打發時間"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "也沒有超好玩…只是可以打發時間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "흠…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "hmm..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "다음에 구원자 모양도 찾으면"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I will send you a picture next time"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "下次找到像救援者一樣的陽光的話"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "下次找到像救援者一樣的陽光的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "사진 보내 줄게"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "if I get to see one that looks like you"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "再傳照片給你"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "再傳照片給你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "아빠도 참 무슨 말을 하는 건지…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Dad...just what is he saying...?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "爸爸到底在說什麼…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "爸爸到底在說什麼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자도 진지하게 받아들이지 마!!"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "don't take it seriously, Savior!!"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者也不要太認真聽！！"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者也不要太認真聽！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "시… 신랑감이라니"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "s-soon-to-be husband...that's"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "怎…怎麼能說是準新郎"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "怎…怎麼能說是準新郎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "으, 응…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Ye-yeah..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "呃、嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "呃、嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "으, 응…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Ye-yeah..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "呃、嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "呃、嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그나저나 정말로 부모님이 돌아오다니"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Anyway, my parents are really back"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "話說回來，我父母竟然真的回來了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "話說回來，我父母竟然真的回來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "아무리 일주일만이라지만"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "although it'll be only for a week"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "雖然只有一週而已"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "雖然只有一週而已"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "앞으로 다시는 못볼 줄 알았는데"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I thought I'd never get to see them again"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "但我以為再也見不到他們了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "但我以為再也見不到他們了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "정말… 정말 기뻐"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I'm so...so happy"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "真的…真的很開心"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "真的…真的很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "역시 구원자 덕분인 거겠지?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "it's thanks to you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "果然是多虧了救援者吧？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "果然是多虧了救援者吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "진심으로 고마워, 구원자"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "thank you"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "真的很感謝你，救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "真的很感謝你，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이거 봐봐"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Look"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你看這個"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你看這個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이거 누구게"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Guess who this is"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你猜這是誰"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你猜這是誰"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "목도리 한 하루"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Haru wearing a scarf"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "戴圍巾的河路"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "戴圍巾的河路"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "목도리 한 하루"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Haru wearing a scarf"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "戴圍巾的河路"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "戴圍巾的河路"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뭐?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나 말고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "not me"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "不是我"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "不是我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "내가 눈으로 만든 거"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "the one I made with snow"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我用雪做的"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我用雪做的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "엄마게, 아빠게?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "is it my mom or dad? try guessing"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你猜是我媽媽還是爸爸？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你猜是我媽媽還是爸爸？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루 목도리 잘 어울린다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You look great on that scarf"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路很適合戴圍巾"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路很適合戴圍巾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루 목도리 잘 어울린다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You look great on that scarf"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路很適合戴圍巾"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路很適合戴圍巾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나 말고 눈인형을 보라니까?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "look at the snow doll, not me!"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "不要看著我，我要你看雪人"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "不要看著我，我要你看雪人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나참…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "my..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "真是的…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "真是的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀여워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "so cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀여워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "so cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뭐야"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "what"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "什麼嘛"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "什麼嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나 안 귀여워"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I'm not cute"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我不可愛"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我不可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니 눈인형이"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I mean the snow doll"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是，我是說雪人可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是，我是說雪人可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니 눈인형이"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I mean the snow doll"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是，我是說雪人可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是，我是說雪人可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "……"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…………"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "......"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…………"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…………"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루도 귀여워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You are cute, too, Haru"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路也很可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路也很可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루도 귀여워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You are cute, too, Haru"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路也很可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路也很可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "집어치워"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Stop it"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "算了吧"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "算了吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그러고보니 구원자는 씻을 때"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "By the way Savior, when you shower"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "話說回來，救援者洗澡的時候"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "話說回來，救援者洗澡的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "어디부터 씻어?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "where do you start washing?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "從哪裡開始洗？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "從哪裡開始洗？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "심리테스트가 있더라고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "there's a psychological test about it"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我聽過有種心理測驗"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我聽過有種心理測驗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄, 어디부터 씻었더라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm not sure. Where did I start washing...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛，我從哪裡開始洗…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛，我從哪裡開始洗…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄, 어디부터 씻었더라…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm not sure. Where did I start washing...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛，我從哪裡開始洗…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛，我從哪裡開始洗…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "머리부터 감는다면 연인에게 휘둘리는 타입"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "If you wash your hair first, you are the type who is swayed by your lover"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "先洗頭是會為戀人著迷的類型"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "先洗頭是會為戀人著迷的類型"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "세수부터 한다면 연인을 잘 배려해 주는 타입"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "if you wash your face first, you are the type who is kind to your lover"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "先洗臉是會為戀人著想的類型"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "先洗臉是會為戀人著想的類型"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "몸부터 씻는다면 바람 피우지 않는 해바라기 타입"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "if you wash your body first, you are the type who is faithful to your lover"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "先洗身體是不會出軌的向日葵類型"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "先洗身體是不會出軌的向日葵類型"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이부터 닦는다면 연애에 신중한 타입"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and if you brush your teeth first, you are the type who is careful about romantic relationships"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "先刷牙是謹慎戀愛的類型"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "先刷牙是謹慎戀愛的類型"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이래"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "that's what the test says"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "聽說是這樣"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "聽說是這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연애 스타일 심리테스트야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it a relationship style test?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是戀愛風格心理測驗嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是戀愛風格心理測驗嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연애 스타일 심리테스트야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it a relationship style test?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是戀愛風格心理測驗嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是戀愛風格心理測驗嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…그러고 보니 그러네"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "... Looks like it"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…聽你這麼一說好像是"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…聽你這麼一說好像是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루는 어디부터 씻어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about you? Where do you start washing?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路從哪裡開始洗？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路從哪裡開始洗？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루는 어디부터 씻어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about you? Where do you start washing?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路從哪裡開始洗？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路從哪裡開始洗？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나는…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Me...?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "음………"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "hmm..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "嗯………"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "嗯………"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "꼬리"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "my tail"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "尾巴"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "尾巴"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "진짜 개운하다"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "This is so refreshing"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "真的好舒暢"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "真的好舒暢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "눈 쌓인 곳에서 하는 뜨끈한 온천욕은"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I think bathing in a hot spring at a snowy place"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "在白雪皚皚的地方泡熱呼呼的溫泉"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "在白雪皚皚的地方泡熱呼呼的溫泉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뭔가 특별한 효과가 있는 것 같아"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "has some kind of special effect"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "感覺有特別的效用"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "感覺有特別的效用"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그냥 뜨거운 물일 뿐일텐데 신기해"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "when it's just hot water...it's amazing!"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "明明只是熱水而已，好神奇"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "明明只是熱水而已，好神奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "실제로 효과가 있을걸?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It is actually effective"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該實際上也有效用吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該實際上也有效用吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "실제로 효과가 있을걸?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It is actually effective"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該實際上也有效用吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該實際上也有效用吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물 속에 녹아있는 여러가지 성분이"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "there are a lot of minerals in the hot spring water"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聽說融在水裡的各種成分"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聽說融在水裡的各種成分"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "물 속에 녹아있는 여러가지 성분이"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "there are a lot of minerals in the hot spring water"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聽說融在水裡的各種成分"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聽說融在水裡的各種成分"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "몸에 좋다고 들었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "which are good for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對身體很好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對身體很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "몸에 좋다고 들었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "which are good for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對身體很好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對身體很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자같은 인간이 아니라"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Would that apply to me as well?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "如果不是救援者那種人類"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "如果不是救援者那種人類"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나같은 정령한테도 그럴까?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "since I'm a Soul, not a human"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "對我這樣的精靈也會有效嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "對我這樣的精靈也會有效嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "아무튼 물 속은 뜨거운데"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "anyway, the part of my body that's inside the water feels hot"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "總之在水裡很燙"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "總之在水裡很燙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "물 밖에 있는 부분은 차갑고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and what's outside the water feels cold"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "但在水以外的部分很涼"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "但在水以外的部分很涼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그게 왠지 기분좋아"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I like that"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "那莫名地讓我心情很好"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "那莫名地讓我心情很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그렇게 가만히 온천욕을 하다 보면"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and when the sun sets and the stars rise"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "那樣靜靜泡著溫泉浴"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "那樣靜靜泡著溫泉浴"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "해가 지고 별이 총총 뜰때"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "while I'm bathing in the hot spring"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "等到太陽下山，點點繁星升起的時候"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "等到太陽下山，點點繁星升起的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "깜짝 놀라곤 하지"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I get really surprised"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我總是會嚇一跳"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我總是會嚇一跳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 아름다워서?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because the scene is beautiful?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為太美了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為太美了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 아름다워서?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because the scene is beautiful?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為太美了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為太美了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "아니"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "不是"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "不是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "또 온천욕하다 늦게 들어가서"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "because my mom would scold me"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "溫泉浴又泡到這麼晚才回家"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "溫泉浴又泡到這麼晚才回家"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "엄마한테 혼나겠구나"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "for bathing for hours"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "要被媽媽罵了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "要被媽媽罵了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "하고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and getting home late"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "這樣"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "예전에 자주 그랬어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "that often happened"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "以前常常發生那種事"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "以前常常發生那種事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "진짜 별것도 아니었는데"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "It really was nothing"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "其實真的沒什麼"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "其實真的沒什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "내가 왜 그랬을까"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "why did I do that?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我怎麼會那樣呢"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我怎麼會那樣呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…후회돼"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "... I regret it"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…好後悔"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…好後悔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 걱정하지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't worry too much"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別太擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別太擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 걱정하지 마"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't worry too much"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "別太擔心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "別太擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "인간들도 종종 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Humans often do that, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "人類也常常那樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "人類也常常那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "인간들도 종종 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Humans often do that, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "人類也常常那樣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "人類也常常那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "특히 '사춘기' 때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "especially in their \"puberty\""
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤其是「青春期」的時候"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤其是「青春期」的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "특히 '사춘기' 때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "especially in their \"puberty\""
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤其是「青春期」的時候"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤其是「青春期」的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "인간도 이렇게 예민해지는 시기가 있어?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Is there a time when humans become this sensitive, too?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "人類也有這樣變敏感的時期嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "人類也有這樣變敏感的時期嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이 계절쯤엔 다들 그런 건가?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "does everyone become sensitive in this time of the year?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "是這個季節大家都會那樣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "是這個季節大家都會那樣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 계절마다 그런 건 아니고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Umm...that's not it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…倒不是因為季節"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…倒不是因為季節"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음… 계절마다 그런 건 아니고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Umm...that's not it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…倒不是因為季節"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…倒不是因為季節"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "주로 10대 때 이러곤 하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "it usually happens when we are teenagers"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "主要是10幾歲的時候"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "主要是10幾歲的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "주로 10대 때 이러곤 하지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "it usually happens when we are teenagers"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "主要是10幾歲的時候"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "主要是10幾歲的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뭐? 10대?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "What? Teenagers?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "什麼？10幾歲？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "什麼？10幾歲？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "내가 그런"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "are you trying to say that"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "意思是"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "意思是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "갓난아기 같다는 거야?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I'm acting like a baby?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我很像小寶寶嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我很像小寶寶嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "자존심 상해"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "that hurts my pride"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "好傷自尊心"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "好傷自尊心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "난 그냥…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I just..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我只是…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我只是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "엄마랑 아빠랑"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "want to stay with mom and dad"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "想跟爸爸媽媽"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "想跟爸爸媽媽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "좀 더 함께 있고 싶어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "for a bit longer"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "再待久一點"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "再待久一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "욕심인 건 알아"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I know I'm asking too much"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "好像是我太貪心了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "好像是我太貪心了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이미 몇백 년도 더 전에 돌아가셨고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "they already passed away hundreds of years ago"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "他們早在幾百年前就去世了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "他們早在幾百年前就去世了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "지금 다시 만난 건"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and I met them again, thanks to you"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "現在能重逢"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "現在能重逢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자 덕분에 일어난 기적이라는 것도"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "like a miracle"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "都是多虧救援者才會發生的奇蹟"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "都是多虧救援者才會發生的奇蹟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그런데 자꾸 욕심이 나고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "but I can't stop asking for more"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "但我總是不知足"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "但我總是不知足"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그 욕심을 이룰 수 없는 현실에 화가 나"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and it makes me angry that all of that is impossible"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "還因為現實無法實現我的貪念而生氣"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "還因為現實無法實現我的貪念而生氣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이해해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I understand"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我可以理解"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我可以理解"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이해해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I understand"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我可以理解"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我可以理解"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 조금만 진정해 보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "still, let's calm down a little"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還是冷靜一點吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還是冷靜一點吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 조금만 진정해 보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "still, let's calm down a little"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還是冷靜一點吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還是冷靜一點吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "아빠도 자꾸 구원자한테"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "And dad keeps telling you"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "爸爸也老是對救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "爸爸也老是對救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "신랑감 소리나 하고…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "silly things..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "說什麼準新郎…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "說什麼準新郎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "미안…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I'm sorry..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "對不起…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "對不起…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "응…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Okay..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자가 차분하게 들어주니"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I think I can calm myself down now"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者這麼從容地聽我訴說"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者這麼從容地聽我訴說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나도 좀 진정이 되는 것 같아"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "because you are listening to me"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我好像也冷靜下來了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我好像也冷靜下來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "고마워…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "thank you..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "謝謝…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "謝謝…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그런 쿠션 만들 생각은 어떻게 한 거야?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "How did you come up with that idea?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你是怎麼想到要做那種抱枕的？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你是怎麼想到要做那種抱枕的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "정말 깜짝 놀랐어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "it really surprised me"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "真的嚇了我一大跳"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "真的嚇了我一大跳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "쿠션에 쓴 구원자 옷 정말 고급이던데"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "the clothes you used to make the cushion looked expensive"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者包住抱枕的衣服真的好高級耶"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者包住抱枕的衣服真的好高級耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그렇게 써도 괜찮아?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "is it okay to use it like that?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "可以拿來那樣用嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "可以拿來那樣用嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도움이 됐다면 얼마든지 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course, if it can be of any help"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "只要能幫上忙就完全沒問題"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "只要能幫上忙就完全沒問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도움이 됐다면 얼마든지 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course, if it can be of any help"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "只要能幫上忙就完全沒問題"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "只要能幫上忙就完全沒問題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "우리 가족 털을 구원자 옷으로 감싼 게"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Wrapping my family's hair in your clothes..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "用救援者的衣服包住我們一家人的毛"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "用救援者的衣服包住我們一家人的毛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "왠지… 지금 우리 상황 같아서"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "is somehow...similar to this situation"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "總感覺…我們現在的狀況"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "總感覺…我們現在的狀況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자가 우리 가족을 하나로 묶어준 것 같은"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "it's as if you bound my family together"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "就像救援者讓我們一家人凝聚在一起一樣"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "就像救援者讓我們一家人凝聚在一起一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그런 기분이 들었어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "that's what I felt"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "讓我產生那樣的感覺"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "讓我產生那樣的感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그 쿠션…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I hope that cushion..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "那個抱枕…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "那個抱枕…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "부모님이 다시 사라진 후에도"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "remains"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "就算我爸媽再次消失以後"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "就算我爸媽再次消失以後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "계속 남아 있으려나"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "even after my parents are gone"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "也會留存下來嗎"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "也會留存下來嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그랬으면 좋겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I hope so, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要是這樣就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要是這樣就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그랬으면 좋겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I hope so, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "要是這樣就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "要是這樣就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Right"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이 순간의 증거로 남았으면 좋겠어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I hope it remains as the evidence of this moment"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "希望可以留下這瞬間的證據"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "希望可以留下這瞬間的證據"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자가 나를 책임지고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "You said you'd take care of me"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者說會對我負責"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者說會對我負責"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "행복하게 해주겠다는 말"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and make me happy"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "會讓我幸福的話"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "會讓我幸福的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "새삼 무거운 말인 것 같아"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "now I know the weight of those words"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我再次感受到這句話有多麼沉重"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我再次感受到這句話有多麼沉重"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "책임…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "to take care of someone..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "負責…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "負責…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 살던 시절의 어떤 언어에서는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In a certain language of the world I came from"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "在我生活的時代，用某種語言"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "在我生活的時代，用某種語言"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 살던 시절의 어떤 언어에서는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In a certain language of the world I came from"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "在我生活的時代，用某種語言"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "在我生活的時代，用某種語言"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "책임을 표현할 때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "to take care of someone refers to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "表示要負責的時候"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "表示要負責的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "책임을 표현할 때"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "to take care of someone refers to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "表示要負責的時候"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "表示要負責的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "'응답할 수 있는 능력'이라고 했었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "the ability to respond"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "代表有「可以回應的能力」"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "代表有「可以回應的能力」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "'응답할 수 있는 능력'이라고 했었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "the ability to respond"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "代表有「可以回應的能力」"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "代表有「可以回應的能力」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "응답할 수 있는 능력?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "The ability to respond?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "可以回應的能力？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "可以回應的能力？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "흠…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "hmm..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "맞는 말인 것 같아"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "it makes sense"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "好像說得沒錯"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "好像說得沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그렇다면 구원자에겐"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "in other words,"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "那就代表救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "那就代表救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나를 행복하게 해줄 수 있는"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "you have the ability to make me happy"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "有能力"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "有能力"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "능력이 있다는 거네?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "is that right?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "讓我幸福囉？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "讓我幸福囉？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "히, 힘내 볼게…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I, I'll do my best...!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我、我會努力的…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我、我會努力的…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "히, 힘내 볼게…!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I, I'll do my best...!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我、我會努力的…！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我、我會努力的…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "ㅋㅋㅋ"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "haha"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "哈哈哈"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "哈哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "장난이야"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "just kidding"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "開玩笑的"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "開玩笑的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자와 이렇게 잔뜩 이야기하는 게"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "talking with you like this"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "像這樣跟救援者盡情聊天"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "像這樣跟救援者盡情聊天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나를 행복하게 해주는"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "is what makes me"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "就是讓我"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "就是讓我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "방법일거야"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "happy"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "幸福的方法"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "幸福的方法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "페이렌 숲의 햇과일 따러 갈 건데"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I'm going to Fayren forest to pick fruits"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我要去費倫森林摘水果"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我要去費倫森林摘水果"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "혹시… 관심 있어?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "do you want to join...?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你…有興趣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你…有興趣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "햇과일? 좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Fruits? Sounds good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "水果？好啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "水果？好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "햇과일? 좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Fruits? Sounds good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "水果？好啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "水果？好啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "잘 됐네"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Great"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자한텐 생소한 과일들일지도 모르겠지만"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "they might be new to you"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "這些水果對救援者來說可能很陌生"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "這些水果對救援者來說可能很陌生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "숲의 제철 과일들은 정말 맛있거든"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "but the seasonal fruits of the forest taste really good"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "但森林裡的當季水果真的很好吃"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "但森林裡的當季水果真的很好吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이 기회에 구원자도 한번 먹어봐"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "you should try them"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者也趁這個機會吃吃看"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者也趁這個機會吃吃看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay, thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay, thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "대신 수확은 직접 해야 해"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "But you have to pick them yourself"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "但是要親自採收"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "但是要親自採收"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "그 정도 노동은 각오하라구"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "you can do that much, can't you?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "要做好心理準備是那種程度的勞動"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "要做好心理準備是那種程度的勞動"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "부모님하고 같이 살던 건 꽤 오래 전이야"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "It's been a while since I lived with my parents"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我和父母一起生活是很久以前的事了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我和父母一起生活是很久以前的事了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "게이트 현상이 시작되기 전에 두분 다 돌아가셨으니까"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "they passed away before the Gate Incident started"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "他們是在傳送門現象發生之前去世的"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "他們是在傳送門現象發生之前去世的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "어떻게 생각하면 차라리 잘 된 걸지도"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "in a way, it was a good thing"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "換個角度想，也許這樣正好"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "換個角度想，也許這樣正好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "지금의 에덴을 보면 깜짝 놀라시려나…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "they'd be surprised if they saw the Eden of now..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "他們看到現在的伊甸園會不會嚇一大跳…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "他們看到現在的伊甸園會不會嚇一大跳…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뭐, 그럴 일은 없겠지만 말야."
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "but well, that won't happen"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "嗯，雖然不會發生那種事"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "嗯，雖然不會發生那種事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "어때? 휴가 연장할 수 있대?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "So, what happened? Can you extend your vacation?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "怎麼樣？可以延長假期嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "怎麼樣？可以延長假期嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "메피 허락 받았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mephi gave me permission"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我得到梅菲的許可了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我得到梅菲的許可了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "메피 허락 받았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mephi gave me permission"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我得到梅菲的許可了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我得到梅菲的許可了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "정말?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응. 휴가 일주일 연장했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I extended my vacation for a week"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，假期延長了一週"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，假期延長了一週"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응. 휴가 일주일 연장했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I extended my vacation for a week"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，假期延長了一週"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，假期延長了一週"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대신 돌아가면 엄청 일해야해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but I'll have a lot of work to do when I go back"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是回來後要做很多工作"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是回來後要做很多工作"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "대신 돌아가면 엄청 일해야해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but I'll have a lot of work to do when I go back"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是回來後要做很多工作"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是回來後要做很多工作"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자가 좀 힘들긴 하겠지만"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "It'll be hard for you but"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "雖然救援者聽起來會有點辛苦"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "雖然救援者聽起來會有點辛苦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "같이 남아줘서 고마워…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "thank you for staying with us..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "但謝謝你陪我留下來…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "但謝謝你陪我留下來…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "답례라고 하긴 뭐하지만"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "in return"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "這不算是回禮"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "這不算是回禮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "오늘 맛있는 거 사냥하러 가자"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "let's go out and hunt something nice today"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我們今天去狩獵好吃的東西吧"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我們今天去狩獵好吃的東西吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맛있는 거?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Something nice?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好吃的東西？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好吃的東西？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맛있는 거?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Something nice?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好吃的東西？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好吃的東西？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이곳 설산에만 사는 눈토끼가 진짜 맛있거든"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "The snow rabbits of these snowy mountains are really tasty"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "雪兔只生活在這座雪山，真的很好吃"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "雪兔只生活在這座雪山，真的很好吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "너무 어두워지기 전에 빨리 잡으러 가자"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "let's go catch them before it gets too dark"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "在天色更黑之前趕快去抓吧"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "在天色更黑之前趕快去抓吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "눈토끼 통구이 진짜 맛있었다…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "The roasted snow rabbit was delicious..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "烤雪兔真的很好吃…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "烤雪兔真的很好吃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "또 먹을 수 있을 줄 몰랐어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I never imagined I'd eat it again"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "沒想到還能吃到"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "沒想到還能吃到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자 덕에 오랜만에 맛봤네…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I ate one after a long time thanks to you, Savior..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "託救援者的福，久違嚐到了雪兔…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "託救援者的福，久違嚐到了雪兔…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자는 어땠어? 맛있었어?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "what about you, Savior? did you like it?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者覺得怎麼樣？好吃嗎？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者覺得怎麼樣？好吃嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "설산에서 몸을 데우려면"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "There are two ways"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "要在雪山讓身體暖和起來的話"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "要在雪山讓身體暖和起來的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "두 가지 방법이 있는데"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "to keep yourself warm in the snowy mountains"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "有兩種方法"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "有兩種方法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "하나는 불을 피우는 것"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "one is to make fire"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "一種是生火"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "一種是生火"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "또 하나는"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "and the other one"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "另外一種是"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "另外一種是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뜨끈한 온천욕을 하는 거야"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "is to bathe in the hot spring"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "泡熱熱的溫泉"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "泡熱熱的溫泉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대된다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm so excited!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好期待"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好期待"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기대된다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm so excited!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好期待"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好期待"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자는 재도 뒤집어써서 새카매졌으니까"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Since you got covered with ashes"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "救援者也沾了滿臉灰，變得黑麻麻的"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "救援者也沾了滿臉灰，變得黑麻麻的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "밖에서 한번 더 씻고 들어가자"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "wash yourself before getting into the hot spring"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "在外面盥洗一下再回去吧"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "在外面盥洗一下再回去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "목욕할 준비 됐지?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "you are ready, right?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "準備好要泡湯了吧？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "準備好要泡湯了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "엄마는 노래를 잘해"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Mom is a great singer"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我媽唱歌很好聽"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我媽唱歌很好聽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "자장가도 많이 불러 줬어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "she often sang lullabies to me"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "也很常唱搖籃曲給我聽"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "也很常唱搖籃曲給我聽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루도 노래 잘할 것 같은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You must be a great singer, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺河路也很會唱歌"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺河路也很會唱歌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루도 노래 잘할 것 같은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You must be a great singer, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺河路也很會唱歌"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺河路也很會唱歌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "목소리 예쁘잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "since your voice is pretty"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳的聲音很好聽啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳的聲音很好聽啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "목소리 예쁘잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "since your voice is pretty"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳的聲音很好聽啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳的聲音很好聽啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "난 못해"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I'm not"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "我不會唱歌"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "我不會唱歌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "불러본 적도 별로 없고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I don't sing much"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "也沒什麼唱過"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "也沒什麼唱過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "한번 노래 불러 주면 안돼?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Won't you sing a song for me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可以唱一下看看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可以唱一下看看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "한번 노래 불러 주면 안돼?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Won't you sing a song for me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可以唱一下看看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可以唱一下看看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뭐? 내가 왜?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "What? Why should I?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "什麼？我為什麼要？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "什麼？我為什麼要？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "딱히 생존에 필요한 것도 아니고"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "it's not essential for survival"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "又不是生存必備技能"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "又不是生存必備技能"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "못해도 문제 없어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "there's no need to be a good singer"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "不會唱也沒差"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "不會唱也沒差"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "못해도 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It doesn't matter"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會唱也沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會唱也沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "못해도 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It doesn't matter"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會唱也沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會唱也沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 내가 듣고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just want to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我只是想聽聽看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我只是想聽聽看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 내가 듣고 싶어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just want to"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我只是想聽聽看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我只是想聽聽看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루 노랫소리"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "hear you sing, Haru"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路的歌聲"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路的歌聲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하루 노랫소리"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "hear you sing, Haru"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "河路的歌聲"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "河路的歌聲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…구원자 넌 진짜 이상해"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "... You are so strange, Savior"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…救援者你真的好奇怪"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…救援者你真的好奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "살아남는 데 그런 건 필요 없어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "you don't need something like that to survive"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "生存不需要那種東西"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "生存不需要那種東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "살아남는 데엔 필요 없어도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Even so"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就算生存不需要"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就算生存不需要"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "살아남는 데엔 필요 없어도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Even so"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就算生存不需要"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就算生存不需要"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "즐겁게 살아가는 데엔 필요해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "you need something like that to be happy"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但開心地生活需要啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但開心地生活需要啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "즐겁게 살아가는 데엔 필요해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "you need something like that to be happy"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但開心地生活需要啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但開心地生活需要啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "흠…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "hmm..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "말은 잘하네"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "you're so eloquent"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你真會說話"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你真會說話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "나중에 생각해볼게"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "well, I'll think about it"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "之後再考慮看看"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "之後再考慮看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "갑자기 꼬리를 빌려달라니"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Lend you my tail? Why all of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你突然要我借你尾巴"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你突然要我借你尾巴"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "내, 내 꼬리로 뭔 짓을 하려는 거야?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "w-what are you planning to do with my tail?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你、你想用我的尾巴做什麼啊？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你、你想用我的尾巴做什麼啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "이상한 짓 하면 가만두지 않을 거야!!"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "don't even think of doing anything strange!!"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "你要是做奇怪的事，我不會放過你的！！"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "你要是做奇怪的事，我不會放過你的！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…결국 이 날이 왔네…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "... The day has come..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…這一天終究還是來了…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…這一天終究還是來了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "다 정리해야겠지"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I must sort out everything"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "該整理一切了"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "該整理一切了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "동굴도… 내 마음도…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "clean the cave...and put an end to these feelings..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "整理洞窟…跟我的內心…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "整理洞窟…跟我的內心…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "허락해 주실까…?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Will they admit us...?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "他們會同意嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "他們會同意嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "뭐, 중요한 건 우리 마음이겠지만…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Well, what matters is our feelings..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "嗯，雖然重要的是我們的心…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "嗯，雖然重要的是我們的心…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "좋아, 인사드리러 가자…!"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Alright, let's go greet them...!"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "好，去跟他們打招呼吧…！"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "好，去跟他們打招呼吧…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "정말 행복한 일주일이었어"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I had a really happy week"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "這一週真的很幸福"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "這一週真的很幸福"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "다 구원자 덕분이야…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "it's all thanks to you, Savior..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "全是多虧了救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "全是多虧了救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "구원자라면…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I know you will..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "是救援者的話…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "是救援者的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "앞으로도 날"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "always make me happy..."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "以後也會"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "以後也會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "행복하게 해줄 수… 있지?"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "right?"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "讓我幸福…吧？"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "讓我幸福…吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…이런 날을 기념하게 될 줄은\r\n정말 몰랐는데…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "…I never knew\r\nI would celebrate such a day…"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…沒想到會有紀念\r\n這種日子的一天…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…沒想到會有紀念\r\n這種日子的一天…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "…받아"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "…Here"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "…收下吧"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "…收下吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 하루야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Haru!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，河路！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，河路！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 하루야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Haru!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，河路！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，河路！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "오늘은 무예의 날이야"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Today is Martial Arts day"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "今天是武術之日"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "今天是武術之日"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "무기를 평소보다 좀 더 \r\n열심히 정비해야겠어…"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "I will tend to my weapon\r\nmore passionately today…"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "得比平時更努力地\r\n整備武器了…"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "得比平時更努力地\r\n整備武器了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "멋지다, 챙겨줘서 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's great, thanks!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真帥氣，謝謝妳的禮物！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真帥氣，謝謝妳的禮物！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "멋지다, 챙겨줘서 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's great, thanks!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真帥氣，謝謝妳的禮物！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真帥氣，謝謝妳的禮物！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "떠들썩한 크리스마스 파티…\r\n즐거워 보이네"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "A bustling Christmas party…\r\nLooks fun"
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "熱鬧的聖誕派對…\r\n看起來很開心呢"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "熱鬧的聖誕派對…\r\n看起來很開心呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "하루",
+            "message": "해피 이브 데이, 구원자"
+          },
+          "en": {
+            "speaker": "Haru",
+            "message": "Happy Eve's Day, Savior."
+          },
+          "zh_tw": {
+            "speaker": "河路",
+            "message": "夏娃之日快樂，救援者"
+          },
+          "zh_cn": {
+            "speaker": "河路",
+            "message": "夏娃之日快樂，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 관심 있으면 이따가 만나자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's meet up later if you're interested!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有興趣的話，等等見吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有興趣的話，等等見吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 관심 있으면 이따가 만나자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's meet up later if you're interested!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有興趣的話，等等見吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有興趣的話，等等見吧！"
+          }
+        }
+      ]
+    }
+  }
+}

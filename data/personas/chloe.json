@@ -1,0 +1,5418 @@
+{
+  "id": "3100",
+  "name": "클로이",
+  "name_en": "Chloe",
+  "grade": "에픽",
+  "race": "요정형",
+  "class": "디펜더",
+  "sub_class": "버프",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "의리의 방패",
+    "constellation": "인연_제이드_이벤트1",
+    "union": "태양 기사단",
+    "birthday": "501",
+    "height": 172,
+    "weight": 54,
+    "cv_ko": "김연우",
+    "cv_jp": "Satsumi Matsuda",
+    "like": [
+      "친구",
+      "양송이 스프"
+    ],
+    "dislike": [
+      "잔소리",
+      "토마토 스프"
+    ],
+    "hobby": [
+      "팔씨름 내기"
+    ],
+    "speciality": [
+      "물건 고장내기"
+    ]
+  },
+  "personality": {
+    "description": "타앗~! 하앗! 이얍~! \n후우… 응? 거기 누구… 구원자님?\n\n지켜보고 계셨어요? 한창 연습하느라 몰랐어요! \n전 고민이 있을 땐 일단 몸부터 움직여서 푸는 스타일이거든요.\n그러다 보면 아, 이렇게 하면 되겠다 하고 답이 나와요. 굳이 오래 고민할 필요 없죠~\n그러니까 구원자님도 고민이 있으실 때 여기 와서 저랑 연습해요!\n\n한바탕 땀을 흘려 보자구요~! 빠샤! 그리고 끝나고 나서 엄청 맛있는 저녁을 먹는 거죠! \n물론 구원자님이 사주시면 더 좋고요! 헤헥.",
+    "greeting": "흐으읍… 차아앗! 준비 완료!"
+  },
+  "speech_patterns": [
+    "ㄱㅜ원자 님 ! 이따 점심ㅂ",
+    "아… ㅌㅏㅈㅏ 치는거 너무 힘들어요",
+    "에버폰 짜증ㄴ ㅏ!",
+    "이거 에버폰 누르는 버튼이 너무 작은 것 같아요 ;;",
+    "제꺼가 최신형이 아니라서 그런가?",
+    "아… 진짜 승질난다…",
+    "저희 그냥 직접 만나서 얘기해요!",
+    "제가갑니ㄷ!",
+    "에버폰으로 셀카찍는애들있던데",
+    "저도해볼려고했거든요??",
+    "근데 각도맞추기가너무어렵던데? ㅡㅡ",
+    "다들어떻게하는거죠",
+    "셀카도 쉬운게아니구만…",
+    "까딱 잘못했다가 떨어뜨려서 또 액정깰것같아요;;",
+    "필요할땐 그냥구원자님한테 찍어달라할게요~~",
+    "여름은 엄청덥잖아요!!그래서 저는요",
+    "여름마다 린지랑 로제랑열번 가위바위보해서",
+    "꼴등이 1등한테 부채질 100번해주기 게임을 해요",
+    "구원자님도 끼실래요??",
+    "꼴등걸리면 지옥이지만 1등되면 천국이라고요!!",
+    "그냥… 구경해요",
+    "ㅋㅋㅋㅋㅋㅋ",
+    "구원자님이 부채질얼마나잘하시는지제가한번볼게요~~ㅋ",
+    "글씨잘쓰고싶다…",
+    "글씨 잘쓰면 멋있더라고요??",
+    "막 멋진척안해도 자연스럽게 멋진 느낌…?",
+    "아 그럴까요??",
+    "하루에 세문장정도 쓰면 되나?",
+    "근데…귀찮을듯",
+    "흠…",
+    "역시세상에 거저얻는건 없군요… ㅠ",
+    "으으…",
+    "구원자님 저진짜죽을거같아요;;",
+    "어제 음식남은거 아까 먹었는데",
+    "상했나봐요ㅜ; 아진짜너무배아파요;;아악!!!!!!!!!!!!",
+    "으으으으으윽",
+    "집밖으로한걸음도못걷겠어요",
+    "업어주세요;;",
+    "ㅜㅜㅜㅜ감사합니다ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ",
+    "전 집안일중에서 설거지가제일싫어요",
+    "설거지는 하는동안 한군데에서 가만히있어야되잖아요;",
+    "그게너무지겨워요…",
+    "차라리 청소기 돌리고 걸레질하는게나음요!!!",
+    "네 ㅜㅜ",
+    "설거지짱싫음~",
+    "지난 번에 린지랑 로제가 가길래 미술관 따라갔는데요…",
+    "좀… 뭐가 뭔지…",
+    "재미없다고 해야되나… 뭘 해야될지잘모르겠더라고요",
+    "아 근데",
+    "그림 보는 건 그냥 그랬는데"
+  ],
+  "comments": [
+    {
+      "writer": "린지",
+      "comment": "어휴… 제발 철 좀 들었으면."
+    },
+    {
+      "writer": "로제",
+      "comment": "클로이는 사실 굉장히 멘탈이 강해요. 본받을 점도 많답니다."
+    },
+    {
+      "writer": "미리암",
+      "comment": "보기보다 어려운 상대지.\n행동이 앞선다는 건, 생각을 읽을 틈이 부족하다는 이야기니까."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "클로이",
+        "message": "ㄱㅜ원자 님 ! 이따 점심ㅂ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "아… ㅌㅏㅈㅏ 치는거 너무 힘들어요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "에버폰 짜증ㄴ ㅏ!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 클로이"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 클로이"
+      },
+      {
+        "speaker": "클로이",
+        "message": "이거 에버폰 누르는 버튼이 너무 작은 것 같아요 ;;"
+      },
+      {
+        "speaker": "클로이",
+        "message": "제꺼가 최신형이 아니라서 그런가?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "아… 진짜 승질난다…"
+      },
+      {
+        "speaker": "클로이",
+        "message": "저희 그냥 직접 만나서 얘기해요!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "제가갑니ㄷ!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클로이?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클로이?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클로이??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클로이??"
+      },
+      {
+        "speaker": "클로이",
+        "message": "에버폰으로 셀카찍는애들있던데"
+      },
+      {
+        "speaker": "클로이",
+        "message": "저도해볼려고했거든요??"
+      },
+      {
+        "speaker": "클로이",
+        "message": "근데 각도맞추기가너무어렵던데? ㅡㅡ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "다들어떻게하는거죠"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연습해서 익숙해져야할 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연습해서 익숙해져야할 것 같아"
+      },
+      {
+        "speaker": "클로이",
+        "message": "셀카도 쉬운게아니구만…"
+      },
+      {
+        "speaker": "클로이",
+        "message": "까딱 잘못했다가 떨어뜨려서 또 액정깰것같아요;;"
+      },
+      {
+        "speaker": "클로이",
+        "message": "필요할땐 그냥구원자님한테 찍어달라할게요~~"
+      },
+      {
+        "speaker": "클로이",
+        "message": "여름은 엄청덥잖아요!!그래서 저는요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "여름마다 린지랑 로제랑열번 가위바위보해서"
+      },
+      {
+        "speaker": "클로이",
+        "message": "꼴등이 1등한테 부채질 100번해주기 게임을 해요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원자님도 끼실래요??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "100번…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "100번…?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "꼴등걸리면 지옥이지만 1등되면 천국이라고요!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "2등은 뭐 하는데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "2등은 뭐 하는데?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "그냥… 구경해요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "ㅋㅋㅋㅋㅋㅋ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원자님이 부채질얼마나잘하시는지제가한번볼게요~~ㅋ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "글씨잘쓰고싶다…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글씨?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글씨?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "글씨 잘쓰면 멋있더라고요??"
+      },
+      {
+        "speaker": "클로이",
+        "message": "막 멋진척안해도 자연스럽게 멋진 느낌…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글씨 연습할 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글씨 연습할 거야?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "아 그럴까요??"
+      },
+      {
+        "speaker": "클로이",
+        "message": "하루에 세문장정도 쓰면 되나?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "근데…귀찮을듯"
+      },
+      {
+        "speaker": "클로이",
+        "message": "흠…"
+      },
+      {
+        "speaker": "클로이",
+        "message": "역시세상에 거저얻는건 없군요… ㅠ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "으으…"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원자님 저진짜죽을거같아요;;"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "어제 음식남은거 아까 먹었는데"
+      },
+      {
+        "speaker": "클로이",
+        "message": "상했나봐요ㅜ; 아진짜너무배아파요;;아악!!!!!!!!!!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "치료 정령한테 가자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "치료 정령한테 가자"
+      },
+      {
+        "speaker": "클로이",
+        "message": "으으으으으윽"
+      },
+      {
+        "speaker": "클로이",
+        "message": "집밖으로한걸음도못걷겠어요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "업어주세요;;"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "클로이",
+        "message": "ㅜㅜㅜㅜ감사합니다ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "전 집안일중에서 설거지가제일싫어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "설거지는 하는동안 한군데에서 가만히있어야되잖아요;"
+      },
+      {
+        "speaker": "클로이",
+        "message": "그게너무지겨워요…"
+      },
+      {
+        "speaker": "클로이",
+        "message": "차라리 청소기 돌리고 걸레질하는게나음요!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "답답한 게 싫구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "답답한 게 싫구나"
+      },
+      {
+        "speaker": "클로이",
+        "message": "네 ㅜㅜ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "설거지짱싫음~"
+      },
+      {
+        "speaker": "클로이",
+        "message": "지난 번에 린지랑 로제가 가길래 미술관 따라갔는데요…"
+      },
+      {
+        "speaker": "클로이",
+        "message": "좀… 뭐가 뭔지…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재미 없었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재미 없었어?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "재미없다고 해야되나… 뭘 해야될지잘모르겠더라고요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "아 근데"
+      },
+      {
+        "speaker": "클로이",
+        "message": "그림 보는 건 그냥 그랬는데"
+      },
+      {
+        "speaker": "클로이",
+        "message": "커다란 동상 보는건 좋았어요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "어떻게만든거지???"
+      },
+      {
+        "speaker": "클로이",
+        "message": "큼직큼직하게 생긴 걸 보는 게 재밌더라고요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "나도 만들어볼까…?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "집세를 제때제때 내야되는데"
+      },
+      {
+        "speaker": "클로이",
+        "message": "날짜 맞추는게 귀찮아요 ㅜ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "자동 이체 없어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "자동 이체 없어?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "자동 이체…?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "그게 뭐에요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에덴엔 없나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에덴엔 없나?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "에덴엔 있는데 제가모르는걸수도… ㅜ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "돈관리어려워요 ㅜ…"
+      },
+      {
+        "speaker": "클로이",
+        "message": "재밌는 꿈 꾸고 싶어요!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꿈?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "꿈?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "하늘을 날거나"
+      },
+      {
+        "speaker": "클로이",
+        "message": "갑자기 제가 유리아님이랑 영혼이 뒤바뀌거나"
+      },
+      {
+        "speaker": "클로이",
+        "message": "막 엄청큰유성이 에덴에떨어지거나…"
+      },
+      {
+        "speaker": "클로이",
+        "message": "꿈 속이면 못 할게 없겠죠?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "흠… 꿀잠자고싶다"
+      },
+      {
+        "speaker": "클로이",
+        "message": "오늘은 이따가 자기전에 로제가 준 입욕제써야겠어요!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋은 꿈 꿔"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋은 꿈 꿔"
+      },
+      {
+        "speaker": "클로이",
+        "message": "넹ㅋ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원자님~~~~~~~밥드셨어요???"
+      },
+      {
+        "speaker": "클로이",
+        "message": "저랑같이 먹어요!!!!!!!!!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알았어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알았어"
+      },
+      {
+        "speaker": "클로이",
+        "message": "뭐먹지??"
+      },
+      {
+        "speaker": "클로이",
+        "message": "저먹고싶은거 먹어도돼요??"
+      },
+      {
+        "speaker": "클로이",
+        "message": "오늘은 약간 트로이카 전통음식 풀코스가 땡기는느낌ㅋ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "같이 시장돌아다니면서 봐봐요!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "광장에서 기다릴게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "광장에서 기다릴게"
+      },
+      {
+        "speaker": "클로이",
+        "message": "♪♪♪"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원ㅈ 님요즘 클레르단장님이랑 많이얘기하시던데 오시는김에저랑도놀아요!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이따 보자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이따 보자"
+      },
+      {
+        "speaker": "클로이",
+        "message": "굿~~~ 1석2조인듯요!!!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원ㅈ님ㄱㅇ자님"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "오늘 제가 제일좋아하는 업무날이에요 ㅋ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "바로바로"
+      },
+      {
+        "speaker": "클로이",
+        "message": "순찰 업무!!!\r\n역시 밖에 나돌아다니는 게 최고죠!!개꿀!!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "같이 가요!!안바쁘시죠?!?!?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "광장으로 와주세요!!!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "으 구원자님 제얘기좀 들어보세요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "어제 먹은 포션이 진짜 맛없었어요 ㅜ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저런"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저런"
+      },
+      {
+        "speaker": "클로이",
+        "message": "포션을 맛으로 먹는건아니지만;"
+      },
+      {
+        "speaker": "클로이",
+        "message": "맛있으면 더 좋은데 ㅜ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "맛있는 포션 가게 아시면 공유좀요!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "찾아볼게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "찾아볼게"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원자님만 믿습니당~ㅋ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원자님!! 리타봤어요??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "리타?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "리타?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "요즘 리타가 영 안보여요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "어딜 싸돌아다니는거지??"
+      },
+      {
+        "speaker": "클로이",
+        "message": "저랑 팔씨름해야되는데 ㅡㅡ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디 있을까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디 있을까"
+      },
+      {
+        "speaker": "클로이",
+        "message": "지나가다 보시면제보좀요~~"
+      },
+      {
+        "speaker": "로제",
+        "message": "구원자님~"
+      },
+      {
+        "speaker": "로제",
+        "message": "클레르님이 바쁘셔서 제가 대신 전달드릴 게 있는데"
+      },
+      {
+        "speaker": "로제",
+        "message": "오늘 오후에 어디 계세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "광장에 용무가 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "광장에 용무가 있어"
+      },
+      {
+        "speaker": "로제",
+        "message": "그렇군요"
+      },
+      {
+        "speaker": "로제",
+        "message": "그럼 제가 찾아갈게요! ㅎㅎ\r\n항상 고생이 많으시네요"
+      },
+      {
+        "speaker": "로제",
+        "message": "이따 뵈어요~"
+      },
+      {
+        "speaker": "클로이",
+        "message": "강아지는 도대체 어떻게하면 빨리 잘 찾을 수있는거지…ㅜ"
+      },
+      {
+        "speaker": "클로이",
+        "message": "아그러고보니까 부하중에 하나가 도서관에서 가출한 강아지 관련해서 고대 문헌 찾아보니까"
+      },
+      {
+        "speaker": "클로이",
+        "message": "옛날에는 고양이 탐정이라는 게 있었대요;"
+      },
+      {
+        "speaker": "클로이",
+        "message": "혹시 지금도 있는 직업인가?"
+      },
+      {
+        "speaker": "클로이",
+        "message": "강아지 탐정도 있었으면 좋겠다…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "클로이",
+        "message": "도대체 어디간거야~ ㅠ"
+      },
+      {
+        "speaker": "로제",
+        "message": "구원자님, 지금 클로이랑 같이 계세요?"
+      },
+      {
+        "speaker": "로제",
+        "message": "클로이는 마나 관리를 잘 못하는 편이라…"
+      },
+      {
+        "speaker": "로제",
+        "message": "신경 좀 써주실 수 있을까요?"
+      },
+      {
+        "speaker": "로제",
+        "message": "답장이 없으신 걸 보니까 이미 숲에 계신가보네요…"
+      },
+      {
+        "speaker": "로제",
+        "message": "무사히 돌아오시길"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님, 지금 숲 쪽에 계시다고 들었어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "혹시 마물이 있는 곳까지 들어가신다면… 병력을 사용하셔도 괜찮아요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "제 연락이 너무 뒤늦은게 아닐까 걱정이네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "강아지 이야기를 방금 들은 참이라서요…"
+      },
+      {
+        "speaker": "로제",
+        "message": "구원자님, 지금 숲에 계신 거 맞죠?"
+      },
+      {
+        "speaker": "로제",
+        "message": "저희가 늦지 않아야 할텐데…"
+      },
+      {
+        "speaker": "로제",
+        "message": "조금만 기다리세요!"
+      },
+      {
+        "speaker": "로제",
+        "message": "아, 바쁘시면 굳이 답장하실 필요 없어요!"
+      },
+      {
+        "speaker": "리타",
+        "message": "구, 구원자님…"
+      },
+      {
+        "speaker": "리타",
+        "message": "클로이 선배랑 구원자님 지금 괜찮으신 거 맞죠…?"
+      },
+      {
+        "speaker": "리타",
+        "message": "너무 위험한 곳은 가심 안됨다…!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "구원자님!!!!!!!!!!!!!!!!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "싸랑해욥!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 클로이!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 클로이!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "전 평소에 \r\n뭘 잘 까먹는 편이거든요"
+      },
+      {
+        "speaker": "클로이",
+        "message": "그래서 이런 날을 따로 만들어서\r\n기념하는 것도 나름 의미있는 거 같애요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇구나, 챙겨줘서 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇구나, 챙겨줘서 고마워!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "으하하하하하하"
+      },
+      {
+        "speaker": "클로이",
+        "message": "명절좋아!!!"
+      },
+      {
+        "speaker": "클로이",
+        "message": "같이 양송이 수프먹어요구원자님!!!!!!!!!!!!!!!!!!!!!!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 조금 뒤에 보자!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응, 조금 뒤에 보자!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "클로이",
+      "en": "Chloe",
+      "zh_tw": "克羅伊",
+      "zh_cn": "克羅伊"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "요정형",
+      "en": "Fairy",
+      "zh_tw": "妖精型",
+      "zh_cn": "妖精型"
+    },
+    "class": {
+      "ko": "디펜더",
+      "en": "Defender",
+      "zh_tw": "捍衛者",
+      "zh_cn": "捍衛者"
+    },
+    "sub_class": {
+      "ko": "버프",
+      "en": "Buff",
+      "zh_tw": "增益",
+      "zh_cn": "增益"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "의리의 방패",
+        "en": "Shield of Loyalty",
+        "zh_tw": "情義之盾",
+        "zh_cn": "情義之盾"
+      },
+      "constellation": {
+        "ko": "인연_제이드_이벤트1",
+        "en": "인연_제이드_이벤트1",
+        "zh_tw": "金牛座",
+        "zh_cn": "金牛座"
+      },
+      "union": {
+        "ko": "태양 기사단",
+        "en": "Order of Sun",
+        "zh_tw": "太陽騎士團",
+        "zh_cn": "太陽騎士團"
+      },
+      "cv_ko": {
+        "ko": "김연우",
+        "en": "Yeonwoo Kim",
+        "zh_tw": "金延佑",
+        "zh_cn": "金延佑"
+      },
+      "cv_jp": {
+        "ko": "Satsumi Matsuda",
+        "en": "Satsumi Matsuda",
+        "zh_tw": "Satsumi Matsuda",
+        "zh_cn": "Satsumi Matsuda"
+      },
+      "like": {
+        "ko": [
+          "친구",
+          "양송이 스프"
+        ],
+        "en": [
+          "Friends",
+          "mushroom soup"
+        ],
+        "zh_tw": [
+          "朋友、蘑菇湯"
+        ],
+        "zh_cn": [
+          "朋友、蘑菇湯"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "잔소리",
+          "토마토 스프"
+        ],
+        "en": [
+          "Nagging",
+          "tomato soup"
+        ],
+        "zh_tw": [
+          "碎碎念、番茄湯"
+        ],
+        "zh_cn": [
+          "碎碎念、番茄湯"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "팔씨름 내기"
+        ],
+        "en": [
+          "Arm wrestling betting"
+        ],
+        "zh_tw": [
+          "比腕力"
+        ],
+        "zh_cn": [
+          "比腕力"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "물건 고장내기"
+        ],
+        "en": [
+          "Breaking things down"
+        ],
+        "zh_tw": [
+          "破壞物品"
+        ],
+        "zh_cn": [
+          "破壞物品"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "타앗~! 하앗! 이얍~! \n후우… 응? 거기 누구… 구원자님?\n\n지켜보고 계셨어요? 한창 연습하느라 몰랐어요! \n전 고민이 있을 땐 일단 몸부터 움직여서 푸는 스타일이거든요.\n그러다 보면 아, 이렇게 하면 되겠다 하고 답이 나와요. 굳이 오래 고민할 필요 없죠~\n그러니까 구원자님도 고민이 있으실 때 여기 와서 저랑 연습해요!\n\n한바탕 땀을 흘려 보자구요~! 빠샤! 그리고 끝나고 나서 엄청 맛있는 저녁을 먹는 거죠! \n물론 구원자님이 사주시면 더 좋고요! 헤헥.",
+        "en": "Ta-ah! Ha-ah! Hup! \nPhew… Huh? Who's there… Savior?\n\nYou've been watching me! I didn't see you because I was so focused on practicing! \nWhen something's worrying me, I first move my body to find a solution.\nThen the answer comes out: I'm saying, \"Oh, I can do it this way!\" There's no need to spend too much time thinking over it.\nWhen you feel troubled, come here and do exercises with me, Savior!\n\nLet's do exercises and sweat a lot! Gotcha! And then, let's have a very delicious dinner! \nOf course, it's even better if you buy me dinner, Savior! Hehe.",
+        "zh_tw": "嗒啊～！哈啊！咿呀～！\n呼…嗯？那是誰…救援者？\n\n你一直在看我嗎？我顧著練習都沒察覺呢！\n我有煩惱的時候就會先活動筋骨紓解一下，\n這樣一來就會想出解決辦法了。所以不必煩惱太久～\n所以救援者有煩惱的時候，就來這裡和我一起練習吧！\n\n試著大汗淋漓一場吧～！呀哈！結束後再吃一頓超美味的晚餐！\n救援者請客的話當然更好囉！嘿嘿。",
+        "zh_cn": "嗒啊～！哈啊！咿呀～！\n呼…嗯？那是誰…救援者？\n\n你一直在看我嗎？我顧著練習都沒察覺呢！\n我有煩惱的時候就會先活動筋骨紓解一下，\n這樣一來就會想出解決辦法了。所以不必煩惱太久～\n所以救援者有煩惱的時候，就來這裡和我一起練習吧！\n\n試著大汗淋漓一場吧～！呀哈！結束後再吃一頓超美味的晚餐！\n救援者請客的話當然更好囉！嘿嘿。"
+      },
+      "greeting": {
+        "ko": "흐으읍… 차아앗! 준비 완료!",
+        "en": "Hup… Ta-ah! All's ready!",
+        "zh_tw": "呃呃…來吧！準備就緒！",
+        "zh_cn": "呃呃…來吧！準備就緒！"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "ㄱㅜ원자 님 ! 이따 점심ㅂ"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "sAvIor! Lunch laterrr"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "ㄐ援者！等等中ㄨ見"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "ㄐ援者！等等中ㄨ見"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "아… ㅌㅏㅈㅏ 치는거 너무 힘들어요"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Ugh… Typinggg is too hard"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "啊…打ㄗㄏ累"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "啊…打ㄗㄏ累"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "에버폰 짜증ㄴ ㅏ!"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Everphone so annoyingg"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "EverPhone好ㄈㄢ！"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "EverPhone好ㄈㄢ！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "이거 에버폰 누르는 버튼이 너무 작은 것 같아요 ;;"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I think the buttons on the Everphone are too small…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "這個EverPhone的按鍵好像太小了;;"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "這個EverPhone的按鍵好像太小了;;"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "제꺼가 최신형이 아니라서 그런가?"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Maybe it's because my phone is too old."
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "因為我的不是最新型的，才這樣嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "因為我的不是最新型的，才這樣嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "아… 진짜 승질난다…"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Ah… So annoying…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "啊…真火大…"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "啊…真火大…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "저희 그냥 직접 만나서 얘기해요!"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Let's meet up and talk in person!"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "我們直接見面聊吧！"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "我們直接見面聊吧！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "제가갑니ㄷ!"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I'm on my wa"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "我過ㄑㄩ！"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "我過ㄑㄩ！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "에버폰으로 셀카찍는애들있던데"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "There are people who take selfies with their Everphones."
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "有一群孩子在用EverPhone自拍"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "有一群孩子在用EverPhone自拍"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "저도해볼려고했거든요??"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "So I tried too"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "我也想試試看"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "我也想試試看"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "근데 각도맞추기가너무어렵던데? ㅡㅡ"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "But getting the right angle was too hard… -_-"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "但是對準角度好難耶？ㅡㅡ"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "但是對準角度好難耶？ㅡㅡ"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "다들어떻게하는거죠"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "How do people do it"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "大家都是怎麼做的呢"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "大家都是怎麼做的呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "셀카도 쉬운게아니구만…"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Taking a selfie is also not easy…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "自拍也不是容易的事啊…"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "自拍也不是容易的事啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "까딱 잘못했다가 떨어뜨려서 또 액정깰것같아요;;"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I think I'll break the screen again by accidentally dropping it."
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "感覺不小心失手掉在地上，螢幕就會破掉;;"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "感覺不小心失手掉在地上，螢幕就會破掉;;"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "필요할땐 그냥구원자님한테 찍어달라할게요~~"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "When I need one, I'll just ask you to take a picture."
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "需要的時候會直接叫救援者幫我拍的～～"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "需要的時候會直接叫救援者幫我拍的～～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "여름은 엄청덥잖아요!!그래서 저는요"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Summer is so hot!!"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "夏天不是很熱嗎！！所以我啊"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "夏天不是很熱嗎！！所以我啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "여름마다 린지랑 로제랑열번 가위바위보해서"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Every summer Linzy and Rose play rock paper scissors ten times"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "每到夏天就會跟琳賽、蘿絲剪刀石頭布十次"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "每到夏天就會跟琳賽、蘿絲剪刀石頭布十次"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "꼴등이 1등한테 부채질 100번해주기 게임을 해요"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "and the loser fans the winner 100 times"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "玩最後一名要幫第一名搧風一百次的遊戲"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "玩最後一名要幫第一名搧風一百次的遊戲"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "구원자님도 끼실래요??"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Do you want to join?"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "救援者要不要也加入啊？？"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "救援者要不要也加入啊？？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "꼴등걸리면 지옥이지만 1등되면 천국이라고요!!"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "It's hell if you get last place, but heaven if you get first place!"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "最後一名的話雖然像在地獄一樣，但成為第一名的話就像在天堂一樣！！"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "最後一名的話雖然像在地獄一樣，但成為第一名的話就像在天堂一樣！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "그냥… 구경해요"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Just watch…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "就…在旁邊看"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "就…在旁邊看"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "ㅋㅋㅋㅋㅋㅋ"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "LOLOLOL"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "哈哈哈哈哈哈"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "哈哈哈哈哈哈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "구원자님이 부채질얼마나잘하시는지제가한번볼게요~~ㅋ"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Let's see how good Savior is at fanning! LOL"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "來看看救援者有多麼會搧風～～哈"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "來看看救援者有多麼會搧風～～哈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "글씨잘쓰고싶다…"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I want to have good handwriting"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "我想把字練好…"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "我想把字練好…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "글씨 잘쓰면 멋있더라고요??"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "It looks cool if the handwriting is nice"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "可以把字練好的話很帥氣的"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "可以把字練好的話很帥氣的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "막 멋진척안해도 자연스럽게 멋진 느낌…?"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "You don't have to pretend to be cool, but you naturally feel cool…?"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "感覺就算不耍帥也自然而然地會很帥…？"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "感覺就算不耍帥也自然而然地會很帥…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "아 그럴까요??"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Should I?"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "啊要練嗎？？"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "啊要練嗎？？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "하루에 세문장정도 쓰면 되나?"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Should I write about three sentences a day?"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "一天寫三句話的話可以嗎？"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "一天寫三句話的話可以嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "근데…귀찮을듯"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "But… I'm lazy."
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "但是…感覺會很煩"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "但是…感覺會很煩"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "흠…"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Hmm…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "嗯…"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "嗯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "역시세상에 거저얻는건 없군요… ㅠ"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I guess you can't get anything for free…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "果然世界上沒有什麼東西是能輕易得到的呀…嗚"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "果然世界上沒有什麼東西是能輕易得到的呀…嗚"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "으으…"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Ugh…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "呃呃…"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "呃呃…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "구원자님 저진짜죽을거같아요;;"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Savior, I feel like I'm going to die"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "救援者我真的快死了;;"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "救援者我真的快死了;;"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "어제 음식남은거 아까 먹었는데"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I ate the leftover food from yesterday"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "我剛剛吃了昨天剩下的食物"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "我剛剛吃了昨天剩下的食物"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "상했나봐요ㅜ; 아진짜너무배아파요;;아악!!!!!!!!!!!!"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I think it spoiled T_T. Oh my gosh, it hurts so bad! Argh!!!!"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "好像酸掉了嗚;啊肚子真的好痛;;啊啊！！！！！！！！！！！！"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "好像酸掉了嗚;啊肚子真的好痛;;啊啊！！！！！！！！！！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "으으으으으윽"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Arghhhhhh"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "呃呃呃呃呃呃"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "呃呃呃呃呃呃"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "집밖으로한걸음도못걷겠어요"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I can barely take a step out of the house"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "我連走出家門一步也沒辦法"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "我連走出家門一步也沒辦法"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "업어주세요;;"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Carry me on your back"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "背我;;"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "背我;;"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "ㅜㅜㅜㅜ감사합니다ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Thank you! T_T"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "嗚嗚嗚嗚謝謝你嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "嗚嗚嗚嗚謝謝你嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "전 집안일중에서 설거지가제일싫어요"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Of all the house chores, I hate washing dishes the most"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "在所有家事裡面\r\n我最討厭洗碗了"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "在所有家事裡面\r\n我最討厭洗碗了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "설거지는 하는동안 한군데에서 가만히있어야되잖아요;"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "You have to stay in one place while you're doing the dishes"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "洗碗的時候不是必須待在一個地方嗎;"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "洗碗的時候不是必須待在一個地方嗎;"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "그게너무지겨워요…"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "That'stooboring…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "那太煩了…"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "那太煩了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "차라리 청소기 돌리고 걸레질하는게나음요!!!"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I'd rather vacuum and mop!!!"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "乾脆用吸塵器到處清理還比較好！！！"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "乾脆用吸塵器到處清理還比較好！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "네 ㅜㅜ"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Yeah T_T"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "對嗚嗚"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "對嗚嗚"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "설거지짱싫음~"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "I hate doing the dishes!"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "最討厭洗碗～"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "最討厭洗碗～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "지난 번에 린지랑 로제가 가길래 미술관 따라갔는데요…"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Last time, I followed Linzy and Rose to the art museum."
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "上次我跟琳賽還有蘿絲去了美術館…"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "上次我跟琳賽還有蘿絲去了美術館…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "좀… 뭐가 뭔지…"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "It was… too…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "總覺得⋯有點⋯"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "總覺得⋯有點⋯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "재미없다고 해야되나… 뭘 해야될지잘모르겠더라고요"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Should I say it's boring? I didn't know how to feel or what to say"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "該說是無聊嗎…那時候不知道該做什麼"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "該說是無聊嗎…那時候不知道該做什麼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "아 근데"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "But…"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "啊不過"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "啊不過"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "그림 보는 건 그냥 그랬는데"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Looking at the pictures was okay"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "看畫的部分雖然普普通通的"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "看畫的部分雖然普普通通的"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "린지",
+          "message": "어휴… 제발 철 좀 들었으면."
+        },
+        "en": {
+          "speaker": "Linzy",
+          "message": "Ugh… Hope she grows up."
+        },
+        "zh_tw": {
+          "speaker": "琳賽",
+          "message": "哎呀…拜託成熟點吧。"
+        },
+        "zh_cn": {
+          "speaker": "琳賽",
+          "message": "哎呀…拜託成熟點吧。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "로제",
+          "message": "클로이는 사실 굉장히 멘탈이 강해요. 본받을 점도 많답니다."
+        },
+        "en": {
+          "speaker": "Rose",
+          "message": "Chloe is actually very strong mentally. She is a role model for us to learn from."
+        },
+        "zh_tw": {
+          "speaker": "蘿絲",
+          "message": "克羅伊其實很堅強，也有很多地方值得我們學習。"
+        },
+        "zh_cn": {
+          "speaker": "蘿絲",
+          "message": "克羅伊其實很堅強，也有很多地方值得我們學習。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미리암",
+          "message": "보기보다 어려운 상대지.\n행동이 앞선다는 건, 생각을 읽을 틈이 부족하다는 이야기니까."
+        },
+        "en": {
+          "speaker": "Miriam",
+          "message": "She is a tougher opponent than she looks.\nShe takes action first. It means that there's not enough time to read thoughts."
+        },
+        "zh_tw": {
+          "speaker": "米里昂",
+          "message": "是個比看起來更難對付的對手。\n動作快到沒時間猜測她的想法。"
+        },
+        "zh_cn": {
+          "speaker": "米里昂",
+          "message": "是個比看起來更難對付的對手。\n動作快到沒時間猜測她的想法。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "ㄱㅜ원자 님 ! 이따 점심ㅂ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "sAvIor! Lunch laterrr"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "ㄐ援者！等等中ㄨ見"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "ㄐ援者！等等中ㄨ見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "아… ㅌㅏㅈㅏ 치는거 너무 힘들어요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Ugh… Typinggg is too hard"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "啊…打ㄗㄏ累"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "啊…打ㄗㄏ累"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "에버폰 짜증ㄴ ㅏ!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Everphone so annoyingg"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "EverPhone好ㄈㄢ！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "EverPhone好ㄈㄢ！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 클로이"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Chloe."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，克羅伊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，克羅伊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 클로이"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Chloe."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，克羅伊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，克羅伊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "이거 에버폰 누르는 버튼이 너무 작은 것 같아요 ;;"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I think the buttons on the Everphone are too small…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "這個EverPhone的按鍵好像太小了;;"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "這個EverPhone的按鍵好像太小了;;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "제꺼가 최신형이 아니라서 그런가?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Maybe it's because my phone is too old."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "因為我的不是最新型的，才這樣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "因為我的不是最新型的，才這樣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "아… 진짜 승질난다…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Ah… So annoying…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "啊…真火大…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "啊…真火大…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "저희 그냥 직접 만나서 얘기해요!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Let's meet up and talk in person!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我們直接見面聊吧！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我們直接見面聊吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "제가갑니ㄷ!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I'm on my wa"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我過ㄑㄩ！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我過ㄑㄩ！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클로이?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Chloe?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克羅伊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克羅伊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클로이?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Chloe?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克羅伊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克羅伊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클로이??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Chloe??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克羅伊？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克羅伊？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클로이??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Chloe??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "克羅伊？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "克羅伊？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "에버폰으로 셀카찍는애들있던데"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "There are people who take selfies with their Everphones."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "有一群孩子在用EverPhone自拍"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "有一群孩子在用EverPhone自拍"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "저도해볼려고했거든요??"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "So I tried too"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我也想試試看"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我也想試試看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "근데 각도맞추기가너무어렵던데? ㅡㅡ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "But getting the right angle was too hard… -_-"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "但是對準角度好難耶？ㅡㅡ"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "但是對準角度好難耶？ㅡㅡ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "다들어떻게하는거죠"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "How do people do it"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "大家都是怎麼做的呢"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "大家都是怎麼做的呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연습해서 익숙해져야할 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I need to practice and get used to it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "練習之後應該就會熟練的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "練習之後應該就會熟練的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연습해서 익숙해져야할 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I need to practice and get used to it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "練習之後應該就會熟練的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "練習之後應該就會熟練的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "셀카도 쉬운게아니구만…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Taking a selfie is also not easy…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "自拍也不是容易的事啊…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "自拍也不是容易的事啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "까딱 잘못했다가 떨어뜨려서 또 액정깰것같아요;;"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I think I'll break the screen again by accidentally dropping it."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "感覺不小心失手掉在地上，螢幕就會破掉;;"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "感覺不小心失手掉在地上，螢幕就會破掉;;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "필요할땐 그냥구원자님한테 찍어달라할게요~~"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "When I need one, I'll just ask you to take a picture."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "需要的時候會直接叫救援者幫我拍的～～"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "需要的時候會直接叫救援者幫我拍的～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "여름은 엄청덥잖아요!!그래서 저는요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Summer is so hot!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "夏天不是很熱嗎！！所以我啊"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "夏天不是很熱嗎！！所以我啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "여름마다 린지랑 로제랑열번 가위바위보해서"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Every summer Linzy and Rose play rock paper scissors ten times"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "每到夏天就會跟琳賽、蘿絲剪刀石頭布十次"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "每到夏天就會跟琳賽、蘿絲剪刀石頭布十次"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "꼴등이 1등한테 부채질 100번해주기 게임을 해요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "and the loser fans the winner 100 times"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "玩最後一名要幫第一名搧風一百次的遊戲"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "玩最後一名要幫第一名搧風一百次的遊戲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원자님도 끼실래요??"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Do you want to join?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "救援者要不要也加入啊？？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "救援者要不要也加入啊？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "100번…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "100 times…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一百次…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一百次…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "100번…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "100 times…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一百次…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一百次…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "꼴등걸리면 지옥이지만 1등되면 천국이라고요!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "It's hell if you get last place, but heaven if you get first place!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "最後一名的話雖然像在地獄一樣，但成為第一名的話就像在天堂一樣！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "最後一名的話雖然像在地獄一樣，但成為第一名的話就像在天堂一樣！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "2등은 뭐 하는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about 2nd place?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那第二名做什麼呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那第二名做什麼呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "2등은 뭐 하는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about 2nd place?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那第二名做什麼呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那第二名做什麼呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "그냥… 구경해요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Just watch…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "就…在旁邊看"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "就…在旁邊看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "ㅋㅋㅋㅋㅋㅋ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "LOLOLOL"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "哈哈哈哈哈哈"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "哈哈哈哈哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원자님이 부채질얼마나잘하시는지제가한번볼게요~~ㅋ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Let's see how good Savior is at fanning! LOL"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "來看看救援者有多麼會搧風～～哈"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "來看看救援者有多麼會搧風～～哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "글씨잘쓰고싶다…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I want to have good handwriting"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我想把字練好…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我想把字練好…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글씨?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Handwriting?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "字？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "字？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글씨?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Handwriting?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "字？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "字？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "글씨 잘쓰면 멋있더라고요??"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "It looks cool if the handwriting is nice"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "可以把字練好的話很帥氣的"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "可以把字練好的話很帥氣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "막 멋진척안해도 자연스럽게 멋진 느낌…?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "You don't have to pretend to be cool, but you naturally feel cool…?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "感覺就算不耍帥也自然而然地會很帥…？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "感覺就算不耍帥也自然而然地會很帥…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글씨 연습할 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So are you going to practice writing?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要練字嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要練字嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글씨 연습할 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So are you going to practice writing?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要練字嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要練字嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "아 그럴까요??"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Should I?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "啊要練嗎？？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "啊要練嗎？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "하루에 세문장정도 쓰면 되나?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Should I write about three sentences a day?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "一天寫三句話的話可以嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "一天寫三句話的話可以嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "근데…귀찮을듯"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "But… I'm lazy."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "但是…感覺會很煩"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "但是…感覺會很煩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "흠…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "역시세상에 거저얻는건 없군요… ㅠ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I guess you can't get anything for free…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "果然世界上沒有什麼東西是能輕易得到的呀…嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "果然世界上沒有什麼東西是能輕易得到的呀…嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "으으…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Ugh…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "呃呃…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "呃呃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원자님 저진짜죽을거같아요;;"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Savior, I feel like I'm going to die"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "救援者我真的快死了;;"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "救援者我真的快死了;;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "어제 음식남은거 아까 먹었는데"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I ate the leftover food from yesterday"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我剛剛吃了昨天剩下的食物"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我剛剛吃了昨天剩下的食物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "상했나봐요ㅜ; 아진짜너무배아파요;;아악!!!!!!!!!!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I think it spoiled T_T. Oh my gosh, it hurts so bad! Argh!!!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "好像酸掉了嗚;啊肚子真的好痛;;啊啊！！！！！！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "好像酸掉了嗚;啊肚子真的好痛;;啊啊！！！！！！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "치료 정령한테 가자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go to the healing Soul."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "去找治療精靈吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "去找治療精靈吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "치료 정령한테 가자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go to the healing Soul."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "去找治療精靈吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "去找治療精靈吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "으으으으으윽"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Arghhhhhh"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "呃呃呃呃呃呃"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "呃呃呃呃呃呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "집밖으로한걸음도못걷겠어요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I can barely take a step out of the house"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我連走出家門一步也沒辦法"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我連走出家門一步也沒辦法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "업어주세요;;"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Carry me on your back"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "背我;;"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "背我;;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "ㅜㅜㅜㅜ감사합니다ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Thank you! T_T"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "嗚嗚嗚嗚謝謝你嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "嗚嗚嗚嗚謝謝你嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "전 집안일중에서 설거지가제일싫어요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Of all the house chores, I hate washing dishes the most"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "在所有家事裡面\r\n我最討厭洗碗了"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "在所有家事裡面\r\n我最討厭洗碗了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hey"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hey"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "설거지는 하는동안 한군데에서 가만히있어야되잖아요;"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "You have to stay in one place while you're doing the dishes"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "洗碗的時候不是必須待在一個地方嗎;"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "洗碗的時候不是必須待在一個地方嗎;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "그게너무지겨워요…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "That'stooboring…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "那太煩了…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "那太煩了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "차라리 청소기 돌리고 걸레질하는게나음요!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I'd rather vacuum and mop!!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "乾脆用吸塵器到處清理還比較好！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "乾脆用吸塵器到處清理還比較好！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "답답한 게 싫구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You don't like staying in one place."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來你討厭煩人的東西啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來你討厭煩人的東西啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "답답한 게 싫구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You don't like staying in one place."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來你討厭煩人的東西啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來你討厭煩人的東西啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "네 ㅜㅜ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Yeah T_T"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "對嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "對嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "설거지짱싫음~"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I hate doing the dishes!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "最討厭洗碗～"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "最討厭洗碗～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "지난 번에 린지랑 로제가 가길래 미술관 따라갔는데요…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Last time, I followed Linzy and Rose to the art museum."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "上次我跟琳賽還有蘿絲去了美術館…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "上次我跟琳賽還有蘿絲去了美術館…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "좀… 뭐가 뭔지…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "It was… too…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "總覺得⋯有點⋯"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "總覺得⋯有點⋯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재미 없었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Boring?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "無聊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "無聊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재미 없었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Boring?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "無聊？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "無聊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "재미없다고 해야되나… 뭘 해야될지잘모르겠더라고요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Should I say it's boring? I didn't know how to feel or what to say"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "該說是無聊嗎…那時候不知道該做什麼"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "該說是無聊嗎…那時候不知道該做什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "아 근데"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "But…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "啊不過"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "啊不過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "그림 보는 건 그냥 그랬는데"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Looking at the pictures was okay"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "看畫的部分雖然普普通通的"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "看畫的部分雖然普普通通的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "커다란 동상 보는건 좋았어요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "but I liked looking at the big statue"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "但是看巨大的銅像很有意思"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "但是看巨大的銅像很有意思"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "어떻게만든거지???"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "How did they make it?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "那是怎麼做的呢？？？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "那是怎麼做的呢？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "큼직큼직하게 생긴 걸 보는 게 재밌더라고요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I liked looking at big things"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "看外觀巨大的東西很有趣"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "看外觀巨大的東西很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "나도 만들어볼까…?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Should I make one…?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我也來做做看…？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我也來做做看…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "집세를 제때제때 내야되는데"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I should pay rent on time"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我要按時交房租"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我要按時交房租"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "날짜 맞추는게 귀찮아요 ㅜ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "But it's hard to pay it on time"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "按時交錢好煩嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "按時交錢好煩嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "자동 이체 없어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about using automatic transfer?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有自動轉帳嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有自動轉帳嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "자동 이체 없어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about using automatic transfer?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有自動轉帳嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有自動轉帳嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "자동 이체…?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Automatic transfer?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "自動轉帳…？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "自動轉帳…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "그게 뭐에요?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "What's that?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "那是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "那是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에덴엔 없나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eden doesn't have it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "伊甸園沒有嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "伊甸園沒有嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에덴엔 없나?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eden doesn't have it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "伊甸園沒有嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "伊甸園沒有嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "에덴엔 있는데 제가모르는걸수도… ㅜ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Maybe it has it but I just don't know…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "伊甸園有，但可能是我不知道的東西…嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "伊甸園有，但可能是我不知道的東西…嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "돈관리어려워요 ㅜ…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "It's hard to manage money… T_T"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "管錢好難嗚…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "管錢好難嗚…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "재밌는 꿈 꾸고 싶어요!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I want to have a fun dream!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我想做有趣的夢！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我想做有趣的夢！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꿈?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dream?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "꿈?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dream?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "하늘을 날거나"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Like flying in the sky"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "像是飛到空中"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "像是飛到空中"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "갑자기 제가 유리아님이랑 영혼이 뒤바뀌거나"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "or changing a Soul with Yuria"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "或是我跟尤里婭突然靈魂互換"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "或是我跟尤里婭突然靈魂互換"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "막 엄청큰유성이 에덴에떨어지거나…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "or a huge meteor falling on Eden"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "或是有一個非常大的流星掉到伊甸園…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "或是有一個非常大的流星掉到伊甸園…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "꿈 속이면 못 할게 없겠죠?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Anything is possible in a dream, right?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "夢裡的話應該沒有不行的吧？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "夢裡的話應該沒有不行的吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "흠… 꿀잠자고싶다"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Hm.. I want to sleep deeply."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "嗯⋯我想做個好夢"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "嗯⋯我想做個好夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "오늘은 이따가 자기전에 로제가 준 입욕제써야겠어요!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I should use the bath bomb Rose gave me before I go to bed tonight!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "等等睡覺前要用蘿絲給的入浴劑！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "等等睡覺前要用蘿絲給的入浴劑！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋은 꿈 꿔"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sweet dreams."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "做個好夢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "做個好夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋은 꿈 꿔"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sweet dreams."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "做個好夢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "做個好夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "넹ㅋ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "OK!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "好哦哈"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "好哦哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원자님~~~~~~~밥드셨어요???"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Savior! have you eaten?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "救援者～～～～～～～你吃飯了嗎？？？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "救援者～～～～～～～你吃飯了嗎？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "저랑같이 먹어요!!!!!!!!!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Eat with me!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "跟我一起吃吧！！！！！！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "跟我一起吃吧！！！！！！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Got it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Got it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "뭐먹지??"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "What should we eat?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "要吃什麼呢？？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "要吃什麼呢？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "저먹고싶은거 먹어도돼요??"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Can we eat what I want to eat?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "可以吃我想吃的嗎？？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "可以吃我想吃的嗎？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "오늘은 약간 트로이카 전통음식 풀코스가 땡기는느낌ㅋ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I'm kind of craving a full course meal of traditional Troyca food today"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "今天有點想吃特羅伊卡的傳統食物套餐哈"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "今天有點想吃特羅伊卡的傳統食物套餐哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "같이 시장돌아다니면서 봐봐요!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "And shopping around the market!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "跟我一起在市場逛逛吧！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "跟我一起在市場逛逛吧！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "광장에서 기다릴게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be waiting in the square!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在廣場等妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在廣場等妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "광장에서 기다릴게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be waiting in the square!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在廣場等妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在廣場等妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "♪♪♪"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "♪♪♪"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "♪♪♪"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "♪♪♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원ㅈ 님요즘 클레르단장님이랑 많이얘기하시던데 오시는김에저랑도놀아요!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "You've been talking a lot with Claire lately. Come, hang out with me, too!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "救ㄩ者最近跟克萊兒團長聊了好多，你既然都來了，也跟我玩嘛！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "救ㄩ者最近跟克萊兒團長聊了好多，你既然都來了，也跟我玩嘛！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이따 보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll see you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等見"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이따 보자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll see you."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等見"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "굿~~~ 1석2조인듯요!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Good! It's killing two birds with one stone!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "Good～～～簡直就是一石二鳥！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "Good～～～簡直就是一石二鳥！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원ㅈ님ㄱㅇ자님"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Savior, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "救ㄩ者ㄐ援ㄓ"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "救ㄩ者ㄐ援ㄓ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "오늘 제가 제일좋아하는 업무날이에요 ㅋ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Today is my favorite work day LOL"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "今天是我最喜歡的任務日哈"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "今天是我最喜歡的任務日哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "바로바로"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Today is"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "就是就是"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "就是就是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "순찰 업무!!!\r\n역시 밖에 나돌아다니는 게 최고죠!!개꿀!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "patrol day!!!\r\nGoing out is the best! Love it!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "巡視任務！！！\r\n果然還是出去外面轉最棒了！！超爽的！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "巡視任務！！！\r\n果然還是出去外面轉最棒了！！超爽的！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "같이 가요!!안바쁘시죠?!?!?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Go with me!! You're not busy, right?!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "一起去吧！！你不忙吧？！？！？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "一起去吧！！你不忙吧？！？！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "광장으로 와주세요!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Please come to the square!!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "到廣場來！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "到廣場來！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "으 구원자님 제얘기좀 들어보세요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Savior, listen to me."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "呃，救援者，你聽我說"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "呃，救援者，你聽我說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "어제 먹은 포션이 진짜 맛없었어요 ㅜ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "The potion I had yesterday didn't taste good T_T"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "昨天喝的藥水真的很難喝嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "昨天喝的藥水真的很難喝嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저런"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Aw."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "天啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "天啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저런"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Aw."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "天啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "天啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "포션을 맛으로 먹는건아니지만;"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I don't drink potions for their taste"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "雖然藥水不是為了好喝才喝的;"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "雖然藥水不是為了好喝才喝的;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "맛있으면 더 좋은데 ㅜ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "but it's better if it tastes good"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "不過要是好喝的話就更好了嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "不過要是好喝的話就更好了嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "맛있는 포션 가게 아시면 공유좀요!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Please tell me if you know any yummy potion stores!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "如果你知道有賣好喝藥水的商店的話，請告訴我！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "如果你知道有賣好喝藥水的商店的話，請告訴我！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "찾아볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll look for one."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我找找"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我找找"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "찾아볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll look for one."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我找找"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我找找"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원자님만 믿습니당~ㅋ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I trust you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我就相信救援者囉～哈"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我就相信救援者囉～哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원자님!! 리타봤어요??"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Savior!! Have you seen Rita?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "救援者！！你有看到麗塔嗎？？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "救援者！！你有看到麗塔嗎？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "리타?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Rita?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "麗塔？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "麗塔？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "리타?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Rita?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "麗塔？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "麗塔？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "요즘 리타가 영 안보여요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I haven't seen Rita lately"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "最近都沒看到麗塔"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "最近都沒看到麗塔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "어딜 싸돌아다니는거지??"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Where is she wandering around?"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "亂跑去哪了呢？？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "亂跑去哪了呢？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "저랑 팔씨름해야되는데 ㅡㅡ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "She has to arm wrestle me -_-"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "她應該要來跟我比腕力的ㅡㅡ"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "她應該要來跟我比腕力的ㅡㅡ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디 있을까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where is she?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會在哪呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會在哪呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디 있을까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where is she?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "會在哪呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "會在哪呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "지나가다 보시면제보좀요~~"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "If you see her, please let me know!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "如果你有遇到她的話，請告訴我～～"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "如果你有遇到她的話，請告訴我～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "구원자님~"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "救援者～"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "救援者～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "클레르님이 바쁘셔서 제가 대신 전달드릴 게 있는데"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Claire is busy, so I have something to deliver."
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "因為克萊兒在忙，所以我代她來轉達消息"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "因為克萊兒在忙，所以我代她來轉達消息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "오늘 오후에 어디 계세요?"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Where will you be in the afternoon?"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "今天下午你會在哪呢？"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "今天下午你會在哪呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "광장에 용무가 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I have some work near the square."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在廣場有事要辦"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在廣場有事要辦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "광장에 용무가 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I have some work near the square."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在廣場有事要辦"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在廣場有事要辦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "그렇군요"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "I see."
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "그럼 제가 찾아갈게요! ㅎㅎ\r\n항상 고생이 많으시네요"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Then I'll find you! Hehe,\r\nyou're always working hard."
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "那我去找你！呵呵\r\n你總是很辛苦呢"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "那我去找你！呵呵\r\n你總是很辛苦呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "이따 뵈어요~"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "See you later!"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "等等見～"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "等等見～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "강아지는 도대체 어떻게하면 빨리 잘 찾을 수있는거지…ㅜ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "How can I find a puppy quickly? T_T"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "要怎麼做樣才能趕快找到小狗呢…嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "要怎麼做樣才能趕快找到小狗呢…嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "아그러고보니까 부하중에 하나가 도서관에서 가출한 강아지 관련해서 고대 문헌 찾아보니까"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Oh, one of my subordinates was looking at ancient documents about the runaway dog in the library."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "啊這麼說來，有一個手下在圖書館找了有關小狗離家出走的古代文獻"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "啊這麼說來，有一個手下在圖書館找了有關小狗離家出走的古代文獻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "옛날에는 고양이 탐정이라는 게 있었대요;"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "There used to be a cat detective."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "聽說在以前有個叫貓咪偵探的東西;"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "聽說在以前有個叫貓咪偵探的東西;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "혹시 지금도 있는 직업인가?"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I wonder if that job still exists."
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "現在也有這種職業嗎？"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "現在也有這種職業嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "강아지 탐정도 있었으면 좋겠다…"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I wish there was also a dog detective…"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "如果有小狗偵探就好了…"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "如果有小狗偵探就好了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "도대체 어디간거야~ ㅠ"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Where are you? T_T"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "到底去了哪裡啊～嗚"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "到底去了哪裡啊～嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "구원자님, 지금 클로이랑 같이 계세요?"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Savior, are you with Chloe right now?"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "救援者，你現在和克羅伊在一起嗎？"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "救援者，你現在和克羅伊在一起嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "클로이는 마나 관리를 잘 못하는 편이라…"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Chloe is not good at managing Mana…"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "克羅伊不太會管理魔力…"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "克羅伊不太會管理魔力…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "신경 좀 써주실 수 있을까요?"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Can you take care of her?"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "能麻煩你幫幫她嗎？"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "能麻煩你幫幫她嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "답장이 없으신 걸 보니까 이미 숲에 계신가보네요…"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Since you're not answering, I guess you're already in the forest…"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "沒回答，看來你已經在森林裡了…"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "沒回答，看來你已經在森林裡了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "무사히 돌아오시길"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Please come back safely."
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "希望你能平安回來"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "希望你能平安回來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님, 지금 숲 쪽에 계시다고 들었어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior, I heard that you are in the forest."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者，聽說你現在在森林裡"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者，聽說你現在在森林裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "혹시 마물이 있는 곳까지 들어가신다면… 병력을 사용하셔도 괜찮아요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "If you ever get to where the monsters are… you can use your troops."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果走到有魔物的地方…可以使用兵力的"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果走到有魔物的地方…可以使用兵力的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "제 연락이 너무 뒤늦은게 아닐까 걱정이네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm afraid that I messaged you too late."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我擔心是不是晚了一步聯絡你"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我擔心是不是晚了一步聯絡你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "강아지 이야기를 방금 들은 참이라서요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I just heard about the dog…"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "因為我剛剛正好聽到小狗的事…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "因為我剛剛正好聽到小狗的事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "구원자님, 지금 숲에 계신 거 맞죠?"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Savior, you are in the forest now, right?"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "救援者，你現在在森林吧？"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "救援者，你現在在森林吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "저희가 늦지 않아야 할텐데…"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "I hope we're not too late."
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "我們應該要早一點過去…"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "我們應該要早一點過去…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "조금만 기다리세요!"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Please wait for a moment!"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "等我們一下！"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "等我們一下！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "로제",
+            "message": "아, 바쁘시면 굳이 답장하실 필요 없어요!"
+          },
+          "en": {
+            "speaker": "Rose",
+            "message": "Ah, if you're busy, you don't need to reply!"
+          },
+          "zh_tw": {
+            "speaker": "蘿絲",
+            "message": "啊，在忙的話，不一定要回的！"
+          },
+          "zh_cn": {
+            "speaker": "蘿絲",
+            "message": "啊，在忙的話，不一定要回的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "리타",
+            "message": "구, 구원자님…"
+          },
+          "en": {
+            "speaker": "Rita",
+            "message": "Sa-Savior…"
+          },
+          "zh_tw": {
+            "speaker": "麗塔",
+            "message": "救、救援者…"
+          },
+          "zh_cn": {
+            "speaker": "麗塔",
+            "message": "救、救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "리타",
+            "message": "클로이 선배랑 구원자님 지금 괜찮으신 거 맞죠…?"
+          },
+          "en": {
+            "speaker": "Rita",
+            "message": "You and Chloe are both okay, right…?"
+          },
+          "zh_tw": {
+            "speaker": "麗塔",
+            "message": "克羅伊學姐跟救援者現在沒事吧…？"
+          },
+          "zh_cn": {
+            "speaker": "麗塔",
+            "message": "克羅伊學姐跟救援者現在沒事吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "리타",
+            "message": "너무 위험한 곳은 가심 안됨다…!"
+          },
+          "en": {
+            "speaker": "Rita",
+            "message": "Don't go to anywhere too dangerous…!"
+          },
+          "zh_tw": {
+            "speaker": "麗塔",
+            "message": "不可以到太危險的地方去…！"
+          },
+          "zh_cn": {
+            "speaker": "麗塔",
+            "message": "不可以到太危險的地方去…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "구원자님!!!!!!!!!!!!!!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Savior!!!!!!!!!!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "救援者！！！！！！！！！！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "救援者！！！！！！！！！！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "싸랑해욥!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Luv ya!!!!!!!!!!!!!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我愛泥！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我愛泥！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 클로이!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Chloe!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，克羅伊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，克羅伊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 클로이!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Chloe!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，克羅伊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，克羅伊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "전 평소에 \r\n뭘 잘 까먹는 편이거든요"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I tend to\r\nforget about a lot of things"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我平常\r\n經常忘東忘西"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我平常\r\n經常忘東忘西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "그래서 이런 날을 따로 만들어서\r\n기념하는 것도 나름 의미있는 거 같애요!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "So it is meaningful to celebrate\r\na holiday like this!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "所以單獨創造一個這樣的日子\r\n感覺來紀念也挺有意義的！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "所以單獨創造一個這樣的日子\r\n感覺來紀念也挺有意義的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇구나, 챙겨줘서 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see, thanks!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來如此，謝謝妳的照顧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來如此，謝謝妳的照顧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇구나, 챙겨줘서 고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see, thanks!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來如此，謝謝妳的照顧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來如此，謝謝妳的照顧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "으하하하하하하"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Hahahahahaha"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "額哈哈哈哈哈"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "額哈哈哈哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "명절좋아!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "I love holidays!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "我喜歡過節！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "我喜歡過節！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "클로이",
+            "message": "같이 양송이 수프먹어요구원자님!!!!!!!!!!!!!!!!!!!!!!"
+          },
+          "en": {
+            "speaker": "Chloe",
+            "message": "Let's have mushroom soup Savior!!!!!!!!!!!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "克羅伊",
+            "message": "一起喝蘑菇湯吧救援者！！！！！！！！！！！！！！！！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "克羅伊",
+            "message": "一起喝蘑菇湯吧救援者！！！！！！！！！！！！！！！！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 조금 뒤에 보자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Alright, I'll see you in a bit!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，等等見吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，等等見吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응, 조금 뒤에 보자!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Alright, I'll see you in a bit!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，等等見吧！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，等等見吧！"
+          }
+        }
+      ]
+    }
+  }
+}

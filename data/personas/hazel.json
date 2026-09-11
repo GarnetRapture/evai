@@ -1,0 +1,6206 @@
+{
+  "id": "1130",
+  "name": "헤이즐",
+  "name_en": "Hazel",
+  "grade": "에픽",
+  "race": "인간형",
+  "class": "캐스터",
+  "sub_class": "지속",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "전장의 지휘자",
+    "constellation": "염소자리",
+    "union": "에델 가드",
+    "birthday": "1230",
+    "height": 175,
+    "weight": 63,
+    "cv_ko": "양정화",
+    "cv_jp": "양정화",
+    "like": [
+      "등산"
+    ],
+    "dislike": [
+      "술",
+      "치즈"
+    ],
+    "hobby": [
+      "음악 감상"
+    ],
+    "speciality": [
+      "체스"
+    ]
+  },
+  "personality": {
+    "description": "그대가 구원자인가?\n그렇다면 소개하지.\n나는 타브리아의 황태녀, 헤이즐이다.\n현재 정령 연합군의 유격부대 '에델가드'를 이끌고 있지.\n\n특별하고 강력한 능력과 힘에는 그만큼의 책임과 의무가 따르는 법.\n우리 같은 지도자들은 이 책임과 의무를 잊지 않아야 해.\n갑작스럽게 에덴에 소환되어 모든 것이 낯설고 어렵겠지만,\n주어진 사명을 받아들이고 모두를 지킬 수 있도록 정진하길 바라지.\n\n물론 타브리아의 제1후계자이자, '에델가드'의 우두머리로서 나 또한 그대를 물심양면으로 도울 테니 언제든지 도움을 요청하도록 해.\n\n그럼 인사는 여기까지 하지.\n\n아, 아케나인의 영주 자리를 맡았다고 들었는데…\n그렇다면 검은 매 기사단 소속인 이디스도 알고 있겠군.\n이디스는 잘 지내고 있나? 메이드 고용 건에 대해서 들은 것이라도 있나?\n그 녀석 청소도 요리도 못해서 이만저만 걱정이 아닌데…\n\n…방금은 의미 없는 말이니 그대는 신경 쓰지 말도록.",
+    "greeting": "타브리아의 헤이즐. 그대의 부름에 따라 참전한다."
+  },
+  "speech_patterns": [
+    "그대가 구원자인가?",
+    "다행히 제대로 보냈군.",
+    "구원자인 것을 확인했으니,\r\n내 소개를 하지.",
+    "나는 헤이즐. 타브리아의 황태녀이자,\r\n정령 연합군 에델가드의 우두머리다.",
+    "서신 상으로 이야기를 나눠봤으니,\r\n이름을 들으면 알 것이라 생각해.",
+    "이야기를 많이 들었다라…",
+    "혹시 이디스가 내 이야기를 하던가…?",
+    "아… 아니다.",
+    "귀한 시간 더 뺏지 않도록 하지.",
+    "나중에 그대에게 정식으로 인사하러 가도록 하겠어.",
+    "이디스, 내가 갑자기 찾아와서 화난 거야?",
+    "그렇지만 네가 아무런 답장도 하지 않아서 그랬어.",
+    "타국에 하나뿐인 동생이 혼자 있는데,\r\n걱정이 안 될 수가 없잖니.",
+    "지금 지내는 방은 괜찮은지,\r\n메이드는 다시 고용했는지…",
+    "옷은 잘 다려입고 다니는지,\r\n식사는 거르지 않는지…",
+    "혹시 밤에 혼자 무서워하는 건 아니지?",
+    "정말 나는 네 걱정뿐이야, 이디스.",
+    "아…",
+    "실례했군.",
+    "잊어줘.",
+    "구원자, 그대에게 물어볼 것이 있다.",
+    "내 말투가 그렇게 공격적인가?",
+    "하아, 역시 그렇군.",
+    "난 내 발언이 내 의도와 다르게 전달되는 일이 잦아.",
+    "아까도 유리아 님께 실례를 저지른 것 같아,\r\n정말 죄송하군…",
+    "표정이라…",
+    "그래, 표정이 문제 일수도 있겠어.",
+    "조언, 고마워.",
+    "나는 아직도 어색하군.",
+    "이디스가 기사로 있는 모습이…\r\n잘 받아들여지지 않아.",
+    "씩씩하게 자기 할 일을 하는 이디스가,\r\n기특하고 자랑스러우면서도…",
+    "공주였던 이디스의 예전 모습이 그립기도 하군.",
+    "그래? 그렇다면 다행이야.",
+    "후후후.",
+    "구원자, 귀빈실은 편안한가?",
+    "다행이군.\r\n필요한 게 있으면 언제든지 말하도록.",
+    "솔레이의 귀빈이자,\r\n예비… 부마를 제대로 대접하겠다는 게 어머니의 뜻이셔.",
+    "그럼 약혼식 준비 관련으로 점검할 게 있어서,\r\n에버톡은 여기서 마치도록 하지.",
+    "손님에게 일을 시킬 순 없지.",
+    "편히 쉬어.",
+    "나는 술을 한잔…\r\n아니, 한 방울도 못 한다.",
+    "어머니는 아무리 마셔도 취하지 않고,\r\n이디스도 마실 줄 아는데…",
+    "왜 나만 못 마시는 걸까…",
+    "평소에는 괜찮은데,\r\n꼭 연회나 이런 자리에서 문제가 되더군.",
+    "포션이라도 찾아봐야 할까…",
+    "…말이라도 고맙군.",
+    "예전에 이디스와 단둘이 사진을 찍었는데,\r\n사진에 찍힌 이디스의 표정이 안 좋더군.",
+    "나는 봐도 그 이유를 잘 모르겠어서 그러는데,\r\n구원자 그대가 한번 봐줄 수 있나?",
+    "하트…?",
+    "아! 손으로 하트를 완성해야 했던 거군."
+  ],
+  "comments": [
+    {
+      "writer": "셰리",
+      "comment": "에에~ 술을 못 마신다고? 내가 알려줄까~?"
+    },
+    {
+      "writer": "클라우디아",
+      "comment": "보이는 것과 다르게 꽤 여린 면이 있답니다♪"
+    },
+    {
+      "writer": "이디스",
+      "comment": "흥, 꽉 막히고 고리타분하고 재미없는 정령이시지요."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "헤이즐",
+        "message": "그대가 구원자인가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "다행히 제대로 보냈군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자인 것을 확인했으니,\r\n내 소개를 하지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "나는 헤이즐. 타브리아의 황태녀이자,\r\n정령 연합군 에델가드의 우두머리다."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "서신 상으로 이야기를 나눠봤으니,\r\n이름을 들으면 알 것이라 생각해."
+      },
+      {
+        "speaker": "구원자",
+        "message": "반가워 이야기 많이 들었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "반가워 이야기 많이 들었어"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "이야기를 많이 들었다라…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "혹시 이디스가 내 이야기를 하던가…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "아… 아니다."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "귀한 시간 더 뺏지 않도록 하지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "나중에 그대에게 정식으로 인사하러 가도록 하겠어."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "이디스, 내가 갑자기 찾아와서 화난 거야?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그렇지만 네가 아무런 답장도 하지 않아서 그랬어."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "타국에 하나뿐인 동생이 혼자 있는데,\r\n걱정이 안 될 수가 없잖니."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "지금 지내는 방은 괜찮은지,\r\n메이드는 다시 고용했는지…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "옷은 잘 다려입고 다니는지,\r\n식사는 거르지 않는지…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "혹시 밤에 혼자 무서워하는 건 아니지?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "정말 나는 네 걱정뿐이야, 이디스."
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐 톡 잘 못 보냈어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐 톡 잘 못 보냈어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 구원자야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 구원자야"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "아…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "실례했군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "잊어줘."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 그대에게 물어볼 것이 있다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "내 말투가 그렇게 공격적인가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "공격적인 건 아니지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "공격적인 건 아니지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누군가는 압박을 느낄지도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "누군가는 압박을 느낄지도"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "하아, 역시 그렇군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "난 내 발언이 내 의도와 다르게 전달되는 일이 잦아."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "아까도 유리아 님께 실례를 저지른 것 같아,\r\n정말 죄송하군…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말할 때 표정을 부드럽게 하는 건 어떨까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "말할 때 표정을 부드럽게 하는 건 어떨까?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "표정이라…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그래, 표정이 문제 일수도 있겠어."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "조언, 고마워."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "나는 아직도 어색하군."
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "이디스가 기사로 있는 모습이…\r\n잘 받아들여지지 않아."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "씩씩하게 자기 할 일을 하는 이디스가,\r\n기특하고 자랑스러우면서도…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "공주였던 이디스의 예전 모습이 그립기도 하군."
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금도 종종 공주 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금도 종종 공주 같아"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그래? 그렇다면 다행이야."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "후후후."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 귀빈실은 편안한가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 넓고 편안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 넓고 편안해"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "다행이군.\r\n필요한 게 있으면 언제든지 말하도록."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "솔레이의 귀빈이자,\r\n예비… 부마를 제대로 대접하겠다는 게 어머니의 뜻이셔."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그럼 약혼식 준비 관련으로 점검할 게 있어서,\r\n에버톡은 여기서 마치도록 하지."
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 도울 일은 없을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 도울 일은 없을까?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "손님에게 일을 시킬 순 없지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "편히 쉬어."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "나는 술을 한잔…\r\n아니, 한 방울도 못 한다."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "어머니는 아무리 마셔도 취하지 않고,\r\n이디스도 마실 줄 아는데…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "왜 나만 못 마시는 걸까…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "평소에는 괜찮은데,\r\n꼭 연회나 이런 자리에서 문제가 되더군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "포션이라도 찾아봐야 할까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "마실 일이 있으면 또 대신 마셔줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "마실 일이 있으면 또 대신 마셔줄게"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "…말이라도 고맙군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "예전에 이디스와 단둘이 사진을 찍었는데,\r\n사진에 찍힌 이디스의 표정이 안 좋더군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "나는 봐도 그 이유를 잘 모르겠어서 그러는데,\r\n구원자 그대가 한번 봐줄 수 있나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래 봐 줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래 봐 줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…헤이즐이 하트를 만들어주지 않아서 그런 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…헤이즐이 하트를 만들어주지 않아서 그런 것 같아"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "하트…?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "아! 손으로 하트를 완성해야 했던 거군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "나는 엄지를 드는 게 유행인 줄 알았다…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음부터는 하트를 완성해 줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음부터는 하트를 완성해 줘"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "알았다, 새겨듣지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "좋은 글귀가 있어 공유한다.\r\n꽃 사진이 참 예쁘지 않은가?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "오늘 하루 기운차게 시작하길 바란다,\r\n구원자."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "새로운 아침에는 새로운 기분으로 시작해야,\r\n보람찬 하루를 보낼 수 있는 거니까."
+      },
+      {
+        "speaker": "구원자",
+        "message": "에덴에도 이런 그림이 있구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에덴에도 이런 그림이 있구나"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그대의 세계에도 이런 좋은 그림이 있었나?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "이디스에게도 보냈는데, 이상하게 싫어하더군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "이제는 답장도 안 해주고 있다."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "하루를 잘 보내길 바라는 마음으로 보냈는데…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "다른 꽃 사진이 있는 지 찾아봐야겠다.\r\n다른 사진에 다른 글귀면 이디스도 좋아해 주겠지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "다른 것을 찾으면 그대에게도 공유하지."
+      },
+      {
+        "speaker": "구원자",
+        "message": "고, 고마워…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고, 고마워…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 그대는 저번에…\r\n내 어머니가 어떤 정령인지 궁금하다고 했었던가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 그랬어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 그랬어"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "어머니는 너그러운 듯하면서 엄격하고,\r\n호방한 듯 하면서도 교활하신 분이시지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "타브리아를 건국하신, 정말 대단한 분이지만…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "가끔은 그 페이스에 휘말리는 것 같아서,\r\n그분의 후계자로 있는 게 버거운 날도 있었지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "이디스도 제 2 후계자로 있었을 때,\r\n마음고생이 많았을 거라 생각한다."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "언젠가는 어머니를 뛰어넘는 정령이 되어야 할 텐데,\r\n그게… 가능한 일이 될지 모르겠군."
+      },
+      {
+        "speaker": "구원자",
+        "message": "언제나 응원할게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언제나 응원할게"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "…고마워, 구원자.\r\n그대는 정말 다정하군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 그대는 만약에…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "어머니가 우리에게 선택권을 준다면 어떻게 하겠는가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "선택권?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "선택권?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "…결혼 말이야."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "원한다면 청혼까지 무를 수 있는 선택권을 준다면,\r\n어떻게 할 것인지…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "……."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "아니다, 내가 괜한 이야기를 했군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "방금 보낸 에버톡에는,\r\n답장하지 않아도 돼."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "아니, 안 해줬으면 하군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "부탁할게."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "저기…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "이디스는 아직 근무 중인가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니 퇴근했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니 퇴근했어"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그렇군…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "아니다, 아무것도."
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해 헤이즐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해 헤이즐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 문화가 있는 줄 모르고…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 문화가 있는 줄 모르고…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "아무리 나에게 사과를 해도,\r\n달라지는 건 없다."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "앞으로 어떻게 해야 할 지,\r\n그것만 생각하도록."
+      },
+      {
+        "speaker": "구원자",
+        "message": "응…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "누군가에게 이런 사적인 초대를 받다니…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "꽤 신선한 경험이군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "방주에는 방주의 오퍼레이터가 있던가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 메피가 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 메피가 있어"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그렇다면 빈손으로 가기 그런데…\r\n선물이라도 지금 사야겠군."
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 시간에는 가게가 다 닫았을 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 시간에는 가게가 다 닫았을 거야"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그런가?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "사적으로 외출한 적이 별로 없어서 몰랐군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "손님으로 가는 건데, \r\n정말 미안하게 되었어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에 또 놀러 올 때 준비하면 되지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에 또 놀러 올 때 준비하면 되지"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "다음?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "다음이라…"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그런 날이 온다면 그렇게 하지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그러고 보니, 그대는 타브리아에 관해 궁금한 점은 없나?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "타브리아를 방문하는 건, 거의 처음인 거로 아는데."
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐의 어머니가 궁금하긴 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐의 어머니가 궁금하긴 해"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "어머니… 대제 폐하가 궁금하다고?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "한마디로 설명하기가 어려운 분이셔서…\r\n어떻게 말해줘야 할지 모르겠군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "하지만 주의 사항 정도는 말해줄 수 있다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "주의 사항?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "주의 사항?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그분에게 빈틈을 보이지 마, 절대로."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "끝까지 파고드실 거니까."
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐? 어디야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐? 어디야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "읻 ㅣ 스니?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "ㅎ ㅣ ㅁ ㄷ ㅡ ㄹ 어"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "살ㄹ려주 ㅓ"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "ㅇ ㅓㄴ니는 죽게 ㅆ ㄷ ㅏ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디야 내가 데리러갈게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어디야 내가 데리러갈게"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "역 ㅣㄱ ㅏ ㅇ ㅓ 딛 ㅓ 라"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "몰ㄹ라"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "…술 취한 나를 챙겨줘서 고맙다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야 당연히 해야 하는 일이었는 걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야 당연히 해야 하는 일이었는 걸"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "추태를 보이다니, 면목이 없군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "꼴사나왔던 내 모습은 잊어주면 좋겠어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀여웠는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀여웠는데"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "……."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "놀리지마라, 구원자."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 정말 면목이 없다."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "어머니가 이렇게 강수를 둘 줄은 몰랐어."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그대를 이렇게 감금하다니…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 괜찮아"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "조금만 기다려 주겠나, 구원자."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "내가 어머니를 꼭 설득해 보겠다."
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐은 괜찮겠어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐은 괜찮겠어?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "…괜찮을 거다, 걱정마."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 폐하와 이야기는 끝났다."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "귀빈실로 가서 결과를 전달하지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "…그대에게는 미안함 뿐이군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 어머니와 이야기는 끝났어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "수고했어 헤이즐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "수고했어 헤이즐"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "…역시 어머니를 설득하는 일은 쉽지 않군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "하지만, 얻은 게 없지는 않아."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "자세한 것은 얼굴을 보고 이야기하도록 하지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "그대, 일어났는가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 준비 중이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 준비 중이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐은?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "헤이즐은?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "이미 다 준비해서 그대의 방 앞이지."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "신부를 기다리게 하지 말고 어서 나오도록."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "사랑의 날을 내가 기념하는 날이 오는군."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 그대를 위한 선물이니 어서 받도록."
+      },
+      {
+        "speaker": "구원자",
+        "message": "감사히 받을게, 헤이즐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "감사히 받을게, 헤이즐!"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "구원자, 그대는 꽃에 관심이 있는가?"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "나는 꽃을 보고 있으면, 마음이 편안해지더군."
+      },
+      {
+        "speaker": "구원자",
+        "message": "이따가 꽃 보러 가자, 헤이즐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이따가 꽃 보러 가자, 헤이즐!"
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "해피 이브 데이, 구원자."
+      },
+      {
+        "speaker": "헤이즐",
+        "message": "즐거운 하루 보내도록."
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 이브 데이, 헤이즐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 이브 데이, 헤이즐!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "헤이즐",
+      "en": "Hazel",
+      "zh_tw": "黑伊茲爾",
+      "zh_cn": "黑伊茲爾"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "인간형",
+      "en": "Humanlike",
+      "zh_tw": "人類型",
+      "zh_cn": "人類型"
+    },
+    "class": {
+      "ko": "캐스터",
+      "en": "Caster",
+      "zh_tw": "魔法師",
+      "zh_cn": "魔法師"
+    },
+    "sub_class": {
+      "ko": "지속",
+      "en": "DoT",
+      "zh_tw": "持續",
+      "zh_cn": "持續"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "전장의 지휘자",
+        "en": "Conductor of Battlefield",
+        "zh_tw": "戰場指揮家",
+        "zh_cn": "戰場指揮家"
+      },
+      "constellation": {
+        "ko": "염소자리",
+        "en": "Capricorn",
+        "zh_tw": "摩羯座",
+        "zh_cn": "摩羯座"
+      },
+      "union": {
+        "ko": "에델 가드",
+        "en": "Edel Guards",
+        "zh_tw": "埃德爾護衛隊",
+        "zh_cn": "埃德爾護衛隊"
+      },
+      "cv_ko": {
+        "ko": "양정화",
+        "en": "Junghwa Yang",
+        "zh_tw": "梁靜花",
+        "zh_cn": "梁靜花"
+      },
+      "cv_jp": {
+        "ko": "양정화",
+        "en": "Junghwa Yang",
+        "zh_tw": "梁靜花",
+        "zh_cn": "梁靜花"
+      },
+      "like": {
+        "ko": [
+          "등산"
+        ],
+        "en": [
+          "Mountain climbing"
+        ],
+        "zh_tw": [
+          "登山"
+        ],
+        "zh_cn": [
+          "登山"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "술",
+          "치즈"
+        ],
+        "en": [
+          "Alcoholic beverages and cheese"
+        ],
+        "zh_tw": [
+          "酒、起司"
+        ],
+        "zh_cn": [
+          "酒、起司"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "음악 감상"
+        ],
+        "en": [
+          "Listening to music"
+        ],
+        "zh_tw": [
+          "音樂鑑賞"
+        ],
+        "zh_cn": [
+          "音樂鑑賞"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "체스"
+        ],
+        "en": [
+          "Chess"
+        ],
+        "zh_tw": [
+          "西洋棋"
+        ],
+        "zh_cn": [
+          "西洋棋"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "그대가 구원자인가?\n그렇다면 소개하지.\n나는 타브리아의 황태녀, 헤이즐이다.\n현재 정령 연합군의 유격부대 '에델가드'를 이끌고 있지.\n\n특별하고 강력한 능력과 힘에는 그만큼의 책임과 의무가 따르는 법.\n우리 같은 지도자들은 이 책임과 의무를 잊지 않아야 해.\n갑작스럽게 에덴에 소환되어 모든 것이 낯설고 어렵겠지만,\n주어진 사명을 받아들이고 모두를 지킬 수 있도록 정진하길 바라지.\n\n물론 타브리아의 제1후계자이자, '에델가드'의 우두머리로서 나 또한 그대를 물심양면으로 도울 테니 언제든지 도움을 요청하도록 해.\n\n그럼 인사는 여기까지 하지.\n\n아, 아케나인의 영주 자리를 맡았다고 들었는데…\n그렇다면 검은 매 기사단 소속인 이디스도 알고 있겠군.\n이디스는 잘 지내고 있나? 메이드 고용 건에 대해서 들은 것이라도 있나?\n그 녀석 청소도 요리도 못해서 이만저만 걱정이 아닌데…\n\n…방금은 의미 없는 말이니 그대는 신경 쓰지 말도록.",
+        "en": "Are you the Savior?\r\nIn that case, let me introduce myself.\r\nI am Hazel, Crown Princess of Tabria.\r\nI am also in charge of the Edel Guards, a special unit of the Soul Alliance.\r\n\r\nWith nobility comes the burden of responsibility.\r\nLeaders like us must never forget our duties.\r\nI understand how everything must feel strange and confusing after being abruptly summoned to Eden,\r\nbut I hope you will embrace your calling and do your best to protect everyone.\r\n\r\nOf course, as the first in line to the throne of Tabria and the leader of the Edel Guards, I will be sure to assist you to the best of my ability, so feel free to ask for help anytime.\r\n\r\nAnd thus concludes my self-introduction.\r\n\r\nBy the way, I did hear that you are now the Lord of Arkenine…\r\nThen you must know Edith of the Order of Blackhawk.\r\nHow is she doing? Do you know anything about her hiring a maid?\r\nIt worries me greatly as she's terrible at chores like cleaning and cooking…\r\n\r\nForget what I just said. It was nothing.",
+        "zh_tw": "你就是救援者嗎？\r\n那跟你介紹一下，\r\n我是塔布里亞的皇太女，黑伊茲爾。\r\n目前負責統率精靈聯軍的游擊部隊「埃德爾護衛隊」。\r\n\r\n身懷特別又強大的能力和力量就會伴隨著相應的責任和義務。\r\n像我們這種領導者不能忘記這份責任和義務。\r\n你突然被召喚到伊甸園，應該覺得一切都很陌生又困難，\r\n但希望你能精益求精，接受身負的使命，守護所有人。\r\n\r\n我身為塔布里亞的第1接班人和「埃德爾護衛隊」的首領，當然也會給你物質和精神上的幫助，儘管向我開口吧。\r\n\r\n那就問候到這裡。\r\n\r\n對了，聽說你身兼阿肯納因的領主…\r\n那應該也認識黑鷹騎士團的伊迪絲。\r\n伊迪絲過得好嗎？有聽說她有雇用女僕嗎？\r\n那傢伙不會打掃也不會下廚，實在是讓我憂心忡忡…\r\n\r\n…剛才那段話沒什麼意義，不用放在心上。",
+        "zh_cn": "你就是救援者嗎？\r\n那跟你介紹一下，\r\n我是塔布里亞的皇太女，黑伊茲爾。\r\n目前負責統率精靈聯軍的游擊部隊「埃德爾護衛隊」。\r\n\r\n身懷特別又強大的能力和力量就會伴隨著相應的責任和義務。\r\n像我們這種領導者不能忘記這份責任和義務。\r\n你突然被召喚到伊甸園，應該覺得一切都很陌生又困難，\r\n但希望你能精益求精，接受身負的使命，守護所有人。\r\n\r\n我身為塔布里亞的第1接班人和「埃德爾護衛隊」的首領，當然也會給你物質和精神上的幫助，儘管向我開口吧。\r\n\r\n那就問候到這裡。\r\n\r\n對了，聽說你身兼阿肯納因的領主…\r\n那應該也認識黑鷹騎士團的伊迪絲。\r\n伊迪絲過得好嗎？有聽說她有雇用女僕嗎？\r\n那傢伙不會打掃也不會下廚，實在是讓我憂心忡忡…\r\n\r\n…剛才那段話沒什麼意義，不用放在心上。"
+      },
+      "greeting": {
+        "ko": "타브리아의 헤이즐. 그대의 부름에 따라 참전한다.",
+        "en": "Hazel of Tabria. I shall answer your call and join the fight.",
+        "zh_tw": "塔布里亞的黑伊茲爾，在你的召喚下參戰。",
+        "zh_cn": "塔布里亞的黑伊茲爾，在你的召喚下參戰。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "그대가 구원자인가?"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Are you the Savior?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "你就是救援者嗎？"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "你就是救援者嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "다행히 제대로 보냈군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Good, I've found the right one."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "幸好有順利傳出去。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "幸好有順利傳出去。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "구원자인 것을 확인했으니,\r\n내 소개를 하지."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Now that I have confirmed that you are the Savior,\r\r\nlet me introduce myself."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "既然已經確認你是救援者，\r\r\n那我來自我介紹一下。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "既然已經確認你是救援者，\r\r\n那我來自我介紹一下。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "나는 헤이즐. 타브리아의 황태녀이자,\r\n정령 연합군 에델가드의 우두머리다."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I am Hazel. Crown Princess of Tabria,\r\r\nand leader of the Soul Alliance's Edel Guard."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "我是黑伊茲爾，塔布里亞的皇太女，\r\r\n同時也是精靈聯軍埃德爾護衛隊的首領。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "我是黑伊茲爾，塔布里亞的皇太女，\r\r\n同時也是精靈聯軍埃德爾護衛隊的首領。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "서신 상으로 이야기를 나눠봤으니,\r\n이름을 들으면 알 것이라 생각해."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "We've spoken in correspondence.\r\r\nI'm sure you recognize me by name."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "因為已經有過書信的往來，\r\r\n所以你聽到名字應該就會知道。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "因為已經有過書信的往來，\r\r\n所以你聽到名字應該就會知道。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "이야기를 많이 들었다라…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "You've heard a lot about me..."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "很常聽到我的事啊…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "很常聽到我的事啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "혹시 이디스가 내 이야기를 하던가…?"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "From Edith, by chance?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "是伊迪絲跟你說的嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "是伊迪絲跟你說的嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "아… 아니다."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Ah... Never mind."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "呃…沒事。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "呃…沒事。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "귀한 시간 더 뺏지 않도록 하지."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I won't take up more of your valuable time."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "就不占用你寶貴的時間了。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "就不占用你寶貴的時間了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "나중에 그대에게 정식으로 인사하러 가도록 하겠어."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I will come to greet you formally later."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "之後會再正式去跟你打招呼。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "之後會再正式去跟你打招呼。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "이디스, 내가 갑자기 찾아와서 화난 거야?"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Edith, are you angry with me for coming unannounced?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "伊迪絲，我突然來找妳，妳生氣了嗎？"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "伊迪絲，我突然來找妳，妳生氣了嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "그렇지만 네가 아무런 답장도 하지 않아서 그랬어."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "But I did it only because you didn't respond."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "但那是因為妳沒有任何回覆。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "但那是因為妳沒有任何回覆。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "타국에 하나뿐인 동생이 혼자 있는데,\r\n걱정이 안 될 수가 없잖니."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "How can I not be worried about my only sister,\r\r\nall alone in another country?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "我妹妹在國外隻身一人，\r\r\n不可能不擔心嘛。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "我妹妹在國外隻身一人，\r\r\n不可能不擔心嘛。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "지금 지내는 방은 괜찮은지,\r\n메이드는 다시 고용했는지…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I want to know if your room is decent,\r\r\nif you've rehired your maid,"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "不知道妳的房間舒不舒適、\r\r\n有沒有重新雇用女僕…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "不知道妳的房間舒不舒適、\r\r\n有沒有重新雇用女僕…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "옷은 잘 다려입고 다니는지,\r\n식사는 거르지 않는지…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "if you're dressed nicely,\r\r\nif you're not skipping meals,"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "有沒有好好燙衣服、\r\r\n按時吃飯…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "有沒有好好燙衣服、\r\r\n按時吃飯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "혹시 밤에 혼자 무서워하는 건 아니지?"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "and if you're not scared at night, all alone."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "應該不會在晚上覺得自己一個很害怕吧？"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "應該不會在晚上覺得自己一個很害怕吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "정말 나는 네 걱정뿐이야, 이디스."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Really, I'm only worried about you, Edith."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "我真的只是在擔心妳，伊迪絲。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "我真的只是在擔心妳，伊迪絲。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "아…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Ah..."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "啊…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "실례했군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I'm sorry."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "不好意思。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "不好意思。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "잊어줘."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Please disregard all of that."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "忘了吧。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "忘了吧。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "구원자, 그대에게 물어볼 것이 있다."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Savior, I have a question for you."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "救援者，我有事要問你。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "救援者，我有事要問你。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "내 말투가 그렇게 공격적인가?"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Do I sound all that aggressive?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "我的語氣有那麼有攻擊性嗎？"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "我的語氣有那麼有攻擊性嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "하아, 역시 그렇군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Ugh, I knew it."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "唉，果然是這樣。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "唉，果然是這樣。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "난 내 발언이 내 의도와 다르게 전달되는 일이 잦아."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I often let my words come across differently than I intend."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "我說的話常常跟我的本意不一樣。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "我說的話常常跟我的本意不一樣。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "아까도 유리아 님께 실례를 저지른 것 같아,\r\n정말 죄송하군…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I think I was rude to Yuria earlier.\r\r\nI feel so bad..."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "剛剛好像也對尤里婭很失禮，\r\r\n真的很抱歉…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "剛剛好像也對尤里婭很失禮，\r\r\n真的很抱歉…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "표정이라…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "My facial expressions?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "表情喔…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "表情喔…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "그래, 표정이 문제 일수도 있겠어."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Yes, my facial expressions could be the problem."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "對，也有可能是表情的問題。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "對，也有可能是表情的問題。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "조언, 고마워."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Thank you for the advice."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "謝謝你的建議。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "謝謝你的建議。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "나는 아직도 어색하군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "It's still awkward to me."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "我還是覺得很彆扭。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "我還是覺得很彆扭。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "이디스가 기사로 있는 모습이…\r\n잘 받아들여지지 않아."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "That Edith is a knight.\r\r\nIt's hard to accept that."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "伊迪絲當騎士的樣子…\r\r\n我不太能接受。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "伊迪絲當騎士的樣子…\r\r\n我不太能接受。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "씩씩하게 자기 할 일을 하는 이디스가,\r\n기특하고 자랑스러우면서도…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Even though I'm proud of her\r\r\nfor being so strong and competent,"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "獨當一面的伊迪絲很了不起，\r\r\n也讓我覺得很驕傲…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "獨當一面的伊迪絲很了不起，\r\r\n也讓我覺得很驕傲…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "공주였던 이디스의 예전 모습이 그립기도 하군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I still miss the princess Edith."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "但同時也很想念從前伊迪絲當公主的樣子。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "但同時也很想念從前伊迪絲當公主的樣子。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "그래? 그렇다면 다행이야."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Does she? I'm glad to hear that."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "是嗎？那就太好了。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "是嗎？那就太好了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "후후후."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Hahaha."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "呵呵呵。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "呵呵呵。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "구원자, 귀빈실은 편안한가?"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Savior, how do you like your quarters?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "救援者，貴賓室舒服嗎？"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "救援者，貴賓室舒服嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "다행이군.\r\n필요한 게 있으면 언제든지 말하도록."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I'm glad to hear that.\r\r\nIf you need anything, just let me know."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "太好了。\r\r\n有需要什麼就隨時告訴我。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "太好了。\r\r\n有需要什麼就隨時告訴我。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "솔레이의 귀빈이자,\r\n예비… 부마를 제대로 대접하겠다는 게 어머니의 뜻이셔."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "It is my mother's will that the guest of honor from Solrey\r\r\nand her future...son-in-law be treated properly."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "你是蘇萊伊的貴賓，\r\r\n也是準…駙馬，我媽媽要我好好接待你。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "你是蘇萊伊的貴賓，\r\r\n也是準…駙馬，我媽媽要我好好接待你。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "그럼 약혼식 준비 관련으로 점검할 게 있어서,\r\n에버톡은 여기서 마치도록 하지."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Now, I have some preparations for our engagement to check on.\r\r\nI'll end our chat on Evertalk here."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "訂婚儀式的準備工作還有事要確認，\r\r\n那EverTalk就先聊到這裡。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "訂婚儀式的準備工作還有事要確認，\r\r\n那EverTalk就先聊到這裡。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "손님에게 일을 시킬 순 없지."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I can't put guests to work."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "不能讓客人工作。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "不能讓客人工作。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "편히 쉬어."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Just make yourself at home."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "你好好休息。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "你好好休息。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "나는 술을 한잔…\r\n아니, 한 방울도 못 한다."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I can't drink alcohol.\r\r\nNot even a drop."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "我一杯酒…\r\r\n不對，一滴酒都不能喝。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "我一杯酒…\r\r\n不對，一滴酒都不能喝。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "어머니는 아무리 마셔도 취하지 않고,\r\n이디스도 마실 줄 아는데…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Mother drinks like a champ.\r\r\nSo does Edith."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "媽媽千杯不醉，\r\r\n伊迪絲酒量也不錯…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "媽媽千杯不醉，\r\r\n伊迪絲酒量也不錯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "왜 나만 못 마시는 걸까…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Why can't I?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "為什麼只有我不能喝呢…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "為什麼只有我不能喝呢…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "평소에는 괜찮은데,\r\n꼭 연회나 이런 자리에서 문제가 되더군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Usually, it's not a problem,\r\r\nexcept when I attend banquets and such."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "平常倒是無所謂，\r\r\n但在宴會或這種場合就會是個問題。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "平常倒是無所謂，\r\r\n但在宴會或這種場合就會是個問題。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "포션이라도 찾아봐야 할까…"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "Maybe I should find a potion..."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "要找找藥水之類的嗎…"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "要找找藥水之類的嗎…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "…말이라도 고맙군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "... Thank you for saying that."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "…謝謝你這樣說。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "…謝謝你這樣說。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "예전에 이디스와 단둘이 사진을 찍었는데,\r\n사진에 찍힌 이디스의 표정이 안 좋더군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I once took a picture with Edith,\r\r\nand she didn't look happy in it."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "以前我跟伊迪絲兩個人合照過，\r\r\n但伊迪絲在照片裡的表情不太好。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "以前我跟伊迪絲兩個人合照過，\r\r\n但伊迪絲在照片裡的表情不太好。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "나는 봐도 그 이유를 잘 모르겠어서 그러는데,\r\n구원자 그대가 한번 봐줄 수 있나?"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "I'm not sure why.\r\r\nCan you take a look at it and tell me?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "我再怎麼看都想不透原因，\r\r\n救援者可以幫我看一下嗎？"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "我再怎麼看都想不透原因，\r\r\n救援者可以幫我看一下嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "하트…?"
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "The heart?"
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "愛心…？"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "愛心…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "헤이즐",
+          "message": "아! 손으로 하트를 완성해야 했던 거군."
+        },
+        "en": {
+          "speaker": "Hazel",
+          "message": "... Oh, I was supposed to form a heart with my hand."
+        },
+        "zh_tw": {
+          "speaker": "黑伊茲爾",
+          "message": "喔！原來是要用手跟她拼出一個愛心。"
+        },
+        "zh_cn": {
+          "speaker": "黑伊茲爾",
+          "message": "喔！原來是要用手跟她拼出一個愛心。"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "에에~ 술을 못 마신다고? 내가 알려줄까~?"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "No way! Ye don't drink? I can help ye get started!"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "唉唷～妳說妳不會喝酒？要不要我教妳～？"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "唉唷～妳說妳不會喝酒？要不要我教妳～？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클라우디아",
+          "message": "보이는 것과 다르게 꽤 여린 면이 있답니다♪"
+        },
+        "en": {
+          "speaker": "Claudia",
+          "message": "She may seem tough, but she's actually quite tender-hearted ♪"
+        },
+        "zh_tw": {
+          "speaker": "克勞迪婭",
+          "message": "她有非常柔弱的一面，跟外表看起來不一樣♪"
+        },
+        "zh_cn": {
+          "speaker": "克勞迪婭",
+          "message": "她有非常柔弱的一面，跟外表看起來不一樣♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이디스",
+          "message": "흥, 꽉 막히고 고리타분하고 재미없는 정령이시지요."
+        },
+        "en": {
+          "speaker": "Edith",
+          "message": "Oh, she's a stubborn, old-fashioned, dull Soul."
+        },
+        "zh_tw": {
+          "speaker": "伊迪絲",
+          "message": "哼，是很死腦筋又迂腐的無趣精靈。"
+        },
+        "zh_cn": {
+          "speaker": "伊迪絲",
+          "message": "哼，是很死腦筋又迂腐的無趣精靈。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그대가 구원자인가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Are you the Savior?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你就是救援者嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你就是救援者嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "다행히 제대로 보냈군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Good, I've found the right one."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "幸好有順利傳出去。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "幸好有順利傳出去。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자인 것을 확인했으니,\r\n내 소개를 하지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Now that I have confirmed that you are the Savior,\r\r\nlet me introduce myself."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "既然已經確認你是救援者，\r\r\n那我來自我介紹一下。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "既然已經確認你是救援者，\r\r\n那我來自我介紹一下。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "나는 헤이즐. 타브리아의 황태녀이자,\r\n정령 연합군 에델가드의 우두머리다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I am Hazel. Crown Princess of Tabria,\r\r\nand leader of the Soul Alliance's Edel Guard."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我是黑伊茲爾，塔布里亞的皇太女，\r\r\n同時也是精靈聯軍埃德爾護衛隊的首領。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我是黑伊茲爾，塔布里亞的皇太女，\r\r\n同時也是精靈聯軍埃德爾護衛隊的首領。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "서신 상으로 이야기를 나눠봤으니,\r\n이름을 들으면 알 것이라 생각해."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "We've spoken in correspondence.\r\r\nI'm sure you recognize me by name."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "因為已經有過書信的往來，\r\r\n所以你聽到名字應該就會知道。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "因為已經有過書信的往來，\r\r\n所以你聽到名字應該就會知道。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "반가워 이야기 많이 들었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nice to meet you. I've heard a lot about you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很高興認識妳，很常聽到妳的事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很高興認識妳，很常聽到妳的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "반가워 이야기 많이 들었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nice to meet you. I've heard a lot about you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很高興認識妳，很常聽到妳的事"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很高興認識妳，很常聽到妳的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "이야기를 많이 들었다라…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "You've heard a lot about me..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "很常聽到我的事啊…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "很常聽到我的事啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "혹시 이디스가 내 이야기를 하던가…?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "From Edith, by chance?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "是伊迪絲跟你說的嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "是伊迪絲跟你說的嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "아… 아니다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Ah... Never mind."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "呃…沒事。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "呃…沒事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "귀한 시간 더 뺏지 않도록 하지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I won't take up more of your valuable time."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "就不占用你寶貴的時間了。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "就不占用你寶貴的時間了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "나중에 그대에게 정식으로 인사하러 가도록 하겠어."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I will come to greet you formally later."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "之後會再正式去跟你打招呼。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "之後會再正式去跟你打招呼。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "이디스, 내가 갑자기 찾아와서 화난 거야?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Edith, are you angry with me for coming unannounced?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪絲，我突然來找妳，妳生氣了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪絲，我突然來找妳，妳生氣了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그렇지만 네가 아무런 답장도 하지 않아서 그랬어."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "But I did it only because you didn't respond."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "但那是因為妳沒有任何回覆。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "但那是因為妳沒有任何回覆。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "타국에 하나뿐인 동생이 혼자 있는데,\r\n걱정이 안 될 수가 없잖니."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "How can I not be worried about my only sister,\r\r\nall alone in another country?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我妹妹在國外隻身一人，\r\r\n不可能不擔心嘛。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我妹妹在國外隻身一人，\r\r\n不可能不擔心嘛。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "지금 지내는 방은 괜찮은지,\r\n메이드는 다시 고용했는지…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I want to know if your room is decent,\r\r\nif you've rehired your maid,"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "不知道妳的房間舒不舒適、\r\r\n有沒有重新雇用女僕…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "不知道妳的房間舒不舒適、\r\r\n有沒有重新雇用女僕…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "옷은 잘 다려입고 다니는지,\r\n식사는 거르지 않는지…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "if you're dressed nicely,\r\r\nif you're not skipping meals,"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "有沒有好好燙衣服、\r\r\n按時吃飯…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "有沒有好好燙衣服、\r\r\n按時吃飯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "혹시 밤에 혼자 무서워하는 건 아니지?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "and if you're not scared at night, all alone."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "應該不會在晚上覺得自己一個很害怕吧？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "應該不會在晚上覺得自己一個很害怕吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "정말 나는 네 걱정뿐이야, 이디스."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Really, I'm only worried about you, Edith."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我真的只是在擔心妳，伊迪絲。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我真的只是在擔心妳，伊迪絲。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐 톡 잘 못 보냈어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hazel, you've sent this to the wrong person"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾，妳傳錯人了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾，妳傳錯人了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐 톡 잘 못 보냈어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hazel, you've sent this to the wrong person"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾，妳傳錯人了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾，妳傳錯人了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 구원자야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm the Savior"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我是救援者"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我是救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 구원자야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm the Savior"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我是救援者"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我是救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "아…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Ah..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "啊…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "실례했군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'm sorry."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "不好意思。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "不好意思。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "잊어줘."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Please disregard all of that."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "忘了吧。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "忘了吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 그대에게 물어볼 것이 있다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, I have a question for you."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，我有事要問你。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，我有事要問你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "내 말투가 그렇게 공격적인가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Do I sound all that aggressive?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我的語氣有那麼有攻擊性嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我的語氣有那麼有攻擊性嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "공격적인 건 아니지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't think so,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是有攻擊性"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是有攻擊性"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "공격적인 건 아니지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't think so,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是有攻擊性"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是有攻擊性"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누군가는 압박을 느낄지도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but some people might feel intimidated"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但可能會讓人覺得有壓迫感"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但可能會讓人覺得有壓迫感"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "누군가는 압박을 느낄지도"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but some people might feel intimidated"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但可能會讓人覺得有壓迫感"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但可能會讓人覺得有壓迫感"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "하아, 역시 그렇군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Ugh, I knew it."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "唉，果然是這樣。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "唉，果然是這樣。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "난 내 발언이 내 의도와 다르게 전달되는 일이 잦아."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I often let my words come across differently than I intend."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我說的話常常跟我的本意不一樣。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我說的話常常跟我的本意不一樣。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "아까도 유리아 님께 실례를 저지른 것 같아,\r\n정말 죄송하군…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I think I was rude to Yuria earlier.\r\r\nI feel so bad..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "剛剛好像也對尤里婭很失禮，\r\r\n真的很抱歉…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "剛剛好像也對尤里婭很失禮，\r\r\n真的很抱歉…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말할 때 표정을 부드럽게 하는 건 어떨까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why don't you try to soften your facial expressions when you speak?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說話的時候，表情溫和一點怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說話的時候，表情溫和一點怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "말할 때 표정을 부드럽게 하는 건 어떨까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why don't you try to soften your facial expressions when you speak?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "說話的時候，表情溫和一點怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "說話的時候，表情溫和一點怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "표정이라…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "My facial expressions?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "表情喔…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "表情喔…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그래, 표정이 문제 일수도 있겠어."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Yes, my facial expressions could be the problem."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "對，也有可能是表情的問題。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "對，也有可能是表情的問題。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "조언, 고마워."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Thank you for the advice."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "謝謝你的建議。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "謝謝你的建議。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "나는 아직도 어색하군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "It's still awkward to me."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我還是覺得很彆扭。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我還是覺得很彆扭。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "이디스가 기사로 있는 모습이…\r\n잘 받아들여지지 않아."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "That Edith is a knight.\r\r\nIt's hard to accept that."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪絲當騎士的樣子…\r\r\n我不太能接受。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪絲當騎士的樣子…\r\r\n我不太能接受。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "씩씩하게 자기 할 일을 하는 이디스가,\r\n기특하고 자랑스러우면서도…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Even though I'm proud of her\r\r\nfor being so strong and competent,"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "獨當一面的伊迪絲很了不起，\r\r\n也讓我覺得很驕傲…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "獨當一面的伊迪絲很了不起，\r\r\n也讓我覺得很驕傲…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "공주였던 이디스의 예전 모습이 그립기도 하군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I still miss the princess Edith."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "但同時也很想念從前伊迪絲當公主的樣子。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "但同時也很想念從前伊迪絲當公主的樣子。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금도 종종 공주 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She still acts like a princess sometimes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她現在也常常很像公主"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她現在也常常很像公主"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금도 종종 공주 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "She still acts like a princess sometimes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她現在也常常很像公主"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她現在也常常很像公主"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그래? 그렇다면 다행이야."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Does she? I'm glad to hear that."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "是嗎？那就太好了。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "是嗎？那就太好了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "후후후."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Hahaha."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "呵呵呵。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "呵呵呵。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 귀빈실은 편안한가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, how do you like your quarters?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，貴賓室舒服嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，貴賓室舒服嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 넓고 편안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Good. It's spacious and comfortable"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，很寬敞很舒服"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，很寬敞很舒服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 넓고 편안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Good. It's spacious and comfortable"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，很寬敞很舒服"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，很寬敞很舒服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "다행이군.\r\n필요한 게 있으면 언제든지 말하도록."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'm glad to hear that.\r\r\nIf you need anything, just let me know."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "太好了。\r\r\n有需要什麼就隨時告訴我。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "太好了。\r\r\n有需要什麼就隨時告訴我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "솔레이의 귀빈이자,\r\n예비… 부마를 제대로 대접하겠다는 게 어머니의 뜻이셔."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "It is my mother's will that the guest of honor from Solrey\r\r\nand her future...son-in-law be treated properly."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你是蘇萊伊的貴賓，\r\r\n也是準…駙馬，我媽媽要我好好接待你。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你是蘇萊伊的貴賓，\r\r\n也是準…駙馬，我媽媽要我好好接待你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그럼 약혼식 준비 관련으로 점검할 게 있어서,\r\n에버톡은 여기서 마치도록 하지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Now, I have some preparations for our engagement to check on.\r\r\nI'll end our chat on Evertalk here."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "訂婚儀式的準備工作還有事要確認，\r\r\n那EverTalk就先聊到這裡。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "訂婚儀式的準備工作還有事要確認，\r\r\n那EverTalk就先聊到這裡。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 도울 일은 없을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there anything I can do to help?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有什麼我能幫忙的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有什麼我能幫忙的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 도울 일은 없을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is there anything I can do to help?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有什麼我能幫忙的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有什麼我能幫忙的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "손님에게 일을 시킬 순 없지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I can't put guests to work."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "不能讓客人工作。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "不能讓客人工作。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "편히 쉬어."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Just make yourself at home."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你好好休息。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你好好休息。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "나는 술을 한잔…\r\n아니, 한 방울도 못 한다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I can't drink alcohol.\r\r\nNot even a drop."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我一杯酒…\r\r\n不對，一滴酒都不能喝。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我一杯酒…\r\r\n不對，一滴酒都不能喝。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "어머니는 아무리 마셔도 취하지 않고,\r\n이디스도 마실 줄 아는데…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Mother drinks like a champ.\r\r\nSo does Edith."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "媽媽千杯不醉，\r\r\n伊迪絲酒量也不錯…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "媽媽千杯不醉，\r\r\n伊迪絲酒量也不錯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "왜 나만 못 마시는 걸까…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Why can't I?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "為什麼只有我不能喝呢…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "為什麼只有我不能喝呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "평소에는 괜찮은데,\r\n꼭 연회나 이런 자리에서 문제가 되더군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Usually, it's not a problem,\r\r\nexcept when I attend banquets and such."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "平常倒是無所謂，\r\r\n但在宴會或這種場合就會是個問題。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "平常倒是無所謂，\r\r\n但在宴會或這種場合就會是個問題。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "포션이라도 찾아봐야 할까…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Maybe I should find a potion..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "要找找藥水之類的嗎…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "要找找藥水之類的嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "마실 일이 있으면 또 대신 마셔줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If you need to drink, I'll drink for you again"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "需要喝的話，我再幫妳擋"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "需要喝的話，我再幫妳擋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "마실 일이 있으면 또 대신 마셔줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "If you need to drink, I'll drink for you again"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "需要喝的話，我再幫妳擋"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "需要喝的話，我再幫妳擋"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "…말이라도 고맙군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "... Thank you for saying that."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "…謝謝你這樣說。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "…謝謝你這樣說。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "예전에 이디스와 단둘이 사진을 찍었는데,\r\n사진에 찍힌 이디스의 표정이 안 좋더군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I once took a picture with Edith,\r\r\nand she didn't look happy in it."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "以前我跟伊迪絲兩個人合照過，\r\r\n但伊迪絲在照片裡的表情不太好。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "以前我跟伊迪絲兩個人合照過，\r\r\n但伊迪絲在照片裡的表情不太好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "나는 봐도 그 이유를 잘 모르겠어서 그러는데,\r\n구원자 그대가 한번 봐줄 수 있나?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'm not sure why.\r\r\nCan you take a look at it and tell me?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我再怎麼看都想不透原因，\r\r\n救援者可以幫我看一下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我再怎麼看都想不透原因，\r\r\n救援者可以幫我看一下嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래 봐 줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好，我看看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好，我看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래 봐 줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好，我看看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好，我看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…헤이즐이 하트를 만들어주지 않아서 그런 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it's because you didn't make the heart with her"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…好像是因為黑伊茲爾沒有比愛心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…好像是因為黑伊茲爾沒有比愛心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…헤이즐이 하트를 만들어주지 않아서 그런 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it's because you didn't make the heart with her"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…好像是因為黑伊茲爾沒有比愛心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…好像是因為黑伊茲爾沒有比愛心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "하트…?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "The heart?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "愛心…？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "愛心…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "아! 손으로 하트를 완성해야 했던 거군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "... Oh, I was supposed to form a heart with my hand."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "喔！原來是要用手跟她拼出一個愛心。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "喔！原來是要用手跟她拼出一個愛心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "나는 엄지를 드는 게 유행인 줄 알았다…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I thought it was fashionable to give a thumbs up..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我以為流行比大拇指…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我以為流行比大拇指…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음부터는 하트를 완성해 줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Next time, do the heart"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次跟她比愛心吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次跟她比愛心吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음부터는 하트를 완성해 줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Next time, do the heart"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次跟她比愛心吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次跟她比愛心吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "알았다, 새겨듣지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Okay, I'll remember that."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "好，我會銘記在心。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "好，我會銘記在心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "좋은 글귀가 있어 공유한다.\r\n꽃 사진이 참 예쁘지 않은가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I thought this was a great quote to share.\r\r\nIsn't the picture of the flowers pretty, too?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "跟你分享佳句，\r\r\n不覺得花的照片很美嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "跟你分享佳句，\r\r\n不覺得花的照片很美嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "오늘 하루 기운차게 시작하길 바란다,\r\n구원자."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Hope you have a great start to your day,\r\r\nSavior."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "希望你能精神奕奕地開始這一天，\r\r\n救援者。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "希望你能精神奕奕地開始這一天，\r\r\n救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "새로운 아침에는 새로운 기분으로 시작해야,\r\n보람찬 하루를 보낼 수 있는 거니까."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "A fresh start in the morning is the key\r\r\nto a rewarding day."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "用全新的心情迎接嶄新的早晨，\r\r\n才能收穫有意義的一天。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "用全新的心情迎接嶄新的早晨，\r\r\n才能收穫有意義的一天。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에덴에도 이런 그림이 있구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eden also has a picture like this"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來伊甸園也有這種圖"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來伊甸園也有這種圖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에덴에도 이런 그림이 있구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eden also has a picture like this"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來伊甸園也有這種圖"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來伊甸園也有這種圖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그대의 세계에도 이런 좋은 그림이 있었나?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Do you have such a nice picture in your world?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你的世界也有這種好圖嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你的世界也有這種好圖嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "이디스에게도 보냈는데, 이상하게 싫어하더군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I also sent it to Edith, and she didn't like it."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我也有傳給伊迪絲，但她不喜歡，好奇怪。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我也有傳給伊迪絲，但她不喜歡，好奇怪。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "이제는 답장도 안 해주고 있다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Now, she won't even write back."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "現在也沒有回我。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "現在也沒有回我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "하루를 잘 보내길 바라는 마음으로 보냈는데…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I sent it to her to wish her a good day..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我傳給她只是想祝她有個美好的一天…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我傳給她只是想祝她有個美好的一天…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "다른 꽃 사진이 있는 지 찾아봐야겠다.\r\n다른 사진에 다른 글귀면 이디스도 좋아해 주겠지?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'll see if I can find another picture of flowers.\r\r\nMaybe Edith will like a different picture with different words?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我要找找其他有花的照片，\r\r\n用別張照片配上其他句子，伊迪絲應該也會喜歡吧？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我要找找其他有花的照片，\r\r\n用別張照片配上其他句子，伊迪絲應該也會喜歡吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "다른 것을 찾으면 그대에게도 공유하지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "If I find something else, I'll also share it with you."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我找到其他的再跟你分享。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我找到其他的再跟你分享。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고, 고마워…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Th-thanks..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝、謝謝…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝、謝謝…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고, 고마워…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Th-thanks..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝、謝謝…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝、謝謝…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 그대는 저번에…\r\n내 어머니가 어떤 정령인지 궁금하다고 했었던가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, you said the other day that you wondered\r\r\nwhat kind of Soul my mother was."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，你上次是不是說…\r\r\n很好奇我媽媽是個什麼樣的精靈？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，你上次是不是說…\r\r\n很好奇我媽媽是個什麼樣的精靈？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 그랬어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I did"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 그랬어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I did"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "어머니는 너그러운 듯하면서 엄격하고,\r\n호방한 듯 하면서도 교활하신 분이시지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "She's generous yet strict,\r\r\nmagnanimous yet cunning."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "媽媽是個既寬厚又嚴厲，\r\r\n看似豪放卻又奸詐的人。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "媽媽是個既寬厚又嚴厲，\r\r\n看似豪放卻又奸詐的人。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "타브리아를 건국하신, 정말 대단한 분이지만…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "She's an amazing Soul, the founder of Tabria,"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "她建立了塔布里亞，真的是個偉大的人…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "她建立了塔布里亞，真的是個偉大的人…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "가끔은 그 페이스에 휘말리는 것 같아서,\r\n그분의 후계자로 있는 게 버거운 날도 있었지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "but sometimes I feel like I get caught up in her pace.\r\r\nThere are days when it feels like it's too hard to be her successor."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "偶爾會不知不覺跟著她的腳步，\r\r\n所以當她的接班人也會有很吃力的時候。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "偶爾會不知不覺跟著她的腳步，\r\r\n所以當她的接班人也會有很吃力的時候。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "이디스도 제 2 후계자로 있었을 때,\r\n마음고생이 많았을 거라 생각한다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'm sure Edith had her own struggles\r\r\nwhen she was the second in line."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪絲當第2接班人的時候，\r\r\n一定也很辛苦。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪絲當第2接班人的時候，\r\r\n一定也很辛苦。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "언젠가는 어머니를 뛰어넘는 정령이 되어야 할 텐데,\r\n그게… 가능한 일이 될지 모르겠군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "One day, I will have to be a leader that surpasses my mother,\r\r\nbut I don't know if that will ever be possible."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "總有一天要超越媽媽才行，\r\r\n但不知道…有沒有那種可能。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "總有一天要超越媽媽才行，\r\r\n但不知道…有沒有那種可能。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언제나 응원할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll always be rooting for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我永遠支持妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我永遠支持妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언제나 응원할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll always be rooting for you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我永遠支持妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我永遠支持妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "…고마워, 구원자.\r\n그대는 정말 다정하군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "... Thank you, Savior.\r\r\nYou're very kind."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "…謝謝你，救援者，\r\r\n你真的好溫柔。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "…謝謝你，救援者，\r\r\n你真的好溫柔。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 그대는 만약에…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, what if...?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，如果…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，如果…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "어머니가 우리에게 선택권을 준다면 어떻게 하겠는가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "What would you do if Mother gave us a choice?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "媽媽把選擇權交給我們的話，你會怎麼做？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "媽媽把選擇權交給我們的話，你會怎麼做？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "선택권?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What choice?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "選擇權？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "選擇權？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "선택권?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What choice?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "選擇權？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "選擇權？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "…결혼 말이야."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "... About our marriage."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "…就是結婚這件事。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "…就是結婚這件事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "원한다면 청혼까지 무를 수 있는 선택권을 준다면,\r\n어떻게 할 것인지…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "What would you do if she gave you the option\r\r\nto take back your proposal...?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "想要的話，也能讓你選擇要不要反悔求婚，\r\r\n你會怎麼做…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "想要的話，也能讓你選擇要不要反悔求婚，\r\r\n你會怎麼做…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "아니다, 내가 괜한 이야기를 했군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Never mind. I shouldn't even have asked."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "沒事，我不該說這個的。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "沒事，我不該說這個的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "방금 보낸 에버톡에는,\r\n답장하지 않아도 돼."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "You don't have to reply to\r\r\nthat Evertalk message I just sent."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你不用回覆\r\r\n我剛剛傳的EverTalk沒關係。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你不用回覆\r\r\n我剛剛傳的EverTalk沒關係。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "아니, 안 해줬으면 하군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Actually, I don't want you to."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "不對，我希望你不要回覆。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "不對，我希望你不要回覆。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "부탁할게."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Please."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "拜託你了。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "拜託你了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "저기…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Hey..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "那個…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "那個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "이디스는 아직 근무 중인가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Is Edith still on duty?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪絲還在工作嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪絲還在工作嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니 퇴근했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No. She went home"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有，她下班了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有，她下班了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니 퇴근했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No. She went home"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有，她下班了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有，她下班了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그렇군…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I see..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "這樣啊…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "這樣啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "아니다, 아무것도."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "No, not at all."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "沒有，沒什麼。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "沒有，沒什麼。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해 헤이즐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry, Hazel"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，黑伊茲爾"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，黑伊茲爾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해 헤이즐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry, Hazel"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "對不起，黑伊茲爾"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "對不起，黑伊茲爾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 문화가 있는 줄 모르고…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I had no idea there was such a thing"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不知道你們有那種文化…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不知道你們有那種文化…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 문화가 있는 줄 모르고…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I had no idea there was such a thing"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不知道你們有那種文化…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不知道你們有那種文化…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "아무리 나에게 사과를 해도,\r\n달라지는 건 없다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "No amount of apologizing to me\r\r\nwill change anything."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你再怎麼跟我道歉\r\r\n也不會有所改變。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你再怎麼跟我道歉\r\r\n也不會有所改變。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "앞으로 어떻게 해야 할 지,\r\n그것만 생각하도록."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "You just think about\r\r\nwhat we need to do next."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "還是想想\r\r\n以後要怎麼做吧。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "還是想想\r\r\n以後要怎麼做吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "누군가에게 이런 사적인 초대를 받다니…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Receiving such a private invitation from someone,"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "居然被人邀請來這麼私人的地方…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "居然被人邀請來這麼私人的地方…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "꽤 신선한 경험이군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "really is quite refreshing."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "非常新鮮的體驗。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "非常新鮮的體驗。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "방주에는 방주의 오퍼레이터가 있던가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Does your ark have an operator?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "方舟有方舟的駕駛員嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "方舟有方舟的駕駛員嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 메피가 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes. Mephi"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，有梅菲在"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，有梅菲在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 메피가 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes. Mephi"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，有梅菲在"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，有梅菲在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그렇다면 빈손으로 가기 그런데…\r\n선물이라도 지금 사야겠군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Well, then I shouldn't show up empty-handed.\r\r\nI'll get a gift."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "那就不能空手去了…\r\r\n得現在去買個禮物。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "那就不能空手去了…\r\r\n得現在去買個禮物。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 시간에는 가게가 다 닫았을 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sure all the shops are closed by now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在這個時間，店家應該都休息了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在這個時間，店家應該都休息了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 시간에는 가게가 다 닫았을 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sure all the shops are closed by now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在這個時間，店家應該都休息了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在這個時間，店家應該都休息了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그런가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Are they?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "사적으로 외출한 적이 별로 없어서 몰랐군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I didn't know. I don't go out much by myself."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "因為我沒有私下外出過，不清楚。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "因為我沒有私下外出過，不清楚。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "손님으로 가는 건데, \r\n정말 미안하게 되었어."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Still, visiting someone's house\r\r\nwithout a gift doesn't feel right. I'm sorry."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我可是去那裡作客的，\r\r\n真的很不好意思。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我可是去那裡作客的，\r\r\n真的很不好意思。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에 또 놀러 올 때 준비하면 되지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can always get one when you come over next time"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次來玩的時候再準備就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次來玩的時候再準備就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에 또 놀러 올 때 준비하면 되지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can always get one when you come over next time"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次來玩的時候再準備就好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次來玩的時候再準備就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "다음?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Next time?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "下次？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "下次？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "다음이라…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Next time..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "下次喔…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "下次喔…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그런 날이 온다면 그렇게 하지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "If that day comes, I will."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "有那一天的話就那麼辦吧。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "有那一天的話就那麼辦吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그러고 보니, 그대는 타브리아에 관해 궁금한 점은 없나?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "By the way, do you have any questions about Tabria?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "話說回來，你對塔布里亞沒有什麼好奇的事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "話說回來，你對塔布里亞沒有什麼好奇的事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "타브리아를 방문하는 건, 거의 처음인 거로 아는데."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I know it's practically your first time visiting Tabria."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "據我所知，你是第一次拜訪塔布里亞。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "據我所知，你是第一次拜訪塔布里亞。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐의 어머니가 궁금하긴 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Actually, I'm curious about your mother"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我很好奇黑伊茲爾的媽媽"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我很好奇黑伊茲爾的媽媽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐의 어머니가 궁금하긴 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Actually, I'm curious about your mother"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我很好奇黑伊茲爾的媽媽"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我很好奇黑伊茲爾的媽媽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "어머니… 대제 폐하가 궁금하다고?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "About...my mother? The Great Empress?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你好奇我媽媽…大帝陛下？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你好奇我媽媽…大帝陛下？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "한마디로 설명하기가 어려운 분이셔서…\r\n어떻게 말해줘야 할지 모르겠군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "It's difficult to describe\r\r\nher in a few words."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "很難用三言兩語介紹她…\r\r\n不知道該怎麼說。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "很難用三言兩語介紹她…\r\r\n不知道該怎麼說。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "하지만 주의 사항 정도는 말해줄 수 있다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "But I can give you some warnings."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "但是我可以告訴你她的注意事項。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "但是我可以告訴你她的注意事項。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "주의 사항?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Warnings?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "注意事項？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "注意事項？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "주의 사항?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Warnings?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "注意事項？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "注意事項？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그분에게 빈틈을 보이지 마, 절대로."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Don't give her an opening—ever."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "絕對不要對她露出破綻。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "絕對不要對她露出破綻。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "끝까지 파고드실 거니까."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "She'll dig right through it."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "因為她會針對你的破綻直到最後一刻。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "因為她會針對你的破綻直到最後一刻。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐? 어디야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hazel? Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾？妳在哪裡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾？妳在哪裡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐? 어디야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hazel? Where are you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾？妳在哪裡？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾？妳在哪裡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "읻 ㅣ 스니?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "e D th i"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪ㄙ？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "伊迪ㄙ？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "ㅎ ㅣ ㅁ ㄷ ㅡ ㄹ 어"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "iT s tOO mUcH"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "ㄨㄛˇㄏㄠˇㄌㄟˋ"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "ㄨㄛˇㄏㄠˇㄌㄟˋ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "살ㄹ려주 ㅓ"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "H l e P"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "ㄐㄧㄡˋ救ㄨㄛˇ"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "ㄐㄧㄡˋ救ㄨㄛˇ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "ㅇ ㅓㄴ니는 죽게 ㅆ ㄷ ㅏ"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Yuor s i S t eR is DynG"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "姐ㄐㄧㄝ快死ㄌㄜ"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "姐ㄐㄧㄝ快死ㄌㄜ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디야 내가 데리러갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where are you? I'll pick you up"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳在哪？我去接妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳在哪？我去接妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어디야 내가 데리러갈게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where are you? I'll pick you up"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳在哪？我去接妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳在哪？我去接妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "역 ㅣㄱ ㅏ ㅇ ㅓ 딛 ㅓ 라"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "W h Er E Am aI ?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "這裡ㄕˋㄋㄚˇㄌㄧˇ"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "這裡ㄕˋㄋㄚˇㄌㄧˇ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "몰ㄹ라"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "D u n N o"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我不ㄓ道"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我不ㄓ道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "…술 취한 나를 챙겨줘서 고맙다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "... Thank you for taking care of me when I was drunk."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "…謝謝你照顧喝醉的我。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "…謝謝你照顧喝醉的我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야 당연히 해야 하는 일이었는 걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't mention it. It was the right thing to do"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會，都是我應該做的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會，都是我應該做的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야 당연히 해야 하는 일이었는 걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Don't mention it. It was the right thing to do"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會，都是我應該做的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會，都是我應該做的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "추태를 보이다니, 면목이 없군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'm sorry you had to see me like that."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "讓你看到我失態的樣子，我沒臉見你。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "讓你看到我失態的樣子，我沒臉見你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "꼴사나왔던 내 모습은 잊어주면 좋겠어."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I hope you can just wipe it from your memory."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "希望你可以忘記我丟人現眼的樣子。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "希望你可以忘記我丟人現眼的樣子。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀여웠는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It was cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可愛啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可愛啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀여웠는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It was cute"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可愛啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可愛啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "놀리지마라, 구원자."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "It's not funny, Savior"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你不要捉弄我，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你不要捉弄我，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 정말 면목이 없다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, I am so sorry."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，我真的沒臉見你。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，我真的沒臉見你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "어머니가 이렇게 강수를 둘 줄은 몰랐어."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I never thought Mother would do something so drastic,"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "沒想到媽媽會出這種狠招。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "沒想到媽媽會出這種狠招。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그대를 이렇게 감금하다니…"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "imprisoning you like this."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "她竟然監禁你…"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "她竟然監禁你…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "조금만 기다려 주겠나, 구원자."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Hang in there, Savior."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "可以等我一下嗎？救援者。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "可以等我一下嗎？救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "내가 어머니를 꼭 설득해 보겠다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I will try to persuade her."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我一定會說服媽媽的。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我一定會說服媽媽的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐은 괜찮겠어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How about you, Hazel? Are you okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐은 괜찮겠어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How about you, Hazel? Are you okay?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "…괜찮을 거다, 걱정마."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "... I will be. Don't worry."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "…會沒事的，別擔心。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "…會沒事的，別擔心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 폐하와 이야기는 끝났다."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, I've spoken with Her Majesty."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，我跟陛下談好了。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，我跟陛下談好了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "귀빈실로 가서 결과를 전달하지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'll tell you more about it in the audience chamber."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我去貴賓室跟你說明結果。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我去貴賓室跟你說明結果。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "…그대에게는 미안함 뿐이군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "... I'm so sorry about everything, Savior."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "…對你很抱歉。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "…對你很抱歉。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 어머니와 이야기는 끝났어."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, I've spoken to Mother."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，我跟媽媽說好了。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，我跟媽媽說好了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "수고했어 헤이즐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "辛苦妳了，黑伊茲爾"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "辛苦妳了，黑伊茲爾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "수고했어 헤이즐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Good"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "辛苦妳了，黑伊茲爾"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "辛苦妳了，黑伊茲爾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "…역시 어머니를 설득하는 일은 쉽지 않군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "It's not easy to convince her, as expected,"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "…說服媽媽果然不是件易事。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "…說服媽媽果然不是件易事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "하지만, 얻은 게 없지는 않아."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "but I've gained something."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "但並不是完全沒有收穫。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "但並不是完全沒有收穫。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "자세한 것은 얼굴을 보고 이야기하도록 하지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'll tell you the details when I see you."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "詳細的事見面再跟你說。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "詳細的事見面再跟你說。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "그대, 일어났는가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Are you awake?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "你醒了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "你醒了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 준비 중이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I'm getting ready"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，我在準備"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，我在準備"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 준비 중이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I'm getting ready"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，我在準備"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，我在準備"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐은?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "헤이즐은?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "黑伊茲爾呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "이미 다 준비해서 그대의 방 앞이지."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I'm ready and in front of your room."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我已經準備好，在你的房門前了。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我已經準備好，在你的房門前了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "신부를 기다리게 하지 말고 어서 나오도록."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Come on out. Don't keep the bride waiting."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "不要讓新娘等太久，快點出來。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "不要讓新娘等太久，快點出來。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "사랑의 날을 내가 기념하는 날이 오는군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "The day has come that I celebrate Love Day."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "沒想到我也有慶祝戀愛之日的這天。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "沒想到我也有慶祝戀愛之日的這天。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 그대를 위한 선물이니 어서 받도록."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, here's a gift for you. Take it."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，這是我為你準備的禮物，趕快收下。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，這是我為你準備的禮物，趕快收下。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "감사히 받을게, 헤이즐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks, Hazel!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的心意，黑伊茲爾！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的心意，黑伊茲爾！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "감사히 받을게, 헤이즐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks, Hazel!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的心意，黑伊茲爾！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的心意，黑伊茲爾！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "구원자, 그대는 꽃에 관심이 있는가?"
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Savior, are you interested in flowers?"
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，你喜歡花嗎？"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "救援者，你喜歡花嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "나는 꽃을 보고 있으면, 마음이 편안해지더군."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "I find them so soothing to look at."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "我看著花，內心就會變平靜。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "我看著花，內心就會變平靜。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이따가 꽃 보러 가자, 헤이즐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go look at some flowers later, then."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等去賞花吧，黑伊茲爾！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等去賞花吧，黑伊茲爾！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이따가 꽃 보러 가자, 헤이즐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go look at some flowers later, then."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等去賞花吧，黑伊茲爾！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等去賞花吧，黑伊茲爾！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "해피 이브 데이, 구원자."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Happy Eve's Day, Savior."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "夏娃之日快樂，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "夏娃之日快樂，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "헤이즐",
+            "message": "즐거운 하루 보내도록."
+          },
+          "en": {
+            "speaker": "Hazel",
+            "message": "Have a good day."
+          },
+          "zh_tw": {
+            "speaker": "黑伊茲爾",
+            "message": "祝你有個愉快的一天。"
+          },
+          "zh_cn": {
+            "speaker": "黑伊茲爾",
+            "message": "祝你有個愉快的一天。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 이브 데이, 헤이즐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day, Hazel!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，黑伊茲爾！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，黑伊茲爾！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 이브 데이, 헤이즐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day, Hazel!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，黑伊茲爾！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，黑伊茲爾！"
+          }
+        }
+      ]
+    }
+  }
+}

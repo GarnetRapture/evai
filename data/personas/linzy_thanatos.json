@@ -1,0 +1,5459 @@
+{
+  "id": "6520",
+  "name": "린지(타나토스)",
+  "name_en": "Linzy (Thanatos)",
+  "grade": "에픽",
+  "race": "혼돈형",
+  "class": "스트라이커",
+  "sub_class": "광역",
+  "stat": "민첩",
+  "profile": {
+    "nick_name": "흑야의 사신",
+    "constellation": "인연_메피스토_이벤트1",
+    "union": "검은 매 기사단",
+    "birthday": "205",
+    "height": 165,
+    "weight": 48,
+    "cv_ko": "박지윤",
+    "cv_jp": "Kanemoto Hisako",
+    "like": [
+      "허브 티"
+    ],
+    "dislike": [
+      "빙빙 꼬아 말하는 것",
+      "마요네즈"
+    ],
+    "hobby": [
+      "풍경 감상"
+    ],
+    "speciality": [
+      "뛰어난 직감"
+    ]
+  },
+  "personality": {
+    "description": "수많은 변한 것과, 단 하나의 변하지 않은 것.\n구원자님은 알아보실 수 있을까요?\n\n많은 일들이 있었죠. 에덴에 있어서도, 저 개인에 있어서도…\n누군가는 제가 변했다고 말하더군요.\n실제로 제 몸을 구성하는 많은 요소들이 변한 건 사실이죠.\n그 변화의 과정 또한 고통스럽기도 했고요.\n\n하지만… 저의 가장 중요한 부분은 변하지 않았어요.\n저는 언제나 최고이길 원하고, 앞으로도 최고의 길을 걸어 나갈 겁니다.\n에덴의, 솔레이의… 그리고 구원자님의 곁에서\n그 누구보다도 우아하고 예리한 검이 되어 지키면서요.\n\n구원자님. 다시 인사드릴게요.\n저는 검은 매 기사단 단장 린지입니다.\n앞으로도 변함없이, 잘 부탁드립니다.",
+    "greeting": "메인 스킬을 사용할 시 모든 아군을 리더 정령의 공격력 <652051.VALUE> 만큼 체력을 회복하고 <652052.DURATION>초 동안 리더 정령의 공격력 <652052.VALUE> 만큼의 공격을 흡수하는 보호막 효과를 부여한다. 만약 리더 정령이 캐서린일 경우 위 효과가 <COLOR=#FFFFFF>2</COLOR>배로 증가하고 보호막이 유지되는 동안 가하는 피해량이 <COLOR=#E0942C><652055.VALUE></COLOR> 증가한다."
+  },
+  "speech_patterns": [
+    "구원자님",
+    "기사단 복귀 절차 완료했습니다",
+    "보고 고마워",
+    "다시 한 번 인사드려요",
+    "검은 매 기사단 단장, 린지입니다",
+    "새삼스럽게 인사도 새로 해?",
+    "새삼스러워도 중요한 거니까요",
+    "전 언제나 최고여야 하니까",
+    "기본적인 부분부터 완벽하게 챙겨야죠",
+    "아무튼 잘 부탁드려요, 구원자님",
+    "나도 잘 부탁해, 린지!",
+    "오랜만에 기사단에 복귀하는 거라 걱정했는데",
+    "부단장인 이디스가 생각보다 잘 해주고 있었네요",
+    "이디스를 불안하게 생각했다기보다는…",
+    "인수인계도 제대로 못 해준 상태에서",
+    "갑자기 자리를 두 번이나 비웠으니",
+    "많이 미안했거든요",
+    "생각해보니 그렇네",
+    "다 나 때문이야",
+    "미안해",
+    "구원자님이 미안하실 게 뭐가 있겠어요",
+    "제가 더 강하지 못했던 탓이죠",
+    "앞으로 더욱 정진하겠어요",
+    "태양 기사단 훈련장에 가면",
+    "종종 강아지가 있는데",
+    "아시나요?",
+    "리타네 강아지 말이지?",
+    "네",
+    "맞아요",
+    "이름 이상한 그 강아지요",
+    "종종 훈련에도 데려오는 모양이더군요",
+    "검은 매 기사단은 동물 안 키워?",
+    "이름 그대로 매를 키워 보지 않겠냐고 물어보시려는 거라면",
+    "정중하게 사양하겠습니다",
+    "눈치 빠르네",
+    "그런 얘기를 몇 번 들었다고 생각하세요?",
+    "이골이 났다고요",
+    "휴",
+    "가끔 보면",
+    "미루는 습관을 가진 정령들이 있죠",
+    "뭐, 전 바로바로 하는 편이긴 한데요",
+    "최근에 생각해보니",
+    "저도 미루고 있던 게 하나 있더라고요",
+    "그래?",
+    "린지도 그런 게 있어?",
+    "예전에 저랑 약속 하나 하셨는데",
+    "기억하세요?",
+    "약속?",
+    "잘 떠올려 보세요",
+    "기다릴게요"
+  ],
+  "comments": [
+    {
+      "writer": "이디스",
+      "comment": "단장님… 어쩐지 더 카리스마가 대단해지신 것 같사와요…!"
+    },
+    {
+      "writer": "클로이",
+      "comment": "아 뭐야!!! 왜 너만 멋있는 무기 생겼는데!! \n린지 이 치사한 녀석~!!! 두고 봐~!!"
+    },
+    {
+      "writer": "릴리트",
+      "comment": "의외로 저와 합이 잘 맞는 것 같아요. 재밌는 분♪"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "기사단 복귀 절차 완료했습니다"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "보고 고마워"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "보고 고마워"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "다시 한 번 인사드려요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "검은 매 기사단 단장, 린지입니다"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "새삼스럽게 인사도 새로 해?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "새삼스럽게 인사도 새로 해?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "새삼스러워도 중요한 거니까요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "전 언제나 최고여야 하니까"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "기본적인 부분부터 완벽하게 챙겨야죠"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "아무튼 잘 부탁드려요, 구원자님"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "나도 잘 부탁해, 린지!"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "나도 잘 부탁해, 린지!"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "오랜만에 기사단에 복귀하는 거라 걱정했는데"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "부단장인 이디스가 생각보다 잘 해주고 있었네요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "이디스를 불안하게 생각했다기보다는…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "인수인계도 제대로 못 해준 상태에서"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "갑자기 자리를 두 번이나 비웠으니"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "많이 미안했거든요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "생각해보니 그렇네"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "생각해보니 그렇네"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "다 나 때문이야"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "다 나 때문이야"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "미안해"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "미안해"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님이 미안하실 게 뭐가 있겠어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제가 더 강하지 못했던 탓이죠"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "앞으로 더욱 정진하겠어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "태양 기사단 훈련장에 가면"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "종종 강아지가 있는데"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "아시나요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "리타네 강아지 말이지?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "리타네 강아지 말이지?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "네"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "맞아요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "이름 이상한 그 강아지요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "종종 훈련에도 데려오는 모양이더군요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "검은 매 기사단은 동물 안 키워?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "검은 매 기사단은 동물 안 키워?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "이름 그대로 매를 키워 보지 않겠냐고 물어보시려는 거라면"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "정중하게 사양하겠습니다"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "눈치 빠르네"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "눈치 빠르네"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그런 얘기를 몇 번 들었다고 생각하세요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "이골이 났다고요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "휴"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "가끔 보면"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "미루는 습관을 가진 정령들이 있죠"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "뭐, 전 바로바로 하는 편이긴 한데요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "최근에 생각해보니"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저도 미루고 있던 게 하나 있더라고요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그래?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그래?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "린지도 그런 게 있어?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "린지도 그런 게 있어?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "네"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "예전에 저랑 약속 하나 하셨는데"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "기억하세요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "약속?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "약속?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "잘 떠올려 보세요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "기다릴게요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "기억나셨나요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "생각났어"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "생각났어"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "주스 사주기로 했던 거"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "주스 사주기로 했던 거"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "맞아요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "이런 것도 미루지 말아야겠다 싶더라고요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "물론 이제 전 구원자님 곁에 계속 있을 거지만"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "아무튼"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "시간 괜찮으시면 광장으로 나오세요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제가 약속대로 대접할게요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "기사단도 결국은 군대니까"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "상명하복식 일처리를 해야만 할 때가 있죠"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "대부분 군말없이 따라와 주지만…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "가끔 불안할 때가 있기도 해요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "요즘 정령들에겐 안 통하는 거 아닌가 싶어서요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "정령들에게도 세대차이가 있어?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "정령들에게도 세대차이가 있어?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "세대… 라고 표현하긴 이상하네요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "좀 더 자유로운 성향의 정령들도 있잖아요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저 같은 정령하곤 다르게요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "물론 잘 이해는 안 되지만요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그래도 함께 일하는 사이니까"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "가능한 존중해 주고 싶거든요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "린지는 좋은 상관이구나"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "린지는 좋은 상관이구나"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그런가요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "스스로는 잘 모르겠어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제 생각엔 클레르가 더 이상적인 상사 같거든요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "린지도 훌륭한 리더야"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "린지도 훌륭한 리더야"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "칭찬 고맙습니다"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "더 정진할게요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "생각해봤는데"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님은 별로 좋은 리더는 아니신 것 같아요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "미, 미안…?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "미, 미안…?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "내가 그렇긴 하지…?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "내가 그렇긴 하지…?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "근데 이렇게 갑자기…??"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "근데 이렇게 갑자기…??"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "왜 기가 죽고 그러세요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님은 좋은 리더보다는"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "좋은 친구 같아요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "힘들어도 잘 티 안 내고"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "묵묵히 희생하려 하고"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그러시니까요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그런가…?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그런가…?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "나도 스스로는 잘 모르겠네…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "나도 스스로는 잘 모르겠네…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그렇죠?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저도 막상 자기 일은 잘 모르겠더라고요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저희 좀 닮았을지도 모르겠네요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "먼 과거, 인간들은"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "같은 이름을 대대로 이어 갔다면서요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "성씨 말하는 거야?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "성씨 말하는 거야?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "네"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "재밌는 관습이라고 생각했어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "불리는 존재는 달라지는데"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "부르는 이름은 같은 거죠"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저도 그런 상태일지도 모르겠어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제 몸의 많은 것이 바뀌었지만"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저는 여전히 린지니까요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제가 그렇게 착각하고 있을 뿐"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "사실은 저도 완전히 새로운 정령인 걸까요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "불안해하지 마"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "불안해하지 마"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "린지는 분명히 내가 아는 그 린지니까"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "린지는 분명히 내가 아는 그 린지니까"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "망설임 없이 그렇게 말씀해 주시니까"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "마음이 놓이네요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저도 괜히 마음이 약해졌었나 봐요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "감사합니다"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님과"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "시시콜콜한 이야기를 하고 싶어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "옷을 갈아입을 땐 어느 쪽부터 팔을 꿰는지"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "아침 식사로 계란 요리를 즐겨 먹는지"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "신발 뒷굽은 어느 쪽이 먼저 닳는지 같은 거요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "얼마든지 말해줄 수 있긴 한데"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "얼마든지 말해줄 수 있긴 한데"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "혹시 무슨 일 있어?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "혹시 무슨 일 있어?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "아무 일 없는데요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "음…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "사실 있는 것 같아요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "곳곳에 숨어 있는 '삶'의 증거를"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "하나라도 더 많이 모으고 싶어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님이 살아있다는 증거를 보면서"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저 또한 살아있다고 느끼고"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "안심하고 싶은가 봐요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제 안에 있는 죽음을 인식할수록"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제 밖에 있는 삶을 분명하게 느껴요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "우스운 일일지도 모르겠어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "평화롭게 영생을 살 땐"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "크게 인식하지 못했던 삶이"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "막상 죽음과 종말이 위협적으로 다가오니까"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "이제서야 간절해지는 것이요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "어둠이 있기에 빛이 있듯이?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "어둠이 있기에 빛이 있듯이?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "맞아요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "죽음이 있기에 삶도 빛나는 거겠죠?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "인간의 삶은 짧아서 참 불편하겠다 싶었는데"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "짧기에 더욱 충실하고 아름다운 삶을"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "살 수 있는가 봐요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "삶과 죽음이 중첩된 이 몸으로"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님의 그 짧은 생을"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "곁에서 저도 함께하겠습니다"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "몇몇 정령들이 저보고"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "좀 변했다고 하더라고요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "저는 그렇게 생각 안 하는데…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "혹시 구원자님도 그렇게 생각하세요?"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님이 안 계신 동안"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제게 무슨 일이 일어났었는지"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "말씀드릴게요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제가 새로운 존재로 다시 태어나면서…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "겪은 일을요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "주스 말고도"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님과 약속한 게 하나 더 있었죠"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그걸 지키기 위해서"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "제가 어떤 길을 택했는지"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "말씀드릴게요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "'죽음'은 보통 제 안에 조용히 웅크리고 있지만…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "가끔 자아를 드러내기도 해요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "지금도 그런 느낌이 들어요"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "구원자님과 이야기하고 싶어하는…"
+      },
+      {
+        "speaker": "린지(타나토스)",
+        "message": "그런 느낌…"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "린지(타나토스)",
+      "en": "Linzy (Thanatos)",
+      "zh_tw": "琳賽（桑納托斯）",
+      "zh_cn": "琳賽（桑納托斯）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "혼돈형",
+      "en": "Chaotic",
+      "zh_tw": "混沌型",
+      "zh_cn": "混沌型"
+    },
+    "class": {
+      "ko": "스트라이커",
+      "en": "Striker",
+      "zh_tw": "鬥士",
+      "zh_cn": "鬥士"
+    },
+    "sub_class": {
+      "ko": "광역",
+      "en": "AoE",
+      "zh_tw": "廣域",
+      "zh_cn": "廣域"
+    },
+    "stat": {
+      "ko": "민첩",
+      "en": "DEX",
+      "zh_tw": "敏捷",
+      "zh_cn": "敏捷"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "흑야의 사신",
+        "en": "Reaper of the Black Night",
+        "zh_tw": "闇夜使者",
+        "zh_cn": "闇夜使者"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_이벤트1",
+        "en": "인연_메피스토_이벤트1",
+        "zh_tw": "水瓶座",
+        "zh_cn": "水瓶座"
+      },
+      "union": {
+        "ko": "검은 매 기사단",
+        "en": "Order of Blackhawk",
+        "zh_tw": "黑鷹騎士團",
+        "zh_cn": "黑鷹騎士團"
+      },
+      "cv_ko": {
+        "ko": "박지윤",
+        "en": "Jiyoon Park",
+        "zh_tw": "朴智允",
+        "zh_cn": "朴智允"
+      },
+      "cv_jp": {
+        "ko": "Kanemoto Hisako",
+        "en": "Kanemoto Hisako",
+        "zh_tw": "金元壽子",
+        "zh_cn": "金元壽子"
+      },
+      "like": {
+        "ko": [
+          "허브 티"
+        ],
+        "en": [
+          "Herbal tea"
+        ],
+        "zh_tw": [
+          "花草茶"
+        ],
+        "zh_cn": [
+          "花草茶"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "빙빙 꼬아 말하는 것",
+          "마요네즈"
+        ],
+        "en": [
+          "Sarcastic remarks",
+          "mayonnaise"
+        ],
+        "zh_tw": [
+          "說話拐彎抹角、\r\n美乃滋"
+        ],
+        "zh_cn": [
+          "說話拐彎抹角、\r\n美乃滋"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "풍경 감상"
+        ],
+        "en": [
+          "Enjoying scenic views"
+        ],
+        "zh_tw": [
+          "欣賞風景"
+        ],
+        "zh_cn": [
+          "欣賞風景"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "뛰어난 직감"
+        ],
+        "en": [
+          "Excellent hunch"
+        ],
+        "zh_tw": [
+          "優秀的直覺"
+        ],
+        "zh_cn": [
+          "優秀的直覺"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "수많은 변한 것과, 단 하나의 변하지 않은 것.\n구원자님은 알아보실 수 있을까요?\n\n많은 일들이 있었죠. 에덴에 있어서도, 저 개인에 있어서도…\n누군가는 제가 변했다고 말하더군요.\n실제로 제 몸을 구성하는 많은 요소들이 변한 건 사실이죠.\n그 변화의 과정 또한 고통스럽기도 했고요.\n\n하지만… 저의 가장 중요한 부분은 변하지 않았어요.\n저는 언제나 최고이길 원하고, 앞으로도 최고의 길을 걸어 나갈 겁니다.\n에덴의, 솔레이의… 그리고 구원자님의 곁에서\n그 누구보다도 우아하고 예리한 검이 되어 지키면서요.\n\n구원자님. 다시 인사드릴게요.\n저는 검은 매 기사단 단장 린지입니다.\n앞으로도 변함없이, 잘 부탁드립니다.",
+        "en": "So many things have changed, but there's one thing that hasn’t.\nDo you know what it is, Savior?\n\nMuch has transpired, in Eden and in my own life.\nSome say I've changed.\nIt's true that much of what makes up my body has altered.\nAnd yes, that process was painful.\n\nHowever…the most vital part of me hasn't changed.\nI have always strived to be the best, and I will continue to pursue the path of excellence.\nFor Eden, Solrey…and for you, Savior,\nI will become the sharpest and most elegant blade to protect you.\n\nSavior, allow me to introduce myself again.\nI am Linzy, the Commander of the Order of Blackhawk.\nI look forward to what lies ahead with us.",
+        "zh_tw": "有許多東西變了，唯有一個沒有變。\n救援者能認出來嗎？\n\n發生了許多事，無論是伊甸園，還是我個人…\n有人說我變了。\n而實際上，構成我身體的許多要素的確有所改變，\n變化的過程也很難受。\n\n但是…我最重要的部分並沒有改變。\n我總是渴望著頂尖，以後也只會走最好的路。\n我會成為伊甸園的、蘇萊伊的…還有在救援者身邊，\n比誰都還優雅、銳利的劍。\n\n救援者，再次跟你打聲招呼。\n我是黑鷹騎士團的團長琳賽，\n以後也要一如既往地請你多多指教。",
+        "zh_cn": "有許多東西變了，唯有一個沒有變。\n救援者能認出來嗎？\n\n發生了許多事，無論是伊甸園，還是我個人…\n有人說我變了。\n而實際上，構成我身體的許多要素的確有所改變，\n變化的過程也很難受。\n\n但是…我最重要的部分並沒有改變。\n我總是渴望著頂尖，以後也只會走最好的路。\n我會成為伊甸園的、蘇萊伊的…還有在救援者身邊，\n比誰都還優雅、銳利的劍。\n\n救援者，再次跟你打聲招呼。\n我是黑鷹騎士團的團長琳賽，\n以後也要一如既往地請你多多指教。"
+      },
+      "greeting": {
+        "ko": "메인 스킬을 사용할 시 모든 아군을 리더 정령의 공격력 <652051.VALUE> 만큼 체력을 회복하고 <652052.DURATION>초 동안 리더 정령의 공격력 <652052.VALUE> 만큼의 공격을 흡수하는 보호막 효과를 부여한다. 만약 리더 정령이 캐서린일 경우 위 효과가 <COLOR=#FFFFFF>2</COLOR>배로 증가하고 보호막이 유지되는 동안 가하는 피해량이 <COLOR=#E0942C><652055.VALUE></COLOR> 증가한다.",
+        "en": "Using the main skill restores all allies' HP by <652051.VALUE> of the lead Soul's ATK and grants them a shield that absorbs damage equal to <652052.VALUE> of the lead Soul's ATK for <652052.DURATION> sec. The above effects are multiplied by <COLOR=#FFFFFF>2</COLOR> and their damage dealt is increased by <COLOR=#E0942C><652055.VALUE></COLOR> while the shield is active if the lead Soul is Catherine.",
+        "zh_tw": "使用主要技能時，所有友軍恢復隊長精靈攻擊力<652051.VALUE>的體力，<652052.DURATION>秒內賦予吸收隊長精靈攻擊力<652052.VALUE>攻擊的防護罩效果。若隊長精靈為凱瑟琳時，以上效果增加為<COLOR=#FFFFFF>2</COLOR>倍，且防護罩持續期間造成的傷害量增加<COLOR=#E0942C><652055.VALUE></COLOR>",
+        "zh_cn": "使用主要技能時，所有友軍恢復隊長精靈攻擊力<652051.VALUE>的體力，<652052.DURATION>秒內賦予吸收隊長精靈攻擊力<652052.VALUE>攻擊的防護罩效果。若隊長精靈為凱瑟琳時，以上效果增加為<COLOR=#FFFFFF>2</COLOR>倍，且防護罩持續期間造成的傷害量增加<COLOR=#E0942C><652055.VALUE></COLOR>"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "구원자님"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Savior"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "救援者"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "기사단 복귀 절차 완료했습니다"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I have completed the procedure to return to the Order"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我已經完成騎士團歸隊程序了"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我已經完成騎士團歸隊程序了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "보고 고마워"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Thank you for reporting"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "謝謝妳的報告"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "謝謝妳的報告"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "다시 한 번 인사드려요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Let me introduce myself again"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "重新向你打聲招呼"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "重新向你打聲招呼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "검은 매 기사단 단장, 린지입니다"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I am Linzy, commander of the Order of Blackhawk"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我是黑鷹騎士團的團長琳賽"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我是黑鷹騎士團的團長琳賽"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "새삼스럽게 인사도 새로 해?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "An introduction again? Is that really necessary?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "還突然重新打招呼？"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "還突然重新打招呼？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "새삼스러워도 중요한 거니까요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Of course. It's necessary"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "雖然有點突然，但這很重要"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "雖然有點突然，但這很重要"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "전 언제나 최고여야 하니까"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I always have to be the best"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "因為我無論何時都要是最棒的"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "因為我無論何時都要是最棒的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "기본적인 부분부터 완벽하게 챙겨야죠"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I must cover all the bases"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "當然要從最基本的開始做到完美囉"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "當然要從最基本的開始做到完美囉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "아무튼 잘 부탁드려요, 구원자님"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Anyway, nice to meet you, Savior"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "總之請多指教，救援者。"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "總之請多指教，救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "나도 잘 부탁해, 린지!"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Me, too, Linzy!"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我也請妳多指教，琳賽！"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我也請妳多指教，琳賽！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "오랜만에 기사단에 복귀하는 거라 걱정했는데"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I was worried about returning to the Order after such a long absence."
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "時隔好久回歸騎士團，讓我很擔心"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "時隔好久回歸騎士團，讓我很擔心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "부단장인 이디스가 생각보다 잘 해주고 있었네요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Edith, my assistant commander, has been doing a better job than I expected"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "副團長伊迪絲的表現比我預期的還好呢"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "副團長伊迪絲的表現比我預期的還好呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "이디스를 불안하게 생각했다기보다는…"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "It's not that I was unsure about her"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "與其說是不放心伊迪絲…"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "與其說是不放心伊迪絲…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "인수인계도 제대로 못 해준 상태에서"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "It's more that I felt bad"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "其實是因為在沒好好交接的狀態下"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "其實是因為在沒好好交接的狀態下"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "갑자기 자리를 두 번이나 비웠으니"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "for leaving her twice"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "突然離開崗位"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "突然離開崗位"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "많이 미안했거든요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "without a proper handover"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "讓我感到很抱歉"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "讓我感到很抱歉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "생각해보니 그렇네"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Now that I think about it, you did"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "想想也是呢"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "想想也是呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "다 나 때문이야"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "It's all my fault"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "全都是因為我"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "全都是因為我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "미안해"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I'm sorry"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "對不起"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "對不起"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "구원자님이 미안하실 게 뭐가 있겠어요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "You have nothing to be sorry about"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "救援者有什麼好對不起的"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "救援者有什麼好對不起的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "제가 더 강하지 못했던 탓이죠"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "It's my fault I wasn't stronger"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "全都是因為我之前不夠強"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "全都是因為我之前不夠強"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "앞으로 더욱 정진하겠어요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I'll do better from now on"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我以後會更精進自己的"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我以後會更精進自己的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "태양 기사단 훈련장에 가면"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "There's a dog"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "去太陽騎士團訓練場的話"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "去太陽騎士團訓練場的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "종종 강아지가 있는데"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "at the Order of Sun training grounds"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "經常會有狗狗"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "經常會有狗狗"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "아시나요?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Did you know?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "你知道嗎？"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "你知道嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "리타네 강아지 말이지?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "You mean, Rita's?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "妳是說麗塔的狗狗吧？"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "妳是說麗塔的狗狗吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "네"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Yes"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "對"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "對"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "맞아요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Right"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "沒錯"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "沒錯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "이름 이상한 그 강아지요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "The dog with the weird name"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "就是名字很奇怪的那隻狗狗"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "就是名字很奇怪的那隻狗狗"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "종종 훈련에도 데려오는 모양이더군요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Apparently, she even brings him to training sometimes."
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "她好像也經常帶牠來訓練"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "她好像也經常帶牠來訓練"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "검은 매 기사단은 동물 안 키워?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Doesn't the Order of Blackhawk have animals?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "黑鷹騎士團不養動物嗎？"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "黑鷹騎士團不養動物嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "이름 그대로 매를 키워 보지 않겠냐고 물어보시려는 거라면"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "If you're asking me if I'd like to keep a hawk, as the name implies,"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "如果你打算問要不要像騎士團名字那樣養老鷹的話"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "如果你打算問要不要像騎士團名字那樣養老鷹的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "정중하게 사양하겠습니다"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I'll respectfully decline"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "恕我鄭重拒絕"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "恕我鄭重拒絕"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "눈치 빠르네"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "That answer came quick"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "妳反應很快嘛"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "妳反應很快嘛"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "그런 얘기를 몇 번 들었다고 생각하세요?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "How many times do you think I've heard that?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "你想想看我聽過多少次那樣的話了"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "你想想看我聽過多少次那樣的話了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "이골이 났다고요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I'm tired of it"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "聽到耳朵都長繭了"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "聽到耳朵都長繭了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "휴"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Ugh"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "呼"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "呼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "가끔 보면"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Sometimes you see"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "偶爾啊"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "偶爾啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "미루는 습관을 가진 정령들이 있죠"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Souls who have a habit of procrastinating"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "會發現有些精靈有拖延症"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "會發現有些精靈有拖延症"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "뭐, 전 바로바로 하는 편이긴 한데요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Well, I tend to do things on the spot,"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "嗯，不過我是有事就立刻執行的類型"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "嗯，不過我是有事就立刻執行的類型"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "최근에 생각해보니"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "but then, I realize"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "最近仔細一想"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "最近仔細一想"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "저도 미루고 있던 게 하나 있더라고요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "here was something I'd been putting off lately"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "發現我也曾經拖延過一次"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "發現我也曾經拖延過一次"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "그래?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Really?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "這樣啊？"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "這樣啊？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "린지도 그런 게 있어?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "What is it?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "琳賽也有那種經驗？"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "琳賽也有那種經驗？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "예전에 저랑 약속 하나 하셨는데"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "You made a promise to me once,"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "以前和我有過一個約定"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "以前和我有過一個約定"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "기억하세요?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "remember?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "你記得嗎？"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "你記得嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "약속?"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "A promise?"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "約定？"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "約定？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "잘 떠올려 보세요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "Think about it"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "你仔細回想看看"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "你仔細回想看看"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "린지(타나토스)",
+          "message": "기다릴게요"
+        },
+        "en": {
+          "speaker": "Linzy (Thanatos)",
+          "message": "I'll wait"
+        },
+        "zh_tw": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我會等你的"
+        },
+        "zh_cn": {
+          "speaker": "琳賽（桑納托斯）",
+          "message": "我會等你的"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "이디스",
+          "message": "단장님… 어쩐지 더 카리스마가 대단해지신 것 같사와요…!"
+        },
+        "en": {
+          "speaker": "Edith",
+          "message": "It appears the Commander's charisma has notably intensified somehow…"
+        },
+        "zh_tw": {
+          "speaker": "伊迪絲",
+          "message": "難怪…團長好像變得更有領袖魅力了…！"
+        },
+        "zh_cn": {
+          "speaker": "伊迪絲",
+          "message": "難怪…團長好像變得更有領袖魅力了…！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "클로이",
+          "message": "아 뭐야!!! 왜 너만 멋있는 무기 생겼는데!! \n린지 이 치사한 녀석~!!! 두고 봐~!!"
+        },
+        "en": {
+          "speaker": "Chloe",
+          "message": "Ugh, how come she gets to have a new, cool weapon!?\r\nThis is so not fair! Linzy, just you wait!"
+        },
+        "zh_tw": {
+          "speaker": "克羅伊",
+          "message": "吼，什麼嘛！！！為什麼只有妳有酷炫的武器！！\r\n琳賽這卑鄙的傢伙～！！！走著瞧～！！"
+        },
+        "zh_cn": {
+          "speaker": "克羅伊",
+          "message": "吼，什麼嘛！！！為什麼只有妳有酷炫的武器！！\r\n琳賽這卑鄙的傢伙～！！！走著瞧～！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "릴리트",
+          "message": "의외로 저와 합이 잘 맞는 것 같아요. 재밌는 분♪"
+        },
+        "en": {
+          "speaker": "Lilith",
+          "message": "Surprisingly, we seem to get along well. She's fascinating ♪"
+        },
+        "zh_tw": {
+          "speaker": "莉莉絲",
+          "message": "意外地好像跟我很合得來，有趣的精靈♪"
+        },
+        "zh_cn": {
+          "speaker": "莉莉絲",
+          "message": "意外地好像跟我很合得來，有趣的精靈♪"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "기사단 복귀 절차 완료했습니다"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I have completed the procedure to return to the Order"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我已經完成騎士團歸隊程序了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我已經完成騎士團歸隊程序了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "보고 고마워"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Thank you for reporting"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "謝謝妳的報告"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "謝謝妳的報告"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "보고 고마워"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Thank you for reporting"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "謝謝妳的報告"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "謝謝妳的報告"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "다시 한 번 인사드려요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Let me introduce myself again"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "重新向你打聲招呼"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "重新向你打聲招呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "검은 매 기사단 단장, 린지입니다"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I am Linzy, commander of the Order of Blackhawk"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我是黑鷹騎士團的團長琳賽"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我是黑鷹騎士團的團長琳賽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "새삼스럽게 인사도 새로 해?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "An introduction again? Is that really necessary?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "還突然重新打招呼？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "還突然重新打招呼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "새삼스럽게 인사도 새로 해?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "An introduction again? Is that really necessary?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "還突然重新打招呼？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "還突然重新打招呼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "새삼스러워도 중요한 거니까요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Of course. It's necessary"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然有點突然，但這很重要"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然有點突然，但這很重要"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "전 언제나 최고여야 하니까"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I always have to be the best"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "因為我無論何時都要是最棒的"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "因為我無論何時都要是最棒的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "기본적인 부분부터 완벽하게 챙겨야죠"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I must cover all the bases"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "當然要從最基本的開始做到完美囉"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "當然要從最基本的開始做到完美囉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "아무튼 잘 부탁드려요, 구원자님"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Anyway, nice to meet you, Savior"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "總之請多指教，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "總之請多指教，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "나도 잘 부탁해, 린지!"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Me, too, Linzy!"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我也請妳多指教，琳賽！"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我也請妳多指教，琳賽！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "나도 잘 부탁해, 린지!"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Me, too, Linzy!"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我也請妳多指教，琳賽！"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我也請妳多指教，琳賽！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "오랜만에 기사단에 복귀하는 거라 걱정했는데"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I was worried about returning to the Order after such a long absence."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "時隔好久回歸騎士團，讓我很擔心"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "時隔好久回歸騎士團，讓我很擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "부단장인 이디스가 생각보다 잘 해주고 있었네요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Edith, my assistant commander, has been doing a better job than I expected"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "副團長伊迪絲的表現比我預期的還好呢"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "副團長伊迪絲的表現比我預期的還好呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "이디스를 불안하게 생각했다기보다는…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "It's not that I was unsure about her"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "與其說是不放心伊迪絲…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "與其說是不放心伊迪絲…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "인수인계도 제대로 못 해준 상태에서"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "It's more that I felt bad"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "其實是因為在沒好好交接的狀態下"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "其實是因為在沒好好交接的狀態下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "갑자기 자리를 두 번이나 비웠으니"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "for leaving her twice"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "突然離開崗位"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "突然離開崗位"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "많이 미안했거든요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "without a proper handover"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "讓我感到很抱歉"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "讓我感到很抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "생각해보니 그렇네"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Now that I think about it, you did"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "想想也是呢"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "想想也是呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "생각해보니 그렇네"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Now that I think about it, you did"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "想想也是呢"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "想想也是呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "다 나 때문이야"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "It's all my fault"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "全都是因為我"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "全都是因為我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "다 나 때문이야"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "It's all my fault"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "全都是因為我"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "全都是因為我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對不起"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對不起"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님이 미안하실 게 뭐가 있겠어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You have nothing to be sorry about"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者有什麼好對不起的"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者有什麼好對不起的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제가 더 강하지 못했던 탓이죠"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "It's my fault I wasn't stronger"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "全都是因為我之前不夠強"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "全都是因為我之前不夠強"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "앞으로 더욱 정진하겠어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'll do better from now on"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我以後會更精進自己的"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我以後會更精進自己的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "태양 기사단 훈련장에 가면"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "There's a dog"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "去太陽騎士團訓練場的話"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "去太陽騎士團訓練場的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "종종 강아지가 있는데"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "at the Order of Sun training grounds"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "經常會有狗狗"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "經常會有狗狗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "아시나요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Did you know?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你知道嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你知道嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "리타네 강아지 말이지?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You mean, Rita's?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳是說麗塔的狗狗吧？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳是說麗塔的狗狗吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "리타네 강아지 말이지?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You mean, Rita's?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳是說麗塔的狗狗吧？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳是說麗塔的狗狗吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "맞아요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Right"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "이름 이상한 그 강아지요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "The dog with the weird name"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "就是名字很奇怪的那隻狗狗"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "就是名字很奇怪的那隻狗狗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "종종 훈련에도 데려오는 모양이더군요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Apparently, she even brings him to training sometimes."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "她好像也經常帶牠來訓練"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "她好像也經常帶牠來訓練"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "검은 매 기사단은 동물 안 키워?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Doesn't the Order of Blackhawk have animals?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "黑鷹騎士團不養動物嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "黑鷹騎士團不養動物嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "검은 매 기사단은 동물 안 키워?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Doesn't the Order of Blackhawk have animals?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "黑鷹騎士團不養動物嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "黑鷹騎士團不養動物嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "이름 그대로 매를 키워 보지 않겠냐고 물어보시려는 거라면"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "If you're asking me if I'd like to keep a hawk, as the name implies,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "如果你打算問要不要像騎士團名字那樣養老鷹的話"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "如果你打算問要不要像騎士團名字那樣養老鷹的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "정중하게 사양하겠습니다"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'll respectfully decline"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "恕我鄭重拒絕"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "恕我鄭重拒絕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "눈치 빠르네"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "That answer came quick"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳反應很快嘛"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳反應很快嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "눈치 빠르네"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "That answer came quick"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳反應很快嘛"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳反應很快嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그런 얘기를 몇 번 들었다고 생각하세요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "How many times do you think I've heard that?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你想想看我聽過多少次那樣的話了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你想想看我聽過多少次那樣的話了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "이골이 났다고요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'm tired of it"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "聽到耳朵都長繭了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "聽到耳朵都長繭了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "휴"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Ugh"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "呼"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "가끔 보면"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Sometimes you see"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "偶爾啊"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "偶爾啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "미루는 습관을 가진 정령들이 있죠"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Souls who have a habit of procrastinating"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "會發現有些精靈有拖延症"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "會發現有些精靈有拖延症"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "뭐, 전 바로바로 하는 편이긴 한데요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Well, I tend to do things on the spot,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "嗯，不過我是有事就立刻執行的類型"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "嗯，不過我是有事就立刻執行的類型"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "최근에 생각해보니"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "but then, I realize"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "最近仔細一想"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "最近仔細一想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저도 미루고 있던 게 하나 있더라고요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "here was something I'd been putting off lately"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "發現我也曾經拖延過一次"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "發現我也曾經拖延過一次"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "這樣啊？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "這樣啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "這樣啊？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "這樣啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "린지도 그런 게 있어?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽也有那種經驗？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽也有那種經驗？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "린지도 그런 게 있어?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽也有那種經驗？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽也有那種經驗？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "예전에 저랑 약속 하나 하셨는데"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You made a promise to me once,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "以前和我有過一個約定"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "以前和我有過一個約定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "기억하세요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "remember?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你記得嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你記得嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "약속?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "A promise?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "約定？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "約定？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "약속?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "A promise?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "約定？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "約定？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "잘 떠올려 보세요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Think about it"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你仔細回想看看"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你仔細回想看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "기다릴게요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'll wait"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我會等你的"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我會等你的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "기억나셨나요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Remember now?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "想起來了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "想起來了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "생각났어"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I do"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想起來了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "생각났어"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I do"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想起來了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "주스 사주기로 했던 거"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You said you'd buy me juice"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳曾約好要買果汁給我"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳曾約好要買果汁給我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "주스 사주기로 했던 거"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You said you'd buy me juice"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳曾約好要買果汁給我"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳曾約好要買果汁給我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "맞아요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "이런 것도 미루지 말아야겠다 싶더라고요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I decided I shouldn't put it off"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我覺得這種事不應該拖延下去"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我覺得這種事不應該拖延下去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "물론 이제 전 구원자님 곁에 계속 있을 거지만"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Of course,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然我現在會一直待在救援者身邊就是了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然我現在會一直待在救援者身邊就是了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "아무튼"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'll still be by your side now,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "總之"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "總之"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "시간 괜찮으시면 광장으로 나오세요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "but if you have a moment, come out to the Square"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "如果你有空的話，請來廣場吧"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "如果你有空的話，請來廣場吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제가 약속대로 대접할게요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'll treat you as promised"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我會依照約定請客"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我會依照約定請客"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "기사단도 결국은 군대니까"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "The Knights are an army, after all,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "騎士團終究還是軍隊"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "騎士團終究還是軍隊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "상명하복식 일처리를 해야만 할 때가 있죠"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "and sometimes we have to do things the military way"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "所以有時必須以上命下從的方式做事"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "所以有時必須以上命下從的方式做事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "대부분 군말없이 따라와 주지만…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Most of the time, they're fine with it,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然大部分都是二話不說地遵從…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然大部分都是二話不說地遵從…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "가끔 불안할 때가 있기도 해요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "but sometimes I get nervous"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但偶爾也會有讓人焦慮不安的時候"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但偶爾也會有讓人焦慮不安的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "요즘 정령들에겐 안 통하는 거 아닌가 싶어서요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "because I don't know if it'll work with the newer generation of Souls"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "最近會覺得好像跟精靈們難以溝通"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "最近會覺得好像跟精靈們難以溝通"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "정령들에게도 세대차이가 있어?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Is there a generation gap even among the Souls?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "精靈們也有世代差異嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "精靈們也有世代差異嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "정령들에게도 세대차이가 있어?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Is there a generation gap even among the Souls?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "精靈們也有世代差異嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "精靈們也有世代差異嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "세대… 라고 표현하긴 이상하네요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Maybe generation is not the right word."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "用世代…這種說法有點怪"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "用世代…這種說法有點怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "좀 더 자유로운 성향의 정령들도 있잖아요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Some Souls are more liberal than others"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "總會有些精靈的想法比較自由嘛"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "總會有些精靈的想法比較自由嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저 같은 정령하곤 다르게요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "like me"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "和我這種精靈不一樣"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "和我這種精靈不一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "물론 잘 이해는 안 되지만요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I don't really understand them,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "當然我不太能理解就是了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "當然我不太能理解就是了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그래도 함께 일하는 사이니까"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "but we're working together"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不過畢竟是共事的關係"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不過畢竟是共事的關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "가능한 존중해 주고 싶거든요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I want to be as respectful as possible"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想盡可能尊重大家"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想盡可能尊重大家"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "린지는 좋은 상관이구나"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Linzy, you're such a good boss"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽真是個好上司"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽真是個好上司"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "린지는 좋은 상관이구나"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Linzy, you're such a good boss"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽真是個好上司"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽真是個好上司"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그런가요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You think so?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "스스로는 잘 모르겠어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I don't know"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我自己是不太清楚"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我自己是不太清楚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제 생각엔 클레르가 더 이상적인 상사 같거든요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I think Claire is a more ideal boss"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我覺得克萊兒是更理想的上司"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我覺得克萊兒是更理想的上司"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "린지도 훌륭한 리더야"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You're just as good"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽也是優秀的領導者"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽也是優秀的領導者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "린지도 훌륭한 리더야"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You're just as good"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽也是優秀的領導者"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽也是優秀的領導者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "칭찬 고맙습니다"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Thank you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "謝謝你的稱讚"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "謝謝你的稱讚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "더 정진할게요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I'll do better"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我會更精進自己的"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我會更精進自己的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "생각해봤는데"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I've been thinking,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想了一下"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想了一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님은 별로 좋은 리더는 아니신 것 같아요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "and I don't think you're a very good leader"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者好像不是一個好的領導者"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者好像不是一個好的領導者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "미, 미안…?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "S-sorry..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "抱、抱歉…？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "抱、抱歉…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "미, 미안…?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "S-sorry..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "抱、抱歉…？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "抱、抱歉…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "내가 그렇긴 하지…?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I know I'm lacking..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我的確是那樣吧…？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我的確是那樣吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "내가 그렇긴 하지…?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I know I'm lacking..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我的確是那樣吧…？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我的確是那樣吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "근데 이렇게 갑자기…??"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "But hearing that so all of a sudden..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不過這麼突然…？？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不過這麼突然…？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "근데 이렇게 갑자기…??"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "But hearing that so all of a sudden..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不過這麼突然…？？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不過這麼突然…？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "왜 기가 죽고 그러세요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "What are you talking about?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你為什麼這麼沮喪？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你為什麼這麼沮喪？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님은 좋은 리더보다는"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I mean, you're more like a good friend"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者比起好的領導者"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者比起好的領導者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "좋은 친구 같아요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "than a good leader"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "更像是一個好朋友"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "更像是一個好朋友"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "힘들어도 잘 티 안 내고"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "No matter how hard it is, you don't show it"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "因為你即使疲憊也不會表現出來"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "因為你即使疲憊也不會表現出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "묵묵히 희생하려 하고"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You're always willing to sacrifice yourself"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "而是總想著"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "而是總想著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그러시니까요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "for those around you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "默默犧牲自己"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "默默犧牲自己"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그런가…?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You think so?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "是嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "是嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그런가…?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You think so?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "是嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "是嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "나도 스스로는 잘 모르겠네…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I don't know..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我自己也不太清楚呢…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我自己也不太清楚呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "나도 스스로는 잘 모르겠네…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I don't know..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我自己也不太清楚呢…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我自己也不太清楚呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그렇죠?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對吧？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저도 막상 자기 일은 잘 모르겠더라고요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I don't really know what I'm doing, either"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "實際上我也不太清楚自己的情況"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "實際上我也不太清楚自己的情況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저희 좀 닮았을지도 모르겠네요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Maybe we're alike in that sense"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "說不定我們有點相像呢"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "說不定我們有點相像呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "먼 과거, 인간들은"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I heard that in the distant past, humans passed down"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "聽說在遙遠的過去，人類們"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "聽說在遙遠的過去，人類們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "같은 이름을 대대로 이어 갔다면서요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "the same names from generation to generation."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "都會代代傳承相同的名字？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "都會代代傳承相同的名字？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "성씨 말하는 거야?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You mean, family names?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳是指姓氏嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳是指姓氏嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "성씨 말하는 거야?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You mean, family names?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳是指姓氏嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "妳是指姓氏嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "재밌는 관습이라고 생각했어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I thought it was an interesting custom."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我覺得這是很有趣的風俗"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我覺得這是很有趣的風俗"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "불리는 존재는 달라지는데"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "The being changes,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "被稱呼的存在不同"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "被稱呼的存在不同"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "부르는 이름은 같은 거죠"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "but the name remains the same"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但稱呼的名字卻相同"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但稱呼的名字卻相同"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저도 그런 상태일지도 모르겠어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Maybe that's what I am"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "說不定我也處於那種狀態"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "說不定我也處於那種狀態"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제 몸의 많은 것이 바뀌었지만"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "So much of my body has changed,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然我的身體有很多地方都改變了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然我的身體有很多地方都改變了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저는 여전히 린지니까요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "but I'm still Linzy"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但我依然是琳賽"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但我依然是琳賽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제가 그렇게 착각하고 있을 뿐"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Maybe I'm just under a false impression"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "也許只是我誤會了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "也許只是我誤會了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "사실은 저도 완전히 새로운 정령인 걸까요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Maybe I'm a completely new Soul now"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "會不會其實我也是個全新的精靈？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "會不會其實我也是個全新的精靈？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "불안해하지 마"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Don't worry"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不用感到不安"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不用感到不安"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "불안해하지 마"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Don't worry"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不用感到不安"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "不用感到不安"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "린지는 분명히 내가 아는 그 린지니까"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You're still the same Linzy I know"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽就是我知道的那個琳賽"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽就是我知道的那個琳賽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "린지는 분명히 내가 아는 그 린지니까"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "You're still the same Linzy I know"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽就是我知道的那個琳賽"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "琳賽就是我知道的那個琳賽"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "망설임 없이 그렇게 말씀해 주시니까"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "It's a relief to hear you say that"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你毫不猶豫地這樣說"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "你毫不猶豫地這樣說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "마음이 놓이네요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "without hesitation"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "讓我安心了呢"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "讓我安心了呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저도 괜히 마음이 약해졌었나 봐요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I guess I've been a little soft"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "看來我的心也莫名變軟弱了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "看來我的心也莫名變軟弱了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "감사합니다"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Thank you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님과"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I want to talk to you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想和救援者"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想和救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "시시콜콜한 이야기를 하고 싶어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "about small things"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "聊些瑣碎的話題"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "聊些瑣碎的話題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "옷을 갈아입을 땐 어느 쪽부터 팔을 꿰는지"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Like which arm you put in first when you get dressed"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "像是換衣服的時候都從哪隻手開始穿"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "像是換衣服的時候都從哪隻手開始穿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "아침 식사로 계란 요리를 즐겨 먹는지"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "if you like to eat eggs for breakfast"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "早餐喜不喜歡吃雞蛋料理"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "早餐喜不喜歡吃雞蛋料理"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "신발 뒷굽은 어느 쪽이 먼저 닳는지 같은 거요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "or which heel of your shoes wears out first"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "鞋跟從哪邊先開始磨損之類的話題"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "鞋跟從哪邊先開始磨損之類的話題"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "얼마든지 말해줄 수 있긴 한데"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Sure, I can tell you, but"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我隨時都能跟妳聊這些呀"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我隨時都能跟妳聊這些呀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "얼마든지 말해줄 수 있긴 한데"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Sure, I can tell you, but"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我隨時都能跟妳聊這些呀"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我隨時都能跟妳聊這些呀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "혹시 무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "is something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但妳發生了什麼事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但妳發生了什麼事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "혹시 무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "is something wrong?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但妳發生了什麼事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但妳發生了什麼事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "아무 일 없는데요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "No, nothing's wrong"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "什麼事也沒有啊"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "什麼事也沒有啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "사실 있는 것 같아요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Actually, maybe it is"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "其實好像有啦"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "其實好像有啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "곳곳에 숨어 있는 '삶'의 증거를"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I want to collect"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想多收藏一點"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我想多收藏一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "하나라도 더 많이 모으고 싶어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "as much evidence of life as I can"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "四處隱藏的「生命」的證據"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "四處隱藏的「生命」的證據"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님이 살아있다는 증거를 보면서"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Maybe I want to see evidence"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "看著救援者活著的證據"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "看著救援者活著的證據"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저 또한 살아있다고 느끼고"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "that you're alive so that I can feel alive"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我似乎也想要感受到自己活著"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我似乎也想要感受到自己活著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "안심하고 싶은가 봐요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "and reassured"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "並感到安心"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "並感到安心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제 안에 있는 죽음을 인식할수록"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "The more I recognize the death within me,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "當我越意識到心中的死亡"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "當我越意識到心中的死亡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제 밖에 있는 삶을 분명하게 느껴요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "the more clearly I feel the life outside of me"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我就越清晰地感受到自己以外的生命"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我就越清晰地感受到自己以外的生命"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "우스운 일일지도 모르겠어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "It's funny, I suppose,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "或許這件事很可笑"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "或許這件事很可笑"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "평화롭게 영생을 살 땐"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "that when I lived my eternal life in peace,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "當我平靜地活在永生之中時"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "當我平靜地活在永生之中時"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "크게 인식하지 못했던 삶이"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I didn't really recognize life,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "沒有強烈意識到的生命"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "沒有強烈意識到的生命"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "막상 죽음과 종말이 위협적으로 다가오니까"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "and now that death and the end of the world are so threatening,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "因為死亡和末日充滿威脅地逼近"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "因為死亡和末日充滿威脅地逼近"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "이제서야 간절해지는 것이요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I suddenly crave it"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "才終於變得迫切"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "才終於變得迫切"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "어둠이 있기에 빛이 있듯이?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Because there is darkness, there is light, right?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "像是有黑暗就會有光明？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "像是有黑暗就會有光明？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "어둠이 있기에 빛이 있듯이?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Because there is darkness, there is light, right?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "像是有黑暗就會有光明？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "像是有黑暗就會有光明？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "맞아요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Right"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "沒錯"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "沒錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "죽음이 있기에 삶도 빛나는 거겠죠?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Life shines because there is death"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "因為有死亡，所以生命才會閃閃發光吧？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "因為有死亡，所以生命才會閃閃發光吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "인간의 삶은 짧아서 참 불편하겠다 싶었는데"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I thought that human life was so short that it was inconvenient,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我原本覺得人類的生命短暫肯定很不方便"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我原本覺得人類的生命短暫肯定很不方便"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "짧기에 더욱 충실하고 아름다운 삶을"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "but because it's short,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "看來是因為短暫"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "看來是因為短暫"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "살 수 있는가 봐요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "you can live a more fulfilling and beautiful life"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "才能活出更充實美好的人生"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "才能活出更充實美好的人生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "삶과 죽음이 중첩된 이 몸으로"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "With this body that contains both life and death,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我要以這個生死交疊的身軀"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我要以這個生死交疊的身軀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님의 그 짧은 생을"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I will be with you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "在救援者短暫的一生中"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "在救援者短暫的一生中"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "곁에서 저도 함께하겠습니다"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "in your short life"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "陪在你身邊"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "陪在你身邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "몇몇 정령들이 저보고"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Some Souls say"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "有好幾個精靈看到我"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "有好幾個精靈看到我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "좀 변했다고 하더라고요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I've changed"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "說我有點變了"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "說我有點變了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "저는 그렇게 생각 안 하는데…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "But I don't think I have..."
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然我並不這麼覺得…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "雖然我並不這麼覺得…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "혹시 구원자님도 그렇게 생각하세요?"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "What do you think, Savior?"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但救援者也這麼想嗎？"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但救援者也這麼想嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님이 안 계신 동안"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Let me tell you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者不在的期間"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "救援者不在的期間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제게 무슨 일이 일어났었는지"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "what happened to me"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我身上究竟發生什麼事"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我身上究竟發生什麼事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "말씀드릴게요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "while you were gone"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我就來告訴你吧"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我就來告訴你吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제가 새로운 존재로 다시 태어나면서…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "what happened"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我重新誕生為新的存在…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我重新誕生為新的存在…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "겪은 일을요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "when I was reborn as a new being"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "所經歷過的事"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "所經歷過的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "주스 말고도"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Besides the juice"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "除了果汁以外"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "除了果汁以外"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님과 약속한 게 하나 더 있었죠"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I made another promise to you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我還和救援者有過另一個約定"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我還和救援者有過另一個約定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그걸 지키기 위해서"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Let me tell you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "為了遵守約定"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "為了遵守約定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "제가 어떤 길을 택했는지"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "the path I took"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我究竟選擇怎樣的路"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我究竟選擇怎樣的路"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "말씀드릴게요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "to fulfill it"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我就來告訴你吧"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我就來告訴你吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "'죽음'은 보통 제 안에 조용히 웅크리고 있지만…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "Death usually crouches quietly inside of me,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "「死亡」通常都在我心裡安靜地蜷縮著…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "「死亡」通常都在我心裡安靜地蜷縮著…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "가끔 자아를 드러내기도 해요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "but sometimes it makes itself known"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但偶爾會展現出自我"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "但偶爾會展現出自我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "지금도 그런 느낌이 들어요"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "I get that feeling now,"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我現在也有那種感覺"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "我現在也有那種感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "구원자님과 이야기하고 싶어하는…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "that it wants to"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "想和救援者聊天的…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "想和救援者聊天的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "린지(타나토스)",
+            "message": "그런 느낌…"
+          },
+          "en": {
+            "speaker": "Linzy (Thanatos)",
+            "message": "talk to you"
+          },
+          "zh_tw": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "那種感覺…"
+          },
+          "zh_cn": {
+            "speaker": "琳賽（桑納托斯）",
+            "message": "那種感覺…"
+          }
+        }
+      ]
+    }
+  }
+}

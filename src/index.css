@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --color-pink-neon: #FF2E7E;
+  --color-purple-neon: #A855F7;
+  --color-bg-main: #0B0B12;
+  --color-bg-panel: rgba(20, 20, 30, 0.65);
+  
+  --font-title: 'Outfit', 'Inter', 'sans-serif';
+  --font-body: 'Inter', 'sans-serif';
+  
+  --shadow-pink-glow: 0 0 15px rgba(255, 46, 126, 0.35);
+  --shadow-purple-glow: 0 0 15px rgba(168, 85, 247, 0.35);
+}
+
+@layer base {
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    background-color: var(--color-bg-main);
+    color: #ffffff;
+    font-family: var(--font-body);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(255, 46, 126, 0.05) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 40%);
+  }
+
+  #root {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 46, 126, 0.4);
+  }
+}

@@ -1,0 +1,4054 @@
+{
+  "id": "2020",
+  "name": "순이",
+  "name_en": "Soonie",
+  "grade": "에픽",
+  "race": "야수형",
+  "class": "디펜더",
+  "sub_class": "디버프",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "물빛 포효",
+    "constellation": "인연_메피스토_이벤트2",
+    "union": "가온",
+    "birthday": "219",
+    "height": 135,
+    "weight": 38,
+    "cv_ko": "정혜원",
+    "cv_jp": "Maria Naganawa",
+    "like": [
+      "약과",
+      "감주"
+    ],
+    "dislike": [
+      "한약"
+    ],
+    "hobby": [
+      "공기 놀이",
+      "체통 지키기"
+    ],
+    "speciality": [
+      "제기 차기"
+    ]
+  },
+  "personality": {
+    "description": "험, 험! 게 아무도 없느냐! 나는 순이, 그대가 바라던 강력하고 위대한 업적을 가진 정령이다!\n\n…거 이상하구나. 내 배우기로는 손님이 오면 버선발로 나와 맞는 것이 예의라 들었는데, 어찌 이리 조용할꼬? \n우리 구원자는 양반의 도를 배우지 못 한 자인가? 어허… 이제야 오는구만. 어째 정신이 없어 보이는구나. \n내가 온 것이 그리 기쁜가? 그렇다면 어쩔 수 없지, 내 사소한 법도를 어기는 것쯤은 이해하겠네.\n\n그런데… 기뻐하는 것도 좋다만, 혹시 시원한 감주나 달콤한 약과라도 내어 주면 어떻겠는가? 그간의 잠이 길어 그런가, 내 단것을 먹으면 눈이 반짝 뜨일 것 같구나. \n뭣…? 감주나, 약과가 없다니!? 아니 그럼 무얼로 요기를 한단 말인가? …히잉… …어떻게, 삶은 밤이라도 없겠는가?\n\n…음, 음. 오랜만에 먹으니 삶은 밤도 무척 맛있구나! 이제 본격적으로 내 이야기를 해 보자면, 부끄럽지만 바다 위에서는 거의 무적이라 불렸다네. \n내가 나타나는 순간 적은 후퇴로부터 살피기 바빴을게야. 굉장했지. 단단한 외피에 뾰족한 가시로 적병의 침입을 원천봉쇄하고, 웅장한 용의 머리까지 달아 \n단박에 적 함선의 옆구리를 부수어 꼼짝도 못하게 만들었지. 어디 그뿐인가? \n수십의 함포를 달아 멀리 있는 적들을 요격하는 데도 안성맞춤이라, 그야말로 해상의 패자가 따로 없었다네. \n…이곳도 분명 전쟁이 있어 나를 부른 것일 테지. 이 순이, 힘이 닿는 한 그대를 도울 것이니, 앞으로의 일은 걱정말고 맡겨주게!",
+    "greeting": "걱정말거라! \n내 비록 작아도, 이쯤은 거뜬하다!"
+  },
+  "speech_patterns": [
+    "구원자! 안녕한가\r\n인사하겠네",
+    "흠흠. 참으로 반갑네",
+    "허나…",
+    "나는 에버폰은 영 서툴러서…",
+    "직접 만나 인사할 수 있겠나?",
+    "꿀떡 먹으면서 \r\n도란도란 이야기나 좀 하지!",
+    "구원자는 오늘 아침밥 뭘 먹었나?",
+    "나는 그냥 집에 있는 걸로 먹었네",
+    "짭조름한 김을\r\n쌀밥에 얹어먹는 재미가 있었지!",
+    "암!",
+    "항시 잘 챙겨먹어야 해~",
+    "무척 중요한 일이야!\r\n구원자도 결코 잊지 않도록 하게나!",
+    "내 착각일지도 모르네만…",
+    "가끔 무척 열렬한 시선이\r\n나를 향하고 있다는 느낌이 드네…",
+    "이유가 뭐라고 생각하나?",
+    "!!!",
+    "그럴 수도 있겠군!",
+    "'캐럿'… 하면서 계속\r\n중얼중얼대는 소리가 들리지 뭐냐!",
+    "!!!!!!",
+    "구원자 이제보니 아주 똑똑하구만!",
+    "나는 떡을 좋아하긴 하지만…",
+    "빵도 맛이 제법 괜찮더구만",
+    "지호 녀석도 원래는 떡을 더 좋아했는데…",
+    "좋아하는 가수가 부추빵 좋아한다는 걸 알더니",
+    "오늘부터 빵만 먹겠다고 했어",
+    "그러게 말이야 쯧쯧",
+    "맘에 안 들어!",
+    "나는 탄생한지 얼마 안됐을 무렵…",
+    "장래희망이 무척 많았다네",
+    "정말 많은 것을 꿈꾸었지",
+    "그리고, 지금은 이렇게 \r\n에덴의 바다를 수호하고 있지",
+    "그 많은 꿈들 중에서",
+    "가장 가치있는 꿈이라고…",
+    "그렇게 자부한다네!",
+    "으으, 아까 시장에서",
+    "무슨 차를 마셨는데… 으으",
+    "치약 먹은 것 같다네",
+    "대강 그런 이름이었던 것 같군\r\n내겐 생소했어",
+    "으으으~! \r\n입안이 이상하네~!",
+    "홍란은 평소 아기 토끼들과",
+    "오순도순 잘 살더군",
+    "보기 좋았네~",
+    "자주 싸운다고는 하지만",
+    "내가 보기에 그 아기 토끼들은\r\n홍란을 무척 믿고 따르고 있어",
+    "아주 흐뭇한 일이지!",
+    "세상에는 다양한 전술이 있지",
+    "그 중, 나와 아군에게 \r\n가장 잘 맞는 방법이 뭔지…",
+    "오늘의 날씨와의 궁합은 어떤지…",
+    "모든 것을 잘 헤아려야 해",
+    "그래야만 승리를 거머쥘 수 있다네!"
+  ],
+  "comments": [
+    {
+      "writer": "가넷",
+      "comment": "아아~! 아무리 봐도 완벽해. 새 캐럿이 되어달라 부탁해 볼까?"
+    },
+    {
+      "writer": "멜피스",
+      "comment": "처음엔 어른 같은 말투라 싫었지만 지금은 친구야."
+    },
+    {
+      "writer": "메릴",
+      "comment": "분명 먼 곳의 전래 동화 중에 <토끼와 거북이>라는 게 있었죠?\n거북이 위에 탈 생각을 하다니 영리한 토끼네요!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "순이",
+        "message": "구원자! 안녕한가\r\n인사하겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "순이야, 안녕!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "순이야, 안녕!"
+      },
+      {
+        "speaker": "순이",
+        "message": "흠흠. 참으로 반갑네"
+      },
+      {
+        "speaker": "순이",
+        "message": "허나…"
+      },
+      {
+        "speaker": "순이",
+        "message": "나는 에버폰은 영 서툴러서…"
+      },
+      {
+        "speaker": "순이",
+        "message": "직접 만나 인사할 수 있겠나?"
+      },
+      {
+        "speaker": "순이",
+        "message": "꿀떡 먹으면서 \r\n도란도란 이야기나 좀 하지!"
+      },
+      {
+        "speaker": "순이",
+        "message": "구원자는 오늘 아침밥 뭘 먹었나?"
+      },
+      {
+        "speaker": "순이",
+        "message": "나는 그냥 집에 있는 걸로 먹었네"
+      },
+      {
+        "speaker": "순이",
+        "message": "짭조름한 김을\r\n쌀밥에 얹어먹는 재미가 있었지!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "먹는 걸 좋아하는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "먹는 걸 좋아하는구나"
+      },
+      {
+        "speaker": "순이",
+        "message": "암!"
+      },
+      {
+        "speaker": "순이",
+        "message": "항시 잘 챙겨먹어야 해~"
+      },
+      {
+        "speaker": "순이",
+        "message": "무척 중요한 일이야!\r\n구원자도 결코 잊지 않도록 하게나!"
+      },
+      {
+        "speaker": "순이",
+        "message": "내 착각일지도 모르네만…"
+      },
+      {
+        "speaker": "순이",
+        "message": "가끔 무척 열렬한 시선이\r\n나를 향하고 있다는 느낌이 드네…"
+      },
+      {
+        "speaker": "순이",
+        "message": "이유가 뭐라고 생각하나?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "순이의 팬인가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "순이의 팬인가?"
+      },
+      {
+        "speaker": "순이",
+        "message": "!!!"
+      },
+      {
+        "speaker": "순이",
+        "message": "그럴 수도 있겠군!"
+      },
+      {
+        "speaker": "순이",
+        "message": "'캐럿'… 하면서 계속\r\n중얼중얼대는 소리가 들리지 뭐냐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "토끼가 당근을 좋아해서 그런가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "토끼가 당근을 좋아해서 그런가?"
+      },
+      {
+        "speaker": "순이",
+        "message": "!!!!!!"
+      },
+      {
+        "speaker": "순이",
+        "message": "구원자 이제보니 아주 똑똑하구만!"
+      },
+      {
+        "speaker": "순이",
+        "message": "나는 떡을 좋아하긴 하지만…"
+      },
+      {
+        "speaker": "순이",
+        "message": "빵도 맛이 제법 괜찮더구만"
+      },
+      {
+        "speaker": "순이",
+        "message": "지호 녀석도 원래는 떡을 더 좋아했는데…"
+      },
+      {
+        "speaker": "순이",
+        "message": "좋아하는 가수가 부추빵 좋아한다는 걸 알더니"
+      },
+      {
+        "speaker": "순이",
+        "message": "오늘부터 빵만 먹겠다고 했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호답다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지호답다"
+      },
+      {
+        "speaker": "순이",
+        "message": "그러게 말이야 쯧쯧"
+      },
+      {
+        "speaker": "순이",
+        "message": "맘에 안 들어!"
+      },
+      {
+        "speaker": "순이",
+        "message": "나는 탄생한지 얼마 안됐을 무렵…"
+      },
+      {
+        "speaker": "순이",
+        "message": "장래희망이 무척 많았다네"
+      },
+      {
+        "speaker": "순이",
+        "message": "정말 많은 것을 꿈꾸었지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그랬구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그랬구나"
+      },
+      {
+        "speaker": "순이",
+        "message": "그리고, 지금은 이렇게 \r\n에덴의 바다를 수호하고 있지"
+      },
+      {
+        "speaker": "순이",
+        "message": "그 많은 꿈들 중에서"
+      },
+      {
+        "speaker": "순이",
+        "message": "가장 가치있는 꿈이라고…"
+      },
+      {
+        "speaker": "순이",
+        "message": "그렇게 자부한다네!"
+      },
+      {
+        "speaker": "순이",
+        "message": "으으, 아까 시장에서"
+      },
+      {
+        "speaker": "순이",
+        "message": "무슨 차를 마셨는데… 으으"
+      },
+      {
+        "speaker": "순이",
+        "message": "치약 먹은 것 같다네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페퍼민트 티?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "페퍼민트 티?"
+      },
+      {
+        "speaker": "순이",
+        "message": "대강 그런 이름이었던 것 같군\r\n내겐 생소했어"
+      },
+      {
+        "speaker": "순이",
+        "message": "으으으~! \r\n입안이 이상하네~!"
+      },
+      {
+        "speaker": "순이",
+        "message": "홍란은 평소 아기 토끼들과"
+      },
+      {
+        "speaker": "순이",
+        "message": "오순도순 잘 살더군"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀엽더라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "귀엽더라"
+      },
+      {
+        "speaker": "순이",
+        "message": "보기 좋았네~"
+      },
+      {
+        "speaker": "순이",
+        "message": "자주 싸운다고는 하지만"
+      },
+      {
+        "speaker": "순이",
+        "message": "내가 보기에 그 아기 토끼들은\r\n홍란을 무척 믿고 따르고 있어"
+      },
+      {
+        "speaker": "순이",
+        "message": "아주 흐뭇한 일이지!"
+      },
+      {
+        "speaker": "순이",
+        "message": "세상에는 다양한 전술이 있지"
+      },
+      {
+        "speaker": "순이",
+        "message": "그 중, 나와 아군에게 \r\n가장 잘 맞는 방법이 뭔지…"
+      },
+      {
+        "speaker": "순이",
+        "message": "오늘의 날씨와의 궁합은 어떤지…"
+      },
+      {
+        "speaker": "순이",
+        "message": "모든 것을 잘 헤아려야 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "듬직하다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "듬직하다"
+      },
+      {
+        "speaker": "순이",
+        "message": "그래야만 승리를 거머쥘 수 있다네!"
+      },
+      {
+        "speaker": "순이",
+        "message": "♪"
+      },
+      {
+        "speaker": "순이",
+        "message": "그러고 보니 숲에서 사는\r\n도라라는 수련생이"
+      },
+      {
+        "speaker": "순이",
+        "message": "맛있는 꿀이 어딨는지\r\n그렇게 잘 안다고 하더군"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곰돌이 도라?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곰돌이 도라?"
+      },
+      {
+        "speaker": "순이",
+        "message": "맞네\r\n아주 특상급 꿀단지를 갖고 있다던데…"
+      },
+      {
+        "speaker": "순이",
+        "message": "그 꿀로 꿀떡을 빚으면…"
+      },
+      {
+        "speaker": "순이",
+        "message": "크으, 정말 환상적일 게야…!"
+      },
+      {
+        "speaker": "순이",
+        "message": "이건 내 오늘 먹은 꿀떡이네"
+      },
+      {
+        "speaker": "순이",
+        "message": "빛깔이 아주 곱지 않은가?"
+      },
+      {
+        "speaker": "순이",
+        "message": "♪♪"
+      },
+      {
+        "speaker": "순이",
+        "message": "구원자를 통해 알게된 그\r\n아이라라는 녀석…!"
+      },
+      {
+        "speaker": "순이",
+        "message": "너무 위협적이지 않은가!"
+      },
+      {
+        "speaker": "순이",
+        "message": "정녕 아케나인 성에 둬도 괜찮은 게야?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좀 과격한 친구야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좀 과격한 친구야"
+      },
+      {
+        "speaker": "순이",
+        "message": "좀이 아니지 않은가!"
+      },
+      {
+        "speaker": "순이",
+        "message": "어휴, 지난번엔 정말 \r\n간 떨어질 뻔했네…!"
+      },
+      {
+        "speaker": "순이",
+        "message": "구원자, 어떤가!\r\n구원자도 이제 에덴에 살게 되었으니…"
+      },
+      {
+        "speaker": "순이",
+        "message": "에덴의 산해진미는 슬슬 다 맛보았는가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직은 잘…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아직은 잘…"
+      },
+      {
+        "speaker": "순이",
+        "message": "이런이런~"
+      },
+      {
+        "speaker": "순이",
+        "message": "내 한수 가르쳐줌세!\r\n따라오게나!"
+      },
+      {
+        "speaker": "순이",
+        "message": "이 시기를 그냥 놓칠 순 없지…"
+      },
+      {
+        "speaker": "순이",
+        "message": "반드시, 반드시 \r\n내 뜻을 이룰 것이야!"
+      },
+      {
+        "speaker": "순이",
+        "message": "후우, 이걸로 일단락 지었지만…"
+      },
+      {
+        "speaker": "순이",
+        "message": "아직 멀었네!"
+      },
+      {
+        "speaker": "순이",
+        "message": "바다의 부름에 응해야만 해…!"
+      },
+      {
+        "speaker": "순이",
+        "message": "언제부터 바다에 큰 관심과 사랑을\r\n품게 되었는지는…"
+      },
+      {
+        "speaker": "순이",
+        "message": "너무 옛날의 일이라서 \r\n잘 기억이 나지 않는다네"
+      },
+      {
+        "speaker": "순이",
+        "message": "끙, 장수도 꼭 좋은 것은 아니구만"
+      },
+      {
+        "speaker": "순이",
+        "message": "지호랑은 이제 알게 된 지 \r\n제법 되었지"
+      },
+      {
+        "speaker": "순이",
+        "message": "예전에 비하면 지호도\r\n많이 어른스러워진 편이라네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "순이",
+        "message": "그렇다네!"
+      },
+      {
+        "speaker": "순이",
+        "message": "옛날의 지호는… \r\n정말 괄괄했어. 으으"
+      },
+      {
+        "speaker": "순이",
+        "message": "다시 떠올리기도 싫네!"
+      },
+      {
+        "speaker": "순이",
+        "message": "구원자~!!!\r\n큰일일세!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "순이",
+        "message": "중요한 기록물을 잃어버렸다네~"
+      },
+      {
+        "speaker": "순이",
+        "message": "그게 없으면 나는…"
+      },
+      {
+        "speaker": "순이",
+        "message": "으으으~!!!"
+      },
+      {
+        "speaker": "순이",
+        "message": "…어제는 어쩐지 \r\n꿈자리가 사나웠다네"
+      },
+      {
+        "speaker": "순이",
+        "message": "느낌이 영 좋지 않아…"
+      },
+      {
+        "speaker": "순이",
+        "message": "…!"
+      },
+      {
+        "speaker": "순이",
+        "message": "구원자! 나와 함께해주겠는가!"
+      },
+      {
+        "speaker": "순이",
+        "message": "바다가 있는 곳에 내가 있다네"
+      },
+      {
+        "speaker": "순이",
+        "message": "구원자! 잠은 잘 잤는가!"
+      },
+      {
+        "speaker": "순이",
+        "message": "신년을 축하하네!\r\n새해 복 많이 받게나."
+      },
+      {
+        "speaker": "구원자",
+        "message": "새해 복 많이 받아, 순이야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "새해 복 많이 받아, 순이야!"
+      },
+      {
+        "speaker": "순이",
+        "message": "사랑의 날일세.\r\n구원자, 선물은 좀 받았는가?"
+      },
+      {
+        "speaker": "순이",
+        "message": "마음을 담아서…\r\n내 좀 나눠주겠네!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 순이야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 순이야!"
+      },
+      {
+        "speaker": "순이",
+        "message": "구원자, 달달~한 먹거리들이 함께하는\r\n이브의 날 축하하네!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "축하해, 순이야!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "축하해, 순이야!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "순이",
+      "en": "Soonie",
+      "zh_tw": "順伊",
+      "zh_cn": "順伊"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "야수형",
+      "en": "Beast",
+      "zh_tw": "野獸型",
+      "zh_cn": "野獸型"
+    },
+    "class": {
+      "ko": "디펜더",
+      "en": "Defender",
+      "zh_tw": "捍衛者",
+      "zh_cn": "捍衛者"
+    },
+    "sub_class": {
+      "ko": "디버프",
+      "en": "Debuff",
+      "zh_tw": "減益",
+      "zh_cn": "減益"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "물빛 포효",
+        "en": "Water Roar",
+        "zh_tw": "水色咆哮",
+        "zh_cn": "水色咆哮"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_이벤트2",
+        "en": "인연_메피스토_이벤트2",
+        "zh_tw": "雙魚座",
+        "zh_cn": "雙魚座"
+      },
+      "union": {
+        "ko": "가온",
+        "en": "Gaon",
+        "zh_tw": "加溫",
+        "zh_cn": "加溫"
+      },
+      "cv_ko": {
+        "ko": "정혜원",
+        "en": "Hyewon Jung",
+        "zh_tw": "鄭惠媛",
+        "zh_cn": "鄭惠媛"
+      },
+      "cv_jp": {
+        "ko": "Maria Naganawa",
+        "en": "Maria Naganawa",
+        "zh_tw": "Maria Naganawa",
+        "zh_cn": "Maria Naganawa"
+      },
+      "like": {
+        "ko": [
+          "약과",
+          "감주"
+        ],
+        "en": [
+          "Honey cookies",
+          "sweet rice drinks"
+        ],
+        "zh_tw": [
+          "藥菓、甜味飄飄飲"
+        ],
+        "zh_cn": [
+          "藥菓、甜味飄飄飲"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "한약"
+        ],
+        "en": [
+          "Oriental medicine"
+        ],
+        "zh_tw": [
+          "漢藥"
+        ],
+        "zh_cn": [
+          "漢藥"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "공기 놀이",
+          "체통 지키기"
+        ],
+        "en": [
+          "Pebble games",
+          "keeping the dignity"
+        ],
+        "zh_tw": [
+          "抓石子遊戲、保持體面"
+        ],
+        "zh_cn": [
+          "抓石子遊戲、保持體面"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "제기 차기"
+        ],
+        "en": [
+          "Jegichagi"
+        ],
+        "zh_tw": [
+          "踢毽子"
+        ],
+        "zh_cn": [
+          "踢毽子"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "험, 험! 게 아무도 없느냐! 나는 순이, 그대가 바라던 강력하고 위대한 업적을 가진 정령이다!\n\n…거 이상하구나. 내 배우기로는 손님이 오면 버선발로 나와 맞는 것이 예의라 들었는데, 어찌 이리 조용할꼬? \n우리 구원자는 양반의 도를 배우지 못 한 자인가? 어허… 이제야 오는구만. 어째 정신이 없어 보이는구나. \n내가 온 것이 그리 기쁜가? 그렇다면 어쩔 수 없지, 내 사소한 법도를 어기는 것쯤은 이해하겠네.\n\n그런데… 기뻐하는 것도 좋다만, 혹시 시원한 감주나 달콤한 약과라도 내어 주면 어떻겠는가? 그간의 잠이 길어 그런가, 내 단것을 먹으면 눈이 반짝 뜨일 것 같구나. \n뭣…? 감주나, 약과가 없다니!? 아니 그럼 무얼로 요기를 한단 말인가? …히잉… …어떻게, 삶은 밤이라도 없겠는가?\n\n…음, 음. 오랜만에 먹으니 삶은 밤도 무척 맛있구나! 이제 본격적으로 내 이야기를 해 보자면, 부끄럽지만 바다 위에서는 거의 무적이라 불렸다네. \n내가 나타나는 순간 적은 후퇴로부터 살피기 바빴을게야. 굉장했지. 단단한 외피에 뾰족한 가시로 적병의 침입을 원천봉쇄하고, 웅장한 용의 머리까지 달아 \n단박에 적 함선의 옆구리를 부수어 꼼짝도 못하게 만들었지. 어디 그뿐인가? \n수십의 함포를 달아 멀리 있는 적들을 요격하는 데도 안성맞춤이라, 그야말로 해상의 패자가 따로 없었다네. \n…이곳도 분명 전쟁이 있어 나를 부른 것일 테지. 이 순이, 힘이 닿는 한 그대를 도울 것이니, 앞으로의 일은 걱정말고 맡겨주게!",
+        "en": "Humph, humph! Is there no one here? I am Soonie, the Soul with the mighty and great achievements thou have been looking forward to seeing!\n\n…That's weird. It's polite, I learned to welcome guests even in bare feet, but how come thou are so quiet?\nDid thou not yet learn the way of nobility, Savior? My, my… It is only now that thou come up. Thou look distracted somehow.\nAre thou so glad I came? Then I can't help it. I'll understand thou just break my petty custom.\n\nBy the way… It's good to be glad, but how about treating me with some cool sweet rice drink or sweet honey cookie? I've been sleeping for a long time and eating something sweet might open up my eyes.\nWhat…? No sweet rice drink, no honey cookies!? Why, then what shall I have to appease my hunger? …Phew… Can I have at least some boiled chestnuts?\n\n…Yum, umm. It's been a while since I ate them. Even chestnuts taste very good! Now, let me tell thee my story in earnest. I'm ashamed to say that I was called almost invincible on the sea.\nThe moment I appeared, the enemy would be busy watching me from retreat. It was awesome. I used my ship with hard shell and sharp thorns to block the invasion of enemy soldiers.\nIt also has a magnificent dragon head attached to the bow, with which I'd smash the side of the enemy battleships at a stroke so they get stuck. That's not all!\nThe ship is equipped with dozens of guns perfect for intercepting distant enemies, so there was no other champion on the sea.\n…I must have been called to come here since there must be a war here, too. I, Soonie, will aid thee as far as I can, so just trust me without worrying about what will happen!",
+        "zh_tw": "哼、哼！沒人嗎！我是順伊，我就是你所盼望的既強大又有豐功偉業的精靈！\n\n…真奇怪。我學到有訪客來的時候，穿著襪子出來迎接客人是禮貌，怎麼會這麼安靜呢？\n我們救援者沒有學過貴族的禮儀嗎？喔吼…你現在才出現，你怎麼看起來有點手忙腳亂？\n我來找你讓你那麼開心嗎？既然如此那就沒辦法了，雖然你違反了我的小小規矩，但我會原諒你的。\n\n但是…既然你很高興，可以給我一些爽口的甜味飄飄飲或甜甜的藥菓嗎？可能是因為我睡太久了吧，給我吃點甜的，我的眼睛就會立刻亮起來。\n啊…？你沒有甜味飄飄飲也沒有藥菓！？那要怎麼充飢啊？…嗚嗚……怎麼辦，難道連水煮栗子也沒有嗎？\n\n…嗯，嗯。好久沒吃到水煮栗子了，實在太美味啦！那我就開始認真告訴你我的故事。雖然有點不好意思，但我在海上可說是無敵呢。\n只要我一出現，敵人就會落荒而逃。厲害吧？我會用堅硬外殼上的尖刺封鎖敵人的入侵，\n然後用雄偉的龍頭擊碎敵艦側面，讓他們動彈不得。還沒完呢！\n我還有幾十個艦砲，正適合用來截擊遠方的敵人，就是所謂的海上霸主。\n…你會把我叫來這裡，一定也是因為有戰爭吧！我，順伊，會盡全力幫助你的，不必操心，以後就交給我啦！",
+        "zh_cn": "哼、哼！沒人嗎！我是順伊，我就是你所盼望的既強大又有豐功偉業的精靈！\n\n…真奇怪。我學到有訪客來的時候，穿著襪子出來迎接客人是禮貌，怎麼會這麼安靜呢？\n我們救援者沒有學過貴族的禮儀嗎？喔吼…你現在才出現，你怎麼看起來有點手忙腳亂？\n我來找你讓你那麼開心嗎？既然如此那就沒辦法了，雖然你違反了我的小小規矩，但我會原諒你的。\n\n但是…既然你很高興，可以給我一些爽口的甜味飄飄飲或甜甜的藥菓嗎？可能是因為我睡太久了吧，給我吃點甜的，我的眼睛就會立刻亮起來。\n啊…？你沒有甜味飄飄飲也沒有藥菓！？那要怎麼充飢啊？…嗚嗚……怎麼辦，難道連水煮栗子也沒有嗎？\n\n…嗯，嗯。好久沒吃到水煮栗子了，實在太美味啦！那我就開始認真告訴你我的故事。雖然有點不好意思，但我在海上可說是無敵呢。\n只要我一出現，敵人就會落荒而逃。厲害吧？我會用堅硬外殼上的尖刺封鎖敵人的入侵，\n然後用雄偉的龍頭擊碎敵艦側面，讓他們動彈不得。還沒完呢！\n我還有幾十個艦砲，正適合用來截擊遠方的敵人，就是所謂的海上霸主。\n…你會把我叫來這裡，一定也是因為有戰爭吧！我，順伊，會盡全力幫助你的，不必操心，以後就交給我啦！"
+      },
+      "greeting": {
+        "ko": "걱정말거라! \n내 비록 작아도, 이쯤은 거뜬하다!",
+        "en": "Don't worry!\nI may be small, but this much is nothing!",
+        "zh_tw": "不要擔心！\n我個子很小、動作很輕盈！",
+        "zh_cn": "不要擔心！\n我個子很小、動作很輕盈！"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "구원자! 안녕한가\r\n인사하겠네"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Greetings to thee, Savior."
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "救援者！你好啊\r\n我來打聲招呼"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "救援者！你好啊\r\n我來打聲招呼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "흠흠. 참으로 반갑네"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Ahem. I am glad to have made your acquaintance."
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "嗯嗯，真高興"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "嗯嗯，真高興"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "허나…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "However…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "不過…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "不過…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "나는 에버폰은 영 서툴러서…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I am all but clumsy with this Everphone…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "我不太會用EverPhone…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "我不太會用EverPhone…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "직접 만나 인사할 수 있겠나?"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Perhaps we could talk in person?"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "可以直接見面打招呼嗎？"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "可以直接見面打招呼嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "꿀떡 먹으면서 \r\n도란도란 이야기나 좀 하지!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Let us speak\r\nover some delicious honey rice cakes!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "一邊吃蜜糖年糕，\r\n一邊聊天吧！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "一邊吃蜜糖年糕，\r\n一邊聊天吧！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "구원자는 오늘 아침밥 뭘 먹었나?"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Has thee enjoyed today's breakfast?"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "救援者今天早餐吃了什麼？"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "救援者今天早餐吃了什麼？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "나는 그냥 집에 있는 걸로 먹었네"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I enjoyed what I had at home"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "我就吃了家裡的東西"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "我就吃了家裡的東西"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "짭조름한 김을\r\n쌀밥에 얹어먹는 재미가 있었지!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "It was quite a joyous experience\r\nto have savory seaweed with rice!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "把鹹鹹的海苔\r\n放在米飯上吃很有趣！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "把鹹鹹的海苔\r\n放在米飯上吃很有趣！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "암!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Undoubtedly!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "當然！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "當然！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "항시 잘 챙겨먹어야 해~"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "You must always eat a good meal!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "一定要按時吃飯～"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "一定要按時吃飯～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "무척 중요한 일이야!\r\n구원자도 결코 잊지 않도록 하게나!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "It is of utmost importance!\r\nSavior must never neglect this!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "這非常重要！救援者也絕對不要忘記！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "這非常重要！救援者也絕對不要忘記！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "내 착각일지도 모르네만…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "This may just be one's delusion…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "也許是我的錯覺…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "也許是我的錯覺…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "가끔 무척 열렬한 시선이\r\n나를 향하고 있다는 느낌이 드네…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I have, on occasion, have felt\r\nsomeone's heated gaze upon me…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "偶爾會感覺到一股\r\n非常熾熱的眼神看著我…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "偶爾會感覺到一股\r\n非常熾熱的眼神看著我…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "이유가 뭐라고 생각하나?"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "What reason do thee think it is?"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "你覺得原因是什麼？"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "你覺得原因是什麼？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "!!!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "!!!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "！！！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "그럴 수도 있겠군!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "By golly, that must be it!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "有可能是那樣呢！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "有可能是那樣呢！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "'캐럿'… 하면서 계속\r\n중얼중얼대는 소리가 들리지 뭐냐!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I was sure they whispered\r\n\"carrot\"… and more!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "「蘿蔔」…我一直聽到\r\n這樣喃喃自語的聲音！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "「蘿蔔」…我一直聽到\r\n這樣喃喃自語的聲音！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "!!!!!!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "!!!!!!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "！！！！！！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "！！！！！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "구원자 이제보니 아주 똑똑하구만!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Savior, you are an intelligent fellow!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "救援者原來你很聰明啊！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "救援者原來你很聰明啊！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "나는 떡을 좋아하긴 하지만…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I usually prefer tteok…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "雖然我喜歡吃年糕，但是…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "雖然我喜歡吃年糕，但是…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "빵도 맛이 제법 괜찮더구만"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "But bread is tastier than I thought"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "麵包的味道也不錯"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "麵包的味道也不錯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "지호 녀석도 원래는 떡을 더 좋아했는데…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Jiho used to love tteok more…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "智河那傢伙原本也比較喜歡年糕…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "智河那傢伙原本也比較喜歡年糕…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "좋아하는 가수가 부추빵 좋아한다는 걸 알더니"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Alas, after she learnt her favorite singer likes chive bread,"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "結果知道自己喜歡的歌手愛吃韭菜麵包之後"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "結果知道自己喜歡的歌手愛吃韭菜麵包之後"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "오늘부터 빵만 먹겠다고 했어"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "she insists she will only eat chive bread from now on"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "就說從今天開始只吃麵包了"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "就說從今天開始只吃麵包了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "그러게 말이야 쯧쯧"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Tsk tsk"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "就是說啊嘖嘖"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "就是說啊嘖嘖"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "맘에 안 들어!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I don't like it!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "不喜歡！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "不喜歡！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "나는 탄생한지 얼마 안됐을 무렵…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "When I had barely entered this world…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "在我出生不久後…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "在我出生不久後…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "장래희망이 무척 많았다네"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I had many aspirations"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "有很多對未來的期望"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "有很多對未來的期望"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "정말 많은 것을 꿈꾸었지"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Numerous dreams I sought after"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "真的有很多夢想"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "真的有很多夢想"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "그리고, 지금은 이렇게 \r\n에덴의 바다를 수호하고 있지"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "And now,\r\nI am protecting the seas of Eden"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "還有，現在這樣\r\n守護著伊甸園的大海"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "還有，現在這樣\r\n守護著伊甸園的大海"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "그 많은 꿈들 중에서"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Of all my dreams"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "是在眾多夢想中"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "是在眾多夢想中"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "가장 가치있는 꿈이라고…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "it is the noblest aspiration…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "最有價值的一個…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "最有價值的一個…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "그렇게 자부한다네!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "It is my pride!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "我以此自豪！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "我以此自豪！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "으으, 아까 시장에서"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Ugh, at the market"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "呃呃，剛剛在市場"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "呃呃，剛剛在市場"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "무슨 차를 마셨는데… 으으"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I drank some kind of tea… Ugh"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "喝了某種茶…呃呃"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "喝了某種茶…呃呃"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "치약 먹은 것 같다네"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Feels like I consumed toothpaste"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "很像在吃牙膏"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "很像在吃牙膏"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "대강 그런 이름이었던 것 같군\r\n내겐 생소했어"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Yes, it was something of the sort,\r\nunfamiliar to me"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "名字很類似，\r\n對我來說很陌生"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "名字很類似，\r\n對我來說很陌生"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "으으으~! \r\n입안이 이상하네~!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Ugh!\r\nMy mouth feels bizzare!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "呃呃呃～！\r\n嘴巴裡好奇怪～！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "呃呃呃～！\r\n嘴巴裡好奇怪～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "홍란은 평소 아기 토끼들과"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Honglan and her bunnies"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "紅蘭平常跟小兔子們"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "紅蘭平常跟小兔子們"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "오순도순 잘 살더군"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "seem to enjoy their companionship"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "相處得很融洽呢"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "相處得很融洽呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "보기 좋았네~"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Indeed!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "看起來很好～"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "看起來很好～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "자주 싸운다고는 하지만"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Though they often quarrel"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "雖然她說他們很常吵架"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "雖然她說他們很常吵架"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "내가 보기에 그 아기 토끼들은\r\n홍란을 무척 믿고 따르고 있어"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "I can acknowledge the bunnies\r\ntrust and follow Honglan"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "但在我看來，那些小兔子\r\n非常信任紅蘭並跟隨著她"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "但在我看來，那些小兔子\r\n非常信任紅蘭並跟隨著她"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "아주 흐뭇한 일이지!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Most delightful!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "真是令人感到欣慰！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "真是令人感到欣慰！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "세상에는 다양한 전술이 있지"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "There are various strategies in the world"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "世上有各種各樣的戰術"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "世上有各種各樣的戰術"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "그 중, 나와 아군에게 \r\n가장 잘 맞는 방법이 뭔지…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Of those, one must choose\r\nthe one best fitting for my allies…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "其中，最適合我和友軍的\r\n戰術是什麼…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "其中，最適合我和友軍的\r\n戰術是什麼…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "오늘의 날씨와의 궁합은 어떤지…"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "Best fitting to the day's weather…"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "還有當天的天氣是否合適…"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "還有當天的天氣是否合適…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "모든 것을 잘 헤아려야 해"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "One most take note of every detail"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "一切都要好好計算"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "一切都要好好計算"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "순이",
+          "message": "그래야만 승리를 거머쥘 수 있다네!"
+        },
+        "en": {
+          "speaker": "Soonie",
+          "message": "That is how you seize victory!"
+        },
+        "zh_tw": {
+          "speaker": "順伊",
+          "message": "只有這樣才能獲得勝利！"
+        },
+        "zh_cn": {
+          "speaker": "順伊",
+          "message": "只有這樣才能獲得勝利！"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "가넷",
+          "message": "아아~! 아무리 봐도 완벽해. 새 캐럿이 되어달라 부탁해 볼까?"
+        },
+        "en": {
+          "speaker": "Garnet",
+          "message": "Ahh! She is perfect by any measure. Shall I ask her to be the new Carrot?"
+        },
+        "zh_tw": {
+          "speaker": "佳妮特",
+          "message": "啊啊～！不管怎麼看都很完美，要拜託她成為新的克拉嗎？"
+        },
+        "zh_cn": {
+          "speaker": "佳妮特",
+          "message": "啊啊～！不管怎麼看都很完美，要拜託她成為新的克拉嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "멜피스",
+          "message": "처음엔 어른 같은 말투라 싫었지만 지금은 친구야."
+        },
+        "en": {
+          "speaker": "Melfice",
+          "message": "At first, I didn't like her because of her adult-like tone, but now we're friends."
+        },
+        "zh_tw": {
+          "speaker": "梅爾菲斯",
+          "message": "一開始因為她的說話的語氣很像大人，所以不太喜歡她，但我們現在是朋友。"
+        },
+        "zh_cn": {
+          "speaker": "梅爾菲斯",
+          "message": "一開始因為她的說話的語氣很像大人，所以不太喜歡她，但我們現在是朋友。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메릴",
+          "message": "분명 먼 곳의 전래 동화 중에 <토끼와 거북이>라는 게 있었죠?\n거북이 위에 탈 생각을 하다니 영리한 토끼네요!"
+        },
+        "en": {
+          "speaker": "Meryl",
+          "message": "Surely there was a fairy tale from a distant land called \"The Rabbit and the Turtle,\" right?\nBut what a clever rabbit! To think of riding on the back of the turtle!"
+        },
+        "zh_tw": {
+          "speaker": "梅莉兒",
+          "message": "在某個遙遠的地方，有一個傳統童話叫《兔子和烏龜》，對吧？\n竟然想到要騎在烏龜上，還真是聰明的兔子啊！"
+        },
+        "zh_cn": {
+          "speaker": "梅莉兒",
+          "message": "在某個遙遠的地方，有一個傳統童話叫《兔子和烏龜》，對吧？\n竟然想到要騎在烏龜上，還真是聰明的兔子啊！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자! 안녕한가\r\n인사하겠네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Greetings to thee, Savior."
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "救援者！你好啊\r\n我來打聲招呼"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "救援者！你好啊\r\n我來打聲招呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "순이야, 안녕!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Greetings, Soonie!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "順伊，妳好！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "順伊，妳好！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "순이야, 안녕!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Greetings, Soonie!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "順伊，妳好！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "順伊，妳好！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "흠흠. 참으로 반갑네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Ahem. I am glad to have made your acquaintance."
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "嗯嗯，真高興"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "嗯嗯，真高興"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "허나…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "However…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "不過…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "不過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "나는 에버폰은 영 서툴러서…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I am all but clumsy with this Everphone…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "我不太會用EverPhone…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "我不太會用EverPhone…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "직접 만나 인사할 수 있겠나?"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Perhaps we could talk in person?"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "可以直接見面打招呼嗎？"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "可以直接見面打招呼嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "꿀떡 먹으면서 \r\n도란도란 이야기나 좀 하지!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Let us speak\r\nover some delicious honey rice cakes!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "一邊吃蜜糖年糕，\r\n一邊聊天吧！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "一邊吃蜜糖年糕，\r\n一邊聊天吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자는 오늘 아침밥 뭘 먹었나?"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Has thee enjoyed today's breakfast?"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "救援者今天早餐吃了什麼？"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "救援者今天早餐吃了什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "나는 그냥 집에 있는 걸로 먹었네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I enjoyed what I had at home"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "我就吃了家裡的東西"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "我就吃了家裡的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "짭조름한 김을\r\n쌀밥에 얹어먹는 재미가 있었지!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "It was quite a joyous experience\r\nto have savory seaweed with rice!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "把鹹鹹的海苔\r\n放在米飯上吃很有趣！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "把鹹鹹的海苔\r\n放在米飯上吃很有趣！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "먹는 걸 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see you enjoy eating"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳喜歡吃東西啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳喜歡吃東西啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "먹는 걸 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see you enjoy eating"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳喜歡吃東西啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳喜歡吃東西啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "암!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Undoubtedly!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "當然！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "當然！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "항시 잘 챙겨먹어야 해~"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "You must always eat a good meal!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "一定要按時吃飯～"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "一定要按時吃飯～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "무척 중요한 일이야!\r\n구원자도 결코 잊지 않도록 하게나!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "It is of utmost importance!\r\nSavior must never neglect this!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "這非常重要！救援者也絕對不要忘記！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "這非常重要！救援者也絕對不要忘記！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "내 착각일지도 모르네만…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "This may just be one's delusion…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "也許是我的錯覺…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "也許是我的錯覺…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "가끔 무척 열렬한 시선이\r\n나를 향하고 있다는 느낌이 드네…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I have, on occasion, have felt\r\nsomeone's heated gaze upon me…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "偶爾會感覺到一股\r\n非常熾熱的眼神看著我…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "偶爾會感覺到一股\r\n非常熾熱的眼神看著我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "이유가 뭐라고 생각하나?"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "What reason do thee think it is?"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "你覺得原因是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "你覺得原因是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "순이의 팬인가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe they're your fans?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是順伊的粉絲嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是順伊的粉絲嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "순이의 팬인가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Maybe they're your fans?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是順伊的粉絲嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是順伊的粉絲嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "!!!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "!!!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "！！！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그럴 수도 있겠군!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "By golly, that must be it!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "有可能是那樣呢！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "有可能是那樣呢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "'캐럿'… 하면서 계속\r\n중얼중얼대는 소리가 들리지 뭐냐!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I was sure they whispered\r\n\"carrot\"… and more!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "「蘿蔔」…我一直聽到\r\n這樣喃喃自語的聲音！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "「蘿蔔」…我一直聽到\r\n這樣喃喃自語的聲音！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "토끼가 당근을 좋아해서 그런가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because rabbits like carrots?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是因為兔子喜歡蘿蔔的關係嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是因為兔子喜歡蘿蔔的關係嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "토끼가 당근을 좋아해서 그런가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because rabbits like carrots?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是因為兔子喜歡蘿蔔的關係嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是因為兔子喜歡蘿蔔的關係嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "!!!!!!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "!!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자 이제보니 아주 똑똑하구만!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Savior, you are an intelligent fellow!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "救援者原來你很聰明啊！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "救援者原來你很聰明啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "나는 떡을 좋아하긴 하지만…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I usually prefer tteok…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "雖然我喜歡吃年糕，但是…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "雖然我喜歡吃年糕，但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "빵도 맛이 제법 괜찮더구만"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "But bread is tastier than I thought"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "麵包的味道也不錯"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "麵包的味道也不錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "지호 녀석도 원래는 떡을 더 좋아했는데…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Jiho used to love tteok more…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "智河那傢伙原本也比較喜歡年糕…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "智河那傢伙原本也比較喜歡年糕…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "좋아하는 가수가 부추빵 좋아한다는 걸 알더니"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Alas, after she learnt her favorite singer likes chive bread,"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "結果知道自己喜歡的歌手愛吃韭菜麵包之後"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "結果知道自己喜歡的歌手愛吃韭菜麵包之後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "오늘부터 빵만 먹겠다고 했어"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "she insists she will only eat chive bread from now on"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "就說從今天開始只吃麵包了"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "就說從今天開始只吃麵包了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호답다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's so Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很像智河呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很像智河呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지호답다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's so Jiho"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很像智河呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很像智河呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그러게 말이야 쯧쯧"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Tsk tsk"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "就是說啊嘖嘖"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "就是說啊嘖嘖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "맘에 안 들어!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I don't like it!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "不喜歡！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "不喜歡！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "나는 탄생한지 얼마 안됐을 무렵…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "When I had barely entered this world…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "在我出生不久後…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "在我出生不久後…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "장래희망이 무척 많았다네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I had many aspirations"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "有很多對未來的期望"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "有很多對未來的期望"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "정말 많은 것을 꿈꾸었지"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Numerous dreams I sought after"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "真的有很多夢想"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "真的有很多夢想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그랬구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來是這樣啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來是這樣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그랬구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來是這樣啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來是這樣啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그리고, 지금은 이렇게 \r\n에덴의 바다를 수호하고 있지"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "And now,\r\nI am protecting the seas of Eden"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "還有，現在這樣\r\n守護著伊甸園的大海"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "還有，現在這樣\r\n守護著伊甸園的大海"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그 많은 꿈들 중에서"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Of all my dreams"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "是在眾多夢想中"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "是在眾多夢想中"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "가장 가치있는 꿈이라고…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "it is the noblest aspiration…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "最有價值的一個…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "最有價值的一個…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그렇게 자부한다네!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "It is my pride!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "我以此自豪！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "我以此自豪！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "으으, 아까 시장에서"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Ugh, at the market"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "呃呃，剛剛在市場"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "呃呃，剛剛在市場"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "무슨 차를 마셨는데… 으으"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I drank some kind of tea… Ugh"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "喝了某種茶…呃呃"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "喝了某種茶…呃呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "치약 먹은 것 같다네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Feels like I consumed toothpaste"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "很像在吃牙膏"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "很像在吃牙膏"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페퍼민트 티?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Peppermint tea?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "薄荷茶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "薄荷茶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "페퍼민트 티?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Peppermint tea?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "薄荷茶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "薄荷茶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "대강 그런 이름이었던 것 같군\r\n내겐 생소했어"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Yes, it was something of the sort,\r\nunfamiliar to me"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "名字很類似，\r\n對我來說很陌生"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "名字很類似，\r\n對我來說很陌生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "으으으~! \r\n입안이 이상하네~!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Ugh!\r\nMy mouth feels bizzare!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "呃呃呃～！\r\n嘴巴裡好奇怪～！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "呃呃呃～！\r\n嘴巴裡好奇怪～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "홍란은 평소 아기 토끼들과"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Honglan and her bunnies"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "紅蘭平常跟小兔子們"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "紅蘭平常跟小兔子們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "오순도순 잘 살더군"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "seem to enjoy their companionship"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "相處得很融洽呢"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "相處得很融洽呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀엽더라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "They are cute together"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可愛啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可愛啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "귀엽더라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "They are cute together"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很可愛啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很可愛啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "보기 좋았네~"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Indeed!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "看起來很好～"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "看起來很好～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "자주 싸운다고는 하지만"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Though they often quarrel"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "雖然她說他們很常吵架"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "雖然她說他們很常吵架"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "내가 보기에 그 아기 토끼들은\r\n홍란을 무척 믿고 따르고 있어"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I can acknowledge the bunnies\r\ntrust and follow Honglan"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "但在我看來，那些小兔子\r\n非常信任紅蘭並跟隨著她"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "但在我看來，那些小兔子\r\n非常信任紅蘭並跟隨著她"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "아주 흐뭇한 일이지!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Most delightful!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "真是令人感到欣慰！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "真是令人感到欣慰！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "세상에는 다양한 전술이 있지"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "There are various strategies in the world"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "世上有各種各樣的戰術"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "世上有各種各樣的戰術"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그 중, 나와 아군에게 \r\n가장 잘 맞는 방법이 뭔지…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Of those, one must choose\r\nthe one best fitting for my allies…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "其中，最適合我和友軍的\r\n戰術是什麼…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "其中，最適合我和友軍的\r\n戰術是什麼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "오늘의 날씨와의 궁합은 어떤지…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Best fitting to the day's weather…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "還有當天的天氣是否合適…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "還有當天的天氣是否合適…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "모든 것을 잘 헤아려야 해"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "One most take note of every detail"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "一切都要好好計算"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "一切都要好好計算"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "듬직하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know I can count on you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好可靠"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好可靠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "듬직하다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know I can count on you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好可靠"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好可靠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그래야만 승리를 거머쥘 수 있다네!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "That is how you seize victory!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "只有這樣才能獲得勝利！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "只有這樣才能獲得勝利！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "♪"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "♪"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "♪"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그러고 보니 숲에서 사는\r\n도라라는 수련생이"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I happened on the information that\r\na forest dwelling fellow named Dora"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "話說，住在森林裡\r\n一個叫做朵菈的修練生說"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "話說，住在森林裡\r\n一個叫做朵菈的修練生說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "맛있는 꿀이 어딨는지\r\n그렇게 잘 안다고 하더군"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Knows the whereabouts of\r\ntasty honey"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "她對哪裡有\r\n好吃的蜂蜜瞭若指掌"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "她對哪裡有\r\n好吃的蜂蜜瞭若指掌"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곰돌이 도라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You mean teddy bear Dora?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "小熊朵菈？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "小熊朵菈？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곰돌이 도라?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You mean teddy bear Dora?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "小熊朵菈？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "小熊朵菈？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "맞네\r\n아주 특상급 꿀단지를 갖고 있다던데…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Exactly\r\nI hear she is in possession of a pot of high quality honey…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "對啊\r\n她說她有一罐特級的蜂蜜罐…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "對啊\r\n她說她有一罐特級的蜂蜜罐…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그 꿀로 꿀떡을 빚으면…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Making honey rice cakes with that…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "用那個蜂蜜做蜜糖年糕的話…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "用那個蜂蜜做蜜糖年糕的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "크으, 정말 환상적일 게야…!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Ha, it would no doubt be heavenly…!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "咳，絕對會非常美妙…！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "咳，絕對會非常美妙…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "이건 내 오늘 먹은 꿀떡이네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "It's the honey rice cake I had today"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "這是我今天吃的蜜糖年糕啊"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "這是我今天吃的蜜糖年糕啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "빛깔이 아주 곱지 않은가?"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Looks delicious doesn't it?"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "顏色很好看對吧？"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "顏色很好看對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "♪♪"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "♪♪"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "♪♪"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "♪♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자를 통해 알게된 그\r\n아이라라는 녀석…!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "This Aira\r\nthee introduced to me…!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "透過救援者認識的\r\n那個叫做艾拉的傢伙…！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "透過救援者認識的\r\n那個叫做艾拉的傢伙…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "너무 위협적이지 않은가!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "She is dangerous!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "不會太具有威脅性嗎！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "不會太具有威脅性嗎！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "정녕 아케나인 성에 둬도 괜찮은 게야?!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Is it truly safe to let her be at the Arkenine Palace?"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "真的可以讓她待在阿肯納因城嗎？！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "真的可以讓她待在阿肯納因城嗎？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좀 과격한 친구야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know she can be a little rough"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她個性有點激動嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她個性有點激動嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좀 과격한 친구야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know she can be a little rough"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她個性有點激動嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她個性有點激動嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "좀이 아니지 않은가!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "A little is an understatement!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "不是有點吧！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "不是有點吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "어휴, 지난번엔 정말 \r\n간 떨어질 뻔했네…!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Last time,\r\nI almost fainted…!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "哎喲，上次真的\r\n差點把我嚇死了…！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "哎喲，上次真的\r\n差點把我嚇死了…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자, 어떤가!\r\n구원자도 이제 에덴에 살게 되었으니…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "How are you, Savior!\r\nNow that you've had ample time in Eden…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "救援者，怎麼樣！\r\n既然你現在也住在伊甸園了…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "救援者，怎麼樣！\r\n既然你現在也住在伊甸園了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "에덴의 산해진미는 슬슬 다 맛보았는가?"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Have thee enjoyed all the delicacies Eden has to offer?"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "伊甸園的山珍海味都嘗過了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "伊甸園的山珍海味都嘗過了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직은 잘…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not yet…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "目前還沒…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "目前還沒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아직은 잘…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not yet…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "目前還沒…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "目前還沒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "이런이런~"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Great Scott!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "居然居然～"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "居然居然～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "내 한수 가르쳐줌세!\r\n따라오게나!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I shall be of your assistance!\r\nFollow my lead!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "讓我來告訴你吧！\r\n跟我來！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "讓我來告訴你吧！\r\n跟我來！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "이 시기를 그냥 놓칠 순 없지…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "That said, I cannot miss this season…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "不能就這樣錯過這個時期…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "不能就這樣錯過這個時期…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "반드시, 반드시 \r\n내 뜻을 이룰 것이야!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I shall, I must\r\nFulfill my desires!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "一定，我一定會\r\n如願以償的！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "一定，我一定會\r\n如願以償的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "후우, 이걸로 일단락 지었지만…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "We have resolution on one hand…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "呼，雖然就此告一段落…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "呼，雖然就此告一段落…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "아직 멀었네!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I am not yet done!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "但還差得遠呢！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "但還差得遠呢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "바다의 부름에 응해야만 해…!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "The sea beckons…!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "必須回應大海的呼喚…！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "必須回應大海的呼喚…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "언제부터 바다에 큰 관심과 사랑을\r\n품게 되었는지는…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "On when I started to\r\nlove the seas…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "不知從何時起對大海產生了\r\n濃厚的興趣和愛意…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "不知從何時起對大海產生了\r\n濃厚的興趣和愛意…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "너무 옛날의 일이라서 \r\n잘 기억이 나지 않는다네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Alas, it is a long lost memory\r\nI cannot remember"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "因為是太久以前的事，\r\n所以不太記得了"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "因為是太久以前的事，\r\n所以不太記得了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "끙, 장수도 꼭 좋은 것은 아니구만"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "A long life is both a blessing and a curse"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "哼，長壽也未必是好事呢"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "哼，長壽也未必是好事呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "지호랑은 이제 알게 된 지 \r\n제법 되었지"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "It has been an eternity\r\nsince I've know Jiho"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "我跟智河\r\n也認識蠻久的了"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "我跟智河\r\n也認識蠻久的了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "예전에 비하면 지호도\r\n많이 어른스러워진 편이라네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I'll have you know,\r\nJiho was a lot more juvenile back in the day"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "跟以前相比，\r\n智河也算是成熟了許多"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "跟以前相比，\r\n智河也算是成熟了許多"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh yeah?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh yeah?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그렇다네!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Indeed!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "是的！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "是的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "옛날의 지호는… \r\n정말 괄괄했어. 으으"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Jiho was…\r\nUncivilized, to say the least…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "以前的智河…\r\n神經真的很大條，呃呃"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "以前的智河…\r\n神經真的很大條，呃呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "다시 떠올리기도 싫네!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Just the thought of it is horrendous!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "不想再回想了！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "不想再回想了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자~!!!\r\n큰일일세!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Savior!\r\nI have an urgent matter!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "救援者～！！！\r\n出大事了！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "救援者～！！！\r\n出大事了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "중요한 기록물을 잃어버렸다네~"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I have misplaced some important documents!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "我把重要的檔案遺失了～"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "我把重要的檔案遺失了～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "그게 없으면 나는…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Without them…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "如果沒有那個的話，我…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "如果沒有那個的話，我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "으으으~!!!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Ugh!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "呃呃呃～！！！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "呃呃呃～！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "…어제는 어쩐지 \r\n꿈자리가 사나웠다네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Last night's dream was…\r\nTroubling…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "…昨天不知道\r\n為什麼做了個惡夢"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "…昨天不知道\r\n為什麼做了個惡夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "느낌이 영 좋지 않아…"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I have a bad feeling about this…"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "感覺不太好…"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "感覺不太好…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "…!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "…!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "…！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자! 나와 함께해주겠는가!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Savior! I am in need of your companionship!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "救援者！你願意和我一起嗎！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "救援者！你願意和我一起嗎！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "바다가 있는 곳에 내가 있다네"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I am where the sea is at"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "有大海的地方就有我"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "有大海的地方就有我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자! 잠은 잘 잤는가!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Savior! Did you sleep well?"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "救援者！睡得好嗎！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "救援者！睡得好嗎！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "신년을 축하하네!\r\n새해 복 많이 받게나."
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Happy New Year!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "恭賀新禧！\r\n新年快樂。"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "恭賀新禧！\r\n新年快樂。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "새해 복 많이 받아, 순이야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy New Year, Soonie!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "新年快樂啊，順伊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "新年快樂啊，順伊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "새해 복 많이 받아, 순이야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy New Year, Soonie!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "新年快樂啊，順伊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "新年快樂啊，順伊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "사랑의 날일세.\r\n구원자, 선물은 좀 받았는가?"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Today is Love Day.\r\nSavior, did you get some gifts?"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "是戀愛之日呢。\r\n救援者，是不是收到很多禮物啊？"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "是戀愛之日呢。\r\n救援者，是不是收到很多禮物啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "마음을 담아서…\r\n내 좀 나눠주겠네!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "I shall share some of my love!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "看在你誠意滿滿…\r\n我就分你一點吧！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "看在你誠意滿滿…\r\n我就分你一點吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 순이야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Soonie!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，順伊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，順伊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 순이야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Soonie!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，順伊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，順伊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "순이",
+            "message": "구원자, 달달~한 먹거리들이 함께하는\r\n이브의 날 축하하네!"
+          },
+          "en": {
+            "speaker": "Soonie",
+            "message": "Savior! Happy Eve's Day!\r\nEnjoy all the sweets!"
+          },
+          "zh_tw": {
+            "speaker": "順伊",
+            "message": "救援者，搭配甜甜～的美食，\r\n慶祝夏娃之日！"
+          },
+          "zh_cn": {
+            "speaker": "順伊",
+            "message": "救援者，搭配甜甜～的美食，\r\n慶祝夏娃之日！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "축하해, 순이야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day Soonie!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "快樂夏娃之日，順伊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "快樂夏娃之日，順伊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "축하해, 순이야!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day Soonie!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "快樂夏娃之日，順伊！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "快樂夏娃之日，順伊！"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6911 @@
+{
+  "id": "4050",
+  "name": "브라이스",
+  "name_en": "Bryce",
+  "grade": "에픽",
+  "race": "불사형",
+  "class": "디펜더",
+  "sub_class": "단일",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "추방의 달",
+    "constellation": "전갈자리",
+    "union": "밤의 일족",
+    "birthday": "1113",
+    "height": 151,
+    "weight": 41,
+    "cv_ko": "허예은",
+    "cv_jp": "Yurina Amami",
+    "like": [
+      "멜피스",
+      "동화책"
+    ],
+    "dislike": [
+      "방해꾼"
+    ],
+    "hobby": [
+      "리본 수집"
+    ],
+    "speciality": [
+      "허브 키우기"
+    ]
+  },
+  "personality": {
+    "description": "안녕, 구원자. \n인사할게, 나는 밤의 일족의 일원인 브라이스.\n보스의 의향에 따라 당신을 도우러 왔어.\n\n멜피스에게 들었을지도 모르겠지만… \n우리는 기본적으로 어둠의 세계에 혼란을 일으키는 무뢰배들을 사냥하고 있어.\n그러니 추적, 포획, 심문, 그리고 방해물의 '제거'는 우리의 특기야.\n…아, 실례. 초면인데 너무 무서운 이야기를 했을까?\n가넷과 비올레트를 만났을 거라고 생각해서, 익숙할까 싶었는데… \n부디 용서해 주길 바라.\n당신은 바쁜 몸이니 바로 본론을 이야기하는 게 좋을 것 같았거든.\n\n나는 몸이 썩 좋지 않지만… 그래도 싸우는 데에 문제는 없어.\n내 도움이 필요한 상황이라면 주저하지 말고 연락해 줘.\n그럼, 앞으로 잘 부탁할게.",
+    "greeting": "당신이 구원자구나. \n…멜피스가 돕겠다면, 나도 도와줄게."
+  },
+  "speech_patterns": [
+    "안녕 구원자.\r\n바쁜 와중 잠시 실례할게.",
+    "나는 밤의 일족에 소속된 \r\n브라이스.",
+    "조직의 의향으로 인해 \r\n앞으로 당신을 돕게 되었어.",
+    "내가 필요한 일이 있다면 미리 연락 부탁할게.",
+    "서로 최소한의 매너는 챙겼으면 하거든.",
+    "고마워.",
+    "무슨 일 있으면 연락 바라.",
+    "그럼 평안한 하루 보내기를.",
+    "이전에 신세를 진 건 말인데…",
+    "기왕이면 제대로 감사하고 싶다고 생각해.",
+    "하지만 당신에 대해 아는 게 너무 없어.",
+    "…그래. \r\n원래 이런 거였지.",
+    "미안해.",
+    "누군가와 새로운 관계를 쌓아나가는 게\r\n상당히 오랜만이라서…",
+    "꽤나 어색하네.",
+    "모쪼록 내가 실수하더라도 양해해줬으면 해.",
+    "지적해주면 더욱 고맙고.",
+    "당신과 불편하게 지내고 싶은 게 아니니까.",
+    "…….",
+    "그래. 그렇게 하도록 할게.",
+    "그럼 이만.\r\n다음에 봐, 구원자.",
+    "구원자. 잠시 시간 괜찮을까?",
+    "그래? 고마워.",
+    "다름이 아니라 \r\n이전에 보답으로 건넸던 차 말인데…",
+    "혹시 비슷한 맛이라면 \r\n다른 것도 입에 맞을까?",
+    "이번에 키운 허브가 너무 잘 자라서 \r\n차로 만들어서 주변에 나눠줄까 하거든.",
+    "지난 번 차와는 배합이 조금 다르긴 하지만\r\n괜찮다면 좀 받겠어?",
+    "으음.",
+    "…그러다가 내가\r\n독이 든 차라도 주면 어쩌려고?",
+    "나는 독초를 좋아하긴 하지만 \r\n직접 키우지는 않아.",
+    "하지만…",
+    "당신은 조금 더 \r\n남을 의심하는 게 좋을 거 같아.",
+    "그럼 나중에 가져다 주도록 할게.",
+    "도서관에 갔던 이후로 \r\n조금 생각해보긴 했는데…",
+    "학교를 가는 것 외에도 \r\n여행을 가는 것도 좋을 것 같아.",
+    "응.",
+    "나는 타브리아 제국과 솔레이 왕국 외의 \r\n다른 장소에는 가본 적이 없거든.",
+    "당신은 어때?",
+    "…그래?",
+    "그럼 당신과 같이 가는 것도 \r\n나쁘지 않겠네.",
+    "멜피스와 함께 셋이서 간다면…",
+    "어디가 좋을지 한 번 알아봐줘.",
+    "그럼… 조금 더 \r\n병을 치료할 의욕이 생길지도 모르니까.",
+    "…후후.\r\n고마워.",
+    "안녕, 구원자.",
+    "지난 번에는 찾아와줘서 고마웠어.",
+    "응. 덕분에 잘 회복했거든.",
+    "수분을 많이 섭취했더니 \r\n효과가 있는 것 같아.",
+    "그러고 보니…",
+    "이런 걸 보내주면 좋아한다고 들었는데."
+  ],
+  "comments": [
+    {
+      "writer": "멜피스",
+      "comment": "세상에서 제일 귀여운 내 동생! 너무 좋아!"
+    },
+    {
+      "writer": "에루샤",
+      "comment": "춤이 아름답다며 가끔 구경하고 가곤 해.\n보기만 하지 말고 직접 배워보면 좋을 텐데!"
+    },
+    {
+      "writer": "리젤로테",
+      "comment": "눈썰미가 예사롭지 않은 걸 보면 예술에 조예가 있을 것 같아.\n상당한 탐미주의자일지도?"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "브라이스",
+        "message": "안녕 구원자.\r\n바쁜 와중 잠시 실례할게."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나는 밤의 일족에 소속된 \r\n브라이스."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "조직의 의향으로 인해 \r\n앞으로 당신을 돕게 되었어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "내가 필요한 일이 있다면 미리 연락 부탁할게."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "서로 최소한의 매너는 챙겼으면 하거든."
+      },
+      {
+        "speaker": "구원자",
+        "message": "알았어!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "알았어!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞으로 잘 부탁할게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "앞으로 잘 부탁할게"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "고마워."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "무슨 일 있으면 연락 바라."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그럼 평안한 하루 보내기를."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이전에 신세를 진 건 말인데…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "기왕이면 제대로 감사하고 싶다고 생각해."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "하지만 당신에 대해 아는 게 너무 없어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "서로 안지 얼마 안됐으니 어쩔 수 없지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "서로 안지 얼마 안됐으니 어쩔 수 없지"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…그래. \r\n원래 이런 거였지."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "미안해."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "누군가와 새로운 관계를 쌓아나가는 게\r\n상당히 오랜만이라서…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "꽤나 어색하네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "모쪼록 내가 실수하더라도 양해해줬으면 해."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "지적해주면 더욱 고맙고."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신과 불편하게 지내고 싶은 게 아니니까."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 뭔가 실수하면 말해줄래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 뭔가 실수하면 말해줄래?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "……."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그래. 그렇게 하도록 할게."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그럼 이만.\r\n다음에 봐, 구원자."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "구원자. 잠시 시간 괜찮을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 괜찮아"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그래? 고마워."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "다름이 아니라 \r\n이전에 보답으로 건넸던 차 말인데…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "혹시 비슷한 맛이라면 \r\n다른 것도 입에 맞을까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이번에 키운 허브가 너무 잘 자라서 \r\n차로 만들어서 주변에 나눠줄까 하거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "지난 번 차와는 배합이 조금 다르긴 하지만\r\n괜찮다면 좀 받겠어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맛있을 거 같아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맛있을 거 같아!"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "으음."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…그러다가 내가\r\n독이 든 차라도 주면 어쩌려고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "독이 든 걸로 주게?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "독이 든 걸로 주게?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "……."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나는 독초를 좋아하긴 하지만 \r\n직접 키우지는 않아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "하지만…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신은 조금 더 \r\n남을 의심하는 게 좋을 거 같아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그럼 나중에 가져다 주도록 할게."
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워!"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "도서관에 갔던 이후로 \r\n조금 생각해보긴 했는데…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "학교를 가는 것 외에도 \r\n여행을 가는 것도 좋을 것 같아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 좋은 아이디어네!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거 좋은 아이디어네!"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "응."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나는 타브리아 제국과 솔레이 왕국 외의 \r\n다른 장소에는 가본 적이 없거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신은 어때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 즐기기 위한 여행은 별로…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 즐기기 위한 여행은 별로…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…그래?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그럼 당신과 같이 가는 것도 \r\n나쁘지 않겠네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "멜피스와 함께 셋이서 간다면…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "어디가 좋을지 한 번 알아봐줘."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그럼… 조금 더 \r\n병을 치료할 의욕이 생길지도 모르니까."
+      },
+      {
+        "speaker": "구원자",
+        "message": "…맡겨줘!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…맡겨줘!"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…후후.\r\n고마워."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "안녕, 구원자."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "지난 번에는 찾아와줘서 고마웠어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "몸 상태는 좀 괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "몸 상태는 좀 괜찮아?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "응. 덕분에 잘 회복했거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "수분을 많이 섭취했더니 \r\n효과가 있는 것 같아."
+      },
+      {
+        "speaker": "구원자",
+        "message": "다행이다…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다행이다…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그러고 보니…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "!?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이런 걸 보내주면 좋아한다고 들었는데."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…사실일까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "후후.\r\n어쨌거나 잘 회복하고 있으니 정말 걱정 마."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그리고… 멜피스에게 소식 전해들었어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "혹시 우리가 따로 준비해줄 게 있으면 말해줘."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "손님은 잘 대접하고 싶거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "미안해. \r\n당분간은 연락이 잘 안될 수도 있어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "상당히 혼란스러운 상황이거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "잠깐 홀로 생각하는 시간을 가지고 싶어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "급한 용건이 있다면 멜피스를 통해 전해주겠어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…알았어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…알았어"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "……."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신을 어떻게 대해야 할지 모르겠어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나 스스로도 내가 느끼는 이 감정을 \r\n어떻게 정의해야할지 모르겠어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그러니 부디 조금만 기다려줘."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나는 도망치지 않으니까."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "반드시 결론을 내고\r\n당신과 문제없이 대화할 수 있게 될게."
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기다릴테니 천천히 생각을 정리해줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "기다릴테니 천천히 생각을 정리해줘"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…당신에게는 항상 고마워하고 있어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그럼 나중에 또 연락할게."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…이상한 기분이야."
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐가?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그렇게 오랫동안 찾아 헤맨\r\n치료법이 발견되었는데도…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "순수하게 기뻐할 수가 없어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무래도 역시 큰 변화가 오니까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아무래도 역시 큰 변화가 오니까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…맞아. \r\n그런 것 같아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나는 너무 오랫동안 이렇게 살아와서…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "건강한 스스로의 모습이 \r\n잘 그려지지 않아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그리고…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그리고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그리고?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "역시 그 치료법이 신경 쓰여."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신의 피로 내가 나을 수 있다면…\r\n결국 당신의 피를 봐야하잖아?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그 점이 역시 걸리는 것 같아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…미안. 기껏 치료법을 찾아줬는데."
+      },
+      {
+        "speaker": "구원자",
+        "message": "브라이스가 다정해서 그래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "브라이스가 다정해서 그래"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…당신이 그렇게 느껴준다면 다행이네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "……."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "치료를 했을 때의 \r\n긍정적인 부분을 생각해 봤는데."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "학교에 가는 것 외에도\r\n조금 더 몸을 과격하게 써보고 싶네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "다이빙이나 심해 잠수 같은 걸 해보고 싶어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "심해 잠수!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "심해 잠수!?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "응."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "특수한 장비를 사용하면 \r\n상당히 깊은 바다까지 들어갈 수 있거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "조금 비싸긴 하지만…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그간 모아둔 돈은 충분하니까 \r\n문제 없을 거 같아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "다만 인간용 장비는 없으니까…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그건 구원자와 함께 못 하겠네."
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 좀 아쉽다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 좀 아쉽다"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그러니까 다른 걸 할까 싶어."
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 바다 속의 브라이스는 예쁠 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 바다 속의 브라이스는 예쁠 거 같아"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…부끄러운 말을 하네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "심해까지는 아니더라도…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "얕은 바다라면 함께 갈 수 있겠지?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "언젠가는 같이 아름답게 핀 산호초를 보러 가자."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…후후."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신과 마음을 터놓고 이야기를 나눠보길\r\n정말 잘 한 것 같아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "덕분에 여러가지 결심도 섰고…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "새삼스럽지만, \r\n당신이 내게 얼마나 의미 있는지도 알았거든."
+      },
+      {
+        "speaker": "구원자",
+        "message": "부끄러운 말을 하네…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "부끄러운 말을 하네…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "응."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그래서 에버톡을 하는 지금도 부끄러워."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "아마 지금 쯤 얼굴이 상당히 붉어졌을 거야."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나는 수줍음도 잘 타거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이제 잘 알잖아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "확실히 그렇긴 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "확실히 그렇긴 해"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "알아주니 다행이야."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "둔한가 싶었더니\r\n멜피스도 눈치 못챈 걸 눈치채기도 하고."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이렇게 가다간 언젠가는 \r\n당신에게 숨길 수 있는 게 없어질 거 같아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "숙녀는 비밀이 많아야 매력적인 법인데…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그렇게 된다면 책임… 져주리라 믿어?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "하나 말해두지만…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "구원자는 내게 있어서 \r\n앞으로도 대체 불가능한 존재가 되겠지만…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그렇다고 해서 나의 유일하게 소중한 존재는 아니야."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "내게는 멜피스도 아주 소중한 존재거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그러니까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러니까…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러니까…?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "둘이 같은 맛 아이스크림을 가지고 다툰다면\r\n난 당연히 멜피스 편을 들 거야."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그때는 부디 속상해하지 말아줘, 구원자."
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+      },
+      {
+        "speaker": "구원자",
+        "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나는 진지해 구원자."
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이스크림 정도는 양보할 수 있어!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아이스크림 정도는 양보할 수 있어!"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그래?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그렇다면 다행이네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "앞으로도 계속 사이좋게 지내줘."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "정말 둘이 싸우면 내가 아주 곤란해질 거거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "후후."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "덕분에 집에 무사히 들어갈 수 있었어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…고마워."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그리고 당신은…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "내가 예상한 것보다 더 고집이 강하구나."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "굉장히 유익한 정보를 얻었어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "안녕 구원자. \r\n혹시 조만간 시간 괜찮을까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신이 괜찮은 시간에 맞춰서 \r\n잠시 방문하고 싶어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이전에 말한 '보답'에 대한 건이야."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "멜피스와 함께 찾아가려고 하는데…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "언제가 좋을까? \r\n알려주길 바라."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "안녕, 구원자."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "오늘 약속은 \r\n도서관에서 만나기로 한 게 맞을까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "확인차 연락했어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나는 보고싶었던 책이 있으니 \r\n멜피스와 먼저 가서 기다리고 있을게."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "조심해서 느긋하게 오도록 해."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "미안 구원자"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "약속을 취소할 수 있을까"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "몸 상태가 갑자기 안 좋아져서"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "오늘은 만나기 힘들 것 같아"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "다음은 언제가 좋을까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "짐은 다 챙겼을까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "준비 되었으면 말해줘."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "지금 저택을 청소하고 있거든."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "도착할 때에 맞춰서 차를 준비하도록 할게."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "안녕, 구원자."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신이 내 병증에 대해 \r\n알아낸 바가 있다고 멜피스에게 들었는데…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "정말일까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "믿을 수 있는 정보같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "믿을 수 있는 정보같아"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…그래."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "직접 만나서 이야기하는 게 좋을 것 같네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신이 머물고 있는 성으로 가면 될까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "구원자, 부디 시간을 내주지 않겠어?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "앞으로 어떻게 하면 좋을지 상담하고 싶어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이건 더이상 나 혼자만의 문제가 아니니까."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신의 의견이 내게 아주 중요해졌어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "저택에서 기다리고 있을게."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "부디 내 결정을 존중해주길 바라."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신은 내게 있어서 너무 큰 존재가 되어서…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이 이상 당신에게 짐이 되고 싶지 않아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "부디 내가 당신을 상처입히지 않기를."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "나의 선택으로 인해,\r\n상냥한 당신의 마음이 너무 아프지는 않기를."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그리고…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신에게 어떻게 해서든 \r\n전하고 싶은 말이 있는데"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "모든 게 끝난 후 전해도 될까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신에게 어떤 말을 보내야 할지…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "정리가 끝나질 않네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "내게 조금만 더 시간을 주겠어?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "앞으로 우리가 함께할 시간은\r\n충분하리라 믿으니까."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신과 나의 만남이, \r\n우리가 함께해 온 시간이."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "새로운 기적을 불러일으킨 것 같아."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "에버톡으로 묻기에는\r\n너무 비겁한 질문이지만…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "구원자."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "앞으로도…\r\n나를…"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "우리를, 계속 행복하게 해주겠어?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "…당신의 마음이 우리와 같은지 알고 싶어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "저택에서 기다릴게."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "대답을 들려줬으면 해."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "사랑을 속삭이는 날이야, 구원자."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "당신을 위해 멜피스와 함께 선물을 준비했어. \r\n모쪼록 마음에 들면 좋겠네."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이후 시간이 된다면 저택에 들러주겠어? \r\n다른… '좀 더 특별한 것'들도 준비했거든. 후훗."
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워 브라이스! 이따가 저택에도 들를게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워 브라이스! 이따가 저택에도 들를게!"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "재회의 날은 내게 꽤 특별한 날이야."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "그래서 왠지 소중한 당신에게\r\n무언가 선물을 보내고 싶었어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "앞으로도 '재회'하는 일 없이,\r\n우리와 계속 함께 있어주겠어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "최대한 노력해볼게. 나도 너희가 아주 소중해."
+      },
+      {
+        "speaker": "구원자",
+        "message": "최대한 노력해볼게. 나도 너희가 아주 소중해."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "이브의 날 축하해, 구원자. \r\n아니면 메리 크리스마스가 더 좋을까?"
+      },
+      {
+        "speaker": "브라이스",
+        "message": "오늘은 멜피스와 함께 크리스마스 요리라는 걸 해봤어."
+      },
+      {
+        "speaker": "브라이스",
+        "message": "여유가 된다면 저택에 들러주길 바라.\r\n같이 식사하도록 하자."
+      },
+      {
+        "speaker": "구원자",
+        "message": "초대 고마워, 브라이스! 이따 봐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "초대 고마워, 브라이스! 이따 봐!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "브라이스",
+      "en": "Bryce",
+      "zh_tw": "布萊斯",
+      "zh_cn": "布萊斯"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "불사형",
+      "en": "Undead",
+      "zh_tw": "不死型",
+      "zh_cn": "不死型"
+    },
+    "class": {
+      "ko": "디펜더",
+      "en": "Defender",
+      "zh_tw": "捍衛者",
+      "zh_cn": "捍衛者"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "추방의 달",
+        "en": "Banishing Moon",
+        "zh_tw": "斥逐之月",
+        "zh_cn": "斥逐之月"
+      },
+      "constellation": {
+        "ko": "전갈자리",
+        "en": "Scorpio",
+        "zh_tw": "天蠍座",
+        "zh_cn": "天蠍座"
+      },
+      "union": {
+        "ko": "밤의 일족",
+        "en": "Nightbloods",
+        "zh_tw": "夜之族",
+        "zh_cn": "夜之族"
+      },
+      "cv_ko": {
+        "ko": "허예은",
+        "en": "Yeeun Heo",
+        "zh_tw": "許藝恩",
+        "zh_cn": "許藝恩"
+      },
+      "cv_jp": {
+        "ko": "Yurina Amami",
+        "en": "Yurina Amami",
+        "zh_tw": "Yurina Amami",
+        "zh_cn": "Yurina Amami"
+      },
+      "like": {
+        "ko": [
+          "멜피스",
+          "동화책"
+        ],
+        "en": [
+          "Melfice",
+          "fairy tale books"
+        ],
+        "zh_tw": [
+          "梅爾菲斯、童話書"
+        ],
+        "zh_cn": [
+          "梅爾菲斯、童話書"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "방해꾼"
+        ],
+        "en": [
+          "Disrupters"
+        ],
+        "zh_tw": [
+          "搗蛋鬼"
+        ],
+        "zh_cn": [
+          "搗蛋鬼"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "리본 수집"
+        ],
+        "en": [
+          "Collecting ribbons"
+        ],
+        "zh_tw": [
+          "收集緞帶"
+        ],
+        "zh_cn": [
+          "收集緞帶"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "허브 키우기"
+        ],
+        "en": [
+          "Growing herbs"
+        ],
+        "zh_tw": [
+          "種植香草"
+        ],
+        "zh_cn": [
+          "種植香草"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "안녕, 구원자. \n인사할게, 나는 밤의 일족의 일원인 브라이스.\n보스의 의향에 따라 당신을 도우러 왔어.\n\n멜피스에게 들었을지도 모르겠지만… \n우리는 기본적으로 어둠의 세계에 혼란을 일으키는 무뢰배들을 사냥하고 있어.\n그러니 추적, 포획, 심문, 그리고 방해물의 '제거'는 우리의 특기야.\n…아, 실례. 초면인데 너무 무서운 이야기를 했을까?\n가넷과 비올레트를 만났을 거라고 생각해서, 익숙할까 싶었는데… \n부디 용서해 주길 바라.\n당신은 바쁜 몸이니 바로 본론을 이야기하는 게 좋을 것 같았거든.\n\n나는 몸이 썩 좋지 않지만… 그래도 싸우는 데에 문제는 없어.\n내 도움이 필요한 상황이라면 주저하지 말고 연락해 줘.\n그럼, 앞으로 잘 부탁할게.",
+        "en": "Hello, Savior.\r\nI am Bryce, a member of the Nightbloods.\r\nI was sent by my boss to help you out.\r\n\r\nYou might've already heard from Melfice, but…\r\nWe basically hunt down ruffians who bring chaos to the world of darkness.\r\nPursuit, capture, interrogation, and \"removing\" whatever gets in our way is our specialty.\r\nOh, excuse me. Was that too intense for an introduction?\r\nI thought you might've been used to something like this since you probably already met Garnet and Violette…\r\nForgive me if I scared you.\r\nI just thought you'd prefer to get down to business right away. You know, since you're so busy.\r\n\r\nI'm not in tip top condition, but I have no problem fighting.\r\nDon't ever hesitate to call me if you need my help.\r\nWell, then. I'll look forward to seeing you more.",
+        "zh_tw": "嗨，救援者。\n我來跟你打招呼，我是隸屬夜之族的布萊斯。\n我按照首領的意思來幫你。\n\n你可能聽梅爾菲斯說過了…\n我們基本上負責狩獵在黑暗世界作亂的無賴，\n所以我們的專長是追蹤、捕捉、審問，還有「消滅」障礙物。\n…啊，抱歉，是不是第一次見面就提太恐怖的事了？\n因為我覺得你見過佳妮特和薇奧蕾特，已經很習慣了…\n還請你見諒。\n因為你是個大忙人，我覺得直接切入正題會比較好。\n\n雖然我的身體不是很好…但要戰鬥還是沒問題的。\n如果你需要我的幫助，儘管告訴我。\n那就請你多多指教了。",
+        "zh_cn": "嗨，救援者。\n我來跟你打招呼，我是隸屬夜之族的布萊斯。\n我按照首領的意思來幫你。\n\n你可能聽梅爾菲斯說過了…\n我們基本上負責狩獵在黑暗世界作亂的無賴，\n所以我們的專長是追蹤、捕捉、審問，還有「消滅」障礙物。\n…啊，抱歉，是不是第一次見面就提太恐怖的事了？\n因為我覺得你見過佳妮特和薇奧蕾特，已經很習慣了…\n還請你見諒。\n因為你是個大忙人，我覺得直接切入正題會比較好。\n\n雖然我的身體不是很好…但要戰鬥還是沒問題的。\n如果你需要我的幫助，儘管告訴我。\n那就請你多多指教了。"
+      },
+      "greeting": {
+        "ko": "당신이 구원자구나. \n…멜피스가 돕겠다면, 나도 도와줄게.",
+        "en": "You are the Savior.\n…I will help you if Melfice does.",
+        "zh_tw": "你就是救援者啊，\n…如果梅爾菲斯要幫忙，我也會幫忙的。",
+        "zh_cn": "你就是救援者啊，\n…如果梅爾菲斯要幫忙，我也會幫忙的。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "안녕 구원자.\r\n바쁜 와중 잠시 실례할게."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Hello, Savior.\r\r\nI know you are busy, but please excuse me for a moment."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "你好，救援者。\r\r\n不好意思打擾你了。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "你好，救援者。\r\r\n不好意思打擾你了。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "나는 밤의 일족에 소속된 \r\n브라이스."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I'm Bryce,\r\r\na member of the Nightbloods."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "我是夜之族的\r\r\n布萊斯。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "我是夜之族的\r\r\n布萊斯。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "조직의 의향으로 인해 \r\n앞으로 당신을 돕게 되었어."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I will be helping you from now on,\r\r\nfollowing our organization's plans."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "組織讓我來\r\r\n幫助你。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "組織讓我來\r\r\n幫助你。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "내가 필요한 일이 있다면 미리 연락 부탁할게."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Contact me in advance if you ever need my help."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "如果有需要我幫忙的地方，請提早聯絡我。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "如果有需要我幫忙的地方，請提早聯絡我。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "서로 최소한의 매너는 챙겼으면 하거든."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I want us to be courteous to each other."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "希望我們可以對彼此保持基本禮儀。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "希望我們可以對彼此保持基本禮儀。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "고마워."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Thank you."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "謝謝。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "謝謝。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "무슨 일 있으면 연락 바라."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Contact me if anything happens."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "有什麼事都歡迎聯絡我。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "有什麼事都歡迎聯絡我。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "그럼 평안한 하루 보내기를."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I wish you a peaceful day."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "那麼祝你有愉快的一天。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "那麼祝你有愉快的一天。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "이전에 신세를 진 건 말인데…"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "About the favor I owe you from last time..."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "我之前欠你人情…"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "我之前欠你人情…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "기왕이면 제대로 감사하고 싶다고 생각해."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I feel like I should thank you properly."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "既然如此，我想要好好答謝你。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "既然如此，我想要好好答謝你。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "하지만 당신에 대해 아는 게 너무 없어."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "But I know almost nothing about you."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "但我對你完全不了解。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "但我對你完全不了解。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "…그래. \r\n원래 이런 거였지."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "...Right.\r\r\nThat's how things work."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "…好。\r\r\n原本就是這樣吧。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "…好。\r\r\n原本就是這樣吧。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "미안해."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I'm sorry."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "對不起。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "對不起。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "누군가와 새로운 관계를 쌓아나가는 게\r\n상당히 오랜만이라서…"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "It's been a long time\r\r\nsince I made a new friend..."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "好久沒有和人\r\r\n建立新關係了…"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "好久沒有和人\r\r\n建立新關係了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "꽤나 어색하네."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "It feels very awkward."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "好尷尬啊。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "好尷尬啊。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "모쪼록 내가 실수하더라도 양해해줬으면 해."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I hope you understand if I ever make a mistake."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "萬一我犯錯了，還請你多多包涵。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "萬一我犯錯了，還請你多多包涵。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "지적해주면 더욱 고맙고."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I'll be grateful if you point out the mistake for me."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "若你能點出錯誤，我會更感謝你的。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "若你能點出錯誤，我會更感謝你的。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "당신과 불편하게 지내고 싶은 게 아니니까."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Since I want to be in good terms with you."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "因為我不想和你之間有不愉快。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "因為我不想和你之間有不愉快。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "..."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "그래. 그렇게 하도록 할게."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Sure. I will."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "好，我會這麼做的。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "好，我會這麼做的。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "그럼 이만.\r\n다음에 봐, 구원자."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Well, then.\r\r\nGoodbye, Savior."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "那麼我先離開了。\r\r\n下次見，救援者。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "那麼我先離開了。\r\r\n下次見，救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "구원자. 잠시 시간 괜찮을까?"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Savior, do you have a moment?"
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "救援者，你有空嗎？"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "救援者，你有空嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "그래? 고마워."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Really? Thanks."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "這樣啊？謝謝。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "這樣啊？謝謝。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "다름이 아니라 \r\n이전에 보답으로 건넸던 차 말인데…"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "It's about the tea\r\r\nthat I gave you last time..."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "是這樣的，\r\r\n關於之前我送茶當謝禮…"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "是這樣的，\r\r\n關於之前我送茶當謝禮…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "혹시 비슷한 맛이라면 \r\n다른 것도 입에 맞을까?"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Would you like to try another tea\r\r\nthat tastes similar?"
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "如果是其他類似的口味\r\r\n會合你胃口嗎？"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "如果是其他類似的口味\r\r\n會合你胃口嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "이번에 키운 허브가 너무 잘 자라서 \r\n차로 만들어서 주변에 나눠줄까 하거든."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I'm thinking of making a tea using the herbs that I grew\r\r\nand give it out to others."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "這次種植的香草長得很好，\r\r\n我想要做成茶分送給周圍的人。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "這次種植的香草長得很好，\r\r\n我想要做成茶分送給周圍的人。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "지난 번 차와는 배합이 조금 다르긴 하지만\r\n괜찮다면 좀 받겠어?"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "The tea mixture will be a little different this time,\r\r\nbut I can give you some if you want."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "雖然配方和上次的茶有點不同，\r\r\n但你願意的話，要不要收下一些？"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "雖然配方和上次的茶有點不同，\r\r\n但你願意的話，要不要收下一些？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "으음."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Um."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "呃嗯。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "呃嗯。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "…그러다가 내가\r\n독이 든 차라도 주면 어쩌려고?"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "... What if I gave you\r\r\na poisonous tea?"
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "…萬一我給的茶\r\r\n裡面有毒怎麼辦？"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "…萬一我給的茶\r\r\n裡面有毒怎麼辦？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "나는 독초를 좋아하긴 하지만 \r\n직접 키우지는 않아."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I like poisonous plants,\r\r\nbut I don't grow them myself."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "雖然我喜歡毒草，\r\r\n但我沒有直接種植。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "雖然我喜歡毒草，\r\r\n但我沒有直接種植。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "하지만…"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Nevertheless..."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "但是…"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "但是…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "당신은 조금 더 \r\n남을 의심하는 게 좋을 거 같아."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I think you should be more suspicious\r\r\nof others."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "你最好對別人\r\r\n保持點戒心。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "你最好對別人\r\r\n保持點戒心。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "그럼 나중에 가져다 주도록 할게."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I will then bring it to you later."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "那我之後拿給你。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "那我之後拿給你。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "도서관에 갔던 이후로 \r\n조금 생각해보긴 했는데…"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I've been thinking\r\r\nafter our visit to the library..."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "去過圖書館之後，\r\r\n我稍微思考了一下…"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "去過圖書館之後，\r\r\n我稍微思考了一下…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "학교를 가는 것 외에도 \r\n여행을 가는 것도 좋을 것 같아."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "It'd be nice to travel around,\r\r\nto places other than school."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "除了上學以外，\r\r\n旅行好像也很棒。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "除了上學以外，\r\r\n旅行好像也很棒。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "응."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Right."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "嗯。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "嗯。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "나는 타브리아 제국과 솔레이 왕국 외의 \r\n다른 장소에는 가본 적이 없거든."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "I've only been to Tabria Empire\r\r\nand the Kingdom of Solrey."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "我沒有去過塔布里亞帝國和蘇萊伊王國\r\r\n以外的地方。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "我沒有去過塔布里亞帝國和蘇萊伊王國\r\r\n以外的地方。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "당신은 어때?"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "What about you?"
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "你呢？"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "你呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "…그래?"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "... Really?"
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "…是嗎？"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "…是嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "그럼 당신과 같이 가는 것도 \r\n나쁘지 않겠네."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Then, it wouldn't be bad\r\r\nif you came along with us."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "那和你一起去\r\r\n應該也不錯吧。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "那和你一起去\r\r\n應該也不錯吧。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "멜피스와 함께 셋이서 간다면…"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "If Melfice, you, and I were to travel together..."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "如果加上梅爾菲斯，三人一起去的話…"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "如果加上梅爾菲斯，三人一起去的話…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "어디가 좋을지 한 번 알아봐줘."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Can you find a nice place to travel?"
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "幫我查查看要去哪裡好。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "幫我查查看要去哪裡好。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "그럼… 조금 더 \r\n병을 치료할 의욕이 생길지도 모르니까."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "It might...encourage her\r\r\nto treat her illness."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "那樣…說不定\r\r\n會產生一些治療疾病的欲望。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "那樣…說不定\r\r\n會產生一些治療疾病的欲望。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "…후후.\r\n고마워."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "... Haha.\r\r\nThank you."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "…呵呵。\r\r\n謝謝。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "…呵呵。\r\r\n謝謝。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "안녕, 구원자."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Hello, Savior."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "你好，救援者。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "你好，救援者。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "지난 번에는 찾아와줘서 고마웠어."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Thank you for visiting me last time."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "謝謝你上次來找我。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "謝謝你上次來找我。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "응. 덕분에 잘 회복했거든."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Yes, I have fully recovered."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "嗯，託你的福，我恢復得很好。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "嗯，託你的福，我恢復得很好。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "수분을 많이 섭취했더니 \r\n효과가 있는 것 같아."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Drinking a lot of water helped."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "我喝了很多水，\r\r\n好像挺有效的。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "我喝了很多水，\r\r\n好像挺有效的。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "그러고 보니…"
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Come to think of it..."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "話說回來…"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "話說回來…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "브라이스",
+          "message": "이런 걸 보내주면 좋아한다고 들었는데."
+        },
+        "en": {
+          "speaker": "Bryce",
+          "message": "Someone told me that sending this to you would make you happy."
+        },
+        "zh_tw": {
+          "speaker": "布萊斯",
+          "message": "我聽說傳這個表示喜歡。"
+        },
+        "zh_cn": {
+          "speaker": "布萊斯",
+          "message": "我聽說傳這個表示喜歡。"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "멜피스",
+          "message": "세상에서 제일 귀여운 내 동생! 너무 좋아!"
+        },
+        "en": {
+          "speaker": "Melfice",
+          "message": "She's the cutest sister in the world! I love her!"
+        },
+        "zh_tw": {
+          "speaker": "梅爾菲斯",
+          "message": "世界上最可愛的我的妹妹！太喜歡了！"
+        },
+        "zh_cn": {
+          "speaker": "梅爾菲斯",
+          "message": "世界上最可愛的我的妹妹！太喜歡了！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "에루샤",
+          "message": "춤이 아름답다며 가끔 구경하고 가곤 해.\n보기만 하지 말고 직접 배워보면 좋을 텐데!"
+        },
+        "en": {
+          "speaker": "Erusha",
+          "message": "Sometimes, she watches me dance.\r\nShe should learn a bit, instead of just watching!"
+        },
+        "zh_tw": {
+          "speaker": "艾魯莎",
+          "message": "她說我跳舞很好看，所以偶爾會來看我跳舞。\r\n要是她不要只用看的，直接去學會更好！"
+        },
+        "zh_cn": {
+          "speaker": "艾魯莎",
+          "message": "她說我跳舞很好看，所以偶爾會來看我跳舞。\r\n要是她不要只用看的，直接去學會更好！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "리젤로테",
+          "message": "눈썰미가 예사롭지 않은 걸 보면 예술에 조예가 있을 것 같아.\n상당한 탐미주의자일지도?"
+        },
+        "en": {
+          "speaker": "Lizelotte",
+          "message": "She has an eye for beauty. I think she's quite knowledgeable in the arts.\r\nShe might be an aesthete."
+        },
+        "zh_tw": {
+          "speaker": "莉澤洛特",
+          "message": "觀察力非凡，她在藝術上肯定有相當的造詣。\r\n說不定還是個唯美主義者？"
+        },
+        "zh_cn": {
+          "speaker": "莉澤洛特",
+          "message": "觀察力非凡，她在藝術上肯定有相當的造詣。\r\n說不定還是個唯美主義者？"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "안녕 구원자.\r\n바쁜 와중 잠시 실례할게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Hello, Savior.\r\r\nI know you are busy, but please excuse me for a moment."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。\r\r\n不好意思打擾你了。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。\r\r\n不好意思打擾你了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나는 밤의 일족에 소속된 \r\n브라이스."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm Bryce,\r\r\na member of the Nightbloods."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我是夜之族的\r\r\n布萊斯。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我是夜之族的\r\r\n布萊斯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "조직의 의향으로 인해 \r\n앞으로 당신을 돕게 되었어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I will be helping you from now on,\r\r\nfollowing our organization's plans."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "組織讓我來\r\r\n幫助你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "組織讓我來\r\r\n幫助你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "내가 필요한 일이 있다면 미리 연락 부탁할게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Contact me in advance if you ever need my help."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "如果有需要我幫忙的地方，請提早聯絡我。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "如果有需要我幫忙的地方，請提早聯絡我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "서로 최소한의 매너는 챙겼으면 하거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I want us to be courteous to each other."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "希望我們可以對彼此保持基本禮儀。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "希望我們可以對彼此保持基本禮儀。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알았어!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我知道了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我知道了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "알았어!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Okay!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我知道了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我知道了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞으로 잘 부탁할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm looking forward to getting to know you more."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "以後請多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "以後請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "앞으로 잘 부탁할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm looking forward to getting to know you more."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "以後請多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "以後請多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "고마워."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Thank you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "謝謝。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "謝謝。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "무슨 일 있으면 연락 바라."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Contact me if anything happens."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "有什麼事都歡迎聯絡我。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "有什麼事都歡迎聯絡我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그럼 평안한 하루 보내기를."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I wish you a peaceful day."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "那麼祝你有愉快的一天。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "那麼祝你有愉快的一天。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이전에 신세를 진 건 말인데…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "About the favor I owe you from last time..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我之前欠你人情…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我之前欠你人情…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "기왕이면 제대로 감사하고 싶다고 생각해."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I feel like I should thank you properly."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "既然如此，我想要好好答謝你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "既然如此，我想要好好答謝你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "하지만 당신에 대해 아는 게 너무 없어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "But I know almost nothing about you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "但我對你完全不了解。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "但我對你完全不了解。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "서로 안지 얼마 안됐으니 어쩔 수 없지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, since we only just met."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為我們才認識不久，這也沒辦法"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為我們才認識不久，這也沒辦法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "서로 안지 얼마 안됐으니 어쩔 수 없지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well, since we only just met."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為我們才認識不久，這也沒辦法"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為我們才認識不久，這也沒辦法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…그래. \r\n원래 이런 거였지."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "...Right.\r\r\nThat's how things work."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…好。\r\r\n原本就是這樣吧。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…好。\r\r\n原本就是這樣吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "미안해."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm sorry."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "對不起。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "對不起。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "누군가와 새로운 관계를 쌓아나가는 게\r\n상당히 오랜만이라서…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It's been a long time\r\r\nsince I made a new friend..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "好久沒有和人\r\r\n建立新關係了…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "好久沒有和人\r\r\n建立新關係了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "꽤나 어색하네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It feels very awkward."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "好尷尬啊。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "好尷尬啊。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "모쪼록 내가 실수하더라도 양해해줬으면 해."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I hope you understand if I ever make a mistake."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "萬一我犯錯了，還請你多多包涵。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "萬一我犯錯了，還請你多多包涵。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "지적해주면 더욱 고맙고."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'll be grateful if you point out the mistake for me."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "若你能點出錯誤，我會更感謝你的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "若你能點出錯誤，我會更感謝你的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신과 불편하게 지내고 싶은 게 아니니까."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Since I want to be in good terms with you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "因為我不想和你之間有不愉快。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "因為我不想和你之間有不愉快。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 뭔가 실수하면 말해줄래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can you also let me know if I ever make a mistake?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果我也犯錯的話，可以跟我說嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果我也犯錯的話，可以跟我說嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 뭔가 실수하면 말해줄래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can you also let me know if I ever make a mistake?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果我也犯錯的話，可以跟我說嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果我也犯錯的話，可以跟我說嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그래. 그렇게 하도록 할게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Sure. I will."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "好，我會這麼做的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "好，我會這麼做的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그럼 이만.\r\n다음에 봐, 구원자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Well, then.\r\r\nGoodbye, Savior."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "那麼我先離開了。\r\r\n下次見，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "那麼我先離開了。\r\r\n下次見，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "구원자. 잠시 시간 괜찮을까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Savior, do you have a moment?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "救援者，你有空嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "救援者，你有空嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sure"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Now is fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在有空"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在有空"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Now is fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在有空"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在有空"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그래? 고마워."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Really? Thanks."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "這樣啊？謝謝。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "這樣啊？謝謝。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "다름이 아니라 \r\n이전에 보답으로 건넸던 차 말인데…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It's about the tea\r\r\nthat I gave you last time..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "是這樣的，\r\r\n關於之前我送茶當謝禮…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "是這樣的，\r\r\n關於之前我送茶當謝禮…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "혹시 비슷한 맛이라면 \r\n다른 것도 입에 맞을까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Would you like to try another tea\r\r\nthat tastes similar?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "如果是其他類似的口味\r\r\n會合你胃口嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "如果是其他類似的口味\r\r\n會合你胃口嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이번에 키운 허브가 너무 잘 자라서 \r\n차로 만들어서 주변에 나눠줄까 하거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm thinking of making a tea using the herbs that I grew\r\r\nand give it out to others."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "這次種植的香草長得很好，\r\r\n我想要做成茶分送給周圍的人。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "這次種植的香草長得很好，\r\r\n我想要做成茶分送給周圍的人。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "지난 번 차와는 배합이 조금 다르긴 하지만\r\n괜찮다면 좀 받겠어?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "The tea mixture will be a little different this time,\r\r\nbut I can give you some if you want."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "雖然配方和上次的茶有點不同，\r\r\n但你願意的話，要不要收下一些？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "雖然配方和上次的茶有點不同，\r\r\n但你願意的話，要不要收下一些？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맛있을 거 같아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I will like it!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像很好喝！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像很好喝！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맛있을 거 같아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I will like it!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像很好喝！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像很好喝！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "으음."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Um."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "呃嗯。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "呃嗯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…그러다가 내가\r\n독이 든 차라도 주면 어쩌려고?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "... What if I gave you\r\r\na poisonous tea?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…萬一我給的茶\r\r\n裡面有毒怎麼辦？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…萬一我給的茶\r\r\n裡面有毒怎麼辦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "독이 든 걸로 주게?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Will you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要給我有毒的茶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要給我有毒的茶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "독이 든 걸로 주게?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Will you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳要給我有毒的茶？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳要給我有毒的茶？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나는 독초를 좋아하긴 하지만 \r\n직접 키우지는 않아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I like poisonous plants,\r\r\nbut I don't grow them myself."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "雖然我喜歡毒草，\r\r\n但我沒有直接種植。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "雖然我喜歡毒草，\r\r\n但我沒有直接種植。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "하지만…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Nevertheless..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "但是…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신은 조금 더 \r\n남을 의심하는 게 좋을 거 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I think you should be more suspicious\r\r\nof others."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你最好對別人\r\r\n保持點戒心。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你最好對別人\r\r\n保持點戒心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그럼 나중에 가져다 주도록 할게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I will then bring it to you later."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "那我之後拿給你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "那我之後拿給你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "도서관에 갔던 이후로 \r\n조금 생각해보긴 했는데…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I've been thinking\r\r\nafter our visit to the library..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "去過圖書館之後，\r\r\n我稍微思考了一下…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "去過圖書館之後，\r\r\n我稍微思考了一下…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "학교를 가는 것 외에도 \r\n여행을 가는 것도 좋을 것 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It'd be nice to travel around,\r\r\nto places other than school."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "除了上學以外，\r\r\n旅行好像也很棒。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "除了上學以外，\r\r\n旅行好像也很棒。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 좋은 아이디어네!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's a great idea!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是個好點子！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是個好點子！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거 좋은 아이디어네!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's a great idea!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是個好點子！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是個好點子！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "응."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Right."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "嗯。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "嗯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나는 타브리아 제국과 솔레이 왕국 외의 \r\n다른 장소에는 가본 적이 없거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I've only been to Tabria Empire\r\r\nand the Kingdom of Solrey."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我沒有去過塔布里亞帝國和蘇萊伊王國\r\r\n以外的地方。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我沒有去過塔布里亞帝國和蘇萊伊王國\r\r\n以外的地方。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신은 어때?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "What about you?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你呢？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 즐기기 위한 여행은 별로…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't like traveling around for fun either..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也沒什麼單純旅行遊玩的經驗…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也沒什麼單純旅行遊玩的經驗…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 즐기기 위한 여행은 별로…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't like traveling around for fun either..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也沒什麼單純旅行遊玩的經驗…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也沒什麼單純旅行遊玩的經驗…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…그래?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "... Really?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그럼 당신과 같이 가는 것도 \r\n나쁘지 않겠네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Then, it wouldn't be bad\r\r\nif you came along with us."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "那和你一起去\r\r\n應該也不錯吧。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "那和你一起去\r\r\n應該也不錯吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "멜피스와 함께 셋이서 간다면…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "If Melfice, you, and I were to travel together..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "如果加上梅爾菲斯，三人一起去的話…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "如果加上梅爾菲斯，三人一起去的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "어디가 좋을지 한 번 알아봐줘."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Can you find a nice place to travel?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "幫我查查看要去哪裡好。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "幫我查查看要去哪裡好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그럼… 조금 더 \r\n병을 치료할 의욕이 생길지도 모르니까."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It might...encourage her\r\r\nto treat her illness."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "那樣…說不定\r\r\n會產生一些治療疾病的欲望。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "那樣…說不定\r\r\n會產生一些治療疾病的欲望。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…맡겨줘!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... Leave it to me!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…交給我！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…交給我！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…맡겨줘!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... Leave it to me!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…交給我！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…交給我！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…후후.\r\n고마워."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "... Haha.\r\r\nThank you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…呵呵。\r\r\n謝謝。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…呵呵。\r\r\n謝謝。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "안녕, 구원자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Hello, Savior."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "지난 번에는 찾아와줘서 고마웠어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Thank you for visiting me last time."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "謝謝你上次來找我。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "謝謝你上次來找我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "몸 상태는 좀 괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you feeling better?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "身體好一點了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "身體好一點了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "몸 상태는 좀 괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you feeling better?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "身體好一點了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "身體好一點了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "응. 덕분에 잘 회복했거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Yes, I have fully recovered."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "嗯，託你的福，我恢復得很好。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "嗯，託你的福，我恢復得很好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "수분을 많이 섭취했더니 \r\n효과가 있는 것 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Drinking a lot of water helped."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我喝了很多水，\r\r\n好像挺有效的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我喝了很多水，\r\r\n好像挺有效的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다행이다…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Glad to hear it..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太好了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太好了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다행이다…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Glad to hear it..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太好了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太好了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그러고 보니…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Come to think of it..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "話說回來…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "話說回來…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "!?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "!?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이런 걸 보내주면 좋아한다고 들었는데."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Someone told me that sending this to you would make you happy."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我聽說傳這個表示喜歡。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我聽說傳這個表示喜歡。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…사실일까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "... Is it true?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "후후.\r\n어쨌거나 잘 회복하고 있으니 정말 걱정 마."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Haha.\r\r\nAnyway, don't sorry as I have recovered well."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "呵呵。\r\r\n總之我身體都好了，不用擔心。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "呵呵。\r\r\n總之我身體都好了，不用擔心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그리고… 멜피스에게 소식 전해들었어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Also... I heard the news from Melfice."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "還有…我聽梅爾菲斯說了。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "還有…我聽梅爾菲斯說了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "혹시 우리가 따로 준비해줄 게 있으면 말해줘."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Let me know if there's anything we need to prepare."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "如果有我們要另外準備的東西，請跟我說。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "如果有我們要另外準備的東西，請跟我說。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "손님은 잘 대접하고 싶거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "One should treat a guest well."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我想好好招待客人。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我想好好招待客人。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "미안해. \r\n당분간은 연락이 잘 안될 수도 있어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm sorry.\r\r\nI might not be able to contact you for a while."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "對不起。\r\r\n我們可能會暫時聯絡不上。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "對不起。\r\r\n我們可能會暫時聯絡不上。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "상당히 혼란스러운 상황이거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm very confused right now."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "現在情況非常混亂。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "現在情況非常混亂。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "잠깐 홀로 생각하는 시간을 가지고 싶어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I need some time to be alone and think about it."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我想要有獨自思考的時間。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我想要有獨自思考的時間。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "급한 용건이 있다면 멜피스를 통해 전해주겠어?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Could you talk to Melfice for any urgent matter?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "如果有急事的話，可以透過梅爾菲斯轉告我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "如果有急事的話，可以透過梅爾菲斯轉告我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…알았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... Okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…我知道了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…我知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…알았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... Okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…我知道了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…我知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신을 어떻게 대해야 할지 모르겠어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm not sure how I should treat you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我不知道該怎麼對待你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我不知道該怎麼對待你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나 스스로도 내가 느끼는 이 감정을 \r\n어떻게 정의해야할지 모르겠어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "And I don't know how I should define these emotions."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我不知道該如何定義\r\r\n自己感覺到的這份情感。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我不知道該如何定義\r\r\n自己感覺到的這份情感。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그러니 부디 조금만 기다려줘."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "So please, give me a bit of time."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "所以請給我點時間。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "所以請給我點時間。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나는 도망치지 않으니까."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I won't run away."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我不會逃走的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我不會逃走的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "반드시 결론을 내고\r\n당신과 문제없이 대화할 수 있게 될게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I will draw a conclusion\r\r\nand talk to you again like I've always done."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我一定會做出結論，\r\r\n讓我可以跟你坦誠以對地說話。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我一定會做出結論，\r\r\n讓我可以跟你坦誠以對地說話。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, too"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기다릴테니 천천히 생각을 정리해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will wait for you, so take your time"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會等妳的，妳就慢慢整理思緒吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會等妳的，妳就慢慢整理思緒吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "기다릴테니 천천히 생각을 정리해줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I will wait for you, so take your time"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會等妳的，妳就慢慢整理思緒吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會等妳的，妳就慢慢整理思緒吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…당신에게는 항상 고마워하고 있어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "... I'm always grateful to you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…我一直都很感謝你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…我一直都很感謝你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그럼 나중에 또 연락할게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I will message you later."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "那我之後再聯絡你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "那我之後再聯絡你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…이상한 기분이야."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It's strange though."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…心情好奇怪。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…心情好奇怪。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그렇게 오랫동안 찾아 헤맨\r\n치료법이 발견되었는데도…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "The cure I've been searching for so long has been discovered\r\r\nbut..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "即使發現\r\r\n尋找已久的治療方法…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "即使發現\r\r\n尋找已久的治療方法…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "순수하게 기뻐할 수가 없어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm not all that happy."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "也無法單純地感到開心。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "也無法單純地感到開心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Umm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Umm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무래도 역시 큰 변화가 오니까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it because you'll go through a big change?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為會有很大的變化嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為會有很大的變化嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아무래도 역시 큰 변화가 오니까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is it because you'll go through a big change?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為會有很大的變化嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為會有很大的變化嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…맞아. \r\n그런 것 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "...Yes.\r\r\nI think so."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…沒錯，\r\r\n好像是這麼一回事。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…沒錯，\r\r\n好像是這麼一回事。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나는 너무 오랫동안 이렇게 살아와서…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I lived my entire life like this..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "因為我已經這樣生活很久了…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "因為我已經這樣生活很久了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "건강한 스스로의 모습이 \r\n잘 그려지지 않아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I can't picture myself healthy."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "無法想像\r\r\n自己健康的模樣。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "無法想像\r\r\n自己健康的模樣。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그리고…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "And..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "而且…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "而且…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그리고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "而且？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "而且？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그리고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "And?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "而且？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "而且？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "역시 그 치료법이 신경 쓰여."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "The cure bothers me."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "還是會很在意那個治療方法。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "還是會很在意那個治療方法。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신의 피로 내가 나을 수 있다면…\r\n결국 당신의 피를 봐야하잖아?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Your blood is the cure...\r\r\nDoesn't that mean you must draw blood?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "如果能用你的血治癒我…\r\r\n那不就要看到你的血嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "如果能用你的血治癒我…\r\r\n那不就要看到你的血嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그 점이 역시 걸리는 것 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It just doesn't sit right with me."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我很在意這點。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我很在意這點。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…미안. 기껏 치료법을 찾아줬는데."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm sorry. I know I should be happy you found the cure."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…對不起，你好不容易才找到治療方法的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…對不起，你好不容易才找到治療方法的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "브라이스가 다정해서 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's because you're so thoughtful."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是因為布萊斯很溫柔"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是因為布萊斯很溫柔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "브라이스가 다정해서 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's because you're so thoughtful."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這是因為布萊斯很溫柔"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這是因為布萊斯很溫柔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…당신이 그렇게 느껴준다면 다행이네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm glad you see it that way..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…你能這麼想真是太好了。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…你能這麼想真是太好了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "치료를 했을 때의 \r\n긍정적인 부분을 생각해 봤는데."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I thought about the good things about getting cured."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我試著去想\r\r\n有關治療好的那一面。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我試著去想\r\r\n有關治療好的那一面。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "학교에 가는 것 외에도\r\n조금 더 몸을 과격하게 써보고 싶네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Other than going to school\r\r\nI want to try to do some more vigorous activities."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我想讓身體可以進行上學以外\r\r\n更高強度的事情。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我想讓身體可以進行上學以外\r\r\n更高強度的事情。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "다이빙이나 심해 잠수 같은 걸 해보고 싶어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Like diving or deep sea diving."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "想嘗試潛水或深潛這類的運動。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "想嘗試潛水或深潛這類的運動。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "심해 잠수!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Deep sea diving?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "深潛！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "深潛！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "심해 잠수!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Deep sea diving?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "深潛！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "深潛！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "응."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Yup."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "嗯。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "嗯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "특수한 장비를 사용하면 \r\n상당히 깊은 바다까지 들어갈 수 있거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "With special gear\r\r\nyou can go deep down to the deepest depths."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "使用特殊裝備\r\r\n就能進入深海喔。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "使用特殊裝備\r\r\n就能進入深海喔。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "조금 비싸긴 하지만…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Though the gear is expensive..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "雖然有點貴…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "雖然有點貴…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그간 모아둔 돈은 충분하니까 \r\n문제 없을 거 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I saved up a lot of money\r\r\nso that shouldn't be a problem."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "但我之前存的錢夠多，\r\r\n所以應該沒問題。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "但我之前存的錢夠多，\r\r\n所以應該沒問題。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "다만 인간용 장비는 없으니까…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "But there's no gear for humans here..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "只是沒有人類用的裝備…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "只是沒有人類用的裝備…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그건 구원자와 함께 못 하겠네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I guess that means you can't join."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "所以沒辦法和救援者一起玩。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "所以沒辦法和救援者一起玩。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 좀 아쉽다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's a shame."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這點有點可惜"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這點有點可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 좀 아쉽다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's a shame."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這點有點可惜"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這點有點可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그러니까 다른 걸 할까 싶어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "So I'm thinking of doing something else."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "所以我想玩其他的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "所以我想玩其他的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 바다 속의 브라이스는 예쁠 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I think you'd be beautiful under the sea"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我覺得海裡的布萊斯應該會很漂亮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我覺得海裡的布萊斯應該會很漂亮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 바다 속의 브라이스는 예쁠 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I think you'd be beautiful under the sea"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我覺得海裡的布萊斯應該會很漂亮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我覺得海裡的布萊斯應該會很漂亮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…부끄러운 말을 하네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "...you're making me blush."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…你怎麼說些讓人害羞的話。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…你怎麼說些讓人害羞的話。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "심해까지는 아니더라도…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It doesn't have to be the deep sea..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "就算不是到深海…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "就算不是到深海…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "얕은 바다라면 함께 갈 수 있겠지?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "You can join if I just stay in the shallow parts of the sea, right?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "應該可以一起去淺層的海域吧？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "應該可以一起去淺層的海域吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "언젠가는 같이 아름답게 핀 산호초를 보러 가자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Let's go see the coral reefs together sometime."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我們找一天一起去看美麗的珊瑚礁吧。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我們找一天一起去看美麗的珊瑚礁吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…후후."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "...Hehe."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…呵呵。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…呵呵。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신과 마음을 터놓고 이야기를 나눠보길\r\n정말 잘 한 것 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm glad I was able to speak my mind with you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "和你敞開心房聊天\r\r\n真是個正確的決定。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "和你敞開心房聊天\r\r\n真是個正確的決定。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "덕분에 여러가지 결심도 섰고…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Thanks to you, I'm determined about a lot of things now..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "多虧有你，我才能各方面下定決心…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "多虧有你，我才能各方面下定決心…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "새삼스럽지만, \r\n당신이 내게 얼마나 의미 있는지도 알았거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "And I've come to realize how important you are to me."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我再次領悟到，\r\r\n你對我而言有多麽重要。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我再次領悟到，\r\r\n你對我而言有多麽重要。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "부끄러운 말을 하네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I feel like blushing..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳怎麼說些讓人害羞的話…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳怎麼說些讓人害羞的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "부끄러운 말을 하네…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I feel like blushing..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳怎麼說些讓人害羞的話…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳怎麼說些讓人害羞的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "응."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Yup."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "嗯。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "嗯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그래서 에버톡을 하는 지금도 부끄러워."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I feel a bit embarrassed right now as I message you too"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "所以我現在用Ever Talk也覺得很害羞。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "所以我現在用Ever Talk也覺得很害羞。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "아마 지금 쯤 얼굴이 상당히 붉어졌을 거야."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I can feel myself blushing right now."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "現在臉應該非常紅。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "現在臉應該非常紅。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나는 수줍음도 잘 타거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm really shy, you know."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我可是很容易感到害臊的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我可是很容易感到害臊的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이제 잘 알잖아?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Well, I'm sure you know that by now!"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你現在不是很清楚了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你現在不是很清楚了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "확실히 그렇긴 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Indeed you are"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "的確如此"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "的確如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "확실히 그렇긴 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Indeed you are"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "的確如此"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "的確如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "알아주니 다행이야."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm glad you understand"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你懂我真是太好了。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你懂我真是太好了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "둔한가 싶었더니\r\n멜피스도 눈치 못챈 걸 눈치채기도 하고."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "At first I thought you'd be slow to catch things\r\r\nbut then you even noticed something Melfice didn't even notice."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我還以為你很遲鈍，\r\r\n結果連梅爾菲斯都看不出來的東西，你都看出來了。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我還以為你很遲鈍，\r\r\n結果連梅爾菲斯都看不出來的東西，你都看出來了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이렇게 가다간 언젠가는 \r\n당신에게 숨길 수 있는 게 없어질 거 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I feel like there will come a point where I can no longer keep any secrets from you"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "再這樣下去，\r\r\n總有一天我在你面前都會無所遁形的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "再這樣下去，\r\r\n總有一天我在你面前都會無所遁形的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "숙녀는 비밀이 많아야 매력적인 법인데…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "And secrets make a lady more attractive..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "淑女要保持神祕才有魅力…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "淑女要保持神祕才有魅力…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그렇게 된다면 책임… 져주리라 믿어?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "If it comes to that point...you will always be with me, right?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "變成那樣的話…我可以相信你會負責嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "變成那樣的話…我可以相信你會負責嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "하나 말해두지만…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "One thing I want you to know..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我想先說一件事…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我想先說一件事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "구원자는 내게 있어서 \r\n앞으로도 대체 불가능한 존재가 되겠지만…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "You are irreplaceable to me right now and always will be, Savior, but..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "雖然救援者以後會成為\r\r\n對我而言不可或缺的存在…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "雖然救援者以後會成為\r\r\n對我而言不可或缺的存在…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그렇다고 해서 나의 유일하게 소중한 존재는 아니야."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "that doesn't mean you're the only one who is precious to me."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "但並不表示你是我唯一珍貴的對象。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "但並不表示你是我唯一珍貴的對象。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "내게는 멜피스도 아주 소중한 존재거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Melfice is very precious to me as well."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "梅爾菲斯對我而言也非常重要。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "梅爾菲斯對我而言也非常重要。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그러니까…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "So..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "所以…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "所以…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러니까…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러니까…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "So...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "둘이 같은 맛 아이스크림을 가지고 다툰다면\r\n난 당연히 멜피스 편을 들 거야."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "If the two of you fight over the same ice cream flavor,\r\r\nI'm going to be on Melfice's side!"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "如果你們兩個為了同一個口味的冰淇淋吵架的話，\r\r\n我一定會站在梅爾菲斯那邊的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "如果你們兩個為了同一個口味的冰淇淋吵架的話，\r\r\n我一定會站在梅爾菲斯那邊的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그때는 부디 속상해하지 말아줘, 구원자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I hope that doesn't hurt your feelings, Savior."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "到時請你別覺得受傷喔，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "到時請你別覺得受傷喔，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "LOL"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哈哈哈哈哈哈哈哈哈哈哈"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哈哈哈哈哈哈哈哈哈哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "LOL"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哈哈哈哈哈哈哈哈哈哈哈"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哈哈哈哈哈哈哈哈哈哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나는 진지해 구원자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm serious, Savior."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我是認真的，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我是認真的，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이스크림 정도는 양보할 수 있어!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can let her choose her ice cream first!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "冰淇淋這點程度還是可以退讓的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "冰淇淋這點程度還是可以退讓的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아이스크림 정도는 양보할 수 있어!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can let her choose her ice cream first!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "冰淇淋這點程度還是可以退讓的！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "冰淇淋這點程度還是可以退讓的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그렇다면 다행이네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "That's good to hear."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "那就好。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "那就好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "앞으로도 계속 사이좋게 지내줘."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I hope the two of you continue to get along."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我們接下來也繼續好好相處吧。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我們接下來也繼續好好相處吧。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "정말 둘이 싸우면 내가 아주 곤란해질 거거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'll be in a difficult position if the two of you fight."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你們兩個吵起來的話，我會非常困擾的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你們兩個吵起來的話，我會非常困擾的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "후후."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Hehe."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "呵呵。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "呵呵。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "덕분에 집에 무사히 들어갈 수 있었어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I came back home safely."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "託你的福，我平安到家了。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "託你的福，我平安到家了。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…고마워."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "...Thanks."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…謝謝。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…謝謝。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그리고 당신은…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Also, you are..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "還有你…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "還有你…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "내가 예상한 것보다 더 고집이 강하구나."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "much more stubborn than what I thought."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "比我預期的還要固執呢。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "比我預期的還要固執呢。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "굉장히 유익한 정보를 얻었어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I got a lot of useful information."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我獲得了很有用的情報。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我獲得了很有用的情報。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "안녕 구원자. \r\n혹시 조만간 시간 괜찮을까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Hello, Savior.\r\r\nWill you have time soon?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。\r\r\n你待會有空嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。\r\r\n你待會有空嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신이 괜찮은 시간에 맞춰서 \r\n잠시 방문하고 싶어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'd like to visit you\r\r\nwhenever you are free."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我想在你有空的時候，\r\r\n去拜訪你一下。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我想在你有空的時候，\r\r\n去拜訪你一下。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이전에 말한 '보답'에 대한 건이야."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It has to do with the favor that I owe you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "就是關於之前提到的「報答」。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "就是關於之前提到的「報答」。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "멜피스와 함께 찾아가려고 하는데…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Melfice is coming with me..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我想和梅爾菲斯一起去找你…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我想和梅爾菲斯一起去找你…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "언제가 좋을까? \r\n알려주길 바라."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "When will be the best time for you?\r\r\nPlease let me know."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你什麼時候有空呢？\r\r\n請你告訴我。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你什麼時候有空呢？\r\r\n請你告訴我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "안녕, 구원자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Hello, Savior."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "오늘 약속은 \r\n도서관에서 만나기로 한 게 맞을까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Are we meeting at the library today?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "今天約好\r\r\n在圖書館見面嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "今天約好\r\r\n在圖書館見面嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "확인차 연락했어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I just contacted you to make sure."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我想再確認一下。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我想再確認一下。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나는 보고싶었던 책이 있으니 \r\n멜피스와 먼저 가서 기다리고 있을게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "There is a book I want to read,\r\r\nso I will go ahead with Melfice and wait for you there."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我有想看的書，\r\r\n所以先和梅爾菲斯過去等你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我有想看的書，\r\r\n所以先和梅爾菲斯過去等你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "조심해서 느긋하게 오도록 해."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Be careful on your way and take your time."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你慢慢來就好。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你慢慢來就好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "미안 구원자"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm sorry Savior"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "對不起，救援者"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "對不起，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "약속을 취소할 수 있을까"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Can we cancel our appointment?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "可以取消約定嗎"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "可以取消約定嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "몸 상태가 갑자기 안 좋아져서"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm suddenly not feeling well"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我突然不舒服"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我突然不舒服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "오늘은 만나기 힘들 것 같아"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I don't think we could meet today"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "今天好像沒辦法見面了"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "今天好像沒辦法見面了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "다음은 언제가 좋을까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "When shall we meet next?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "下次什麼時候方便呢？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "下次什麼時候方便呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "짐은 다 챙겼을까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Did you get everything you need?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "行李都準備好了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "行李都準備好了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "준비 되었으면 말해줘."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Let me know when you are ready."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "準備好的話就跟我說。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "準備好的話就跟我說。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "지금 저택을 청소하고 있거든."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm cleaning the mansion now."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我正在打掃宅邸。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我正在打掃宅邸。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "도착할 때에 맞춰서 차를 준비하도록 할게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'll make some tea for when you get here."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我會算好你抵達的時間，準備好茶水的。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我會算好你抵達的時間，準備好茶水的。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "안녕, 구원자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Hey Savior."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你好，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신이 내 병증에 대해 \r\n알아낸 바가 있다고 멜피스에게 들었는데…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I heard from Melfice\r\r\nthat you found out something about my sickness..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我聽梅爾菲斯說\r\r\n你有研究過我的疾病…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我聽梅爾菲斯說\r\r\n你有研究過我的疾病…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "정말일까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Is it true?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "믿을 수 있는 정보같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it's promising"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該是可靠的情報"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該是可靠的情報"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "믿을 수 있는 정보같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think it's promising"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該是可靠的情報"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該是可靠的情報"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…그래."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "...Alright."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…好。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "직접 만나서 이야기하는 게 좋을 것 같네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Let's meet and talk about it."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我們應該面對面談談會比較好。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我們應該面對面談談會比較好。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신이 머물고 있는 성으로 가면 될까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Should I go to the palace?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "可以去你住的城堡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "可以去你住的城堡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "구원자, 부디 시간을 내주지 않겠어?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Savior, make some time for me, will you?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "救援者，可不可以請你撥點時間給我？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "救援者，可不可以請你撥點時間給我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "앞으로 어떻게 하면 좋을지 상담하고 싶어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I want to get your advice on what to do."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我想和你聊聊未來該怎麼辦。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我想和你聊聊未來該怎麼辦。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이건 더이상 나 혼자만의 문제가 아니니까."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "This is no longer my own problem."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "因為這好像不再是我一個人的問題。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "因為這好像不再是我一個人的問題。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신의 의견이 내게 아주 중요해졌어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Your opinion is really valuable to me now."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你的意見對我而言非常重要。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你的意見對我而言非常重要。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "저택에서 기다리고 있을게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'll be waiting for you at home."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我會在宅邸等你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我會在宅邸等你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "부디 내 결정을 존중해주길 바라."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I just hope you respect by decisions."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "希望你能尊重我的決定。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "希望你能尊重我的決定。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신은 내게 있어서 너무 큰 존재가 되어서…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "You've become such an important person to me..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "因為你對我而言是很重要的存在…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "因為你對我而言是很重要的存在…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이 이상 당신에게 짐이 되고 싶지 않아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I do not want to become more of a burden to you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我不想成為你的累贅。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我不想成為你的累贅。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "부디 내가 당신을 상처입히지 않기를."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I just hope I never hurt you."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "希望我不會傷害到你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "希望我不會傷害到你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "나의 선택으로 인해,\r\n상냥한 당신의 마음이 너무 아프지는 않기를."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I don't want any of my decisions\r\r\nto hurt your kind heart."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "希望不會因為我的決定，\r\r\n讓善良的你太過難受。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "希望不會因為我的決定，\r\r\n讓善良的你太過難受。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그리고…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "And..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "還有…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "還有…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신에게 어떻게 해서든 \r\n전하고 싶은 말이 있는데"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "There's something I want to say to you,"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我有無論如何\r\r\n都想告訴你的話"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我有無論如何\r\r\n都想告訴你的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "모든 게 끝난 후 전해도 될까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "but can I tell you after everything is over?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "可以等一切都結束後再跟你說嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "可以等一切都結束後再跟你說嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신에게 어떤 말을 보내야 할지…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I can't organize my thoughts properly yet..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "該傳什麼給你才好…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "該傳什麼給你才好…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "정리가 끝나질 않네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It's still a mess inside my head."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我一直無法整理完這些內容。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我一直無法整理完這些內容。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "내게 조금만 더 시간을 주겠어?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Can you give me some more time?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "可以再給我一些時間嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "可以再給我一些時間嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "앞으로 우리가 함께할 시간은\r\n충분하리라 믿으니까."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'm sure we'll have more time together."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我相信我們\r\r\n來日方長。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我相信我們\r\r\n來日方長。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신과 나의 만남이, \r\n우리가 함께해 온 시간이."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I think my encounter with you,\r\r\nand all the time we spent together..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你和我的相遇，\r\r\n還有我們一直以來共度的時光，"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你和我的相遇，\r\r\n還有我們一直以來共度的時光，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "새로운 기적을 불러일으킨 것 같아."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I think it brought a miracle."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "好像能創造新的奇蹟。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "好像能創造新的奇蹟。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "에버톡으로 묻기에는\r\n너무 비겁한 질문이지만…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It's a bit cowardly of me to ask this through Evertalk, but..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "這個問題透過Ever Talk來問\r\r\n好像太卑鄙了…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "這個問題透過Ever Talk來問\r\r\n好像太卑鄙了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "구원자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "救援者。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "앞으로도…\r\n나를…"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Will you..."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "以後…\r\r\n你能讓我…"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "以後…\r\r\n你能讓我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "우리를, 계속 행복하게 해주겠어?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "continue to make us happy?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "讓我們，一直幸福下去嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "讓我們，一直幸福下去嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "…당신의 마음이 우리와 같은지 알고 싶어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I want to know if you think the same as we do."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "…我想知道你的心意是否與我們相同。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "…我想知道你的心意是否與我們相同。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "저택에서 기다릴게."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I'll be waiting at home."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我在宅邸等你。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我在宅邸等你。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "대답을 들려줬으면 해."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I want to know what you think."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "希望你能回答我。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "希望你能回答我。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "사랑을 속삭이는 날이야, 구원자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "It's a day of whispering sweet lovely messages, Savior."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "是談情說愛的日子呢，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "是談情說愛的日子呢，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "당신을 위해 멜피스와 함께 선물을 준비했어. \r\n모쪼록 마음에 들면 좋겠네."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Melfice and I prepared a little something for you.\r\nI hope you love it."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我和梅爾菲斯一起為你準備了禮物。\r\n無論如何，我們希望你喜歡。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我和梅爾菲斯一起為你準備了禮物。\r\n無論如何，我們希望你喜歡。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이후 시간이 된다면 저택에 들러주겠어? \r\n다른… '좀 더 특별한 것'들도 준비했거든. 후훗."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Can you stop by the mansion later if you have the time?\r\nWe also prepared \"something more special\" for you. Hehe."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你有空的話能來宅邸嗎？\r\n我還準備了其他…「更特別的」，呵呵。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你有空的話能來宅邸嗎？\r\n我還準備了其他…「更特別的」，呵呵。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워 브라이스! 이따가 저택에도 들를게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Bryce! I'll stop by the mansion later!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝布萊斯！我待會去宅邸找妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝布萊斯！我待會去宅邸找妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워 브라이스! 이따가 저택에도 들를게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Bryce! I'll stop by the mansion later!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝布萊斯！我待會去宅邸找妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝布萊斯！我待會去宅邸找妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "재회의 날은 내게 꽤 특별한 날이야."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Reunion Day is really special to me."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "相逢之日對我來說很特別。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "相逢之日對我來說很特別。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "그래서 왠지 소중한 당신에게\r\n무언가 선물을 보내고 싶었어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "And you're really special,\r\nso I wanted to give you a gift."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "所以我想送給珍貴的你\r\n一些禮物。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "所以我想送給珍貴的你\r\n一些禮物。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "앞으로도 '재회'하는 일 없이,\r\n우리와 계속 함께 있어주겠어?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Will you stay by our side forever,\r\nso that there's no need for a \"reunion\"?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "你能繼續陪在我們身邊，\r\n讓我們不需要再次「相逢」嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "你能繼續陪在我們身邊，\r\n讓我們不需要再次「相逢」嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "최대한 노력해볼게. 나도 너희가 아주 소중해."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll try my best. You're both really special to me too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會盡力的，我也很珍惜妳們。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會盡力的，我也很珍惜妳們。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "최대한 노력해볼게. 나도 너희가 아주 소중해."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll try my best. You're both really special to me too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會盡力的，我也很珍惜妳們。"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會盡力的，我也很珍惜妳們。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "이브의 날 축하해, 구원자. \r\n아니면 메리 크리스마스가 더 좋을까?"
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Happy Eve's Day, Savior.\r\nOr shall I say, Merry Christmas?"
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "夏娃之日快樂，救援者。\r\n還是說聖誕快樂比較好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "夏娃之日快樂，救援者。\r\n還是說聖誕快樂比較好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "오늘은 멜피스와 함께 크리스마스 요리라는 걸 해봤어."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "I tried cooking some Christmas food with Melfice today."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "我今天和梅爾菲斯一起煮聖誕料理。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "我今天和梅爾菲斯一起煮聖誕料理。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "브라이스",
+            "message": "여유가 된다면 저택에 들러주길 바라.\r\n같이 식사하도록 하자."
+          },
+          "en": {
+            "speaker": "Bryce",
+            "message": "Stop by the mansion fi you can.\r\nLet's eat together."
+          },
+          "zh_tw": {
+            "speaker": "布萊斯",
+            "message": "如果你有空的話，來宅邸一趟吧，\r\n我們一起吃飯。"
+          },
+          "zh_cn": {
+            "speaker": "布萊斯",
+            "message": "如果你有空的話，來宅邸一趟吧，\r\n我們一起吃飯。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "초대 고마워, 브라이스! 이따 봐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for the invitation, Bryce! See you later!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳邀請我，布萊斯！等等見！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳邀請我，布萊斯！等等見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "초대 고마워, 브라이스! 이따 봐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for the invitation, Bryce! See you later!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳邀請我，布萊斯！等等見！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳邀請我，布萊斯！等等見！"
+          }
+        }
+      ]
+    }
+  }
+}

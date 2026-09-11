@@ -1,0 +1,6138 @@
+{
+  "id": "4060",
+  "name": "프림",
+  "name_en": "Prim",
+  "grade": "에픽",
+  "race": "불사형",
+  "class": "서포터",
+  "sub_class": "치료",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "환영의 무지개",
+    "constellation": "인연_메피스토_이벤트1",
+    "union": "제이드 상단",
+    "birthday": "203",
+    "height": 159,
+    "weight": 46,
+    "cv_ko": "김하루",
+    "cv_jp": "Yu Sasahara",
+    "like": [
+      "민트 초코"
+    ],
+    "dislike": [
+      "무관심"
+    ],
+    "hobby": [
+      "마술 도구 개조"
+    ],
+    "speciality": [
+      "관객 모으기"
+    ]
+  },
+  "personality": {
+    "description": "자, 팡파르! 폭죽! 그 뒤로 모자를 돌리면서 한 바퀴 턴! 좋아☆ 완벽한 인사였어♥\n\n안녕, 구원자! 세상에 즐거움과 놀라움을 선물하는 만능 엔터테이너, 프림이야★ \n솔직히 말하면 난 싸우는 건 썩 좋아하지는 않아! 그것보다는 더 재밌고 즐거운 일, 신기하고 새로운 일을 찾아다니는 게 좋거든☆\n하지만 매번 싸움을 피할 수는 없잖아? 나만 믿어. 어떤 장소건 내가 등장하는 순간 멋진 파티장이 될 테니까♥\n\n그럼 구원자를 처음 만난 기념으로 마술을 하나 보여줄게!\n자, 내가 들고 있는 카드가 보이지? 사실 이 카드 속에, 구원자한테 줄 선물을 숨겨왔어♥ \n지금 꺼낼 건데, 도망갈 수도 있으니까 잘 보고 있어야 해? 다른 데 보지 말고, 프림의 눈이랑 이 카드만 보는 거야. 알겠지?\n\n하나, 둘, 셋. …얍★\n\n짠! 특제 깃털 폭탄이지롱♥ 어때, 선물이 마음에 들어? 꺄하핫. 새가 된 것 같은 기분이지?\n일상의 지루함에 좀먹혀버릴 것 같을 때에는 언제든지 불러줘! \n내가 구원자를 그런 지루한 일상에서 멋지게 구해줄 테니까★",
+    "greeting": "이 모든 게 너를 위한 엔터테인먼트야♥"
+  },
+  "speech_patterns": [
+    "☆★☆안녕 구원자☆★☆",
+    "계약해줘서 <(^▽^)/ 고마워!",
+    "히히, 뭘☆ 앞으로 잘 부탁해♪♬",
+    "파티가 필요할 때라던지",
+    "아님 그냥 보고싶을 때라던지!",
+    "언제든지 편하게 불러줘~♥",
+    "그럼 나중에 봐!",
+    "★◇환영 파티◇★ 준비하고 있을테니까♥",
+    "꼭 오기다! 알겠지?",
+    "약속이야!!! *^-^*)/♡♥♡/",
+    "아냐아냐! 전문가한테 맡겨버령★\r\n실력 발휘할 틈을 달라구~!",
+    "좀 이따가 봐! (+▽<)b",
+    "구원자ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ",
+    "들어봐!!!! 말도 안되는 얘기를 들었어!",
+    "우리 토끼가 하나도 안 귀엽대!! 왜!?",
+    "귀여운 건 크면 클수록 좋은 거 아냐?",
+    "작은 토끼가 모자 안에서 나와도 재미 없지 않아???",
+    "설마 구원자도 우리 토끼 안귀엽다고 생각하는 건 아니지",
+    "그치?!",
+    "그치!!!!! 구원자가 보기에도 그렇지!!",
+    "히힛 역시 구원자는 잘알이라니까♥",
+    "왠지 구원자라면 민트도 좋아할거같아~★",
+    "다음에 내가 맛있는 민트 사탕 갖다줄게!",
+    "딱기다려~!",
+    "구원자~~",
+    "트럼프 카드로 점도 볼 수 있는 거 알아?",
+    "카드 보다가 구원자가 생각났는데",
+    "무슨 카드게☆",
+    "흐흥~ 정답은! 하트 킹이지롱~!",
+    "하트 킹은~ 사랑, 섬세함, 대범함…",
+    "한창 모험에 나설 유년기를 의미해♡",
+    "사랑이 넘치고 순수한게 구원자랑 어울리지 않아?",
+    "점은 그냥 점이지만",
+    "그래도 재밌지 않아? 히히",
+    "다음엔 내가 제대로 배워서 봐줄게★",
+    "두구두구두구두구",
+    "★☆★☆프림의 수수께끼 타임☆★☆★",
+    "이빨이 그렇게나 많은데…",
+    "전혀 깨물 수 없는게 뭘까~요!",
+    "정답 공개한다?!",
+    "3!",
+    "2!",
+    "1!",
+    "땡!",
+    "정답은 빗!",
+    "오늘 엄청 마음에 드는 걸 사버렸지롱♥",
+    "제이드한테도 선물하려구☆",
+    "구원자한테도 하나 보내줄게!",
+    "뭘 이런걸 가지구~ *^▽^*)v",
+    "이따 성에서 봐 구원자~~~♥"
+  ],
+  "comments": [
+    {
+      "writer": "도라",
+      "comment": "신체 분리 마술을 체험할 수 있대서 기대했는데, 머리 때문에 들어가지 못했어…"
+    },
+    {
+      "writer": "비비안",
+      "comment": "프림한테 엄청 큰 풍선을 선물 받아서 빗자루에 매달고 가다가 터진 적이 있어. 귀 찢어지는 줄 알았지 뭐야."
+    },
+    {
+      "writer": "미카",
+      "comment": "흠흠. 관객을 집중시키는 고난이도 기술…! 배워야겠어…!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "프림",
+        "message": "☆★☆안녕 구원자☆★☆"
+      },
+      {
+        "speaker": "프림",
+        "message": "계약해줘서 <(^▽^)/ 고마워!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나야말로 고마워"
+      },
+      {
+        "speaker": "프림",
+        "message": "히히, 뭘☆ 앞으로 잘 부탁해♪♬"
+      },
+      {
+        "speaker": "프림",
+        "message": "파티가 필요할 때라던지"
+      },
+      {
+        "speaker": "프림",
+        "message": "아님 그냥 보고싶을 때라던지!"
+      },
+      {
+        "speaker": "프림",
+        "message": "언제든지 편하게 불러줘~♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "그럼 나중에 봐!"
+      },
+      {
+        "speaker": "프림",
+        "message": "★◇환영 파티◇★ 준비하고 있을테니까♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "꼭 오기다! 알겠지?"
+      },
+      {
+        "speaker": "프림",
+        "message": "약속이야!!! *^-^*)/♡♥♡/"
+      },
+      {
+        "speaker": "구원자",
+        "message": "준비 도와줄까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "준비 도와줄까?"
+      },
+      {
+        "speaker": "프림",
+        "message": "아냐아냐! 전문가한테 맡겨버령★\r\n실력 발휘할 틈을 달라구~!"
+      },
+      {
+        "speaker": "프림",
+        "message": "좀 이따가 봐! (+▽<)b"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ"
+      },
+      {
+        "speaker": "프림",
+        "message": "들어봐!!!! 말도 안되는 얘기를 들었어!"
+      },
+      {
+        "speaker": "프림",
+        "message": "우리 토끼가 하나도 안 귀엽대!! 왜!?"
+      },
+      {
+        "speaker": "프림",
+        "message": "귀여운 건 크면 클수록 좋은 거 아냐?"
+      },
+      {
+        "speaker": "프림",
+        "message": "작은 토끼가 모자 안에서 나와도 재미 없지 않아???"
+      },
+      {
+        "speaker": "프림",
+        "message": "설마 구원자도 우리 토끼 안귀엽다고 생각하는 건 아니지"
+      },
+      {
+        "speaker": "프림",
+        "message": "그치?!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클 수록 귀여운 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "클 수록 귀여운 거 같아"
+      },
+      {
+        "speaker": "프림",
+        "message": "그치!!!!! 구원자가 보기에도 그렇지!!"
+      },
+      {
+        "speaker": "프림",
+        "message": "히힛 역시 구원자는 잘알이라니까♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "왠지 구원자라면 민트도 좋아할거같아~★"
+      },
+      {
+        "speaker": "프림",
+        "message": "다음에 내가 맛있는 민트 사탕 갖다줄게!"
+      },
+      {
+        "speaker": "프림",
+        "message": "딱기다려~!"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자~~"
+      },
+      {
+        "speaker": "프림",
+        "message": "트럼프 카드로 점도 볼 수 있는 거 알아?"
+      },
+      {
+        "speaker": "프림",
+        "message": "카드 보다가 구원자가 생각났는데"
+      },
+      {
+        "speaker": "프림",
+        "message": "무슨 카드게☆"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 모르겠는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 모르겠는데"
+      },
+      {
+        "speaker": "프림",
+        "message": "흐흥~ 정답은! 하트 킹이지롱~!"
+      },
+      {
+        "speaker": "프림",
+        "message": "하트 킹은~ 사랑, 섬세함, 대범함…"
+      },
+      {
+        "speaker": "프림",
+        "message": "한창 모험에 나설 유년기를 의미해♡"
+      },
+      {
+        "speaker": "프림",
+        "message": "사랑이 넘치고 순수한게 구원자랑 어울리지 않아?"
+      },
+      {
+        "speaker": "프림",
+        "message": "점은 그냥 점이지만"
+      },
+      {
+        "speaker": "프림",
+        "message": "그래도 재밌지 않아? 히히"
+      },
+      {
+        "speaker": "프림",
+        "message": "다음엔 내가 제대로 배워서 봐줄게★"
+      },
+      {
+        "speaker": "프림",
+        "message": "두구두구두구두구"
+      },
+      {
+        "speaker": "프림",
+        "message": "★☆★☆프림의 수수께끼 타임☆★☆★"
+      },
+      {
+        "speaker": "프림",
+        "message": "이빨이 그렇게나 많은데…"
+      },
+      {
+        "speaker": "프림",
+        "message": "전혀 깨물 수 없는게 뭘까~요!"
+      },
+      {
+        "speaker": "프림",
+        "message": "정답 공개한다?!"
+      },
+      {
+        "speaker": "프림",
+        "message": "3!"
+      },
+      {
+        "speaker": "프림",
+        "message": "2!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐만!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐만!"
+      },
+      {
+        "speaker": "프림",
+        "message": "1!"
+      },
+      {
+        "speaker": "프림",
+        "message": "땡!"
+      },
+      {
+        "speaker": "프림",
+        "message": "정답은 빗!"
+      },
+      {
+        "speaker": "프림",
+        "message": "오늘 엄청 마음에 드는 걸 사버렸지롱♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "제이드한테도 선물하려구☆"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자한테도 하나 보내줄게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워"
+      },
+      {
+        "speaker": "프림",
+        "message": "뭘 이런걸 가지구~ *^▽^*)v"
+      },
+      {
+        "speaker": "프림",
+        "message": "이따 성에서 봐 구원자~~~♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "있잖아"
+      },
+      {
+        "speaker": "프림",
+        "message": "나 가끔가다가 구원자가 영주님이란거 잊어버리는데"
+      },
+      {
+        "speaker": "프림",
+        "message": "이러다가 괘씸죄로 잡혀가는 거 아닐까…;;"
+      },
+      {
+        "speaker": "프림",
+        "message": "근데 진짜 구원자가 너무 친절하달까"
+      },
+      {
+        "speaker": "프림",
+        "message": "잘해주니까"
+      },
+      {
+        "speaker": "프림",
+        "message": "뭔가 착각하게 되는 느낌?"
+      },
+      {
+        "speaker": "프림",
+        "message": "조심해 구원자~!"
+      },
+      {
+        "speaker": "프림",
+        "message": "이러다가 구원자도 유죄야 유죄"
+      },
+      {
+        "speaker": "프림",
+        "message": "모두의 마음을 훔친 죄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 피곤해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "혹시 피곤해?"
+      },
+      {
+        "speaker": "프림",
+        "message": "헉…들켰어?"
+      },
+      {
+        "speaker": "프림",
+        "message": "얼른 자러갈게 ㅎ_ㅎ)"
+      },
+      {
+        "speaker": "프림",
+        "message": "항상 고마워 구원자~!"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자는 꼭 잘 쉬어야돼"
+      },
+      {
+        "speaker": "프림",
+        "message": "나처럼 헛소리하지 말구…"
+      },
+      {
+        "speaker": "프림",
+        "message": "그럼 나중에 봐~~☆★☆"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자!!!!!!!!"
+      },
+      {
+        "speaker": "프림",
+        "message": "이거봐봐!!!"
+      },
+      {
+        "speaker": "프림",
+        "message": "이거 케이크래!!!!"
+      },
+      {
+        "speaker": "프림",
+        "message": "완전 대박이지!?!?!?!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "케이크네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "케이크네"
+      },
+      {
+        "speaker": "프림",
+        "message": "반응이 너무 쿨하지 않아!?"
+      },
+      {
+        "speaker": "프림",
+        "message": "혹시 이미 알고 있었던거야!?"
+      },
+      {
+        "speaker": "프림",
+        "message": "난 이런 거 처음 봐서 너무 깜짝 놀랐는데!"
+      },
+      {
+        "speaker": "프림",
+        "message": "파티 아이템으로 너무너무 좋을거같아★"
+      },
+      {
+        "speaker": "프림",
+        "message": "위험하지 않게 조심해야겠지만…"
+      },
+      {
+        "speaker": "프림",
+        "message": "어린이 정령들이 아무거나 케이크인 줄 알고 \r\n먹으면 큰일날거야♣"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자두 조심하기다! 아무거나 먹지 말기★"
+      },
+      {
+        "speaker": "프림",
+        "message": "약속!"
+      },
+      {
+        "speaker": "프림",
+        "message": "지난번에는 흔쾌히 도와줘서 고마워 구원자♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "덕분에 앞으로 어떻게 해야할지 가닥을 잡은거 같아★"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다행이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다행이야"
+      },
+      {
+        "speaker": "프림",
+        "message": "헤헤"
+      },
+      {
+        "speaker": "프림",
+        "message": "음★"
+      },
+      {
+        "speaker": "프림",
+        "message": "새삼"
+      },
+      {
+        "speaker": "프림",
+        "message": "정말 구원자가 나한테 잘해준다 싶네"
+      },
+      {
+        "speaker": "프림",
+        "message": "다른 정령들한테도 이러고 있지?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "프림",
+        "message": "으~~"
+      },
+      {
+        "speaker": "프림",
+        "message": "역시 구원자 유죄!"
+      },
+      {
+        "speaker": "프림",
+        "message": "벌로 책임지고 나 계속 도와주기야★"
+      },
+      {
+        "speaker": "프림",
+        "message": "약속♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자-!"
+      },
+      {
+        "speaker": "프림",
+        "message": "파티랑 쇼의 차이점이 뭐게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "파티는 체험형 쇼는 감상형?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "파티는 체험형 쇼는 감상형?"
+      },
+      {
+        "speaker": "프림",
+        "message": "오~"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자 역시 잘알이네!! 실은"
+      },
+      {
+        "speaker": "프림",
+        "message": "사실 나도 파티랑 쇼의 차이 잘 몰라♠"
+      },
+      {
+        "speaker": "프림",
+        "message": "물론 구분을 하자면 차이는 많긴 하다구?"
+      },
+      {
+        "speaker": "프림",
+        "message": "기본적으로 목적이 다르기도 하니까"
+      },
+      {
+        "speaker": "프림",
+        "message": "하지만 역시 기본 핵심은 즐거워야한다"
+      },
+      {
+        "speaker": "프림",
+        "message": "그게 중요한거 아닐까 싶긴 해"
+      },
+      {
+        "speaker": "프림",
+        "message": "음 갑자기 이런 얘기를 왜 했냐면"
+      },
+      {
+        "speaker": "프림",
+        "message": "파티 구상하다가 막혔어 히잉…"
+      },
+      {
+        "speaker": "프림",
+        "message": "지난 번 이벤트 선물로 받은 디저트인데"
+      },
+      {
+        "speaker": "프림",
+        "message": "같이 먹자!!"
+      },
+      {
+        "speaker": "프림",
+        "message": "영주 성으로 찾아갈게~!! 이따 봐!!"
+      },
+      {
+        "speaker": "프림",
+        "message": "[삭제된 메시지입니다]"
+      },
+      {
+        "speaker": "프림",
+        "message": "아 실수했다"
+      },
+      {
+        "speaker": "프림",
+        "message": "아무것도 아냐"
+      },
+      {
+        "speaker": "프림",
+        "message": "나중에 연락할게 구원자"
+      },
+      {
+        "speaker": "프림",
+        "message": "잘지내~"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자 잠깐 들어볼래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "프림",
+        "message": "이게 현타라는건가…"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자는 내가 다른 직업을 갖는게 혹시 상상가?"
+      },
+      {
+        "speaker": "프림",
+        "message": "솔직히 엄청 고민해봤는데"
+      },
+      {
+        "speaker": "프림",
+        "message": "뭔가 다른 생각이 잘 안든당★"
+      },
+      {
+        "speaker": "프림",
+        "message": "빵집같은 걸 운영하면 재밌으려나♣"
+      },
+      {
+        "speaker": "구원자",
+        "message": "프림이라면 뭐든 잘하지 않을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "프림이라면 뭐든 잘하지 않을까?"
+      },
+      {
+        "speaker": "프림",
+        "message": "에엥? 진짜? 그래 보여?"
+      },
+      {
+        "speaker": "프림",
+        "message": "음 사실 예전에 다른 일을 해본적이 있긴 하거든♣"
+      },
+      {
+        "speaker": "프림",
+        "message": "기억은 잘 안나지만"
+      },
+      {
+        "speaker": "프림",
+        "message": "그래서 다시 하려면 할 수는 있을텐데"
+      },
+      {
+        "speaker": "프림",
+        "message": "뭔가 상상이 잘 안가긴 하네★"
+      },
+      {
+        "speaker": "프림",
+        "message": "그래도 뭔가"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자가 옆에 있다면 뭐든 괜찮을지도~?"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자~ 나 조만간 쇼하는데 보러올래?"
+      },
+      {
+        "speaker": "프림",
+        "message": "성 외곽에 있는 스테이지에서 게릴라 쇼 할거지롱"
+      },
+      {
+        "speaker": "프림",
+        "message": "이번에 엄청 열심히 준비했으니까"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자가 보러오면 엄청 기쁠거야☆★"
+      },
+      {
+        "speaker": "프림",
+        "message": "기다릴게!"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자!!! 드디어 때가 왔어!! <(+_<)/"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 때?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 때?"
+      },
+      {
+        "speaker": "프림",
+        "message": "에잉~ 다 알면서!"
+      },
+      {
+        "speaker": "프림",
+        "message": "이번에야말로 반드시 구원자를 즐겁게 해줄게!"
+      },
+      {
+        "speaker": "프림",
+        "message": "그럼 광장 분수대 앞에서 보자★"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자~!!! 나 엄청 감동이야 ㅜㅜ"
+      },
+      {
+        "speaker": "프림",
+        "message": "저번의 그 애 있잖아!"
+      },
+      {
+        "speaker": "프림",
+        "message": "왜 우리 벚꽃동산에서 놀 때 만난 어린이 정령! 티모시!"
+      },
+      {
+        "speaker": "프림",
+        "message": "어쩌다가 거리에서 마주쳤는데"
+      },
+      {
+        "speaker": "프림",
+        "message": "글쎄 있지 걔가 풀피리 불어줬다!"
+      },
+      {
+        "speaker": "프림",
+        "message": "엄청나지 않아!?"
+      },
+      {
+        "speaker": "프림",
+        "message": "그 때 들은게 인상깊었나보더라고~!"
+      },
+      {
+        "speaker": "프림",
+        "message": "아 참 그건 그렇고!"
+      },
+      {
+        "speaker": "프림",
+        "message": "우리 만나자!!!"
+      },
+      {
+        "speaker": "프림",
+        "message": "이번에야말로 꼭!!! 구원자를 재밌게 해줄게!"
+      },
+      {
+        "speaker": "프림",
+        "message": "응? 응?"
+      },
+      {
+        "speaker": "프림",
+        "message": "후… 구원자는 날씨 타는 편이야?"
+      },
+      {
+        "speaker": "프림",
+        "message": "난 왠지 날이 흐리면 엄청 늘어지게 되더라"
+      },
+      {
+        "speaker": "프림",
+        "message": "졸리고 피곤하고… 뭔가 울적~하고"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자 얼굴보면 좀 나아질지도 ^ㅅ^;"
+      },
+      {
+        "speaker": "프림",
+        "message": "헤헤… 혹시 괜찮으면 만나줄래?"
+      },
+      {
+        "speaker": "프림",
+        "message": "달콤한 핫초코를 마시면 좀 좋아질거같아"
+      },
+      {
+        "speaker": "프림",
+        "message": "히히…"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자 혹시 아이돌 좋아해?"
+      },
+      {
+        "speaker": "프림",
+        "message": "헤헤 다른게 아니라 에루샤한테 부탁받아서"
+      },
+      {
+        "speaker": "프림",
+        "message": "아이돌 이벤트 도와주기로 했는데"
+      },
+      {
+        "speaker": "프림",
+        "message": "미카랑 시하 알지? 걔네 관련이거든"
+      },
+      {
+        "speaker": "프림",
+        "message": "데뷔한지 얼마 안돼서 정보가 부족해가지구"
+      },
+      {
+        "speaker": "프림",
+        "message": "괜찮으면 구원자 의견 좀 들려주지 않을래?"
+      },
+      {
+        "speaker": "프림",
+        "message": "우리 같이 최고의 이벤트를 만들어보자★"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자"
+      },
+      {
+        "speaker": "프림",
+        "message": "나 엄청 진지한 얘기가 있어"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자의 도움이 필요해"
+      },
+      {
+        "speaker": "프림",
+        "message": "정령 하나 살린다치고"
+      },
+      {
+        "speaker": "프림",
+        "message": "나 좀 도와주면 안 될까"
+      },
+      {
+        "speaker": "프림",
+        "message": "으으 긴장돼…"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자, 괜찮으면 오늘 현장에 같이 가줄래?"
+      },
+      {
+        "speaker": "프림",
+        "message": "온몸이 떨려서 잘 못움직이겠어"
+      },
+      {
+        "speaker": "프림",
+        "message": "하… 파티 잘 되어야 할텐데…"
+      },
+      {
+        "speaker": "프림",
+        "message": "다들…좋아해주면 좋겠다"
+      },
+      {
+        "speaker": "프림",
+        "message": "[사용자에게 메시지를 보낼 수 없습니다]"
+      },
+      {
+        "speaker": "구원자",
+        "message": "프림?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "프림?"
+      },
+      {
+        "speaker": "프림",
+        "message": "[사용자에게 메시지를 보낼 수 없습니다]"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자~★"
+      },
+      {
+        "speaker": "프림",
+        "message": "뭐 재밌는 거 없을까?"
+      },
+      {
+        "speaker": "프림",
+        "message": "그 일 이후로 휴업 때린 건 좋았는데☆"
+      },
+      {
+        "speaker": "프림",
+        "message": "정작 뭘 하려고 해도 생각이 안나네♠"
+      },
+      {
+        "speaker": "프림",
+        "message": "이 김에 평소 안하던 짓을 해야하려나~"
+      },
+      {
+        "speaker": "프림",
+        "message": "혹시 좋은 아이디어 있으면 알려주라♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "★★★프림 부활★★★"
+      },
+      {
+        "speaker": "프림",
+        "message": "히히 그동안 걱정끼쳐서 미안해 구원자!"
+      },
+      {
+        "speaker": "프림",
+        "message": "나 이제 괜찮아졌으니까"
+      },
+      {
+        "speaker": "프림",
+        "message": "뭐 어떻게든 되겠지"
+      },
+      {
+        "speaker": "프림",
+        "message": "그럼 오늘도 힘낼테니까!"
+      },
+      {
+        "speaker": "프림",
+        "message": "시간 나면 광장에서 보자~★"
+      },
+      {
+        "speaker": "프림",
+        "message": "서프라이즈~☆★"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자! 내가 아주 많~~이 좋아하는 거 알지?"
+      },
+      {
+        "speaker": "프림",
+        "message": "다음 사랑의 날에도 구원자를 위해 서프라이즈를 준비할게♡\r\n기대해~♥"
+      },
+      {
+        "speaker": "구원자",
+        "message": "서프라이즈 고마워, 프림!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "서프라이즈 고마워, 프림!"
+      },
+      {
+        "speaker": "프림",
+        "message": "빠밤~★ 오늘은 대상인의 날이야!"
+      },
+      {
+        "speaker": "프림",
+        "message": "나중에 같이 트로이카에 경매장 구경하러 가자!\r\n열심히 준비하고 있을게~☆"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워. 준비 힘내, 프림!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워. 준비 힘내, 프림!"
+      },
+      {
+        "speaker": "프림",
+        "message": "해피 이브 데이, 구원자♥"
+      },
+      {
+        "speaker": "프림",
+        "message": "구원자한테는 메리 크마리스스! 하는게 좋았으려나?"
+      },
+      {
+        "speaker": "프림",
+        "message": "연말연시는 둘 다 바쁘겠지만, \r\n우리 같이 힘내자☆"
+      },
+      {
+        "speaker": "구원자",
+        "message": "프림도 해피 이브 데이!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "프림도 해피 이브 데이!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "프림",
+      "en": "Prim",
+      "zh_tw": "弗里姆",
+      "zh_cn": "弗里姆"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "불사형",
+      "en": "Undead",
+      "zh_tw": "不死型",
+      "zh_cn": "不死型"
+    },
+    "class": {
+      "ko": "서포터",
+      "en": "Supporter",
+      "zh_tw": "輔助者",
+      "zh_cn": "輔助者"
+    },
+    "sub_class": {
+      "ko": "치료",
+      "en": "Heal",
+      "zh_tw": "治療",
+      "zh_cn": "治療"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "환영의 무지개",
+        "en": "Phantom Rainbow",
+        "zh_tw": "幻象之虹",
+        "zh_cn": "幻象之虹"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_이벤트1",
+        "en": "인연_메피스토_이벤트1",
+        "zh_tw": "水瓶座",
+        "zh_cn": "水瓶座"
+      },
+      "union": {
+        "ko": "제이드 상단",
+        "en": "Jade's Merchants' Guild",
+        "zh_tw": "潔依德商團",
+        "zh_cn": "潔依德商團"
+      },
+      "cv_ko": {
+        "ko": "김하루",
+        "en": "Haru Kim",
+        "zh_tw": "金賀婁",
+        "zh_cn": "金賀婁"
+      },
+      "cv_jp": {
+        "ko": "Yu Sasahara",
+        "en": "Yu Sasahara",
+        "zh_tw": "Yu Sasahara",
+        "zh_cn": "Yu Sasahara"
+      },
+      "like": {
+        "ko": [
+          "민트 초코"
+        ],
+        "en": [
+          "Mint chocolate"
+        ],
+        "zh_tw": [
+          "薄荷巧克力"
+        ],
+        "zh_cn": [
+          "薄荷巧克力"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "무관심"
+        ],
+        "en": [
+          "Apathy"
+        ],
+        "zh_tw": [
+          "不感興趣"
+        ],
+        "zh_cn": [
+          "不感興趣"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "마술 도구 개조"
+        ],
+        "en": [
+          "Magic tool modification"
+        ],
+        "zh_tw": [
+          "改造魔術道具"
+        ],
+        "zh_cn": [
+          "改造魔術道具"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "관객 모으기"
+        ],
+        "en": [
+          "Gathering audience"
+        ],
+        "zh_tw": [
+          "吸引觀眾聚集"
+        ],
+        "zh_cn": [
+          "吸引觀眾聚集"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "자, 팡파르! 폭죽! 그 뒤로 모자를 돌리면서 한 바퀴 턴! 좋아☆ 완벽한 인사였어♥\n\n안녕, 구원자! 세상에 즐거움과 놀라움을 선물하는 만능 엔터테이너, 프림이야★ \n솔직히 말하면 난 싸우는 건 썩 좋아하지는 않아! 그것보다는 더 재밌고 즐거운 일, 신기하고 새로운 일을 찾아다니는 게 좋거든☆\n하지만 매번 싸움을 피할 수는 없잖아? 나만 믿어. 어떤 장소건 내가 등장하는 순간 멋진 파티장이 될 테니까♥\n\n그럼 구원자를 처음 만난 기념으로 마술을 하나 보여줄게!\n자, 내가 들고 있는 카드가 보이지? 사실 이 카드 속에, 구원자한테 줄 선물을 숨겨왔어♥ \n지금 꺼낼 건데, 도망갈 수도 있으니까 잘 보고 있어야 해? 다른 데 보지 말고, 프림의 눈이랑 이 카드만 보는 거야. 알겠지?\n\n하나, 둘, 셋. …얍★\n\n짠! 특제 깃털 폭탄이지롱♥ 어때, 선물이 마음에 들어? 꺄하핫. 새가 된 것 같은 기분이지?\n일상의 지루함에 좀먹혀버릴 것 같을 때에는 언제든지 불러줘! \n내가 구원자를 그런 지루한 일상에서 멋지게 구해줄 테니까★",
+        "en": "Now, fanfare! Firecracker! After that, turn my hat and turn around once again! Bien! ☆ It was a perfect greeting! ♥\n\nHi, Savior! I'm Prim, the all-around entertainer who presents joy and surprise to the world. ★\nTo be honest, I don't really like fighting! I prefer finding something more interesting and enjoyable, something new and amazing, rather than fighting. ☆\nBut one can't avoid fighting every time, you know. That's why you should just trust me. The moment I show up in any place, it will be a wonderful party venue. ♥\n\nTo commemorate our first meeting, I'll show you a magic trick!\nDo you see the card I'm holding? Actually, in this card, I have hidden a gift for you, Savior! ♥ \nI'm going to take it out now, but it might run away, so you must keep an eye on it, d'accord? Don't look anywhere else. Just look at my eyes and this card. Got it?\n\nUn, deux, trois. …Voilà! ★\n\nTada! A special feather bomb! ♥ What do you think? Do you like the gift? Hahaha. Don't you feel like a bird?\nJust call me anytime when you feel as if you're going to get stuck with the boredom of everyday life!\nI'll save you nicely from such a boring life! ★",
+        "zh_tw": "來，砰砰砰！鞭炮！接著轉帽子，轉圈！很好☆是個完美的問候♥\n\n你好，救援者！我是為這個世界帶來歡樂和驚喜的萬能藝人，弗里姆★\n老實說，我不太喜歡戰鬥！相反地，我喜歡去尋找更有趣、更歡樂和更神奇的新鮮事☆\n但並不是每次都能逃過戰鬥吧？不過呢，相信我，只要我一登場，不管是哪裡，都會瞬間變成帥氣的派對現場♥\n\n今天和救援者初次見面，作為紀念，我表演一個魔術給你看！\n來，看到我手上的卡片了嗎？其實這個卡片裡面藏有我要送給救援者的禮物♥\n我要拿出來了，牠有可能會逃跑，得看好牠才行啊！不要分心，要專心看弗里姆和這張卡片。知道了嗎？\n\n一、二、三…呀★\n\n噹噹！是特製的羽毛炸彈♥怎麼樣，你喜歡嗎？哈哈哈，有感覺變成鳥了嗎？\n當你對日常生活感到厭倦時，隨時呼叫我！\n我會拯救救援者，讓你脫離無趣乏味的日常生活★",
+        "zh_cn": "來，砰砰砰！鞭炮！接著轉帽子，轉圈！很好☆是個完美的問候♥\n\n你好，救援者！我是為這個世界帶來歡樂和驚喜的萬能藝人，弗里姆★\n老實說，我不太喜歡戰鬥！相反地，我喜歡去尋找更有趣、更歡樂和更神奇的新鮮事☆\n但並不是每次都能逃過戰鬥吧？不過呢，相信我，只要我一登場，不管是哪裡，都會瞬間變成帥氣的派對現場♥\n\n今天和救援者初次見面，作為紀念，我表演一個魔術給你看！\n來，看到我手上的卡片了嗎？其實這個卡片裡面藏有我要送給救援者的禮物♥\n我要拿出來了，牠有可能會逃跑，得看好牠才行啊！不要分心，要專心看弗里姆和這張卡片。知道了嗎？\n\n一、二、三…呀★\n\n噹噹！是特製的羽毛炸彈♥怎麼樣，你喜歡嗎？哈哈哈，有感覺變成鳥了嗎？\n當你對日常生活感到厭倦時，隨時呼叫我！\n我會拯救救援者，讓你脫離無趣乏味的日常生活★"
+      },
+      "greeting": {
+        "ko": "이 모든 게 너를 위한 엔터테인먼트야♥",
+        "en": "This is all to entertain you! ♥",
+        "zh_tw": "這一切都是為了你準備的娛樂♥",
+        "zh_cn": "這一切都是為了你準備的娛樂♥"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "☆★☆안녕 구원자☆★☆"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "☆★☆Hi, Savior☆★☆"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "☆★☆救援者你好☆★☆"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "☆★☆さようなら救世主☆★☆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "계약해줘서 <(^▽^)/ 고마워!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Thanks for the contract! <(^▽^)/"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "謝謝你<(^0^)/跟我立下契約！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "契約のために<（^0^）/ありがとう！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "히히, 뭘☆ 앞으로 잘 부탁해♪♬"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Hehe☆ Nice meeting you♪♬"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "嘻嘻，沒什麼☆以後請多指教♪♬"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "hehe、何があなたに尋ねてください"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "파티가 필요할 때라던지"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "When you need a party"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "不管是需要派對的時候"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "パーティーが必要なとき"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "아님 그냥 보고싶을 때라던지!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "or when you want to see me!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "還是單純想我的時候！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "または、あなたがそれを見たいとき！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "언제든지 편하게 불러줘~♥"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Feel free to call me anytime! ♥"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "隨時找我～♥"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "いつでも快適に電話してください〜♥"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "그럼 나중에 봐!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I'll see you later!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "那之後見囉！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "その後、後で見てください！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "★◇환영 파티◇★ 준비하고 있을테니까♥"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I'll be preparing a ★◇Welcome party◇★♥"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "♥因為我正在準備★◇歡迎派對◇★"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "★◇ウェルカムパーティー★★準備をします♥"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "꼭 오기다! 알겠지?"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "You should come, okay? Okay?"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "一定要來哦！知道嗎？"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "来て！とった？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "약속이야!!! *^-^*)/♡♥♡/"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Promise!!! *^-^*)/♡♥♡/"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "約定好了！！！*^-^*)/♡♥♡/"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "それは予定です!!! *^ - ^*）/♡♥♡/"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "아냐아냐! 전문가한테 맡겨버령★\r\n실력 발휘할 틈을 달라구~!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "No-no! Leave it to an expert!★\r\nGive me some time to show off my skills!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "不用不用！交給專家就行了哦★\r\n給我發揮實力的空間～！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "いいえ！専門家に★\r\nスキルを披露したい〜！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "좀 이따가 봐! (+▽<)b"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I'll see you soon! (+▽<)b"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "等等見！(+▽<)b"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "少し後で見てください！ （+▽<）b"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "구원자ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Saviorrrrrrrrrrrrrr"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "救援者啊啊啊啊啊啊啊啊啊啊"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "救援者啊啊啊啊啊啊啊啊啊啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "들어봐!!!! 말도 안되는 얘기를 들었어!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Listen!!! I've heard something unbelievable!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "你聽我說！！！！我聽到一件非常扯的事情！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "你聽我說！！！！我聽到一件非常扯的事情！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "우리 토끼가 하나도 안 귀엽대!! 왜!?"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Some say my bunny isn't cute!!! WHY!?"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "有人說我的兔子一點都不可愛！！為什麼！？"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "有人說我的兔子一點都不可愛！！為什麼！？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "귀여운 건 크면 클수록 좋은 거 아냐?"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Don't cute things get cuter when they get bigger?"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "可愛的東西不是越大越好嗎？"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "可愛的東西不是越大越好嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "작은 토끼가 모자 안에서 나와도 재미 없지 않아???"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Pulling out a tiny rabbit out of a hat isn't fun, right???"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "如果是小兔子從帽子裡蹦出來不是一點都不有趣嗎？？？"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "如果是小兔子從帽子裡蹦出來不是一點都不有趣嗎？？？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "설마 구원자도 우리 토끼 안귀엽다고 생각하는 건 아니지"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Don't tell me you also think my bunny isn't cute"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "救援者應該不會覺得我的兔子不可愛吧"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "救援者應該不會覺得我的兔子不可愛吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "그치?!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Right!?"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "對吧？！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "對吧？！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "그치!!!!! 구원자가 보기에도 그렇지!!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I knew it!!!! That's what I mean!!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "對吧！！！！！救援者也是這樣想得吧！！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "對吧！！！！！救援者也是這樣想得吧！！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "히힛 역시 구원자는 잘알이라니까♥"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Hehe, I knew you'd agree ♥"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "嘻嘻，果然救援者很懂呢♥"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "嘻嘻，果然救援者很懂呢♥"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "왠지 구원자라면 민트도 좋아할거같아~★"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I'm betting you also like mint~★"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "不知道為什麼感覺救援者也會喜歡薄荷～★"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "不知道為什麼感覺救援者也會喜歡薄荷～★"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "다음에 내가 맛있는 민트 사탕 갖다줄게!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I'll get you some tasty mint candy next time!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "下次我拿好吃的薄荷糖給你！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "下次我拿好吃的薄荷糖給你！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "딱기다려~!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Just you wait!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "你等著～！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "你等著～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "구원자~~"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Savior!!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "救援者～～"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "救援者～～"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "트럼프 카드로 점도 볼 수 있는 거 알아?"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Did you know you can tell your fortune with trump cards?"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "你知道撲克牌也能占卜嗎？"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "你知道撲克牌也能占卜嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "카드 보다가 구원자가 생각났는데"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "One of the cards reminded me of you"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "我在用卡片占卜的時候想到了救援者"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "我在用卡片占卜的時候想到了救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "무슨 카드게☆"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Guess which card☆"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "你猜結果是哪張卡片☆"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "你猜結果是哪張卡片☆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "흐흥~ 정답은! 하트 킹이지롱~!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Hehe! The answer! Is the King of Hearts!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "呵哼～答案是！紅心K～！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "呵哼～答案是！紅心K～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "하트 킹은~ 사랑, 섬세함, 대범함…"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "The King of Hearts! Means love, delicacy, boldness…"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "紅心K是～愛、細心、大方…"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "紅心K是～愛、細心、大方…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "한창 모험에 나설 유년기를 의미해♡"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Also the symbol of an adventurous youth ♡"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "代表著正是熱愛冒險的幼年時期♡"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "代表著正是熱愛冒險的幼年時期♡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "사랑이 넘치고 순수한게 구원자랑 어울리지 않아?"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Loving and pure, just like you Savior!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "充滿愛，而且純粹0\r\n你不覺得正好適合救援者嗎？"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "充滿愛，而且純粹0\r\n你不覺得正好適合救援者嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "점은 그냥 점이지만"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "It's just fortune telling"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "雖然只是占卜而已"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "雖然只是占卜而已"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "그래도 재밌지 않아? 히히"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "But it's fun right? Hehe"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "但是不覺得很有趣嗎？嘻嘻"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "但是不覺得很有趣嗎？嘻嘻"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "다음엔 내가 제대로 배워서 봐줄게★"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I'll learn more and tell you properly next time ★"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "我之後好好學了之後再幫你算★"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "我之後好好學了之後再幫你算★"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "두구두구두구두구"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "*Drum Roll*"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "撲通撲通撲通撲通"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "撲通撲通撲通撲通"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "★☆★☆프림의 수수께끼 타임☆★☆★"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "★☆★☆Prim's Quiz Time☆★☆★"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "★☆★☆弗里姆的猜謎時間☆★☆★"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "★☆★☆弗里姆的猜謎時間☆★☆★"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "이빨이 그렇게나 많은데…"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "It has so many teeth…"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "有非常多牙齒…"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "有非常多牙齒…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "전혀 깨물 수 없는게 뭘까~요!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "But it cannot bite. What could it be?"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "但完全不能咬的東西，是什～麼！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "但完全不能咬的東西，是什～麼！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "정답 공개한다?!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Can you guess?"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "公布答案囉？！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "公布答案囉？！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "3!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "3!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "三！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "三！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "2!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "2!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "二！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "二！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "1!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "1!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "一！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "一！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "땡!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "Time's up!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "答錯！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "答錯！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "정답은 빗!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "The answer is: a comb!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "正確答案是梳子！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "正確答案是梳子！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "오늘 엄청 마음에 드는 걸 사버렸지롱♥"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I found and bought one I really like ♥"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "今天買了非常滿意的東西♥"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "今天買了非常滿意的東西♥"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "제이드한테도 선물하려구☆"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I'm going to give one to Jade ☆"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "我想送給潔依德☆"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "我想送給潔依德☆"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "구원자한테도 하나 보내줄게!"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "I'll send you one as well!"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "也送一個給救援者！"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "也送一個給救援者！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "뭘 이런걸 가지구~ *^▽^*)v"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "No problem! *^▽^*)v"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "你太客氣了啦～*^▽^*)v"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "你太客氣了啦～*^▽^*)v"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "프림",
+          "message": "이따 성에서 봐 구원자~~~♥"
+        },
+        "en": {
+          "speaker": "Prim",
+          "message": "See you at the palace Savior~~~♥"
+        },
+        "zh_tw": {
+          "speaker": "弗里姆",
+          "message": "等等在城裡見吧，救援者～～～♥"
+        },
+        "zh_cn": {
+          "speaker": "弗里姆",
+          "message": "等等在城裡見吧，救援者～～～♥"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "도라",
+          "message": "신체 분리 마술을 체험할 수 있대서 기대했는데, 머리 때문에 들어가지 못했어…"
+        },
+        "en": {
+          "speaker": "Dora",
+          "message": "I expected to be able to experience body separation magic, but I couldn't do that because of my big head…"
+        },
+        "zh_tw": {
+          "speaker": "朵菈",
+          "message": "聽說可以體驗身體分離魔術讓我很期待，但因為頭太大進不去…"
+        },
+        "zh_cn": {
+          "speaker": "朵菈",
+          "message": "聽說可以體驗身體分離魔術讓我很期待，但因為頭太大進不去…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비비안",
+          "message": "프림한테 엄청 큰 풍선을 선물 받아서 빗자루에 매달고 가다가 터진 적이 있어. 귀 찢어지는 줄 알았지 뭐야."
+        },
+        "en": {
+          "speaker": "Vivienne",
+          "message": "One day, I got a huge balloon from Prim and flew on a broomstick from the balloon, but it exploded. The sound was so loud it almost split my ears."
+        },
+        "zh_tw": {
+          "speaker": "薇薇安",
+          "message": "有一次弗里姆送我一顆超大的氣球，我把汽球掛在掃帚上，結果飛到一半氣球就爆炸了。害我差點耳聾。"
+        },
+        "zh_cn": {
+          "speaker": "薇薇安",
+          "message": "有一次弗里姆送我一顆超大的氣球，我把汽球掛在掃帚上，結果飛到一半氣球就爆炸了。害我差點耳聾。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "미카",
+          "message": "흠흠. 관객을 집중시키는 고난이도 기술…! 배워야겠어…!"
+        },
+        "en": {
+          "speaker": "Mica",
+          "message": "Ahem. Her high-level skill draws the audience's attention…! I'd have to learn it…!"
+        },
+        "zh_tw": {
+          "speaker": "米卡",
+          "message": "哼哼，可以吸引觀眾目光的高難度技術…！我得學起來…！"
+        },
+        "zh_cn": {
+          "speaker": "米卡",
+          "message": "哼哼，可以吸引觀眾目光的高難度技術…！我得學起來…！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "☆★☆안녕 구원자☆★☆"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "☆★☆Hi, Savior☆★☆"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "☆★☆救援者你好☆★☆"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "☆★☆さようなら救世主☆★☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "계약해줘서 <(^▽^)/ 고마워!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Thanks for the contract! <(^▽^)/"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "謝謝你<(^0^)/跟我立下契約！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "契約のために<（^0^）/ありがとう！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "ありがとうございました"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나야말로 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我才要謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "ありがとうございました"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "히히, 뭘☆ 앞으로 잘 부탁해♪♬"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Hehe☆ Nice meeting you♪♬"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嘻嘻，沒什麼☆以後請多指教♪♬"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "hehe、何があなたに尋ねてください"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "파티가 필요할 때라던지"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "When you need a party"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "不管是需要派對的時候"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "パーティーが必要なとき"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "아님 그냥 보고싶을 때라던지!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "or when you want to see me!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "還是單純想我的時候！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "または、あなたがそれを見たいとき！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "언제든지 편하게 불러줘~♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Feel free to call me anytime! ♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "隨時找我～♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "いつでも快適に電話してください〜♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그럼 나중에 봐!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll see you later!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "那之後見囉！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "その後、後で見てください！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "★◇환영 파티◇★ 준비하고 있을테니까♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll be preparing a ★◇Welcome party◇★♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "♥因為我正在準備★◇歡迎派對◇★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "★◇ウェルカムパーティー★★準備をします♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "꼭 오기다! 알겠지?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "You should come, okay? Okay?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "一定要來哦！知道嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "来て！とった？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "약속이야!!! *^-^*)/♡♥♡/"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Promise!!! *^-^*)/♡♥♡/"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "約定好了！！！*^-^*)/♡♥♡/"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "それは予定です!!! *^ - ^*）/♡♥♡/"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "준비 도와줄까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you need my help?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "需要幫忙準備嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "私は助けることができませんか？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "준비 도와줄까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you need my help?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "需要幫忙準備嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "私は助けることができませんか？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "아냐아냐! 전문가한테 맡겨버령★\r\n실력 발휘할 틈을 달라구~!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "No-no! Leave it to an expert!★\r\nGive me some time to show off my skills!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "不用不用！交給專家就行了哦★\r\n給我發揮實力的空間～！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "いいえ！専門家に★\r\nスキルを披露したい〜！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "좀 이따가 봐! (+▽<)b"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll see you soon! (+▽<)b"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "等等見！(+▽<)b"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "少し後で見てください！ （+▽<）b"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Saviorrrrrrrrrrrrrr"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者啊啊啊啊啊啊啊啊啊啊"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者啊啊啊啊啊啊啊啊啊啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "들어봐!!!! 말도 안되는 얘기를 들었어!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Listen!!! I've heard something unbelievable!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你聽我說！！！！我聽到一件非常扯的事情！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你聽我說！！！！我聽到一件非常扯的事情！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "우리 토끼가 하나도 안 귀엽대!! 왜!?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Some say my bunny isn't cute!!! WHY!?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "有人說我的兔子一點都不可愛！！為什麼！？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "有人說我的兔子一點都不可愛！！為什麼！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "귀여운 건 크면 클수록 좋은 거 아냐?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Don't cute things get cuter when they get bigger?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "可愛的東西不是越大越好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "可愛的東西不是越大越好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "작은 토끼가 모자 안에서 나와도 재미 없지 않아???"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Pulling out a tiny rabbit out of a hat isn't fun, right???"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "如果是小兔子從帽子裡蹦出來不是一點都不有趣嗎？？？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "如果是小兔子從帽子裡蹦出來不是一點都不有趣嗎？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "설마 구원자도 우리 토끼 안귀엽다고 생각하는 건 아니지"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Don't tell me you also think my bunny isn't cute"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者應該不會覺得我的兔子不可愛吧"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者應該不會覺得我的兔子不可愛吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그치?!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Right!?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "對吧？！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "對吧？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클 수록 귀여운 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, bigger the cuter"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "越大應該越可愛啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "越大應該越可愛啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "클 수록 귀여운 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup, bigger the cuter"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "越大應該越可愛啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "越大應該越可愛啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그치!!!!! 구원자가 보기에도 그렇지!!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I knew it!!!! That's what I mean!!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "對吧！！！！！救援者也是這樣想得吧！！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "對吧！！！！！救援者也是這樣想得吧！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "히힛 역시 구원자는 잘알이라니까♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Hehe, I knew you'd agree ♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嘻嘻，果然救援者很懂呢♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嘻嘻，果然救援者很懂呢♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "왠지 구원자라면 민트도 좋아할거같아~★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'm betting you also like mint~★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "不知道為什麼感覺救援者也會喜歡薄荷～★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "不知道為什麼感覺救援者也會喜歡薄荷～★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "다음에 내가 맛있는 민트 사탕 갖다줄게!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll get you some tasty mint candy next time!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "下次我拿好吃的薄荷糖給你！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "下次我拿好吃的薄荷糖給你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "딱기다려~!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Just you wait!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你等著～！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你等著～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자~~"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior!!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者～～"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "트럼프 카드로 점도 볼 수 있는 거 알아?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Did you know you can tell your fortune with trump cards?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你知道撲克牌也能占卜嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你知道撲克牌也能占卜嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "카드 보다가 구원자가 생각났는데"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "One of the cards reminded me of you"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我在用卡片占卜的時候想到了救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我在用卡片占卜的時候想到了救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "무슨 카드게☆"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Guess which card☆"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你猜結果是哪張卡片☆"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你猜結果是哪張卡片☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 모르겠는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I have no idea"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 모르겠는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I have no idea"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不知道耶"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不知道耶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "흐흥~ 정답은! 하트 킹이지롱~!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Hehe! The answer! Is the King of Hearts!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "呵哼～答案是！紅心K～！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "呵哼～答案是！紅心K～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "하트 킹은~ 사랑, 섬세함, 대범함…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "The King of Hearts! Means love, delicacy, boldness…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "紅心K是～愛、細心、大方…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "紅心K是～愛、細心、大方…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "한창 모험에 나설 유년기를 의미해♡"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Also the symbol of an adventurous youth ♡"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "代表著正是熱愛冒險的幼年時期♡"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "代表著正是熱愛冒險的幼年時期♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "사랑이 넘치고 순수한게 구원자랑 어울리지 않아?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Loving and pure, just like you Savior!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "充滿愛，而且純粹0\r\n你不覺得正好適合救援者嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "充滿愛，而且純粹0\r\n你不覺得正好適合救援者嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "점은 그냥 점이지만"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "It's just fortune telling"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "雖然只是占卜而已"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "雖然只是占卜而已"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그래도 재밌지 않아? 히히"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "But it's fun right? Hehe"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "但是不覺得很有趣嗎？嘻嘻"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "但是不覺得很有趣嗎？嘻嘻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "다음엔 내가 제대로 배워서 봐줄게★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll learn more and tell you properly next time ★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我之後好好學了之後再幫你算★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我之後好好學了之後再幫你算★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "두구두구두구두구"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "*Drum Roll*"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "撲通撲通撲通撲通"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "撲通撲通撲通撲通"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "★☆★☆프림의 수수께끼 타임☆★☆★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "★☆★☆Prim's Quiz Time☆★☆★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "★☆★☆弗里姆的猜謎時間☆★☆★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "★☆★☆弗里姆的猜謎時間☆★☆★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이빨이 그렇게나 많은데…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "It has so many teeth…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "有非常多牙齒…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "有非常多牙齒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "전혀 깨물 수 없는게 뭘까~요!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "But it cannot bite. What could it be?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "但完全不能咬的東西，是什～麼！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "但完全不能咬的東西，是什～麼！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "정답 공개한다?!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Can you guess?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "公布答案囉？！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "公布答案囉？！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "3!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "3!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "三！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "三！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "2!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "2!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "二！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "二！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐만!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐만!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "1!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "1!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "一！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "一！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "땡!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Time's up!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "答錯！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "答錯！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "정답은 빗!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "The answer is: a comb!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "正確答案是梳子！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "正確答案是梳子！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "오늘 엄청 마음에 드는 걸 사버렸지롱♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I found and bought one I really like ♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "今天買了非常滿意的東西♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "今天買了非常滿意的東西♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "제이드한테도 선물하려구☆"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'm going to give one to Jade ☆"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我想送給潔依德☆"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我想送給潔依德☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자한테도 하나 보내줄게!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll send you one as well!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "也送一個給救援者！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "也送一個給救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "뭘 이런걸 가지구~ *^▽^*)v"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "No problem! *^▽^*)v"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你太客氣了啦～*^▽^*)v"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你太客氣了啦～*^▽^*)v"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이따 성에서 봐 구원자~~~♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "See you at the palace Savior~~~♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "等等在城裡見吧，救援者～～～♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "等等在城裡見吧，救援者～～～♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "있잖아"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "You know"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "那個啊"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "那個啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "나 가끔가다가 구원자가 영주님이란거 잊어버리는데"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I sometimes forget you're lord of the town"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我有時候會忘記救援者是領主這件事"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我有時候會忘記救援者是領主這件事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이러다가 괘씸죄로 잡혀가는 거 아닐까…;;"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "What if I get punished for it…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "這樣下去會不會因為可惡罪而被抓走啊…;;"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "這樣下去會不會因為可惡罪而被抓走啊…;;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "근데 진짜 구원자가 너무 친절하달까"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "It's all because you're so nice, Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "但是救援者真的太親切了"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "但是救援者真的太親切了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "잘해주니까"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "You being nice"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "對我很好"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "對我很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "뭔가 착각하게 되는 느낌?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Makes me confused and forget"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "所以讓我有點錯覺？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "所以讓我有點錯覺？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "조심해 구원자~!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Be careful Savior!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "小心點，救援者～！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "小心點，救援者～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이러다가 구원자도 유죄야 유죄"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "This could make you guilty as well!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "這樣下去救援者也有罪啊"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "這樣下去救援者也有罪啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "모두의 마음을 훔친 죄"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Guilty for stealing our hearts!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "偷心罪"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "偷心罪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 피곤해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you tired?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很累嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很累嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "혹시 피곤해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you tired?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳很累嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳很累嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "헉…들켰어?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Ugh… Did it show?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "啊…被發現了呢？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "啊…被發現了呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "얼른 자러갈게 ㅎ_ㅎ)"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll go and sleep right away ㅎ_ㅎ)"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我馬上去睡ㅎ_ㅎ)"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我馬上去睡ㅎ_ㅎ)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "항상 고마워 구원자~!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Always appreciate it, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "一直都很謝謝你，救援者～！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "一直都很謝謝你，救援者～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자는 꼭 잘 쉬어야돼"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Rest well"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者也要好好休息喔"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者也要好好休息喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "나처럼 헛소리하지 말구…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Or else you'll talk gibberish like me…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "別跟我一樣亂說話…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "別跟我一樣亂說話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그럼 나중에 봐~~☆★☆"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "See you later~~☆★☆"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "那麼之後再見了～～☆★☆"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "那麼之後再見了～～☆★☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자!!!!!!!!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior!!!!!!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者！！！！！！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者！！！！！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이거봐봐!!!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Look at this!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你看這個！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你看這個！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이거 케이크래!!!!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "This is a cake!!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "這是蛋糕耶！！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "這是蛋糕耶！！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "완전 대박이지!?!?!?!?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Isn't it awesome?!?!?!?!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "很讚吧！？！？！？！？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "很讚吧！？！？！？！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "케이크네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah, it's a cake alright"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是蛋糕呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是蛋糕呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "케이크네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah, it's a cake alright"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是蛋糕呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是蛋糕呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "반응이 너무 쿨하지 않아!?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Not the reaction I was hoping for!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "反應也太冷淡了吧！？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "反應也太冷淡了吧！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "혹시 이미 알고 있었던거야!?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Did you already know?!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "難道你已經知道了嗎！？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "難道你已經知道了嗎！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "난 이런 거 처음 봐서 너무 깜짝 놀랐는데!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I've never seen anything like it!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我第一次看到，所以覺得超級驚喜！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我第一次看到，所以覺得超級驚喜！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "파티 아이템으로 너무너무 좋을거같아★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Should be great as a party item★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "作為派對道具應該會非常不錯★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "作為派對道具應該會非常不錯★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "위험하지 않게 조심해야겠지만…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Though we should be careful with it…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "雖然要小心不要發生危險…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "雖然要小心不要發生危險…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "어린이 정령들이 아무거나 케이크인 줄 알고 \r\n먹으면 큰일날거야♣"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "We don't want young Souls trying to eat anything\r\nthinking they're cake ♣"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "如果小精靈以為任何東西都是蛋糕\r\n全都吃掉的話就會出大事呢♣"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "如果小精靈以為任何東西都是蛋糕\r\n全都吃掉的話就會出大事呢♣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I know, right?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자두 조심하기다! 아무거나 먹지 말기★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "You too, Savior! Don't just eat whatever★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者也要小心！不要什麼都吃★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者也要小心！不要什麼都吃★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "약속!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Promise!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "約好囉！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "約好囉！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "지난번에는 흔쾌히 도와줘서 고마워 구원자♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Thanks for helping me out last time, Savior ♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者，謝謝你上次爽快地答應幫忙，♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者，謝謝你上次爽快地答應幫忙，♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "덕분에 앞으로 어떻게 해야할지 가닥을 잡은거 같아★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I think I now have a bearing of what to do★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "託你的福，我似乎知道今後要怎麼做了★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "託你的福，我似乎知道今後要怎麼做了★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다행이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Glad to be of help"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다행이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Glad to be of help"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "헤헤"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Hehe"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嘿嘿"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嘿嘿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "음★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Hmm★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嗯★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嗯★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "새삼"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Just wondering"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "又再一次感覺到"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "又再一次感覺到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "정말 구원자가 나한테 잘해준다 싶네"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "If you're being nice just to me"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者真的對我很好呢"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者真的對我很好呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "다른 정령들한테도 이러고 있지?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Do you go around and be nice to other Souls as well?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你對其他精靈也是這樣的吧？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你對其他精靈也是這樣的吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "으~~"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Ugh!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "呃～～"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "呃～～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "역시 구원자 유죄!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I knew it, guilty Savior!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者果然有罪！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者果然有罪！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "벌로 책임지고 나 계속 도와주기야★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "As your punishment, you must continue to help me★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "作為懲罰，要負責繼續幫助我★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "作為懲罰，要負責繼續幫助我★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "약속♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Pinky promise ♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "約好囉♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "約好囉♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자-!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者-！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者-！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "파티랑 쇼의 차이점이 뭐게!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Do you know the difference between a party and a show?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你猜派對跟表演的差異是什麼！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你猜派對跟表演的差異是什麼！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "파티는 체험형 쇼는 감상형?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You experience parties and watch shows?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "派對是體驗，表演是欣賞？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "派對是體驗，表演是欣賞？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "파티는 체험형 쇼는 감상형?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You experience parties and watch shows?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "派對是體驗，表演是欣賞？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "派對是體驗，表演是欣賞？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "오~"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Wow!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "喔～"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "喔～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자 역시 잘알이네!! 실은"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I knew you'd know!! You see"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者果然什麼都知道呢！！其實"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者果然什麼都知道呢！！其實"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "사실 나도 파티랑 쇼의 차이 잘 몰라♠"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I didn't know clearly their difference ♠"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我也不太清楚派對跟表演的差異♠"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我也不太清楚派對跟表演的差異♠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "물론 구분을 하자면 차이는 많긴 하다구?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Of course, they have distinct differences"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "當然，要區分的話，確實有很多差異？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "當然，要區分的話，確實有很多差異？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "기본적으로 목적이 다르기도 하니까"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "And they pursue different purposes"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "因為最根本的從目的就不一樣"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "因為最根本的從目的就不一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "하지만 역시 기본 핵심은 즐거워야한다"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "But the important thing is they need to be fun"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "但是核心概念是要享受"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "但是核心概念是要享受"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그게 중요한거 아닐까 싶긴 해"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "That is my conclusion"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "這應該是最重要的吧"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "這應該是最重要的吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "음 갑자기 이런 얘기를 왜 했냐면"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Umm… The reason I say this is because"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嗯，至於我為什麼突然提這個"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嗯，至於我為什麼突然提這個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "파티 구상하다가 막혔어 히잉…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I've run out of ideas for the party…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "是因為我構思派對到一半就卡住了嗚嗚…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "是因為我構思派對到一半就卡住了嗚嗚…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "지난 번 이벤트 선물로 받은 디저트인데"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I got some dessert as a gift from the last event"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "這是上次活動的時候收到的甜點"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "這是上次活動的時候收到的甜點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "같이 먹자!!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Let's eat it together!!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "一起吃吧！！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "一起吃吧！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "영주 성으로 찾아갈게~!! 이따 봐!!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll go to where you are! See you soon!!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我去領地找你～！！等等見！！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我去領地找你～！！等等見！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "[삭제된 메시지입니다]"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "[Deleted Message]"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "［已刪除的訊息］"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "［已刪除的訊息］"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "아 실수했다"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "My bad"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "啊，傳錯了"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "啊，傳錯了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "아무것도 아냐"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "It was nothing"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "沒事"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "沒事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "나중에 연락할게 구원자"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll message you later"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我之後再聯絡你，救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我之後再聯絡你，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "잘지내~"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Seeya!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "多保重～"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "多保重～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자 잠깐 들어볼래"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior, can you hear me out"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者，你聽我說"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者，你聽我說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이게 현타라는건가…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Perhaps this is what they call burn out…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "這就是所謂認清現實嗎…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "這就是所謂認清現實嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자는 내가 다른 직업을 갖는게 혹시 상상가?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior, can you imagine me doing a different job?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者你能想像我從事其他職業嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者你能想像我從事其他職業嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "솔직히 엄청 고민해봤는데"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I've been thinking really hard"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我其實苦惱了很久"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我其實苦惱了很久"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "뭔가 다른 생각이 잘 안든당★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "But I can't think of anything different★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "但沒有什麼別的想法★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "但沒有什麼別的想法★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "빵집같은 걸 운영하면 재밌으려나♣"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Would it be fun to run a bakery ♣"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "經營麵包店之類的有趣嗎♣"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "經營麵包店之類的有趣嗎♣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "프림이라면 뭐든 잘하지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you would do well in whatever job you choose"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗里姆不管做什麼都會做得很好吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗里姆不管做什麼都會做得很好吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "프림이라면 뭐든 잘하지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think you would do well in whatever job you choose"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗里姆不管做什麼都會做得很好吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗里姆不管做什麼都會做得很好吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "에엥? 진짜? 그래 보여?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Eh? Really? You really think so?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "欸？真的嗎？看起來是那樣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "欸？真的嗎？看起來是那樣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "음 사실 예전에 다른 일을 해본적이 있긴 하거든♣"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Well, I have tried something else a long time ago ♣"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嗯，其實我以前有做過別的工作♣"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嗯，其實我以前有做過別的工作♣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "기억은 잘 안나지만"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I can't remember exactly what"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "雖然不太記得了"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "雖然不太記得了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그래서 다시 하려면 할 수는 있을텐데"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "But I think I can do it again"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "所以如果想重新做的話，應該能做到"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "所以如果想重新做的話，應該能做到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "뭔가 상상이 잘 안가긴 하네★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Still can't imagine what it was★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "不過有點難以想像★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "不過有點難以想像★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그래도 뭔가"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Anyways"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "但是"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "但是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자가 옆에 있다면 뭐든 괜찮을지도~?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Anything should be okay as long as you're there with me!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "如果救援者在身邊的話，感覺不管做什麼都好～？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "如果救援者在身邊的話，感覺不管做什麼都好～？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자~ 나 조만간 쇼하는데 보러올래?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior! You wanna come see my show?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者～最近要不要來看我的表演？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者～最近要不要來看我的表演？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "성 외곽에 있는 스테이지에서 게릴라 쇼 할거지롱"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "It's going to be a surprise show at the outskirts of the palace"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我會在城外的舞臺進行快閃表演喔"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我會在城外的舞臺進行快閃表演喔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이번에 엄청 열심히 준비했으니까"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I've worked so hard preparing it"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我這次非常用心準備"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我這次非常用心準備"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자가 보러오면 엄청 기쁠거야☆★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll be thrilled if you come to see me☆★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "如果救援者來看的話，我會非常開心的☆★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "如果救援者來看的話，我會非常開心的☆★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "기다릴게!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll be waiting!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "等你喔！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "等你喔！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자!!! 드디어 때가 왔어!! <(+_<)/"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior!!! The time has come!! <(+_<)/"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者！！！時機終於到了！！<(+_<)/"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者！！！時機終於到了！！<(+_<)/"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 때?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Time for what?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼時機？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼時機？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 때?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Time for what?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼時機？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼時機？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "에잉~ 다 알면서!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Oh, you know!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "什麼嘛～你明明就知道！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "什麼嘛～你明明就知道！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이번에야말로 반드시 구원자를 즐겁게 해줄게!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "This time I'll make sure you have fun!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "這次一定會讓救援者很開心的！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "這次一定會讓救援者很開心的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그럼 광장 분수대 앞에서 보자★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll meet you at the fountain★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我們在廣場噴水池前見吧★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我們在廣場噴水池前見吧★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자~!!! 나 엄청 감동이야 ㅜㅜ"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior!!! I'm so touched ㅜㅜ"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者～！！！！我好感動啊嗚嗚"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者～！！！！我好感動啊嗚嗚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "저번의 그 애 있잖아!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Remember the kid from before?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "上次那個小孩啊！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "上次那個小孩啊！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "왜 우리 벚꽃동산에서 놀 때 만난 어린이 정령! 티모시!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "You know, the young Soul we met at Cherry Blossom Hill! Timothy!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "就我們上次在櫻花林玩的時候遇到的小精靈！提摩西！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "就我們上次在櫻花林玩的時候遇到的小精靈！提摩西！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "어쩌다가 거리에서 마주쳤는데"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I ran into him on the road"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我偶然在街上碰見他了"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我偶然在街上碰見他了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "글쎄 있지 걔가 풀피리 불어줬다!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "And he played me a tune with a reed!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "他居然吹草笛給我聽！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "他居然吹草笛給我聽！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "엄청나지 않아!?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Isn't it amazing?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你不覺得很厲害嗎！？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你不覺得很厲害嗎！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그 때 들은게 인상깊었나보더라고~!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Must've made an impact on him!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "看來那時候聽到了讓他印象深刻～！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "看來那時候聽到了讓他印象深刻～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "아 참 그건 그렇고!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Oh, that reminds me!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "對了，話說回來！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "對了，話說回來！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "우리 만나자!!!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "We need to meet!!!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我們見個面吧！！！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我們見個面吧！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이번에야말로 꼭!!! 구원자를 재밌게 해줄게!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "This time for sure!!! I'll have you have fun!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "這次一定！！！要讓救援者覺得有趣！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "這次一定！！！要讓救援者覺得有趣！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "응? 응?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Please? Please?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嗯？嗯？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嗯？嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "후… 구원자는 날씨 타는 편이야?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "*Sigh*…Does the weather affect you much, Savior?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "呼…救援者容易受到天氣影響嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "呼…救援者容易受到天氣影響嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "난 왠지 날이 흐리면 엄청 늘어지게 되더라"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I get so low when the weather is cloudy"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我不知道為什麼只要陰天就會變得懶洋洋的"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我不知道為什麼只要陰天就會變得懶洋洋的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "졸리고 피곤하고… 뭔가 울적~하고"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I get drowsy, tired… And a little gloomy"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "很睏又很累…也有點～鬱悶"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "很睏又很累…也有點～鬱悶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자 얼굴보면 좀 나아질지도 ^ㅅ^;"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Maybe I'll get better when I see you Savior ^ㅅ^;"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "見到救援者的話心情可能會變好一點^ㅅ^;"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "見到救援者的話心情可能會變好一點^ㅅ^;"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "헤헤… 혹시 괜찮으면 만나줄래?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Hehe… Could you come meet me?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嘿嘿…如果方便的話要見個面嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嘿嘿…如果方便的話要見個面嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "달콤한 핫초코를 마시면 좀 좋아질거같아"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I think some sweet hot chocolate will do the trick"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "喝一杯甜甜的熱巧克力感覺會變好"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "喝一杯甜甜的熱巧克力感覺會變好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "히히…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Hehe…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嘻嘻…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嘻嘻…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자 혹시 아이돌 좋아해?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior, do you like idols?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者你喜歡偶像嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者你喜歡偶像嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "헤헤 다른게 아니라 에루샤한테 부탁받아서"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "The thing is, Erusha asked me for help"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嘿嘿，因為艾魯莎來拜託我"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嘿嘿，因為艾魯莎來拜託我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "아이돌 이벤트 도와주기로 했는데"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "with some idol event"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "所以我答應幫忙一起弄偶像活動"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "所以我答應幫忙一起弄偶像活動"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "미카랑 시하 알지? 걔네 관련이거든"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "You know Mica and Seeha? It's for them"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "你知道米卡跟西荷吧？是和她們有關的活動"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "你知道米卡跟西荷吧？是和她們有關的活動"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "데뷔한지 얼마 안돼서 정보가 부족해가지구"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "They're pretty new, so I don't have a lot of info to work on"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "因為她們才剛出道沒多久，所以沒有什麼資訊"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "因為她們才剛出道沒多久，所以沒有什麼資訊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "괜찮으면 구원자 의견 좀 들려주지 않을래?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Could you give me some advice?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者可以分享一下你的建議嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者可以分享一下你的建議嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "우리 같이 최고의 이벤트를 만들어보자★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'm sure we can come up with a splendid event★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我們一起打造最棒的活動吧★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我們一起打造最棒的活動吧★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "나 엄청 진지한 얘기가 있어"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I have something serious to say"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我有一件非常嚴肅的事情要跟你說"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我有一件非常嚴肅的事情要跟你說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자의 도움이 필요해"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I need your help, Savior"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我需要救援者的幫助"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我需要救援者的幫助"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "정령 하나 살린다치고"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Think of it as saving a Soul's life"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "就當作拯救一位精靈"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "就當作拯救一位精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "나 좀 도와주면 안 될까"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Could you help me, please?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "能不能幫幫我呢"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "能不能幫幫我呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "으으 긴장돼…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Ugh… I'm so nervous"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "呃呃，好緊張…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "呃呃，好緊張…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자, 괜찮으면 오늘 현장에 같이 가줄래?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior, could you go to the party with me today?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者，今天可以陪我一起去現場嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者，今天可以陪我一起去現場嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "온몸이 떨려서 잘 못움직이겠어"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'm shaking all over"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我緊張到全身都在抖，都不太能動了"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我緊張到全身都在抖，都不太能動了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "하… 파티 잘 되어야 할텐데…"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "*Sigh*… I hope the party goes well…"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "哈…派對要順利才行啊…"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "哈…派對要順利才行啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "다들…좋아해주면 좋겠다"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I hope… Everyone likes it"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "希望…大家都能喜歡"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "希望…大家都能喜歡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "[사용자에게 메시지를 보낼 수 없습니다]"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "[Cannot Send Message to User]"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "［無法傳送訊息給該使用者］"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "［無法傳送訊息給該使用者］"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "프림?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Prim?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗里姆？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗里姆？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "프림?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Prim?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "弗里姆？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "弗里姆？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "[사용자에게 메시지를 보낼 수 없습니다]"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "[Cannot Send Message to User]"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "［無法傳送訊息給該使用者］"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "［無法傳送訊息給該使用者］"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자~★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior~★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者～★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者～★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "뭐 재밌는 거 없을까?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'm bored!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "沒有什麼有趣的事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "沒有什麼有趣的事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그 일 이후로 휴업 때린 건 좋았는데☆"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "It was a good idea to close after the last incident☆"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "那件事之後，暫時停業雖然蠻好的☆"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "那件事之後，暫時停業雖然蠻好的☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "정작 뭘 하려고 해도 생각이 안나네♠"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Now I can't think of anything to do♠"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "但也想不到可以做什麼♠"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "但也想不到可以做什麼♠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "이 김에 평소 안하던 짓을 해야하려나~"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Maybe I should use this chance to do something different?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "趁這個機會做一些平時不會做的事情嗎～"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "趁這個機會做一些平時不會做的事情嗎～"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "혹시 좋은 아이디어 있으면 알려주라♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Let me know if you have any ideas ♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "如果你有什麼好主意，就告訴我吧♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "如果你有什麼好主意，就告訴我吧♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "★★★프림 부활★★★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "★★★Prim is Back★★★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "★★★弗里姆復活★★★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "★★★弗里姆復活★★★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "히히 그동안 걱정끼쳐서 미안해 구원자!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Hehe, sorry for making you worry, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嘻嘻，這段時間讓你擔心了，對不起，救援者！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嘻嘻，這段時間讓你擔心了，對不起，救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "나 이제 괜찮아졌으니까"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'm all fine now"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "我現在沒事了"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "我現在沒事了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "뭐 어떻게든 되겠지"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "So everything should work out"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "就順其自然吧"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "就順其自然吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "그럼 오늘도 힘낼테니까!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll do my best today!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "那麼我今天也會加油的！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "那麼我今天也會加油的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "시간 나면 광장에서 보자~★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Meet me at the square when you can~★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "有空的話在廣場見個面吧～★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "有空的話在廣場見個面吧～★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "서프라이즈~☆★"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Surprise~☆★"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "驚喜～☆★"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "驚喜～☆★"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자! 내가 아주 많~~이 좋아하는 거 알지?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Savior! You know I reeeeeally like you, right?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者！你知道我很～喜歡吧？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者！你知道我很～喜歡吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "다음 사랑의 날에도 구원자를 위해 서프라이즈를 준비할게♡\r\n기대해~♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I'll prepare a surprise for you on the next Love day as well ♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "下次戀愛之日，我也會為救援者準備驚喜♡\r\n敬請期待～♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "下次戀愛之日，我也會為救援者準備驚喜♡\r\n敬請期待～♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "서프라이즈 고마워, 프림!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for the surprise, Prim!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的驚喜，弗里姆！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的驚喜，弗里姆！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "서프라이즈 고마워, 프림!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks for the surprise, Prim!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的驚喜，弗里姆！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的驚喜，弗里姆！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "빠밤~★ 오늘은 대상인의 날이야!"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Bam~★ Today is Merchant's Day!"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "嗚哇～★今天是大商人之日！"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "嗚哇～★今天是大商人之日！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "나중에 같이 트로이카에 경매장 구경하러 가자!\r\n열심히 준비하고 있을게~☆"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Let's go to the Troyca auction house someday!\r\nI'll prepare everything for us~☆"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "以後一起去特羅伊卡逛逛拍賣場吧！\r\n我會認真準備的～☆"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "以後一起去特羅伊卡逛逛拍賣場吧！\r\n我會認真準備的～☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워. 준비 힘내, 프림!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks. And good luck, Prim!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝，準備加油，弗里姆！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝，準備加油，弗里姆！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워. 준비 힘내, 프림!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks. And good luck, Prim!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝，準備加油，弗里姆！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝，準備加油，弗里姆！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "해피 이브 데이, 구원자♥"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Happy Eve's Day, Savior ♥"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "夏娃之日快樂，救援者♥"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "夏娃之日快樂，救援者♥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "구원자한테는 메리 크마리스스! 하는게 좋았으려나?"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "Would you prefer \"Merry Kumawreaths!\" instead?"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "救援者會喜歡我祝你「聖誕節快樂！」嗎？"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "救援者會喜歡我祝你「聖誕節快樂！」嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "프림",
+            "message": "연말연시는 둘 다 바쁘겠지만, \r\n우리 같이 힘내자☆"
+          },
+          "en": {
+            "speaker": "Prim",
+            "message": "I know we're both busy around this time,\r\nbut let's be cheerful☆"
+          },
+          "zh_tw": {
+            "speaker": "弗里姆",
+            "message": "年底我們兩個都會很忙碌，\r\n但我們一起加油吧☆"
+          },
+          "zh_cn": {
+            "speaker": "弗里姆",
+            "message": "年底我們兩個都會很忙碌，\r\n但我們一起加油吧☆"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "프림도 해피 이브 데이!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day to you too, Prim!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也祝弗里姆夏娃之日快樂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也祝弗里姆夏娃之日快樂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "프림도 해피 이브 데이!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day to you too, Prim!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "也祝弗里姆夏娃之日快樂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "也祝弗里姆夏娃之日快樂！"
+          }
+        }
+      ]
+    }
+  }
+}

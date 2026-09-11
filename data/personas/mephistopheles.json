@@ -1,0 +1,5283 @@
+{
+  "id": "1010",
+  "name": "메피스토펠레스",
+  "name_en": "Mephistopheles",
+  "grade": "에픽",
+  "race": "인간형",
+  "class": "캐스터",
+  "sub_class": "광역",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "오퍼레이터 원",
+    "constellation": "인연_메피스토_엔딩",
+    "union": "방주 오퍼레이터",
+    "birthday": "418",
+    "height": 155,
+    "weight": 44,
+    "cv_ko": "장미",
+    "cv_jp": "Ruriko Noguchi",
+    "like": [
+      "케이크"
+    ],
+    "dislike": [
+      "오류",
+      "통제 불가능한 상황"
+    ],
+    "hobby": [
+      "고양이 관찰"
+    ],
+    "speciality": [
+      "데이터 분석"
+    ]
+  },
+  "personality": {
+    "description": "…생체 신호 확인 완료. 환영합니다, 구원자님\n\n저는 방주 <메타트론>의 오퍼레이터이자 인공 정령. 메피스토펠레스입니다.\n\n방주도 오퍼레이터도 인공 정령도, 처음 들어서 바로 이해하기 쉬운 개념은 아니죠… \n천천히 시간을 들여 저를 알아가주시길 바래요. 케이크 한 조각이 함께해도 좋겠네요.\n이렇게 커다란 방주를 움직이는 게 저처럼 작은 정령이라는 게 신기하단 말은 그간 많이 들었어요. \n하지만… 제 겉모습에는 큰 의미가 없다고 생각합니다. \n\n구원자님과 에덴의 위기를 구하기 위해서라면, \n희생 역시 사용 가능한 방법 중 하나일 뿐이라는 점을… 반드시 명심해 주세요.",
+    "greeting": "오퍼레이터 메피스토펠레스.\n구원자님을 기다렸습니다."
+  },
+  "speech_patterns": [
+    "안녕하세요, 구원자님",
+    "메피스토펠레스입니다",
+    "제 메시지가 잘 보이시나요?",
+    "음. 에버톡 시스템이 \r\n정상적으로 기능하고 있군요",
+    "안심했습니다",
+    "오늘 오후는 \r\n따로 일정이 있으신가요?",
+    "그렇군요",
+    "동행이 필요한 용무가 생기면 \r\n제게 공유해주세요",
+    "어느 곳이던 함께 하겠습니다",
+    "구원자님껜 \r\n저와 방주가 있으니까요",
+    "후후…",
+    "앞으로도 잘 부탁드려요, 구원자님",
+    "구원자님 성에 곧 도착합니다",
+    "성에서 오 분만 기다려주세요",
+    "오는 길에 고양이를 봤어요",
+    "…좀 더 잘 찍고 싶었는데",
+    "아쉽네요…",
+    "감사합니다\r\n…후후…",
+    "제가 풀을 좀 흔들어주니\r\n잔뜩 흥분했어요",
+    "무척 즐거웠습니다",
+    "구원자님, 고민이 있는데요",
+    "내일 유리아님이 여실 다과 파티에 \r\n어떤 음악을 틀지 제가 정하게 되었어요",
+    "구원자님은 어떤 노래가 좋을 것 같으세요?",
+    "생각해보니까 그렇겠어요\r\n죄송합니다, 구원자님",
+    "혹시, 시간이 괜찮으시다면…",
+    "구원자님과 같이 \r\n음반을 들어도 괜찮을까요?",
+    "집무실의 음향기기를 \r\n이용하면 좋을 것 같아요",
+    "후후. 감사합니다",
+    "어떤 노래를 선곡하면\r\n파티의 분위기가 무르익을지…",
+    "함께 찾아봐요, 구원자님",
+    "유리아님, 트로이카에 지난 주에 부탁한 서류가 도착했어요",
+    "…….",
+    "죄송합니다. 잘못 보낸 것 맞아요",
+    "…충격이 너무 큽니다",
+    "에버폰 같이 지극히 단순한 기계의 조작을 실수하다니…",
+    "으음… 하지만 저는 오퍼레이터인데…",
+    "상당히 자신감을 잃게 되네요",
+    "우선 유리아님께 보고를 마치고 올게요",
+    "나중에 뵈어요, 구원자님",
+    "구원자님, 미리암님이 하신 말씀인데요",
+    "제가 가장 좋아하는 과일은 \r\n딸기인 거 같다고 하시더라고요",
+    "이유는 제가 항상 딸기 케이크, 딸기 타르트를 먹고 있기 때문이래요",
+    "하지만 전 딸기 단품으로는 먹지 않아요",
+    "제가 케이크를 좋아하고\r\n케이크에 가장 많이 쓰이는 재료가 딸기라서 그런 게 아닐까요?",
+    "만약 딸기가 아니라 다른 과일이\r\n케이크 재료로 가장 메이저했다면",
+    "전 아마 딸기를 섭취하지 않았을 것 같습니다",
+    "네",
+    "그러니까 전 딸기를 좋아하는 거라고 할 수 없지 않나요?",
+    "…생각해보니 너무 쓸데없는 걸로 \r\n에버톡을 드렸네요\r\n죄송해요",
+    "구원자님을 만나고 나서부터\r\n스스로에 대해서 생각하는 일이 늘은 것 같습니다"
+  ],
+  "comments": [
+    {
+      "writer": "유리아",
+      "comment": "항상 에덴을 위해서 노력하는 메피… 정말 고마워요!"
+    },
+    {
+      "writer": "페트라",
+      "comment": "함정의 위치를 닿기도 전에 전부 눈치채. 신기하네…"
+    },
+    {
+      "writer": "탈리아",
+      "comment": "헉… 터무니없이 커다란 운명의 별 아래에 태어났어…!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "메피스토펠레스",
+        "message": "안녕하세요, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "메피스토펠레스입니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "제 메시지가 잘 보이시나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 보여"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 보여"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "음. 에버톡 시스템이 \r\n정상적으로 기능하고 있군요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "안심했습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "오늘 오후는 \r\n따로 일정이 있으신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "딱히 일정이 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "딱히 일정이 없어"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그렇군요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "동행이 필요한 용무가 생기면 \r\n제게 공유해주세요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "어느 곳이던 함께 하겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님껜 \r\n저와 방주가 있으니까요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 메피"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 메피"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "후후…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "앞으로도 잘 부탁드려요, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님 성에 곧 도착합니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "성에서 오 분만 기다려주세요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "오는 길에 고양이를 봤어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고양이…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고양이…?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "…좀 더 잘 찍고 싶었는데"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "아쉽네요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야, 귀엽다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야, 귀엽다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "감사합니다\r\n…후후…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "제가 풀을 좀 흔들어주니\r\n잔뜩 흥분했어요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "무척 즐거웠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 고민이 있는데요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "내일 유리아님이 여실 다과 파티에 \r\n어떤 음악을 틀지 제가 정하게 되었어요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님은 어떤 노래가 좋을 것 같으세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도움이 되고 싶은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도움이 되고 싶은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에덴의 노래를 잘 몰라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에덴의 노래를 잘 몰라"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그렇군요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "생각해보니까 그렇겠어요\r\n죄송합니다, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "혹시, 시간이 괜찮으시다면…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님과 같이 \r\n음반을 들어도 괜찮을까요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "집무실의 음향기기를 \r\n이용하면 좋을 것 같아요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌겠다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "후후. 감사합니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "어떤 노래를 선곡하면\r\n파티의 분위기가 무르익을지…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "함께 찾아봐요, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "유리아님, 트로이카에 지난 주에 부탁한 서류가 도착했어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘못 보낸 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘못 보낸 것 같아"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "……."
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "……."
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "죄송합니다. 잘못 보낸 것 맞아요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "…충격이 너무 큽니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "에버폰 같이 지극히 단순한 기계의 조작을 실수하다니…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴 수도 있지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴 수도 있지"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "으음… 하지만 저는 오퍼레이터인데…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "상당히 자신감을 잃게 되네요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "우선 유리아님께 보고를 마치고 올게요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "나중에 뵈어요, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 미리암님이 하신 말씀인데요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "제가 가장 좋아하는 과일은 \r\n딸기인 거 같다고 하시더라고요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "이유는 제가 항상 딸기 케이크, 딸기 타르트를 먹고 있기 때문이래요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞는 말 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "맞는 말 같아"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "하지만 전 딸기 단품으로는 먹지 않아요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "제가 케이크를 좋아하고\r\n케이크에 가장 많이 쓰이는 재료가 딸기라서 그런 게 아닐까요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "만약 딸기가 아니라 다른 과일이\r\n케이크 재료로 가장 메이저했다면"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "전 아마 딸기를 섭취하지 않았을 것 같습니다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "네"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그러니까 전 딸기를 좋아하는 거라고 할 수 없지 않나요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "…생각해보니 너무 쓸데없는 걸로 \r\n에버톡을 드렸네요\r\n죄송해요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님을 만나고 나서부터\r\n스스로에 대해서 생각하는 일이 늘은 것 같습니다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "오늘 귀가할 때에도\r\n케이크 세 조각을 사갈게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 케이크야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 케이크야?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "…딸기 케이크입니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "이따 뵈어요, 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "클로이님은 제 이름을 잘 못 외우시더군요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그래서 사실 처음에는 조금 동요했어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "짜증났어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "짜증났어?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "짜증까지는 아니고요\r\n아주 약간… 기억에 남았습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "하지만 알고보니 클로이님은 \r\n이름이 5글자를 넘어가면 다 못 외우시더라고요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그래서 제가 이해하기로 했습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "혹시 구원자님도 제 이름을 못 외우셔서\r\n메피라고 부르시는 건가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그렇군요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그 말, 믿어보겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "후후"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "유리아님과 밤늦게 톡을 하다보면"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "중간부터 답장이 안 올 때가 있습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "졸려서 중간에 잠이 드신 거겠죠"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 아무래도 유리아님보다 제가\r\n늦게까지 깨있는 걸 더 잘 하는 것 같습니다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "자랑스러워보여"
+      },
+      {
+        "speaker": "구원자",
+        "message": "자랑스러워보여"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "아주 약간요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "…♪"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 필요한 물건이 있으신가요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "내일 미리암님과 외출하기로 했어요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "뭔가 심부름거리가 있으면 말씀해주세요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "딱히 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "딱히 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 다녀와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 다녀와"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "네"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "내일은 안 가본 가게에 가보고 싶어요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "좋은 가게를 새로 찾으면…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님께도 공유드리겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "기대해주세요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 뭐 하고 계신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "딱히 아무것도 안 하고 있었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "딱히 아무것도 안 하고 있었어"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그렇군요. \r\n저도 마찬가지입니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그래서 무심코 메시지를 보내봤어요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "용무가 없는데 \r\n연락을 드려서 죄송합니다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 심심했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 심심했어"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "후후"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "뭔가 재미있는 동영상이라도 찾아볼까요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그리고 나서 서로 공유하기로 해요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "누가 더 재미있는 동영상을 찾을지…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "같이 승부해봐요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "그러고 보니 구원자님"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님의 에버폰… \r\n야간 알람 소리 설정을 꺼 두셨나요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "밤에 메시지를 드리면\r\n잠을 깨울까봐 걱정이 되네요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "음, 알겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "앞으로는 그냥 안심하고 메시지를 보낼게요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "사실, 지금 딱히 용무가 있어서 메시지를 보낸 건 아니에요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "심심해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "심심해?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "……."
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "네"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "잠깐 만나주실 수 있나요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "정원에 나와있겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "후후. 기대되네요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 바쁘신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님께 아케나인 광장을 소개하고 싶어요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "잠깐 만나시겠어요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님, 유리아에요\r\n식사는 하셨나요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "실은 메피에 대해 상담하고 싶은 게 있어서요…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘 혹시 안 바쁘시면\r\n광장까지 와주실 수 있나요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "기다릴게요!"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "메피스토펠레스입니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 제게 줄 게 있으시다고요…?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "…?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "알겠습니다. 그럼 아케나인 광장에 나와있겠습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 오늘은 어쩐지 간밤에 꿈을 꾼 것 같아요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "하지만 그 내용은 잘 기억나지 않네요"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님도 이런 적이 있으신가요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "광장에서 구원자님을 기다릴게요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "으음, 메피는 어디에…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님, 혹시 오늘 광장으로 가실 예정이 있으신가요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "혹시 거기서 메피를 만나신다면\r\n제가 찾고 있다고 전해주세요!"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "제 생일이 궁금하시다고요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "으음… 최초 기동일자라면 있습니다만…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "조회할까요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "메피입니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "구원자님, 괜찮으시다면 오늘도 모의 전투를 지휘해주실 수 있나요?"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "유리아님과 구원자님께서는 괜찮다고 말씀해주셨지만…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "역시 저는… 궁극의 형태를 구현하고 싶습니다"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "…NO SIGNAL…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "… …\r\n…NO SIGNAL…"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "… … … …\r\n… CHANGE MODE : AUTOMATIC"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "< MEPHISTOPHELES'S LINK STORY > EPISODE"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "READY"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "―……………………"
+      },
+      {
+        "speaker": "메피스토펠레스",
+        "message": "―……………………"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "메피스토펠레스",
+      "en": "Mephistopheles",
+      "zh_tw": "梅菲斯托佩萊斯",
+      "zh_cn": "梅菲斯托佩萊斯"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "인간형",
+      "en": "Humanlike",
+      "zh_tw": "人類型",
+      "zh_cn": "人類型"
+    },
+    "class": {
+      "ko": "캐스터",
+      "en": "Caster",
+      "zh_tw": "魔法師",
+      "zh_cn": "魔法師"
+    },
+    "sub_class": {
+      "ko": "광역",
+      "en": "AoE",
+      "zh_tw": "廣域",
+      "zh_cn": "廣域"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "오퍼레이터 원",
+        "en": "Operator One",
+        "zh_tw": "駕駛員一號",
+        "zh_cn": "駕駛員一號"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_엔딩",
+        "en": "인연_메피스토_엔딩",
+        "zh_tw": "牡羊座",
+        "zh_cn": "牡羊座"
+      },
+      "union": {
+        "ko": "방주 오퍼레이터",
+        "en": "Ark Operator",
+        "zh_tw": "方舟駕駛員",
+        "zh_cn": "方舟駕駛員"
+      },
+      "cv_ko": {
+        "ko": "장미",
+        "en": "Jang Mi",
+        "zh_tw": "張美",
+        "zh_cn": "張美"
+      },
+      "cv_jp": {
+        "ko": "Ruriko Noguchi",
+        "en": "Ruriko Noguchi",
+        "zh_tw": "Ruriko Noguchi",
+        "zh_cn": "Ruriko Noguchi"
+      },
+      "like": {
+        "ko": [
+          "케이크"
+        ],
+        "en": [
+          "Cake"
+        ],
+        "zh_tw": [
+          "蛋糕"
+        ],
+        "zh_cn": [
+          "蛋糕"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "오류",
+          "통제 불가능한 상황"
+        ],
+        "en": [
+          "Errors",
+          "situations out of control"
+        ],
+        "zh_tw": [
+          "錯誤、無法控制的情況"
+        ],
+        "zh_cn": [
+          "錯誤、無法控制的情況"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "고양이 관찰"
+        ],
+        "en": [
+          "Watching cats"
+        ],
+        "zh_tw": [
+          "觀察貓"
+        ],
+        "zh_cn": [
+          "觀察貓"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "데이터 분석"
+        ],
+        "en": [
+          "Data analysis"
+        ],
+        "zh_tw": [
+          "分析數據"
+        ],
+        "zh_cn": [
+          "分析數據"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "…생체 신호 확인 완료. 환영합니다, 구원자님\n\n저는 방주 <메타트론>의 오퍼레이터이자 인공 정령. 메피스토펠레스입니다.\n\n방주도 오퍼레이터도 인공 정령도, 처음 들어서 바로 이해하기 쉬운 개념은 아니죠… \n천천히 시간을 들여 저를 알아가주시길 바래요. 케이크 한 조각이 함께해도 좋겠네요.\n이렇게 커다란 방주를 움직이는 게 저처럼 작은 정령이라는 게 신기하단 말은 그간 많이 들었어요. \n하지만… 제 겉모습에는 큰 의미가 없다고 생각합니다. \n\n구원자님과 에덴의 위기를 구하기 위해서라면, \n희생 역시 사용 가능한 방법 중 하나일 뿐이라는 점을… 반드시 명심해 주세요.",
+        "en": "…Vital sign check completed. Welcome, Savior.\n\nI am the operator of the Ark \"Metatron,\" an artificial Soul named Mephistopheles.\n\nYou wouldn't be able to understand what an Ark, operator, or artificial Soul is right away…\nI hope you take your time and get to know me. Sharing a piece of cake with you could be nice.\nI've often heard how amazing it is that a small Soul like myself can steer such a large Ark.\nBut…I think my appearance doesn't mean so much.\n\nSacrifice is only one of many available methods we have\nto save you and Eden from crisis. Please keep that in mind.",
+        "zh_tw": "…已確認生命信號。歡迎你，救援者。\n\n我是方舟《梅塔特隆》的駕駛員也是人工精靈——梅菲斯托佩萊斯。\n\n不管是方舟、駕駛員還是人工精靈，都不是聽一次就能理解吧…\n希望你能花點時間慢慢地了解我，也可以一起吃塊蛋糕。\n我很常聽到別人說「這麼巨大的方舟就靠一隻這麼小的精靈驅動，真是神奇。」\n但…我認為我的外貌並不代表什麼。\n\n只要是為了救援者和拯救伊甸園的危機，\n即便得犧牲我，我也在所不辭，這點…還請你銘記於心。",
+        "zh_cn": "…已確認生命信號。歡迎你，救援者。\n\n我是方舟《梅塔特隆》的駕駛員也是人工精靈——梅菲斯托佩萊斯。\n\n不管是方舟、駕駛員還是人工精靈，都不是聽一次就能理解吧…\n希望你能花點時間慢慢地了解我，也可以一起吃塊蛋糕。\n我很常聽到別人說「這麼巨大的方舟就靠一隻這麼小的精靈驅動，真是神奇。」\n但…我認為我的外貌並不代表什麼。\n\n只要是為了救援者和拯救伊甸園的危機，\n即便得犧牲我，我也在所不辭，這點…還請你銘記於心。"
+      },
+      "greeting": {
+        "ko": "오퍼레이터 메피스토펠레스.\n구원자님을 기다렸습니다.",
+        "en": "Operator Mephistopheles.\nI have been waiting for you, Savior.",
+        "zh_tw": "駕駛員梅菲斯托佩萊斯，\n一直在等著救援者。",
+        "zh_cn": "駕駛員梅菲斯托佩萊斯，\n一直在等著救援者。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "안녕하세요, 구원자님"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Hello, Savior."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "你好，救援者"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "你好，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "메피스토펠레스입니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "It's me, Mephistopheles."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我是梅菲斯托佩萊斯"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我是梅菲斯托佩萊斯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "제 메시지가 잘 보이시나요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Can you see my messages well?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "看得到我的訊息嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "看得到我的訊息嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "음. 에버톡 시스템이 \r\n정상적으로 기능하고 있군요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Umm. So the Evertalk system is fully functional."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "嗯，EverTalk系統\r\n運作正常"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "嗯，EverTalk系統\r\n運作正常"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "안심했습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I'm relieved."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "那我就放心了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "那我就放心了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "오늘 오후는 \r\n따로 일정이 있으신가요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Do you have any plans this afternoon?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "今天下午\r\n你有別的行程嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "今天下午\r\n你有別的行程嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "그렇군요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I see."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "原來如此"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "原來如此"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "동행이 필요한 용무가 생기면 \r\n제게 공유해주세요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "If you have business that requires company, please let me know."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "如果有事需要我陪同的話，\r\n請告訴我"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "如果有事需要我陪同的話，\r\n請告訴我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "어느 곳이던 함께 하겠습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I'll be with you wherever you need to go."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "任何地方我都會一起去的"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "任何地方我都會一起去的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "구원자님껜 \r\n저와 방주가 있으니까요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Because you, Savior, have me and the Ark."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者身邊\r\n有我跟方舟"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者身邊\r\n有我跟方舟"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "후후…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Hehe…"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "呵呵…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "呵呵…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "앞으로도 잘 부탁드려요, 구원자님"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "The pleasure is all mine, Savior."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "以後也請多指教，救援者"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "以後也請多指教，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "구원자님 성에 곧 도착합니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Savior, I'm arriving soon."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者，我馬上就會到城裡"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者，我馬上就會到城裡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "성에서 오 분만 기다려주세요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Please wait for 5 minutes in the castle."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "請在城裡等我五分鐘"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "請在城裡等我五分鐘"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "오는 길에 고양이를 봤어요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I saw a cat on the way here."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我在來的路上看見了貓咪"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我在來的路上看見了貓咪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "…좀 더 잘 찍고 싶었는데"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "…I wanted to take a better picture."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "…本來想拍得更好一點"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "…本來想拍得更好一點"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "아쉽네요…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Such a shame…"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "真可惜啊…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "真可惜啊…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "감사합니다\r\n…후후…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Thank you.\r\n…Hehe…"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "謝謝你\r\n…呵呵…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "謝謝你\r\n…呵呵…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "제가 풀을 좀 흔들어주니\r\n잔뜩 흥분했어요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I shook some tall grass\r\nand it got excited."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我晃了一下草，\r\n牠就興奮得不得了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我晃了一下草，\r\n牠就興奮得不得了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "무척 즐거웠습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "It was so much fun."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "非常開心"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "非常開心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "구원자님, 고민이 있는데요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Savior, there's something on my mind."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者，我有一個煩惱"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者，我有一個煩惱"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "내일 유리아님이 여실 다과 파티에 \r\n어떤 음악을 틀지 제가 정하게 되었어요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "For Yuria's refreshment party tomorrow, \r\nI have to choose songs to play."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我要決定明天尤里婭舉辦的茶會\r\n要放什麼音樂"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我要決定明天尤里婭舉辦的茶會\r\n要放什麼音樂"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "구원자님은 어떤 노래가 좋을 것 같으세요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "What kind of song would be good?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者喜歡怎麼樣的音樂呢？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者喜歡怎麼樣的音樂呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "생각해보니까 그렇겠어요\r\n죄송합니다, 구원자님"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Now that I think about it, I understand.\r\nI'm sorry, Savior."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我想了想，應該是這樣\r\n對不起，救援者"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我想了想，應該是這樣\r\n對不起，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "혹시, 시간이 괜찮으시다면…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "If you have some time…"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "如果你方便的話…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "如果你方便的話…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "구원자님과 같이 \r\n음반을 들어도 괜찮을까요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Do you mind \r\nif I listen to some music with you?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "可以跟我一起\r\n聽唱片嗎？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "可以跟我一起\r\n聽唱片嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "집무실의 음향기기를 \r\n이용하면 좋을 것 같아요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "The audio equipment in the office \r\nshould do the trick."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "用辦公室的音響設備來聽的話，\r\n應該滿不錯的"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "用辦公室的音響設備來聽的話，\r\n應該滿不錯的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "후후. 감사합니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Hehe. Thank you."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "呵呵，謝謝你"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "呵呵，謝謝你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "어떤 노래를 선곡하면\r\n파티의 분위기가 무르익을지…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "What playlist would\r\nmake this party exciting?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "要選什麼音樂，\r\n才能帶動茶會的氣氛呢…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "要選什麼音樂，\r\n才能帶動茶會的氣氛呢…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "함께 찾아봐요, 구원자님"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Let's search together, Savior."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "一起找找看吧，救援者"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "一起找找看吧，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "유리아님, 트로이카에 지난 주에 부탁한 서류가 도착했어요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Yuria, the document you requested last week arrived in Troyca."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "尤里婭，妳上週拜託我的文件已經送到特羅伊卡了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "尤里婭，妳上週拜託我的文件已經送到特羅伊卡了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "…"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "죄송합니다. 잘못 보낸 것 맞아요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I'm sorry, this wasn't supposed to go to you."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "對不起，的確傳錯了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "對不起，的確傳錯了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "…충격이 너무 큽니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "…I'm quite shocked."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "…太令人震驚了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "…太令人震驚了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "에버폰 같이 지극히 단순한 기계의 조작을 실수하다니…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "How could I make a mistake operating a simple device like Everphone?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "像EverPhone這樣這麼單純的機器，我竟然操作失誤…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "像EverPhone這樣這麼單純的機器，我竟然操作失誤…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "으음… 하지만 저는 오퍼레이터인데…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Umm… But I'm an operator."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "嗯⋯但是是我操作的⋯"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "嗯⋯但是是我操作的⋯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "상당히 자신감을 잃게 되네요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "This makes me lose confidence."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "非常讓人失去自信心啊"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "非常讓人失去自信心啊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "우선 유리아님께 보고를 마치고 올게요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I'll go report to Yuria first."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我先去向尤里婭報告"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我先去向尤里婭報告"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "나중에 뵈어요, 구원자님"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "See you later, Savior."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "之後見，救援者"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "之後見，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "구원자님, 미리암님이 하신 말씀인데요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Savior, Miriam told me that"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者，米里昂說過"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "救援者，米里昂說過"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "제가 가장 좋아하는 과일은 \r\n딸기인 거 같다고 하시더라고요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "my favorite fruit is \r\nstrawberries."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "她說我最喜歡的水果\r\n好像是草莓。"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "她說我最喜歡的水果\r\n好像是草莓。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "이유는 제가 항상 딸기 케이크, 딸기 타르트를 먹고 있기 때문이래요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Because I always eat strawberry cake and strawberry tarts."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "因為我總是在吃草莓蛋糕、草莓塔"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "因為我總是在吃草莓蛋糕、草莓塔"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "하지만 전 딸기 단품으로는 먹지 않아요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "But I don't eat just strawberries."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "但我不會單吃草莓"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "但我不會單吃草莓"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "제가 케이크를 좋아하고\r\n케이크에 가장 많이 쓰이는 재료가 딸기라서 그런 게 아닐까요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I like to eat cake,\r\nand strawberries are the most common ingredient in cake. Maybe that's the reason."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我喜歡蛋糕，\r\n會不會是因為蛋糕上用最多的材料是草莓的關係呢？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我喜歡蛋糕，\r\n會不會是因為蛋糕上用最多的材料是草莓的關係呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "만약 딸기가 아니라 다른 과일이\r\n케이크 재료로 가장 메이저했다면"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "If other fruits were used\r\nin cake,"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "萬一蛋糕最主要的材料\r\n不是草莓，而是其他水果的話，"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "萬一蛋糕最主要的材料\r\n不是草莓，而是其他水果的話，"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "전 아마 딸기를 섭취하지 않았을 것 같습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "I probably wouldn't eat strawberries."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我可能就不會吃草莓了"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "我可能就不會吃草莓了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "네"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Correct."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "是"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "그러니까 전 딸기를 좋아하는 거라고 할 수 없지 않나요?"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "So one shouldn't actually say that I like strawberries, right?"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "所以應該不能說我喜歡草莓吧？"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "所以應該不能說我喜歡草莓吧？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "…생각해보니 너무 쓸데없는 걸로 \r\n에버톡을 드렸네요\r\n죄송해요"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "…Now that I think about it, I Evertalked you \r\nfor a really trivial matter.\r\nMy apologies."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "⋯想了一下發現我用EverTalk\r\n傳了非常沒用的訊息呢，\r\n對不起"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "⋯想了一下發現我用EverTalk\r\n傳了非常沒用的訊息呢，\r\n對不起"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "구원자님을 만나고 나서부터\r\n스스로에 대해서 생각하는 일이 늘은 것 같습니다"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "Ever since I met you, Savior,\r\nI have been spending more time thinking about myself."
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "自從遇見救援者之後，\r\n我好像變得會經常思考自己"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "自從遇見救援者之後，\r\n我好像變得會經常思考自己"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "항상 에덴을 위해서 노력하는 메피… 정말 고마워요!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "You're always working hard for Eden… Thank you so much, Mephi!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "總是為了伊甸園而努力的梅菲…真的很感謝她！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "總是為了伊甸園而努力的梅菲…真的很感謝她！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라",
+          "message": "함정의 위치를 닿기도 전에 전부 눈치채. 신기하네…"
+        },
+        "en": {
+          "speaker": "Petra",
+          "message": "You notice where a trap is before you even reach it. Interesting…"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉",
+          "message": "在抵達陷阱位置之前就會被她發現。真神奇…"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉",
+          "message": "在抵達陷阱位置之前就會被她發現。真神奇…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "헉… 터무니없이 커다란 운명의 별 아래에 태어났어…!"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "Ugh… I was born under the star of absurdly great destiny…!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "呃…她命中註定要背負龐大的責任…！"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "呃…她命中註定要背負龐大的責任…！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "안녕하세요, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Hello, Savior."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "你好，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "你好，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "메피스토펠레스입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "It's me, Mephistopheles."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我是梅菲斯托佩萊斯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我是梅菲斯托佩萊斯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "제 메시지가 잘 보이시나요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Can you see my messages well?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "看得到我的訊息嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "看得到我的訊息嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 보여"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can see them well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看得到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看得到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 보여"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I can see them well."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看得到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看得到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "음. 에버톡 시스템이 \r\n정상적으로 기능하고 있군요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Umm. So the Evertalk system is fully functional."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "嗯，EverTalk系統\r\n運作正常"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "嗯，EverTalk系統\r\n運作正常"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "안심했습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'm relieved."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "那我就放心了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "那我就放心了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "오늘 오후는 \r\n따로 일정이 있으신가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Do you have any plans this afternoon?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "今天下午\r\n你有別的行程嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "今天下午\r\n你有別的行程嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "딱히 일정이 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有特別的行程"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有特別的行程"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "딱히 일정이 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有特別的行程"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有特別的行程"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그렇군요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I see."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "동행이 필요한 용무가 생기면 \r\n제게 공유해주세요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "If you have business that requires company, please let me know."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "如果有事需要我陪同的話，\r\n請告訴我"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "如果有事需要我陪同的話，\r\n請告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "어느 곳이던 함께 하겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'll be with you wherever you need to go."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "任何地方我都會一起去的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "任何地方我都會一起去的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님껜 \r\n저와 방주가 있으니까요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Because you, Savior, have me and the Ark."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者身邊\r\n有我跟方舟"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者身邊\r\n有我跟方舟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 메피"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Mephi."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，梅菲"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，梅菲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 메피"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Mephi."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，梅菲"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，梅菲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "후후…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Hehe…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "앞으로도 잘 부탁드려요, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "The pleasure is all mine, Savior."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "以後也請多指教，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "以後也請多指教，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님 성에 곧 도착합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, I'm arriving soon."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，我馬上就會到城裡"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，我馬上就會到城裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "성에서 오 분만 기다려주세요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Please wait for 5 minutes in the castle."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "請在城裡等我五分鐘"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "請在城裡等我五分鐘"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "오는 길에 고양이를 봤어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I saw a cat on the way here."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我在來的路上看見了貓咪"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我在來的路上看見了貓咪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고양이…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A cat…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貓咪…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貓咪…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고양이…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A cat…?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "貓咪…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "貓咪…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "…좀 더 잘 찍고 싶었는데"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…I wanted to take a better picture."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…本來想拍得更好一點"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…本來想拍得更好一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "아쉽네요…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Such a shame…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "真可惜啊…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "真可惜啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야, 귀엽다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, it's cute."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會啦，很可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會啦，很可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야, 귀엽다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, it's cute."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會啦，很可愛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會啦，很可愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "감사합니다\r\n…후후…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Thank you.\r\n…Hehe…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "謝謝你\r\n…呵呵…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "謝謝你\r\n…呵呵…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "제가 풀을 좀 흔들어주니\r\n잔뜩 흥분했어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I shook some tall grass\r\nand it got excited."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我晃了一下草，\r\n牠就興奮得不得了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我晃了一下草，\r\n牠就興奮得不得了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "무척 즐거웠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "It was so much fun."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "非常開心"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "非常開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 고민이 있는데요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, there's something on my mind."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，我有一個煩惱"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，我有一個煩惱"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "내일 유리아님이 여실 다과 파티에 \r\n어떤 음악을 틀지 제가 정하게 되었어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "For Yuria's refreshment party tomorrow, \r\nI have to choose songs to play."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我要決定明天尤里婭舉辦的茶會\r\n要放什麼音樂"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我要決定明天尤里婭舉辦的茶會\r\n要放什麼音樂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님은 어떤 노래가 좋을 것 같으세요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "What kind of song would be good?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者喜歡怎麼樣的音樂呢？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者喜歡怎麼樣的音樂呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도움이 되고 싶은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to help,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我很想幫忙"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我很想幫忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도움이 되고 싶은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I want to help,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我很想幫忙"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我很想幫忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에덴의 노래를 잘 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I'm not familiar with the songs of Eden."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過我不太清楚伊甸園的音樂"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過我不太清楚伊甸園的音樂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에덴의 노래를 잘 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I'm not familiar with the songs of Eden."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過我不太清楚伊甸園的音樂"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過我不太清楚伊甸園的音樂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그렇군요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I see."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "생각해보니까 그렇겠어요\r\n죄송합니다, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Now that I think about it, I understand.\r\nI'm sorry, Savior."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我想了想，應該是這樣\r\n對不起，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我想了想，應該是這樣\r\n對不起，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "혹시, 시간이 괜찮으시다면…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "If you have some time…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "如果你方便的話…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "如果你方便的話…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님과 같이 \r\n음반을 들어도 괜찮을까요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Do you mind \r\nif I listen to some music with you?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "可以跟我一起\r\n聽唱片嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "可以跟我一起\r\n聽唱片嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "집무실의 음향기기를 \r\n이용하면 좋을 것 같아요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "The audio equipment in the office \r\nshould do the trick."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "用辦公室的音響設備來聽的話，\r\n應該滿不錯的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "用辦公室的音響設備來聽的話，\r\n應該滿不錯的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That sounds fun"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That sounds fun"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "후후. 감사합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Hehe. Thank you."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵，謝謝你"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵，謝謝你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "어떤 노래를 선곡하면\r\n파티의 분위기가 무르익을지…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "What playlist would\r\nmake this party exciting?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "要選什麼音樂，\r\n才能帶動茶會的氣氛呢…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "要選什麼音樂，\r\n才能帶動茶會的氣氛呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "함께 찾아봐요, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Let's search together, Savior."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "一起找找看吧，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "一起找找看吧，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "유리아님, 트로이카에 지난 주에 부탁한 서류가 도착했어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Yuria, the document you requested last week arrived in Troyca."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "尤里婭，妳上週拜託我的文件已經送到特羅伊卡了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "尤里婭，妳上週拜託我的文件已經送到特羅伊卡了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘못 보낸 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Looks like you sent this to the wrong person"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像傳錯人了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像傳錯人了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘못 보낸 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Looks like you sent this to the wrong person"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像傳錯人了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像傳錯人了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "죄송합니다. 잘못 보낸 것 맞아요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'm sorry, this wasn't supposed to go to you."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "對不起，的確傳錯了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "對不起，的確傳錯了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "…충격이 너무 큽니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…I'm quite shocked."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…太令人震驚了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…太令人震驚了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "에버폰 같이 지극히 단순한 기계의 조작을 실수하다니…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "How could I make a mistake operating a simple device like Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "像EverPhone這樣這麼單純的機器，我竟然操作失誤…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "像EverPhone這樣這麼單純的機器，我竟然操作失誤…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴 수도 있지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "These things happen"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "難免會發生這種失誤"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "難免會發生這種失誤"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴 수도 있지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "These things happen"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "難免會發生這種失誤"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "難免會發生這種失誤"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "으음… 하지만 저는 오퍼레이터인데…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Umm… But I'm an operator."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "嗯⋯但是是我操作的⋯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "嗯⋯但是是我操作的⋯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "상당히 자신감을 잃게 되네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "This makes me lose confidence."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "非常讓人失去自信心啊"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "非常讓人失去自信心啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "우선 유리아님께 보고를 마치고 올게요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'll go report to Yuria first."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我先去向尤里婭報告"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我先去向尤里婭報告"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "나중에 뵈어요, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "See you later, Savior."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "之後見，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "之後見，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 미리암님이 하신 말씀인데요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, Miriam told me that"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，米里昂說過"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，米里昂說過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "제가 가장 좋아하는 과일은 \r\n딸기인 거 같다고 하시더라고요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "my favorite fruit is \r\nstrawberries."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "她說我最喜歡的水果\r\n好像是草莓。"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "她說我最喜歡的水果\r\n好像是草莓。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "이유는 제가 항상 딸기 케이크, 딸기 타르트를 먹고 있기 때문이래요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Because I always eat strawberry cake and strawberry tarts."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "因為我總是在吃草莓蛋糕、草莓塔"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "因為我總是在吃草莓蛋糕、草莓塔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞는 말 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think she's right."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像沒說錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像沒說錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "맞는 말 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think she's right."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像沒說錯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像沒說錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "하지만 전 딸기 단품으로는 먹지 않아요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "But I don't eat just strawberries."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "但我不會單吃草莓"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "但我不會單吃草莓"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "제가 케이크를 좋아하고\r\n케이크에 가장 많이 쓰이는 재료가 딸기라서 그런 게 아닐까요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I like to eat cake,\r\nand strawberries are the most common ingredient in cake. Maybe that's the reason."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我喜歡蛋糕，\r\n會不會是因為蛋糕上用最多的材料是草莓的關係呢？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我喜歡蛋糕，\r\n會不會是因為蛋糕上用最多的材料是草莓的關係呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "만약 딸기가 아니라 다른 과일이\r\n케이크 재료로 가장 메이저했다면"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "If other fruits were used\r\nin cake,"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "萬一蛋糕最主要的材料\r\n不是草莓，而是其他水果的話，"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "萬一蛋糕最主要的材料\r\n不是草莓，而是其他水果的話，"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "전 아마 딸기를 섭취하지 않았을 것 같습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I probably wouldn't eat strawberries."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我可能就不會吃草莓了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我可能就不會吃草莓了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh yeah?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh yeah?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Correct."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "是"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그러니까 전 딸기를 좋아하는 거라고 할 수 없지 않나요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "So one shouldn't actually say that I like strawberries, right?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "所以應該不能說我喜歡草莓吧？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "所以應該不能說我喜歡草莓吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "…생각해보니 너무 쓸데없는 걸로 \r\n에버톡을 드렸네요\r\n죄송해요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…Now that I think about it, I Evertalked you \r\nfor a really trivial matter.\r\nMy apologies."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "⋯想了一下發現我用EverTalk\r\n傳了非常沒用的訊息呢，\r\n對不起"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "⋯想了一下發現我用EverTalk\r\n傳了非常沒用的訊息呢，\r\n對不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님을 만나고 나서부터\r\n스스로에 대해서 생각하는 일이 늘은 것 같습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Ever since I met you, Savior,\r\nI have been spending more time thinking about myself."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "自從遇見救援者之後，\r\n我好像變得會經常思考自己"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "自從遇見救援者之後，\r\n我好像變得會經常思考自己"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's okay"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "오늘 귀가할 때에도\r\n케이크 세 조각을 사갈게요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "When I come back home today,\r\nI'll bring three pieces of cake."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我今天回家的時候\r\n也會買三塊蛋糕回去。"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我今天回家的時候\r\n也會買三塊蛋糕回去。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 케이크야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Which cake is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是什麼蛋糕呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是什麼蛋糕呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 케이크야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Which cake is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是什麼蛋糕呢？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是什麼蛋糕呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "…딸기 케이크입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…Strawberry cake."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…草莓蛋糕"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…草莓蛋糕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "이따 뵈어요, 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "See you later, Savior."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "待會見，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "待會見，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "클로이님은 제 이름을 잘 못 외우시더군요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Chloe has trouble remembering my name."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "克羅伊記錯我的名字了啊"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "克羅伊記錯我的名字了啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그래서 사실 처음에는 조금 동요했어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "So, actually, I was hesitant at first."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "所以其實我一開始有點動搖"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "所以其實我一開始有點動搖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "짜증났어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you annoyed?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳覺得煩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳覺得煩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "짜증났어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you annoyed?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳覺得煩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳覺得煩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "짜증까지는 아니고요\r\n아주 약간… 기억에 남았습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Not annoyed.\r\nIt just remained in my memory for a while…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "不至於覺得煩\r\n是稍微有點…印象深刻"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "不至於覺得煩\r\n是稍微有點…印象深刻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "하지만 알고보니 클로이님은 \r\n이름이 5글자를 넘어가면 다 못 외우시더라고요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "But it turned out that Chloe \r\ncan't remember names longer than 5 characters."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "但後來發現名字要是超過五個字\r\n克羅伊都會記不起來"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "但後來發現名字要是超過五個字\r\n克羅伊都會記不起來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그래서 제가 이해하기로 했습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "So I decided to be understanding."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "所以我決定體諒她"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "所以我決定體諒她"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "혹시 구원자님도 제 이름을 못 외우셔서\r\n메피라고 부르시는 건가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, by any chance… are you calling me Mephi\r\nbecause you, too, cannot remember my name?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "難道救援者也是因為記不起我的名字\r\n才叫我梅菲的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "難道救援者也是因為記不起我的名字\r\n才叫我梅菲的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, that's not why."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "才不是"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "才不是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, that's not why."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "才不是"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "才不是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그렇군요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I see."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그 말, 믿어보겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'll take your word for it."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我會試著相信這句話的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我會試著相信這句話的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Hehe"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "유리아님과 밤늦게 톡을 하다보면"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "When I chat with Yuria late at night,"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "跟尤里婭聊到深夜的話"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "跟尤里婭聊到深夜的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "중간부터 답장이 안 올 때가 있습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "there are times when she stops replying in the middle of our conversation."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "有時從中間開始就沒回覆了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "有時從中間開始就沒回覆了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "졸려서 중간에 잠이 드신 거겠죠"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "She falls asleep midway through."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "應該是太睏，所以中途就睡著了吧"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "應該是太睏，所以中途就睡著了吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh yeah?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是這樣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是這樣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Oh yeah?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是這樣嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是這樣嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 아무래도 유리아님보다 제가\r\n늦게까지 깨있는 걸 더 잘 하는 것 같습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, compared to Yuria,\r\nI think I'm better at staying up late."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，總覺得我好像\r\n比尤里婭更能熬夜"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，總覺得我好像\r\n比尤里婭更能熬夜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "자랑스러워보여"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You sound proud."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像很自豪"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像很自豪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "자랑스러워보여"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You sound proud."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好像很自豪"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好像很自豪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "아주 약간요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Just a little bit."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "稍微有一點"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "稍微有一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "…♪"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…♪"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…♪"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 필요한 물건이 있으신가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, do you need anything?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，你需要什麼東西嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，你需要什麼東西嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "내일 미리암님과 외출하기로 했어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'm going out with Miriam tomorrow."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "明天我要跟米里昂外出"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "明天我要跟米里昂外出"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "뭔가 심부름거리가 있으면 말씀해주세요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Please let me know if you need me to run any errands."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "如果你有需要的東西，請告訴我"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "如果你有需要的東西，請告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "딱히 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "딱히 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 다녀와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have fun."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "路上小心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "路上小心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 다녀와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have fun."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "路上小心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "路上小心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Okay."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "是"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "내일은 안 가본 가게에 가보고 싶어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Tomorrow, I want to go to a store I've never visited before."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我明天想去沒去過的商店"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我明天想去沒去過的商店"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "좋은 가게를 새로 찾으면…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "If I find a good store…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "如果找到不錯的新商店…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "如果找到不錯的新商店…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님께도 공유드리겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'll share it with you as well."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我會也分享給救援者的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我會也分享給救援者的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "기대해주세요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Just wait and see."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "敬請期待"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "敬請期待"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 뭐 하고 계신가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, what are you up to?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，你在做什麼呢？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，你在做什麼呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "딱히 아무것도 안 하고 있었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nothing really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有在做什麼"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有在做什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "딱히 아무것도 안 하고 있었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nothing really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有在做什麼"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有在做什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그렇군요. \r\n저도 마찬가지입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I see. Same here."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "原來如此，我也一樣"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "原來如此，我也一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그래서 무심코 메시지를 보내봤어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "That's why I messaged you."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "所以下意識傳了訊息給您"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "所以下意識傳了訊息給您"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "용무가 없는데 \r\n연락을 드려서 죄송합니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Sorry about messaging you\r\nfor no reason."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "明明沒事卻聯絡您，\r\n真不好意思"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "明明沒事卻聯絡您，\r\n真不好意思"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, that's not why."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會啦"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, that's not why."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會啦"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會啦"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 심심했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was bored, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也很無聊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也很無聊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 심심했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was bored, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也很無聊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也很無聊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Hehe"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "뭔가 재미있는 동영상이라도 찾아볼까요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Why don't we look for funny videos"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "要找點有趣的影片嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "要找點有趣的影片嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그리고 나서 서로 공유하기로 해요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "and then share them with each other?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "然後再互相分享"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "然後再互相分享"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "누가 더 재미있는 동영상을 찾을지…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Let's see who can find the funnier video?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "看誰能找到更有趣的影片…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "看誰能找到更有趣的影片…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "같이 승부해봐요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Let's compete."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "來較量一下吧"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "來較量一下吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "그러고 보니 구원자님"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "By the way, Savior,"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "這麼說來，救援者"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "這麼說來，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님의 에버폰… \r\n야간 알람 소리 설정을 꺼 두셨나요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "your Everphone… \r\nIs it in Night mode?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者的EverPhone…\r\n有關掉夜間提示音的設定嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者的EverPhone…\r\n有關掉夜間提示音的設定嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "밤에 메시지를 드리면\r\n잠을 깨울까봐 걱정이 되네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "If I message you at night,\r\nI'm worried that I'll wake you up."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我怕晚上傳訊息給你的話\r\n會吵醒你"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我怕晚上傳訊息給你的話\r\n會吵醒你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "음, 알겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Umm, okay."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "嗯，我明白了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "嗯，我明白了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "앞으로는 그냥 안심하고 메시지를 보낼게요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'll message you then."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "以後會放心傳訊息給你的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "以後會放心傳訊息給你的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "사실, 지금 딱히 용무가 있어서 메시지를 보낸 건 아니에요…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Actually, I messaged you for no particular reason…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "其實，我現在正好有事，不應該傳訊息的…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "其實，我現在正好有事，不應該傳訊息的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "심심해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you bored?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很無聊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很無聊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "심심해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you bored?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很無聊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很無聊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Correct."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "是"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "잠깐 만나주실 수 있나요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Can we meet soon?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "可以見個面嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "可以見個面嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "정원에 나와있겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'll be in the garden."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我會到庭園的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我會到庭園的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "후후. 기대되네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Hehe. I'm excited."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵，真令人期待"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "呵呵，真令人期待"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 바쁘신가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, are you busy?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，你在忙嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，你在忙嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "還好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "還好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님께 아케나인 광장을 소개하고 싶어요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I want to introduce you to Arkenine Square."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我想向救援者介紹阿肯納因廣場"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我想向救援者介紹阿肯納因廣場"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "잠깐 만나시겠어요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Can we meet briefly?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "能見個面嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "能見個面嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님, 유리아에요\r\n식사는 하셨나요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior, it's Yuria.\r\nHave you eaten?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者，我是尤里婭\r\n你用餐了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者，我是尤里婭\r\n你用餐了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "실은 메피에 대해 상담하고 싶은 게 있어서요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Actually, I'd like to talk to you about Mephi."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "其實我想跟你討論梅菲的事…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "其實我想跟你討論梅菲的事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘 혹시 안 바쁘시면\r\n광장까지 와주실 수 있나요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "If you're not busy today,\r\ncan you come to the square?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果今天你不忙的話，\r\n可以到廣場來嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果今天你不忙的話，\r\n可以到廣場來嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "기다릴게요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'll wait!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我會等你的！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我會等你的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "메피스토펠레스입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "It's me, Mephistopheles."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我是梅菲斯托佩萊斯"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我是梅菲斯托佩萊斯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 제게 줄 게 있으시다고요…?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, I heard you have something to give me…?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，你有東西要給我…？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，你有東西要給我…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "알겠습니다. 그럼 아케나인 광장에 나와있겠습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Okay. Then I'll be at Arkenine Square."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "知道了，那我會去阿肯納因廣場的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "知道了，那我會去阿肯納因廣場的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 오늘은 어쩐지 간밤에 꿈을 꾼 것 같아요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, I had a dream last night for the first time in a long time."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，今天不知道怎麼了，我昨天晚上好像做夢了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，今天不知道怎麼了，我昨天晚上好像做夢了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "하지만 그 내용은 잘 기억나지 않네요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "But I don't remember it well."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "但是內容想不太起來了"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "但是內容想不太起來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님도 이런 적이 있으신가요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Has that ever happened to you?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者也有過這樣的經驗嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者也有過這樣的經驗嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "광장에서 구원자님을 기다릴게요"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'll be waiting for you in the square."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我會在廣場等救援者的"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我會在廣場等救援者的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "으음, 메피는 어디에…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Umm, I wonder where Mephi is…"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呃，梅菲去哪了…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呃，梅菲去哪了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님, 혹시 오늘 광장으로 가실 예정이 있으신가요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior, do you have a plan to go to the square today?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者，請問你今天打算要去廣場嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者，請問你今天打算要去廣場嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "혹시 거기서 메피를 만나신다면\r\n제가 찾고 있다고 전해주세요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "If you happen to meet Mephi there,\r\nplease tell her I'm looking for her!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果你在那邊碰到梅菲的話，\r\n請告訴她我在找她！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果你在那邊碰到梅菲的話，\r\n請告訴她我在找她！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "제 생일이 궁금하시다고요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "You want to know my birthday?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "你想知道我的生日？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "你想知道我的生日？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "으음… 최초 기동일자라면 있습니다만…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Umm… I have an initial operation date…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "嗯…雖然有最早開始運作的日期…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "嗯…雖然有最早開始運作的日期…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "조회할까요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "You want me to do a search?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "要查詢嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "要查詢嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "메피입니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "I'm Mephi."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我是梅菲"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "我是梅菲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "구원자님, 괜찮으시다면 오늘도 모의 전투를 지휘해주실 수 있나요?"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Savior, do you mind conducting a mock battle today?"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，可以的話，今天也能幫忙指揮模擬戰鬥嗎？"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "救援者，可以的話，今天也能幫忙指揮模擬戰鬥嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "유리아님과 구원자님께서는 괜찮다고 말씀해주셨지만…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "Yuria and yourself told me that I'm just fine as I'm now…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "雖然尤里婭跟救援者說了沒關係…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "雖然尤里婭跟救援者說了沒關係…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "역시 저는… 궁극의 형태를 구현하고 싶습니다"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "But I… want to embody the ultimate form."
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "但我還是…想變成終極的型態"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "但我還是…想變成終極的型態"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "…NO SIGNAL…"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…NO SIGNAL…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…NOSIGNAL…"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…NOSIGNAL…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "… …\r\n…NO SIGNAL…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "……\r\n…NO SIGNAL…"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……\r\n…NOSIGNAL…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……\r\n…NOSIGNAL…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "… … … …\r\n… CHANGE MODE : AUTOMATIC"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "… … … …\r\n… CHANGE MODE : AUTOMATIC"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…………\r\n…CHANGEMODE:AUTOMATIC"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "…………\r\n…CHANGEMODE:AUTOMATIC"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "< MEPHISTOPHELES'S LINK STORY > EPISODE"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "< MEPHISTOPHELES'S LINK STORY > EPISODE"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "<MEPHISTOPHELES'SLINKSTORY>EPISODE"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "<MEPHISTOPHELES'SLINKSTORY>EPISODE"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "READY"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "READY"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "READY"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "READY"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "―……………………"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "―……………………"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "―……………………"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "―……………………"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "메피스토펠레스",
+            "message": "―……………………"
+          },
+          "en": {
+            "speaker": "Mephistopheles",
+            "message": "―……………………"
+          },
+          "zh_tw": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "―……………………"
+          },
+          "zh_cn": {
+            "speaker": "梅菲斯托佩萊斯",
+            "message": "―……………………"
+          }
+        }
+      ]
+    }
+  }
+}

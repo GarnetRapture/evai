@@ -1,0 +1,7772 @@
+{
+  "id": "6050",
+  "name": "이브",
+  "name_en": "Eve",
+  "grade": "에픽",
+  "race": "악마형",
+  "class": "디펜더",
+  "sub_class": "보호",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "금지된 지혜",
+    "constellation": "염소자리",
+    "union": "파우스트 공방",
+    "birthday": "1228",
+    "height": 154,
+    "weight": 46,
+    "cv_ko": "이현진",
+    "cv_jp": "이현진",
+    "like": [
+      "실험",
+      "논리적인 결론"
+    ],
+    "dislike": [
+      "맹목"
+    ],
+    "hobby": [
+      "바깥 돌아다니기"
+    ],
+    "speciality": [
+      "분석",
+      "회유"
+    ]
+  },
+  "personality": {
+    "description": "그래, 네가 바로 구원자라고 불리는 인간의 아이구나. \n\n나는 이브. \n태초의 정령 아담과 함께 만들어진, 최초의 여성형 정령.\n\n네가 나를 구했으니, 예의에 따라 나는 너를 돕겠어.\n하지만 그렇다고 해서 내가 다른 정령들처럼 너를 전적으로 믿고 따를 거라는 기대는 부디 버려주길 바라.\n\n나는 오로지 내가 직접 이 두 눈으로 보아서 사실이라고 입증한 것만을 믿고, 내가 여태까지 보아온 지성체들은 대부분 아주 추악했어. \n\n네가 나로부터 무엇을 바라는지는 잘 모르겠지만, \n만일 네가 금기를 어겨 타락한 나의 지혜를 바란다면 기꺼이 빌려주도록 하지. \n\n자아, 너는 언제까지 나라는 유혹을 견딜 수 있을까.\n너는 언제까지 이성을 유지할 수 있을까. \n어디 한번 잘 저항해 봐.\n\n만일 네가 계속해서 내 앞에서 이성을 유지할 수 있다면…\n그 때는 아주 황홀한 상을 내리도록 할게.",
+    "greeting": "나는 파괴하고, 또한 창조하는 자. \n태초의 정령, 모든 정령의 어머니."
+  },
+  "speech_patterns": [
+    "이게 바로 에버톡…",
+    "정령들은 여전히 \r\n인간 흉내를 내는 걸 좋아하는구나",
+    "사용법은 잘 알았어",
+    "앞으로 무슨 일이 있다면 \r\n내게 이걸로 연락하도록 해",
+    "…….",
+    "그래",
+    "잘 부탁할게",
+    "네가 나를 구했으니",
+    "나도 너를 돕도록 하지",
+    "하지만 기억해 둬",
+    "나는 어디까지나 의리로 너를 돕겠지만",
+    "너와 가까워질 생각은 없어",
+    "너 뿐만이 아니라 \r\n다른 정령들과도",
+    "나와 원만한 관계를 유지하고 싶다면 \r\n그걸 꼭 기억하도록 해",
+    "구원자",
+    "가급적 빨리 네 방으로 돌아가",
+    "저번에 시장에서 과일을 받은 걸 사양했더니",
+    "오히려 기회라면서 \r\n더 많이 보내왔어…",
+    "구원자 너와 함께 시장에 나가서 그랬는지",
+    "영주님이 계신 방주로 \r\n물건을 보내면 된다고 생각했나 봐",
+    "…어차피 내가 물건을 안 받아들이거나 \r\n나한테 물건이 도착하지 않더라도",
+    "영주님께 헌상될 테니  \r\n다들 문제 없다고 생각한 건가?",
+    "어쨌건… 혼자서는 다 못 먹으니까\r\n네게도 줄게",
+    "…그런 짓은 못 해",
+    "글쎄…",
+    "뭐… \r\n그런 걸로 해 둬",
+    "포기하고 싶어지면 \r\n언제든지 내기를 포기하도록 해",
+    "비록 네가 패배하더라도 \r\n내가 어딘가로 사라지진 않으니까",
+    "그저 너와 거리를 둘 뿐이야",
+    "내 매혹의 저주를 알고도\r\n그렇게 생각하는 건…",
+    "역시 너는 약간…\r\n머리가 이상한 건가?",
+    "아니면 매혹의 저주에 걸려보고 싶은 거야?",
+    "…지금 나한테 떼 쓰는 거야?",
+    "네 말은 전혀 논리적이지 않아",
+    "인간은…\r\n감정의 생물이라고도 하지",
+    "잘 알겠어",
+    "네가 바라는대로 하도록 해",
+    "나는 분명 경고 했어",
+    "급작스러운 질문에 당황한 것 같네",
+    "내가 위험해 보이냐는 질문…",
+    "정답이 있지만 없는 질문이야",
+    "그저 너의 생각을 알고 싶은 것뿐",
+    "그러니까 편하게 의견을 들려줘",
+    "…상관 없다만",
+    "안젤리카는…\r\n내 친구",
+    "둘도 없는 친구",
+    "내게 이 육신을 준 존재",
+    "나는 인간을 싫어하지만",
+    "지금도 안젤리카만큼은 아끼고 있어",
+    "안젤리카가 숨을 거두는 순간에 \r\n내가 그녀의 곁에 있지 못한 게 아직도 후회스러워"
+  ],
+  "comments": [
+    {
+      "writer": "메피스토펠레스",
+      "comment": "어딘가 계속 그립고, 친숙한 느낌이 듭니다. 하지만, 지독히 슬픈 느낌 역시 드네요…"
+    },
+    {
+      "writer": "비비안",
+      "comment": "단순해 보이지만 생각이 많고, 생각이 많아 보이지만 단순하단다. 까다로운 정령이지."
+    },
+    {
+      "writer": "캐서린",
+      "comment": "태초의 어머니 정령 이브… 직접 만나뵈니 무어라 말을 건네야 할지 모르겠네요…"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "이브",
+        "message": "이게 바로 에버톡…"
+      },
+      {
+        "speaker": "이브",
+        "message": "정령들은 여전히 \r\n인간 흉내를 내는 걸 좋아하는구나"
+      },
+      {
+        "speaker": "이브",
+        "message": "사용법은 잘 알았어"
+      },
+      {
+        "speaker": "이브",
+        "message": "앞으로 무슨 일이 있다면 \r\n내게 이걸로 연락하도록 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 부탁해 이브"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 부탁해 이브"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "그래"
+      },
+      {
+        "speaker": "이브",
+        "message": "잘 부탁할게"
+      },
+      {
+        "speaker": "이브",
+        "message": "네가 나를 구했으니"
+      },
+      {
+        "speaker": "이브",
+        "message": "나도 너를 돕도록 하지"
+      },
+      {
+        "speaker": "이브",
+        "message": "하지만 기억해 둬"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는 어디까지나 의리로 너를 돕겠지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "너와 가까워질 생각은 없어"
+      },
+      {
+        "speaker": "이브",
+        "message": "너 뿐만이 아니라 \r\n다른 정령들과도"
+      },
+      {
+        "speaker": "이브",
+        "message": "나와 원만한 관계를 유지하고 싶다면 \r\n그걸 꼭 기억하도록 해"
+      },
+      {
+        "speaker": "이브",
+        "message": "구원자"
+      },
+      {
+        "speaker": "이브",
+        "message": "가급적 빨리 네 방으로 돌아가"
+      },
+      {
+        "speaker": "구원자",
+        "message": "???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웬 과일이야???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웬 과일이야???"
+      },
+      {
+        "speaker": "이브",
+        "message": "저번에 시장에서 과일을 받은 걸 사양했더니"
+      },
+      {
+        "speaker": "이브",
+        "message": "오히려 기회라면서 \r\n더 많이 보내왔어…"
+      },
+      {
+        "speaker": "이브",
+        "message": "구원자 너와 함께 시장에 나가서 그랬는지"
+      },
+      {
+        "speaker": "이브",
+        "message": "영주님이 계신 방주로 \r\n물건을 보내면 된다고 생각했나 봐"
+      },
+      {
+        "speaker": "이브",
+        "message": "…어차피 내가 물건을 안 받아들이거나 \r\n나한테 물건이 도착하지 않더라도"
+      },
+      {
+        "speaker": "이브",
+        "message": "영주님께 헌상될 테니  \r\n다들 문제 없다고 생각한 건가?"
+      },
+      {
+        "speaker": "이브",
+        "message": "어쨌건… 혼자서는 다 못 먹으니까\r\n네게도 줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 버리진 않는구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래도 버리진 않는구나"
+      },
+      {
+        "speaker": "이브",
+        "message": "…그런 짓은 못 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "과일엔 죄가 없어서?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "과일엔 죄가 없어서?"
+      },
+      {
+        "speaker": "이브",
+        "message": "글쎄…"
+      },
+      {
+        "speaker": "이브",
+        "message": "뭐… \r\n그런 걸로 해 둬"
+      },
+      {
+        "speaker": "이브",
+        "message": "구원자"
+      },
+      {
+        "speaker": "이브",
+        "message": "포기하고 싶어지면 \r\n언제든지 내기를 포기하도록 해"
+      },
+      {
+        "speaker": "이브",
+        "message": "비록 네가 패배하더라도 \r\n내가 어딘가로 사라지진 않으니까"
+      },
+      {
+        "speaker": "이브",
+        "message": "그저 너와 거리를 둘 뿐이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러니까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러니까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 그게 서운해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나는 그게 서운해"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "내 매혹의 저주를 알고도\r\n그렇게 생각하는 건…"
+      },
+      {
+        "speaker": "이브",
+        "message": "역시 너는 약간…\r\n머리가 이상한 건가?"
+      },
+      {
+        "speaker": "이브",
+        "message": "아니면 매혹의 저주에 걸려보고 싶은 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저주에 걸리고 싶은 건 아냐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "저주에 걸리고 싶은 건 아냐"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그치만 이브랑 멀어지는 건 싫어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그치만 이브랑 멀어지는 건 싫어"
+      },
+      {
+        "speaker": "이브",
+        "message": "…지금 나한테 떼 쓰는 거야?"
+      },
+      {
+        "speaker": "이브",
+        "message": "네 말은 전혀 논리적이지 않아"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "인간은…\r\n감정의 생물이라고도 하지"
+      },
+      {
+        "speaker": "이브",
+        "message": "잘 알겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "네가 바라는대로 하도록 해"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는 분명 경고 했어"
+      },
+      {
+        "speaker": "이브",
+        "message": "급작스러운 질문에 당황한 것 같네"
+      },
+      {
+        "speaker": "이브",
+        "message": "내가 위험해 보이냐는 질문…"
+      },
+      {
+        "speaker": "이브",
+        "message": "정답이 있지만 없는 질문이야"
+      },
+      {
+        "speaker": "이브",
+        "message": "그저 너의 생각을 알고 싶은 것뿐"
+      },
+      {
+        "speaker": "이브",
+        "message": "그러니까 편하게 의견을 들려줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 전에…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그 전에…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐 하나 물어봐도 돼?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐 하나 물어봐도 돼?"
+      },
+      {
+        "speaker": "이브",
+        "message": "…상관 없다만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안젤리카가 대체 누구야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안젤리카가 대체 누구야?"
+      },
+      {
+        "speaker": "이브",
+        "message": "안젤리카는…\r\n내 친구"
+      },
+      {
+        "speaker": "이브",
+        "message": "둘도 없는 친구"
+      },
+      {
+        "speaker": "이브",
+        "message": "내게 이 육신을 준 존재"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는 인간을 싫어하지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "지금도 안젤리카만큼은 아끼고 있어"
+      },
+      {
+        "speaker": "이브",
+        "message": "안젤리카가 숨을 거두는 순간에 \r\n내가 그녀의 곁에 있지 못한 게 아직도 후회스러워"
+      },
+      {
+        "speaker": "이브",
+        "message": "어째서 인간은 그렇게 쉽게 죽는 걸까…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 죽을 때는 옆에 있을래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가 죽을 때는 옆에 있을래?"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "그래"
+      },
+      {
+        "speaker": "이브",
+        "message": "네가 죽는 모습은 내가 지켜봐줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 생각해 봤는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 생각해 봤는데…"
+      },
+      {
+        "speaker": "이브",
+        "message": "?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브는 위험하기도 하고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브는 위험하기도 하고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안 위험하기도 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안 위험하기도 해"
+      },
+      {
+        "speaker": "이브",
+        "message": "……?"
+      },
+      {
+        "speaker": "이브",
+        "message": "지난 번에 물어본 질문에 대한 답이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "객관적으로 보면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "객관적으로 보면"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브의 능력은 확실히 위험한데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브의 능력은 확실히 위험한데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그것만으로 위험하다고 하는 건 이상해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그것만으로 위험하다고 하는 건 이상해"
+      },
+      {
+        "speaker": "이브",
+        "message": "능력이 위험하면 \r\n그것만으로도 위험 요소 아닌가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 이브는 싸움을 싫어하잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 이브는 싸움을 싫어하잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "세상을 멸망시키고 싶어하지도 않고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "세상을 멸망시키고 싶어하지도 않고"
+      },
+      {
+        "speaker": "이브",
+        "message": "…내 입장은 언제든지 \r\n바뀔 수 있는 거 아닌가?"
+      },
+      {
+        "speaker": "이브",
+        "message": "지금에야 너와 함께 지내고 있고\r\n별다른 이유가 없으니 조용하지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "나도 이유가 있다면 \r\n세상을 파괴하려고 들 수도 있어"
+      },
+      {
+        "speaker": "이브",
+        "message": "그럼에도 나는 위험하지 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브가 적이라면 무섭겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브가 적이라면 무섭겠다"
+      },
+      {
+        "speaker": "이브",
+        "message": "하지만 너는 지금의 내가 아군이니까 \r\n당장은 위험하지 않다고 여기는 거군"
+      },
+      {
+        "speaker": "이브",
+        "message": "네 생각은 잘 알겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "너는 많이… 무르군"
+      },
+      {
+        "speaker": "이브",
+        "message": "…역시 내가 아는 인간들과는 달라"
+      },
+      {
+        "speaker": "이브",
+        "message": "오늘도 또 과일이 도착했어"
+      },
+      {
+        "speaker": "이브",
+        "message": "이번에는 과일 뿐만 아니라 \r\n옷가지나 장신구 같은 것도"
+      },
+      {
+        "speaker": "이브",
+        "message": "…그만했으면 좋겠는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "역시 이런 걸 받으면 귀찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "역시 이런 걸 받으면 귀찮아?"
+      },
+      {
+        "speaker": "이브",
+        "message": "귀찮은 게 아니야"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는…"
+      },
+      {
+        "speaker": "이브",
+        "message": "이런 호의에 \r\n어떻게 답해야 할지 모르겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는 정령도 인간도 \r\n용서할 생각이 없어"
+      },
+      {
+        "speaker": "이브",
+        "message": "내게 어떤 선물을 주더라도\r\n나는 기뻐하지 않을 거야"
+      },
+      {
+        "speaker": "이브",
+        "message": "내게 아무리 애정을 쏟더라도\r\n내가 같은 애정을 돌려줄 수는 없어"
+      },
+      {
+        "speaker": "이브",
+        "message": "그럼에도 대체 왜 이러는 걸까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브는 미안한 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브는 미안한 거야?"
+      },
+      {
+        "speaker": "이브",
+        "message": "내가 어째서?"
+      },
+      {
+        "speaker": "이브",
+        "message": "…그저 곤란할 뿐이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 보통 이런 경우에는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 보통 이런 경우에는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "호의에 답하지 못하는 걸 신경쓰기보다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "호의에 답하지 못하는 걸 신경쓰기보다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "상대를 귀찮게 생각하지 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "상대를 귀찮게 생각하지 않아?"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "그렇게 생각해 본 적은…"
+      },
+      {
+        "speaker": "이브",
+        "message": "단 한번도 없어…"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "공식적으로 알려진 태초의 정령은 나지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "태초의 정령은 나 혼자가 아니야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "이브",
+        "message": "나와는 다른 또 한 명의 태초의 정령…"
+      },
+      {
+        "speaker": "이브",
+        "message": "그 아이는 나랑 달리 \r\n바깥으로 나가는 일도 없었고"
+      },
+      {
+        "speaker": "이브",
+        "message": "많은 이들에게 사랑받는 일도 없었지"
+      },
+      {
+        "speaker": "이브",
+        "message": "오직 공방만이 그의 존재를 알고 있었어"
+      },
+      {
+        "speaker": "이브",
+        "message": "먼 옛날의 나는 세상에 알려지지 않은 \r\n그 아이를 가엾게 여겼지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "너무 많은 시선을 받아버린 \r\n지금은 잘 모르겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "세상에 외면당한 그 아이와 \r\n세상에 과하게 주목 받은 나"
+      },
+      {
+        "speaker": "이브",
+        "message": "진짜로 행복한 건 어느 쪽이었을까…"
+      },
+      {
+        "speaker": "이브",
+        "message": "정령이란 존재는 어째서 태어난 걸까"
+      },
+      {
+        "speaker": "이브",
+        "message": "가끔 그런 의문을 품을 때가 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑작스럽네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑작스럽네"
+      },
+      {
+        "speaker": "이브",
+        "message": "너희들 인간은 \r\n육체를 지닌 상태로 태어나지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "우리들 정령의 원형이 되는 ANIMA는 \r\n육체가 없는 존재니까"
+      },
+      {
+        "speaker": "이브",
+        "message": "지금의 지구…"
+      },
+      {
+        "speaker": "이브",
+        "message": "에덴처럼 마나가 풍부한 곳이라면\r\n일시적으로 실체화할 수도 있었겠지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "기본적으로 우리는 영혼에 불과해"
+      },
+      {
+        "speaker": "이브",
+        "message": "먼 과거 초인류들이 존재하던 세계에서는…"
+      },
+      {
+        "speaker": "이브",
+        "message": "ANIMA 중에서도 특별히 강한 \r\nEVERSOUL만이 육체를 얻어 정령이 되었지만…"
+      },
+      {
+        "speaker": "이브",
+        "message": "여기서는 그렇게 강하지 않은 \r\nANIMA라도 육신을 얻을 수 있는 것 같더군"
+      },
+      {
+        "speaker": "이브",
+        "message": "…그들의 존재 의미는 무엇일까"
+      },
+      {
+        "speaker": "이브",
+        "message": "게이트 사건을 해결하기 위해 \r\n분주하는 지금 상황에서"
+      },
+      {
+        "speaker": "이브",
+        "message": "그런 약한 정령들의 존재는 오히려 \r\n모두의 발목을 잡을 뿐이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "자연의 법칙대로라면 그런 약한 존재는\r\n제거되어 사라지고"
+      },
+      {
+        "speaker": "이브",
+        "message": "강력한 개체만이 남을텐데도…"
+      },
+      {
+        "speaker": "이브",
+        "message": "에덴은 오히려 그런 약한 정령들이\r\n대다수를 차지하고 있지"
+      },
+      {
+        "speaker": "이브",
+        "message": "무리에서 탈락자가 나타나지 않도록 \r\n서로를 돕는 건 인간의 특징이라고도 해"
+      },
+      {
+        "speaker": "이브",
+        "message": "인간이 없어져버린 이 세상에서…"
+      },
+      {
+        "speaker": "이브",
+        "message": "정령들은 새로운 인간이 되고 싶은 걸까…"
+      },
+      {
+        "speaker": "이브",
+        "message": "나를 깨운게 네가 아니었다면…"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는 아마 다시 잠들기를 택했겠지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러고 보니 묻고 싶었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러고 보니 묻고 싶었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브는 어째서 날 돕는 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브는 어째서 날 돕는 거야?"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "궁금해"
+      },
+      {
+        "speaker": "이브",
+        "message": "초인류의 인간이 아닌 \r\n너에게도 내가 실망할지"
+      },
+      {
+        "speaker": "이브",
+        "message": "아니면 다른 희망을 가질 수 있을지"
+      },
+      {
+        "speaker": "이브",
+        "message": "아주 오랜 세월동안 \r\n너희들 인간을 관찰해왔지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는 아직도 판단하지 못하고 있어"
+      },
+      {
+        "speaker": "이브",
+        "message": "너희에게는 분명 선성이라는 게 \r\n존재하지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "동시에 악성이라고 부를 만한 \r\n추악한 부분들도 많이 존재하지"
+      },
+      {
+        "speaker": "이브",
+        "message": "그 두 가지 성질 중 \r\n어느 쪽을 택할지 정하는 요소가 뭔지…"
+      },
+      {
+        "speaker": "이브",
+        "message": "지켜보고 싶다고 생각했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…이건 내 착각일 수도 있는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…이건 내 착각일 수도 있는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브는 인간을 믿고 싶어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브는 인간을 믿고 싶어?"
+      },
+      {
+        "speaker": "이브",
+        "message": "…모르겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "나 자신도 내가 어떤 감정인지\r\n잘 모르겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "어쩌면 내가 네게 내기를 권한 것도…"
+      },
+      {
+        "speaker": "이브",
+        "message": "너를 믿을 만한 존재라고\r\n생각하고 싶어서일지도 모르겠네"
+      },
+      {
+        "speaker": "이브",
+        "message": "인간은 자주 아프곤 하지"
+      },
+      {
+        "speaker": "이브",
+        "message": "먼 옛날…\r\n비극적인 사건이 일어나기 전에는…"
+      },
+      {
+        "speaker": "이브",
+        "message": "나도 때때로 공방의 인간들을 간호하곤 했어"
+      },
+      {
+        "speaker": "이브",
+        "message": "반대로 내게 무슨 일이 생겼을 때도 \r\n안젤리카와 공방의 인간들이 나를 돌봐줬고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떤 식으로 돌봐줬는데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "어떤 식으로 돌봐줬는데?"
+      },
+      {
+        "speaker": "이브",
+        "message": "정령술사가 정령을 관리하는 것과 같아"
+      },
+      {
+        "speaker": "이브",
+        "message": "내가 공방에서 지내던 시절에는 \r\n아직 정령술 자체가 정착되지 않았으니까"
+      },
+      {
+        "speaker": "이브",
+        "message": "다양한 수단으로 날 간호하려 했지"
+      },
+      {
+        "speaker": "이브",
+        "message": "인간처럼 침대에 눕히고 \r\n열을 식혀주려고 하거나…"
+      },
+      {
+        "speaker": "이브",
+        "message": "환자가 먹는 음식을 만들어서 먹이거나…"
+      },
+      {
+        "speaker": "이브",
+        "message": "정령을 제작하는 데 쓰이는 설비를 써서\r\n나를 치료하려 하기도 했고…"
+      },
+      {
+        "speaker": "이브",
+        "message": "그 덕분에 정령술의 기초를 다졌다고는 하는데…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하는데…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하는데…?"
+      },
+      {
+        "speaker": "이브",
+        "message": "당시 내게 있어 제일 큰 영향을 미친 건…"
+      },
+      {
+        "speaker": "이브",
+        "message": "인간들이 나를 보며 걱정하는 얼굴이었던 것 같아"
+      },
+      {
+        "speaker": "이브",
+        "message": "정령은 영혼이 육신을 얻은 존재니…"
+      },
+      {
+        "speaker": "이브",
+        "message": "마음으로 입은 상처는 마음으로 치료하는 게 \r\n어찌보면 말이 되긴 하는군"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…나도 언젠가는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…나도 언젠가는"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브의 마음이 다쳤을 때 치료해줄 수 있을까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이브의 마음이 다쳤을 때 치료해줄 수 있을까"
+      },
+      {
+        "speaker": "이브",
+        "message": "…글쎄"
+      },
+      {
+        "speaker": "이브",
+        "message": "네가 치료하기에는 내 상처는 너무 오래되어서\r\n효과가 있을지 잘 모르겠네"
+      },
+      {
+        "speaker": "이브",
+        "message": "그래도…"
+      },
+      {
+        "speaker": "이브",
+        "message": "시도해보는 건 나쁘진 않겠지"
+      },
+      {
+        "speaker": "이브",
+        "message": "나가는 건 가급적 지양하고 있었지만…"
+      },
+      {
+        "speaker": "이브",
+        "message": "그래도 정령술사인 너와 함께라면 \r\n괜찮을지도 모르겠군"
+      },
+      {
+        "speaker": "이브",
+        "message": "정령들만의 세상에서 \r\n정령들이 어떻게 살아가고 있는지…"
+      },
+      {
+        "speaker": "이브",
+        "message": "내 눈으로 직접 확인하겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "구원자"
+      },
+      {
+        "speaker": "이브",
+        "message": "약속대로 시장에서 벌어진 일에 대해 설명해줄게"
+      },
+      {
+        "speaker": "이브",
+        "message": "이따가 내 개인실로 오도록 해"
+      },
+      {
+        "speaker": "이브",
+        "message": "드디어 내기가 본격적으로 시작되었군"
+      },
+      {
+        "speaker": "이브",
+        "message": "언제쯤 널 만나러 가면 되지?"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "구원자?"
+      },
+      {
+        "speaker": "이브",
+        "message": "……."
+      },
+      {
+        "speaker": "이브",
+        "message": "자고 있나…?"
+      },
+      {
+        "speaker": "이브",
+        "message": "오늘은 내 질문에 대답할 수 있겠어?"
+      },
+      {
+        "speaker": "이브",
+        "message": "저번에도 말했지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "긴장할 필요 없어"
+      },
+      {
+        "speaker": "이브",
+        "message": "그저 네 생각을 말하면 돼"
+      },
+      {
+        "speaker": "이브",
+        "message": "설마 일이 이렇게 커질 줄이야…"
+      },
+      {
+        "speaker": "이브",
+        "message": "어떻게든 해결할 방법을 찾아야겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "신세를 좀 지도록 하지"
+      },
+      {
+        "speaker": "이브",
+        "message": "오늘이네"
+      },
+      {
+        "speaker": "이브",
+        "message": "지긋지긋한 착각을 끝내는 날이"
+      },
+      {
+        "speaker": "이브",
+        "message": "걱정하지 마"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는 남들 앞에 나서는 데에 익숙하니까"
+      },
+      {
+        "speaker": "이브",
+        "message": "어떻게든 될 거야"
+      },
+      {
+        "speaker": "이브",
+        "message": "네가 정령술사인 이상 \r\n내 과거를 알게 되는 건 불가피했지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "그래도 이런 형태로 보여주고 싶지는 않았어"
+      },
+      {
+        "speaker": "이브",
+        "message": "…나의 치부를 무방비하게 노출한\r\n이 상황이…"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는 아주 치욕스러워"
+      },
+      {
+        "speaker": "이브",
+        "message": "어디서부터 잘못된 건지 모르겠어"
+      },
+      {
+        "speaker": "이브",
+        "message": "내가 너를 더 밀어냈어야 했을까"
+      },
+      {
+        "speaker": "이브",
+        "message": "아니면 반대로 너를 완전히 받아들였어야 했을까"
+      },
+      {
+        "speaker": "이브",
+        "message": "이런 결말은 예상하지 못했어"
+      },
+      {
+        "speaker": "이브",
+        "message": "나는…"
+      },
+      {
+        "speaker": "이브",
+        "message": "너를 아끼고 싶었는데…"
+      },
+      {
+        "speaker": "이브",
+        "message": "승부에 비겁한 수를 쓰다니…"
+      },
+      {
+        "speaker": "이브",
+        "message": "하지만…"
+      },
+      {
+        "speaker": "이브",
+        "message": "너의 기지는 인정하도록 할게"
+      },
+      {
+        "speaker": "이브",
+        "message": "계속해서 너를 지켜볼 거야"
+      },
+      {
+        "speaker": "이브",
+        "message": "네가 유혹에 질지"
+      },
+      {
+        "speaker": "이브",
+        "message": "아니면… 계속해서 유혹에 이길 수 있을지"
+      },
+      {
+        "speaker": "이브",
+        "message": "네 앞에만 서면 자꾸 마음이 약해져"
+      },
+      {
+        "speaker": "이브",
+        "message": "너는 나를 도대체 어떻게 하고 싶은 거야?"
+      },
+      {
+        "speaker": "이브",
+        "message": "이 이상 소중한 건 만들지 않겠다고 다짐했는데"
+      },
+      {
+        "speaker": "이브",
+        "message": "자꾸 네가 나의 연약한 부분으로 파고들고 말아"
+      },
+      {
+        "speaker": "이브",
+        "message": "너를 만난 것 자체가"
+      },
+      {
+        "speaker": "이브",
+        "message": "내게는 구원이라고 인정해야 하는 거야?"
+      },
+      {
+        "speaker": "이브",
+        "message": "알려줘"
+      },
+      {
+        "speaker": "이브",
+        "message": "네가 나한테 받는 선물을 기뻐할 지는 모르겠지만"
+      },
+      {
+        "speaker": "이브",
+        "message": "일단 그래도…\r\n이 선물에 달콤한 마음을 담아봤어"
+      },
+      {
+        "speaker": "이브",
+        "message": "해피 발렌타인, 구원자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 이브! 사랑이 느껴져!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 이브! 사랑이 느껴져!"
+      },
+      {
+        "speaker": "이브",
+        "message": "아는 게 많아질 수록 \r\n세상은 점점 더 선명하게 보이는 법이지"
+      },
+      {
+        "speaker": "이브",
+        "message": "무지함 또한 축복이지만\r\n풍부한 지식은 자신을 지키는 무기가 될 수 있어"
+      },
+      {
+        "speaker": "이브",
+        "message": "새로운 사실을 배워서 스스로를 무장하는 쾌락…\r\n즐길 수 있을 때 충분히 즐기도록 해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워 이브! 조만간 찾아갈게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워 이브! 조만간 찾아갈게!"
+      },
+      {
+        "speaker": "이브",
+        "message": "…이브의 날이라니\r\n상상만 해도 끔찍해"
+      },
+      {
+        "speaker": "이브",
+        "message": "하지만 네게는 딱히 죄가 없으니\r\n선물을 주도록 할게"
+      },
+      {
+        "speaker": "이브",
+        "message": "…해피 홀리데이."
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 홀리데이, 이브!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 홀리데이, 이브!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "이브",
+      "en": "Eve",
+      "zh_tw": "夏娃",
+      "zh_cn": "夏娃"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "악마형",
+      "en": "Demon",
+      "zh_tw": "惡魔型",
+      "zh_cn": "惡魔型"
+    },
+    "class": {
+      "ko": "디펜더",
+      "en": "Defender",
+      "zh_tw": "捍衛者",
+      "zh_cn": "捍衛者"
+    },
+    "sub_class": {
+      "ko": "보호",
+      "en": "Protect",
+      "zh_tw": "保護",
+      "zh_cn": "保護"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "금지된 지혜",
+        "en": "Forbidden Wisdom",
+        "zh_tw": "禁忌智慧",
+        "zh_cn": "禁忌智慧"
+      },
+      "constellation": {
+        "ko": "염소자리",
+        "en": "Capricorn",
+        "zh_tw": "摩羯座",
+        "zh_cn": "摩羯座"
+      },
+      "union": {
+        "ko": "파우스트 공방",
+        "en": "Faust's Workshop",
+        "zh_tw": "浮士德工坊",
+        "zh_cn": "浮士德工坊"
+      },
+      "cv_ko": {
+        "ko": "이현진",
+        "en": "Lee Hyunjin",
+        "zh_tw": "李賢真",
+        "zh_cn": "李賢真"
+      },
+      "cv_jp": {
+        "ko": "이현진",
+        "en": "Lee Hyunjin",
+        "zh_tw": "李賢真",
+        "zh_cn": "李賢真"
+      },
+      "like": {
+        "ko": [
+          "실험",
+          "논리적인 결론"
+        ],
+        "en": [
+          "Experiments",
+          "logical conclusion"
+        ],
+        "zh_tw": [
+          "實驗、具邏輯的結論"
+        ],
+        "zh_cn": [
+          "實驗、具邏輯的結論"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "맹목"
+        ],
+        "en": [
+          "Recklessness"
+        ],
+        "zh_tw": [
+          "盲目"
+        ],
+        "zh_cn": [
+          "盲目"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "바깥 돌아다니기"
+        ],
+        "en": [
+          "Going around outside"
+        ],
+        "zh_tw": [
+          "在外閒晃"
+        ],
+        "zh_cn": [
+          "在外閒晃"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "분석",
+          "회유"
+        ],
+        "en": [
+          "Analysis",
+          "conciliation"
+        ],
+        "zh_tw": [
+          "分析、勸導"
+        ],
+        "zh_cn": [
+          "分析、勸導"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "그래, 네가 바로 구원자라고 불리는 인간의 아이구나. \n\n나는 이브. \n태초의 정령 아담과 함께 만들어진, 최초의 여성형 정령.\n\n네가 나를 구했으니, 예의에 따라 나는 너를 돕겠어.\n하지만 그렇다고 해서 내가 다른 정령들처럼 너를 전적으로 믿고 따를 거라는 기대는 부디 버려주길 바라.\n\n나는 오로지 내가 직접 이 두 눈으로 보아서 사실이라고 입증한 것만을 믿고, 내가 여태까지 보아온 지성체들은 대부분 아주 추악했어. \n\n네가 나로부터 무엇을 바라는지는 잘 모르겠지만, \n만일 네가 금기를 어겨 타락한 나의 지혜를 바란다면 기꺼이 빌려주도록 하지. \n\n자아, 너는 언제까지 나라는 유혹을 견딜 수 있을까.\n너는 언제까지 이성을 유지할 수 있을까. \n어디 한번 잘 저항해 봐.\n\n만일 네가 계속해서 내 앞에서 이성을 유지할 수 있다면…\n그 때는 아주 황홀한 상을 내리도록 할게.",
+        "en": "I see, you are that human known as the Savior.\r\n\r\nI am Eve.\r\nI am the first female Soul, created along with the primal Soul Adam.\r\n\r\nSince you helped me, I will help you as well.\r\nHowever, do not expect me to trust you completely and follow you like other Souls do.\r\n\r\nI only believe in things I've seen with my own eyes, and most of what I've seen was rather hideous.\r\n\r\nI'm not sure what you wish from me, a Soul who has been corrupted for breaking a taboo,\r\nbut if it's my intelligence you seek, I'm willing to share it.\r\n\r\nLet's see how long you can resist me,\r\nhow long you can hold on to reason against me.\r\nGo ahead and try your best.\r\n\r\nIf you manage to stay rational in my presence…\r\nI will give you a great reward.",
+        "zh_tw": "好，看來你就是叫救援者的人類小孩。\r\n\r\n我是夏娃。\r\n我和太古精靈亞當一起被製造而成，是史上第一個女性型精靈。\r\n\r\n既然你拯救了我，基於禮貌，我會幫助你。\r\n但就算是這樣，你也不要期望我會像其他精靈那樣全然信任、跟隨你。\r\n\r\n我只相信我親眼見證的事實，而且我至今見過的智慧生命體都非常醜惡。\r\n\r\n雖然不知道你希望從我這裡得到什麼，\r\n但如果你想得到我觸碰禁忌所墮落的智慧，那我很樂意給你。\r\n\r\n來，你能抵擋我這種誘惑到什麼時候？\r\n你能保持理智到什麼時候？\r\n好好地抵抗看看。\r\n\r\n倘若你能一直在我面前保持理智…\r\n我到時候會賜予你非常令人嚮往的獎賞。",
+        "zh_cn": "好，看來你就是叫救援者的人類小孩。\r\n\r\n我是夏娃。\r\n我和太古精靈亞當一起被製造而成，是史上第一個女性型精靈。\r\n\r\n既然你拯救了我，基於禮貌，我會幫助你。\r\n但就算是這樣，你也不要期望我會像其他精靈那樣全然信任、跟隨你。\r\n\r\n我只相信我親眼見證的事實，而且我至今見過的智慧生命體都非常醜惡。\r\n\r\n雖然不知道你希望從我這裡得到什麼，\r\n但如果你想得到我觸碰禁忌所墮落的智慧，那我很樂意給你。\r\n\r\n來，你能抵擋我這種誘惑到什麼時候？\r\n你能保持理智到什麼時候？\r\n好好地抵抗看看。\r\n\r\n倘若你能一直在我面前保持理智…\r\n我到時候會賜予你非常令人嚮往的獎賞。"
+      },
+      "greeting": {
+        "ko": "나는 파괴하고, 또한 창조하는 자. \n태초의 정령, 모든 정령의 어머니.",
+        "en": "I am a destroyer and a creator.\r\nThe primal Soul and the mother of all Souls.",
+        "zh_tw": "我是破壞者也是創始者。\r\n是太古精靈，是所有精靈之母。",
+        "zh_cn": "我是破壞者也是創始者。\r\n是太古精靈，是所有精靈之母。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "이게 바로 에버톡…"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "So, this is Evertalk."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "這就是EverTalk…"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "這就是EverTalk…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "정령들은 여전히 \r\n인간 흉내를 내는 걸 좋아하는구나"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Souls still like\r\nto imitate humans."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "原來精靈們\r\n仍然喜歡模仿人類"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "原來精靈們\r\n仍然喜歡模仿人類"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "사용법은 잘 알았어"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "I think I've got the hang of it."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "我知道怎麼使用"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "我知道怎麼使用"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "앞으로 무슨 일이 있다면 \r\n내게 이걸로 연락하도록 해"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "If something happens,\r\nyou can contact me on this."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "以後有什麼事，\r\n就用這個聯絡我"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "以後有什麼事，\r\n就用這個聯絡我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "..."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "그래"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "No,"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "好"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "잘 부탁할게"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "thank you."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "多多指教"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "多多指教"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "네가 나를 구했으니"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "You saved me,"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "既然你拯救了我"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "既然你拯救了我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "나도 너를 돕도록 하지"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "so I'll help you."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "我也會幫助你"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "我也會幫助你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "하지만 기억해 둬"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "But keep this in mind:"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "但你要記住"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "但你要記住"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "나는 어디까지나 의리로 너를 돕겠지만"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "I'll only help you out of my sense of duty."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "不管怎樣，我都會出於道義幫助你"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "不管怎樣，我都會出於道義幫助你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "너와 가까워질 생각은 없어"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "I have no intention of getting close to you."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "但我並不打算跟你變得親近"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "但我並不打算跟你變得親近"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "너 뿐만이 아니라 \r\n다른 정령들과도"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "That goes for\r\nall the other Souls as well."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "不只是你，\r\n我跟其他精靈也是如此"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "不只是你，\r\n我跟其他精靈也是如此"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "나와 원만한 관계를 유지하고 싶다면 \r\n그걸 꼭 기억하도록 해"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "If you want us to work well together,\r\nyou'd better remember that."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "如果想跟我維持友好關係，\r\n務必記住這一點"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "如果想跟我維持友好關係，\r\n務必記住這一點"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "구원자"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Savior."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "救援者"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "가급적 빨리 네 방으로 돌아가"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Go back to your room as soon as possible."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "你盡快回到你的房間去"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "你盡快回到你的房間去"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "저번에 시장에서 과일을 받은 걸 사양했더니"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "The other day, they offered me some fruit at the market, and I declined."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "上次在市場拒絕收下水果"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "上次在市場拒絕收下水果"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "오히려 기회라면서 \r\n더 많이 보내왔어…"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "They must have seen it as an opportunity.\r\nThey sent me these."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "他們反而覺得是個機會，\r\n就送來了更多…"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "他們反而覺得是個機會，\r\n就送來了更多…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "구원자 너와 함께 시장에 나가서 그랬는지"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Maybe it was because I went to the market with you,"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "可能是因為我跟救援者一起去市場"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "可能是因為我跟救援者一起去市場"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "영주님이 계신 방주로 \r\n물건을 보내면 된다고 생각했나 봐"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "but they must have thought\r\nthey could send it to the Ark, where their lord was."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "他們就以為把東西送到\r\n領主所在的方舟就可以了"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "他們就以為把東西送到\r\n領主所在的方舟就可以了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "…어차피 내가 물건을 안 받아들이거나 \r\n나한테 물건이 도착하지 않더라도"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "That way, even if I didn't accept it,\r\nor if it didn't reach me,"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "…是因為覺得反正我不收下，\r\n或是東西沒有送到我手上的話"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "…是因為覺得反正我不收下，\r\n或是東西沒有送到我手上的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "영주님께 헌상될 테니  \r\n다들 문제 없다고 생각한 건가?"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "it'd still be offered to\r\ntheir lord, right?"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "也會變成獻給領主，\r\n所以大家覺得沒有問題嗎？"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "也會變成獻給領主，\r\n所以大家覺得沒有問題嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "어쨌건… 혼자서는 다 못 먹으니까\r\n네게도 줄게"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Anyway, I can't eat it all myself.\r\nYou can have some."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "總之…我自己一個人吃不完，\r\n所以分你吃"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "總之…我自己一個人吃不完，\r\n所以分你吃"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "…그런 짓은 못 해"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "...I can't do that."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "…那種事我辦不到"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "…那種事我辦不到"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "글쎄…"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Well..."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "這個嘛…"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "這個嘛…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "뭐… \r\n그런 걸로 해 둬"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Yes,\r\nwe'll leave it at that."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "嗯…\r\n就當作是那樣吧"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "嗯…\r\n就當作是那樣吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "포기하고 싶어지면 \r\n언제든지 내기를 포기하도록 해"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "If you feel like giving up,\r\nyou can always walk away from the bet."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "如果你想放棄，\r\n可以隨時放棄打賭"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "如果你想放棄，\r\n可以隨時放棄打賭"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "비록 네가 패배하더라도 \r\n내가 어딘가로 사라지진 않으니까"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Even if you lose,\r\nI won't disappear into thin air."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "因為就算你輸了，\r\n我也不會消失到某個地方"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "因為就算你輸了，\r\n我也不會消失到某個地方"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "그저 너와 거리를 둘 뿐이야"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "I'll just distance myself from you."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "只是會跟你保持距離罷了"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "只是會跟你保持距離罷了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "내 매혹의 저주를 알고도\r\n그렇게 생각하는 건…"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "For you to think that,\r\neven after knowing my charming curse,"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "都已經知道我的魅惑詛咒了，\r\n你還那樣想…"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "都已經知道我的魅惑詛咒了，\r\n你還那樣想…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "역시 너는 약간…\r\n머리가 이상한 건가?"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "there must be...\r\na little something wrong with you."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "你果然…\r\n腦袋有點問題嗎？"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "你果然…\r\n腦袋有點問題嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "아니면 매혹의 저주에 걸려보고 싶은 거야?"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Or do you want to experience my curse?"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "還是你想被我施魅惑詛咒？"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "還是你想被我施魅惑詛咒？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "…지금 나한테 떼 쓰는 거야?"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "...What are you doing?"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "…你在跟我耍賴嗎？"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "…你在跟我耍賴嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "네 말은 전혀 논리적이지 않아"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "What you're saying is not logical at all."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "你的話完全不符邏輯"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "你的話完全不符邏輯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "인간은…\r\n감정의 생물이라고도 하지"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "You humans are\r\ncreatures of emotion."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "所以人類…\r\n也被稱作情感生物"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "所以人類…\r\n也被稱作情感生物"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "잘 알겠어"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Okay."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "我知道了"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "我知道了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "네가 바라는대로 하도록 해"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Do as you wish."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "我會照你希望的去做"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "我會照你希望的去做"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "나는 분명 경고 했어"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "But don't say I didn't warn you."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "我已經清楚地警告過你了"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "我已經清楚地警告過你了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "급작스러운 질문에 당황한 것 같네"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "You must have been taken aback by the sudden question."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "突如其來的問題好像讓你很慌張"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "突如其來的問題好像讓你很慌張"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "내가 위험해 보이냐는 질문…"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "The question of whether you think I'm a threat."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "我問你我看起來危不危險…"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "我問你我看起來危不危險…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "정답이 있지만 없는 질문이야"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "It has an answer, which really is not an answer."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "雖然有正確答案，但不是那麼重要"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "雖然有正確答案，但不是那麼重要"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "그저 너의 생각을 알고 싶은 것뿐"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "I just want to know what you think."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "我只是想知道你的想法"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "我只是想知道你的想法"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "그러니까 편하게 의견을 들려줘"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "So, feel free to tell me."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "所以你放心告訴我你的意見"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "所以你放心告訴我你的意見"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "…상관 없다만"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "...Sure."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "…我是無所謂"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "…我是無所謂"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "안젤리카는…\r\n내 친구"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "Angelica is...\r\nmy friend."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "安潔莉卡…\r\n是我朋友"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "安潔莉卡…\r\n是我朋友"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "둘도 없는 친구"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "My best friend."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "是我獨一無二的朋友"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "是我獨一無二的朋友"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "내게 이 육신을 준 존재"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "The one who gave me this body."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "是賦予我這副身體的存在"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "是賦予我這副身體的存在"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "나는 인간을 싫어하지만"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "I hate humans,"
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "雖然我討厭人類"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "雖然我討厭人類"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "지금도 안젤리카만큼은 아끼고 있어"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "but I still care about her."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "但至少我現在還是很珍惜安潔莉卡"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "但至少我現在還是很珍惜安潔莉卡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "이브",
+          "message": "안젤리카가 숨을 거두는 순간에 \r\n내가 그녀의 곁에 있지 못한 게 아직도 후회스러워"
+        },
+        "en": {
+          "speaker": "Eve",
+          "message": "I still regret that I wasn't there for her\r\nwhen she took her last breath."
+        },
+        "zh_tw": {
+          "speaker": "夏娃",
+          "message": "我到現在還是很後悔安潔莉卡斷氣的時候，\r\n沒能陪在她身邊"
+        },
+        "zh_cn": {
+          "speaker": "夏娃",
+          "message": "我到現在還是很後悔安潔莉卡斷氣的時候，\r\n沒能陪在她身邊"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "메피스토펠레스",
+          "message": "어딘가 계속 그립고, 친숙한 느낌이 듭니다. 하지만, 지독히 슬픈 느낌 역시 드네요…"
+        },
+        "en": {
+          "speaker": "Mephistopheles",
+          "message": "She gives me a nostalgic, familiar feeling. But at the same time, I can sense a terrible sadness from her…"
+        },
+        "zh_tw": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "莫名讓我覺得很想念、很熟悉，但還有一種極其悲傷的感覺…"
+        },
+        "zh_cn": {
+          "speaker": "梅菲斯托佩萊斯",
+          "message": "莫名讓我覺得很想念、很熟悉，但還有一種極其悲傷的感覺…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "비비안",
+          "message": "단순해 보이지만 생각이 많고, 생각이 많아 보이지만 단순하단다. 까다로운 정령이지."
+        },
+        "en": {
+          "speaker": "Vivienne",
+          "message": "She seems simple but has a lot on her mind. She also seems to have a lot on her mind, but is simple. She's a complicated Soul."
+        },
+        "zh_tw": {
+          "speaker": "薇薇安",
+          "message": "看起來很單純，但有很多想法；看起來有很多想法，但很單純。是個難搞的精靈。"
+        },
+        "zh_cn": {
+          "speaker": "薇薇安",
+          "message": "看起來很單純，但有很多想法；看起來有很多想法，但很單純。是個難搞的精靈。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "캐서린",
+          "message": "태초의 어머니 정령 이브… 직접 만나뵈니 무어라 말을 건네야 할지 모르겠네요…"
+        },
+        "en": {
+          "speaker": "Catherine",
+          "message": "The primal Soul Eve, the mother of all Souls… I don't know what to say now that I've really met her…"
+        },
+        "zh_tw": {
+          "speaker": "凱瑟琳",
+          "message": "太古的精靈之母夏娃…親眼見到她之後，不知道要怎麼跟她搭話呢…"
+        },
+        "zh_cn": {
+          "speaker": "凱瑟琳",
+          "message": "太古的精靈之母夏娃…親眼見到她之後，不知道要怎麼跟她搭話呢…"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "이게 바로 에버톡…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "So, this is Evertalk."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "這就是EverTalk…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "這就是EverTalk…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "정령들은 여전히 \r\n인간 흉내를 내는 걸 좋아하는구나"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Souls still like\r\nto imitate humans."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "原來精靈們\r\n仍然喜歡模仿人類"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "原來精靈們\r\n仍然喜歡模仿人類"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "사용법은 잘 알았어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I think I've got the hang of it."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我知道怎麼使用"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我知道怎麼使用"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "앞으로 무슨 일이 있다면 \r\n내게 이걸로 연락하도록 해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "If something happens,\r\nyou can contact me on this."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "以後有什麼事，\r\n就用這個聯絡我"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "以後有什麼事，\r\n就用這個聯絡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 부탁해 이브"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks, Eve."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃，請多多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃，請多多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 부탁해 이브"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks, Eve."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃，請多多指教"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃，請多多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그래"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "No,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "잘 부탁할게"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "thank you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "多多指教"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "多多指教"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네가 나를 구했으니"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "You saved me,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "既然你拯救了我"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "既然你拯救了我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나도 너를 돕도록 하지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "so I'll help you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我也會幫助你"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我也會幫助你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "하지만 기억해 둬"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But keep this in mind:"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但你要記住"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但你要記住"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는 어디까지나 의리로 너를 돕겠지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I'll only help you out of my sense of duty."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不管怎樣，我都會出於道義幫助你"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不管怎樣，我都會出於道義幫助你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너와 가까워질 생각은 없어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I have no intention of getting close to you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但我並不打算跟你變得親近"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但我並不打算跟你變得親近"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너 뿐만이 아니라 \r\n다른 정령들과도"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "That goes for\r\nall the other Souls as well."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不只是你，\r\n我跟其他精靈也是如此"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不只是你，\r\n我跟其他精靈也是如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나와 원만한 관계를 유지하고 싶다면 \r\n그걸 꼭 기억하도록 해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "If you want us to work well together,\r\nyou'd better remember that."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "如果想跟我維持友好關係，\r\n務必記住這一點"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "如果想跟我維持友好關係，\r\n務必記住這一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "가급적 빨리 네 방으로 돌아가"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Go back to your room as soon as possible."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你盡快回到你的房間去"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你盡快回到你的房間去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "???"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "???"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "為什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웬 과일이야???"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where did this fruit come from?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哪來的水果？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哪來的水果？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웬 과일이야???"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where did this fruit come from?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "哪來的水果？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "哪來的水果？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "저번에 시장에서 과일을 받은 걸 사양했더니"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The other day, they offered me some fruit at the market, and I declined."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "上次在市場拒絕收下水果"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "上次在市場拒絕收下水果"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "오히려 기회라면서 \r\n더 많이 보내왔어…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "They must have seen it as an opportunity.\r\nThey sent me these."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "他們反而覺得是個機會，\r\n就送來了更多…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "他們反而覺得是個機會，\r\n就送來了更多…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "구원자 너와 함께 시장에 나가서 그랬는지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Maybe it was because I went to the market with you,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "可能是因為我跟救援者一起去市場"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "可能是因為我跟救援者一起去市場"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "영주님이 계신 방주로 \r\n물건을 보내면 된다고 생각했나 봐"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but they must have thought\r\nthey could send it to the Ark, where their lord was."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "他們就以為把東西送到\r\n領主所在的方舟就可以了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "他們就以為把東西送到\r\n領主所在的方舟就可以了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…어차피 내가 물건을 안 받아들이거나 \r\n나한테 물건이 도착하지 않더라도"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "That way, even if I didn't accept it,\r\nor if it didn't reach me,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…是因為覺得反正我不收下，\r\n或是東西沒有送到我手上的話"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…是因為覺得反正我不收下，\r\n或是東西沒有送到我手上的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "영주님께 헌상될 테니  \r\n다들 문제 없다고 생각한 건가?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "it'd still be offered to\r\ntheir lord, right?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "也會變成獻給領主，\r\n所以大家覺得沒有問題嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "也會變成獻給領主，\r\n所以大家覺得沒有問題嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "어쨌건… 혼자서는 다 못 먹으니까\r\n네게도 줄게"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Anyway, I can't eat it all myself.\r\nYou can have some."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "總之…我自己一個人吃不完，\r\n所以分你吃"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "總之…我自己一個人吃不完，\r\n所以分你吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 버리진 않는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "At least you don’t throw it away."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過妳還是沒有丟掉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過妳還是沒有丟掉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래도 버리진 않는구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "At least you don't throw it away."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不過妳還是沒有丟掉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不過妳還是沒有丟掉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…그런 짓은 못 해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...I can't do that."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…那種事我辦不到"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…那種事我辦不到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "과일엔 죄가 없어서?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because fruit is innocent?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為水果是無辜的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為水果是無辜的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "과일엔 죄가 없어서?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Because fruit is innocent?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "因為水果是無辜的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "因為水果是無辜的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "글쎄…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Well..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "這個嘛…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "這個嘛…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "뭐… \r\n그런 걸로 해 둬"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Yes,\r\nwe'll leave it at that."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "嗯…\r\n就當作是那樣吧"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "嗯…\r\n就當作是那樣吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "포기하고 싶어지면 \r\n언제든지 내기를 포기하도록 해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "If you feel like giving up,\r\nyou can always walk away from the bet."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "如果你想放棄，\r\n可以隨時放棄打賭"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "如果你想放棄，\r\n可以隨時放棄打賭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "비록 네가 패배하더라도 \r\n내가 어딘가로 사라지진 않으니까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Even if you lose,\r\nI won't disappear into thin air."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "因為就算你輸了，\r\n我也不會消失到某個地方"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "因為就算你輸了，\r\n我也不會消失到某個地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그저 너와 거리를 둘 뿐이야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I'll just distance myself from you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "只是會跟你保持距離罷了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "只是會跟你保持距離罷了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러니까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러니까…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "所以…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "所以…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 그게 서운해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I have a problem with that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是那樣讓我覺得很傷心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是那樣讓我覺得很傷心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나는 그게 서운해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I have a problem with that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是那樣讓我覺得很傷心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是那樣讓我覺得很傷心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내 매혹의 저주를 알고도\r\n그렇게 생각하는 건…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "For you to think that,\r\neven after knowing my charming curse,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "都已經知道我的魅惑詛咒了，\r\n你還那樣想…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "都已經知道我的魅惑詛咒了，\r\n你還那樣想…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "역시 너는 약간…\r\n머리가 이상한 건가?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "there must be...\r\na little something wrong with you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你果然…\r\n腦袋有點問題嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你果然…\r\n腦袋有點問題嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "아니면 매혹의 저주에 걸려보고 싶은 거야?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Or do you want to experience my curse?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "還是你想被我施魅惑詛咒？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "還是你想被我施魅惑詛咒？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저주에 걸리고 싶은 건 아냐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't want to be cursed."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒有想要被妳下咒"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒有想要被妳下咒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "저주에 걸리고 싶은 건 아냐"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't want to be cursed."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我沒有想要被妳下咒"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我沒有想要被妳下咒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그치만 이브랑 멀어지는 건 싫어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I don't want to be separated from you, Eve."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是我不想跟夏娃變疏遠"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是我不想跟夏娃變疏遠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그치만 이브랑 멀어지는 건 싫어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I don't want to be separated from you, Eve."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是我不想跟夏娃變疏遠"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是我不想跟夏娃變疏遠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…지금 나한테 떼 쓰는 거야?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...What are you doing?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…你在跟我耍賴嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…你在跟我耍賴嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네 말은 전혀 논리적이지 않아"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "What you're saying is not logical at all."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你的話完全不符邏輯"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你的話完全不符邏輯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "인간은…\r\n감정의 생물이라고도 하지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "You humans are\r\ncreatures of emotion."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "所以人類…\r\n也被稱作情感生物"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "所以人類…\r\n也被稱作情感生物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "잘 알겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Okay."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我知道了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我知道了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네가 바라는대로 하도록 해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Do as you wish."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我會照你希望的去做"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我會照你希望的去做"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는 분명 경고 했어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But don't say I didn't warn you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我已經清楚地警告過你了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我已經清楚地警告過你了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "급작스러운 질문에 당황한 것 같네"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "You must have been taken aback by the sudden question."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "突如其來的問題好像讓你很慌張"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "突如其來的問題好像讓你很慌張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내가 위험해 보이냐는 질문…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The question of whether you think I'm a threat."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我問你我看起來危不危險…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我問你我看起來危不危險…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "정답이 있지만 없는 질문이야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "It has an answer, which really is not an answer."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "雖然有正確答案，但不是那麼重要"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "雖然有正確答案，但不是那麼重要"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그저 너의 생각을 알고 싶은 것뿐"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I just want to know what you think."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我只是想知道你的想法"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我只是想知道你的想法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그러니까 편하게 의견을 들려줘"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "So, feel free to tell me."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "所以你放心告訴我你的意見"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "所以你放心告訴我你的意見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 전에…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But first..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "在那之前…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "在那之前…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그 전에…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But first..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "在那之前…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "在那之前…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐 하나 물어봐도 돼?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can I ask you something?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可以問你一個問題嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可以問你一個問題嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐 하나 물어봐도 돼?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can I ask you something?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可以問你一個問題嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可以問你一個問題嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…상관 없다만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...Sure."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…我是無所謂"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…我是無所謂"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안젤리카가 대체 누구야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Who's Angelica?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "安潔莉卡到底是誰？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "安潔莉卡到底是誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안젤리카가 대체 누구야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Who's Angelica?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "安潔莉卡到底是誰？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "安潔莉卡到底是誰？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "안젤리카는…\r\n내 친구"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Angelica is...\r\nmy friend."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "安潔莉卡…\r\n是我朋友"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "安潔莉卡…\r\n是我朋友"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "둘도 없는 친구"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "My best friend."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "是我獨一無二的朋友"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "是我獨一無二的朋友"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내게 이 육신을 준 존재"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The one who gave me this body."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "是賦予我這副身體的存在"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "是賦予我這副身體的存在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는 인간을 싫어하지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I hate humans,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "雖然我討厭人類"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "雖然我討厭人類"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "지금도 안젤리카만큼은 아끼고 있어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but I still care about her."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但至少我現在還是很珍惜安潔莉卡"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但至少我現在還是很珍惜安潔莉卡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "안젤리카가 숨을 거두는 순간에 \r\n내가 그녀의 곁에 있지 못한 게 아직도 후회스러워"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I still regret that I wasn't there for her\r\nwhen she took her last breath."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我到現在還是很後悔安潔莉卡斷氣的時候，\r\n沒能陪在她身邊"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我到現在還是很後悔安潔莉卡斷氣的時候，\r\n沒能陪在她身邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "어째서 인간은 그렇게 쉽게 죽는 걸까…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Why do you humans die so easily?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "人類怎麼會那麼輕易就死掉呢…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "人類怎麼會那麼輕易就死掉呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那麼…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那麼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那麼…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那麼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 죽을 때는 옆에 있을래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Will you be there when I die?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我快死掉的時候，妳會待在我身邊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我快死掉的時候，妳會待在我身邊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가 죽을 때는 옆에 있을래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Will you be there when I die?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我快死掉的時候，妳會待在我身邊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我快死掉的時候，妳會待在我身邊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그래"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Yes."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네가 죽는 모습은 내가 지켜봐줄게"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I'll be there to bear witness."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我會看著你死去的模樣"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我會看著你死去的模樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 생각해 봤는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've been thinking about it..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我仔細想過了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我仔細想過了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 생각해 봤는데…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've been thinking about it..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我仔細想過了…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我仔細想過了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "And?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브는 위험하기도 하고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eve, you're dangerous..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃既危險"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃既危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브는 위험하기도 하고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eve, you're dangerous..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃既危險"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃既危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안 위험하기도 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "and not dangerous."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "又不危險"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "又不危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안 위험하기도 해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "and not dangerous."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "又不危險"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "又不危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "지난 번에 물어본 질문에 대한 답이야?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Is that your answer to the question I asked you last time?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "這是上次那個問題的答案嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "這是上次那個問題的答案嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "객관적으로 보면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Objectively speaking,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "客觀來說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "客觀來說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "객관적으로 보면"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Objectively speaking,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "客觀來說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "客觀來說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브의 능력은 확실히 위험한데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "your power is definitely dangerous,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃的能力的確很危險"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃的能力的確很危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브의 능력은 확실히 위험한데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "your power is definitely dangerous,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃的能力的確很危險"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃的能力的確很危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그것만으로 위험하다고 하는 건 이상해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but I shouldn't base my judgment solely on that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但僅僅因為那樣就覺得妳危險很奇怪"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但僅僅因為那樣就覺得妳危險很奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그것만으로 위험하다고 하는 건 이상해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but I shouldn't base my judgment solely on that."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但僅僅因為那樣就覺得妳危險很奇怪"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但僅僅因為那樣就覺得妳危險很奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "능력이 위험하면 \r\n그것만으로도 위험 요소 아닌가?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But if my power is dangerous,\r\nthat alone is a threat, isn't it?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "能力很危險的話，\r\n不也構成了危險因子嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "能力很危險的話，\r\n不也構成了危險因子嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 이브는 싸움을 싫어하잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "True, but Eve, you hate fighting."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是夏娃不喜歡打架嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是夏娃不喜歡打架嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 이브는 싸움을 싫어하잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "True, but Eve, you hate fighting."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是夏娃不喜歡打架嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是夏娃不喜歡打架嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "세상을 멸망시키고 싶어하지도 않고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You don't want to destroy the world, either."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳也不會想讓世界滅亡"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳也不會想讓世界滅亡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "세상을 멸망시키고 싶어하지도 않고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You don't want to destroy the world, either."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳也不會想讓世界滅亡"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳也不會想讓世界滅亡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…내 입장은 언제든지 \r\n바뀔 수 있는 거 아닌가?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...My stance can change\r\nat any time, can't it?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…我的立場\r\n隨時都有可能改變吧？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…我的立場\r\n隨時都有可能改變吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "지금에야 너와 함께 지내고 있고\r\n별다른 이유가 없으니 조용하지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "For now, I'm only keeping quiet because I'm with you\r\nand I have no reason to cause trouble."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "現在是因為跟你待在一起，\r\n沒什麼特別的理由，所以很安分"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "現在是因為跟你待在一起，\r\n沒什麼特別的理由，所以很安分"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나도 이유가 있다면 \r\n세상을 파괴하려고 들 수도 있어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But I could destroy the world\r\nif I wanted to."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但如果有了理由，\r\n我可能也會想毀滅世界"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但如果有了理由，\r\n我可能也會想毀滅世界"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그럼에도 나는 위험하지 않아?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Doesn't that make me dangerous?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "即便如此，你還是不覺得我危險嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "即便如此，你還是不覺得我危險嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브가 적이라면 무섭겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd be scared if you were the enemy."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果夏娃變敵人，感覺會很恐怖"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果夏娃變敵人，感覺會很恐怖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브가 적이라면 무섭겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'd be scared if you were the enemy."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果夏娃變敵人，感覺會很恐怖"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果夏娃變敵人，感覺會很恐怖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "하지만 너는 지금의 내가 아군이니까 \r\n당장은 위험하지 않다고 여기는 거군"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "So, you don't think I'm dangerous right now\r\nbecause I'm your ally."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但你現在跟我在同一陣線，\r\n所以不會覺得我危險"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但你現在跟我在同一陣線，\r\n所以不會覺得我危險"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네 생각은 잘 알겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I get it."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我明白你的看法了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我明白你的看法了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너는 많이… 무르군"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "You are quite... accepting."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你還真是…溫和"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你還真是…溫和"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…역시 내가 아는 인간들과는 달라"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...Not like the other humans I know."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…果然跟我知道的人類不一樣"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…果然跟我知道的人類不一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "오늘도 또 과일이 도착했어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "More fruit arrived today."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "今天又有水果送到了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "今天又有水果送到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "이번에는 과일 뿐만 아니라 \r\n옷가지나 장신구 같은 것도"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "This time, it's not just fruit,\r\nbut clothes and jewelry."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "這次不只是水果，\r\n還有幾件衣服跟飾品"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "這次不只是水果，\r\n還有幾件衣服跟飾品"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…그만했으면 좋겠는데"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...I wish they would stop."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…希望他們別再送來了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…希望他們別再送來了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "역시 이런 걸 받으면 귀찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Does it bother you when you get stuff like this?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳果然覺得收到這些很煩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳果然覺得收到這些很煩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "역시 이런 걸 받으면 귀찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Does it bother you when you get stuff like this?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳果然覺得收到這些很煩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳果然覺得收到這些很煩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "귀찮은 게 아니야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "It doesn't bother me."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不是很煩"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不是很煩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I just..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "이런 호의에 \r\n어떻게 답해야 할지 모르겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I don't know\r\nhow to respond to such kindness."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不知道要怎麼回應\r\n這種善意"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不知道要怎麼回應\r\n這種善意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는 정령도 인간도 \r\n용서할 생각이 없어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I have no intention of forgiving\r\nSouls or humans."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "精靈跟人類，\r\n我都不打算原諒他們"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "精靈跟人類，\r\n我都不打算原諒他們"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내게 어떤 선물을 주더라도\r\n나는 기뻐하지 않을 거야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "No gift you give me will ever\r\nplease me."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不管送我什麼禮物，\r\n我都不會高興的"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不管送我什麼禮物，\r\n我都不會高興的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내게 아무리 애정을 쏟더라도\r\n내가 같은 애정을 돌려줄 수는 없어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "No matter how much affection you shower on me,\r\nI can never reciprocate."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不管怎麼對我示好，\r\n我都沒辦法回報同等的愛意"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不管怎麼對我示好，\r\n我都沒辦法回報同等的愛意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그럼에도 대체 왜 이러는 걸까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "So, why are you doing this to me?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "那到底為什麼還是這樣呢"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "那到底為什麼還是這樣呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브는 미안한 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eve, are you sorry?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃感到很抱歉嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃感到很抱歉嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브는 미안한 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eve, are you sorry?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃感到很抱歉嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃感到很抱歉嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내가 어째서?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Why should I be?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我怎麼會？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我怎麼會？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…그저 곤란할 뿐이야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I just feel... uncomfortable."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…只是會很困擾而已"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…只是會很困擾而已"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 보통 이런 경우에는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But usually in these cases,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…但通常這種狀況"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…但通常這種狀況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 보통 이런 경우에는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But usually in these cases,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…但通常這種狀況"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…但通常這種狀況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "호의에 답하지 못하는 걸 신경쓰기보다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "people think the other person is bothering them,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "比起在意不能回報善意"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "比起在意不能回報善意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "호의에 답하지 못하는 걸 신경쓰기보다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "people think the other person is bothering them,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "比起在意不能回報善意"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "比起在意不能回報善意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "상대를 귀찮게 생각하지 않아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "rather than worrying about not being able to return the favor."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是會覺得對方很煩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是會覺得對方很煩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "상대를 귀찮게 생각하지 않아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "rather than worrying about not being able to return the favor."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不是會覺得對方很煩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不是會覺得對方很煩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그렇게 생각해 본 적은…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I never thought of it that way."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我從來都沒有…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我從來都沒有…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "단 한번도 없어…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Not even once."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "那樣想過…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "那樣想過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "공식적으로 알려진 태초의 정령은 나지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I may be the officially known primordial Soul,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "雖然外界所知的太古精靈是我"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "雖然外界所知的太古精靈是我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "태초의 정령은 나 혼자가 아니야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but I'm not the only primordial Soul."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但其實太古精靈不只有我一個"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但其實太古精靈不只有我一個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나와는 다른 또 한 명의 태초의 정령…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The other primordial Soul..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "還有另一個太古精靈…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "還有另一個太古精靈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그 아이는 나랑 달리 \r\n바깥으로 나가는 일도 없었고"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Unlike me,\r\nshe never went outside,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "那孩子跟我不一樣，\r\n他不需要出去外面"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "那孩子跟我不一樣，\r\n他不需要出去外面"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "많은 이들에게 사랑받는 일도 없었지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "and she was never loved by many."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "也沒有被很多人喜愛"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "也沒有被很多人喜愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "오직 공방만이 그의 존재를 알고 있었어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Only the Workshop knew of her existence."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "只有工坊知道他的存在"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "只有工坊知道他的存在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "먼 옛날의 나는 세상에 알려지지 않은 \r\n그 아이를 가엾게 여겼지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Once upon a time, I pitied her\r\nfor being so unknown to the world."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "很久以前，\r\n我覺得不被世人所知的他很可憐"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "很久以前，\r\n我覺得不被世人所知的他很可憐"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너무 많은 시선을 받아버린 \r\n지금은 잘 모르겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But now, having been the center of so much attention,\r\nI'm not so sure."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但我現在受到太多矚目，\r\n就不太確定"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但我現在受到太多矚目，\r\n就不太確定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "세상에 외면당한 그 아이와 \r\n세상에 과하게 주목 받은 나"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "She was ignored by the world.\r\nI received too much attention."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "被世界冷落的那孩子，\r\n以及受到世界太多矚目的我"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "被世界冷落的那孩子，\r\n以及受到世界太多矚目的我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "진짜로 행복한 건 어느 쪽이었을까…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Which one was really happy?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "哪一種才是真正的幸福…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "哪一種才是真正的幸福…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "정령이란 존재는 어째서 태어난 걸까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Why were we Souls even born?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "所謂的精靈為什麼會出生呢"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "所謂的精靈為什麼會出生呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "가끔 그런 의문을 품을 때가 있어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Sometimes I wonder about that."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我偶爾會浮現這種疑問"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我偶爾會浮現這種疑問"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑작스럽네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's unexpected."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真突然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真突然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑작스럽네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's unexpected."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真突然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真突然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너희들 인간은 \r\n육체를 지닌 상태로 태어나지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "You humans are born\r\nwith a body,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "雖然你們人類\r\n一出生就有形體"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "雖然你們人類\r\n一出生就有形體"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "우리들 정령의 원형이 되는 ANIMA는 \r\n육체가 없는 존재니까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but ANIMA, the origin of us Souls,\r\nhas no physical form."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但我們精靈的原形不滅之魂ANIMA\r\n是沒有形體的存在"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但我們精靈的原形不滅之魂ANIMA\r\n是沒有形體的存在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "지금의 지구…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The current Earth..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "如果現在的地球…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "如果現在的地球…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "에덴처럼 마나가 풍부한 곳이라면\r\n일시적으로 실체화할 수도 있었겠지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "In a mana-rich place like Eden,\r\nwe could temporarily materialize,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "跟伊甸園一樣充滿魔力，\r\n說不定可以暫時被實體化"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "跟伊甸園一樣充滿魔力，\r\n說不定可以暫時被實體化"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "기본적으로 우리는 영혼에 불과해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but we are basically just spirits."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但基本上，我們只是靈魂而已"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但基本上，我們只是靈魂而已"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "먼 과거 초인류들이 존재하던 세계에서는…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "In the distant past, in the world of the Homo Dominas,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "在遙遠的過去，存有超人類的世界裡…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "在遙遠的過去，存有超人類的世界裡…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "ANIMA 중에서도 특별히 강한 \r\nEVERSOUL만이 육체를 얻어 정령이 되었지만…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "only the strongest of the ANIMA, the EVERSOULS,\r\ncould gain bodies and become Souls."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不滅之魂ANIMA當中，\r\n也只有特別強大的永恆靈魂可以獲得形體，變成精靈…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不滅之魂ANIMA當中，\r\n也只有特別強大的永恆靈魂可以獲得形體，變成精靈…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "여기서는 그렇게 강하지 않은 \r\nANIMA라도 육신을 얻을 수 있는 것 같더군"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But here, it seems that\r\neven not-so-strong ANIMA can get them."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但看來在這裡，就算不是特別強大的不滅之魂ANIMA\r\n也可以擁有形體"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但看來在這裡，就算不是特別強大的不滅之魂ANIMA\r\n也可以擁有形體"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…그들의 존재 의미는 무엇일까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...What's the meaning of their existence?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…他們存在的意義是什麼呢"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…他們存在的意義是什麼呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "게이트 사건을 해결하기 위해 \r\n분주하는 지금 상황에서"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "At a time like this, when we're busy\r\ntrying to solve the Gate incident,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "現在這種忙著解決\r\n傳送門事件的狀況"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "現在這種忙著解決\r\n傳送門事件的狀況"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그런 약한 정령들의 존재는 오히려 \r\n모두의 발목을 잡을 뿐이야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "such weak Souls\r\nonly hinder everyone."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "那種弱小的精靈\r\n反而會拖了大家的後腿"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "那種弱小的精靈\r\n反而會拖了大家的後腿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "자연의 법칙대로라면 그런 약한 존재는\r\n제거되어 사라지고"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "According to the laws of nature,\r\nsuch weak beings should be eliminated and disappear,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "按照自然法則，\r\n那種弱小的存在會被淘汰、消失"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "按照自然法則，\r\n那種弱小的存在會被淘汰、消失"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "강력한 개체만이 남을텐데도…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "leaving only strong individuals,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "而強大的生命體會存活下來…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "而強大的生命體會存活下來…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "에덴은 오히려 그런 약한 정령들이\r\n대다수를 차지하고 있지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but in Eden, such weak Souls\r\nmake up the majority."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但伊甸園反而\r\n大部分都是那種弱小的精靈"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但伊甸園反而\r\n大部分都是那種弱小的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "무리에서 탈락자가 나타나지 않도록 \r\n서로를 돕는 건 인간의 특징이라고도 해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "It's a human trait to help each other out\r\nso that no one's left behind."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "互相幫助，讓群體中不會有人被淘汰\r\n也是人類的特點"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "互相幫助，讓群體中不會有人被淘汰\r\n也是人類的特點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "인간이 없어져버린 이 세상에서…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "In this world where humans are gone,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "在這個人類消失的世界…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "在這個人類消失的世界…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "정령들은 새로운 인간이 되고 싶은 걸까…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "do Souls want to become the new humans?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "精靈們想成為新人類嗎…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "精靈們想成為新人類嗎…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나를 깨운게 네가 아니었다면…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "If it weren't you who had woken me up,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "如果不是你喚醒我…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "如果不是你喚醒我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는 아마 다시 잠들기를 택했겠지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I would have chosen to go back to sleep."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我可能會選擇再次陷入沉睡"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我可能會選擇再次陷入沉睡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러고 보니 묻고 싶었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That reminds me..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "話說回來，我想問妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "話說回來，我想問妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러고 보니 묻고 싶었어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That reminds me..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "話說回來，我想問妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "話說回來，我想問妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브는 어째서 날 돕는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eve, why are you helping me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳怎麼會幫助我？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳怎麼會幫助我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브는 어째서 날 돕는 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eve, why are you helping me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳怎麼會幫助我？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳怎麼會幫助我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "궁금해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I wonder"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我很好奇"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我很好奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "초인류의 인간이 아닌 \r\n너에게도 내가 실망할지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I wonder if I'll be disappointed in you,\r\nwho's not a Homo Domina,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不是超人類的你\r\n是不是也會對我感到失望"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不是超人類的你\r\n是不是也會對我感到失望"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "아니면 다른 희망을 가질 수 있을지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "or if I'll see another reason to hope in you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "還是會懷抱著其他希望"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "還是會懷抱著其他希望"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "아주 오랜 세월동안 \r\n너희들 인간을 관찰해왔지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I have observed you humans\r\nfor many years,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "雖然我觀察了你們人類\r\n這麼長一段時間"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "雖然我觀察了你們人類\r\n這麼長一段時間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는 아직도 판단하지 못하고 있어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "and I have yet to judge."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但我到現在仍然沒辦法判斷"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但我到現在仍然沒辦法判斷"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너희에게는 분명 선성이라는 게 \r\n존재하지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "There's definitely\r\ngoodness in you,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "雖然你們一定有\r\n所謂善良的本性"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "雖然你們一定有\r\n所謂善良的本性"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "동시에 악성이라고 부를 만한 \r\n추악한 부분들도 많이 존재하지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but there's also a lot of ugliness\r\nthat I would call evil."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但也有很多醜陋的面向\r\n足以被說人性本惡"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但也有很多醜陋的面向\r\n足以被說人性本惡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그 두 가지 성질 중 \r\n어느 쪽을 택할지 정하는 요소가 뭔지…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I thought it'd be interesting to see\r\nwhat it is about you"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "決定要選擇哪種本性的要素\r\n究竟是什麼…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "決定要選擇哪種本性的要素\r\n究竟是什麼…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "지켜보고 싶다고 생각했어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "that makes you choose one over the other."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我想觀察看看"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我想觀察看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…이건 내 착각일 수도 있는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I could be mistaken, but..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…可能是我誤會了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…可能是我誤會了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…이건 내 착각일 수도 있는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I could be mistaken, but..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…可能是我誤會了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…可能是我誤會了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브는 인간을 믿고 싶어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eve, do you want to trust humans?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但夏娃想相信人類嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但夏娃想相信人類嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브는 인간을 믿고 싶어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Eve, do you want to trust humans?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但夏娃想相信人類嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但夏娃想相信人類嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…모르겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...I don't know."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…我不知道"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…我不知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나 자신도 내가 어떤 감정인지\r\n잘 모르겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I don't know\r\nhow I feel."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "連我都搞不懂\r\n自己有著什麼樣的情感"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "連我都搞不懂\r\n自己有著什麼樣的情感"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "어쩌면 내가 네게 내기를 권한 것도…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Maybe I offered you that bet because..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "說不定我之所以慫恿你打賭…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "說不定我之所以慫恿你打賭…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너를 믿을 만한 존재라고\r\n생각하고 싶어서일지도 모르겠네"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I wanted to\r\ntrust you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "也是因為我想相信\r\n你是值得信任的存在"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "也是因為我想相信\r\n你是值得信任的存在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "인간은 자주 아프곤 하지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Humans get sick often."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "人類常常有病痛"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "人類常常有病痛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "먼 옛날…\r\n비극적인 사건이 일어나기 전에는…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "A long time ago,\r\nbefore that tragic event,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "很久以前…\r\n在悲劇的事件發生之前…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "很久以前…\r\n在悲劇的事件發生之前…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나도 때때로 공방의 인간들을 간호하곤 했어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I used to nurse the humans in the Workshop from time to time."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我偶爾也會照料在工坊裡的人類"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我偶爾也會照料在工坊裡的人類"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "반대로 내게 무슨 일이 생겼을 때도 \r\n안젤리카와 공방의 인간들이 나를 돌봐줬고"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "When something happened to me,\r\nAngelica and the other humans took care of me, too."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "相反地，在我出事的時候，\r\n安潔莉卡和工坊的人類也有照顧我"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "相反地，在我出事的時候，\r\n安潔莉卡和工坊的人類也有照顧我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떤 식으로 돌봐줬는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How did they take care of you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "他們怎麼照顧妳？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "他們怎麼照顧妳？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "어떤 식으로 돌봐줬는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "How did they take care of you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "他們怎麼照顧妳？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "他們怎麼照顧妳？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "정령술사가 정령을 관리하는 것과 같아"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The same way a Soul Master takes care of his Souls."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "就跟精靈術士管理精靈一樣"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "就跟精靈術士管理精靈一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내가 공방에서 지내던 시절에는 \r\n아직 정령술 자체가 정착되지 않았으니까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Back when I was living in the Workshop,\r\nSoul Mastery hadn't been established yet,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我待在工坊的時期，\r\n精靈術根本還沒成形"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我待在工坊的時期，\r\n精靈術根本還沒成形"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "다양한 수단으로 날 간호하려 했지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "so they tried to take care of me in various ways."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "他們用很多種方式照顧我"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "他們用很多種方式照顧我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "인간처럼 침대에 눕히고 \r\n열을 식혀주려고 하거나…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "They would put me in a bed like a human\r\nand try to cool me down,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "讓我跟人類一樣躺在床上，\r\n想讓我退燒…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "讓我跟人類一樣躺在床上，\r\n想讓我退燒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "환자가 먹는 음식을 만들어서 먹이거나…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "make me food that patients eat,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "或是做一頓病人吃的料理給我…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "或是做一頓病人吃的料理給我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "정령을 제작하는 데 쓰이는 설비를 써서\r\n나를 치료하려 하기도 했고…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "or use the equipment\r\nused to make Souls to heal me."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "還想拿用來製造精靈的設備\r\n治療我…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "還想拿用來製造精靈的設備\r\n治療我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그 덕분에 정령술의 기초를 다졌다고는 하는데…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "That actually laid the foundation for Soul Mastery, but..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不過據說多虧那樣，奠定了精靈術的基礎，但是…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不過據說多虧那樣，奠定了精靈術的基礎，但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하는데…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하는데…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但是…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但是…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "당시 내게 있어 제일 큰 영향을 미친 건…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I think the biggest impact on me at the time was"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你為我帶來最大的影響…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你為我帶來最大的影響…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "인간들이 나를 보며 걱정하는 얼굴이었던 것 같아"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "the concern on the humans' faces as they looked at me."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "好像是人類看著我，露出擔憂的表情"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "好像是人類看著我，露出擔憂的表情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "정령은 영혼이 육신을 얻은 존재니…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "A Soul is a spirit that has gained a body,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "因為精靈是靈魂得到形體的存在…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "因為精靈是靈魂得到形體的存在…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "마음으로 입은 상처는 마음으로 치료하는 게 \r\n어찌보면 말이 되긴 하는군"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "so it makes sense to heal\r\nthe wounds of the heart with the heart."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "所以說不定用心治療內心受的傷\r\n這個辦法說得通"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "所以說不定用心治療內心受的傷\r\n這個辦法說得通"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It does."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It does."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就是說啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…나도 언젠가는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I wonder"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…總有一天"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…總有一天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…나도 언젠가는"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I wonder"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…總有一天"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…總有一天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브의 마음이 다쳤을 때 치료해줄 수 있을까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "if I could heal your heart if it were broken."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也能在夏娃內心受傷的時候，幫妳治療嗎"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也能在夏娃內心受傷的時候，幫妳治療嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이브의 마음이 다쳤을 때 치료해줄 수 있을까"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "if I could heal your heart if it were broken."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也能在夏娃內心受傷的時候，幫妳治療嗎"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也能在夏娃內心受傷的時候，幫妳治療嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…글쎄"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Well..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네가 치료하기에는 내 상처는 너무 오래되어서\r\n효과가 있을지 잘 모르겠네"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "My wounds are too old for you to heal.\r\nI'm not sure if you could."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "因為我的傷口太久遠了，\r\n不知道你來治療有沒有效"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "因為我的傷口太久遠了，\r\n不知道你來治療有沒有效"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그래도…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不過..."
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不過..."
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "시도해보는 건 나쁘진 않겠지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "it couldn't hurt to try."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "嘗試看看應該不是壞事"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "嘗試看看應該不是壞事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나가는 건 가급적 지양하고 있었지만…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I've been avoiding going out as much as possible,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "雖然我盡量抑制著不要外出…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "雖然我盡量抑制著不要外出…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그래도 정령술사인 너와 함께라면 \r\n괜찮을지도 모르겠군"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but with you, the Soul Master,\r\nit might be okay."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但如果是跟身為精靈術士的你一起\r\n可能就沒關係"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但如果是跟身為精靈術士的你一起\r\n可能就沒關係"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "정령들만의 세상에서 \r\n정령들이 어떻게 살아가고 있는지…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I'll see with my own eyes\r\nhow the Souls fare"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我要親眼確認\r\n精靈們是如何在只有精靈的世界…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我要親眼確認\r\n精靈們是如何在只有精靈的世界…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내 눈으로 직접 확인하겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "in their own world."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "生存下去"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "生存下去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Savior."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "약속대로 시장에서 벌어진 일에 대해 설명해줄게"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "As promised, I'll explain what happened at the market."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我會按照約定，跟你解釋在市場發生的事"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我會按照約定，跟你解釋在市場發生的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "이따가 내 개인실로 오도록 해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Come to my private chamber later."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你等等來我的私人房間"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你等等來我的私人房間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "드디어 내기가 본격적으로 시작되었군"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Finally, the bet is in full swing."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "終於正式開始打賭了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "終於正式開始打賭了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "언제쯤 널 만나러 가면 되지?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "When can I come see you?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我要什麼時候去見你？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我要什麼時候去見你？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "구원자?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Savior?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "救援者？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "救援者？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "자고 있나…?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Are you sleeping?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "在睡覺嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "在睡覺嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "오늘은 내 질문에 대답할 수 있겠어?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Can you answer my question today?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你今天能回答我的問題嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你今天能回答我的問題嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "저번에도 말했지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Like I said,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我上次也說過了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我上次也說過了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "긴장할 필요 없어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "you don't have to be nervous about it."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你不用緊張"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你不用緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그저 네 생각을 말하면 돼"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Just tell me what you think."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "只要說出你的想法就好"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "只要說出你的想法就好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "설마 일이 이렇게 커질 줄이야…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I can't believe this has gotten so out of hand."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "沒想到事情會鬧得這麼大…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "沒想到事情會鬧得這麼大…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "어떻게든 해결할 방법을 찾아야겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I have to find a way to fix this somehow."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "無論如何，都要找到解決辦法"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "無論如何，都要找到解決辦法"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "신세를 좀 지도록 하지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I owe you one."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "讓我麻煩你一件事"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "讓我麻煩你一件事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "오늘이네"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Today is the day."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "就是今天了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "就是今天了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "지긋지긋한 착각을 끝내는 날이"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The day I end this tiresome illusion."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "終於要終結讓人厭煩的誤會"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "終於要終結讓人厭煩的誤會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "걱정하지 마"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Don't worry."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "別擔心"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "別擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는 남들 앞에 나서는 데에 익숙하니까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I'm used to being in front of others."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我很習慣站在別人面前"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我很習慣站在別人面前"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "어떻게든 될 거야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "It'll work out somehow."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "無論如何都會沒事的"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "無論如何都會沒事的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네가 정령술사인 이상 \r\n내 과거를 알게 되는 건 불가피했지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Since you are a Soul Master,\r\nit was inevitable that you would learn of my past,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "既然你是精靈術士，\r\n知道我的過去就是難免的事"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "既然你是精靈術士，\r\n知道我的過去就是難免的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "그래도 이런 형태로 보여주고 싶지는 않았어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but I didn't want to show it like this."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但我也不想讓你看見這種型態"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但我也不想讓你看見這種型態"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…나의 치부를 무방비하게 노출한\r\n이 상황이…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...I'm very ashamed of\r\nthis situation"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…這種毫無防備地\r\n暴露我的陰暗面的狀況…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…這種毫無防備地\r\n暴露我的陰暗面的狀況…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는 아주 치욕스러워"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "where I've unwittingly exposed my vulnerability."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "讓我覺得非常羞恥"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "讓我覺得非常羞恥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "어디서부터 잘못된 건지 모르겠어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I don't know where I went wrong."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不知道是哪裡出了差錯"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不知道是哪裡出了差錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내가 너를 더 밀어냈어야 했을까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Should I have pushed you away harder?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我應該更積極地推開你嗎"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我應該更積極地推開你嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "아니면 반대로 너를 완전히 받아들였어야 했을까"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Or should I have accepted you completely?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "還是我反而要全然接受你呢"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "還是我反而要全然接受你呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "이런 결말은 예상하지 못했어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I didn't expect this."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我沒有料到是這樣的結局"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我沒有料到是這樣的結局"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "나는…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너를 아끼고 싶었는데…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I wanted to cherish you..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "很想珍惜你的…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "很想珍惜你的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "승부에 비겁한 수를 쓰다니…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "What a cowardly way to play the game!"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "竟然在勝負上耍小聰明…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "竟然在勝負上耍小聰明…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "하지만…"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但是…"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但是…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너의 기지는 인정하도록 할게"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I recognize your wit."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我承認你很機靈"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我承認你很機靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "계속해서 너를 지켜볼 거야"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I'll keep an eye on you,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我會繼續觀察你"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我會繼續觀察你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네가 유혹에 질지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "to see if you fall to my temptation..."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "看你有沒有敗給誘惑"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "看你有沒有敗給誘惑"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "아니면… 계속해서 유혹에 이길 수 있을지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Or if you can keep beating it."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "還是…能繼續抵擋住誘惑"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "還是…能繼續抵擋住誘惑"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네 앞에만 서면 자꾸 마음이 약해져"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Every time I see you, I feel weak."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "站在你面前，我的心就一直變脆弱"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "站在你面前，我的心就一直變脆弱"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너는 나를 도대체 어떻게 하고 싶은 거야?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "What do you want to do with me?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "你到底想怎麼對我？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "你到底想怎麼對我？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "이 이상 소중한 건 만들지 않겠다고 다짐했는데"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I swore I'd never cherish anything any more,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我都已經下定決心，不要再重視別人了"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我都已經下定決心，不要再重視別人了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "자꾸 네가 나의 연약한 부분으로 파고들고 말아"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "and you keep digging your way into my most vulnerable spots."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但你總是會攻陷我脆弱的部分"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但你總是會攻陷我脆弱的部分"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "너를 만난 것 자체가"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Am I supposed to admit"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "我必須承認遇見你"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "我必須承認遇見你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "내게는 구원이라고 인정해야 하는 거야?"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "that meeting you was my salvation?"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "對我來說就是種救援嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "對我來說就是種救援嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "알려줘"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Tell me."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "告訴我"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "네가 나한테 받는 선물을 기뻐할 지는 모르겠지만"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "I don't know if you'd be pleased with what I got you,"
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "不知道你收到我的禮物會不會很高興"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "不知道你收到我的禮物會不會很高興"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "일단 그래도…\r\n이 선물에 달콤한 마음을 담아봤어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "but...\r\nI put my heart into this gift for you."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但我還是…\r\n在這禮物裝進了甜蜜的心意"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但我還是…\r\n在這禮物裝進了甜蜜的心意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "해피 발렌타인, 구원자"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Happy Valentine's Day, Savior."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "情人節快樂，救援者"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "情人節快樂，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 이브! 사랑이 느껴져!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Eve! I can feel your love!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，夏娃！我感受到愛意了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，夏娃！我感受到愛意了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 이브! 사랑이 느껴져!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Eve! I can feel your love!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，夏娃！我感受到愛意了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，夏娃！我感受到愛意了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "아는 게 많아질 수록 \r\n세상은 점점 더 선명하게 보이는 법이지"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The more you know,\r\nthe more clearly you see the world."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "知道的越多，\r\n看見的世界就會越清晰"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "知道的越多，\r\n看見的世界就會越清晰"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "무지함 또한 축복이지만\r\n풍부한 지식은 자신을 지키는 무기가 될 수 있어"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "Ignorance is a blessing,\r\nbut a wealth of knowledge can serve as a weapon to defend yourself."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "雖然無知也是種福，\r\n但豐富的知識可以成為保護自己的武器"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "雖然無知也是種福，\r\n但豐富的知識可以成為保護自己的武器"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "새로운 사실을 배워서 스스로를 무장하는 쾌락…\r\n즐길 수 있을 때 충분히 즐기도록 해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "The pleasure of arming yourself with new facts...\r\nEnjoy it while you can."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "學習新知識，武裝自己的快樂…\r\n還能享受的時候要好好享受"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "學習新知識，武裝自己的快樂…\r\n還能享受的時候要好好享受"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워 이브! 조만간 찾아갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Eve! I'll be seeing you soon!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，夏娃！我之後再去找妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，夏娃！我之後再去找妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워 이브! 조만간 찾아갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Eve! I'll be seeing you soon!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，夏娃！我之後再去找妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，夏娃！我之後再去找妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…이브의 날이라니\r\n상상만 해도 끔찍해"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...Eve's Day.\r\nI can't even imagine."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…竟然是夏娃之日，\r\n光是想像就好恐怖"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…竟然是夏娃之日，\r\n光是想像就好恐怖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "하지만 네게는 딱히 죄가 없으니\r\n선물을 주도록 할게"
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "But since you're so innocent,\r\nI'll give you a gift."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "但你是無辜的，\r\n所以我會送你禮物"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "但你是無辜的，\r\n所以我會送你禮物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "이브",
+            "message": "…해피 홀리데이."
+          },
+          "en": {
+            "speaker": "Eve",
+            "message": "...Happy Holidays."
+          },
+          "zh_tw": {
+            "speaker": "夏娃",
+            "message": "…假期快樂。"
+          },
+          "zh_cn": {
+            "speaker": "夏娃",
+            "message": "…假期快樂。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 홀리데이, 이브!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Holidays, Eve!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "假期快樂，夏娃！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "假期快樂，夏娃！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 홀리데이, 이브!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Holidays, Eve!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "假期快樂，夏娃！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "假期快樂，夏娃！"
+          }
+        }
+      ]
+    }
+  }
+}

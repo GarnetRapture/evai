@@ -1,0 +1,4510 @@
+{
+  "id": "1050",
+  "name": "제이드",
+  "name_en": "Jade",
+  "grade": "에픽",
+  "race": "인간형",
+  "class": "캐스터",
+  "sub_class": "단일",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "황금의 재상",
+    "constellation": "인연_메피스토_이벤트2",
+    "union": "제이드 상단",
+    "birthday": "304",
+    "height": 167,
+    "weight": 50,
+    "cv_ko": "강시현",
+    "cv_jp": "Sayaka Oohara",
+    "like": [
+      "꽃"
+    ],
+    "dislike": [
+      "기만"
+    ],
+    "hobby": [
+      "보석 관리"
+    ],
+    "speciality": [
+      "정보 수집"
+    ]
+  },
+  "personality": {
+    "description": "구원자님 반가워요. 제 이름은 제이드. \n앞으로 긴 시간을 구원자님과 함께할 정령이랍니다.\n보석에도 꽃처럼 의미가 깃들어있다는 사실을 아시나요? 그중에서도 제이드라는 보석은 부를 상징한다고 해요. \n자, 보세요. 영원히 사라지지 않는 이 아름다움이, 정령과 닮지 않았나요? 영롱하죠.\n\n저는 매일 아침 이것들을 하나하나 꼼꼼히 닦아 빛내는 것으로 일과를 시작해요. \n가치 있는 것들은 이렇게 하나씩 들여다보고, 충분히 정성을 들이는 보람이 있지요. \n…이미 알고 계실 수도 있겠지만, 정령도 마찬가지랍니다. \n당신이 애정을 주고, 하나하나 신경 써 줄수록 그들 역시 더 강한 힘을 뽐낼 수 있어요. 어찌 보면 사랑이나 연애랑도 비슷하다고 볼 수 있겠네요.\n\n저 역시 정령이기에, 구원자님께서 제게 그만한 성의를 보여주셨으면 좋겠어요. \n이제 와서 순수한 애정이나 돈으로 살 수 없는 애착 따위를 믿는 건 아니지만… \n기껏 드라마틱하게 만난 구원자님께서 제게 조금 간지럽고 특별한 시도를 해 줄 수 있지 않을까, 하는 기대 정도는 하고 있답니다. \n구원자님과 저 사이에, 무언가 재미있는 일이 생기면 좋겠네요. 기다려봐도 되겠죠?",
+    "greeting": "황금이 해결하지 못 하는 일은, \n인간이 해결하지 못 하는 일일 뿐."
+  },
+  "speech_patterns": [
+    "구원자님?",
+    "안녕하세요",
+    "이게 구원자님의 연락처군요. 후후",
+    "잘 보관해둘게요",
+    "제이드 상단의 제이드랍니다",
+    "아케나인에 올 때… 종종 연락드려도 될까요?",
+    "후후",
+    "앞으로 아케나인을 방문하는 기쁨이 늘겠어요",
+    "잘 부탁드려요!",
+    "혹시 식사 하셨나요?",
+    "구원자님이 안 바쁘시면 \r\n제 단골 식당에 초대하고 싶은데…",
+    "…….",
+    "오늘은 아무래도 바쁘신 모양이네요",
+    "다음 기회를 노릴게요",
+    "아뇨, 구원자님은 무척 바쁘신 분이니까요",
+    "시간 나실 때 불러주시겠어요?",
+    "저도 열심히 스케쥴을 맞춰볼게요",
+    "기대하세요?\r\n정말 맛있는 곳이라구요",
+    "구원자님, 트로이카에서 뭐 필요한 거 없으세요?",
+    "말해주시면 제가 이번에 사갈게요",
+    "음…",
+    "좀 더 오래 생각해보세요",
+    "…흥",
+    "그러고보니 구원자님",
+    "에덴에 오신 이후로\r\n건강검진은 받으셨나요?",
+    "꾸준히 정기적으로 받아야한다구요",
+    "특히나 구원자님처럼 바쁘게 지내시는 분은 더욱요!",
+    "흠. 안 되겠네요",
+    "제가 챙겨드릴게요",
+    "제이드 상단과 제휴를 맺은 의원에 함께 가요♪",
+    "다음 주는 어떠세요?",
+    "후훗, 이런 건 이르면 이를 수록 좋다구요",
+    "기다리세요, 제가 관련 서류를 보내드릴게요",
+    "서류를 많이 봤더니 눈이 피로하네요…",
+    "안경을 맞춰야할 시기일지도 모르겠어요",
+    "네. 가끔요",
+    "보고 싶으신가요?",
+    "구원자님이 안경쓰신 사진 보내주시면",
+    "저도 보여드릴게요♪",
+    "하핫, 구원자님께는 \r\n어떤 모양의 안경이 가장 어울리려나?",
+    "구원자님, 탈리아랑도 개인톡을 종종 하시나요?",
+    "탈리아는 평소에 주로 어떤 얘기를 하나요?",
+    "아하핫",
+    "저랑 얘기할 때랑 똑같네요",
+    "무심코 웃음이 나왔어요",
+    "쥐고 있던 펜을 떨어뜨렸지 뭐에요",
+    "구원자님, 싸인을 갖고 계신가요?",
+    "저는 하루에도 싸인을 무척 많이 해야 해서 피곤해요…",
+    "서류에 서명해야 하거든요",
+    "구원자님의 싸인은 어떻게 생겼는지 궁금해요"
+  ],
+  "comments": [
+    {
+      "writer": "미카",
+      "comment": "지난번에 갑자기 노래를 잘 하는 법에 대해서 물어보던데… 뭐지?"
+    },
+    {
+      "writer": "셰리",
+      "comment": "좋은 와인, 좋은 친구 제이드와 함께라면 무서울 게 없지♪"
+    },
+    {
+      "writer": "탈리아",
+      "comment": "별님이 수호를 금과 보석으로 해주시는 경우도 있구나 하고 깜짝 놀랐지… 지금은 절친!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "제이드",
+        "message": "구원자님?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 제이드"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안녕, 제이드"
+      },
+      {
+        "speaker": "제이드",
+        "message": "안녕하세요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "이게 구원자님의 연락처군요. 후후"
+      },
+      {
+        "speaker": "제이드",
+        "message": "잘 보관해둘게요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "제이드 상단의 제이드랍니다"
+      },
+      {
+        "speaker": "제이드",
+        "message": "아케나인에 올 때… 종종 연락드려도 될까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "환영이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "환영이야"
+      },
+      {
+        "speaker": "제이드",
+        "message": "후후"
+      },
+      {
+        "speaker": "제이드",
+        "message": "앞으로 아케나인을 방문하는 기쁨이 늘겠어요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "잘 부탁드려요!"
+      },
+      {
+        "speaker": "제이드",
+        "message": "혹시 식사 하셨나요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님이 안 바쁘시면 \r\n제 단골 식당에 초대하고 싶은데…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "……."
+      },
+      {
+        "speaker": "제이드",
+        "message": "오늘은 아무래도 바쁘신 모양이네요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "다음 기회를 노릴게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미안해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "메시지 지금 확인했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "메시지 지금 확인했어"
+      },
+      {
+        "speaker": "제이드",
+        "message": "아뇨, 구원자님은 무척 바쁘신 분이니까요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "시간 나실 때 불러주시겠어요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "저도 열심히 스케쥴을 맞춰볼게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "제이드",
+        "message": "후후"
+      },
+      {
+        "speaker": "제이드",
+        "message": "기대하세요?\r\n정말 맛있는 곳이라구요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님, 트로이카에서 뭐 필요한 거 없으세요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "말해주시면 제가 이번에 사갈게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아"
+      },
+      {
+        "speaker": "제이드",
+        "message": "음…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "좀 더 오래 생각해보세요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 괜찮은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말 괜찮은데"
+      },
+      {
+        "speaker": "제이드",
+        "message": "…흥"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제이드?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제이드?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제이드??"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제이드??"
+      },
+      {
+        "speaker": "제이드",
+        "message": "그러고보니 구원자님"
+      },
+      {
+        "speaker": "제이드",
+        "message": "에덴에 오신 이후로\r\n건강검진은 받으셨나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "건강검진?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "건강검진?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "꾸준히 정기적으로 받아야한다구요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "특히나 구원자님처럼 바쁘게 지내시는 분은 더욱요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "받은 적 없어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "받은 적 없어"
+      },
+      {
+        "speaker": "제이드",
+        "message": "흠. 안 되겠네요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "제가 챙겨드릴게요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "제이드 상단과 제휴를 맺은 의원에 함께 가요♪"
+      },
+      {
+        "speaker": "제이드",
+        "message": "다음 주는 어떠세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑작스러워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑작스러워"
+      },
+      {
+        "speaker": "제이드",
+        "message": "후훗, 이런 건 이르면 이를 수록 좋다구요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "기다리세요, 제가 관련 서류를 보내드릴게요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "서류를 많이 봤더니 눈이 피로하네요…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "안경을 맞춰야할 시기일지도 모르겠어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제이드도 안경을 써?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "제이드도 안경을 써?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "네. 가끔요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "보고 싶으신가요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님이 안경쓰신 사진 보내주시면"
+      },
+      {
+        "speaker": "제이드",
+        "message": "저도 보여드릴게요♪"
+      },
+      {
+        "speaker": "제이드",
+        "message": "하핫, 구원자님께는 \r\n어떤 모양의 안경이 가장 어울리려나?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님, 탈리아랑도 개인톡을 종종 하시나요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "탈리아는 평소에 주로 어떤 얘기를 하나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "별님 얘기"
+      },
+      {
+        "speaker": "구원자",
+        "message": "별님 얘기"
+      },
+      {
+        "speaker": "제이드",
+        "message": "아하핫"
+      },
+      {
+        "speaker": "제이드",
+        "message": "저랑 얘기할 때랑 똑같네요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "무심코 웃음이 나왔어요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "쥐고 있던 펜을 떨어뜨렸지 뭐에요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님, 싸인을 갖고 계신가요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "저는 하루에도 싸인을 무척 많이 해야 해서 피곤해요…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "서류에 서명해야 하거든요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님의 싸인은 어떻게 생겼는지 궁금해요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에 보여줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에 보여줄게"
+      },
+      {
+        "speaker": "제이드",
+        "message": "후후, 기대할게요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "어디에다가 싸인 받을까…♪"
+      },
+      {
+        "speaker": "제이드",
+        "message": "시간은 금이다, 라는 말이 있지만…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님. 저는 생각보다 그렇게 바쁘지는 않답니다"
+      },
+      {
+        "speaker": "제이드",
+        "message": "그러니까…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "지금보다 좀 더 부담없이 불러내주셔도 괜찮아요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "……."
+      },
+      {
+        "speaker": "제이드",
+        "message": "사실, 바쁘지 않다는 건 거짓말이지만…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "바빠도, 안 바빠요!"
+      },
+      {
+        "speaker": "제이드",
+        "message": "…후후"
+      },
+      {
+        "speaker": "제이드",
+        "message": "제 마음, 아시겠죠?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "적극적으로 권유해주세요♪"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "제이드",
+        "message": "저, 이번에 제 방의 커튼을 새 걸로 바꿨어요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "실물로 보면 무척 예쁘답니다"
+      },
+      {
+        "speaker": "제이드",
+        "message": "…언제 한 번 보러 오실래요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아"
+      },
+      {
+        "speaker": "제이드",
+        "message": "♪"
+      },
+      {
+        "speaker": "제이드",
+        "message": "기다릴게요!"
+      },
+      {
+        "speaker": "제이드",
+        "message": "옛날에 딸기 축제에 참여한 적이 있었는데요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "딸기로 옷감을 빨갛게 물들이는 걸 보고"
+      },
+      {
+        "speaker": "제이드",
+        "message": "어쩐지 무척 감동받았답니다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌었겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "재밌었겠다"
+      },
+      {
+        "speaker": "제이드",
+        "message": "네. 무척요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "빨간 딸기의 화려함도 예뻤구요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "새콤달콤한 향이 진하게 나서"
+      },
+      {
+        "speaker": "제이드",
+        "message": "무척 즐거웠어요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님이랑도 같이 즐겨보고 싶네요…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "저희, 여러 축제에 함께 가봐요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "약속해주실 수 있죠?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님, 아케나인에는 슬슬 적응하셨나요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "맛있는 음식점 몇 군데를 추천해 드릴까 해요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "관심 있으신가요? 후훗"
+      },
+      {
+        "speaker": "제이드",
+        "message": "…우리 구원자님은\r\n생각보다 성격이 대담하신가봐요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "그렇게 안 봤는데…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "이번에 실종된 그 애 말이죠"
+      },
+      {
+        "speaker": "제이드",
+        "message": "좀 더 희귀한 꽃을 찾으러\r\n깊은 산 속으로 들어갔다고 해요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "별 일 없이 무사하면 좋으련만…"
+      },
+      {
+        "speaker": "샤링",
+        "message": "구원자님 안녕~!"
+      },
+      {
+        "speaker": "샤링",
+        "message": "오늘은 오랜만에 제이드랑 탈리아랑 놀기로 했어!"
+      },
+      {
+        "speaker": "샤링",
+        "message": "부럽지? 히히"
+      },
+      {
+        "speaker": "샤링",
+        "message": "구원자님! 혹시 오늘 제이드 봤어?"
+      },
+      {
+        "speaker": "샤링",
+        "message": "킁킁. 뭔가 비밀스러운 거래를 한다는 모양인데…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님, 내일 바쁘신가요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "…별 일은 아니에요. 그냥 여쭤봤어요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님에게 하고 싶은 얘기가 있어요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "들어주실래요?"
+      },
+      {
+        "speaker": "제이드",
+        "message": "……."
+      },
+      {
+        "speaker": "제이드",
+        "message": "…!"
+      },
+      {
+        "speaker": "제이드",
+        "message": "…!"
+      },
+      {
+        "speaker": "제이드",
+        "message": "구원자님…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "이건, 제 마음이에요"
+      },
+      {
+        "speaker": "제이드",
+        "message": "받아주시겠어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 제이드!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 제이드!"
+      },
+      {
+        "speaker": "제이드",
+        "message": "오늘은 대상인의 날\r\n그야말로 저를 위한 날이라고 볼 수 있죠♪"
+      },
+      {
+        "speaker": "제이드",
+        "message": "…노, 농담이에요!\r\n사실은 상인 모두를 위한 날이랍니다!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "챙겨줘서 고마워, 제이드!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "챙겨줘서 고마워, 제이드!"
+      },
+      {
+        "speaker": "제이드",
+        "message": "저는 이렇게 특별한 날은 꼭\r\n구원자님과 함께 하고 싶어져요…"
+      },
+      {
+        "speaker": "제이드",
+        "message": "허락해주시겠어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 만나러 갈게!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 만나러 갈게!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "제이드",
+      "en": "Jade",
+      "zh_tw": "潔依德",
+      "zh_cn": "潔依德"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "인간형",
+      "en": "Humanlike",
+      "zh_tw": "人類型",
+      "zh_cn": "人類型"
+    },
+    "class": {
+      "ko": "캐스터",
+      "en": "Caster",
+      "zh_tw": "魔法師",
+      "zh_cn": "魔法師"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "황금의 재상",
+        "en": "Golden Chancellor",
+        "zh_tw": "黃金的丞相",
+        "zh_cn": "黃金的丞相"
+      },
+      "constellation": {
+        "ko": "인연_메피스토_이벤트2",
+        "en": "인연_메피스토_이벤트2",
+        "zh_tw": "雙魚座",
+        "zh_cn": "雙魚座"
+      },
+      "union": {
+        "ko": "제이드 상단",
+        "en": "Jade's Merchants' Guild",
+        "zh_tw": "潔依德商團",
+        "zh_cn": "潔依德商團"
+      },
+      "cv_ko": {
+        "ko": "강시현",
+        "en": "Shihyun Kang",
+        "zh_tw": "姜詩炫",
+        "zh_cn": "姜詩炫"
+      },
+      "cv_jp": {
+        "ko": "Sayaka Oohara",
+        "en": "Sayaka Oohara",
+        "zh_tw": "Sayaka Oohara",
+        "zh_cn": "Sayaka Oohara"
+      },
+      "like": {
+        "ko": [
+          "꽃"
+        ],
+        "en": [
+          "Flowers"
+        ],
+        "zh_tw": [
+          "花"
+        ],
+        "zh_cn": [
+          "花"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "기만"
+        ],
+        "en": [
+          "Deception"
+        ],
+        "zh_tw": [
+          "欺騙"
+        ],
+        "zh_cn": [
+          "欺騙"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "보석 관리"
+        ],
+        "en": [
+          "Jewelry care"
+        ],
+        "zh_tw": [
+          "保養寶石"
+        ],
+        "zh_cn": [
+          "保養寶石"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "정보 수집"
+        ],
+        "en": [
+          "Gathering information"
+        ],
+        "zh_tw": [
+          "收集情報"
+        ],
+        "zh_cn": [
+          "收集情報"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "구원자님 반가워요. 제 이름은 제이드. \n앞으로 긴 시간을 구원자님과 함께할 정령이랍니다.\n보석에도 꽃처럼 의미가 깃들어있다는 사실을 아시나요? 그중에서도 제이드라는 보석은 부를 상징한다고 해요. \n자, 보세요. 영원히 사라지지 않는 이 아름다움이, 정령과 닮지 않았나요? 영롱하죠.\n\n저는 매일 아침 이것들을 하나하나 꼼꼼히 닦아 빛내는 것으로 일과를 시작해요. \n가치 있는 것들은 이렇게 하나씩 들여다보고, 충분히 정성을 들이는 보람이 있지요. \n…이미 알고 계실 수도 있겠지만, 정령도 마찬가지랍니다. \n당신이 애정을 주고, 하나하나 신경 써 줄수록 그들 역시 더 강한 힘을 뽐낼 수 있어요. 어찌 보면 사랑이나 연애랑도 비슷하다고 볼 수 있겠네요.\n\n저 역시 정령이기에, 구원자님께서 제게 그만한 성의를 보여주셨으면 좋겠어요. \n이제 와서 순수한 애정이나 돈으로 살 수 없는 애착 따위를 믿는 건 아니지만… \n기껏 드라마틱하게 만난 구원자님께서 제게 조금 간지럽고 특별한 시도를 해 줄 수 있지 않을까, 하는 기대 정도는 하고 있답니다. \n구원자님과 저 사이에, 무언가 재미있는 일이 생기면 좋겠네요. 기다려봐도 되겠죠?",
+        "en": "Nice to meet you, Savior. My name is Jade.\nI'm a Soul who will be with you for a long time to come.\nDo you know that jewelry has meaning just like flowers do? Among others, jade is said to symbolize wealth.\nHere, look. Doesn't their everlasting beauty resemble a Soul? It's iridescent.\n\nI begin my daily routine by thoroughly cleaning each one of these jewels to make them shine every morning.\nIt is worthwhile to look into something valuable one by one and spend enough effort to take care of them.\n…As you may already know, the same goes for the Souls.\nThe more affection and attention you give them, the stronger they become. It's similar to a romantic relationship in a way.\n\nAs I myself am a Soul, too, I hope you will show me your sincerity.\nNow, I don't believe in pure love or attachment that I couldn't buy with money, but…\nI can't help but expect some kind of ticklish and special attempts from you, who has appeared to us so dramatically.\nI hope something interesting would happen between you and me. Can I look forward to it?",
+        "zh_tw": "很高興見到你，救援者。我叫潔依德。\n是未來會跟救援者相處很久的精靈。\n你知道寶石也像花朵一樣有特殊涵義嗎？名為潔依德的寶石就象徵著財富。\n你看！你不覺得這永不消逝的美麗，就像精靈一樣晶瑩剔透嗎。\n\n我每天早上做的第一件事就是仔細擦拭每一顆寶石。\n細心觀察並真心對待每一個有價值的東西，是很有意義的事情。\n…或許你也知道，精靈也是如此。\n你給予越多的關愛，他們越能展現出強大的力量，和愛或戀愛一樣。\n\n我身為精靈，也希望能夠感受到救援者的誠意，\n雖然我現在已經不相信什麼純真的愛情，或是無法用金錢換取的感情…\n但我仍期盼如戲劇般相遇的救援者能做一些讓我心癢癢的特別驚喜。\n希望救援者和我之間能有奇妙的化學變化，我可以期待一下吧？",
+        "zh_cn": "很高興見到你，救援者。我叫潔依德。\n是未來會跟救援者相處很久的精靈。\n你知道寶石也像花朵一樣有特殊涵義嗎？名為潔依德的寶石就象徵著財富。\n你看！你不覺得這永不消逝的美麗，就像精靈一樣晶瑩剔透嗎。\n\n我每天早上做的第一件事就是仔細擦拭每一顆寶石。\n細心觀察並真心對待每一個有價值的東西，是很有意義的事情。\n…或許你也知道，精靈也是如此。\n你給予越多的關愛，他們越能展現出強大的力量，和愛或戀愛一樣。\n\n我身為精靈，也希望能夠感受到救援者的誠意，\n雖然我現在已經不相信什麼純真的愛情，或是無法用金錢換取的感情…\n但我仍期盼如戲劇般相遇的救援者能做一些讓我心癢癢的特別驚喜。\n希望救援者和我之間能有奇妙的化學變化，我可以期待一下吧？"
+      },
+      "greeting": {
+        "ko": "황금이 해결하지 못 하는 일은, \n인간이 해결하지 못 하는 일일 뿐.",
+        "en": "If gold cannot solve it,\nhumans can't either.",
+        "zh_tw": "黃金無法解決的事，\n就是人類無法解決的事。",
+        "zh_cn": "黃金無法解決的事，\n就是人類無法解決的事。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "구원자님?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Savior?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "救援者？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "救援者？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "안녕하세요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Hello, savior."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "你好"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "你好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "이게 구원자님의 연락처군요. 후후"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "So this is your number. Tee hee."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "原來這是救援者的聯絡方式啊，呵呵"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "原來這是救援者的聯絡方式啊，呵呵"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "잘 보관해둘게요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I'll keep it safe."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "我會好好保存的"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "我會好好保存的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "제이드 상단의 제이드랍니다"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "It's me, Jade, I own the Merchants' Guild"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "我是潔依德商團的潔依德"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "我是潔依德商團的潔依德"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "아케나인에 올 때… 종종 연락드려도 될까요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Can I call you from time to time when I come to Arkenine?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "我來阿肯納因的時候…可以常常聯絡你嗎？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "我來阿肯納因的時候…可以常常聯絡你嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "후후"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Hehe"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "呵呵"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "呵呵"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "앞으로 아케나인을 방문하는 기쁨이 늘겠어요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I'll be happier visiting Arkenine in the future."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "看來以後來到阿肯納因會更開心。"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "看來以後來到阿肯納因會更開心。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "잘 부탁드려요!"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Good luck!"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "請多指教！"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "請多指教！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "혹시 식사 하셨나요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Have you eaten?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "請問你吃過了嗎？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "請問你吃過了嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "구원자님이 안 바쁘시면 \r\n제 단골 식당에 초대하고 싶은데…"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "If you're not busy today, \r\nI would like to invite you to my favorite restaurant."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "如果救援者不忙的話，\r\n想招待你去我常去的餐廳…"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "如果救援者不忙的話，\r\n想招待你去我常去的餐廳…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "……."
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "…"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "……"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "……"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "오늘은 아무래도 바쁘신 모양이네요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "It seems you're busy today."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "總覺得你今天看起來很忙呢"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "總覺得你今天看起來很忙呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "다음 기회를 노릴게요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Maybe later then."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "等下次機會吧"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "等下次機會吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "아뇨, 구원자님은 무척 바쁘신 분이니까요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "It's okay, you are a very busy person."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "沒事的，畢竟救援者是個大忙人"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "沒事的，畢竟救援者是個大忙人"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "시간 나실 때 불러주시겠어요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Would you call me when you've time?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "有空的時候可以叫我嗎？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "有空的時候可以叫我嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "저도 열심히 스케쥴을 맞춰볼게요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I'll try to work around your schedule."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "我也會努力配合你的行程"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "我也會努力配合你的行程"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "기대하세요?\r\n정말 맛있는 곳이라구요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Are you excited?\r\nThey really serve some good food."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "期待嗎？\r\n那裡的東西真的很好吃"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "期待嗎？\r\n那裡的東西真的很好吃"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "구원자님, 트로이카에서 뭐 필요한 거 없으세요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Savior, do you need anything from Troyca?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "救援者，你需要特羅伊卡的東西嗎？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "救援者，你需要特羅伊卡的東西嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "말해주시면 제가 이번에 사갈게요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I'll try to get it if you let me know."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "告訴我的話，我這次會買去給你的"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "告訴我的話，我這次會買去給你的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "음…"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Hmm…"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "嗯…"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "嗯…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "좀 더 오래 생각해보세요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Take your time."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "請再思考久一點"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "請再思考久一點"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "…흥"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "…Pff."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "⋯哼"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "⋯哼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "그러고보니 구원자님"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Savior, by the way,"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "話說回來，救援者"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "話說回來，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "에덴에 오신 이후로\r\n건강검진은 받으셨나요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "since you came to Eden,\r\nhave you had a health checkup?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "你來到伊甸園之後，\r\n有接受過健康檢查嗎？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "你來到伊甸園之後，\r\n有接受過健康檢查嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "꾸준히 정기적으로 받아야한다구요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "You should get check-ups regularly."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "聽說要定期持續接受檢查"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "聽說要定期持續接受檢查"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "특히나 구원자님처럼 바쁘게 지내시는 분은 더욱요!"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Especially someone who's as busy as you."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "尤其是像救援者這樣忙碌的人更需要！"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "尤其是像救援者這樣忙碌的人更需要！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "흠. 안 되겠네요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Hmm. I should"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "哼，這可不行。"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "哼，這可不行。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "제가 챙겨드릴게요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "take care of you."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "我來幫你準備"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "我來幫你準備"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "제이드 상단과 제휴를 맺은 의원에 함께 가요♪"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Let's go to the clinic that's partnered with Jade's Merchants' Guild♪"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "一起去與潔依德商團合作的醫院吧♪"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "一起去與潔依德商團合作的醫院吧♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "다음 주는 어떠세요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "What about next week?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "下週怎麼樣？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "下週怎麼樣？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "후훗, 이런 건 이르면 이를 수록 좋다구요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "The earlier it is, the better."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "呵呵，聽說這種東西越早做越好"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "呵呵，聽說這種東西越早做越好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "기다리세요, 제가 관련 서류를 보내드릴게요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Please wait, I'll send you a related document."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "等一下，我會把相關文件傳給你"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "等一下，我會把相關文件傳給你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "서류를 많이 봤더니 눈이 피로하네요…"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "My eyes are tired from looking at so many documents"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "看了好多文件，眼睛好疲勞…"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "看了好多文件，眼睛好疲勞…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "안경을 맞춰야할 시기일지도 모르겠어요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I might have to get glasses."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "也許是時候該配眼鏡了"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "也許是時候該配眼鏡了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "네. 가끔요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Okay. Sometimes."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "對，偶爾"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "對，偶爾"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "보고 싶으신가요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Do you want to see?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "想看嗎？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "想看嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "구원자님이 안경쓰신 사진 보내주시면"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "If you send me a picture of yourself wearing glasses"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "如果救援者讓我看你戴眼鏡的樣子"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "如果救援者讓我看你戴眼鏡的樣子"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "저도 보여드릴게요♪"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "then I'll wear mine as well and show you too♪"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "我也會讓你看♪"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "我也會讓你看♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "하핫, 구원자님께는 \r\n어떤 모양의 안경이 가장 어울리려나?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Hehe I wonder what kind of\r\nglasses would look good on you!"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "哈哈，救援者\r\n適合什麼樣子的眼鏡呢？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "哈哈，救援者\r\n適合什麼樣子的眼鏡呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "구원자님, 탈리아랑도 개인톡을 종종 하시나요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Savior, do you sometimes chat with Talia, too?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "救援者，你跟塔利亞也常常私聊嗎？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "救援者，你跟塔利亞也常常私聊嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "탈리아는 평소에 주로 어떤 얘기를 하나요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "What does she talk about?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "塔利亞平常主要聊什麼呢？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "塔利亞平常主要聊什麼呢？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "아하핫"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Haha."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "啊哈哈"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "啊哈哈"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "저랑 얘기할 때랑 똑같네요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Just like when she talks with me."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "跟和我聊天的時候一樣呢"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "跟和我聊天的時候一樣呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "무심코 웃음이 나왔어요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "It made me laugh before I knew she did that."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "無意間笑了出來"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "無意間笑了出來"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "쥐고 있던 펜을 떨어뜨렸지 뭐에요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I dropped the pen I was holding."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "把拿著的筆弄掉了，搞什麼嘛"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "把拿著的筆弄掉了，搞什麼嘛"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "구원자님, 싸인을 갖고 계신가요?"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "Savior, do you have your own signature?"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "救援者，你身上有帶著簽名嗎？"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "救援者，你身上有帶著簽名嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "저는 하루에도 싸인을 무척 많이 해야 해서 피곤해요…"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I'm tired of having to sign so many a day…"
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "我一天要簽名很多次，所以很累…"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "我一天要簽名很多次，所以很累…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "서류에 서명해야 하거든요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I have to sign some documents."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "因為要在文件上簽名"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "因為要在文件上簽名"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "구원자님의 싸인은 어떻게 생겼는지 궁금해요"
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I wonder what yours looks like."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "很好奇救援者的簽名是什麼樣子"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "很好奇救援者的簽名是什麼樣子"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "미카",
+          "message": "지난번에 갑자기 노래를 잘 하는 법에 대해서 물어보던데… 뭐지?"
+        },
+        "en": {
+          "speaker": "Mica",
+          "message": "Last time, she suddenly asked me about how to sing well… What's up with her?"
+        },
+        "zh_tw": {
+          "speaker": "米卡",
+          "message": "她上次突然問我唱歌的技巧…怎麼一回事？"
+        },
+        "zh_cn": {
+          "speaker": "米卡",
+          "message": "她上次突然問我唱歌的技巧…怎麼一回事？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "셰리",
+          "message": "좋은 와인, 좋은 친구 제이드와 함께라면 무서울 게 없지♪"
+        },
+        "en": {
+          "speaker": "Cherrie",
+          "message": "With good wine and me good friend Jade, I'm afraid of nothing!♪"
+        },
+        "zh_tw": {
+          "speaker": "雪莉",
+          "message": "只要有好喝的飄飄飲、跟好友潔依德在一起，就沒什麼好怕的♪"
+        },
+        "zh_cn": {
+          "speaker": "雪莉",
+          "message": "只要有好喝的飄飄飲、跟好友潔依德在一起，就沒什麼好怕的♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "탈리아",
+          "message": "별님이 수호를 금과 보석으로 해주시는 경우도 있구나 하고 깜짝 놀랐지… 지금은 절친!"
+        },
+        "en": {
+          "speaker": "Talia",
+          "message": "I was surprised to learn that the stars may provide protection with gold and jewels… She's my best friend now!"
+        },
+        "zh_tw": {
+          "speaker": "塔利亞",
+          "message": "我很驚訝，原來星星有時會以黃金和寶石的形式降下祝福…現在是摯友！"
+        },
+        "zh_cn": {
+          "speaker": "塔利亞",
+          "message": "我很驚訝，原來星星有時會以黃金和寶石的形式降下祝福…現在是摯友！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 제이드"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Jade."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，潔依德"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，潔依德"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안녕, 제이드"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hi, Jade."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳好，潔依德"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳好，潔依德"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "안녕하세요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Hello, savior."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "你好"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "你好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "이게 구원자님의 연락처군요. 후후"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "So this is your number. Tee hee."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "原來這是救援者的聯絡方式啊，呵呵"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "原來這是救援者的聯絡方式啊，呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "잘 보관해둘게요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I'll keep it safe."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我會好好保存的"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我會好好保存的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "제이드 상단의 제이드랍니다"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "It's me, Jade, I own the Merchants' Guild"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我是潔依德商團的潔依德"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我是潔依德商團的潔依德"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "아케나인에 올 때… 종종 연락드려도 될까요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Can I call you from time to time when I come to Arkenine?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我來阿肯納因的時候…可以常常聯絡你嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我來阿肯納因的時候…可以常常聯絡你嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "환영이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course you can."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "歡迎啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "歡迎啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "환영이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Of course you can."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "歡迎啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "歡迎啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Hehe"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "앞으로 아케나인을 방문하는 기쁨이 늘겠어요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I'll be happier visiting Arkenine in the future."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "看來以後來到阿肯納因會更開心。"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "看來以後來到阿肯納因會更開心。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "잘 부탁드려요!"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Good luck!"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "請多指教！"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "請多指教！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "혹시 식사 하셨나요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Have you eaten?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "請問你吃過了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "請問你吃過了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님이 안 바쁘시면 \r\n제 단골 식당에 초대하고 싶은데…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "If you're not busy today, \r\nI would like to invite you to my favorite restaurant."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "如果救援者不忙的話，\r\n想招待你去我常去的餐廳…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "如果救援者不忙的話，\r\n想招待你去我常去的餐廳…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "오늘은 아무래도 바쁘신 모양이네요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "It seems you're busy today."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "總覺得你今天看起來很忙呢"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "總覺得你今天看起來很忙呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "다음 기회를 노릴게요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Maybe later then."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "等下次機會吧"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "等下次機會吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미안해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "메시지 지금 확인했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've just checked your message."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在才看訊息"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在才看訊息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "메시지 지금 확인했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've just checked your message."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "現在才看訊息"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "現在才看訊息"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "아뇨, 구원자님은 무척 바쁘신 분이니까요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "It's okay, you are a very busy person."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "沒事的，畢竟救援者是個大忙人"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "沒事的，畢竟救援者是個大忙人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "시간 나실 때 불러주시겠어요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Would you call me when you've time?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "有空的時候可以叫我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "有空的時候可以叫我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "저도 열심히 스케쥴을 맞춰볼게요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I'll try to work around your schedule."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我也會努力配合你的行程"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我也會努力配合你的行程"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yup"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Hehe"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "기대하세요?\r\n정말 맛있는 곳이라구요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Are you excited?\r\nThey really serve some good food."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "期待嗎？\r\n那裡的東西真的很好吃"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "期待嗎？\r\n那裡的東西真的很好吃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님, 트로이카에서 뭐 필요한 거 없으세요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior, do you need anything from Troyca?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者，你需要特羅伊卡的東西嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者，你需要特羅伊卡的東西嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "말해주시면 제가 이번에 사갈게요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I'll try to get it if you let me know."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "告訴我的話，我這次會買去給你的"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "告訴我的話，我這次會買去給你的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不用了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不用了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not really."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不用了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不用了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Hmm…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "좀 더 오래 생각해보세요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Take your time."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "請再思考久一點"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "請再思考久一點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 괜찮은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's fine."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的不用了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的不用了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말 괜찮은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's fine."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的不用了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的不用了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "…흥"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…Pff."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "⋯哼"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "⋯哼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제이드?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Jade?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "潔依德？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "潔依德？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제이드?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Jade?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "潔依德？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "潔依德？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제이드??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Jade??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "潔依德？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "潔依德？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제이드??"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Jade??"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "潔依德？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "潔依德？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "그러고보니 구원자님"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior, by the way,"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "話說回來，救援者"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "話說回來，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "에덴에 오신 이후로\r\n건강검진은 받으셨나요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "since you came to Eden,\r\nhave you had a health checkup?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "你來到伊甸園之後，\r\n有接受過健康檢查嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "你來到伊甸園之後，\r\n有接受過健康檢查嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "건강검진?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Health checkup?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "健康檢查？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "健康檢查？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "건강검진?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Health checkup?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "健康檢查？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "健康檢查？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "꾸준히 정기적으로 받아야한다구요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "You should get check-ups regularly."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "聽說要定期持續接受檢查"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "聽說要定期持續接受檢查"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "특히나 구원자님처럼 바쁘게 지내시는 분은 더욱요!"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Especially someone who's as busy as you."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "尤其是像救援者這樣忙碌的人更需要！"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "尤其是像救援者這樣忙碌的人更需要！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "받은 적 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've never had one."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有檢查過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有檢查過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "받은 적 없어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I've never had one."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "沒有檢查過"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "沒有檢查過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "흠. 안 되겠네요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Hmm. I should"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "哼，這可不行。"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "哼，這可不行。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "제가 챙겨드릴게요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "take care of you."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我來幫你準備"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我來幫你準備"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "제이드 상단과 제휴를 맺은 의원에 함께 가요♪"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Let's go to the clinic that's partnered with Jade's Merchants' Guild♪"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "一起去與潔依德商團合作的醫院吧♪"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "一起去與潔依德商團合作的醫院吧♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "다음 주는 어떠세요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "What about next week?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "下週怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "下週怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑작스러워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's so sudden."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太突然了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太突然了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑작스러워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's so sudden."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太突然了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太突然了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "후훗, 이런 건 이르면 이를 수록 좋다구요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "The earlier it is, the better."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "呵呵，聽說這種東西越早做越好"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "呵呵，聽說這種東西越早做越好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "기다리세요, 제가 관련 서류를 보내드릴게요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Please wait, I'll send you a related document."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "等一下，我會把相關文件傳給你"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "等一下，我會把相關文件傳給你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "서류를 많이 봤더니 눈이 피로하네요…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "My eyes are tired from looking at so many documents"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "看了好多文件，眼睛好疲勞…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "看了好多文件，眼睛好疲勞…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "안경을 맞춰야할 시기일지도 모르겠어요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I might have to get glasses."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "也許是時候該配眼鏡了"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "也許是時候該配眼鏡了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제이드도 안경을 써?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you also wear glasses, Jade?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "潔依德也戴眼鏡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "潔依德也戴眼鏡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "제이드도 안경을 써?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Do you also wear glasses, Jade?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "潔依德也戴眼鏡嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "潔依德也戴眼鏡嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "네. 가끔요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Okay. Sometimes."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "對，偶爾"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "對，偶爾"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "보고 싶으신가요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Do you want to see?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "想看嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "想看嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님이 안경쓰신 사진 보내주시면"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "If you send me a picture of yourself wearing glasses"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "如果救援者讓我看你戴眼鏡的樣子"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "如果救援者讓我看你戴眼鏡的樣子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "저도 보여드릴게요♪"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "then I'll wear mine as well and show you too♪"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我也會讓你看♪"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我也會讓你看♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "하핫, 구원자님께는 \r\n어떤 모양의 안경이 가장 어울리려나?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Hehe I wonder what kind of\r\nglasses would look good on you!"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "哈哈，救援者\r\n適合什麼樣子的眼鏡呢？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "哈哈，救援者\r\n適合什麼樣子的眼鏡呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님, 탈리아랑도 개인톡을 종종 하시나요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior, do you sometimes chat with Talia, too?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者，你跟塔利亞也常常私聊嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者，你跟塔利亞也常常私聊嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "탈리아는 평소에 주로 어떤 얘기를 하나요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "What does she talk about?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "塔利亞平常主要聊什麼呢？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "塔利亞平常主要聊什麼呢？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "별님 얘기"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "About stars."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聊星星"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聊星星"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "별님 얘기"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "About stars."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "聊星星"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "聊星星"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "아하핫"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Haha."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "啊哈哈"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "啊哈哈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "저랑 얘기할 때랑 똑같네요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Just like when she talks with me."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "跟和我聊天的時候一樣呢"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "跟和我聊天的時候一樣呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "무심코 웃음이 나왔어요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "It made me laugh before I knew she did that."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "無意間笑了出來"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "無意間笑了出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "쥐고 있던 펜을 떨어뜨렸지 뭐에요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I dropped the pen I was holding."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "把拿著的筆弄掉了，搞什麼嘛"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "把拿著的筆弄掉了，搞什麼嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님, 싸인을 갖고 계신가요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior, do you have your own signature?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者，你身上有帶著簽名嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者，你身上有帶著簽名嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "저는 하루에도 싸인을 무척 많이 해야 해서 피곤해요…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I'm tired of having to sign so many a day…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我一天要簽名很多次，所以很累…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我一天要簽名很多次，所以很累…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "서류에 서명해야 하거든요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I have to sign some documents."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "因為要在文件上簽名"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "因為要在文件上簽名"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님의 싸인은 어떻게 생겼는지 궁금해요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I wonder what yours looks like."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "很好奇救援者的簽名是什麼樣子"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "很好奇救援者的簽名是什麼樣子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에 보여줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll show you next time."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次給妳看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次給妳看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에 보여줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll show you next time."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次給妳看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次給妳看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "후후, 기대할게요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Hehe, I can't wait."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "呵呵，我會期待的"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "呵呵，我會期待的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "어디에다가 싸인 받을까…♪"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Where can I get your signature…♪"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "要簽在哪呢…♪"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "要簽在哪呢…♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "시간은 금이다, 라는 말이 있지만…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "There's a saying that time is gold, but…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "雖然有句話說時間就是金錢…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "雖然有句話說時間就是金錢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님. 저는 생각보다 그렇게 바쁘지는 않답니다"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior. I'm not as busy as you think."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "不過救援者，我沒有想像中這麼忙"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "不過救援者，我沒有想像中這麼忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "그러니까…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "So…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "所以…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "所以…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "지금보다 좀 더 부담없이 불러내주셔도 괜찮아요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "You should call me more often."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "你可以再更隨心所欲叫我出來"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "你可以再更隨心所欲叫我出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "사실, 바쁘지 않다는 건 거짓말이지만…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Actually, I would be lying if I said I'm not busy…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "其實，說不忙是騙人的…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "其實，說不忙是騙人的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "바빠도, 안 바빠요!"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Even if I'm busy, I'm not too busy for you!"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "但是就算忙，也不忙！"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "但是就算忙，也不忙！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "…후후"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…Hehe."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "⋯呵呵"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "⋯呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "제 마음, 아시겠죠?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "You know what I mean, right?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "能明白我的心意吧？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "能明白我的心意吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "적극적으로 권유해주세요♪"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "So call me anytime♪"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "請積極找我出來哦♪"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "請積極找我出來哦♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "저, 이번에 제 방의 커튼을 새 걸로 바꿨어요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I got a new curtain in my room."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我這次把我房間的窗簾換成新的了"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我這次把我房間的窗簾換成新的了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "실물로 보면 무척 예쁘답니다"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "It looks really pretty. You should see it for yourself."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "…實際看的話非常漂亮"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "…實際看的話非常漂亮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "…언제 한 번 보러 오실래요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…Would you come over and see?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "…要不要找時間來看看？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "…要不要找時間來看看？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Gladly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Gladly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "♪"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "♪"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "♪"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "기다릴게요!"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I'll wait!"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我會等你的！"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我會等你的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "옛날에 딸기 축제에 참여한 적이 있었는데요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I went to a strawberry festival a long time ago."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我以前參加過草莓慶典"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我以前參加過草莓慶典"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "딸기로 옷감을 빨갛게 물들이는 걸 보고"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "After seeing how the fabric is colored red with strawberries,"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "看到布料被草莓染紅之後"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "看到布料被草莓染紅之後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "어쩐지 무척 감동받았답니다"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I was somehow so impressed."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "不知道為什麼非常感動"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "不知道為什麼非常感動"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌었겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It must have been fun."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "재밌었겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It must have been fun."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "네. 무척요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Okay. Very much."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "對，非常有趣"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "對，非常有趣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "빨간 딸기의 화려함도 예뻤구요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "The red strawberries were pretty, too."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "紅色草莓的華麗感也很漂亮"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "紅色草莓的華麗感也很漂亮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "새콤달콤한 향이 진하게 나서"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Smelling its strong sweet and sour fragrance"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "散發出濃濃的酸甜香氣"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "散發出濃濃的酸甜香氣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "무척 즐거웠어요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "was so much fun."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "那天我很快樂。"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "那天我很快樂。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님이랑도 같이 즐겨보고 싶네요…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I want to enjoy that with you, too…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我也想和救援者一起同樂…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我也想和救援者一起同樂…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "저희, 여러 축제에 함께 가봐요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Let's go to various festivals together."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我們，要一起去看看許多慶典"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我們，要一起去看看許多慶典"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "약속해주실 수 있죠?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Can you promise?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "可以答應我吧？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "可以答應我吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님, 아케나인에는 슬슬 적응하셨나요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior, how's Arkenine treating you?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者，你漸漸適應阿肯納因了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者，你漸漸適應阿肯納因了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "맛있는 음식점 몇 군데를 추천해 드릴까 해요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I would like to recommend some good restaurants."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "要不要推薦你幾家好吃的餐廳"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "要不要推薦你幾家好吃的餐廳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "관심 있으신가요? 후훗"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Are you interested? Tee hee."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "有興趣嗎？呵呵"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "有興趣嗎？呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "…우리 구원자님은\r\n생각보다 성격이 대담하신가봐요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…You must have\r\na bolder personality than I thought."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "…看來救援者的性格\r\n比想像的還要大膽啊？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "…看來救援者的性格\r\n比想像的還要大膽啊？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "그렇게 안 봤는데…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I never viewed you that way…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "沒想到你是這種人…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "沒想到你是這種人…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "이번에 실종된 그 애 말이죠"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "The kid who went missing."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "這次失蹤的那個孩子"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "這次失蹤的那個孩子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "좀 더 희귀한 꽃을 찾으러\r\n깊은 산 속으로 들어갔다고 해요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I heard she went deep into the mountains\r\nto pick rarer flowers."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "聽說是為了找到更稀有的花朵，\r\n才跑進深山之中"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "聽說是為了找到更稀有的花朵，\r\n才跑進深山之中"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "별 일 없이 무사하면 좋으련만…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I hope she's okay…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "希望那個孩子平安無事…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "希望那個孩子平安無事…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "구원자님 안녕~!"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "Hey, Savior!"
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "救援者你好～！"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "救援者你好～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "오늘은 오랜만에 제이드랑 탈리아랑 놀기로 했어!"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "Today, I'm hanging out with Jade and Talia for the first time in a while!"
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "我今天久違的和潔依德還有塔利亞約好要一起玩！"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "我今天久違的和潔依德還有塔利亞約好要一起玩！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "부럽지? 히히"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "Are you jealous? Hehe."
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "羨慕吧？嘻嘻"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "羨慕吧？嘻嘻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "구원자님! 혹시 오늘 제이드 봤어?"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "Savior! Have you seen Jade today?"
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "救援者！你今天有看到潔依德嗎？"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "救援者！你今天有看到潔依德嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "샤링",
+            "message": "킁킁. 뭔가 비밀스러운 거래를 한다는 모양인데…"
+          },
+          "en": {
+            "speaker": "Sharinne",
+            "message": "Sniff-sniff. Looks like she's up to some kind of secret deal."
+          },
+          "zh_tw": {
+            "speaker": "夏琳",
+            "message": "哼哼，她好像要進行什麼秘密交易的樣子…"
+          },
+          "zh_cn": {
+            "speaker": "夏琳",
+            "message": "哼哼，她好像要進行什麼秘密交易的樣子…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님, 내일 바쁘신가요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior, are you busy tomorrow?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者，你明天有空嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者，你明天有空嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "…별 일은 아니에요. 그냥 여쭤봤어요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…Not really. I was just asking."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "…沒什麼特別的事，只是問問而已"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "…沒什麼特別的事，只是問問而已"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님에게 하고 싶은 얘기가 있어요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "I want to tell you something."
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "我有話要跟你說"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "我有話要跟你說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "들어주실래요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Will you hear me out?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "能聽我說嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "能聽我說嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "…!"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…!"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "…！"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "…!"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…!"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "…！"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "구원자님…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Savior…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "救援者…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "이건, 제 마음이에요"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "This is my heart"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "這個，是我一番心意"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "這個，是我一番心意"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "받아주시겠어요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Will you accept?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "你可以收下嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "你可以收下嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 제이드!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Jade!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "潔依德，謝謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "潔依德，謝謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 제이드!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thanks Jade!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "潔依德，謝謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "潔依德，謝謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "오늘은 대상인의 날\r\n그야말로 저를 위한 날이라고 볼 수 있죠♪"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Today is Merchant's Day\r\nA day specifically for me♪"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "今天是大商人之日\r\n可以說是為了我的節日呢♪"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "今天是大商人之日\r\n可以說是為了我的節日呢♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "…노, 농담이에요!\r\n사실은 상인 모두를 위한 날이랍니다!"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "…Just kidding!\r\nIt's a day for all merchants!"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "…開、開個玩笑而已！\r\n其實是為了所有商人的節日！"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "…開、開個玩笑而已！\r\n其實是為了所有商人的節日！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "챙겨줘서 고마워, 제이드!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Jade!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，潔依德！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，潔依德！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "챙겨줘서 고마워, 제이드!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Jade!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，潔依德！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳的禮物，潔依德！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "저는 이렇게 특별한 날은 꼭\r\n구원자님과 함께 하고 싶어져요…"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "On a special day like this\r\nI want to be with you, Savior…"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "這麼特別的日子\r\n我想跟救援者一起度過…"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "這麼特別的日子\r\n我想跟救援者一起度過…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "제이드",
+            "message": "허락해주시겠어요?"
+          },
+          "en": {
+            "speaker": "Jade",
+            "message": "Will you allow it?"
+          },
+          "zh_tw": {
+            "speaker": "潔依德",
+            "message": "可以嗎？"
+          },
+          "zh_cn": {
+            "speaker": "潔依德",
+            "message": "可以嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 만나러 갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上去找妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上去找妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 만나러 갈게!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我馬上去找妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我馬上去找妳！"
+          }
+        }
+      ]
+    }
+  }
+}

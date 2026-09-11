@@ -1,0 +1,6552 @@
+{
+  "id": "4160",
+  "name": "페트라(각혼)",
+  "name_en": "Petra (Awakened Soul)",
+  "grade": "에픽",
+  "race": "불사형",
+  "class": "디펜더",
+  "sub_class": "제어",
+  "stat": "힘",
+  "profile": {
+    "nick_name": "눈부신 밤",
+    "constellation": "인연_제이드_이벤트1",
+    "union": "팀 언더테이커",
+    "birthday": "423",
+    "height": 144,
+    "weight": 39,
+    "cv_ko": "여민정",
+    "cv_jp": "여민정",
+    "like": [
+      "반짝이는 것",
+      "어두운 곳",
+      "장난"
+    ],
+    "dislike": [
+      "구속",
+      "강요",
+      "생선 회"
+    ],
+    "hobby": [
+      "멍하니 있기",
+      "빛나는 물건 모으기"
+    ],
+    "speciality": [
+      "땅 파기",
+      "어둠 속에서 길 찾기"
+    ]
+  },
+  "personality": {
+    "description": "와악―\n…이제 안 놀라? 흐응… 구원자, 꽤 성장했네.\n\n나도 성장했다고? 으응, 그런 걸지도…\n난, 원래 가지고 있던 힘을 되찾은 것 뿐이라고 생각했지만…\n성장이라고 말하는 쪽이 더 멋지니까, 성장이라고 할게.\n\n응, 의도한 건 아니지만「지옥의 힘」을 되찾게 되었어.\n그런데 아직은… 이 힘을 어떻게 사용해야 할지는 잘 모르겠어.\n옛날에도… 내가 원하는 대로 힘을 쓰지는 않았거든.\n\n그래서 요즘은, 이 힘으로 뭘 해야 할까…에 대해 생각하고 있어.\n구원자 생각은 어때?\n일단 내가 생각한 건… 역시 구원자 놀래키기려나.\n\n아직 고민에 대한 답을 찾지는 못했지만, 한 가지는 맹세할게.\n이 힘… 옛날처럼 나쁜 데에 쓰지 않을게.\n…응, 약속이야. 계속 지켜봐도 좋아.",
+    "greeting": "…응, 이번에는 거짓말이 아니야…"
+  },
+  "speech_patterns": [
+    "구원자 안녕",
+    "이거내 새에버폰",
+    "안녕 페트라",
+    "응",
+    "암즈에서받은 의뢰금으로",
+    "하나새로 샀어",
+    "근데이거 너무어려워",
+    "버튼이많아",
+    "어떻게쓰는지 알려줘",
+    "오늘은",
+    "장례식할거야",
+    "누구 장례식…?",
+    "칼라르에서데려온",
+    "헬블러드스노우",
+    "햇빛아래에 있으면",
+    "반짝거려서",
+    "그게예뻐서 창가에뒀는데",
+    "어느순간보니까 녹아버렸어",
+    "예요",
+    "구원자도 편히잠들라고 해줘",
+    "저번에 미리암이부탁한거",
+    "'결투'가아니라 '협력'이었지만",
+    "만약 나 미리암이랑 결투했으면",
+    "누가이겼을까",
+    "으응",
+    "그랬을지도",
+    "사실 총 쏴본적 없어요",
+    "'지옥의 신'에게 총은",
+    "거추장스러울뿐이니까",
+    "나도",
+    "아끼는거 정리해서",
+    "모아둔상자 있어",
+    "보물상자",
+    "산딸기씨앗이랑",
+    "도토리랑",
+    "완벽하게납작한 돌멩이",
+    "니니가만들어준 부적",
+    "유리조각",
+    "흙",
+    "벌레",
+    "전부 소중한거야",
+    "상자보다커서",
+    "못넣은것도 있지만",
+    "일단 구원자",
+    "잘구겨넣으면 들어가려나",
+    "칼라르 다녀온뒤로",
+    "가끔 옛날생각해",
+    "생각해도 달라지는거없는데",
+    "그냥 생각나",
+    "그래?"
+  ],
+  "comments": [
+    {
+      "writer": "미리암(잔영)",
+      "comment": "팬텀이 만들어낸 죄업… 속죄할 수 있어서 다행이라고 생각해."
+    },
+    {
+      "writer": "조앤",
+      "comment": "고 아가씨, 가끔은 제멋대로지만 그래도 심성이 나쁘진 않아."
+    },
+    {
+      "writer": "니니",
+      "comment": "칼라르에서 사고 치는 건 아니겠지? 으으, 진짜 걱정 돼!"
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자 안녕"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "이거내 새에버폰"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "안녕 페트라"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "안녕 페트라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰 새로 산 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "에버폰 새로 산 거야?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "암즈에서받은 의뢰금으로"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "하나새로 샀어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "근데이거 너무어려워"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "버튼이많아"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "어떻게쓰는지 알려줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나중에 만나면 알려줄게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나중에 만나면 알려줄게"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "오늘은"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "장례식할거야"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "누구 장례식…?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "칼라르에서데려온"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "헬블러드스노우"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "햇빛아래에 있으면"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "반짝거려서"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그게예뻐서 창가에뒀는데"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "어느순간보니까 녹아버렸어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "예요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "눈사람 얘기구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "눈사람 얘기구나"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자도 편히잠들라고 해줘"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "저번에 미리암이부탁한거"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "'결투'가아니라 '협력'이었지만"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "만약 나 미리암이랑 결투했으면"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "누가이겼을까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "3, 2, 1 하고 쏘는 건"
+      },
+      {
+        "speaker": "구원자",
+        "message": "3, 2, 1 하고 쏘는 건"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암이 더 잘했을지도 모르겠네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "미리암이 더 잘했을지도 모르겠네"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "으응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그랬을지도"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "사실 총 쏴본적 없어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "스웜프였을 때도 총 안 썼어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "스웜프였을 때도 총 안 썼어?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "'지옥의 신'에게 총은"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "거추장스러울뿐이니까"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "나도"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "아끼는거 정리해서"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "모아둔상자 있어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "보물상자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐가 들었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐가 들었어?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "으응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "산딸기씨앗이랑"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "도토리랑"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "완벽하게납작한 돌멩이"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "니니가만들어준 부적"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "유리조각"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "흙"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "벌레"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "전부 소중한거야"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "상자보다커서"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "못넣은것도 있지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "못 넣은 건 뭔데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "못 넣은 건 뭔데?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "으응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "일단 구원자"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "잘구겨넣으면 들어가려나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…마음은 고맙지만 사양할게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…마음은 고맙지만 사양할게"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "칼라르 다녀온뒤로"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "가끔 옛날생각해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "옛날 생각?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "옛날 생각?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "생각해도 달라지는거없는데"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그냥 생각나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나쁜 생각은 떨쳐내는 게 좋지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나쁜 생각은 떨쳐내는 게 좋지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "행복했던 추억을 떠올리는 건 좋다고 생각해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "행복했던 추억을 떠올리는 건 좋다고 생각해"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그래?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "으음"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그럼 행복했던추억 생각할게"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "떠올랐어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "떠올랐어?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "칼라르에서 구원자겉옷 입었을때"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자냄새나서"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "좋았어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "다들 무명이랑대화하는거"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "어렵다고하는데"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "사실 무명은 말잘해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "가끔은 개랑도대화하니까"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "멍멍멍"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "이에요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…대화 맞아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…대화 맞아?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "대화 아니야?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "어쨌든"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "꼭 말로하지않아도"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "말한것처럼 통할때도있어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그럴때마다 옛날에 옆에있었던"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "'그림자'랑 비슷하단생각을 해"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "니니 결혼하고싶은걸까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "니니가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "니니가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 왜?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "요즘자꾸 결혼식장간대"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "웨딩사진도찍고"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "드레스도입고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 니니가"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그건 니니가"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨딩 화보 촬영 알바를 해서 그래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "웨딩 화보 촬영 알바를 해서 그래"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "아"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그렇구나"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "결혼하고싶은줄 알고"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "니니 묫자리를 봐주고있었어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "묫자리는 왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "묫자리는 왜?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "예전에도말했지만"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "결혼은 무덤이니까"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "최고의무덤을"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "찾아주려고 한거야"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "단장은"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "찾고싶어해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언더테이커 단장?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "언더테이커 단장?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭘 찾고 싶어하는데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭘 찾고 싶어하는데?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "기억을 찾고싶다고했어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "무명처럼 기억하지못해서"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그래서 기억찾으려고 돌아다니는거야"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "예전엔 왜그래야하는지 잘몰랐는데"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "이제조금은"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "이해할수있어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "조앤한테"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "물어보고왔어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭘?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭘?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "인간의 몸은"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "정령의 몸이랑 달라서"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "영양분이 가득한 음식을먹으면"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "오래오래 튼튼할수있다고"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그래서 준비했어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "숙성된지렁이즙"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "거대지네젤리"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "흰개미튀김"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자 뭐먹을래"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…꼭 먹어야 해?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…꼭 먹어야 해?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자 오래오래살면 좋으니까"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자 좋아하는거 뭐야?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "반짝거리는거라던가"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "달콤한거나 예쁜거"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "아니면 무덤이나"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "죽음"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "파멸"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "붕괴"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 건 안 좋아해!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런 건 안 좋아해!"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "쳇"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "좋아하는거 알려주세요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아하는 건 왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "좋아하는 건 왜?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "이제 구원자"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "영원히기억하기로 했으니까"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "많이알아두면"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "더많이기억하니까"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 기억하고 싶은 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 기억하고 싶은 거야?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "음"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "아마도"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "많이알아서"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "여러가지를 볼때마다"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자가 떠오르면좋겠어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "예를들면"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "누군가의 은밀한취향이담긴 물건"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그런거보면"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자도 좋아하는거다"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "라고 생각할지도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런건 안 좋아한다니까!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그런건 안 좋아한다니까!"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "집무실언제와?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 갈 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 갈 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왜?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "빨리와"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "선물준비했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "선물…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "선물…?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "나"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "아르바이트준비 잘했어?"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "처음이라 쉽지않겠지만"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "그래도 포기하지말고"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "늘웃는얼굴 유지하고"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "편한신발 신고가고"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "급여받으면 뿌듯할거야"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "준비다됐으면 가자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오늘 아르바이트 하는 건 페트라잖아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "오늘 아르바이트 하는 건 페트라잖아!"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "아"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "맞다그랬지"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "이제정리도 끝이네"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "집도 철거되면"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "여기에누가있었는지"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "아무도 모르게될지도"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나랑 페트라가 알잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나랑 페트라가 알잖아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이 집 주인이 어떤 정령이었는지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "이 집 주인이 어떤 정령이었는지"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "구원자가"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "기억할거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "으음…"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "오늘드디어"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "결전의 날이네"
+      },
+      {
+        "speaker": "페트라(각혼)",
+        "message": "준비됐어 구원자?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 급여 지급일일 뿐이잖아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그냥 급여 지급일일 뿐이잖아!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "페트라(각혼)",
+      "en": "Petra (Awakened Soul)",
+      "zh_tw": "佩特拉（覺魂）",
+      "zh_cn": "佩特拉（覺魂）"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "불사형",
+      "en": "Undead",
+      "zh_tw": "不死型",
+      "zh_cn": "不死型"
+    },
+    "class": {
+      "ko": "디펜더",
+      "en": "Defender",
+      "zh_tw": "捍衛者",
+      "zh_cn": "捍衛者"
+    },
+    "sub_class": {
+      "ko": "제어",
+      "en": "CC",
+      "zh_tw": "控制",
+      "zh_cn": "控制"
+    },
+    "stat": {
+      "ko": "힘",
+      "en": "STR",
+      "zh_tw": "力量",
+      "zh_cn": "力量"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "눈부신 밤",
+        "en": "Dazzling Night",
+        "zh_tw": "耀眼的夜晚",
+        "zh_cn": "耀眼的夜晚"
+      },
+      "constellation": {
+        "ko": "인연_제이드_이벤트1",
+        "en": "인연_제이드_이벤트1",
+        "zh_tw": "金牛座",
+        "zh_cn": "金牛座"
+      },
+      "union": {
+        "ko": "팀 언더테이커",
+        "en": "Team Undertaker",
+        "zh_tw": "送葬者小組",
+        "zh_cn": "送葬者小組"
+      },
+      "cv_ko": {
+        "ko": "여민정",
+        "en": "Minjeong Yeo",
+        "zh_tw": "余敏靜",
+        "zh_cn": "余敏靜"
+      },
+      "cv_jp": {
+        "ko": "여민정",
+        "en": "Minjeong Yeo",
+        "zh_tw": "余敏靜",
+        "zh_cn": "余敏靜"
+      },
+      "like": {
+        "ko": [
+          "반짝이는 것",
+          "어두운 곳",
+          "장난"
+        ],
+        "en": [
+          "Sparkly things",
+          "dark places",
+          "pranks"
+        ],
+        "zh_tw": [
+          "閃亮的東西、陰暗的地方、玩笑"
+        ],
+        "zh_cn": [
+          "閃亮的東西、陰暗的地方、玩笑"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "구속",
+          "강요",
+          "생선 회"
+        ],
+        "en": [
+          "Restraints",
+          "coercion",
+          "raw fish"
+        ],
+        "zh_tw": [
+          "束縛、強迫、生魚片"
+        ],
+        "zh_cn": [
+          "束縛、強迫、生魚片"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "멍하니 있기",
+          "빛나는 물건 모으기"
+        ],
+        "en": [
+          "Being absent-minded",
+          "collecting shiny things"
+        ],
+        "zh_tw": [
+          "發呆、收集閃亮的物品"
+        ],
+        "zh_cn": [
+          "發呆、收集閃亮的物品"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "땅 파기",
+          "어둠 속에서 길 찾기"
+        ],
+        "en": [
+          "Digging",
+          "navigating in the dark"
+        ],
+        "zh_tw": [
+          "挖地、在黑暗中找路"
+        ],
+        "zh_cn": [
+          "挖地、在黑暗中找路"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "와악―\n…이제 안 놀라? 흐응… 구원자, 꽤 성장했네.\n\n나도 성장했다고? 으응, 그런 걸지도…\n난, 원래 가지고 있던 힘을 되찾은 것 뿐이라고 생각했지만…\n성장이라고 말하는 쪽이 더 멋지니까, 성장이라고 할게.\n\n응, 의도한 건 아니지만「지옥의 힘」을 되찾게 되었어.\n그런데 아직은… 이 힘을 어떻게 사용해야 할지는 잘 모르겠어.\n옛날에도… 내가 원하는 대로 힘을 쓰지는 않았거든.\n\n그래서 요즘은, 이 힘으로 뭘 해야 할까…에 대해 생각하고 있어.\n구원자 생각은 어때?\n일단 내가 생각한 건… 역시 구원자 놀래키기려나.\n\n아직 고민에 대한 답을 찾지는 못했지만, 한 가지는 맹세할게.\n이 힘… 옛날처럼 나쁜 데에 쓰지 않을게.\n…응, 약속이야. 계속 지켜봐도 좋아.",
+        "en": "Waah!\r\n... You're not surprised anymore? Hm... Savior, you've grown quite a bit.\r\n\r\nYou think I've grown, too? Hmm, maybe you're right...\r\nI think I was just reclaiming the power I once had,\r\nbut calling it growth does sound cooler, so let's go with that.\r\n\r\nYes, it wasn't on purpose, but I've regained the \"power of Hell.\"\r\nThing is...I still don't really know how to use it.\r\nEven in the past, it didn't always do what I wanted it to.\r\n\r\nSo, lately, I've been thinking... What should I do with this power?\r\nWhat do you think, Savior?\r\nMy first idea was... Using it to scare you, obviously.\r\n\r\nI haven't figured it all out yet, but there's one thing I can promise you.\r\nI'll never use this power for anything bad again.\r\n... Yes, that's a promise. You can keep watching over me.",
+        "zh_tw": "哇啊—\r\n…現在不會嚇到了嗎？嗯…救援者，你成長了很多呢。\r\n\r\n我也成長了？嗯，應該吧…\r\n我原本認為自己只是找回以前的力量…\r\n但有成長的說法聽起來比較厲害，所以就叫做成長吧。\r\n\r\n嗯，雖然並非出於本意，但我找回「地獄之力」了。\r\n不過我還不知道…要怎麼使用這股力量。\r\n以前…我也無法隨心所欲地使用力量。\r\n\r\n所以我最近在思考…要怎麼用這股力量。\r\n救援者覺得呢？\r\n首先我想到的是…要給救援者驚喜。\r\n\r\n雖然我還沒想出答案，但我答應你一件事。\r\n我絕對…不會用這股力量做壞事。\r\n…嗯，我答應你，你也可以一直盯著我。",
+        "zh_cn": "哇啊—\r\n…現在不會嚇到了嗎？嗯…救援者，你成長了很多呢。\r\n\r\n我也成長了？嗯，應該吧…\r\n我原本認為自己只是找回以前的力量…\r\n但有成長的說法聽起來比較厲害，所以就叫做成長吧。\r\n\r\n嗯，雖然並非出於本意，但我找回「地獄之力」了。\r\n不過我還不知道…要怎麼使用這股力量。\r\n以前…我也無法隨心所欲地使用力量。\r\n\r\n所以我最近在思考…要怎麼用這股力量。\r\n救援者覺得呢？\r\n首先我想到的是…要給救援者驚喜。\r\n\r\n雖然我還沒想出答案，但我答應你一件事。\r\n我絕對…不會用這股力量做壞事。\r\n…嗯，我答應你，你也可以一直盯著我。"
+      },
+      "greeting": {
+        "ko": "…응, 이번에는 거짓말이 아니야…",
+        "en": "... No, this time, it's not a lie...",
+        "zh_tw": "…嗯，這次不是騙人的…",
+        "zh_cn": "…嗯，這次不是騙人的…"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "구원자 안녕"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Hey Savior"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "救援者嗨"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "救援者嗨"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "이거내 새에버폰"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "thisis mynew Everphone"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "這是我新的EverPhone"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "這是我新的EverPhone"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "안녕 페트라"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Hey, Petra"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "嗨佩特拉"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "嗨佩特拉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "응"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Yes"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "嗯"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "암즈에서받은 의뢰금으로"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Withthe commission I got"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我用安茲給我的委託金"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我用安茲給我的委託金"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "하나새로 샀어"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "from Arms"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "新買了一支"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "新買了一支"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "근데이거 너무어려워"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "but it s way too hardto use"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "但這實在是太難了"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "但這實在是太難了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "버튼이많아"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Somany buttons"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "按鍵好多"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "按鍵好多"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "어떻게쓰는지 알려줘"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Canyou show me how it works"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "教我怎麼用"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "教我怎麼用"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "오늘은"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "We're"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "今天"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "今天"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "장례식할거야"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "having a funeraltoday"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "要辦告別式"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "要辦告別式"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "누구 장례식…?"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Whose funeral...?"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "誰的告別式…？"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "誰的告別式…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "칼라르에서데려온"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Hellblood Snow"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我從卡拉爾帶過來的"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我從卡拉爾帶過來的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "헬블러드스노우"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "the one I broughtfrom Chalar"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "獄血雪人"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "獄血雪人"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "햇빛아래에 있으면"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "I left it by thewindow"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "在陽光底下"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "在陽光底下"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "반짝거려서"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "because itsparkled under the sunlight"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "就會閃閃發光"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "就會閃閃發光"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "그게예뻐서 창가에뒀는데"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "and looked pretty"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "因為很漂亮我就放在窗邊"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "因為很漂亮我就放在窗邊"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "어느순간보니까 녹아버렸어"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "but before Iknew it"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "但突然發現他已經融化"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "但突然發現他已經融化"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "예요"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "it melted"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "了"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "구원자도 편히잠들라고 해줘"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Savior, tell him torest in peace too"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "救援者也對他說句安息吧"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "救援者也對他說句安息吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "저번에 미리암이부탁한거"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "What Miriam askedfor lasttime"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "米里昂上次拜託的"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "米里昂上次拜託的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "'결투'가아니라 '협력'이었지만"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "it was \"cooperation\" not a \"duel\""
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "雖然不是「決鬥」而是「協助」"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "雖然不是「決鬥」而是「協助」"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "만약 나 미리암이랑 결투했으면"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "but if Ihad fought her"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "但如果我和米里昂決鬥"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "但如果我和米里昂決鬥"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "누가이겼을까"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "who doyou think you would have won"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "誰會贏呢"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "誰會贏呢"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "으응"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "yes"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "呃嗯"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "呃嗯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "그랬을지도"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "maybe"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "可能吧"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "可能吧"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "사실 총 쏴본적 없어요"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Actually Ive never fireda gun before"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "其實我沒有用過槍"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "其實我沒有用過槍"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "'지옥의 신'에게 총은"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "To the \"God of Hell\""
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "因為對「地獄之神」來說"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "因為對「地獄之神」來說"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "거추장스러울뿐이니까"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "gunswere just a burden"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "只會覺得礙手礙腳而已"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "只會覺得礙手礙腳而已"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "나도"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "I"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我也"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我也"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "아끼는거 정리해서"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "have abox too"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "整理了一些珍藏"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "整理了一些珍藏"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "모아둔상자 있어"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "filledwith things I treasure"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "全都放在一個箱子裡"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "全都放在一個箱子裡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "보물상자"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "My treasure chest"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我的寶箱"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我的寶箱"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "산딸기씨앗이랑"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "raspberry seeds"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "有樹梅種子"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "有樹梅種子"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "도토리랑"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "acorns"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "跟橡實"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "跟橡實"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "완벽하게납작한 돌멩이"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "a perfectlyflat stone"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "還有扁得恰到好處的小石頭"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "還有扁得恰到好處的小石頭"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "니니가만들어준 부적"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "a charmNini made me"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "妮妮做的符咒"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "妮妮做的符咒"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "유리조각"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "some glass shards"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "玻璃碎片"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "玻璃碎片"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "흙"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "dirt"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "泥土"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "泥土"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "벌레"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "bugs"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "蟲子"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "蟲子"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "전부 소중한거야"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "They're all precious tome"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "全都是我的寶貝"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "全都是我的寶貝"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "상자보다커서"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "There are somethings"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "也有一些比箱子大"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "也有一些比箱子大"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "못넣은것도 있지만"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "that aretoo big to fit in the box though"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "所以放不進去的東西"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "所以放不進去的東西"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "일단 구원자"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "first off...you"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "首先是救援者"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "首先是救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "잘구겨넣으면 들어가려나"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Maybe if i fold you up real tight,I could squeeze you in"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "好好凹一下的話放得進去嗎"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "好好凹一下的話放得進去嗎"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "칼라르 다녀온뒤로"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Ever since we cameback from Chalar"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "自從去了一趟卡拉爾之後"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "自從去了一趟卡拉爾之後"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "가끔 옛날생각해"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "I sometimesthink about thepast"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我就偶爾會想起從前"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "我就偶爾會想起從前"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "생각해도 달라지는거없는데"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Thinking aboutit doesnt change anything"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "明明想了也不會有什麼改變"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "明明想了也不會有什麼改變"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "그냥 생각나"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "but it justcomes to mind"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "但就是會想起來"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "但就是會想起來"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "페트라(각혼)",
+          "message": "그래?"
+        },
+        "en": {
+          "speaker": "Petra (Awakened Soul)",
+          "message": "Really?"
+        },
+        "zh_tw": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "是嗎？"
+        },
+        "zh_cn": {
+          "speaker": "佩特拉（覺魂）",
+          "message": "是嗎？"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "미리암(잔영)",
+          "message": "팬텀이 만들어낸 죄업… 속죄할 수 있어서 다행이라고 생각해."
+        },
+        "en": {
+          "speaker": "Miriam (Afterimage)",
+          "message": "The sins Phantom created... I'm glad I can make up for them."
+        },
+        "zh_tw": {
+          "speaker": "米里昂（殘影）",
+          "message": "魅影造成的罪孽…她要慶幸還能贖罪。"
+        },
+        "zh_cn": {
+          "speaker": "米里昂（殘影）",
+          "message": "魅影造成的罪孽…她要慶幸還能贖罪。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "조앤",
+          "message": "고 아가씨, 가끔은 제멋대로지만 그래도 심성이 나쁘진 않아."
+        },
+        "en": {
+          "speaker": "Joanne",
+          "message": "She can be a bit willful at times, but she's not a bad Soul at heart."
+        },
+        "zh_tw": {
+          "speaker": "瓊",
+          "message": "那個小姐，有時很任性，但心性並不壞。"
+        },
+        "zh_cn": {
+          "speaker": "瓊",
+          "message": "那個小姐，有時很任性，但心性並不壞。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "니니",
+          "message": "칼라르에서 사고 치는 건 아니겠지? 으으, 진짜 걱정 돼!"
+        },
+        "en": {
+          "speaker": "Nini",
+          "message": "She's not going to cause trouble in Chalar, right? Ugh, I'm really worried!"
+        },
+        "zh_tw": {
+          "speaker": "妮妮",
+          "message": "應該不會在卡拉爾闖禍吧？呃呃，真擔心！"
+        },
+        "zh_cn": {
+          "speaker": "妮妮",
+          "message": "應該不會在卡拉爾闖禍吧？呃呃，真擔心！"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자 안녕"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Hey Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者嗨"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者嗨"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "이거내 새에버폰"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "thisis mynew Everphone"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "這是我新的EverPhone"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "這是我新的EverPhone"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "안녕 페트라"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Hey, Petra"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗨佩特拉"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗨佩特拉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "안녕 페트라"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Hey, Petra"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗨佩特拉"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗨佩特拉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰 새로 산 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you just get a new Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳新買了EverPhone？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳新買了EverPhone？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "에버폰 새로 산 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did you just get a new Everphone?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳新買了EverPhone？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳新買了EverPhone？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "암즈에서받은 의뢰금으로"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Withthe commission I got"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我用安茲給我的委託金"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我用安茲給我的委託金"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "하나새로 샀어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "from Arms"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "新買了一支"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "新買了一支"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "근데이거 너무어려워"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "but it s way too hardto use"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但這實在是太難了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但這實在是太難了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "버튼이많아"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Somany buttons"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "按鍵好多"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "按鍵好多"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "어떻게쓰는지 알려줘"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Canyou show me how it works"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "教我怎麼用"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "教我怎麼用"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나중에 만나면 알려줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll show you when we meet up"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "改天見面再教妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "改天見面再教妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나중에 만나면 알려줄게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll show you when we meet up"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "改天見面再教妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "改天見面再教妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "ok"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "오늘은"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "We're"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "今天"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "今天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "장례식할거야"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "having a funeraltoday"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "要辦告別式"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "要辦告別式"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "누구 장례식…?"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Whose funeral...?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "誰的告別式…？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "誰的告別式…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "칼라르에서데려온"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Hellblood Snow"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我從卡拉爾帶過來的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我從卡拉爾帶過來的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "헬블러드스노우"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "the one I broughtfrom Chalar"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "獄血雪人"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "獄血雪人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "햇빛아래에 있으면"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I left it by thewindow"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "在陽光底下"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "在陽光底下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "반짝거려서"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "because itsparkled under the sunlight"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "就會閃閃發光"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "就會閃閃發光"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그게예뻐서 창가에뒀는데"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "and looked pretty"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為很漂亮我就放在窗邊"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為很漂亮我就放在窗邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "어느순간보니까 녹아버렸어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "but before Iknew it"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但突然發現他已經融化"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但突然發現他已經融化"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "예요"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "it melted"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "눈사람 얘기구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're talking about the snowman"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來是在講雪人"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來是在講雪人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "눈사람 얘기구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're talking about the snowman"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "原來是在講雪人"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "原來是在講雪人"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자도 편히잠들라고 해줘"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Savior, tell him torest in peace too"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者也對他說句安息吧"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者也對他說句安息吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "저번에 미리암이부탁한거"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "What Miriam askedfor lasttime"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "米里昂上次拜託的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "米里昂上次拜託的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "'결투'가아니라 '협력'이었지만"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "it was \"cooperation\" not a \"duel\""
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "雖然不是「決鬥」而是「協助」"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "雖然不是「決鬥」而是「協助」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "만약 나 미리암이랑 결투했으면"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "but if Ihad fought her"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但如果我和米里昂決鬥"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但如果我和米里昂決鬥"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "누가이겼을까"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "who doyou think you would have won"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "誰會贏呢"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "誰會贏呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "3, 2, 1 하고 쏘는 건"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "When it comes to pulling the trigger on 3, 2, 1"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "倒數3、2、1之後開槍"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "倒數3、2、1之後開槍"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "3, 2, 1 하고 쏘는 건"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "When it comes to pulling the trigger on 3, 2, 1"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "倒數3、2、1之後開槍"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "倒數3、2、1之後開槍"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암이 더 잘했을지도 모르겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Miriam might be better"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能會是米里昂更厲害"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能會是米里昂更厲害"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "미리암이 더 잘했을지도 모르겠네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Miriam might be better"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能會是米里昂更厲害"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能會是米里昂更厲害"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "으응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그랬을지도"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "maybe"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "可能吧"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "可能吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "사실 총 쏴본적 없어요"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Actually Ive never fireda gun before"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "其實我沒有用過槍"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "其實我沒有用過槍"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "스웜프였을 때도 총 안 썼어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not even back when you were in Swamp?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "待在斯沃普的時候也沒有用過槍嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "待在斯沃普的時候也沒有用過槍嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "스웜프였을 때도 총 안 썼어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Not even back when you were in Swamp?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "待在斯沃普的時候也沒有用過槍嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "待在斯沃普的時候也沒有用過槍嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "no"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "'지옥의 신'에게 총은"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "To the \"God of Hell\""
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為對「地獄之神」來說"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為對「地獄之神」來說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "거추장스러울뿐이니까"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "gunswere just a burden"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "只會覺得礙手礙腳而已"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "只會覺得礙手礙腳而已"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "나도"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我也"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我也"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "아끼는거 정리해서"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "have abox too"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "整理了一些珍藏"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "整理了一些珍藏"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "모아둔상자 있어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "filledwith things I treasure"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "全都放在一個箱子裡"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "全都放在一個箱子裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "보물상자"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "My treasure chest"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我的寶箱"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我的寶箱"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐가 들었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's inside?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "裡面有什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "裡面有什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐가 들었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's inside?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "裡面有什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "裡面有什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "으응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "mm"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "산딸기씨앗이랑"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "raspberry seeds"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "有樹梅種子"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "有樹梅種子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "도토리랑"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "acorns"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "跟橡實"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "跟橡實"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "완벽하게납작한 돌멩이"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "a perfectlyflat stone"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "還有扁得恰到好處的小石頭"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "還有扁得恰到好處的小石頭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "니니가만들어준 부적"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "a charmNini made me"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "妮妮做的符咒"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "妮妮做的符咒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "유리조각"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "some glass shards"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "玻璃碎片"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "玻璃碎片"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "흙"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "dirt"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "泥土"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "泥土"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "벌레"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "bugs"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "蟲子"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "蟲子"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "전부 소중한거야"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "They're all precious tome"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "全都是我的寶貝"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "全都是我的寶貝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "상자보다커서"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "There are somethings"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "也有一些比箱子大"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "也有一些比箱子大"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "못넣은것도 있지만"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "that aretoo big to fit in the box though"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以放不進去的東西"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以放不進去的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "못 넣은 건 뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What didn't fit?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "放不進去的是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "放不進去的是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "못 넣은 건 뭔데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What didn't fit?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "放不進去的是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "放不進去的是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "으응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "mm"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "일단 구원자"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "first off...you"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "首先是救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "首先是救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "잘구겨넣으면 들어가려나"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Maybe if i fold you up real tight,I could squeeze you in"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "好好凹一下的話放得進去嗎"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "好好凹一下的話放得進去嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…마음은 고맙지만 사양할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... That's sweet, but I'll have to pass"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…謝謝妳的好意，我心領了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…謝謝妳的好意，我心領了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…마음은 고맙지만 사양할게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... That's sweet, but I'll have to pass"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…謝謝妳的好意，我心領了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…謝謝妳的好意，我心領了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "칼라르 다녀온뒤로"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Ever since we cameback from Chalar"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "自從去了一趟卡拉爾之後"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "自從去了一趟卡拉爾之後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "가끔 옛날생각해"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I sometimesthink about thepast"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我就偶爾會想起從前"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我就偶爾會想起從前"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "옛날 생각?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The past?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "想起從前？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "想起從前？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "옛날 생각?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The past?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "想起從前？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "想起從前？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "생각해도 달라지는거없는데"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Thinking aboutit doesnt change anything"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "明明想了也不會有什麼改變"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "明明想了也不會有什麼改變"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그냥 생각나"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "but it justcomes to mind"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但就是會想起來"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但就是會想起來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나쁜 생각은 떨쳐내는 게 좋지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's good to shake off the bad memories"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "雖然說不好的念頭要擺脫比較好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "雖然說不好的念頭要擺脫比較好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나쁜 생각은 떨쳐내는 게 좋지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's good to shake off the bad memories"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "雖然說不好的念頭要擺脫比較好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "雖然說不好的念頭要擺脫比較好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "행복했던 추억을 떠올리는 건 좋다고 생각해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but I think it's nice to remember the happy ones"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我覺得回想幸福的回憶是很棒的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我覺得回想幸福的回憶是很棒的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "행복했던 추억을 떠올리는 건 좋다고 생각해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but I think it's nice to remember the happy ones"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但我覺得回想幸福的回憶是很棒的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但我覺得回想幸福的回憶是很棒的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "으음"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Mm"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그럼 행복했던추억 생각할게"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "then I'll try tothink of a happy memory"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "那我會想想幸福的回憶"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "那我會想想幸福的回憶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Ah"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "떠올랐어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did something come to mind?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳想到了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳想到了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "떠올랐어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did something come to mind?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳想到了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳想到了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "칼라르에서 구원자겉옷 입었을때"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Back inChalar when I wore yourcoat"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "在卡拉爾穿上救援者的外衣時"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "在卡拉爾穿上救援者的外衣時"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자냄새나서"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I liked"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為有救援者的味道"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為有救援者的味道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "좋았어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "how it smelled like you"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以很開心"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "다들 무명이랑대화하는거"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Everyone says its hard"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "大家都說跟無名對話"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "大家都說跟無名對話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "어렵다고하는데"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "to talk to Nameless"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "很困難"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "很困難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "사실 무명은 말잘해"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "butactually Nameless talks just fine"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但其實無名很會說話"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但其實無名很會說話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "가끔은 개랑도대화하니까"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Sometimes she eventalks to dogs"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "偶爾還會跟狗對話"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "偶爾還會跟狗對話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "멍멍멍"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Woof woof"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "汪汪汪"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "汪汪汪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "이에요"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "she says"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "這樣"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…대화 맞아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... Is that really talking?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…確定有在對話嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…確定有在對話嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…대화 맞아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... Is that really talking?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…確定有在對話嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…確定有在對話嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "대화 아니야?"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Isnt it?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "那不是對話嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "那不是對話嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "어쨌든"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Anyway"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "總之"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "總之"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "꼭 말로하지않아도"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "sometimes evenwithout words"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "有時候不用非得說話"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "有時候不用非得說話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "말한것처럼 통할때도있어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "it feels like Ican understand her"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "也可以像說話一樣溝通"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "也可以像說話一樣溝通"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그럴때마다 옛날에 옆에있었던"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "And i thinkshe's kind of like"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "每當那時候就覺得她跟以前在我身邊的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "每當那時候就覺得她跟以前在我身邊的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "'그림자'랑 비슷하단생각을 해"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "the \"shadow\" that used to be beside me long ago"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "「影子」很像"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "「影子」很像"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "니니 결혼하고싶은걸까"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Do you think Nini wants toget married"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "妮妮想結婚了嗎"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "妮妮想結婚了嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "니니가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nini?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妮妮嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妮妮嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "니니가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nini?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妮妮嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妮妮嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where's that coming from?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼突然這樣說？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼突然這樣說？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Where's that coming from?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼突然這樣說？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼突然這樣說？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "요즘자꾸 결혼식장간대"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Shes been goingto wedding halls a lot lately"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "她說最近很常去婚禮"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "她說最近很常去婚禮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "웨딩사진도찍고"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Taking wedding photos"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "會拍婚紗照"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "會拍婚紗照"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "드레스도입고"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "trying ondresses"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "還會穿禮服"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "還會穿禮服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 니니가"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's because"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是因為妮妮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是因為妮妮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그건 니니가"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's because"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那是因為妮妮"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那是因為妮妮"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨딩 화보 촬영 알바를 해서 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "she's doing part-time work as a bridal model"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "在兼職拍攝婚紗寫真"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "在兼職拍攝婚紗寫真"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "웨딩 화보 촬영 알바를 해서 그래"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "she's doing part-time work as a bridal model"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "在兼職拍攝婚紗寫真"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "在兼職拍攝婚紗寫真"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Ah"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그렇구나"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "결혼하고싶은줄 알고"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I thought shewanted to get married"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "還以為她想結婚"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "還以為她想結婚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "니니 묫자리를 봐주고있었어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "So I was pickingout a burial site for her"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我在幫妮妮看墓地"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我在幫妮妮看墓地"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "묫자리는 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A burial site? Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼在看墓地？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼在看墓地？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "묫자리는 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A burial site? Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼在看墓地？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼在看墓地？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "예전에도말했지만"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I told youbefore"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我之前也有說過"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我之前也有說過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "결혼은 무덤이니까"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Marriage is basicallya grave"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為婚姻就是墳墓"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為婚姻就是墳墓"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "최고의무덤을"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I wantedto"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以想幫她找到"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以想幫她找到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "찾아주려고 한거야"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "find her the bestone"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "最棒的墳墓"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "最棒的墳墓"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "단장은"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "The Captain"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "團長"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "團長"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "찾고싶어해"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "wantsto find"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "想要找東西"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "想要找東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언더테이커 단장?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The Captain of Team Undertaker?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "送葬者小組的團長？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "送葬者小組的團長？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "언더테이커 단장?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "The Captain of Team Undertaker?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "送葬者小組的團長？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "送葬者小組的團長？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭘 찾고 싶어하는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What does she want to find?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她想找什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她想找什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭘 찾고 싶어하는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What does she want to find?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "她想找什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "她想找什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "기억을 찾고싶다고했어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Her memories"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "她說想要找記憶"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "她說想要找記憶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "무명처럼 기억하지못해서"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Like Nameless,she doesnt remember anything"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "她像無名一樣失憶了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "她像無名一樣失憶了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그래서 기억찾으려고 돌아다니는거야"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "So shes been wandering around tryingto recover them"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以在到處找記憶"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以在到處找記憶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "예전엔 왜그래야하는지 잘몰랐는데"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I didnt reallyget why she would do that before"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我以前不懂為什麼要那樣做"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我以前不懂為什麼要那樣做"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "이제조금은"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "now Ithink"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "現在有點"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "現在有點"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "이해할수있어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "i understand a little"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "可以理解了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "可以理解了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "조앤한테"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I talkedto"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我跟瓊"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我跟瓊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "물어보고왔어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Joanne"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "問過了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "問過了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭘?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "About what?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "問什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "問什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭘?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "About what?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "問什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "問什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "인간의 몸은"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "She said"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "人類的身體"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "人類的身體"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "정령의 몸이랑 달라서"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "a human bodys different from a Soul's"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "跟精靈的身體不一樣"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "跟精靈的身體不一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "영양분이 가득한 음식을먹으면"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "and if you eat foodfull of nutrients"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "吃下營養豐富的食物"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "吃下營養豐富的食物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "오래오래 튼튼할수있다고"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "you can live a longstrong life"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "就可以很長一段時間都很強壯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "就可以很長一段時間都很強壯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그래서 준비했어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "So Igot things readyfor you"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以我準備了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "所以我準備了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "숙성된지렁이즙"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Aged earthwormjuice"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "熟成蚯蚓汁"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "熟成蚯蚓汁"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "거대지네젤리"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "giant centipedejelly"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "巨無霸蜈蚣軟糖"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "巨無霸蜈蚣軟糖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "흰개미튀김"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "fried termites"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "炸白蟻"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "炸白蟻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자 뭐먹을래"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Which one do you want,Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者要吃哪一個"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者要吃哪一個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…꼭 먹어야 해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... Do I have to eat one?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…一定要吃嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…一定要吃嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…꼭 먹어야 해?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "... Do I have to eat one?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…一定要吃嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…一定要吃嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자 오래오래살면 좋으니까"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I wantyou to live a long,long time"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為我希望救援者長命百歲"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為我希望救援者長命百歲"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자 좋아하는거 뭐야?"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Savior, whatdo you like"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者喜歡什麼？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者喜歡什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "반짝거리는거라던가"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Something shiny?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "像是亮晶晶的東西"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "像是亮晶晶的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "달콤한거나 예쁜거"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Sweet? Or pretty?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "或是甜甜的、漂亮的東西"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "或是甜甜的、漂亮的東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "아니면 무덤이나"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Or maybe graves"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "或是墳墓之類的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "或是墳墓之類的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "죽음"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Death"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "還有死亡"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "還有死亡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "파멸"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Ruin"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "破滅"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "破滅"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "붕괴"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Collapse"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "崩潰"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "崩潰"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 건 안 좋아해!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't like any of that!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不喜歡那種東西"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不喜歡那種東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런 건 안 좋아해!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I don't like any of that!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我不喜歡那種東西"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我不喜歡那種東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "쳇"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "pfft"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呿"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "좋아하는거 알려주세요"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Then tell me whatyou do like, please"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "跟我說你喜歡什麼"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "跟我說你喜歡什麼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아하는 건 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why do you want to know?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼這樣問？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼這樣問？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "좋아하는 건 왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why do you want to know?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼這樣問？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼這樣問？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "이제 구원자"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Because"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為我決定要永遠"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "因為我決定要永遠"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "영원히기억하기로 했으니까"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Ive decided to remember youforever"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "記住救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "記住救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "많이알아두면"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "The more I know"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "先了解一下"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "先了解一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "더많이기억하니까"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "the more Ican remember"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "才能記住更多"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "才能記住更多"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 기억하고 싶은 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You want to remember me that much?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳想記住很多事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳想記住很多事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 기억하고 싶은 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You want to remember me that much?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳想記住很多事嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳想記住很多事嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "음"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Mm"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "아마도"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "maybe"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "大概吧"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "大概吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "많이알아서"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I want to knowenough"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "希望知道很多之後"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "希望知道很多之後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "여러가지를 볼때마다"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "that when I see something, anything"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "每當我看到各種事物時"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "每當我看到各種事物時"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자가 떠오르면좋겠어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "it reminds me of you"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "可以想起救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "可以想起救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "예를들면"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Like if I see"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "像是"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "像是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "누군가의 은밀한취향이담긴 물건"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "something with someone's..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "透露出某人不為人知的愛好的物品"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "透露出某人不為人知的愛好的物品"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그런거보면"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "unusual tastes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "看到那種東西"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "看到那種東西"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자도 좋아하는거다"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I might think"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "「救援者也會喜歡」"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "「救援者也會喜歡」"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "라고 생각할지도"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Oh,Savior likes that too"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我可能會這樣想"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我可能會這樣想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런건 안 좋아한다니까!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I told you, I don't like those kinds of things!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就說我沒有喜歡那種了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就說我沒有喜歡那種了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그런건 안 좋아한다니까!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I told you, I don't like those kinds of things!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就說我沒有喜歡那種了！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就說我沒有喜歡那種了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "집무실언제와?"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "When areyou coming to the office"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "你什麼時候會來辦公室？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "你什麼時候會來辦公室？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 갈 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該馬上就會到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該馬上就會到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 갈 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll be there soon"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "應該馬上就會到"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "應該馬上就會到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왜?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "ok"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "빨리와"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "hurry"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "快點來"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "快點來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "선물준비했어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "I gotyou a present"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我準備了禮物"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我準備了禮物"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "선물…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A present...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "禮物…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "禮物…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "선물…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "A present...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "禮物…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "禮物…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "yes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "나"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "i"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "아르바이트준비 잘했어?"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "are you allset for your part-time job?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "做好打工的準備了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "做好打工的準備了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "처음이라 쉽지않겠지만"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "it's your first time soit won't be easy"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "第一次可能會不容易"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "第一次可能會不容易"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "그래도 포기하지말고"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "but dont giveup"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但你還是別放棄"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "但你還是別放棄"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "늘웃는얼굴 유지하고"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Keep smiling"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "要常保一張笑臉"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "要常保一張笑臉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "편한신발 신고가고"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "wear comfyshoes"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "穿著舒適的鞋子去打工"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "穿著舒適的鞋子去打工"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "급여받으면 뿌듯할거야"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "once you get your paycheck,you'll feel proud"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "收到薪水會很欣慰的"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "收到薪水會很欣慰的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "준비다됐으면 가자"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "If youre ready, let's go"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "都準備好的話就走吧"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "都準備好的話就走吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Wait..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "等等…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "等等…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오늘 아르바이트 하는 건 페트라잖아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're the one working the part-time job today, Petra!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "今天要打工的不是佩特拉嗎！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "今天要打工的不是佩特拉嗎！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "오늘 아르바이트 하는 건 페트라잖아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're the one working the part-time job today, Petra!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "今天要打工的不是佩特拉嗎！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "今天要打工的不是佩特拉嗎！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "아"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Ah"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "맞다그랬지"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "right Iforgot"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "對齁"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "對齁"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "이제정리도 끝이네"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "That's the lastof the cleanup"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "現在也整理好了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "現在也整理好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "집도 철거되면"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Once thehouse is torn down"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "如果家也拆遷的話"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "如果家也拆遷的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "여기에누가있었는지"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "maybe noone will even remember"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "可能就不會有人知道"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "可能就不會有人知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "아무도 모르게될지도"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "wholived here"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "有誰曾經住在這裡"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "有誰曾經住在這裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나랑 페트라가 알잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But you and I know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我跟佩特拉知道啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我跟佩特拉知道啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나랑 페트라가 알잖아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But you and I know"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我跟佩特拉知道啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我跟佩特拉知道啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이 집 주인이 어떤 정령이었는지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We know what kind of Soul lived here"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道這個家的主人是什麼樣的精靈"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道這個家的主人是什麼樣的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "이 집 주인이 어떤 정령이었는지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We know what kind of Soul lived here"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "知道這個家的主人是什麼樣的精靈"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "知道這個家的主人是什麼樣的精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "구원자가"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Will you really"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "기억할거야?"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "remember Savior?"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "會記得嗎？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "會記得嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "으음…"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Mm..."
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯…"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "呃嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "오늘드디어"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Finally"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "今天終於"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "今天終於"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "결전의 날이네"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "its the day of destiny"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "就是決戰之日了"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "就是決戰之日了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "페트라(각혼)",
+            "message": "준비됐어 구원자?"
+          },
+          "en": {
+            "speaker": "Petra (Awakened Soul)",
+            "message": "Are you ready Savior"
+          },
+          "zh_tw": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "準備好了嗎救援者？"
+          },
+          "zh_cn": {
+            "speaker": "佩特拉（覺魂）",
+            "message": "準備好了嗎救援者？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 급여 지급일일 뿐이잖아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's just payday!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不就只是發薪日而已嗎！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不就只是發薪日而已嗎！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그냥 급여 지급일일 뿐이잖아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "It's just payday!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不就只是發薪日而已嗎！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不就只是發薪日而已嗎！"
+          }
+        }
+      ]
+    }
+  }
+}

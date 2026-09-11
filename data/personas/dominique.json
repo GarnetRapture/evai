@@ -1,0 +1,8039 @@
+{
+  "id": "3140",
+  "name": "도미니크",
+  "name_en": "Dominique",
+  "grade": "에픽",
+  "race": "요정형",
+  "class": "캐스터",
+  "sub_class": "단일",
+  "stat": "지능",
+  "profile": {
+    "nick_name": "찬란한 금빛",
+    "constellation": "천칭자리",
+    "union": "에덴",
+    "birthday": "930",
+    "height": 148,
+    "weight": 37,
+    "cv_ko": "김채린",
+    "cv_jp": "김채린",
+    "like": [
+      "스티커",
+      "도마뱀",
+      "쓴맛"
+    ],
+    "dislike": [
+      "발표",
+      "연설"
+    ],
+    "hobby": [
+      "그림 그리기"
+    ],
+    "speciality": [
+      "도망치기"
+    ]
+  },
+  "personality": {
+    "description": "아, 아, 안녕하세요… 구원자님…!\n제, 제이드에게… 이야기 많이 들었어요…\n저, 저는 트로이카의 국왕… 도미니크예요.\n\n이, 이렇게… 이, 인사드리게 되어서… 저, 정말 기뻐요… 히끅!\n죄, 죄송해요… 너무 긴장해서 딸꾹질이 나와버렸어요…\n우으으으…히끅!\n\n지, 진정해야 해… 심호흡하고… 휴우우우우…\n\n제, 제가 왕이 된 지 얼마 안 되어서… 아직 미숙한 부분이 많지만…\n그, 그래도 제가 도울 수 있는 게 있다면… 언제든지 편하게 말씀해 주세요…!\n힘이 닿는 데까지 여, 열심히 해볼게요…!\n\n어… 그… 이제 어떻게 마무리해야 하지…?\n아, 그렇지! 다, 다음에… 꼭… 차 한잔하도록 해요…!\n그, 그, 그럼  이, 이만 먼저 가볼게요…!\n\n(쌔앵)",
+    "greeting": "네! 제가 바로… 트로이카의 왕, 도미니크예요."
+  },
+  "speech_patterns": [
+    "저기",
+    "혹시 구원자님이세요?",
+    "휴 다행이다",
+    "잘못 보냈으면 울 뻔했어요",
+    "아 저는",
+    "트로이카의 왕",
+    "도미니크예요",
+    "그냥",
+    "인사드리려고 했어요",
+    "혹시 귀찮게 해드렸다면",
+    "정말 죄송해요",
+    "감사해요",
+    "나중에 정식으로",
+    "인사드릴게요",
+    "이제 더 답장",
+    "안 하셔도 돼요",
+    "저 구생",
+    "아니 구원자님",
+    "아까 교실에서",
+    "저 많이 이상해보였나요?",
+    "완벽하게",
+    "위장했다고 생각했는데",
+    "결국 다 들켰네요",
+    "망해버렸어요",
+    "완전 글러 먹고 말았어요",
+    "(ㅠ▽ㅠ)",
+    "구생님",
+    "아니지 선생님",
+    "그럼",
+    "자기소개문은 꼭",
+    "발표해야 하는 건가요?",
+    "뭔가 그",
+    "대체 과제 같은 것은",
+    "없는 걸까요?",
+    "저 혹시",
+    "내일 아파도 돼요?",
+    "알겠어요…",
+    "발표 연습 혼자 한 거",
+    "인증샷 찍었어요",
+    "여기 있어요",
+    "찍는 건 친구한테",
+    "부탁했어요",
+    "그 그러니까",
+    "같은 반 친구한테요",
+    "(^▽^)",
+    "이번 숙제는",
+    "장래 희망 발표하기네요",
+    "장래 희망이",
+    "왕인 친구가 있으면",
+    "꽤 곤란하겠어요"
+  ],
+  "comments": [
+    {
+      "writer": "제이드",
+      "comment": "저는 선왕 전하의 판단과 도미니크 전하의 가능성을 믿고 있답니다."
+    },
+    {
+      "writer": "에리카",
+      "comment": "저, 정말 이렇게까지 공감이 되는 상대는 처음이야…"
+    },
+    {
+      "writer": "사쿠요",
+      "comment": "아랫것들을 다루는 법은 이 사쿠요에게 배워보시라고 전해라."
+    }
+  ],
+  "dialogues": {
+    "story": [],
+    "evertalk": [
+      {
+        "speaker": "도미니크",
+        "message": "저기"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "혹시 구원자님이세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 맞아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 맞아"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "휴 다행이다"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "잘못 보냈으면 울 뻔했어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아 저는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "트로이카의 왕"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "도미니크예요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그냥"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "인사드리려고 했어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "혹시 귀찮게 해드렸다면"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "정말 죄송해요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "반가워 도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "반가워 도미니크"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "감사해요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "나중에 정식으로"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "인사드릴게요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "이제 더 답장"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "안 하셔도 돼요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저 구생"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아니 구원자님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아까 교실에서"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저 많이 이상해보였나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 긴장하는 것 같았어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 긴장하는 것 같았어"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "완벽하게"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "위장했다고 생각했는데"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "결국 다 들켰네요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "망해버렸어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "완전 글러 먹고 말았어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(ㅠ▽ㅠ)"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아니 구원자님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아니지 선생님"
+      },
+      {
+        "speaker": "구원자",
+        "message": "편한 호칭으로 불러줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "편한 호칭으로 불러줘"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그럼"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "자기소개문은 꼭"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "발표해야 하는 건가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "뭔가 그"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "대체 과제 같은 것은"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "없는 걸까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저 혹시"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "내일 아파도 돼요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안 돼"
+      },
+      {
+        "speaker": "구원자",
+        "message": "안 돼"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(ㅠ▽ㅠ)"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "알겠어요…"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "발표 연습 혼자 한 거"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "인증샷 찍었어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래 보여줘"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래 보여줘"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "여기 있어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "찍는 건 친구한테"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "부탁했어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그 그러니까"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "같은 반 친구한테요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘했어"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(^▽^)"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "이번 숙제는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "장래 희망 발표하기네요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "장래 희망이"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "왕인 친구가 있으면"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "꽤 곤란하겠어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(O_O)"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크의 장래 희망은 뭐야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크의 장래 희망은 뭐야?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "우으 부끄러운데"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저는 예전부터"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "선생님이"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "되고 싶었어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님 입장에서는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "우스운 이야기일 것 같아요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘할 거 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘할 거 같아"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "지 진짜로요?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그런 말은 처음 듣는데"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "왠지 기분이 좋아지네요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(^▽^)"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "괜찮아?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저 도미니크 아니에요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "글러 먹은 도미니크라는 애는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "학교에 나갈 생각이 없을 거예요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그러니까"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "더는 기다리지 마세요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "학교 가는 길에"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "길 잃은 도마뱀이 있어서"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "원래 있을 법한 곳에"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "놓아주었어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘했어 도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘했어 도미니크"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그러니까"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "오늘 지각한 거"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "봐주시면"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "안 될까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "칭찬은 칭찬이고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "칭찬은 칭찬이고"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벌점은 벌점이지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "벌점은 벌점이지"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(ㅠ▽ㅠ)"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "학교 분위기가"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "생각보다 많이"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "침체되어 있네요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 며칠째 그러네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 며칠째 그러네"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "제가"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "도망쳤던 탓이겠죠?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "친구들을"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "이렇게 놔두면 안 되었는데"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "전 정말 형편없네요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "하지만"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "이제는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "도망가지 않아요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐 도망친 사이에"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잠깐 도망친 사이에"
+      },
+      {
+        "speaker": "구원자",
+        "message": "용기를 얻어서 돌아왔구나"
+      },
+      {
+        "speaker": "구원자",
+        "message": "용기를 얻어서 돌아왔구나"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "정말 구생님은"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "화술이 남다르시네요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "지금은"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "학교 가는 게 즐겁지만"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "예전에 다닐 때는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "늘 즐겁지는 않았어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일이 있었어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일이 있었어?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "당시에는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그 학교에 저만"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "서민 출신이었어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그래서 잘 어울리지 못했죠"
+      },
+      {
+        "speaker": "구원자",
+        "message": "따돌림당한 거야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "따돌림당한 거야?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그런 건 아니에요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "오히려 잘해주는 친구들도 많았는데"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "뭔가 대화에 낄 수 없어서"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "잘 못 어울렸어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "지금 생각해 보면 그냥"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "제가 혼자 위축되어서"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그런 건가 싶기도 하고"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "헤헷 쓸데없는 말이었어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야 이야기 해줘서 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "아니야 이야기 해줘서 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크의 이야기는 언제나 환영해"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크의 이야기는 언제나 환영해"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(^▽^)"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "혹시 저랑 약속했던 기간이 끝나면"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아케나인으로 돌아가실 건가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "별 계획이 없으면 그러지 않을까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "별 계획이 없으면 그러지 않을까?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그렇군요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "호 혹시라도"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "학교에 더 계시고 싶으시면"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "언제든 말씀해 주세요!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "서류 처리는 금방 될 테니까"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "다른 건 걱정 안 하셔도 돼요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워 도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워 도미니크"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "감사합니다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아 그 공립 학교 교사"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "해주신다고 들었거든요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "거절하시면 어쩌나 하고"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "걱정 많이 했어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "잘 부탁드릴게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "열심히 해볼게"
+      },
+      {
+        "speaker": "구원자",
+        "message": "열심히 해볼게"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "네 그럼 학교에서 뵐게요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아 아니"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그러니까 제가 나중에"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "학교에 방문 하려고 하거든요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그럼 이만"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "줄일게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 왕궁에 도착할 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "곧 왕궁에 도착할 것 같아"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "ㅂ벌써요?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "알겟ㅆ습니다"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "ㅈ준비하고 ㅇ있ㅇㅡㄹ게요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크, 괜찮은 거지…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크, 괜찮은 거지…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 가고 있어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "지금 가고 있어"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저 도미니크 아니에요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "에버톡 잘 못 하신 것 같아요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "구원자",
+        "message": "……."
+      },
+      {
+        "speaker": "도미니크",
+        "message": "죄송해요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "알현실로 오시면 돼요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "혼나나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "우으으으…"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "혹시 오늘 보충수업"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "내일로"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "미룰 수 있을까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일 있어?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그 친구들이"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "오늘 학교 끝나고"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "디저트 카페 가자고 해서요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "오늘은 놀러 가면"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "안될까요?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(O_O)"
+      },
+      {
+        "speaker": "구원자",
+        "message": "즐겁게 다녀와"
+      },
+      {
+        "speaker": "구원자",
+        "message": "즐겁게 다녀와"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "감사합니다!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(^▽^)"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "일어나셨어요?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저 너무 떨려서"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "잠을 거의 못 잤어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(ㅠ▽ㅠ)"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 긴장돼?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "많이 긴장돼?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "긴장되기도 하고"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "설레기도 하고"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "막 엄청 복잡해요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "우으으으"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우린 잘 해낼 거야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "우린 잘 해낼 거야"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "네! 맞아요!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "이따 봬요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왕궁 앞이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "왕궁 앞이야"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "어서 오세요, 구원자님."
+      },
+      {
+        "speaker": "도미니크",
+        "message": "제가 전하가 있는 곳으로 안내해 드릴게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "???"
+      },
+      {
+        "speaker": "구원자",
+        "message": "설마 제이드야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "설마 제이드야?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "남의 에버폰을 함부로 만진 일은"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구원자님과 저만의 비밀로 해주세요."
+      },
+      {
+        "speaker": "도미니크",
+        "message": "아셨죠?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저 아까"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "잘했나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "훌륭했어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "훌륭했어"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님의 보충수업 덕분이에요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "정말 감사해요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그럼 저는"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "친구들이랑 회의하러 갈게요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "이따 봬요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(^▽^)/"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "도미니크"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나 오늘 수업 빠져도 될까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나 오늘 수업 빠져도 될까?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "네"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "친구들한테는 잘 둘러댈게요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 고마워"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응 고마워"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저야말로 감사하죠"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님이 앞으로도 계속"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "선생님을 해주시기로 했으니까요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "전 그걸로 충분해요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "저 아케나인이에요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐라고?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "뭐라고?"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "급한 일이라서 찾아왔어요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "진짜 진짜 급해요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "정말로요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(ㅠ▽ㅠ)"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다들 도착했대"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다들 도착했대"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "앗"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "알겠어요 준비할게요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "친구들이 요새 다 바빠서"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "시간 맞추기가 어려웠는데"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "구생님 덕에 다 모일 수 있게 되었네요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 그냥 스케줄링만 했을 뿐이야"
+      },
+      {
+        "speaker": "구원자",
+        "message": "난 그냥 스케줄링만 했을 뿐이야"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "그게 얼마나 큰 도움이 되었는데요!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "정말 감사해요"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "(^▽^)/"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "사, 사랑의 날이라서…"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "주, 준비해보았어요…!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 도미니크!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워, 도미니크!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "대, 대상인의 날을 맞아 준비해보았어요!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "마음에 안 드시면 꼭 말씀해주세요…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 마음에 들어, 도미니크!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "너무 마음에 들어, 도미니크!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "해, 해피 이브 데이에요…!"
+      },
+      {
+        "speaker": "도미니크",
+        "message": "따뜻하고 즐거운 이브데이 되시기를…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 이브 데이, 도미니크!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "해피 이브 데이, 도미니크!"
+      }
+    ]
+  },
+  "i18n": {
+    "name": {
+      "ko": "도미니크",
+      "en": "Dominique",
+      "zh_tw": "多米尼克",
+      "zh_cn": "多米尼克"
+    },
+    "grade": {
+      "ko": "에픽",
+      "en": "Epic",
+      "zh_tw": "史詩",
+      "zh_cn": "史詩"
+    },
+    "race": {
+      "ko": "요정형",
+      "en": "Fairy",
+      "zh_tw": "妖精型",
+      "zh_cn": "妖精型"
+    },
+    "class": {
+      "ko": "캐스터",
+      "en": "Caster",
+      "zh_tw": "魔法師",
+      "zh_cn": "魔法師"
+    },
+    "sub_class": {
+      "ko": "단일",
+      "en": "Single",
+      "zh_tw": "單一",
+      "zh_cn": "單一"
+    },
+    "stat": {
+      "ko": "지능",
+      "en": "INT",
+      "zh_tw": "智力",
+      "zh_cn": "智力"
+    },
+    "profile": {
+      "nick_name": {
+        "ko": "찬란한 금빛",
+        "en": "Golden Radiance",
+        "zh_tw": "燦爛金光",
+        "zh_cn": "燦爛金光"
+      },
+      "constellation": {
+        "ko": "천칭자리",
+        "en": "Libra",
+        "zh_tw": "天秤座",
+        "zh_cn": "天秤座"
+      },
+      "union": {
+        "ko": "에덴",
+        "en": "Eden",
+        "zh_tw": "伊甸園",
+        "zh_cn": "伊甸園"
+      },
+      "cv_ko": {
+        "ko": "김채린",
+        "en": "Kim Chae-rin",
+        "zh_tw": "金采琳",
+        "zh_cn": "金采琳"
+      },
+      "cv_jp": {
+        "ko": "김채린",
+        "en": "Kim Chae-rin",
+        "zh_tw": "金采琳",
+        "zh_cn": "金采琳"
+      },
+      "like": {
+        "ko": [
+          "스티커",
+          "도마뱀",
+          "쓴맛"
+        ],
+        "en": [
+          "Stickers",
+          "lizards",
+          "bitter taste"
+        ],
+        "zh_tw": [
+          "貼紙、蜥蜴、苦味"
+        ],
+        "zh_cn": [
+          "貼紙、蜥蜴、苦味"
+        ]
+      },
+      "dislike": {
+        "ko": [
+          "발표",
+          "연설"
+        ],
+        "en": [
+          "Presentation",
+          "public speech"
+        ],
+        "zh_tw": [
+          "發表、演說"
+        ],
+        "zh_cn": [
+          "發表、演說"
+        ]
+      },
+      "hobby": {
+        "ko": [
+          "그림 그리기"
+        ],
+        "en": [
+          "Painting"
+        ],
+        "zh_tw": [
+          "畫畫"
+        ],
+        "zh_cn": [
+          "畫畫"
+        ]
+      },
+      "speciality": {
+        "ko": [
+          "도망치기"
+        ],
+        "en": [
+          "Running away"
+        ],
+        "zh_tw": [
+          "逃跑"
+        ],
+        "zh_cn": [
+          "逃跑"
+        ]
+      }
+    },
+    "personality": {
+      "description": {
+        "ko": "아, 아, 안녕하세요… 구원자님…!\n제, 제이드에게… 이야기 많이 들었어요…\n저, 저는 트로이카의 국왕… 도미니크예요.\n\n이, 이렇게… 이, 인사드리게 되어서… 저, 정말 기뻐요… 히끅!\n죄, 죄송해요… 너무 긴장해서 딸꾹질이 나와버렸어요…\n우으으으…히끅!\n\n지, 진정해야 해… 심호흡하고… 휴우우우우…\n\n제, 제가 왕이 된 지 얼마 안 되어서… 아직 미숙한 부분이 많지만…\n그, 그래도 제가 도울 수 있는 게 있다면… 언제든지 편하게 말씀해 주세요…!\n힘이 닿는 데까지 여, 열심히 해볼게요…!\n\n어… 그… 이제 어떻게 마무리해야 하지…?\n아, 그렇지! 다, 다음에… 꼭… 차 한잔하도록 해요…!\n그, 그, 그럼  이, 이만 먼저 가볼게요…!\n\n(쌔앵)",
+        "en": "H-h-hello, Savior!\nI-I heard a lot about you from Jade.\nI'm Dominique, the queen of Troyca.\n\nI-I'm so pleased to make your acquaintance… Hic!\nOh, I'm sorry! I've been so nervous and now I got the hiccups.\nUgh…hic!\n\nL-let me calm down… Take a deep breath… Aaaaah!\n\nYou see, I'm still new to this role…and I'm still learning the ropes.\nBut still, if there's anything I can help you with…feel free to let me know!\nI'll do my best to assist you.\n\nSo, now…how shall I end this?\nAh, that's right! We should…have tea together sometime!\nWell then, I-I'll get going now!\n\n(Swish)",
+        "zh_tw": "你、你、你好…救援者…！\n我、我常聽…潔依德提起你…\n我、我是特羅伊卡的國王…多米尼克。\n\n很、很高興…可、可以這樣…跟、跟你打招呼…嗝呃！\n抱、抱歉…我緊張到打嗝了…\n唔呃呃呃…嗝！\n\n我、我要冷靜…深呼吸…呼唔唔唔唔…\n\n因、因為我才當上王沒多久…還有很多不足的地方…\n但、但如果有我能幫上忙的地方…請隨時告訴我…！\n我會努力幫、幫忙的…！\n\n呃…那個…現在要怎麼結尾…？\n喔，對了！下、下次…一定要…一起喝杯茶…！\n那、那、那麼我、我先走了…！\n\n（咻）",
+        "zh_cn": "你、你、你好…救援者…！\n我、我常聽…潔依德提起你…\n我、我是特羅伊卡的國王…多米尼克。\n\n很、很高興…可、可以這樣…跟、跟你打招呼…嗝呃！\n抱、抱歉…我緊張到打嗝了…\n唔呃呃呃…嗝！\n\n我、我要冷靜…深呼吸…呼唔唔唔唔…\n\n因、因為我才當上王沒多久…還有很多不足的地方…\n但、但如果有我能幫上忙的地方…請隨時告訴我…！\n我會努力幫、幫忙的…！\n\n呃…那個…現在要怎麼結尾…？\n喔，對了！下、下次…一定要…一起喝杯茶…！\n那、那、那麼我、我先走了…！\n\n（咻）"
+      },
+      "greeting": {
+        "ko": "네! 제가 바로… 트로이카의 왕, 도미니크예요.",
+        "en": "Yes! I am Queen Dominique of Troyca.",
+        "zh_tw": "對！我就是…特羅伊卡的王，多米尼克。",
+        "zh_cn": "對！我就是…特羅伊卡的王，多米尼克。"
+      }
+    },
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "저기"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Erm"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "那個"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "那個"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "혹시 구원자님이세요?"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Are you the Savior?"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "你是救援者嗎？"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "你是救援者嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "휴 다행이다"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Phew, I'm relieved"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "呼，幸好"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "呼，幸好"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "잘못 보냈으면 울 뻔했어요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I was going to cry if I made a mistake"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "要是傳錯人，我差點就要哭了"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "要是傳錯人，我差點就要哭了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "아 저는"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Ah, I'm"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "啊，我是"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "啊，我是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "트로이카의 왕"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Queen of Troyca"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "特羅伊卡的王"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "特羅伊卡的王"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "도미니크예요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Dominique"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "多米尼克"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "多米尼克"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "그냥"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I just"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "就是"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "就是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "인사드리려고 했어요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "wanted to say hi"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "想跟你打聲招呼"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "想跟你打聲招呼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "혹시 귀찮게 해드렸다면"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "If I'm bothering you"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "如果有打擾到你"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "如果有打擾到你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "정말 죄송해요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I'm so sorry"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "真的很抱歉"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "真的很抱歉"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "감사해요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Thank you"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "謝謝你"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "謝謝你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "나중에 정식으로"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I'll introduce myself"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "以後再正式地"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "以後再正式地"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "인사드릴게요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "properly later"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "跟你打招呼"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "跟你打招呼"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "이제 더 답장"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "You don't need to"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "你現在"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "你現在"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "안 하셔도 돼요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "keep replying"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "不用再回我了"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "不用再回我了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "저 구생"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Erm, Saveacher"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "那個，救老師"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "那個，救老師"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "아니 구원자님"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I mean, Savior"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "不對，救援者"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "不對，救援者"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "아까 교실에서"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Earlier, in the classroom"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "剛剛在教室裡"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "剛剛在教室裡"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "저 많이 이상해보였나요?"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "was I super strange?"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "我看起來很奇怪嗎？"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "我看起來很奇怪嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "완벽하게"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I thought I had"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "還以為"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "還以為"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "위장했다고 생각했는데"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "hid it well"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "偽裝得很完美"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "偽裝得很完美"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "결국 다 들켰네요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "but I guess it showed"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "結果都被發現了"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "結果都被發現了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "망해버렸어요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "It was no use"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "完蛋了"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "完蛋了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "완전 글러 먹고 말았어요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "All futile"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "徹底沒戲唱了"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "徹底沒戲唱了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "(ㅠ▽ㅠ)"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "(T.T)"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "(T▽T)"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "(T▽T)"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "구생님"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Saveacher"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "救老師"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "救老師"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "아니지 선생님"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "No, Teacher"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "不對，老師"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "不對，老師"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "그럼"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "In that case"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "那"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "那"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "자기소개문은 꼭"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Do we really have to present"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "一定要發表"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "一定要發表"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "발표해야 하는 건가요?"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "our self-introductions?"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "自我介紹嗎？"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "自我介紹嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "뭔가 그"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "No option for"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "就是那個"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "就是那個"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "대체 과제 같은 것은"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "something like"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "沒有像是替代作業"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "沒有像是替代作業"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "없는 걸까요?"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "an alternative assignment?"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "之類的嗎？"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "之類的嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "저 혹시"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "What if"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "那我"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "那我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "내일 아파도 돼요?"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I call in sick tomorrow?"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "明天可以請病假嗎？"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "明天可以請病假嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "알겠어요…"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Okay..."
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "我知道了…"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "我知道了…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "발표 연습 혼자 한 거"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I recorded myself"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "我自己在練習發表"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "我自己在練習發表"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "인증샷 찍었어요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "practicing the presentation"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "拍了認證照"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "拍了認證照"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "여기 있어요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "Here you go"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "你看"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "你看"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "찍는 건 친구한테"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I asked a friend"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "我是拜託朋友"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "我是拜託朋友"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "부탁했어요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "to film it"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "幫我拍的"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "幫我拍的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "그 그러니까"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "I mean"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "就是"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "就是"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "같은 반 친구한테요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "a classmate"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "同班同學"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "同班同學"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "(^▽^)"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": ":)"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "(^▽^)"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "(^▽^)"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "이번 숙제는"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "So the new assignment"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "這次的作業"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "這次的作業"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "장래 희망 발표하기네요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "is to present our dreams"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "是發表未來志願"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "是發表未來志願"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "장래 희망이"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "It would be embarrassing"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "如果有未來志願"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "如果有未來志願"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "왕인 친구가 있으면"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "if anybody in the class"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "是當王的朋友"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "是當王的朋友"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "도미니크",
+          "message": "꽤 곤란하겠어요"
+        },
+        "en": {
+          "speaker": "Dominique",
+          "message": "wants to become queen"
+        },
+        "zh_tw": {
+          "speaker": "多米尼克",
+          "message": "一定會很難為情"
+        },
+        "zh_cn": {
+          "speaker": "多米尼克",
+          "message": "一定會很難為情"
+        }
+      }
+    ],
+    "comments": [
+      {
+        "ko": {
+          "speaker": "제이드",
+          "message": "저는 선왕 전하의 판단과 도미니크 전하의 가능성을 믿고 있답니다."
+        },
+        "en": {
+          "speaker": "Jade",
+          "message": "I have faith in the discernment of the previous queen and the potential of Queen Dominique."
+        },
+        "zh_tw": {
+          "speaker": "潔依德",
+          "message": "我相信先王殿下的判斷和多米尼克殿下的潛力。"
+        },
+        "zh_cn": {
+          "speaker": "潔依德",
+          "message": "我相信先王殿下的判斷和多米尼克殿下的潛力。"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "에리카",
+          "message": "저, 정말 이렇게까지 공감이 되는 상대는 처음이야…"
+        },
+        "en": {
+          "speaker": "Erika",
+          "message": "I've never met anyone more relatable than her…"
+        },
+        "zh_tw": {
+          "speaker": "艾麗卡",
+          "message": "真、真的是第一次遇到這麼有共鳴的對象…"
+        },
+        "zh_cn": {
+          "speaker": "艾麗卡",
+          "message": "真、真的是第一次遇到這麼有共鳴的對象…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "사쿠요",
+          "message": "아랫것들을 다루는 법은 이 사쿠요에게 배워보시라고 전해라."
+        },
+        "en": {
+          "speaker": "Sakuyo",
+          "message": "Tell her I can show her a thing or two about how to handle subordinates."
+        },
+        "zh_tw": {
+          "speaker": "櫻世",
+          "message": "叫她來跟我櫻世學學如何管教下屬。"
+        },
+        "zh_cn": {
+          "speaker": "櫻世",
+          "message": "叫她來跟我櫻世學學如何管教下屬。"
+        }
+      }
+    ],
+    "dialogues": {
+      "story": [],
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저기"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Erm"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "혹시 구원자님이세요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Are you the Savior?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "你是救援者嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "你是救援者嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I am"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 맞아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, I am"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "휴 다행이다"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Phew, I'm relieved"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "呼，幸好"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "呼，幸好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "잘못 보냈으면 울 뻔했어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I was going to cry if I made a mistake"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "要是傳錯人，我差點就要哭了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "要是傳錯人，我差點就要哭了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아 저는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Ah, I'm"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "啊，我是"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "啊，我是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "트로이카의 왕"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Queen of Troyca"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "特羅伊卡的王"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "特羅伊卡的王"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "도미니크예요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그냥"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I just"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "就是"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "就是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "인사드리려고 했어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "wanted to say hi"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "想跟你打聲招呼"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "想跟你打聲招呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "혹시 귀찮게 해드렸다면"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "If I'm bothering you"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "如果有打擾到你"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "如果有打擾到你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "정말 죄송해요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'm so sorry"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "真的很抱歉"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "真的很抱歉"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "반가워 도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nice to meet you, Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很高興認識妳，多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很高興認識妳，多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "반가워 도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Nice to meet you, Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很高興認識妳，多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很高興認識妳，多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "감사해요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Thank you"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "謝謝你"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "謝謝你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "나중에 정식으로"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'll introduce myself"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "以後再正式地"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "以後再正式地"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "인사드릴게요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "properly later"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "跟你打招呼"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "跟你打招呼"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "이제 더 답장"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "You don't need to"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "你現在"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "你現在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "안 하셔도 돼요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "keep replying"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不用再回我了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不用再回我了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저 구생"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Erm, Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那個，救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那個，救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아니 구원자님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I mean, Savior"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不對，救援者"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不對，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아까 교실에서"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Earlier, in the classroom"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "剛剛在教室裡"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "剛剛在教室裡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저 많이 이상해보였나요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "was I super strange?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我看起來很奇怪嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我看起來很奇怪嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 긴장하는 것 같았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You seemed really nervous"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺妳很緊張"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺妳很緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 긴장하는 것 같았어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You seemed really nervous"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺妳很緊張"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺妳很緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "완벽하게"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I thought I had"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "還以為"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "還以為"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "위장했다고 생각했는데"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "hid it well"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "偽裝得很完美"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "偽裝得很完美"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "결국 다 들켰네요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "but I guess it showed"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "結果都被發現了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "結果都被發現了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "망해버렸어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "It was no use"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "完蛋了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "完蛋了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "완전 글러 먹고 말았어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "All futile"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "徹底沒戲唱了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "徹底沒戲唱了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(ㅠ▽ㅠ)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "(T.T)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아니 구원자님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I mean, Savior"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不對，救援者"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不對，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아니지 선생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "No, Teacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不對，老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不對，老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "편한 호칭으로 불러줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can call me whatever you like"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就叫妳覺得自在的稱呼吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就叫妳覺得自在的稱呼吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "편한 호칭으로 불러줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You can call me whatever you like"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "就叫妳覺得自在的稱呼吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "就叫妳覺得自在的稱呼吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그럼"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "In that case"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "자기소개문은 꼭"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Do we really have to present"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "一定要發表"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "一定要發表"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "발표해야 하는 건가요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "our self-introductions?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "自我介紹嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "自我介紹嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "뭔가 그"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "No option for"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "就是那個"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "就是那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "대체 과제 같은 것은"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "something like"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "沒有像是替代作業"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "沒有像是替代作業"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "없는 걸까요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "an alternative assignment?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "之類的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "之類的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저 혹시"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "What if"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那我"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "내일 아파도 돼요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I call in sick tomorrow?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "明天可以請病假嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "明天可以請病假嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不可以"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "안 돼"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不可以"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(ㅠ▽ㅠ)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "(T.T)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "알겠어요…"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Okay..."
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我知道了…"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我知道了…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "발표 연습 혼자 한 거"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I recorded myself"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我自己在練習發表"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我自己在練習發表"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "인증샷 찍었어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "practicing the presentation"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "拍了認證照"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "拍了認證照"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래 보여줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let me see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好，給我看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好，給我看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래 보여줘"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let me see"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好，給我看"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好，給我看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "여기 있어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Here you go"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "你看"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "你看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "찍는 건 친구한테"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I asked a friend"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我是拜託朋友"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我是拜託朋友"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "부탁했어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "to film it"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "幫我拍的"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "幫我拍的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그 그러니까"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I mean"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "就是"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "就是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "같은 반 친구한테요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "a classmate"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "同班同學"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "同班同學"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Good job"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很棒"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很棒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Good job"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很棒"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很棒"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(^▽^)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": ":)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "이번 숙제는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "So the new assignment"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "這次的作業"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "這次的作業"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "장래 희망 발표하기네요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "is to present our dreams"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "是發表未來志願"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "是發表未來志願"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "장래 희망이"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "It would be embarrassing"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "如果有未來志願"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "如果有未來志願"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "왕인 친구가 있으면"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "if anybody in the class"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "是當王的朋友"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "是當王的朋友"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "꽤 곤란하겠어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "wants to become queen"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "一定會很難為情"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "一定會很難為情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(O_O)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "(O_O)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(O_O)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(O_O)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크의 장래 희망은 뭐야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you want to be, Dominique?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克的未來志願是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克的未來志願是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크의 장래 희망은 뭐야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What do you want to be, Dominique?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克的未來志願是什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克的未來志願是什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "우으 부끄러운데"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Oh, this is embarrassing"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "唔呃，好害羞"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "唔呃，好害羞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저는 예전부터"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I've always"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我從以前開始"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我從以前開始"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "선생님이"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "wanted to become"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "就很想"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "就很想"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "되고 싶었어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "a teacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "當老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "當老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님 입장에서는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I guess it might sound"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "在救老師看來"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "在救老師看來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "우스운 이야기일 것 같아요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "ridiculous to you, Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "一定會覺得是個笑話"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "一定會覺得是個笑話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘할 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You'd make a great teacher"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺妳會做得很好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺妳會做得很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘할 거 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You'd make a great teacher"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺妳會做得很好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺妳會做得很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "지 진짜로요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "S-seriously?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "真、真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "真、真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그런 말은 처음 듣는데"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "No one has ever said that to me"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "第一次聽到這種話"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "第一次聽到這種話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "왠지 기분이 좋아지네요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "This makes me feel happy"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "感覺心情莫名變得很好"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "感覺心情莫名變得很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(^▽^)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": ":)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you alright?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "괜찮아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you alright?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳還好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저 도미니크 아니에요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "This is not Dominique"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我不是多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我不是多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "글러 먹은 도미니크라는 애는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "That pathetic Dominique"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "差勁的多米尼克這個精靈"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "差勁的多米尼克這個精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "학교에 나갈 생각이 없을 거예요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "probably doesn't want to go to school"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不會去學校的"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不會去學校的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그러니까"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "So"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "所以"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "所以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "더는 기다리지 마세요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "don't wait for me anymore"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不要再等我了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不要再等我了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "학교 가는 길에"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "On my way to school"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "在去學校的路上"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "在去學校的路上"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "길 잃은 도마뱀이 있어서"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I saw a lost lizard"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "有隻蜥蜴迷路了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "有隻蜥蜴迷路了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "원래 있을 법한 곳에"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "so I took it somewhere"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "所以我把他放回去"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "所以我把他放回去"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "놓아주었어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "where it belongs"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "本來應該在的地方了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "本來應該在的地方了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘했어 도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well done, Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "做得好，多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "做得好，多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘했어 도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well done, Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "做得好，多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "做得好，多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그러니까"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "So"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "所以"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "所以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "오늘 지각한 거"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "would you excuse"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "今天遲到的事"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "今天遲到的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "봐주시면"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "my tardiness"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "就放過我"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "就放過我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "안 될까요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "today?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "好不好？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "好不好？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "칭찬은 칭찬이고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What you did was commendable"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "稱讚歸稱讚"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "稱讚歸稱讚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "칭찬은 칭찬이고"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What you did was commendable"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "稱讚歸稱讚"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "稱讚歸稱讚"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벌점은 벌점이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but penalties still have to be paid"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "扣分歸扣分"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "扣分歸扣分"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "벌점은 벌점이지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but penalties still have to be paid"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "扣分歸扣分"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "扣分歸扣分"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(ㅠ▽ㅠ)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "(T.T)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "학교 분위기가"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "The school feels"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "學校的氣氛"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "學校的氣氛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "생각보다 많이"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "more somber"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "比想像中"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "比想像中"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "침체되어 있네요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "than I thought"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "還要沉悶"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "還要沉悶"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 며칠째 그러네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah, it's been like that for a few days now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，已經這樣好幾天了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，已經這樣好幾天了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 며칠째 그러네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yeah, it's been like that for a few days now"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，已經這樣好幾天了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，已經這樣好幾天了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "제가"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Is it because"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "應該是因為"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "應該是因為"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "도망쳤던 탓이겠죠?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I ran away?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我逃跑的關係吧？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我逃跑的關係吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "친구들을"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I shouldn't have"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不能這樣"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不能這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "이렇게 놔두면 안 되었는데"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "abandoned my friends like that"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "丟下朋友們才對"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "丟下朋友們才對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "전 정말 형편없네요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'm so pathetic"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我真的好糟糕"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我真的好糟糕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "하지만"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "But"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "但是"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "但是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "이제는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I won't"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "現在"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "現在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "도망가지 않아요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "run away anymore"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不會再逃跑了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不會再逃跑了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐 도망친 사이에"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In your little escapade"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳在逃跑的期間"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳在逃跑的期間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잠깐 도망친 사이에"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "In your little escapade"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看來妳在逃跑的期間"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看來妳在逃跑的期間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "용기를 얻어서 돌아왔구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "you seem to have found courage"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "獲得了勇氣才回來的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "獲得了勇氣才回來的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "용기를 얻어서 돌아왔구나"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "you seem to have found courage"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "獲得了勇氣才回來的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "獲得了勇氣才回來的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "!"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "정말 구생님은"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher, you really"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師的口才"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師的口才"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "화술이 남다르시네요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "have a way with words"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "真的很與眾不同"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "真的很與眾不同"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "지금은"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Right now"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "現在"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "現在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "학교 가는 게 즐겁지만"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I enjoy school"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "去上學是很開心"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "去上學是很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "예전에 다닐 때는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "but in the past"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "但以前上學的時候"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "但以前上學的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "늘 즐겁지는 않았어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I didn't always like it"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "並不是一直都很開心"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "並不是一直都很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일이 있었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did something happen?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일이 있었어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Did something happen?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "發生什麼事了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "發生什麼事了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "당시에는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "At the time"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那時候"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그 학교에 저만"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I was the only Soul"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那間學校"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那間學校"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "서민 출신이었어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "with a humble background"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "只有我是平民出身"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "只有我是平民出身"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그래서 잘 어울리지 못했죠"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "So I didn't quite fit in"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "所以沒有很融入大家"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "所以沒有很融入大家"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "따돌림당한 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you bullied?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有被大家排擠嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有被大家排擠嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "따돌림당한 거야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you bullied?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有被大家排擠嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有被大家排擠嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그런 건 아니에요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "No, it wasn't like that"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不是那樣的"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不是那樣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "오히려 잘해주는 친구들도 많았는데"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Many classmates were nice to me"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "反而有很多朋友對我很好"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "反而有很多朋友對我很好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "뭔가 대화에 낄 수 없어서"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "but I had trouble joining in the conversations"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "但感覺插不上話"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "但感覺插不上話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "잘 못 어울렸어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "and felt out of place"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "沒辦法融入"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "沒辦法融入"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "지금 생각해 보면 그냥"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Now that I think about it"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "現在回想起來"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "現在回想起來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "제가 혼자 위축되어서"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "maybe I was just"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "可能只是我自己畏畏縮縮的"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "可能只是我自己畏畏縮縮的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그런 건가 싶기도 하고"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "too self-conscious"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "才會那樣"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "才會那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "헤헷 쓸데없는 말이었어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Eh, sorry for rambling"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "嘿嘿，講了些廢話"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "嘿嘿，講了些廢話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야 이야기 해줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'm glad you shared that with me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會，謝謝妳告訴我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會，謝謝妳告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "아니야 이야기 해줘서 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "No, I'm glad you shared that with me"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "不會，謝謝妳告訴我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "不會，謝謝妳告訴我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크의 이야기는 언제나 환영해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm always eager to hear what you have to say, Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "隨時都歡迎多米尼克跟我訴說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "隨時都歡迎多米尼克跟我訴說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크의 이야기는 언제나 환영해"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm always eager to hear what you have to say, Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "隨時都歡迎多米尼克跟我訴說"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "隨時都歡迎多米尼克跟我訴說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(^▽^)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": ":)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "혹시 저랑 약속했던 기간이 끝나면"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "once your agreed term is over"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "如果跟我約定的時間結束了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "如果跟我約定的時間結束了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아케나인으로 돌아가실 건가요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "will you go back to Arkenine?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "你就會回到阿肯納因嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "你就會回到阿肯納因嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "별 계획이 없으면 그러지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Probably, unless something else comes up"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果沒什麼計畫，不要回去怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果沒什麼計畫，不要回去怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "별 계획이 없으면 그러지 않을까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Probably, unless something else comes up"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "如果沒什麼計畫，不要回去怎麼樣？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "如果沒什麼計畫，不要回去怎麼樣？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그렇군요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I see"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "호 혹시라도"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I-if you feel like"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "如、如果"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "如、如果"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "학교에 더 계시고 싶으시면"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "staying at the school longer"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "你想繼續待在學校"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "你想繼續待在學校"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "언제든 말씀해 주세요!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "just let me know!"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "隨時告訴我！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "隨時告訴我！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "서류 처리는 금방 될 테니까"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I can take care of the paperwork in no time"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "書面流程很快就可以處理好了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "書面流程很快就可以處理好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "다른 건 걱정 안 하셔도 돼요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "so you don't have to worry about anything"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "其他的事你不用擔心"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "其他的事你不用擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워 도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워 도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "감사합니다"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Thank you"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "謝謝"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "謝謝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아 그 공립 학교 교사"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Ah, I heard that you said yes to"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "啊，那個公立學校的老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "啊，那個公立學校的老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "해주신다고 들었거든요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "teaching at the public school"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "聽說你答應了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "聽說你答應了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "거절하시면 어쩌나 하고"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I was so worried about"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我還怕你會拒絕"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我還怕你會拒絕"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "걱정 많이 했어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "you saying no"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "很擔心"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "很擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "잘 부탁드릴게요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'm counting on you"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "拜託你了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "拜託你了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "열심히 해볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll do my best"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會努力的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會努力的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "열심히 해볼게"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'll do my best"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我會努力的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我會努力的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "네 그럼 학교에서 뵐게요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Yes, I'll see you at school then"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "好，那學校見"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "好，那學校見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아 아니"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Wait, I mean"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "呃，不是"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "呃，不是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그러니까 제가 나중에"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'm planning on visiting the school"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "就是我之後"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "就是我之後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "학교에 방문 하려고 하거든요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "some time later"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "打算去拜訪學校"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "打算去拜訪學校"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그럼 이만"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'll be off now"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那就"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那就"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "줄일게요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Talk to you later"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "先這樣"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "先這樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 왕궁에 도착할 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm almost at your palace"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像快抵達王宮了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像快抵達王宮了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "곧 왕궁에 도착할 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm almost at your palace"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好像快抵達王宮了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好像快抵達王宮了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "ㅂ벌써요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Alredy?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "ㄓ這麼快？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "ㄓ這麼快？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "알겟ㅆ습니다"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "K"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "ㄏㄠˇ"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "ㄏㄠˇ"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "ㅈ준비하고 ㅇ있ㅇㅡㄹ게요!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'll gt ready!"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "ㄨ我會ㄓㄓ準ㄅㄟˋ！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "ㄨ我會ㄓㄓ準ㄅㄟˋ！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크, 괜찮은 거지…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique, are you alright...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克，妳還好吧…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克，妳還好吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크, 괜찮은 거지…?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique, are you alright...?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克，妳還好吧…？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克，妳還好吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 가고 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm on my way"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在路上了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在路上了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "지금 가고 있어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm on my way"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在路上了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在路上了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저 도미니크 아니에요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "This is not Dominique"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我不是多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我不是多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "에버톡 잘 못 하신 것 같아요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Your Evertalk message was sent to the wrong person"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "你傳錯EverTalk了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "你傳錯EverTalk了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "……."
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "……"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "죄송해요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'm sorry"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "對不起"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "對不起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "알현실로 오시면 돼요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "You can come to my audience chamber"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "你來會客室就可以了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "你來會客室就可以了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Am I"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "혼나나요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "in trouble?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我會被罵嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我會被罵嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "우으으으…"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Ugh..."
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "唔呃呃呃…"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "唔呃呃呃…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Erm"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "혹시 오늘 보충수업"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Can we reschedule"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "今天的輔導課"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "今天的輔導課"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "내일로"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "today's extra lesson"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "可以延到"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "可以延到"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "미룰 수 있을까요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "to tomorrow?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "明天嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "明天嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's the matter?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일 있어?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's the matter?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "怎麼了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그 친구들이"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "My friends"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那些朋友"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那些朋友"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "오늘 학교 끝나고"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "want to go to"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "今天下課之後"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "今天下課之後"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "디저트 카페 가자고 해서요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "a dessert cafe after school today"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "說要一起去甜點咖啡廳"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "說要一起去甜點咖啡廳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "오늘은 놀러 가면"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "So can I go"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我今天"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我今天"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "안될까요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "hang out instead?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "不能去玩嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "不能去玩嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(O_O)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "(O_O)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(O_O)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(O_O)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "즐겁게 다녀와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have fun"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好好去玩吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好好去玩吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "즐겁게 다녀와"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Have fun"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好好去玩吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好好去玩吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "감사합니다!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Thank you!"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "謝謝！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "謝謝！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(^▽^)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": ":)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "일어나셨어요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Are you up?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "你起床了嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "你起床了嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저 너무 떨려서"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I've been too restless"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我太緊張了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我太緊張了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "잠을 거의 못 잤어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "to get any sleep"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "幾乎沒什麼睡覺"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "幾乎沒什麼睡覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(ㅠ▽ㅠ)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "(T.T)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 긴장돼?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you nervous?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很緊張嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很緊張嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "많이 긴장돼?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Are you nervous?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很緊張嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很緊張嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "긴장되기도 하고"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "A little bit, yes"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "很緊張"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "很緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "설레기도 하고"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "excited, too"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "也很激動"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "也很激動"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "막 엄청 복잡해요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "It's complicated"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "感覺非常複雜"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "感覺非常複雜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "우으으으"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Uggghhhh"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "唔呃呃呃"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "唔呃呃呃"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우린 잘 해낼 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We'll do fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們會做到的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們會做到的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "우린 잘 해낼 거야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "We'll do fine"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我們會做到的"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我們會做到的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "네! 맞아요!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Yes! We will!"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "對！沒錯！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "對！沒錯！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "이따 봬요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "See you later"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "待會見"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "待會見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왕궁 앞이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just got to your palace"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在王宮前面"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在王宮前面"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "왕궁 앞이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I just got to your palace"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我在王宮前面"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我在王宮前面"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "어서 오세요, 구원자님."
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Welcome, Savior."
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "歡迎你，救援者。"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "歡迎你，救援者。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "제가 전하가 있는 곳으로 안내해 드릴게요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'll take you to Her Majesty"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我帶你去殿下所在的地方"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我帶你去殿下所在的地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "???"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "???"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "???"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "???"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "？？？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "？？？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "설마 제이드야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is this Jade?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是潔依德嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是潔依德嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "설마 제이드야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Is this Jade?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是潔依德嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是潔依德嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "남의 에버폰을 함부로 만진 일은"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Let's keep it just between us"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "擅自碰別人的EverPhone這件事"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "擅自碰別人的EverPhone這件事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구원자님과 저만의 비밀로 해주세요."
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "that I meddled with someone else's phone."
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救援者要幫我保密。"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救援者要幫我保密。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "아셨죠?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Got it?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "知道了吧？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "知道了吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저 아까"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Did I"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我剛剛"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我剛剛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "잘했나요?"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "do alright?"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "表現得很好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "表現得很好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "훌륭했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You did marvelously"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很優秀"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很優秀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "훌륭했어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You did marvelously"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "很優秀"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "很優秀"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님의 보충수업 덕분이에요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "It's all thanks to your extra lessons"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "都是多虧了救老師的輔導課"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "都是多虧了救老師的輔導課"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "정말 감사해요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Thank you so much"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "真的很謝謝你"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "真的很謝謝你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그럼 저는"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Now, I'm off"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那我"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "친구들이랑 회의하러 갈게요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "for a meeting with my friends"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "去跟朋友們開會了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "去跟朋友們開會了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "이따 봬요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "See you later"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "待會見"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "待會見"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(^▽^)/"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": ":)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)/"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)/"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "도미니크"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Dominique"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나 오늘 수업 빠져도 될까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can I skip class today?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我今天可以翹課嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我今天可以翹課嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나 오늘 수업 빠져도 될까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Can I skip class today?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我今天可以翹課嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我今天可以翹課嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Yes"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "可以"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "可以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "친구들한테는 잘 둘러댈게요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'll come up with a good excuse for the class"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我會跟朋友們編個藉口的"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我會跟朋友們編個藉口的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, thank you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응 고마워"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Yes, thank you"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯，謝謝妳"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯，謝謝妳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저야말로 감사하죠"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I thank YOU"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我才要謝謝你"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我才要謝謝你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님이 앞으로도 계속"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "for agreeing to stay"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "因為救老師答應"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "因為救老師答應"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "선생님을 해주시기로 했으니까요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "as a teacher here"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "以後也會繼續當老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "以後也會繼續當老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "전 그걸로 충분해요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "That's enough for me"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "只要那樣就夠了"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "只要那樣就夠了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Saveacher"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "救老師"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "저 아케나인이에요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'm in Arkenine"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我在阿肯納因"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我在阿肯納因"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐라고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "뭐라고?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "급한 일이라서 찾아왔어요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I've come for you because of an emergency"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我有急事，所以來找你"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我有急事，所以來找你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "진짜 진짜 급해요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "It's really urgent"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "真的真的很急"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "真的真的很急"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "정말로요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I'm serious"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "真的"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "真的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(ㅠ▽ㅠ)"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "(T.T)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(T▽T)"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다들 도착했대"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Everybody's here"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "大家都到了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "大家都到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다들 도착했대"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Everybody's here"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "大家都到了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "大家都到了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "앗"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Oh"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "알겠어요 준비할게요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Alright, I'll get ready"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "好，我準備一下"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "好，我準備一下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "친구들이 요새 다 바빠서"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "It's been tough to find a time"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "朋友們最近都很忙"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "朋友們最近都很忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "시간 맞추기가 어려웠는데"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "when everyone is free these days"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "很難約一個時間"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "很難約一個時間"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "구생님 덕에 다 모일 수 있게 되었네요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "but thanks to you, we managed to get together"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "多虧了救老師才能聚在一起"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "多虧了救老師才能聚在一起"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 그냥 스케줄링만 했을 뿐이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "All I did was just schedule it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我只是排了一下行程"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我只是排了一下行程"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "난 그냥 스케줄링만 했을 뿐이야"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "All I did was just schedule it"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我只是排了一下行程"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我只是排了一下行程"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "그게 얼마나 큰 도움이 되었는데요!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "That was a big help!"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "那就幫了很大的忙！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "那就幫了很大的忙！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "정말 감사해요"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Thank you so much"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "真的很謝謝你"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "真的很謝謝你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "(^▽^)/"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": ":)"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)/"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "(^▽^)/"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "사, 사랑의 날이라서…"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "S-since it's Love Day..."
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "因、因為是戀愛之日…"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "因、因為是戀愛之日…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "주, 준비해보았어요…!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I-I got you this..."
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "我、我就準備了一下…！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "我、我就準備了一下…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 도미니크!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Dominique!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克，謝謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克，謝謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워, 도미니크!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Dominique!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "多米尼克，謝謝妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "多米尼克，謝謝妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "대, 대상인의 날을 맞아 준비해보았어요!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "I g-got you this for Merchant's Day!"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "這、這是我為了大商人之日準備的！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "這、這是我為了大商人之日準備的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "마음에 안 드시면 꼭 말씀해주세요…"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "Do tell me if you don't like it..."
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "如果你不喜歡，一定要告訴我…"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "如果你不喜歡，一定要告訴我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 마음에 들어, 도미니크!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I love it, Dominique!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我超喜歡，多米尼克！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我超喜歡，多米尼克！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "너무 마음에 들어, 도미니크!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I love it, Dominique!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我超喜歡，多米尼克！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我超喜歡，多米尼克！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "해, 해피 이브 데이에요…!"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "H-happy Eve's Day!"
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "夏、夏娃之日快樂…！"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "夏、夏娃之日快樂…！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "도미니크",
+            "message": "따뜻하고 즐거운 이브데이 되시기를…"
+          },
+          "en": {
+            "speaker": "Dominique",
+            "message": "May you have a warm and lovely Eve's Day..."
+          },
+          "zh_tw": {
+            "speaker": "多米尼克",
+            "message": "祝你度過溫暖又愉快的夏娃之日…"
+          },
+          "zh_cn": {
+            "speaker": "多米尼克",
+            "message": "祝你度過溫暖又愉快的夏娃之日…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 이브 데이, 도미니크!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day, Dominique!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，多米尼克！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，多米尼克！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "해피 이브 데이, 도미니크!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy Eve's Day, Dominique!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，多米尼克！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "夏娃之日快樂，多米尼克！"
+          }
+        }
+      ]
+    }
+  }
+}
