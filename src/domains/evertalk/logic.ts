@@ -3,6 +3,7 @@ import type { AppLanguage } from '../../shared/types';
 import { EVERTALK_SESSION_TITLE, type ChatRoom } from '../chat';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
+import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
 import type { ApiConnectionState, ApiStatusItem, SpiritRosterMeta, SystemStatusId, TalkChoice } from './types';
 export function filterSpirits(spirits: PersonaConfig[], searchQuery: string): PersonaConfig[] {
@@ -97,6 +98,9 @@ export function formatDateTime(isoTimestamp: string, labels: EverTalkLabels): st
         return isoTimestamp;
     }
     return new Intl.DateTimeFormat(labels.localeTag, { dateStyle: 'medium', timeStyle: 'short' }).format(parsed);
+}
+export function formatBackupFileMeta(file: BackupFileEntry, labels: EverTalkLabels): string {
+    return labels.backupFileMeta(formatDateTime(file.modified_at, labels), Math.max(1, Math.ceil(file.size_bytes / 1024)));
 }
 export function formatLanguageName(language: AppLanguage, labels: EverTalkLabels): string {
     if (language === 'en') {

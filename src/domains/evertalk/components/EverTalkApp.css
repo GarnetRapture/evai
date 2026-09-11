@@ -2052,6 +2052,91 @@
   gap: 8px;
 }
 
+.ever-settings-modal--wide {
+  width: min(800px, 90vw);
+}
+
+.ever-settings-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ever-settings-toggle input {
+  width: auto;
+}
+
+.ever-settings-error {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255, 109, 124, 0.12);
+  border: 1px solid rgba(255, 109, 124, 0.44);
+  color: #ffb3bb;
+  font-size: 12px;
+}
+
+.ever-backup-folder {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ever-backup-folder h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.ever-backup-folder__status {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.ever-backup-file-list {
+  display: grid;
+  gap: 6px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.ever-backup-file-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ever-backup-file-item span {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.ever-backup-file-item strong,
+.ever-backup-file-item small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ever-backup-file-item strong {
+  font-size: 12px;
+}
+
+.ever-backup-file-item small {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+}
+
 .ever-setup-wizard__next {
   margin-top: 1rem;
 }

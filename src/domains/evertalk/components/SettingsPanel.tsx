@@ -1,29 +1,13 @@
 import { useState } from 'react';
 import type { ChangeEvent } from 'react';
-import { Box, Download, FolderOpen, RefreshCw, RotateCcw, Save, Trash2, X } from 'lucide-react';
-import { pickLocalFile } from '../../../shared/files';
+import { Box, Download, FolderOpen, FolderPlus, History, RefreshCw, RotateCcw, Save, ShieldCheck, Trash2, Unlink, X } from 'lucide-react';
 import type { AppLanguage } from '../../../shared/types';
 import type { BuiltInModelEntry } from '../../llm';
-import { RISU_MODULE_FILE_ACCEPT } from '../../modules';
-import { BACKUP_FILE_ACCEPT } from '../../sync';
-import type { EverTalkLabels } from '../i18n';
+import { formatBackupFileMeta, formatDateTime, formatLanguageName } from '../logic';
 import type { SettingsPanelProps } from '../types';
 
-function modelRoleLabel(entry: BuiltInModelEntry, labels: EverTalkLabels): string {
-    if (entry.role === 'chat') {
-        return labels.modelRoleChat;
-    }
-    const source = entry.source_language ?? '-';
-    const target = entry.target_language ?? '-';
-    return entry.role === 'translation_input'
-        ? labels.modelRoleTranslationInput(source, target)
-        : labels.modelRoleTranslationOutput(source, target);
-}
-
-export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatalogError, modelPreparation, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleImportError, backupBusy, backupRestoreSummary, backupMessage, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatalogError, modelPreparation, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupDirectoryStatus, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
-    const [moduleBusy, setModuleBusy] = useState(false);
-    const [moduleResult, setModuleResult] = useState<string | null>(null);
     if (!isOpen) {
         return null;
     }
@@ -42,31 +26,8 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
     function handleLanguageChange(event: ChangeEvent<HTMLSelectElement>) {
         void onSetLanguage(event.target.value as AppLanguage);
     }
-    async function handleModuleImport() {
-        setModuleBusy(true);
-        setModuleResult(null);
-        try {
-            const selected = await pickLocalFile(RISU_MODULE_FILE_ACCEPT);
-            if (!selected) {
-                return;
-            }
-            await onImportModule(selected);
-            setModuleResult(labels.moduleImported);
-        }
-        catch (err) {
-            setModuleResult(err instanceof Error ? err.message : String(err));
-        }
-        finally {
-            setModuleBusy(false);
-        }
-    }
-    async function handleBackupImport() {
-        const selected = await pickLocalFile(BACKUP_FILE_ACCEPT);
-        if (!selected) {
-            return;
-        }
-        await onImportBackup(selected);
-    }
+    const backupFolderLinked = backupDirectoryStatus?.linked ?? false;
+    const backupFolderGranted = backupDirectoryStatus?.permission === 'granted';
     function preparationLabel(entry: BuiltInModelEntry): string {
         if (modelPreparation?.model_id === entry.id && modelPreparation.progress) {
             return labels.modelPreparing(Math.round(modelPreparation.progress.ratio * 100));
@@ -74,7 +35,7 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
         return labels.modelPrepare;
     }
     return (<div className="ever-settings-overlay" role="dialog" aria-modal="true">
-      <div className="ever-settings-modal" style={{ width: '800px', maxWidth: '90vw' }}>
+      <div className="ever-settings-modal ever-settings-modal--wide">
         <header className="ever-settings-modal__header">
           <h2>{labels.settings}</h2>
           <button type="button" aria-label={labels.close} onClick={handleClose}>
@@ -95,7 +56,7 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
             </div>
             <div>
               <small>{labels.language}</small>
-              <strong>{settings?.language ?? 'ko'}</strong>
+              <strong>{formatLanguageName(settings?.language ?? 'ko', labels)}</strong>
             </div>
           </div>
           <label className="ever-settings-language">
@@ -106,14 +67,9 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
               <option value="zh_cn">{labels.languageZhCn}</option>
             </select>
           </label>
-          <label className="ever-settings-language" style={{ marginTop: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <label className="ever-settings-toggle">
             <span>{labels.showReasoning}</span>
-            <input 
-              type="checkbox" 
-              checked={settings?.show_reasoning ?? true} 
-              onChange={(e) => void onSetShowReasoning(e.target.checked)} 
-              style={{ width: 'auto' }}
-            />
+            <input type="checkbox" checked={settings?.show_reasoning ?? true} onChange={(event) => void onSetShowReasoning(event.target.checked)}/>
           </label>
         </section>
 
@@ -130,17 +86,18 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
                 const preparing = modelPreparation?.model_id === entry.id && modelPreparation.progress !== null;
                 const preparationError = modelPreparation?.model_id === entry.id ? modelPreparation.error : null;
                 const needsPreparation = entry.api_supported && (entry.availability === 'downloadable' || entry.availability === 'downloading');
-                return (<div key={entry.id} className={`ever-model-item ${entry.role === 'chat' && entry.selected ? 'is-selected' : ''}`}>
+                return (<div key={entry.id} className={`ever-model-item ${entry.selected ? 'is-selected' : ''}`}>
                     <div className="ever-model-item__main">
-                      {entry.role === 'chat' ? (<input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.api_supported} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>) : null}
+                      <input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.api_supported} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>
                       <span>
-                        <strong>{modelRoleLabel(entry, labels)}</strong>
+                        <strong>{labels.modelRoleChat}</strong>
                         <small>{entry.id}</small>
                         <small>
                           {entry.api_supported ? labels.modelAvailabilityDetail(entry.availability) : labels.modelApiUnsupported}
                           {entry.context_window !== null ? ` · ${labels.modelContextWindow(entry.context_window)}` : ''}
-                          {entry.role === 'chat' && entry.selected ? ` · ${labels.modelInUse}` : ''}
+                          {entry.selected ? ` · ${labels.modelInUse}` : ''}
                         </small>
+                        {entry.api_supported ? <small>{labels.modelLanguageSupport(entry.language_tag, entry.language_declared)}</small> : null}
                         {preparationError && <small className="ever-model-item__error">{preparationError}</small>}
                       </span>
                     </div>
@@ -162,39 +119,35 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
         </section>
 
         <section className="ever-panel-section">
-          <h3>Risu 모듈</h3>
-          <div className="ever-settings-result">
-            <span>활성화된 모듈의 설명과 로어북 내용이 채팅 시스템 프롬프트에 추가됩니다.</span>
-          </div>
+          <h3>{labels.modulesSectionTitle}</h3>
+          <p>{labels.modulesSectionDescription}</p>
           {importedModules.length === 0 ? (<div className="ever-settings-result">
-              <span>{labels.notConfigured}</span>
+              <span>{labels.moduleEmptyList}</span>
             </div>) : (<div className="ever-module-list">
               {importedModules.map((module) => (<div className="ever-module-item" key={module.id}>
                   <label className="ever-module-item__main">
-                    <input
-                      type="checkbox"
-                      checked={module.enabled}
-                      onChange={(event) => void onSetModuleEnabled(module.id, event.target.checked)}
-                    />
+                    <input type="checkbox" checked={module.enabled} disabled={moduleBusy} onChange={(event) => void onSetModuleEnabled(module.id, event.target.checked)}/>
                     <span>
                       <strong>{module.name}</strong>
-                      <small>{module.description || module.source_path || labels.notConfigured}</small>
-                      <small>lorebook {module.lorebook_count} · regex {module.regex_count} · trigger {module.trigger_count}</small>
+                      <small>{module.description || module.source_path || labels.moduleNoDescription}</small>
+                      <small>{labels.moduleStats(module.lorebook_count, module.regex_count, module.trigger_count)}</small>
                     </span>
                   </label>
-                  <button type="button" aria-label="Delete module" onClick={() => void onDeleteModule(module.id)}>
+                  <button type="button" aria-label={labels.moduleDelete} title={labels.moduleDelete} disabled={moduleBusy} onClick={() => void onDeleteModule(module.id)}>
                     <Trash2 aria-hidden="true" size={16}/>
                   </button>
                 </div>))}
             </div>)}
-          {(moduleResult || moduleImportError) && (<div className="ever-settings-result">
-              <span>{moduleResult ?? moduleImportError}</span>
+          {moduleMessage && (<div className="ever-settings-result">
+              <span>{moduleMessage}</span>
             </div>)}
-          <button type="button" className="ever-settings-reset-button" disabled={moduleBusy} onClick={handleModuleImport}>
+          {moduleError && (<div className="ever-settings-error">
+              <span>{moduleError}</span>
+            </div>)}
+          <button type="button" className="ever-settings-reset-button" disabled={moduleBusy} onClick={() => void onImportModule()}>
             <Box aria-hidden="true" size={16}/>
-            {moduleBusy ? 'Importing...' : 'Import .risum Module'}
+            {moduleBusy ? labels.moduleImporting : labels.moduleImportAction}
           </button>
-
         </section>
 
         <section className="ever-panel-section">
@@ -216,22 +169,67 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
         <section className="ever-panel-section">
           <h3>{labels.backupTitle}</h3>
           <p>{labels.backupDescription}</p>
+          <div className="ever-settings-actions">
+            <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onExportBackup()}>
+              <Save aria-hidden="true" size={16}/>
+              {backupBusy ? labels.backupWorking : labels.backupExport}
+            </button>
+            <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onImportBackup()}>
+              <FolderOpen aria-hidden="true" size={16}/>
+              {backupBusy ? labels.backupWorking : labels.backupImport}
+            </button>
+          </div>
+          <div className="ever-backup-folder">
+            <h4>{labels.backupFolderTitle}</h4>
+            <p>{labels.backupFolderDescription}</p>
+            <div className="ever-backup-folder__status">
+              <span>{backupFolderLinked ? labels.backupFolderLinked(backupDirectoryStatus?.directory_name ?? '') : labels.backupFolderNotLinked}</span>
+              {backupFolderLinked && backupDirectoryStatus?.permission ? <span>{labels.backupFolderPermission(backupDirectoryStatus.permission)}</span> : null}
+              {backupDirectoryStatus?.last_backup_at ? <span>{labels.backupLastAt(formatDateTime(backupDirectoryStatus.last_backup_at, labels))}</span> : null}
+            </div>
+            {backupDirectoryStatus?.last_backup_error ? (<div className="ever-settings-error">
+                <span>{labels.backupLastError(backupDirectoryStatus.last_backup_error)}</span>
+              </div>) : null}
+            <div className="ever-settings-actions">
+              {backupFolderLinked ? (<>
+                  {backupFolderGranted ? null : (<button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onGrantBackupDirectoryPermission()}>
+                      <ShieldCheck aria-hidden="true" size={16}/>
+                      {labels.backupFolderGrant}
+                    </button>)}
+                  <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onBackupNow()}>
+                    <Save aria-hidden="true" size={16}/>
+                    {backupBusy ? labels.backupWorking : labels.backupNow}
+                  </button>
+                  <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onUnlinkBackupDirectory()}>
+                    <Unlink aria-hidden="true" size={16}/>
+                    {labels.backupFolderUnlink}
+                  </button>
+                </>) : (<button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onLinkBackupDirectory()}>
+                  <FolderPlus aria-hidden="true" size={16}/>
+                  {backupBusy ? labels.backupWorking : labels.backupFolderLink}
+                </button>)}
+            </div>
+            {backupFolderLinked && backupFolderGranted ? (backupDirectoryStatus?.files.length ? (<div className="ever-backup-file-list">
+                  {backupDirectoryStatus.files.map((file) => (<div className="ever-backup-file-item" key={file.name}>
+                      <span>
+                        <strong>{file.name}</strong>
+                        <small>{formatBackupFileMeta(file, labels)}</small>
+                      </span>
+                      <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onRestoreBackupFile(file.name)}>
+                        <History aria-hidden="true" size={16}/>
+                        {labels.backupFileRestore}
+                      </button>
+                    </div>))}
+                </div>) : (<div className="ever-settings-result">
+                  <span>{labels.backupFilesEmpty}</span>
+                </div>)) : null}
+          </div>
           {backupMessage && (<div className="ever-settings-result">
               <span>{backupMessage}</span>
             </div>)}
           {backupRestoreSummary && (<div className="ever-settings-result">
               <span>{labels.backupRestored(backupRestoreSummary.restored_chat_rooms, backupRestoreSummary.restored_chat_messages, backupRestoreSummary.restored_persona_memories)}</span>
             </div>)}
-          <div className="ever-settings-actions">
-            <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onExportBackup()}>
-              <Save aria-hidden="true" size={16}/>
-              {backupBusy ? labels.backupWorking : labels.backupExport}
-            </button>
-            <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void handleBackupImport()}>
-              <FolderOpen aria-hidden="true" size={16}/>
-              {backupBusy ? labels.backupWorking : labels.backupImport}
-            </button>
-          </div>
         </section>
 
         <section className="ever-panel-section ever-settings-danger">

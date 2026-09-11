@@ -89,6 +89,7 @@ export function useEverTalkController(): EverTalkController {
     const [backupBusy, setBackupBusy] = useState(false);
     const [backupRestoreSummary, setBackupRestoreSummary] = useState<BackupRestoreSummary | null>(null);
     const [backupMessage, setBackupMessage] = useState<string | null>(null);
+    const [backupError, setBackupError] = useState<string | null>(null);
     const [backupDirectoryStatus, setBackupDirectoryStatus] = useState<BackupDirectoryStatus | null>(null);
     const [llmSessionStatuses, setLlmSessionStatuses] = useState<LlmSessionStatus[]>([]);
     const [llmRequestStatuses, setLlmRequestStatuses] = useState<LlmRequestStatus[]>([]);
@@ -527,6 +528,7 @@ export function useEverTalkController(): EverTalkController {
         setModuleError(null);
         setModuleMessage(null);
         setBackupMessage(null);
+        setBackupError(null);
         setBackupRestoreSummary(null);
         try {
             const current = await settingsClient.get();
