@@ -1,5 +1,8 @@
+import { useState } from 'react';
 import type { AppLanguage } from '../../../shared/types';
+import { formatLanguageName } from '../logic';
 import type { SetupWizardProps } from '../types';
+import { PlatformGuideNotice } from './PlatformGuideNotice';
 
 const LANGUAGE_OPTIONS: AppLanguage[] = ['ko', 'en', 'zh_cn'];
 
@@ -10,18 +13,9 @@ export function SetupWizard({
     onSelectLanguage,
     onCompleteSetup,
 }: SetupWizardProps) {
+    const [platformGuideAcknowledged, setPlatformGuideAcknowledged] = useState(false);
     if (!open) {
         return null;
-    }
-
-    function languageLabel(option: AppLanguage): string {
-        if (option === 'en') {
-            return labels.languageEn;
-        }
-        if (option === 'zh_cn') {
-            return labels.languageZhCn;
-        }
-        return labels.languageKo;
     }
 
     return (
@@ -38,11 +32,12 @@ export function SetupWizard({
                                 className={language === option ? 'is-active' : ''}
                                 onClick={() => void onSelectLanguage(option)}
                             >
-                                {languageLabel(option)}
+                                {formatLanguageName(option, labels)}
                             </button>
                         ))}
                     </div>
-                    <button type="button" className="ever-setup-wizard__next" onClick={() => void onCompleteSetup()}>
+                    <PlatformGuideNotice labels={labels} acknowledged={platformGuideAcknowledged} onAcknowledgedChange={setPlatformGuideAcknowledged}/>
+                    <button type="button" className="ever-setup-wizard__next" disabled={!platformGuideAcknowledged} onClick={() => void onCompleteSetup()}>
                         {labels.continue}
                     </button>
                 </div>

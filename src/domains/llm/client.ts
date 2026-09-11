@@ -33,9 +33,6 @@ export const llmClient = {
     async unloadEngine(): Promise<void> {
         onDeviceRuntime.unload();
     },
-    async cancelRequest(requestId: string): Promise<boolean> {
-        return onDeviceRuntime.cancelRequest(requestId);
-    },
     async getActiveSessions(): Promise<string[]> {
         return onDeviceRuntime.activeSessionIds();
     },

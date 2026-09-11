@@ -8,6 +8,8 @@ import {
 } from './chrome';
 import { CHAT_RESPONSE_TOKEN_RESERVE, LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE, REQUEST_STATUS_HISTORY_LIMIT } from './constants';
 import type {
+    BaseModelSession,
+    BudgetedMessages,
     LanguageModelLanguagePlan,
     LlmRequestStatus,
     LlmSessionStatus,
@@ -17,24 +19,16 @@ import type {
     OnDeviceGenerationResult,
     OnDeviceTextMessage,
     PersonaModelSession,
+    PersonaModelSessionCreation,
+    PersonaModelSessionIdentity,
 } from './types';
-
-interface BaseModelSession {
-    declared_language_tag: string | null;
-    session: LanguageModel;
-}
 
 let baseSession: BaseModelSession | null = null;
 let baseSessionCreation: Promise<BaseModelSession> | null = null;
 let lastRuntimeError: string | null = null;
-const personaSessions = new Map<string, PersonaModelSession>();
+let focusedPersonaSession: PersonaModelSession | null = null;
+let focusedPersonaSessionCreation: PersonaModelSessionCreation | null = null;
 const requestStatuses = new Map<string, LlmRequestStatus>();
-const requestControllers = new Map<string, AbortController>();
-
-interface BudgetedMessages {
-    messages: LanguageModelMessage[];
-    truncated_tokens: number;
-}
 
 function recordRequestStatus(status: LlmRequestStatus): void {
     requestStatuses.delete(status.request_id);
@@ -61,18 +55,27 @@ function assertSessionCreatable(plan: LanguageModelLanguagePlan): void {
     }
 }
 
-function evictLeastRecentPersonaSessions(maxActiveSessions: number, keepPersonaId: string): void {
-    const ordered = [...personaSessions.values()]
-        .filter((entry) => entry.persona_id !== keepPersonaId)
-        .sort((left, right) => left.last_access - right.last_access);
-    while (personaSessions.size > maxActiveSessions && ordered.length > 0) {
-        const evicted = ordered.shift();
-        if (!evicted) {
-            break;
-        }
-        evicted.session.destroy();
-        personaSessions.delete(evicted.persona_id);
-    }
+function isSamePersonaSession(entry: PersonaModelSessionIdentity, identity: PersonaModelSessionIdentity): boolean {
+    return entry.persona_id === identity.persona_id
+        && entry.declared_language_tag === identity.declared_language_tag
+        && entry.system_prompt === identity.system_prompt;
+}
+
+async function createPersonaModelSession(identity: PersonaModelSessionIdentity, plan: LanguageModelLanguagePlan, cacheReset: boolean): Promise<PersonaModelSession> {
+    await onDeviceRuntime.ensureBaseSession(plan, null);
+    const session = await createChromeLanguageModel({
+        declaredLanguageTag: identity.declared_language_tag,
+        systemPrompt: identity.system_prompt,
+        onDownloadProgress: null,
+        signal: null,
+    });
+    return {
+        ...identity,
+        session,
+        last_access: Date.now(),
+        cache_reset: cacheReset,
+        last_generation: null,
+    };
 }
 
 async function selectMessagesWithinBudget(
@@ -161,46 +164,55 @@ export const onDeviceRuntime = {
         }
     },
     unload(): void {
-        for (const entry of personaSessions.values()) {
-            entry.session.destroy();
-        }
-        personaSessions.clear();
+        focusedPersonaSession?.session.destroy();
+        focusedPersonaSession = null;
+        focusedPersonaSessionCreation = null;
         baseSession?.session.destroy();
         baseSession = null;
     },
-    async warmPersonaSession(personaId: string, plan: LanguageModelLanguagePlan, systemPrompt: string, maxActiveSessions: number): Promise<PersonaModelSession> {
-        const existing = personaSessions.get(personaId);
-        if (existing && existing.system_prompt === systemPrompt && existing.declared_language_tag === plan.declared_language_tag) {
-            existing.last_access = Date.now();
-            existing.cache_reset = false;
-            return existing;
-        }
-        await onDeviceRuntime.ensureBaseSession(plan, null);
-        const session = await createChromeLanguageModel({
-            declaredLanguageTag: plan.declared_language_tag,
-            systemPrompt,
-            onDownloadProgress: null,
-            signal: null,
-        });
-        if (existing) {
-            existing.session.destroy();
-        }
-        const entry: PersonaModelSession = {
+    async focusPersonaSession(personaId: string, plan: LanguageModelLanguagePlan, systemPrompt: string): Promise<PersonaModelSession> {
+        const identity: PersonaModelSessionIdentity = {
             persona_id: personaId,
             declared_language_tag: plan.declared_language_tag,
             system_prompt: systemPrompt,
-            session,
-            last_access: Date.now(),
-            cache_reset: existing !== undefined,
-            last_generation: null,
         };
-        personaSessions.set(personaId, entry);
-        evictLeastRecentPersonaSessions(maxActiveSessions, personaId);
+        if (focusedPersonaSession && isSamePersonaSession(focusedPersonaSession, identity)) {
+            focusedPersonaSession.last_access = Date.now();
+            focusedPersonaSession.cache_reset = false;
+            return focusedPersonaSession;
+        }
+        if (!focusedPersonaSessionCreation || !isSamePersonaSession(focusedPersonaSessionCreation, identity)) {
+            focusedPersonaSessionCreation = {
+                ...identity,
+                promise: createPersonaModelSession(identity, plan, focusedPersonaSession?.persona_id === personaId),
+            };
+        }
+        const creation = focusedPersonaSessionCreation;
+        let entry: PersonaModelSession;
+        try {
+            entry = await creation.promise;
+        }
+        catch (error) {
+            if (focusedPersonaSessionCreation === creation) {
+                focusedPersonaSessionCreation = null;
+            }
+            throw error;
+        }
+        if (focusedPersonaSessionCreation === creation) {
+            focusedPersonaSessionCreation = null;
+            if (focusedPersonaSession && focusedPersonaSession !== entry) {
+                focusedPersonaSession.session.destroy();
+            }
+            focusedPersonaSession = entry;
+        }
+        if (focusedPersonaSession !== entry) {
+            entry.session.destroy();
+            throw new DomainError('cancelled', personaId);
+        }
         return entry;
     },
-    async generate(request: OnDeviceGenerationRequest, maxActiveSessions: number): Promise<OnDeviceGenerationResult> {
-        const controller = new AbortController();
-        requestControllers.set(request.request_id, controller);
+    async generate(request: OnDeviceGenerationRequest): Promise<OnDeviceGenerationResult> {
+        const signal = request.signal;
         const status: LlmRequestStatus = {
             request_id: request.request_id,
             persona_id: request.persona_id,
@@ -216,8 +228,8 @@ export const onDeviceRuntime = {
         let generatedText = '';
         let conversation: LanguageModel | null = null;
         try {
-            const entry = await onDeviceRuntime.warmPersonaSession(request.persona_id, request.language_plan, request.system_prompt, maxActiveSessions);
-            conversation = await entry.session.clone({ signal: controller.signal });
+            const entry = await onDeviceRuntime.focusPersonaSession(request.persona_id, request.language_plan, request.system_prompt);
+            conversation = await entry.session.clone({ signal });
             const reusedPrefixTokens = conversation.contextUsage;
             const budgeted = await selectMessagesWithinBudget(conversation, request.messages, request.behavior_instruction);
             const promptTokens = await conversation.measureContextUsage(budgeted.messages);
@@ -229,7 +241,7 @@ export const onDeviceRuntime = {
                 truncated_prompt_tokens: budgeted.truncated_tokens,
                 cache_reset: entry.cache_reset,
             });
-            const stream = conversation.promptStreaming(budgeted.messages, { signal: controller.signal });
+            const stream = conversation.promptStreaming(budgeted.messages, { signal });
             for await (const chunk of stream) {
                 generatedText += chunk;
                 request.handlers.onChunk(chunk);
@@ -256,7 +268,7 @@ export const onDeviceRuntime = {
             return { text: generatedText, cancelled: false };
         }
         catch (error) {
-            if (isAbortError(error) || controller.signal.aborted) {
+            if (isAbortError(error) || signal.aborted) {
                 recordRequestStatus({ ...status, state: 'cancelled' });
                 return { text: generatedText, cancelled: true };
             }
@@ -265,7 +277,6 @@ export const onDeviceRuntime = {
         }
         finally {
             conversation?.destroy();
-            requestControllers.delete(request.request_id);
         }
     },
     async promptOnce(plan: LanguageModelLanguagePlan, prompt: string): Promise<string> {
@@ -278,25 +289,20 @@ export const onDeviceRuntime = {
             conversation.destroy();
         }
     },
-    cancelRequest(requestId: string): boolean {
-        const controller = requestControllers.get(requestId);
-        if (!controller) {
-            return false;
-        }
-        controller.abort();
-        return true;
-    },
     activeSessionIds(): string[] {
-        return [...personaSessions.keys()];
+        return focusedPersonaSession ? [focusedPersonaSession.persona_id] : [];
     },
     sessionStatuses(): LlmSessionStatus[] {
-        return [...personaSessions.values()].map((entry) => ({
-            persona_id: entry.persona_id,
-            cached_tokens: entry.session.contextUsage,
-            context_window: entry.session.contextWindow,
-            last_access: entry.last_access,
-            last_generation: entry.last_generation,
-        }));
+        if (!focusedPersonaSession) {
+            return [];
+        }
+        return [{
+            persona_id: focusedPersonaSession.persona_id,
+            cached_tokens: focusedPersonaSession.session.contextUsage,
+            context_window: focusedPersonaSession.session.contextWindow,
+            last_access: focusedPersonaSession.last_access,
+            last_generation: focusedPersonaSession.last_generation,
+        }];
     },
     requestStatuses(): LlmRequestStatus[] {
         return [...requestStatuses.values()].reverse();

@@ -3,7 +3,7 @@ import type { AppInfoPanelProps } from '../types';
 
 const DEVELOPER_NAME = 'GarnetRapture';
 const CONTACT_EMAIL = 'garnet@everlib.pro';
-const WEBSITE_URL = 'https://n9k32.com/';
+const WEBSITE_URL = 'https://ai.everlib.pro/';
 
 export function AppInfoPanel({ labels }: AppInfoPanelProps) {
     return (

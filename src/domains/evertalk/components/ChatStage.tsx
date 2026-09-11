@@ -3,25 +3,9 @@ import type React from 'react';
 import { Images, MessageCircle, Send, Sparkles, Square, X, ZoomIn } from 'lucide-react';
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
 import { createConversationSummary, createTalkChoices, formatDateTime, formatRoomTitle, formatSkinLabel, pickRandomSpeechLine, pickPokeReactionLine } from '../logic';
-import type { ChatMessage } from '../../chat';
-import type { SpiritSkinVisualAsset, SpiritVisualAssets } from '../../persona';
-import type { ChatStageProps } from '../types';
+import type { SpiritVisualAssets } from '../../persona';
+import type { ChatMessageBubbleProps, ChatStageProps, GalleryTileProps, ZoomDragState, ZoomOffset } from '../types';
 import { LoadableAssetImage } from './LoadableAssetImage';
-interface ChatMessageBubbleProps {
-    message: ChatMessage;
-    avatarCandidates: string[];
-    spiritName: string;
-    showReasoning: boolean;
-    deleteLabel: string;
-    onDelete: (messageId: string) => Promise<void>;
-}
-interface GalleryTileProps {
-    skin: SpiritSkinVisualAsset;
-    skinLabel: string;
-    spiritName: string;
-    zoomLabel: string;
-    onZoom: (candidates: string[]) => void;
-}
 const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoomLabel, onZoom }: GalleryTileProps) {
     return (<button type="button" className="ever-gallery-tile ever-gallery-tile--button" aria-label={`${skinLabel} ${zoomLabel}`} onClick={() => onZoom(skin.portraitCandidates)}>
       <LoadableAssetImage candidates={skin.portraitCandidates} alt={spiritName} fallback={<span>{skinLabel}</span>}/>
@@ -102,8 +86,8 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
     const [poked, setPoked] = useState(false);
     const [displayLine, setDisplayLine] = useState(speechLine);
     const [zoomedImageCandidates, setZoomedImageCandidates] = useState<string[] | null>(null);
-    const [zoomOffset, setZoomOffset] = useState({ x: 0, y: 0 });
-    const [zoomDragStart, setZoomDragStart] = useState<{ pointerId: number; x: number; y: number; originX: number; originY: number } | null>(null);
+    const [zoomOffset, setZoomOffset] = useState<ZoomOffset>({ x: 0, y: 0 });
+    const [zoomDragStart, setZoomDragStart] = useState<ZoomDragState | null>(null);
     const pokeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     useEffect(() => {
         setDisplayLine(speechLine);

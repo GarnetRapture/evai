@@ -6,7 +6,7 @@ import type { BuiltInModelEntry } from '../../llm';
 import { formatBackupFileMeta, formatDateTime, formatLanguageName } from '../logic';
 import type { SettingsPanelProps } from '../types';
 
-export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatalogError, modelPreparation, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupDirectoryStatus, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatalogError, modelPreparation, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     if (!isOpen) {
         return null;
@@ -226,6 +226,9 @@ export function SettingsPanel({ open: isOpen, settings, modelCatalog, modelCatal
           </div>
           {backupMessage && (<div className="ever-settings-result">
               <span>{backupMessage}</span>
+            </div>)}
+          {backupError && (<div className="ever-settings-error">
+              <span>{backupError}</span>
             </div>)}
           {backupRestoreSummary && (<div className="ever-settings-result">
               <span>{labels.backupRestored(backupRestoreSummary.restored_chat_rooms, backupRestoreSummary.restored_chat_messages, backupRestoreSummary.restored_persona_memories)}</span>

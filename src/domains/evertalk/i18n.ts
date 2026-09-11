@@ -1,6 +1,8 @@
 import type { DomainErrorCode } from '../../shared/errors';
-import type { AppLanguage } from '../../shared/types';
+import type { AppLanguage, PlatformSupportStatus } from '../../shared/types';
 import type { SpiritRaidEvent } from '../persona/types';
+
+export type PlatformBlockedReason = Exclude<PlatformSupportStatus, 'supported'>;
 
 export interface EverTalkLabels {
     languageGateTitle: string;
@@ -102,7 +104,9 @@ export interface EverTalkLabels {
     loadingBondRanking: string;
     noBondData: string;
     bondDescription: string;
-    setDefaultProfile: (name: string) => string;
+    preferredSpirit: string;
+    preferredSpiritSetAction: (name: string) => string;
+    preferredSpiritClearAction: (name: string) => string;
     personaDbLoading: string;
     settingsOpen: string;
     collapseRight: string;
@@ -138,7 +142,8 @@ export interface EverTalkLabels {
     manualSyncWaiting: string;
     modelLoaded: string;
     modelAvailabilityDetail: (availability: string | null) => string;
-    defaultProfileSet: (id: string) => string;
+    preferredSpiritSet: (name: string) => string;
+    preferredSpiritCleared: (name: string) => string;
     appLoading: string;
     activeSessionBadge: string;
     messageSendFailed: string;
@@ -152,6 +157,13 @@ export interface EverTalkLabels {
     appInfoDeveloper: string;
     appInfoContact: string;
     appInfoWebsite: string;
+    platformGuideTitle: string;
+    platformGuideItems: (modelSettingsPath: string) => string[];
+    platformGuideCheckbox: string;
+    platformGuideConfirm: string;
+    platformBlockedTitle: string;
+    platformBlockedMessages: Record<PlatformBlockedReason, string>;
+    platformBlockedHint: string;
     modelListTitle: string;
     modelListDescription: string;
     modelRoleChat: string;
@@ -300,7 +312,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         zoomImage: '확대 보기',
         settings: '설정',
         currentSettings: '현재 설정값 (IndexedDB)',
-        defaultSpirit: '기본 정령',
+        defaultSpirit: '선호정령',
         activeStyle: '활성 스타일',
         language: '언어',
         displayResponseLanguage: '표시 및 응답 언어',
@@ -347,7 +359,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         loadingBondRanking: '인연도 랭킹 조회 중',
         noBondData: '누적된 대화가 없습니다',
         bondDescription: '정령과 대화를 나누면 실제 메시지/기억 누적량을 기준으로 랭킹이 산출됩니다.',
-        setDefaultProfile: (name) => `${name} 기본 프로필 지정`,
+        preferredSpirit: '선호정령',
+        preferredSpiritSetAction: (name) => `${name} 선호정령으로 지정`,
+        preferredSpiritClearAction: (name) => `${name} 선호정령 해제`,
         personaDbLoading: '정령 DB 로드 대기',
         settingsOpen: '설정 열기',
         collapseRight: '우측 패널 접기',
@@ -397,7 +411,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             }
             return '확인 중';
         },
-        defaultProfileSet: (id) => `기본 프로필 ${id}`,
+        preferredSpiritSet: (name) => `선호정령: ${name}`,
+        preferredSpiritCleared: (name) => `선호정령 해제: ${name}`,
         appLoading: '에버톡 로컬 데이터베이스 연결 중...',
         activeSessionBadge: '세션 활성',
         setupProgressTitle: '에버톡 초기 구성 중',
@@ -410,6 +425,21 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         appInfoDeveloper: '개발자',
         appInfoContact: '문의',
         appInfoWebsite: '웹사이트',
+        platformGuideTitle: '이용 환경 안내',
+        platformGuideItems: (modelSettingsPath) => [
+            '에버톡 AI 채팅은 PC의 Chrome 브라우저에 내장된 온디바이스 AI(Gemini Nano)로만 동작합니다.',
+            '모바일 기기(스마트폰·태블릿)에서는 이용할 수 없습니다. 모바일을 사용 중이라면 반드시 PC의 Chrome 브라우저로 접속해야 합니다.',
+            'Chrome 이외의 브라우저(Edge, Firefox, Safari, Whale 등)에서는 접속할 수 없습니다.',
+            `처음 대화하기 전에 ${modelSettingsPath}에서 Chrome 온디바이스 모델을 내려받아 준비해야 합니다.`,
+        ],
+        platformGuideCheckbox: '위 안내를 확인했으며, PC Chrome 브라우저의 온디바이스 AI로만 이용할 수 있음을 이해했습니다.',
+        platformGuideConfirm: '확인하고 입장',
+        platformBlockedTitle: '지원하지 않는 이용 환경입니다',
+        platformBlockedMessages: {
+            mobile_device: '모바일 기기에서는 에버톡 AI 채팅을 이용할 수 없습니다. 에버톡 AI 채팅은 PC Chrome 브라우저의 온디바이스 AI로만 동작하므로, PC의 Chrome 브라우저로 접속해 주세요.',
+            unsupported_browser: '이 브라우저에서는 에버톡 AI 채팅을 이용할 수 없습니다. 에버톡 AI 채팅은 PC Chrome 브라우저의 온디바이스 AI로만 동작하므로, PC의 Google Chrome 브라우저로 접속해 주세요.',
+        },
+        platformBlockedHint: '지원 환경: Windows · macOS · Linux · ChromeOS의 Google Chrome 데스크톱 브라우저',
         messageSendFailed: '응답 생성에 실패했습니다. 다시 시도해 주세요.',
         modelListTitle: '온디바이스 모델 목록',
         modelListDescription: '이 PC의 Chrome이 제공하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 선택하고, 필요한 모델은 여기서 내려받아 준비하세요. Gemini Nano의 크기와 GPU/CPU 백엔드는 Chrome이 기기 성능에 맞춰 자동으로 고릅니다.',
@@ -604,7 +634,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         zoomImage: 'Zoom',
         settings: 'Settings',
         currentSettings: 'Current settings (IndexedDB)',
-        defaultSpirit: 'Default Soul',
+        defaultSpirit: 'Preferred Soul',
         activeStyle: 'Active Style',
         language: 'Language',
         displayResponseLanguage: 'Display and response language',
@@ -651,7 +681,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         loadingBondRanking: 'Loading bond ranking',
         noBondData: 'No accumulated conversations',
         bondDescription: 'Ranking is calculated from actual messages and saved memories.',
-        setDefaultProfile: (name) => `Set ${name} as default profile`,
+        preferredSpirit: 'Preferred Soul',
+        preferredSpiritSetAction: (name) => `Set ${name} as preferred Soul`,
+        preferredSpiritClearAction: (name) => `Remove ${name} as preferred Soul`,
         personaDbLoading: 'Waiting for soul DB',
         settingsOpen: 'Open settings',
         collapseRight: 'Collapse right panel',
@@ -701,7 +733,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             }
             return 'Checking';
         },
-        defaultProfileSet: (id) => `Default profile ${id}`,
+        preferredSpiritSet: (name) => `Preferred Soul: ${name}`,
+        preferredSpiritCleared: (name) => `Preferred Soul removed: ${name}`,
         appLoading: 'Connecting EverTalk local database',
         activeSessionBadge: 'Session active',
         setupProgressTitle: 'Setting up EverTalk',
@@ -714,6 +747,21 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         appInfoDeveloper: 'Developer',
         appInfoContact: 'Contact',
         appInfoWebsite: 'Website',
+        platformGuideTitle: 'Supported Environment',
+        platformGuideItems: (modelSettingsPath) => [
+            'EverTalk AI Chat runs only on the on-device AI (Gemini Nano) built into the Chrome browser on a PC.',
+            'It cannot be used on mobile devices (smartphones or tablets). If you are on mobile, you must connect with the Chrome browser on a PC.',
+            'Browsers other than Chrome (Edge, Firefox, Safari, Whale, etc.) cannot access the service.',
+            `Before your first chat, download and prepare the Chrome on-device model in ${modelSettingsPath}.`,
+        ],
+        platformGuideCheckbox: 'I have read the notice above and understand that this service works only with the on-device AI of Chrome on a PC.',
+        platformGuideConfirm: 'Confirm and Enter',
+        platformBlockedTitle: 'Unsupported Environment',
+        platformBlockedMessages: {
+            mobile_device: 'EverTalk AI Chat cannot be used on mobile devices. It runs only on the on-device AI of the Chrome browser on a PC, so please connect with Chrome on a PC.',
+            unsupported_browser: 'EverTalk AI Chat cannot be used in this browser. It runs only on the on-device AI of the Chrome browser on a PC, so please connect with Google Chrome on a PC.',
+        },
+        platformBlockedHint: 'Supported: Google Chrome desktop browser on Windows, macOS, Linux, or ChromeOS',
         messageSendFailed: 'Failed to generate a response. Please try again.',
         modelListTitle: 'On-device Models',
         modelListDescription: 'On-device AI models provided by Chrome on this PC. Choose the model used for chat and download the models you need here. Chrome picks the Gemini Nano size and GPU/CPU backend automatically for this device.',
@@ -908,7 +956,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         zoomImage: '放大',
         settings: '设置',
         currentSettings: '当前设置 (IndexedDB)',
-        defaultSpirit: '默认精灵',
+        defaultSpirit: '偏好精灵',
         activeStyle: '启用风格',
         language: '语言',
         displayResponseLanguage: '显示与回复语言',
@@ -955,7 +1003,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         loadingBondRanking: '正在加载羁绊排行',
         noBondData: '暂无累积对话',
         bondDescription: '排行基于实际消息与保存记忆计算。',
-        setDefaultProfile: (name) => `将 ${name} 设为默认资料`,
+        preferredSpirit: '偏好精灵',
+        preferredSpiritSetAction: (name) => `将 ${name} 设为偏好精灵`,
+        preferredSpiritClearAction: (name) => `取消 ${name} 的偏好精灵设定`,
         personaDbLoading: '等待精灵数据库',
         settingsOpen: '打开设置',
         collapseRight: '收起右侧面板',
@@ -1005,7 +1055,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             }
             return '确认中';
         },
-        defaultProfileSet: (id) => `默认资料 ${id}`,
+        preferredSpiritSet: (name) => `偏好精灵：${name}`,
+        preferredSpiritCleared: (name) => `已取消偏好精灵：${name}`,
         appLoading: '正在连接 EverTalk 本地数据库',
         activeSessionBadge: '会话已激活',
         setupProgressTitle: '正在初始化 EverTalk',
@@ -1018,6 +1069,21 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         appInfoDeveloper: '开发者',
         appInfoContact: '联系方式',
         appInfoWebsite: '网站',
+        platformGuideTitle: '使用环境说明',
+        platformGuideItems: (modelSettingsPath) => [
+            'EverTalk AI 聊天仅能通过电脑 Chrome 浏览器内置的设备端 AI（Gemini Nano）运行。',
+            '无法在移动设备（智能手机、平板电脑）上使用。如果您正在使用移动设备，必须改用电脑上的 Chrome 浏览器访问。',
+            'Chrome 以外的浏览器（Edge、Firefox、Safari、Whale 等）无法访问。',
+            `首次对话前，请在“${modelSettingsPath}”中下载并准备 Chrome 设备端模型。`,
+        ],
+        platformGuideCheckbox: '我已阅读以上说明，并了解本服务仅能通过电脑 Chrome 浏览器的设备端 AI 使用。',
+        platformGuideConfirm: '确认并进入',
+        platformBlockedTitle: '不支持的使用环境',
+        platformBlockedMessages: {
+            mobile_device: '无法在移动设备上使用 EverTalk AI 聊天。本服务仅能通过电脑 Chrome 浏览器的设备端 AI 运行，请使用电脑上的 Chrome 浏览器访问。',
+            unsupported_browser: '无法在此浏览器中使用 EverTalk AI 聊天。本服务仅能通过电脑 Chrome 浏览器的设备端 AI 运行，请使用电脑上的 Google Chrome 浏览器访问。',
+        },
+        platformBlockedHint: '支持环境：Windows、macOS、Linux、ChromeOS 上的 Google Chrome 桌面浏览器',
         messageSendFailed: '生成响应失败。请重试。',
         modelListTitle: '设备端模型列表',
         modelListDescription: '这是本电脑 Chrome 提供的设备端 AI 模型。请选择用于对话的模型，并在此下载准备所需模型。Gemini Nano 的规格与 GPU/CPU 后端由 Chrome 根据设备性能自动选择。',

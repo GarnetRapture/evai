@@ -1,7 +1,6 @@
 <p align="right">
   <img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" /> <strong>한국어</strong> &nbsp;|&nbsp;
-  <a href="README.en.md"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" /> English</a> &nbsp;|&nbsp;
-  <a href="README.zh-CN.md"><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" /> 简体中文</a>
+  <a href="README.en.md"><img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" /> English</a>
 </p>
 
 <p align="center">
@@ -9,40 +8,41 @@
 </p>
 
 <h1 align="center">EverSoul AI Chat</h1>
-<p align="center"><i>완전한 로컬 구동 AI 채팅 클라이언트</i></p>
+<p align="center"><i>PC Chrome 온디바이스 AI로만 동작하는 서버리스 웹 AI 채팅</i></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.0.23-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.0.1-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/license-Apache_2.0-green?style=flat-square" alt="License" />
-  <img src="https://img.shields.io/badge/Tauri-2-FFC107?style=flat-square&logo=tauri" alt="Tauri" />
-  <img src="https://img.shields.io/badge/React-19.1-61DAFB?style=flat-square&logo=react" alt="React" />
-  <img src="https://img.shields.io/badge/Rust-2021_edition-000000?style=flat-square&logo=rust" alt="Rust" />
-  <img src="https://img.shields.io/badge/SQLite-bundled-003B57?style=flat-square&logo=sqlite" alt="SQLite" />
-  <img src="https://img.shields.io/badge/spirits-95-9b5de5?style=flat-square" alt="Spirits" />
+  <img src="https://img.shields.io/badge/Chrome-Prompt_API-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome Prompt API" />
+  <img src="https://img.shields.io/badge/React-19.3-61DAFB?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-7.0-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-8.3-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/IndexedDB-idb_8-003B57?style=flat-square" alt="IndexedDB" />
+  <img src="https://img.shields.io/badge/spirits-99-9b5de5?style=flat-square" alt="Spirits" />
   <img src="https://img.shields.io/badge/talk_backgrounds-522-f15bb5?style=flat-square" alt="Backgrounds" />
   <img src="https://img.shields.io/badge/languages-ko%20%7C%20en%20%7C%20zh__cn-00bbf9?style=flat-square" alt="Languages" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/GarnetRapture/eversoul-ai-chat/fork"><img src="https://img.shields.io/badge/1.%20Fork-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
-  <a href="https://github.com/GarnetRapture/eversoul-ai-chat/stargazers"><img src="https://img.shields.io/badge/2.%20Star-e3b341?style=for-the-badge&logo=github&logoColor=white" alt="Star" /></a>
-  <a href="https://github.com/GarnetRapture/eversoul-ai-chat/watchers"><img src="https://img.shields.io/badge/3.%20Watch-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Watch" /></a>
-  <a href="https://github.com/GarnetRapture/eversoul-ai-chat/actions/workflows/build-portable.yml"><img src="https://img.shields.io/badge/4.%20Actions%20빌드-8957e5?style=for-the-badge&logo=githubactions&logoColor=white" alt="Actions" /></a>
+  <a href="https://ai.everlib.pro/"><img src="https://img.shields.io/badge/서비스-ai.everlib.pro-8957e5?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Service" /></a>
+  <a href="https://github.com/GarnetRapture/evai/fork"><img src="https://img.shields.io/badge/Fork-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
+  <a href="https://github.com/GarnetRapture/evai/stargazers"><img src="https://img.shields.io/badge/Star-e3b341?style=for-the-badge&logo=github&logoColor=white" alt="Star" /></a>
+  <a href="https://github.com/GarnetRapture/evai/watchers"><img src="https://img.shields.io/badge/Watch-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Watch" /></a>
 </p>
 
 <p align="center">
-  <sub><b>Fork</b> → <b>Star</b> → <b>Watch</b> 를 누른 뒤, 포크한 <b>내 저장소</b>의 Actions 탭에서 <b>Run workflow</b> 한 번이면 빌드가 끝납니다. 내 PC에 Rust·CMake·Clang을 설치할 필요가 없습니다.</sub>
+  <sub><b>PC의 Google Chrome 브라우저</b>에서만 이용할 수 있습니다. 모바일 기기와 Chrome 이외의 브라우저는 접속이 차단됩니다.</sub>
 </p>
 
 ---
 
 ## 🌟 개요
 
-**EverSoul AI Chat**은 에버소울을 간직할 새로운 로컬 AI 채팅 프로젝트입니다. 정령들의 기억을 보존한다는 의미로 만들었습니다. 에버소울에 등장하는 정령 95명을 실제 게임 데이터 그대로 불러와, 각자의 성격과 말투로 자유롭게 대화할 수 있습니다.
+**EverSoul AI Chat**은 에버소울을 간직할 새로운 AI 채팅 프로젝트입니다. 정령들의 기억을 보존한다는 의미로 만들었습니다. 에버소울에 등장하는 정령 99명을 실제 게임 데이터 그대로 불러와, 각자의 성격과 말투로 자유롭게 대화할 수 있습니다.
 
-대화를 만들어내는 AI는 기본적으로 내 컴퓨터 안에서만(로컬 GGUF 모델) 돌아가므로 프라이버시가 완벽히 보장됩니다. 또한, 무거운 로컬 모델 실행이 부담스러운 환경을 위해 외부 API(OpenAI, Gemini 등)로 컨텍스트만 전송하여 가볍고 똑똑하게 통신할 수 있는 하이브리드 아키텍처 연동도 함께 설계되어 있습니다.
+이 프로젝트는 서버가 없는 정적 웹 앱입니다. 대화를 만들어내는 AI는 PC Chrome 브라우저에 내장된 온디바이스 AI(Prompt API · Gemini Nano)이고, 대화·기억·설정은 모두 그 PC 브라우저의 IndexedDB에만 저장됩니다. 대화 내용이 외부 서버로 나가지 않으며, 저장된 데이터는 PC 파일로 내보내거나 PC 폴더에 자동 백업할 수 있습니다.
 
-그래서 정령 95명 전원의 실제 게임 그림, 대화 배경 522장, 에버톡 화면에서 쓰던 UI까지 프로젝트 안에 그대로 담아뒀습니다. 각 정령의 이름과 성격, 말투는 `data/personas/`에 정령마다 하나씩 정리되어 있고, 한국어·영어·중국어(번체/간체) 네 개 언어로 미리 준비해 두었기 때문에 언어를 바꿔도 그 정령다움은 그대로 유지됩니다.
+정령 99명 전원의 실제 게임 그림, 대화 배경 522장, 에버톡 화면에서 쓰던 UI까지 프로젝트 안에 그대로 담아뒀습니다. 각 정령의 이름과 성격, 말투는 `data/personas/`에 정령마다 하나씩 정리되어 있고, 한국어·영어·중국어(번체/간체) 언어별 값이 미리 준비되어 있어서 언어를 바꿔도 그 정령다움은 그대로 유지됩니다.
 
 <p align="center">
   <img src="public/eversoul-assets/spirits/GarnetRapture/base/GarnetRapture_1024.png" width="120" alt="GarnetRapture" />
@@ -55,9 +55,9 @@
 
 ---
 
-## 🎨 전체 정령 갤러리 (95종)
+## 🎨 전체 정령 갤러리 (99종)
 
-`data/personas/*.json` 95개 파일을 전부 살펴서 정령 그림과 한국어(ko)·영어(en)·중국어 간체(zh_cn) 이름을 실제 데이터 그대로 나열한 도감입니다. 그림 폴더 이름은 `src/domains/persona/logic.ts`의 `resolveSpiritAssetFolder`가 찾는 방식 그대로 가져왔습니다(게임 내 표시명과 실제 그림 폴더명이 다른 26명은 `explicitAssetFolders` 매핑을 그대로 따랐습니다).
+`data/personas/*.json` 99개 파일을 전부 살펴서 정령 그림과 한국어(ko)·영어(en)·중국어 간체(zh_cn) 이름을 실제 데이터 그대로 나열한 도감입니다. 그림 폴더 이름은 `src/domains/persona/logic.ts`의 `resolveSpiritAssetFolder`가 찾는 방식 그대로 가져왔습니다(게임 내 표시명과 실제 그림 폴더명이 다른 27명은 `explicitAssetFolders` 매핑을, 그림 파일 접두사가 폴더명과 다른 Canney·Casper·Irene은 `assetFilePrefixes` 매핑을 그대로 따랐습니다).
 
 <table>
 <tr>
@@ -178,11 +178,21 @@
 <td align="center"><img src="public/eversoul-assets/spirits/Sakuyo/base/Sakuyo_1024.png" width="64"/><br/><sub>사쿠요<br/>Sakuyo<br/>櫻世</sub></td>
 <td align="center"><img src="public/eversoul-assets/spirits/YuriaApollyon/base/YuriaApollyon_1024.png" width="64"/><br/><sub>유리아(아폴리온)<br/>Yuria (Apollyon)<br/>尤里婭（阿巴頓）</sub></td>
 <td align="center"><img src="public/eversoul-assets/spirits/Wheri/base/Wheri_1024.png" width="64"/><br/><sub>웨리<br/>Wheri<br/>威里</sub></td>
+<td align="center"><img src="public/eversoul-assets/spirits/Canney/base/Beast_1024.png" width="64"/><br/><sub>Canney<br/>Canney<br/>Canney</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="public/eversoul-assets/spirits/Casper/base/Ghost_1024.png" width="64"/><br/><sub>Casper<br/>Casper<br/>Casper</sub></td>
+<td align="center"><img src="public/eversoul-assets/spirits/Irene/base/Apprentice_1024.png" width="64"/><br/><sub>Irene<br/>Irene<br/>Irene</sub></td>
+<td align="center"><img src="public/eversoul-assets/spirits/Pixie/base/Pixie_1024.png" width="64"/><br/><sub>Pixie<br/>Pixie<br/>Pixie</sub></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </table>
 
-정령마다 그림이 한 장으로 끝나지 않습니다. `base`(평소 모습), `costume`(의상), `raid`, `gacha`, `srg` 폴더로 나뉘어서 같은 정령이라도 여러 장의 그림이 준비되어 있습니다.
+정령마다 그림이 한 장으로 끝나지 않습니다. `base`(평소 모습), `costume`(의상), `raid`, `gacha`, `srg` 폴더로 나뉘어서 같은 정령이라도 여러 장의 그림이 준비되어 있습니다. 앱은 `base`·`costume`·`raid` 그림을 스킨으로 보여주며, 정령마다 고른 스킨은 설정에 저장됩니다.
 
 <p align="center">
   <img src="public/eversoul-assets/spirits/Adrianne/base/Adrianne_1024.png" width="110" alt="Adrianne base" />
@@ -196,12 +206,15 @@
 
 ## 🚀 주요 기능
 
-- 💻 **내 컴퓨터만으로 돌아가는 AI**: GPU가 없어도 `llama.cpp` 기반으로 대화를 만들어냅니다. CPU 물리 코어 수에 맞춰 스레드를 잡기 때문에 무리 없이 안정적으로 대답합니다.
-- 🎭 **95명의 정령, 각자의 성격 그대로**: 이름과 등급, 종족, 직업은 물론 성우, 생일, 좋아하는 것까지 정령마다 정리해 둔 자료를 불러와서, 대화할 때마다 그 정령답게 말하도록 합니다.
-- 🧠 **정령이 나와의 대화를 기억함**: 대화를 나눌 때마다 그 정령이 스스로 "기억할 만한 게 있었는지" 되짚어보고, 있으면 남겨둡니다. 기억이 쌓이면 한 번씩 다시 정리해서, 다음에 만났을 때도 그 기억을 그대로 안고 이야기합니다.
-- 🌐 **언어를 바꿔도 그 정령 그대로**: 이름과 소개, 말투가 한국어·영어·중국어(번체/간체) 네 언어로 다 준비되어 있어서, 앱 언어를 바꾸면 정령의 이름과 소개도 바로 그 언어로 바뀝니다.
-- 🧬 **대화가 쌓일수록 더 그 정령다워지는 학습**: Python 없이 순수 Rust(`candle`)로 Qwen2 모델을 직접 구현해서, 정령마다 나눈 대화를 바탕으로 내 컴퓨터에서 바로 미세조정(LoRA) 학습을 돌릴 수 있습니다.
-- 📂 **대화는 전부 내 컴퓨터에 저장**: 나눈 대화, 정령 프로필, 말투 설정 모두 가벼운 SQLite 데이터베이스에 그대로 남습니다.
+- 💻 **PC Chrome 온디바이스 AI**: Chrome에 내장된 Prompt API(`LanguageModel`, Gemini Nano)로 대답을 만듭니다. 서버나 외부 API를 쓰지 않으며, 모델 내려받기와 준비는 설정 > 온디바이스 모델 목록에서 진행합니다.
+- 🔒 **이용 환경 제한과 첫 진입 안내**: PC의 Google Chrome이 아니면(모바일 기기, 다른 브라우저) 접속이 차단됩니다. 처음 들어올 때는 "PC Chrome 온디바이스 AI로만 동작한다"는 안내를 확인하고 체크해야 입장할 수 있습니다.
+- 🎭 **99명의 정령, 각자의 성격 그대로**: 이름과 등급, 종족, 직업은 물론 성우, 생일, 좋아하는 것, 대표 대사와 에버톡 대화 예시까지 불러와 정령마다 시스템 프롬프트를 만들고, 그 정령답게 말하도록 합니다.
+- 🧠 **정령이 나와의 대화를 기억함**: 매 턴의 대화를 정령별 기억으로 남기고, 다음 대화에서 관련된 기억을 떠올려 함께 전달합니다. 기억이 10개 쌓일 때마다 온디바이스 AI가 다시 정리한 요약을 시스템 프롬프트에 넣습니다.
+- 🎯 **지금 채팅 중인 정령에만 집중**: 대화는 매 턴 바로 저장되므로, 다른 정령으로 바꾸면 이전 정령의 생성 중인 응답을 멈추고 모델 세션도 지금 정령 하나만 유지합니다.
+- 🌐 **언어를 바꿔도 그 정령 그대로**: UI·안내·오류 메시지가 한국어·영어·중국어(간체) 라벨로 준비되어 있고, 정령의 이름과 소개, 시스템 프롬프트도 선택한 언어로 바뀝니다.
+- ⭐ **선호정령**: 목록의 별로 선호정령을 지정·해제하고, 친밀도 탭 맨 위에 선호정령으로 표시됩니다. 앱을 다시 켜면 선호정령이 먼저 선택됩니다.
+- 🧩 **Risu 모듈**: `.risum` 모듈을 가져와 켜고 끌 수 있고, 활성 모듈의 설명과 로어북이 시스템 프롬프트에 추가됩니다.
+- 📂 **내 PC에 저장·백업**: 대화, 기억, 설정, 모듈은 브라우저 IndexedDB에 저장되고, PC 파일로 내보내기·불러오기와 PC 백업 폴더 자동 백업·시점 복원을 지원합니다.
 - 🖼️ **대화 배경도 그대로**: 에버소울 정식 일러스트 배경 522장을 언제든 꺼내서 대화창 분위기를 바꿀 수 있습니다.
 
 <p align="center">
@@ -217,122 +230,106 @@
 
 ## 🏗 아키텍처
 
-프론트엔드(React)와 백엔드(Rust)가 각각 동일한 이름의 도메인 모듈로 대칭 구성되어 있으며, Tauri IPC(`invoke`)로만 통신합니다.
+서버 없이 브라우저 안에서만 동작하는 React 정적 웹 앱입니다. UI 도메인(`evertalk`)이 각 도메인 서비스를 부르고, 도메인 서비스는 공용 모듈(`src/shared`)을 통해 IndexedDB, PC 파일, Chrome 온디바이스 AI에 접근합니다. Chrome `LanguageModel` API를 직접 다루는 곳은 `src/domains/llm/chrome/languageModel.ts` 한 곳뿐입니다.
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#cde2fb', 'primaryBorderColor': '#2a78d6', 'primaryTextColor': '#0b0b0b', 'lineColor': '#52514e', 'clusterBkg': '#fcfcfb', 'clusterBorder': '#c3c2b7', 'fontFamily': 'system-ui, -apple-system, Segoe UI, sans-serif'}}}%%
 flowchart TB
-    subgraph FE["프론트엔드 · src/domains"]
+    subgraph UI["UI · src/domains/evertalk"]
         direction LR
-        FE1["auth · chat · knowledge"]
-        FE2["llm · persona · settings"]
-        FE3["style · sync · training"]
-        FE4["evertalk<br/>SpiritRoster · ChatStage · SettingsPanel"]
+        UI1["PlatformBlockedPanel · PlatformGuideGate<br/>SetupWizard"]
+        UI2["SpiritRoster · ChatStage<br/>SpiritProfilePanel"]
+        UI3["SettingsPanel · ModuleManagementPanel<br/>i18n (ko · en · zh_cn)"]
     end
 
-    FE == "Tauri invoke<br/>67개 커맨드" ==> BE
-
-    subgraph BE["백엔드 · src-tauri/src/domains + infrastructure"]
+    subgraph DOMAIN["도메인 서비스 · src/domains"]
         direction LR
-        BE1["auth · chat · knowledge"]
-        BE2["llm · persona · settings"]
-        BE3["style · sync · training"]
+        D1["persona · chat · style<br/>knowledge · modules"]
+        D2["llm<br/>runtime · catalog · chrome"]
+        D3["settings · sync · auth"]
     end
 
-    BE -- "대화방 · 메시지 · 정령 프로필 · 기억" --> DB[("SQLite<br/>eversoul.db")]
-    BE -- "공통 접두사 재사용<br/>세션 KV 상태 영구 보존" --> CACHE[("KV Cache<br/>ai/cache/*.bin")]
-    BE -- "로컬 컨텍스트 조립 추론" --> LLM["GGUF 로컬 모델<br/>gemma-2-2b-it Q4_K_M<br/>llama.cpp"]
+    subgraph SHARED["공용 모듈 · src/shared"]
+        direction LR
+        S1["storage (idb)"]
+        S2["files (File System Access)"]
+        S3["platform (UA Client Hints)<br/>i18n · errors · time"]
+    end
 
-    classDef feStyle fill:#cde2fb,stroke:#2a78d6,stroke-width:2px,color:#0b0b0b
-    classDef beStyle fill:#e3ddf7,stroke:#4a3aa7,stroke-width:2px,color:#0b0b0b
+    UI --> DOMAIN
+    DOMAIN --> SHARED
+    PACK["data/personas/*.json<br/>99개 · import.meta.glob"] --> D1
+    S1 -- "대화방 · 메시지 · 정령 · 기억 · 설정 · 모듈" --> DB[("IndexedDB<br/>eversoul-ai-chat v2")]
+    S2 -- "JSON 내보내기·불러오기<br/>백업 폴더 자동 백업" --> PC[("PC 파일 / 백업 폴더")]
+    D2 -- "availability · create · clone<br/>promptStreaming" --> LLM["Chrome Prompt API<br/>LanguageModel · Gemini Nano"]
+
+    classDef uiStyle fill:#cde2fb,stroke:#2a78d6,stroke-width:2px,color:#0b0b0b
+    classDef domainStyle fill:#e3ddf7,stroke:#4a3aa7,stroke-width:2px,color:#0b0b0b
+    classDef sharedStyle fill:#fff4cc,stroke:#ffb703,stroke-width:2px,color:#0b0b0b
     classDef dbStyle fill:#c9f0d8,stroke:#008300,stroke-width:2px,color:#0b0b0b
     classDef llmStyle fill:#fbdcc9,stroke:#eb6834,stroke-width:2px,color:#0b0b0b
-    classDef cacheStyle fill:#fff4cc,stroke:#ffb703,stroke-width:2px,color:#0b0b0b
 
-    class FE1,FE2,FE3,FE4 feStyle
-    class BE1,BE2,BE3 beStyle
-    class DB dbStyle
+    class UI1,UI2,UI3 uiStyle
+    class D1,D2,D3 domainStyle
+    class S1,S2,S3,PACK sharedStyle
+    class DB,PC dbStyle
     class LLM llmStyle
-    class CACHE cacheStyle
 ```
 
-- **로컬 DB 경로**: OS별 앱 데이터 디렉터리 하위 `database/eversoul.db` (디버그 빌드 시 매 실행마다 초기화).
-- **설정 파일**: 앱 데이터 디렉터리 하위 `config/settings.ini` (`rust-ini`로 읽기/쓰기, 기본 정령·활성 스타일·언어 저장).
-- **KV Cache 저장소**: 앱 실행 디렉터리 하위 `ai/cache/` (정령별 KV 상태를 `.bin` 파일로 보존. 세션 축출·정령 예열·앱 종료·엔진 언로드 시점에 저장되며, 다음 턴에서 프롬프트의 공통 접두사만큼 재계산을 건너뜁니다).
-- **비동기 런타임 구조**: 백엔드의 LLM 연산은 전용 워커 스레드에서 실행되고, Tauri 커맨드는 `tauri::async_runtime::spawn_blocking`으로 그 결과를 기다려 메인 UI 스레드 논블로킹을 보장합니다.
-- **토큰 스트리밍**: 답변은 `chat-stream-token` / `chat-stream-done` 이벤트로 한 토큰씩 전달되어 화면에 즉시 표시되고, 생성 도중 중지 버튼으로 취소할 수 있습니다.
-
-정령 데이터 빌드 파이프라인, 대화 처리 시퀀스, LoRA 학습 흐름, 데이터베이스 구조까지 더 자세한 다이어그램은 [docs/wiki/ARCHITECTURE.md](docs/wiki/ARCHITECTURE.md)에 있습니다.
+- **이용 환경 판별**: `src/shared/platform`이 `navigator.userAgentData`의 브랜드·모바일 여부·플랫폼을 읽어, 브랜드에 `Google Chrome`이 있고 모바일이 아니며 Windows·macOS·Linux·ChromeOS일 때만 앱을 엽니다. 그 밖의 환경은 `PlatformBlockedPanel`만 보여주고 초기화도 하지 않습니다. 첫 진입 안내 확인 여부(`platform_guide_acknowledged`)는 설정에 저장됩니다.
+- **정령 데이터**: `src/domains/persona/archive.ts`가 `import.meta.glob`으로 `data/personas/*.json`을 불러오고, 초기 설정 때 IndexedDB `persona_profile`에 설치합니다. 언어별 시스템 프롬프트는 `persona_localized_prompt`에 캐시합니다.
+- **시스템 프롬프트**: 원본 Rust 구현을 그대로 옮겼습니다. 정령 프로필·성격·대표 대사(12개)·에버톡 대화 예시(16개)·다른 정령의 평가 + 이름·호칭 규칙에, 말투 스타일, 활성 Risu 모듈, 통합 기억 요약을 이어 붙입니다. 매 턴에는 최근 대화 6개, 관련 기억 최대 5개(후보 200개 중), 지식 데이터 최대 2개, `<think>` 지침이 함께 전달됩니다.
+- **온디바이스 세션**: 지금 채팅 중인 정령 하나의 세션만 유지합니다(시스템 프롬프트를 `initialPrompts`로 넣은 세션). 요청마다 세션을 `clone()`하고, `measureContextUsage`로 컨텍스트 창에 맞게 대화 기록을 고른 뒤(응답용 96토큰 예약) `promptStreaming`으로 한 조각씩 화면에 표시합니다. 중지 버튼과 정령 전환은 `AbortSignal`로 생성을 멈춥니다.
+- **언어 선언**: 앱 언어의 언어 태그로 `availability()`를 확인해 사용할 수 있으면 `expectedInputs`/`expectedOutputs`에 선언하고, 그렇지 않으면 언어 선언 없이 세션을 만듭니다. Prompt API 공식 지원 언어는 en·ja·es·de·fr입니다.
+- **기억**: 매 턴 `구원자/정령` 대화를 에피소드 기억으로 저장합니다. Prompt API에는 임베딩이 없으므로 1~3글자 n-gram을 FNV-1a로 512차원에 해싱한 어휘 벡터와 코사인 유사도로 관련 기억을 찾습니다. 에피소드 기억이 10개 쌓일 때마다 최근 30개를 온디바이스 AI로 요약해 통합 기억으로 갱신합니다.
+- **저장소**: IndexedDB `eversoul-ai-chat`(버전 2)의 스토어는 `auth_session`, `chat_room`, `chat_message`, `persona_profile`, `persona_localized_prompt`, `persona_memory`, `style_profile`, `knowledge_chunk`, `sync_metadata`, `general_settings`, `imported_module`, `file_handle`입니다. 시작할 때 `navigator.storage.persist()`로 영구 저장소를 요청합니다.
+- **백업**: File System Access API로 전체 데이터(`file_handle` 제외)를 JSON 파일로 내보내고 불러옵니다. PC 폴더를 연결하면 응답 완료, 메시지·대화방 삭제, 모듈 변경, 언어·추론 표시·스킨·선호정령·대화 모델·안내 확인 변경 후 5초 뒤(연속 변경은 마지막 기준) `eversoul-ai-chat-backup-<시각>.json`과 `eversoul-ai-chat-backup-latest.json`을 쓰고, 시각별 백업은 최근 10개만 남깁니다. 폴더 핸들은 IndexedDB `file_handle`에 보관되며, 목록에서 원하는 시점으로 복원할 수 있습니다.
+- **다국어**: UI 문구, 안내, 차단 화면, 상태·오류 메시지는 `src/domains/evertalk/i18n.ts`의 한국어·영어·중국어(간체) 라벨로 표시됩니다. 도메인 오류는 코드(`DomainError`)로 전달되고 화면에서 라벨로 바뀝니다.
 
 ---
 
 ## 🛠 기술 스택
 
-### Frontend Stack
+### Web App
 
-- **Framework**: `React 19.1` + `TypeScript 6.0` + `Vite 8`
-- **State Management**: `TanStack React Query v5`(비동기 서버 상태), `Zustand v5`(전역 클라이언트 상태)
-- **Styling**: `Tailwind CSS v4`(`@tailwindcss/vite`) + `clsx`(클래스 믹싱)
+- **Framework**: `React 19.3` + `TypeScript 7.0` + `Vite 8.3` (`base: './'` 정적 빌드)
+- **State Management**: `TanStack React Query v5`, `Zustand v5`
+- **Styling**: `Tailwind CSS v4`(`@tailwindcss/vite`) + `clsx`
 - **Icons**: `lucide-react`
-- **Tauri Plugins**: `@tauri-apps/plugin-dialog`, `plugin-fs`, `plugin-opener`, `plugin-shell`
+- **Lint**: `oxlint`
 
-### Desktop Runtime & Backend Stack
+### Browser Platform
 
-- **Core Runtime**: `Tauri v2` (Rust 2021 edition), release 빌드는 `codegen-units=1` + `lto=true` + `opt-level=3` + `panic=abort` + `strip`로 최적화.
-- **Local Database**: `SQLite3` (`rusqlite` bundled)
-- **HTTP Client**: `reqwest`(rustls, json, stream 기능)
-- **AI Inference Engine**: `llama.cpp` (`llama-cpp-2` C-bindings, GGUF 포맷) + `num_cpus`(물리 코어 기준 스레드 산정)
-- **On-device Fine-tuning**: `candle-core` / `candle-nn` 0.8 (Qwen2 아키텍처 + LoRA 어댑터 직접 구현), `hf-hub`, `tokenizers`(BPE, `onig` 기능)
-- **Serialization / Utilities**: `serde`, `serde_json`, `anyhow`, `thiserror`, `tracing` + `tracing-subscriber`, `uuid`, `directories`, `sha2`, `hex`, `flate2`, `rust-ini`
+- **On-device AI**: Chrome Prompt API(`LanguageModel`, Gemini Nano) — 타입 `@types/dom-chromium-ai`
+- **Storage**: IndexedDB(`idb` 8)
+- **PC 파일·폴더**: File System Access API(`showOpenFilePicker`, `showSaveFilePicker`, `showDirectoryPicker`) — 타입 `@types/wicg-file-system-access`
+- **이용 환경 판별**: User-Agent Client Hints(`navigator.userAgentData`) — 타입 `user-agent-data-types`
 
 ---
 
-## 📦 로컬 모델
+## 📦 온디바이스 모델
 
-CPU만으로도 돌아가는 단일 고정 모델을 씁니다. 용량이 커서 저장소에는 포함되지 않으며, 앱을 처음 켰을 때 초기 설정 마법사가 직접 내려받습니다.
+모델 파일을 저장소에 넣거나 직접 내려받지 않습니다. Chrome이 제공하는 Gemini Nano를 Prompt API로 씁니다.
 
-- **이름**: `gemma-2-2b-it Q4_K_M` (GGUF)
-- **출처**: [`bartowski/gemma-2-2b-it-GGUF`](https://huggingface.co/bartowski/gemma-2-2b-it-GGUF)
-- **위치**: `ai/model/gemma-2-2b-it-Q4_K_M.gguf`
-- **검증**: 내려받은 뒤 SHA-256을 계산하고, `.sha256` 사이드카 파일이 함께 있으면 값이 일치하는지 확인합니다.
+- **준비**: 설정 > 온디바이스 모델 목록에서 "다운로드 및 준비"를 누르면 Chrome이 모델을 내려받고 진행률이 표시됩니다. 내려받기는 사용자 클릭(user activation)이 있어야 시작됩니다.
+- **모델 선택**: Gemini Nano의 크기와 GPU/CPU 실행 방식은 Chrome이 기기 성능에 맞춰 고르며, 웹 페이지가 직접 고를 수 없습니다.
+- **Chrome 요구 사항**([Chrome 공식 문서](https://developer.chrome.com/docs/ai/prompt-api)): Windows 10/11, macOS 13 이상, Linux, ChromeOS(Chromebook Plus). Chrome 프로필이 있는 볼륨에 22GB 이상 여유 공간, GPU VRAM 4GB 초과 또는 RAM 16GB 이상·CPU 4코어 이상, 데이터 무제한 네트워크. Android·iOS용 Chrome에서는 동작하지 않습니다.
 
 ---
 
 ## 💻 실행 및 빌드 가이드
 
-### ⭐ 가장 쉬운 방법 — 내 저장소의 GitHub Actions로 빌드
-
-내 PC에 Rust·CMake·Clang을 설치하지 않고, GitHub이 대신 빌드해 주는 방식입니다.
-
-1. 이 저장소 오른쪽 위 **Fork** 를 눌러 내 계정으로 복사합니다.
-2. **Star** ⭐ 와 **Watch** 👁 를 눌러 두면 이후 업데이트를 놓치지 않습니다.
-3. 포크한 **내 저장소**의 **Actions** 탭에 들어가 `Build Portable` 워크플로를 선택합니다.
-4. **Run workflow** 버튼을 누릅니다. (포크 직후 한 번은 Actions 사용에 동의해야 버튼이 나타납니다)
-5. 빌드가 끝나면 실행 결과 페이지 아래 **Artifacts** 에서 `eversoul-ai-chat-portable-*` 을 내려받아 압축을 풉니다.
-6. `eversoul-ai-chat.exe` 를 실행하면 초기 설정 마법사가 로컬 모델을 내려받습니다.
-
-내 저장소에 `v0.0.21` 같은 `v*` 태그를 밀면 같은 워크플로가 zip으로 묶어 **내 저장소의 Releases** 에 자동 게시합니다.
-
-### 내 PC에서 직접 빌드하기
-
-프론트엔드는 TypeScript, 백엔드는 Rust + Tauri v2이므로 두 툴체인이 모두 필요합니다.
-
-- [Node.js](https://nodejs.org/) 22 이상 (프론트엔드 빌드 및 `npm` 스크립트 실행)
-- [Rust](https://rustup.rs/) stable 툴체인 (2021 edition, `cargo` 포함)
-
-로컬 추론에 쓰는 `llama-cpp-2` 크레이트는 순수 Rust가 아니라 llama.cpp의 C/C++ 소스를 함께 빌드하는 바인딩(`llama-cpp-sys-2`)입니다. 그래서 `cargo build` 도중 아래 세 가지가 실행되며, 없으면 빌드가 실패합니다.
-
-- [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/) — llama.cpp의 C++ 코드를 컴파일할 MSVC 컴파일러
-- [CMake](https://cmake.org/download/) 3.20 이상 — llama.cpp가 CMake 프로젝트라서 이걸로 빌드를 구성
-- [Clang](https://releases.llvm.org/download.html) — `bindgen`이 llama.cpp 헤더를 파싱해 Rust FFI 바인딩을 생성할 때 `libclang`이 필요
-
-GitHub Actions 방식으로 빌드하면 이 세 가지는 워크플로가 러너에 알아서 준비하므로 내 PC에 설치할 필요가 없습니다.
+- [Node.js](https://nodejs.org/)와 PC용 [Google Chrome](https://www.google.com/chrome/)이 필요합니다.
+- 개발 서버도 반드시 PC Chrome으로 열어야 합니다. 다른 브라우저에서는 차단 화면만 보입니다.
 
 ```bash
-npm install        # 의존성 설치
-npm run tauri dev  # 개발 모드 실행
-npm run build      # 포터블 빌드 (tauri build + build/ 패키징)
+npm install      # 의존성 설치
+npm run dev      # Vite 개발 서버 실행 후 PC Chrome으로 접속
+npm run lint     # oxlint 검사
+npm run build    # tsc -b 타입 검사 + vite build 정적 빌드(dist/)
 ```
+
+`dist/`는 서버 코드 없이 정적 파일만 담고 있으므로 어떤 정적 호스팅에도 그대로 올릴 수 있습니다. 운영 주소는 [ai.everlib.pro](https://ai.everlib.pro/)입니다. `navigator.userAgentData`와 File System Access API는 보안 컨텍스트(HTTPS 또는 localhost)에서만 동작합니다.
 
 ---
 
@@ -352,9 +349,9 @@ npm run build      # 포터블 빌드 (tauri build + build/ 패키징)
 </tr>
 </table>
 
-앱이 실제로 대화할 때 정령의 이름·성격·말투를 읽어오는 곳은 SQLite `persona_profile.raw_json` 컬럼입니다. 정령 목록을 조회할 때마다 `PersonaService::get_available_personas`가 `personas.bin`에서 다시 불러와 이 컬럼에 매번 덮어써서(upsert) 저장하고, 실제 LLM 시스템 프롬프트는 `PersonaService::build_localized_system_prompt`가 이 `raw_json`을 파싱해서 조립합니다.
+앱이 실제로 대화할 때 정령의 이름·성격·말투를 읽어오는 곳은 IndexedDB `persona_profile` 스토어 레코드의 `raw_json` 필드입니다. `src/domains/persona/archive.ts`가 `import.meta.glob`으로 번들에 포함한 `data/personas/*.json`을 읽고, `personaService.installPreset`이 아직 설치되지 않은 정령을 이 스토어에 저장합니다. 실제 시스템 프롬프트는 `src/domains/persona/prompt.ts`의 `buildLocalizedPersonaPrompt`·`wrapAssembledPersonaPrompt`가 `raw_json`을 파싱해 조립하고, 언어별 결과는 `persona_localized_prompt`에 캐시됩니다.
 
-이 데이터의 원본은 `data/personas/*.json` 95개 파일이며, `tools/build_complete_personas.cjs`가 이를 `ko / en / zh_tw / zh_cn` 4개 언어 배열(`LANGUAGES`)로 정규화해 `personas.bin`으로 빌드해 둡니다. 아래는 그 원본 JSON 하나(아드리안)의 실제 필드 구조입니다.
+이 데이터의 원본은 `data/personas/*.json` 99개 파일입니다. 아래는 그 원본 JSON 하나(아드리안)의 실제 필드 구조입니다.
 
 ```json
 {
@@ -421,24 +418,20 @@ npm run build      # 포터블 빌드 (tauri build + build/ 패키징)
 ```
 
 - `i18n` 블록은 필드 이름을 키로 두고 그 아래 `{ ko, en, zh_tw, zh_cn }` 4개 언어 값을 나란히 갖는 **필드-우선 구조**이며, `name` · `grade` · `race` · `class` · `sub_class` · `stat`은 물론 `profile.nick_name` · `profile.constellation` · `profile.union` · `profile.cv_ko` · `profile.cv_jp` · `profile.like` · `profile.dislike` · `profile.hobby` · `profile.speciality`까지 세부 필드 단위로 번역이 존재합니다.
-- 화면에 보여줄 때는 `src/domains/persona/logic.ts`의 `parseSpiritDetail`이 이 `raw_json`을 파싱해 언어별로 골라내고, 실제 LLM에게 보낼 시스템 프롬프트는 이것과 별개로 Rust 백엔드의 `PersonaService::build_localized_system_prompt`가 `raw_json`을 다시 파싱해 직접 조립합니다 — 두 곳 다 최종적으로는 SQLite의 `raw_json`을 소스로 씁니다.
+- 화면에 보여줄 때는 `src/domains/persona/logic.ts`의 `parseSpiritDetail`이 이 `raw_json`을 파싱해 언어별로 골라내고, 온디바이스 AI에게 보낼 시스템 프롬프트는 이것과 별개로 `src/domains/persona/prompt.ts`가 `raw_json`을 다시 파싱해 조립합니다 — 두 곳 다 최종적으로는 IndexedDB의 `raw_json`을 소스로 씁니다.
 - 정령별 원화는 `public/eversoul-assets/spirits/{영문명}/` 하위에 `base`(기본 일러스트 512/1024/2048), `costume`(코스튬), `gacha`(가챠 연출), `raid`(레이드 연출), `srg`(스토리) 등 카테고리 폴더로 분리되어 있으며, `LoadableAssetImage` 컴포넌트(`src/domains/evertalk/components/LoadableAssetImage.tsx`)가 후보 경로 배열을 순차 시도(`useFirstLoadableImage`)해 존재하는 첫 이미지를 렌더링합니다.
 
 ---
 
 ## 📌 버전 관리 규칙
 
-이 저장소는 **커밋 1회당 patch 버전 +1**을 원칙으로 합니다. `package.json` · `src-tauri/Cargo.toml` · `src-tauri/tauri.conf.json` 세 파일의 `version` 필드는 항상 동일한 값으로 동기화되어야 하며, 기능 변경이 포함된 커밋을 생성할 때마다 세 파일을 함께 갱신합니다.
-
-포크한 저장소에서 `v0.0.21` 형식의 태그를 밀면 `Build Portable` 워크플로가 포터블 zip을 만들어 그 저장소의 Releases에 게시합니다.
+이 저장소는 **커밋 1회당 patch 버전 +1**을 원칙으로 합니다. 버전은 `package.json`의 `version` 필드 하나로 관리합니다. Tauri 데스크톱 앱에서 Chrome 온디바이스 AI 웹 앱으로 전환하면서 새 프로젝트로 초기화해 `0.0.0`부터 다시 시작했으며, 현재 버전은 `0.0.1`입니다.
 
 ---
 
 ## 📄 라이선스
 
-이 저장소의 **Apache License 2.0**은 이 프로젝트가 직접 작성한 프론트엔드(`src/`)와 백엔드(`src-tauri/src/`, `scripts/`, `tools/`) 소스 코드에만 적용됩니다. 아래 제3자 저작물에 대한 권리는 이 프로젝트가 보유하지 않습니다.
+이 저장소의 **Apache License 2.0**은 이 프로젝트가 직접 작성한 웹 앱 소스 코드(`src/`)에만 적용됩니다. 아래 제3자 저작물에 대한 권리는 이 프로젝트가 보유하지 않습니다.
 
-- **로컬 모델 `gemma-2-2b-it`** — Google 저작물이며 [Gemma Terms of Use](https://ai.google.dev/gemma/terms)를 따릅니다. 이 저장소는 모델 가중치를 포함하거나 재배포하지 않으며, 앱이 사용자 기기에서 [Hugging Face](https://huggingface.co/bartowski/gemma-2-2b-it-GGUF)로부터 직접 내려받습니다. 모델 사용에 따르는 의무는 내려받는 사용자 본인에게 있습니다.
+- **온디바이스 모델 Gemini Nano** — Google이 Chrome을 통해 제공하는 모델입니다. 이 저장소는 모델 가중치를 포함하거나 재배포하지 않으며, 모델은 사용자 PC의 Chrome이 직접 내려받아 관리합니다.
 - **에버소울 게임 리소스** — 정령 일러스트, 대화 배경, 정령 프로필 원본 데이터, 음성의 저작권은 원저작권자에게 있습니다. 이 프로젝트는 해당 저작물의 권리를 주장하지 않으며 비상업적 팬 프로젝트로 이용합니다.
-
-전체 고지는 [NOTICE](NOTICE), 항목별 상세는 [LICENSE-THIRD-PARTY.md](LICENSE-THIRD-PARTY.md)를 참고하십시오.

@@ -77,6 +77,7 @@ export interface OnDeviceGenerationRequest {
     system_prompt: string;
     messages: OnDeviceTextMessage[];
     behavior_instruction: string;
+    signal: AbortSignal;
     handlers: OnDeviceGenerationHandlers;
 }
 export interface OnDeviceGenerationHandlers {
@@ -86,12 +87,25 @@ export interface OnDeviceGenerationResult {
     text: string;
     cancelled: boolean;
 }
-export interface PersonaModelSession {
+export interface PersonaModelSessionIdentity {
     persona_id: string;
     declared_language_tag: string | null;
     system_prompt: string;
+}
+export interface PersonaModelSession extends PersonaModelSessionIdentity {
     session: LanguageModel;
     last_access: number;
     cache_reset: boolean;
     last_generation: LlmSessionGenerationStats | null;
+}
+export interface PersonaModelSessionCreation extends PersonaModelSessionIdentity {
+    promise: Promise<PersonaModelSession>;
+}
+export interface BaseModelSession {
+    declared_language_tag: string | null;
+    session: LanguageModel;
+}
+export interface BudgetedMessages {
+    messages: LanguageModelMessage[];
+    truncated_tokens: number;
 }

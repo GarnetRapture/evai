@@ -16,7 +16,7 @@ export function SpiritProfilePanel({ activeDetail, collapsed, systemStatuses, st
         <button className="ever-profile__toggle" type="button" aria-label={labels.settingsOpen} onClick={onOpenSettings}>
           <Settings aria-hidden="true" size={20}/>
         </button>
-        <button className="ever-profile__toggle" type="button" aria-label="모듈 관리" title="모듈 관리" onClick={onOpenModuleManagement}>
+        <button className="ever-profile__toggle" type="button" aria-label={labels.moduleManagement} title={labels.moduleManagement} onClick={onOpenModuleManagement}>
           <Boxes aria-hidden="true" size={20}/>
         </button>
         <button className="ever-profile__toggle" type="button" aria-label={collapsed ? labels.expandRight : labels.collapseRight} onClick={onToggleCollapsed}>

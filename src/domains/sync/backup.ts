@@ -82,12 +82,6 @@ function restoreSummary(snapshot: EverSoulDatabaseSnapshot): BackupRestoreSummar
     };
 }
 
-async function restoreFromFile(file: File): Promise<BackupRestoreSummary> {
-    const snapshot = parseDatabaseSnapshot(await file.text());
-    await restoreDatabaseSnapshot(snapshot);
-    return restoreSummary(snapshot);
-}
-
 async function grantedBackupDirectory(): Promise<FileSystemDirectoryHandle | null> {
     const directory = await readBackupDirectoryHandle();
     if (!directory) {
@@ -120,9 +114,27 @@ export const backupService = {
         const snapshot = await exportDatabaseSnapshot();
         return saveLocalFile(BACKUP_FILE_TYPE, BACKUP_FILE_PICKER_ID, timestampedBackupFileName(snapshot.exported_at), snapshotBlob(snapshot));
     },
-    async importFromFile(): Promise<BackupRestoreSummary | null> {
+    async pickSnapshotFile(): Promise<EverSoulDatabaseSnapshot | null> {
         const file = await openLocalFile(BACKUP_FILE_TYPE, BACKUP_FILE_PICKER_ID);
-        return file ? restoreFromFile(file) : null;
+        return file ? parseDatabaseSnapshot(await file.text()) : null;
+    },
+    async readDirectorySnapshot(fileName: string): Promise<EverSoulDatabaseSnapshot> {
+        const directory = await readBackupDirectoryHandle();
+        if (!directory) {
+            throw new DomainError('not_found', EVERSOUL_STORE.fileHandle);
+        }
+        if ((await readDirectoryPermission(directory)) !== 'granted' && (await requestDirectoryPermission(directory)) !== 'granted') {
+            throw new DomainError('storage', directory.name);
+        }
+        return parseDatabaseSnapshot(await (await readDirectoryFile(directory, fileName)).text());
+    },
+    async restoreSnapshot(snapshot: EverSoulDatabaseSnapshot): Promise<BackupRestoreSummary> {
+        if (automaticBackupTimer !== null) {
+            window.clearTimeout(automaticBackupTimer);
+            automaticBackupTimer = null;
+        }
+        await restoreDatabaseSnapshot(snapshot);
+        return restoreSummary(snapshot);
     },
     async linkDirectory(): Promise<BackupDirectoryStatus | null> {
         const directory = await pickLocalDirectory(BACKUP_DIRECTORY_PICKER_ID);
@@ -158,16 +170,6 @@ export const backupService = {
             throw new DomainError('storage', directory.name);
         }
         return writeSnapshotToDirectory(directory);
-    },
-    async restoreDirectoryFile(fileName: string): Promise<BackupRestoreSummary> {
-        const directory = await readBackupDirectoryHandle();
-        if (!directory) {
-            throw new DomainError('not_found', EVERSOUL_STORE.fileHandle);
-        }
-        if ((await readDirectoryPermission(directory)) !== 'granted' && (await requestDirectoryPermission(directory)) !== 'granted') {
-            throw new DomainError('storage', directory.name);
-        }
-        return restoreFromFile(await readDirectoryFile(directory, fileName));
     },
     async readDirectoryStatus(): Promise<BackupDirectoryStatus> {
         const [directory, lastBackupAt, lastBackupError] = await Promise.all([

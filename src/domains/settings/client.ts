@@ -70,6 +70,9 @@ export const settingsClient = {
         onProgress({ stage: 'done', current: 1, total: 1 });
         return settingsRepository.readAppSettings();
     },
+    async acknowledgePlatformGuide(): Promise<AppSettings> {
+        return composeAppSettings(await settingsRepository.updateGeneral({ platform_guide_acknowledged: true }));
+    },
     async setShowReasoning(showReasoning: boolean): Promise<AppSettings> {
         return composeAppSettings(await settingsRepository.updateGeneral({ show_reasoning: showReasoning }));
     },

@@ -4,7 +4,7 @@
     "target": "es2023",
     "lib": ["ES2023", "DOM"],
     "module": "esnext",
-    "types": ["vite/client", "dom-chromium-ai", "wicg-file-system-access"],
+    "types": ["vite/client", "dom-chromium-ai", "wicg-file-system-access", "user-agent-data-types"],
     "strict": true,
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,

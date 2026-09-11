@@ -62,8 +62,12 @@ export const syncClient = {
         return backupService.exportToFile();
     },
     async importBackupFromFile(): Promise<BackupRestoreSummary | null> {
+        const snapshot = await backupService.pickSnapshotFile();
+        if (!snapshot) {
+            return null;
+        }
         await llmClient.unloadEngine();
-        return backupService.importFromFile();
+        return backupService.restoreSnapshot(snapshot);
     },
     async readBackupDirectoryStatus(): Promise<BackupDirectoryStatus> {
         return backupService.readDirectoryStatus();
@@ -81,8 +85,9 @@ export const syncClient = {
         return backupService.backupNow();
     },
     async restoreBackupDirectoryFile(fileName: string): Promise<BackupRestoreSummary> {
+        const snapshot = await backupService.readDirectorySnapshot(fileName);
         await llmClient.unloadEngine();
-        return backupService.restoreDirectoryFile(fileName);
+        return backupService.restoreSnapshot(snapshot);
     },
     scheduleAutomaticBackup(): void {
         backupService.scheduleAutomaticBackup();

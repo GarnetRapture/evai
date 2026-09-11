@@ -5,7 +5,6 @@ import type { AppLanguage } from '../../shared/types';
 import { knowledgeClient } from '../knowledge/client';
 import {
     CHROME_PROMPT_MODEL_ID,
-    MAX_ACTIVE_PERSONA_SESSIONS,
     onDeviceRuntime,
     type LanguageModelLanguagePlan,
     type OnDeviceTextMessage,
@@ -31,7 +30,7 @@ import {
     buildTurnMemoryText,
 } from './prompt';
 import { chatRepository } from './repository';
-import type { ChatMessage, ChatRoom, ChatStreamHandlers } from './types';
+import type { ChatMessage, ChatRoom, ChatSendRequest } from './types';
 
 function toOnDeviceMessage(message: ChatMessage): OnDeviceTextMessage {
     return {
@@ -104,14 +103,14 @@ export const chatService = {
         }
         return systemPrompt;
     },
-    async preparePersonaSession(personaId: string): Promise<boolean> {
+    async focusPersonaSession(personaId: string): Promise<void> {
         const settings = await settingsRepository.readAppSettings();
         const plan = await onDeviceRuntime.resolveLanguagePlan(settings.language);
         const systemPrompt = await chatService.buildPersonaBaseSystemPrompt(personaId, settings.language);
-        await onDeviceRuntime.warmPersonaSession(personaId, plan, systemPrompt, MAX_ACTIVE_PERSONA_SESSIONS);
-        return true;
+        await onDeviceRuntime.focusPersonaSession(personaId, plan, systemPrompt);
     },
-    async sendMessage(roomId: string, content: string, personaId: string, requestId: string, handlers: ChatStreamHandlers): Promise<ChatMessage> {
+    async sendMessage(request: ChatSendRequest): Promise<ChatMessage> {
+        const { room_id: roomId, persona_id: personaId, content, request_id: requestId, signal, handlers } = request;
         const settings = await settingsRepository.readAppSettings();
         const language = settings.language;
         if (settings.active_model !== CHROME_PROMPT_MODEL_ID) {
@@ -151,8 +150,9 @@ export const chatService = {
             system_prompt: systemPrompt,
             messages,
             behavior_instruction: buildBehaviorInstruction(language),
+            signal,
             handlers: { onChunk: handlers.onToken },
-        }, MAX_ACTIVE_PERSONA_SESSIONS);
+        });
         if (result.cancelled && result.text.trim().length === 0) {
             throw new DomainError('cancelled', requestId);
         }

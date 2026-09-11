@@ -1,6 +1,8 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useEffectEvent, useMemo, useRef, useState } from 'react';
 import { requestPersistentStorage } from '../../shared/storage';
-import type { AppLanguage } from '../../shared/types';
+import { detectBrowserAppLanguage } from '../../shared/i18n';
+import { detectPlatformSupport } from '../../shared/platform';
+import type { AppLanguage, PlatformSupportStatus } from '../../shared/types';
 import { authClient } from '../auth';
 import { chatClient, type ChatMessage, type ChatRoom } from '../chat';
 import {
@@ -44,7 +46,8 @@ export function useEverTalkController(): EverTalkController {
     const [spirits, setSpirits] = useState<PersonaConfig[]>([]);
     const [defaultPersonaId, setDefaultPersonaId] = useState<string | null>(null);
     const [personaLoadError, setPersonaLoadError] = useState<string | null>(null);
-    const [appLanguage, setAppLanguage] = useState<AppLanguage>('ko');
+    const [platformSupport] = useState<PlatformSupportStatus>(detectPlatformSupport);
+    const [appLanguage, setAppLanguage] = useState<AppLanguage>(detectBrowserAppLanguage);
     const labels = useMemo(() => getEverTalkLabels(appLanguage), [appLanguage]);
     const [systemStatuses, setSystemStatuses] = useState<ApiStatusItem[]>(() => [
         createApiStatus('auth', 'checking', labels.checking),
@@ -106,6 +109,7 @@ export function useEverTalkController(): EverTalkController {
     const [familiarityLoading, setFamiliarityLoading] = useState(false);
     const [localStatus, setLocalStatus] = useState<LocalStatusSnapshot | null>(null);
     const messagesListRef = useRef<HTMLDivElement>(null);
+    const focusedChatRequestRef = useRef<AbortController | null>(null);
     const appInitStartedRef = useRef(false);
     const renderedLanguageRef = useRef<AppLanguage | null>(null);
     const filteredSpirits = useMemo(() => filterSpirits(spirits, searchQuery), [searchQuery, spirits]);
@@ -277,7 +281,9 @@ export function useEverTalkController(): EverTalkController {
         setSetupInProgress(true);
         setSetupProgress({ stage: 'personas', current: 0, total: 1 });
         try {
-            const staged = await settingsClient.completeInitialSetup(appSettings?.language ?? appLanguage, setSetupProgress);
+            await settingsClient.acknowledgePlatformGuide();
+            const setupLanguage = appSettings?.language_configured ? appSettings.language : appLanguage;
+            const staged = await settingsClient.completeInitialSetup(setupLanguage, setSetupProgress);
             setAppSettings(staged);
             setAppLanguage(staged.language);
             await loadMainAppData(staged.language);
@@ -293,59 +299,48 @@ export function useEverTalkController(): EverTalkController {
         frontendDebugLog('completeSetup:done');
     }
 
+    function releaseFocusedChatRequest() {
+        focusedChatRequestRef.current?.abort();
+        focusedChatRequestRef.current = null;
+        setIsTyping(false);
+        setStreamingText('');
+        setStreamingRequestId(null);
+    }
+    async function focusSpiritModelSession(spiritId: string) {
+        if (!(await ensureLlmReadyForPersonaCache())) {
+            return;
+        }
+        try {
+            await chatClient.focusPersonaSession(spiritId);
+        }
+        catch (err) {
+            console.error(labels.logPersonaCacheFailed, err);
+            setSystemStatus(createApiStatus('llm', 'warning', formatUnknownError(err, labels)));
+        }
+        await refreshActiveSessions();
+    }
     async function selectSpirit(spirit: PersonaConfig, languageOverride?: AppLanguage) {
         frontendDebugLog(`selectSpirit:start:${spirit.id}`);
-        setActiveSpiritId(spirit.id);
-        const detail = parseSpiritDetail(spirit, languageOverride ?? appLanguage);
-        setActiveDetail(detail);
-
-        async function selectRoom(room: ChatRoom) {
-            if (room) {
-                setActiveRoom(room);
-                const currentSpiritId = spirit.id;
-                if (currentSpiritId) {
-                    const history = await chatClient.listMessagesForPersona(room.id, currentSpiritId);
-                    setMessages(history);
-                    
-                    ensureLlmReadyForPersonaCache().then(async llmReady => {
-                        if (llmReady) {
-                            try {
-                                await chatClient.preparePersonaCache(currentSpiritId);
-                                await refreshActiveSessions();
-                            } catch (err) {
-                                console.error(labels.logRoomSwitchCacheFailed, err);
-                            }
-                        }
-                    });
-                }
-                await refreshActiveSessions();
-            }
+        if (spirit.id !== activeSpiritId) {
+            releaseFocusedChatRequest();
         }
-
+        setActiveSpiritId(spirit.id);
+        setActiveDetail(parseSpiritDetail(spirit, languageOverride ?? appLanguage));
         const room = await chatClient.getEverTalkSessionRoom();
-        await selectRoom(room);
-        
-        // 프론트엔드 UI 블로킹(프리징) 방지: 프롬프트 캐시 준비는 백그라운드에서 비동기로 실행
-        ensureLlmReadyForPersonaCache().then(async llmReady => {
-            if (llmReady) {
-                try {
-                    await chatClient.preparePersonaCache(spirit.id);
-                } catch (err) {
-                    console.error(labels.logPersonaCacheFailed, err);
-                    setSystemStatus(createApiStatus('llm', 'warning', formatUnknownError(err, labels)));
-                }
-            }
-        });
-
+        setActiveRoom(room);
+        setMessages(await chatClient.listMessagesForPersona(room.id, spirit.id));
+        void focusSpiritModelSession(spirit.id);
         await refreshLocalStatus();
         await refreshActiveSessions();
         frontendDebugLog(`selectSpirit:done:${spirit.id}`);
     }
-    async function setDefaultSpirit(spiritId: string) {
+    async function toggleDefaultSpirit(spiritId: string) {
         try {
-            const updated = await personaClient.setDefault(spiritId);
+            const updated = await personaClient.toggleDefault(spiritId);
             setDefaultPersonaId(updated);
-            setSystemStatus(createApiStatus('persona-db', 'ready', labels.defaultProfileSet(updated)));
+            setAppSettings(await settingsClient.get());
+            const spiritName = spirits.find((spirit) => spirit.id === spiritId)?.name ?? spiritId;
+            setSystemStatus(createApiStatus('persona-db', 'ready', updated ? labels.preferredSpiritSet(spiritName) : labels.preferredSpiritCleared(spiritName)));
             syncClient.scheduleAutomaticBackup();
         }
         catch (err) {
@@ -359,7 +354,11 @@ export function useEverTalkController(): EverTalkController {
         }
         const userText = inputText;
         const room = activeRoom;
+        const spiritId = activeSpiritId;
         const requestId = crypto.randomUUID();
+        const requestController = new AbortController();
+        const isFocusedRequest = () => focusedChatRequestRef.current === requestController;
+        focusedChatRequestRef.current = requestController;
         setInputText('');
         setIsTyping(true);
         setStreamingText('');
@@ -367,7 +366,7 @@ export function useEverTalkController(): EverTalkController {
         const optimisticUserMessage: ChatMessage = {
             id: crypto.randomUUID(),
             room_id: room.id,
-            persona_id: activeSpiritId,
+            persona_id: spiritId,
             role: 'user',
             content: userText,
             created_at: new Date().toISOString(),
@@ -375,27 +374,47 @@ export function useEverTalkController(): EverTalkController {
         setMessages((prev) => [...prev, optimisticUserMessage]);
         let aiMessage: ChatMessage | null = null;
         try {
-            aiMessage = await chatClient.sendMessage(room.id, userText, activeSpiritId, requestId, {
-                onToken: (token) => setStreamingText((prev) => prev + token),
+            aiMessage = await chatClient.sendMessage({
+                room_id: room.id,
+                persona_id: spiritId,
+                content: userText,
+                request_id: requestId,
+                signal: requestController.signal,
+                handlers: {
+                    onToken: (token) => {
+                        if (isFocusedRequest()) {
+                            setStreamingText((prev) => prev + token);
+                        }
+                    },
+                },
             });
-            setMessages((prev) => [...prev, aiMessage as ChatMessage]);
+            const completedMessage = aiMessage;
+            if (isFocusedRequest()) {
+                setMessages((prev) => [...prev, completedMessage]);
+            }
         }
         catch (err) {
             console.error(labels.logChatResponseFailed, err);
-            setSystemStatus(createApiStatus('llm', 'error', formatUnknownError(err, labels)));
-            const errorMessage: ChatMessage = {
-                id: crypto.randomUUID(),
-                room_id: room.id,
-                persona_id: activeSpiritId,
-                role: 'system',
-                content: `${labels.messageSendFailed} (${formatUnknownError(err, labels)})`,
-                created_at: new Date().toISOString(),
-            };
-            setMessages((prev) => [...prev, errorMessage]);
+            if (isFocusedRequest()) {
+                setSystemStatus(createApiStatus('llm', 'error', formatUnknownError(err, labels)));
+                const errorMessage: ChatMessage = {
+                    id: crypto.randomUUID(),
+                    room_id: room.id,
+                    persona_id: spiritId,
+                    role: 'system',
+                    content: `${labels.messageSendFailed} (${formatUnknownError(err, labels)})`,
+                    created_at: new Date().toISOString(),
+                };
+                setMessages((prev) => [...prev, errorMessage]);
+            }
         }
         finally {
-            setStreamingText('');
-            setStreamingRequestId(null);
+            if (isFocusedRequest()) {
+                focusedChatRequestRef.current = null;
+                setStreamingText('');
+                setStreamingRequestId(null);
+                setIsTyping(false);
+            }
         }
         if (aiMessage) {
             syncClient.scheduleAutomaticBackup();
@@ -413,23 +432,15 @@ export function useEverTalkController(): EverTalkController {
                 console.error(labels.logPostChatStateRefreshFailed, err);
             }
         }
-        setIsTyping(false);
     }
     async function cancelStreaming() {
-        if (!streamingRequestId) {
-            return;
-        }
-        try {
-            await llmClient.cancelRequest(streamingRequestId);
-        }
-        catch (err) {
-            console.error(labels.logChatResponseFailed, err);
-        }
+        focusedChatRequestRef.current?.abort();
     }
     async function startNewChat() {
         if (!activeSpiritId) {
             return;
         }
+        releaseFocusedChatRequest();
         try {
             const room = await chatClient.startNewRoom(activeSpiritId);
             setActiveRoom(room);
@@ -461,6 +472,7 @@ export function useEverTalkController(): EverTalkController {
         if (!activeSpiritId || room.id === activeRoom?.id) {
             return;
         }
+        releaseFocusedChatRequest();
         try {
             const history = await chatClient.listMessagesForPersona(room.id, activeSpiritId);
             setActiveRoom(room);
@@ -586,10 +598,11 @@ export function useEverTalkController(): EverTalkController {
         setIsResetting(true);
         setResetError(null);
         try {
+            releaseFocusedChatRequest();
             const summary = await settingsClient.reset();
             setResetSummary(summary);
             setAppSettings(await settingsClient.get());
-            setAppLanguage('ko');
+            setAppLanguage(detectBrowserAppLanguage());
             pendingLanguageRef.current = null;
             setLanguageGateOpen(true);
             setActiveSpiritId('');
@@ -641,6 +654,22 @@ export function useEverTalkController(): EverTalkController {
         syncClient.scheduleAutomaticBackup();
     }
 
+    async function acknowledgePlatformGuide() {
+        const updated = await settingsClient.acknowledgePlatformGuide();
+        setAppSettings(updated);
+        syncClient.scheduleAutomaticBackup();
+        if (updated.setup_stage !== 'done') {
+            return;
+        }
+        setAppInitializing(true);
+        try {
+            await loadMainAppData(updated.language);
+        }
+        finally {
+            setAppInitializing(false);
+        }
+    }
+
     async function selectSkin(skinId: string) {
         if (!activeSpiritId) {
             return;
@@ -655,20 +684,21 @@ export function useEverTalkController(): EverTalkController {
         }
         catch (err) {
             console.error(labels.logBackupFailed, err);
-            setBackupMessage(formatUnknownError(err, labels));
+            setBackupError(formatUnknownError(err, labels));
         }
     }
 
     async function runBackupAction(action: () => Promise<void>) {
         setBackupBusy(true);
         setBackupMessage(null);
+        setBackupError(null);
         setBackupRestoreSummary(null);
         try {
             await action();
         }
         catch (err) {
             console.error(labels.logBackupFailed, err);
-            setBackupMessage(formatUnknownError(err, labels));
+            setBackupError(formatUnknownError(err, labels));
         }
         finally {
             setBackupBusy(false);
@@ -718,7 +748,7 @@ export function useEverTalkController(): EverTalkController {
             setModelPreparation(null);
             await refreshLlmStatus();
             if (activeSpiritId) {
-                await chatClient.preparePersonaCache(activeSpiritId);
+                await chatClient.focusPersonaSession(activeSpiritId);
                 await refreshActiveSessions();
             }
         }
@@ -830,51 +860,83 @@ export function useEverTalkController(): EverTalkController {
         await runModuleAction(() => modulesClient.updateControls(id, controls));
     }
 
-    useEffect(() => {
-        frontendDebugLog('initEffect:entered');
-        if (appInitStartedRef.current) {
-            frontendDebugLog('initEffect:already_started');
+    async function loadBondRanking() {
+        setBondRankingLoading(true);
+        try {
+            setBondRanking(await personaClient.getBondRanking());
+        }
+        catch (err) {
+            console.error(labels.logBondRankingFetchFailed, err);
+        }
+        finally {
+            setBondRankingLoading(false);
+        }
+    }
+
+    async function loadFamiliarityList() {
+        setFamiliarityLoading(true);
+        try {
+            setFamiliarityList(await personaClient.getFamiliarityList());
+        }
+        catch (err) {
+            console.error(labels.logFamiliarityFetchFailed, err);
+        }
+        finally {
+            setFamiliarityLoading(false);
+        }
+    }
+
+    function changeRosterTab(tab: RosterTab) {
+        setActiveRosterTab(tab);
+        if (tab === 'bondRanking') {
+            void loadBondRanking();
+        }
+        if (tab === 'familiarity') {
+            void loadFamiliarityList();
+        }
+    }
+
+    const initializeApp = useEffectEvent(async () => {
+        frontendDebugLog('initApp:start');
+        let initialLanguage: AppLanguage = appLanguage;
+        let needsGate = true;
+        try {
+            frontendDebugLog('initApp:settings_get:start');
+            const currentSettings = await settingsClient.get();
+            initialLanguage = currentSettings.language_configured ? currentSettings.language : detectBrowserAppLanguage();
+            setAppSettings(currentSettings);
+            setAppLanguage(initialLanguage);
+            needsGate = currentSettings.setup_stage !== 'done' || !currentSettings.platform_guide_acknowledged;
+        }
+        catch (err) {
+            console.error(labels.logSettingsFetchFailed, err);
+        }
+        if (platformSupport !== 'supported') {
+            frontendDebugLog(`initApp:platform_blocked:${platformSupport}`);
+            setAppInitializing(false);
             return;
         }
-        appInitStartedRef.current = true;
-        async function initApp() {
-            frontendDebugLog('initApp:start');
-            let initialLanguage: AppLanguage = 'ko';
-            let needsGate = true;
-            requestPersistentStorage().catch((err: unknown) => {
-                console.error(labels.logPersistentStorageFailed, err);
-            });
-            try {
-                frontendDebugLog('initApp:settings_get:start');
-                const currentSettings = await settingsClient.get();
-                initialLanguage = currentSettings.language;
-                setAppSettings(currentSettings);
-                setAppLanguage(currentSettings.language);
-                needsGate = currentSettings.setup_stage !== 'done';
-            }
-            catch (err) {
-                console.error(labels.logSettingsFetchFailed, err);
-            }
-            if (needsGate) {
-                frontendDebugLog('initApp:needs_gate');
-                setAppInitializing(false);
-                return;
-            }
-            try {
-                frontendDebugLog('initApp:loadMainAppData:start');
-                await loadMainAppData(initialLanguage);
-            }
-            finally {
-                setAppInitializing(false);
-            }
-            frontendDebugLog('initApp:done');
+        requestPersistentStorage().catch((err: unknown) => {
+            console.error(labels.logPersistentStorageFailed, err);
+        });
+        if (needsGate) {
+            frontendDebugLog('initApp:needs_gate');
+            setAppInitializing(false);
+            return;
         }
-        initApp();
-    }, []);
-    useEffect(() => {
+        try {
+            frontendDebugLog('initApp:loadMainAppData:start');
+            await loadMainAppData(initialLanguage);
+        }
+        finally {
+            setAppInitializing(false);
+        }
+        frontendDebugLog('initApp:done');
+    });
+    const refreshForRenderedLanguage = useEffectEvent((renderedLanguage: AppLanguage) => {
         const previousLanguage = renderedLanguageRef.current;
-        renderedLanguageRef.current = appLanguage;
-        if (previousLanguage === null || previousLanguage === appLanguage || appSettings?.setup_stage !== 'done') {
+        renderedLanguageRef.current = renderedLanguage;
+        if (previousLanguage === null || previousLanguage === renderedLanguage || appInitializing || platformSupport !== 'supported' || appSettings?.setup_stage !== 'done') {
             return;
         }
         void (async () => {
@@ -883,12 +945,24 @@ export function useEverTalkController(): EverTalkController {
             await refreshLlmStatus();
             await refreshModelCatalog();
             if (activeSpiritId && (await ensureLlmReadyForPersonaCache())) {
-                await chatClient.preparePersonaCache(activeSpiritId);
+                await chatClient.focusPersonaSession(activeSpiritId);
                 await refreshActiveSessions();
             }
         })().catch((err: unknown) => {
             console.error(labels.logPersonaCacheFailed, err);
         });
+    });
+    useEffect(() => {
+        frontendDebugLog('initEffect:entered');
+        if (appInitStartedRef.current) {
+            frontendDebugLog('initEffect:already_started');
+            return;
+        }
+        appInitStartedRef.current = true;
+        void initializeApp();
+    }, []);
+    useEffect(() => {
+        refreshForRenderedLanguage(appLanguage);
     }, [appLanguage]);
     useEffect(() => {
         const listEl = messagesListRef.current;
@@ -897,56 +971,6 @@ export function useEverTalkController(): EverTalkController {
         }
         listEl.scrollTop = listEl.scrollHeight;
     }, [messages]);
-    useEffect(() => {
-        if (activeRosterTab !== 'bondRanking') {
-            return;
-        }
-        let cancelled = false;
-        setBondRankingLoading(true);
-        personaClient
-            .getBondRanking()
-            .then((ranking) => {
-            if (!cancelled) {
-                setBondRanking(ranking);
-            }
-        })
-            .catch((err) => {
-            console.error(labels.logBondRankingFetchFailed, err);
-        })
-            .finally(() => {
-            if (!cancelled) {
-                setBondRankingLoading(false);
-            }
-        });
-        return () => {
-            cancelled = true;
-        };
-    }, [activeRosterTab]);
-    useEffect(() => {
-        if (activeRosterTab !== 'familiarity') {
-            return;
-        }
-        let cancelled = false;
-        setFamiliarityLoading(true);
-        personaClient
-            .getFamiliarityList()
-            .then((entries) => {
-            if (!cancelled) {
-                setFamiliarityList(entries);
-            }
-        })
-            .catch((err) => {
-            console.error(labels.logFamiliarityFetchFailed, err);
-        })
-            .finally(() => {
-            if (!cancelled) {
-                setFamiliarityLoading(false);
-            }
-        });
-        return () => {
-            cancelled = true;
-        };
-    }, [activeRosterTab]);
     return {
         appInitializing,
         llmStatus,
@@ -989,6 +1013,7 @@ export function useEverTalkController(): EverTalkController {
         backupBusy,
         backupRestoreSummary,
         backupMessage,
+        backupError,
         backupDirectoryStatus,
         llmSessionStatuses,
         llmRequestStatuses,
@@ -1015,12 +1040,12 @@ export function useEverTalkController(): EverTalkController {
         setupProgress,
         setSearchQuery,
         setInputText,
-        setActiveRosterTab,
+        changeRosterTab,
         setActiveStageTab,
         setProfileCollapsed,
         setRosterCollapsed,
         selectSpirit,
-        setDefaultSpirit,
+        toggleDefaultSpirit,
         sendMessage,
         syncStyles,
         selectStyle,
@@ -1053,5 +1078,8 @@ export function useEverTalkController(): EverTalkController {
         closeProfileDetail,
         setupStage: appSettings?.setup_stage ?? 'language',
         completeSetup,
+        platformSupport,
+        platformGuideAcknowledged: appSettings?.platform_guide_acknowledged ?? false,
+        acknowledgePlatformGuide,
     };
 }

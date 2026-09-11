@@ -1,7 +1,6 @@
 <p align="right">
   <a href="README.md"><img src="https://flagcdn.com/20x15/kr.png" width="20" height="15" alt="KR" /> 한국어</a> &nbsp;|&nbsp;
-  <img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" /> <strong>English</strong> &nbsp;|&nbsp;
-  <a href="README.zh-CN.md"><img src="https://flagcdn.com/20x15/cn.png" width="20" height="15" alt="CN" /> 简体中文</a>
+  <img src="https://flagcdn.com/20x15/us.png" width="20" height="15" alt="US" /> <strong>English</strong>
 </p>
 
 <p align="center">
@@ -9,40 +8,41 @@
 </p>
 
 <h1 align="center">EverSoul AI Chat</h1>
-<p align="center"><i>A fully local AI chat client that carries the voices of the spirits</i></p>
+<p align="center"><i>A serverless web AI chat that runs only on the on-device AI of Chrome on a PC</i></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.0.23-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.0.1-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/license-Apache_2.0-green?style=flat-square" alt="License" />
-  <img src="https://img.shields.io/badge/Tauri-2-FFC107?style=flat-square&logo=tauri" alt="Tauri" />
-  <img src="https://img.shields.io/badge/React-19.1-61DAFB?style=flat-square&logo=react" alt="React" />
-  <img src="https://img.shields.io/badge/Rust-2021_edition-000000?style=flat-square&logo=rust" alt="Rust" />
-  <img src="https://img.shields.io/badge/SQLite-bundled-003B57?style=flat-square&logo=sqlite" alt="SQLite" />
-  <img src="https://img.shields.io/badge/spirits-95-9b5de5?style=flat-square" alt="Spirits" />
+  <img src="https://img.shields.io/badge/Chrome-Prompt_API-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome Prompt API" />
+  <img src="https://img.shields.io/badge/React-19.3-61DAFB?style=flat-square&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-7.0-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-8.3-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/IndexedDB-idb_8-003B57?style=flat-square" alt="IndexedDB" />
+  <img src="https://img.shields.io/badge/spirits-99-9b5de5?style=flat-square" alt="Spirits" />
   <img src="https://img.shields.io/badge/talk_backgrounds-522-f15bb5?style=flat-square" alt="Backgrounds" />
   <img src="https://img.shields.io/badge/languages-ko%20%7C%20en%20%7C%20zh__cn-00bbf9?style=flat-square" alt="Languages" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/GarnetRapture/eversoul-ai-chat/fork"><img src="https://img.shields.io/badge/1.%20Fork-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
-  <a href="https://github.com/GarnetRapture/eversoul-ai-chat/stargazers"><img src="https://img.shields.io/badge/2.%20Star-e3b341?style=for-the-badge&logo=github&logoColor=white" alt="Star" /></a>
-  <a href="https://github.com/GarnetRapture/eversoul-ai-chat/watchers"><img src="https://img.shields.io/badge/3.%20Watch-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Watch" /></a>
-  <a href="https://github.com/GarnetRapture/eversoul-ai-chat/actions/workflows/build-portable.yml"><img src="https://img.shields.io/badge/4.%20Build%20on%20Actions-8957e5?style=for-the-badge&logo=githubactions&logoColor=white" alt="Actions" /></a>
+  <a href="https://ai.everlib.pro/"><img src="https://img.shields.io/badge/Service-ai.everlib.pro-8957e5?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Service" /></a>
+  <a href="https://github.com/GarnetRapture/evai/fork"><img src="https://img.shields.io/badge/Fork-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
+  <a href="https://github.com/GarnetRapture/evai/stargazers"><img src="https://img.shields.io/badge/Star-e3b341?style=for-the-badge&logo=github&logoColor=white" alt="Star" /></a>
+  <a href="https://github.com/GarnetRapture/evai/watchers"><img src="https://img.shields.io/badge/Watch-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Watch" /></a>
 </p>
 
 <p align="center">
-  <sub>Hit <b>Fork</b> → <b>Star</b> → <b>Watch</b>, then one <b>Run workflow</b> click in <b>your own</b> fork's Actions tab builds the app for you. No Rust, CMake, or Clang on your machine.</sub>
+  <sub>Available only in the <b>Google Chrome browser on a PC</b>. Mobile devices and browsers other than Chrome are blocked.</sub>
 </p>
 
 ---
 
 ## 🌟 Overview
 
-**EverSoul AI Chat** is a new local AI chat project made to keep EverSoul close. It was built with one idea in mind: preserving the memories of the spirits. It brings all 95 spirits from EverSoul to life using the real game data, so you can talk with each of them in their own personality and voice.
+**EverSoul AI Chat** is a new AI chat project made to keep EverSoul close. It was built with one idea in mind: preserving the memories of the spirits. It brings all 99 spirits from EverSoul to life using the real game data, so you can talk with each of them in their own personality and voice.
 
-The AI that generates every reply runs entirely on your own computer (using local GGUF models), keeping your privacy completely secure. Additionally, for environments where running heavy local models is challenging, a hybrid architecture is designed to integrate with external APIs (like OpenAI, Gemini), transmitting only the context for lightweight and smart communication.
+This project is a static web app with no server. Replies are generated by the on-device AI built into Chrome on a PC (Prompt API · Gemini Nano), and conversations, memories, and settings are stored only in that PC browser's IndexedDB. Your conversations never leave for an external server, and the stored data can be exported to a file on your PC or backed up automatically to a folder on your PC.
 
-That's why the full official artwork of all 95 spirits, 522 conversation backgrounds, and the UI that EverTalk itself used are all bundled directly into this project. Each spirit's name, personality, and speech patterns are organized one file at a time under `data/personas/`, prepared in Korean, English, and Chinese (Traditional/Simplified) in advance — so switching languages never breaks what makes that spirit feel like itself.
+The full official artwork of all 99 spirits, 522 conversation backgrounds, and the UI that EverTalk itself used are all bundled directly into this project. Each spirit's name, personality, and speech patterns are organized one file at a time under `data/personas/`, with per-language values prepared in Korean, English, and Chinese (Traditional/Simplified) — so switching languages never breaks what makes that spirit feel like itself.
 
 <p align="center">
   <img src="public/eversoul-assets/spirits/GarnetRapture/base/GarnetRapture_1024.png" width="120" alt="GarnetRapture" />
@@ -55,9 +55,9 @@ That's why the full official artwork of all 95 spirits, 522 conversation backgro
 
 ---
 
-## 🎨 Full Spirit Gallery (95 Spirits)
+## 🎨 Full Spirit Gallery (99 Spirits)
 
-A complete gallery built by looking through all 95 `data/personas/*.json` files, listing each spirit's artwork alongside its real Korean (ko), English (en), and Simplified Chinese (zh_cn) names exactly as stored in the data. The artwork folder names are taken exactly the way `resolveSpiritAssetFolder` in `src/domains/persona/logic.ts` looks them up (26 spirits whose in-game display name differs from their actual artwork folder name follow the `explicitAssetFolders` mapping as-is).
+A complete gallery built by looking through all 99 `data/personas/*.json` files, listing each spirit's artwork alongside its real Korean (ko), English (en), and Simplified Chinese (zh_cn) names exactly as stored in the data. The artwork folder names are taken exactly the way `resolveSpiritAssetFolder` in `src/domains/persona/logic.ts` looks them up (27 spirits whose in-game display name differs from their actual artwork folder name follow the `explicitAssetFolders` mapping as-is, and Canney, Casper, and Irene, whose artwork file prefix differs from the folder name, follow the `assetFilePrefixes` mapping).
 
 <table>
 <tr>
@@ -178,11 +178,21 @@ A complete gallery built by looking through all 95 `data/personas/*.json` files,
 <td align="center"><img src="public/eversoul-assets/spirits/Sakuyo/base/Sakuyo_1024.png" width="64"/><br/><sub>사쿠요<br/>Sakuyo<br/>櫻世</sub></td>
 <td align="center"><img src="public/eversoul-assets/spirits/YuriaApollyon/base/YuriaApollyon_1024.png" width="64"/><br/><sub>유리아(아폴리온)<br/>Yuria (Apollyon)<br/>尤里婭（阿巴頓）</sub></td>
 <td align="center"><img src="public/eversoul-assets/spirits/Wheri/base/Wheri_1024.png" width="64"/><br/><sub>웨리<br/>Wheri<br/>威里</sub></td>
+<td align="center"><img src="public/eversoul-assets/spirits/Canney/base/Beast_1024.png" width="64"/><br/><sub>Canney<br/>Canney<br/>Canney</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="public/eversoul-assets/spirits/Casper/base/Ghost_1024.png" width="64"/><br/><sub>Casper<br/>Casper<br/>Casper</sub></td>
+<td align="center"><img src="public/eversoul-assets/spirits/Irene/base/Apprentice_1024.png" width="64"/><br/><sub>Irene<br/>Irene<br/>Irene</sub></td>
+<td align="center"><img src="public/eversoul-assets/spirits/Pixie/base/Pixie_1024.png" width="64"/><br/><sub>Pixie<br/>Pixie<br/>Pixie</sub></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </table>
 
-Each spirit's artwork doesn't stop at a single picture. It's split across folders — `base` (everyday look), `costume`, `raid`, `gacha`, `srg` — so the same spirit has several different pictures on hand.
+Each spirit's artwork doesn't stop at a single picture. It's split across folders — `base` (everyday look), `costume`, `raid`, `gacha`, `srg` — so the same spirit has several different pictures on hand. The app shows the `base`, `costume`, and `raid` artwork as skins, and the skin you pick for each spirit is saved in settings.
 
 <p align="center">
   <img src="public/eversoul-assets/spirits/Adrianne/base/Adrianne_1024.png" width="110" alt="Adrianne base" />
@@ -196,12 +206,15 @@ Each spirit's artwork doesn't stop at a single picture. It's split across folder
 
 ## 🚀 Key Features
 
-- 💻 **AI that runs on your computer alone**: Built on `llama.cpp`, generating replies without a GPU. Threads are sized to your CPU's physical core count, so it stays stable without overloading your machine.
-- 🎭 **95 spirits, each with their own personality**: Name, grade, race, class, voice actor, birthday, likes — everything organized per spirit gets loaded and assembled so every spirit speaks like themselves.
-- 🧠 **A spirit that remembers talking with you**: After every exchange, the spirit checks itself for anything worth remembering and keeps it. Those memories get re-summarized from time to time, so the spirit carries them into the next conversation too.
-- 🌐 **Switch languages, the spirit stays the same**: Names, introductions, and speech patterns are all ready in Korean, English, and Chinese (Traditional/Simplified), so changing the app language instantly changes the spirit's name and introduction too.
-- 🧬 **Fine-tuning that makes a spirit more itself over time**: A Qwen2 model built from scratch in pure Rust (`candle`), no Python involved — you can run local fine-tuning (LoRA) right on your own machine, trained on that spirit's own conversations.
-- 📂 **Everything stays on your computer**: Conversations, spirit profiles, and speech-pattern settings all stay in a lightweight SQLite database.
+- 💻 **Chrome on-device AI on your PC**: Replies come from the Prompt API built into Chrome (`LanguageModel`, Gemini Nano). No server or external API is used, and the model is downloaded and prepared from Settings > On-device Models.
+- 🔒 **Environment restriction and first-entry notice**: Anything other than Google Chrome on a PC (mobile devices, other browsers) is blocked. On first entry you must read and check the notice that the app works only with the on-device AI of Chrome on a PC before you can enter.
+- 🎭 **99 spirits, each with their own personality**: Name, grade, race, class, voice actor, birthday, likes, representative lines, and EverTalk dialogue samples are loaded to build each spirit's system prompt, so every spirit speaks like themselves.
+- 🧠 **A spirit that remembers talking with you**: Every turn is kept as that spirit's memory, and related memories are recalled and passed along in later conversations. Every time 10 memories pile up, the on-device AI re-summarizes them and the summary goes into the system prompt.
+- 🎯 **Focus on the spirit you are chatting with**: Conversations are saved every turn, so switching to another spirit stops the previous spirit's in-progress reply and keeps a model session only for the current spirit.
+- 🌐 **Switch languages, the spirit stays the same**: UI text, notices, and error messages are ready as Korean, English, and Simplified Chinese labels, and the spirit's name, introduction, and system prompt follow the selected language too.
+- ⭐ **Preferred Soul**: The star in the list sets or clears your Preferred Soul, which is shown at the top of the Familiarity tab and selected first when you reopen the app.
+- 🧩 **Risu modules**: Import `.risum` modules and turn them on or off; the description and lorebook of active modules are added to the system prompt.
+- 📂 **Saved and backed up on your PC**: Conversations, memories, settings, and modules live in the browser's IndexedDB, with file export/import and automatic backup to a linked PC folder with point-in-time restore.
 - 🖼️ **Backgrounds stay too**: All 522 official EverSoul illustration backgrounds are ready to pull up and change the mood of the conversation whenever you like.
 
 <p align="center">
@@ -217,120 +230,104 @@ Each spirit's artwork doesn't stop at a single picture. It's split across folder
 
 ## 🏗 Architecture
 
-The React frontend and Rust backend are structured as symmetric domain modules of the same name, communicating exclusively through Tauri IPC (`invoke`).
+A React static web app that runs entirely inside the browser with no server. The UI domain (`evertalk`) calls the domain services, and the domain services reach IndexedDB, PC files, and Chrome's on-device AI through the shared modules (`src/shared`). The only place that touches Chrome's `LanguageModel` API directly is `src/domains/llm/chrome/languageModel.ts`.
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#cde2fb', 'primaryBorderColor': '#2a78d6', 'primaryTextColor': '#0b0b0b', 'lineColor': '#52514e', 'clusterBkg': '#fcfcfb', 'clusterBorder': '#c3c2b7', 'fontFamily': 'system-ui, -apple-system, Segoe UI, sans-serif'}}}%%
 flowchart TB
-    subgraph FE["Frontend · src/domains"]
+    subgraph UI["UI · src/domains/evertalk"]
         direction LR
-        FE1["auth · chat · knowledge"]
-        FE2["llm · persona · settings"]
-        FE3["style · sync · training"]
-        FE4["evertalk<br/>SpiritRoster · ChatStage · SettingsPanel"]
+        UI1["PlatformBlockedPanel · PlatformGuideGate<br/>SetupWizard"]
+        UI2["SpiritRoster · ChatStage<br/>SpiritProfilePanel"]
+        UI3["SettingsPanel · ModuleManagementPanel<br/>i18n (ko · en · zh_cn)"]
     end
 
-    FE == "Tauri invoke<br/>67 commands" ==> BE
-
-    subgraph BE["Backend · src-tauri/src/domains + infrastructure"]
+    subgraph DOMAIN["Domain services · src/domains"]
         direction LR
-        BE1["auth · chat · knowledge"]
-        BE2["llm · persona · settings"]
-        BE3["style · sync · training"]
+        D1["persona · chat · style<br/>knowledge · modules"]
+        D2["llm<br/>runtime · catalog · chrome"]
+        D3["settings · sync · auth"]
     end
 
-    BE -- "rooms · messages · spirit profiles · memories" --> DB[("SQLite<br/>eversoul.db")]
-    BE -- "Shared-prefix reuse<br/>Persistent session KV state" --> CACHE[("KV Cache<br/>ai/cache/*.bin")]
-    BE -- "Local context assembly inference" --> LLM["Local GGUF model<br/>gemma-2-2b-it Q4_K_M<br/>llama.cpp"]
+    subgraph SHARED["Shared modules · src/shared"]
+        direction LR
+        S1["storage (idb)"]
+        S2["files (File System Access)"]
+        S3["platform (UA Client Hints)<br/>i18n · errors · time"]
+    end
 
-    classDef feStyle fill:#cde2fb,stroke:#2a78d6,stroke-width:2px,color:#0b0b0b
-    classDef beStyle fill:#e3ddf7,stroke:#4a3aa7,stroke-width:2px,color:#0b0b0b
+    UI --> DOMAIN
+    DOMAIN --> SHARED
+    PACK["data/personas/*.json<br/>99 files · import.meta.glob"] --> D1
+    S1 -- "rooms · messages · spirits · memories · settings · modules" --> DB[("IndexedDB<br/>eversoul-ai-chat v2")]
+    S2 -- "JSON export / import<br/>automatic folder backup" --> PC[("PC files / backup folder")]
+    D2 -- "availability · create · clone<br/>promptStreaming" --> LLM["Chrome Prompt API<br/>LanguageModel · Gemini Nano"]
+
+    classDef uiStyle fill:#cde2fb,stroke:#2a78d6,stroke-width:2px,color:#0b0b0b
+    classDef domainStyle fill:#e3ddf7,stroke:#4a3aa7,stroke-width:2px,color:#0b0b0b
+    classDef sharedStyle fill:#fff4cc,stroke:#ffb703,stroke-width:2px,color:#0b0b0b
     classDef dbStyle fill:#c9f0d8,stroke:#008300,stroke-width:2px,color:#0b0b0b
     classDef llmStyle fill:#fbdcc9,stroke:#eb6834,stroke-width:2px,color:#0b0b0b
-    classDef cacheStyle fill:#fff4cc,stroke:#ffb703,stroke-width:2px,color:#0b0b0b
 
-    class FE1,FE2,FE3,FE4 feStyle
-    class BE1,BE2,BE3 beStyle
-    class DB dbStyle
+    class UI1,UI2,UI3 uiStyle
+    class D1,D2,D3 domainStyle
+    class S1,S2,S3,PACK sharedStyle
+    class DB,PC dbStyle
     class LLM llmStyle
-    class CACHE cacheStyle
 ```
 
-- **Local DB path**: `database/eversoul.db` under the OS app-data directory (reset on every launch in debug builds).
-- **Settings file**: `config/settings.ini` under the app-data directory (read/written via `rust-ini`; stores default spirit, active style, and language).
-- **KV Cache storage**: `ai/cache/` under the app directory (per-spirit KV state saved as `.bin` files on session eviction, spirit warm-up, app exit, and engine unload; the next turn then skips recomputing whatever prefix the prompt still shares).
-- **Async Runtime Architecture**: LLM computation runs on a dedicated worker thread, and Tauri commands await it through `tauri::async_runtime::spawn_blocking`, guaranteeing a non-blocking main UI thread.
-- **Token streaming**: Replies arrive token by token over the `chat-stream-token` / `chat-stream-done` events and render immediately, and generation can be cancelled mid-flight with the stop button.
-
-More detailed diagrams — the spirit-data build pipeline, the conversation sequence, the LoRA training flow, and the database structure — are in [docs/wiki/ARCHITECTURE.en.md](docs/wiki/ARCHITECTURE.en.md).
+- **Environment detection**: `src/shared/platform` reads the brands, mobile flag, and platform from `navigator.userAgentData` and opens the app only when the brands include `Google Chrome`, the device is not mobile, and the platform is Windows, macOS, Linux, or ChromeOS. Any other environment sees only `PlatformBlockedPanel`, and initialization does not run. Whether the first-entry notice was acknowledged (`platform_guide_acknowledged`) is stored in settings.
+- **Spirit data**: `src/domains/persona/archive.ts` loads `data/personas/*.json` through `import.meta.glob`, and the initial setup installs them into the IndexedDB `persona_profile` store. Per-language system prompts are cached in `persona_localized_prompt`.
+- **System prompt**: Ported as-is from the original Rust implementation. The spirit's profile, personality, representative lines (12), EverTalk dialogue samples (16), and other spirits' comments plus the name and addressing rules are followed by the speech style, active Risu modules, and the consolidated memory summary. Each turn also carries the 6 most recent messages, up to 5 related memories (out of 200 candidates), up to 2 knowledge chunks, and the `<think>` instruction.
+- **On-device session**: Only one session is kept — for the spirit you are currently chatting with (a session created with the system prompt as `initialPrompts`). Each request `clone()`s that session, picks the conversation history that fits the context window with `measureContextUsage` (reserving 96 tokens for the reply), and streams the answer with `promptStreaming`. The stop button and switching spirits cancel generation through an `AbortSignal`.
+- **Language declaration**: `availability()` is checked with the app language's tag; if it is usable, the tag is declared in `expectedInputs`/`expectedOutputs`, otherwise the session is created without a language declaration. The Prompt API's officially supported languages are en, ja, es, de, and fr.
+- **Memory**: Every turn is saved as an episodic `Savior/Spirit` memory (stored with the Korean labels `구원자`/`정령`, as in the original). Because the Prompt API has no embeddings, related memories are found with a lexical vector — 1–3 character n-grams hashed with FNV-1a into 512 dimensions — and cosine similarity. Every time 10 episodic memories pile up, the latest 30 are summarized by the on-device AI into the consolidated memory.
+- **Storage**: The stores of IndexedDB `eversoul-ai-chat` (version 2) are `auth_session`, `chat_room`, `chat_message`, `persona_profile`, `persona_localized_prompt`, `persona_memory`, `style_profile`, `knowledge_chunk`, `sync_metadata`, `general_settings`, `imported_module`, and `file_handle`. Persistent storage is requested with `navigator.storage.persist()` at startup.
+- **Backup**: The File System Access API exports and imports all data (except `file_handle`) as a JSON file. When a PC folder is linked, `eversoul-ai-chat-backup-<timestamp>.json` and `eversoul-ai-chat-backup-latest.json` are written 5 seconds after a completed reply, a message or room deletion, a module change, or a change of language, reasoning display, skin, Preferred Soul, chat model, or notice acknowledgment (consecutive changes restart the 5-second wait), keeping only the 10 most recent timestamped backups. The folder handle is kept in the IndexedDB `file_handle` store, and you can restore any point from the list.
+- **Localization**: UI text, notices, the blocked screen, and status/error messages are shown from the Korean, English, and Simplified Chinese labels in `src/domains/evertalk/i18n.ts`. Domain errors travel as codes (`DomainError`) and are turned into labels in the UI.
 
 ---
 
 ## 🛠 Tech Stack
 
-### Frontend Stack
-- **Framework**: `React 19.1` + `TypeScript 6.0` + `Vite 8`
-- **State Management**: `TanStack React Query v5` (async server state), `Zustand v5` (global client state)
-- **Styling**: `Tailwind CSS v4` (`@tailwindcss/vite`) + `clsx` (class composition)
+### Web App
+- **Framework**: `React 19.3` + `TypeScript 7.0` + `Vite 8.3` (static build with `base: './'`)
+- **State Management**: `TanStack React Query v5`, `Zustand v5`
+- **Styling**: `Tailwind CSS v4` (`@tailwindcss/vite`) + `clsx`
 - **Icons**: `lucide-react`
-- **Tauri Plugins**: `@tauri-apps/plugin-dialog`, `plugin-fs`, `plugin-opener`, `plugin-shell`
+- **Lint**: `oxlint`
 
-### Desktop Runtime & Backend Stack
-- **Core Runtime**: `Tauri v2` (Rust 2021 edition); release builds are optimized with `codegen-units=1` + `lto=true` + `opt-level=3` + `panic=abort` + `strip`.
-- **Local Database**: `SQLite3` (`rusqlite` bundled)
-- **HTTP Client**: `reqwest` (rustls, json, stream features)
-- **AI Inference Engine**: `llama.cpp` (`llama-cpp-2` C-bindings, GGUF format) + `num_cpus` (physical-core-based thread sizing)
-- **On-device Fine-tuning**: `candle-core` / `candle-nn` 0.8 (Qwen2 architecture + hand-built LoRA adapter), `hf-hub`, `tokenizers` (BPE, `onig` feature)
-- **Serialization / Utilities**: `serde`, `serde_json`, `anyhow`, `thiserror`, `tracing` + `tracing-subscriber`, `uuid`, `directories`, `sha2`, `hex`, `flate2`, `rust-ini`
+### Browser Platform
+- **On-device AI**: Chrome Prompt API (`LanguageModel`, Gemini Nano) — types from `@types/dom-chromium-ai`
+- **Storage**: IndexedDB (`idb` 8)
+- **PC files and folders**: File System Access API (`showOpenFilePicker`, `showSaveFilePicker`, `showDirectoryPicker`) — types from `@types/wicg-file-system-access`
+- **Environment detection**: User-Agent Client Hints (`navigator.userAgentData`) — types from `user-agent-data-types`
 
 ---
 
-## 📦 Local Model
+## 📦 On-device Model
 
-A single fixed model that runs on CPU alone. It is too large to ship in the repository, so the first-run setup wizard downloads it for you.
+No model file is shipped in the repository or downloaded by the app itself. The app uses the Gemini Nano model that Chrome provides, through the Prompt API.
 
-- **Name**: `gemma-2-2b-it Q4_K_M` (GGUF)
-- **Source**: [`bartowski/gemma-2-2b-it-GGUF`](https://huggingface.co/bartowski/gemma-2-2b-it-GGUF)
-- **Location**: `ai/model/gemma-2-2b-it-Q4_K_M.gguf`
-- **Verification**: SHA-256 is computed after the download and, when a `.sha256` sidecar file is present, checked against it.
+- **Preparation**: Press "Download and prepare" in Settings > On-device Models; Chrome downloads the model and the progress is shown. The download starts only with a user click (user activation).
+- **Model choice**: Chrome picks the Gemini Nano size and the GPU/CPU backend to fit the device; a web page cannot choose it.
+- **Chrome requirements** ([official Chrome docs](https://developer.chrome.com/docs/ai/prompt-api)): Windows 10/11, macOS 13+, Linux, or ChromeOS (Chromebook Plus); at least 22 GB of free space on the volume that holds the Chrome profile; a GPU with more than 4 GB of VRAM, or 16 GB of RAM and 4 CPU cores or more; an unlimited or unmetered network. It does not work in Chrome for Android or iOS.
 
 ---
 
 ## 💻 Run & Build Guide
 
-### ⭐ Easiest path — build in your own fork with GitHub Actions
-
-GitHub builds it for you, so you never install Rust, CMake, or Clang locally.
-
-1. Press **Fork** at the top right of this repository to copy it into your account.
-2. Press **Star** ⭐ and **Watch** 👁 so you don't miss later updates.
-3. Open the **Actions** tab of **your own** fork and pick the `Build Portable` workflow.
-4. Press **Run workflow**. (Right after forking you have to enable Actions once before the button shows up.)
-5. When the run finishes, download `eversoul-ai-chat-portable-*` from the **Artifacts** section at the bottom of the run page and unzip it.
-6. Launch `eversoul-ai-chat.exe`; the setup wizard downloads the local model.
-
-Push a `v*` tag such as `v0.0.21` to your fork and the same workflow zips the build and publishes it to **your fork's Releases**.
-
-### Building locally
-
-The frontend is TypeScript and the backend is Rust + Tauri v2, so both toolchains are required.
-
-- [Node.js](https://nodejs.org/) 22 or later (frontend build and `npm` scripts)
-- [Rust](https://rustup.rs/) stable toolchain (2021 edition, includes `cargo`)
-
-The `llama-cpp-2` crate used for local inference is not pure Rust — it is a binding (`llama-cpp-sys-2`) that builds llama.cpp's C/C++ sources alongside it. That means `cargo build` invokes all three of the following, and fails without them.
-
-- [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/) — the MSVC compiler that compiles llama.cpp's C++ code
-- [CMake](https://cmake.org/download/) 3.20 or later — llama.cpp is a CMake project, so this configures its build
-- [Clang](https://releases.llvm.org/download.html) — `bindgen` needs `libclang` to parse llama.cpp headers and generate the Rust FFI bindings
-
-If you build through GitHub Actions instead, the workflow installs all three on the runner, so nothing lands on your machine.
+- You need [Node.js](https://nodejs.org/) and [Google Chrome](https://www.google.com/chrome/) for PC.
+- Open the dev server in Chrome on a PC as well; other browsers only see the blocked screen.
 
 ```bash
-npm install        # install dependencies
-npm run tauri dev  # run in development mode
-npm run build      # portable build (tauri build + build/ packaging)
+npm install      # install dependencies
+npm run dev      # start the Vite dev server, then open it in Chrome on a PC
+npm run lint     # run oxlint
+npm run build    # tsc -b type check + vite build static output (dist/)
 ```
+
+`dist/` contains only static files with no server code, so it can be deployed as-is to any static host. The production address is [ai.everlib.pro](https://ai.everlib.pro/). `navigator.userAgentData` and the File System Access API work only in a secure context (HTTPS or localhost).
 
 ---
 
@@ -350,9 +347,9 @@ Spirits fall into seven races (`race`).
 </tr>
 </table>
 
-When the app is actually chatting, it reads a spirit's name, personality, and speech patterns from the SQLite `persona_profile.raw_json` column. Every time the spirit list is queried, `PersonaService::get_available_personas` reloads it from `personas.bin` and upserts it into that column, and the system prompt actually sent to the LLM is assembled by `PersonaService::build_localized_system_prompt` parsing that same `raw_json`.
+When the app is actually chatting, it reads a spirit's name, personality, and speech patterns from the `raw_json` field of the records in the IndexedDB `persona_profile` store. `src/domains/persona/archive.ts` reads the `data/personas/*.json` files bundled through `import.meta.glob`, and `personaService.installPreset` stores any spirit that is not installed yet into that store. The system prompt is assembled by `buildLocalizedPersonaPrompt` and `wrapAssembledPersonaPrompt` in `src/domains/persona/prompt.ts` parsing that `raw_json`, and the per-language result is cached in `persona_localized_prompt`.
 
-The source of that data is the 95 `data/personas/*.json` files. `tools/build_complete_personas.cjs` normalizes them into the 4-language array (`LANGUAGES = ['ko', 'en', 'zh_tw', 'zh_cn']`) and builds them into `personas.bin`. Below is the real field structure of one of those source files (Adrianne's).
+The source of that data is the 99 `data/personas/*.json` files. Below is the real field structure of one of those source files (Adrianne's).
 
 ```json
 {
@@ -394,14 +391,14 @@ The source of that data is the 95 `data/personas/*.json` files. `tools/build_com
 ```
 
 - The `i18n` block is a **field-first structure**: each field name is the key, and beneath it sit the 4 language values `{ ko, en, zh_tw, zh_cn }`. Translations exist down to the individual field level for `name` · `grade` · `race` · `class` · `sub_class` · `stat`, as well as `profile.nick_name` · `profile.constellation` · `profile.union` · `profile.cv_ko` · `profile.cv_jp` · `profile.like` · `profile.dislike` · `profile.hobby` · `profile.speciality`.
-- For display, `parseSpiritDetail` in `src/domains/persona/logic.ts` parses this same `raw_json` and picks the right language. The system prompt actually sent to the LLM is assembled separately — the Rust backend's `PersonaService::build_localized_system_prompt` re-parses `raw_json` on its own — but both ultimately read from SQLite's `raw_json`.
+- For display, `parseSpiritDetail` in `src/domains/persona/logic.ts` parses this same `raw_json` and picks the right language. The system prompt sent to the on-device AI is assembled separately — `src/domains/persona/prompt.ts` re-parses `raw_json` on its own — but both ultimately read from the `raw_json` in IndexedDB.
 - Each spirit's artwork lives under `public/eversoul-assets/spirits/{EnglishName}/`, split into category folders: `base` (base illustration at 512/1024/2048), `costume`, `gacha`, `raid`, and `srg` (story). The `LoadableAssetImage` component (`src/domains/evertalk/components/LoadableAssetImage.tsx`) tries a list of candidate paths in order (`useFirstLoadableImage`) and renders the first one that actually loads.
 
 ---
 
 ## 📌 Versioning Rule
 
-This repository follows the principle of **incrementing the patch version by 1 for every commit**. The `version` field in `package.json`, `src-tauri/Cargo.toml`, and `src-tauri/tauri.conf.json` must always stay in sync, and all three files are updated together whenever a commit containing a functional change is created.
+This repository follows the principle of **incrementing the patch version by 1 for every commit**. The version is managed by the single `version` field in `package.json`. The project was re-initialized at `0.0.0` when it moved from the Tauri desktop app to the Chrome on-device AI web app, and the current version is `0.0.1`. The table below is the version history of the former Tauri desktop app.
 
 | Version | Commit |
 | --- | --- |
@@ -434,9 +431,7 @@ This repository follows the principle of **incrementing the patch version by 1 f
 
 ## 📄 License
 
-The **Apache License 2.0** in this repository covers only the source code this project wrote itself — the frontend (`src/`) and the backend (`src-tauri/src/`, `scripts/`, `tools/`). This project holds no rights to the third-party works below.
+The **Apache License 2.0** in this repository covers only the web app source code this project wrote itself (`src/`). This project holds no rights to the third-party works below.
 
-- **Local model `gemma-2-2b-it`** — a Google work governed by the [Gemma Terms of Use](https://ai.google.dev/gemma/terms). This repository neither bundles nor redistributes the model weights; the app downloads them on the user's own machine from [Hugging Face](https://huggingface.co/bartowski/gemma-2-2b-it-GGUF). Obligations that come with using the model rest with the user who downloads it.
+- **On-device model Gemini Nano** — a model Google provides through Chrome. This repository neither bundles nor redistributes the model weights; Chrome on the user's PC downloads and manages the model itself.
 - **EverSoul game resources** — spirit illustrations, talk backgrounds, source persona data, and voice lines remain the property of their original rights holders. This project claims no rights to them and uses them as a non-commercial fan project.
-
-See [NOTICE](NOTICE) for the full attribution and [LICENSE-THIRD-PARTY.md](LICENSE-THIRD-PARTY.md) for the per-item breakdown.

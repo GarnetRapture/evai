@@ -2,10 +2,10 @@ import { isDomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
 import { EVERTALK_SESSION_TITLE, type ChatRoom } from '../chat';
 import type { ModuleControl, ModuleControlOption } from '../modules';
-import type { PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
+import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, SpiritRosterMeta, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, PreferredSpiritFamiliarity, SpiritRosterMeta, SystemStatusId, TalkChoice } from './types';
 export function filterSpirits(spirits: PersonaConfig[], searchQuery: string): PersonaConfig[] {
     const query = searchQuery.trim().toLowerCase();
     if (!query) {
@@ -15,6 +15,19 @@ export function filterSpirits(spirits: PersonaConfig[], searchQuery: string): Pe
         spirit.name_en.toLowerCase().includes(query) ||
         spirit.race.toLowerCase().includes(query) ||
         spirit.class.toLowerCase().includes(query)));
+}
+export function resolvePreferredSpiritFamiliarity(spirits: PersonaConfig[], familiarityList: FamiliarityEntry[], preferredPersonaId: string | null): PreferredSpiritFamiliarity | null {
+    const spirit = preferredPersonaId ? spirits.find((candidate) => candidate.id === preferredPersonaId) : undefined;
+    if (!spirit) {
+        return null;
+    }
+    const entry = familiarityList.find((candidate) => candidate.persona_id === spirit.id);
+    return {
+        spirit,
+        message_count: entry?.message_count ?? 0,
+        memory_count: entry?.memory_count ?? 0,
+        familiarity_score: entry?.familiarity_score ?? 0,
+    };
 }
 export function createRosterMeta(spirit: PersonaConfig): SpiritRosterMeta {
     const preview = spirit.greeting || spirit.class || spirit.race;
@@ -101,6 +114,9 @@ export function formatDateTime(isoTimestamp: string, labels: EverTalkLabels): st
 }
 export function formatBackupFileMeta(file: BackupFileEntry, labels: EverTalkLabels): string {
     return labels.backupFileMeta(formatDateTime(file.modified_at, labels), Math.max(1, Math.ceil(file.size_bytes / 1024)));
+}
+export function formatModelSettingsPath(labels: EverTalkLabels): string {
+    return `${labels.settings} > ${labels.modelListTitle}`;
 }
 export function formatLanguageName(language: AppLanguage, labels: EverTalkLabels): string {
     if (language === 'en') {

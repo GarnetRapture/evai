@@ -22,6 +22,14 @@ export interface ChatError {
 export interface ChatStreamHandlers {
     onToken: (token: string) => void;
 }
+export interface ChatSendRequest {
+    room_id: string;
+    persona_id: string;
+    content: string;
+    request_id: string;
+    signal: AbortSignal;
+    handlers: ChatStreamHandlers;
+}
 export type PersonaMemoryType = 'episodic' | 'semantic';
 export interface PersonaMemoryRecord {
     id: string;

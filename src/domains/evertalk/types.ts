@@ -1,19 +1,51 @@
 import type React from 'react';
-import type { AppLanguage } from '../../shared/types';
+import type { AppLanguage, PlatformSupportStatus } from '../../shared/types';
 import type { ChatMessage, ChatRoom } from '../chat';
 import type { BuiltInModelCatalog, BuiltInModelEntry, LlmRequestStatus, LlmSessionStatus, LlmStatus, ModelPreparationState } from '../llm';
 import type { ImportedModule, ModuleControl } from '../modules';
-import type { BondRankingEntry, FamiliarityEntry, PersonaConfig, SpiritDetail } from '../persona';
+import type { BondRankingEntry, FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { AppSettings, ResetSummary, SetupPhase, SetupProgress } from '../settings';
 import type { StyleProfile } from '../style';
 import type { BackupDirectoryStatus, BackupRestoreSummary, LocalStatusSnapshot } from '../sync';
-import type { EverTalkLabels } from './i18n';
+import type { EverTalkLabels, PlatformBlockedReason } from './i18n';
 export interface LoadableAssetImageProps {
     candidates: string[];
     alt: string;
     className?: string;
     style?: React.CSSProperties;
     fallback: React.ReactNode;
+}
+export interface ZoomDragState {
+    pointerId: number;
+    x: number;
+    y: number;
+    originX: number;
+    originY: number;
+}
+export interface ZoomOffset {
+    x: number;
+    y: number;
+}
+export interface ChatMessageBubbleProps {
+    message: ChatMessage;
+    avatarCandidates: string[];
+    spiritName: string;
+    showReasoning: boolean;
+    deleteLabel: string;
+    onDelete: (messageId: string) => Promise<void>;
+}
+export interface GalleryTileProps {
+    skin: SpiritSkinVisualAsset;
+    skinLabel: string;
+    spiritName: string;
+    zoomLabel: string;
+    onZoom: (candidates: string[]) => void;
+}
+export interface PreferredSpiritFamiliarity {
+    spirit: PersonaConfig;
+    message_count: number;
+    memory_count: number;
+    familiarity_score: number;
 }
 export interface SpiritRosterMeta {
     preview: string;
@@ -47,10 +79,9 @@ export interface SpiritRosterProps {
     labels: EverTalkLabels;
     appLanguage: AppLanguage;
     activeSessionIds: string[];
-    personaSkinIds: Record<string, string>;
     onSearchChange: (value: string) => void;
     onSelect: (spirit: PersonaConfig) => void;
-    onSetDefault: (spiritId: string) => void;
+    onToggleDefault: (spiritId: string) => Promise<void>;
     onTabChange: (tab: RosterTab) => void;
     onToggleCollapsed: () => void;
 }
@@ -134,6 +165,7 @@ export interface SettingsPanelProps {
     backupBusy: boolean;
     backupRestoreSummary: BackupRestoreSummary | null;
     backupMessage: string | null;
+    backupError: string | null;
     backupDirectoryStatus: BackupDirectoryStatus | null;
     labels: EverTalkLabels;
     onClose: () => void;
@@ -183,6 +215,19 @@ export interface SetupWizardProps {
     onSelectLanguage: (language: AppLanguage) => Promise<void>;
     onCompleteSetup: () => Promise<void>;
 }
+export interface PlatformGuideNoticeProps {
+    labels: EverTalkLabels;
+    acknowledged: boolean;
+    onAcknowledgedChange: (acknowledged: boolean) => void;
+}
+export interface PlatformGuideGateProps {
+    labels: EverTalkLabels;
+    onAcknowledge: () => Promise<void>;
+}
+export interface PlatformBlockedPanelProps {
+    reason: PlatformBlockedReason;
+    labels: EverTalkLabels;
+}
 export interface AppInfoPanelProps {
     labels: EverTalkLabels;
 }
@@ -228,6 +273,7 @@ export interface EverTalkController {
     backupBusy: boolean;
     backupRestoreSummary: BackupRestoreSummary | null;
     backupMessage: string | null;
+    backupError: string | null;
     backupDirectoryStatus: BackupDirectoryStatus | null;
     llmSessionStatuses: LlmSessionStatus[];
     llmRequestStatuses: LlmRequestStatus[];
@@ -254,12 +300,12 @@ export interface EverTalkController {
     setupProgress: SetupProgress | null;
     setSearchQuery: (value: string) => void;
     setInputText: (value: string) => void;
-    setActiveRosterTab: (tab: RosterTab) => void;
+    changeRosterTab: (tab: RosterTab) => void;
     setActiveStageTab: (tab: StageTab) => void;
     setProfileCollapsed: (collapsed: boolean) => void;
     setRosterCollapsed: (collapsed: boolean) => void;
     selectSpirit: (spirit: PersonaConfig) => Promise<void>;
-    setDefaultSpirit: (spiritId: string) => Promise<void>;
+    toggleDefaultSpirit: (spiritId: string) => Promise<void>;
     sendMessage: (event: React.FormEvent) => Promise<void>;
     syncStyles: () => Promise<void>;
     selectStyle: (styleId: string) => Promise<void>;
@@ -292,4 +338,7 @@ export interface EverTalkController {
     closeProfileDetail: () => void;
     setupStage: SetupPhase;
     completeSetup: () => Promise<void>;
+    platformSupport: PlatformSupportStatus;
+    platformGuideAcknowledged: boolean;
+    acknowledgePlatformGuide: () => Promise<void>;
 }

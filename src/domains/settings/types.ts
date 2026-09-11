@@ -10,6 +10,7 @@ export interface AppSettings {
     show_reasoning: boolean;
     active_model: string;
     persona_skin_ids: Record<string, string>;
+    platform_guide_acknowledged: boolean;
 }
 export type SetupStage = 'personas' | 'caching' | 'model' | 'done';
 export interface SetupProgress {
@@ -26,6 +27,7 @@ export interface GeneralSettingsRecord {
     show_reasoning: boolean;
     active_model: string;
     persona_skin_ids: Record<string, string>;
+    platform_guide_acknowledged: boolean;
 }
 export interface ResetSummary {
     cleared_chat_rooms: number;

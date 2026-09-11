@@ -10,6 +10,7 @@ export const DEFAULT_GENERAL_SETTINGS: GeneralSettingsRecord = {
     show_reasoning: true,
     active_model: CHROME_PROMPT_MODEL_ID,
     persona_skin_ids: {},
+    platform_guide_acknowledged: false,
 };
 
 export const settingsRepository = {
@@ -45,5 +46,6 @@ export function composeAppSettings(general: GeneralSettingsRecord): AppSettings 
         show_reasoning: general.show_reasoning,
         active_model: general.active_model,
         persona_skin_ids: general.persona_skin_ids,
+        platform_guide_acknowledged: general.platform_guide_acknowledged,
     };
 }

@@ -31,13 +31,15 @@ export const personaClient = {
     async getDefault(): Promise<string | null> {
         return (await settingsRepository.readGeneral()).default_persona_id;
     },
-    async setDefault(id: string): Promise<string> {
+    async toggleDefault(id: string): Promise<string | null> {
         const persona = await personaRepository.getPersona(id);
         if (!persona) {
             throw personaNotFoundError(id);
         }
-        await settingsRepository.updateGeneral({ default_persona_id: id });
-        return id;
+        const current = (await settingsRepository.readGeneral()).default_persona_id;
+        const next = current === id ? null : id;
+        await settingsRepository.updateGeneral({ default_persona_id: next });
+        return next;
     },
     async getBondRanking(): Promise<BondRankingEntry[]> {
         return personaService.getBondRanking();

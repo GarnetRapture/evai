@@ -16,3 +16,29 @@ export function normalizeAppLanguage(value: string | null | undefined): AppLangu
     }
     return null;
 }
+
+const DEFAULT_APP_LANGUAGE: AppLanguage = 'ko';
+
+function appLanguageFromBrowserTag(tag: string): AppLanguage | null {
+    const primary = tag.toLowerCase().split('-')[0];
+    if (primary === 'ko') {
+        return 'ko';
+    }
+    if (primary === 'en') {
+        return 'en';
+    }
+    if (primary === 'zh') {
+        return 'zh_cn';
+    }
+    return null;
+}
+
+export function detectBrowserAppLanguage(): AppLanguage {
+    for (const tag of navigator.languages) {
+        const language = appLanguageFromBrowserTag(tag);
+        if (language) {
+            return language;
+        }
+    }
+    return DEFAULT_APP_LANGUAGE;
+}
