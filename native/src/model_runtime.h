@@ -12,7 +12,7 @@ struct ModelConfiguration {
     std::filesystem::path modelPath;
     std::string modelFile;
     std::filesystem::path runtimePath;
-    std::string backend = "cpu";
+    std::string backend = "gpu";
     std::int32_t contextWindow = 4096;
 };
 
@@ -23,7 +23,8 @@ struct ModelRuntimeStatus {
     std::filesystem::path configuredModelPath;
     std::filesystem::path resolvedModelPath;
     std::filesystem::path runtimePath;
-    std::string backend = "cpu";
+    std::string backend;
+    std::string activeBackend;
     std::string architecture;
     std::int32_t contextWindow = 0;
     std::string error;
@@ -43,10 +44,19 @@ struct NativeChatMessage {
     std::string content;
 };
 
-struct NativeGenerationPrompt {
+struct NativeSamplingParameters {
+    std::int32_t topK = 40;
+    float topP = 0.95F;
+    float temperature = 0.8F;
+    std::int32_t seed = 0;
+};
+
+struct NativeGenerationRequest {
     std::string systemPrompt;
     std::vector<NativeChatMessage> messages;
-    std::string responsePrefix;
+    std::string responseSchema;
+    std::int32_t maxOutputTokens = 512;
+    NativeSamplingParameters sampling;
 };
 
 class NativeModelRuntime {
@@ -62,7 +72,7 @@ public:
     void configure(ModelConfiguration configuration, bool persist);
     void load();
     void unload();
-    void startGeneration(std::string requestId, NativeGenerationPrompt prompt, std::int32_t maxOutputTokens);
+    void startGeneration(std::string requestId, NativeGenerationRequest request);
     [[nodiscard]] GenerationStatus waitForGeneration(const std::string& requestId);
     void cancelGeneration(const std::string& requestId);
     [[nodiscard]] ModelRuntimeStatus status() const;

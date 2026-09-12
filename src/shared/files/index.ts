@@ -7,6 +7,19 @@ export interface LocalFileType {
     extensions: FileExtension[];
 }
 
+const ABSOLUTE_LOCAL_PATH_MAX_LENGTH = 1_024;
+const WINDOWS_ABSOLUTE_PATH_PATTERN = /^(?:[A-Za-z]:[\\/]|\\\\)/u;
+const WRAPPING_QUOTES_PATTERN = /^"|"$/gu;
+
+export function normalizeAbsoluteLocalPath(path: string): string | null {
+    const normalized = path.trim().replace(WRAPPING_QUOTES_PATTERN, '');
+    if (normalized.length === 0) {
+        return '';
+    }
+    const absolute = WINDOWS_ABSOLUTE_PATH_PATTERN.test(normalized) || normalized.startsWith('/');
+    return absolute && normalized.length <= ABSOLUTE_LOCAL_PATH_MAX_LENGTH ? normalized : null;
+}
+
 export interface LocalDirectoryFileEntry {
     name: string;
     size_bytes: number;
@@ -62,6 +75,30 @@ export async function openLocalFile(fileType: LocalFileType, pickerId: string): 
     }
 }
 
+export async function pickLocalFileHandle(fileType: LocalFileType, pickerId: string): Promise<FileSystemFileHandle | null> {
+    try {
+        const [handle] = await window.showOpenFilePicker({ id: pickerId, multiple: false, types: pickerTypes(fileType) });
+        return handle;
+    }
+    catch (error) {
+        if (isAbortError(error)) {
+            return null;
+        }
+        throw error;
+    }
+}
+
+export async function readLinkedFilePermission(handle: FileSystemFileHandle): Promise<PermissionState> {
+    return handle.queryPermission({ mode: 'read' });
+}
+
+export async function openLinkedFile(handle: FileSystemFileHandle): Promise<File> {
+    if (await handle.queryPermission({ mode: 'read' }) !== 'granted' && await handle.requestPermission({ mode: 'read' }) !== 'granted') {
+        throw new DOMException(handle.name, 'NotAllowedError');
+    }
+    return handle.getFile();
+}
+
 export async function saveLocalFile(fileType: LocalFileType, pickerId: string, suggestedName: string, blob: Blob): Promise<string | null> {
     if (isAndroidAppRuntime()) {
         return saveFileWithAndroidBridge(fileType, suggestedName, blob);
@@ -112,30 +149,6 @@ export async function writeDirectoryFile(directory: FileSystemDirectoryHandle, f
 export async function getOriginPrivateDirectory(directoryName: string): Promise<FileSystemDirectoryHandle> {
     const root = await navigator.storage.getDirectory();
     return root.getDirectoryHandle(directoryName, { create: true });
-}
-
-export async function copyFileToDirectory(directory: FileSystemDirectoryHandle, fileName: string, source: Blob, onProgress: (writtenBytes: number, totalBytes: number) => void): Promise<void> {
-    const handle = await directory.getFileHandle(fileName, { create: true });
-    const writable = await handle.createWritable();
-    const reader = source.stream().getReader();
-    let writtenBytes = 0;
-    try {
-        for (;;) {
-            const chunk = await reader.read();
-            if (chunk.done) {
-                break;
-            }
-            await writable.write(chunk.value);
-            writtenBytes += chunk.value.byteLength;
-            onProgress(writtenBytes, source.size);
-        }
-        await writable.close();
-    }
-    catch (error) {
-        await writable.abort();
-        await directory.removeEntry(fileName);
-        throw error;
-    }
 }
 
 export async function readDirectoryFile(directory: FileSystemDirectoryHandle, fileName: string): Promise<File> {

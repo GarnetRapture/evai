@@ -62,6 +62,7 @@ import {
 import {
     buildPersonaReplySpec,
     detectPersonaBreach,
+    detectPersonaReplyViolation,
     normalizePersonaReplyEnvelope,
     parsePersonaReplyEnvelope,
     renderPersonaReplyContent,
@@ -83,6 +84,7 @@ import type {
     PersonaMemoryInsight,
     PersonaReplyGeneration,
     PersonaReplyGenerationInput,
+    PersonaReplyViolation,
     PersonaSystemPrompt,
     PersonaTurnContextRequest,
     ProactiveGenerationOptions,
@@ -97,8 +99,9 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         reasoning: input.reasoning,
         max_messages: resolvePersonaReplyMessageLimit(persona.speech_style),
     });
-    const turnHook = buildPersonaTurnHook(persona.spirit_name, persona.address_term, input.reasoning, persona.speech_style);
+    const turnHook = buildPersonaTurnHook(persona.spirit_name, persona.address_term, input.reasoning, persona.speech_style, persona.voice_register);
     let content = '';
+    let previousViolation: PersonaReplyViolation | null = null;
     for (let attempt = 1; attempt <= PERSONA_REPLY_ATTEMPT_LIMIT; attempt += 1) {
         const redirectable = attempt < PERSONA_REPLY_ATTEMPT_LIMIT;
         const attemptController = new AbortController();
@@ -113,7 +116,9 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
             persona_name: persona.spirit_name,
             session_prompt: persona.session_prompt,
             messages: input.messages,
-            behavior_instruction: attempt === 1 ? turnHook : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name)}`,
+            behavior_instruction: previousViolation === null
+                ? turnHook
+                : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name, previousViolation, persona.voice_register)}`,
             structured_reply: structuredReply,
             signal: attemptSignal,
             handlers: {
@@ -138,7 +143,9 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         }
         const finalEnvelope = normalizePersonaReplyEnvelope(parsePersonaReplyEnvelope(breached ? rawReply : result.text), input.language);
         content = renderPersonaReplyContent(finalEnvelope);
-        if (redirectable && (breached || detectPersonaBreach(finalEnvelope))) {
+        const violation = breached ? 'meta_breach' : detectPersonaReplyViolation(finalEnvelope, persona.voice_register, input.language);
+        if (redirectable && violation !== null) {
+            previousViolation = violation;
             continue;
         }
         input.on_text(content);
@@ -338,6 +345,7 @@ export const chatService = {
             greeting: persona.greeting,
             dialogue_excluded_terms: persona.dialogue_excluded_terms,
             speech_style: persona.speech_profile.style,
+            voice_register: persona.voice_register,
         };
     },
     async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {

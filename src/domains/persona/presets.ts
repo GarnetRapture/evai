@@ -113,6 +113,7 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
         labels: { ko: '원작 말투', en: 'Original voice', zh_cn: '原作语气' },
         descriptions: { ko: '실제 대사에서 드러난 말투 그대로', en: 'The voice shown in the real dialogue', zh_cn: '沿用真实台词中的语气' },
         instructions: { ko: '', en: '', zh_cn: '' },
+        register: null,
     },
     {
         id: 'polite',
@@ -123,6 +124,7 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
             en: 'Always speak politely and respectfully, with courteous phrasing.',
             zh_cn: 'Always speak politely, addressing them as 您 with courteous phrasing.',
         },
+        register: 'polite',
     },
     {
         id: 'casual',
@@ -133,6 +135,7 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
             en: 'Always speak casually and relaxed, the way close friends talk.',
             zh_cn: 'Always speak casually with 你, the way close friends talk.',
         },
+        register: 'casual',
     },
     {
         id: 'affectionate',
@@ -143,6 +146,7 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
             en: 'Speak in a sweet, affectionate, slightly clingy way.',
             zh_cn: 'Speak in a sweet, coquettish 撒娇 style with soft sentence-final particles.',
         },
+        register: null,
     },
     {
         id: 'teasing',
@@ -153,6 +157,7 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
             en: 'Speak in a playful, teasing tone that stays warm.',
             zh_cn: 'Speak in a playful, teasing tone that stays warm.',
         },
+        register: null,
     },
     {
         id: 'formal',
@@ -163,6 +168,7 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
             en: 'Speak formally with a composed, dignified tone.',
             zh_cn: 'Speak formally with a composed, dignified tone, addressing them as 您.',
         },
+        register: 'polite',
     },
     {
         id: 'quiet',
@@ -173,6 +179,7 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
             en: 'Speak briefly and quietly in short, understated sentences.',
             zh_cn: 'Speak briefly and quietly in short, understated sentences.',
         },
+        register: null,
     },
 ];
 

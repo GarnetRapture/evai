@@ -3,13 +3,13 @@ import {
     requireAndroidBridge,
     runAndroidRequest,
     runAndroidStreamingRequest,
-    type AndroidLiteRtLmGenerationPayload,
     type AndroidLiteRtLmModelFile,
     type AndroidLiteRtLmStatus,
 } from '../../../shared/android';
 import { DomainError, describeUnknownError } from '../../../shared/errors';
 import { assertPersonaSystemPrompt } from '../chrome/personaHook';
 import { LITERT_LM_CONSOLIDATION_TOKEN_LIMIT, LITERT_LM_RESPONSE_TOKEN_LIMIT } from '../constants';
+import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload } from '../localGeneration';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
 import type {
     InstalledModelFile,
@@ -80,22 +80,6 @@ async function ensureModelLoaded(fileName: string): Promise<LiteRtLmLoadedModel>
             loadingModel = null;
         }
     }
-}
-
-function toGenerationPayload(request: OnDeviceGenerationRequest, behaviorInstruction = request.behavior_instruction): AndroidLiteRtLmGenerationPayload {
-    const lastIndex = request.messages.length - 1;
-    return {
-        system_prompt: request.session_prompt.system_prompt,
-        messages: [
-            ...request.session_prompt.priming_messages.map((message) => ({ role: message.role, content: message.content })),
-            ...request.messages.map((message, index) => ({
-                role: message.role,
-                content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,
-            })),
-        ],
-        response_prefix: request.structured_reply.soft_prefix,
-        max_output_tokens: LITERT_LM_RESPONSE_TOKEN_LIMIT,
-    };
 }
 
 export const liteRtLmModelStorage = {
@@ -171,11 +155,11 @@ export const liteRtLmRuntime = {
             assertPersonaSystemPrompt(request.session_prompt.system_prompt, request.persona_name);
             await liteRtLmRuntime.focusPersonaSession(fileName, request.persona_id);
             recordRequestStatus({ ...status, state: 'running', prompt_tokens: null, generated_tokens: null });
-            const payload = JSON.stringify(toGenerationPayload(request));
-            request.handlers.onChunk(request.structured_reply.soft_prefix);
+            const payload = JSON.stringify(buildPersonaGenerationPayload(request, LITERT_LM_RESPONSE_TOKEN_LIMIT));
             const result = await runAndroidStreamingRequest(
                 request.request_id,
                 (bridge) => bridge.generateLiteRtLm(request.request_id, payload),
+                (bridge) => bridge.cancelLiteRtLm(request.request_id),
                 (chunk) => request.handlers.onChunk(chunk),
                 request.signal,
             );
@@ -195,16 +179,12 @@ export const liteRtLmRuntime = {
     },
     async promptOnce(fileName: string, prompt: string): Promise<string> {
         await ensureModelLoaded(fileName);
-        const payload: AndroidLiteRtLmGenerationPayload = {
-            system_prompt: '',
-            messages: [{ role: 'user', content: prompt }],
-            response_prefix: '',
-            max_output_tokens: LITERT_LM_CONSOLIDATION_TOKEN_LIMIT,
-        };
+        const payload = JSON.stringify(buildPromptOnceGenerationPayload(prompt, LITERT_LM_CONSOLIDATION_TOKEN_LIMIT));
         const requestId = crypto.randomUUID();
         const result = await runAndroidStreamingRequest(
             requestId,
-            (bridge) => bridge.generateLiteRtLm(requestId, JSON.stringify(payload)),
+            (bridge) => bridge.generateLiteRtLm(requestId, payload),
+            (bridge) => bridge.cancelLiteRtLm(requestId),
             () => undefined,
             new AbortController().signal,
         );

@@ -1,6 +1,6 @@
 import { isAndroidAppRuntime } from '../../shared/android';
 import { DomainError } from '../../shared/errors';
-import { CHROME_PROMPT_MODEL_ID } from './constants';
+import { ANDROID_GEMINI_NANO_MODEL_ID, CHROME_PROMPT_MODEL_ID, NATIVE_HOST_MODEL_ID } from './constants';
 import { ggufFileNameFromModelId, ggufModelId, isGgufModelId } from './gguf/catalog';
 import { isLiteRtLmModelId, liteRtLmFileNameFromModelId, liteRtLmModelId } from './litertlm/catalog';
 import type { ChatModelEngineKind, LocalModelEngineKind } from './types';
@@ -8,11 +8,11 @@ import type { ChatModelEngineKind, LocalModelEngineKind } from './types';
 export const NO_CHAT_MODEL_ID = '';
 
 export function platformChatModelEngines(): ChatModelEngineKind[] {
-    return isAndroidAppRuntime() ? ['litert_lm'] : ['chrome_prompt', 'gguf'];
+    return isAndroidAppRuntime() ? ['android_gemini_nano', 'litert_lm'] : ['chrome_prompt', 'native_host', 'gguf'];
 }
 
 export function platformDefaultChatModelId(): string {
-    return isAndroidAppRuntime() ? NO_CHAT_MODEL_ID : CHROME_PROMPT_MODEL_ID;
+    return isAndroidAppRuntime() ? ANDROID_GEMINI_NANO_MODEL_ID : CHROME_PROMPT_MODEL_ID;
 }
 
 export function isChatModelIdSupportedHere(modelId: string): boolean {
@@ -30,6 +30,12 @@ export function isChatModelIdSupportedHere(modelId: string): boolean {
 export function resolveChatModelEngine(modelId: string): ChatModelEngineKind {
     if (modelId === CHROME_PROMPT_MODEL_ID) {
         return 'chrome_prompt';
+    }
+    if (modelId === ANDROID_GEMINI_NANO_MODEL_ID) {
+        return 'android_gemini_nano';
+    }
+    if (modelId === NATIVE_HOST_MODEL_ID) {
+        return 'native_host';
     }
     if (isGgufModelId(modelId)) {
         return 'gguf';

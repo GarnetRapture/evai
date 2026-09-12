@@ -1,14 +1,15 @@
 /* oxlint-disable react/only-export-components -- graph builder is exported for the production layout contract test */
 import { useMemo, useState } from 'react';
-import type { ReactNode } from 'react';
-import { Activity, BrainCircuit, Database, HardDrive, MessageCircle, Minus, Plus, RefreshCw, RotateCcw, Search, Sparkles, Trophy } from 'lucide-react';
+import { Activity, Database, HardDrive, RefreshCw, Search, Trophy } from 'lucide-react';
 import { MEMORY_CONTEXT_KINDS } from '../../chat';
 import { isMemoryContextKind } from '../../chat/memoryContext';
 import { computeFamiliarityLevel, parseSpiritDetail } from '../../persona';
 import type { SpiritDetail } from '../../persona';
-import type { EverTalkController, MemoryGraphEdge, MemoryGraphLayout, MemoryGraphNode, MemoryGraphNodeKind, MemoryGraphViewFilter, WorkspacePageProps } from '../types';
+import { MEMORY_GRAPH_COLUMN_DISTANCE, MEMORY_GRAPH_MARGIN, MEMORY_GRAPH_NODE_HEIGHT, MEMORY_GRAPH_NODE_WIDTH, MEMORY_GRAPH_ROW_DISTANCE } from '../logic';
+import type { EverTalkController, MemoryGraphEdge, MemoryGraphLayout, MemoryGraphNode, MemoryGraphViewFilter, WorkspacePageProps } from '../types';
 import { LOBBY_UI_ASSETS } from '../uiAssets';
 import { CheatModePage } from './CheatModePage';
+import { MemoryGraphCanvas } from './MemoryGraphCanvas';
 import { SpiritViewAvatar, WorkspaceSurface } from './WorkspaceSurface';
 
 function formatBytes(bytes: number | null, locale: string): string {
@@ -135,18 +136,6 @@ export function BondRankingPage({ controller }: WorkspacePageProps) {
     </WorkspaceSurface>;
 }
 
-const GRAPH_NODE_WIDTH = 244;
-const GRAPH_NODE_HEIGHT = 96;
-const GRAPH_COLUMN_DISTANCE = 340;
-const GRAPH_ROW_DISTANCE = 112;
-
-function memoryNodeIcon(kind: MemoryGraphNodeKind): ReactNode {
-    if (kind === 'persona') return <Sparkles/>;
-    if (kind === 'conversation' || kind === 'reply') return <MessageCircle/>;
-    if (kind === 'memory' || kind === 'summary') return <Database/>;
-    return <BrainCircuit/>;
-}
-
 function localizedMemoryType(controller: EverTalkController, value: string): string {
     return isMemoryContextKind(value) ? controller.labels.memoryContextKinds[value] : controller.labels.memoriesLabel;
 }
@@ -175,11 +164,11 @@ export function buildMemoryGraph(controller: EverTalkController, viewFilter: Mem
     });
     const nodes: MemoryGraphNode[] = [];
     const edges: MemoryGraphEdge[] = [];
-    let laneTop = 32;
+    let laneTop = MEMORY_GRAPH_MARGIN;
     let edgeIndex = 0;
 
     function addNode(node: Omit<MemoryGraphNode, 'x' | 'y'>, column: number, y: number): MemoryGraphNode {
-        const positioned = { ...node, x: 32 + column * GRAPH_COLUMN_DISTANCE, y };
+        const positioned = { ...node, x: MEMORY_GRAPH_MARGIN + column * MEMORY_GRAPH_COLUMN_DISTANCE, y };
         nodes.push(positioned);
         return positioned;
     }
@@ -200,8 +189,8 @@ export function buildMemoryGraph(controller: EverTalkController, viewFilter: Mem
         const messageSamples = samples.filter((sample) => sample.kind === 'message');
         const memorySamples = samples.filter((sample) => sample.kind === 'memory' && memorySampleVisible(sample.role_or_type, viewFilter));
         const branchRows = Math.max(1, messageSamples.length || (messageCount > 0 ? 1 : 0), memorySamples.length || (memoryCount > 0 ? 1 : 0));
-        const laneHeight = Math.max(GRAPH_NODE_HEIGHT + 36, branchRows * GRAPH_ROW_DISTANCE + 28);
-        const laneCenter = laneTop + (laneHeight - GRAPH_NODE_HEIGHT) / 2;
+        const laneHeight = Math.max(MEMORY_GRAPH_NODE_HEIGHT + 36, branchRows * MEMORY_GRAPH_ROW_DISTANCE + 28);
+        const laneCenter = laneTop + (laneHeight - MEMORY_GRAPH_NODE_HEIGHT) / 2;
         const familiarityScore = familiarity.get(spirit.id)?.familiarity_score ?? 0;
         const level = computeFamiliarityLevel(familiarityScore).level;
         const bondScore = bonds.get(spirit.id)?.bond_score ?? 0;
@@ -221,7 +210,7 @@ export function buildMemoryGraph(controller: EverTalkController, viewFilter: Mem
                     title: `${flow[1]?.title ?? labels.messagesLabel} · ${speaker}`,
                     description: sample.content,
                     value: new Date(sample.created_at).toLocaleString(labels.localeTag),
-                }, 1, laneTop + index * GRAPH_ROW_DISTANCE);
+                }, 1, laneTop + index * MEMORY_GRAPH_ROW_DISTANCE);
                 messageNodes.push(node);
                 connect(personaNode, node);
             });
@@ -243,7 +232,7 @@ export function buildMemoryGraph(controller: EverTalkController, viewFilter: Mem
                     title: `${flow[2]?.title ?? labels.memoriesLabel} · ${localizedMemoryType(controller, sample.role_or_type)}`,
                     description: sample.content,
                     value: new Date(sample.created_at).toLocaleString(labels.localeTag),
-                }, 2, laneTop + index * GRAPH_ROW_DISTANCE);
+                }, 2, laneTop + index * MEMORY_GRAPH_ROW_DISTANCE);
                 memoryNodes.push(node);
                 (messageNodes.length ? messageNodes : [personaNode]).forEach((source) => connect(source, node));
             });
@@ -284,26 +273,12 @@ export function buildMemoryGraph(controller: EverTalkController, viewFilter: Mem
     return {
         nodes,
         edges,
-        width: 32 * 2 + GRAPH_COLUMN_DISTANCE * 5 + GRAPH_NODE_WIDTH,
+        width: MEMORY_GRAPH_MARGIN * 2 + MEMORY_GRAPH_COLUMN_DISTANCE * 5 + MEMORY_GRAPH_NODE_WIDTH,
         height: Math.max(240, laneTop + 16),
     };
 }
 
-function memoryEdgePath(edge: MemoryGraphEdge): string {
-    const sourceX = edge.feedback ? edge.source.x + GRAPH_NODE_WIDTH / 2 : edge.source.x + GRAPH_NODE_WIDTH;
-    const sourceY = edge.source.y + GRAPH_NODE_HEIGHT / 2;
-    const targetX = edge.feedback ? edge.target.x + GRAPH_NODE_WIDTH / 2 : edge.target.x;
-    const targetY = edge.target.y + GRAPH_NODE_HEIGHT / 2;
-    if (edge.feedback) {
-        const loopY = Math.max(sourceY, targetY) + GRAPH_NODE_HEIGHT * 0.65;
-        return `M ${sourceX} ${sourceY} C ${sourceX} ${loopY}, ${targetX} ${loopY}, ${targetX} ${targetY}`;
-    }
-    const midpoint = sourceX + (targetX - sourceX) / 2;
-    return `M ${sourceX} ${sourceY} C ${midpoint} ${sourceY}, ${midpoint} ${targetY}, ${targetX} ${targetY}`;
-}
-
 export function MemoryWorkflowPage({ controller }: WorkspacePageProps) {
-    const [zoom, setZoom] = useState(0.65);
     const [query, setQuery] = useState('');
     const [activeOnly, setActiveOnly] = useState(false);
     const { labels, memoryContextFilter } = controller;
@@ -311,8 +286,7 @@ export function MemoryWorkflowPage({ controller }: WorkspacePageProps) {
         () => buildMemoryGraph(controller, { query, activeOnly, memoryContextFilter }),
         [controller, query, activeOnly, memoryContextFilter],
     );
-    const clampZoom = (value: number) => Math.min(1.25, Math.max(0.35, Number(value.toFixed(2))));
-    return <WorkspaceSurface controller={controller} labelledBy="memory-page-title">
+    return <WorkspaceSurface controller={controller} labelledBy="memory-page-title" layout="canvas">
         <header className="ever-workspace-page__header"><div><p>{labels.navMemory}</p><h1 id="memory-page-title">{labels.memoryPageTitle}</h1><span>{labels.memoryPageDescription}</span></div><Activity size={34}/></header>
         <section className="ever-memory-filter" aria-labelledby="memory-filter-title">
             <div className="ever-memory-filter__head">
@@ -343,32 +317,7 @@ export function MemoryWorkflowPage({ controller }: WorkspacePageProps) {
                 </label>
             </div>
         </section>
-        <section className="ever-memory-graph-shell">
-            <div className="ever-memory-graph-toolbar">
-                <span>{graph.nodes.length.toLocaleString(labels.localeTag)} {labels.recordsLabel} · {graph.edges.length.toLocaleString(labels.localeTag)} {labels.memoryGraphConnections}</span>
-                <div>
-                    <button type="button" aria-label={labels.imageViewerZoomOut} onClick={() => setZoom((value) => clampZoom(value - 0.1))}><Minus size={16}/></button>
-                    <output>{Math.round(zoom * 100)}%</output>
-                    <button type="button" aria-label={labels.imageViewerZoomIn} onClick={() => setZoom((value) => clampZoom(value + 0.1))}><Plus size={16}/></button>
-                    <button type="button" aria-label={labels.imageViewerReset} onClick={() => setZoom(0.65)}><RotateCcw size={16}/></button>
-                </div>
-            </div>
-            {graph.nodes.length === 0 ? <p className="ever-memory-graph-empty">{labels.memoryFilterEmpty}</p> : null}
-            <div className="ever-memory-graph-viewport">
-                <div className="ever-memory-graph-sizer" style={{ width: graph.width * zoom, height: graph.height * zoom }}>
-                    <div className="ever-memory-graph" style={{ width: graph.width, height: graph.height, transform: `scale(${zoom})` }}>
-                        <svg width={graph.width} height={graph.height} aria-hidden="true">
-                            <defs><marker id="ever-memory-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z"/></marker></defs>
-                            {graph.edges.map((edge) => <path key={edge.id} className={edge.feedback ? 'is-feedback' : ''} d={memoryEdgePath(edge)} markerEnd="url(#ever-memory-arrow)"/>)}
-                        </svg>
-                        {graph.nodes.map((node) => <article key={node.id} className={`ever-memory-node is-${node.kind}`} style={{ left: node.x, top: node.y }}>
-                            <span className="ever-memory-node__icon">{node.kind === 'persona' ? <SpiritViewAvatar controller={controller} personaId={node.personaId}/> : memoryNodeIcon(node.kind)}</span>
-                            <div><small>{node.title}</small><p>{node.description}</p><strong>{node.value}</strong></div>
-                        </article>)}
-                    </div>
-                </div>
-            </div>
-        </section>
+        <MemoryGraphCanvas controller={controller} graph={graph}/>
     </WorkspaceSurface>;
 }
 

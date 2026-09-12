@@ -13,6 +13,7 @@ export interface AndroidBridgeEvent {
     content?: string;
     model?: AndroidLiteRtLmModelFile;
     status?: AndroidLiteRtLmStatus;
+    gemini_nano?: AndroidGeminiNanoStatus;
     files?: AndroidBackupFile[];
     linked?: boolean;
     writable?: boolean;
@@ -31,16 +32,12 @@ export interface AndroidLiteRtLmStatus {
     error_message: string | null;
 }
 
-export interface AndroidLiteRtLmMessage {
-    role: 'user' | 'assistant';
-    content: string;
-}
+export type AndroidGeminiNanoAvailability = 'unsupported' | 'downloadable' | 'downloading' | 'available' | 'failed';
 
-export interface AndroidLiteRtLmGenerationPayload {
-    system_prompt: string;
-    messages: AndroidLiteRtLmMessage[];
-    response_prefix: string;
-    max_output_tokens: number;
+export interface AndroidGeminiNanoStatus {
+    availability: AndroidGeminiNanoAvailability;
+    downloaded_bytes: number | null;
+    error_message: string | null;
 }
 
 export interface AndroidStreamingResult {
@@ -87,6 +84,10 @@ export interface EverSoulAndroidBridge {
     unloadLiteRtLmModel(requestId: string): void;
     generateLiteRtLm(requestId: string, payloadJson: string): void;
     cancelLiteRtLm(requestId: string): void;
+    geminiNanoStatus(): string;
+    prepareGeminiNano(requestId: string): void;
+    generateGeminiNano(requestId: string, payloadJson: string): void;
+    cancelGeminiNano(requestId: string): void;
     saveDocument(requestId: string, suggestedName: string, mimeType: string, base64Content: string): void;
     linkBackupDirectory(requestId: string): void;
     backupDirectoryState(): string;

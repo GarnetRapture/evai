@@ -1,6 +1,58 @@
 import { settingsRepository } from '../settings/repository';
 import { nativeContextClient } from './client';
-import type { NativeContextSnapshot, NativeMirrorMemory, NativeMirrorMessage } from './types';
+import type {
+    NativeContextSnapshot,
+    NativeGenerationRequest,
+    NativeGenerationStatus,
+    NativeHostModelSnapshot,
+    NativeMirrorMemory,
+    NativeMirrorMessage,
+    NativeModelConfiguration,
+    NativeModelStatus,
+} from './types';
+
+async function routeToConfiguredHost(): Promise<void> {
+    const settings = await settingsRepository.readGeneral();
+    nativeContextClient.setPreferredExecutablePath(settings.native_executable_path ?? '');
+}
+
+export const nativeHostModelService = {
+    async snapshot(): Promise<NativeHostModelSnapshot> {
+        await routeToConfiguredHost();
+        const status = await nativeContextClient.health();
+        return {
+            host_available: status.available,
+            host_detail: status.detail,
+            model: status.available && status.health ? status.health.inference : null,
+        };
+    },
+    async modelStatus(): Promise<NativeModelStatus> {
+        await routeToConfiguredHost();
+        return nativeContextClient.modelStatus();
+    },
+    async configureModel(configuration: NativeModelConfiguration): Promise<NativeModelStatus> {
+        await routeToConfiguredHost();
+        return nativeContextClient.configureModel(configuration);
+    },
+    async loadModel(): Promise<NativeModelStatus> {
+        await routeToConfiguredHost();
+        return nativeContextClient.loadModel();
+    },
+    async unloadModel(): Promise<NativeModelStatus> {
+        await routeToConfiguredHost();
+        return nativeContextClient.unloadModel();
+    },
+    async startGeneration(request: NativeGenerationRequest): Promise<NativeGenerationStatus> {
+        await routeToConfiguredHost();
+        return nativeContextClient.startGeneration(request);
+    },
+    async generationStatus(requestId: string): Promise<NativeGenerationStatus> {
+        return nativeContextClient.generationStatus(requestId);
+    },
+    async cancelGeneration(requestId: string): Promise<NativeGenerationStatus> {
+        return nativeContextClient.cancelGeneration(requestId);
+    },
+};
 
 async function enabled(): Promise<boolean> {
     const settings = await settingsRepository.readGeneral();

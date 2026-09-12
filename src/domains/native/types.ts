@@ -1,4 +1,5 @@
 import type { ChatMessage, PersonaMemoryRecord } from '../chat';
+import type { LocalGenerationPayload } from '../llm/types';
 
 export type ContextStorageMode = 'browser' | 'native_mirror';
 export type NativeContextTransport = 'vite_dev' | 'browser_extension' | 'unavailable';
@@ -18,6 +19,47 @@ export interface NativeContextHealth {
     single_instance: true;
     display_language: 'ko' | 'en' | 'zh_cn';
     settings_path: string;
+    inference: NativeModelStatus;
+}
+
+export interface NativeModelStatus {
+    configured: boolean;
+    model_found: boolean;
+    loaded: boolean;
+    configured_model_path: string | null;
+    resolved_model_path: string | null;
+    runtime_path: string | null;
+    backend: string;
+    active_backend: string | null;
+    architecture: string;
+    context_window: number;
+    error: string | null;
+}
+
+export interface NativeModelConfiguration {
+    model_path: string;
+    context_window: number;
+}
+
+export type NativeGenerationState = 'idle' | 'queued' | 'running' | 'completed' | 'cancelled' | 'failed';
+
+export interface NativeGenerationStatus {
+    request_id: string | null;
+    state: NativeGenerationState;
+    text: string;
+    prompt_tokens: number;
+    generated_tokens: number;
+    error: string | null;
+}
+
+export interface NativeGenerationRequest extends LocalGenerationPayload {
+    request_id: string;
+}
+
+export interface NativeHostModelSnapshot {
+    host_available: boolean;
+    host_detail: string;
+    model: NativeModelStatus | null;
 }
 
 export interface NativeContextStatus {

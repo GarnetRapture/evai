@@ -5,8 +5,8 @@ export type {
     AndroidBackupDirectoryState,
     AndroidBackupFile,
     AndroidBridgeEvent,
-    AndroidLiteRtLmGenerationPayload,
-    AndroidLiteRtLmMessage,
+    AndroidGeminiNanoAvailability,
+    AndroidGeminiNanoStatus,
     AndroidLiteRtLmModelFile,
     AndroidLiteRtLmStatus,
     AndroidPlatformInfo,
@@ -86,12 +86,18 @@ export function runAndroidRequest(start: (bridge: EverSoulAndroidBridge, request
     });
 }
 
-export function runAndroidStreamingRequest(requestId: string, start: (bridge: EverSoulAndroidBridge) => void, onChunk: (chunk: string) => void, signal: AbortSignal): Promise<AndroidStreamingResult> {
+export function runAndroidStreamingRequest(
+    requestId: string,
+    start: (bridge: EverSoulAndroidBridge) => void,
+    cancel: (bridge: EverSoulAndroidBridge) => void,
+    onChunk: (chunk: string) => void,
+    signal: AbortSignal,
+): Promise<AndroidStreamingResult> {
     const bridge = requireAndroidBridge();
     window.__everSoulAndroidReceive = receiveAndroidEvent;
     return new Promise((resolve, reject) => {
         let streamed = '';
-        const abort = () => bridge.cancelLiteRtLm(requestId);
+        const abort = () => cancel(bridge);
         signal.addEventListener('abort', abort, { once: true });
         pendingRequests.set(requestId, {
             onEvent: (event) => {

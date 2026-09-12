@@ -1,4 +1,4 @@
-import { Download, ExternalLink, Trash2 } from 'lucide-react';
+import { Download, ExternalLink, Link2, Trash2 } from 'lucide-react';
 import { formatMegabytes } from '../logic';
 import type { LocalModelItemProps } from '../types';
 
@@ -31,10 +31,11 @@ export function LocalModelItem({ appPlatform, entry, busy, modelLoadingId, label
           {canDownloadInApp ? (<button type="button" className="ever-settings-reset-button" disabled={busy || loading} onClick={() => void onDownloadLocalModel(entry)}>
               <Download aria-hidden="true" size={16}/>
               {labels.localModelDownload}
-            </button>) : (entry.download_url && !entry.installed ? (<a className="ever-settings-reset-button" href={entry.download_url} target="_blank" rel="noreferrer">
-              <Download aria-hidden="true" size={16}/>
-              {labels.localModelDownload}
-            </a>) : null)}
+            </button>) : null}
+          {entry.download_url && !entry.installed ? (<a className="ever-settings-reset-button" href={entry.download_url} target="_blank" rel="noreferrer">
+              <Link2 aria-hidden="true" size={16}/>
+              {labels.localModelHttpLink}
+            </a>) : null}
           {entry.installed ? (<button type="button" className="ever-settings-reset-button" disabled={busy || loading} onClick={() => void onRemoveLocalModel(entry)}>
               <Trash2 aria-hidden="true" size={16}/>
               {labels.localModelRemove}

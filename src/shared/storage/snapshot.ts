@@ -151,7 +151,34 @@ export async function restoreDatabaseSnapshot(snapshot: EverSoulDatabaseSnapshot
 
 export async function readBackupDirectoryHandle(): Promise<FileSystemDirectoryHandle | null> {
     const database = await getEverSoulDatabase();
-    return (await database.get(EVERSOUL_STORE.fileHandle, BACKUP_DIRECTORY_HANDLE_KEY)) ?? null;
+    const handle = await database.get(EVERSOUL_STORE.fileHandle, BACKUP_DIRECTORY_HANDLE_KEY);
+    return handle?.kind === 'directory' ? handle : null;
+}
+
+export async function listLinkedFileHandles(keyPrefix: string): Promise<Array<{ key: string; handle: FileSystemFileHandle }>> {
+    const database = await getEverSoulDatabase();
+    const keys = await database.getAllKeys(EVERSOUL_STORE.fileHandle);
+    const linked: Array<{ key: string; handle: FileSystemFileHandle }> = [];
+    for (const key of keys) {
+        if (!key.startsWith(keyPrefix)) {
+            continue;
+        }
+        const handle = await database.get(EVERSOUL_STORE.fileHandle, key);
+        if (handle?.kind === 'file') {
+            linked.push({ key, handle });
+        }
+    }
+    return linked;
+}
+
+export async function saveLinkedFileHandle(key: string, handle: FileSystemFileHandle): Promise<void> {
+    const database = await getEverSoulDatabase();
+    await database.put(EVERSOUL_STORE.fileHandle, handle, key);
+}
+
+export async function removeLinkedFileHandle(key: string): Promise<void> {
+    const database = await getEverSoulDatabase();
+    await database.delete(EVERSOUL_STORE.fileHandle, key);
 }
 
 export async function saveBackupDirectoryHandle(directory: FileSystemDirectoryHandle): Promise<void> {

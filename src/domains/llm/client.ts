@@ -1,5 +1,8 @@
-import { describeUnknownError } from '../../shared/errors';
+import { DomainError, describeUnknownError } from '../../shared/errors';
+import { normalizeAbsoluteLocalPath } from '../../shared/files';
+import { nativeHostModelService } from '../native/service';
 import { settingsRepository } from '../settings/repository';
+import { NATIVE_HOST_MAX_CONTEXT_WINDOW, NATIVE_HOST_MIN_CONTEXT_WINDOW } from './constants';
 import { chatModelCatalog } from './catalog';
 import { chatModelRuntime } from './engine';
 import { localModelId } from './identity';
@@ -11,6 +14,7 @@ import type {
     LlmStatus,
     LocalModelEngineKind,
     ModelDownloadProgressHandler,
+    OnDeviceSystemModelEntry,
 } from './types';
 
 async function resolveUsableActiveModelId(): Promise<string | null> {
@@ -64,9 +68,9 @@ export const llmClient = {
         const settings = await settingsRepository.readAppSettings();
         return chatModelCatalog.list(settings.language, settings.active_model);
     },
-    async prepareChromePromptModel(onDownloadProgress: ModelDownloadProgressHandler): Promise<ChatModelCatalog> {
+    async prepareOnDeviceSystemModel(entry: OnDeviceSystemModelEntry, onDownloadProgress: ModelDownloadProgressHandler): Promise<ChatModelCatalog> {
         const settings = await settingsRepository.readAppSettings();
-        await chatModelCatalog.prepareChromePromptModel(settings.language, onDownloadProgress);
+        await chatModelCatalog.prepareOnDeviceSystemModel(entry, settings.language, onDownloadProgress);
         return llmClient.listModels();
     },
     async installLocalModel(engine: LocalModelEngineKind, onProgress: ModelDownloadProgressHandler): Promise<string | null> {
@@ -83,6 +87,21 @@ export const llmClient = {
         await chatModelCatalog.removeLocalModel(engine, fileName);
         if (settings.active_model === removedModelId) {
             await settingsRepository.updateGeneral({ active_model: await chatModelCatalog.resolveFallbackChatModelId(removedModelId) });
+        }
+        return llmClient.listModels();
+    },
+    async saveNativeHostModelPath(modelPath: string, contextWindow: number): Promise<ChatModelCatalog> {
+        const normalizedPath = normalizeAbsoluteLocalPath(modelPath);
+        if (normalizedPath === null || normalizedPath.length === 0) {
+            throw new DomainError('validation', modelPath);
+        }
+        if (!Number.isInteger(contextWindow) || contextWindow < NATIVE_HOST_MIN_CONTEXT_WINDOW || contextWindow > NATIVE_HOST_MAX_CONTEXT_WINDOW) {
+            throw new DomainError('validation', String(contextWindow));
+        }
+        await settingsRepository.updateGeneral({ native_model_path: normalizedPath, native_model_context_window: contextWindow });
+        const snapshot = await nativeHostModelService.snapshot();
+        if (snapshot.host_available) {
+            await nativeHostModelService.configureModel({ model_path: normalizedPath, context_window: contextWindow });
         }
         return llmClient.listModels();
     },

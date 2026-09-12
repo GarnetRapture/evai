@@ -14,7 +14,7 @@ export {
 } from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphEdge, MemoryGraphViewportScroll, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -262,6 +262,46 @@ export function imageViewerWheelDeltaPixels(deltaY: number, deltaMode: number, p
 export function imageViewerWheelZoomFactor(deltaPixels: number): number {
     return Math.exp(-deltaPixels * IMAGE_VIEWER_WHEEL_ZOOM_RATE);
 }
+export const MEMORY_GRAPH_NODE_WIDTH = 320;
+export const MEMORY_GRAPH_NODE_HEIGHT = 128;
+export const MEMORY_GRAPH_COLUMN_DISTANCE = 420;
+export const MEMORY_GRAPH_ROW_DISTANCE = 148;
+export const MEMORY_GRAPH_MARGIN = 40;
+export function memoryGraphEdgePath(edge: MemoryGraphEdge): string {
+    const sourceX = edge.feedback ? edge.source.x + MEMORY_GRAPH_NODE_WIDTH / 2 : edge.source.x + MEMORY_GRAPH_NODE_WIDTH;
+    const sourceY = edge.source.y + MEMORY_GRAPH_NODE_HEIGHT / 2;
+    const targetX = edge.feedback ? edge.target.x + MEMORY_GRAPH_NODE_WIDTH / 2 : edge.target.x;
+    const targetY = edge.target.y + MEMORY_GRAPH_NODE_HEIGHT / 2;
+    if (edge.feedback) {
+        const loopY = Math.max(sourceY, targetY) + MEMORY_GRAPH_NODE_HEIGHT * 0.65;
+        return `M ${sourceX} ${sourceY} C ${sourceX} ${loopY}, ${targetX} ${loopY}, ${targetX} ${targetY}`;
+    }
+    const midpoint = sourceX + (targetX - sourceX) / 2;
+    return `M ${sourceX} ${sourceY} C ${midpoint} ${sourceY}, ${midpoint} ${targetY}, ${targetX} ${targetY}`;
+}
+export const MEMORY_GRAPH_ZOOM_MIN = 0.3;
+export const MEMORY_GRAPH_ZOOM_MAX = 2;
+export const MEMORY_GRAPH_ZOOM_STEP = 1.2;
+export const MEMORY_GRAPH_DEFAULT_ZOOM = 1;
+const MEMORY_GRAPH_ZOOM_PRECISION = 1000;
+export function clampMemoryGraphZoom(zoom: number): number {
+    const bounded = Math.min(MEMORY_GRAPH_ZOOM_MAX, Math.max(MEMORY_GRAPH_ZOOM_MIN, zoom));
+    return Math.round(bounded * MEMORY_GRAPH_ZOOM_PRECISION) / MEMORY_GRAPH_ZOOM_PRECISION;
+}
+export function anchorMemoryGraphScroll(scroll: MemoryGraphViewportScroll, anchor: ImageViewerPoint, previousZoom: number, nextZoom: number): MemoryGraphViewportScroll {
+    const contentX = (scroll.left + anchor.x) / previousZoom;
+    const contentY = (scroll.top + anchor.y) / previousZoom;
+    return {
+        left: Math.max(0, contentX * nextZoom - anchor.x),
+        top: Math.max(0, contentY * nextZoom - anchor.y),
+    };
+}
+export function computeMemoryGraphFitZoom(graph: ImageViewerSize, viewport: ImageViewerSize): number {
+    if (graph.width <= 0 || graph.height <= 0 || viewport.width <= 0 || viewport.height <= 0) {
+        return MEMORY_GRAPH_DEFAULT_ZOOM;
+    }
+    return clampMemoryGraphZoom(Math.min(viewport.width / graph.width, viewport.height / graph.height));
+}
 export function imageViewerJogScale(baseScale: number, jogValue: number): number {
     return baseScale * 2 ** (jogValue / IMAGE_VIEWER_JOG_UNITS_PER_DOUBLING);
 }
@@ -396,7 +436,7 @@ export function collectEventStickers(): SpiritStickerBadge[] {
 export function groupLocalModelEntries(entries: ChatModelEntry[]): LocalModelEntryGroup[] {
     const groups: LocalModelEntryGroup[] = [];
     for (const entry of entries) {
-        if (entry.engine === 'chrome_prompt') {
+        if (entry.engine === 'chrome_prompt' || entry.engine === 'android_gemini_nano' || entry.engine === 'native_host') {
             continue;
         }
         const localEntry: LocalModelFileEntry = entry;

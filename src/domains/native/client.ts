@@ -4,8 +4,12 @@ import type {
     NativeContextStatistics,
     NativeContextSnapshot,
     NativeContextStatus,
+    NativeGenerationRequest,
+    NativeGenerationStatus,
     NativeMirrorMemory,
     NativeMirrorMessage,
+    NativeModelConfiguration,
+    NativeModelStatus,
 } from './types';
 
 declare global {
@@ -192,5 +196,38 @@ export const nativeContextClient = {
     },
     async clearAll(): Promise<void> {
         await send({ operation: 'clear_all' });
+    },
+    async modelStatus(): Promise<NativeModelStatus> {
+        const response = await send({ operation: 'model_status' }) as { ok: true; model: NativeModelStatus };
+        return response.model;
+    },
+    async configureModel(configuration: NativeModelConfiguration): Promise<NativeModelStatus> {
+        const response = await send({
+            operation: 'configure_model',
+            model_path: configuration.model_path,
+            model_file: '',
+            context_window: configuration.context_window,
+        }) as { ok: true; model: NativeModelStatus };
+        return response.model;
+    },
+    async loadModel(): Promise<NativeModelStatus> {
+        const response = await send({ operation: 'load_model' }) as { ok: true; model: NativeModelStatus };
+        return response.model;
+    },
+    async unloadModel(): Promise<NativeModelStatus> {
+        const response = await send({ operation: 'unload_model' }) as { ok: true; model: NativeModelStatus };
+        return response.model;
+    },
+    async startGeneration(request: NativeGenerationRequest): Promise<NativeGenerationStatus> {
+        const response = await send({ operation: 'start_generation', ...request }) as { ok: true; generation: NativeGenerationStatus };
+        return response.generation;
+    },
+    async generationStatus(requestId: string): Promise<NativeGenerationStatus> {
+        const response = await send({ operation: 'generation_status', request_id: requestId }) as { ok: true; generation: NativeGenerationStatus };
+        return response.generation;
+    },
+    async cancelGeneration(requestId: string): Promise<NativeGenerationStatus> {
+        const response = await send({ operation: 'cancel_generation', request_id: requestId }) as { ok: true; generation: NativeGenerationStatus };
+        return response.generation;
     },
 };

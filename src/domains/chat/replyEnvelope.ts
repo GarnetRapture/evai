@@ -1,11 +1,11 @@
 import type { AppLanguage } from '../../shared/types';
 import type { StructuredReplySpec } from '../llm';
-import type { PersonaSpeechStyle } from '../persona/types';
+import type { PersonaSpeechRegister, PersonaSpeechStyle } from '../persona/types';
+import { detectVoiceRegisterDrift } from '../persona/voice';
 import { normalizeChatOutput, splitPersonaReplyActions, stripReasoning } from './output';
-import type { PersonaReplyEnvelope, PersonaReplyEnvelopeParse, PersonaReplyShape } from './types';
+import type { PersonaReplyEnvelope, PersonaReplyEnvelopeParse, PersonaReplyShape, PersonaReplyViolation } from './types';
 
 export const PERSONA_REPLY_SPEC_NAME = 'persona_reply';
-export const PERSONA_REPLY_SOFT_PREFIX = '{';
 const PERSONA_REPLY_MESSAGE_HEADROOM = 3;
 const PERSONA_REPLY_MIN_MESSAGES = 3;
 const PERSONA_REPLY_MAX_MESSAGES = 10;
@@ -18,6 +18,8 @@ const ACTION_WRAPPER_PATTERN = /^[(（*\s]+|[)）*\s]+$/gu;
 const PERSONA_BREACH_PATTERN = /\b(?:AI|A\.I\.|LLM|chat ?bot|language model|assistant|system prompt)\b|인공지능|언어\s*모델|어시스턴트|챗봇|프롬프트|人工智能|语言模型|聊天机器人|提示词/iu;
 const JSON_ESCAPES: Record<string, string> = { '"': '"', '\\': '\\', '/': '/', b: '\b', f: '\f', n: '\n', r: '\r', t: '\t' };
 const UNICODE_ESCAPE_LENGTH = 4;
+const QUESTION_ONLY_MIN_MESSAGES = 2;
+const QUESTION_ENDING_PATTERN = /[?？][\s!.…~♡♥♪ㅜㅠㅋㅎ]*$/u;
 
 interface JsonStringRead {
     value: string;
@@ -209,6 +211,25 @@ export function detectPersonaBreach(envelope: PersonaReplyEnvelope): boolean {
     return PERSONA_BREACH_PATTERN.test([envelope.action, ...envelope.messages].join('\n'));
 }
 
+function isQuestionOnlyReply(envelope: PersonaReplyEnvelope): boolean {
+    return envelope.messages.length >= QUESTION_ONLY_MIN_MESSAGES
+        && envelope.messages.every((message) => QUESTION_ENDING_PATTERN.test(message.trim()));
+}
+
+export function detectPersonaReplyViolation(
+    envelope: PersonaReplyEnvelope,
+    register: PersonaSpeechRegister | null,
+    language: AppLanguage,
+): PersonaReplyViolation | null {
+    if (detectPersonaBreach(envelope)) {
+        return 'meta_breach';
+    }
+    if (isQuestionOnlyReply(envelope)) {
+        return 'question_only';
+    }
+    return detectVoiceRegisterDrift(envelope.messages, register, language) ? 'register_drift' : null;
+}
+
 export function resolvePersonaReplyMessageLimit(style: PersonaSpeechStyle | null): number {
     if (style === null) {
         return PERSONA_REPLY_DEFAULT_MESSAGES;
@@ -230,6 +251,5 @@ export function buildPersonaReplySpec(shape: PersonaReplyShape): StructuredReply
             required: [...(shape.reasoning ? [ENVELOPE_KEY_INNER_THOUGHT] : []), ENVELOPE_KEY_ACTION, ENVELOPE_KEY_MESSAGES],
             additionalProperties: false,
         },
-        soft_prefix: PERSONA_REPLY_SOFT_PREFIX,
     };
 }

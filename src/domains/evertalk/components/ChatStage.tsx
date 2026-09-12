@@ -34,7 +34,7 @@ const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandi
       <div className="ever-message__bubble">
         {fromUser
           ? message.content
-          : <SpiritReplyContent text={message.content} showReasoning={showReasoning} variant="desktop" innerThoughtsLabel={innerThoughtsLabel} streaming={false} showActionStatus={showActionStatus}/>}
+          : <SpiritReplyContent text={message.content} showReasoning={showReasoning} innerThoughtsLabel={innerThoughtsLabel} streaming={false} showActionStatus={showActionStatus}/>}
       </div>
       <button type="button" className="ever-message__delete" aria-label={deleteLabel} onClick={() => onDelete(message.id)}>
         <X aria-hidden="true" size={12}/>
@@ -352,7 +352,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                   </div>
                   <div className="ever-message__bubble">
                     {streamingText
-                      ? <SpiritReplyContent text={streamingText} showReasoning={showReasoning} variant="desktop" innerThoughtsLabel={labels.innerThoughts} streaming showActionStatus/>
+                      ? <SpiritReplyContent text={streamingText} showReasoning={showReasoning} innerThoughtsLabel={labels.innerThoughts} streaming showActionStatus/>
                       : <span className="ever-typing"><i /><i /><i /></span>}
                   </div>
                 </div>)}

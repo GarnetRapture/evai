@@ -17,6 +17,39 @@ const SAVIOR_SPEAKERS: Record<AppLanguage, ReadonlySet<string>> = {
     en: new Set(['Savior']),
     zh_cn: new Set(['救援者', '救世主']),
 };
+
+function isSaviorChoicePair(entries: LocalizedDialogue[], index: number, saviorSpeaker: string): boolean {
+    const current = entries[index];
+    return current.speaker === saviorSpeaker
+        && ((entries[index - 1]?.speaker === saviorSpeaker && entries[index - 1].message === current.message)
+            || (entries[index + 1]?.speaker === saviorSpeaker && entries[index + 1].message === current.message));
+}
+
+export function repairSaviorChoicePairSpeakers(entries: LocalizedDialogue[], language: AppLanguage, spiritName: string): LocalizedDialogue[] {
+    const saviorSpeakers = SAVIOR_SPEAKERS[language];
+    const repaired = entries.map((entry) => ({ ...entry }));
+    for (let index = 1; index < repaired.length; index += 1) {
+        const previous = repaired[index - 1];
+        const current = repaired[index];
+        const saviorSpeaker = saviorSpeakers.has(previous.speaker) ? previous.speaker : saviorSpeakers.has(current.speaker) ? current.speaker : null;
+        if (saviorSpeaker === null || previous.message !== current.message || previous.speaker === current.speaker) {
+            continue;
+        }
+        const spiritSpeaker = saviorSpeakers.has(previous.speaker) ? current.speaker : previous.speaker;
+        if (spiritSpeaker !== spiritName) {
+            continue;
+        }
+        previous.speaker = saviorSpeaker;
+        current.speaker = saviorSpeaker;
+        for (const neighborIndex of [index - 2, index + 1]) {
+            const neighbor = repaired[neighborIndex];
+            if (neighbor !== undefined && neighbor.speaker === saviorSpeaker && !isSaviorChoicePair(repaired, neighborIndex, saviorSpeaker)) {
+                neighbor.speaker = spiritName;
+            }
+        }
+    }
+    return repaired;
+}
 const DIALOGUE_CANONICAL_ALIASES: ReadonlyArray<readonly [RegExp, string]> = [
     [/할매|할망구/gu, '할머니'],
     [/할배|영감탱이/gu, '할아버지'],
@@ -106,6 +139,10 @@ export function parsePersonaDialogueExchanges(slice: PersonaLanguageSlice, langu
     ];
 }
 
+function dialogueExchangeKey(exchange: PersonaDialogueExchange): string {
+    return `${exchange.user_message}\n${exchange.spirit_messages.join('\n')}`;
+}
+
 function stableTextHash(text: string): number {
     let hash = 2166136261;
     for (let index = 0; index < text.length; index += 1) {
@@ -121,8 +158,10 @@ export function selectBondStageDialogueExamples(
     maxLevel: number,
     limit: number,
     rotationSeed: string,
+    excludedExchanges: readonly PersonaDialogueExchange[],
 ): PersonaDialogueExchange[] {
-    const timeline = exchanges.filter((exchange) => exchange.source === 'evertalk');
+    const excludedKeys = new Set(excludedExchanges.map(dialogueExchangeKey));
+    const timeline = exchanges.filter((exchange) => exchange.source === 'evertalk' && !excludedKeys.has(dialogueExchangeKey(exchange)));
     if (limit <= 0 || timeline.length === 0 || maxLevel <= 1) {
         return [];
     }

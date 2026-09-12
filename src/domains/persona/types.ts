@@ -25,6 +25,7 @@ export interface PersonaPersonalityPresetOption extends PersonaPresetOption<Pers
 }
 export interface PersonaSpeechPresetOption extends PersonaPresetOption<PersonaSpeechPresetId> {
     instructions: Record<AppLanguage, string>;
+    register: PersonaSpeechRegister | null;
 }
 export interface PersonaEmotionPresetOption extends PersonaPresetOption<PersonaEmotionPresetId> {
     levels: import('../chat/affect').PersonaEmotionLevels | null;
@@ -84,10 +85,13 @@ export interface PersonaLanguageSlice {
     story: LocalizedDialogue[];
     evertalk: LocalizedDialogue[];
 }
+export type PersonaSpeechRegister = 'polite' | 'casual' | 'mixed';
+export type PersonaLineRegister = Exclude<PersonaSpeechRegister, 'mixed'>;
 export interface PersonaSpeechStyle {
     messages_per_turn: number;
     message_length: number;
     signature_marks: string[];
+    register: PersonaSpeechRegister | null;
 }
 export interface PersonaSpeechProfile {
     address_term: string | null;
@@ -119,6 +123,7 @@ export interface AssembledPersonaPrompt {
     greeting: string;
     address_term: string;
     dialogue_excluded_terms: string[];
+    voice_register: PersonaSpeechRegister | null;
 }
 export interface PersonaPromptIdentity {
     name: string;

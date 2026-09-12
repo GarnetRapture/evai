@@ -6,6 +6,7 @@ import type {
     PersonaSpeechStyle,
 } from './types';
 import { parsePersonaDialogueExchanges, selectRepresentativeDialogueExamples } from './dialogue';
+import { measureSpeechRegister } from './voice';
 
 export const SOLO_LINE_LIMIT = 12;
 const SOLO_LINE_MIN_LENGTH = 10;
@@ -110,7 +111,7 @@ function spiritMessageRuns(entries: LocalizedDialogue[], spiritName: string): nu
     return runs;
 }
 
-function measureSpeechStyle(slice: PersonaLanguageSlice): PersonaSpeechStyle | null {
+function measureSpeechStyle(slice: PersonaLanguageSlice, language: AppLanguage): PersonaSpeechStyle | null {
     const runs = [...spiritMessageRuns(slice.story, slice.name), ...spiritMessageRuns(slice.evertalk, slice.name)];
     const lines = [...spiritDialogues(slice.story, slice.name), ...spiritDialogues(slice.evertalk, slice.name)];
     if (runs.length === 0 || lines.length === 0) {
@@ -122,6 +123,7 @@ function measureSpeechStyle(slice: PersonaLanguageSlice): PersonaSpeechStyle | n
         signature_marks: SIGNATURE_MARK_PATTERNS
             .filter(({ pattern }) => lines.filter((line) => pattern.test(line)).length / lines.length >= SIGNATURE_MARK_MIN_RATIO)
             .map(({ mark }) => mark),
+        register: measureSpeechRegister([...spiritDialogues(slice.speech_patterns, slice.name), ...lines], language),
     };
 }
 
@@ -134,6 +136,6 @@ export function measurePersonaSpeechProfile(slice: PersonaLanguageSlice, languag
         address_term: measureAddressTerm(spiritLines, language),
         solo_lines: measureSoloLines(spiritLines),
         dialogue_examples: selectRepresentativeDialogueExamples(parsePersonaDialogueExchanges(slice, language)),
-        style: measureSpeechStyle(slice),
+        style: measureSpeechStyle(slice, language),
     };
 }

@@ -17,14 +17,15 @@ import pro.everlib.ai.AppConstants
 import pro.everlib.ai.files.BackupDirectoryStore
 import pro.everlib.ai.files.DocumentRequestCoordinator
 import pro.everlib.ai.llm.DeviceAcceleratorDetector
+import pro.everlib.ai.llm.GeminiNanoDownloadEvent
+import pro.everlib.ai.llm.GeminiNanoRuntime
+import pro.everlib.ai.llm.GeminiNanoStatus
 import pro.everlib.ai.llm.InstalledLiteRtLmModel
-import pro.everlib.ai.llm.LiteRtLmGenerationOutcome
-import pro.everlib.ai.llm.LiteRtLmGenerationRequest
-import pro.everlib.ai.llm.LiteRtLmHistoryMessage
-import pro.everlib.ai.llm.LiteRtLmMessageRole
 import pro.everlib.ai.llm.LiteRtLmModelStore
 import pro.everlib.ai.llm.LiteRtLmRuntime
 import pro.everlib.ai.llm.LiteRtLmStatus
+import pro.everlib.ai.llm.LocalGenerationOutcome
+import pro.everlib.ai.llm.LocalGenerationPayloadParser
 
 class EverSoulAndroidBridge(
     private val context: Context,
@@ -34,6 +35,7 @@ class EverSoulAndroidBridge(
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
     private val modelStore = LiteRtLmModelStore(context)
     private val runtime = LiteRtLmRuntime(context)
+    private val geminiNano = GeminiNanoRuntime(context)
     private val backupDirectory = BackupDirectoryStore(context)
 
     @JavascriptInterface
@@ -118,24 +120,52 @@ class EverSoulAndroidBridge(
     @JavascriptInterface
     fun generateLiteRtLm(requestId: String, payloadJson: String) {
         launchRequest(requestId) {
-            val outcome = runtime.generate(requestId, parseGenerationRequest(payloadJson)) { chunk ->
+            val outcome = runtime.generate(requestId, LocalGenerationPayloadParser.parse(payloadJson)) { chunk ->
                 events.emit(requestId, "chunk", JSONObject().put("text", chunk))
             }
-            when (outcome) {
-                is LiteRtLmGenerationOutcome.Completed -> events.emit(
-                    requestId,
-                    "result",
-                    JSONObject().put("text", outcome.text).put("token_count", outcome.tokenCount),
-                )
-                is LiteRtLmGenerationOutcome.Cancelled -> events.emit(requestId, "cancelled", JSONObject().put("text", outcome.text))
-                is LiteRtLmGenerationOutcome.Failed -> events.emitError(requestId, outcome.error)
-            }
+            emitGenerationOutcome(requestId, outcome)
         }
     }
 
     @JavascriptInterface
     fun cancelLiteRtLm(requestId: String) {
         runtime.cancel(requestId)
+    }
+
+    @JavascriptInterface
+    fun geminiNanoStatus(): String = geminiNano.status().toJson().toString()
+
+    @JavascriptInterface
+    fun prepareGeminiNano(requestId: String) {
+        launchRequest(requestId) {
+            var totalBytes: Long? = null
+            val status = geminiNano.prepare { event ->
+                when (event) {
+                    is GeminiNanoDownloadEvent.Started -> totalBytes = event.totalBytes
+                    is GeminiNanoDownloadEvent.Progress -> {
+                        val progress = JSONObject().put("loaded_bytes", event.downloadedBytes)
+                        totalBytes?.takeIf { it > 0 }?.let { progress.put("ratio", event.downloadedBytes.toDouble() / it.toDouble()) }
+                        events.emit(requestId, "progress", progress)
+                    }
+                }
+            }
+            events.emit(requestId, "result", JSONObject().put("gemini_nano", status.toJson()))
+        }
+    }
+
+    @JavascriptInterface
+    fun generateGeminiNano(requestId: String, payloadJson: String) {
+        launchRequest(requestId) {
+            val outcome = geminiNano.generate(LocalGenerationPayloadParser.parse(payloadJson)) { chunk ->
+                events.emit(requestId, "chunk", JSONObject().put("text", chunk))
+            }
+            emitGenerationOutcome(requestId, outcome)
+        }
+    }
+
+    @JavascriptInterface
+    fun cancelGeminiNano(requestId: String) {
+        geminiNano.cancel()
     }
 
     @JavascriptInterface
@@ -214,6 +244,7 @@ class EverSoulAndroidBridge(
 
     override fun close() {
         runtime.close()
+        geminiNano.close()
         scope.cancel()
     }
 
@@ -235,25 +266,22 @@ class EverSoulAndroidBridge(
             .put("writable", state.writable)
     }
 
-    private fun parseGenerationRequest(payloadJson: String): LiteRtLmGenerationRequest {
-        val payload = JSONObject(payloadJson)
-        val messages = payload.getJSONArray("messages")
-        val history = (0 until messages.length() - 1).map { index ->
-            val message = messages.getJSONObject(index)
-            LiteRtLmHistoryMessage(
-                role = if (message.getString("role") == "assistant") LiteRtLmMessageRole.ASSISTANT else LiteRtLmMessageRole.USER,
-                content = message.getString("content"),
+    private fun emitGenerationOutcome(requestId: String, outcome: LocalGenerationOutcome) {
+        when (outcome) {
+            is LocalGenerationOutcome.Completed -> events.emit(
+                requestId,
+                "result",
+                JSONObject().put("text", outcome.text).put("token_count", outcome.tokenCount ?: JSONObject.NULL),
             )
+            is LocalGenerationOutcome.Cancelled -> events.emit(requestId, "cancelled", JSONObject().put("text", outcome.text))
+            is LocalGenerationOutcome.Failed -> events.emitError(requestId, outcome.error)
         }
-        val last = messages.getJSONObject(messages.length() - 1)
-        return LiteRtLmGenerationRequest(
-            systemPrompt = payload.optString("system_prompt").takeIf { it.isNotEmpty() },
-            history = history,
-            userMessage = last.getString("content"),
-            responsePrefix = payload.optString("response_prefix"),
-            maxOutputTokens = payload.optInt("max_output_tokens", AppConstants.LITERT_LM_DEFAULT_MAX_OUTPUT_TOKENS),
-        )
     }
+
+    private fun GeminiNanoStatus.toJson(): JSONObject = JSONObject()
+        .put("availability", availability.name.lowercase())
+        .put("downloaded_bytes", downloadedBytes ?: JSONObject.NULL)
+        .put("error_message", errorMessage ?: JSONObject.NULL)
 
     private fun InstalledLiteRtLmModel.toJson(): JSONObject = JSONObject()
         .put("file_name", fileName)

@@ -8,6 +8,7 @@ import {
     parsePersonaDialogueExchanges,
     selectBondStageDialogueExamples,
     selectRelevantDialogueExamples,
+    selectRepresentativeDialogueExamples,
 } from './dialogue';
 import { FAMILIARITY_MAX_LEVEL } from './familiarity';
 import { personaCheatPresetKey, resolveActivePersonaCheatPreset, resolvePersonaFamiliarityScore } from './presets';
@@ -151,7 +152,7 @@ export const personaService = {
             return { voice_examples: topical, voice_reference_kind: 'topic', profile_mentions: profileMentions };
         }
         return {
-            voice_examples: selectBondStageDialogueExamples(exchanges, familiarityLevel, FAMILIARITY_MAX_LEVEL, limit, query),
+            voice_examples: selectBondStageDialogueExamples(exchanges, familiarityLevel, FAMILIARITY_MAX_LEVEL, limit, query, selectRepresentativeDialogueExamples(exchanges)),
             voice_reference_kind: 'bond_stage',
             profile_mentions: profileMentions,
         };

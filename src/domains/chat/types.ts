@@ -59,7 +59,9 @@ export interface PersonaSystemPrompt {
     address_term: string;
     dialogue_excluded_terms: string[];
     speech_style: import('../persona/types').PersonaSpeechStyle | null;
+    voice_register: import('../persona/types').PersonaSpeechRegister | null;
 }
+export type PersonaReplyViolation = 'meta_breach' | 'question_only' | 'register_drift';
 export interface PersonaReplyParts {
     actions: string[];
     spoken: string;

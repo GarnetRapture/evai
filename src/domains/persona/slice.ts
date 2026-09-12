@@ -1,4 +1,5 @@
 import { normalizeLanguageText } from '../../shared/i18n';
+import { repairSaviorChoicePairSpeakers } from './dialogue';
 import type { AppLanguage } from '../../shared/types';
 import type {
     LocalizedDialogue,
@@ -54,8 +55,7 @@ function localizedDialogues(
     if (!entries) {
         return [];
     }
-    const selected: LocalizedDialogue[] = [];
-    let previousLine: string | null = null;
+    const normalizedEntries: LocalizedDialogue[] = [];
     for (const entry of entries) {
         const source = entry[language]
             ?? FALLBACK_LANGUAGES.map((fallback) => entry[fallback]).find((dialogue) => dialogue !== undefined);
@@ -67,9 +67,13 @@ function localizedDialogues(
             message: normalizeLanguageText(source.message, language),
         });
         const dialogue = normalized?.speaker === originalName ? { ...normalized, speaker: localizedName } : normalized;
-        if (!dialogue) {
-            continue;
+        if (dialogue) {
+            normalizedEntries.push(dialogue);
         }
+    }
+    const selected: LocalizedDialogue[] = [];
+    let previousLine: string | null = null;
+    for (const dialogue of repairSaviorChoicePairSpeakers(normalizedEntries, language, localizedName)) {
         const line = `${dialogue.speaker}: ${dialogue.message}`;
         if (line === previousLine) {
             continue;

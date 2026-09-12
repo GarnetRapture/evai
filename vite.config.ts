@@ -81,11 +81,22 @@ function registeredManifestPaths(): string[] {
   ]
 }
 
+const nativeArtifactPlatformNames: Partial<Record<NodeJS.Platform, string>> = { win32: 'windows', linux: 'linux' }
+const nativeArtifactArchitectureNames: Partial<Record<NodeJS.Architecture, string>> = { x64: 'x86_64', arm64: 'arm64' }
+
+function projectNativeArtifactExecutable(): string {
+  const platform = nativeArtifactPlatformNames[process.platform] ?? process.platform
+  const architecture = nativeArtifactArchitectureNames[process.arch] ?? process.arch
+  return join(process.cwd(), 'native', 'artifacts', `${platform}-${architecture}`, nativeExecutableName)
+}
+
 function standardNativeExecutableCandidates(): string[] {
+  const projectArtifact = projectNativeArtifactExecutable()
   const projectBuild = join(process.cwd(), 'native', 'build', nativeExecutableName)
   if (process.platform === 'win32') {
     const candidates = [
       process.env.EVERSOUL_NATIVE_HOST ?? '',
+      projectArtifact,
       projectBuild,
       join(process.cwd(), nativeExecutableName),
     ]
@@ -101,6 +112,7 @@ function standardNativeExecutableCandidates(): string[] {
   }
   return [
     process.env.EVERSOUL_NATIVE_HOST ?? '',
+    projectArtifact,
     projectBuild,
     join(process.cwd(), nativeExecutableName),
     join(homedir(), '.local', 'lib', 'eversoul-ai', nativeExecutableName),

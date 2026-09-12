@@ -20,6 +20,8 @@ export interface AppSettings {
     platform_guide_acknowledged: boolean;
     context_storage_mode: ContextStorageMode;
     native_executable_path: string;
+    native_model_path: string;
+    native_model_context_window: number;
     memory_context_filter: MemoryContextFilter;
     cheat_mode_enabled: boolean;
     persona_cheat_presets: Record<string, PersonaCheatPreset>;
@@ -45,6 +47,8 @@ export interface GeneralSettingsRecord {
     platform_guide_acknowledged: boolean;
     context_storage_mode: ContextStorageMode;
     native_executable_path: string;
+    native_model_path: string;
+    native_model_context_window: number;
     memory_context_filter: MemoryContextFilter;
     cheat_mode_enabled: boolean;
     persona_cheat_presets: Record<string, PersonaCheatPreset>;

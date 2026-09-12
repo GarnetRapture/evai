@@ -23,8 +23,8 @@ function WorkspaceBackdrop({ controller }: WorkspacePageProps) {
     </div>;
 }
 
-export function WorkspaceSurface({ controller, labelledBy, children }: WorkspaceSurfaceProps) {
-    return <main className="ever-workspace-page" aria-labelledby={labelledBy} style={WORKSPACE_STYLE}>
+export function WorkspaceSurface({ controller, labelledBy, layout = 'document', children }: WorkspaceSurfaceProps) {
+    return <main className={`ever-workspace-page is-${layout}`} aria-labelledby={labelledBy} style={WORKSPACE_STYLE}>
         <WorkspaceBackdrop controller={controller}/>
         <div className="ever-workspace-page__content">{children}</div>
     </main>;

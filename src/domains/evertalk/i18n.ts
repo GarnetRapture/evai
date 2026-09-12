@@ -15,6 +15,30 @@ export interface LocalModelSectionLabels {
     guideSteps: (downloadLabel: string, installLabel: string, useLabel: string, removeLabel: string) => string[];
 }
 
+export interface NativeHostModelLabels {
+    title: string;
+    description: string;
+    modelName: string;
+    hostReady: string;
+    hostUnavailable: (detail: string) => string;
+    pathMissing: string;
+    savedPath: (path: string) => string;
+    resolvedPath: (path: string) => string;
+    modelMissing: string;
+    loaded: string;
+    notLoaded: string;
+    errorDetail: (error: string) => string;
+    pathLabel: string;
+    pathPlaceholder: string;
+    pathHint: string;
+    contextWindowLabel: string;
+    save: string;
+    saving: string;
+    recommendedTitle: string;
+    guideTitle: string;
+    guideSteps: string[];
+}
+
 export interface EverTalkLabels {
     languageGateTitle: string;
     languageGateDescription: string;
@@ -276,6 +300,8 @@ export interface EverTalkLabels {
     modelListTitle: string;
     modelListDescription: Record<AppPlatform, string>;
     modelRoleChat: string;
+    modelRoleAndroidGeminiNano: string;
+    modelAndroidGeminiNanoUnsupported: string;
     modelLanguageSupport: (languageTag: string, declared: boolean) => string;
     modelUseForChat: string;
     modelInUse: string;
@@ -294,6 +320,8 @@ export interface EverTalkLabels {
     localModelRemove: string;
     localModelOpenPage: string;
     localModelDownload: string;
+    localModelHttpLink: string;
+    nativeHostModel: NativeHostModelLabels;
     localModelGated: string;
     localModelBackend: (backend: string) => string;
     localModelFileMeta: (fileName: string, sizeMb: number | null, license: string | null) => string;
@@ -737,6 +765,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             android_app: '이 기기에서 Google LiteRT-LM 엔진으로 실행하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 설치하고 선택하세요. 모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 사용할 수 없으면 CPU 백엔드로 실행합니다.',
         },
         modelRoleChat: '대화 생성 · Prompt API (Gemini Nano)',
+        modelRoleAndroidGeminiNano: '대화 생성 · Android AICore (Gemini Nano)',
+        modelAndroidGeminiNanoUnsupported: '이 기기는 AICore Gemini Nano를 지원하지 않습니다 (Android 12 이상 · AICore 지원 기기 필요)',
         modelLanguageSupport: (languageTag, declared) => declared
             ? `대화 언어 ${languageTag}: Chrome 공식 지원 언어로 세션 생성`
             : `대화 언어 ${languageTag}: Chrome 공식 지원 목록에 없음 · 모델 기본 능력으로 대화`,
@@ -752,16 +782,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelSections: {
             gguf: {
                 title: 'Hugging Face GGUF 모델',
-                description: 'Chrome 온디바이스 모델 대신 Hugging Face의 GGUF 모델을 이 브라우저 안에서 실행할 수 있습니다. 모델 파일은 이 PC의 브라우저 저장소(OPFS)에만 보관되며, 대화·기억·페르소나·이모지 금지 규칙은 똑같이 적용됩니다.',
-                installFile: 'GGUF 파일 설치',
-                customModel: '직접 설치한 GGUF',
-                guideTitle: 'Hugging Face 모델 설치 가이드',
+                description: 'PC에 받아 둔 Hugging Face GGUF 파일을 복사하지 않고 그 자리에서 연결해 이 브라우저 안에서 실행합니다. 연결은 저장되어 다음에 열어도 유지되며, 대화·기억·페르소나 규칙은 똑같이 적용됩니다.',
+                installFile: 'GGUF 파일 연결',
+                customModel: '연결한 GGUF',
+                guideTitle: 'Hugging Face GGUF 연결 가이드',
                 guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
-                    `추천 모델의 "${downloadLabel}"를 눌러 Hugging Face에서 .gguf 파일을 PC에 내려받습니다. 약관 동의가 필요한 모델은 Hugging Face에 로그인해 모델 페이지에서 약관에 동의한 뒤 받을 수 있습니다.`,
-                    `"${installLabel}"을 눌러 내려받은 .gguf 파일을 고르면 이 브라우저 저장소(OPFS)로 복사됩니다. 복사가 끝나면 PC의 원본 파일은 지워도 됩니다. 파일 하나는 2GB 이하여야 하며, 다른 GGUF 파일도 같은 방법으로 설치할 수 있습니다.`,
-                    `설치된 모델의 "${useLabel}"를 고르면 모델을 불러옵니다. 불러오기가 끝나면 선택한 정령과 바로 대화할 수 있습니다.`,
+                    `추천 모델의 "HTTP 직접 링크"로 .gguf 파일을 PC의 원하는 폴더에 내려받습니다. 약관 동의가 필요한 모델은 Hugging Face에 로그인해 모델 페이지에서 약관에 동의한 뒤 받을 수 있습니다. ("${downloadLabel}"은 안드로이드 앱 전용입니다.)`,
+                    `"${installLabel}"을 눌러 그 .gguf 파일을 한 번 고르면 파일 위치가 저장됩니다. 파일은 복사되지 않으므로 원본을 옮기거나 지우면 다시 연결해야 합니다. 파일 하나는 2GB 이하여야 합니다.`,
+                    `연결된 모델의 "${useLabel}"를 고르면 원본 파일에서 바로 불러옵니다. 브라우저를 다시 열었을 때 파일 읽기 권한을 한 번 더 물어볼 수 있습니다.`,
                     'Chrome의 WebGPU를 사용할 수 있으면 GPU로 실행하고, 사용할 수 없으면 CPU로 실행되어 느려집니다. 여러 CPU 스레드로 실행하려면 사이트가 Cross-Origin-Opener-Policy: same-origin 과 Cross-Origin-Embedder-Policy: require-corp 헤더로 제공되어야 합니다.',
-                    `다 쓴 모델은 "${removeLabel}"로 브라우저 저장소에서 지웁니다. 사용 중인 모델을 지우면 Chrome 온디바이스 모델로 돌아갑니다.`,
+                    `"${removeLabel}"는 연결만 해제하고 PC의 원본 파일은 그대로 둡니다. 사용 중인 모델의 연결을 해제하면 Chrome 온디바이스 모델로 돌아갑니다.`,
                 ],
             },
             litert_lm: {
@@ -786,6 +816,35 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelRemove: '삭제',
         localModelOpenPage: 'Hugging Face 페이지',
         localModelDownload: '다운로드',
+        localModelHttpLink: 'HTTP 직접 링크',
+        nativeHostModel: {
+            title: 'EverSoul 네이티브 exe 모델 (경로 지정)',
+            description: 'PC에 있는 모델 파일 경로를 지정하면 EverSoul 네이티브 exe가 그 경로에서 직접 읽어 실행합니다. Chrome이 아닌 브라우저에서도 같은 방식으로 대화할 수 있고, 경로와 설정은 이 앱과 exe 설정 파일에 저장되어 계속 유지됩니다.',
+            modelName: '네이티브 exe 모델',
+            hostReady: 'exe 연결됨',
+            hostUnavailable: (detail) => `exe에 연결되지 않음 (${detail}) · 저장한 경로는 exe가 연결되면 적용됩니다`,
+            pathMissing: '아직 모델 경로가 저장되지 않았습니다',
+            savedPath: (path) => `저장된 경로 ${path}`,
+            resolvedPath: (path) => `exe가 찾은 모델 파일 ${path}`,
+            modelMissing: '저장된 경로에서 .litertlm 또는 .task 모델 파일을 찾지 못했습니다',
+            loaded: '모델 불러옴',
+            notLoaded: '대화를 시작하면 모델을 불러옵니다',
+            errorDetail: (error) => `exe 오류 ${error}`,
+            pathLabel: '모델 파일 또는 폴더 경로',
+            pathPlaceholder: 'C:\\Models\\gemma-4-E2B-it.litertlm  또는  /home/user/models/',
+            pathHint: 'Windows는 C:\\폴더\\파일 처럼 \\, Linux·macOS는 /폴더/파일 처럼 / 로 적은 절대 경로를 입력합니다. 폴더를 지정하면 그 안의 모델 파일 하나를 사용합니다.',
+            contextWindowLabel: '컨텍스트 크기(토큰)',
+            save: '경로 저장',
+            saving: '저장 중...',
+            recommendedTitle: 'exe에서 쓸 수 있는 Hugging Face LiteRT-LM 모델',
+            guideTitle: '네이티브 exe 모델 설치 가이드',
+            guideSteps: [
+                '저장소 설정에서 EverSoul 네이티브 exe 경로를 지정하고 연결합니다. exe가 실행 중이어야 모델을 읽을 수 있습니다.',
+                '아래 추천 모델의 "HTTP 직접 링크"로 .litertlm 파일을 PC의 원하는 폴더에 내려받습니다. 약관 동의가 필요한 모델은 Hugging Face에 로그인한 뒤 받습니다.',
+                '받은 파일이나 그 파일이 든 폴더의 절대 경로를 입력하고 "경로 저장"을 누릅니다. 경로는 복사 없이 저장되며 다음에 열어도 유지됩니다.',
+                '"대화에 사용"을 고르면 대화를 시작할 때 exe가 그 경로의 모델을 불러와 응답합니다.',
+            ],
+        },
         localModelGated: 'Hugging Face 로그인과 모델 약관 동의 후 다운로드할 수 있습니다',
         localModelBackend: (backend) => `백엔드 ${backend}`,
         localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `라이선스 ${license}`].filter((part) => part !== null).join(' · '),
@@ -1289,6 +1348,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             android_app: 'On-device AI models run on this device by the Google LiteRT-LM engine. Install and choose the model used for chat. Loading a model tries the GPU backend first and falls back to the CPU backend when the GPU cannot be used.',
         },
         modelRoleChat: 'Chat generation · Prompt API (Gemini Nano)',
+        modelRoleAndroidGeminiNano: 'Chat generation · Android AICore (Gemini Nano)',
+        modelAndroidGeminiNanoUnsupported: 'This device does not support AICore Gemini Nano (requires Android 12+ and an AICore-capable device)',
         modelLanguageSupport: (languageTag, declared) => declared
             ? `Chat language ${languageTag}: session created with a Chrome-supported language`
             : `Chat language ${languageTag}: not in Chrome's supported list · using the model's base capability`,
@@ -1304,16 +1365,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelSections: {
             gguf: {
                 title: 'Hugging Face GGUF Models',
-                description: 'Instead of the Chrome on-device model, you can run a Hugging Face GGUF model inside this browser. Model files are kept only in this PC browser\'s storage (OPFS), and conversations, memories, persona rules, and the no-emoji rule apply the same way.',
-                installFile: 'Install GGUF file',
-                customModel: 'Manually installed GGUF',
-                guideTitle: 'Hugging Face Model Installation Guide',
+                description: 'Link a Hugging Face GGUF file saved on your PC in place, without copying it, and run it inside this browser. The link is saved and kept the next time you open the app, and conversation, memory, and persona rules apply the same way.',
+                installFile: 'Link GGUF file',
+                customModel: 'Linked GGUF',
+                guideTitle: 'Hugging Face GGUF Link Guide',
                 guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
-                    `Press "${downloadLabel}" on a recommended model to download its .gguf file from Hugging Face to your PC. For models that require accepting terms, sign in to Hugging Face and accept the terms on the model page first.`,
-                    `Press "${installLabel}" and choose the downloaded .gguf file; it is copied into this browser's storage (OPFS). After the copy finishes you can delete the original file on your PC. Each file must be 2 GB or smaller, and any other GGUF file can be installed the same way.`,
-                    `Choose "${useLabel}" on an installed model to load it. When loading finishes, you can chat with the selected spirit right away.`,
+                    `Use a recommended model's "Direct HTTP link" to download its .gguf file into any folder on your PC. For models that require accepting terms, sign in to Hugging Face and accept the terms on the model page first. ("${downloadLabel}" is only available in the Android app.)`,
+                    `Press "${installLabel}" and choose that .gguf file once; its location is saved. The file is not copied, so if you move or delete the original you need to link it again. Each file must be 2 GB or smaller.`,
+                    `Choose "${useLabel}" on a linked model to load it straight from the original file. When the browser is reopened it may ask once more for permission to read the file.`,
                     'If Chrome\'s WebGPU is available the model runs on the GPU; otherwise it runs on the CPU and is slower. To use multiple CPU threads, the site must be served with the Cross-Origin-Opener-Policy: same-origin and Cross-Origin-Embedder-Policy: require-corp headers.',
-                    `Remove models you no longer need with "${removeLabel}". Removing the model in use switches back to the Chrome on-device model.`,
+                    `"${removeLabel}" only removes the link and leaves the original file on your PC. Unlinking the model in use switches back to the Chrome on-device model.`,
                 ],
             },
             litert_lm: {
@@ -1338,6 +1399,35 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelRemove: 'Remove',
         localModelOpenPage: 'Hugging Face page',
         localModelDownload: 'Download',
+        localModelHttpLink: 'Direct HTTP link',
+        nativeHostModel: {
+            title: 'EverSoul Native exe Model (by path)',
+            description: 'Enter the path of a model file on your PC and the EverSoul native exe reads and runs it directly from that path. Browsers other than Chrome can chat the same way, and the path and settings are saved in this app and in the exe settings file so they stay in place.',
+            modelName: 'Native exe model',
+            hostReady: 'exe connected',
+            hostUnavailable: (detail) => `exe not connected (${detail}) · the saved path is applied once the exe connects`,
+            pathMissing: 'No model path has been saved yet',
+            savedPath: (path) => `Saved path ${path}`,
+            resolvedPath: (path) => `Model file found by the exe ${path}`,
+            modelMissing: 'No .litertlm or .task model file was found at the saved path',
+            loaded: 'Model loaded',
+            notLoaded: 'The model loads when a chat starts',
+            errorDetail: (error) => `exe error ${error}`,
+            pathLabel: 'Model file or folder path',
+            pathPlaceholder: 'C:\\Models\\gemma-4-E2B-it.litertlm  or  /home/user/models/',
+            pathHint: 'Enter an absolute path: C:\\folder\\file with \\ on Windows, /folder/file with / on Linux and macOS. If you enter a folder, the single model file inside it is used.',
+            contextWindowLabel: 'Context size (tokens)',
+            save: 'Save path',
+            saving: 'Saving...',
+            recommendedTitle: 'Hugging Face LiteRT-LM models for the exe',
+            guideTitle: 'Native exe Model Setup Guide',
+            guideSteps: [
+                'In storage settings, set the EverSoul native exe path and connect it. The exe must be running to read the model.',
+                'Download a recommended model below into any folder on your PC with its "Direct HTTP link". For models that require accepting terms, sign in to Hugging Face first.',
+                'Enter the absolute path of the downloaded file, or of the folder that contains it, and press "Save path". The path is saved without copying anything and stays in place the next time you open the app.',
+                'Choose "Use for chat" and the exe loads the model from that path and replies when a chat starts.',
+            ],
+        },
         localModelGated: 'Requires signing in to Hugging Face and accepting the model terms before downloading',
         localModelBackend: (backend) => `Backend ${backend}`,
         localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `License ${license}`].filter((part) => part !== null).join(' · '),
@@ -1841,6 +1931,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             android_app: '这是在本设备上由 Google LiteRT-LM 引擎运行的设备端 AI 模型。请安装并选择用于对话的模型。加载模型时会优先尝试 GPU 后端，无法使用时改用 CPU 后端运行。',
         },
         modelRoleChat: '对话生成 · Prompt API (Gemini Nano)',
+        modelRoleAndroidGeminiNano: '对话生成 · Android AICore (Gemini Nano)',
+        modelAndroidGeminiNanoUnsupported: '此设备不支持 AICore Gemini Nano（需要 Android 12 及以上且支持 AICore 的设备）',
         modelLanguageSupport: (languageTag, declared) => declared
             ? `对话语言 ${languageTag}：以 Chrome 官方支持语言创建会话`
             : `对话语言 ${languageTag}：不在 Chrome 官方支持列表中 · 使用模型基础能力对话`,
@@ -1856,16 +1948,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelSections: {
             gguf: {
                 title: 'Hugging Face GGUF 模型',
-                description: '除了 Chrome 设备端模型，你也可以在此浏览器中运行 Hugging Face 的 GGUF 模型。模型文件只保存在这台电脑的浏览器存储（OPFS）中，对话、记忆、角色设定和禁用表情符号的规则同样适用。',
-                installFile: '安装 GGUF 文件',
-                customModel: '手动安装的 GGUF',
-                guideTitle: 'Hugging Face 模型安装指南',
+                description: '将电脑中已下载的 Hugging Face GGUF 文件原地关联（不复制），在此浏览器中运行。关联会被保存，下次打开时仍然保留，对话、记忆和角色设定规则同样适用。',
+                installFile: '关联 GGUF 文件',
+                customModel: '已关联的 GGUF',
+                guideTitle: 'Hugging Face GGUF 关联指南',
                 guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
-                    `点击推荐模型的“${downloadLabel}”，从 Hugging Face 将 .gguf 文件下载到电脑。需要同意条款的模型，请先登录 Hugging Face 并在模型页面同意条款后再下载。`,
-                    `点击“${installLabel}”并选择下载的 .gguf 文件，文件会被复制到此浏览器的存储（OPFS）中。复制完成后可以删除电脑上的原始文件。单个文件必须不超过 2GB，其他 GGUF 文件也可以用同样的方法安装。`,
-                    `选择已安装模型的“${useLabel}”即可加载模型。加载完成后即可与所选精灵对话。`,
+                    `通过推荐模型的“HTTP 直链”将 .gguf 文件下载到电脑中的任意文件夹。需要同意条款的模型，请先登录 Hugging Face 并在模型页面同意条款后再下载。（“${downloadLabel}”仅限 Android 应用。）`,
+                    `点击“${installLabel}”并选择该 .gguf 文件一次，文件位置就会被保存。文件不会被复制，如果移动或删除原文件，需要重新关联。单个文件必须不超过 2GB。`,
+                    `选择已关联模型的“${useLabel}”即可直接从原文件加载。重新打开浏览器时，可能会再次请求读取文件的权限。`,
                     '如果可以使用 Chrome 的 WebGPU，则在 GPU 上运行；否则在 CPU 上运行，速度较慢。若要使用多个 CPU 线程，网站必须以 Cross-Origin-Opener-Policy: same-origin 和 Cross-Origin-Embedder-Policy: require-corp 标头提供。',
-                    `不再需要的模型可以用“${removeLabel}”从浏览器存储中删除。删除正在使用的模型后会切换回 Chrome 设备端模型。`,
+                    `“${removeLabel}”只会解除关联，电脑中的原文件保持不变。解除正在使用的模型后会切换回 Chrome 设备端模型。`,
                 ],
             },
             litert_lm: {
@@ -1890,6 +1982,35 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelRemove: '删除',
         localModelOpenPage: 'Hugging Face 页面',
         localModelDownload: '下载',
+        localModelHttpLink: 'HTTP 直链',
+        nativeHostModel: {
+            title: 'EverSoul 原生 exe 模型（指定路径）',
+            description: '指定电脑中模型文件的路径后，EverSoul 原生 exe 会直接从该路径读取并运行。非 Chrome 浏览器也可以用同样的方式对话，路径和设置会保存在本应用和 exe 设置文件中并一直保留。',
+            modelName: '原生 exe 模型',
+            hostReady: 'exe 已连接',
+            hostUnavailable: (detail) => `exe 未连接（${detail}）· 已保存的路径会在 exe 连接后生效`,
+            pathMissing: '尚未保存模型路径',
+            savedPath: (path) => `已保存的路径 ${path}`,
+            resolvedPath: (path) => `exe 找到的模型文件 ${path}`,
+            modelMissing: '在已保存的路径中找不到 .litertlm 或 .task 模型文件',
+            loaded: '模型已加载',
+            notLoaded: '开始对话时加载模型',
+            errorDetail: (error) => `exe 错误 ${error}`,
+            pathLabel: '模型文件或文件夹路径',
+            pathPlaceholder: 'C:\\Models\\gemma-4-E2B-it.litertlm  或  /home/user/models/',
+            pathHint: '请输入绝对路径：Windows 使用 \\，如 C:\\文件夹\\文件；Linux 和 macOS 使用 /，如 /文件夹/文件。指定文件夹时会使用其中唯一的模型文件。',
+            contextWindowLabel: '上下文大小（tokens）',
+            save: '保存路径',
+            saving: '正在保存...',
+            recommendedTitle: '可在 exe 中使用的 Hugging Face LiteRT-LM 模型',
+            guideTitle: '原生 exe 模型设置指南',
+            guideSteps: [
+                '在存储设置中指定 EverSoul 原生 exe 的路径并连接。exe 必须正在运行才能读取模型。',
+                '通过下方推荐模型的“HTTP 直链”将 .litertlm 文件下载到电脑中的任意文件夹。需要同意条款的模型，请先登录 Hugging Face。',
+                '输入下载文件或所在文件夹的绝对路径，然后点击“保存路径”。路径不会复制任何文件，保存后下次打开时仍然保留。',
+                '选择“用于对话”后，开始对话时 exe 会从该路径加载模型并回复。',
+            ],
+        },
         localModelGated: '需要登录 Hugging Face 并同意模型条款后才能下载',
         localModelBackend: (backend) => `后端 ${backend}`,
         localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `许可证 ${license}`].filter((part) => part !== null).join(' · '),

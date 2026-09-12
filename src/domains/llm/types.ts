@@ -18,7 +18,38 @@ export interface LanguageModelLanguagePlan {
     availability: OnDeviceModelAvailability;
 }
 export type LocalModelEngineKind = 'gguf' | 'litert_lm';
-export type ChatModelEngineKind = 'chrome_prompt' | LocalModelEngineKind;
+export type ChatModelEngineKind = 'chrome_prompt' | 'android_gemini_nano' | 'native_host' | LocalModelEngineKind;
+export interface AndroidGeminiNanoModelEntry {
+    engine: 'android_gemini_nano';
+    id: string;
+    api_supported: boolean;
+    availability: OnDeviceModelAvailability;
+    error_message: string | null;
+    context_window: number | null;
+    selected: boolean;
+}
+export interface NativeHostRecommendedModel {
+    source: HuggingFaceModelSource;
+    page_url: string;
+    download_url: string;
+}
+export interface NativeHostModelEntry {
+    engine: 'native_host';
+    id: string;
+    host_available: boolean;
+    host_detail: string;
+    saved_model_path: string;
+    saved_context_window: number;
+    configured_model_path: string | null;
+    resolved_model_path: string | null;
+    model_found: boolean;
+    loaded: boolean;
+    context_window: number | null;
+    backend: string | null;
+    error: string | null;
+    recommended_models: NativeHostRecommendedModel[];
+    selected: boolean;
+}
 export interface ChromePromptModelEntry {
     engine: 'chrome_prompt';
     id: string;
@@ -52,7 +83,8 @@ export interface LocalModelFileEntry {
     context_window: number | null;
     selected: boolean;
 }
-export type ChatModelEntry = ChromePromptModelEntry | LocalModelFileEntry;
+export type OnDeviceSystemModelEntry = ChromePromptModelEntry | AndroidGeminiNanoModelEntry;
+export type ChatModelEntry = OnDeviceSystemModelEntry | LocalModelFileEntry | NativeHostModelEntry;
 export interface ChatModelCatalog {
     app_language: AppLanguage;
     entries: ChatModelEntry[];
@@ -132,7 +164,19 @@ export interface OnDeviceTextMessage {
 export interface StructuredReplySpec {
     name: string;
     json_schema: Record<string, unknown>;
-    soft_prefix: string;
+}
+export interface LocalSamplingParameters {
+    top_k: number;
+    top_p: number;
+    temperature: number;
+    seed: number;
+}
+export interface LocalGenerationPayload {
+    system_prompt: string;
+    messages: OnDeviceTextMessage[];
+    response_schema: string | null;
+    max_output_tokens: number;
+    sampling: LocalSamplingParameters;
 }
 export interface PersonaSessionPrompt {
     system_prompt: string;

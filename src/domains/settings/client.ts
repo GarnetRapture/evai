@@ -1,4 +1,5 @@
 import { DomainError } from '../../shared/errors';
+import { normalizeAbsoluteLocalPath } from '../../shared/files';
 import { normalizeAppLanguage } from '../../shared/i18n';
 import { EVERSOUL_STORE, clearStores, countStoreRecords, getEverSoulDatabase } from '../../shared/storage';
 import type { AppLanguage } from '../../shared/types';
@@ -25,11 +26,8 @@ function assertLanguage(language: string): AppLanguage {
 }
 
 function normalizeNativeExecutablePath(path: string): string {
-    const normalized = path.trim().replace(/^"|"$/gu, '');
-    if (normalized.length === 0) return '';
-    const isWindowsAbsolute = /^(?:[A-Za-z]:[\\/]|\\\\)/u.test(normalized);
-    const isPosixAbsolute = normalized.startsWith('/');
-    if ((!isWindowsAbsolute && !isPosixAbsolute) || normalized.length > 1_024) {
+    const normalized = normalizeAbsoluteLocalPath(path);
+    if (normalized === null) {
         throw new DomainError('validation', path);
     }
     return normalized;

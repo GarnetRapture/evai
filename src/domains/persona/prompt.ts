@@ -2,6 +2,7 @@ import type { AppLanguage } from '../../shared/types';
 import { findPersonalityPreset, findSpeechPreset } from './presets';
 import { buildPersonaLanguageSlice } from './slice';
 import { ADDRESS_TERM_CANDIDATES_BY_LANGUAGE, measurePersonaSpeechProfile } from './speech';
+import { describePersonaVoiceRegister, resolvePersonaVoiceRegister } from './voice';
 import type {
     AssembledPersonaPrompt,
     PersonaCheatPreset,
@@ -12,6 +13,7 @@ import type {
     PersonaProfileMentionKind,
     PersonaPromptIdentity,
     PersonaSpeechProfile,
+    PersonaSpeechRegister,
     PersonaSpeechStyle,
     SpiritDetail,
 } from './types';
@@ -88,14 +90,16 @@ function speechSampleLines(messages: string[]): string {
 
 export function describePersonaSpeechStyle(style: PersonaSpeechStyle): string {
     const shape = style.messages_per_turn >= 2
-        ? `about ${style.messages_per_turn} short messages in a row, each on its own line, around ${style.message_length} characters each`
+        ? `short chat messages of around ${style.message_length} characters, split over a few lines the way you text, where every message adds something new and never restates another in different words`
         : `one short message of around ${style.message_length} characters`;
     return style.signature_marks.length === 0 ? shape : `${shape}, often using ${style.signature_marks.join(' ')}`;
 }
 
-function speakingSection(speechProfile: PersonaSpeechProfile): string {
+function speakingSection(speechProfile: PersonaSpeechProfile, voiceRegister: PersonaSpeechRegister | null): string {
+    const registerDescription = describePersonaVoiceRegister(voiceRegister);
     const lines = [
         speechProfile.style === null ? '' : `How your messages look: ${describePersonaSpeechStyle(speechProfile.style)}.`,
+        registerDescription === null ? '' : `You always speak in ${registerDescription}.`,
         speechProfile.solo_lines.length === 0
             ? ''
             : `Lines you have said before. Match their vocabulary, sentence endings, and rhythm without repeating them word for word.\n${speechSampleLines(speechProfile.solo_lines)}`,
@@ -157,7 +161,7 @@ function replyRulesSection(identity: PersonaPromptIdentity, language: AppLanguag
     const speechInstruction = cheatPreset === null ? '' : findSpeechPreset(cheatPreset.speech_preset).instructions[language];
     return '[HOW YOU REPLY]\n'
         + `- Write only in ${PERSONA_OUTPUT_LANGUAGE_NAME[language]}.\n`
-        + (speechInstruction.length > 0 ? `- Speaking style: ${speechInstruction} This style overrides the samples below.\n` : '')
+        + (speechInstruction.length > 0 ? `- Voice layer: keep your own vocabulary, rhythm, and habits from [YOUR WAY OF SPEAKING], and lay this tone over them: ${speechInstruction}\n` : '')
         + `- Reply as ${identity.name} texting ${address}, in the short, natural lines shown under [YOUR WAY OF SPEAKING].\n`
         + `- Every reply is one JSON object. "messages" holds the chat messages you send, one short message per item, exactly as you would type them. "action" holds one short thing you physically do right now, written as a brief stage direction, or "" when you do nothing; it is shown as a status, never as your words. Never put actions inside "messages", and never write tags or markup.\n`
         + `- Turns marked ${PERSONA_REHEARSAL_MARKER} before the live chat are exchanges from your past, kept only as a model of your voice and reply format. They are not part of this conversation.\n`
@@ -179,7 +183,7 @@ function personaPromptBody(
     const personalityInstruction = cheatPreset === null ? '' : findPersonalityPreset(cheatPreset.personality_preset).instruction;
     const personalitySection = [
         personality ?? '',
-        personalityInstruction.length > 0 ? `Right now this side of you is strongest: ${personalityInstruction}` : '',
+        personalityInstruction.length > 0 ? `Everything above stays who you are. On top of it, this side of you comes forward more right now: ${personalityInstruction}` : '',
     ].filter((line) => line.length > 0).join('\n');
     const sections = [
         identitySection(identity),
@@ -187,7 +191,7 @@ function personaPromptBody(
         replyRulesSection(identity, language, cheatPreset),
         `[PROFILE]\n${profileLines(slice)}`,
         personalitySection.length === 0 ? '' : `[PERSONALITY]\n${personalitySection}`,
-        speakingSection(speechProfile),
+        speakingSection(speechProfile, resolvePersonaVoiceRegister(speechProfile.style, cheatPreset)),
     ];
     return sections.filter((section) => section.length > 0).join('\n\n');
 }
@@ -226,6 +230,7 @@ export function buildPersonaSystemPrompt(
         greeting: knownProfileValue(override?.greeting ?? '') ?? knownProfileValue(slice.greeting) ?? '',
         address_term: identity.address_term,
         dialogue_excluded_terms: buildPersonaDialogueExcludedTerms(slice, language, identity.address_term),
+        voice_register: resolvePersonaVoiceRegister(speechProfile.style, cheatPreset),
     };
 }
 

@@ -14,9 +14,10 @@
 #include <string_view>
 #include <utility>
 
-#include <sqlite3.h>
+#include <vector>
 
-#include "eversoul/format/json_value.h"
+#include <nlohmann/json.hpp>
+#include <sqlite3.h>
 
 #ifdef _WIN32
 #include <fcntl.h>
@@ -31,14 +32,15 @@
 
 namespace {
 
-using eversoul::format::JsonValue;
+using JsonValue = nlohmann::json;
 using eversoul::native::ContextDatabase;
 using eversoul::native::GenerationStatus;
 using eversoul::native::ModelConfiguration;
 using eversoul::native::ModelRuntimeStatus;
 using eversoul::native::NativeChatMessage;
-using eversoul::native::NativeGenerationPrompt;
+using eversoul::native::NativeGenerationRequest;
 using eversoul::native::NativeModelRuntime;
+using eversoul::native::NativeSamplingParameters;
 using eversoul::native::jsonEscape;
 
 constexpr std::uint32_t kMaximumFrameBytes = 8U * 1024U * 1024U;
@@ -67,6 +69,7 @@ std::string modelStatusJson(const ModelRuntimeStatus& status) {
         + ",\"resolved_model_path\":" + nullablePathJson(status.resolvedModelPath)
         + ",\"runtime_path\":" + nullablePathJson(status.runtimePath)
         + ",\"backend\":\"" + jsonEscape(status.backend) + "\""
+        + ",\"active_backend\":" + (status.activeBackend.empty() ? "null" : "\"" + jsonEscape(status.activeBackend) + "\"")
         + ",\"architecture\":\"" + jsonEscape(status.architecture) + "\""
         + ",\"context_window\":" + std::to_string(status.contextWindow)
         + ",\"error\":" + (status.error.empty() ? "null" : "\"" + jsonEscape(status.error) + "\"") + '}';
@@ -367,83 +370,106 @@ std::uint64_t currentProcessId() {
 #endif
 }
 
+const JsonValue* findMember(const JsonValue& request, std::string_view key) {
+    if (!request.is_object()) return nullptr;
+    const auto found = request.find(key);
+    return found == request.end() ? nullptr : &*found;
+}
+
+bool hasMember(const JsonValue& request, std::string_view key) {
+    return findMember(request, key) != nullptr;
+}
+
 std::string requiredString(const JsonValue& request, std::string_view key) {
-    const JsonValue* value = request.find(key);
+    const JsonValue* value = findMember(request, key);
     if (value == nullptr) {
         throw std::runtime_error("missing_" + std::string(key));
     }
-    auto text = value->asString();
-    if (!text) {
+    if (!value->is_string()) {
         throw std::runtime_error("invalid_" + std::string(key));
     }
-    return std::string(*text);
+    return value->get<std::string>();
 }
 
 std::string optionalString(const JsonValue& request, std::string_view key) {
-    const JsonValue* value = request.find(key);
-    if (value == nullptr) {
-        return {};
-    }
-    auto text = value->asString();
-    return text ? std::string(*text) : std::string{};
+    const JsonValue* value = findMember(request, key);
+    return value != nullptr && value->is_string() ? value->get<std::string>() : std::string{};
 }
 
 std::vector<std::string> optionalStringArray(const JsonValue& request, std::string_view key) {
-    const JsonValue* value = request.find(key);
+    const JsonValue* value = findMember(request, key);
     if (value == nullptr) return {};
-    auto array = value->asArray();
-    if (!array) throw std::runtime_error("invalid_" + std::string(key));
+    if (!value->is_array()) throw std::runtime_error("invalid_" + std::string(key));
     std::vector<std::string> result;
-    for (const JsonValue& entry : **array) {
-        auto text = entry.asString();
-        if (!text) throw std::runtime_error("invalid_" + std::string(key));
-        result.emplace_back(*text);
+    for (const JsonValue& entry : *value) {
+        if (!entry.is_string()) throw std::runtime_error("invalid_" + std::string(key));
+        result.push_back(entry.get<std::string>());
     }
     return result;
 }
 
-const eversoul::format::JsonArray& requiredArray(const JsonValue& request, std::string_view key) {
-    const JsonValue* value = request.find(key);
+const JsonValue& requiredArray(const JsonValue& request, std::string_view key) {
+    const JsonValue* value = findMember(request, key);
     if (value == nullptr) throw std::runtime_error("missing_" + std::string(key));
-    auto array = value->asArray();
-    if (!array) throw std::runtime_error("invalid_" + std::string(key));
-    return **array;
+    if (!value->is_array()) throw std::runtime_error("invalid_" + std::string(key));
+    return *value;
 }
 
 int optionalInt(const JsonValue& request, std::string_view key, int fallback) {
-    const JsonValue* value = request.find(key);
+    const JsonValue* value = findMember(request, key);
     if (value == nullptr) {
         return fallback;
     }
-    auto number = value->asNumber();
-    if (!number || *number < 0 || *number > static_cast<double>(std::numeric_limits<int>::max())) {
+    if (!value->is_number_integer() || value->get<std::int64_t>() < 0
+        || value->get<std::int64_t>() > std::numeric_limits<int>::max()) {
         throw std::runtime_error("invalid_" + std::string(key));
     }
-    return static_cast<int>(*number);
+    return static_cast<int>(value->get<std::int64_t>());
 }
 
-NativeGenerationPrompt generationPrompt(const JsonValue& request) {
-    NativeGenerationPrompt prompt;
-    prompt.systemPrompt = optionalString(request, "system_prompt");
-    prompt.responsePrefix = optionalString(request, "response_prefix");
+float requiredUnitNumber(const JsonValue& request, std::string_view key) {
+    const JsonValue* value = findMember(request, key);
+    if (value == nullptr) throw std::runtime_error("missing_" + std::string(key));
+    if (!value->is_number()) throw std::runtime_error("invalid_" + std::string(key));
+    return value->get<float>();
+}
+
+NativeSamplingParameters samplingParameters(const JsonValue& request) {
+    NativeSamplingParameters sampling;
+    const JsonValue* value = findMember(request, "sampling");
+    if (value == nullptr) return sampling;
+    if (!value->is_object()) throw std::runtime_error("invalid_sampling");
+    sampling.topK = optionalInt(*value, "top_k", sampling.topK);
+    sampling.topP = requiredUnitNumber(*value, "top_p");
+    sampling.temperature = requiredUnitNumber(*value, "temperature");
+    sampling.seed = optionalInt(*value, "seed", sampling.seed);
+    return sampling;
+}
+
+NativeGenerationRequest generationRequest(const JsonValue& request) {
+    NativeGenerationRequest generation;
+    generation.systemPrompt = optionalString(request, "system_prompt");
+    generation.responseSchema = optionalString(request, "response_schema");
+    generation.maxOutputTokens = optionalInt(request, "max_output_tokens", generation.maxOutputTokens);
+    generation.sampling = samplingParameters(request);
     for (const JsonValue& entry : requiredArray(request, "messages")) {
         const std::string role = requiredString(entry, "role");
         if (role != "user" && role != "assistant") throw std::runtime_error("invalid_message_role");
-        prompt.messages.push_back(NativeChatMessage{role, requiredString(entry, "content")});
+        generation.messages.push_back(NativeChatMessage{role, requiredString(entry, "content")});
     }
-    return prompt;
+    return generation;
 }
 
 ModelConfiguration modelConfiguration(const JsonValue& request, const NativeModelRuntime& runtime) {
     ModelConfiguration configuration = runtime.configuration();
-    if (const JsonValue* value = request.find("model_path"); value != nullptr) {
-        auto text = value->asString();
-        if (!text || text->empty()) throw std::runtime_error("invalid_model_path");
-        configuration.modelPath = pathFromUtf8(std::string(*text));
+    if (hasMember(request, "model_path")) {
+        const std::string path = requiredString(request, "model_path");
+        if (path.empty()) throw std::runtime_error("invalid_model_path");
+        configuration.modelPath = pathFromUtf8(path);
     }
-    if (request.find("model_file") != nullptr) configuration.modelFile = optionalString(request, "model_file");
-    if (request.find("runtime_path") != nullptr) configuration.runtimePath = pathFromUtf8(optionalString(request, "runtime_path"));
-    if (request.find("backend") != nullptr) configuration.backend = optionalString(request, "backend");
+    if (hasMember(request, "model_file")) configuration.modelFile = optionalString(request, "model_file");
+    if (hasMember(request, "runtime_path")) configuration.runtimePath = pathFromUtf8(optionalString(request, "runtime_path"));
+    if (hasMember(request, "backend")) configuration.backend = requiredString(request, "backend");
     configuration.contextWindow = optionalInt(request, "context_window", configuration.contextWindow);
     return configuration;
 }
@@ -456,10 +482,11 @@ std::string handleRequest(
     const std::filesystem::path& databasePath,
     const std::filesystem::path& settingsPath,
     DisplayLanguage displayLanguage) {
-    auto parsed = eversoul::format::parseJson(payload);
-    if (!parsed || !parsed->isObject()) {
+    const JsonValue request = JsonValue::parse(payload, nullptr, false);
+    if (request.is_discarded() || !request.is_object()) {
         throw std::runtime_error("invalid_json_request");
     }
+    const JsonValue* parsed = &request;
     const std::string operation = requiredString(*parsed, "operation");
     if (operation == "health") {
         const auto fileBytes = [](const std::filesystem::path& path) -> std::uintmax_t {
@@ -494,9 +521,9 @@ std::string handleRequest(
         return "{\"ok\":true,\"model\":" + modelStatusJson(modelRuntime.status()) + '}';
     }
     if (operation == "load_model") {
-        if (parsed->find("model_path") != nullptr || parsed->find("model_file") != nullptr
-            || parsed->find("runtime_path") != nullptr || parsed->find("backend") != nullptr
-            || parsed->find("context_window") != nullptr) {
+        if (hasMember(*parsed, "model_path") || hasMember(*parsed, "model_file")
+            || hasMember(*parsed, "runtime_path") || hasMember(*parsed, "backend")
+            || hasMember(*parsed, "context_window")) {
             modelRuntime.configure(modelConfiguration(*parsed, modelRuntime), true);
         }
         modelRuntime.load();
@@ -508,8 +535,7 @@ std::string handleRequest(
     }
     if (operation == "start_generation") {
         const std::string requestId = requiredString(*parsed, "request_id");
-        modelRuntime.startGeneration(
-            requestId, generationPrompt(*parsed), optionalInt(*parsed, "max_output_tokens", 512));
+        modelRuntime.startGeneration(requestId, generationRequest(*parsed));
         return "{\"ok\":true,\"generation\":"
             + generationStatusJson(modelRuntime.generationStatus(requestId)) + '}';
     }
@@ -525,8 +551,7 @@ std::string handleRequest(
     }
     if (operation == "generate") {
         const std::string requestId = requiredString(*parsed, "request_id");
-        modelRuntime.startGeneration(
-            requestId, generationPrompt(*parsed), optionalInt(*parsed, "max_output_tokens", 512));
+        modelRuntime.startGeneration(requestId, generationRequest(*parsed));
         return "{\"ok\":true,\"generation\":"
             + generationStatusJson(modelRuntime.waitForGeneration(requestId)) + '}';
     }

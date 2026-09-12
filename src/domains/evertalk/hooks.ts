@@ -7,9 +7,10 @@ import { authClient, type UserSession } from '../auth';
 import { DEFAULT_MEMORY_CONTEXT_FILTER, PROACTIVE_CHECK_INTERVAL_MS, PROACTIVE_INITIAL_DELAY_MS, chatClient, type ChatMessage, type ChatRoom, type MemoryContextKind, type PersonaMemoryInsight } from '../chat';
 import {
     LOCAL_MODEL_INSTALL_PREPARATION_IDS,
+    NATIVE_HOST_MODEL_ID,
     llmClient,
     type ChatModelCatalog,
-    type ChromePromptModelEntry,
+    type OnDeviceSystemModelEntry,
     type LocalModelEngineKind,
     type LocalModelFileEntry,
     type LlmRequestStatus,
@@ -1008,13 +1009,13 @@ export function useEverTalkController(): EverTalkController {
         }
     }
 
-    async function prepareChromePromptModel(entry: ChromePromptModelEntry) {
+    async function prepareOnDeviceSystemModel(entry: OnDeviceSystemModelEntry) {
         if (modelPreparation !== null) {
             return;
         }
         setModelPreparation({ model_id: entry.id, progress: { ratio: 0, done: false }, error: null });
         try {
-            const catalog = await llmClient.prepareChromePromptModel((progress) => {
+            const catalog = await llmClient.prepareOnDeviceSystemModel(entry, (progress) => {
                 setModelPreparation({ model_id: entry.id, progress, error: null });
             });
             setModelCatalog(catalog);
@@ -1070,6 +1071,23 @@ export function useEverTalkController(): EverTalkController {
             setModelPreparation(null);
             setModelCatalogError(formatUnknownError(err, labels));
             await refreshModelCatalog();
+        }
+    }
+
+    async function saveNativeHostModelPath(modelPath: string, contextWindow: number) {
+        try {
+            setModelCatalog(await llmClient.saveNativeHostModelPath(modelPath, contextWindow));
+            setAppSettings(await settingsClient.get());
+            setModelCatalogError(null);
+            syncClient.scheduleAutomaticBackup();
+            if (appSettings?.active_model === NATIVE_HOST_MODEL_ID) {
+                await refreshLlmStatus();
+                await refocusActiveSpiritSession();
+            }
+        }
+        catch (err) {
+            console.error(labels.logLocalModelChangeFailed, err);
+            setModelCatalogError(formatUnknownError(err, labels));
         }
     }
 
@@ -1560,9 +1578,10 @@ export function useEverTalkController(): EverTalkController {
         refreshEnvironment,
         refreshModelCatalog,
         selectChatModel,
-        prepareChromePromptModel,
+        prepareOnDeviceSystemModel,
         installLocalModel,
         downloadLocalModel,
+        saveNativeHostModelPath,
         removeLocalModel,
         modelLoadingId,
         exportBackup,

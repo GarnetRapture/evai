@@ -13,9 +13,12 @@ export {
     clearStores,
     countStoreRecords,
     exportDatabaseSnapshot,
+    listLinkedFileHandles,
     parseDatabaseSnapshot,
     readBackupDirectoryHandle,
     removeBackupDirectoryHandle,
+    removeLinkedFileHandle,
     restoreDatabaseSnapshot,
     saveBackupDirectoryHandle,
+    saveLinkedFileHandle,
 } from './snapshot';

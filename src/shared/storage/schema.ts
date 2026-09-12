@@ -98,7 +98,7 @@ export interface EverSoulDatabaseSchema extends DBSchema {
     };
     file_handle: {
         key: string;
-        value: FileSystemDirectoryHandle;
+        value: FileSystemDirectoryHandle | FileSystemFileHandle;
     };
 }
 

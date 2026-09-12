@@ -5,12 +5,13 @@ import type { UserSession } from '../auth';
 import type { ChatMessage, ChatRoom, MemoryContextFilter, MemoryContextKind, PersonaMemoryInsight } from '../chat';
 import type {
     ChatModelCatalog,
-    ChromePromptModelEntry,
+    OnDeviceSystemModelEntry,
     LlmRequestStatus,
     LlmSessionStatus,
     LlmStatus,
     LocalModelEngineKind,
     LocalModelFileEntry,
+    NativeHostModelEntry,
     ModelPreparationState,
 } from '../llm';
 import type { ImportedModule, ModuleControl } from '../modules';
@@ -109,8 +110,10 @@ export type ImageViewerPanDirection = 'up' | 'down' | 'left' | 'right';
 export interface WorkspacePageProps {
     controller: EverTalkController;
 }
+export type WorkspaceSurfaceLayout = 'document' | 'canvas';
 export interface WorkspaceSurfaceProps extends WorkspacePageProps {
     labelledBy: string;
+    layout?: WorkspaceSurfaceLayout;
     children: React.ReactNode;
 }
 export interface CheatPresetGridProps<Id extends string> {
@@ -150,6 +153,31 @@ export interface MemoryGraphViewFilter {
     activeOnly: boolean;
     memoryContextFilter: MemoryContextFilter;
 }
+export interface MemoryGraphViewportScroll {
+    left: number;
+    top: number;
+}
+export interface MemoryGraphPanSession {
+    pointerId: number;
+    startX: number;
+    startY: number;
+    origin: MemoryGraphViewportScroll;
+}
+export interface MemoryGraphViewportController {
+    viewportRef: React.RefObject<HTMLDivElement | null>;
+    zoom: number;
+    panning: boolean;
+    zoomIn: () => void;
+    zoomOut: () => void;
+    resetZoom: () => void;
+    fitZoom: () => void;
+    onPointerDown: (event: React.PointerEvent<HTMLDivElement>) => void;
+    onPointerMove: (event: React.PointerEvent<HTMLDivElement>) => void;
+    onPointerEnd: (event: React.PointerEvent<HTMLDivElement>) => void;
+}
+export interface MemoryGraphCanvasProps extends WorkspacePageProps {
+    graph: MemoryGraphLayout;
+}
 export interface ImageViewerOverlayProps {
     open: boolean;
     candidates: string[];
@@ -163,18 +191,15 @@ export interface SpiritReplyParts {
     reply: string;
     actions: string[];
 }
-export type SpiritReplyVariant = 'desktop' | 'mobile';
 export interface SpiritReplyContentProps {
     text: string;
     showReasoning: boolean;
-    variant: SpiritReplyVariant;
     innerThoughtsLabel: string;
     streaming: boolean;
     showActionStatus: boolean;
 }
 export interface SpiritActionStatusProps {
     actions: string[];
-    variant: SpiritReplyVariant;
 }
 export interface ChatMessageBubbleProps {
     message: ChatMessage;
@@ -421,10 +446,18 @@ export interface ModelCatalogSectionProps {
     labels: EverTalkLabels;
     onRefreshModelCatalog: () => Promise<void>;
     onSelectChatModel: (modelId: string) => Promise<void>;
-    onPrepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
+    onPrepareOnDeviceSystemModel: (entry: OnDeviceSystemModelEntry) => Promise<void>;
     onInstallLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
     onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
+    onSaveNativeHostModelPath: (modelPath: string, contextWindow: number) => Promise<void>;
+}
+export interface NativeHostModelItemProps {
+    entry: NativeHostModelEntry;
+    modelLoadingId: string | null;
+    labels: EverTalkLabels;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onSaveNativeHostModelPath: (modelPath: string, contextWindow: number) => Promise<void>;
 }
 export interface LocalModelEntryGroup {
     engine: LocalModelEngineKind;
@@ -442,13 +475,13 @@ export interface LocalModelSectionProps {
     onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
 }
-export interface ChromePromptModelItemProps {
-    entry: ChromePromptModelEntry;
+export interface OnDeviceSystemModelItemProps {
+    entry: OnDeviceSystemModelEntry;
     modelPreparation: ModelPreparationState | null;
     modelLoadingId: string | null;
     labels: EverTalkLabels;
     onSelectChatModel: (modelId: string) => Promise<void>;
-    onPrepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
+    onPrepareOnDeviceSystemModel: (entry: OnDeviceSystemModelEntry) => Promise<void>;
 }
 export interface LocalModelItemProps {
     appPlatform: AppPlatform;
@@ -700,9 +733,10 @@ export interface EverTalkController {
     refreshEnvironment: () => Promise<void>;
     refreshModelCatalog: () => Promise<void>;
     selectChatModel: (modelId: string) => Promise<void>;
-    prepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
+    prepareOnDeviceSystemModel: (entry: OnDeviceSystemModelEntry) => Promise<void>;
     installLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
     downloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
+    saveNativeHostModelPath: (modelPath: string, contextWindow: number) => Promise<void>;
     removeLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     exportBackup: () => Promise<void>;
     importBackup: () => Promise<void>;

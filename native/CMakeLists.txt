@@ -9,32 +9,26 @@ FetchContent_Declare(
     DOWNLOAD_EXTRACT_TIMESTAMP TRUE)
 FetchContent_MakeAvailable(sqlite_amalgamation)
 
-find_package(ZLIB QUIET)
-if(NOT ZLIB_FOUND AND MINGW)
-    get_filename_component(EVERSOUL_COMPILER_BIN_DIR "${CMAKE_CXX_COMPILER}" DIRECTORY)
-    get_filename_component(EVERSOUL_COMPILER_PREFIX "${EVERSOUL_COMPILER_BIN_DIR}" DIRECTORY)
-    find_path(EVERSOUL_ZLIB_INCLUDE_DIR zlib.h HINTS "${EVERSOUL_COMPILER_PREFIX}/include" NO_DEFAULT_PATH)
-    find_file(EVERSOUL_ZLIB_LIBRARY NAMES libz.a HINTS "${EVERSOUL_COMPILER_PREFIX}/lib" NO_DEFAULT_PATH)
-    if(EVERSOUL_ZLIB_INCLUDE_DIR AND EVERSOUL_ZLIB_LIBRARY)
-        add_library(ZLIB::ZLIB UNKNOWN IMPORTED)
-        set_target_properties(ZLIB::ZLIB PROPERTIES
-            IMPORTED_LOCATION "${EVERSOUL_ZLIB_LIBRARY}"
-            INTERFACE_INCLUDE_DIRECTORIES "${EVERSOUL_ZLIB_INCLUDE_DIR}")
-        set(ZLIB_FOUND TRUE)
-    endif()
-endif()
-if(NOT ZLIB_FOUND)
-    set(ZLIB_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-    set(ZLIB_BUILD_SHARED OFF CACHE BOOL "" FORCE)
-    set(SKIP_INSTALL_ALL ON CACHE BOOL "" FORCE)
-    FetchContent_Declare(
-        eversoul_zlib
-        GIT_REPOSITORY https://github.com/madler/zlib.git
-        GIT_TAG v1.3.1
-        GIT_SHALLOW TRUE)
-    FetchContent_MakeAvailable(eversoul_zlib)
-    add_library(ZLIB::ZLIB ALIAS zlibstatic)
-endif()
+FetchContent_Declare(
+    nlohmann_json
+    URL https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz
+    URL_HASH SHA256=42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa
+    DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+    SYSTEM)
+set(JSON_Install OFF CACHE INTERNAL "")
+FetchContent_MakeAvailable(nlohmann_json)
+
+set(EVERSOUL_LITERT_LM_RELEASE v0.16.0)
+FetchContent_Declare(
+    litert_lm_c_api
+    URL https://github.com/google-ai-edge/LiteRT-LM/releases/download/${EVERSOUL_LITERT_LM_RELEASE}/litert_lm_c_api-0.1.0.zip
+    URL_HASH SHA256=f0f3ae7b5730af783d1f018f7ad9a8de20c25fedf01af4e35fc11d4382246f7d
+    DOWNLOAD_EXTRACT_TIMESTAMP TRUE)
+FetchContent_MakeAvailable(litert_lm_c_api)
+
+set(EVERSOUL_LITERT_LM_INCLUDE_DIR "${CMAKE_CURRENT_BINARY_DIR}/litert_lm_include")
+configure_file("${litert_lm_c_api_SOURCE_DIR}/include/engine.h" "${EVERSOUL_LITERT_LM_INCLUDE_DIR}/c/engine.h" COPYONLY)
+configure_file("${litert_lm_c_api_SOURCE_DIR}/include/conversation.h" "${EVERSOUL_LITERT_LM_INCLUDE_DIR}/c/conversation.h" COPYONLY)
 
 add_library(eversoul_sqlite STATIC ${sqlite_amalgamation_SOURCE_DIR}/sqlite3.c)
 target_include_directories(eversoul_sqlite PUBLIC ${sqlite_amalgamation_SOURCE_DIR})
@@ -45,38 +39,12 @@ target_compile_definitions(eversoul_sqlite PRIVATE
     SQLITE_ENABLE_JSON1
     SQLITE_THREADSAFE=1)
 
-set(EVERSOUL_SHARED_CPP ${CMAKE_CURRENT_SOURCE_DIR}/../android/app/src/main/cpp)
 add_executable(eversoul-native-host
     src/main.cpp
     src/context_database.cpp
-    src/litert_runtime_loader.cpp
-    src/mapped_model_file.cpp
+    src/litert_lm_library.cpp
     src/model_runtime.cpp
-    src/native_code_point_classifier.cpp
-    src/native_settings.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/core/failure.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/format/byte_reader.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/format/flatbuffer_table.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/format/protobuf_reader.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/format/json_value.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/unicode/code_point_category.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/litertlm/container.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/litertlm/llm_metadata.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/litertlm/zlib_inflate.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/tokenizer/byte_level.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/tokenizer/pre_tokenizer.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/tokenizer/huggingface_tokenizer.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/tokenizer/sentencepiece_model.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/tokenizer/sentencepiece_tokenizer.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/tokenizer/tokenizer_factory.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/inference/tensor.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/inference/token_sampler.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/inference/chat_prompt.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/inference/stop_token_detector.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/inference/attention_mask.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/inference/generation_session.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/inference/engine.cpp
-    ${EVERSOUL_SHARED_CPP}/eversoul/inference/litert_compiled_graph.cpp)
+    src/native_settings.cpp)
 if(WIN32)
     file(TO_CMAKE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../public/favicon.ico" EVERSOUL_ICON_PATH)
     configure_file(src/eversoul_native_host.rc.in eversoul_native_host.rc @ONLY)
@@ -87,12 +55,9 @@ set_target_properties(eversoul-native-host PROPERTIES
     CXX_STANDARD 26
     CXX_STANDARD_REQUIRED ON
     CXX_EXTENSIONS OFF)
-target_include_directories(eversoul-native-host PRIVATE
-    src
-    ${EVERSOUL_SHARED_CPP})
-target_include_directories(eversoul-native-host SYSTEM PRIVATE
-    ${EVERSOUL_SHARED_CPP}/third_party)
-target_link_libraries(eversoul-native-host PRIVATE eversoul_sqlite ZLIB::ZLIB)
+target_include_directories(eversoul-native-host PRIVATE src)
+target_include_directories(eversoul-native-host SYSTEM PRIVATE ${EVERSOUL_LITERT_LM_INCLUDE_DIR})
+target_link_libraries(eversoul-native-host PRIVATE eversoul_sqlite nlohmann_json::nlohmann_json)
 
 string(TOLOWER "${CMAKE_SYSTEM_NAME}" EVERSOUL_PLATFORM)
 string(TOLOWER "${CMAKE_SYSTEM_PROCESSOR}" EVERSOUL_PROCESSOR)
@@ -113,6 +78,50 @@ if(EVERSOUL_NATIVE_OUTPUT_ROOT)
     set_target_properties(eversoul-native-host PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY "${EVERSOUL_NATIVE_OUTPUT_ROOT}/${EVERSOUL_PLATFORM}-${EVERSOUL_ARCH}")
 endif()
+
+set(EVERSOUL_LITERT_LM_PREBUILT_BASE_URL
+    "https://media.githubusercontent.com/media/google-ai-edge/LiteRT-LM/${EVERSOUL_LITERT_LM_RELEASE}/prebuilt")
+set(EVERSOUL_LITERT_LM_ACCELERATOR_DIR "${CMAKE_CURRENT_BINARY_DIR}/litert_lm_accelerators")
+if(WIN32 AND EVERSOUL_ARCH STREQUAL "x86_64")
+    set(EVERSOUL_LITERT_LM_PLATFORM windows_x86_64)
+    set(EVERSOUL_LITERT_LM_RUNTIME "${litert_lm_c_api_SOURCE_DIR}/lib/windows_x86_64/bin/litert-lm.dll")
+    set(EVERSOUL_LITERT_LM_ACCELERATORS
+        "libLiteRtWebGpuAccelerator.dll|c17cdb57e420a9c0b8cbad424dd8322c4e1f0e7be1773a4b6cb03bb96d3bde4c"
+        "libwebgpu_dawn.dll|e045ab52c99e48ab689a81d4988b90d64993cb602109f20f8444cc23e52a678d")
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux" AND EVERSOUL_ARCH STREQUAL "x86_64")
+    set(EVERSOUL_LITERT_LM_PLATFORM linux_x86_64)
+    set(EVERSOUL_LITERT_LM_RUNTIME "${litert_lm_c_api_SOURCE_DIR}/lib/linux_x86_64/liblitert-lm.so")
+    set(EVERSOUL_LITERT_LM_ACCELERATORS
+        "libLiteRtWebGpuAccelerator.so|488f6a64a6760b69a2930b82b71d4e77f731b0b2f1c33435888a6f61e375f5bd"
+        "libwebgpu_dawn.so|8cadd63e1ed84d29700ab0e7a785fc674727b128384c06afd1846258fec57945")
+elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux" AND EVERSOUL_ARCH STREQUAL "arm64")
+    set(EVERSOUL_LITERT_LM_PLATFORM linux_arm64)
+    set(EVERSOUL_LITERT_LM_RUNTIME "${litert_lm_c_api_SOURCE_DIR}/lib/linux_arm64/liblitert-lm.so")
+    set(EVERSOUL_LITERT_LM_ACCELERATORS
+        "libLiteRtWebGpuAccelerator.so|a8f9ee0653f38ca3be1d3d235763bacc25374fbb6de871b8d2a77df859e4010e"
+        "libwebgpu_dawn.so|8962a2dbcef04ce8c210a962a2dc17bced3675ffb584c84a87fdbb3957d46d28")
+else()
+    message(FATAL_ERROR "LiteRT-LM ${EVERSOUL_LITERT_LM_RELEASE} C API has no prebuilt runtime for ${CMAKE_SYSTEM_NAME}-${EVERSOUL_ARCH}")
+endif()
+
+set(EVERSOUL_LITERT_LM_DEPLOYED_FILES "${EVERSOUL_LITERT_LM_RUNTIME}")
+foreach(EVERSOUL_ACCELERATOR_ENTRY IN LISTS EVERSOUL_LITERT_LM_ACCELERATORS)
+    string(REPLACE "|" ";" EVERSOUL_ACCELERATOR_PARTS "${EVERSOUL_ACCELERATOR_ENTRY}")
+    list(GET EVERSOUL_ACCELERATOR_PARTS 0 EVERSOUL_ACCELERATOR_NAME)
+    list(GET EVERSOUL_ACCELERATOR_PARTS 1 EVERSOUL_ACCELERATOR_HASH)
+    set(EVERSOUL_ACCELERATOR_PATH "${EVERSOUL_LITERT_LM_ACCELERATOR_DIR}/${EVERSOUL_ACCELERATOR_NAME}")
+    file(DOWNLOAD
+        "${EVERSOUL_LITERT_LM_PREBUILT_BASE_URL}/${EVERSOUL_LITERT_LM_PLATFORM}/${EVERSOUL_ACCELERATOR_NAME}"
+        "${EVERSOUL_ACCELERATOR_PATH}"
+        EXPECTED_HASH SHA256=${EVERSOUL_ACCELERATOR_HASH}
+        TLS_VERIFY ON)
+    list(APPEND EVERSOUL_LITERT_LM_DEPLOYED_FILES "${EVERSOUL_ACCELERATOR_PATH}")
+endforeach()
+
+add_custom_command(TARGET eversoul-native-host POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different ${EVERSOUL_LITERT_LM_DEPLOYED_FILES} "$<TARGET_FILE_DIR:eversoul-native-host>"
+    VERBATIM)
+install(FILES ${EVERSOUL_LITERT_LM_DEPLOYED_FILES} DESTINATION "${EVERSOUL_PLATFORM}-${EVERSOUL_ARCH}")
 
 option(EVERSOUL_PORTABLE_CPU "Compile against the baseline ISA for the selected CPU architecture" ON)
 if(EVERSOUL_PORTABLE_CPU AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
