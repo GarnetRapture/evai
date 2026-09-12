@@ -1,5 +1,4 @@
 import type { ModelDownloadProgressHandler } from '../types';
-import { extractPersonaPriming } from '../personaPriming';
 
 export interface ChromeLanguageModelCreateRequest {
     declaredLanguageTag: string | null;
@@ -46,9 +45,8 @@ export async function createChromeLanguageModel(request: ChromeLanguageModelCrea
         samplingMode: request.samplingMode,
     };
     if (request.systemPrompt !== null) {
-        const priming = extractPersonaPriming(request.systemPrompt);
-        const systemMessage: LanguageModelSystemMessage = { role: 'system', content: priming.system_prompt };
-        options.initialPrompts = [systemMessage, ...priming.messages];
+        const systemMessage: LanguageModelSystemMessage = { role: 'system', content: request.systemPrompt };
+        options.initialPrompts = [systemMessage];
     }
     if (request.signal !== null) {
         options.signal = request.signal;

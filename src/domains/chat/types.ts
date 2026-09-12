@@ -55,7 +55,34 @@ export interface ChatStreamHandlers {
 export interface PersonaSystemPrompt {
     spirit_name: string;
     system_prompt: string;
+    greeting: string;
     address_term: string;
+    dialogue_excluded_terms: string[];
+}
+export type MemoryContextKind = 'digest' | 'semantic' | 'directive' | 'episodic' | 'habit' | 'affect' | 'knowledge';
+export type MemoryContextFilter = Record<MemoryContextKind, boolean>;
+export interface PersonaTurnContextSources {
+    digest_summary: string;
+    semantic_summary: string | null;
+    directives: string[];
+    episodic: string[];
+    habits: string[];
+    knowledge: string[];
+    emotion: import('./affect').PersonaEmotionState | null;
+    familiarity_level: number;
+    voice_examples: import('../persona/types').PersonaDialogueExchange[];
+}
+export interface PersonaTurnContextRequest {
+    persona_id: string;
+    language: import('../../shared/types').AppLanguage;
+    spirit_name: string;
+    address_term: string;
+    query: string;
+    digest_summary: string;
+    filter: MemoryContextFilter;
+    excluded_terms: string[];
+    include_knowledge: boolean;
+    cheat_bond_level: number | null;
 }
 export interface ChatSendRequest {
     room_id: string;

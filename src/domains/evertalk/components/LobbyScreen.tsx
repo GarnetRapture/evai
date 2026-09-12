@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import type { CSSProperties } from 'react';
-import { Check, Cpu, Image as ImageIcon, Package, Pencil, Users } from 'lucide-react';
+import { Check, Cpu, Pencil, Users } from 'lucide-react';
 import { ASSET_ROOT, getSpiritVisualAssets } from '../../persona';
 import { computeFamiliarityLevel, familiaritySigilFrameUrl, pickRandomSpeechLine, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from '../logic';
 import type { LobbyScreenProps } from '../types';
-import { EVERTALK_UI_ASSETS, LOBBY_ACTOR_SLOT_ASSETS, LOBBY_UI_ASSETS, raceBadgeUrl } from '../uiAssets';
+import { DECOR_UI_ASSETS, EVERTALK_UI_ASSETS, LOBBY_ACTOR_SLOT_ASSETS, LOBBY_UI_ASSETS, loveFrameAssetForLevel, raceBadgeUrl } from '../uiAssets';
 import { LoadableAssetImage } from './LoadableAssetImage';
 
 export function LobbyScreen({ spirits, familiarityList, background, saviorProfile, memoryInsight, memoryInsightLoading, labels, maxPreferredSlots, onEnterChat, onOpenBackgroundPicker, onOpenRoster, onOpenSaviorProfile, onRenameSavior }: LobbyScreenProps) {
@@ -24,8 +24,16 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
         setEditingName(false);
     }
 
+    const lobbyStyle = {
+        backgroundImage: `url(${backgroundUrl})`,
+        '--ever-lobby-deco': `url(${DECOR_UI_ASSETS.sectionDeco})`,
+        '--ever-lobby-badge': `url(${DECOR_UI_ASSETS.levelBadge})`,
+        '--ever-lobby-stripe': `url(${LOBBY_UI_ASSETS.stripePattern})`,
+        '--ever-lobby-edge': `url(${DECOR_UI_ASSETS.cardEdge})`,
+    } as CSSProperties;
+
     return (
-        <div className="ever-lobby" style={{ backgroundImage: `url(${backgroundUrl})` }}>
+        <div className="ever-lobby" style={lobbyStyle}>
             <div className="ever-lobby__shade"/>
             <img className="ever-lobby__light ever-lobby__light--left" src={LOBBY_UI_ASSETS.lightColumn} alt="" aria-hidden="true"/>
             <img className="ever-lobby__light ever-lobby__light--right" src={LOBBY_UI_ASSETS.lightColumn} alt="" aria-hidden="true"/>
@@ -36,7 +44,7 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
                         <img className="ever-lobby__savior-ring" src={LOBBY_UI_ASSETS.gradeBloom} alt="" aria-hidden="true"/>
                     </span>
                     <div className="ever-lobby__savior-body">
-                        <span className="ever-lobby__ribbon" style={{ backgroundImage: `url(${LOBBY_UI_ASSETS.ribbonLabel})` }}>{labels.saviorProfile}</span>
+                        <span className="ever-lobby__section-title">{labels.saviorProfile}</span>
                         {editingName ? (
                             <span className="ever-lobby__savior-edit">
                                 <input value={nameDraft} maxLength={24} placeholder={labels.saviorNamePlaceholder} onChange={(event) => setNameDraft(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') { submitName(); } }}/>
@@ -52,26 +60,29 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
                             <div><small>{labels.saviorStatPreferred}</small><strong>{saviorProfile.preferredCount}</strong></div>
                             <div><small>{labels.saviorStatEarned}</small><strong>{saviorProfile.earnedSigils.length}</strong></div>
                             <div><small>{labels.saviorStatMessages}</small><strong>{saviorProfile.totalMessages}</strong></div>
-                            <div><small>{labels.saviorStatHighest}</small><strong>Lv.{saviorProfile.highestLevel}</strong></div>
+                            <div className="is-highlight"><small>{labels.saviorStatHighest}</small><strong>Lv.{saviorProfile.highestLevel}</strong></div>
                         </div>
                         <button type="button" className="ever-lobby__savior-open" onClick={onOpenSaviorProfile}>{labels.saviorProfileOpenAction}</button>
                     </div>
                 </div>
-                <div className="ever-lobby__top-actions">
-                    <button type="button" className="ever-lobby__top-button" onClick={onOpenSaviorProfile}>
-                        <Package aria-hidden="true" size={18}/><span>{labels.inventory}</span>
+                <nav className="ever-lobby__top-actions" aria-label={labels.lobby}>
+                    <button type="button" className="ever-lobby__action" onClick={onOpenSaviorProfile}>
+                        <span className="ever-lobby__action-icon"><img src={DECOR_UI_ASSETS.inventoryIcon} alt="" aria-hidden="true"/></span>
+                        <span>{labels.inventory}</span>
                     </button>
-                    <button type="button" className="ever-lobby__top-button" onClick={onOpenBackgroundPicker}>
-                        <ImageIcon aria-hidden="true" size={18}/><span>{labels.lobbyPickBackground}</span>
+                    <button type="button" className="ever-lobby__action" onClick={onOpenBackgroundPicker}>
+                        <span className="ever-lobby__action-icon is-thumbnail"><img src={backgroundUrl} alt="" aria-hidden="true"/></span>
+                        <span>{labels.lobbyPickBackground}</span>
                     </button>
-                    <button type="button" className="ever-lobby__top-button" onClick={onOpenRoster}>
-                        <Users aria-hidden="true" size={18}/><span>{labels.lobbyBrowseRoster}</span>
+                    <button type="button" className="ever-lobby__action" onClick={onOpenRoster}>
+                        <span className="ever-lobby__action-icon"><img src={EVERTALK_UI_ASSETS.tabBond} alt="" aria-hidden="true"/></span>
+                        <span>{labels.lobbyBrowseRoster}</span>
                     </button>
-                </div>
+                </nav>
             </header>
 
             <aside className="ever-lobby__insight">
-                <span className="ever-lobby__ribbon" style={{ backgroundImage: `url(${LOBBY_UI_ASSETS.ribbonLabel})` }}>{labels.lobbyInsightTitle}</span>
+                <span className="ever-lobby__section-title">{labels.lobbyInsightTitle}</span>
                 {memoryInsightLoading && <p className="ever-lobby__insight-line">{labels.checking}</p>}
                 {!memoryInsightLoading && insightSummary.length === 0 && insightDirectives.length === 0 && (
                     <p className="ever-lobby__insight-line">{labels.memoryInsightEmpty}</p>
@@ -92,6 +103,7 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
 
             {spirits.length === 0 ? (
                 <div className="ever-lobby__empty">
+                    <img className="ever-lobby__empty-art" src={loveFrameAssetForLevel(1)} alt="" aria-hidden="true"/>
                     <strong>{labels.lobbyEmpty}</strong>
                     <button type="button" onClick={onOpenRoster}>
                         <Users aria-hidden="true" size={18}/>
@@ -170,6 +182,7 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
                 {Array.from({ length: emptySlots }, (_unused, index) => (
                     <button key={`empty-${index}`} type="button" className="ever-lobby__slot-chip" style={{ backgroundImage: `url(${LOBBY_UI_ASSETS.emptySlot})` }} aria-label={labels.lobbySlotEmptyLabel(spirits.length + index + 1)} onClick={onOpenRoster}>
                         <img src={LOBBY_UI_ASSETS.diamondMarker} alt="" aria-hidden="true"/>
+                        <b className="ever-lobby__slot-number">{spirits.length + index + 1}</b>
                     </button>
                 ))}
             </div>

@@ -8,7 +8,7 @@ import { ModelCatalogSection } from './ModelCatalogSection';
 import { ContextStorageSelector } from './ContextStorageSelector';
 import { EnvironmentLayer } from './EnvironmentLayer';
 
-export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, nativeContextStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetContextStorageMode, onSetNativeExecutablePath, onConnectNativeProgram, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, nativeContextStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onSetContextStorageMode, onSetNativeExecutablePath, onConnectNativeProgram, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     if (!isOpen) {
         return null;
@@ -67,6 +67,13 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
           <label className="ever-settings-toggle">
             <span>{labels.showReasoning}</span>
             <input type="checkbox" checked={settings?.show_reasoning ?? true} onChange={(event) => void onSetShowReasoning(event.target.checked)}/>
+          </label>
+          <label className="ever-settings-toggle">
+            <span>
+              {labels.cheatMode}
+              <small>{labels.cheatModeDescription}</small>
+            </span>
+            <input type="checkbox" checked={settings?.cheat_mode_enabled ?? false} onChange={(event) => void onSetCheatModeEnabled(event.target.checked)}/>
           </label>
         </section>
 

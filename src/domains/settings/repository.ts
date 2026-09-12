@@ -1,4 +1,5 @@
 import { EVERSOUL_STORE, SINGLETON_RECORD_KEY, clearStores, getEverSoulDatabase } from '../../shared/storage';
+import { DEFAULT_MEMORY_CONTEXT_FILTER, normalizeMemoryContextFilter } from '../chat/memoryContext';
 import { CHROME_PROMPT_MODEL_ID } from '../llm/constants';
 import type { AppSettings, GeneralSettingsRecord } from './types';
 
@@ -16,6 +17,9 @@ export const DEFAULT_GENERAL_SETTINGS: GeneralSettingsRecord = {
     platform_guide_acknowledged: false,
     context_storage_mode: 'browser',
     native_executable_path: '',
+    memory_context_filter: DEFAULT_MEMORY_CONTEXT_FILTER,
+    cheat_mode_enabled: false,
+    persona_cheat_presets: {},
 };
 
 export const settingsRepository = {
@@ -57,5 +61,8 @@ export function composeAppSettings(general: GeneralSettingsRecord): AppSettings 
         platform_guide_acknowledged: general.platform_guide_acknowledged,
         context_storage_mode: general.context_storage_mode,
         native_executable_path: general.native_executable_path ?? '',
+        memory_context_filter: normalizeMemoryContextFilter(general.memory_context_filter),
+        cheat_mode_enabled: general.cheat_mode_enabled ?? false,
+        persona_cheat_presets: general.persona_cheat_presets ?? {},
     };
 }

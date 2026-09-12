@@ -4,7 +4,7 @@ import { detectBrowserAppLanguage } from '../../shared/i18n';
 import { detectAppPlatform, detectPlatformSupport, inspectDeviceEnvironment, type DeviceEnvironmentInfo } from '../../shared/platform';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import { authClient, type UserSession } from '../auth';
-import { PROACTIVE_CHECK_INTERVAL_MS, PROACTIVE_INITIAL_DELAY_MS, chatClient, type ChatMessage, type ChatRoom, type PersonaMemoryInsight } from '../chat';
+import { DEFAULT_MEMORY_CONTEXT_FILTER, PROACTIVE_CHECK_INTERVAL_MS, PROACTIVE_INITIAL_DELAY_MS, chatClient, type ChatMessage, type ChatRoom, type MemoryContextKind, type PersonaMemoryInsight } from '../chat';
 import {
     LOCAL_MODEL_INSTALL_PREPARATION_IDS,
     llmClient,
@@ -19,7 +19,7 @@ import {
 } from '../llm';
 import { modulesClient, type ImportedModule, type ModuleControl } from '../modules';
 import { nativeContextClient, type ContextStorageMode, type NativeContextStatus } from '../native';
-import { DEFAULT_SPIRIT_SKIN_ID, getSpiritVisualAssets, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaConfig, type SpiritDetail } from '../persona';
+import { DEFAULT_SPIRIT_SKIN_ID, getSpiritVisualAssets, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaCheatPresetPatch, type PersonaConfig, type SpiritDetail } from '../persona';
 import { settingsClient, type AppSettings, type ResetSummary, type SetupProgress } from '../settings';
 import { styleClient, type StyleProfile } from '../style';
 import { inspectBrowserStorage, syncClient, type BackupDirectoryStatus, type BackupRestoreSummary, type BrowserStorageInspection, type LocalStatusSnapshot } from '../sync';
@@ -401,12 +401,12 @@ export function useEverTalkController(): EverTalkController {
         setStreamingText('');
         setStreamingRequestId(null);
     }
-    async function focusSpiritModelSession(spiritId: string, roomId?: string) {
+    async function focusSpiritModelSession(spiritId: string) {
         if (!(await ensureLlmReadyForPersonaCache())) {
             return;
         }
         try {
-            await chatClient.focusPersonaSession(spiritId, roomId);
+            await chatClient.focusPersonaSession(spiritId);
         }
         catch (err) {
             console.error(labels.logPersonaCacheFailed, err);
@@ -446,7 +446,7 @@ export function useEverTalkController(): EverTalkController {
         const room = await chatClient.getEverTalkSessionRoom();
         setActiveRoom(room);
         setMessages(await chatClient.listMessagesForPersona(room.id, spirit.id));
-        void focusSpiritModelSession(spirit.id, room.id);
+        void focusSpiritModelSession(spirit.id);
         void refreshMemoryInsight(spirit.id);
         await refreshLocalStatus();
         await refreshActiveSessions();
@@ -598,7 +598,7 @@ export function useEverTalkController(): EverTalkController {
             const history = await chatClient.listMessagesForPersona(room.id, activeSpiritId);
             setActiveRoom(room);
             setMessages(history);
-            await focusSpiritModelSession(activeSpiritId, room.id);
+            await focusSpiritModelSession(activeSpiritId);
         }
         catch (err) {
             console.error(labels.logRoomSwitchCacheFailed, err);
@@ -830,6 +830,60 @@ export function useEverTalkController(): EverTalkController {
         syncClient.scheduleAutomaticBackup();
     }
 
+    async function applyPersonaCheatChange(personaId: string | null) {
+        await loadFamiliarityList();
+        if (activeSpiritId && (personaId === null || personaId === activeSpiritId)) {
+            await refreshMemoryInsight(activeSpiritId);
+            if (await ensureLlmReadyForPersonaCache()) {
+                await refocusActiveSpiritSession();
+            }
+        }
+        syncClient.scheduleAutomaticBackup();
+    }
+
+    async function setCheatModeEnabled(enabled: boolean) {
+        try {
+            setAppSettings(await settingsClient.setCheatModeEnabled(enabled));
+            if (!enabled && workspaceView === 'cheat') {
+                setWorkspaceView('chat');
+            }
+            await applyPersonaCheatChange(null);
+        }
+        catch (err) {
+            setSystemStatus(createApiStatus('persona-db', 'error', formatUnknownError(err, labels)));
+        }
+    }
+
+    async function updatePersonaCheatPreset(personaId: string, patch: PersonaCheatPresetPatch) {
+        try {
+            setAppSettings(await settingsClient.updatePersonaCheatPreset(personaId, patch));
+            await applyPersonaCheatChange(personaId);
+        }
+        catch (err) {
+            setSystemStatus(createApiStatus('persona-db', 'error', formatUnknownError(err, labels)));
+        }
+    }
+
+    async function clearPersonaCheatPreset(personaId: string) {
+        try {
+            setAppSettings(await settingsClient.clearPersonaCheatPreset(personaId));
+            await applyPersonaCheatChange(personaId);
+        }
+        catch (err) {
+            setSystemStatus(createApiStatus('persona-db', 'error', formatUnknownError(err, labels)));
+        }
+    }
+
+    async function setMemoryContextEnabled(kind: MemoryContextKind, enabled: boolean) {
+        try {
+            setAppSettings(await settingsClient.setMemoryContextEnabled(kind, enabled));
+            syncClient.scheduleAutomaticBackup();
+        }
+        catch (err) {
+            setSystemStatus(createApiStatus('persona-db', 'error', formatUnknownError(err, labels)));
+        }
+    }
+
     async function setContextStorageMode(mode: ContextStorageMode) {
         const updated = await settingsClient.setContextStorageMode(mode);
         setAppSettings(updated);
@@ -929,7 +983,7 @@ export function useEverTalkController(): EverTalkController {
         if (!activeSpiritId) {
             return;
         }
-        await chatClient.focusPersonaSession(activeSpiritId, activeRoom?.id);
+        await chatClient.focusPersonaSession(activeSpiritId);
         await refreshActiveSessions();
     }
 
@@ -1183,7 +1237,7 @@ export function useEverTalkController(): EverTalkController {
     async function navigateWorkspace(view: WorkspaceView) {
         setWorkspaceView(view);
         setLobbyOpen(false);
-        if (view === 'ranking') {
+        if (view === 'ranking' || view === 'cheat') {
             await Promise.all([loadBondRanking(), loadFamiliarityList()]);
         }
         if (view === 'memory' || view === 'storage') {
@@ -1259,7 +1313,7 @@ export function useEverTalkController(): EverTalkController {
                 refreshEnvironment(true, appSettings?.context_storage_mode === 'native_mirror'),
             ]);
             if (activeSpiritId && (await ensureLlmReadyForPersonaCache())) {
-                await chatClient.focusPersonaSession(activeSpiritId, activeRoom?.id);
+                await chatClient.focusPersonaSession(activeSpiritId);
                 await refreshActiveSessions();
             }
         })().catch((err: unknown) => {
@@ -1375,6 +1429,13 @@ export function useEverTalkController(): EverTalkController {
     };
     return {
         workspaceView,
+        memoryContextFilter: appSettings?.memory_context_filter ?? DEFAULT_MEMORY_CONTEXT_FILTER,
+        setMemoryContextEnabled,
+        cheatModeEnabled: appSettings?.cheat_mode_enabled ?? false,
+        personaCheatPresets: appSettings?.persona_cheat_presets ?? {},
+        setCheatModeEnabled,
+        updatePersonaCheatPreset,
+        clearPersonaCheatPreset,
         storageInspection,
         storageInspectionLoading,
         storageInspectionError,

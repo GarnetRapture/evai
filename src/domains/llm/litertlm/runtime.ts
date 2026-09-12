@@ -11,7 +11,6 @@ import { DomainError, describeUnknownError } from '../../../shared/errors';
 import { assertPersonaSystemPrompt } from '../chrome/personaHook';
 import { LITERT_LM_CONSOLIDATION_TOKEN_LIMIT, LITERT_LM_RESPONSE_TOKEN_LIMIT } from '../constants';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
-import { extractPersonaPriming } from '../personaPriming';
 import type {
     InstalledModelFile,
     LiteRtLmLoadedModel,
@@ -85,13 +84,12 @@ async function ensureModelLoaded(fileName: string): Promise<LiteRtLmLoadedModel>
 
 function toGenerationPayload(request: OnDeviceGenerationRequest, behaviorInstruction = request.behavior_instruction): AndroidLiteRtLmGenerationPayload {
     const lastIndex = request.messages.length - 1;
-    const priming = extractPersonaPriming(request.system_prompt);
     return {
-        system_prompt: priming.system_prompt,
-        messages: [...priming.messages, ...request.messages.map((message, index) => ({
+        system_prompt: request.system_prompt,
+        messages: request.messages.map((message, index) => ({
             role: message.role,
             content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,
-        }))],
+        })),
         response_prefix: request.response_prefix,
         max_output_tokens: LITERT_LM_RESPONSE_TOKEN_LIMIT,
     };

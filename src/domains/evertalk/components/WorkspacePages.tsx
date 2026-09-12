@@ -1,58 +1,15 @@
 /* oxlint-disable react/only-export-components -- graph builder is exported for the production layout contract test */
 import { useMemo, useState } from 'react';
-import type { CSSProperties, ReactNode } from 'react';
-import { Activity, BrainCircuit, Database, HardDrive, MessageCircle, Minus, Plus, RefreshCw, RotateCcw, Sparkles, Trophy } from 'lucide-react';
-import { computeFamiliarityLevel, getSpiritVisualAssets, parseSpiritDetail } from '../../persona';
+import type { ReactNode } from 'react';
+import { Activity, BrainCircuit, Database, HardDrive, MessageCircle, Minus, Plus, RefreshCw, RotateCcw, Search, Sparkles, Trophy } from 'lucide-react';
+import { MEMORY_CONTEXT_KINDS } from '../../chat';
+import { isMemoryContextKind } from '../../chat/memoryContext';
+import { computeFamiliarityLevel, parseSpiritDetail } from '../../persona';
 import type { SpiritDetail } from '../../persona';
-import type { EverTalkController } from '../types';
-import { EVERTALK_UI_ASSETS, LOBBY_UI_ASSETS } from '../uiAssets';
-import { LoadableAssetImage } from './LoadableAssetImage';
-import { RosterAvatar } from './SpiritRosterCard';
-
-interface WorkspacePageProps {
-    controller: EverTalkController;
-}
-
-const WORKSPACE_STYLE = {
-    '--ever-workspace-panel-texture': `url(${EVERTALK_UI_ASSETS.panelSurfaceCommon})`,
-    '--ever-workspace-stripe': `url(${LOBBY_UI_ASSETS.stripePattern})`,
-    '--ever-workspace-gauge': `url(${LOBBY_UI_ASSETS.gaugeFill})`,
-} as CSSProperties;
-
-function WorkspaceBackdrop({ controller }: WorkspacePageProps) {
-    const detail = controller.activeDetail
-        ?? (controller.allSpirits[0] ? parseSpiritDetail(controller.allSpirits[0], controller.appLanguage) : null);
-    if (!detail) return null;
-    const assets = getSpiritVisualAssets(detail);
-    return <div className="ever-workspace-backdrop" aria-hidden="true">
-        <img src={assets.background} alt=""/>
-        <LoadableAssetImage candidates={assets.memoryCandidates.length ? assets.memoryCandidates : assets.portraitCandidates} alt="" className="ever-workspace-backdrop__spirit" fallback={null}/>
-    </div>;
-}
-
-function WorkspaceSurface({ controller, labelledBy, children }: WorkspacePageProps & { labelledBy: string; children: ReactNode }) {
-    return <main className="ever-workspace-page" aria-labelledby={labelledBy} style={WORKSPACE_STYLE}>
-        <WorkspaceBackdrop controller={controller}/>
-        <div className="ever-workspace-page__content">{children}</div>
-    </main>;
-}
-
-function resolveSpiritDisplay(controller: EverTalkController, personaId: string): { detail: SpiritDetail; level: number; skinId: string | undefined } | null {
-    const spirit = controller.allSpirits.find((candidate) => candidate.id === personaId);
-    if (!spirit) return null;
-    const familiarity = controller.familiarityList.find((entry) => entry.persona_id === personaId)?.familiarity_score ?? 0;
-    return {
-        detail: parseSpiritDetail(spirit, controller.appLanguage),
-        level: computeFamiliarityLevel(familiarity).level,
-        skinId: controller.personaSkinIds[personaId],
-    };
-}
-
-function SpiritViewAvatar({ controller, personaId }: WorkspacePageProps & { personaId: string }) {
-    const display = resolveSpiritDisplay(controller, personaId);
-    if (!display) return null;
-    return <RosterAvatar detail={display.detail} level={display.level} skinId={display.skinId} sessionActive={personaId === controller.activeSpiritId} labels={controller.labels}/>;
-}
+import type { EverTalkController, MemoryGraphEdge, MemoryGraphLayout, MemoryGraphNode, MemoryGraphNodeKind, MemoryGraphViewFilter, WorkspacePageProps } from '../types';
+import { LOBBY_UI_ASSETS } from '../uiAssets';
+import { CheatModePage } from './CheatModePage';
+import { SpiritViewAvatar, WorkspaceSurface } from './WorkspaceSurface';
 
 function formatBytes(bytes: number | null, locale: string): string {
     if (bytes === null) return '-';
@@ -178,33 +135,6 @@ export function BondRankingPage({ controller }: WorkspacePageProps) {
     </WorkspaceSurface>;
 }
 
-type MemoryGraphNodeKind = 'persona' | 'conversation' | 'memory' | 'bond' | 'reply' | 'summary';
-
-interface MemoryGraphNode {
-    id: string;
-    personaId: string;
-    kind: MemoryGraphNodeKind;
-    x: number;
-    y: number;
-    title: string;
-    description: string;
-    value: string;
-}
-
-interface MemoryGraphEdge {
-    id: string;
-    source: MemoryGraphNode;
-    target: MemoryGraphNode;
-    feedback?: boolean;
-}
-
-interface MemoryGraphLayout {
-    nodes: MemoryGraphNode[];
-    edges: MemoryGraphEdge[];
-    width: number;
-    height: number;
-}
-
 const GRAPH_NODE_WIDTH = 244;
 const GRAPH_NODE_HEIGHT = 96;
 const GRAPH_COLUMN_DISTANCE = 340;
@@ -218,15 +148,20 @@ function memoryNodeIcon(kind: MemoryGraphNodeKind): ReactNode {
 }
 
 function localizedMemoryType(controller: EverTalkController, value: string): string {
-    const labels = controller.labels.memoryGraphMemoryTypes;
-    if (value === 'directive') return labels.directive;
-    if (value === 'episodic') return labels.episodic;
-    if (value === 'semantic') return labels.semantic;
-    if (value === 'affect') return labels.affect;
-    return labels.memory;
+    return isMemoryContextKind(value) ? controller.labels.memoryContextKinds[value] : controller.labels.memoriesLabel;
 }
 
-export function buildMemoryGraph(controller: EverTalkController): MemoryGraphLayout {
+function memorySampleVisible(value: string, viewFilter: MemoryGraphViewFilter): boolean {
+    return !isMemoryContextKind(value) || viewFilter.memoryContextFilter[value];
+}
+
+function spiritMatchesQuery(detail: SpiritDetail, personaId: string, query: string): boolean {
+    const normalized = query.trim().toLocaleLowerCase();
+    if (normalized.length === 0) return true;
+    return [detail.name, detail.name_en, personaId].some((candidate) => candidate.toLocaleLowerCase().includes(normalized));
+}
+
+export function buildMemoryGraph(controller: EverTalkController, viewFilter: MemoryGraphViewFilter): MemoryGraphLayout {
     const labels = controller.labels;
     const flow = labels.memoryWorkflowNodes;
     const browserUsage = new Map((controller.storageInspection?.personas ?? []).map((entry) => [entry.persona_id, entry]));
@@ -252,15 +187,18 @@ export function buildMemoryGraph(controller: EverTalkController): MemoryGraphLay
         edges.push({ id: `edge-${edgeIndex++}`, source, target, feedback });
     }
 
+    const anyMemoryKindVisible = MEMORY_CONTEXT_KINDS.some((kind) => viewFilter.memoryContextFilter[kind]);
     for (const spirit of orderedSpirits) {
         const detail = parseSpiritDetail(spirit, controller.appLanguage);
         const browser = browserUsage.get(spirit.id);
         const native = nativeUsage.get(spirit.id);
         const messageCount = native?.message_count ?? browser?.message_count ?? 0;
         const memoryCount = native?.memory_count ?? browser?.memory_count ?? 0;
+        if (!spiritMatchesQuery(detail, spirit.id, viewFilter.query)) continue;
+        if (viewFilter.activeOnly && messageCount === 0 && memoryCount === 0) continue;
         const samples = browser?.samples ?? [];
         const messageSamples = samples.filter((sample) => sample.kind === 'message');
-        const memorySamples = samples.filter((sample) => sample.kind === 'memory');
+        const memorySamples = samples.filter((sample) => sample.kind === 'memory' && memorySampleVisible(sample.role_or_type, viewFilter));
         const branchRows = Math.max(1, messageSamples.length || (messageCount > 0 ? 1 : 0), memorySamples.length || (memoryCount > 0 ? 1 : 0));
         const laneHeight = Math.max(GRAPH_NODE_HEIGHT + 36, branchRows * GRAPH_ROW_DISTANCE + 28);
         const laneCenter = laneTop + (laneHeight - GRAPH_NODE_HEIGHT) / 2;
@@ -310,7 +248,7 @@ export function buildMemoryGraph(controller: EverTalkController): MemoryGraphLay
                 (messageNodes.length ? messageNodes : [personaNode]).forEach((source) => connect(source, node));
             });
         }
-        else if (memoryCount > 0) {
+        else if (memoryCount > 0 && anyMemoryKindVisible && !samples.some((sample) => sample.kind === 'memory')) {
             const node = addNode({
                 id: `${spirit.id}-memories`, personaId: spirit.id, kind: 'memory',
                 title: flow[2]?.title ?? labels.memoriesLabel, description: flow[2]?.description ?? '',
@@ -366,20 +304,56 @@ function memoryEdgePath(edge: MemoryGraphEdge): string {
 
 export function MemoryWorkflowPage({ controller }: WorkspacePageProps) {
     const [zoom, setZoom] = useState(0.65);
-    const graph = useMemo(() => buildMemoryGraph(controller), [controller]);
+    const [query, setQuery] = useState('');
+    const [activeOnly, setActiveOnly] = useState(false);
+    const { labels, memoryContextFilter } = controller;
+    const graph = useMemo(
+        () => buildMemoryGraph(controller, { query, activeOnly, memoryContextFilter }),
+        [controller, query, activeOnly, memoryContextFilter],
+    );
     const clampZoom = (value: number) => Math.min(1.25, Math.max(0.35, Number(value.toFixed(2))));
     return <WorkspaceSurface controller={controller} labelledBy="memory-page-title">
-        <header className="ever-workspace-page__header"><div><p>{controller.labels.navMemory}</p><h1 id="memory-page-title">{controller.labels.memoryPageTitle}</h1><span>{controller.labels.memoryPageDescription}</span></div><Activity size={34}/></header>
+        <header className="ever-workspace-page__header"><div><p>{labels.navMemory}</p><h1 id="memory-page-title">{labels.memoryPageTitle}</h1><span>{labels.memoryPageDescription}</span></div><Activity size={34}/></header>
+        <section className="ever-memory-filter" aria-labelledby="memory-filter-title">
+            <div className="ever-memory-filter__head">
+                <strong id="memory-filter-title">{labels.memoryFilterTitle}</strong>
+                <span>{labels.memoryFilterDescription}</span>
+            </div>
+            <div className="ever-memory-filter__kinds">
+                {MEMORY_CONTEXT_KINDS.map((kind) => (
+                    <button
+                        key={kind}
+                        type="button"
+                        className={memoryContextFilter[kind] ? 'is-on' : ''}
+                        aria-pressed={memoryContextFilter[kind]}
+                        onClick={() => void controller.setMemoryContextEnabled(kind, !memoryContextFilter[kind])}
+                    >
+                        {labels.memoryContextKinds[kind]}
+                    </button>
+                ))}
+            </div>
+            <div className="ever-memory-filter__view">
+                <label className="ever-memory-filter__search">
+                    <Search size={15} aria-hidden="true"/>
+                    <input type="search" value={query} placeholder={labels.memoryFilterSearchPlaceholder} aria-label={labels.memoryFilterSearchPlaceholder} onChange={(event) => setQuery(event.target.value)}/>
+                </label>
+                <label className="ever-memory-filter__toggle">
+                    <input type="checkbox" checked={activeOnly} onChange={(event) => setActiveOnly(event.target.checked)}/>
+                    <span>{labels.memoryFilterActiveOnly}</span>
+                </label>
+            </div>
+        </section>
         <section className="ever-memory-graph-shell">
             <div className="ever-memory-graph-toolbar">
-                <span>{graph.nodes.length.toLocaleString(controller.labels.localeTag)} {controller.labels.recordsLabel} · {graph.edges.length.toLocaleString(controller.labels.localeTag)} {controller.labels.memoryGraphConnections}</span>
+                <span>{graph.nodes.length.toLocaleString(labels.localeTag)} {labels.recordsLabel} · {graph.edges.length.toLocaleString(labels.localeTag)} {labels.memoryGraphConnections}</span>
                 <div>
-                    <button type="button" aria-label={controller.labels.imageViewerZoomOut} onClick={() => setZoom((value) => clampZoom(value - 0.1))}><Minus size={16}/></button>
+                    <button type="button" aria-label={labels.imageViewerZoomOut} onClick={() => setZoom((value) => clampZoom(value - 0.1))}><Minus size={16}/></button>
                     <output>{Math.round(zoom * 100)}%</output>
-                    <button type="button" aria-label={controller.labels.imageViewerZoomIn} onClick={() => setZoom((value) => clampZoom(value + 0.1))}><Plus size={16}/></button>
-                    <button type="button" aria-label={controller.labels.imageViewerReset} onClick={() => setZoom(0.65)}><RotateCcw size={16}/></button>
+                    <button type="button" aria-label={labels.imageViewerZoomIn} onClick={() => setZoom((value) => clampZoom(value + 0.1))}><Plus size={16}/></button>
+                    <button type="button" aria-label={labels.imageViewerReset} onClick={() => setZoom(0.65)}><RotateCcw size={16}/></button>
                 </div>
             </div>
+            {graph.nodes.length === 0 ? <p className="ever-memory-graph-empty">{labels.memoryFilterEmpty}</p> : null}
             <div className="ever-memory-graph-viewport">
                 <div className="ever-memory-graph-sizer" style={{ width: graph.width * zoom, height: graph.height * zoom }}>
                     <div className="ever-memory-graph" style={{ width: graph.width, height: graph.height, transform: `scale(${zoom})` }}>
@@ -402,5 +376,6 @@ export function WorkspacePage({ controller }: WorkspacePageProps) {
     if (controller.workspaceView === 'ranking') return <BondRankingPage controller={controller}/>;
     if (controller.workspaceView === 'memory') return <MemoryWorkflowPage controller={controller}/>;
     if (controller.workspaceView === 'storage') return <StorageAnalyticsPage controller={controller}/>;
+    if (controller.workspaceView === 'cheat' && controller.cheatModeEnabled) return <CheatModePage controller={controller}/>;
     return null;
 }

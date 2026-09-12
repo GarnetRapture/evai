@@ -1,5 +1,7 @@
 import type { AppLanguage } from '../../shared/types';
+import type { MemoryContextFilter } from '../chat/types';
 import type { ContextStorageMode } from '../native/types';
+import type { PersonaCheatPreset } from '../persona/types';
 
 export type SetupPhase = 'language' | 'done';
 export const MAX_PREFERRED_PERSONAS = 5;
@@ -18,6 +20,9 @@ export interface AppSettings {
     platform_guide_acknowledged: boolean;
     context_storage_mode: ContextStorageMode;
     native_executable_path: string;
+    memory_context_filter: MemoryContextFilter;
+    cheat_mode_enabled: boolean;
+    persona_cheat_presets: Record<string, PersonaCheatPreset>;
 }
 export type SetupStage = 'personas' | 'caching' | 'model' | 'done';
 export interface SetupProgress {
@@ -40,6 +45,9 @@ export interface GeneralSettingsRecord {
     platform_guide_acknowledged: boolean;
     context_storage_mode: ContextStorageMode;
     native_executable_path: string;
+    memory_context_filter: MemoryContextFilter;
+    cheat_mode_enabled: boolean;
+    persona_cheat_presets: Record<string, PersonaCheatPreset>;
 }
 export interface ResetSummary {
     cleared_chat_rooms: number;

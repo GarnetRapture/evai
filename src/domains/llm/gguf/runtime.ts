@@ -13,7 +13,6 @@ import {
     GGUF_RESPONSE_TOKEN_LIMIT,
 } from '../constants';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
-import { extractPersonaPriming } from '../personaPriming';
 import type {
     GgufLoadedModel,
     GgufLoadingModel,
@@ -98,10 +97,8 @@ async function ensureModelLoaded(fileName: string): Promise<Wllama> {
 
 function toChatMessages(request: OnDeviceGenerationRequest, behaviorInstruction: string): ChatCompletionMessage[] {
     const lastIndex = request.messages.length - 1;
-    const priming = extractPersonaPriming(request.system_prompt);
     const messages: ChatCompletionMessage[] = [
-        { role: 'system', content: priming.system_prompt },
-        ...priming.messages,
+        { role: 'system', content: request.system_prompt },
         ...request.messages.map((message, index): ChatCompletionMessage => ({
             role: message.role,
             content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,

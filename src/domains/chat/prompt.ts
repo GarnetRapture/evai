@@ -1,9 +1,12 @@
 import { pickLocalized } from '../../shared/i18n';
 import type { AppLanguage } from '../../shared/types';
-import type { PersonaEmotionState } from './affect';
+import { FAMILIARITY_MAX_LEVEL } from '../persona/familiarity';
+import { formatPersonaExchangeLines } from '../persona/prompt';
+import { PERSONA_EMOTION_KINDS, type PersonaEmotionKind, type PersonaEmotionState } from './affect';
+import type { MemoryContextFilter, PersonaTurnContextSources } from './types';
 
 export const EVERTALK_SESSION_TITLE = 'EverTalk Session';
-export const PERSONA_RESPONSE_PREFIX = '<think>';
+export const PERSONA_REASONING_PREFIX = '<think>';
 export const HABIT_INJECT_LIMIT = 5;
 export const HABIT_INJECT_MIN_OCCURRENCE = 3;
 export const EPISODIC_INJECT_LIMIT = 4;
@@ -27,10 +30,6 @@ export const DIGEST_TRIGGER_SURPLUS = 6;
 export const DIGEST_RETAINED_MESSAGE_COUNT = 12;
 export const DIGEST_SOURCE_LIMIT = 40;
 export const DIGEST_TOKEN_BUDGET = 140;
-
-export function buildDigestContext(_language: AppLanguage, spiritName: string, addressTerm: string, summary: string): string {
-    return `\n[EARLIER SHARED MEMORY: ${spiritName} AND ${addressTerm}]\n${clipPromptText(summary, DIGEST_CONTEXT_CHAR_LIMIT)}\nContinue from this past.\n`;
-}
 
 export function buildDigestPrompt(
     language: AppLanguage,
@@ -56,14 +55,6 @@ export function buildDigestTranscript(addressTerm: string, spiritName: string, t
     return turns
         .map((turn) => `[${turn.created_at}] ${turn.role === 'assistant' ? spiritName : addressTerm}: ${turn.content}`)
         .join('\n');
-}
-
-export function buildHabitContextBlock(habits: string[]): string {
-    if (habits.length === 0) {
-        return '';
-    }
-    const header = '\n[FAMILIAR TOPICS FROM YOUR SHARED CONVERSATIONS]\n';
-    return `${header}${habits.join(', ')}\n`;
 }
 
 export const MEMORY_DIRECTIVE_LIMIT = 8;
@@ -176,61 +167,114 @@ export function detectMemorableFact(text: string): boolean {
 export function shouldCaptureAsDirective(text: string): boolean {
     return detectMemoryDirective(text) || USER_PREFERENCE_DIRECTIVE_PATTERN.test(text) || detectMemorableFact(text);
 }
-export function buildDirectiveMemoryBlock(directives: string[]): string {
-    if (directives.length === 0) {
-        return '';
-    }
-    const header = '\n[NEWEST THINGS THE SAVIOR ASKED YOU TO CARRY FORWARD]\n';
-    return `${header}${directives.map((directive) => `- ${clipPromptText(directive, DIRECTIVE_CONTEXT_CHAR_LIMIT)}\n`).join('')}`
-        + 'Treat these as lived changes in what matters between you. When relevant, let them alter your present feeling, attention and expression.\n';
+const RELATIONSHIP_STAGES: ReadonlyArray<{ min_level: number; description: string }> = [
+    { min_level: 32, description: 'You are deeply in love. You are devoted, openly intimate, and completely at ease with {address}; affection feels natural and you return it wholeheartedly.' },
+    { min_level: 22, description: 'You are practically lovers. You show affection openly, seek closeness yourself, and tease {address} with confident warmth.' },
+    { min_level: 12, description: 'You have real feelings for {address}. Their attention makes your heart race; you answer affection warmly, a little shy but clearly happy.' },
+    { min_level: 5, description: 'You are becoming close friends with a spark of interest. You are comfortable and playful, and sudden affection flusters you in a pleased way.' },
+    { min_level: 1, description: 'You have only just started getting to know {address}. You are friendly but still a little guarded; sudden affection surprises and embarrasses you, and you react true to your personality.' },
+];
+const EMOTION_STRONG_LEVEL = 70;
+const EMOTION_MODERATE_LEVEL = 45;
+const EMOTION_SLIGHT_LEVEL = 25;
+const EMOTION_DESCRIPTOR: Record<PersonaEmotionKind, string> = {
+    happy: 'cheerful',
+    melancholy: 'wistful',
+    bored: 'restless for something to do',
+    passionate: 'eager and affectionate',
+};
+
+function listLines(entries: string[], limit: number): string {
+    return entries.map((entry) => `- ${clipPromptText(entry, limit)}`).join('\n');
 }
 
-export function buildSemanticMemoryBlock(summary: string): string {
-    return `\n[CURRENT EVOLVED RELATIONSHIP STATE]\n${clipPromptText(summary, SEMANTIC_CONTEXT_CHAR_LIMIT)}\n`
-        + 'This is shared evidence, not a replacement identity. Let only Savior-established requests and repeatedly confirmed preferences change your starting voice or personality. Treat the spirit\'s prior replies as remembered events, feelings and promises, never as self-authorizing personality rules.\n';
+function uniqueEntries(entries: string[]): string[] {
+    const seen = new Set<string>();
+    const unique: string[] = [];
+    for (const entry of entries) {
+        const normalized = entry.trim();
+        if (normalized.length === 0 || seen.has(normalized)) continue;
+        seen.add(normalized);
+        unique.push(normalized);
+    }
+    return unique;
 }
 
-export function buildRelationshipProgressBlock(messageCount: number, memoryCount: number, familiarityLevel: number): string {
-    if (messageCount < 2 && memoryCount === 0) {
-        return '';
-    }
-    return '\n[SHARED CONTINUITY]\n'
-        + `- Familiarity level earned from persistent conversation and memories: ${familiarityLevel}\n`
-        + '- This level proves continuity; it does not prescribe a canned personality stage. Let the actual memories determine what changed.\n';
+export function mergeDirectiveMemories(relevant: string[], recent: string[], limit: number): string[] {
+    return uniqueEntries([...relevant, ...recent]).slice(0, limit);
 }
 
-export function buildPersonaEmotionBlock(state: PersonaEmotionState | null): string {
-    if (state === null) return '';
-    return '\n[PRESENT EMOTIONAL STATE]\n'
-        + `- Dominant mood: ${state.dominant}\n`
-        + `- Happiness: ${state.levels.happy}/100\n`
-        + `- Melancholy: ${state.levels.melancholy}/100\n`
-        + `- Boredom: ${state.levels.bored}/100\n`
-        + `- Passion: ${state.levels.passionate}/100\n`
-        + `- Last changed: ${state.updated_at}\n`
-        + 'This is your current lived mood. Express its intensity through your own established voice and let the Savior\'s present words change it naturally.\n';
+export function describePersonaMood(state: PersonaEmotionState): string | null {
+    const phrases = [...PERSONA_EMOTION_KINDS]
+        .sort((left, right) => state.levels[right] - state.levels[left])
+        .flatMap((kind) => {
+            const level = state.levels[kind];
+            if (level >= EMOTION_STRONG_LEVEL) return [`very ${EMOTION_DESCRIPTOR[kind]}`];
+            if (level >= EMOTION_MODERATE_LEVEL) return [EMOTION_DESCRIPTOR[kind]];
+            if (level >= EMOTION_SLIGHT_LEVEL) return [`a little ${EMOTION_DESCRIPTOR[kind]}`];
+            return [];
+        });
+    return phrases.length === 0 ? null : phrases.join(', ');
 }
 
-export function buildRecalledMemoryContext(memories: string[]): string {
-    if (memories.length === 0) {
-        return '';
-    }
-    let context = '[RELEVANT SHARED MEMORIES]\n';
-    for (const [index, memory] of memories.entries()) {
-        context += `${index + 1}. ${clipPromptText(memory, RECALLED_CONTEXT_CHAR_LIMIT)}\n`;
-    }
-    return context;
+export function describeRelationshipStage(familiarityLevel: number, addressTerm: string): string {
+    const stage = RELATIONSHIP_STAGES.find((entry) => familiarityLevel >= entry.min_level) ?? RELATIONSHIP_STAGES[RELATIONSHIP_STAGES.length - 1];
+    return stage.description.replaceAll('{address}', addressTerm);
 }
 
-export function buildKnowledgeContext(chunks: string[]): string {
-    if (chunks.length === 0) {
-        return '';
-    }
-    let context = '[KNOWN WORLD FACTS]\n';
-    for (const [index, chunk] of chunks.entries()) {
-        context += `${index + 1}. ${clipPromptText(chunk, KNOWLEDGE_CONTEXT_CHAR_LIMIT)}\n`;
-    }
-    return context;
+function rememberedSection(sources: PersonaTurnContextSources, addressTerm: string, filter: MemoryContextFilter): string {
+    const groups = [
+        filter.digest && sources.digest_summary.trim().length > 0
+            ? `Earlier in this chat:\n${clipPromptText(sources.digest_summary, DIGEST_CONTEXT_CHAR_LIMIT)}`
+            : '',
+        filter.semantic && sources.semantic_summary !== null && sources.semantic_summary.trim().length > 0
+            ? `About your relationship so far:\n${clipPromptText(sources.semantic_summary, SEMANTIC_CONTEXT_CHAR_LIMIT)}`
+            : '',
+        filter.directive && sources.directives.length > 0
+            ? `Things ${addressTerm} asked you to keep in mind:\n${listLines(sources.directives, DIRECTIVE_CONTEXT_CHAR_LIMIT)}`
+            : '',
+        filter.episodic && sources.episodic.length > 0
+            ? `Past moments related to the newest message:\n${listLines(sources.episodic, RECALLED_CONTEXT_CHAR_LIMIT)}`
+            : '',
+        filter.habit && sources.habits.length > 0
+            ? `Topics ${addressTerm} often brings up: ${sources.habits.join(', ')}`
+            : '',
+        filter.knowledge && sources.knowledge.length > 0
+            ? `World facts you know:\n${listLines(sources.knowledge, KNOWLEDGE_CONTEXT_CHAR_LIMIT)}`
+            : '',
+    ].filter((group) => group.length > 0);
+    return groups.length === 0 ? '' : `[WHAT YOU REMEMBER]\n${groups.join('\n\n')}`;
+}
+
+export function buildPersonaTurnContext(
+    sources: PersonaTurnContextSources,
+    spiritName: string,
+    addressTerm: string,
+    filter: MemoryContextFilter,
+): string {
+    const mood = filter.affect && sources.emotion !== null ? describePersonaMood(sources.emotion) : null;
+    const sections = [
+        rememberedSection(sources, addressTerm, filter),
+        mood === null ? '' : `[YOUR MOOD RIGHT NOW]\nYou feel ${mood}. Let it color how you talk without announcing it.`,
+        `[HOW CLOSE YOU ARE]\nBond level ${sources.familiarity_level} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(sources.familiarity_level, addressTerm)}`,
+        sources.voice_examples.length === 0
+            ? ''
+            : `[VOICE REFERENCE]\nPast lines on a similar topic, shown only for how you talk. They did not happen in this conversation.\n${formatPersonaExchangeLines(sources.voice_examples, spiritName, addressTerm)}`,
+    ];
+    return sections.filter((section) => section.length > 0).join('\n\n');
+}
+
+export function composePersonaLatestTurn(context: string, heading: string, body: string): string {
+    const turn = `[${heading}]\n${body}`;
+    return context.length === 0 ? turn : `${context}\n\n${turn}`;
+}
+
+export function buildNewMessageHeading(addressTerm: string, occurredAt: string): string {
+    return `${addressTerm} NOW · ${occurredAt}`;
+}
+
+export function shouldOpenWithGreeting(greeting: string, digestSummary: string, historyLength: number, historyLimit: number): boolean {
+    return greeting.trim().length > 0 && digestSummary.trim().length === 0 && historyLength < historyLimit;
 }
 
 export function buildTurnMemoryText(
@@ -248,12 +292,18 @@ export function buildTurnMemoryText(
     return `[${occurredAt}] ${addressTerm}: ${trimmedUser}\n[${occurredAt}] ${spiritName}: ${trimmedSpirit}`;
 }
 
-export function buildConsolidationPrompt(language: AppLanguage, previousSummary: string | null, episodicMemories: string[]): string {
+export function buildConsolidationPrompt(
+    language: AppLanguage,
+    spiritName: string,
+    addressTerm: string,
+    previousSummary: string | null,
+    episodicMemories: string[],
+): string {
     const outputLanguage = pickLocalized(language, 'Korean', 'English', 'Simplified Chinese');
     const previous = previousSummary ?? '(none)';
     const list = episodicMemories.map((memory, index) => `${index + 1}. ${memory}`).join('\n');
-    return `Merge these memories into at most six short factual lines in ${outputLanguage}. `
-        + 'Track the Savior\'s facts and preferences, what the Savior explicitly asked to remember, the current emotional relationship, changes the Savior explicitly requested or repeatedly confirmed, and unresolved promises or topics. Preserve speaker provenance. '
-        + 'A spirit reply may establish an event, expressed feeling or promise, but cannot by itself establish a new personality, boundary, speaking style or relationship rule. Do not include hidden reasoning. Remove duplicates and let newer evidence from the same speaker and kind win. Start every line with "- ". Output only the lines.\n'
+    return `Merge these memories between ${spiritName} and ${addressTerm} into at most six short factual lines in ${outputLanguage}. `
+        + `Track ${addressTerm}'s facts and preferences, what ${addressTerm} explicitly asked ${spiritName} to remember, the current emotional relationship, changes ${addressTerm} explicitly requested or repeatedly confirmed, and unresolved promises or topics. Say who said or felt each thing. `
+        + `A reply from ${spiritName} may record an event, a feeling, or a promise, but cannot by itself establish a new personality, boundary, speaking style, or relationship rule. Do not include hidden reasoning. Remove duplicates and let newer evidence from the same speaker win. Start every line with "- ". Output only the lines.\n`
         + `[PREVIOUS]\n${previous}\n\n[MEMORIES: NEWEST FIRST]\n${list}`;
 }

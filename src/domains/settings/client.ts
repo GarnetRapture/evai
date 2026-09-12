@@ -2,6 +2,13 @@ import { DomainError } from '../../shared/errors';
 import { normalizeAppLanguage } from '../../shared/i18n';
 import { EVERSOUL_STORE, clearStores, countStoreRecords, getEverSoulDatabase } from '../../shared/storage';
 import type { AppLanguage } from '../../shared/types';
+import { createMonotonicTimestamp } from '../../shared/time';
+import { createPersonaEmotionStateFromLevels } from '../chat/affect';
+import { isMemoryContextKind, normalizeMemoryContextFilter } from '../chat/memoryContext';
+import { chatRepository } from '../chat/repository';
+import type { MemoryContextKind } from '../chat/types';
+import { findEmotionPreset, mergePersonaCheatPreset } from '../persona/presets';
+import type { PersonaCheatPresetPatch } from '../persona/types';
 import { llmClient } from '../llm';
 import { nativeContextClient } from '../native/client';
 import type { ContextStorageMode } from '../native/types';
@@ -171,6 +178,36 @@ export const settingsClient = {
     },
     async setLobbyBackground(background: string | null): Promise<AppSettings> {
         return composeAppSettings(await settingsRepository.updateGeneral({ lobby_background: background }));
+    },
+    async setMemoryContextEnabled(kind: MemoryContextKind, enabled: boolean): Promise<AppSettings> {
+        if (!isMemoryContextKind(kind)) {
+            throw new DomainError('validation', kind);
+        }
+        const general = await settingsRepository.readGeneral();
+        return composeAppSettings(await settingsRepository.updateGeneral({
+            memory_context_filter: { ...normalizeMemoryContextFilter(general.memory_context_filter), [kind]: enabled },
+        }));
+    },
+    async setCheatModeEnabled(enabled: boolean): Promise<AppSettings> {
+        return composeAppSettings(await settingsRepository.updateGeneral({ cheat_mode_enabled: enabled }));
+    },
+    async updatePersonaCheatPreset(personaId: string, patch: PersonaCheatPresetPatch): Promise<AppSettings> {
+        const general = await settingsRepository.readGeneral();
+        const presets = general.persona_cheat_presets ?? {};
+        const updatedAt = createMonotonicTimestamp();
+        const next = mergePersonaCheatPreset(presets[personaId], patch, updatedAt);
+        const emotionLevels = patch.emotion_preset === undefined ? null : findEmotionPreset(next.emotion_preset).levels;
+        if (emotionLevels !== null) {
+            await chatRepository.upsertPersonaEmotion(personaId, createPersonaEmotionStateFromLevels(emotionLevels, updatedAt));
+        }
+        return composeAppSettings(await settingsRepository.updateGeneral({
+            persona_cheat_presets: { ...presets, [personaId]: next },
+        }));
+    },
+    async clearPersonaCheatPreset(personaId: string): Promise<AppSettings> {
+        const general = await settingsRepository.readGeneral();
+        const remaining = Object.fromEntries(Object.entries(general.persona_cheat_presets ?? {}).filter(([id]) => id !== personaId));
+        return composeAppSettings(await settingsRepository.updateGeneral({ persona_cheat_presets: remaining }));
     },
     async setSaviorName(name: string): Promise<AppSettings> {
         return composeAppSettings(await settingsRepository.updateGeneral({ savior_name: name.slice(0, 24) }));

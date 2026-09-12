@@ -21,5 +21,6 @@ export interface MobileMessageBubbleProps {
     avatarCandidates: string[];
     showReasoning: boolean;
     deleteLabel: string;
+    innerThoughtsLabel: string;
     onDelete: (messageId: string) => Promise<void>;
 }

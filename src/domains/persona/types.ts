@@ -1,5 +1,39 @@
 import type { AppLanguage } from '../../shared/types';
 
+export type PersonaPersonalityPresetId = 'dataset' | 'gentle' | 'cheerful' | 'tsundere' | 'cool' | 'shy' | 'playful' | 'devoted' | 'bold';
+export type PersonaEmotionPresetId = 'dataset' | 'cheerful' | 'calm' | 'lovestruck' | 'wistful' | 'bored';
+export type PersonaSpeechPresetId = 'dataset' | 'polite' | 'casual' | 'affectionate' | 'teasing' | 'formal' | 'quiet';
+export interface PersonaCheatPreset {
+    bond_level: number | null;
+    personality_preset: PersonaPersonalityPresetId;
+    emotion_preset: PersonaEmotionPresetId;
+    speech_preset: PersonaSpeechPresetId;
+    updated_at: string;
+}
+export type PersonaCheatPresetPatch = Partial<Omit<PersonaCheatPreset, 'updated_at'>>;
+export interface PersonaCheatSettingsSource {
+    cheat_mode_enabled: boolean;
+    persona_cheat_presets: Record<string, PersonaCheatPreset>;
+}
+export interface PersonaPresetOption<Id extends string> {
+    id: Id;
+    labels: Record<AppLanguage, string>;
+    descriptions: Record<AppLanguage, string>;
+}
+export interface PersonaPersonalityPresetOption extends PersonaPresetOption<PersonaPersonalityPresetId> {
+    instruction: string;
+}
+export interface PersonaSpeechPresetOption extends PersonaPresetOption<PersonaSpeechPresetId> {
+    instructions: Record<AppLanguage, string>;
+}
+export interface PersonaEmotionPresetOption extends PersonaPresetOption<PersonaEmotionPresetId> {
+    levels: import('../chat/affect').PersonaEmotionLevels | null;
+}
+export interface PersonaPersonalityOverride {
+    personality: string;
+    greeting: string;
+    updated_at: string;
+}
 export interface PersonaConfig {
     id: string;
     name: string;
@@ -8,8 +42,8 @@ export interface PersonaConfig {
     race: string;
     class: string;
     sub_class: string;
-    system_prompt: string;
     greeting: string;
+    personality_override: PersonaPersonalityOverride | null;
     raw_json: string;
     created_at: string;
 }
@@ -32,16 +66,10 @@ export interface PersonaArchiveEntry {
 export interface PersonaLanguageSlice {
     name: string;
     name_en: string;
-    grade: string;
     race: string;
-    class: string;
-    sub_class: string;
-    stat: string;
     nick_name: string;
     constellation: string;
     union: string;
-    cv_ko: string;
-    cv_jp: string;
     birthday: string;
     height: string;
     weight: string;
@@ -61,21 +89,26 @@ export interface PersonaSpeechProfile {
     solo_lines: string[];
     dialogue_examples: PersonaDialogueExchange[];
 }
-export type PersonaDialogueSource = 'story' | 'evertalk' | 'greeting';
+export type PersonaDialogueSource = 'story' | 'evertalk';
 export interface PersonaDialogueExchange {
     source: PersonaDialogueSource;
     user_message: string;
     spirit_messages: string[];
 }
-export interface LocalizedPersonaPromptBody {
-    localized_name: string;
-    body: string;
-    speech_profile: PersonaSpeechProfile;
-}
 export interface AssembledPersonaPrompt {
     localized_name: string;
     assembled_prompt: string;
     speech_profile: PersonaSpeechProfile;
+    greeting: string;
+    address_term: string;
+    dialogue_excluded_terms: string[];
+}
+export interface PersonaPromptIdentity {
+    name: string;
+    name_en: string;
+    nick_name: string;
+    address_term: string;
+    address_is_personal_name: boolean;
 }
 export type LocalizedText = Record<AppLanguage | 'zh_tw', string>;
 export type LocalizedList = Record<AppLanguage | 'zh_tw', string[]>;

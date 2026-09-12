@@ -2,7 +2,7 @@ import type React from 'react';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import type { DeviceEnvironmentInfo } from '../../shared/platform';
 import type { UserSession } from '../auth';
-import type { ChatMessage, ChatRoom, PersonaMemoryInsight } from '../chat';
+import type { ChatMessage, ChatRoom, MemoryContextFilter, MemoryContextKind, PersonaMemoryInsight } from '../chat';
 import type {
     ChatModelCatalog,
     ChromePromptModelEntry,
@@ -15,7 +15,7 @@ import type {
 } from '../llm';
 import type { ImportedModule, ModuleControl } from '../modules';
 import type { ContextStorageMode, NativeContextStatus } from '../native';
-import type { BondRankingEntry, FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
+import type { BondRankingEntry, FamiliarityEntry, PersonaCheatPreset, PersonaCheatPresetPatch, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { AppSettings, ResetSummary, SetupPhase, SetupProgress } from '../settings';
 import type { StyleProfile } from '../style';
 import type { BackupDirectoryStatus, BackupRestoreSummary, BrowserStorageInspection, LocalStatusSnapshot } from '../sync';
@@ -26,6 +26,7 @@ export interface LoadableAssetImageProps {
     className?: string;
     style?: React.CSSProperties;
     fallback: React.ReactNode;
+    onLoad?: (event: React.SyntheticEvent<HTMLImageElement>) => void;
 }
 export interface ZoomDragState {
     pointerId: number;
@@ -39,7 +40,7 @@ export interface ZoomOffset {
     y: number;
 }
 export type PanelResizeHandle = 'n' | 's' | 'e' | 'w' | 'ne' | 'nw' | 'se' | 'sw';
-export type WorkspaceView = 'chat' | 'ranking' | 'memory' | 'storage';
+export type WorkspaceView = 'chat' | 'ranking' | 'memory' | 'storage' | 'cheat';
 export interface PanelGeometry {
     x: number;
     y: number;
@@ -72,7 +73,83 @@ export interface ImageViewerTransform {
     x: number;
     y: number;
 }
+export interface ImageViewerPoint {
+    x: number;
+    y: number;
+}
+export interface ImageViewerSize {
+    width: number;
+    height: number;
+}
+export interface ImageViewerViewState {
+    candidatesKey: string;
+    transform: ImageViewerTransform;
+    jogValue: number;
+}
+export interface ImageViewerJogSession {
+    candidatesKey: string;
+    baseScale: number;
+}
+export interface ImageViewerNaturalSizeRecord {
+    candidatesKey: string;
+    size: ImageViewerSize;
+}
+export interface ImageViewerDragSession {
+    pointerId: number;
+    startX: number;
+    startY: number;
+    originX: number;
+    originY: number;
+}
+export interface ImageViewerPinchSession {
+    pointers: Map<number, ImageViewerPoint>;
+    previousDistance: number;
+}
 export type ImageViewerPanDirection = 'up' | 'down' | 'left' | 'right';
+export interface WorkspacePageProps {
+    controller: EverTalkController;
+}
+export interface WorkspaceSurfaceProps extends WorkspacePageProps {
+    labelledBy: string;
+    children: React.ReactNode;
+}
+export interface CheatPresetGridProps<Id extends string> {
+    title: string;
+    description?: string;
+    options: ReadonlyArray<{ id: Id; labels: Record<AppLanguage, string>; descriptions: Record<AppLanguage, string> }>;
+    icons: Record<Id, string>;
+    selected: Id;
+    language: AppLanguage;
+    onSelect: (id: Id) => void;
+}
+export type MemoryGraphNodeKind = 'persona' | 'conversation' | 'memory' | 'bond' | 'reply' | 'summary';
+export interface MemoryGraphNode {
+    id: string;
+    personaId: string;
+    kind: MemoryGraphNodeKind;
+    x: number;
+    y: number;
+    title: string;
+    description: string;
+    value: string;
+}
+export interface MemoryGraphEdge {
+    id: string;
+    source: MemoryGraphNode;
+    target: MemoryGraphNode;
+    feedback?: boolean;
+}
+export interface MemoryGraphLayout {
+    nodes: MemoryGraphNode[];
+    edges: MemoryGraphEdge[];
+    width: number;
+    height: number;
+}
+export interface MemoryGraphViewFilter {
+    query: string;
+    activeOnly: boolean;
+    memoryContextFilter: MemoryContextFilter;
+}
 export interface ImageViewerOverlayProps {
     open: boolean;
     candidates: string[];
@@ -81,12 +158,24 @@ export interface ImageViewerOverlayProps {
     labels: EverTalkLabels;
     onClose: () => void;
 }
+export interface SpiritReplyParts {
+    reasoning: string;
+    reply: string;
+}
+export type SpiritReplyVariant = 'desktop' | 'mobile';
+export interface SpiritReplyContentProps {
+    text: string;
+    showReasoning: boolean;
+    variant: SpiritReplyVariant;
+    innerThoughtsLabel: string;
+}
 export interface ChatMessageBubbleProps {
     message: ChatMessage;
     avatarCandidates: string[];
     spiritName: string;
     showReasoning: boolean;
     deleteLabel: string;
+    innerThoughtsLabel: string;
     onDelete: (messageId: string) => Promise<void>;
 }
 export interface GalleryTileProps {
@@ -370,6 +459,7 @@ export interface SettingsPanelProps extends ModelCatalogSectionProps {
     onReset: () => void;
     onSetLanguage: (language: AppLanguage) => Promise<void>;
     onSetShowReasoning: (show: boolean) => Promise<void>;
+    onSetCheatModeEnabled: (enabled: boolean) => Promise<void>;
     onSetContextStorageMode: (mode: ContextStorageMode) => Promise<void>;
     onSetNativeExecutablePath: (path: string) => Promise<void>;
     onConnectNativeProgram: () => Promise<void>;
@@ -450,6 +540,13 @@ export interface AppInfoPanelProps {
 }
 export interface EverTalkController {
     workspaceView: WorkspaceView;
+    memoryContextFilter: MemoryContextFilter;
+    setMemoryContextEnabled: (kind: MemoryContextKind, enabled: boolean) => Promise<void>;
+    cheatModeEnabled: boolean;
+    personaCheatPresets: Record<string, PersonaCheatPreset>;
+    setCheatModeEnabled: (enabled: boolean) => Promise<void>;
+    updatePersonaCheatPreset: (personaId: string, patch: PersonaCheatPresetPatch) => Promise<void>;
+    clearPersonaCheatPreset: (personaId: string) => Promise<void>;
     storageInspection: BrowserStorageInspection | null;
     storageInspectionLoading: boolean;
     storageInspectionError: string | null;

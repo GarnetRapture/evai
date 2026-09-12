@@ -1,4 +1,5 @@
 import { ASSET_ROOT } from '../persona';
+import type { PersonaEmotionPresetId, PersonaPersonalityPresetId, PersonaSpeechPresetId } from '../persona';
 import type { FamiliaritySigilGrade } from './logic';
 
 export const EVERTALK_UI_ASSETS = {
@@ -39,6 +40,63 @@ export const LOBBY_UI_ASSETS = {
     chevronDivider: `${ASSET_ROOT}/ui/roby/img_fairygradeF.png`,
     stripePattern: `${ASSET_ROOT}/ui/roby/pattern_singleraid.png`,
 } as const;
+
+export const DECOR_UI_ASSETS = {
+    inventoryIcon: `${ASSET_ROOT}/icon/Inventory_icon.png`,
+    loveFrames: [
+        `${ASSET_ROOT}/ui/frame/Frame_Love_01.png`,
+        `${ASSET_ROOT}/ui/frame/Frame_Love_02.png`,
+        `${ASSET_ROOT}/ui/frame/Frame_Love_03.png`,
+    ],
+    levelBadge: `${ASSET_ROOT}/ui/frame/frame_guildraid_boss.png`,
+    sectionDeco: `${ASSET_ROOT}/ui/frame/frame_guildraid_boss_deco.png`,
+    gaugeGradient: `${ASSET_ROOT}/ui/frame/gauge_MPGradation.png`,
+    cardEdge: `${ASSET_ROOT}/ui/frame/box_edge10.png`,
+    heart: `${ASSET_ROOT}/icon/Icon_Heart.png`,
+} as const;
+
+const GIFT_ICON_ROOT = `${ASSET_ROOT}/gift`;
+
+export const CHEAT_PRESET_ICON_ASSETS: {
+    personality: Record<PersonaPersonalityPresetId, string>;
+    emotion: Record<PersonaEmotionPresetId, string>;
+    speech: Record<PersonaSpeechPresetId, string>;
+} = {
+    personality: {
+        dataset: `${GIFT_ICON_ROOT}/Icon_Gift_TaleBook.png`,
+        gentle: `${GIFT_ICON_ROOT}/Icon_Gift_HoneyMilk.png`,
+        cheerful: `${GIFT_ICON_ROOT}/Icon_Gift_FlowerBouquet.png`,
+        tsundere: `${GIFT_ICON_ROOT}/Icon_Gift_TrumpCard.png`,
+        cool: `${GIFT_ICON_ROOT}/Icon_Gift_FountainPen.png`,
+        shy: `${GIFT_ICON_ROOT}/Icon_Gift_HairPin.png`,
+        playful: `${GIFT_ICON_ROOT}/Icon_Gift_CubePuzzle.png`,
+        devoted: `${GIFT_ICON_ROOT}/Icon_Gift_TeddyBear.png`,
+        bold: `${GIFT_ICON_ROOT}/Icon_Gift_Ukulele.png`,
+    },
+    emotion: {
+        dataset: `${GIFT_ICON_ROOT}/Icon_Gift_SmallFrame.png`,
+        cheerful: `${GIFT_ICON_ROOT}/Icon_Gift_CakePiece.png`,
+        calm: `${GIFT_ICON_ROOT}/Icon_Gift_HerbTea.png`,
+        lovestruck: `${GIFT_ICON_ROOT}/Icon_Gift_EverFlower.png`,
+        wistful: `${GIFT_ICON_ROOT}/Icon_Gift_Handkerchief.png`,
+        bored: `${GIFT_ICON_ROOT}/Icon_Gift_PotatoChips.png`,
+    },
+    speech: {
+        dataset: `${GIFT_ICON_ROOT}/Icon_Gift_MagicScrolls.png`,
+        polite: `${GIFT_ICON_ROOT}/Icon_Gift_TeaSet.png`,
+        casual: `${GIFT_ICON_ROOT}/Icon_Gift_FruitJuice.png`,
+        affectionate: `${GIFT_ICON_ROOT}/Icon_Gift_PerfumeBottle.png`,
+        teasing: `${GIFT_ICON_ROOT}/Icon_Gift_FoldingFan.png`,
+        formal: `${GIFT_ICON_ROOT}/Icon_Gift_CommemorativeCoin.png`,
+        quiet: `${GIFT_ICON_ROOT}/Icon_Gift_SmallPlant.png`,
+    },
+};
+
+export function loveFrameAssetForLevel(level: number): string {
+    if (level >= 32) return DECOR_UI_ASSETS.loveFrames[2];
+    if (level >= 12) return DECOR_UI_ASSETS.loveFrames[1];
+    return DECOR_UI_ASSETS.loveFrames[0];
+}
 
 export const LOBBY_ACTOR_SLOT_ASSETS: string[] = [
     LOBBY_UI_ASSETS.actorSlotOuter,

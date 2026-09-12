@@ -1,10 +1,23 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
+import { mkdtemp, readFile, rm } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
 import path from 'node:path';
 
 const executable = path.resolve('native', 'build', process.platform === 'win32' ? 'eversoul-native-host.exe' : 'eversoul-native-host');
-const child = spawn(executable, ['--headless'], { windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'] });
+const verificationDirectory = await mkdtemp(path.join(tmpdir(), 'eversoul-native-settings-'));
+const settingsPath = path.join(verificationDirectory, 'eversoul-native-host.ini');
+for (const [choice, expectedLanguage] of [['1', 'ko'], ['2', 'en'], ['3', 'zh_cn']]) {
+    const languageSettingsPath = choice === '1' ? settingsPath : path.join(verificationDirectory, `language-${choice}.ini`);
+    const configuration = spawnSync(executable, ['--headless', '--configure-language', choice, '--settings', languageSettingsPath], {
+        windowsHide: true,
+        encoding: 'utf8',
+    });
+    assert.equal(configuration.status, 0, configuration.stderr);
+    assert.match(await readFile(languageSettingsPath, 'utf8'), new RegExp(`language=${expectedLanguage}`, 'u'));
+}
+const child = spawn(executable, ['--headless', '--settings', settingsPath], { windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'] });
 let stdout = Buffer.alloc(0);
 let stderr = '';
 const pending = [];
@@ -56,8 +69,8 @@ try {
     assert.equal(firstHealth.ok, true);
     assert.equal(secondHealth.process_id, firstHealth.process_id);
     assert.equal(firstHealth.single_instance, true);
-    assert.equal(firstHealth.display_language, 'en');
-    assert.equal(path.dirname(firstHealth.settings_path), path.dirname(firstHealth.executable_path));
+    assert.equal(firstHealth.display_language, 'ko');
+    assert.equal(path.resolve(firstHealth.settings_path), path.resolve(settingsPath));
     await verifyDuplicateProcessRejected();
     assert.equal(typeof firstHealth.database_bytes, 'number');
     assert.ok(firstHealth.database_bytes >= 0);
@@ -118,6 +131,7 @@ try {
         sqlite_affect_state_round_trip: 'passed',
         duplicate_process_rejected: 'passed',
         fixed_status_console_contract: 'passed',
+        numeric_language_ini_configuration: 'passed',
         concurrent_dynamic_sql_requests: 'passed',
         process_id: firstHealth.process_id,
         executable_path: firstHealth.executable_path,
@@ -134,4 +148,6 @@ finally {
         request.reject(new Error(`native_host_exit_${exitCode}: ${stderr}`));
     }
     assert.equal(exitCode, 0, stderr);
+    assert.equal(path.dirname(path.resolve(verificationDirectory)), path.resolve(tmpdir()));
+    await rm(verificationDirectory, { recursive: true, force: true });
 }

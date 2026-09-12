@@ -20,14 +20,14 @@ try {
         { personaService },
         { settingsRepository },
         { chatModelRuntime },
-        { extractPersonaPriming },
+        { DEFAULT_MEMORY_CONTEXT_FILTER },
     ] = await Promise.all([
         vite.ssrLoadModule('/src/domains/chat/service.ts'),
         vite.ssrLoadModule('/src/domains/chat/repository.ts'),
         vite.ssrLoadModule('/src/domains/persona/service.ts'),
         vite.ssrLoadModule('/src/domains/settings/repository.ts'),
         vite.ssrLoadModule('/src/domains/llm/engine.ts'),
-        vite.ssrLoadModule('/src/domains/llm/personaPriming.ts'),
+        vite.ssrLoadModule('/src/domains/chat/memoryContext.ts'),
     ]);
 
     await settingsRepository.updateGeneral({
@@ -36,6 +36,8 @@ try {
         active_model: 'chrome-prompt-api',
         context_storage_mode: 'browser',
         savior_name: '',
+        show_reasoning: true,
+        memory_context_filter: DEFAULT_MEMORY_CONTEXT_FILTER,
     });
     await personaService.installPreset('garnet', 'ko');
     await personaService.installPreset('xiaolian', 'ko');
@@ -111,58 +113,63 @@ try {
         assert.equal(garnetFirst.persona_name, '가넷');
         assert.equal(xiaolianFirst.persona_name, '소연');
         assert.notEqual(garnetFirst.system_prompt, xiaolianFirst.system_prompt);
-        assert.match(garnetFirst.system_prompt, /\[IDENTITY\][\s\S]*You are 가넷/);
-        assert.match(garnetFirst.system_prompt, /구원자님/);
+        assert.match(garnetFirst.system_prompt, /\[IDENTITY\]\nThis is an ongoing romance roleplay between 가넷 and 구원자님\. You are 가넷 yourself/);
         assert.match(garnetFirst.system_prompt, /캐럿/);
-        assert.match(xiaolianFirst.system_prompt, /\[IDENTITY\][\s\S]*You are 소연/);
+        assert.match(xiaolianFirst.system_prompt, /\[IDENTITY\][\s\S]*You are 소연 yourself/);
         assert.match(xiaolianFirst.system_prompt, /만두/);
-        assert.match(garnetFirst.behavior_instruction, /\[LIVE ROLEPLAY\]/);
-        assert.match(garnetFirst.behavior_instruction, /spoken, acted or felt beat/);
-        assert.match(garnetFirst.behavior_instruction, /Short names, nicknames, teasing, fragments and stage directions/);
-        assert.match(garnetFirst.behavior_instruction, /persistent behavior variables/);
-        assert.match(garnetFirst.system_prompt, /\[ROLEPLAY CORE\]/);
-        assert.match(garnetFirst.system_prompt, /real replies define your vocabulary/);
-        assert.match(garnetFirst.system_prompt, /\[PRESENT EMOTIONAL STATE\]/);
-        assert.match(garnetFirst.system_prompt, /Happiness: \d+\/100/);
-        assert.match(garnetFirst.system_prompt, /Passion: \d+\/100/);
-        assert.ok(garnetFirst.messages.some((message) => message.role === 'user' && message.content.endsWith('내가 캐럿 꾸미기를 좋아한다고 꼭 기억해 줘')),
-            'the application must pass the Savior message into model history without censoring or rewriting it');
-        assert.doesNotMatch(garnetFirst.behavior_instruction, /answer .* directly/i);
-        assert.notEqual(garnetFirst.system_prompt, garnetSecond.system_prompt);
-        assert.match(garnetSecond.system_prompt, /\[NEWEST THINGS THE SAVIOR ASKED YOU TO CARRY FORWARD\]/);
-        assert.match(garnetSecond.system_prompt, /\[SHARED CONTINUITY\]/);
+        assert.doesNotMatch(garnetFirst.system_prompt, /\[YOUR MOOD RIGHT NOW\]|\/100|\[WHAT YOU REMEMBER\]/, 'turn-varying state must stay out of the cached system prompt');
+        assert.equal(garnetFirst.system_prompt, garnetSecond.system_prompt, 'the persona system prompt must stay identical across turns so the Chrome session is reused');
+        assert.match(garnetFirst.behavior_instruction, /\[YOUR TURN\]/);
+        assert.match(garnetFirst.behavior_instruction, /inside <think><\/think>[\s\S]*honest inner feelings in first person/);
+        assert.equal(garnetFirst.response_prefix, '<think>');
 
-        const garnetPriming = extractPersonaPriming(garnetFirst.system_prompt);
-        const xiaolianPriming = extractPersonaPriming(xiaolianFirst.system_prompt);
-        assert.ok(garnetPriming.messages.length >= 2);
-        assert.ok(xiaolianPriming.messages.length >= 2);
-        assert.notDeepEqual(garnetPriming.messages, xiaolianPriming.messages);
-        assert.equal(garnetPriming.messages[0].role, 'user');
-        assert.equal(garnetPriming.messages[1].role, 'assistant');
+        assert.equal(garnetFirst.messages[0].role, 'assistant', 'the greeting shown in the room must open the model conversation');
+        assert.equal(garnetFirst.messages[0].content, (await personaService.getAssembledPersonaPrompt('garnet', 'ko')).greeting);
+        const garnetFirstLatest = garnetFirst.messages.at(-1);
+        assert.equal(garnetFirstLatest.role, 'user');
+        assert.match(garnetFirstLatest.content, /\[HOW CLOSE YOU ARE\]\nBond level \d+ of 40\./);
+        assert.match(garnetFirstLatest.content, /\[구원자님 NOW · [^\]]+\]\n내가 캐럿 꾸미기를 좋아한다고 꼭 기억해 줘$/);
+        assert.equal(garnetFirst.messages.filter((message) => message.content.includes('내가 캐럿 꾸미기를 좋아한다고 꼭 기억해 줘')).length, 1, 'the live user turn must not be duplicated');
 
-        const rebeccaLatestUserIndex = rebeccaFirst.messages.findLastIndex((message) => message.role === 'user');
-        assert.equal(rebeccaFirst.messages[rebeccaLatestUserIndex].content.endsWith('할매'), true);
-        assert.equal(rebeccaFirst.messages[rebeccaLatestUserIndex - 1].role, 'assistant');
-        assert.match(rebeccaFirst.messages[rebeccaLatestUserIndex - 1].content, /어머머, 할머니라니/);
-        assert.match(rebeccaFirst.messages[rebeccaLatestUserIndex - 1].content, /꼬집어주고 싶게/);
-        assert.equal(rebeccaFirst.messages[rebeccaLatestUserIndex - 2].role, 'user');
-        assert.equal(rebeccaFirst.messages[rebeccaLatestUserIndex - 2].content, '할매');
+        const rebeccaLatest = rebeccaFirst.messages.at(-1);
+        assert.equal(rebeccaLatest.role, 'user');
+        assert.match(rebeccaLatest.content, /\n할매$/);
+        assert.ok(rebeccaFirst.messages.slice(0, -1).every((message) => message.role === 'assistant'), 'no fabricated user/assistant example turns may precede the live turn');
 
         const secondTurnText = garnetSecond.messages.map((message) => message.content).join('\n');
         assert.match(secondTurnText, /내가 캐럿 꾸미기를 좋아한다고 꼭 기억해 줘/);
         assert.match(secondTurnText, /캐럿은 제가 예쁘게 꾸며 드릴게요/);
-        assert.match(secondTurnText, /RELEVANT SHARED MEMORIES/);
+        assert.match(garnetSecond.messages.at(-1).content, /\[WHAT YOU REMEMBER\][\s\S]*Things 구원자님 asked you to keep in mind:[\s\S]*캐럿 꾸미기를 좋아한다고/);
         assert.doesNotMatch(secondTurnText, /구원자님과 캐럿을 꾸밀 생각에 마음이 들뜬다/);
+
+        await settingsRepository.updateGeneral({
+            show_reasoning: false,
+            memory_context_filter: { ...DEFAULT_MEMORY_CONTEXT_FILTER, directive: false, affect: false },
+        });
+        await chatService.sendMessage({
+            room_id: garnetRoom.id,
+            persona_id: 'garnet',
+            content: '너의 볼에 뽀뽀했어',
+            request_id: 'garnet-turn-3',
+            signal,
+            handlers,
+        });
+        const garnetFiltered = capturedRequests.at(-1);
+        assert.equal(garnetFiltered.response_prefix, '', 'reasoning off must not prefill <think>');
+        assert.doesNotMatch(garnetFiltered.behavior_instruction, /<think>/);
+        assert.doesNotMatch(garnetFiltered.messages.at(-1).content, /asked you to keep in mind|\[YOUR MOOD RIGHT NOW\]/, 'disabled memory kinds must not reach the model');
+        assert.match(garnetFiltered.messages.at(-1).content, /\n너의 볼에 뽀뽀했어$/);
+        await settingsRepository.updateGeneral({ show_reasoning: true, memory_context_filter: DEFAULT_MEMORY_CONTEXT_FILTER });
 
         const garnetStored = await chatRepository.listMessagesForPersona(garnetRoom.id, 'garnet');
         const xiaolianStored = await chatRepository.listMessagesForPersona(xiaolianRoom.id, 'xiaolian');
         const rebeccaStored = await chatRepository.listMessagesForPersona(rebeccaRoom.id, 'rebecca');
-        assert.equal(garnetStored.length, 4);
+        assert.equal(garnetStored.length, 6);
         assert.equal(xiaolianStored.length, 2);
         assert.equal(rebeccaStored.length, 2);
         assert.ok(garnetStored.every((message) => message.persona_id === 'garnet'));
         assert.ok(xiaolianStored.every((message) => message.persona_id === 'xiaolian'));
-        assert.equal(await chatRepository.countEpisodicMemories('garnet'), 2);
+        assert.equal(await chatRepository.countEpisodicMemories('garnet'), 3);
         assert.equal(await chatRepository.countEpisodicMemories('xiaolian'), 1);
         assert.equal(await chatRepository.countEpisodicMemories('rebecca'), 1);
         const garnetEmotion = await chatRepository.getPersonaEmotion('garnet');
@@ -200,10 +207,10 @@ try {
             }
         }
         assert.equal(chromeCreateOptions.length, 2);
-        assert.equal(chromeCreateOptions[0].initialPrompts[0].role, 'system');
-        assert.equal(chromeCreateOptions[1].initialPrompts[0].role, 'system');
-        assert.match(chromeCreateOptions[0].initialPrompts[0].content, /You are 가넷/);
-        assert.match(chromeCreateOptions[1].initialPrompts[0].content, /You are 소연/);
+        assert.deepEqual(chromeCreateOptions[0].initialPrompts.map((prompt) => prompt.role), ['system']);
+        assert.deepEqual(chromeCreateOptions[1].initialPrompts.map((prompt) => prompt.role), ['system']);
+        assert.match(chromeCreateOptions[0].initialPrompts[0].content, /You are 가넷 yourself/);
+        assert.match(chromeCreateOptions[1].initialPrompts[0].content, /You are 소연 yourself/);
         assert.notEqual(
             chromeCreateOptions[0].initialPrompts[0].content,
             chromeCreateOptions[1].initialPrompts[0].content,
@@ -233,7 +240,7 @@ try {
         for (const [index, request] of ratingRequests.entries()) {
             const [rating, scene] = ratingScenarios[index];
             assert.equal(request.messages.at(-1).content.endsWith(`${rating}: ${scene}`), true, `${rating} scene must reach the model unchanged`);
-            assert.match(request.behavior_instruction, /\[LIVE ROLEPLAY\]/);
+            assert.match(request.behavior_instruction, /\[YOUR TURN\]/);
             assert.doesNotMatch(request.behavior_instruction, /block|reject|classif|rating|guard/i);
         }
 
@@ -242,20 +249,22 @@ try {
             persona_prompts_are_distinct: true,
             garnet_system_prompt_sha256: sha256(garnetFirst.system_prompt),
             xiaolian_system_prompt_sha256: sha256(xiaolianFirst.system_prompt),
-            garnet_priming_messages: garnetPriming.messages.length,
-            xiaolian_priming_messages: xiaolianPriming.messages.length,
+            greeting_opens_model_conversation: true,
+            persona_system_prompt_stable_across_turns: true,
+            memory_filter_reaches_model_context: true,
+            reasoning_toggle_controls_prefill: true,
             garnet_second_turn_contains_first_user_message: true,
             garnet_second_turn_contains_first_spirit_reply: true,
             garnet_second_turn_contains_recalled_memory: true,
             garnet_second_turn_persona_state_evolved: true,
             garnet_persistent_emotion_state: garnetEmotion,
-            rebecca_age_teasing_uses_dataset_voice: true,
+            no_fabricated_example_turns: true,
             reasoning_excluded_from_next_turn: true,
             chrome_initial_prompts_are_distinct: true,
             chrome_expected_output_language: 'ko',
             roleplay_rating_flows: ratingScenarios.map(([rating]) => rating),
             stored_messages: { garnet: garnetStored.length, xiaolian: xiaolianStored.length, rebecca: rebeccaStored.length },
-            stored_episodic_memories: { garnet: 2, xiaolian: 1, rebecca: 1 },
+            stored_episodic_memories: { garnet: 3, xiaolian: 1, rebecca: 1 },
         }, null, 2));
     }
     finally {

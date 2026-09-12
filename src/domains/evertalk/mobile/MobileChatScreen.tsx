@@ -3,9 +3,10 @@ import type React from 'react';
 import { ChevronLeft, History, Images, MessageCircle, Plus, Send, Square, X, ZoomIn } from 'lucide-react';
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
 import type { SpiritVisualAssets } from '../../persona';
-import { createTalkChoices, createConversationSummary, formatDateTime, formatRoomTitle, formatSkinLabel, parseThinkBlocks, pickPokeReactionLine, pickRandomSpeechLine } from '../logic';
+import { createTalkChoices, createConversationSummary, formatDateTime, formatRoomTitle, formatSkinLabel, pickPokeReactionLine, pickRandomSpeechLine } from '../logic';
 import { ImageViewerOverlay } from '../components/ImageViewerOverlay';
 import { LoadableAssetImage } from '../components/LoadableAssetImage';
+import { SpiritReplyContent } from '../components/SpiritReplyContent';
 import type { StageTab } from '../types';
 import type { MobileChatScreenProps, MobileMessageBubbleProps } from './types';
 
@@ -21,6 +22,7 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
     const speechLine = useMemo(() => pickRandomSpeechLine(activeDetail), [activeDetail]);
     const avatarCandidates = activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? [];
     const canUseComposer = Boolean(activeDetail && llmStatus?.is_loaded && !isTyping);
+    const openingGreeting = activeDetail?.personality.greeting?.trim() ?? '';
 
     const [historyOpen, setHistoryOpen] = useState(false);
     const [poked, setPoked] = useState(false);
@@ -147,14 +149,22 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
                         </div>
                     )}
                     <div className="ever-mobile-chat__messages" ref={messagesListRef}>
-                        {messages.length === 0 && (
+                        {openingGreeting.length > 0 && (
+                            <div className="ever-mobile-message is-spirit is-opening">
+                                <div className="ever-mobile-message__avatar">
+                                    <LoadableAssetImage candidates={avatarCandidates} alt={activeDetail.name} fallback={<span>{activeDetail.name.charAt(0)}</span>}/>
+                                </div>
+                                <div className="ever-mobile-message__bubble"><span className="ever-mobile-message__text">{openingGreeting}</span></div>
+                            </div>
+                        )}
+                        {messages.length === 0 && openingGreeting.length === 0 && (
                             <div className="ever-mobile-chat__messages-empty">
                                 <strong>{labels.noSavedMessages}</strong>
                                 <span>{labels.firstMessageHint}</span>
                             </div>
                         )}
                         {messages.map((message) => (
-                            <MobileMessageBubble key={message.id} message={message} spiritName={activeDetail.name} avatarCandidates={avatarCandidates} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} onDelete={controller.deleteChatMessage}/>
+                            <MobileMessageBubble key={message.id} message={message} spiritName={activeDetail.name} avatarCandidates={avatarCandidates} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} innerThoughtsLabel={labels.innerThoughts} onDelete={controller.deleteChatMessage}/>
                         ))}
                         {isTyping && (
                             <div className="ever-mobile-message is-spirit">
@@ -163,9 +173,7 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
                                 </div>
                                 <div className="ever-mobile-message__bubble">
                                     {streamingText
-                                        ? parseThinkBlocks(streamingText).map((block, idx) => (block.type === 'think'
-                                            ? (showReasoning ? <div key={idx} className="ever-mobile-message__think">{block.content}</div> : null)
-                                            : <span key={idx} className="ever-mobile-message__text">{block.content}</span>))
+                                        ? <SpiritReplyContent text={streamingText} showReasoning={showReasoning} variant="mobile" innerThoughtsLabel={labels.innerThoughts}/>
                                         : <span className="ever-mobile-typing"><i/><i/><i/></span>}
                                 </div>
                             </div>
@@ -214,7 +222,7 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
     );
 }
 
-function MobileMessageBubble({ message, spiritName, avatarCandidates, showReasoning, deleteLabel, onDelete }: MobileMessageBubbleProps) {
+function MobileMessageBubble({ message, spiritName, avatarCandidates, showReasoning, deleteLabel, innerThoughtsLabel, onDelete }: MobileMessageBubbleProps) {
     if (message.role === 'system') {
         return (<div className="ever-mobile-message is-system"><div className="ever-mobile-message__bubble">{message.content}</div></div>);
     }
@@ -229,9 +237,7 @@ function MobileMessageBubble({ message, spiritName, avatarCandidates, showReason
             <div className="ever-mobile-message__bubble">
                 {fromUser
                     ? message.content
-                    : parseThinkBlocks(message.content).map((block, idx) => (block.type === 'think'
-                        ? (showReasoning ? <div key={idx} className="ever-mobile-message__think">{block.content}</div> : null)
-                        : <span key={idx} className="ever-mobile-message__text">{block.content}</span>))}
+                    : <SpiritReplyContent text={message.content} showReasoning={showReasoning} variant="mobile" innerThoughtsLabel={innerThoughtsLabel}/>}
             </div>
             <button type="button" className="ever-mobile-message__delete" aria-label={deleteLabel} onClick={() => void onDelete(message.id)}><X aria-hidden="true" size={12}/></button>
         </div>

@@ -15,7 +15,7 @@ export interface PersonaEmotionState {
     updated_at: string;
 }
 
-const BASELINE: PersonaEmotionLevels = {
+export const PERSONA_EMOTION_BASELINE: PersonaEmotionLevels = {
     happy: 42,
     melancholy: 12,
     bored: 16,
@@ -44,8 +44,12 @@ function elapsedHours(previous: PersonaEmotionState | null, occurredAt: string):
     return Number.isFinite(elapsed) && elapsed > 0 ? elapsed / 3_600_000 : 0;
 }
 
+export function createPersonaEmotionStateFromLevels(levels: PersonaEmotionLevels, updatedAt: string): PersonaEmotionState {
+    return { levels: { ...levels }, dominant: dominantEmotion(levels), updated_at: updatedAt };
+}
+
 export function createPersonaEmotionState(updatedAt: string, personaVoiceSeed = ''): PersonaEmotionState {
-    const baseline = { levels: { ...BASELINE }, dominant: dominantEmotion(BASELINE), updated_at: updatedAt };
+    const baseline = createPersonaEmotionStateFromLevels(PERSONA_EMOTION_BASELINE, updatedAt);
     return personaVoiceSeed.trim().length > 0
         ? advancePersonaEmotion(baseline, personaVoiceSeed, updatedAt, 0.65)
         : baseline;
@@ -56,13 +60,14 @@ export function advancePersonaEmotion(
     stimulus: string,
     occurredAt: string,
     influence = 1,
+    baseline: PersonaEmotionLevels = PERSONA_EMOTION_BASELINE,
 ): PersonaEmotionState {
-    const starting = previous ?? createPersonaEmotionState(occurredAt);
+    const starting = previous ?? createPersonaEmotionStateFromLevels(baseline, occurredAt);
     const hours = elapsedHours(previous, occurredAt);
     const decay = Math.min(0.45, hours / 72);
     const levels: PersonaEmotionLevels = { ...starting.levels };
     for (const kind of PERSONA_EMOTION_KINDS) {
-        levels[kind] += (BASELINE[kind] - levels[kind]) * decay;
+        levels[kind] += (baseline[kind] - levels[kind]) * decay;
     }
 
     const text = stimulus.trim();

@@ -119,7 +119,7 @@ public:
 #endif
     }
 
-    DisplayLanguage resolveLanguage(const std::filesystem::path& settingsPath) {
+    DisplayLanguage resolveLanguage(const std::filesystem::path& settingsPath, bool promptIfMissing) {
         std::ifstream settings(settingsPath);
         std::string line;
         while (std::getline(settings, line)) {
@@ -128,6 +128,7 @@ public:
             const std::string code = line.substr(prefix.size());
             if (code == "ko" || code == "en" || code == "zh_cn") return languageFromCode(code);
         }
+        if (!promptIfMissing) return DisplayLanguage::English;
         writeUtf8(
             "EverSoul Native Host - Display language / 표시 언어 / 显示语言\n\n"
             "  1. 한국어\n"
@@ -135,13 +136,20 @@ public:
             "  3. 简体中文\n\n"
             "Select 1, 2, or 3 / 1, 2, 3 중 선택 / 请选择 1、2 或 3: ");
         const int choice = readChoice();
-        const DisplayLanguage language = choice == 1
-            ? DisplayLanguage::Korean
+        const DisplayLanguage language = languageForChoice(choice);
+        saveLanguage(settingsPath, language);
+        return language;
+    }
+
+    static DisplayLanguage languageForChoice(int choice) {
+        return choice == 1 ? DisplayLanguage::Korean
             : choice == 3 ? DisplayLanguage::Chinese : DisplayLanguage::English;
+    }
+
+    static void saveLanguage(const std::filesystem::path& settingsPath, DisplayLanguage language) {
         std::ofstream output(settingsPath, std::ios::trunc);
         if (!output) throw std::runtime_error("native_host_ini_write_failed");
         output << "[display]\nlanguage=" << languageCode(language) << '\n';
-        return language;
     }
 
     void show(
@@ -534,8 +542,10 @@ int main(int argc, char** argv) {
     try {
         bool jsonLines = false;
         bool consoleEnabled = true;
+        int configureLanguageChoice = 0;
         const std::filesystem::path executablePath = std::filesystem::absolute(argv[0]);
         std::filesystem::path databasePath = executablePath.parent_path() / "eversoul-context.sqlite3";
+        std::filesystem::path settingsPath = executablePath.parent_path() / "eversoul-native-host.ini";
         for (int index = 1; index < argc; ++index) {
             const std::string_view argument(argv[index]);
             if (argument == "--self-test") {
@@ -553,6 +563,20 @@ int main(int argc, char** argv) {
             else if (argument == "--db" && index + 1 < argc) {
                 databasePath = argv[++index];
             }
+            else if (argument == "--settings" && index + 1 < argc) {
+                settingsPath = argv[++index];
+            }
+            else if (argument == "--configure-language" && index + 1 < argc) {
+                configureLanguageChoice = std::stoi(argv[++index]);
+            }
+        }
+        if (configureLanguageChoice != 0) {
+            if (configureLanguageChoice < 1 || configureLanguageChoice > 3) {
+                throw std::runtime_error("invalid_display_language_choice");
+            }
+            HostStatusConsole::saveLanguage(
+                settingsPath, HostStatusConsole::languageForChoice(configureLanguageChoice));
+            return 0;
         }
 #ifdef _WIN32
         if (!jsonLines) {
@@ -562,10 +586,7 @@ int main(int argc, char** argv) {
 #endif
         ProcessInstanceGuard instanceGuard(executablePath);
         HostStatusConsole statusConsole(consoleEnabled);
-        const std::filesystem::path settingsPath = executablePath.parent_path() / "eversoul-native-host.ini";
-        const DisplayLanguage displayLanguage = consoleEnabled
-            ? statusConsole.resolveLanguage(settingsPath)
-            : DisplayLanguage::English;
+        const DisplayLanguage displayLanguage = statusConsole.resolveLanguage(settingsPath, consoleEnabled);
         ContextDatabase database(databasePath);
         statusConsole.show(displayLanguage, false, currentProcessId(), executablePath, databasePath, settingsPath);
         std::string payload;

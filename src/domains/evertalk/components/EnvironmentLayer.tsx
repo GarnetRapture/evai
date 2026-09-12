@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Bell, ChevronDown, Cpu, Database, HardDrive, Home, MessageCircle, Settings, Trophy, UserRound, Workflow, X } from 'lucide-react';
+import { Bell, ChevronDown, Cpu, Database, FlaskConical, HardDrive, Home, MessageCircle, Settings, Trophy, UserRound, Workflow, X } from 'lucide-react';
 import type { DeviceEnvironmentInfo } from '../../../shared/platform';
 import type { UserSession } from '../../auth';
 import type { AppSettings } from '../../settings';
@@ -96,6 +96,7 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
                         ['ranking', labels.navRanking, Trophy],
                         ['memory', labels.navMemory, Workflow],
                         ['storage', labels.navStorage, HardDrive],
+                        ...(settings?.cheat_mode_enabled ? [['cheat', labels.navCheat, FlaskConical]] as const : []),
                     ] as const).map(([view, title, Icon]) => (
                         <button key={view} type="button" className={activeView === view ? 'is-active' : ''} aria-current={activeView === view ? 'page' : undefined} onClick={() => {
                             setOpen(false);

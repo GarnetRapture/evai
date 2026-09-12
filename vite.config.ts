@@ -2,7 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 import { execFileSync, spawn } from 'node:child_process'
 import type { ChildProcessWithoutNullStreams } from 'node:child_process'
-import { existsSync, readFileSync, statSync } from 'node:fs'
+import { closeSync, existsSync, openSync, readFileSync, statSync } from 'node:fs'
 import { homedir } from 'node:os'
 import { basename, isAbsolute, join, resolve } from 'node:path'
 import type { IncomingMessage } from 'node:http'
@@ -149,9 +149,10 @@ class PersistentNativeContextHost {
   private stdoutBuffer = ''
   private stderrBuffer = ''
   private pending: PendingNativeCall[] = []
+  private closing: Promise<void> | null = null
 
-  call(executable: string, payload: string): Promise<string> {
-    const startedNow = this.ensureRunning(executable)
+  async call(executable: string, payload: string): Promise<string> {
+    const startedNow = await this.ensureRunning(executable)
     if (this.pending.length >= maximumPendingNativeCalls) {
       return Promise.reject(new Error('native_host_busy'))
     }
@@ -166,17 +167,23 @@ class PersistentNativeContextHost {
     })
   }
 
-  close(): void {
+  async close(): Promise<void> {
+    if (this.closing) return this.closing
     const child = this.child
     this.child = null
     this.executable = null
     this.rejectPending(new Error('native_host_closed'))
-    if (child) this.terminateChild(child)
+    if (!child) return
+    this.closing = this.terminateChild(child).finally(() => {
+      this.closing = null
+    })
+    return this.closing
   }
 
-  private ensureRunning(executable: string): boolean {
+  private async ensureRunning(executable: string): Promise<boolean> {
+    if (this.closing) await this.closing
     if (this.child && this.child.exitCode === null && this.executable === executable) return false
-    if (this.child) this.close()
+    if (this.child) await this.close()
     const consoleArgument = process.env.EVERSOUL_NATIVE_HEADLESS === '1' ? '--headless' : '--visible-console'
     const child = spawn(executable, ['--jsonl', consoleArgument], {
       detached: process.platform === 'win32',
@@ -235,17 +242,34 @@ class PersistentNativeContextHost {
     this.child = null
     this.executable = null
     this.rejectPending(error)
-    if (child) this.terminateChild(child)
+    if (child && !this.closing) {
+      this.closing = this.terminateChild(child).finally(() => {
+        this.closing = null
+      })
+    }
   }
 
-  private terminateChild(child: ChildProcessWithoutNullStreams): void {
+  private terminateChild(child: ChildProcessWithoutNullStreams): Promise<void> {
     child.stdin.destroy()
-    if (child.exitCode !== null) return
+    if (child.exitCode !== null) return Promise.resolve()
     child.kill()
-    const forceKill = setTimeout(() => {
-      if (child.exitCode === null) child.kill('SIGKILL')
-    }, 750)
-    forceKill.unref()
+    return new Promise((resolveTermination) => {
+      let settled = false
+      const finish = () => {
+        if (settled) return
+        settled = true
+        clearTimeout(forceKill)
+        clearTimeout(giveUp)
+        resolveTermination()
+      }
+      child.once('close', finish)
+      const forceKill = setTimeout(() => {
+        if (child.exitCode === null) child.kill('SIGKILL')
+      }, 750)
+      const giveUp = setTimeout(finish, 2_000)
+      forceKill.unref()
+      giveUp.unref()
+    })
   }
 
   private rejectPending(error: Error): void {
@@ -262,7 +286,7 @@ function nativeContextDevelopmentBridge(): Plugin {
     name: 'eversoul-native-context-development-bridge',
     apply: 'serve',
     configureServer(server) {
-      server.httpServer?.once('close', () => nativeHost.close())
+      server.httpServer?.once('close', () => { void nativeHost.close() })
       server.middlewares.use('/__eversoul/native-context', async (request, response) => {
         response.setHeader('Content-Type', 'application/json; charset=utf-8')
         response.setHeader('Cache-Control', 'no-store')
@@ -275,7 +299,7 @@ function nativeContextDevelopmentBridge(): Plugin {
           const body = await readRequestBody(request)
           const payload = JSON.parse(body) as { operation?: unknown; host_executable_path?: unknown }
           if (payload.operation === 'disconnect_native_host') {
-            nativeHost.close()
+            await nativeHost.close()
             response.end(JSON.stringify({ ok: true }))
             return
           }
@@ -298,9 +322,70 @@ function nativeContextDevelopmentBridge(): Plugin {
   }
 }
 
+const lockedWatchErrorCodes = new Set(['EBUSY', 'EPERM', 'EACCES'])
+const lockedWatchRetryIntervalMs = 500
+const lockedWatchMaximumAttempts = 120
+
+interface WatchErrorDetail {
+  code?: string
+  path?: string
+  filename?: string
+  message?: string
+}
+
+function isFileReadable(path: string): boolean {
+  try {
+    closeSync(openSync(path, 'r'))
+    return true
+  } catch {
+    return false
+  }
+}
+
+function lockedFileWatchRecovery(): Plugin {
+  return {
+    name: 'eversoul-locked-file-watch-recovery',
+    apply: 'serve',
+    configureServer(server) {
+      const pendingPaths = new Set<string>()
+      function recover(path: string, attempt: number): void {
+        if (!existsSync(path)) {
+          pendingPaths.delete(path)
+          return
+        }
+        if (!isFileReadable(path)) {
+          if (attempt >= lockedWatchMaximumAttempts) {
+            pendingPaths.delete(path)
+            server.config.logger.error(`[watch] ${path} stayed locked; restart the dev server after the copy finishes.`)
+            return
+          }
+          setTimeout(() => recover(path, attempt + 1), lockedWatchRetryIntervalMs).unref()
+          return
+        }
+        pendingPaths.delete(path)
+        server.watcher.add(path)
+        server.watcher.emit('add', path)
+        server.config.logger.info(`[watch] ${path} is readable again and registered.`)
+      }
+      server.watcher.on('error', (error: unknown) => {
+        const detail = error as WatchErrorDetail
+        const path = detail.path ?? detail.filename
+        if (detail.code && lockedWatchErrorCodes.has(detail.code) && path) {
+          if (pendingPaths.has(path)) return
+          pendingPaths.add(path)
+          server.config.logger.warn(`[watch] ${detail.code} while watching ${path}; waiting for the file lock to release.`)
+          setTimeout(() => recover(path, 1), lockedWatchRetryIntervalMs).unref()
+          return
+        }
+        server.config.logger.error(`[watch] ${detail.message ?? String(error)}`)
+      })
+    },
+  }
+}
+
 export default defineConfig({
   base: './',
-  plugins: [nativeContextDevelopmentBridge(), react(), tailwindcss()],
+  plugins: [lockedFileWatchRecovery(), nativeContextDevelopmentBridge(), react(), tailwindcss()],
   server: { headers: crossOriginIsolationHeaders },
   preview: { headers: crossOriginIsolationHeaders },
 })

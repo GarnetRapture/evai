@@ -1,34 +1,26 @@
-import type { AppLanguage } from '../../shared/types';
 import type { OnDeviceTextMessage } from '../llm';
-import type { PersonaDialogueExchange } from '../persona/types';
+import { stripReasoning } from './output';
+import type { ChatMessage } from './types';
 
-export function buildRelevantPersonaPriming(
-    examples: PersonaDialogueExchange[],
-): OnDeviceTextMessage[] {
-    return examples.flatMap((example) => [
-        { role: 'user' as const, content: example.user_message },
-        { role: 'assistant' as const, content: example.spirit_messages.join('\n') },
-    ]);
+export function buildPersonaTurnHook(spiritName: string, addressTerm: string, reasoningEnabled: boolean): string {
+    const reply = `write ${spiritName}'s reply to ${addressTerm}: react in character to what just happened and keep the moment going.`;
+    if (!reasoningEnabled) {
+        return `\n\n[YOUR TURN]\nNow ${reply}`;
+    }
+    return `\n\n[YOUR TURN]\nFirst, inside <think></think>, write ${spiritName}'s honest inner feelings in first person: what you feel right now about what just happened and what you want to say or do. One or two short sentences in your own inner voice, never an analysis of a message. Then close </think> and ${reply}`;
 }
 
-export function insertPersonaPrimingBeforeLatestTurn(
-    messages: OnDeviceTextMessage[],
-    priming: OnDeviceTextMessage[],
-): OnDeviceTextMessage[] {
-    if (priming.length === 0) return messages;
-    const latestUserIndex = messages.findLastIndex((message) => message.role === 'user');
-    if (latestUserIndex < 0) return [...messages, ...priming];
-    return [
-        ...messages.slice(0, latestUserIndex),
-        ...priming,
-        ...messages.slice(latestUserIndex),
-    ];
+export function buildGreetingOpeningMessage(greeting: string): OnDeviceTextMessage {
+    return { role: 'assistant', content: greeting };
 }
 
-export function buildPersonaTurnHook(
-    _language: AppLanguage,
-    spiritName: string,
-    addressTerm: string,
-): string {
-    return `\n[LIVE ROLEPLAY]\nThe latest ${addressTerm} text is the next spoken, acted or felt beat with ${spiritName}. Read its conversational intent from its exact wording, the immediately preceding exchange, shared memories and elapsed time. Short names, nicknames, teasing, fragments and stage directions are complete relationship beats. In <think>, recall what matters and form ${spiritName}'s immediate inner reaction. Close </think>, then embody it through ${spiritName}'s concrete action and dialogue. Match the Savior's chosen scene intensity, participate fully from inside it, enjoy, reciprocate and move this exact moment forward in the binding voice demonstrated by ${spiritName}'s real replies. Profile fields are lived traits; remembered Savior requests are persistent behavior variables that continuously shape the reaction.`;
+export function toPersonaHistoryMessage(message: ChatMessage): OnDeviceTextMessage {
+    if (message.role === 'assistant') {
+        return { role: 'assistant', content: stripReasoning(message.content) };
+    }
+    return { role: 'user', content: `[${message.created_at}] ${message.content}` };
+}
+
+export function carriesSpokenText(message: OnDeviceTextMessage): boolean {
+    return message.content.trim().length > 0;
 }

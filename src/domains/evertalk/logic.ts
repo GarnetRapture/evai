@@ -14,7 +14,7 @@ export {
 } from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerTransform, LocalModelEntryGroup, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LocalModelEntryGroup, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -179,20 +179,66 @@ export function parseThinkBlocks(text: string): ThinkBlock[] {
     }
     return parts;
 }
+export function splitSpiritReply(text: string): SpiritReplyParts {
+    const blocks = parseThinkBlocks(text);
+    return {
+        reasoning: blocks.filter((block) => block.type === 'think').map((block) => block.content.trim()).filter((content) => content.length > 0).join('\n\n'),
+        reply: blocks.filter((block) => block.type === 'text').map((block) => block.content).join('').trim(),
+    };
+}
 export function formatProgressPercent(progress: ModelDownloadProgress): number {
     return Math.round(progress.ratio * 100);
 }
-export const IMAGE_VIEWER_MIN_SCALE = 0.25;
-export const IMAGE_VIEWER_MAX_SCALE = 6;
-export const IMAGE_VIEWER_SCALE_STEP = 0.25;
+export const IMAGE_VIEWER_ZOOM_FACTOR = 1.25;
 export const IMAGE_VIEWER_PAN_STEP_PX = 64;
-export function clampImageViewerScale(scale: number): number {
-    return Math.min(IMAGE_VIEWER_MAX_SCALE, Math.max(IMAGE_VIEWER_MIN_SCALE, Number(scale.toFixed(3))));
+export const IMAGE_VIEWER_WHEEL_ZOOM_RATE = 0.0015;
+export const IMAGE_VIEWER_WHEEL_LINE_PX = 16;
+export const IMAGE_VIEWER_JOG_RANGE = 100;
+export const IMAGE_VIEWER_JOG_UNITS_PER_DOUBLING = 25;
+export const IMAGE_VIEWER_FRAME_CENTER: ImageViewerPoint = { x: 0, y: 0 };
+export const IMAGE_VIEWER_FIT_TRANSFORM: ImageViewerTransform = { scale: 1, x: 0, y: 0 };
+export function resolveImageViewerScale(currentScale: number, nextScale: number): number {
+    return Number.isFinite(nextScale) && nextScale > 0 ? nextScale : currentScale;
 }
-export function scaleImageViewerTransform(transform: ImageViewerTransform, nextScale: number): ImageViewerTransform {
-    const scale = clampImageViewerScale(nextScale);
+export function zoomImageViewerTransform(transform: ImageViewerTransform, nextScale: number, anchor: ImageViewerPoint): ImageViewerTransform {
+    const scale = resolveImageViewerScale(transform.scale, nextScale);
     const ratio = scale / transform.scale;
-    return { scale, x: transform.x * ratio, y: transform.y * ratio };
+    return {
+        scale,
+        x: anchor.x - (anchor.x - transform.x) * ratio,
+        y: anchor.y - (anchor.y - transform.y) * ratio,
+    };
+}
+export function computeImageViewerFitScale(natural: ImageViewerSize, frame: ImageViewerSize): number | null {
+    if (natural.width <= 0 || natural.height <= 0 || frame.width <= 0 || frame.height <= 0) {
+        return null;
+    }
+    return Math.min(frame.width / natural.width, frame.height / natural.height);
+}
+export function imageViewerWheelDeltaPixels(deltaY: number, deltaMode: number, pageHeight: number): number {
+    if (deltaMode === WheelEvent.DOM_DELTA_LINE) {
+        return deltaY * IMAGE_VIEWER_WHEEL_LINE_PX;
+    }
+    if (deltaMode === WheelEvent.DOM_DELTA_PAGE) {
+        return deltaY * pageHeight;
+    }
+    return deltaY;
+}
+export function imageViewerWheelZoomFactor(deltaPixels: number): number {
+    return Math.exp(-deltaPixels * IMAGE_VIEWER_WHEEL_ZOOM_RATE);
+}
+export function imageViewerJogScale(baseScale: number, jogValue: number): number {
+    return baseScale * 2 ** (jogValue / IMAGE_VIEWER_JOG_UNITS_PER_DOUBLING);
+}
+export function imageViewerPointFromClient(clientX: number, clientY: number, frameRect: DOMRect): ImageViewerPoint {
+    return {
+        x: clientX - (frameRect.left + frameRect.width / 2),
+        y: clientY - (frameRect.top + frameRect.height / 2),
+    };
+}
+export function formatImageViewerScalePercent(scale: number): string {
+    const percent = scale * 100;
+    return percent >= 100 ? String(Math.round(percent)) : String(Number(percent.toPrecision(3)));
 }
 export function panImageViewerTransform(transform: ImageViewerTransform, direction: ImageViewerPanDirection, stepPx: number): ImageViewerTransform {
     if (direction === 'up') {

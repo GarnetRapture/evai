@@ -112,10 +112,28 @@ export function selectRepresentativeDialogueExamples(
     });
 }
 
+function withoutExcludedTerms(text: string, excludedTerms: readonly string[]): string {
+    let normalized = compactDialogueText(text).toLocaleLowerCase();
+    for (const term of excludedTerms) {
+        normalized = normalized.replaceAll(term, ' ');
+    }
+    return normalized;
+}
+
+function normalizeExcludedTerms(terms: readonly string[]): string[] {
+    const normalized = new Set<string>();
+    for (const term of terms) {
+        const compact = compactDialogueText(term).toLocaleLowerCase();
+        for (const token of compact.match(TOKEN_PATTERN) ?? []) {
+            normalized.add(token);
+        }
+    }
+    return [...normalized].sort((left, right) => right.length - left.length);
+}
+
 function lexicalTerms(text: string): Set<string> {
     const terms = new Set<string>();
-    const normalized = compactDialogueText(text).toLocaleLowerCase();
-    for (const token of normalized.match(TOKEN_PATTERN) ?? []) {
+    for (const token of text.match(TOKEN_PATTERN) ?? []) {
         if (token.length >= 2) {
             terms.add(token);
         }
@@ -130,23 +148,22 @@ function lexicalTerms(text: string): Set<string> {
 
 function lexicalTokens(text: string): Set<string> {
     return new Set(
-        (compactDialogueText(text).toLocaleLowerCase().match(TOKEN_PATTERN) ?? [])
+        (text.match(TOKEN_PATTERN) ?? [])
             .filter((token) => token.length >= 2),
     );
 }
 
-function exchangeText(exchange: PersonaDialogueExchange): string {
-    return `${exchange.user_message} ${exchange.spirit_messages.join(' ')}`;
+function exchangeText(exchange: PersonaDialogueExchange, excludedTerms: readonly string[]): string {
+    return withoutExcludedTerms(`${exchange.user_message} ${exchange.spirit_messages.join(' ')}`, excludedTerms);
 }
 
 function relevanceScore(
     queryTokens: Set<string>,
     queryTerms: Set<string>,
-    exchange: PersonaDialogueExchange,
+    candidateText: string,
     tokenDocumentFrequency: ReadonlyMap<string, number>,
     exchangeCount: number,
 ): number {
-    const candidateText = exchangeText(exchange);
     const candidateTokens = lexicalTokens(candidateText);
     let exactTokenScore = 0;
     for (const token of queryTokens) {
@@ -172,18 +189,22 @@ export function selectRelevantDialogueExamples(
     exchanges: PersonaDialogueExchange[],
     query: string,
     limit = RELEVANT_DIALOGUE_EXAMPLE_LIMIT,
+    excludedTerms: readonly string[] = [],
 ): PersonaDialogueExchange[] {
     if (limit <= 0) {
         return [];
     }
-    const queryTokens = lexicalTokens(query);
-    const queryTerms = lexicalTerms(query);
+    const exclusions = normalizeExcludedTerms(excludedTerms);
+    const normalizedQuery = withoutExcludedTerms(query, exclusions);
+    const queryTokens = lexicalTokens(normalizedQuery);
+    const queryTerms = lexicalTerms(normalizedQuery);
     if (queryTerms.size === 0) {
         return [];
     }
+    const candidateTexts = exchanges.map((exchange) => exchangeText(exchange, exclusions));
     const tokenDocumentFrequency = new Map<string, number>();
-    for (const exchange of exchanges) {
-        for (const token of lexicalTokens(exchangeText(exchange))) {
+    for (const candidateText of candidateTexts) {
+        for (const token of lexicalTokens(candidateText)) {
             tokenDocumentFrequency.set(token, (tokenDocumentFrequency.get(token) ?? 0) + 1);
         }
     }
@@ -191,20 +212,10 @@ export function selectRelevantDialogueExamples(
         .map((exchange, index) => ({
             exchange,
             index,
-            score: relevanceScore(queryTokens, queryTerms, exchange, tokenDocumentFrequency, exchanges.length),
+            score: relevanceScore(queryTokens, queryTerms, candidateTexts[index], tokenDocumentFrequency, exchanges.length),
         }))
         .filter((candidate) => candidate.score > 0)
         .sort((left, right) => right.score - left.score || left.index - right.index)
         .slice(0, limit)
         .map((candidate) => candidate.exchange);
-}
-
-export function hasDialogueLexicalOverlap(query: string, candidate: string): boolean {
-    const queryTerms = lexicalTerms(query);
-    if (queryTerms.size === 0) return false;
-    const candidateTerms = lexicalTerms(candidate);
-    for (const term of queryTerms) {
-        if (candidateTerms.has(term)) return true;
-    }
-    return false;
 }

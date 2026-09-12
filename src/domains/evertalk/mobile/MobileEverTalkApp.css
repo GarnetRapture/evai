@@ -637,14 +637,20 @@
     text-align: center;
 }
 
-.ever-mobile-message__think {
+.ever-inner-thoughts.is-mobile {
     margin-bottom: 6px;
-    padding: 8px 10px;
-    border-radius: 10px;
+}
+
+.ever-inner-thoughts.is-mobile .ever-inner-thoughts__toggle {
+    min-height: 28px;
+    font-size: var(--ever-mobile-small);
+}
+
+.ever-inner-thoughts.is-mobile .ever-inner-thoughts__body {
+    border-radius: 0 10px 10px 0;
     background: color-mix(in srgb, var(--ever-mobile-ink) 6%, transparent);
     color: var(--ever-mobile-ink-soft);
     font-size: var(--ever-mobile-small);
-    font-style: italic;
 }
 
 .ever-mobile-message__delete {

@@ -2,12 +2,13 @@ import { memo, useEffect, useMemo, useRef, useState } from 'react';
 import type React from 'react';
 import { Maximize2, Minimize2, Minus, Send, Sparkles, Square, X, ZoomIn } from 'lucide-react';
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
-import { CHAT_PANEL_MIN_HEIGHT, CHAT_PANEL_MIN_WIDTH, CHAT_PANEL_RESIZE_HANDLES, createConversationSummary, createTalkChoices, formatDateTime, formatRoomTitle, formatSkinLabel, parseThinkBlocks, pickRandomSpeechLine, pickPokeReactionLine, resolvePanelResize } from '../logic';
+import { CHAT_PANEL_MIN_HEIGHT, CHAT_PANEL_MIN_WIDTH, CHAT_PANEL_RESIZE_HANDLES, createConversationSummary, createTalkChoices, formatDateTime, formatRoomTitle, formatSkinLabel, pickRandomSpeechLine, pickPokeReactionLine, resolvePanelResize } from '../logic';
 import type { SpiritVisualAssets } from '../../persona';
 import type { ChatMessageBubbleProps, ChatStageProps, GalleryTileProps, PanelGeometry, PanelResizeHandle, PanelResizeState } from '../types';
 import { EVERTALK_UI_ASSETS } from '../uiAssets';
 import { ImageViewerOverlay } from './ImageViewerOverlay';
 import { LoadableAssetImage } from './LoadableAssetImage';
+import { SpiritReplyContent } from './SpiritReplyContent';
 const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoomLabel, onZoom }: GalleryTileProps) {
     return (<button type="button" className="ever-gallery-tile ever-gallery-tile--button" aria-label={`${skinLabel} ${zoomLabel}`} onClick={() => onZoom(skin.portraitCandidates)}>
       <LoadableAssetImage candidates={skin.portraitCandidates} alt={spiritName} fallback={<span>{skinLabel}</span>}/>
@@ -19,7 +20,7 @@ const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoo
 });
 const PANEL_SHAKE_DURATION_MS = 400;
 const PANEL_BOUNDARY_TOLERANCE_PX = 1;
-const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandidates, spiritName, showReasoning, deleteLabel, onDelete }: ChatMessageBubbleProps) {
+const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandidates, spiritName, showReasoning, deleteLabel, innerThoughtsLabel, onDelete }: ChatMessageBubbleProps) {
     if (message.role === 'system') {
         return (<div className="ever-message is-system">
           <div className="ever-message__bubble">{message.content}</div>
@@ -31,16 +32,9 @@ const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandi
           <LoadableAssetImage candidates={avatarCandidates} alt={spiritName} fallback={<span>{spiritName.charAt(0) || 'E'}</span>}/>
         </div>)}
       <div className="ever-message__bubble">
-        {fromUser ? (
-           message.content
-        ) : (
-           parseThinkBlocks(message.content).map((block, idx) => {
-               if (block.type === 'think') {
-                   return showReasoning ? <div key={idx} className="ever-message__think">{block.content}</div> : null;
-               }
-               return <span key={idx} className="ever-message__text">{block.content}</span>;
-           })
-        )}
+        {fromUser
+          ? message.content
+          : <SpiritReplyContent text={message.content} showReasoning={showReasoning} variant="desktop" innerThoughtsLabel={innerThoughtsLabel}/>}
       </div>
       <button type="button" className="ever-message__delete" aria-label={deleteLabel} onClick={() => onDelete(message.id)}>
         <X aria-hidden="true" size={12}/>
@@ -68,6 +62,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
     const summary = useMemo(() => createConversationSummary(activeDetail), [activeDetail]);
     const activeSkin = useMemo(() => (assets ? resolveSpiritSkin(assets, activeSkinId) : null), [activeSkinId, assets]);
     const gallerySkins = useMemo(() => assets?.skinOptions ?? [], [assets]);
+    const openingGreeting = activeDetail?.personality.greeting?.trim() ?? '';
     const speechLine = useMemo(() => pickRandomSpeechLine(activeDetail), [activeDetail]);
     const canUseComposer = Boolean(activeDetail && llmStatus?.is_loaded && !isTyping);
     const [poked, setPoked] = useState(false);
@@ -340,23 +335,24 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                 </div>)}
             </div>
             <div className="ever-messages" ref={messagesListRef}>
-              {messages.length === 0 && (<div className="ever-messages__empty">
+              {openingGreeting.length > 0 && (<div className="ever-message is-spirit is-opening">
+                  <div className="ever-message__avatar">
+                    <LoadableAssetImage candidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} alt={activeDetail?.name ?? ''} fallback={<span>{activeDetail?.name.charAt(0) ?? 'E'}</span>}/>
+                  </div>
+                  <div className="ever-message__bubble"><span className="ever-message__text">{openingGreeting}</span></div>
+                </div>)}
+              {messages.length === 0 && openingGreeting.length === 0 && (<div className="ever-messages__empty">
                   <strong>{labels.noSavedMessages}</strong>
                   <span>{labels.firstMessageHint}</span>
                 </div>)}
-              {messages.map((message) => (<ChatMessageBubble key={message.id} message={message} avatarCandidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} spiritName={activeDetail?.name ?? ''} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} onDelete={onDeleteMessage} />))}
+              {messages.map((message) => (<ChatMessageBubble key={message.id} message={message} avatarCandidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} spiritName={activeDetail?.name ?? ''} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} innerThoughtsLabel={labels.innerThoughts} onDelete={onDeleteMessage} />))}
               {isTyping && (<div className="ever-message is-spirit">
                   <div className="ever-message__avatar">
                     <LoadableAssetImage candidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} alt={activeDetail?.name ?? ''} fallback={<span>{activeDetail?.name.charAt(0) ?? 'E'}</span>}/>
                   </div>
                   <div className="ever-message__bubble">
                     {streamingText
-                      ? parseThinkBlocks(streamingText).map((block, idx) => {
-                          if (block.type === 'think') {
-                              return showReasoning ? <div key={idx} className="ever-message__think">{block.content}</div> : null;
-                          }
-                          return <span key={idx} className="ever-message__text">{block.content}</span>;
-                      })
+                      ? <SpiritReplyContent text={streamingText} showReasoning={showReasoning} variant="desktop" innerThoughtsLabel={labels.innerThoughts}/>
                       : <span className="ever-typing"><i /><i /><i /></span>}
                   </div>
                 </div>)}

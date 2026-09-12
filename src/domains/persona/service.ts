@@ -5,20 +5,20 @@ import type { AppLanguage } from '../../shared/types';
 import { chatRepository } from '../chat/repository';
 import { listPersonaArchiveKeys, loadPersonaPack, normalizePersonaKey } from './archive';
 import {
-    hasDialogueLexicalOverlap,
     parsePersonaDialogueExchanges,
     selectRelevantDialogueExamples,
 } from './dialogue';
-import { familiarityScore } from './familiarity';
+import { personaCheatPresetKey, resolveActivePersonaCheatPreset, resolvePersonaFamiliarityScore } from './presets';
 import {
-    buildPersonaPromptFromPack,
+    buildPersonaSystemPrompt,
     personaGreetingFromPack,
-    wrapAssembledPersonaPrompt,
 } from './prompt';
 import { personaRepository } from './repository';
 import { buildPersonaLanguageSlice } from './slice';
 import type {
     AssembledPersonaPrompt,
+    PersonaCheatPreset,
+    PersonaCheatSettingsSource,
     BondRankingEntry,
     FamiliarityEntry,
     PersonaDialogueExchange,
@@ -46,8 +46,8 @@ export const personaService = {
             race: pack.race ?? DEFAULT_PROFILE_FIELD,
             class: pack.class ?? DEFAULT_PROFILE_FIELD,
             sub_class: pack.sub_class ?? DEFAULT_PROFILE_FIELD,
-            system_prompt: buildPersonaPromptFromPack(pack, language).body,
             greeting: personaGreetingFromPack(pack, language),
+            personality_override: null,
             raw_json: JSON.stringify(pack),
             created_at: createMonotonicTimestamp(),
             archive_key: archiveKey,
@@ -89,35 +89,31 @@ export const personaService = {
         await personaService.ensureArchivePersonasInstalled(language);
         return personaRepository.listPersonas();
     },
-    async getAssembledPersonaPrompt(id: string, language: AppLanguage, saviorName = ''): Promise<AssembledPersonaPrompt> {
+    async getAssembledPersonaPrompt(
+        id: string,
+        language: AppLanguage,
+        saviorName = '',
+        cheatPreset: PersonaCheatPreset | null = null,
+    ): Promise<AssembledPersonaPrompt> {
         const persona = await personaRepository.getPersona(id);
         if (!persona) {
             throw personaNotFoundError(id);
         }
         const normalizedSaviorName = saviorName.trim();
-        const memoKey = `${persona.id}\u0000${language}\u0000${persona.created_at}\u0000${normalizedSaviorName}`;
+        const presetKey = personaCheatPresetKey(cheatPreset);
+        const sourceUpdatedAt = persona.personality_override?.updated_at ?? persona.created_at;
+        const memoKey = `${persona.id}\u0000${language}\u0000${sourceUpdatedAt}\u0000${normalizedSaviorName}\u0000${presetKey}`;
         const memoized = assembledPromptMemo.get(memoKey);
         if (memoized) {
             return memoized;
         }
         const pack = JSON.parse(persona.raw_json) as SpiritDetail;
-        const localized = buildPersonaPromptFromPack(pack, language);
-        const assembled: AssembledPersonaPrompt = {
-            localized_name: localized.localized_name,
-            assembled_prompt: wrapAssembledPersonaPrompt(
-                localized.localized_name,
-                localized.body,
-                language,
-                localized.speech_profile,
-                normalizedSaviorName,
-            ),
-            speech_profile: localized.speech_profile,
-        };
+        const assembled = buildPersonaSystemPrompt(pack, language, normalizedSaviorName, persona.personality_override, cheatPreset);
         assembledPromptMemo.set(memoKey, assembled);
-        if (normalizedSaviorName.length > 0) {
+        if (normalizedSaviorName.length > 0 || cheatPreset !== null) {
             return assembled;
         }
-        const cached = await personaRepository.getLocalizedPrompt(persona.id, language, persona.created_at);
+        const cached = await personaRepository.getLocalizedPrompt(persona.id, language, sourceUpdatedAt);
         if (!cached || cached.assembled_prompt !== assembled.assembled_prompt || cached.localized_name !== assembled.localized_name) {
             await personaRepository.saveLocalizedPrompt({
                 persona_id: persona.id,
@@ -125,7 +121,7 @@ export const personaService = {
                 localized_name: assembled.localized_name,
                 assembled_prompt: assembled.assembled_prompt,
                 speech_profile: assembled.speech_profile,
-                source_updated_at: persona.created_at,
+                source_updated_at: sourceUpdatedAt,
                 cached_at: createMonotonicTimestamp(),
             });
         }
@@ -136,6 +132,7 @@ export const personaService = {
         language: AppLanguage,
         query: string,
         limit: number,
+        excludedTerms: readonly string[],
     ): Promise<PersonaDialogueExchange[]> {
         const persona = await personaRepository.getPersona(id);
         if (!persona) {
@@ -143,18 +140,7 @@ export const personaService = {
         }
         const pack = JSON.parse(persona.raw_json) as SpiritDetail;
         const slice = buildPersonaLanguageSlice(pack, language);
-        const selected = selectRelevantDialogueExamples(parsePersonaDialogueExchanges(slice, language), query, limit);
-        if (selected.length >= limit || !hasDialogueLexicalOverlap(query, slice.greeting)) {
-            return selected;
-        }
-        return [
-            {
-                source: 'greeting' as const,
-                user_message: query,
-                spirit_messages: [slice.greeting],
-            },
-            ...selected,
-        ].slice(0, limit);
+        return selectRelevantDialogueExamples(parsePersonaDialogueExchanges(slice, language), query, limit, excludedTerms);
     },
     async getEmotionSeedText(id: string, language: AppLanguage): Promise<string> {
         const persona = await personaRepository.getPersona(id);
@@ -162,8 +148,8 @@ export const personaService = {
         const pack = JSON.parse(persona.raw_json) as SpiritDetail;
         const slice = buildPersonaLanguageSlice(pack, language);
         return [
-            slice.description,
-            slice.greeting,
+            persona.personality_override?.personality || slice.description,
+            persona.personality_override?.greeting || slice.greeting,
             ...slice.speech_patterns
                 .filter((entry) => entry.speaker === slice.name)
                 .slice(0, 24)
@@ -211,7 +197,7 @@ export const personaService = {
         }
         return entries.sort((left, right) => right.bond_score - left.bond_score);
     },
-    async getFamiliarityList(): Promise<FamiliarityEntry[]> {
+    async getFamiliarityList(cheatSource: PersonaCheatSettingsSource): Promise<FamiliarityEntry[]> {
         const [personas, messageCounts, memoryCounts] = await Promise.all([
             personaRepository.listPersonas(),
             chatRepository.countMessagesByPersona(),
@@ -221,7 +207,8 @@ export const personaService = {
         for (const persona of personas) {
             const messageCount = messageCounts.get(persona.id) ?? 0;
             const memoryCount = memoryCounts.get(persona.id) ?? 0;
-            if (messageCount === 0 && memoryCount === 0) {
+            const cheatLevel = resolveActivePersonaCheatPreset(cheatSource, persona.id)?.bond_level ?? null;
+            if (messageCount === 0 && memoryCount === 0 && cheatLevel === null) {
                 continue;
             }
             entries.push({
@@ -230,7 +217,7 @@ export const personaService = {
                 name_en: persona.name_en,
                 message_count: messageCount,
                 memory_count: memoryCount,
-                familiarity_score: familiarityScore(messageCount, memoryCount),
+                familiarity_score: resolvePersonaFamiliarityScore(messageCount, memoryCount, cheatLevel),
             });
         }
         return entries.sort((left, right) => right.familiarity_score - left.familiarity_score);

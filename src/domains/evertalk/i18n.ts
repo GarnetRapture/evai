@@ -1,5 +1,6 @@
 import type { DomainErrorCode } from '../../shared/errors';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
+import type { MemoryContextKind } from '../chat/types';
 import type { LocalModelEngineKind } from '../llm/types';
 import type { SpiritRaidEvent } from '../persona/types';
 
@@ -87,7 +88,7 @@ export interface EverTalkLabels {
     imageViewerPanDown: string;
     imageViewerPanLeft: string;
     imageViewerPanRight: string;
-    imageViewerScale: (percent: number) => string;
+    imageViewerScale: (percent: string) => string;
     lobbySlotEmptyLabel: (index: number) => string;
     lobbyInsightTitle: string;
     lobbyModelTitle: string;
@@ -146,6 +147,7 @@ export interface EverTalkLabels {
     language: string;
     displayResponseLanguage: string;
     showReasoning: string;
+    innerThoughts: string;
     environmentTitle: string;
     userProfile: string;
     deviceProfile: string;
@@ -333,6 +335,24 @@ export interface EverTalkLabels {
     navRanking: string;
     navMemory: string;
     navStorage: string;
+    navCheat: string;
+    cheatMode: string;
+    cheatModeDescription: string;
+    cheatPageTitle: string;
+    cheatPageDescription: string;
+    cheatSearchPlaceholder: string;
+    cheatNoSpirits: string;
+    cheatAppliedBadge: string;
+    cheatBondTitle: string;
+    cheatBondDescription: string;
+    cheatBondAutomatic: string;
+    cheatBondAutomaticLevel: (level: number) => string;
+    cheatBondManualLevel: (level: number) => string;
+    cheatPersonalityTitle: string;
+    cheatEmotionTitle: string;
+    cheatEmotionDescription: string;
+    cheatSpeechTitle: string;
+    cheatReset: string;
     storagePageTitle: string;
     storagePageDescription: string;
     refreshAnalysis: string;
@@ -358,7 +378,12 @@ export interface EverTalkLabels {
     memoryPageTitle: string;
     memoryPageDescription: string;
     memoryGraphConnections: string;
-    memoryGraphMemoryTypes: { directive: string; episodic: string; semantic: string; affect: string; memory: string };
+    memoryContextKinds: Record<MemoryContextKind, string>;
+    memoryFilterTitle: string;
+    memoryFilterDescription: string;
+    memoryFilterSearchPlaceholder: string;
+    memoryFilterActiveOnly: string;
+    memoryFilterEmpty: string;
     memoryWorkflowNodes: Array<{ title: string; description: string }>;
     skinBase: string;
     skinBaseVariant: string;
@@ -549,7 +574,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         activeStyle: '활성 스타일',
         language: '언어',
         displayResponseLanguage: '표시 및 응답 언어',
-        showReasoning: 'AI의 추론 과정 표시 (<think>)',
+        showReasoning: '정령의 속마음(추론 과정) 생성 및 표시',
+        innerThoughts: '속마음',
         environmentTitle: '실행 환경',
         userProfile: '사용자 프로필',
         deviceProfile: '기기 프로필',
@@ -815,6 +841,24 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         navRanking: '인연 순위',
         navMemory: '기억 흐름',
         navStorage: '저장소',
+        navCheat: '치트모드',
+        cheatMode: '치트모드',
+        cheatModeDescription: '켜면 상단에 치트모드 화면이 생기고, 정령별 인연 레벨·성격·감정·말투 프리셋이 실제 응답에 적용됩니다.',
+        cheatPageTitle: '정령 치트 설정',
+        cheatPageDescription: '정령마다 인연 레벨을 직접 정하고, 기본 성격·감정·말하는 방식을 프리셋으로 바꿉니다. 설정은 다음 응답부터 바로 반영됩니다.',
+        cheatSearchPlaceholder: '정령 이름 또는 영문명',
+        cheatNoSpirits: '조건에 맞는 정령이 없습니다.',
+        cheatAppliedBadge: '적용 중',
+        cheatBondTitle: '인연 레벨',
+        cheatBondDescription: '대화 기록과 무관하게 관계 단계와 인연 표시가 이 레벨로 고정됩니다.',
+        cheatBondAutomatic: '대화 기반 자동',
+        cheatBondAutomaticLevel: (level) => `대화 기반 Lv.${level}`,
+        cheatBondManualLevel: (level) => `수동 Lv.${level}`,
+        cheatPersonalityTitle: '기본 성격 상태',
+        cheatEmotionTitle: '감정',
+        cheatEmotionDescription: '선택하면 현재 감정이 즉시 이 상태로 바뀌고, 이후 감정 변화도 이 상태를 기준으로 되돌아옵니다.',
+        cheatSpeechTitle: '말하는 방식',
+        cheatReset: '이 정령 치트 초기화',
         storagePageTitle: '대화 데이터베이스 분석',
         storagePageDescription: '현재 저장 모드, 실제 저장 위치, 저장소·정령별 레코드와 용량 구성, 최근 저장 내용을 분석합니다.',
         refreshAnalysis: '분석 새로고침',
@@ -840,7 +884,12 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryPageTitle: '기억 알고리즘 흐름',
         memoryPageDescription: '초기 페르소나에서 현재 응답과 장기 기억으로 이어지는 실제 데이터 흐름입니다.',
         memoryGraphConnections: '연결선',
-        memoryGraphMemoryTypes: { directive: '사용자 지시', episodic: '대화 사건', semantic: '통합 기억', affect: '감정 상태', memory: '기억' },
+        memoryContextKinds: { digest: '대화 요약', semantic: '통합 기억', directive: '사용자 지시', episodic: '대화 사건', habit: '자주 나온 화제', affect: '감정 상태', knowledge: '세계관 지식' },
+        memoryFilterTitle: '응답에 쓰는 기억',
+        memoryFilterDescription: '끈 종류는 이 그래프에서 숨겨지고, 정령의 다음 응답 컨텍스트에서도 제외됩니다.',
+        memoryFilterSearchPlaceholder: '정령 이름 또는 영문명',
+        memoryFilterActiveOnly: '대화 기록이 있는 정령만',
+        memoryFilterEmpty: '조건에 맞는 정령이 없습니다.',
         memoryWorkflowNodes: [
             { title: '초기 페르소나', description: '프로필·성격·실제 대화 말투 예시' },
             { title: '최근 대화', description: '시간순 사용자·정령 응답과 현재 세션' },
@@ -1079,7 +1128,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         activeStyle: 'Active Style',
         language: 'Language',
         displayResponseLanguage: 'Display and response language',
-        showReasoning: 'Show AI Reasoning Process (<think>)',
+        showReasoning: 'Generate and show the spirit\'s inner thoughts (reasoning)',
+        innerThoughts: 'Inner thoughts',
         environmentTitle: 'Runtime Environment',
         userProfile: 'User profile',
         deviceProfile: 'Device profile',
@@ -1345,6 +1395,24 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         navRanking: 'Bond Ranking',
         navMemory: 'Memory Flow',
         navStorage: 'Storage',
+        navCheat: 'Cheat Mode',
+        cheatMode: 'Cheat mode',
+        cheatModeDescription: 'Adds a Cheat Mode view to the top bar and applies each spirit\'s bond level, personality, emotion, and speech presets to real replies.',
+        cheatPageTitle: 'Spirit Cheat Settings',
+        cheatPageDescription: 'Set each spirit\'s bond level directly and switch their base personality, emotion, and way of speaking with presets. Changes apply from the next reply.',
+        cheatSearchPlaceholder: 'Spirit name or English name',
+        cheatNoSpirits: 'No spirit matches this search.',
+        cheatAppliedBadge: 'Active',
+        cheatBondTitle: 'Bond level',
+        cheatBondDescription: 'Locks the relationship stage and bond display to this level regardless of conversation history.',
+        cheatBondAutomatic: 'Automatic from conversation',
+        cheatBondAutomaticLevel: (level) => `From conversation Lv.${level}`,
+        cheatBondManualLevel: (level) => `Manual Lv.${level}`,
+        cheatPersonalityTitle: 'Base personality',
+        cheatEmotionTitle: 'Emotion',
+        cheatEmotionDescription: 'Selecting a preset switches the current emotion immediately, and later mood changes settle back toward it.',
+        cheatSpeechTitle: 'Way of speaking',
+        cheatReset: 'Reset this spirit\'s cheats',
         storagePageTitle: 'Conversation Database Analytics',
         storagePageDescription: 'Inspect the active mode, actual storage location, store and spirit record volume, capacity composition, and recent saved content.',
         refreshAnalysis: 'Refresh analysis',
@@ -1370,7 +1438,12 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryPageTitle: 'Memory Algorithm Flow',
         memoryPageDescription: 'The live data flow from the starting persona through the current response and long-term memory.',
         memoryGraphConnections: 'connections',
-        memoryGraphMemoryTypes: { directive: 'User directive', episodic: 'Conversation event', semantic: 'Consolidated memory', affect: 'Emotional state', memory: 'Memory' },
+        memoryContextKinds: { digest: 'Chat summary', semantic: 'Consolidated memory', directive: 'User directive', episodic: 'Conversation event', habit: 'Frequent topic', affect: 'Emotional state', knowledge: 'World knowledge' },
+        memoryFilterTitle: 'Memories used in replies',
+        memoryFilterDescription: 'Kinds you turn off are hidden in this graph and also left out of the spirit\'s next reply context.',
+        memoryFilterSearchPlaceholder: 'Spirit name or English name',
+        memoryFilterActiveOnly: 'Only spirits with conversation history',
+        memoryFilterEmpty: 'No spirit matches these filters.',
         memoryWorkflowNodes: [
             { title: 'Starting persona', description: 'Profile, personality, and real dialogue voice examples' },
             { title: 'Recent conversation', description: 'Time-ordered user and spirit replies in the current session' },
@@ -1609,7 +1682,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         activeStyle: '启用风格',
         language: '语言',
         displayResponseLanguage: '显示与回复语言',
-        showReasoning: '显示 AI 推理过程 (<think>)',
+        showReasoning: '生成并显示精灵的心里话（推理过程）',
+        innerThoughts: '心里话',
         environmentTitle: '运行环境',
         userProfile: '用户资料',
         deviceProfile: '设备资料',
@@ -1875,6 +1949,24 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         navRanking: '羁绊排行',
         navMemory: '记忆流程',
         navStorage: '存储',
+        navCheat: '作弊模式',
+        cheatMode: '作弊模式',
+        cheatModeDescription: '开启后顶部会出现作弊模式页面，每位精灵的羁绊等级、性格、情绪与语气预设会应用到实际回复中。',
+        cheatPageTitle: '精灵作弊设置',
+        cheatPageDescription: '直接设定每位精灵的羁绊等级，并用预设切换基础性格、情绪与说话方式。更改从下一次回复起生效。',
+        cheatSearchPlaceholder: '精灵名称或英文名',
+        cheatNoSpirits: '没有符合条件的精灵。',
+        cheatAppliedBadge: '生效中',
+        cheatBondTitle: '羁绊等级',
+        cheatBondDescription: '无论对话记录如何，关系阶段与羁绊显示都会固定为此等级。',
+        cheatBondAutomatic: '按对话自动计算',
+        cheatBondAutomaticLevel: (level) => `按对话 Lv.${level}`,
+        cheatBondManualLevel: (level) => `手动 Lv.${level}`,
+        cheatPersonalityTitle: '基础性格状态',
+        cheatEmotionTitle: '情绪',
+        cheatEmotionDescription: '选择后当前情绪会立即切换为该状态，之后的情绪变化也会回归到该状态。',
+        cheatSpeechTitle: '说话方式',
+        cheatReset: '重置此精灵的作弊设置',
         storagePageTitle: '对话数据库分析',
         storagePageDescription: '分析当前存储模式、实际位置、各存储与精灵的记录和容量构成，以及最近保存的内容。',
         refreshAnalysis: '刷新分析',
@@ -1900,7 +1992,12 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryPageTitle: '记忆算法流程',
         memoryPageDescription: '从初始角色设定到当前回复与长期记忆的实际数据流程。',
         memoryGraphConnections: '连接线',
-        memoryGraphMemoryTypes: { directive: '用户指示', episodic: '对话事件', semantic: '整合记忆', affect: '情绪状态', memory: '记忆' },
+        memoryContextKinds: { digest: '对话摘要', semantic: '整合记忆', directive: '用户指示', episodic: '对话事件', habit: '常聊话题', affect: '情绪状态', knowledge: '世界观知识' },
+        memoryFilterTitle: '用于回复的记忆',
+        memoryFilterDescription: '关闭的类型会在此图中隐藏，也不会进入精灵下一次回复的上下文。',
+        memoryFilterSearchPlaceholder: '精灵名称或英文名',
+        memoryFilterActiveOnly: '仅显示有对话记录的精灵',
+        memoryFilterEmpty: '没有符合条件的精灵。',
         memoryWorkflowNodes: [
             { title: '初始角色设定', description: '档案、性格与真实对话语气示例' },
             { title: '最近对话', description: '当前会话中按时间排序的用户与精灵回复' },

@@ -37,8 +37,8 @@ export const chatClient = {
     async listMessagesForPersona(roomId: string, personaId: string): Promise<ChatMessage[]> {
         return chatRepository.listMessagesForPersona(roomId, personaId);
     },
-    async focusPersonaSession(personaId: string, roomId?: string): Promise<void> {
-        await chatService.focusPersonaSession(personaId, roomId);
+    async focusPersonaSession(personaId: string): Promise<void> {
+        await chatService.focusPersonaSession(personaId);
     },
     async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {
         return chatService.getPersonaMemoryInsight(personaId);

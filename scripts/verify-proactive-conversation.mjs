@@ -43,7 +43,7 @@ try {
             messages: request.messages,
             behavior_instruction: request.behavior_instruction,
         }));
-        const proactive = request.messages.at(-1)?.content.includes('[SPONTANEOUS CONTINUATION]');
+        const proactive = request.messages.at(-1)?.content.includes('[NO NEW MESSAGE FROM ');
         const text = proactive
             ? '<think>함께 꾸미기로 한 캐럿이 문득 궁금해져 먼저 말을 걸고 싶다.</think>구원자님, 우리 캐럿은 어떤 색으로 꾸밀까요? 아까부터 계속 궁금했어요.'
             : '<think>구원자님과 한 약속을 소중히 간직한다.</think>좋아요. 우리 함께 캐럿을 꾸미기로 해요. 꼭 기억할게요.';
@@ -78,11 +78,11 @@ try {
         const proactiveRequest = captured.at(-1);
         const promptText = proactiveRequest.messages.map((message) => message.content).join('\n');
         assert.equal(proactiveRequest.persona_id, 'garnet');
-        assert.match(proactiveRequest.system_prompt, /\[IDENTITY\][\s\S]*You are 가넷/);
+        assert.match(proactiveRequest.system_prompt, /\[IDENTITY\][\s\S]*You are 가넷 yourself/);
         assert.match(promptText, /우리 다음에 캐럿을 같이 꾸미자/);
         assert.match(promptText, /우리 함께 캐럿을 꾸미기로 해요/);
-        assert.match(promptText, /RELEVANT SHARED MEMORIES/);
-        assert.match(promptText, /SPONTANEOUS CONTINUATION/);
+        assert.match(promptText, /\[WHAT YOU REMEMBER\]/);
+        assert.match(proactiveRequest.messages.at(-1).content, /\[NO NEW MESSAGE FROM 구원자님 SINCE [^\]]+\]\n구원자님 has not written anything new/);
         assert.doesNotMatch(promptText, /함께 꾸미기로 한 캐럿이 문득 궁금해져/);
 
         const stored = await chatRepository.listMessagesForPersona(room.id, 'garnet');

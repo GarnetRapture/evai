@@ -80,9 +80,9 @@ try {
     }
     const disconnectedProcessId = nativeProcessId;
     await invoke({ operation: 'disconnect_native_host' });
-    assert.equal(await waitForProcessExit(disconnectedProcessId), true);
     const reconnectedHealth = await invoke({ operation: 'health' });
     assert.notEqual(reconnectedHealth.process_id, disconnectedProcessId);
+    assert.equal(await waitForProcessExit(disconnectedProcessId), true);
     nativeProcessId = reconnectedHealth.process_id;
     await settingsClient.setNativeExecutablePath('');
     const suffix = randomUUID();
@@ -101,6 +101,7 @@ try {
         native_dev_bridge: 'passed',
         persistent_process_same_pid: 'passed',
         explicit_disconnect_and_reconnect: 'passed',
+        immediate_reconnect_without_singleton_race: 'passed',
         automatic_discovery: 'passed',
         explicit_file_path: 'passed',
         explicit_directory_path: 'passed',

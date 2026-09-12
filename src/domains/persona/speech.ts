@@ -12,7 +12,7 @@ const SOLO_LINE_MAX_LENGTH = 160;
 const SOLO_LINE_MIN_SENTENCE_CHARS = 6;
 const FILLER_ONLY_PATTERN = /^[\s.…·!?~♪♥\-'"]*$/u;
 
-const ADDRESS_TERM_CANDIDATES_BY_LANGUAGE: Record<AppLanguage, string[]> = {
+export const ADDRESS_TERM_CANDIDATES_BY_LANGUAGE: Record<AppLanguage, string[]> = {
     ko: ['구원자님', '구원자'],
     en: ['Savior'],
     zh_cn: ['救援者大人', '救援者', '救世主大人', '救世主'],

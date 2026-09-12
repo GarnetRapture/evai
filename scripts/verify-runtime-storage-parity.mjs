@@ -7,6 +7,7 @@ import 'fake-indexeddb/auto';
 import { createServer } from 'vite';
 
 if (!globalThis.crypto) globalThis.crypto = webcrypto;
+process.env.EVERSOUL_NATIVE_HEADLESS = '1';
 
 const ROOT = process.cwd();
 const LANGUAGES = ['ko', 'en', 'zh_cn'];
@@ -110,16 +111,13 @@ try {
         const testCase = casesByPersonaLanguage.get(`${request.persona_id}\0${language}`);
         assert.ok(testCase, `${request.persona_id}/${language}: missing runtime dialogue case`);
         const actualReply = testCase.dialogue.spirit_messages.join('\n');
-        const proactive = request.messages.at(-1)?.content.includes('[SPONTANEOUS CONTINUATION]') === true;
+        const proactive = request.messages.at(-1)?.content.includes('[NO NEW MESSAGE FROM ') === true;
         assert.equal(request.persona_name, testCase.slice.name);
         assert.ok(request.system_prompt.includes(testCase.slice.name));
-        if (proactive) {
-            assert.ok(request.messages.at(-1).content.includes('[SPONTANEOUS CONTINUATION]'));
-        }
-        else {
-            assert.ok(request.messages.some((message) => message.role === 'user' && message.content === testCase.dialogue.user_message));
-            assert.ok(request.messages.some((message) => message.role === 'assistant' && message.content.includes(testCase.dialogue.spirit_messages[0])));
-            assert.ok(request.behavior_instruction.includes('[LIVE ROLEPLAY]'));
+        assert.ok(request.behavior_instruction.includes('[YOUR TURN]'));
+        if (!proactive) {
+            assert.ok(request.messages.at(-1).role === 'user' && request.messages.at(-1).content.endsWith(`\n${testCase.dialogue.user_message}`));
+            assert.ok(request.messages.slice(0, -1).every((message) => !message.content.includes(testCase.dialogue.user_message)), 'the live user turn must appear exactly once');
         }
         capturedRequests.push({
             kind: proactive ? 'proactive' : 'conversation',

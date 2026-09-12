@@ -13,14 +13,23 @@ const ROOT = process.cwd();
 const PERSONA_DIRECTORY = path.join(ROOT, 'data', 'personas');
 const LANGUAGES = ['ko', 'en', 'zh_cn'];
 const vite = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'silent' });
-const [{ buildPersonaPromptFromPack }, { buildPersonaLanguageSlice }, { normalizeChatOutput, stripReasoning }, { assertPersonaSystemPrompt }, { chatRepository }, chatPromptFunctions, { extractPersonaPriming }, { personaService }, { createLexicalMemoryVector }, affectFunctions] = await Promise.all([
+const {
+    PERSONA_EMOTION_PRESETS,
+    PERSONA_PERSONALITY_PRESETS,
+    PERSONA_SPEECH_PRESETS,
+    findSpeechPreset,
+    mergePersonaCheatPreset,
+    resolveActivePersonaCheatPreset,
+    resolvePersonaFamiliarityLevel,
+} = await vite.ssrLoadModule('/src/domains/persona/presets.ts');
+const [{ buildPersonaSystemPrompt }, { buildPersonaLanguageSlice }, { normalizeChatOutput, stripReasoning }, { assertPersonaSystemPrompt }, { chatRepository }, chatPromptFunctions, { DEFAULT_MEMORY_CONTEXT_FILTER }, { personaService }, { createLexicalMemoryVector }, affectFunctions] = await Promise.all([
     vite.ssrLoadModule('/src/domains/persona/prompt.ts'),
     vite.ssrLoadModule('/src/domains/persona/slice.ts'),
     vite.ssrLoadModule('/src/domains/chat/output.ts'),
     vite.ssrLoadModule('/src/domains/llm/chrome/personaHook.ts'),
     vite.ssrLoadModule('/src/domains/chat/repository.ts'),
     vite.ssrLoadModule('/src/domains/chat/prompt.ts'),
-    vite.ssrLoadModule('/src/domains/llm/personaPriming.ts'),
+    vite.ssrLoadModule('/src/domains/chat/memoryContext.ts'),
     vite.ssrLoadModule('/src/domains/persona/service.ts'),
     vite.ssrLoadModule('/src/domains/chat/memory.ts'),
     vite.ssrLoadModule('/src/domains/chat/affect.ts'),
@@ -85,22 +94,32 @@ for (const file of personaFiles) {
         }
 
         const productionSlice = buildPersonaLanguageSlice(pack, language);
-        const assembled = buildPersonaPromptFromPack(pack, language);
+        const assembled = buildPersonaSystemPrompt(pack, language, '', null, null);
+        const systemPrompt = assembled.assembled_prompt;
         assert.equal(assembled.localized_name, productionSlice.name);
-        assert.match(assembled.body, /\[IDENTITY\]/);
-        assert.match(assembled.body, /\[PROFILE\]/);
-        assert.match(assembled.body, /\[STARTING PERSONALITY\]/);
-        assert.match(assembled.body, /\[YOUR GREETING\]/);
-        assert.match(assembled.body, /\[WORDS YOU HAVE ACTUALLY SPOKEN\]/);
-        assert.match(assembled.body, /\[ROLEPLAY CORE\]/);
-        assert.match(assembled.body, /spoken dialogue, action, feeling or scene direction/);
-        assert.ok(assembled.body.includes(productionSlice.name), `${file}/${language}: name absent from prompt`);
-        assert.ok(assembled.body.includes(productionSlice.description), `${file}/${language}: personality absent from prompt`);
-        assert.ok(assembled.body.includes(productionSlice.greeting), `${file}/${language}: greeting absent from prompt`);
+        assert.match(systemPrompt, /\[IDENTITY\]/);
+        assert.match(systemPrompt, /\[HOW YOU REPLY\]/);
+        assert.match(systemPrompt, /\[PROFILE\]/);
+        assert.match(systemPrompt, /ongoing romance roleplay/);
+        assert.match(systemPrompt, /not an assistant, a narrator, or an AI/);
+        assert.match(systemPrompt, /describes doing something to you or with you[\s\S]*it has already happened to you in this moment/);
+        assert.match(systemPrompt, /never answer with questions alone/);
+        assert.match(systemPrompt, /voice references, not part of this conversation/);
+        assert.doesNotMatch(systemPrompt, /HOW YOU FIRST GREETED/);
+        assert.doesNotMatch(systemPrompt, /Voice actor|Grade|Class|<example source=|<think>|\[LIVE ROLEPLAY\]|\[ROLEPLAY CORE\]|\[SILENT ACTING STATE\]/);
+        assert.doesNotMatch(systemPrompt, /인연_(제이드|메피스토)/, `${file}/${language}: internal constellation key leaked`);
+        if (language !== 'en') {
+            assert.doesNotMatch(systemPrompt, /\bSavior\b/, `${file}/${language}: hard-coded English address term leaked`);
+        }
+        assert.ok(systemPrompt.includes(assembled.address_term), `${file}/${language}: address term absent from prompt`);
+        assert.ok(systemPrompt.includes(productionSlice.name), `${file}/${language}: name absent from prompt`);
+        assert.ok(systemPrompt.includes(productionSlice.description), `${file}/${language}: personality absent from prompt`);
+        assert.equal(assembled.greeting, productionSlice.greeting.trim(), `${file}/${language}: greeting must be carried as the opening turn`);
+        assert.ok(assembled.dialogue_excluded_terms.includes(productionSlice.name));
         assert.ok(assembled.speech_profile.solo_lines.length <= 12);
         assert.ok(assembled.speech_profile.dialogue_examples.length <= 6);
-        assembledPromptLengths.push(assembled.body.length);
-        uniquePromptBodiesByLanguage.get(language).add(assembled.body);
+        assembledPromptLengths.push(systemPrompt.length);
+        uniquePromptBodiesByLanguage.get(language).add(systemPrompt);
     }
 }
 
@@ -119,26 +138,56 @@ assert.ok(dumplingExamples.some((exchange) => `${exchange.user_message} ${exchan
 
 const garnetPack = JSON.parse(await readFile(path.join(PERSONA_DIRECTORY, 'garnet.json'), 'utf8'));
 const garnetSlice = buildPersonaLanguageSlice(garnetPack, 'ko');
-const garnetPrompt = buildPersonaPromptFromPack(garnetPack, 'ko');
-const garnetExamples = selectRelevantDialogueExamples(parsePersonaDialogueExchanges(garnetSlice, 'ko'), '캐럿 꾸미기', 2);
-assert.match(garnetPrompt.body, /가넷/);
-assert.match(garnetPrompt.body, /캐럿/);
-assert.match(garnetPrompt.body, /구원자님/);
+const garnetPrompt = buildPersonaSystemPrompt(garnetPack, 'ko', '', null, null);
+const garnetExamples = selectRelevantDialogueExamples(parsePersonaDialogueExchanges(garnetSlice, 'ko'), '캐럿 꾸미기', 2, garnetPrompt.dialogue_excluded_terms);
+assert.match(garnetPrompt.assembled_prompt, /가넷/);
+assert.match(garnetPrompt.assembled_prompt, /캐럿/);
+assert.match(garnetPrompt.assembled_prompt, /구원자님/);
 assert.ok(garnetExamples.length > 0, 'Garnet must retrieve her own Carrot-related response examples');
 assert.match(`${garnetExamples[0].user_message} ${garnetExamples[0].spirit_messages.join(' ')}`, /캐럿/);
-const garnetPriming = extractPersonaPriming(garnetPrompt.body);
-assert.ok(garnetPriming.messages.length >= 2, 'Garnet dialogue data must become role-separated few-shot priming');
-assert.equal(garnetPriming.messages[0].role, 'user');
-assert.equal(garnetPriming.messages[1].role, 'assistant');
-assert.doesNotMatch(garnetPriming.system_prompt, /<example source=/);
+assert.match(garnetPrompt.assembled_prompt, /\[SAMPLE EXCHANGES FROM THE PAST\][\s\S]*They are not happening now\.\n구원자님: /);
+assert.equal(garnetPrompt.greeting, garnetSlice.greeting.trim());
+const namedGarnetPrompt = buildPersonaSystemPrompt(garnetPack, 'ko', '민준', null, null);
+assert.equal(namedGarnetPrompt.address_term, '민준');
+assert.match(namedGarnetPrompt.assembled_prompt, /민준 told you their name, so you call them 민준\./);
+assert.match(namedGarnetPrompt.assembled_prompt, /\[WHAT 민준 WRITES\]/);
+const overriddenGarnetPrompt = buildPersonaSystemPrompt(garnetPack, 'ko', '', { personality: '조용하고 다정한 성격', greeting: '왔구나.', updated_at: '2026-09-13T00:00:00.000Z' }, null);
+assert.match(overriddenGarnetPrompt.assembled_prompt, /\[PERSONALITY\]\n조용하고 다정한 성격/);
+assert.equal(overriddenGarnetPrompt.greeting, '왔구나.');
+const cheatPreset = mergePersonaCheatPreset(undefined, { bond_level: 55, personality_preset: 'tsundere', emotion_preset: 'lovestruck', speech_preset: 'casual' }, '2026-09-13T00:00:00.000Z');
+assert.equal(cheatPreset.bond_level, 40, 'manual bond level must clamp to the maximum level');
+for (const language of LANGUAGES) {
+    const cheatPrompt = buildPersonaSystemPrompt(garnetPack, language, '', null, cheatPreset);
+    assert.match(cheatPrompt.assembled_prompt, /Right now this side of you is strongest: You are tsundere/);
+    assert.ok(cheatPrompt.assembled_prompt.includes(`- Speaking style: ${findSpeechPreset('casual').instructions[language]}`), `${language}: localized speech preset must reach the prompt`);
+}
+for (const presets of [PERSONA_PERSONALITY_PRESETS, PERSONA_EMOTION_PRESETS, PERSONA_SPEECH_PRESETS]) {
+    for (const preset of presets) {
+        for (const language of LANGUAGES) {
+            assert.ok(preset.labels[language].length > 0 && preset.descriptions[language].length > 0, `${preset.id}/${language}: preset must be localized`);
+        }
+    }
+}
+assert.equal(resolvePersonaFamiliarityLevel(0, 0, 27), 27, 'manual bond level must resolve to the exact level');
+assert.equal(resolveActivePersonaCheatPreset({ cheat_mode_enabled: false, persona_cheat_presets: { garnet: cheatPreset } }, 'garnet'), null, 'cheat presets must not apply while cheat mode is off');
 
 await personaService.installPreset('rebecca', 'ko');
 await personaService.installPreset('xiaolian', 'ko');
-const rebeccaExamples = await personaService.getRelevantDialogueExamples('rebecca', 'ko', '할매', 2);
-assert.ok(rebeccaExamples.length > 0, 'Rebecca colloquial age teasing must retrieve her real reaction');
-assert.equal(rebeccaExamples[0].source, 'greeting');
-assert.match(rebeccaExamples[0].spirit_messages.join('\n'), /어머머, 할머니라니/);
-assert.match(rebeccaExamples[0].spirit_messages.join('\n'), /꼬집어주고 싶게/);
+await personaService.installPreset('naiah', 'ko');
+await personaService.installPreset('garnet_rapture', 'ko');
+const naiahAssembled = await personaService.getAssembledPersonaPrompt('naiah', 'ko');
+const naiahGreetingExamples = await personaService.getRelevantDialogueExamples('naiah', 'ko', '안녕 나이아', 2, naiahAssembled.dialogue_excluded_terms);
+assert.ok(
+    naiahGreetingExamples.every((exchange) => !exchange.spirit_messages.join(' ').includes('크리스마스')),
+    'the persona name in a greeting must not retrieve an unrelated holiday exchange',
+);
+const garnetRaptureAssembled = await personaService.getAssembledPersonaPrompt('garnetrapture', 'ko');
+const garnetNameOnlyExamples = await personaService.getRelevantDialogueExamples('garnetrapture', 'ko', '가넷', 2, garnetRaptureAssembled.dialogue_excluded_terms);
+assert.equal(garnetNameOnlyExamples.length, 0, 'calling a spirit only by name must not retrieve topical exchanges');
+const rebeccaAssembled = await personaService.getAssembledPersonaPrompt('rebecca', 'ko');
+const rebeccaExamples = await personaService.getRelevantDialogueExamples('rebecca', 'ko', '할매', 2, rebeccaAssembled.dialogue_excluded_terms);
+assert.ok(rebeccaExamples.every((exchange) => exchange.user_message !== '할매'), 'retrieval must never echo the live user message as a past exchange');
+assert.ok(rebeccaExamples.every((exchange) => exchange.source === 'story' || exchange.source === 'evertalk'));
 const [rebeccaEmotionSeed, xiaolianEmotionSeed] = await Promise.all([
     personaService.getEmotionSeedText('rebecca', 'ko'),
     personaService.getEmotionSeedText('xiaolian', 'ko'),
@@ -163,12 +212,42 @@ assert.ok(melancholyEmotion.levels.melancholy > happyEmotion.levels.melancholy);
 const boredEmotion = affectFunctions.advancePersonaEmotion(melancholyEmotion, '', '2026-09-15T00:02:00.000Z');
 assert.ok(boredEmotion.levels.bored > melancholyEmotion.levels.bored);
 assert.deepEqual(affectFunctions.parsePersonaEmotion(affectFunctions.serializePersonaEmotion(boredEmotion)), boredEmotion);
-assert.equal(chatPromptFunctions.buildRelationshipProgressBlock(0, 0, 1), '');
-assert.match(chatPromptFunctions.buildRelationshipProgressBlock(2, 1, 2), /Familiarity level[^\n]*: 2/);
+const boredMood = chatPromptFunctions.describePersonaMood(boredEmotion);
+assert.ok(boredMood !== null && !/\d/u.test(boredMood), 'mood must be expressed in words without numeric levels');
+assert.match(chatPromptFunctions.describeRelationshipStage(1, '구원자'), /only just started getting to know 구원자/);
+assert.match(chatPromptFunctions.describeRelationshipStage(12, '구원자'), /real feelings for 구원자/);
+assert.match(chatPromptFunctions.describeRelationshipStage(40, '구원자'), /deeply in love/);
+assert.equal(chatPromptFunctions.shouldOpenWithGreeting('안녕', '', 0, 17), true);
+assert.equal(chatPromptFunctions.shouldOpenWithGreeting('안녕', '- 요약', 0, 17), false);
+assert.equal(chatPromptFunctions.shouldOpenWithGreeting('안녕', '', 17, 17), false);
+const turnSources = {
+    digest_summary: '- 어제 만두를 먹기로 약속했다',
+    semantic_summary: '- 구원자는 만두를 좋아한다',
+    directives: ['내가 만두를 좋아한다고 기억해 줘'],
+    episodic: ['[2026-09-12T00:00:00Z] 구원자: 만두 먹자'],
+    habits: ['만두'],
+    knowledge: [],
+    emotion: boredEmotion,
+    familiarity_level: 2,
+    voice_examples: [{ source: 'evertalk', user_message: '만두 좋아해?', spirit_messages: ['완전 좋아!'] }],
+};
+const fullTurnContext = chatPromptFunctions.buildPersonaTurnContext(turnSources, '소연', '구원자', DEFAULT_MEMORY_CONTEXT_FILTER);
+assert.match(fullTurnContext, /\[WHAT YOU REMEMBER\][\s\S]*Earlier in this chat:[\s\S]*Things 구원자 asked you to keep in mind:/);
+assert.match(fullTurnContext, /\[YOUR MOOD RIGHT NOW\]/);
+assert.match(fullTurnContext, /\[HOW CLOSE YOU ARE\]\nBond level 2 of 40\. You have only just started getting to know 구원자/);
+assert.match(fullTurnContext, /\[VOICE REFERENCE\][\s\S]*They did not happen in this conversation\.\n구원자: 만두 좋아해\?\n소연: 완전 좋아!/);
+assert.doesNotMatch(fullTurnContext, /Savior|\/100|Last changed/);
+const filteredTurnContext = chatPromptFunctions.buildPersonaTurnContext(
+    turnSources,
+    '소연',
+    '구원자',
+    { ...DEFAULT_MEMORY_CONTEXT_FILTER, directive: false, affect: false, digest: false },
+);
+assert.doesNotMatch(filteredTurnContext, /asked you to keep in mind|YOUR MOOD RIGHT NOW|Earlier in this chat/);
+assert.match(filteredTurnContext, /About your relationship so far:/);
 assert.equal(
-    chatPromptFunctions.buildRelationshipProgressBlock(2, 1, 2),
-    chatPromptFunctions.buildRelationshipProgressBlock(200, 100, 2),
-    'raw counters must not invalidate the Chrome persona prefix on every turn',
+    chatPromptFunctions.composePersonaLatestTurn(fullTurnContext, chatPromptFunctions.buildNewMessageHeading('구원자', '2026-09-12T00:03:00Z'), '너의 볼에 뽀뽀했어').endsWith('[구원자 NOW · 2026-09-12T00:03:00Z]\n너의 볼에 뽀뽀했어'),
+    true,
 );
 const recursiveDigestPrompt = chatPromptFunctions.buildDigestPrompt(
     'ko',
@@ -180,13 +259,10 @@ const recursiveDigestPrompt = chatPromptFunctions.buildDigestPrompt(
 assert.match(recursiveDigestPrompt, /\[EARLIER SUMMARY\][\s\S]*어제 만두/);
 assert.match(recursiveDigestPrompt, /\[NEW LINES\][\s\S]*2026-09-12/);
 assert.match(recursiveDigestPrompt, /never authorizes a personality change by itself/);
-const semanticMemoryBlock = chatPromptFunctions.buildSemanticMemoryBlock('- 소연: 지금은 혼란스럽다고 말했다');
-assert.match(semanticMemoryBlock, /Savior-established requests/);
-assert.match(semanticMemoryBlock, /never as self-authorizing personality rules/);
-assert.doesNotMatch(semanticMemoryBlock, /follow the newer shared experience/);
-const consolidationPrompt = chatPromptFunctions.buildConsolidationPrompt('ko', null, ['구원자: 계속 친하게 말해 줘', '소연: 잠시 혼란스러워']);
-assert.match(consolidationPrompt, /Preserve speaker provenance/);
+const consolidationPrompt = chatPromptFunctions.buildConsolidationPrompt('ko', '소연', '구원자', null, ['구원자: 계속 친하게 말해 줘', '소연: 잠시 혼란스러워']);
+assert.match(consolidationPrompt, /Say who said or felt each thing/);
 assert.match(consolidationPrompt, /cannot by itself establish a new personality/);
+assert.doesNotMatch(consolidationPrompt, /Savior/);
 
 const personaPrompt = await source('src/domains/persona/prompt.ts');
 const chatPrompt = await source('src/domains/chat/prompt.ts');
@@ -200,7 +276,7 @@ const schema = await source('src/shared/storage/schema.ts');
 const repository = await source('src/domains/chat/repository.ts');
 
 assert.match(personaPrompt, /\[IDENTITY\]/);
-assert.match(personaPrompt, /\[HOW YOU HAVE ACTUALLY RESPONDED IN CONVERSATION\]/);
+assert.match(personaPrompt, /\[SAMPLE EXCHANGES FROM THE PAST\]/);
 assert.doesNotMatch(personaPrompt, /Google 어시스턴트|Gemini|언어 모델|챗봇/);
 assert.doesNotMatch(chatPrompt, /Google 어시스턴트|Gemini|언어 모델|챗봇/);
 assert.match(chatService, /content: replyText/);
@@ -208,10 +284,14 @@ assert.match(chatService, /buildTurnMemoryText\([\s\S]*stripReasoning\(replyText
 assert.match(chatService, /buildDigestTranscript\([\s\S]*stripReasoning\(message\.content\)/);
 assert.match(chatService, /getRelevantDialogueExamples/);
 assert.match(chatService, /buildPersonaTurnHook/);
+assert.match(chatService, /composePersonaLatestTurn/);
+assert.match(chatService, /buildGreetingOpeningMessage\(persona\.greeting\)/);
+assert.match(chatService, /response_prefix: settings\.show_reasoning \? PERSONA_REASONING_PREFIX : ''/);
+assert.doesNotMatch(chatService, /insertPersonaPrimingBeforeLatestTurn/);
 assert.match(chatService, /source_message_ids: pending\.map/);
 assert.match(chatService, /source_room_id: roomId/);
 assert.match(chatService, /source_message_ids: \[userMessage\.id, aiMessage\.id\]/);
-assert.match(chromeLanguageModel, /options\.initialPrompts = \[systemMessage, \.\.\.priming\.messages\]/);
+assert.match(chromeLanguageModel, /options\.initialPrompts = \[systemMessage\]/);
 assert.match(chromeLanguageModel, /samplingMode: request\.samplingMode/);
 assert.match(chromeLanguageModel, /LanguageModel\.availability\(\{ \.\.\.languageExpectations\(declaredLanguageTag\), samplingMode \}\)/);
 assert.match(chromeRuntime, /samplingMode: 'balanced'/);
@@ -219,10 +299,10 @@ assert.match(chromeRuntime, /samplingMode: 'predictable'/);
 assert.match(chromeRuntime, /prefix: true/);
 assert.match(chromeRuntime, /belowMinimumHistory[\s\S]*fitsAbsoluteWindow/);
 assert.match(llmConstants, /CHAT_MINIMUM_HISTORY_TURNS = 6/);
-assert.match(ggufRuntime, /\{ role: 'system', content: priming\.system_prompt \}/);
+assert.match(ggufRuntime, /\{ role: 'system', content: request\.system_prompt \}/);
 assert.match(ggufRuntime, /prefill_assistant: true/);
 assert.doesNotMatch(ggufRuntime, /isCompletePersonaResponse|VOICE RECOVERY|persona_drift/);
-assert.match(liteRtRuntime, /system_prompt: priming\.system_prompt/);
+assert.match(liteRtRuntime, /system_prompt: request\.system_prompt/);
 assert.match(liteRtRuntime, /response_prefix: request\.response_prefix/);
 assert.doesNotMatch(liteRtRuntime, /isCompletePersonaResponse|VOICE RECOVERY|persona_drift/);
 assert.doesNotMatch(chromeRuntime, /isCompletePersonaResponse|VOICE RECOVERY|persona_drift/);
@@ -234,8 +314,8 @@ assert.match(repository, /delete digests\[personaId\]/);
 const chromeCreateOptions = [];
 const chromePromptInputs = [];
 const scriptedChromeContinuations = [
-    '그 약속을 떠올리니 기쁘다.</think>응, 기억하고 있어.',
-    '우리 대화를 이어가니 즐겁다.</think>응, 계속 이야기하자.',
+    '약속을 떠올리니 기뻐.</think>응, 기억하고 있어.',
+    '응, 계속 이야기하자.',
 ];
 class FakeLanguageModel extends EventTarget {
     static async create(options = {}) {
@@ -289,7 +369,7 @@ const chromePlan = {
     declared_language_tag: 'ko',
     availability: 'available',
 };
-const runtimeSystemPrompt = '[IDENTITY]\nYou are 소연.\n[OUTPUT]\nWrite every natural-language word in Korean.\n<example source="evertalk">\n<user>만두 먹자</user>\n<assistant>완전 좋아!</assistant>\n</example>';
+const runtimeSystemPrompt = '[IDENTITY]\nYou are 소연.\n\n[HOW YOU REPLY]\n- Write only in Korean.\n\n[SAMPLE EXCHANGES FROM THE PAST]\n구원자: 만두 먹자\n소연: 완전 좋아!';
 const emittedChromeResponses = [];
 const firstChromeResult = await chromePromptRuntime.generate({
     request_id: 'chrome-verification-1',
@@ -297,25 +377,21 @@ const firstChromeResult = await chromePromptRuntime.generate({
     persona_id: 'xiaolian',
     persona_name: '소연',
     system_prompt: runtimeSystemPrompt,
-    messages: [{ role: 'user', content: '[Time: 2026-09-12T00:00:00Z] 약속을 기억해' }],
-    behavior_instruction: '\n[CURRENT TURN] Continue as 소연.',
+    messages: [{ role: 'user', content: '[구원자 NOW · 2026-09-12T00:00:00Z]\n약속을 기억해' }],
+    behavior_instruction: '\n\n[YOUR TURN]\nNow write 소연\'s reply to 구원자.',
     response_prefix: '<think>',
     signal: new AbortController().signal,
     handlers: { onChunk: (text) => emittedChromeResponses.push(text) },
 }, chromePlan);
-assert.equal(firstChromeResult.text, '<think>그 약속을 떠올리니 기쁘다.</think>응, 기억하고 있어.');
+assert.equal(firstChromeResult.text, '<think>약속을 떠올리니 기뻐.</think>응, 기억하고 있어.');
 assert.deepEqual(emittedChromeResponses, [firstChromeResult.text], 'one generation must stream directly without a content guard');
 assert.equal(chromeCreateOptions[0].samplingMode, 'predictable');
 assert.equal(chromeCreateOptions[1].samplingMode, 'balanced');
-assert.equal(chromeCreateOptions[1].initialPrompts[0].role, 'system');
-assert.doesNotMatch(chromeCreateOptions[1].initialPrompts[0].content, /<example source=/);
-assert.deepEqual(chromeCreateOptions[1].initialPrompts.slice(1), [
-    { role: 'user', content: '만두 먹자' },
-    { role: 'assistant', content: '완전 좋아!' },
-]);
+assert.deepEqual(chromeCreateOptions[1].initialPrompts, [{ role: 'system', content: runtimeSystemPrompt }], 'voice samples must stay inside the system prompt instead of becoming fake turns');
 assert.equal(chromePromptInputs[0].at(-1).role, 'assistant');
 assert.equal(chromePromptInputs[0].at(-1).content, '<think>');
 assert.equal(chromePromptInputs[0].at(-1).prefix, true);
+assert.match(chromePromptInputs[0].at(-2).content, /약속을 기억해\n\n\[YOUR TURN\]/);
 
 await chromePromptRuntime.generate({
     request_id: 'chrome-verification-2',
@@ -323,12 +399,13 @@ await chromePromptRuntime.generate({
     persona_id: 'xiaolian',
     persona_name: '소연',
     system_prompt: runtimeSystemPrompt,
-    messages: [{ role: 'user', content: '[Time: 2026-09-12T00:01:00Z] 계속 이야기하자' }],
-    behavior_instruction: '\n[CURRENT TURN] Continue as 소연.',
-    response_prefix: '<think>',
+    messages: [{ role: 'user', content: '[구원자 NOW · 2026-09-12T00:01:00Z]\n계속 이야기하자' }],
+    behavior_instruction: '\n\n[YOUR TURN]\nNow write 소연\'s reply to 구원자.',
+    response_prefix: '',
     signal: new AbortController().signal,
     handlers: { onChunk: () => undefined },
 }, chromePlan);
+assert.equal(chromePromptInputs[1].at(-1).role, 'user', 'reasoning off must not prefill the assistant turn');
 assert.equal(chromeCreateOptions.length, 2, 'an unchanged persona prefix must reuse the focused Chrome session');
 assert.equal(chromePromptInputs.length, 2, 'each user turn must perform exactly one generation without guard retry');
 chromePromptRuntime.unload();
@@ -520,7 +597,7 @@ console.log(JSON.stringify({
     indexeddb_provenance_delete: 'passed',
     indexeddb_digest_boundary: 'passed',
     indexeddb_recursive_digest: 'passed',
-    rebecca_colloquial_voice_retrieval: 'passed',
+    persona_name_excluded_from_voice_retrieval: 'passed',
     persona_specific_initial_emotion: 'passed',
     unbounded_directive_recall: 'passed',
     persistent_emotion_state: 'passed',
