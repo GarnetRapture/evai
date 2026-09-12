@@ -4,8 +4,9 @@ import { Maximize2, Minimize2, Minus, Send, Sparkles, Square, X, ZoomIn } from '
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
 import { CHAT_PANEL_MIN_HEIGHT, CHAT_PANEL_MIN_WIDTH, CHAT_PANEL_RESIZE_HANDLES, createConversationSummary, createTalkChoices, formatDateTime, formatRoomTitle, formatSkinLabel, parseThinkBlocks, pickRandomSpeechLine, pickPokeReactionLine, resolvePanelResize } from '../logic';
 import type { SpiritVisualAssets } from '../../persona';
-import type { ChatMessageBubbleProps, ChatStageProps, GalleryTileProps, PanelGeometry, PanelResizeHandle, PanelResizeState, ZoomDragState, ZoomOffset } from '../types';
+import type { ChatMessageBubbleProps, ChatStageProps, GalleryTileProps, PanelGeometry, PanelResizeHandle, PanelResizeState } from '../types';
 import { EVERTALK_UI_ASSETS } from '../uiAssets';
+import { ImageViewerOverlay } from './ImageViewerOverlay';
 import { LoadableAssetImage } from './LoadableAssetImage';
 const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoomLabel, onZoom }: GalleryTileProps) {
     return (<button type="button" className="ever-gallery-tile ever-gallery-tile--button" aria-label={`${skinLabel} ${zoomLabel}`} onClick={() => onZoom(skin.portraitCandidates)}>
@@ -72,8 +73,6 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
     const [poked, setPoked] = useState(false);
     const [displayLine, setDisplayLine] = useState(speechLine);
     const [zoomedImageCandidates, setZoomedImageCandidates] = useState<string[] | null>(null);
-    const [zoomOffset, setZoomOffset] = useState<ZoomOffset>({ x: 0, y: 0 });
-    const [zoomDragStart, setZoomDragStart] = useState<ZoomDragState | null>(null);
     const [panelState, setPanelState] = useState<'normal' | 'minimized' | 'maximized'>('normal');
     const [panelSize, setPanelSize] = useState<{ width: number; height: number } | null>(null);
     const [panelPos, setPanelPos] = useState<{ x: number; y: number } | null>(null);
@@ -260,37 +259,10 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
         }, 1600);
     }
     function openZoom(candidates: string[]) {
-        setZoomOffset({ x: 0, y: 0 });
-        setZoomDragStart(null);
         setZoomedImageCandidates(candidates);
     }
     function closeZoom() {
-        setZoomDragStart(null);
         setZoomedImageCandidates(null);
-    }
-    function beginZoomDrag(event: React.PointerEvent<HTMLDivElement>) {
-        event.currentTarget.setPointerCapture(event.pointerId);
-        setZoomDragStart({
-            pointerId: event.pointerId,
-            x: event.clientX,
-            y: event.clientY,
-            originX: zoomOffset.x,
-            originY: zoomOffset.y,
-        });
-    }
-    function moveZoomDrag(event: React.PointerEvent<HTMLDivElement>) {
-        if (!zoomDragStart || zoomDragStart.pointerId !== event.pointerId) {
-            return;
-        }
-        setZoomOffset({
-            x: zoomDragStart.originX + event.clientX - zoomDragStart.x,
-            y: zoomDragStart.originY + event.clientY - zoomDragStart.y,
-        });
-    }
-    function endZoomDrag(event: React.PointerEvent<HTMLDivElement>) {
-        if (zoomDragStart?.pointerId === event.pointerId) {
-            setZoomDragStart(null);
-        }
     }
     return (<main className={`ever-stage ${tone}`}>
       {assets && <img className="ever-stage__background" src={assets.background} alt=""/>}
@@ -443,27 +415,13 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
           <span>{labels.gallery}</span>
         </button>
       </nav>
-      {zoomedImageCandidates && (<div className="ever-background-zoom-overlay" role="dialog" aria-modal="true" onClick={closeZoom}>
-          <button type="button" className="ever-background-zoom-close" aria-label={labels.close} onClick={closeZoom}>
-            <X aria-hidden="true" size={24}/>
-          </button>
-          <div
-            className={`ever-background-zoom-frame ${zoomDragStart ? 'is-dragging' : ''}`}
-            onClick={(event) => event.stopPropagation()}
-            onPointerDown={beginZoomDrag}
-            onPointerMove={moveZoomDrag}
-            onPointerUp={endZoomDrag}
-            onPointerCancel={endZoomDrag}
-          >
-            <LoadableAssetImage
-              candidates={zoomedImageCandidates}
-              alt={activeDetail?.name ?? ''}
-              className="ever-background-zoom-image"
-              style={{ transform: `translate3d(${zoomOffset.x}px, ${zoomOffset.y}px, 0)` }}
-              fallback={<span>{activeDetail?.name ?? ''}</span>}
-            />
-          </div>
-          <span className="ever-background-zoom-caption">{zoomedImageCandidates[0]?.split('/').slice(-1)[0] ?? ''}</span>
-        </div>)}
+      <ImageViewerOverlay
+        open={zoomedImageCandidates !== null}
+        candidates={zoomedImageCandidates ?? []}
+        alt={activeDetail?.name ?? ''}
+        caption={zoomedImageCandidates?.[0]?.split('/').slice(-1)[0] ?? ''}
+        labels={labels}
+        onClose={closeZoom}
+      />
     </main>);
 }

@@ -1,8 +1,9 @@
-import type { ModelDownloadProgressHandler } from '../types';
+import type { ModelDownloadProgressHandler, OnDeviceTextMessage } from '../types';
 
 export interface ChromeLanguageModelCreateRequest {
     declaredLanguageTag: string | null;
     systemPrompt: string | null;
+    primingTurns: OnDeviceTextMessage[];
     onDownloadProgress: ModelDownloadProgressHandler | null;
     signal: AbortSignal | null;
 }
@@ -36,7 +37,10 @@ export async function createChromeLanguageModel(request: ChromeLanguageModelCrea
     const options: LanguageModelCreateOptions = { ...languageExpectations(request.declaredLanguageTag) };
     if (request.systemPrompt !== null) {
         const systemMessage: LanguageModelSystemMessage = { role: 'system', content: request.systemPrompt };
-        options.initialPrompts = [systemMessage];
+        options.initialPrompts = [systemMessage, ...request.primingTurns.map((turn): LanguageModelMessage => ({
+            role: turn.role,
+            content: turn.content,
+        }))];
     }
     if (request.signal !== null) {
         options.signal = request.signal;

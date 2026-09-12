@@ -77,6 +77,15 @@ export interface EverTalkLabels {
     stickerLockedHint: (level: number) => string;
     stickerOwnedCount: (owned: number, total: number) => string;
     stickerEmpty: string;
+    imageViewerZoomIn: string;
+    imageViewerZoomOut: string;
+    imageViewerReset: string;
+    imageViewerFit: string;
+    imageViewerPanUp: string;
+    imageViewerPanDown: string;
+    imageViewerPanLeft: string;
+    imageViewerPanRight: string;
+    imageViewerScale: (percent: number) => string;
     lobbySlotEmptyLabel: (index: number) => string;
     lobbyInsightTitle: string;
     lobbyModelTitle: string;
@@ -405,6 +414,15 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         stickerLockedHint: (level) => `${level}레벨 해금`,
         stickerOwnedCount: (owned, total) => `${owned} / ${total} 획득`,
         stickerEmpty: '아직 획득한 스티커가 없습니다.',
+        imageViewerZoomIn: '확대',
+        imageViewerZoomOut: '축소',
+        imageViewerReset: '원래 크기',
+        imageViewerFit: '화면에 맞춤',
+        imageViewerPanUp: '위로 이동',
+        imageViewerPanDown: '아래로 이동',
+        imageViewerPanLeft: '왼쪽으로 이동',
+        imageViewerPanRight: '오른쪽으로 이동',
+        imageViewerScale: (percent) => `${percent}%`,
         lobbySlotEmptyLabel: (index) => `빈 슬롯 ${index}`,
         lobbyInsightTitle: '채팅 성향 인사이트',
         lobbyModelTitle: '활성 모델',
@@ -846,6 +864,15 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         stickerLockedHint: (level) => `Unlocks at Lv.${level}`,
         stickerOwnedCount: (owned, total) => `${owned} / ${total} collected`,
         stickerEmpty: 'No stickers collected yet.',
+        imageViewerZoomIn: 'Zoom in',
+        imageViewerZoomOut: 'Zoom out',
+        imageViewerReset: 'Actual size',
+        imageViewerFit: 'Fit to screen',
+        imageViewerPanUp: 'Pan up',
+        imageViewerPanDown: 'Pan down',
+        imageViewerPanLeft: 'Pan left',
+        imageViewerPanRight: 'Pan right',
+        imageViewerScale: (percent) => `${percent}%`,
         lobbySlotEmptyLabel: (index) => `Empty slot ${index}`,
         lobbyInsightTitle: 'Chat style insight',
         lobbyModelTitle: 'Active model',
@@ -1287,6 +1314,15 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         stickerLockedHint: (level) => `${level} 级解锁`,
         stickerOwnedCount: (owned, total) => `已收集 ${owned} / ${total}`,
         stickerEmpty: '还没有收集到贴纸。',
+        imageViewerZoomIn: '放大',
+        imageViewerZoomOut: '缩小',
+        imageViewerReset: '原始大小',
+        imageViewerFit: '适应屏幕',
+        imageViewerPanUp: '向上移动',
+        imageViewerPanDown: '向下移动',
+        imageViewerPanLeft: '向左移动',
+        imageViewerPanRight: '向右移动',
+        imageViewerScale: (percent) => `${percent}%`,
         lobbySlotEmptyLabel: (index) => `空位 ${index}`,
         lobbyInsightTitle: '聊天倾向洞察',
         lobbyModelTitle: '启用模型',

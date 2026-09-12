@@ -43,10 +43,16 @@ function assertSessionCreatable(plan: LanguageModelLanguagePlan): void {
     }
 }
 
+function isSamePrimingTurns(left: OnDeviceTextMessage[], right: OnDeviceTextMessage[]): boolean {
+    return left.length === right.length
+        && left.every((turn, index) => turn.role === right[index].role && turn.content === right[index].content);
+}
+
 function isSamePersonaSession(entry: PersonaModelSessionIdentity, identity: PersonaModelSessionIdentity): boolean {
     return entry.persona_id === identity.persona_id
         && entry.declared_language_tag === identity.declared_language_tag
-        && entry.system_prompt === identity.system_prompt;
+        && entry.system_prompt === identity.system_prompt
+        && isSamePrimingTurns(entry.priming_turns, identity.priming_turns);
 }
 
 async function createPersonaModelSession(identity: PersonaModelSessionIdentity, plan: LanguageModelLanguagePlan, cacheReset: boolean): Promise<PersonaModelSession> {
@@ -54,6 +60,7 @@ async function createPersonaModelSession(identity: PersonaModelSessionIdentity, 
     const session = await createChromeLanguageModel({
         declaredLanguageTag: identity.declared_language_tag,
         systemPrompt: identity.system_prompt,
+        primingTurns: identity.priming_turns,
         onDownloadProgress: null,
         signal: null,
     });
@@ -128,6 +135,7 @@ export const chromePromptRuntime = {
                 const session = await createChromeLanguageModel({
                     declaredLanguageTag: plan.declared_language_tag,
                     systemPrompt: null,
+                    primingTurns: [],
                     onDownloadProgress,
                     signal: null,
                 });
@@ -158,11 +166,17 @@ export const chromePromptRuntime = {
         baseSession?.session.destroy();
         baseSession = null;
     },
-    async focusPersonaSession(personaId: string, plan: LanguageModelLanguagePlan, systemPrompt: string): Promise<PersonaModelSession> {
+    async focusPersonaSession(
+        personaId: string,
+        plan: LanguageModelLanguagePlan,
+        systemPrompt: string,
+        primingTurns: OnDeviceTextMessage[],
+    ): Promise<PersonaModelSession> {
         const identity: PersonaModelSessionIdentity = {
             persona_id: personaId,
             declared_language_tag: plan.declared_language_tag,
             system_prompt: systemPrompt,
+            priming_turns: primingTurns,
         };
         if (focusedPersonaSession && isSamePersonaSession(focusedPersonaSession, identity)) {
             focusedPersonaSession.last_access = Date.now();
@@ -203,10 +217,11 @@ export const chromePromptRuntime = {
         const signal = request.signal;
         const status: LlmRequestStatus = createQueuedRequestStatus(request.request_id, request.persona_id);
         recordRequestStatus(status);
+        const responsePrefix = request.response_prefix;
         let generatedText = '';
         let conversation: LanguageModel | null = null;
         try {
-            const entry = await chromePromptRuntime.focusPersonaSession(request.persona_id, plan, request.system_prompt);
+            const entry = await chromePromptRuntime.focusPersonaSession(request.persona_id, plan, request.system_prompt, request.priming_turns);
             conversation = await entry.session.clone({ signal });
             const reusedPrefixTokens = conversation.contextUsage;
             const budgeted = await selectMessagesWithinBudget(conversation, request.messages, request.behavior_instruction);

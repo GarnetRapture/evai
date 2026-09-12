@@ -6,7 +6,7 @@ import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, LocalModelEntryGroup, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerTransform, LocalModelEntryGroup, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -173,6 +173,30 @@ export function parseThinkBlocks(text: string): ThinkBlock[] {
 }
 export function formatProgressPercent(progress: ModelDownloadProgress): number {
     return Math.round(progress.ratio * 100);
+}
+export const IMAGE_VIEWER_MIN_SCALE = 0.25;
+export const IMAGE_VIEWER_MAX_SCALE = 6;
+export const IMAGE_VIEWER_SCALE_STEP = 0.25;
+export const IMAGE_VIEWER_PAN_STEP_PX = 64;
+export function clampImageViewerScale(scale: number): number {
+    return Math.min(IMAGE_VIEWER_MAX_SCALE, Math.max(IMAGE_VIEWER_MIN_SCALE, Number(scale.toFixed(3))));
+}
+export function scaleImageViewerTransform(transform: ImageViewerTransform, nextScale: number): ImageViewerTransform {
+    const scale = clampImageViewerScale(nextScale);
+    const ratio = scale / transform.scale;
+    return { scale, x: transform.x * ratio, y: transform.y * ratio };
+}
+export function panImageViewerTransform(transform: ImageViewerTransform, direction: ImageViewerPanDirection, stepPx: number): ImageViewerTransform {
+    if (direction === 'up') {
+        return { ...transform, y: transform.y + stepPx };
+    }
+    if (direction === 'down') {
+        return { ...transform, y: transform.y - stepPx };
+    }
+    if (direction === 'left') {
+        return { ...transform, x: transform.x + stepPx };
+    }
+    return { ...transform, x: transform.x - stepPx };
 }
 export const CHAT_PANEL_MIN_WIDTH = 320;
 export const CHAT_PANEL_MIN_HEIGHT = 240;

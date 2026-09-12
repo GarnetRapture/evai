@@ -63,6 +63,20 @@ export interface PanelResizeResult {
     height: number;
     blocked: boolean;
 }
+export interface ImageViewerTransform {
+    scale: number;
+    x: number;
+    y: number;
+}
+export type ImageViewerPanDirection = 'up' | 'down' | 'left' | 'right';
+export interface ImageViewerOverlayProps {
+    open: boolean;
+    candidates: string[];
+    alt: string;
+    caption: string;
+    labels: EverTalkLabels;
+    onClose: () => void;
+}
 export interface ChatMessageBubbleProps {
     message: ChatMessage;
     avatarCandidates: string[];

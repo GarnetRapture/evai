@@ -4,8 +4,9 @@ import { ChevronLeft, History, Images, MessageCircle, Plus, Send, Square, X, Zoo
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
 import type { SpiritVisualAssets } from '../../persona';
 import { createTalkChoices, createConversationSummary, formatDateTime, formatRoomTitle, formatSkinLabel, parseThinkBlocks, pickPokeReactionLine, pickRandomSpeechLine } from '../logic';
+import { ImageViewerOverlay } from '../components/ImageViewerOverlay';
 import { LoadableAssetImage } from '../components/LoadableAssetImage';
-import type { StageTab, ZoomDragState, ZoomOffset } from '../types';
+import type { StageTab } from '../types';
 import type { MobileChatScreenProps, MobileMessageBubbleProps } from './types';
 
 export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScreenProps) {
@@ -25,8 +26,6 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
     const [poked, setPoked] = useState(false);
     const [displayLine, setDisplayLine] = useState(speechLine);
     const [zoomedImageCandidates, setZoomedImageCandidates] = useState<string[] | null>(null);
-    const [zoomOffset, setZoomOffset] = useState<ZoomOffset>({ x: 0, y: 0 });
-    const [zoomDragStart, setZoomDragStart] = useState<ZoomDragState | null>(null);
     const pokeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
@@ -71,32 +70,11 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
     }
 
     function openZoom(candidates: string[]) {
-        setZoomOffset({ x: 0, y: 0 });
-        setZoomDragStart(null);
         setZoomedImageCandidates(candidates);
     }
 
     function closeZoom() {
-        setZoomDragStart(null);
         setZoomedImageCandidates(null);
-    }
-
-    function beginZoomDrag(event: React.PointerEvent<HTMLDivElement>) {
-        event.currentTarget.setPointerCapture(event.pointerId);
-        setZoomDragStart({ pointerId: event.pointerId, x: event.clientX, y: event.clientY, originX: zoomOffset.x, originY: zoomOffset.y });
-    }
-
-    function moveZoomDrag(event: React.PointerEvent<HTMLDivElement>) {
-        if (!zoomDragStart || zoomDragStart.pointerId !== event.pointerId) {
-            return;
-        }
-        setZoomOffset({ x: zoomDragStart.originX + event.clientX - zoomDragStart.x, y: zoomDragStart.originY + event.clientY - zoomDragStart.y });
-    }
-
-    function endZoomDrag(event: React.PointerEvent<HTMLDivElement>) {
-        if (zoomDragStart?.pointerId === event.pointerId) {
-            setZoomDragStart(null);
-        }
     }
 
     if (!activeDetail) {
@@ -231,15 +209,7 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
                 </div>
             )}
 
-            {zoomedImageCandidates && (
-                <div className="ever-mobile-zoom-overlay" role="dialog" aria-modal="true" onClick={closeZoom}>
-                    <button type="button" className="ever-mobile-zoom-close" aria-label={labels.close} onClick={closeZoom}><X aria-hidden="true" size={24}/></button>
-                    <div className={`ever-mobile-zoom-frame ${zoomDragStart ? 'is-dragging' : ''}`} onClick={(event) => event.stopPropagation()} onPointerDown={beginZoomDrag} onPointerMove={moveZoomDrag} onPointerUp={endZoomDrag} onPointerCancel={endZoomDrag}>
-                        <LoadableAssetImage candidates={zoomedImageCandidates} alt={activeDetail.name} className="ever-mobile-zoom-image" style={{ transform: `translate3d(${zoomOffset.x}px, ${zoomOffset.y}px, 0)` }} fallback={<span>{activeDetail.name}</span>}/>
-                    </div>
-                    <span className="ever-mobile-zoom-caption">{zoomedImageCandidates[0]?.split('/').slice(-1)[0] ?? ''}</span>
-                </div>
-            )}
+            <ImageViewerOverlay open={zoomedImageCandidates !== null} candidates={zoomedImageCandidates ?? []} alt={activeDetail.name} caption={zoomedImageCandidates?.[0]?.split("/").slice(-1)[0] ?? ""} labels={labels} onClose={closeZoom}/>
         </section>
     );
 }

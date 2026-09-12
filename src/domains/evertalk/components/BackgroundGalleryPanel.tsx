@@ -3,6 +3,7 @@ import { Check, ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
 import { ASSET_ROOT } from '../../persona';
 import { BACKGROUND_ASSET_FILES } from '../backgroundAssets';
 import type { BackgroundGalleryPanelProps } from '../types';
+import { ImageViewerOverlay } from './ImageViewerOverlay';
 
 const PAGE_SIZE = 60;
 
@@ -82,30 +83,14 @@ export function BackgroundGalleryPanel({ open, labels, onClose, onSelectBackgrou
         </div>
       </div>
 
-      {zoomedFile && (
-        <div
-          className="ever-background-zoom-overlay"
-          role="dialog"
-          aria-modal="true"
-          onClick={() => setZoomedFile(null)}
-        >
-          <button
-            type="button"
-            className="ever-background-zoom-close"
-            aria-label={labels.close}
-            onClick={() => setZoomedFile(null)}
-          >
-            <X aria-hidden="true" size={24} />
-          </button>
-          <img
-            className="ever-background-zoom-image"
-            src={`${ASSET_ROOT}/backgrounds/talk/${zoomedFile}`}
-            alt={zoomedFile}
-            onClick={(event) => event.stopPropagation()}
-          />
-          <span className="ever-background-zoom-caption">{zoomedFile}</span>
-        </div>
-      )}
+      <ImageViewerOverlay
+        open={zoomedFile !== null}
+        candidates={zoomedFile ? [`${ASSET_ROOT}/backgrounds/talk/${zoomedFile}`] : []}
+        alt={zoomedFile ?? ''}
+        caption={zoomedFile ?? ''}
+        labels={labels}
+        onClose={() => setZoomedFile(null)}
+      />
     </div>
   );
 }

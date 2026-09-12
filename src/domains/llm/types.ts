@@ -133,8 +133,10 @@ export interface OnDeviceGenerationRequest {
     request_id: string;
     persona_id: string;
     system_prompt: string;
+    priming_turns: OnDeviceTextMessage[];
     messages: OnDeviceTextMessage[];
     behavior_instruction: string;
+    response_prefix: string;
     signal: AbortSignal;
     handlers: OnDeviceGenerationHandlers;
 }
@@ -149,6 +151,7 @@ export interface PersonaModelSessionIdentity {
     persona_id: string;
     declared_language_tag: string | null;
     system_prompt: string;
+    priming_turns: OnDeviceTextMessage[];
 }
 export interface PersonaModelSession extends PersonaModelSessionIdentity {
     session: LanguageModel;
