@@ -3,6 +3,7 @@ import type { AppLanguage } from '../../../shared/types';
 import { formatLanguageName } from '../logic';
 import type { SetupWizardProps } from '../types';
 import { PlatformGuideNotice } from './PlatformGuideNotice';
+import { ContextStorageSelector } from './ContextStorageSelector';
 
 const LANGUAGE_OPTIONS: AppLanguage[] = ['ko', 'en', 'zh_cn'];
 
@@ -11,7 +12,13 @@ export function SetupWizard({
     appPlatform,
     language,
     labels,
+    contextStorageMode,
+    nativeExecutablePath,
+    nativeContextStatus,
     onSelectLanguage,
+    onSetContextStorageMode,
+    onSetNativeExecutablePath,
+    onConnectNativeProgram,
     onCompleteSetup,
 }: SetupWizardProps) {
     const [platformGuideAcknowledged, setPlatformGuideAcknowledged] = useState(false);
@@ -38,6 +45,7 @@ export function SetupWizard({
                         ))}
                     </div>
                     <PlatformGuideNotice appPlatform={appPlatform} labels={labels} acknowledged={platformGuideAcknowledged} onAcknowledgedChange={setPlatformGuideAcknowledged}/>
+                    <ContextStorageSelector mode={contextStorageMode} status={nativeContextStatus} executablePath={nativeExecutablePath} labels={labels} onChange={onSetContextStorageMode} onExecutablePathChange={onSetNativeExecutablePath} onConnect={onConnectNativeProgram}/>
                     <button type="button" className="ever-setup-wizard__next" disabled={!platformGuideAcknowledged} onClick={() => void onCompleteSetup()}>
                         {labels.continue}
                     </button>

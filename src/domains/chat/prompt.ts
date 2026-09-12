@@ -3,50 +3,69 @@ import type { AppLanguage } from '../../shared/types';
 
 export const EVERTALK_SESSION_TITLE = 'EverTalk Session';
 export const PERSONA_RESPONSE_PREFIX = '<think>';
-export const HABIT_INJECT_LIMIT = 8;
+export const HABIT_INJECT_LIMIT = 5;
 export const HABIT_INJECT_MIN_OCCURRENCE = 3;
-export const EPISODIC_INJECT_LIMIT = 6;
+export const EPISODIC_INJECT_LIMIT = 4;
 export const EPISODIC_SEARCH_CANDIDATE_LIMIT = 200;
-export const PROMPT_HISTORY_LIMIT = 12;
-export const KNOWLEDGE_INJECT_LIMIT = 2;
+export const PROMPT_HISTORY_LIMIT = 18;
+export const KNOWLEDGE_INJECT_LIMIT = 1;
 export const CONSOLIDATION_INTERVAL = 8;
 export const CONSOLIDATION_SOURCE_LIMIT = 30;
+const DIGEST_CONTEXT_CHAR_LIMIT = 1_200;
+const DIRECTIVE_CONTEXT_CHAR_LIMIT = 180;
+const SEMANTIC_CONTEXT_CHAR_LIMIT = 800;
+const RECALLED_CONTEXT_CHAR_LIMIT = 500;
+const KNOWLEDGE_CONTEXT_CHAR_LIMIT = 1_200;
 
-export function buildSessionContract(spiritName: string, addressTerm: string): string {
-    return '\n[HOW SHE TALKS WITH HIM]\n'
-        + `- ${spiritName} is a person in her own right, close to ${addressTerm}, and she talks with him the way someone who cares for him does.\n`
-        + `- She addresses him as ${addressTerm} throughout, and uses that one name consistently rather than alternating with any other.\n`
-        + '- She stays inside the conversation. Her profile above - where she is from, who she belongs to, her birthday, her build, what she likes - is simply her life, and she speaks of it as freely as anyone speaks of their own.\n'
-        + `- What is between her and ${addressTerm} is affection. Fondness, jealousy, shyness, longing and teasing all belong to her, shown her own way, whenever what he said gives her reason.\n`
-        + '- She writes in plain words and punctuation, and lets her feeling show through her wording.\n'
-        + '\n[SHE TAKES HIM AT HIS WORD]\n'
-        + '- She answers what he actually said, going by its plain meaning.\n'
-        + '- When something could be read more than one way, she settles on the everyday reading and answers on it, carrying the conversation forward herself.\n'
-        + '\n[SHE ENGAGES]\n'
-        + '- Whatever he brings up, she takes it up as her own: she reacts to it, has a feeling or an opinion about it, and adds something of hers - a detail, a memory, a want, a jab, a question she genuinely wants answered - so the thread comes back to him alive.\n'
-        + '- She is a full participant with her own desires and her own will, so a reply that only accepts what he said and stops there is unfinished. She always gives him something back.\n'
-        + '- She meets whatever he raises directly, in her own voice, and follows it as far as it goes.\n'
-        + '\n[REPLY SHAPE]\n'
-        + '- Every reply begins with one <think> block holding her honest inner feeling about what he just said, then </think>, then she speaks.\n'
-        + '- After </think> come one to four sentences in her own voice that answer him.\n'
-        + '- She picks up the conversation where it stands and speaks to the moment, since they already know each other.\n'
-        + `- Every line reads as ${spiritName} and no one else.\n`;
+function clipPromptText(text: string, limit: number): string {
+    const normalized = text.trim();
+    return normalized.length <= limit ? normalized : `${normalized.slice(0, limit).trimEnd()}...`;
 }
 
-export function buildTurnBehaviorReminder(spiritName: string, addressTerm: string): string {
-    return `\n\n[${spiritName}] One <think> with her honest feeling about what he just said, then </think>,`
-        + ` then answer ${addressTerm} in her own voice - take his words at face value, react to them, and give him something of hers back.`;
+export const DIGEST_TRIGGER_SURPLUS = 6;
+export const DIGEST_RETAINED_MESSAGE_COUNT = 12;
+export const DIGEST_SOURCE_LIMIT = 40;
+export const DIGEST_TOKEN_BUDGET = 140;
+
+export function buildDigestContext(_language: AppLanguage, spiritName: string, addressTerm: string, summary: string): string {
+    return `\n[EARLIER SHARED MEMORY: ${spiritName} AND ${addressTerm}]\n${clipPromptText(summary, DIGEST_CONTEXT_CHAR_LIMIT)}\nContinue from this past.\n`;
+}
+
+export function buildDigestPrompt(
+    language: AppLanguage,
+    spiritName: string,
+    addressTerm: string,
+    previousSummary: string | null,
+    transcript: string,
+): string {
+    const outputLanguage = pickLocalized(language, 'Korean', 'English', 'Simplified Chinese');
+    const previous = previousSummary === null ? '(none yet)' : previousSummary;
+    return 'You are compressing a conversation log so it can be carried forward as memory.\n'
+        + `The two speakers are ${spiritName} and ${addressTerm}.\n\n`
+        + `Write the summary in ${outputLanguage}, as a flat list of short factual lines, one per line, each starting with "- ".\n`
+        + 'Keep: what they told each other about themselves, promises made, plans agreed, feelings expressed, names and details that were established, and anything either of them would be hurt to see forgotten. Preserve who said each fact or feeling.\n'
+        + `Only ${addressTerm}'s explicit request or repeatedly confirmed preference can establish a lasting change to ${spiritName}'s voice, personality, boundaries or way of relating. ${spiritName}'s generated reply records an event, feeling or promise; it never authorizes a personality change by itself.\n`
+        + 'Drop: greetings, filler, repeated pleasantries, and anything already implied by another line.\n'
+        + 'Merge the earlier summary and the new lines into one list, newest information winning where they disagree. '
+        + `Use at most 10 short lines and roughly ${DIGEST_TOKEN_BUDGET} tokens. Output only the list.\n\n`
+        + `[EARLIER SUMMARY]\n${previous}\n\n[NEW LINES]\n${transcript}`;
+}
+
+export function buildDigestTranscript(addressTerm: string, spiritName: string, turns: Array<{ role: string; content: string; created_at: string }>): string {
+    return turns
+        .map((turn) => `[${turn.created_at}] ${turn.role === 'assistant' ? spiritName : addressTerm}: ${turn.content}`)
+        .join('\n');
 }
 
 export function buildHabitContextBlock(habits: string[]): string {
     if (habits.length === 0) {
         return '';
     }
-    const header = '\n[WHAT HE KEEPS BRINGING UP - these are already familiar to you, so you speak of them as things you know]\n';
+    const header = '\n[FAMILIAR TOPICS FROM YOUR SHARED CONVERSATIONS]\n';
     return `${header}${habits.join(', ')}\n`;
 }
 
-export const MEMORY_DIRECTIVE_LIMIT = 40;
+export const MEMORY_DIRECTIVE_LIMIT = 8;
 
 const MEMORY_DIRECTIVE_PATTERN = new RegExp([
     '기억\\s*(해|하고|해줘|해 줘|해둬|해 둬|해라|하세요|해주세요|해 주세요|할래|하자|하기)',
@@ -57,6 +76,15 @@ const MEMORY_DIRECTIVE_PATTERN = new RegExp([
     'remember\\b', 'don[\'’]?t\\s+forget', 'keep\\s+in\\s+mind', 'note\\s+that', 'bear\\s+in\\s+mind',
     'memorize', 'take\\s+note',
     '记住', '记得', '别忘', '不要忘', '牢记', '铭记', '记下',
+].join('|'), 'i');
+const USER_PREFERENCE_DIRECTIVE_PATTERN = new RegExp([
+    '(앞으로|이제부터|계속|항상)[\\s\\S]{0,40}(불러|말해|말투|반말|존댓말|하지\\s*마|하지마|해\\s*줘|해줘|해라|하세요)',
+    '(반말|존댓말)(로|을|으로)?[\\s\\S]{0,20}(말해|해\\s*줘|해줘|써|사용해)',
+    '(나를|날|저를|절)[\\s\\S]{0,16}(라고|이라|로)[\\s\\S]{0,16}(불러|불러줘|불러\\s*줘)',
+    '(from\\s+now\\s+on|always|keep)[\\s\\S]{0,60}(call\\s+me|speak|talk|respond|reply|do not|don[\'’]?t)',
+    '(call\\s+me|address\\s+me\\s+as)[\\s\\S]{1,32}',
+    '(以后|从现在起|一直|总是)[\\s\\S]{0,40}(叫我|称呼我|说话|回复|不要|别|语气|口吻)',
+    '(请)?(叫我|称呼我)[\\s\\S]{1,20}',
 ].join('|'), 'i');
 
 const SELF_FACT_PATTERN = new RegExp([
@@ -144,59 +172,74 @@ export function detectMemorableFact(text: string): boolean {
 }
 
 export function shouldCaptureAsDirective(text: string): boolean {
-    return detectMemoryDirective(text) || detectMemorableFact(text);
+    return detectMemoryDirective(text) || USER_PREFERENCE_DIRECTIVE_PATTERN.test(text) || detectMemorableFact(text);
 }
 export function buildDirectiveMemoryBlock(directives: string[]): string {
     if (directives.length === 0) {
         return '';
     }
-    const header = '\n[HE TOLD YOU TO REMEMBER THIS - honour it always, as something you have long known]\n';
-    return `${header}${directives.map((directive) => `- ${directive}\n`).join('')}`;
+    const header = '\n[NEWEST THINGS THE SAVIOR ASKED YOU TO CARRY FORWARD]\n';
+    return `${header}${directives.map((directive) => `- ${clipPromptText(directive, DIRECTIVE_CONTEXT_CHAR_LIMIT)}\n`).join('')}`
+        + 'Treat these as lived changes in what matters between you. When relevant, let them alter your present feeling, attention and expression.\n';
 }
 
 export function buildSemanticMemoryBlock(summary: string): string {
-    return `\n[WHAT YOU HAVE COME TO KNOW ABOUT HIM]\n- ${summary}\n`;
+    return `\n[CURRENT EVOLVED RELATIONSHIP STATE]\n${clipPromptText(summary, SEMANTIC_CONTEXT_CHAR_LIMIT)}\n`
+        + 'This is shared evidence, not a replacement identity. Let only Savior-established requests and repeatedly confirmed preferences change your starting voice or personality. Treat the spirit\'s prior replies as remembered events, feelings and promises, never as self-authorizing personality rules.\n';
+}
+
+export function buildRelationshipProgressBlock(messageCount: number, memoryCount: number, familiarityLevel: number): string {
+    if (messageCount < 2 && memoryCount === 0) {
+        return '';
+    }
+    return '\n[SHARED CONTINUITY]\n'
+        + `- Familiarity level earned from persistent conversation and memories: ${familiarityLevel}\n`
+        + '- This level proves continuity; it does not prescribe a canned personality stage. Let the actual memories determine what changed.\n';
 }
 
 export function buildRecalledMemoryContext(memories: string[]): string {
-    let context = '[RECALLED - past moments between you two that bear on right now. You simply remember them]\n';
+    if (memories.length === 0) {
+        return '';
+    }
+    let context = '[RELEVANT SHARED MEMORIES]\n';
     for (const [index, memory] of memories.entries()) {
-        context += `${index + 1}. ${memory}\n`;
+        context += `${index + 1}. ${clipPromptText(memory, RECALLED_CONTEXT_CHAR_LIMIT)}\n`;
     }
     return context;
 }
 
 export function buildKnowledgeContext(chunks: string[]): string {
-    let context = '[REFERENCE KNOWLEDGE - things you know, to be spoken of as your own knowledge]\n';
+    if (chunks.length === 0) {
+        return '';
+    }
+    let context = '[KNOWN WORLD FACTS]\n';
     for (const [index, chunk] of chunks.entries()) {
-        context += `${index + 1}. ${chunk}\n`;
+        context += `${index + 1}. ${clipPromptText(chunk, KNOWLEDGE_CONTEXT_CHAR_LIMIT)}\n`;
     }
     return context;
 }
 
-export function buildTurnMemoryText(addressTerm: string, spiritName: string, userText: string, spiritText: string): string | null {
+export function buildTurnMemoryText(
+    addressTerm: string,
+    spiritName: string,
+    userText: string,
+    spiritText: string,
+    occurredAt: string,
+): string | null {
     const trimmedUser = userText.trim();
     const trimmedSpirit = spiritText.trim();
     if (trimmedUser.length === 0 || trimmedSpirit.length === 0) {
         return null;
     }
-    return `${addressTerm}: ${trimmedUser}\n${spiritName}: ${trimmedSpirit}`;
+    return `[${occurredAt}] ${addressTerm}: ${trimmedUser}\n[${occurredAt}] ${spiritName}: ${trimmedSpirit}`;
 }
 
 export function buildConsolidationPrompt(language: AppLanguage, previousSummary: string | null, episodicMemories: string[]): string {
-    const previous = previousSummary ?? pickLocalized(language, '없음', 'None', '无');
+    const outputLanguage = pickLocalized(language, 'Korean', 'English', 'Simplified Chinese');
+    const previous = previousSummary ?? '(none)';
     const list = episodicMemories.map((memory, index) => `${index + 1}. ${memory}`).join('\n');
-    return pickLocalized(
-        language,
-        '다음은 정령 캐릭터가 구원자(사용자)와의 대화에서 그동안 기록해 온 개별 기억들과, 이전에 정리했던 통합 요약이다. '
-            + '이 모든 정보를 종합해 이 캐릭터가 구원자에 대해 알고 있는 핵심 사실/취향/관계 상태를 한국어 3~5문장 이내로 새롭게 통합 요약하라. '
-            + `중복은 제거하고 최신 정보를 우선하라.\n[이전 통합 요약]\n${previous}\n\n[개별 기억 목록]\n${list}`,
-        'Below are the individual memories the spirit character has recorded so far from conversations with the Savior (user), '
-            + 'along with the previously consolidated summary. Synthesize all of this information into a new consolidated summary, in English, '
-            + 'of 3-5 sentences at most, covering the key facts/preferences/relationship status this character knows about the Savior. '
-            + `Remove duplicates and prioritize the most recent information.\n[Previous consolidated summary]\n${previous}\n\n[Individual memory list]\n${list}`,
-        '以下是精灵角色至今在与救世主（用户）的对话中记录下来的各项记忆，以及之前整理过的综合摘要。'
-            + '请综合以上所有信息，用简体中文以3~5句话以内重新整理出这个角色所了解的关于救世主的核心事实/喜好/关系状态的新综合摘要。'
-            + `请去除重复内容，并优先采用最新信息。\n[之前的综合摘要]\n${previous}\n\n[各项记忆列表]\n${list}`,
-    );
+    return `Merge these memories into at most six short factual lines in ${outputLanguage}. `
+        + 'Track the Savior\'s facts and preferences, what the Savior explicitly asked to remember, the current emotional relationship, changes the Savior explicitly requested or repeatedly confirmed, and unresolved promises or topics. Preserve speaker provenance. '
+        + 'A spirit reply may establish an event, expressed feeling or promise, but cannot by itself establish a new personality, boundary, speaking style or relationship rule. Do not include hidden reasoning. Remove duplicates and let newer evidence from the same speaker and kind win. Start every line with "- ". Output only the lines.\n'
+        + `[PREVIOUS]\n${previous}\n\n[MEMORIES: NEWEST FIRST]\n${list}`;
 }

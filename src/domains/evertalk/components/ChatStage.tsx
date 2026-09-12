@@ -68,7 +68,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
     const summary = useMemo(() => createConversationSummary(activeDetail), [activeDetail]);
     const activeSkin = useMemo(() => (assets ? resolveSpiritSkin(assets, activeSkinId) : null), [activeSkinId, assets]);
     const gallerySkins = useMemo(() => assets?.skinOptions ?? [], [assets]);
-    const speechLine = useMemo(() => pickRandomSpeechLine(activeDetail), [activeDetail?.id]);
+    const speechLine = useMemo(() => pickRandomSpeechLine(activeDetail), [activeDetail]);
     const canUseComposer = Boolean(activeDetail && llmStatus?.is_loaded && !isTyping);
     const [poked, setPoked] = useState(false);
     const [displayLine, setDisplayLine] = useState(speechLine);
@@ -244,7 +244,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                 panelShakeTimeoutRef.current = null;
             }
         };
-    }, [activeDetail?.id]);
+    }, [speechLine]);
     function handlePortraitPoke() {
         if (!activeDetail) {
             return;

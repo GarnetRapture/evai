@@ -4,6 +4,14 @@ import { EVERTALK_SESSION_TITLE, type ChatRoom } from '../chat';
 import type { ChatModelEntry, LocalModelFileEntry, ModelDownloadProgress } from '../llm';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
+import { FAMILIARITY_MAX_LEVEL } from '../persona/familiarity';
+export {
+    computeFamiliarityLevel,
+    familiarityCumulativeExp,
+    FAMILIARITY_EXP_STEP,
+    FAMILIARITY_MAX_LEVEL,
+    type FamiliarityLevelInfo,
+} from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
 import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerTransform, LocalModelEntryGroup, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
@@ -241,36 +249,6 @@ export function resolvePanelResize(state: PanelResizeState, deltaX: number, delt
         blocked,
     };
 }
-export const FAMILIARITY_MAX_LEVEL = 40;
-export const FAMILIARITY_EXP_STEP = 5;
-export interface FamiliarityLevelInfo {
-    level: number;
-    isMax: boolean;
-    totalExp: number;
-    levelStartExp: number;
-    nextLevelExp: number;
-    progressExp: number;
-    progressSpan: number;
-    progressRatio: number;
-}
-export function familiarityCumulativeExp(level: number): number {
-    const reached = Math.max(1, level);
-    return FAMILIARITY_EXP_STEP * ((reached - 1) * reached) / 2;
-}
-export function computeFamiliarityLevel(totalExp: number): FamiliarityLevelInfo {
-    const exp = Math.max(0, Math.floor(totalExp));
-    let level = 1;
-    while (level < FAMILIARITY_MAX_LEVEL && exp >= familiarityCumulativeExp(level + 1)) {
-        level += 1;
-    }
-    const isMax = level >= FAMILIARITY_MAX_LEVEL;
-    const levelStartExp = familiarityCumulativeExp(level);
-    const nextLevelExp = isMax ? levelStartExp : familiarityCumulativeExp(level + 1);
-    const progressSpan = isMax ? 0 : nextLevelExp - levelStartExp;
-    const progressExp = exp - levelStartExp;
-    const progressRatio = isMax ? 1 : (progressSpan > 0 ? Math.min(1, progressExp / progressSpan) : 0);
-    return { level, isMax, totalExp: exp, levelStartExp, nextLevelExp, progressExp, progressSpan, progressRatio };
-}
 export type FamiliaritySigilGrade = 'epic' | 'eternal' | 'legendary' | 'origin';
 export const FAMILIARITY_SIGIL_MILESTONES: { level: number; grade: FamiliaritySigilGrade }[] = [
     { level: 10, grade: 'epic' },
@@ -404,6 +382,8 @@ export function formatSystemStatusLabel(statusId: SystemStatusId, labels: EverTa
             return labels.styleDb;
         case 'llm':
             return labels.localModel;
+        case 'native-context':
+            return labels.contextStorage;
         case 'sync':
             return labels.dataSync;
     }

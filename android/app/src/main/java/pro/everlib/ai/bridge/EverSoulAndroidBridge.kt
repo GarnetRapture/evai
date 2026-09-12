@@ -250,6 +250,7 @@ class EverSoulAndroidBridge(
             systemPrompt = payload.optString("system_prompt").takeIf { it.isNotEmpty() },
             history = history,
             userMessage = last.getString("content"),
+            responsePrefix = payload.optString("response_prefix"),
             maxOutputTokens = payload.optInt("max_output_tokens", AppConstants.LITERT_LM_DEFAULT_MAX_OUTPUT_TOKENS),
         )
     }

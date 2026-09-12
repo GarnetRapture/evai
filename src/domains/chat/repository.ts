@@ -1,13 +1,18 @@
 import { EVERSOUL_INDEX, EVERSOUL_STORE, getEverSoulDatabase } from '../../shared/storage';
+import { nativeContextService } from '../native/service';
 import { habitMemoryId } from './habit';
-import { cosineSimilarity } from './memory';
+import { cosineSimilarity, createLexicalMemoryVector, isEmptyMemoryVector } from './memory';
 import type {
     ChatMessage,
     ChatRoom,
+    ChatRoomDigest,
+    ChatRoomPersonaActivity,
+    MemoryVector,
     PersonaHabitMemoryRecord,
     PersonaMemoryRecord,
     PersonaMemoryType,
     PersonaRecalledMemoryRecord,
+    ProactiveConversationCandidate,
 } from './types';
 
 const TIMESTAMP_UPPER_BOUND = '￿';
@@ -30,22 +35,80 @@ function roomMessageRange(roomId: string): IDBKeyRange {
     return IDBKeyRange.bound([roomId, ''], [roomId, TIMESTAMP_UPPER_BOUND]);
 }
 
+function roomMessageRangeAfter(roomId: string, createdAfter: string): IDBKeyRange {
+    return IDBKeyRange.bound(
+        [roomId, createdAfter],
+        [roomId, TIMESTAMP_UPPER_BOUND],
+        createdAfter.length > 0,
+    );
+}
+
 function personaMemoryRange(personaId: string, memoryType: PersonaMemoryType): IDBKeyRange {
     return IDBKeyRange.bound([personaId, memoryType, ''], [personaId, memoryType, TIMESTAMP_UPPER_BOUND]);
+}
+
+function personaMemoryRangeAfter(personaId: string, memoryType: PersonaMemoryType, createdAfter: string): IDBKeyRange {
+    return IDBKeyRange.bound(
+        [personaId, memoryType, createdAfter],
+        [personaId, memoryType, TIMESTAMP_UPPER_BOUND],
+        createdAfter.length > 0,
+    );
 }
 
 function belongsToPersona(message: ChatMessage, room: ChatRoom, personaId: string): boolean {
     return message.persona_id === personaId || (message.persona_id === null && room.persona_id === personaId);
 }
 
+function recordRoomPersonaActivity(
+    activities: Record<string, ChatRoomPersonaActivity>,
+    personaId: string,
+    message: ChatMessage,
+): Record<string, ChatRoomPersonaActivity> {
+    const previous = activities[personaId] ?? { latest_activity_at: '', latest_user_at: '', latest_user_content: '' };
+    return {
+        ...activities,
+        [personaId]: {
+            latest_activity_at: message.created_at > previous.latest_activity_at ? message.created_at : previous.latest_activity_at,
+            latest_user_at: message.role === 'user' && message.created_at > previous.latest_user_at ? message.created_at : previous.latest_user_at,
+            latest_user_content: message.role === 'user' && message.created_at > previous.latest_user_at ? message.content : previous.latest_user_content,
+        },
+    };
+}
+
 function semanticMemoryId(personaId: string): string {
     return `semantic-${personaId}`;
+}
+
+function memoryReferencesMessage(record: PersonaMemoryRecord, messageId: string): boolean {
+    return isRecalledMemory(record) && record.source_message_ids?.includes(messageId) === true;
+}
+
+function memoryReferencesRoom(record: PersonaMemoryRecord, roomId: string): boolean {
+    return isRecalledMemory(record) && record.source_room_id === roomId;
+}
+
+function mergeNativeMessages(
+    stored: ChatMessage[],
+    nativeMessages: Array<{ id: string; role: 'user' | 'assistant'; content: string; created_at: string }>,
+    roomId: string,
+    personaId: string,
+): ChatMessage[] {
+    const merged = new Map<string, ChatMessage>();
+    for (const message of nativeMessages) {
+        merged.set(message.id, { ...message, room_id: roomId, persona_id: personaId });
+    }
+    for (const message of stored) merged.set(message.id, message);
+    return [...merged.values()].sort((left, right) => left.created_at.localeCompare(right.created_at));
 }
 
 export const chatRepository = {
     async createRoom(room: ChatRoom): Promise<void> {
         const database = await getEverSoulDatabase();
-        await database.add(EVERSOUL_STORE.chatRoom, room);
+        await database.add(EVERSOUL_STORE.chatRoom, {
+            ...room,
+            persona_activities: room.persona_activities ?? {},
+            proactive_unread_counts: room.proactive_unread_counts ?? {},
+        });
     },
     async getRoom(roomId: string): Promise<ChatRoom | null> {
         const database = await getEverSoulDatabase();
@@ -58,13 +121,28 @@ export const chatRepository = {
     },
     async findLatestRoomByPersona(personaId: string): Promise<ChatRoom | null> {
         const database = await getEverSoulDatabase();
-        const rooms = await database.getAllFromIndex(EVERSOUL_STORE.chatRoom, EVERSOUL_INDEX.chatRoomByPersonaId, personaId);
-        rooms.sort((left, right) => right.updated_at.localeCompare(left.updated_at));
-        return rooms.at(0) ?? null;
+        const index = database.transaction(EVERSOUL_STORE.chatRoom).store.index(EVERSOUL_INDEX.chatRoomByPersonaId);
+        let latest: ChatRoom | null = null;
+        let cursor = await index.openCursor(personaId);
+        while (cursor) {
+            if (latest === null || cursor.value.updated_at > latest.updated_at) {
+                latest = cursor.value;
+            }
+            cursor = await cursor.continue();
+        }
+        return latest;
     },
     async findLatestGlobalSessionRoom(title: string): Promise<ChatRoom | null> {
-        const rooms = await chatRepository.listRooms();
-        return rooms.find((room) => room.persona_id === null && room.title === title) ?? null;
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.chatRoom).store.index(EVERSOUL_INDEX.chatRoomByUpdatedAt);
+        let cursor = await index.openCursor(null, 'prev');
+        while (cursor) {
+            if (cursor.value.persona_id === null && cursor.value.title === title) {
+                return cursor.value;
+            }
+            cursor = await cursor.continue();
+        }
+        return null;
     },
     async listRoomsByPersona(personaId: string): Promise<ChatRoom[]> {
         const database = await getEverSoulDatabase();
@@ -81,11 +159,32 @@ export const chatRepository = {
             return [];
         }
         const messages = await chatRepository.listMessages(roomId);
-        return messages.filter((message) => belongsToPersona(message, room, personaId));
+        const stored = messages.filter((message) => belongsToPersona(message, room, personaId));
+        const native = await nativeContextService.queryContext(personaId, roomId, 200, 0);
+        return mergeNativeMessages(stored, native?.messages ?? [], roomId, personaId);
     },
-    async listRecentMessagesForPersona(roomId: string, personaId: string, limit: number): Promise<ChatMessage[]> {
-        const messages = await chatRepository.listMessagesForPersona(roomId, personaId);
-        return messages.slice(Math.max(0, messages.length - limit));
+    async listRecentMessagesForPersona(roomId: string, personaId: string, limit: number, after = ''): Promise<ChatMessage[]> {
+        if (limit <= 0) {
+            return [];
+        }
+        const [database, room] = await Promise.all([getEverSoulDatabase(), chatRepository.getRoom(roomId)]);
+        if (!room) {
+            return [];
+        }
+        const index = database.transaction(EVERSOUL_STORE.chatMessage).store.index(EVERSOUL_INDEX.chatMessageByRoomCreated);
+        const messages: ChatMessage[] = [];
+        let cursor = await index.openCursor(roomMessageRangeAfter(roomId, after), 'prev');
+        while (cursor && messages.length < limit) {
+            if (belongsToPersona(cursor.value, room, personaId)) {
+                messages.push(cursor.value);
+            }
+            cursor = await cursor.continue();
+        }
+        const stored = messages.reverse();
+        const native = await nativeContextService.queryContext(personaId, roomId, limit, 0);
+        return mergeNativeMessages(stored, native?.messages ?? [], roomId, personaId)
+            .filter((message) => after.length === 0 || message.created_at > after)
+            .slice(-limit);
     },
     async insertMessage(message: ChatMessage): Promise<void> {
         const database = await getEverSoulDatabase();
@@ -94,77 +193,464 @@ export const chatRepository = {
         const roomStore = transaction.objectStore(EVERSOUL_STORE.chatRoom);
         const room = await roomStore.get(message.room_id);
         if (room) {
-            await roomStore.put({ ...room, updated_at: message.created_at });
+            const personaId = message.persona_id ?? room.persona_id;
+            await roomStore.put({
+                ...room,
+                updated_at: message.created_at,
+                persona_activities: personaId
+                    ? recordRoomPersonaActivity(room.persona_activities ?? {}, personaId, message)
+                    : room.persona_activities,
+            });
+        }
+        await transaction.done;
+        await nativeContextService.appendMessage(message);
+    },
+    async insertAssistantTurn(message: ChatMessage, memory: PersonaRecalledMemoryRecord | null): Promise<void> {
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction(
+            [EVERSOUL_STORE.chatMessage, EVERSOUL_STORE.chatRoom, EVERSOUL_STORE.personaMemory],
+            'readwrite',
+        );
+        await transaction.objectStore(EVERSOUL_STORE.chatMessage).add(message);
+        if (memory !== null) {
+            await transaction.objectStore(EVERSOUL_STORE.personaMemory).add(memory);
+        }
+        const roomStore = transaction.objectStore(EVERSOUL_STORE.chatRoom);
+        const room = await roomStore.get(message.room_id);
+        if (room) {
+            const personaId = message.persona_id ?? room.persona_id;
+            await roomStore.put({
+                ...room,
+                updated_at: message.created_at,
+                persona_activities: personaId
+                    ? recordRoomPersonaActivity(room.persona_activities ?? {}, personaId, message)
+                    : room.persona_activities,
+            });
+        }
+        await transaction.done;
+        await nativeContextService.appendMessage(message);
+        if (memory !== null) await nativeContextService.appendMemory(memory);
+    },
+    async insertProactiveAssistantTurn(message: ChatMessage): Promise<void> {
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction([EVERSOUL_STORE.chatMessage, EVERSOUL_STORE.chatRoom], 'readwrite');
+        const storedMessage: ChatMessage = { ...message, delivery: 'proactive', read_at: null };
+        await transaction.objectStore(EVERSOUL_STORE.chatMessage).add(storedMessage);
+        const roomStore = transaction.objectStore(EVERSOUL_STORE.chatRoom);
+        const room = await roomStore.get(message.room_id);
+        if (room) {
+            const personaId = message.persona_id ?? room.persona_id;
+            await roomStore.put({
+                ...room,
+                updated_at: message.created_at,
+                persona_activities: personaId
+                    ? recordRoomPersonaActivity(room.persona_activities ?? {}, personaId, storedMessage)
+                    : room.persona_activities,
+                proactive_unread_counts: personaId
+                    ? { ...room.proactive_unread_counts, [personaId]: (room.proactive_unread_counts?.[personaId] ?? 0) + 1 }
+                    : room.proactive_unread_counts,
+            });
+        }
+        await transaction.done;
+        await nativeContextService.appendMessage(storedMessage);
+    },
+    async listProactiveConversationCandidates(): Promise<ProactiveConversationCandidate[]> {
+        const database = await getEverSoulDatabase();
+        const rooms = new Map<string, ChatRoom>();
+        const legacyRoomIds = new Set<string>();
+        let roomCursor = await database.transaction(EVERSOUL_STORE.chatRoom).store.openCursor();
+        while (roomCursor) {
+            rooms.set(roomCursor.value.id, roomCursor.value);
+            if (roomCursor.value.persona_activities === undefined) legacyRoomIds.add(roomCursor.value.id);
+            roomCursor = await roomCursor.continue();
+        }
+        if (legacyRoomIds.size > 0) {
+            const rebuilt = new Map<string, Record<string, ChatRoomPersonaActivity>>();
+            let messageCursor = await database.transaction(EVERSOUL_STORE.chatMessage).store.openCursor();
+            while (messageCursor) {
+                const message = messageCursor.value;
+                const room = rooms.get(message.room_id);
+                const personaId = message.persona_id ?? room?.persona_id ?? null;
+                if (room && personaId && legacyRoomIds.has(room.id) && message.role !== 'system') {
+                    rebuilt.set(room.id, recordRoomPersonaActivity(rebuilt.get(room.id) ?? {}, personaId, message));
+                }
+                messageCursor = await messageCursor.continue();
+            }
+            const transaction = database.transaction(EVERSOUL_STORE.chatRoom, 'readwrite');
+            for (const roomId of legacyRoomIds) {
+                const room = rooms.get(roomId);
+                if (!room) continue;
+                const upgraded = { ...room, persona_activities: rebuilt.get(roomId) ?? {} };
+                rooms.set(roomId, upgraded);
+                await transaction.store.put(upgraded);
+            }
+            await transaction.done;
+        }
+        const latestByPersona = new Map<string, ProactiveConversationCandidate>();
+        for (const room of rooms.values()) {
+            for (const [personaId, activity] of Object.entries(room.persona_activities ?? {})) {
+                if (activity.latest_user_content.trim().length === 0) continue;
+                const candidate: ProactiveConversationCandidate = {
+                    room_id: room.id,
+                    persona_id: personaId,
+                    latest_activity_at: activity.latest_activity_at,
+                    latest_user_content: activity.latest_user_content,
+                    last_attempt_at: room.proactive_attempts?.[personaId] ?? null,
+                };
+                const current = latestByPersona.get(personaId);
+                if (!current || candidate.latest_activity_at > current.latest_activity_at) {
+                    latestByPersona.set(personaId, candidate);
+                }
+            }
+        }
+        return [...latestByPersona.values()].sort((left, right) => left.latest_activity_at.localeCompare(right.latest_activity_at));
+    },
+    async markProactiveAttempt(roomId: string, personaId: string, attemptedAt: string): Promise<void> {
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction(EVERSOUL_STORE.chatRoom, 'readwrite');
+        const room = await transaction.store.get(roomId);
+        if (room) {
+            await transaction.store.put({
+                ...room,
+                proactive_attempts: { ...room.proactive_attempts, [personaId]: attemptedAt },
+            });
+        }
+        await transaction.done;
+    },
+    async listProactiveUnreadCounts(): Promise<Record<string, number>> {
+        const database = await getEverSoulDatabase();
+        const counts: Record<string, number> = {};
+        let cursor = await database.transaction(EVERSOUL_STORE.chatRoom).store.openCursor();
+        while (cursor) {
+            for (const [personaId, count] of Object.entries(cursor.value.proactive_unread_counts ?? {})) {
+                if (count > 0) counts[personaId] = (counts[personaId] ?? 0) + count;
+            }
+            cursor = await cursor.continue();
+        }
+        return counts;
+    },
+    async markProactiveMessagesRead(personaId: string, readAt: string): Promise<void> {
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction([EVERSOUL_STORE.chatMessage, EVERSOUL_STORE.chatRoom], 'readwrite');
+        let cursor = await transaction.objectStore(EVERSOUL_STORE.chatMessage).openCursor();
+        while (cursor) {
+            const message = cursor.value;
+            if (message.persona_id === personaId && message.delivery === 'proactive' && message.read_at == null) {
+                await cursor.update({ ...message, read_at: readAt });
+            }
+            cursor = await cursor.continue();
+        }
+        const roomStore = transaction.objectStore(EVERSOUL_STORE.chatRoom);
+        let roomCursor = await roomStore.openCursor();
+        while (roomCursor) {
+            if ((roomCursor.value.proactive_unread_counts?.[personaId] ?? 0) > 0) {
+                await roomCursor.update({
+                    ...roomCursor.value,
+                    proactive_unread_counts: { ...roomCursor.value.proactive_unread_counts, [personaId]: 0 },
+                });
+            }
+            roomCursor = await roomCursor.continue();
         }
         await transaction.done;
     },
     async deleteRoom(roomId: string): Promise<void> {
         const database = await getEverSoulDatabase();
-        const transaction = database.transaction([EVERSOUL_STORE.chatMessage, EVERSOUL_STORE.chatRoom], 'readwrite');
+        const transaction = database.transaction(
+            [EVERSOUL_STORE.chatMessage, EVERSOUL_STORE.chatRoom, EVERSOUL_STORE.personaMemory],
+            'readwrite',
+        );
+        const roomStore = transaction.objectStore(EVERSOUL_STORE.chatRoom);
+        const room = await roomStore.get(roomId);
+        const affectedPersonaIds = new Set<string>();
+        if (room?.persona_id) {
+            affectedPersonaIds.add(room.persona_id);
+        }
         const messageIndex = transaction.objectStore(EVERSOUL_STORE.chatMessage).index(EVERSOUL_INDEX.chatMessageByRoomCreated);
         let cursor = await messageIndex.openCursor(roomMessageRange(roomId));
         while (cursor) {
+            if (cursor.value.persona_id) {
+                affectedPersonaIds.add(cursor.value.persona_id);
+            }
             await cursor.delete();
             cursor = await cursor.continue();
         }
-        await transaction.objectStore(EVERSOUL_STORE.chatRoom).delete(roomId);
+        const memoryStore = transaction.objectStore(EVERSOUL_STORE.personaMemory);
+        let memoryCursor = await memoryStore.openCursor();
+        while (memoryCursor) {
+            const memory = memoryCursor.value;
+            const resetPersonaAggregate = affectedPersonaIds.has(memory.persona_id)
+                && (memory.memory_type === 'semantic' || memory.memory_type === 'habit');
+            if (memoryReferencesRoom(memory, roomId) || resetPersonaAggregate) {
+                await memoryCursor.delete();
+            }
+            memoryCursor = await memoryCursor.continue();
+        }
+        await roomStore.delete(roomId);
         await transaction.done;
+        await nativeContextService.deleteRoom(roomId);
     },
     async deleteMessage(messageId: string): Promise<void> {
         const database = await getEverSoulDatabase();
-        await database.delete(EVERSOUL_STORE.chatMessage, messageId);
+        const transaction = database.transaction(
+            [EVERSOUL_STORE.chatMessage, EVERSOUL_STORE.chatRoom, EVERSOUL_STORE.personaMemory],
+            'readwrite',
+        );
+        const messageStore = transaction.objectStore(EVERSOUL_STORE.chatMessage);
+        const message = await messageStore.get(messageId);
+        if (!message) {
+            await transaction.done;
+            return;
+        }
+        const roomStore = transaction.objectStore(EVERSOUL_STORE.chatRoom);
+        const room = await roomStore.get(message.room_id);
+        const personaId = message.persona_id ?? room?.persona_id ?? null;
+        await messageStore.delete(messageId);
+
+        const memoryStore = transaction.objectStore(EVERSOUL_STORE.personaMemory);
+        let memoryCursor = await memoryStore.openCursor();
+        while (memoryCursor) {
+            const memory = memoryCursor.value;
+            const resetPersonaAggregate = personaId !== null
+                && memory.persona_id === personaId
+                && (memory.memory_type === 'semantic' || (message.role === 'user' && memory.memory_type === 'habit'));
+            if (memoryReferencesMessage(memory, messageId) || resetPersonaAggregate) {
+                await memoryCursor.delete();
+            }
+            memoryCursor = await memoryCursor.continue();
+        }
+
+        if (room && personaId !== null) {
+            const digests = { ...room.digests };
+            delete digests[personaId];
+            const messageIndex = messageStore.index(EVERSOUL_INDEX.chatMessageByRoomCreated);
+            let latestCreatedAt = room.created_at;
+            let personaActivities: Record<string, ChatRoomPersonaActivity> = {};
+            const proactiveUnreadCounts: Record<string, number> = {};
+            let remainingCursor = await messageIndex.openCursor(roomMessageRange(message.room_id));
+            while (remainingCursor) {
+                const remaining = remainingCursor.value;
+                const remainingPersonaId = remaining.persona_id ?? room.persona_id;
+                if (remaining.created_at > latestCreatedAt) latestCreatedAt = remaining.created_at;
+                if (remainingPersonaId && remaining.role !== 'system') {
+                    personaActivities = recordRoomPersonaActivity(personaActivities, remainingPersonaId, remaining);
+                    if (remaining.delivery === 'proactive' && remaining.read_at == null) {
+                        proactiveUnreadCounts[remainingPersonaId] = (proactiveUnreadCounts[remainingPersonaId] ?? 0) + 1;
+                    }
+                }
+                remainingCursor = await remainingCursor.continue();
+            }
+            await roomStore.put({
+                ...room,
+                digests,
+                persona_activities: personaActivities,
+                proactive_unread_counts: proactiveUnreadCounts,
+                updated_at: latestCreatedAt,
+            });
+        }
+        await transaction.done;
+        await nativeContextService.deleteMessage(messageId);
+    },
+    async getRoomDigest(roomId: string, personaId: string): Promise<ChatRoomDigest | null> {
+        const room = await chatRepository.getRoom(roomId);
+        return room?.digests?.[personaId] ?? null;
+    },
+    async saveRoomDigest(roomId: string, personaId: string, digest: ChatRoomDigest): Promise<void> {
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction(EVERSOUL_STORE.chatRoom, 'readwrite');
+        const store = transaction.objectStore(EVERSOUL_STORE.chatRoom);
+        const room = await store.get(roomId);
+        if (room) {
+            await store.put({ ...room, digests: { ...room.digests, [personaId]: digest } });
+        }
+        await transaction.done;
+    },
+    async listMessagesAwaitingDigest(roomId: string, personaId: string, retainedCount: number, limit: number): Promise<ChatMessage[]> {
+        if (retainedCount <= 0 || limit <= 0) {
+            return [];
+        }
+        const [database, room, digest] = await Promise.all([
+            getEverSoulDatabase(),
+            chatRepository.getRoom(roomId),
+            chatRepository.getRoomDigest(roomId, personaId),
+        ]);
+        if (!room) {
+            return [];
+        }
+        const reverseIndex = database.transaction(EVERSOUL_STORE.chatMessage).store.index(EVERSOUL_INDEX.chatMessageByRoomCreated);
+        let retainedBoundary = '';
+        let retained = 0;
+        let reverseCursor = await reverseIndex.openCursor(roomMessageRange(roomId), 'prev');
+        while (reverseCursor) {
+            if (belongsToPersona(reverseCursor.value, room, personaId)) {
+                retained += 1;
+                if (retained === retainedCount) {
+                    retainedBoundary = reverseCursor.value.created_at;
+                    break;
+                }
+            }
+            reverseCursor = await reverseCursor.continue();
+        }
+        if (retainedBoundary.length === 0) {
+            return [];
+        }
+        const forwardIndex = database.transaction(EVERSOUL_STORE.chatMessage).store.index(EVERSOUL_INDEX.chatMessageByRoomCreated);
+        const pending: ChatMessage[] = [];
+        let forwardCursor = await forwardIndex.openCursor(roomMessageRangeAfter(roomId, digest?.covered_through ?? ''));
+        while (forwardCursor && pending.length < limit) {
+            if (forwardCursor.value.created_at >= retainedBoundary) {
+                break;
+            }
+            if (belongsToPersona(forwardCursor.value, room, personaId)) {
+                pending.push(forwardCursor.value);
+            }
+            forwardCursor = await forwardCursor.continue();
+        }
+        return pending;
     },
     async insertEpisodicMemory(record: PersonaRecalledMemoryRecord): Promise<void> {
         const database = await getEverSoulDatabase();
         await database.add(EVERSOUL_STORE.personaMemory, record);
+        await nativeContextService.appendMemory(record);
     },
     async countEpisodicMemories(personaId: string): Promise<number> {
         const database = await getEverSoulDatabase();
         return database.countFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'episodic'));
     },
-    async listEpisodicMemories(personaId: string, limit: number): Promise<PersonaRecalledMemoryRecord[]> {
+    async countMessagesForPersona(personaId: string): Promise<number> {
         const database = await getEverSoulDatabase();
-        const memories = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'episodic'));
-        return memories.filter(isRecalledMemory).reverse().slice(0, limit);
+        const roomIds = new Set<string>();
+        const roomIndex = database.transaction(EVERSOUL_STORE.chatRoom).store.index(EVERSOUL_INDEX.chatRoomByPersonaId);
+        let roomCursor = await roomIndex.openKeyCursor(personaId);
+        while (roomCursor) {
+            roomIds.add(String(roomCursor.primaryKey));
+            roomCursor = await roomCursor.continue();
+        }
+        const transaction = database.transaction(EVERSOUL_STORE.chatMessage);
+        let count = 0;
+        let cursor = await transaction.store.openCursor();
+        while (cursor) {
+            if (cursor.value.persona_id === personaId
+                || (cursor.value.persona_id === null && roomIds.has(cursor.value.room_id))) {
+                count += 1;
+            }
+            cursor = await cursor.continue();
+        }
+        return count;
+    },
+    async countEpisodicMemoriesAfter(personaId: string, createdAfter: string): Promise<number> {
+        const database = await getEverSoulDatabase();
+        return database.countFromIndex(
+            EVERSOUL_STORE.personaMemory,
+            EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated,
+            personaMemoryRangeAfter(personaId, 'episodic', createdAfter),
+        );
+    },
+    async listEpisodicMemories(personaId: string, limit: number): Promise<PersonaRecalledMemoryRecord[]> {
+        if (limit <= 0) {
+            return [];
+        }
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const memories: PersonaRecalledMemoryRecord[] = [];
+        let cursor = await index.openCursor(personaMemoryRange(personaId, 'episodic'), 'prev');
+        while (cursor && memories.length < limit) {
+            if (isRecalledMemory(cursor.value)) {
+                memories.push(cursor.value);
+            }
+            cursor = await cursor.continue();
+        }
+        const native = await nativeContextService.queryContext(personaId, '', 0, limit);
+        const merged = new Map(memories.map((memory) => [memory.id, memory]));
+        for (const memory of native?.memories ?? []) {
+            if (memory.memory_type !== 'episodic' || merged.has(memory.id)) continue;
+            merged.set(memory.id, {
+                ...memory,
+                persona_id: personaId,
+                memory_type: 'episodic',
+                memory_vector: createLexicalMemoryVector(memory.memory_text),
+            });
+        }
+        return [...merged.values()]
+            .sort((left, right) => right.created_at.localeCompare(left.created_at))
+            .slice(0, limit);
     },
     async insertDirectiveMemory(record: PersonaRecalledMemoryRecord): Promise<void> {
         const database = await getEverSoulDatabase();
-        const existing = await database.getAllFromIndex(
-            EVERSOUL_STORE.personaMemory,
-            EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated,
-            personaMemoryRange(record.persona_id, 'directive'),
-        );
+        const transaction = database.transaction(EVERSOUL_STORE.personaMemory, 'readwrite');
+        const store = transaction.store;
+        const index = store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
         const normalized = normalizeDirectiveText(record.memory_text);
-        const duplicate = existing.find((entry) => normalizeDirectiveText(entry.memory_text) === normalized);
-        if (duplicate) {
-            await database.put(EVERSOUL_STORE.personaMemory, { ...record, id: duplicate.id });
+        let duplicateId: string | null = null;
+        const existingIds: string[] = [];
+        let cursor = await index.openCursor(personaMemoryRange(record.persona_id, 'directive'));
+        while (cursor) {
+            if (normalizeDirectiveText(cursor.value.memory_text) === normalized) {
+                duplicateId = cursor.value.id;
+                break;
+            }
+            existingIds.push(cursor.value.id);
+            cursor = await cursor.continue();
+        }
+        if (duplicateId !== null) {
+            const updated = { ...record, id: duplicateId };
+            await store.put(updated);
+            await transaction.done;
+            await nativeContextService.appendMemory(updated);
             return;
         }
-        await database.add(EVERSOUL_STORE.personaMemory, record);
-        const overflow = existing.length + 1 - DIRECTIVE_MEMORY_CAPACITY;
+        while (cursor) {
+            existingIds.push(cursor.value.id);
+            cursor = await cursor.continue();
+        }
+        await store.add(record);
+        const overflow = existingIds.length + 1 - DIRECTIVE_MEMORY_CAPACITY;
         if (overflow > 0) {
-            for (const stale of existing.slice(0, overflow)) {
-                await database.delete(EVERSOUL_STORE.personaMemory, stale.id);
+            for (const staleId of existingIds.slice(0, overflow)) {
+                await store.delete(staleId);
             }
         }
+        await transaction.done;
+        await nativeContextService.appendMemory(record);
     },
     async countDirectiveMemories(personaId: string): Promise<number> {
         const database = await getEverSoulDatabase();
         return database.countFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'directive'));
     },
     async listDirectiveMemories(personaId: string, limit: number): Promise<PersonaMemoryRecord[]> {
+        if (limit <= 0) {
+            return [];
+        }
         const database = await getEverSoulDatabase();
-        const memories = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'directive'));
-        return memories.reverse().slice(0, limit);
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const memories: PersonaMemoryRecord[] = [];
+        let cursor = await index.openCursor(personaMemoryRange(personaId, 'directive'), 'prev');
+        while (cursor && memories.length < limit) {
+            memories.push(cursor.value);
+            cursor = await cursor.continue();
+        }
+        const native = await nativeContextService.queryContext(personaId, '', 0, limit);
+        const merged = new Map(memories.map((memory) => [memory.id, memory]));
+        for (const memory of native?.memories ?? []) {
+            if (memory.memory_type !== 'directive' || merged.has(memory.id)) continue;
+            merged.set(memory.id, {
+                ...memory,
+                persona_id: personaId,
+                memory_type: 'directive',
+                memory_vector: createLexicalMemoryVector(memory.memory_text),
+            });
+        }
+        return [...merged.values()]
+            .sort((left, right) => right.created_at.localeCompare(left.created_at))
+            .slice(0, limit);
     },
-    async searchEpisodicMemories(personaId: string, queryVector: number[], limit: number, candidateLimit: number): Promise<string[]> {
-        if (queryVector.length === 0) {
+    async searchEpisodicMemories(personaId: string, queryVector: MemoryVector, limit: number, candidateLimit: number): Promise<string[]> {
+        if (isEmptyMemoryVector(queryVector)) {
             return [];
         }
         const candidates = await chatRepository.listEpisodicMemories(personaId, candidateLimit);
         const scored: Array<{ score: number; text: string }> = [];
         for (const memory of candidates) {
-            if (memory.memory_vector.length === 0) {
+            if (isEmptyMemoryVector(memory.memory_vector)) {
                 continue;
             }
             const score = cosineSimilarity(queryVector, memory.memory_vector);
@@ -175,21 +661,29 @@ export const chatRepository = {
         scored.sort((left, right) => right.score - left.score);
         return scored.slice(0, limit).map((entry) => entry.text);
     },
-    async upsertSemanticMemory(personaId: string, memoryText: string, memoryVector: number[], createdAt: string): Promise<void> {
+    async upsertSemanticMemory(personaId: string, memoryText: string, memoryVector: MemoryVector, createdAt: string): Promise<void> {
         const database = await getEverSoulDatabase();
-        await database.put(EVERSOUL_STORE.personaMemory, {
+        const record: PersonaRecalledMemoryRecord = {
             id: semanticMemoryId(personaId),
             persona_id: personaId,
             memory_type: 'semantic',
             memory_text: memoryText,
             memory_vector: memoryVector,
             created_at: createdAt,
-        });
+        };
+        await database.put(EVERSOUL_STORE.personaMemory, record);
+        await nativeContextService.appendMemory(record);
     },
     async getSemanticMemory(personaId: string): Promise<string | null> {
+        const stored = await chatRepository.getSemanticMemoryRecord(personaId);
+        if (stored) return stored.memory_text;
+        const native = await nativeContextService.queryContext(personaId, '', 0, 30);
+        return native?.memories.find((memory) => memory.memory_type === 'semantic')?.memory_text ?? null;
+    },
+    async getSemanticMemoryRecord(personaId: string): Promise<PersonaRecalledMemoryRecord | null> {
         const database = await getEverSoulDatabase();
         const record = await database.get(EVERSOUL_STORE.personaMemory, semanticMemoryId(personaId));
-        return record?.memory_text ?? null;
+        return record && isRecalledMemory(record) && record.memory_type === 'semantic' ? record : null;
     },
     async recordHabitTokens(personaId: string, tokens: string[], observedAt: string): Promise<void> {
         if (tokens.length === 0) {
@@ -198,11 +692,12 @@ export const chatRepository = {
         const database = await getEverSoulDatabase();
         const transaction = database.transaction(EVERSOUL_STORE.personaMemory, 'readwrite');
         const store = transaction.objectStore(EVERSOUL_STORE.personaMemory);
+        const mirrored: PersonaHabitMemoryRecord[] = [];
         for (const token of tokens) {
             const id = habitMemoryId(personaId, token);
             const existing = await store.get(id);
             const previous = existing && isHabitMemory(existing) ? existing.occurrence_count : 0;
-            await store.put({
+            const record: PersonaHabitMemoryRecord = {
                 id,
                 persona_id: personaId,
                 memory_type: 'habit',
@@ -210,50 +705,63 @@ export const chatRepository = {
                 occurrence_count: previous + 1,
                 created_at: existing?.created_at ?? observedAt,
                 last_seen_at: observedAt,
-            });
+            };
+            await store.put(record);
+            mirrored.push(record);
         }
         await transaction.done;
+        for (const record of mirrored) await nativeContextService.appendMemory(record);
     },
     async listFrequentHabits(personaId: string, limit: number, minimumOccurrence: number): Promise<PersonaHabitMemoryRecord[]> {
+        if (limit <= 0) {
+            return [];
+        }
         const database = await getEverSoulDatabase();
-        const records = await database.getAllFromIndex(
-            EVERSOUL_STORE.personaMemory,
-            EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated,
-            personaMemoryRange(personaId, 'habit'),
-        );
-        return records
-            .filter(isHabitMemory)
-            .filter((record) => record.occurrence_count >= minimumOccurrence)
-            .sort((left, right) => right.occurrence_count - left.occurrence_count || right.last_seen_at.localeCompare(left.last_seen_at))
-            .slice(0, limit);
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const selected: PersonaHabitMemoryRecord[] = [];
+        let cursor = await index.openCursor(personaMemoryRange(personaId, 'habit'));
+        while (cursor) {
+            const record = cursor.value;
+            if (isHabitMemory(record) && record.occurrence_count >= minimumOccurrence) {
+                selected.push(record);
+                selected.sort((left, right) => right.occurrence_count - left.occurrence_count || right.last_seen_at.localeCompare(left.last_seen_at));
+                if (selected.length > limit) {
+                    selected.pop();
+                }
+            }
+            cursor = await cursor.continue();
+        }
+        return selected;
     },
     async countMessagesByPersona(): Promise<Map<string, number>> {
         const database = await getEverSoulDatabase();
-        const [rooms, messages] = await Promise.all([
-            database.getAll(EVERSOUL_STORE.chatRoom),
-            database.getAll(EVERSOUL_STORE.chatMessage),
-        ]);
-        const roomById = new Map(rooms.map((room) => [room.id, room]));
+        const roomPersonaById = new Map<string, string | null>();
+        let roomCursor = await database.transaction(EVERSOUL_STORE.chatRoom).store.openCursor();
+        while (roomCursor) {
+            roomPersonaById.set(roomCursor.value.id, roomCursor.value.persona_id);
+            roomCursor = await roomCursor.continue();
+        }
         const counts = new Map<string, number>();
-        for (const message of messages) {
-            const room = roomById.get(message.room_id);
-            if (!room) {
-                continue;
+        let messageCursor = await database.transaction(EVERSOUL_STORE.chatMessage).store.openCursor();
+        while (messageCursor) {
+            const message = messageCursor.value;
+            const personaId = message.persona_id ?? roomPersonaById.get(message.room_id) ?? null;
+            if (personaId !== null) {
+                counts.set(personaId, (counts.get(personaId) ?? 0) + 1);
             }
-            const personaId = message.persona_id ?? room.persona_id;
-            if (personaId === null) {
-                continue;
-            }
-            counts.set(personaId, (counts.get(personaId) ?? 0) + 1);
+            messageCursor = await messageCursor.continue();
         }
         return counts;
     },
     async countEpisodicMemoriesByPersona(): Promise<Map<string, number>> {
         const database = await getEverSoulDatabase();
-        const memories = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByType, 'episodic');
         const counts = new Map<string, number>();
-        for (const memory of memories) {
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByType);
+        let cursor = await index.openCursor('episodic');
+        while (cursor) {
+            const memory = cursor.value;
             counts.set(memory.persona_id, (counts.get(memory.persona_id) ?? 0) + 1);
+            cursor = await cursor.continue();
         }
         return counts;
     },

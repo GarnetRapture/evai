@@ -22,6 +22,7 @@ struct ChatPrompt {
     std::string systemPrompt;
     std::vector<ChatTurn> history;
     std::string userMessage;
+    std::string responsePrefix;
 };
 
 [[nodiscard]] std::string renderChatPrompt(const litertlm::LlmMetadata& metadata, const ChatPrompt& prompt);

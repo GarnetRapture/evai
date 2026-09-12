@@ -1,7 +1,7 @@
 import { EVERTALK_SESSION_TITLE } from './prompt';
 import { chatRepository } from './repository';
 import { chatService } from './service';
-import type { ChatMessage, ChatRoom, ChatSendRequest, PersonaMemoryInsight } from './types';
+import type { ChatMessage, ChatRoom, ChatSendRequest, PersonaMemoryInsight, ProactiveGenerationOptions } from './types';
 
 export const chatClient = {
     async createRoom(title: string): Promise<ChatRoom> {
@@ -37,13 +37,22 @@ export const chatClient = {
     async listMessagesForPersona(roomId: string, personaId: string): Promise<ChatMessage[]> {
         return chatRepository.listMessagesForPersona(roomId, personaId);
     },
-    async focusPersonaSession(personaId: string): Promise<void> {
-        await chatService.focusPersonaSession(personaId);
+    async focusPersonaSession(personaId: string, roomId?: string): Promise<void> {
+        await chatService.focusPersonaSession(personaId, roomId);
     },
     async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {
         return chatService.getPersonaMemoryInsight(personaId);
     },
     async sendMessage(request: ChatSendRequest): Promise<ChatMessage> {
         return chatService.sendMessage(request);
+    },
+    async tryGenerateProactiveMessage(options?: ProactiveGenerationOptions): Promise<ChatMessage | null> {
+        return chatService.tryGenerateProactiveMessage(options);
+    },
+    async listProactiveUnreadCounts(): Promise<Record<string, number>> {
+        return chatRepository.listProactiveUnreadCounts();
+    },
+    async markProactiveMessagesRead(personaId: string): Promise<void> {
+        await chatRepository.markProactiveMessagesRead(personaId, new Date().toISOString());
     },
 };

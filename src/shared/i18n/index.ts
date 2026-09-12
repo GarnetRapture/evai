@@ -1,4 +1,15 @@
+import OpenCC from 'opencc-js/t2cn';
 import type { AppLanguage } from '../types';
+
+let traditionalToSimplified: ((text: string) => string) | null = null;
+
+export function normalizeLanguageText(text: string, language: AppLanguage): string {
+    if (language !== 'zh_cn' || text.length === 0) {
+        return text;
+    }
+    traditionalToSimplified ??= OpenCC.Converter({ from: 'tw', to: 'cn' });
+    return traditionalToSimplified(text);
+}
 
 export function pickLocalized<Value>(language: AppLanguage, ko: Value, en: Value, zh: Value): Value {
     if (language === 'en') {

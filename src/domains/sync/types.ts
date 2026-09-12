@@ -56,4 +56,35 @@ export interface BackupRestoreSummary {
     restored_personas: number;
     restored_persona_memories: number;
     restored_modules: number;
+    restored_native_context: boolean;
+}
+export interface StorageStoreUsage {
+    store_name: string;
+    record_count: number;
+    estimated_bytes: number;
+}
+export interface PersonaStorageContentSample {
+    id: string;
+    kind: 'message' | 'memory';
+    role_or_type: string;
+    content: string;
+    created_at: string;
+}
+export interface PersonaStorageUsage {
+    persona_id: string;
+    message_count: number;
+    memory_count: number;
+    estimated_bytes: number;
+    latest_activity_at: string | null;
+    samples: PersonaStorageContentSample[];
+}
+export interface BrowserStorageInspection {
+    database_name: string;
+    origin: string;
+    usage_bytes: number | null;
+    quota_bytes: number | null;
+    estimated_snapshot_bytes: number;
+    stores: StorageStoreUsage[];
+    personas: PersonaStorageUsage[];
+    native_statistics: import('../native').NativeContextStatistics | null;
 }

@@ -18,7 +18,7 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
     const summary = useMemo(() => createConversationSummary(activeDetail), [activeDetail]);
     const activeSkin = useMemo(() => (assets ? resolveSpiritSkin(assets, activeSkinId) : null), [activeSkinId, assets]);
     const gallerySkins = useMemo(() => assets?.skinOptions ?? [], [assets]);
-    const speechLine = useMemo(() => pickRandomSpeechLine(activeDetail), [activeDetail?.id]);
+    const speechLine = useMemo(() => pickRandomSpeechLine(activeDetail), [activeDetail]);
     const avatarCandidates = activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? [];
     const canUseComposer = Boolean(activeDetail && llmStatus?.is_loaded && !isTyping);
 
@@ -36,7 +36,7 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
                 clearTimeout(pokeTimeoutRef.current);
             }
         };
-    }, [activeDetail?.id]);
+    }, [speechLine]);
 
     function handlePortraitPoke() {
         if (!activeDetail) {

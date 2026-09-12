@@ -14,6 +14,8 @@ export const DEFAULT_GENERAL_SETTINGS: GeneralSettingsRecord = {
     lobby_background: null,
     savior_name: '',
     platform_guide_acknowledged: false,
+    context_storage_mode: 'browser',
+    native_executable_path: '',
 };
 
 export const settingsRepository = {
@@ -53,5 +55,7 @@ export function composeAppSettings(general: GeneralSettingsRecord): AppSettings 
         lobby_background: general.lobby_background ?? null,
         savior_name: general.savior_name ?? '',
         platform_guide_acknowledged: general.platform_guide_acknowledged,
+        context_storage_mode: general.context_storage_mode,
+        native_executable_path: general.native_executable_path ?? '',
     };
 }

@@ -99,6 +99,10 @@ export interface EverTalkLabels {
     windowClose: string;
     windowTaskbarHint: string;
     messages: string;
+    notifications: string;
+    noNotifications: string;
+    proactiveNotificationHint: string;
+    proactiveUnreadCount: (count: number) => string;
     memories: string;
     score: string;
     profileDetail: string;
@@ -140,6 +144,29 @@ export interface EverTalkLabels {
     language: string;
     displayResponseLanguage: string;
     showReasoning: string;
+    environmentTitle: string;
+    userProfile: string;
+    deviceProfile: string;
+    browserInfo: string;
+    webGpuInfo: string;
+    webGpuAvailable: string;
+    webGpuUnavailable: string;
+    contextStorage: string;
+    browserStorage: string;
+    browserStorageDescription: string;
+    nativeMirrorStorage: string;
+    nativeMirrorStorageDescription: string;
+    nativeContextReady: string;
+    nativeContextUnavailable: string;
+    nativeExecutablePath: string;
+    nativeExecutablePathPlaceholder: string;
+    nativeExecutablePathDescription: string;
+    nativeExecutablePathNotFound: string;
+    nativeExecutablePathMismatch: string;
+    nativeDatabasePath: string;
+    nativeProcessId: string;
+    connectNativeProgram: string;
+    refreshEnvironment: string;
     resetData: string;
     resetDescription: string;
     resetComplete: string;
@@ -272,6 +299,8 @@ export interface EverTalkLabels {
     modelRequestDetail: (state: string, promptTokens: number | null, generatedTokens: number | null, truncatedTokens: number) => string;
     backupTitle: string;
     backupDescription: string;
+    backupStorageScope: (native: boolean, connected: boolean) => string;
+    backupNativeRestored: string;
     backupExport: string;
     backupImport: string;
     backupWorking: string;
@@ -294,6 +323,39 @@ export interface EverTalkLabels {
     backupFileRestore: string;
     backupRestoreConfirm: (fileName: string) => string;
     backupWritten: (fileName: string) => string;
+    resetStorageScope: (native: boolean, connected: boolean) => string;
+    resetNativeCleared: string;
+    navChat: string;
+    navRanking: string;
+    navMemory: string;
+    navStorage: string;
+    storagePageTitle: string;
+    storagePageDescription: string;
+    refreshAnalysis: string;
+    storageModeActive: string;
+    browserManagedLocation: string;
+    browserManagedLocationDetail: string;
+    nativeLocalLocationDetail: string;
+    storageUsage: string;
+    storageQuota: string;
+    snapshotEstimate: string;
+    databaseFileSize: string;
+    storeBreakdown: string;
+    personaBreakdown: string;
+    storedContents: string;
+    messagesLabel: string;
+    memoriesLabel: string;
+    recordsLabel: string;
+    noStoredData: string;
+    storageComposition: string;
+    rankingPageTitle: string;
+    rankingPageDescription: string;
+    bondScoreLabel: string;
+    memoryPageTitle: string;
+    memoryPageDescription: string;
+    memoryGraphConnections: string;
+    memoryGraphMemoryTypes: { directive: string; episodic: string; semantic: string; memory: string };
+    memoryWorkflowNodes: Array<{ title: string; description: string }>;
     skinBase: string;
     skinBaseVariant: string;
     skinCostume: (index: number) => string;
@@ -329,6 +391,7 @@ export interface EverTalkLabels {
     logRoomSwitchCacheFailed: string;
     logPersonaCacheFailed: string;
     logChatResponseFailed: string;
+    logProactiveMessageFailed: string;
     logPostChatStateRefreshFailed: string;
     logServerSyncFailed: string;
     logStyleActivateFailed: string;
@@ -436,6 +499,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         windowClose: '닫기',
         windowTaskbarHint: '최소화된 대화',
         messages: '메시지',
+        notifications: '정령 알림',
+        noNotifications: '새로운 정령 메시지가 없습니다.',
+        proactiveNotificationHint: '정령을 선택하면 먼저 건넨 대화를 확인하고 읽음 처리합니다.',
+        proactiveUnreadCount: (count) => `새 대화 ${count}개`,
         memories: '기억',
         score: '점수',
         profileDetail: '프로필 상세',
@@ -471,12 +538,35 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backgroundGallery: '배경 갤러리',
         zoomImage: '확대 보기',
         settings: '설정',
-        currentSettings: '현재 설정값 (IndexedDB)',
+        currentSettings: '현재 설정값',
         defaultSpirit: '선호정령',
         activeStyle: '활성 스타일',
         language: '언어',
         displayResponseLanguage: '표시 및 응답 언어',
         showReasoning: 'AI의 추론 과정 표시 (<think>)',
+        environmentTitle: '실행 환경',
+        userProfile: '사용자 프로필',
+        deviceProfile: '기기 프로필',
+        browserInfo: '브라우저',
+        webGpuInfo: 'WebGPU',
+        webGpuAvailable: '어댑터 확인됨',
+        webGpuUnavailable: '사용 불가',
+        contextStorage: '대화 맥락 저장소',
+        browserStorage: '브라우저 저장소',
+        browserStorageDescription: 'IndexedDB를 기본 저장소로 사용합니다. 별도 프로그램이 필요 없습니다.',
+        nativeMirrorStorage: '네이티브 SQLite 확장',
+        nativeMirrorStorageDescription: '브라우저 저장과 함께 EXE 옆 SQLite에 대화·기억을 보조 저장하고 다시 불러옵니다.',
+        nativeContextReady: '네이티브 API 연결됨',
+        nativeContextUnavailable: '네이티브 API 미연결 · IndexedDB로 자동 유지',
+        nativeExecutablePath: '실행 파일',
+        nativeExecutablePathPlaceholder: '예: C:\\Program Files\\EverSoulAI\\eversoul-native-host.exe',
+        nativeExecutablePathDescription: '비워두면 Native Messaging 등록정보와 표준 설치 위치에서 자동으로 찾습니다. 개발 서버는 입력한 파일 또는 폴더를 직접 사용하고, 배포 브라우저는 등록된 호스트의 실제 경로와 일치하는지 확인합니다.',
+        nativeExecutablePathNotFound: '입력한 위치와 자동 탐색 위치에서 실행 파일을 찾지 못했습니다.',
+        nativeExecutablePathMismatch: '입력한 경로와 브라우저가 연결한 실행 파일의 실제 경로가 다릅니다.',
+        nativeDatabasePath: 'SQLite DB',
+        nativeProcessId: '네이티브 프로세스 PID',
+        connectNativeProgram: '네이티브 프로그램 연결',
+        refreshEnvironment: '환경 다시 확인',
         resetData: '데이터 초기화',
         resetDescription: '대화 기록, 정령/스타일/지식팩 데이터, 정령별 누적 기억과 설정값을 모두 삭제해 앱을 초기 상태로 되돌립니다.',
         resetComplete: '초기화 완료',
@@ -506,7 +596,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         deleteChat: '채팅 삭제',
         confirmDeleteChat: '이 채팅 기록을 삭제하시겠습니까?',
         noSavedMessages: '저장된 대화가 없습니다',
-        firstMessageHint: '첫 메시지를 보내면 이 PC 브라우저의 IndexedDB에 대화가 누적됩니다.',
+        firstMessageHint: '첫 메시지부터 이 브라우저에 대화가 누적되며, 네이티브 SQLite 확장을 선택했다면 EXE 옆 DB에도 함께 보조 저장됩니다.',
         messagePlaceholder: (name) => `${name}에게 메시지를 입력하세요...`,
         modelRequiredPlaceholder: '설정 > 온디바이스 모델 목록에서 모델을 준비하세요',
         send: '전송',
@@ -544,7 +634,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         personaDb: '정령 DB',
         chatDb: '채팅 DB',
         styleDb: '스타일 DB',
-        localModel: 'Chrome 온디바이스 AI',
+        localModel: '온디바이스 AI',
         dataSync: '데이터팩 동기화',
         checking: '확인 중',
         archiveCount: (count) => `${count}개 확인`,
@@ -588,10 +678,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: '이용 환경 안내',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                '에버톡 AI 채팅은 PC의 Chrome 브라우저에 내장된 온디바이스 AI(Gemini Nano)로만 동작합니다.',
-                '모바일 기기(스마트폰·태블릿)에서는 이용할 수 없습니다. 모바일을 사용 중이라면 반드시 PC의 Chrome 브라우저로 접속해야 합니다.',
-                'Chrome 이외의 브라우저(Edge, Firefox, Safari, Whale 등)에서는 접속할 수 없습니다.',
-                `처음 대화하기 전에 ${modelSettingsPath}에서 Chrome 온디바이스 모델을 내려받아 준비해야 합니다.`,
+                'PC Chrome에서는 내장 Prompt API 모델을, 지원되는 데스크톱 브라우저에서는 설치한 GGUF 로컬 모델을 사용할 수 있습니다.',
+                '대화·인연·기억은 기본적으로 이 브라우저의 IndexedDB에 저장됩니다. 네이티브 확장을 선택하면 EXE와 같은 폴더의 SQLite에도 보조 저장됩니다.',
+                '네이티브 확장이 연결되지 않더라도 웹 기본 저장소는 계속 동작하며, 저장소 선택은 언제든 설정에서 바꿀 수 있습니다.',
+                `처음 대화하기 전에 ${modelSettingsPath}에서 이 브라우저가 지원하는 로컬 모델을 준비해야 합니다.`,
             ],
             android_app: (modelSettingsPath) => [
                 '에버톡 AI 채팅 안드로이드 앱은 Google LiteRT-LM 온디바이스 엔진으로 이 기기 안에서 AI를 실행합니다. 대화와 모델 파일은 서버로 전송되지 않습니다.',
@@ -600,20 +690,20 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             ],
         },
         platformGuideCheckbox: {
-            web_chrome: '위 안내를 확인했으며, PC Chrome 브라우저의 온디바이스 AI로만 이용할 수 있음을 이해했습니다.',
+            web_chrome: '위 안내와 로컬 모델·저장소 선택 방식을 확인했습니다.',
             android_app: '위 안내를 확인했으며, 이 앱은 기기에 설치한 LiteRT-LM 모델로만 동작함을 이해했습니다.',
         },
         platformGuideConfirm: '확인하고 입장',
         platformBlockedTitle: '지원하지 않는 이용 환경입니다',
         platformBlockedMessages: {
-            mobile_device: '모바일 기기에서는 에버톡 AI 채팅을 이용할 수 없습니다. 에버톡 AI 채팅은 PC Chrome 브라우저의 온디바이스 AI로만 동작하므로, PC의 Chrome 브라우저로 접속해 주세요.',
-            unsupported_browser: '이 브라우저에서는 에버톡 AI 채팅을 이용할 수 없습니다. 에버톡 AI 채팅은 PC Chrome 브라우저의 온디바이스 AI로만 동작하므로, PC의 Google Chrome 브라우저로 접속해 주세요.',
+            mobile_device: '모바일 웹은 지원하지 않습니다. PC 데스크톱 브라우저 또는 전용 Android 앱을 이용해 주세요.',
+            unsupported_browser: '이 데스크톱 환경을 확인할 수 없습니다. Chrome·Edge·Firefox·Whale 등 최신 데스크톱 브라우저를 이용해 주세요.',
         },
-        platformBlockedHint: '지원 환경: Windows · macOS · Linux · ChromeOS의 Google Chrome 데스크톱 브라우저',
+        platformBlockedHint: '지원 환경: Windows · macOS · Linux · ChromeOS의 최신 데스크톱 브라우저',
         messageSendFailed: '응답 생성에 실패했습니다. 다시 시도해 주세요.',
         modelListTitle: '온디바이스 모델 목록',
         modelListDescription: {
-            web_chrome: '이 PC의 Chrome이 제공하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 선택하고, 필요한 모델은 여기서 내려받아 준비하세요. Gemini Nano의 크기와 GPU/CPU 백엔드는 Chrome이 기기 성능에 맞춰 자동으로 고릅니다.',
+            web_chrome: 'Chrome Prompt API 모델과 브라우저에서 직접 실행하는 GGUF 모델을 선택할 수 있습니다. Chrome API가 없으면 GGUF를 설치하세요. WebGPU가 확인되면 GPU를 사용하고, 사용할 수 없으면 CPU로 실행합니다.',
             android_app: '이 기기에서 Google LiteRT-LM 엔진으로 실행하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 설치하고 선택하세요. 모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 사용할 수 없으면 CPU 백엔드로 실행합니다.',
         },
         modelRoleChat: '대화 생성 · Prompt API (Gemini Nano)',
@@ -675,6 +765,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 입력 ${promptTokens ?? '-'} · 생성 ${generatedTokens ?? '-'} · 잘림 ${truncatedTokens}`,
         backupTitle: '데이터 저장 · 불러오기',
         backupDescription: '대화, 정령 기억, 설정, 모듈 등 이 브라우저 IndexedDB의 데이터를 PC에 JSON 파일로 저장하거나, 저장한 파일을 다시 불러옵니다. 불러오면 현재 데이터가 파일 내용으로 교체됩니다.',
+        backupStorageScope: (native, connected) => native
+            ? `JSON은 브라우저 IndexedDB 원본을 저장합니다. 복원 시 IndexedDB를 교체한 뒤 EXE 옆 로컬 SQLite를 비우고 동일 데이터로 다시 동기화합니다. 네이티브 연결: ${connected ? '확인됨' : '필요함'}. 외부 SQL 서버는 사용하지 않습니다.`
+            : 'JSON은 현재 브라우저의 IndexedDB만 저장·복원합니다. 기존 네이티브 SQLite 파일은 변경하지 않으며 외부 SQL 서버는 사용하지 않습니다.',
+        backupNativeRestored: '네이티브 SQLite도 비운 뒤 복원 데이터와 동일하게 동기화했습니다.',
         backupExport: 'PC 파일로 내보내기',
         backupImport: 'PC 파일에서 불러오기',
         backupWorking: '처리 중...',
@@ -705,6 +799,48 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: '복원',
         backupRestoreConfirm: (fileName) => `${fileName} 파일로 복원하면 현재 데이터가 모두 교체됩니다. 계속할까요?`,
         backupWritten: (fileName) => `${fileName} 백업을 저장했습니다.`,
+        resetStorageScope: (native, connected) => native
+            ? `브라우저 IndexedDB와 EXE 옆 로컬 SQLite를 함께 초기화합니다. 네이티브 연결: ${connected ? '확인됨' : '필요함 — 연결되지 않으면 삭제를 시작하지 않습니다'}.`
+            : '현재 브라우저 IndexedDB만 초기화합니다. 별도로 남아 있는 네이티브 SQLite 파일은 변경하지 않습니다.',
+        resetNativeCleared: 'EXE 옆 네이티브 SQLite도 초기화했습니다.',
+        navChat: '대화',
+        navRanking: '인연 순위',
+        navMemory: '기억 흐름',
+        navStorage: '저장소',
+        storagePageTitle: '대화 데이터베이스 분석',
+        storagePageDescription: '현재 저장 모드, 실제 저장 위치, 저장소·정령별 레코드와 용량 구성, 최근 저장 내용을 분석합니다.',
+        refreshAnalysis: '분석 새로고침',
+        storageModeActive: '현재 저장 모드',
+        browserManagedLocation: '브라우저 관리 저장소',
+        browserManagedLocationDetail: 'IndexedDB의 실제 OS 파일 경로는 브라우저 보안 정책상 웹에 공개되지 않습니다. 아래 origin과 논리 DB 이름으로 관리됩니다.',
+        nativeLocalLocationDetail: '이 파일은 외부 SQL 서버가 아니라 실행 중인 네이티브 EXE와 같은 PC에 있는 로컬 SQLite입니다.',
+        storageUsage: '브라우저 전체 사용량',
+        storageQuota: '브라우저 할당량',
+        snapshotEstimate: '앱 데이터 추정량',
+        databaseFileSize: 'SQLite 파일 크기',
+        storeBreakdown: '저장소별 구성',
+        personaBreakdown: '정령별 저장량',
+        storedContents: '최근 저장 내용',
+        messagesLabel: '대화',
+        memoriesLabel: '기억',
+        recordsLabel: '레코드',
+        noStoredData: '저장된 데이터가 없습니다.',
+        storageComposition: '데이터 구성비',
+        rankingPageTitle: '전체 정령 인연 순위',
+        rankingPageDescription: '누적 대화와 기억에서 계산된 실제 인연 점수를 모든 정령과 함께 비교합니다.',
+        bondScoreLabel: '인연 점수',
+        memoryPageTitle: '기억 알고리즘 흐름',
+        memoryPageDescription: '초기 페르소나에서 현재 응답과 장기 기억으로 이어지는 실제 데이터 흐름입니다.',
+        memoryGraphConnections: '연결선',
+        memoryGraphMemoryTypes: { directive: '사용자 지시', episodic: '대화 사건', semantic: '통합 기억', memory: '기억' },
+        memoryWorkflowNodes: [
+            { title: '초기 페르소나', description: '프로필·성격·실제 대화 말투 예시' },
+            { title: '최근 대화', description: '시간순 사용자·정령 응답과 현재 세션' },
+            { title: '관련 기억 회상', description: '지시·사실·감정·에피소드 관련도 검색' },
+            { title: '진화한 인연 상태', description: '누적 경험이 말투·반응·감정에 작용' },
+            { title: '정령의 다음 응답', description: '현재 대화의 다음 턴을 페르소나로 표현' },
+            { title: '요약·통합', description: '응답과 핵심 사건을 저장하고 장기 그래프로 압축' },
+        ],
         skinBase: '기본',
         skinBaseVariant: '기본 (변형)',
         skinCostume: (index) => `코스튬 ${index}`,
@@ -763,6 +899,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `지원하지 않는 모델입니다: ${detail}`;
                 case 'model_not_ready':
                     return `대화 모델이 준비되지 않았습니다 (상태: ${detail}). 설정 > 온디바이스 모델 목록에서 모델을 준비하거나 선택하세요.`;
+                case 'persona_prompt_missing':
+                    return `정령 페르소나 프롬프트가 완전하지 않습니다: ${detail}`;
+                case 'persona_drift':
+                    return `정령의 말투를 벗어난 응답을 차단했습니다. 다시 대화해 주세요 (${detail}).`;
                 case 'cancelled':
                     return '응답 생성이 중지되었습니다.';
                 case 'invalid_format':
@@ -785,6 +925,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logRoomSwitchCacheFailed: '채팅방 전환 중 사전 캐시 준비 실패',
         logPersonaCacheFailed: '정령 사전 캐시 준비 실패',
         logChatResponseFailed: '채팅 응답 수집 실패',
+        logProactiveMessageFailed: '정령 선제 대화 생성 실패',
         logPostChatStateRefreshFailed: '대화 후 부가 상태 갱신 실패',
         logServerSyncFailed: '로컬 데이터팩 동기화 실패',
         logStyleActivateFailed: '스타일 활성화 실패',
@@ -886,6 +1027,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         windowClose: 'Close',
         windowTaskbarHint: 'Minimized chats',
         messages: 'Messages',
+        notifications: 'Soul notifications',
+        noNotifications: 'There are no new Soul messages.',
+        proactiveNotificationHint: 'Select a Soul to open the conversation they started and mark it as read.',
+        proactiveUnreadCount: (count) => `${count} new message${count === 1 ? '' : 's'}`,
         memories: 'Memories',
         score: 'Score',
         profileDetail: 'Profile Detail',
@@ -921,12 +1066,35 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backgroundGallery: 'Background Gallery',
         zoomImage: 'Zoom',
         settings: 'Settings',
-        currentSettings: 'Current settings (IndexedDB)',
+        currentSettings: 'Current settings',
         defaultSpirit: 'Preferred Soul',
         activeStyle: 'Active Style',
         language: 'Language',
         displayResponseLanguage: 'Display and response language',
         showReasoning: 'Show AI Reasoning Process (<think>)',
+        environmentTitle: 'Runtime Environment',
+        userProfile: 'User profile',
+        deviceProfile: 'Device profile',
+        browserInfo: 'Browser',
+        webGpuInfo: 'WebGPU',
+        webGpuAvailable: 'Adapter verified',
+        webGpuUnavailable: 'Unavailable',
+        contextStorage: 'Conversation context storage',
+        browserStorage: 'Browser storage',
+        browserStorageDescription: 'Uses IndexedDB as the primary store with no additional program required.',
+        nativeMirrorStorage: 'Native SQLite extension',
+        nativeMirrorStorageDescription: 'Mirrors and recalls conversations and memories in SQLite beside the EXE while retaining browser storage.',
+        nativeContextReady: 'Native API connected',
+        nativeContextUnavailable: 'Native API disconnected · automatically continuing with IndexedDB',
+        nativeExecutablePath: 'Executable',
+        nativeExecutablePathPlaceholder: 'Example: C:\\Program Files\\EverSoulAI\\eversoul-native-host.exe',
+        nativeExecutablePathDescription: 'Leave blank to discover it from Native Messaging registration and standard install locations. The dev server uses the entered file or folder directly; a deployed browser verifies it against the registered host path.',
+        nativeExecutablePathNotFound: 'The executable was not found at the entered path or any automatic discovery location.',
+        nativeExecutablePathMismatch: 'The entered path does not match the executable actually connected by the browser.',
+        nativeDatabasePath: 'SQLite DB',
+        nativeProcessId: 'Native process PID',
+        connectNativeProgram: 'Connect native program',
+        refreshEnvironment: 'Check environment again',
         resetData: 'Reset Data',
         resetDescription: 'Deletes chat history, soul/style/knowledge data, saved memories, and settings.',
         resetComplete: 'Reset complete',
@@ -956,7 +1124,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         deleteChat: 'Delete chat',
         confirmDeleteChat: 'Delete this chat history?',
         noSavedMessages: 'No saved messages',
-        firstMessageHint: 'Send the first message to store the conversation in this PC browser\'s IndexedDB.',
+        firstMessageHint: 'Conversation history starts accumulating in this browser with the first message and is also mirrored beside the EXE when native SQLite is selected.',
         messagePlaceholder: (name) => `Message ${name}...`,
         modelRequiredPlaceholder: 'Prepare a model in Settings > On-device Models',
         send: 'Send',
@@ -994,7 +1162,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         personaDb: 'Soul DB',
         chatDb: 'Chat DB',
         styleDb: 'Style DB',
-        localModel: 'Chrome On-device AI',
+        localModel: 'On-device AI',
         dataSync: 'Data Pack Sync',
         checking: 'Checking',
         archiveCount: (count) => `${count} checked`,
@@ -1038,10 +1206,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: 'Supported Environment',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                'EverTalk AI Chat runs only on the on-device AI (Gemini Nano) built into the Chrome browser on a PC.',
-                'It cannot be used on mobile devices (smartphones or tablets). If you are on mobile, you must connect with the Chrome browser on a PC.',
-                'Browsers other than Chrome (Edge, Firefox, Safari, Whale, etc.) cannot access the service.',
-                `Before your first chat, download and prepare the Chrome on-device model in ${modelSettingsPath}.`,
+                'On PC Chrome you can use the built-in Prompt API model; supported desktop browsers can use an installed local GGUF model.',
+                'Chats, bonds, and memories are stored in this browser\'s IndexedDB by default. Native mode also mirrors them to SQLite beside the EXE.',
+                'The browser store continues working when the native extension is disconnected, and you can change the storage choice in Settings.',
+                `Before your first chat, prepare a local model supported by this browser in ${modelSettingsPath}.`,
             ],
             android_app: (modelSettingsPath) => [
                 'The EverTalk AI Chat Android app runs AI inside this device with the Google LiteRT-LM on-device engine. Conversations and model files are never sent to a server.',
@@ -1050,20 +1218,20 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             ],
         },
         platformGuideCheckbox: {
-            web_chrome: 'I have read the notice above and understand that this service works only with the on-device AI of Chrome on a PC.',
+            web_chrome: 'I have reviewed the local model and storage choices above.',
             android_app: 'I have read the notice above and understand that this app works only with LiteRT-LM models installed on this device.',
         },
         platformGuideConfirm: 'Confirm and Enter',
         platformBlockedTitle: 'Unsupported Environment',
         platformBlockedMessages: {
-            mobile_device: 'EverTalk AI Chat cannot be used on mobile devices. It runs only on the on-device AI of the Chrome browser on a PC, so please connect with Chrome on a PC.',
-            unsupported_browser: 'EverTalk AI Chat cannot be used in this browser. It runs only on the on-device AI of the Chrome browser on a PC, so please connect with Google Chrome on a PC.',
+            mobile_device: 'Mobile web is not supported. Use a desktop browser on a PC or the dedicated Android app.',
+            unsupported_browser: 'This desktop environment could not be identified. Use a current desktop browser such as Chrome, Edge, Firefox, or Whale.',
         },
-        platformBlockedHint: 'Supported: Google Chrome desktop browser on Windows, macOS, Linux, or ChromeOS',
+        platformBlockedHint: 'Supported: current desktop browsers on Windows, macOS, Linux, or ChromeOS',
         messageSendFailed: 'Failed to generate a response. Please try again.',
         modelListTitle: 'On-device Models',
         modelListDescription: {
-            web_chrome: 'On-device AI models provided by Chrome on this PC. Choose the model used for chat and download the models you need here. Chrome picks the Gemini Nano size and GPU/CPU backend automatically for this device.',
+            web_chrome: 'Choose between Chrome Prompt API and GGUF models run directly in the browser. Install GGUF when the Chrome API is unavailable. A verified WebGPU adapter uses the GPU; otherwise the model falls back to CPU.',
             android_app: 'On-device AI models run on this device by the Google LiteRT-LM engine. Install and choose the model used for chat. Loading a model tries the GPU backend first and falls back to the CPU backend when the GPU cannot be used.',
         },
         modelRoleChat: 'Chat generation · Prompt API (Gemini Nano)',
@@ -1125,6 +1293,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · prompt ${promptTokens ?? '-'} · generated ${generatedTokens ?? '-'} · truncated ${truncatedTokens}`,
         backupTitle: 'Save · Load Data',
         backupDescription: 'Save this browser\'s IndexedDB data (chats, soul memories, settings, modules) to a JSON file on your PC, or load a saved file. Loading replaces the current data with the file contents.',
+        backupStorageScope: (native, connected) => native
+            ? `JSON stores the browser IndexedDB source. Restore replaces IndexedDB, then clears and resynchronizes the local SQLite beside the EXE. Native connection: ${connected ? 'verified' : 'required'}. No external SQL server is used.`
+            : 'JSON saves and restores only this browser\'s IndexedDB. Any existing native SQLite file is untouched, and no external SQL server is used.',
+        backupNativeRestored: 'The native SQLite database was cleared and synchronized to the restored data.',
         backupExport: 'Export to PC file',
         backupImport: 'Import from PC file',
         backupWorking: 'Working...',
@@ -1155,6 +1327,48 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: 'Restore',
         backupRestoreConfirm: (fileName) => `Restoring ${fileName} replaces all current data. Continue?`,
         backupWritten: (fileName) => `Saved backup ${fileName}.`,
+        resetStorageScope: (native, connected) => native
+            ? `Resets both browser IndexedDB and the local SQLite beside the EXE. Native connection: ${connected ? 'verified' : 'required — deletion will not start while disconnected'}.`
+            : 'Resets only this browser\'s IndexedDB. A separate native SQLite file is not changed.',
+        resetNativeCleared: 'The native SQLite beside the EXE was also reset.',
+        navChat: 'Chat',
+        navRanking: 'Bond Ranking',
+        navMemory: 'Memory Flow',
+        navStorage: 'Storage',
+        storagePageTitle: 'Conversation Database Analytics',
+        storagePageDescription: 'Inspect the active mode, actual storage location, store and spirit record volume, capacity composition, and recent saved content.',
+        refreshAnalysis: 'Refresh analysis',
+        storageModeActive: 'Active storage mode',
+        browserManagedLocation: 'Browser-managed storage',
+        browserManagedLocationDetail: 'Browser security does not expose the exact OS path of IndexedDB to the web. It is identified by the origin and logical database name below.',
+        nativeLocalLocationDetail: 'This is a local SQLite file on the same PC as the running native EXE, not an external SQL server.',
+        storageUsage: 'Total browser usage',
+        storageQuota: 'Browser quota',
+        snapshotEstimate: 'Estimated app data',
+        databaseFileSize: 'SQLite file size',
+        storeBreakdown: 'Store composition',
+        personaBreakdown: 'Storage by spirit',
+        storedContents: 'Recent stored content',
+        messagesLabel: 'Messages',
+        memoriesLabel: 'Memories',
+        recordsLabel: 'Records',
+        noStoredData: 'No stored data.',
+        storageComposition: 'Data composition',
+        rankingPageTitle: 'All-Spirit Bond Ranking',
+        rankingPageDescription: 'Compare every spirit using real bond scores calculated from accumulated conversations and memories.',
+        bondScoreLabel: 'Bond score',
+        memoryPageTitle: 'Memory Algorithm Flow',
+        memoryPageDescription: 'The live data flow from the starting persona through the current response and long-term memory.',
+        memoryGraphConnections: 'connections',
+        memoryGraphMemoryTypes: { directive: 'User directive', episodic: 'Conversation event', semantic: 'Consolidated memory', memory: 'Memory' },
+        memoryWorkflowNodes: [
+            { title: 'Starting persona', description: 'Profile, personality, and real dialogue voice examples' },
+            { title: 'Recent conversation', description: 'Time-ordered user and spirit replies in the current session' },
+            { title: 'Relevant recall', description: 'Retrieves directives, facts, feelings, and episodes by relevance' },
+            { title: 'Evolved bond state', description: 'Shared experience changes voice, reaction, and emotion' },
+            { title: 'Spirit\'s next reply', description: 'Expresses the next conversational turn in character' },
+            { title: 'Summarize and consolidate', description: 'Stores the reply and key events into a compressed long-term graph' },
+        ],
         skinBase: 'Default',
         skinBaseVariant: 'Default (Variant)',
         skinCostume: (index) => `Costume ${index}`,
@@ -1213,6 +1427,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `Unsupported model: ${detail}`;
                 case 'model_not_ready':
                     return `The chat model is not ready (status: ${detail}). Prepare or choose a model in Settings > On-device Models.`;
+                case 'persona_prompt_missing':
+                    return `The spirit persona prompt is incomplete: ${detail}`;
+                case 'persona_drift':
+                    return `A response outside the spirit's voice was blocked. Please try again (${detail}).`;
                 case 'cancelled':
                     return 'Response generation was stopped.';
                 case 'invalid_format':
@@ -1235,6 +1453,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logRoomSwitchCacheFailed: 'Failed to prepare cache while switching rooms',
         logPersonaCacheFailed: 'Failed to prepare persona cache',
         logChatResponseFailed: 'Failed to get chat response',
+        logProactiveMessageFailed: 'Failed to generate proactive Soul message',
         logPostChatStateRefreshFailed: 'Failed to refresh state after chat',
         logServerSyncFailed: 'Local data pack sync failed',
         logStyleActivateFailed: 'Failed to activate style',
@@ -1336,6 +1555,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         windowClose: '关闭',
         windowTaskbarHint: '最小化的对话',
         messages: '消息',
+        notifications: '精灵通知',
+        noNotifications: '没有新的精灵消息。',
+        proactiveNotificationHint: '选择精灵即可查看其主动发起的对话并标记为已读。',
+        proactiveUnreadCount: (count) => `${count} 条新消息`,
         memories: '记忆',
         score: '分数',
         profileDetail: '详细资料',
@@ -1371,12 +1594,35 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backgroundGallery: '背景图库',
         zoomImage: '放大',
         settings: '设置',
-        currentSettings: '当前设置 (IndexedDB)',
+        currentSettings: '当前设置',
         defaultSpirit: '偏好精灵',
         activeStyle: '启用风格',
         language: '语言',
         displayResponseLanguage: '显示与回复语言',
         showReasoning: '显示 AI 推理过程 (<think>)',
+        environmentTitle: '运行环境',
+        userProfile: '用户资料',
+        deviceProfile: '设备资料',
+        browserInfo: '浏览器',
+        webGpuInfo: 'WebGPU',
+        webGpuAvailable: '已确认适配器',
+        webGpuUnavailable: '不可用',
+        contextStorage: '对话上下文存储',
+        browserStorage: '浏览器存储',
+        browserStorageDescription: '使用 IndexedDB 作为主存储，无需安装其他程序。',
+        nativeMirrorStorage: '原生 SQLite 扩展',
+        nativeMirrorStorageDescription: '保留浏览器存储，同时将对话与记忆镜像到 EXE 同目录的 SQLite 并用于恢复。',
+        nativeContextReady: '原生 API 已连接',
+        nativeContextUnavailable: '原生 API 未连接 · 自动继续使用 IndexedDB',
+        nativeExecutablePath: '可执行文件',
+        nativeExecutablePathPlaceholder: '例如：C:\\Program Files\\EverSoulAI\\eversoul-native-host.exe',
+        nativeExecutablePathDescription: '留空时会从 Native Messaging 注册信息和标准安装位置自动查找。开发服务器会直接使用输入的文件或文件夹；部署浏览器会核对已注册主机的实际路径。',
+        nativeExecutablePathNotFound: '在输入位置和自动查找位置中均未找到可执行文件。',
+        nativeExecutablePathMismatch: '输入路径与浏览器实际连接的可执行文件路径不一致。',
+        nativeDatabasePath: 'SQLite 数据库',
+        nativeProcessId: '原生进程 PID',
+        connectNativeProgram: '连接原生程序',
+        refreshEnvironment: '重新检查环境',
         resetData: '重置数据',
         resetDescription: '删除聊天记录、精灵/风格/知识数据、累积记忆与设置。',
         resetComplete: '重置完成',
@@ -1406,7 +1652,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         deleteChat: '删除对话',
         confirmDeleteChat: '确定要删除这段对话记录吗？',
         noSavedMessages: '暂无保存的对话',
-        firstMessageHint: '发送第一条消息后，对话会累积到本电脑浏览器的 IndexedDB 中。',
+        firstMessageHint: '从第一条消息起，对话会保存在本浏览器中；选择原生 SQLite 后，也会镜像到 EXE 同目录的数据库。',
         messagePlaceholder: (name) => `向 ${name} 发送消息...`,
         modelRequiredPlaceholder: '请在 设置 > 设备端模型列表 中准备模型',
         send: '发送',
@@ -1444,7 +1690,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         personaDb: '精灵数据库',
         chatDb: '聊天数据库',
         styleDb: '风格数据库',
-        localModel: 'Chrome 设备端 AI',
+        localModel: '设备端 AI',
         dataSync: '数据包同步',
         checking: '确认中',
         archiveCount: (count) => `已确认 ${count} 个`,
@@ -1488,10 +1734,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: '使用环境说明',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                'EverTalk AI 聊天仅能通过电脑 Chrome 浏览器内置的设备端 AI（Gemini Nano）运行。',
-                '无法在移动设备（智能手机、平板电脑）上使用。如果您正在使用移动设备，必须改用电脑上的 Chrome 浏览器访问。',
-                'Chrome 以外的浏览器（Edge、Firefox、Safari、Whale 等）无法访问。',
-                `首次对话前，请在“${modelSettingsPath}”中下载并准备 Chrome 设备端模型。`,
+                'PC Chrome 可使用内置 Prompt API 模型；受支持的桌面浏览器可使用已安装的本地 GGUF 模型。',
+                '对话、羁绊与记忆默认保存在本浏览器的 IndexedDB 中。选择原生扩展后，也会镜像到 EXE 同目录的 SQLite。',
+                '原生扩展断开时浏览器存储仍会继续工作，并可随时在设置中更改存储方式。',
+                `首次对话前，请在“${modelSettingsPath}”中准备此浏览器支持的本地模型。`,
             ],
             android_app: (modelSettingsPath) => [
                 'EverTalk AI 聊天安卓应用通过 Google LiteRT-LM 设备端引擎在本设备内运行 AI。对话和模型文件不会发送到服务器。',
@@ -1500,20 +1746,20 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             ],
         },
         platformGuideCheckbox: {
-            web_chrome: '我已阅读以上说明，并了解本服务仅能通过电脑 Chrome 浏览器的设备端 AI 使用。',
+            web_chrome: '我已确认以上本地模型与存储选择方式。',
             android_app: '我已阅读以上说明，并了解本应用仅能使用安装在本设备上的 LiteRT-LM 模型运行。',
         },
         platformGuideConfirm: '确认并进入',
         platformBlockedTitle: '不支持的使用环境',
         platformBlockedMessages: {
-            mobile_device: '无法在移动设备上使用 EverTalk AI 聊天。本服务仅能通过电脑 Chrome 浏览器的设备端 AI 运行，请使用电脑上的 Chrome 浏览器访问。',
-            unsupported_browser: '无法在此浏览器中使用 EverTalk AI 聊天。本服务仅能通过电脑 Chrome 浏览器的设备端 AI 运行，请使用电脑上的 Google Chrome 浏览器访问。',
+            mobile_device: '不支持移动网页。请使用电脑桌面浏览器或专用 Android 应用。',
+            unsupported_browser: '无法识别此桌面环境。请使用 Chrome、Edge、Firefox、Whale 等最新版桌面浏览器。',
         },
-        platformBlockedHint: '支持环境：Windows、macOS、Linux、ChromeOS 上的 Google Chrome 桌面浏览器',
+        platformBlockedHint: '支持环境：Windows、macOS、Linux、ChromeOS 上的最新版桌面浏览器',
         messageSendFailed: '生成响应失败。请重试。',
         modelListTitle: '设备端模型列表',
         modelListDescription: {
-            web_chrome: '这是本电脑 Chrome 提供的设备端 AI 模型。请选择用于对话的模型，并在此下载准备所需模型。Gemini Nano 的规格与 GPU/CPU 后端由 Chrome 根据设备性能自动选择。',
+            web_chrome: '可选择 Chrome Prompt API 或直接在浏览器中运行的 GGUF 模型。Chrome API 不可用时请安装 GGUF。确认 WebGPU 适配器后使用 GPU，否则回退到 CPU。',
             android_app: '这是在本设备上由 Google LiteRT-LM 引擎运行的设备端 AI 模型。请安装并选择用于对话的模型。加载模型时会优先尝试 GPU 后端，无法使用时改用 CPU 后端运行。',
         },
         modelRoleChat: '对话生成 · Prompt API (Gemini Nano)',
@@ -1575,6 +1821,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 输入 ${promptTokens ?? '-'} · 生成 ${generatedTokens ?? '-'} · 截断 ${truncatedTokens}`,
         backupTitle: '数据保存 · 载入',
         backupDescription: '将本浏览器 IndexedDB 中的对话、精灵记忆、设置、模块等数据以 JSON 文件保存到电脑，或重新载入已保存的文件。载入时当前数据会被文件内容替换。',
+        backupStorageScope: (native, connected) => native
+            ? `JSON 保存浏览器 IndexedDB 原始数据。恢复时先替换 IndexedDB，再清空 EXE 旁的本地 SQLite 并同步相同数据。原生连接：${connected ? '已确认' : '必需'}。不使用外部 SQL 服务器。`
+            : 'JSON 只保存和恢复当前浏览器的 IndexedDB。已有的原生 SQLite 文件不会改变，也不使用外部 SQL 服务器。',
+        backupNativeRestored: '原生 SQLite 已清空并同步为恢复后的数据。',
         backupExport: '导出为电脑文件',
         backupImport: '从电脑文件导入',
         backupWorking: '处理中...',
@@ -1605,6 +1855,48 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: '恢复',
         backupRestoreConfirm: (fileName) => `使用 ${fileName} 恢复会替换当前全部数据。是否继续？`,
         backupWritten: (fileName) => `已保存备份 ${fileName}。`,
+        resetStorageScope: (native, connected) => native
+            ? `同时重置浏览器 IndexedDB 与 EXE 旁的本地 SQLite。原生连接：${connected ? '已确认' : '必需——未连接时不会开始删除'}。`
+            : '只重置当前浏览器的 IndexedDB，单独存在的原生 SQLite 文件不会改变。',
+        resetNativeCleared: 'EXE 旁的原生 SQLite 也已重置。',
+        navChat: '对话',
+        navRanking: '羁绊排行',
+        navMemory: '记忆流程',
+        navStorage: '存储',
+        storagePageTitle: '对话数据库分析',
+        storagePageDescription: '分析当前存储模式、实际位置、各存储与精灵的记录和容量构成，以及最近保存的内容。',
+        refreshAnalysis: '刷新分析',
+        storageModeActive: '当前存储模式',
+        browserManagedLocation: '浏览器管理的存储',
+        browserManagedLocationDetail: '浏览器安全策略不会向网页公开 IndexedDB 的实际系统文件路径。它由下方来源与逻辑数据库名称标识。',
+        nativeLocalLocationDetail: '这是与原生 EXE 位于同一台电脑上的本地 SQLite 文件，并非外部 SQL 服务器。',
+        storageUsage: '浏览器总用量',
+        storageQuota: '浏览器配额',
+        snapshotEstimate: '应用数据估算',
+        databaseFileSize: 'SQLite 文件大小',
+        storeBreakdown: '各存储构成',
+        personaBreakdown: '各精灵存储量',
+        storedContents: '最近保存内容',
+        messagesLabel: '对话',
+        memoriesLabel: '记忆',
+        recordsLabel: '记录',
+        noStoredData: '没有已保存的数据。',
+        storageComposition: '数据构成比例',
+        rankingPageTitle: '全部精灵羁绊排行',
+        rankingPageDescription: '依据累积对话与记忆计算的真实羁绊分数，比较所有精灵。',
+        bondScoreLabel: '羁绊分数',
+        memoryPageTitle: '记忆算法流程',
+        memoryPageDescription: '从初始角色设定到当前回复与长期记忆的实际数据流程。',
+        memoryGraphConnections: '连接线',
+        memoryGraphMemoryTypes: { directive: '用户指示', episodic: '对话事件', semantic: '整合记忆', memory: '记忆' },
+        memoryWorkflowNodes: [
+            { title: '初始角色设定', description: '档案、性格与真实对话语气示例' },
+            { title: '最近对话', description: '当前会话中按时间排序的用户与精灵回复' },
+            { title: '相关记忆召回', description: '按相关度检索指示、事实、感情与事件' },
+            { title: '进化后的羁绊状态', description: '共同经历改变语气、反应与情感' },
+            { title: '精灵的下一句回复', description: '以角色身份表达对话的下一回合' },
+            { title: '摘要与整合', description: '保存回复与关键事件并压缩为长期图谱' },
+        ],
         skinBase: '默认',
         skinBaseVariant: '默认（变体）',
         skinCostume: (index) => `服装 ${index}`,
@@ -1663,6 +1955,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `不支持的模型：${detail}`;
                 case 'model_not_ready':
                     return `对话模型尚未就绪（状态：${detail}）。请在 设置 > 设备端模型列表 中准备或选择模型。`;
+                case 'persona_prompt_missing':
+                    return `精灵人格提示词不完整：${detail}`;
+                case 'persona_drift':
+                    return `已拦截偏离精灵语气的回复。请重试（${detail}）。`;
                 case 'cancelled':
                     return '已停止生成回复。';
                 case 'invalid_format':
@@ -1685,6 +1981,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logRoomSwitchCacheFailed: '切换聊天室时预缓存准备失败',
         logPersonaCacheFailed: '精灵预缓存准备失败',
         logChatResponseFailed: '聊天回复获取失败',
+        logProactiveMessageFailed: '精灵主动对话生成失败',
         logPostChatStateRefreshFailed: '对话后状态刷新失败',
         logServerSyncFailed: '本地数据包同步失败',
         logStyleActivateFailed: '风格启用失败',

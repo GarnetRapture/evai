@@ -1,4 +1,4 @@
-import { HeartHandshake, Star, Trophy, Users } from 'lucide-react';
+import { Bell, HeartHandshake, Star, Trophy, Users } from 'lucide-react';
 import { getRaceTone, parseSpiritDetail } from '../../persona';
 import { computeFamiliarityLevel, createConversationSummary, resolvePreferredSpiritsFamiliarity } from '../logic';
 import { RosterAvatar, RosterExpBar, RosterRankBadge } from '../components/SpiritRosterCard';
@@ -8,6 +8,10 @@ export function MobileRosterScreen({ controller, onOpenChat }: MobileRosterScree
     const { filteredSpirits: spirits, activeRosterTab, bondRanking, bondRankingLoading, familiarityList, familiarityLoading, preferredPersonaIds, activeSessionIds, personaSkinIds, appLanguage, labels } = controller;
     const preferredSpirits = resolvePreferredSpiritsFamiliarity(spirits, familiarityList, preferredPersonaIds);
     const rankedFamiliarity = familiarityList.filter((entry) => !preferredPersonaIds.includes(entry.persona_id));
+    const unreadBadge = (personaId: string) => {
+        const count = controller.proactiveUnreadCounts[personaId] ?? 0;
+        return count > 0 ? <span className="ever-spirit-row__unread" aria-label={labels.proactiveUnreadCount(count)}><Bell aria-hidden="true" size={11}/>{count > 99 ? '99+' : count}</span> : null;
+    };
 
     return (
         <section className="ever-mobile-roster">
@@ -46,6 +50,7 @@ export function MobileRosterScreen({ controller, onOpenChat }: MobileRosterScree
                                 </span>
                             </button>
                             <span className="ever-spirit-row__meta">
+                                {unreadBadge(spirit.id)}
                                 <b>{detail.grade}</b>
                                 <button className={isDefault ? 'is-default' : ''} type="button" aria-pressed={isDefault} aria-label={isDefault ? labels.preferredSpiritClearAction(detail.name) : labels.preferredSpiritSetAction(detail.name)} onClick={() => void controller.toggleDefaultSpirit(spirit.id)}>
                                     <Star aria-hidden="true" size={16}/>
@@ -70,7 +75,7 @@ export function MobileRosterScreen({ controller, onOpenChat }: MobileRosterScree
                                     <RosterExpBar level={rankLevel.level} ratio={rankLevel.progressRatio} isMax={rankLevel.isMax}/>
                                 </span>
                             </button>
-                            <span className="ever-spirit-row__meta"><RosterRankBadge rank={index + 1}/><b>{entry.bond_score}</b></span>
+                            <span className="ever-spirit-row__meta">{unreadBadge(entry.persona_id)}<RosterRankBadge rank={index + 1}/><b>{entry.bond_score}</b></span>
                         </div>
                     );
                 })}
@@ -91,6 +96,7 @@ export function MobileRosterScreen({ controller, onOpenChat }: MobileRosterScree
                                         </span>
                                     </button>
                                     <span className="ever-spirit-row__meta">
+                                        {unreadBadge(preferred.spirit.id)}
                                         <b>{preferred.familiarity_score}</b>
                                         <button className="is-default" type="button" aria-pressed={true} aria-label={labels.preferredSpiritClearAction(preferredDetail.name)} onClick={() => void controller.toggleDefaultSpirit(preferred.spirit.id)}><Star aria-hidden="true" size={16}/></button>
                                     </span>
@@ -114,7 +120,7 @@ export function MobileRosterScreen({ controller, onOpenChat }: MobileRosterScree
                                     <RosterExpBar level={entryLevel.level} ratio={entryLevel.progressRatio} isMax={entryLevel.isMax}/>
                                 </span>
                             </button>
-                            <span className="ever-spirit-row__meta"><RosterRankBadge rank={index + 1}/><b>{entry.familiarity_score}</b></span>
+                            <span className="ever-spirit-row__meta">{unreadBadge(entry.persona_id)}<RosterRankBadge rank={index + 1}/><b>{entry.familiarity_score}</b></span>
                         </div>
                     );
                 })}

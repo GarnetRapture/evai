@@ -65,6 +65,7 @@ function restoreSummary(snapshot: EverSoulDatabaseSnapshot): BackupRestoreSummar
         restored_personas: snapshot.stores.persona_profile.length,
         restored_persona_memories: snapshot.stores.persona_memory.length,
         restored_modules: snapshot.stores.imported_module.length,
+        restored_native_context: false,
     };
 }
 

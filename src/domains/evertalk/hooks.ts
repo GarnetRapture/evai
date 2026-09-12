@@ -1,10 +1,10 @@
 import React, { useEffect, useEffectEvent, useMemo, useRef, useState } from 'react';
 import { requestPersistentStorage } from '../../shared/storage';
 import { detectBrowserAppLanguage } from '../../shared/i18n';
-import { detectAppPlatform, detectPlatformSupport } from '../../shared/platform';
+import { detectAppPlatform, detectPlatformSupport, inspectDeviceEnvironment, type DeviceEnvironmentInfo } from '../../shared/platform';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
-import { authClient } from '../auth';
-import { chatClient, type ChatMessage, type ChatRoom, type PersonaMemoryInsight } from '../chat';
+import { authClient, type UserSession } from '../auth';
+import { PROACTIVE_CHECK_INTERVAL_MS, PROACTIVE_INITIAL_DELAY_MS, chatClient, type ChatMessage, type ChatRoom, type PersonaMemoryInsight } from '../chat';
 import {
     LOCAL_MODEL_INSTALL_PREPARATION_IDS,
     llmClient,
@@ -18,13 +18,14 @@ import {
     type ModelPreparationState,
 } from '../llm';
 import { modulesClient, type ImportedModule, type ModuleControl } from '../modules';
+import { nativeContextClient, type ContextStorageMode, type NativeContextStatus } from '../native';
 import { DEFAULT_SPIRIT_SKIN_ID, getSpiritVisualAssets, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaConfig, type SpiritDetail } from '../persona';
 import { settingsClient, type AppSettings, type ResetSummary, type SetupProgress } from '../settings';
 import { styleClient, type StyleProfile } from '../style';
-import { syncClient, type BackupDirectoryStatus, type BackupRestoreSummary, type LocalStatusSnapshot } from '../sync';
+import { inspectBrowserStorage, syncClient, type BackupDirectoryStatus, type BackupRestoreSummary, type BrowserStorageInspection, type LocalStatusSnapshot } from '../sync';
 import { collectEventStickers, createApiStatus, computeFamiliarityLevel, filterSpirits, formatUnknownError, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from './logic';
-import { getEverTalkLabels } from './i18n';
-import type { ApiStatusItem, EarnedSigil, EverTalkController, RosterTab, SaviorProfileSnapshot, SaviorStickerEntry, SpiritStickerBadge, StageTab } from './types';
+import { getEverTalkLabels, type EverTalkLabels } from './i18n';
+import type { ApiStatusItem, EarnedSigil, EverTalkController, RosterTab, SaviorProfileSnapshot, SaviorStickerEntry, SpiritStickerBadge, StageTab, WorkspaceView } from './types';
 
 const EMPTY_LLM_STATUS: LlmStatus = { is_loaded: false, availability: null, error_message: null };
 function frontendDebugLog(stage: string) {
@@ -60,6 +61,7 @@ export function useEverTalkController(): EverTalkController {
         createApiStatus('chat-db', 'checking', labels.checking),
         createApiStatus('style-db', 'checking', labels.checking),
         createApiStatus('llm', 'checking', labels.checking),
+        createApiStatus('native-context', 'checking', labels.checking),
         createApiStatus('sync', 'warning', labels.manualSyncWaiting),
     ]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -71,6 +73,7 @@ export function useEverTalkController(): EverTalkController {
     const [activeDetail, setActiveDetail] = useState<SpiritDetail | null>(null);
     const [activeRoom, setActiveRoom] = useState<ChatRoom | null>(null);
     const [messages, setMessages] = useState<ChatMessage[]>([]);
+    const [proactiveUnreadCounts, setProactiveUnreadCounts] = useState<Record<string, number>>({});
     const [previousRooms, setPreviousRooms] = useState<ChatRoom[]>([]);
     const [previousRoomsLoading, setPreviousRoomsLoading] = useState(false);
     const [inputText, setInputText] = useState('');
@@ -96,6 +99,14 @@ export function useEverTalkController(): EverTalkController {
     const [setupProgress, setSetupProgress] = useState<SetupProgress | null>(null);
     const pendingLanguageRef = useRef<AppLanguage | null>(null);
     const [appSettings, setAppSettings] = useState<AppSettings | null>(null);
+    const [userSession, setUserSession] = useState<UserSession | null>(null);
+    const [deviceEnvironment, setDeviceEnvironment] = useState<DeviceEnvironmentInfo | null>(null);
+    const [nativeContextStatus, setNativeContextStatus] = useState<NativeContextStatus>({
+        available: false,
+        transport: 'unavailable',
+        detail: 'not_checked',
+        health: null,
+    });
     const [modelCatalog, setModelCatalog] = useState<ChatModelCatalog | null>(null);
     const [modelLoadingId, setModelLoadingId] = useState<string | null>(null);
     const [modelCatalogError, setModelCatalogError] = useState<string | null>(null);
@@ -119,13 +130,74 @@ export function useEverTalkController(): EverTalkController {
     const [familiarityList, setFamiliarityList] = useState<FamiliarityEntry[]>([]);
     const [familiarityLoading, setFamiliarityLoading] = useState(false);
     const [localStatus, setLocalStatus] = useState<LocalStatusSnapshot | null>(null);
+    const [workspaceView, setWorkspaceView] = useState<WorkspaceView>('chat');
+    const [storageInspection, setStorageInspection] = useState<BrowserStorageInspection | null>(null);
+    const [storageInspectionLoading, setStorageInspectionLoading] = useState(false);
+    const [storageInspectionError, setStorageInspectionError] = useState<string | null>(null);
     const messagesListRef = useRef<HTMLDivElement>(null);
     const focusedChatRequestRef = useRef<AbortController | null>(null);
     const appInitStartedRef = useRef(false);
     const renderedLanguageRef = useRef<AppLanguage | null>(null);
+    const proactiveCheckRunningRef = useRef(false);
     const filteredSpirits = useMemo(() => filterSpirits(spirits, searchQuery), [searchQuery, spirits]);
     function setSystemStatus(status: ApiStatusItem) {
         setSystemStatuses((prev) => prev.map((item) => (item.id === status.id ? status : item)));
+    }
+    function relocalizeSystemStatuses(uiLabels: EverTalkLabels) {
+        setSystemStatuses((current) => current.map((status) => {
+            switch (status.id) {
+                case 'auth':
+                    return createApiStatus('auth', userSession ? 'ready' : 'warning', userSession ? uiLabels.sessionReady : uiLabels.noLocalSession);
+                case 'persona-archive':
+                    return createApiStatus('persona-archive', spirits.length > 0 ? 'ready' : status.state, spirits.length > 0 ? uiLabels.archiveCount(spirits.length) : uiLabels.checking);
+                case 'persona-db': {
+                    const count = localStatus?.persona_count ?? spirits.length;
+                    return createApiStatus('persona-db', count > 0 ? 'ready' : 'warning', count > 0 ? uiLabels.loadedCount(count) : uiLabels.noDbRows);
+                }
+                case 'chat-db':
+                    return localStatus
+                        ? createApiStatus('chat-db', 'ready', uiLabels.roomMessageCount(localStatus.chat_room_count, localStatus.chat_message_count))
+                        : createApiStatus('chat-db', status.state, uiLabels.checking);
+                case 'style-db':
+                    return createApiStatus('style-db', styles.length > 0 ? 'ready' : 'warning', uiLabels.loadedCount(styles.length));
+                case 'llm':
+                    return createApiStatus('llm', llmStatus?.is_loaded ? 'ready' : 'warning', llmStatus?.is_loaded ? uiLabels.modelLoaded : uiLabels.modelAvailabilityDetail(llmStatus?.availability ?? null));
+                case 'native-context': {
+                    const selected = appSettings?.context_storage_mode === 'native_mirror';
+                    return createApiStatus(
+                        'native-context',
+                        !selected || nativeContextStatus.available ? 'ready' : 'warning',
+                        !selected ? uiLabels.browserStorage : nativeContextStatus.available ? uiLabels.nativeContextReady : uiLabels.nativeContextUnavailable,
+                    );
+                }
+                case 'sync':
+                    return createApiStatus('sync', 'warning', uiLabels.manualSyncWaiting);
+            }
+        }));
+    }
+    async function refreshEnvironment(reconcile = true, connectNative = appSettings?.context_storage_mode === 'native_mirror') {
+        const environment = await inspectDeviceEnvironment();
+        const nativeStatus: NativeContextStatus = connectNative
+            ? await nativeContextClient.health()
+            : { available: false, transport: 'unavailable', detail: 'not_checked', health: null };
+        setDeviceEnvironment(environment);
+        setNativeContextStatus(nativeStatus);
+        if (nativeStatus.available && reconcile) await settingsClient.reconcileNativeContext();
+        setSystemStatus(createApiStatus(
+            'native-context',
+            !connectNative || nativeStatus.available ? 'ready' : 'warning',
+            !connectNative ? labels.browserStorage : nativeStatus.available ? labels.nativeContextReady : `${labels.nativeContextUnavailable} (${nativeStatus.detail})`,
+        ));
+    }
+    async function connectNativeProgram() {
+        const nativeStatus = await nativeContextClient.health();
+        setNativeContextStatus(nativeStatus);
+        if (nativeStatus.available) await settingsClient.reconcileNativeContext();
+        setSystemStatus(createApiStatus(
+            'native-context',
+            nativeStatus.available ? 'ready' : 'warning',
+            nativeStatus.available ? labels.nativeContextReady : `${labels.nativeContextUnavailable} (${nativeStatus.detail})`,
+        ));
     }
     async function refreshStyles() {
         try {
@@ -207,7 +279,10 @@ export function useEverTalkController(): EverTalkController {
         }
         frontendDebugLog('refreshActiveSessions:done');
     }
-    async function loadMainAppData(initialLanguage: AppLanguage) {
+    async function refreshProactiveUnreadCounts() {
+        setProactiveUnreadCounts(await chatClient.listProactiveUnreadCounts());
+    }
+    async function loadMainAppData(initialLanguage: AppLanguage, contextStorageMode: ContextStorageMode) {
         frontendDebugLog('loadMainAppData:start');
         
         const initLabels = getEverTalkLabels(initialLanguage);
@@ -216,6 +291,7 @@ export function useEverTalkController(): EverTalkController {
 
         const loadPromises = [
             authClient.getSession().then(session => {
+                setUserSession(session);
                 setSystemStatus(createApiStatus('auth', session ? 'ready' : 'warning', session ? initLabels.sessionReady : initLabels.noLocalSession));
             }).catch(err => {
                 setSystemStatus(createApiStatus('auth', 'error', formatUnknownError(err, labels)));
@@ -253,7 +329,9 @@ export function useEverTalkController(): EverTalkController {
             }),
             
             refreshStyles(),
-            refreshLocalStatus()
+            refreshLocalStatus(),
+            refreshProactiveUnreadCounts(),
+            refreshEnvironment(true, contextStorageMode === 'native_mirror'),
         ];
 
         await Promise.all(loadPromises);
@@ -269,7 +347,7 @@ export function useEverTalkController(): EverTalkController {
             ?? sortedList[0];
         if (defaultSpirit) {
             frontendDebugLog('loadMainAppData:select_default_spirit:start');
-            await selectSpirit(defaultSpirit, initialLanguage);
+            await selectSpirit(defaultSpirit, initialLanguage, false);
         }
         frontendDebugLog('loadMainAppData:refreshStyles:start');
         await refreshStyles();
@@ -303,7 +381,7 @@ export function useEverTalkController(): EverTalkController {
             const staged = await settingsClient.completeInitialSetup(setupLanguage, setSetupProgress);
             setAppSettings(staged);
             setAppLanguage(staged.language);
-            await loadMainAppData(staged.language);
+            await loadMainAppData(staged.language, staged.context_storage_mode);
         }
         catch (err) {
             console.error(labels.logInitialSetupFailed, err);
@@ -323,12 +401,12 @@ export function useEverTalkController(): EverTalkController {
         setStreamingText('');
         setStreamingRequestId(null);
     }
-    async function focusSpiritModelSession(spiritId: string) {
+    async function focusSpiritModelSession(spiritId: string, roomId?: string) {
         if (!(await ensureLlmReadyForPersonaCache())) {
             return;
         }
         try {
-            await chatClient.focusPersonaSession(spiritId);
+            await chatClient.focusPersonaSession(spiritId, roomId);
         }
         catch (err) {
             console.error(labels.logPersonaCacheFailed, err);
@@ -348,17 +426,27 @@ export function useEverTalkController(): EverTalkController {
             setMemoryInsightLoading(false);
         }
     }
-    async function selectSpirit(spirit: PersonaConfig, languageOverride?: AppLanguage) {
+    async function acknowledgeProactiveMessages(personaId: string) {
+        await chatClient.markProactiveMessagesRead(personaId);
+        setProactiveUnreadCounts((current) => {
+            if (!(personaId in current)) return current;
+            const next = { ...current };
+            delete next[personaId];
+            return next;
+        });
+    }
+    async function selectSpirit(spirit: PersonaConfig, languageOverride?: AppLanguage, markProactiveRead = true) {
         frontendDebugLog(`selectSpirit:start:${spirit.id}`);
         if (spirit.id !== activeSpiritId) {
             releaseFocusedChatRequest();
         }
         setActiveSpiritId(spirit.id);
         setActiveDetail(parseSpiritDetail(spirit, languageOverride ?? appLanguage));
+        if (markProactiveRead) await acknowledgeProactiveMessages(spirit.id);
         const room = await chatClient.getEverTalkSessionRoom();
         setActiveRoom(room);
         setMessages(await chatClient.listMessagesForPersona(room.id, spirit.id));
-        void focusSpiritModelSession(spirit.id);
+        void focusSpiritModelSession(spirit.id, room.id);
         void refreshMemoryInsight(spirit.id);
         await refreshLocalStatus();
         await refreshActiveSessions();
@@ -383,6 +471,7 @@ export function useEverTalkController(): EverTalkController {
         if (!inputText.trim() || !activeRoom || !activeDetail || isTyping) {
             return;
         }
+        if ((proactiveUnreadCounts[activeSpiritId] ?? 0) > 0) await acknowledgeProactiveMessages(activeSpiritId);
         const userText = inputText;
         const room = activeRoom;
         const spiritId = activeSpiritId;
@@ -509,6 +598,7 @@ export function useEverTalkController(): EverTalkController {
             const history = await chatClient.listMessagesForPersona(room.id, activeSpiritId);
             setActiveRoom(room);
             setMessages(history);
+            await focusSpiritModelSession(activeSpiritId, room.id);
         }
         catch (err) {
             console.error(labels.logRoomSwitchCacheFailed, err);
@@ -519,6 +609,7 @@ export function useEverTalkController(): EverTalkController {
         try {
             await chatClient.deleteMessage(messageId);
             setMessages((prev) => prev.filter((message) => message.id !== messageId));
+            await refreshProactiveUnreadCounts();
             syncClient.scheduleAutomaticBackup();
         }
         catch (err) {
@@ -530,6 +621,7 @@ export function useEverTalkController(): EverTalkController {
         try {
             await chatClient.deleteRoom(roomId);
             setPreviousRooms((prev) => prev.filter((room) => room.id !== roomId));
+            await refreshProactiveUnreadCounts();
             syncClient.scheduleAutomaticBackup();
             if (activeRoom?.id === roomId) {
                 await startNewChat();
@@ -633,6 +725,7 @@ export function useEverTalkController(): EverTalkController {
         setActiveFamiliarityEntry(null);
     }
     function openLobby() {
+        setWorkspaceView('chat');
         setLobbyOpen(true);
     }
     function closeLobby() {
@@ -668,6 +761,7 @@ export function useEverTalkController(): EverTalkController {
         setSaviorProfileOpen(false);
     }
     async function enterChatFromLobby(spiritId: string) {
+        setWorkspaceView('chat');
         const spirit = spirits.find((candidate) => candidate.id === spiritId);
         if (spirit) {
             await selectSpirit(spirit);
@@ -718,8 +812,10 @@ export function useEverTalkController(): EverTalkController {
             return;
         }
         const updated = await settingsClient.setLanguage(language);
+        const updatedLabels = getEverTalkLabels(updated.language);
         setAppSettings(updated);
         setAppLanguage(updated.language);
+        relocalizeSystemStatuses(updatedLabels);
         setLanguageGateOpen(false);
         const activeSpirit = spirits.find((spirit) => spirit.id === activeSpiritId);
         if (activeSpirit) {
@@ -734,6 +830,34 @@ export function useEverTalkController(): EverTalkController {
         syncClient.scheduleAutomaticBackup();
     }
 
+    async function setContextStorageMode(mode: ContextStorageMode) {
+        const updated = await settingsClient.setContextStorageMode(mode);
+        setAppSettings(updated);
+        if (mode === 'browser' && nativeContextStatus.available) {
+            try {
+                await nativeContextClient.disconnect();
+            }
+            catch (error) {
+                console.warn('Native context host disconnect failed.', error);
+            }
+        }
+        setNativeContextStatus({ available: false, transport: 'unavailable', detail: 'not_checked', health: null });
+        syncClient.scheduleAutomaticBackup();
+    }
+
+    async function setNativeExecutablePath(path: string) {
+        try {
+            const updated = await settingsClient.setNativeExecutablePath(path);
+            setAppSettings(updated);
+            syncClient.scheduleAutomaticBackup();
+        }
+        catch (error) {
+            setNativeContextStatus({ available: false, transport: 'unavailable', detail: 'native_host_path_not_found', health: null });
+            setSystemStatus(createApiStatus('native-context', 'error', formatUnknownError(error, labels)));
+            throw error;
+        }
+    }
+
     async function acknowledgePlatformGuide() {
         const updated = await settingsClient.acknowledgePlatformGuide();
         setAppSettings(updated);
@@ -743,7 +867,7 @@ export function useEverTalkController(): EverTalkController {
         }
         setAppInitializing(true);
         try {
-            await loadMainAppData(updated.language);
+            await loadMainAppData(updated.language, updated.context_storage_mode);
         }
         finally {
             setAppInitializing(false);
@@ -805,7 +929,7 @@ export function useEverTalkController(): EverTalkController {
         if (!activeSpiritId) {
             return;
         }
-        await chatClient.focusPersonaSession(activeSpiritId);
+        await chatClient.focusPersonaSession(activeSpiritId, activeRoom?.id);
         await refreshActiveSessions();
     }
 
@@ -1042,6 +1166,34 @@ export function useEverTalkController(): EverTalkController {
         }
     }
 
+    async function refreshStorageInspection() {
+        setStorageInspectionLoading(true);
+        setStorageInspectionError(null);
+        try {
+            setStorageInspection(await inspectBrowserStorage(appSettings?.context_storage_mode === 'native_mirror'));
+        }
+        catch (err) {
+            setStorageInspectionError(formatUnknownError(err, labels));
+        }
+        finally {
+            setStorageInspectionLoading(false);
+        }
+    }
+
+    async function navigateWorkspace(view: WorkspaceView) {
+        setWorkspaceView(view);
+        setLobbyOpen(false);
+        if (view === 'ranking') {
+            await Promise.all([loadBondRanking(), loadFamiliarityList()]);
+        }
+        if (view === 'memory' || view === 'storage') {
+            await Promise.all([
+                refreshStorageInspection(),
+                view === 'memory' && activeSpiritId ? refreshMemoryInsight(activeSpiritId) : Promise.resolve(),
+            ]);
+        }
+    }
+
     function changeRosterTab(tab: RosterTab) {
         setActiveRosterTab(tab);
         if (tab === 'bondRanking') {
@@ -1055,14 +1207,17 @@ export function useEverTalkController(): EverTalkController {
     const initializeApp = useEffectEvent(async () => {
         frontendDebugLog('initApp:start');
         let initialLanguage: AppLanguage = appLanguage;
+        let initialContextStorageMode: ContextStorageMode = 'browser';
         let needsGate = true;
         try {
             frontendDebugLog('initApp:settings_get:start');
             const currentSettings = await settingsClient.get();
             initialLanguage = currentSettings.language_configured ? currentSettings.language : detectBrowserAppLanguage();
+            initialContextStorageMode = currentSettings.context_storage_mode;
             setAppSettings(currentSettings);
             setAppLanguage(initialLanguage);
             needsGate = currentSettings.setup_stage !== 'done' || !currentSettings.platform_guide_acknowledged;
+            await refreshEnvironment(true, currentSettings.context_storage_mode === 'native_mirror');
         }
         catch (err) {
             console.error(labels.logSettingsFetchFailed, err);
@@ -1082,7 +1237,7 @@ export function useEverTalkController(): EverTalkController {
         }
         try {
             frontendDebugLog('initApp:loadMainAppData:start');
-            await loadMainAppData(initialLanguage);
+            await loadMainAppData(initialLanguage, initialContextStorageMode);
         }
         finally {
             setAppInitializing(false);
@@ -1096,17 +1251,43 @@ export function useEverTalkController(): EverTalkController {
             return;
         }
         void (async () => {
-            await refreshStyles();
-            await refreshLocalStatus();
-            await refreshLlmStatus();
-            await refreshModelCatalog();
+            await Promise.all([
+                refreshStyles(),
+                refreshLocalStatus(),
+                refreshLlmStatus(),
+                refreshModelCatalog(),
+                refreshEnvironment(true, appSettings?.context_storage_mode === 'native_mirror'),
+            ]);
             if (activeSpiritId && (await ensureLlmReadyForPersonaCache())) {
-                await chatClient.focusPersonaSession(activeSpiritId);
+                await chatClient.focusPersonaSession(activeSpiritId, activeRoom?.id);
                 await refreshActiveSessions();
             }
         })().catch((err: unknown) => {
             console.error(labels.logPersonaCacheFailed, err);
         });
+    });
+    const runProactiveConversationCheck = useEffectEvent(async () => {
+        if (proactiveCheckRunningRef.current || appInitializing || appSettings?.setup_stage !== 'done' || !llmStatus?.is_loaded || isTyping) {
+            return;
+        }
+        proactiveCheckRunningRef.current = true;
+        try {
+            const generated = await chatClient.tryGenerateProactiveMessage();
+            if (generated) {
+                await refreshProactiveUnreadCounts();
+                if (generated.persona_id === activeSpiritId && generated.room_id === activeRoom?.id) {
+                    setMessages((current) => current.some((message) => message.id === generated.id) ? current : [...current, generated]);
+                }
+                await Promise.all([refreshLocalStatus(), refreshActiveSessions()]);
+                syncClient.scheduleAutomaticBackup();
+            }
+        }
+        catch (err) {
+            console.error(labels.logProactiveMessageFailed, err);
+        }
+        finally {
+            proactiveCheckRunningRef.current = false;
+        }
     });
     useEffect(() => {
         frontendDebugLog('initEffect:entered');
@@ -1121,6 +1302,15 @@ export function useEverTalkController(): EverTalkController {
         refreshForRenderedLanguage(appLanguage);
     }, [appLanguage]);
     useEffect(() => {
+        if (appInitializing || appSettings?.setup_stage !== 'done' || !llmStatus?.is_loaded) return undefined;
+        const initialTimer = window.setTimeout(() => void runProactiveConversationCheck(), PROACTIVE_INITIAL_DELAY_MS);
+        const interval = window.setInterval(() => void runProactiveConversationCheck(), PROACTIVE_CHECK_INTERVAL_MS);
+        return () => {
+            window.clearTimeout(initialTimer);
+            window.clearInterval(interval);
+        };
+    }, [appInitializing, appSettings?.setup_stage, llmStatus?.is_loaded]);
+    useEffect(() => {
         const listEl = messagesListRef.current;
         if (!listEl) {
             return;
@@ -1132,6 +1322,14 @@ export function useEverTalkController(): EverTalkController {
         .map((personaId) => spirits.find((spirit) => spirit.id === personaId)?.name)
         .filter((name): name is string => Boolean(name));
     const activeStyleName = activeStyle?.name ?? null;
+    const proactiveNotifications = spirits
+        .map((spirit) => ({
+            personaId: spirit.id,
+            name: parseSpiritDetail(spirit, appLanguage).name,
+            count: proactiveUnreadCounts[spirit.id] ?? 0,
+        }))
+        .filter((item) => item.count > 0)
+        .sort((left, right) => right.count - left.count || left.name.localeCompare(right.name));
     const lobbySpirits = preferredPersonaIds
         .map((personaId) => spirits.find((spirit) => spirit.id === personaId))
         .filter((spirit): spirit is PersonaConfig => Boolean(spirit))
@@ -1176,8 +1374,13 @@ export function useEverTalkController(): EverTalkController {
         modelReady: llmStatus?.is_loaded ?? false,
     };
     return {
+        workspaceView,
+        storageInspection,
+        storageInspectionLoading,
+        storageInspectionError,
         appInitializing,
         llmStatus,
+        allSpirits: spirits,
         filteredSpirits,
         searchQuery,
         defaultPersonaId,
@@ -1191,6 +1394,8 @@ export function useEverTalkController(): EverTalkController {
         activeDetail,
         activeRoom,
         messages,
+        proactiveUnreadCounts,
+        proactiveNotifications,
         previousRooms,
         previousRoomsLoading,
         startNewChat,
@@ -1211,6 +1416,9 @@ export function useEverTalkController(): EverTalkController {
         moduleManagementOpen,
         backgroundGalleryOpen,
         appSettings,
+        userSession,
+        nativeContextStatus,
+        deviceEnvironment,
         modelCatalog,
         modelCatalogError,
         modelPreparation,
@@ -1285,6 +1493,10 @@ export function useEverTalkController(): EverTalkController {
         resetAppData,
         setLanguage,
         setShowReasoning,
+        setContextStorageMode,
+        setNativeExecutablePath,
+        connectNativeProgram,
+        refreshEnvironment,
         refreshModelCatalog,
         selectChatModel,
         prepareChromePromptModel,
@@ -1315,5 +1527,7 @@ export function useEverTalkController(): EverTalkController {
         appPlatform,
         platformGuideAcknowledged: appSettings?.platform_guide_acknowledged ?? false,
         acknowledgePlatformGuide,
+        navigateWorkspace,
+        refreshStorageInspection,
     };
 }

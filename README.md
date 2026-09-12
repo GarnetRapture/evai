@@ -8,7 +8,7 @@
 </p>
 
 <h1 align="center">EverSoul AI Chat</h1>
-<p align="center"><i>PC Chrome 온디바이스 AI로만 동작하는 서버리스 웹 AI 채팅</i></p>
+<p align="center"><i>브라우저 로컬 AI와 선택형 네이티브 SQLite를 연결한 서브컬처 인연 채팅</i></p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/version-0.0.1-blue?style=flat-square" alt="Version" />
@@ -31,7 +31,7 @@
 </p>
 
 <p align="center">
-  <sub><b>PC의 Google Chrome 브라우저</b>에서만 이용할 수 있습니다. 모바일 기기와 Chrome 이외의 브라우저는 접속이 차단됩니다.</sub>
+  <sub>PC Chrome의 Prompt API 또는 최신 데스크톱 브라우저의 GGUF 로컬 모델을 사용하며, 네이티브 SQLite 확장은 고객이 선택합니다.</sub>
 </p>
 
 ---
@@ -40,7 +40,7 @@
 
 **EverSoul AI Chat**은 에버소울을 간직할 새로운 AI 채팅 프로젝트입니다. 정령들의 기억을 보존한다는 의미로 만들었습니다. 에버소울에 등장하는 정령 99명을 실제 게임 데이터 그대로 불러와, 각자의 성격과 말투로 자유롭게 대화할 수 있습니다.
 
-이 프로젝트는 서버가 없는 정적 웹 앱입니다. 대화를 만들어내는 AI는 PC Chrome 브라우저에 내장된 온디바이스 AI(Prompt API · Gemini Nano)이고, 대화·기억·설정은 모두 그 PC 브라우저의 IndexedDB에만 저장됩니다. 대화 내용이 외부 서버로 나가지 않으며, 저장된 데이터는 PC 파일로 내보내거나 PC 폴더에 자동 백업할 수 있습니다.
+이 프로젝트는 로컬 우선 웹 앱입니다. Chrome에서는 내장 Prompt API를, 최신 데스크톱 브라우저에서는 GGUF/Wllama를 사용할 수 있습니다. 대화·기억·설정은 IndexedDB에 저장되고, 고객이 네이티브 확장을 선택하면 EXE 옆 SQLite에도 미러링됩니다. 저장된 데이터는 PC 파일로 내보내거나 PC 폴더에 자동 백업할 수 있습니다.
 
 정령 99명 전원의 실제 게임 그림, 대화 배경 522장, 에버톡 화면에서 쓰던 UI까지 프로젝트 안에 그대로 담아뒀습니다. 각 정령의 이름과 성격, 말투는 `data/personas/`에 정령마다 하나씩 정리되어 있고, 한국어·영어·중국어(번체/간체) 언어별 값이 미리 준비되어 있어서 언어를 바꿔도 그 정령다움은 그대로 유지됩니다.
 
@@ -206,12 +206,12 @@
 
 ## 🚀 주요 기능
 
-- 💻 **PC Chrome 온디바이스 AI**: Chrome에 내장된 Prompt API(`LanguageModel`, Gemini Nano)로 대답을 만듭니다. 서버나 외부 API를 쓰지 않으며, 모델 내려받기와 준비는 설정 > 온디바이스 모델 목록에서 진행합니다.
-- 🔒 **이용 환경 제한과 첫 진입 안내**: PC의 Google Chrome이 아니면(모바일 기기, 다른 브라우저) 접속이 차단됩니다. 처음 들어올 때는 "PC Chrome 온디바이스 AI로만 동작한다"는 안내를 확인하고 체크해야 입장할 수 있습니다.
-- 🎭 **99명의 정령, 각자의 성격 그대로**: 이름과 등급, 종족, 직업은 물론 성우, 생일, 좋아하는 것, 대표 대사와 에버톡 대화 예시까지 불러와 정령마다 시스템 프롬프트를 만들고, 그 정령답게 말하도록 합니다.
-- 🧠 **정령이 나와의 대화를 기억함**: 매 턴의 대화를 정령별 기억으로 남기고, 다음 대화에서 관련된 기억을 떠올려 함께 전달합니다. 기억이 10개 쌓일 때마다 온디바이스 AI가 다시 정리한 요약을 시스템 프롬프트에 넣습니다.
+- 💻 **PC 로컬 AI**: Chrome은 내장 Prompt API를, 최신 데스크톱 브라우저는 설치한 GGUF 모델을 WebGPU 또는 CPU로 실행합니다.
+- 🔒 **실행 환경과 첫 진입 안내**: 데스크톱 브라우저는 진입할 수 있고, 초기 설정에서 사용 가능한 모델 경로와 IndexedDB/네이티브 SQLite 저장소 선택을 안내합니다.
+- 🎭 **99명의 정령, 각자의 성격 그대로**: 이름과 등급, 종족, 직업, 생일, 좋아하는 것, 대표 대사와 에버톡 대화 예시까지 불러와 정령마다 시스템 프롬프트를 만들고, 그 정령답게 말하도록 합니다.
+- 🧠 **정령이 나와의 대화를 기억함**: 매 턴의 대화를 정령별 기억으로 응답과 함께 원자적으로 저장하고, 다음 대화에서 관련된 기억을 떠올려 함께 전달합니다. 아직 통합하지 않은 기억이 8개 쌓이면 온디바이스 AI가 다시 정리한 요약을 시스템 프롬프트에 넣습니다.
 - 🎯 **지금 채팅 중인 정령에만 집중**: 대화는 매 턴 바로 저장되므로, 다른 정령으로 바꾸면 이전 정령의 생성 중인 응답을 멈추고 모델 세션도 지금 정령 하나만 유지합니다.
-- 🌐 **언어를 바꿔도 그 정령 그대로**: UI·안내·오류 메시지가 한국어·영어·중국어(간체) 라벨로 준비되어 있고, 정령의 이름과 소개, 시스템 프롬프트도 선택한 언어로 바뀝니다.
+- 🌐 **언어를 바꿔도 그 정령 그대로**: UI·안내·오류 메시지와 정령 원본 데이터는 한국어·영어·중국어(간체)로 전환됩니다. 소형 로컬 모델이 규칙을 안정적으로 따르도록 시스템 지침은 짧은 영문으로 고정하고, 실제 응답 언어만 설정값으로 강제합니다.
 - ⭐ **선호정령**: 목록의 별로 선호정령을 지정·해제하고, 친밀도 탭 맨 위에 선호정령으로 표시됩니다. 앱을 다시 켜면 선호정령이 먼저 선택됩니다.
 - 🧩 **Risu 모듈**: `.risum` 모듈을 가져와 켜고 끌 수 있고, 활성 모듈의 설명과 로어북이 시스템 프롬프트에 추가됩니다.
 - 📂 **내 PC에 저장·백업**: 대화, 기억, 설정, 모듈은 브라우저 IndexedDB에 저장되고, PC 파일로 내보내기·불러오기와 PC 백업 폴더 자동 백업·시점 복원을 지원합니다.
@@ -230,14 +230,14 @@
 
 ## 🏗 아키텍처
 
-서버 없이 브라우저 안에서만 동작하는 React 정적 웹 앱입니다. UI 도메인(`evertalk`)이 각 도메인 서비스를 부르고, 도메인 서비스는 공용 모듈(`src/shared`)을 통해 IndexedDB, PC 파일, Chrome 온디바이스 AI에 접근합니다. Chrome `LanguageModel` API를 직접 다루는 곳은 `src/domains/llm/chrome/languageModel.ts` 한 곳뿐입니다.
+IndexedDB와 브라우저 로컬 모델을 기본으로 사용하는 React 웹 앱입니다. 선택형 C++26 네이티브 확장을 설치하면 EXE 옆 SQLite에 대화·기억을 미러링하고 복구 조회에 함께 사용합니다. 개발 중에는 Vite가 EXE를 중계하고, 배포본은 Chromium/Firefox Native Messaging 확장이 중계합니다.
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#cde2fb', 'primaryBorderColor': '#2a78d6', 'primaryTextColor': '#0b0b0b', 'lineColor': '#52514e', 'clusterBkg': '#fcfcfb', 'clusterBorder': '#c3c2b7', 'fontFamily': 'system-ui, -apple-system, Segoe UI, sans-serif'}}}%%
 flowchart TB
     subgraph UI["UI · src/domains/evertalk"]
         direction LR
-        UI1["PlatformBlockedPanel · PlatformGuideGate<br/>SetupWizard"]
+        UI1["EnvironmentLayer · PlatformGuideGate<br/>SetupWizard"]
         UI2["SpiritRoster · ChatStage<br/>SpiritProfilePanel"]
         UI3["SettingsPanel · ModuleManagementPanel<br/>i18n (ko · en · zh_cn)"]
     end
@@ -246,7 +246,7 @@ flowchart TB
         direction LR
         D1["persona · chat · style<br/>knowledge · modules"]
         D2["llm<br/>runtime · catalog · chrome"]
-        D3["settings · sync · auth"]
+        D3["settings · sync · auth · native"]
     end
 
     subgraph SHARED["공용 모듈 · src/shared"]
@@ -259,9 +259,11 @@ flowchart TB
     UI --> DOMAIN
     DOMAIN --> SHARED
     PACK["data/personas/*.json<br/>99개 · import.meta.glob"] --> D1
-    S1 -- "대화방 · 메시지 · 정령 · 기억 · 설정 · 모듈" --> DB[("IndexedDB<br/>eversoul-ai-chat v2")]
+    S1 -- "대화방 · 메시지 · 정령 · 기억 · 설정 · 모듈" --> DB[("IndexedDB<br/>eversoul-ai-chat")]
     S2 -- "JSON 내보내기·불러오기<br/>백업 폴더 자동 백업" --> PC[("PC 파일 / 백업 폴더")]
     D2 -- "availability · create · clone<br/>promptStreaming" --> LLM["Chrome Prompt API<br/>LanguageModel · Gemini Nano"]
+    D2 -- "브라우저 WASM · WebGPU/CPU" --> GGUF["GGUF · Wllama"]
+    D3 -- "dev API / 브라우저 확장" --> NATIVE["C++26 Native Host<br/>SQLite · EXE 옆 DB"]
 
     classDef uiStyle fill:#cde2fb,stroke:#2a78d6,stroke-width:2px,color:#0b0b0b
     classDef domainStyle fill:#e3ddf7,stroke:#4a3aa7,stroke-width:2px,color:#0b0b0b
@@ -273,16 +275,16 @@ flowchart TB
     class D1,D2,D3 domainStyle
     class S1,S2,S3,PACK sharedStyle
     class DB,PC dbStyle
-    class LLM llmStyle
+    class LLM,GGUF,NATIVE llmStyle
 ```
 
-- **이용 환경 판별**: `src/shared/platform`이 `navigator.userAgentData`의 브랜드·모바일 여부·플랫폼을 읽어, 브랜드에 `Google Chrome`이 있고 모바일이 아니며 Windows·macOS·Linux·ChromeOS일 때만 앱을 엽니다. 그 밖의 환경은 `PlatformBlockedPanel`만 보여주고 초기화도 하지 않습니다. 첫 진입 안내 확인 여부(`platform_guide_acknowledged`)는 설정에 저장됩니다.
+- **이용 환경 판별**: PC 데스크톱 브라우저는 진입을 허용합니다. Chrome Prompt API가 있으면 내장 모델을, 그 밖의 지원 브라우저에서는 GGUF 모델을 선택합니다. 최상위 `EnvironmentLayer`가 기존 구원자/인증 프로필, 실제 브라우저·버전·플랫폼, `requestAdapter()`로 확인한 WebGPU, 네이티브 API와 EXE/DB 경로를 설정 언어로 표시합니다.
 - **정령 데이터**: `src/domains/persona/archive.ts`가 `import.meta.glob`으로 `data/personas/*.json`을 불러오고, 초기 설정 때 IndexedDB `persona_profile`에 설치합니다. 언어별 시스템 프롬프트는 `persona_localized_prompt`에 캐시합니다.
-- **시스템 프롬프트**: 원본 Rust 구현을 그대로 옮겼습니다. 정령 프로필·성격·대표 대사(12개)·에버톡 대화 예시(16개)·다른 정령의 평가 + 이름·호칭 규칙에, 말투 스타일, 활성 Risu 모듈, 통합 기억 요약을 이어 붙입니다. 매 턴에는 최근 대화 6개, 관련 기억 최대 5개(후보 200개 중), 지식 데이터 최대 2개, `<think>` 지침이 함께 전달됩니다.
-- **온디바이스 세션**: 지금 채팅 중인 정령 하나의 세션만 유지합니다(시스템 프롬프트를 `initialPrompts`로 넣은 세션). 요청마다 세션을 `clone()`하고, `measureContextUsage`로 컨텍스트 창에 맞게 대화 기록을 고른 뒤(응답용 96토큰 예약) `promptStreaming`으로 한 조각씩 화면에 표시합니다. 중지 버튼과 정령 전환은 `AbortSignal`로 생성을 멈춥니다.
-- **언어 선언**: 앱 언어의 언어 태그로 `availability()`를 확인해 사용할 수 있으면 `expectedInputs`/`expectedOutputs`에 선언하고, 그렇지 않으면 언어 선언 없이 세션을 만듭니다. Prompt API 공식 지원 언어는 en·ja·es·de·fr입니다.
-- **기억**: 매 턴 `구원자/정령` 대화를 에피소드 기억으로 저장합니다. Prompt API에는 임베딩이 없으므로 1~3글자 n-gram을 FNV-1a로 512차원에 해싱한 어휘 벡터와 코사인 유사도로 관련 기억을 찾습니다. 에피소드 기억이 10개 쌓일 때마다 최근 30개를 온디바이스 AI로 요약해 통합 기억으로 갱신합니다.
-- **저장소**: IndexedDB `eversoul-ai-chat`(버전 2)의 스토어는 `auth_session`, `chat_room`, `chat_message`, `persona_profile`, `persona_localized_prompt`, `persona_memory`, `style_profile`, `knowledge_chunk`, `sync_metadata`, `general_settings`, `imported_module`, `file_handle`입니다. 시작할 때 `navigator.storage.persist()`로 영구 저장소를 요청합니다.
+- **시스템 프롬프트**: 정령 원본의 프로필·성격·인사, 전체 말투/스토리/에버톡 말뭉치에서 분산 표집한 정령 발화 12개와 실제 `구원자 → 정령` 반응쌍 4개를 시작 정체성으로 조립합니다. 매 턴에는 현재 발화와 관련된 실제 반응쌍 최대 2개, 최근 대화 최대 18개, 관련 기억 최대 4개(후보 200개 중), 지식 데이터 최대 1개가 동적으로 추가됩니다. 누적된 digest·명시 기억·semantic 관계 상태·습관·인연 수치는 실제 기록이 생긴 뒤에만 시작값을 변화시킵니다. `zh_cn`은 OpenCC로 간체화하고 출력 이모지를 제거합니다.
+- **온디바이스 세션**: 지금 채팅 중인 정령 하나의 세션만 유지합니다. 시스템 프롬프트를 `initialPrompts`의 첫 `system`으로 넣고, 해당 정령 JSON의 실제 `구원자 → 정령` 반응쌍을 뒤이은 `user/assistant` few-shot 메시지로 분리해 Chrome·GGUF·LiteRT-LM에 동일하게 전달합니다. 요청마다 세션을 `clone()`하고, `contextWindow`·`contextUsage`·`measureContextUsage()`로 응답용 384토큰을 남기면서 최근 연속 대화를 고릅니다. 생성 결과는 임시 버퍼에서 `<think>...</think>` 완결, 설정 언어, 정령 발화 여부를 검사하고 1회 복구 생성한 뒤 화면에 전달합니다.
+- **언어 선언**: `availability()`와 `create()`에 같은 옵션을 사용합니다. 시스템 지시문 언어인 영어와 앱 언어를 `expectedInputs`에, 앱 언어만 `expectedOutputs`에 선언하며, 해당 조합을 지원하지 않으면 모델의 기본 다국어 능력으로 전환합니다.
+- **기억**: 응답 메시지와 매 턴의 `구원자/정령` 에피소드 기억은 하나의 IndexedDB 트랜잭션으로 저장됩니다. 1~3글자 n-gram을 FNV-1a로 512차원에 희소 저장한 어휘 벡터와 코사인 유사도로 관련 기억을 찾고, 마지막 성공 이후 기억이 8개 쌓이면 최근 30개를 온디바이스 AI로 통합합니다. 최근 원문 범위를 벗어날 대화가 6개 이상 쌓이면 먼저 압축해 같은 턴의 시스템 프롬프트에 고정합니다.
+- **저장소**: IndexedDB `eversoul-ai-chat`가 권위 저장소이며 시작할 때 영구 저장을 요청합니다. 설정에서 `native_mirror`를 선택하면 `src/domains/native`가 메시지·기억·삭제를 SQLite에 미러링하고 조회 결과를 병합합니다. 개발 API와 브라우저 확장 모두 같은 Native Messaging 연산 계약을 사용하며 실패 시 IndexedDB로 자동 유지됩니다.
 - **백업**: File System Access API로 전체 데이터(`file_handle` 제외)를 JSON 파일로 내보내고 불러옵니다. PC 폴더를 연결하면 응답 완료, 메시지·대화방 삭제, 모듈 변경, 언어·추론 표시·스킨·선호정령·대화 모델·안내 확인 변경 후 5초 뒤(연속 변경은 마지막 기준) `eversoul-ai-chat-backup-<시각>.json`과 `eversoul-ai-chat-backup-latest.json`을 쓰고, 시각별 백업은 최근 10개만 남깁니다. 폴더 핸들은 IndexedDB `file_handle`에 보관되며, 목록에서 원하는 시점으로 복원할 수 있습니다.
 - **다국어**: UI 문구, 안내, 차단 화면, 상태·오류 메시지는 `src/domains/evertalk/i18n.ts`의 한국어·영어·중국어(간체) 라벨로 표시됩니다. 도메인 오류는 코드(`DomainError`)로 전달되고 화면에서 라벨로 바뀝니다.
 
@@ -300,31 +302,34 @@ flowchart TB
 
 ### Browser Platform
 
-- **On-device AI**: Chrome Prompt API(`LanguageModel`, Gemini Nano) — 타입 `@types/dom-chromium-ai`
-- **Storage**: IndexedDB(`idb` 8)
+- **On-device AI**: Chrome Prompt API(`LanguageModel`) 또는 GGUF/Wllama(WebGPU·CPU)
+- **Storage**: IndexedDB(`idb` 8) 기본 + 선택형 C++26/SQLite 네이티브 미러
+- **중국어 간체 고정**: `opencc-js`의 번체→간체 변환
 - **PC 파일·폴더**: File System Access API(`showOpenFilePicker`, `showSaveFilePicker`, `showDirectoryPicker`) — 타입 `@types/wicg-file-system-access`
-- **이용 환경 판별**: User-Agent Client Hints(`navigator.userAgentData`) — 타입 `user-agent-data-types`
+- **실행 환경 판별**: User-Agent Client Hints/UA fallback, 실제 `navigator.gpu.requestAdapter()`, 네이티브 `health`
 
 ---
 
 ## 📦 온디바이스 모델
 
-모델 파일을 저장소에 넣거나 직접 내려받지 않습니다. Chrome이 제공하는 Gemini Nano를 Prompt API로 씁니다.
+Chrome에서는 내장 Prompt API 모델을 쓸 수 있고, Chrome API가 없는 데스크톱 브라우저에서는 설정에서 GGUF 파일을 설치해 Wllama로 실행할 수 있습니다.
 
 - **준비**: 설정 > 온디바이스 모델 목록에서 "다운로드 및 준비"를 누르면 Chrome이 모델을 내려받고 진행률이 표시됩니다. 내려받기는 사용자 클릭(user activation)이 있어야 시작됩니다.
 - **모델 선택**: Gemini Nano의 크기와 GPU/CPU 실행 방식은 Chrome이 기기 성능에 맞춰 고르며, 웹 페이지가 직접 고를 수 없습니다.
 - **Chrome 요구 사항**([Chrome 공식 문서](https://developer.chrome.com/docs/ai/prompt-api)): Windows 10/11, macOS 13 이상, Linux, ChromeOS(Chromebook Plus). Chrome 프로필이 있는 볼륨에 22GB 이상 여유 공간, GPU VRAM 4GB 초과 또는 RAM 16GB 이상·CPU 4코어 이상, 데이터 무제한 네트워크. Android·iOS용 Chrome에서는 동작하지 않습니다.
+- **개발·진단 플래그**: API가 노출되지 않는 개발 버전에서는 `chrome://flags/#prompt-api-for-gemini-nano`를 확인하고, 모델 상태는 `chrome://on-device-internals`에서 확인합니다. 과거의 `chrome://flags/#optimization-guide-on-device-model` 및 `Enabled BypassPerfRequirement`는 성능 요구조건 우회용이지 시스템 프롬프트 해제 옵션이 아닙니다. 일반 웹 JS는 `chrome://flags` 값을 변경할 수 없습니다.
 
 ---
 
 ## 💻 실행 및 빌드 가이드
 
-- [Node.js](https://nodejs.org/)와 PC용 [Google Chrome](https://www.google.com/chrome/)이 필요합니다.
-- 개발 서버도 반드시 PC Chrome으로 열어야 합니다. 다른 브라우저에서는 차단 화면만 보입니다.
+- [Node.js](https://nodejs.org/)와 최신 PC 데스크톱 브라우저가 필요합니다. Chrome은 Prompt API를, Chrome·Edge·Firefox·Whale 등은 GGUF 경로를 사용할 수 있습니다.
+- 네이티브 SQLite 확장을 개발 서버에서 함께 시험하려면 먼저 `npm run native:build`를 실행합니다.
 
 ```bash
 npm install      # 의존성 설치
-npm run dev      # Vite 개발 서버 실행 후 PC Chrome으로 접속
+npm run native:build # 선택형 EXE 빌드
+npm run dev      # Vite 개발 서버 실행 후 데스크톱 브라우저로 접속
 npm run lint     # oxlint 검사
 npm run build    # tsc -b 타입 검사 + vite build 정적 빌드(dist/)
 ```

@@ -13,7 +13,7 @@ async function getStyle(id: string): Promise<StyleProfile | null> {
 }
 
 export function buildStylePrompt(style: StyleProfile): string {
-    return `\n[말투 스타일 지침]\n- 어조: ${style.tone}\n- 격식: ${style.formality}\n- 이모티콘 사용: ${style.emoji_usage ? '허용' : '비허용'}\n- 세부 규칙: ${style.speech_rules}\n`;
+    return `\n[USER-SELECTED VOICE]\nTone: ${style.tone}\nFormality: ${style.formality}\nRules: ${style.speech_rules}\n`;
 }
 
 export const styleClient = {

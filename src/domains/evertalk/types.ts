@@ -1,5 +1,7 @@
 import type React from 'react';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
+import type { DeviceEnvironmentInfo } from '../../shared/platform';
+import type { UserSession } from '../auth';
 import type { ChatMessage, ChatRoom, PersonaMemoryInsight } from '../chat';
 import type {
     ChatModelCatalog,
@@ -12,10 +14,11 @@ import type {
     ModelPreparationState,
 } from '../llm';
 import type { ImportedModule, ModuleControl } from '../modules';
+import type { ContextStorageMode, NativeContextStatus } from '../native';
 import type { BondRankingEntry, FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { AppSettings, ResetSummary, SetupPhase, SetupProgress } from '../settings';
 import type { StyleProfile } from '../style';
-import type { BackupDirectoryStatus, BackupRestoreSummary, LocalStatusSnapshot } from '../sync';
+import type { BackupDirectoryStatus, BackupRestoreSummary, BrowserStorageInspection, LocalStatusSnapshot } from '../sync';
 import type { EverTalkLabels, PlatformBlockedReason } from './i18n';
 export interface LoadableAssetImageProps {
     candidates: string[];
@@ -36,6 +39,7 @@ export interface ZoomOffset {
     y: number;
 }
 export type PanelResizeHandle = 'n' | 's' | 'e' | 'w' | 'ne' | 'nw' | 'se' | 'sw';
+export type WorkspaceView = 'chat' | 'ranking' | 'memory' | 'storage';
 export interface PanelGeometry {
     x: number;
     y: number;
@@ -109,7 +113,7 @@ export interface TalkChoice {
 export type ApiConnectionState = 'checking' | 'ready' | 'warning' | 'error';
 export type RosterTab = 'list' | 'bondRanking' | 'familiarity';
 export type StageTab = 'chat' | 'gallery';
-export type SystemStatusId = 'auth' | 'persona-archive' | 'persona-db' | 'chat-db' | 'style-db' | 'llm' | 'sync';
+export type SystemStatusId = 'auth' | 'persona-archive' | 'persona-db' | 'chat-db' | 'style-db' | 'llm' | 'native-context' | 'sync';
 export interface ApiStatusItem {
     id: SystemStatusId;
     state: ApiConnectionState;
@@ -132,6 +136,7 @@ export interface SpiritRosterProps {
     appLanguage: AppLanguage;
     activeSessionIds: string[];
     personaSkinIds: Record<string, string>;
+    proactiveUnreadCounts: Record<string, number>;
     onSearchChange: (value: string) => void;
     onSelect: (spirit: PersonaConfig) => void;
     onToggleDefault: (spiritId: string) => Promise<void>;
@@ -357,10 +362,17 @@ export interface SettingsPanelProps extends ModelCatalogSectionProps {
     backupMessage: string | null;
     backupError: string | null;
     backupDirectoryStatus: BackupDirectoryStatus | null;
+    nativeContextStatus: NativeContextStatus;
+    deviceEnvironment: DeviceEnvironmentInfo | null;
+    userSession: UserSession | null;
+    saviorProfile: SaviorProfileSnapshot;
     onClose: () => void;
     onReset: () => void;
     onSetLanguage: (language: AppLanguage) => Promise<void>;
     onSetShowReasoning: (show: boolean) => Promise<void>;
+    onSetContextStorageMode: (mode: ContextStorageMode) => Promise<void>;
+    onSetNativeExecutablePath: (path: string) => Promise<void>;
+    onConnectNativeProgram: () => Promise<void>;
     onImportModule: () => Promise<void>;
     onSetModuleEnabled: (id: string, enabled: boolean) => Promise<void>;
     onDeleteModule: (id: string) => Promise<void>;
@@ -409,7 +421,13 @@ export interface SetupWizardProps {
     appPlatform: AppPlatform;
     language: AppLanguage;
     labels: EverTalkLabels;
+    contextStorageMode: ContextStorageMode;
+    nativeExecutablePath: string;
+    nativeContextStatus: NativeContextStatus;
     onSelectLanguage: (language: AppLanguage) => Promise<void>;
+    onSetContextStorageMode: (mode: ContextStorageMode) => Promise<void>;
+    onSetNativeExecutablePath: (path: string) => Promise<void>;
+    onConnectNativeProgram: () => Promise<void>;
     onCompleteSetup: () => Promise<void>;
 }
 export interface PlatformGuideNoticeProps {
@@ -431,8 +449,13 @@ export interface AppInfoPanelProps {
     labels: EverTalkLabels;
 }
 export interface EverTalkController {
+    workspaceView: WorkspaceView;
+    storageInspection: BrowserStorageInspection | null;
+    storageInspectionLoading: boolean;
+    storageInspectionError: string | null;
     appInitializing: boolean;
     llmStatus: LlmStatus | null;
+    allSpirits: PersonaConfig[];
     filteredSpirits: PersonaConfig[];
     searchQuery: string;
     defaultPersonaId: string | null;
@@ -446,6 +469,8 @@ export interface EverTalkController {
     activeDetail: SpiritDetail | null;
     activeRoom: ChatRoom | null;
     messages: ChatMessage[];
+    proactiveUnreadCounts: Record<string, number>;
+    proactiveNotifications: Array<{ personaId: string; name: string; count: number }>;
     previousRooms: ChatRoom[];
     previousRoomsLoading: boolean;
     startNewChat: () => Promise<void>;
@@ -466,6 +491,9 @@ export interface EverTalkController {
     moduleManagementOpen: boolean;
     backgroundGalleryOpen: boolean;
     appSettings: AppSettings | null;
+    userSession: UserSession | null;
+    nativeContextStatus: NativeContextStatus;
+    deviceEnvironment: DeviceEnvironmentInfo | null;
     modelCatalog: ChatModelCatalog | null;
     modelCatalogError: string | null;
     modelLoadingId: string | null;
@@ -541,6 +569,10 @@ export interface EverTalkController {
     resetAppData: () => Promise<void>;
     setLanguage: (language: AppLanguage) => Promise<void>;
     setShowReasoning: (show: boolean) => Promise<void>;
+    setContextStorageMode: (mode: ContextStorageMode) => Promise<void>;
+    setNativeExecutablePath: (path: string) => Promise<void>;
+    connectNativeProgram: () => Promise<void>;
+    refreshEnvironment: () => Promise<void>;
     refreshModelCatalog: () => Promise<void>;
     selectChatModel: (modelId: string) => Promise<void>;
     prepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
@@ -570,4 +602,6 @@ export interface EverTalkController {
     appPlatform: AppPlatform;
     platformGuideAcknowledged: boolean;
     acknowledgePlatformGuide: () => Promise<void>;
+    navigateWorkspace: (view: WorkspaceView) => Promise<void>;
+    refreshStorageInspection: () => Promise<void>;
 }

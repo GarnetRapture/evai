@@ -1,12 +1,13 @@
 import { DomainError, isAbortError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
 import {
+    assertPersonaSystemPrompt,
     createChromeLanguageModel,
     hasTransientUserActivation,
     isChromeLanguageModelSupported,
     readChromeLanguageModelAvailability,
 } from './chrome';
-import { CHAT_RESPONSE_TOKEN_RESERVE, LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE } from './constants';
+import { CHAT_MINIMUM_HISTORY_TURNS, CHAT_RESPONSE_TOKEN_RESERVE, LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE } from './constants';
 import { createQueuedRequestStatus, recordRequestStatus } from './requests';
 import type {
     BaseModelSession,
@@ -54,6 +55,7 @@ async function createPersonaModelSession(identity: PersonaModelSessionIdentity, 
     const session = await createChromeLanguageModel({
         declaredLanguageTag: identity.declared_language_tag,
         systemPrompt: identity.system_prompt,
+        samplingMode: 'balanced',
         onDownloadProgress: null,
         signal: null,
     });
@@ -87,9 +89,17 @@ async function selectMessagesWithinBudget(
         }
         const candidate = [block, ...[...selectedNewestFirst].reverse()];
         const usage = await conversation.measureContextUsage(candidate);
-        if (usage > budget) {
-            truncatedTokens += await conversation.measureContextUsage([block]);
-            continue;
+        const withinReservedBudget = usage <= budget;
+        const belowMinimumHistory = selectedNewestFirst.length < CHAT_MINIMUM_HISTORY_TURNS;
+        const fitsAbsoluteWindow = usage <= conversation.contextWindow - conversation.contextUsage;
+        if (!withinReservedBudget && !(belowMinimumHistory && fitsAbsoluteWindow)) {
+            for (let older = index; older >= 0; older -= 1) {
+                truncatedTokens += await conversation.measureContextUsage([{
+                    role: history[older].role,
+                    content: history[older].content,
+                }]);
+            }
+            break;
         }
         selectedNewestFirst.push(block);
     }
@@ -99,7 +109,7 @@ async function selectMessagesWithinBudget(
 export const chromePromptRuntime = {
     async resolveLanguagePlan(appLanguage: AppLanguage): Promise<LanguageModelLanguagePlan> {
         const languageTag = LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE[appLanguage];
-        const declaredAvailability = await readChromeLanguageModelAvailability(languageTag);
+        const declaredAvailability = await readChromeLanguageModelAvailability(languageTag, 'balanced');
         if (declaredAvailability !== 'unavailable') {
             return { app_language: appLanguage, language_tag: languageTag, declared_language_tag: languageTag, availability: declaredAvailability };
         }
@@ -107,7 +117,7 @@ export const chromePromptRuntime = {
             app_language: appLanguage,
             language_tag: languageTag,
             declared_language_tag: null,
-            availability: await readChromeLanguageModelAvailability(null),
+            availability: await readChromeLanguageModelAvailability(null, 'balanced'),
         };
     },
     getStatus(plan: LanguageModelLanguagePlan): LlmStatus {
@@ -128,6 +138,7 @@ export const chromePromptRuntime = {
                 const session = await createChromeLanguageModel({
                     declaredLanguageTag: plan.declared_language_tag,
                     systemPrompt: null,
+                    samplingMode: 'predictable',
                     onDownloadProgress,
                     signal: null,
                 });
@@ -205,53 +216,45 @@ export const chromePromptRuntime = {
         recordRequestStatus(status);
         const responsePrefix = request.response_prefix;
         let generatedText = '';
-        let conversation: LanguageModel | null = null;
         try {
+            assertPersonaSystemPrompt(request.system_prompt, request.persona_name);
             const entry = await chromePromptRuntime.focusPersonaSession(request.persona_id, plan, request.system_prompt);
-            conversation = await entry.session.clone({ signal });
-            const reusedPrefixTokens = conversation.contextUsage;
-            const budgeted = await selectMessagesWithinBudget(conversation, request.messages, request.behavior_instruction);
-            const promptTokens = await conversation.measureContextUsage(budgeted.messages);
-            recordRequestStatus({
-                ...status,
-                state: 'running',
-                prompt_tokens: promptTokens,
-                reused_prefix_tokens: reusedPrefixTokens,
-                truncated_prompt_tokens: budgeted.truncated_tokens,
-                cache_reset: entry.cache_reset,
-            });
-            const promptInput: LanguageModelPrompt = responsePrefix.length > 0
-                ? [...budgeted.messages, { role: 'assistant', content: responsePrefix, prefix: true }]
-                : budgeted.messages;
-            if (responsePrefix.length > 0) {
+            const conversation = await entry.session.clone({ signal });
+            try {
                 generatedText = responsePrefix;
-                request.handlers.onChunk(responsePrefix);
+                const reusedPrefixTokens = conversation.contextUsage;
+                const budgeted = await selectMessagesWithinBudget(conversation, request.messages, request.behavior_instruction);
+                const promptTokens = await conversation.measureContextUsage(budgeted.messages);
+                recordRequestStatus({
+                    ...status,
+                    state: 'running',
+                    prompt_tokens: promptTokens,
+                    reused_prefix_tokens: reusedPrefixTokens,
+                    truncated_prompt_tokens: budgeted.truncated_tokens,
+                    cache_reset: entry.cache_reset,
+                });
+                const promptInput: LanguageModelPrompt = responsePrefix.length > 0
+                    ? [...budgeted.messages, { role: 'assistant', content: responsePrefix, prefix: true }]
+                    : budgeted.messages;
+                const stream = conversation.promptStreaming(promptInput, { signal });
+                for await (const chunk of stream) generatedText += chunk;
+                const generatedTokens = Math.max(0, conversation.contextUsage - reusedPrefixTokens - promptTokens);
+                entry.last_access = Date.now();
+                entry.last_generation = {
+                    prompt_tokens: promptTokens,
+                    cached_tokens: reusedPrefixTokens,
+                    generated_tokens: generatedTokens,
+                    reused_prefix_tokens: reusedPrefixTokens,
+                    truncated_prompt_tokens: budgeted.truncated_tokens,
+                    cache_reset: entry.cache_reset,
+                };
+                request.handlers.onChunk(generatedText);
+                recordRequestStatus({ ...status, state: 'completed', prompt_tokens: promptTokens, generated_tokens: generatedTokens, reused_prefix_tokens: reusedPrefixTokens, truncated_prompt_tokens: budgeted.truncated_tokens, cache_reset: entry.cache_reset });
+                return { text: generatedText, cancelled: false };
             }
-            const stream = conversation.promptStreaming(promptInput, { signal });
-            for await (const chunk of stream) {
-                generatedText += chunk;
-                request.handlers.onChunk(chunk);
+            finally {
+                conversation.destroy();
             }
-            const generatedTokens = Math.max(0, conversation.contextUsage - reusedPrefixTokens - promptTokens);
-            entry.last_access = Date.now();
-            entry.last_generation = {
-                prompt_tokens: promptTokens,
-                cached_tokens: reusedPrefixTokens,
-                generated_tokens: generatedTokens,
-                reused_prefix_tokens: reusedPrefixTokens,
-                truncated_prompt_tokens: budgeted.truncated_tokens,
-                cache_reset: entry.cache_reset,
-            };
-            recordRequestStatus({
-                ...status,
-                state: 'completed',
-                prompt_tokens: promptTokens,
-                generated_tokens: generatedTokens,
-                reused_prefix_tokens: reusedPrefixTokens,
-                truncated_prompt_tokens: budgeted.truncated_tokens,
-                cache_reset: entry.cache_reset,
-            });
-            return { text: generatedText, cancelled: false };
         }
         catch (error) {
             if (isAbortError(error) || signal.aborted) {
@@ -260,9 +263,6 @@ export const chromePromptRuntime = {
             }
             recordRequestStatus({ ...status, state: 'failed', error_message: error instanceof Error ? error.message : String(error) });
             throw error;
-        }
-        finally {
-            conversation?.destroy();
         }
     },
     async promptOnce(plan: LanguageModelLanguagePlan, prompt: string): Promise<string> {

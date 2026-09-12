@@ -1,8 +1,19 @@
 import { Wllama, type ChatCompletionChunk, type ChatCompletionMessage } from '@wllama/wllama/esm/index.js';
 import wllamaWasmUrl from '@wllama/wllama/esm/wasm/wllama.wasm?url';
 import { DomainError, describeUnknownError, isAbortError } from '../../../shared/errors';
-import { GGUF_CONSOLIDATION_TOKEN_LIMIT, GGUF_CONTEXT_WINDOW, GGUF_RESPONSE_TOKEN_LIMIT } from '../constants';
+import { assertPersonaSystemPrompt } from '../chrome/personaHook';
+import {
+    GGUF_CHAT_REPEAT_PENALTY,
+    GGUF_CHAT_TEMPERATURE,
+    GGUF_CHAT_TOP_K,
+    GGUF_CHAT_TOP_P,
+    GGUF_CONSOLIDATION_TEMPERATURE,
+    GGUF_CONSOLIDATION_TOKEN_LIMIT,
+    GGUF_CONTEXT_WINDOW,
+    GGUF_RESPONSE_TOKEN_LIMIT,
+} from '../constants';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
+import { extractPersonaPriming } from '../personaPriming';
 import type {
     GgufLoadedModel,
     GgufLoadingModel,
@@ -37,7 +48,12 @@ async function loadModelFile(fileName: string, generation: number): Promise<Gguf
     const file = await ggufModelStorage.open(fileName);
     const instance = new Wllama({ default: wllamaWasmUrl }, { suppressNativeLog: true });
     try {
-        await instance.loadModel([file], { n_ctx: GGUF_CONTEXT_WINDOW });
+        await instance.loadModel([file], {
+            n_ctx: GGUF_CONTEXT_WINDOW,
+            reasoning: false,
+            skip_chat_parsing: true,
+            prefill_assistant: true,
+        });
     }
     catch (error) {
         await instance.exit();
@@ -80,15 +96,21 @@ async function ensureModelLoaded(fileName: string): Promise<Wllama> {
     return wllama;
 }
 
-function toChatMessages(request: OnDeviceGenerationRequest): ChatCompletionMessage[] {
+function toChatMessages(request: OnDeviceGenerationRequest, behaviorInstruction: string): ChatCompletionMessage[] {
     const lastIndex = request.messages.length - 1;
-    return [
-        { role: 'system', content: request.system_prompt },
+    const priming = extractPersonaPriming(request.system_prompt);
+    const messages: ChatCompletionMessage[] = [
+        { role: 'system', content: priming.system_prompt },
+        ...priming.messages,
         ...request.messages.map((message, index): ChatCompletionMessage => ({
             role: message.role,
-            content: index === lastIndex ? `${message.content}${request.behavior_instruction}` : message.content,
+            content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,
         })),
     ];
+    if (request.response_prefix.length > 0) {
+        messages.push({ role: 'assistant', content: request.response_prefix });
+    }
+    return messages;
 }
 
 export const ggufRuntime = {
@@ -129,26 +151,31 @@ export const ggufRuntime = {
         let promptTokens = 0;
         let generatedTokens = 0;
         try {
+            assertPersonaSystemPrompt(request.system_prompt, request.persona_name);
             await ggufRuntime.focusPersonaSession(fileName, request.persona_id);
             const instance = await ensureModelLoaded(fileName);
             recordRequestStatus({ ...status, state: 'running' });
+            generatedText = request.response_prefix;
             await instance.createChatCompletion({
-                messages: toChatMessages(request),
+                messages: toChatMessages(request, request.behavior_instruction),
                 stream: true,
                 abortSignal: request.signal,
                 max_tokens: GGUF_RESPONSE_TOKEN_LIMIT,
+                cache_prompt: true,
+                temperature: GGUF_CHAT_TEMPERATURE,
+                top_k: GGUF_CHAT_TOP_K,
+                top_p: GGUF_CHAT_TOP_P,
+                penalty_repeat: GGUF_CHAT_REPEAT_PENALTY,
                 onData: (chunk: ChatCompletionChunk) => {
                     const piece = chunk.choices[0]?.delta.content;
-                    if (piece) {
-                        generatedText += piece;
-                        request.handlers.onChunk(piece);
-                    }
+                    if (piece) generatedText += piece;
                     if (chunk.usage) {
                         promptTokens = chunk.usage.prompt_tokens;
                         generatedTokens = chunk.usage.completion_tokens;
                     }
                 },
             });
+            request.handlers.onChunk(generatedText);
             lastGeneration = {
                 prompt_tokens: promptTokens,
                 cached_tokens: promptTokens + generatedTokens,
@@ -175,6 +202,9 @@ export const ggufRuntime = {
         const response = await instance.createChatCompletion({
             messages: [{ role: 'user', content: prompt }],
             max_tokens: GGUF_CONSOLIDATION_TOKEN_LIMIT,
+            temperature: GGUF_CONSOLIDATION_TEMPERATURE,
+            top_k: GGUF_CHAT_TOP_K,
+            top_p: GGUF_CHAT_TOP_P,
         });
         return response.choices[0]?.message.content ?? '';
     },

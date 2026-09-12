@@ -8,12 +8,17 @@ export const GGUF_MAX_FILE_BYTES = 2 * 1024 * 1024 * 1024;
 export const GGUF_STORAGE_DIRECTORY = 'gguf-models';
 export const GGUF_FILE_PICKER_ID = 'eversoul-gguf-model';
 export const GGUF_CONTEXT_WINDOW = 8192;
-export const GGUF_RESPONSE_TOKEN_LIMIT = 1024;
-export const GGUF_CONSOLIDATION_TOKEN_LIMIT = 512;
+export const GGUF_RESPONSE_TOKEN_LIMIT = 384;
+export const GGUF_CONSOLIDATION_TOKEN_LIMIT = 256;
+export const GGUF_CHAT_TEMPERATURE = 0.8;
+export const GGUF_CHAT_TOP_P = 0.9;
+export const GGUF_CHAT_TOP_K = 40;
+export const GGUF_CHAT_REPEAT_PENALTY = 1.08;
+export const GGUF_CONSOLIDATION_TEMPERATURE = 0.2;
 export const LITERT_LM_MODEL_ID_PREFIX = 'litertlm:';
 export const LITERT_LM_FILE_EXTENSION = '.litertlm';
-export const LITERT_LM_RESPONSE_TOKEN_LIMIT = 1024;
-export const LITERT_LM_CONSOLIDATION_TOKEN_LIMIT = 512;
+export const LITERT_LM_RESPONSE_TOKEN_LIMIT = 384;
+export const LITERT_LM_CONSOLIDATION_TOKEN_LIMIT = 256;
 export const LOCAL_MODEL_INSTALL_PREPARATION_IDS: Record<LocalModelEngineKind, string> = {
     gguf: 'install:gguf',
     litert_lm: 'install:litert_lm',
@@ -25,4 +30,5 @@ export const LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE: Record<AppLanguage, string> = {
     zh_cn: 'zh',
 };
 export const CHAT_RESPONSE_TOKEN_RESERVE = 384;
+export const CHAT_MINIMUM_HISTORY_TURNS = 6;
 export const REQUEST_STATUS_HISTORY_LIMIT = 32;

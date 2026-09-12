@@ -53,14 +53,19 @@ export interface PersonaLanguageSlice {
     greeting: string;
     speech_patterns: LocalizedDialogue[];
     comments: LocalizedDialogue[];
+    story: LocalizedDialogue[];
     evertalk: LocalizedDialogue[];
 }
-export type PersonaSpeechRegister = 'deferential' | 'polite' | 'archaic' | 'casual' | 'unmeasured';
 export interface PersonaSpeechProfile {
     address_term: string | null;
-    register: PersonaSpeechRegister;
-    signature_endings: string[];
     solo_lines: string[];
+    dialogue_examples: PersonaDialogueExchange[];
+}
+export type PersonaDialogueSource = 'story' | 'evertalk';
+export interface PersonaDialogueExchange {
+    source: PersonaDialogueSource;
+    user_message: string;
+    spirit_messages: string[];
 }
 export interface LocalizedPersonaPromptBody {
     localized_name: string;

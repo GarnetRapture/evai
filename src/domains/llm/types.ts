@@ -131,7 +131,9 @@ export interface OnDeviceTextMessage {
 }
 export interface OnDeviceGenerationRequest {
     request_id: string;
+    language: AppLanguage;
     persona_id: string;
+    persona_name: string;
     system_prompt: string;
     messages: OnDeviceTextMessage[];
     behavior_instruction: string;

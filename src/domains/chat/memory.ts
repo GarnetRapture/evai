@@ -1,3 +1,5 @@
+import type { MemoryVector, SparseMemoryVector } from './types';
+
 export const MEMORY_VECTOR_DIMENSIONS = 512;
 const FNV_OFFSET_BASIS = 0x811c9dc5;
 const FNV_PRIME = 0x01000193;
@@ -16,38 +18,81 @@ function normalizeMemoryText(text: string): string {
     return text.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 }
 
-export function normalizeVector(vector: number[]): number[] {
-    const norm = Math.sqrt(vector.reduce((sum, value) => sum + value * value, 0));
-    if (norm <= Number.EPSILON) {
-        return vector;
-    }
-    return vector.map((value) => value / norm);
+function isSparseMemoryVector(vector: MemoryVector): vector is SparseMemoryVector {
+    return !Array.isArray(vector);
 }
 
-export function createLexicalMemoryVector(text: string): number[] {
-    const vector = new Array<number>(MEMORY_VECTOR_DIMENSIONS).fill(0);
+export function isEmptyMemoryVector(vector: MemoryVector): boolean {
+    return isSparseMemoryVector(vector) ? vector.indices.length === 0 : vector.length === 0;
+}
+
+function vectorNorm(vector: MemoryVector): number {
+    const values = isSparseMemoryVector(vector) ? vector.values : vector;
+    return Math.sqrt(values.reduce((sum, value) => sum + value * value, 0));
+}
+
+function sparseDot(left: SparseMemoryVector, right: SparseMemoryVector): number {
+    let leftPosition = 0;
+    let rightPosition = 0;
+    let sum = 0;
+    while (leftPosition < left.indices.length && rightPosition < right.indices.length) {
+        const leftIndex = left.indices[leftPosition];
+        const rightIndex = right.indices[rightPosition];
+        if (leftIndex === rightIndex) {
+            sum += left.values[leftPosition] * right.values[rightPosition];
+            leftPosition += 1;
+            rightPosition += 1;
+        }
+        else if (leftIndex < rightIndex) {
+            leftPosition += 1;
+        }
+        else {
+            rightPosition += 1;
+        }
+    }
+    return sum;
+}
+
+function denseSparseDot(dense: number[], sparse: SparseMemoryVector): number {
+    let sum = 0;
+    for (let position = 0; position < sparse.indices.length; position += 1) {
+        sum += (dense[sparse.indices[position]] ?? 0) * sparse.values[position];
+    }
+    return sum;
+}
+
+export function createLexicalMemoryVector(text: string): MemoryVector {
     const normalized = normalizeMemoryText(text);
     if (normalized.length === 0) {
-        return [];
+        return { indices: [], values: [] };
     }
+    const counts = new Map<number, number>();
     for (const token of normalized.split(' ')) {
         const characters = Array.from(token);
         for (const size of MEMORY_NGRAM_SIZES) {
             for (let start = 0; start + size <= characters.length; start += 1) {
-                vector[hashMemoryGram(characters.slice(start, start + size).join(''))] += 1;
+                const index = hashMemoryGram(characters.slice(start, start + size).join(''));
+                counts.set(index, (counts.get(index) ?? 0) + 1);
             }
         }
     }
-    return normalizeVector(vector);
+    const entries = [...counts.entries()].sort((left, right) => left[0] - right[0]);
+    return {
+        indices: entries.map(([index]) => index),
+        values: entries.map(([, value]) => value),
+    };
 }
 
-export function cosineSimilarity(left: number[], right: number[]): number | null {
-    if (left.length !== right.length || left.length === 0) {
+export function cosineSimilarity(left: MemoryVector, right: MemoryVector): number | null {
+    if (isEmptyMemoryVector(left) || isEmptyMemoryVector(right)) {
         return null;
     }
-    let sum = 0;
-    for (let index = 0; index < left.length; index += 1) {
-        sum += left[index] * right[index];
+    if (Array.isArray(left) && Array.isArray(right) && left.length !== right.length) {
+        return null;
     }
-    return sum;
+    const dot = isSparseMemoryVector(left)
+        ? (isSparseMemoryVector(right) ? sparseDot(left, right) : denseSparseDot(right, left))
+        : (isSparseMemoryVector(right) ? denseSparseDot(left, right) : left.reduce((sum, value, index) => sum + value * right[index], 0));
+    const denominator = vectorNorm(left) * vectorNorm(right);
+    return denominator <= Number.EPSILON ? null : dot / denominator;
 }

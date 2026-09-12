@@ -39,6 +39,7 @@ export interface AndroidLiteRtLmMessage {
 export interface AndroidLiteRtLmGenerationPayload {
     system_prompt: string;
     messages: AndroidLiteRtLmMessage[];
+    response_prefix: string;
     max_output_tokens: number;
 }
 

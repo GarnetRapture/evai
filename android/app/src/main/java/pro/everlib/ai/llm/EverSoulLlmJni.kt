@@ -21,6 +21,7 @@ object EverSoulLlmJni {
         systemPrompt: String,
         historyJson: String,
         userMessage: String,
+        responsePrefix: String,
         maxTokens: Int,
         chunkSink: ChunkSink,
     ): String

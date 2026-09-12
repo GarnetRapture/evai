@@ -1,3 +1,26 @@
+export interface ChatDigestNode {
+    id: string;
+    summary: string;
+    parent_node_id: string | null;
+    source_message_ids: string[];
+    covered_from: string;
+    covered_through: string;
+    source_message_count: number;
+    created_at: string;
+}
+export interface ChatRoomDigest {
+    summary: string;
+    covered_through: string;
+    covered_count: number;
+    updated_at: string;
+    root_node_id?: string;
+    nodes?: ChatDigestNode[];
+}
+export interface ChatRoomPersonaActivity {
+    latest_activity_at: string;
+    latest_user_at: string;
+    latest_user_content: string;
+}
 export interface ChatRoom {
     id: string;
     title: string;
@@ -5,8 +28,13 @@ export interface ChatRoom {
     session_started_at: string;
     created_at: string;
     updated_at: string;
+    digests?: Record<string, ChatRoomDigest>;
+    proactive_attempts?: Record<string, string>;
+    persona_activities?: Record<string, ChatRoomPersonaActivity>;
+    proactive_unread_counts?: Record<string, number>;
 }
 export type ChatMessageRole = 'user' | 'assistant' | 'system';
+export type ChatMessageDelivery = 'conversation' | 'proactive';
 export interface ChatMessage {
     id: string;
     room_id: string;
@@ -14,6 +42,8 @@ export interface ChatMessage {
     role: ChatMessageRole;
     content: string;
     created_at: string;
+    delivery?: ChatMessageDelivery;
+    read_at?: string | null;
 }
 export interface ChatError {
     code: string;
@@ -35,8 +65,26 @@ export interface ChatSendRequest {
     signal: AbortSignal;
     handlers: ChatStreamHandlers;
 }
+export interface ProactiveConversationCandidate {
+    room_id: string;
+    persona_id: string;
+    latest_activity_at: string;
+    latest_user_content: string;
+    last_attempt_at: string | null;
+}
+export interface ProactiveGenerationOptions {
+    now?: Date;
+    chance?: number;
+    random?: () => number;
+    signal?: AbortSignal;
+}
 export type PersonaRecalledMemoryType = 'episodic' | 'semantic' | 'directive';
 export type PersonaMemoryType = PersonaRecalledMemoryType | 'habit';
+export interface SparseMemoryVector {
+    indices: number[];
+    values: number[];
+}
+export type MemoryVector = number[] | SparseMemoryVector;
 export interface PersonaMemoryRecordBase {
     id: string;
     persona_id: string;
@@ -45,7 +93,9 @@ export interface PersonaMemoryRecordBase {
 }
 export interface PersonaRecalledMemoryRecord extends PersonaMemoryRecordBase {
     memory_type: PersonaRecalledMemoryType;
-    memory_vector: number[];
+    memory_vector: MemoryVector;
+    source_room_id?: string;
+    source_message_ids?: string[];
 }
 export interface PersonaHabitMemoryRecord extends PersonaMemoryRecordBase {
     memory_type: 'habit';

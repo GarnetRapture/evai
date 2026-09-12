@@ -28,6 +28,10 @@ RUST_SRC/
 package-lock.json
 tmp-claude/
 
+# Local upstream references (not distributed with this repository)
+third_party/
+native/build/
+
 # Android (Gradle / Kotlin / Java build outputs)
 android/.gradle/
 android/.kotlin/

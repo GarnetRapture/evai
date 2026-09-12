@@ -10,7 +10,6 @@ import type { SyncMetadataKey, SyncMetadataRecord } from '../../domains/sync/typ
 import type { AppLanguage } from '../types';
 
 export const EVERSOUL_DATABASE_NAME = 'eversoul-ai-chat';
-export const EVERSOUL_DATABASE_VERSION = 2;
 export const SINGLETON_RECORD_KEY = 'current';
 export const BACKUP_DIRECTORY_HANDLE_KEY = 'backup_directory';
 
@@ -126,7 +125,6 @@ export interface EverSoulDatabaseSnapshotStores {
 export interface EverSoulDatabaseSnapshot {
     format: typeof EVERSOUL_BACKUP_FORMAT;
     format_version: typeof EVERSOUL_BACKUP_FORMAT_VERSION;
-    database_version: number;
     exported_at: string;
     stores: EverSoulDatabaseSnapshotStores;
 }

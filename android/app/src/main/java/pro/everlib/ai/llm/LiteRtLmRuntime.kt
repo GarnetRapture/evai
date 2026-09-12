@@ -19,6 +19,7 @@ data class LiteRtLmGenerationRequest(
     val systemPrompt: String?,
     val history: List<LiteRtLmHistoryMessage>,
     val userMessage: String,
+    val responsePrefix: String,
     val maxOutputTokens: Int,
 )
 
@@ -87,12 +88,13 @@ class LiteRtLmRuntime(private val context: Context) : AutoCloseable {
                 throw BridgeException("model_not_ready", "unloaded")
             }
             withContext(Dispatchers.IO) {
-                val generated = StringBuilder()
+                val generated = StringBuilder(request.responsePrefix)
                 val resultJson = EverSoulLlmJni.nativeGenerate(
                     activeHandle,
                     request.systemPrompt.orEmpty(),
                     historyJson(request.history),
                     request.userMessage,
+                    request.responsePrefix,
                     request.maxOutputTokens,
                     EverSoulLlmJni.ChunkSink { chunk ->
                         if (chunk.isNotEmpty()) {

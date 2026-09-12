@@ -1,18 +1,26 @@
 import type { ModelDownloadProgressHandler } from '../types';
+import { extractPersonaPriming } from '../personaPriming';
 
 export interface ChromeLanguageModelCreateRequest {
     declaredLanguageTag: string | null;
     systemPrompt: string | null;
+    samplingMode: LanguageModelSamplingMode;
     onDownloadProgress: ModelDownloadProgressHandler | null;
     signal: AbortSignal | null;
 }
 
-function languageExpectations(declaredLanguageTag: string | null): LanguageModelCreateCoreOptions {
+interface LanguageExpectationOptions {
+    expectedInputs?: LanguageModelExpected[];
+    expectedOutputs?: LanguageModelExpected[];
+}
+
+function languageExpectations(declaredLanguageTag: string | null): LanguageExpectationOptions {
     if (declaredLanguageTag === null) {
         return {};
     }
+    const inputLanguages = declaredLanguageTag === 'en' ? ['en'] : ['en', declaredLanguageTag];
     return {
-        expectedInputs: [{ type: 'text', languages: [declaredLanguageTag] }],
+        expectedInputs: [{ type: 'text', languages: inputLanguages }],
         expectedOutputs: [{ type: 'text', languages: [declaredLanguageTag] }],
     };
 }
@@ -25,18 +33,22 @@ export function hasTransientUserActivation(): boolean {
     return navigator.userActivation.isActive;
 }
 
-export async function readChromeLanguageModelAvailability(declaredLanguageTag: string | null): Promise<Availability> {
+export async function readChromeLanguageModelAvailability(declaredLanguageTag: string | null, samplingMode: LanguageModelSamplingMode = 'balanced'): Promise<Availability> {
     if (!isChromeLanguageModelSupported()) {
         return 'unavailable';
     }
-    return LanguageModel.availability(languageExpectations(declaredLanguageTag));
+    return LanguageModel.availability({ ...languageExpectations(declaredLanguageTag), samplingMode });
 }
 
 export async function createChromeLanguageModel(request: ChromeLanguageModelCreateRequest): Promise<LanguageModel> {
-    const options: LanguageModelCreateOptions = { ...languageExpectations(request.declaredLanguageTag) };
+    const options: LanguageModelCreateOptions = {
+        ...languageExpectations(request.declaredLanguageTag),
+        samplingMode: request.samplingMode,
+    };
     if (request.systemPrompt !== null) {
-        const systemMessage: LanguageModelSystemMessage = { role: 'system', content: request.systemPrompt };
-        options.initialPrompts = [systemMessage];
+        const priming = extractPersonaPriming(request.systemPrompt);
+        const systemMessage: LanguageModelSystemMessage = { role: 'system', content: priming.system_prompt };
+        options.initialPrompts = [systemMessage, ...priming.messages];
     }
     if (request.signal !== null) {
         options.signal = request.signal;

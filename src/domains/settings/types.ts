@@ -1,4 +1,5 @@
 import type { AppLanguage } from '../../shared/types';
+import type { ContextStorageMode } from '../native/types';
 
 export type SetupPhase = 'language' | 'done';
 export const MAX_PREFERRED_PERSONAS = 5;
@@ -15,6 +16,8 @@ export interface AppSettings {
     lobby_background: string | null;
     savior_name: string;
     platform_guide_acknowledged: boolean;
+    context_storage_mode: ContextStorageMode;
+    native_executable_path: string;
 }
 export type SetupStage = 'personas' | 'caching' | 'model' | 'done';
 export interface SetupProgress {
@@ -35,6 +38,8 @@ export interface GeneralSettingsRecord {
     lobby_background: string | null;
     savior_name: string;
     platform_guide_acknowledged: boolean;
+    context_storage_mode: ContextStorageMode;
+    native_executable_path: string;
 }
 export interface ResetSummary {
     cleared_chat_rooms: number;
@@ -43,6 +48,7 @@ export interface ResetSummary {
     cleared_styles: number;
     cleared_knowledge_chunks: number;
     cleared_persona_memories: number;
+    cleared_native_context: boolean;
 }
 export interface SettingsError {
     code: 'io' | 'database' | 'validation';

@@ -8,8 +8,10 @@ import {
     type AndroidLiteRtLmStatus,
 } from '../../../shared/android';
 import { DomainError, describeUnknownError } from '../../../shared/errors';
+import { assertPersonaSystemPrompt } from '../chrome/personaHook';
 import { LITERT_LM_CONSOLIDATION_TOKEN_LIMIT, LITERT_LM_RESPONSE_TOKEN_LIMIT } from '../constants';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
+import { extractPersonaPriming } from '../personaPriming';
 import type {
     InstalledModelFile,
     LiteRtLmLoadedModel,
@@ -81,14 +83,16 @@ async function ensureModelLoaded(fileName: string): Promise<LiteRtLmLoadedModel>
     }
 }
 
-function toGenerationPayload(request: OnDeviceGenerationRequest): AndroidLiteRtLmGenerationPayload {
+function toGenerationPayload(request: OnDeviceGenerationRequest, behaviorInstruction = request.behavior_instruction): AndroidLiteRtLmGenerationPayload {
     const lastIndex = request.messages.length - 1;
+    const priming = extractPersonaPriming(request.system_prompt);
     return {
-        system_prompt: request.system_prompt,
-        messages: request.messages.map((message, index) => ({
+        system_prompt: priming.system_prompt,
+        messages: [...priming.messages, ...request.messages.map((message, index) => ({
             role: message.role,
-            content: index === lastIndex ? `${message.content}${request.behavior_instruction}` : message.content,
-        })),
+            content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,
+        }))],
+        response_prefix: request.response_prefix,
         max_output_tokens: LITERT_LM_RESPONSE_TOKEN_LIMIT,
     };
 }
@@ -163,13 +167,14 @@ export const liteRtLmRuntime = {
         const status = createQueuedRequestStatus(request.request_id, request.persona_id);
         recordRequestStatus(status);
         try {
+            assertPersonaSystemPrompt(request.system_prompt, request.persona_name);
             await liteRtLmRuntime.focusPersonaSession(fileName, request.persona_id);
             recordRequestStatus({ ...status, state: 'running', prompt_tokens: null, generated_tokens: null });
             const payload = JSON.stringify(toGenerationPayload(request));
             const result = await runAndroidStreamingRequest(
                 request.request_id,
                 (bridge) => bridge.generateLiteRtLm(request.request_id, payload),
-                request.handlers.onChunk,
+                () => undefined,
                 request.signal,
             );
             focusedPersonaAccess = Date.now();
@@ -177,6 +182,7 @@ export const liteRtLmRuntime = {
                 recordRequestStatus({ ...status, state: 'cancelled', prompt_tokens: null, generated_tokens: null });
                 return { text: result.text, cancelled: true };
             }
+            request.handlers.onChunk(result.text);
             focusedContextTokens = result.token_count ?? 0;
             recordRequestStatus({ ...status, state: 'completed', prompt_tokens: null, generated_tokens: null });
             return { text: result.text, cancelled: false };
@@ -191,6 +197,7 @@ export const liteRtLmRuntime = {
         const payload: AndroidLiteRtLmGenerationPayload = {
             system_prompt: '',
             messages: [{ role: 'user', content: prompt }],
+            response_prefix: '',
             max_output_tokens: LITERT_LM_CONSOLIDATION_TOKEN_LIMIT,
         };
         const requestId = crypto.randomUUID();

@@ -5,8 +5,10 @@ import type { AppLanguage } from '../../../shared/types';
 import { formatBackupFileMeta, formatDateTime, formatLanguageName } from '../logic';
 import type { SettingsPanelProps } from '../types';
 import { ModelCatalogSection } from './ModelCatalogSection';
+import { ContextStorageSelector } from './ContextStorageSelector';
+import { EnvironmentLayer } from './EnvironmentLayer';
 
-export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, nativeContextStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetContextStorageMode, onSetNativeExecutablePath, onConnectNativeProgram, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     if (!isOpen) {
         return null;
@@ -28,6 +30,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
     }
     const backupFolderLinked = backupDirectoryStatus?.linked ?? false;
     const backupFolderGranted = backupDirectoryStatus?.permission === 'granted';
+    const nativeSelected = settings?.context_storage_mode === 'native_mirror';
     return (<div className="ever-settings-overlay" role="dialog" aria-modal="true">
       <div className="ever-settings-modal ever-settings-modal--wide">
         <header className="ever-settings-modal__header">
@@ -65,6 +68,11 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
             <span>{labels.showReasoning}</span>
             <input type="checkbox" checked={settings?.show_reasoning ?? true} onChange={(event) => void onSetShowReasoning(event.target.checked)}/>
           </label>
+        </section>
+
+        <section className="ever-panel-section">
+          <EnvironmentLayer embedded settings={settings} session={userSession} savior={saviorProfile} environment={deviceEnvironment} nativeStatus={nativeContextStatus} labels={labels}/>
+          <ContextStorageSelector mode={settings?.context_storage_mode ?? 'browser'} status={nativeContextStatus} executablePath={settings?.native_executable_path ?? ''} labels={labels} onChange={onSetContextStorageMode} onExecutablePathChange={onSetNativeExecutablePath} onConnect={onConnectNativeProgram}/>
         </section>
 
         <ModelCatalogSection appPlatform={appPlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareChromePromptModel={onPrepareChromePromptModel} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel}/>
@@ -120,6 +128,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
         <section className="ever-panel-section">
           <h3>{labels.backupTitle}</h3>
           <p>{labels.backupDescription}</p>
+          <div className="ever-settings-result"><span>{labels.backupStorageScope(nativeSelected, nativeContextStatus.available)}</span></div>
           <div className="ever-settings-actions">
             <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onExportBackup()}>
               <Save aria-hidden="true" size={16}/>
@@ -183,6 +192,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
             </div>)}
           {backupRestoreSummary && (<div className="ever-settings-result">
               <span>{labels.backupRestored(backupRestoreSummary.restored_chat_rooms, backupRestoreSummary.restored_chat_messages, backupRestoreSummary.restored_persona_memories)}</span>
+              {backupRestoreSummary.restored_native_context ? <span>{labels.backupNativeRestored}</span> : null}
             </div>)}
         </section>
 
@@ -191,6 +201,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
           <p>
             {labels.resetDescription}
           </p>
+          <div className="ever-settings-result"><span>{labels.resetStorageScope(nativeSelected, nativeContextStatus.available)}</span></div>
 
           {resetSummary && (<div className="ever-settings-result">
               <strong>{labels.resetComplete}</strong>
@@ -200,6 +211,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
               <span>{labels.resetStyles(resetSummary.cleared_styles)}</span>
               <span>{labels.resetKnowledgeChunks(resetSummary.cleared_knowledge_chunks)}</span>
               <span>{labels.resetLocalMemories(resetSummary.cleared_persona_memories)}</span>
+              {resetSummary.cleared_native_context ? <span>{labels.resetNativeCleared}</span> : null}
             </div>)}
 
           {resetError && (<div className="ever-roster__error">

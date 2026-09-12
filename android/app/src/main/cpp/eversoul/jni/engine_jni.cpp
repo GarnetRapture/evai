@@ -49,10 +49,15 @@ ChatRole roleFromString(std::string_view role) {
     return ChatRole::User;
 }
 
-eversoul::core::Result<ChatPrompt> parseChatPrompt(const std::string& systemPrompt, const std::string& historyJson, const std::string& userMessage) {
+eversoul::core::Result<ChatPrompt> parseChatPrompt(
+    const std::string& systemPrompt,
+    const std::string& historyJson,
+    const std::string& userMessage,
+    const std::string& responsePrefix) {
     ChatPrompt prompt;
     prompt.systemPrompt = systemPrompt;
     prompt.userMessage = userMessage;
+    prompt.responsePrefix = responsePrefix;
     if (historyJson.empty()) {
         return prompt;
     }
@@ -125,14 +130,18 @@ Java_pro_everlib_ai_llm_EverSoulLlmJni_nativeUnload(JNIEnv* /*env*/, jclass /*cl
 extern "C" JNIEXPORT jstring JNICALL
 Java_pro_everlib_ai_llm_EverSoulLlmJni_nativeGenerate(
     JNIEnv* env, jclass /*clazz*/, jlong handle, jstring systemPrompt, jstring historyJson,
-    jstring userMessage, jint maxTokens, jobject chunkSink) {
+    jstring userMessage, jstring responsePrefix, jint maxTokens, jobject chunkSink) {
     auto* engineHandle = reinterpret_cast<EngineHandle*>(handle);
     if (engineHandle == nullptr) {
         return env->NewStringUTF("{\"error\":\"native_runtime\",\"detail\":\"invalid_handle\"}");
     }
     engineHandle->cancelled.store(false, std::memory_order_relaxed);
 
-    auto prompt = parseChatPrompt(toStdString(env, systemPrompt), toStdString(env, historyJson), toStdString(env, userMessage));
+    auto prompt = parseChatPrompt(
+        toStdString(env, systemPrompt),
+        toStdString(env, historyJson),
+        toStdString(env, userMessage),
+        toStdString(env, responsePrefix));
     if (!prompt) {
         return env->NewStringUTF("{\"error\":\"invalid_model_file\",\"detail\":\"prompt_parse\"}");
     }

@@ -1,10 +1,14 @@
-import { PanelLeftClose, PanelLeftOpen, Star } from 'lucide-react';
+import { Bell, PanelLeftClose, PanelLeftOpen, Star } from 'lucide-react';
 import { getRaceTone, parseSpiritDetail } from '../../persona';
 import { computeFamiliarityLevel, createConversationSummary, resolvePreferredSpiritsFamiliarity } from '../logic';
 import type { SpiritRosterProps } from '../types';
 import { EVERTALK_UI_ASSETS } from '../uiAssets';
 import { RosterAvatar, RosterExpBar, RosterRankBadge } from './SpiritRosterCard';
-export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, preferredPersonaIds, activeTab, collapsed, bondRanking, bondRankingLoading, familiarityList, familiarityLoading, labels, appLanguage, activeSessionIds, personaSkinIds, onSearchChange, onSelect, onToggleDefault, onTabChange, onToggleCollapsed, onOpenFamiliarity, }: SpiritRosterProps) {
+function ProactiveUnreadBadge({ count, label }: { count: number; label: string }) {
+    if (count <= 0) return null;
+    return <span className="ever-spirit-row__unread" aria-label={label} title={label}><Bell aria-hidden="true" size={11}/>{count > 99 ? '99+' : count}</span>;
+}
+export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, preferredPersonaIds, activeTab, collapsed, bondRanking, bondRankingLoading, familiarityList, familiarityLoading, labels, appLanguage, activeSessionIds, personaSkinIds, proactiveUnreadCounts, onSearchChange, onSelect, onToggleDefault, onTabChange, onToggleCollapsed, onOpenFamiliarity, }: SpiritRosterProps) {
     const hasSpirits = spirits.length > 0;
     const preferredSpirits = resolvePreferredSpiritsFamiliarity(spirits, familiarityList, preferredPersonaIds);
     const rankedFamiliarity = familiarityList.filter((entry) => !preferredPersonaIds.includes(entry.persona_id));
@@ -48,6 +52,7 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
                   </span>
                 </button>
                 <span className="ever-spirit-row__meta">
+                  <ProactiveUnreadBadge count={proactiveUnreadCounts[spirit.id] ?? 0} label={labels.proactiveUnreadCount(proactiveUnreadCounts[spirit.id] ?? 0)}/>
                   <b>{detail.grade}</b>
                   <button className={isDefault ? 'is-default' : ''} type="button" aria-pressed={isDefault} aria-label={isDefault ? labels.preferredSpiritClearAction(detail.name) : labels.preferredSpiritSetAction(detail.name)} title={isDefault ? labels.preferredSpiritClearAction(detail.name) : labels.preferredSpiritSetAction(detail.name)} onClick={() => {
                         void onToggleDefault(spirit.id);
@@ -84,6 +89,7 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
               </span>
             </button>
             <span className="ever-spirit-row__meta">
+              <ProactiveUnreadBadge count={proactiveUnreadCounts[entry.persona_id] ?? 0} label={labels.proactiveUnreadCount(proactiveUnreadCounts[entry.persona_id] ?? 0)}/>
               <RosterRankBadge rank={index + 1}/>
               <b>{entry.bond_score}</b>
             </span>
@@ -111,6 +117,7 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
                   </span>
                 </button>
                 <span className="ever-spirit-row__meta">
+                  <ProactiveUnreadBadge count={proactiveUnreadCounts[preferred.spirit.id] ?? 0} label={labels.proactiveUnreadCount(proactiveUnreadCounts[preferred.spirit.id] ?? 0)}/>
                   <b>{preferred.familiarity_score}</b>
                   <button className="is-default" type="button" aria-pressed={true} aria-label={labels.preferredSpiritClearAction(preferredDetail.name)} title={labels.preferredSpiritClearAction(preferredDetail.name)} onClick={() => {
                           void onToggleDefault(preferred.spirit.id);
@@ -141,6 +148,7 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
               </span>
             </button>
             <span className="ever-spirit-row__meta">
+              <ProactiveUnreadBadge count={proactiveUnreadCounts[entry.persona_id] ?? 0} label={labels.proactiveUnreadCount(proactiveUnreadCounts[entry.persona_id] ?? 0)}/>
               <RosterRankBadge rank={index + 1}/>
               <b>{entry.familiarity_score}</b>
             </span>

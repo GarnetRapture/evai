@@ -5,7 +5,6 @@ import {
     BACKUP_DIRECTORY_HANDLE_KEY,
     EVERSOUL_BACKUP_FORMAT,
     EVERSOUL_BACKUP_FORMAT_VERSION,
-    EVERSOUL_DATABASE_VERSION,
     EVERSOUL_STORE,
     SINGLETON_RECORD_KEY,
     type EverSoulDatabaseSnapshot,
@@ -60,7 +59,6 @@ export async function exportDatabaseSnapshot(): Promise<EverSoulDatabaseSnapshot
     return {
         format: EVERSOUL_BACKUP_FORMAT,
         format_version: EVERSOUL_BACKUP_FORMAT_VERSION,
-        database_version: EVERSOUL_DATABASE_VERSION,
         exported_at: createMonotonicTimestamp(),
         stores: {
             auth_session: authSession,
@@ -93,8 +91,6 @@ export function parseDatabaseSnapshot(text: string): EverSoulDatabaseSnapshot {
     if (!isRecordObject(parsed)
         || parsed.format !== EVERSOUL_BACKUP_FORMAT
         || parsed.format_version !== EVERSOUL_BACKUP_FORMAT_VERSION
-        || typeof parsed.database_version !== 'number'
-        || parsed.database_version > EVERSOUL_DATABASE_VERSION
         || typeof parsed.exported_at !== 'string'
         || !isRecordObject(parsed.stores)) {
         throw new DomainError('invalid_backup', `${EVERSOUL_BACKUP_FORMAT} v${EVERSOUL_BACKUP_FORMAT_VERSION}`);

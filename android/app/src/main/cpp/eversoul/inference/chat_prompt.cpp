@@ -127,6 +127,7 @@ std::string renderChatPrompt(const litertlm::LlmMetadata& metadata, const ChatPr
 
     renderUser(prompt.userMessage);
     rendered.append(format.model.prefix);
+    rendered.append(prompt.responsePrefix);
     return rendered;
 }
 

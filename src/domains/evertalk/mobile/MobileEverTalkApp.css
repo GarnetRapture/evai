@@ -26,6 +26,8 @@
     flex-direction: column;
     height: 100dvh;
     width: 100%;
+    padding-top: var(--ever-environment-bar-height);
+    box-sizing: border-box;
     background: var(--ever-mobile-bg);
     color: var(--ever-mobile-ink);
     font-size: var(--ever-mobile-body);
@@ -843,7 +845,7 @@
 
 .ever-mobile-zoom-overlay {
     position: fixed;
-    inset: 0;
+    inset: var(--ever-environment-bar-height) 0 0;
     z-index: 60;
     display: flex;
     align-items: center;

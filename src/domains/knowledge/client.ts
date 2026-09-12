@@ -29,17 +29,23 @@ export const knowledgeClient = {
             return [];
         }
         const database = await getEverSoulDatabase();
-        const chunks = await database.getAll(EVERSOUL_STORE.knowledgeChunk);
+        const store = database.transaction(EVERSOUL_STORE.knowledgeChunk).store;
         const scored: Array<{ score: number; chunk: KnowledgeChunk }> = [];
-        for (const chunk of chunks) {
+        let cursor = await store.openCursor();
+        while (cursor) {
+            const chunk = cursor.value;
             const lowered = chunk.chunk_text.toLowerCase();
             const score = terms.filter((term) => lowered.includes(term)).length;
             if (score > 0) {
                 scored.push({ score, chunk });
+                scored.sort((left, right) => right.score - left.score);
+                if (scored.length > limit) {
+                    scored.pop();
+                }
             }
+            cursor = await cursor.continue();
         }
-        scored.sort((left, right) => right.score - left.score);
-        return scored.slice(0, limit).map((entry) => entry.chunk);
+        return scored.map((entry) => entry.chunk);
     },
     async insertChunk(chunk: KnowledgeChunk): Promise<void> {
         const database = await getEverSoulDatabase();

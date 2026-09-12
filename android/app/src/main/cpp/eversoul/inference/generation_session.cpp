@@ -63,21 +63,27 @@ GenerationSession::GenerationSession(
 }
 
 core::Result<std::vector<tokenizer::TokenId>> GenerationSession::buildPromptTokens(const ChatPrompt& prompt) const {
-    const std::string rendered = renderChatPrompt(metadata_, prompt);
-    auto encoded = tokenizer_.encode(rendered);
-    if (!encoded) {
-        return std::unexpected(encoded.error());
+    ChatPrompt budgeted = prompt;
+    const std::int32_t promptBudget = std::max(1, limits_.maxContextTokens - limits_.maxOutputTokens);
+    for (;;) {
+        const std::string rendered = renderChatPrompt(metadata_, budgeted);
+        auto encoded = tokenizer_.encode(rendered);
+        if (!encoded) {
+            return std::unexpected(encoded.error());
+        }
+        std::vector<tokenizer::TokenId> tokens = startTokenIds(metadata_);
+        tokens.insert(tokens.end(), encoded->begin(), encoded->end());
+        if (tokens.empty()) {
+            return core::fail(core::FailureCode::NativeRuntime, "empty_prompt_tokens");
+        }
+        if (static_cast<std::int32_t>(tokens.size()) <= promptBudget) {
+            return tokens;
+        }
+        if (budgeted.history.empty()) {
+            return core::fail(core::FailureCode::NativeRuntime, "system_and_user_prompt_exceed_context_window");
+        }
+        budgeted.history.erase(budgeted.history.begin());
     }
-    std::vector<tokenizer::TokenId> tokens = startTokenIds(metadata_);
-    tokens.insert(tokens.end(), encoded->begin(), encoded->end());
-    if (tokens.empty()) {
-        return core::fail(core::FailureCode::NativeRuntime, "empty_prompt_tokens");
-    }
-    if (static_cast<std::int32_t>(tokens.size()) >= limits_.maxContextTokens) {
-        const std::size_t keep = static_cast<std::size_t>(limits_.maxContextTokens) - 1;
-        tokens.erase(tokens.begin(), tokens.end() - static_cast<std::ptrdiff_t>(keep));
-    }
-    return tokens;
 }
 
 core::Result<std::string> GenerationSession::selectPrefillSignature(std::int32_t tokenCount) const {

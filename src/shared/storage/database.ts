@@ -1,7 +1,6 @@
 import { openDB, type IDBPDatabase } from 'idb';
 import {
     EVERSOUL_DATABASE_NAME,
-    EVERSOUL_DATABASE_VERSION,
     EVERSOUL_INDEX,
     EVERSOUL_STORE,
     type EverSoulDatabaseSchema,
@@ -45,14 +44,10 @@ function createFileHandleStore(database: EverSoulDatabase): void {
 
 export function getEverSoulDatabase(): Promise<EverSoulDatabase> {
     if (!databaseConnection) {
-        databaseConnection = openDB<EverSoulDatabaseSchema>(EVERSOUL_DATABASE_NAME, EVERSOUL_DATABASE_VERSION, {
-            upgrade(database, oldVersion) {
-                if (oldVersion < 1) {
-                    createEverSoulStores(database);
-                }
-                if (oldVersion < 2) {
-                    createFileHandleStore(database);
-                }
+        databaseConnection = openDB<EverSoulDatabaseSchema>(EVERSOUL_DATABASE_NAME, undefined, {
+            upgrade(database) {
+                createEverSoulStores(database);
+                createFileHandleStore(database);
             },
             terminated() {
                 databaseConnection = null;
