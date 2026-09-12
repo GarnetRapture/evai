@@ -72,6 +72,7 @@ export function ContextStorageSelector({ mode, status, executablePath, labels, o
                             <div><dt>{labels.nativeExecutablePath}</dt><dd>{status.health.executable_path}</dd></div>
                             <div><dt>{labels.nativeDatabasePath}</dt><dd>{status.health.database_path}</dd></div>
                             {Number.isInteger(status.health.process_id) ? <div><dt>{labels.nativeProcessId}</dt><dd>{status.health.process_id}</dd></div> : null}
+                            <div><dt>{labels.nativeRuntimePolicy}</dt><dd>{labels.nativeRuntimePolicyValue}</dd></div>
                         </dl>
                     ) : null}
                 </>

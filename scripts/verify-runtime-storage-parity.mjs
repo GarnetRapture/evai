@@ -117,8 +117,9 @@ try {
             assert.ok(request.messages.at(-1).content.includes('[SPONTANEOUS CONTINUATION]'));
         }
         else {
-            assert.ok(request.behavior_instruction.includes(testCase.dialogue.user_message));
-            assert.ok(request.behavior_instruction.includes(testCase.dialogue.spirit_messages[0]));
+            assert.ok(request.messages.some((message) => message.role === 'user' && message.content === testCase.dialogue.user_message));
+            assert.ok(request.messages.some((message) => message.role === 'assistant' && message.content.includes(testCase.dialogue.spirit_messages[0])));
+            assert.ok(request.behavior_instruction.includes('[LIVE ROLEPLAY]'));
         }
         capturedRequests.push({
             kind: proactive ? 'proactive' : 'conversation',

@@ -50,7 +50,7 @@ function sendThroughExtension(request: Record<string, unknown>): Promise<unknown
         const timeout = window.setTimeout(() => {
             window.removeEventListener('message', onMessage);
             reject(new Error('native_bridge_unavailable'));
-        }, 2_500);
+        }, 120_000);
         function onMessage(event: MessageEvent) {
             if (event.source !== window || event.data?.type !== EXTENSION_RESPONSE || event.data?.request_id !== requestId) return;
             window.clearTimeout(timeout);
@@ -101,14 +101,15 @@ function transport(): NativeContextStatus['transport'] {
 }
 
 function memoryPayload(memory: NativeMirrorMemory): Record<string, unknown> {
+    const hasSources = 'source_message_ids' in memory;
     return {
         id: memory.id,
         persona_id: memory.persona_id,
-        room_id: memory.memory_type === 'habit' ? '' : memory.source_room_id ?? '',
+        room_id: hasSources ? memory.source_room_id ?? '' : '',
         memory_type: memory.memory_type,
         memory_text: memory.memory_text,
         created_at: memory.created_at,
-        source_message_ids: memory.memory_type === 'habit' ? [] : memory.source_message_ids ?? [],
+        source_message_ids: hasSources ? memory.source_message_ids ?? [] : [],
     };
 }
 

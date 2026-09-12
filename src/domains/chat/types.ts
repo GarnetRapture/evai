@@ -79,7 +79,7 @@ export interface ProactiveGenerationOptions {
     signal?: AbortSignal;
 }
 export type PersonaRecalledMemoryType = 'episodic' | 'semantic' | 'directive';
-export type PersonaMemoryType = PersonaRecalledMemoryType | 'habit';
+export type PersonaMemoryType = PersonaRecalledMemoryType | 'habit' | 'affect';
 export interface SparseMemoryVector {
     indices: number[];
     values: number[];
@@ -102,7 +102,10 @@ export interface PersonaHabitMemoryRecord extends PersonaMemoryRecordBase {
     occurrence_count: number;
     last_seen_at: string;
 }
-export type PersonaMemoryRecord = PersonaRecalledMemoryRecord | PersonaHabitMemoryRecord;
+export interface PersonaAffectMemoryRecord extends PersonaMemoryRecordBase {
+    memory_type: 'affect';
+}
+export type PersonaMemoryRecord = PersonaRecalledMemoryRecord | PersonaHabitMemoryRecord | PersonaAffectMemoryRecord;
 export interface PersonaMemoryInsightEntry {
     id: string;
     memory_text: string;
@@ -110,6 +113,7 @@ export interface PersonaMemoryInsightEntry {
 }
 export interface PersonaMemoryInsight {
     semantic_summary: string | null;
+    emotion: import('./affect').PersonaEmotionState | null;
     directives: PersonaMemoryInsightEntry[];
     episodic: PersonaMemoryInsightEntry[];
     episodic_total: number;

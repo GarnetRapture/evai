@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="340" viewBox="0 0 900 340" role="img" aria-label="포크한 저장소의 Actions 탭에서 워크플로를 켜는 화면">
+  <rect x="0" y="0" width="900" height="340" rx="8" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+  <circle cx="30" cy="30" r="7" fill="none" stroke="#59636e" stroke-width="1.6"/>
+  <circle cx="30" cy="58" r="7" fill="none" stroke="#59636e" stroke-width="1.6"/>
+  <path d="M30 37 L30 51" stroke="#59636e" stroke-width="1.6" fill="none"/>
+  <text x="52" y="29" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="17" font-weight="600" fill="#1f2328">my-account / evai</text>
+  <text x="52" y="52" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="12.5" fill="#59636e">forked from GarnetRapture/evai</text>
+  <text x="30" y="94" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" fill="#1f2328">Code</text>
+  <text x="90" y="94" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" fill="#1f2328">Issues</text>
+  <text x="150" y="94" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" fill="#1f2328">Pull requests</text>
+  <path d="M256 84 L268 90 L256 96 Z" fill="#1f883d"/>
+  <text x="276" y="94" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" font-weight="600" fill="#1f2328">Actions</text>
+  <text x="350" y="94" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" fill="#1f2328">Settings</text>
+  <rect x="248" y="106" width="88" height="2" fill="#fd8c73"/>
+  <path d="M0 108 L900 108" stroke="#d1d9e0" stroke-width="1"/>
+  <text x="450" y="156" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="18" font-weight="600" fill="#1f2328">Workflows aren't being run on this forked repository</text>
+  <text x="450" y="186" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13.5" fill="#59636e">포크할 때 워크플로 파일이 함께 복사되었기 때문에, 이 포크에서는 실행이 꺼진 상태로 시작합니다.</text>
+  <text x="450" y="208" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13.5" fill="#59636e">아래 초록 버튼을 한 번 누르면 내 포크에서 Actions가 켜집니다.</text>
+  <circle cx="208" cy="252" r="15" fill="#0969da"/>
+  <text x="208" y="257" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="15" font-weight="700" fill="#ffffff">1</text>
+  <rect x="240" y="232" width="420" height="40" rx="6" fill="#1f883d"/>
+  <text x="450" y="257" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" font-weight="600" fill="#ffffff">I understand my workflows, go ahead and enable them</text>
+  <text x="450" y="308" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13" fill="#1f2328">내 포크 저장소 → Actions 탭 → 초록 버튼 한 번 누르기 (포크당 최초 1회만)</text>
+</svg>

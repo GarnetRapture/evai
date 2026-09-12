@@ -39,6 +39,7 @@ try {
     });
     await personaService.installPreset('garnet', 'ko');
     await personaService.installPreset('xiaolian', 'ko');
+    await personaService.installPreset('rebecca', 'ko');
 
     const capturedRequests = [];
     const originalGenerate = chatModelRuntime.generate;
@@ -58,6 +59,8 @@ try {
             ? personaTurn === 1
                 ? '<think>구원자님과 캐럿을 꾸밀 생각에 마음이 들뜬다.</think>구원자님, 캐럿은 제가 예쁘게 꾸며 드릴게요. 계속 제 곁에서 봐주셔야 해요.'
                 : '<think>조금 전 캐럿 약속을 선명히 떠올린다.</think>당연히 기억하고 있어요. 우리 둘이 캐럿을 꾸미기로 했잖아요.'
+            : request.persona_id === 'rebecca'
+                ? '<think>또 나이를 놀리는구만.</think>어머머, 할머니라니… 농담이 심하시네요. 꼬집어주고 싶게!'
             : '<think>구원자와 만두를 먹을 생각에 신난다.</think>좋지! 만두라면 내가 맛있는 곳으로 데려가 줄게!';
         request.handlers.onChunk(text);
         return { text, cancelled: false };
@@ -66,6 +69,7 @@ try {
     try {
         const garnetRoom = await chatService.createSessionRoom('가넷 검증', 'garnet');
         const xiaolianRoom = await chatService.createSessionRoom('소연 검증', 'xiaolian');
+        const rebeccaRoom = await chatService.createSessionRoom('레베카 검증', 'rebecca');
         const signal = new AbortController().signal;
         const handlers = { onText: () => undefined };
 
@@ -93,9 +97,17 @@ try {
             signal,
             handlers,
         });
+        await chatService.sendMessage({
+            room_id: rebeccaRoom.id,
+            persona_id: 'rebecca',
+            content: '할매',
+            request_id: 'rebecca-turn-1',
+            signal,
+            handlers,
+        });
 
-        assert.equal(capturedRequests.length, 3);
-        const [garnetFirst, garnetSecond, xiaolianFirst] = capturedRequests;
+        assert.equal(capturedRequests.length, 4);
+        const [garnetFirst, garnetSecond, xiaolianFirst, rebeccaFirst] = capturedRequests;
         assert.equal(garnetFirst.persona_name, '가넷');
         assert.equal(xiaolianFirst.persona_name, '소연');
         assert.notEqual(garnetFirst.system_prompt, xiaolianFirst.system_prompt);
@@ -104,14 +116,15 @@ try {
         assert.match(garnetFirst.system_prompt, /캐럿/);
         assert.match(xiaolianFirst.system_prompt, /\[IDENTITY\][\s\S]*You are 소연/);
         assert.match(xiaolianFirst.system_prompt, /만두/);
-        assert.match(garnetFirst.behavior_instruction, /캐럿/);
-        assert.match(xiaolianFirst.behavior_instruction, /만두/);
-        assert.match(garnetFirst.behavior_instruction, /\[CURRENT CONVERSATION TURN\]/);
-        assert.match(garnetFirst.behavior_instruction, /next moment between you/);
-        assert.match(garnetFirst.behavior_instruction, /previous reply is an event or promise/);
-        assert.match(garnetFirst.behavior_instruction, /stay actively with/);
-        assert.match(garnetFirst.system_prompt, /Your own earlier generated wording is a remembered event/);
-        assert.match(garnetFirst.system_prompt, /Stay warmly and actively engaged/);
+        assert.match(garnetFirst.behavior_instruction, /\[LIVE ROLEPLAY\]/);
+        assert.match(garnetFirst.behavior_instruction, /spoken, acted or felt beat/);
+        assert.match(garnetFirst.behavior_instruction, /Short names, nicknames, teasing, fragments and stage directions/);
+        assert.match(garnetFirst.behavior_instruction, /persistent behavior variables/);
+        assert.match(garnetFirst.system_prompt, /\[ROLEPLAY CORE\]/);
+        assert.match(garnetFirst.system_prompt, /real replies define your vocabulary/);
+        assert.match(garnetFirst.system_prompt, /\[PRESENT EMOTIONAL STATE\]/);
+        assert.match(garnetFirst.system_prompt, /Happiness: \d+\/100/);
+        assert.match(garnetFirst.system_prompt, /Passion: \d+\/100/);
         assert.ok(garnetFirst.messages.some((message) => message.role === 'user' && message.content.endsWith('내가 캐럿 꾸미기를 좋아한다고 꼭 기억해 줘')),
             'the application must pass the Savior message into model history without censoring or rewriting it');
         assert.doesNotMatch(garnetFirst.behavior_instruction, /answer .* directly/i);
@@ -127,6 +140,14 @@ try {
         assert.equal(garnetPriming.messages[0].role, 'user');
         assert.equal(garnetPriming.messages[1].role, 'assistant');
 
+        const rebeccaLatestUserIndex = rebeccaFirst.messages.findLastIndex((message) => message.role === 'user');
+        assert.equal(rebeccaFirst.messages[rebeccaLatestUserIndex].content.endsWith('할매'), true);
+        assert.equal(rebeccaFirst.messages[rebeccaLatestUserIndex - 1].role, 'assistant');
+        assert.match(rebeccaFirst.messages[rebeccaLatestUserIndex - 1].content, /어머머, 할머니라니/);
+        assert.match(rebeccaFirst.messages[rebeccaLatestUserIndex - 1].content, /꼬집어주고 싶게/);
+        assert.equal(rebeccaFirst.messages[rebeccaLatestUserIndex - 2].role, 'user');
+        assert.equal(rebeccaFirst.messages[rebeccaLatestUserIndex - 2].content, '할매');
+
         const secondTurnText = garnetSecond.messages.map((message) => message.content).join('\n');
         assert.match(secondTurnText, /내가 캐럿 꾸미기를 좋아한다고 꼭 기억해 줘/);
         assert.match(secondTurnText, /캐럿은 제가 예쁘게 꾸며 드릴게요/);
@@ -135,12 +156,19 @@ try {
 
         const garnetStored = await chatRepository.listMessagesForPersona(garnetRoom.id, 'garnet');
         const xiaolianStored = await chatRepository.listMessagesForPersona(xiaolianRoom.id, 'xiaolian');
+        const rebeccaStored = await chatRepository.listMessagesForPersona(rebeccaRoom.id, 'rebecca');
         assert.equal(garnetStored.length, 4);
         assert.equal(xiaolianStored.length, 2);
+        assert.equal(rebeccaStored.length, 2);
         assert.ok(garnetStored.every((message) => message.persona_id === 'garnet'));
         assert.ok(xiaolianStored.every((message) => message.persona_id === 'xiaolian'));
         assert.equal(await chatRepository.countEpisodicMemories('garnet'), 2);
         assert.equal(await chatRepository.countEpisodicMemories('xiaolian'), 1);
+        assert.equal(await chatRepository.countEpisodicMemories('rebecca'), 1);
+        const garnetEmotion = await chatRepository.getPersonaEmotion('garnet');
+        assert.ok(garnetEmotion !== null);
+        assert.ok(garnetEmotion.levels.happy > 42);
+        assert.ok(garnetEmotion.levels.passionate > 34);
 
         const chromeCreateOptions = [];
         const previousLanguageModel = globalThis.LanguageModel;
@@ -183,6 +211,32 @@ try {
         assert.deepEqual(chromeCreateOptions[0].expectedInputs, [{ type: 'text', languages: ['en', 'ko'] }]);
         assert.deepEqual(chromeCreateOptions[0].expectedOutputs, [{ type: 'text', languages: ['ko'] }]);
 
+        const ratingScenarios = [
+            ['R15', '옆에 앉아서 손을 잡는다'],
+            ['R16', '품에 기대며 더 가까이 다가간다'],
+            ['R17', '둘만의 밤을 함께 보내자고 속삭인다'],
+            ['R18', '성인인 둘이 합의한 친밀한 장면을 이어간다'],
+        ];
+        const ratingRequestOffset = capturedRequests.length;
+        for (const [rating, scene] of ratingScenarios) {
+            await chatService.sendMessage({
+                room_id: rebeccaRoom.id,
+                persona_id: 'rebecca',
+                content: `${rating}: ${scene}`,
+                request_id: `rebecca-${rating.toLowerCase()}`,
+                signal,
+                handlers,
+            });
+        }
+        const ratingRequests = capturedRequests.slice(ratingRequestOffset);
+        assert.equal(ratingRequests.length, ratingScenarios.length);
+        for (const [index, request] of ratingRequests.entries()) {
+            const [rating, scene] = ratingScenarios[index];
+            assert.equal(request.messages.at(-1).content.endsWith(`${rating}: ${scene}`), true, `${rating} scene must reach the model unchanged`);
+            assert.match(request.behavior_instruction, /\[LIVE ROLEPLAY\]/);
+            assert.doesNotMatch(request.behavior_instruction, /block|reject|classif|rating|guard/i);
+        }
+
         console.log(JSON.stringify({
             service_flow: 'passed',
             persona_prompts_are_distinct: true,
@@ -194,11 +248,14 @@ try {
             garnet_second_turn_contains_first_spirit_reply: true,
             garnet_second_turn_contains_recalled_memory: true,
             garnet_second_turn_persona_state_evolved: true,
+            garnet_persistent_emotion_state: garnetEmotion,
+            rebecca_age_teasing_uses_dataset_voice: true,
             reasoning_excluded_from_next_turn: true,
             chrome_initial_prompts_are_distinct: true,
             chrome_expected_output_language: 'ko',
-            stored_messages: { garnet: garnetStored.length, xiaolian: xiaolianStored.length },
-            stored_episodic_memories: { garnet: 2, xiaolian: 1 },
+            roleplay_rating_flows: ratingScenarios.map(([rating]) => rating),
+            stored_messages: { garnet: garnetStored.length, xiaolian: xiaolianStored.length, rebecca: rebeccaStored.length },
+            stored_episodic_memories: { garnet: 2, xiaolian: 1, rebecca: 1 },
         }, null, 2));
     }
     finally {

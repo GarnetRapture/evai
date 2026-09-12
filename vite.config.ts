@@ -14,6 +14,7 @@ const crossOriginIsolationHeaders = {
 }
 
 const maximumNativeRequestBytes = 8 * 1024 * 1024
+const maximumPendingNativeCalls = 128
 const nativeHostName = 'pro.everlib.eversoul.context'
 const nativeExecutableName = process.platform === 'win32' ? 'eversoul-native-host.exe' : 'eversoul-native-host'
 
@@ -150,11 +151,14 @@ class PersistentNativeContextHost {
   private pending: PendingNativeCall[] = []
 
   call(executable: string, payload: string): Promise<string> {
-    this.ensureRunning(executable)
+    const startedNow = this.ensureRunning(executable)
+    if (this.pending.length >= maximumPendingNativeCalls) {
+      return Promise.reject(new Error('native_host_busy'))
+    }
     return new Promise((resolveResponse, reject) => {
       const timeout = setTimeout(() => {
         this.failAndStop(new Error('native_host_timeout'))
-      }, 8_000)
+      }, startedNow ? 120_000 : 8_000)
       this.pending.push({ resolve: resolveResponse, reject, timeout })
       this.child?.stdin.write(`${payload}\n`, (error) => {
         if (error) this.failAndStop(error)
@@ -167,13 +171,18 @@ class PersistentNativeContextHost {
     this.child = null
     this.executable = null
     this.rejectPending(new Error('native_host_closed'))
-    if (child && child.exitCode === null) child.kill()
+    if (child) this.terminateChild(child)
   }
 
-  private ensureRunning(executable: string): void {
-    if (this.child && this.child.exitCode === null && this.executable === executable) return
+  private ensureRunning(executable: string): boolean {
+    if (this.child && this.child.exitCode === null && this.executable === executable) return false
     if (this.child) this.close()
-    const child = spawn(executable, ['--jsonl'], { windowsHide: true, stdio: ['pipe', 'pipe', 'pipe'] })
+    const consoleArgument = process.env.EVERSOUL_NATIVE_HEADLESS === '1' ? '--headless' : '--visible-console'
+    const child = spawn(executable, ['--jsonl', consoleArgument], {
+      detached: process.platform === 'win32',
+      windowsHide: false,
+      stdio: ['pipe', 'pipe', 'pipe'],
+    })
     this.child = child
     this.executable = executable
     this.stdoutBuffer = ''
@@ -195,11 +204,16 @@ class PersistentNativeContextHost {
       this.executable = null
       this.rejectPending(new Error(detail))
     })
+    return true
   }
 
   private consumeStdout(child: ChildProcessWithoutNullStreams, chunk: string): void {
     if (this.child !== child) return
     this.stdoutBuffer += chunk
+    if (this.stdoutBuffer.length > maximumNativeRequestBytes) {
+      this.failAndStop(new Error('native_host_response_too_large'))
+      return
+    }
     while (true) {
       const newline = this.stdoutBuffer.indexOf('\n')
       if (newline < 0) return
@@ -221,7 +235,17 @@ class PersistentNativeContextHost {
     this.child = null
     this.executable = null
     this.rejectPending(error)
-    if (child && child.exitCode === null) child.kill()
+    if (child) this.terminateChild(child)
+  }
+
+  private terminateChild(child: ChildProcessWithoutNullStreams): void {
+    child.stdin.destroy()
+    if (child.exitCode !== null) return
+    child.kill()
+    const forceKill = setTimeout(() => {
+      if (child.exitCode === null) child.kill('SIGKILL')
+    }, 750)
+    forceKill.unref()
   }
 
   private rejectPending(error: Error): void {

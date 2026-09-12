@@ -4,6 +4,8 @@ import { randomUUID } from 'node:crypto';
 import 'fake-indexeddb/auto';
 import { createServer } from 'vite';
 
+process.env.EVERSOUL_NATIVE_HEADLESS = '1';
+
 const server = await createServer({
     logLevel: 'silent',
     server: { host: '127.0.0.1', port: 0 },

@@ -1,6 +1,7 @@
 import { EVERSOUL_INDEX, EVERSOUL_STORE, getEverSoulDatabase } from '../../shared/storage';
 import { nativeContextService } from '../native/service';
 import { habitMemoryId } from './habit';
+import { parsePersonaEmotion, serializePersonaEmotion, type PersonaEmotionState } from './affect';
 import { cosineSimilarity, createLexicalMemoryVector, isEmptyMemoryVector } from './memory';
 import type {
     ChatMessage,
@@ -9,6 +10,7 @@ import type {
     ChatRoomPersonaActivity,
     MemoryVector,
     PersonaHabitMemoryRecord,
+    PersonaAffectMemoryRecord,
     PersonaMemoryRecord,
     PersonaMemoryType,
     PersonaRecalledMemoryRecord,
@@ -16,7 +18,7 @@ import type {
 } from './types';
 
 const TIMESTAMP_UPPER_BOUND = '￿';
-const DIRECTIVE_MEMORY_CAPACITY = 120;
+const NATIVE_MEMORY_SCAN_LIMIT = 2_147_483_647;
 const DIRECTIVE_NORMALIZE_PATTERN = /[^\p{L}\p{N}]+/gu;
 
 function normalizeDirectiveText(text: string): string {
@@ -24,11 +26,15 @@ function normalizeDirectiveText(text: string): string {
 }
 
 function isRecalledMemory(record: PersonaMemoryRecord): record is PersonaRecalledMemoryRecord {
-    return record.memory_type !== 'habit';
+    return record.memory_type === 'episodic' || record.memory_type === 'semantic' || record.memory_type === 'directive';
 }
 
 function isHabitMemory(record: PersonaMemoryRecord): record is PersonaHabitMemoryRecord {
     return record.memory_type === 'habit';
+}
+
+function isAffectMemory(record: PersonaMemoryRecord): record is PersonaAffectMemoryRecord {
+    return record.memory_type === 'affect';
 }
 
 function roomMessageRange(roomId: string): IDBKeyRange {
@@ -77,6 +83,10 @@ function recordRoomPersonaActivity(
 
 function semanticMemoryId(personaId: string): string {
     return `semantic-${personaId}`;
+}
+
+function affectMemoryId(personaId: string): string {
+    return `affect-${personaId}`;
 }
 
 function memoryReferencesMessage(record: PersonaMemoryRecord, messageId: string): boolean {
@@ -581,14 +591,12 @@ export const chatRepository = {
         const index = store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
         const normalized = normalizeDirectiveText(record.memory_text);
         let duplicateId: string | null = null;
-        const existingIds: string[] = [];
         let cursor = await index.openCursor(personaMemoryRange(record.persona_id, 'directive'));
         while (cursor) {
             if (normalizeDirectiveText(cursor.value.memory_text) === normalized) {
                 duplicateId = cursor.value.id;
                 break;
             }
-            existingIds.push(cursor.value.id);
             cursor = await cursor.continue();
         }
         if (duplicateId !== null) {
@@ -598,17 +606,7 @@ export const chatRepository = {
             await nativeContextService.appendMemory(updated);
             return;
         }
-        while (cursor) {
-            existingIds.push(cursor.value.id);
-            cursor = await cursor.continue();
-        }
         await store.add(record);
-        const overflow = existingIds.length + 1 - DIRECTIVE_MEMORY_CAPACITY;
-        if (overflow > 0) {
-            for (const staleId of existingIds.slice(0, overflow)) {
-                await store.delete(staleId);
-            }
-        }
         await transaction.done;
         await nativeContextService.appendMemory(record);
     },
@@ -660,6 +658,61 @@ export const chatRepository = {
         }
         scored.sort((left, right) => right.score - left.score);
         return scored.slice(0, limit).map((entry) => entry.text);
+    },
+    async searchDirectiveMemories(personaId: string, queryVector: MemoryVector, limit: number): Promise<string[]> {
+        if (limit <= 0 || isEmptyMemoryVector(queryVector)) {
+            return [];
+        }
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const scored: Array<{ id: string; score: number; created_at: string; text: string }> = [];
+        let cursor = await index.openCursor(personaMemoryRange(personaId, 'directive'));
+        while (cursor) {
+            const memory = cursor.value;
+            if (isRecalledMemory(memory) && !isEmptyMemoryVector(memory.memory_vector)) {
+                const score = cosineSimilarity(queryVector, memory.memory_vector);
+                if (score !== null && score > 0) {
+                    scored.push({ id: memory.id, score, created_at: memory.created_at, text: memory.memory_text });
+                    scored.sort((left, right) => right.score - left.score || right.created_at.localeCompare(left.created_at));
+                    if (scored.length > limit) scored.pop();
+                }
+            }
+            cursor = await cursor.continue();
+        }
+        const knownIds = new Set(scored.map((entry) => entry.id));
+        const native = await nativeContextService.queryContext(personaId, '', 0, NATIVE_MEMORY_SCAN_LIMIT);
+        for (const memory of native?.memories ?? []) {
+            if (memory.memory_type !== 'directive' || knownIds.has(memory.id)) continue;
+            const vector = createLexicalMemoryVector(memory.memory_text);
+            const score = cosineSimilarity(queryVector, vector);
+            if (score === null || score <= 0) continue;
+            scored.push({ id: memory.id, score, created_at: memory.created_at, text: memory.memory_text });
+            scored.sort((left, right) => right.score - left.score || right.created_at.localeCompare(left.created_at));
+            if (scored.length > limit) scored.pop();
+        }
+        return scored.map((entry) => entry.text);
+    },
+    async upsertPersonaEmotion(personaId: string, state: PersonaEmotionState): Promise<void> {
+        const record: PersonaAffectMemoryRecord = {
+            id: affectMemoryId(personaId),
+            persona_id: personaId,
+            memory_type: 'affect',
+            memory_text: serializePersonaEmotion(state),
+            created_at: state.updated_at,
+        };
+        const database = await getEverSoulDatabase();
+        await database.put(EVERSOUL_STORE.personaMemory, record);
+        await nativeContextService.appendMemory(record);
+    },
+    async getPersonaEmotion(personaId: string): Promise<PersonaEmotionState | null> {
+        const database = await getEverSoulDatabase();
+        const stored = await database.get(EVERSOUL_STORE.personaMemory, affectMemoryId(personaId));
+        if (stored && isAffectMemory(stored)) {
+            return parsePersonaEmotion(stored.memory_text);
+        }
+        const native = await nativeContextService.queryContext(personaId, '', 0, 100);
+        const mirrored = native?.memories.find((memory) => memory.id === affectMemoryId(personaId) && memory.memory_type === 'affect');
+        return mirrored ? parsePersonaEmotion(mirrored.memory_text) : null;
     },
     async upsertSemanticMemory(personaId: string, memoryText: string, memoryVector: MemoryVector, createdAt: string): Promise<void> {
         const database = await getEverSoulDatabase();

@@ -15,6 +15,9 @@ export interface NativeContextHealth {
     database_file_bytes: number;
     wal_bytes: number;
     shared_memory_bytes: number;
+    single_instance: true;
+    display_language: 'ko' | 'en' | 'zh_cn';
+    settings_path: string;
 }
 
 export interface NativeContextStatus {
@@ -33,7 +36,7 @@ export interface NativeContextMessage {
 
 export interface NativeContextMemory {
     id: string;
-    memory_type: 'episodic' | 'semantic' | 'directive' | 'habit';
+    memory_type: 'episodic' | 'semantic' | 'directive' | 'habit' | 'affect';
     memory_text: string;
     created_at: string;
 }

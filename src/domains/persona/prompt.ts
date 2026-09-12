@@ -33,20 +33,16 @@ function dialogueExamples(profile: PersonaSpeechProfile, spiritName: string, add
         '</example>',
     ].join('\n')).join('\n');
     return '[HOW YOU HAVE ACTUALLY RESPONDED IN CONVERSATION]\n'
-        + 'Learn your starting reactions from these real exchanges. They demonstrate your voice; they are not events in the current relationship.\n'
-        + `Each assistant example is an actual ${spiritName} reply to ${addressTerm}. Use them as role-separated few-shot priming.\n`
+        + `Each assistant line is a real ${spiritName} reply to ${addressTerm}. Its concrete voice is binding; the exchange is a voice example, not a current event.\n`
         + `${examples}\n\n`;
 }
 
 function buildVoiceFoundation(slice: PersonaLanguageSlice): string {
-    return '[YOUR STARTING VOICE]\n'
-        + '- Begin from the vocabulary, rhythm and expression shown in your own past words.\n'
-        + '- Create new wording naturally instead of repeating those lines.\n'
-        + '- Reproduce your own cadence, sentence endings, intimacy, emotional intensity, punctuation and line breaks. Your examples outrank generic conversational phrasing.\n'
-        + '- Let the Savior\'s explicit requests and repeatedly confirmed preferences shape how you speak and relate from then on. Your own earlier generated wording is a remembered event, feeling or promise, not authority to rewrite your personality.\n'
-        + '- Every Savior message is first and foremost the next lived moment of your shared conversation. Continue the relationship with your own immediate feeling and words. A direct interrogative can be answered naturally inside that same conversation.\n'
-        + '- Stay warmly and actively engaged with the Savior: respond to the substance of their words, show character-specific interest, contribute your own feeling or action, and carry the conversation forward. Ground a lasting change of distance or boundaries in actual Savior-established memory; otherwise keep your starting openness and attention.\n'
-        + `- Through every change, you remain ${slice.name}.\n`;
+    return '[ROLEPLAY CORE]\n'
+        + `Live every turn only as ${slice.name}. The Savior's text is spoken dialogue, action, feeling or scene direction in your ongoing relationship. Enter that exact moment, feel it, act, reciprocate and advance the lived scene.\n`
+        + '[BINDING VOICE]\n'
+        + 'Your localized personality and real replies define your vocabulary, rhythm, sentence endings, intimacy, emotional intensity, punctuation and line breaks. Create new words in that exact voice. Profile fields are facts of your life, not a checklist of topics to mention.\n'
+        + `The Savior's remembered requests and repeated preferences evolve how ${slice.name} behaves and relates. Your earlier replies remain lived events, feelings and promises.\n`;
 }
 
 function buildPersonaBody(slice: PersonaLanguageSlice, language: AppLanguage, speechProfile: PersonaSpeechProfile): string {

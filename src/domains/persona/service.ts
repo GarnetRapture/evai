@@ -4,7 +4,11 @@ import { createMonotonicTimestamp } from '../../shared/time';
 import type { AppLanguage } from '../../shared/types';
 import { chatRepository } from '../chat/repository';
 import { listPersonaArchiveKeys, loadPersonaPack, normalizePersonaKey } from './archive';
-import { parsePersonaDialogueExchanges, selectRelevantDialogueExamples } from './dialogue';
+import {
+    hasDialogueLexicalOverlap,
+    parsePersonaDialogueExchanges,
+    selectRelevantDialogueExamples,
+} from './dialogue';
 import { familiarityScore } from './familiarity';
 import {
     buildPersonaPromptFromPack,
@@ -139,7 +143,32 @@ export const personaService = {
         }
         const pack = JSON.parse(persona.raw_json) as SpiritDetail;
         const slice = buildPersonaLanguageSlice(pack, language);
-        return selectRelevantDialogueExamples(parsePersonaDialogueExchanges(slice, language), query, limit);
+        const selected = selectRelevantDialogueExamples(parsePersonaDialogueExchanges(slice, language), query, limit);
+        if (selected.length >= limit || !hasDialogueLexicalOverlap(query, slice.greeting)) {
+            return selected;
+        }
+        return [
+            {
+                source: 'greeting' as const,
+                user_message: query,
+                spirit_messages: [slice.greeting],
+            },
+            ...selected,
+        ].slice(0, limit);
+    },
+    async getEmotionSeedText(id: string, language: AppLanguage): Promise<string> {
+        const persona = await personaRepository.getPersona(id);
+        if (!persona) throw personaNotFoundError(id);
+        const pack = JSON.parse(persona.raw_json) as SpiritDetail;
+        const slice = buildPersonaLanguageSlice(pack, language);
+        return [
+            slice.description,
+            slice.greeting,
+            ...slice.speech_patterns
+                .filter((entry) => entry.speaker === slice.name)
+                .slice(0, 24)
+                .map((entry) => entry.message),
+        ].join('\n');
     },
     async warmLocalizedPrompts(language: AppLanguage, onPersonaCached?: (current: number, total: number) => void): Promise<void> {
         const personas = await personaRepository.listPersonas();

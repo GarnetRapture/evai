@@ -3178,6 +3178,51 @@
   margin-bottom: 12px;
 }
 
+.ever-memory-insight__emotion {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--tone, #89b8dc) 12%, rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ever-memory-insight__emotion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.ever-memory-insight__emotion-grid > div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 8px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.ever-memory-insight__emotion-grid > div.is-dominant {
+  color: #fff;
+}
+
+.ever-memory-insight__emotion-grid strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.ever-memory-insight__emotion-grid i {
+  grid-column: 1 / -1;
+  height: 4px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ever-memory-insight__emotion-grid b {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--tone, #89b8dc);
+}
+
 .ever-memory-insight__directives ul {
   list-style: none;
   margin: 0;

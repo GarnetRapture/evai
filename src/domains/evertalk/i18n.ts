@@ -43,6 +43,8 @@ export interface EverTalkLabels {
     familiaritySigilGradeNames: Record<'epic' | 'eternal' | 'legendary' | 'origin', string>;
     memoryInsightTitle: string;
     memoryInsightSummary: string;
+    memoryInsightEmotion: string;
+    memoryEmotionNames: Record<'happy' | 'melancholy' | 'bored' | 'passionate', string>;
     memoryInsightDirectives: string;
     memoryInsightEpisodes: string;
     memoryInsightEmpty: string;
@@ -165,6 +167,8 @@ export interface EverTalkLabels {
     nativeExecutablePathMismatch: string;
     nativeDatabasePath: string;
     nativeProcessId: string;
+    nativeRuntimePolicy: string;
+    nativeRuntimePolicyValue: string;
     connectNativeProgram: string;
     refreshEnvironment: string;
     resetData: string;
@@ -354,7 +358,7 @@ export interface EverTalkLabels {
     memoryPageTitle: string;
     memoryPageDescription: string;
     memoryGraphConnections: string;
-    memoryGraphMemoryTypes: { directive: string; episodic: string; semantic: string; memory: string };
+    memoryGraphMemoryTypes: { directive: string; episodic: string; semantic: string; affect: string; memory: string };
     memoryWorkflowNodes: Array<{ title: string; description: string }>;
     skinBase: string;
     skinBaseVariant: string;
@@ -443,6 +447,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         familiaritySigilGradeNames: { epic: '에픽', eternal: '이터널', legendary: '레전더리', origin: '오리진' },
         memoryInsightTitle: '기억 인사이트',
         memoryInsightSummary: '통합 요약',
+        memoryInsightEmotion: '현재 감정 상태',
+        memoryEmotionNames: { happy: '행복함', melancholy: '우울함', bored: '심심함', passionate: '열정적' },
         memoryInsightDirectives: '기억하라고 지시한 내용',
         memoryInsightEpisodes: '최근 기억',
         memoryInsightEmpty: '아직 이 정령이 기억한 내용이 없습니다. 대화를 나누면 브라우저 IndexedDB에 기억이 쌓입니다.',
@@ -565,6 +571,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         nativeExecutablePathMismatch: '입력한 경로와 브라우저가 연결한 실행 파일의 실제 경로가 다릅니다.',
         nativeDatabasePath: 'SQLite DB',
         nativeProcessId: '네이티브 프로세스 PID',
+        nativeRuntimePolicy: '호스트 실행 정책',
+        nativeRuntimePolicyValue: '단일 인스턴스 · 고정 상태창 · 창을 닫으면 즉시 종료',
         connectNativeProgram: '네이티브 프로그램 연결',
         refreshEnvironment: '환경 다시 확인',
         resetData: '데이터 초기화',
@@ -832,7 +840,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryPageTitle: '기억 알고리즘 흐름',
         memoryPageDescription: '초기 페르소나에서 현재 응답과 장기 기억으로 이어지는 실제 데이터 흐름입니다.',
         memoryGraphConnections: '연결선',
-        memoryGraphMemoryTypes: { directive: '사용자 지시', episodic: '대화 사건', semantic: '통합 기억', memory: '기억' },
+        memoryGraphMemoryTypes: { directive: '사용자 지시', episodic: '대화 사건', semantic: '통합 기억', affect: '감정 상태', memory: '기억' },
         memoryWorkflowNodes: [
             { title: '초기 페르소나', description: '프로필·성격·실제 대화 말투 예시' },
             { title: '최근 대화', description: '시간순 사용자·정령 응답과 현재 세션' },
@@ -901,8 +909,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `대화 모델이 준비되지 않았습니다 (상태: ${detail}). 설정 > 온디바이스 모델 목록에서 모델을 준비하거나 선택하세요.`;
                 case 'persona_prompt_missing':
                     return `정령 페르소나 프롬프트가 완전하지 않습니다: ${detail}`;
-                case 'persona_drift':
-                    return `정령의 말투를 벗어난 응답을 차단했습니다. 다시 대화해 주세요 (${detail}).`;
                 case 'cancelled':
                     return '응답 생성이 중지되었습니다.';
                 case 'invalid_format':
@@ -971,6 +977,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         familiaritySigilGradeNames: { epic: 'Epic', eternal: 'Eternal', legendary: 'Legendary', origin: 'Origin' },
         memoryInsightTitle: 'Memory Insight',
         memoryInsightSummary: 'Consolidated Summary',
+        memoryInsightEmotion: 'Current Emotional State',
+        memoryEmotionNames: { happy: 'Happy', melancholy: 'Melancholy', bored: 'Bored', passionate: 'Passionate' },
         memoryInsightDirectives: 'Told to Remember',
         memoryInsightEpisodes: 'Recent Memories',
         memoryInsightEmpty: 'This spirit has no memories yet. Chatting accumulates memories in the browser IndexedDB.',
@@ -1093,6 +1101,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         nativeExecutablePathMismatch: 'The entered path does not match the executable actually connected by the browser.',
         nativeDatabasePath: 'SQLite DB',
         nativeProcessId: 'Native process PID',
+        nativeRuntimePolicy: 'Host runtime policy',
+        nativeRuntimePolicyValue: 'Single instance · fixed status window · closes with the window',
         connectNativeProgram: 'Connect native program',
         refreshEnvironment: 'Check environment again',
         resetData: 'Reset Data',
@@ -1360,7 +1370,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryPageTitle: 'Memory Algorithm Flow',
         memoryPageDescription: 'The live data flow from the starting persona through the current response and long-term memory.',
         memoryGraphConnections: 'connections',
-        memoryGraphMemoryTypes: { directive: 'User directive', episodic: 'Conversation event', semantic: 'Consolidated memory', memory: 'Memory' },
+        memoryGraphMemoryTypes: { directive: 'User directive', episodic: 'Conversation event', semantic: 'Consolidated memory', affect: 'Emotional state', memory: 'Memory' },
         memoryWorkflowNodes: [
             { title: 'Starting persona', description: 'Profile, personality, and real dialogue voice examples' },
             { title: 'Recent conversation', description: 'Time-ordered user and spirit replies in the current session' },
@@ -1429,8 +1439,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `The chat model is not ready (status: ${detail}). Prepare or choose a model in Settings > On-device Models.`;
                 case 'persona_prompt_missing':
                     return `The spirit persona prompt is incomplete: ${detail}`;
-                case 'persona_drift':
-                    return `A response outside the spirit's voice was blocked. Please try again (${detail}).`;
                 case 'cancelled':
                     return 'Response generation was stopped.';
                 case 'invalid_format':
@@ -1499,6 +1507,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         familiaritySigilGradeNames: { epic: '史诗', eternal: '永恒', legendary: '传说', origin: '起源' },
         memoryInsightTitle: '记忆洞察',
         memoryInsightSummary: '综合摘要',
+        memoryInsightEmotion: '当前情绪状态',
+        memoryEmotionNames: { happy: '幸福', melancholy: '忧郁', bored: '无聊', passionate: '热情' },
         memoryInsightDirectives: '要求记住的内容',
         memoryInsightEpisodes: '最近记忆',
         memoryInsightEmpty: '这位精灵还没有记忆。对话后会在浏览器 IndexedDB 中积累记忆。',
@@ -1621,6 +1631,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         nativeExecutablePathMismatch: '输入路径与浏览器实际连接的可执行文件路径不一致。',
         nativeDatabasePath: 'SQLite 数据库',
         nativeProcessId: '原生进程 PID',
+        nativeRuntimePolicy: '主机运行策略',
+        nativeRuntimePolicyValue: '单实例 · 固定状态窗口 · 关闭窗口即停止',
         connectNativeProgram: '连接原生程序',
         refreshEnvironment: '重新检查环境',
         resetData: '重置数据',
@@ -1888,7 +1900,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryPageTitle: '记忆算法流程',
         memoryPageDescription: '从初始角色设定到当前回复与长期记忆的实际数据流程。',
         memoryGraphConnections: '连接线',
-        memoryGraphMemoryTypes: { directive: '用户指示', episodic: '对话事件', semantic: '整合记忆', memory: '记忆' },
+        memoryGraphMemoryTypes: { directive: '用户指示', episodic: '对话事件', semantic: '整合记忆', affect: '情绪状态', memory: '记忆' },
         memoryWorkflowNodes: [
             { title: '初始角色设定', description: '档案、性格与真实对话语气示例' },
             { title: '最近对话', description: '当前会话中按时间排序的用户与精灵回复' },
@@ -1957,8 +1969,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `对话模型尚未就绪（状态：${detail}）。请在 设置 > 设备端模型列表 中准备或选择模型。`;
                 case 'persona_prompt_missing':
                     return `精灵人格提示词不完整：${detail}`;
-                case 'persona_drift':
-                    return `已拦截偏离精灵语气的回复。请重试（${detail}）。`;
                 case 'cancelled':
                     return '已停止生成回复。';
                 case 'invalid_format':

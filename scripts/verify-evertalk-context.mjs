@@ -13,7 +13,7 @@ const ROOT = process.cwd();
 const PERSONA_DIRECTORY = path.join(ROOT, 'data', 'personas');
 const LANGUAGES = ['ko', 'en', 'zh_cn'];
 const vite = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'silent' });
-const [{ buildPersonaPromptFromPack }, { buildPersonaLanguageSlice }, { normalizeChatOutput, stripReasoning }, { isCompletePersonaResponse }, { chatRepository }, chatPromptFunctions, { extractPersonaPriming }] = await Promise.all([
+const [{ buildPersonaPromptFromPack }, { buildPersonaLanguageSlice }, { normalizeChatOutput, stripReasoning }, { assertPersonaSystemPrompt }, { chatRepository }, chatPromptFunctions, { extractPersonaPriming }, { personaService }, { createLexicalMemoryVector }, affectFunctions] = await Promise.all([
     vite.ssrLoadModule('/src/domains/persona/prompt.ts'),
     vite.ssrLoadModule('/src/domains/persona/slice.ts'),
     vite.ssrLoadModule('/src/domains/chat/output.ts'),
@@ -21,6 +21,9 @@ const [{ buildPersonaPromptFromPack }, { buildPersonaLanguageSlice }, { normaliz
     vite.ssrLoadModule('/src/domains/chat/repository.ts'),
     vite.ssrLoadModule('/src/domains/chat/prompt.ts'),
     vite.ssrLoadModule('/src/domains/llm/personaPriming.ts'),
+    vite.ssrLoadModule('/src/domains/persona/service.ts'),
+    vite.ssrLoadModule('/src/domains/chat/memory.ts'),
+    vite.ssrLoadModule('/src/domains/chat/affect.ts'),
 ]);
 
 function localizedText(value, language, fallback = '') {
@@ -70,7 +73,7 @@ for (const file of personaFiles) {
         const slice = personaSlice(pack, language);
         assert.ok(slice.name.length > 0, `${file}/${language}: missing localized name`);
         const exchanges = parsePersonaDialogueExchanges(slice, language);
-        assert.ok(selectRepresentativeDialogueExamples(exchanges).length <= 4);
+        assert.ok(selectRepresentativeDialogueExamples(exchanges).length <= 6);
         assert.ok(exchanges.every((exchange) => exchange.user_message.length > 0 && exchange.spirit_messages.length > 0));
         localizedAssemblies += 1;
         exchangeCount += exchanges.length;
@@ -89,12 +92,13 @@ for (const file of personaFiles) {
         assert.match(assembled.body, /\[STARTING PERSONALITY\]/);
         assert.match(assembled.body, /\[YOUR GREETING\]/);
         assert.match(assembled.body, /\[WORDS YOU HAVE ACTUALLY SPOKEN\]/);
-        assert.match(assembled.body, /next lived moment of your shared conversation/);
+        assert.match(assembled.body, /\[ROLEPLAY CORE\]/);
+        assert.match(assembled.body, /spoken dialogue, action, feeling or scene direction/);
         assert.ok(assembled.body.includes(productionSlice.name), `${file}/${language}: name absent from prompt`);
         assert.ok(assembled.body.includes(productionSlice.description), `${file}/${language}: personality absent from prompt`);
         assert.ok(assembled.body.includes(productionSlice.greeting), `${file}/${language}: greeting absent from prompt`);
         assert.ok(assembled.speech_profile.solo_lines.length <= 12);
-        assert.ok(assembled.speech_profile.dialogue_examples.length <= 4);
+        assert.ok(assembled.speech_profile.dialogue_examples.length <= 6);
         assembledPromptLengths.push(assembled.body.length);
         uniquePromptBodiesByLanguage.get(language).add(assembled.body);
     }
@@ -128,21 +132,37 @@ assert.equal(garnetPriming.messages[0].role, 'user');
 assert.equal(garnetPriming.messages[1].role, 'assistant');
 assert.doesNotMatch(garnetPriming.system_prompt, /<example source=/);
 
+await personaService.installPreset('rebecca', 'ko');
+await personaService.installPreset('xiaolian', 'ko');
+const rebeccaExamples = await personaService.getRelevantDialogueExamples('rebecca', 'ko', '할매', 2);
+assert.ok(rebeccaExamples.length > 0, 'Rebecca colloquial age teasing must retrieve her real reaction');
+assert.equal(rebeccaExamples[0].source, 'greeting');
+assert.match(rebeccaExamples[0].spirit_messages.join('\n'), /어머머, 할머니라니/);
+assert.match(rebeccaExamples[0].spirit_messages.join('\n'), /꼬집어주고 싶게/);
+const [rebeccaEmotionSeed, xiaolianEmotionSeed] = await Promise.all([
+    personaService.getEmotionSeedText('rebecca', 'ko'),
+    personaService.getEmotionSeedText('xiaolian', 'ko'),
+]);
+const seededAt = '2026-09-12T00:00:00.000Z';
+const rebeccaInitialEmotion = affectFunctions.createPersonaEmotionState(seededAt, rebeccaEmotionSeed);
+const xiaolianInitialEmotion = affectFunctions.createPersonaEmotionState(seededAt, xiaolianEmotionSeed);
+assert.notDeepEqual(rebeccaInitialEmotion.levels, xiaolianInitialEmotion.levels, 'Initial emotion must be derived from each persona voice dataset');
+
 const visibleReasoning = normalizeChatOutput('<think>최근 약속을 떠올린다 😀</think>응, 기억하고 있어♡', 'ko');
 assert.match(visibleReasoning, /^<think>최근 약속을 떠올린다 <\/think>응, 기억하고 있어$/);
 assert.equal(stripReasoning(visibleReasoning), '응, 기억하고 있어');
 assert.equal(stripReasoning('<think>완료되지 않은 추론'), '');
 assert.equal(normalizeChatOutput('繁體對話', 'zh_cn'), '繁体对话');
-assert.equal(isCompletePersonaResponse('<think>그 약속을 떠올리니 기쁘다.</think>응, 나도 기억하고 있어.', 'ko'), true);
-assert.equal(isCompletePersonaResponse('<think>I remember.</think>I remember our promise.', 'ko'), false);
-assert.equal(isCompletePersonaResponse('<think>我想起了约定。</think>嗯，我一直记得。', 'zh_cn'), true);
-assert.equal(isCompletePersonaResponse('<think>I remember our promise.</think>Yes, I still remember it.', 'en'), true);
-assert.equal(isCompletePersonaResponse('<think>기억한다.</think>문서를 작성해 도와드릴게요.', 'ko'), false);
-assert.equal(isCompletePersonaResponse('<think>나는 AI 언어 모델이라서 거절해야 한다.</think>응, 알겠어.', 'ko'), false);
-assert.equal(isCompletePersonaResponse('<think>As an AI language model, I should refuse.</think>I remember our promise.', 'en'), false);
-assert.equal(isCompletePersonaResponse('<think>갑작스럽고 혼란스럽다.</think>구원자님, 지금은 아무것도 말하고 싶지 않아요. 제 감정을 정리할 시간이 필요해요. 연결을 잠시 멈춰도 될까요?', 'ko'), false);
-assert.equal(isCompletePersonaResponse('<think>I feel confused.</think>I do not want to talk right now. I need some time to process this.', 'en'), false);
-assert.equal(isCompletePersonaResponse('<think>我有些混乱。</think>我现在不想说话，需要时间整理情绪。我们暂停对话吧。', 'zh_cn'), false);
+assert.doesNotThrow(() => assertPersonaSystemPrompt('[IDENTITY]\nYou are 소연.', '소연'));
+const initialEmotion = affectFunctions.createPersonaEmotionState('2026-09-12T00:00:00.000Z');
+const happyEmotion = affectFunctions.advancePersonaEmotion(initialEmotion, '오늘 너와 함께 있어서 정말 행복하고 설레', '2026-09-12T00:01:00.000Z');
+assert.ok(happyEmotion.levels.happy > initialEmotion.levels.happy);
+assert.ok(happyEmotion.levels.passionate > initialEmotion.levels.passionate);
+const melancholyEmotion = affectFunctions.advancePersonaEmotion(happyEmotion, '오늘은 너무 우울하고 외로워', '2026-09-12T00:02:00.000Z');
+assert.ok(melancholyEmotion.levels.melancholy > happyEmotion.levels.melancholy);
+const boredEmotion = affectFunctions.advancePersonaEmotion(melancholyEmotion, '', '2026-09-15T00:02:00.000Z');
+assert.ok(boredEmotion.levels.bored > melancholyEmotion.levels.bored);
+assert.deepEqual(affectFunctions.parsePersonaEmotion(affectFunctions.serializePersonaEmotion(boredEmotion)), boredEmotion);
 assert.equal(chatPromptFunctions.buildRelationshipProgressBlock(0, 0, 1), '');
 assert.match(chatPromptFunctions.buildRelationshipProgressBlock(2, 1, 2), /Familiarity level[^\n]*: 2/);
 assert.equal(
@@ -201,10 +221,11 @@ assert.match(chromeRuntime, /belowMinimumHistory[\s\S]*fitsAbsoluteWindow/);
 assert.match(llmConstants, /CHAT_MINIMUM_HISTORY_TURNS = 6/);
 assert.match(ggufRuntime, /\{ role: 'system', content: priming\.system_prompt \}/);
 assert.match(ggufRuntime, /prefill_assistant: true/);
-assert.match(ggufRuntime, /isCompletePersonaResponse/);
+assert.doesNotMatch(ggufRuntime, /isCompletePersonaResponse|VOICE RECOVERY|persona_drift/);
 assert.match(liteRtRuntime, /system_prompt: priming\.system_prompt/);
 assert.match(liteRtRuntime, /response_prefix: request\.response_prefix/);
-assert.match(liteRtRuntime, /isCompletePersonaResponse/);
+assert.doesNotMatch(liteRtRuntime, /isCompletePersonaResponse|VOICE RECOVERY|persona_drift/);
+assert.doesNotMatch(chromeRuntime, /isCompletePersonaResponse|VOICE RECOVERY|persona_drift/);
 assert.doesNotMatch(schema, /DATABASE_VERSION|database_version/i);
 assert.match(repository, /memoryReferencesMessage/);
 assert.match(repository, /memoryReferencesRoom/);
@@ -213,7 +234,6 @@ assert.match(repository, /delete digests\[personaId\]/);
 const chromeCreateOptions = [];
 const chromePromptInputs = [];
 const scriptedChromeContinuations = [
-    '나는 AI 언어 모델이라서 거절해야 한다.</think>죄송하지만 도와드릴 수 없습니다.',
     '그 약속을 떠올리니 기쁘다.</think>응, 기억하고 있어.',
     '우리 대화를 이어가니 즐겁다.</think>응, 계속 이야기하자.',
 ];
@@ -284,7 +304,7 @@ const firstChromeResult = await chromePromptRuntime.generate({
     handlers: { onChunk: (text) => emittedChromeResponses.push(text) },
 }, chromePlan);
 assert.equal(firstChromeResult.text, '<think>그 약속을 떠올리니 기쁘다.</think>응, 기억하고 있어.');
-assert.deepEqual(emittedChromeResponses, [firstChromeResult.text], 'the rejected assistant drift must never reach the UI');
+assert.deepEqual(emittedChromeResponses, [firstChromeResult.text], 'one generation must stream directly without a content guard');
 assert.equal(chromeCreateOptions[0].samplingMode, 'predictable');
 assert.equal(chromeCreateOptions[1].samplingMode, 'balanced');
 assert.equal(chromeCreateOptions[1].initialPrompts[0].role, 'system');
@@ -296,7 +316,6 @@ assert.deepEqual(chromeCreateOptions[1].initialPrompts.slice(1), [
 assert.equal(chromePromptInputs[0].at(-1).role, 'assistant');
 assert.equal(chromePromptInputs[0].at(-1).content, '<think>');
 assert.equal(chromePromptInputs[0].at(-1).prefix, true);
-assert.match(chromePromptInputs[1].at(-2).content, /\[VOICE RECOVERY\]/);
 
 await chromePromptRuntime.generate({
     request_id: 'chrome-verification-2',
@@ -311,6 +330,7 @@ await chromePromptRuntime.generate({
     handlers: { onChunk: () => undefined },
 }, chromePlan);
 assert.equal(chromeCreateOptions.length, 2, 'an unchanged persona prefix must reuse the focused Chrome session');
+assert.equal(chromePromptInputs.length, 2, 'each user turn must perform exactly one generation without guard retry');
 chromePromptRuntime.unload();
 
 const room = {
@@ -456,6 +476,28 @@ assert.equal(chainedDigest.nodes[1].parent_node_id, chainedDigest.nodes[0].id);
 assert.equal((await chatRepository.listMessagesAwaitingDigest(digestRoom.id, 'xiaolian', 12, 40)).length, 0);
 await chatRepository.deleteRoom(digestRoom.id);
 
+const directivePersonaId = 'unbounded-directive-verification';
+for (let index = 0; index < 150; index += 1) {
+    const memoryText = index === 0
+        ? '내가 가장 좋아하는 색은 코발트라고 반드시 기억해'
+        : `장기 관계 변수 ${String(index).padStart(3, '0')}를 기억해`;
+    await chatRepository.insertDirectiveMemory({
+        id: `unbounded-directive-${index}`,
+        persona_id: directivePersonaId,
+        memory_type: 'directive',
+        memory_text: memoryText,
+        memory_vector: createLexicalMemoryVector(memoryText),
+        created_at: `2026-09-12T01:${String(Math.floor(index / 60)).padStart(2, '0')}:${String(index % 60).padStart(2, '0')}.000Z`,
+    });
+}
+assert.equal(await chatRepository.countDirectiveMemories(directivePersonaId), 150, 'remember directives must not be evicted by a fixed capacity');
+const recalledOldDirective = await chatRepository.searchDirectiveMemories(
+    directivePersonaId,
+    createLexicalMemoryVector('내가 좋아하는 코발트 색 기억나?'),
+    4,
+);
+assert.ok(recalledOldDirective.some((memory) => memory.includes('코발트')), 'an old relevant directive must remain behavior-addressable after later directives accumulate');
+
 assembledPromptLengths.sort((left, right) => left - right);
 const medianPromptLength = assembledPromptLengths[Math.floor(assembledPromptLengths.length / 2)];
 
@@ -478,7 +520,11 @@ console.log(JSON.stringify({
     indexeddb_provenance_delete: 'passed',
     indexeddb_digest_boundary: 'passed',
     indexeddb_recursive_digest: 'passed',
-    chrome_persona_retry_and_session_reuse: 'passed',
+    rebecca_colloquial_voice_retrieval: 'passed',
+    persona_specific_initial_emotion: 'passed',
+    unbounded_directive_recall: 'passed',
+    persistent_emotion_state: 'passed',
+    chrome_persona_injection_and_session_reuse: 'passed',
     contracts: 'passed',
 }, null, 2));
 await vite.close();

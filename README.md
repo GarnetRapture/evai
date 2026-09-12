@@ -338,6 +338,59 @@ npm run build    # tsc -b 타입 검사 + vite build 정적 빌드(dist/)
 
 ---
 
+## ⚙️ GitHub Actions로 빌드하기 — 버튼만 누르면 됩니다
+
+이 저장소를 포크하면 워크플로 파일 [`.github/workflows/build-web.yml`](.github/workflows/build-web.yml)도 함께 복사됩니다. 포크한 사람은 각자 자기 저장소에서 이 워크플로를 돌릴 수 있습니다. **Node.js 설치도, 명령어 입력도, 설정값 입력도 필요 없습니다.** 포크한 저장소의 **Actions** 탭에서 버튼을 누르면 GitHub가 대신 `npm install` → `npm run build`를 실행하고, `dist/` 정적 파일을 zip으로 묶어 내려받을 수 있게 올려줍니다.
+
+<p align="center">
+  <a href="https://github.com/GarnetRapture/evai/fork"><img src="https://img.shields.io/badge/STEP_0-Fork_먼저_하기-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/워크플로-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
+</p>
+
+### 1단계 — 내 포크에서 Actions 켜기
+
+포크된 저장소는 워크플로가 꺼진 상태로 시작합니다. 내 포크의 **Actions** 탭에 들어가 초록 버튼 **`I understand my workflows, go ahead and enable them`** 을 한 번 누르면 켜집니다. 포크당 최초 한 번이면 끝입니다.
+
+<p align="center">
+  <img src="docs/images/actions/ko/1-enable-actions.svg" width="880" alt="포크한 저장소의 Actions 탭에서 초록 버튼을 눌러 워크플로를 켜는 화면" />
+</p>
+
+### 2단계 — `Run workflow` 버튼 누르기
+
+왼쪽 목록에서 **Build Web**을 고르고, 오른쪽의 **`Run workflow`** 를 연 다음 초록 **`Run workflow`** 버튼을 누릅니다. 입력할 값은 하나도 없고 브랜치는 기본값 그대로 두면 됩니다.
+
+<p align="center">
+  <img src="docs/images/actions/ko/2-run-workflow.svg" width="880" alt="Build Web 워크플로를 고르고 Run workflow 버튼을 누르는 화면" />
+</p>
+
+### 3단계 — 완성된 zip 내려받기
+
+실행이 끝나면 초록 체크가 뜹니다. 그 실행을 눌러 들어가 맨 아래 **Artifacts**의 `evai-web-v<버전>-<커밋7자리>.zip`을 내려받으세요. 압축을 풀면 `npm run build` 결과인 `dist/` 정적 파일 그대로라서, 그 폴더를 어떤 정적 호스팅에 올리든 바로 동작합니다.
+
+<p align="center">
+  <img src="docs/images/actions/ko/3-download-artifact.svg" width="880" alt="빌드가 끝난 실행 화면에서 Artifacts의 zip 파일을 내려받는 화면" />
+</p>
+
+### 워크플로가 실제로 하는 일
+
+| 단계 | 내용 |
+| --- | --- |
+| 실행 환경 | `ubuntu-latest` + `actions/setup-node@v7` Node.js 24 |
+| 의존성 설치 | `npm install` (이 저장소는 `package-lock.json`을 배포하지 않으므로 `npm ci`가 아닌 `npm install`을 씁니다) |
+| 빌드 | `npm run build` = `tsc -b` 타입 검사 + `vite build` 정적 빌드(`dist/`) |
+| 포장 | `dist/` 전체를 `evai-web-v<package.json 버전>-<커밋 7자리>.zip`으로 압축 |
+| 업로드 | `actions/upload-artifact@v7`로 그 zip 하나를 그대로 업로드(보관 90일) |
+| 릴리스 | `v`로 시작하는 태그를 푸시했을 때만, 같은 zip을 첨부해 **내 포크의** Releases에 릴리스를 생성 |
+
+### 알아둘 점
+
+- 워크플로를 수동 실행하는 **`Run workflow` 버튼은 기본 브랜치에 워크플로 파일이 있을 때만** 나타납니다([GitHub 공식 문서](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)). 포크 직후에는 그대로 있으니 신경 쓰지 않아도 됩니다.
+- 빌드는 각자의 저장소에서 각자의 계정으로 돌아갑니다. 공개 저장소에서 GitHub 제공 표준 러너를 쓰면 [Actions 사용료는 무료](https://docs.github.com/en/billing/concepts/product-billing/github-actions)이고, 비공개 포크는 각 계정 플랜의 무료 분(GitHub Free 기준 월 2,000분)에서 차감됩니다.
+- 원본 저장소에 푸시 권한이 없어도 됩니다. 포크는 완전히 독립된 내 저장소이고, 빌드 결과물도 내 저장소의 Artifacts/Releases에만 올라갑니다.
+- 선택형 C++26 네이티브 SQLite 호스트(`native/`)는 이 워크플로에 포함되지 않습니다. 그쪽은 위의 실행 및 빌드 가이드대로 `npm run native:build`로 각자 PC에서 빌드합니다.
+
+---
+
 ## 🧩 정령(페르소나) 데이터 스키마
 
 정령은 종족(`race`)에 따라 일곱 갈래로 나뉩니다.

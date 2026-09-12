@@ -333,6 +333,59 @@ npm run build    # tsc -b type check + vite build static output (dist/)
 
 ---
 
+## ⚙️ Build with GitHub Actions — Just Press the Button
+
+Forking this repository also copies the workflow file [`.github/workflows/build-web.yml`](.github/workflows/build-web.yml), so everyone who forks can run that build in their own repository. **No Node.js install, no commands to type, no inputs to fill in.** Press the button on the **Actions** tab of your fork and GitHub runs `npm install` → `npm run build` for you, then packs the `dist/` static output into a zip you can download.
+
+<p align="center">
+  <a href="https://github.com/GarnetRapture/evai/fork"><img src="https://img.shields.io/badge/STEP_0-Fork_this_repo-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/Workflow-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
+</p>
+
+### Step 1 — Turn Actions on in your fork
+
+A forked repository starts with its workflows disabled. Open the **Actions** tab of your fork and press the green **`I understand my workflows, go ahead and enable them`** button once. That is all, once per fork.
+
+<p align="center">
+  <img src="docs/images/actions/en/1-enable-actions.svg" width="880" alt="Enabling workflows from the Actions tab of a forked repository" />
+</p>
+
+### Step 2 — Press `Run workflow`
+
+Pick **Build Web** in the left-hand list, open **`Run workflow`** on the right, and press the green **`Run workflow`** button. There is nothing to fill in, and the branch can stay at its default.
+
+<p align="center">
+  <img src="docs/images/actions/en/2-run-workflow.svg" width="880" alt="Selecting the Build Web workflow and pressing Run workflow" />
+</p>
+
+### Step 3 — Download the finished zip
+
+When the run finishes it gets a green check. Open that run and download `evai-web-v<version>-<7-char commit>.zip` from **Artifacts** at the bottom. Unzipped, it is exactly the `dist/` static output of `npm run build`, so it works as-is on any static host.
+
+<p align="center">
+  <img src="docs/images/actions/en/3-download-artifact.svg" width="880" alt="Downloading the artifact zip from a finished workflow run" />
+</p>
+
+### What the workflow actually does
+
+| Stage | Detail |
+| --- | --- |
+| Runner | `ubuntu-latest` with `actions/setup-node@v7` Node.js 24 |
+| Dependencies | `npm install` (this repository does not ship `package-lock.json`, so it uses `npm install` rather than `npm ci`) |
+| Build | `npm run build` = `tsc -b` type check + `vite build` static output (`dist/`) |
+| Packaging | The whole `dist/` compressed into `evai-web-v<package.json version>-<7-char commit>.zip` |
+| Upload | That single zip uploaded as-is by `actions/upload-artifact@v7` (kept for 90 days) |
+| Release | Only when a tag starting with `v` is pushed: the same zip is attached to a release in **your own** fork's Releases |
+
+### Good to know
+
+- The manual **`Run workflow` button appears only while the workflow file is on the default branch** ([official GitHub docs](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)). Right after a fork it already is, so there is nothing to do.
+- The build runs in your own repository on your own account. On a public repository with GitHub-hosted standard runners, [Actions usage is free](https://docs.github.com/en/billing/concepts/product-billing/github-actions); a private fork draws on that account's included minutes (2,000 per month on GitHub Free).
+- You do not need push access to the upstream repository. A fork is fully your own, and the build output lands only in your repository's Artifacts and Releases.
+- The optional C++26 native SQLite host (`native/`) is not part of this workflow. Build it on your own PC with `npm run native:build` as described in the run and build guide above.
+
+---
+
 ## 🧩 Spirit (Persona) Data Schema
 
 Spirits fall into seven races (`race`).

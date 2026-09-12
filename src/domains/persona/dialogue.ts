@@ -6,7 +6,7 @@ import type {
     PersonaLanguageSlice,
 } from './types';
 
-export const BASELINE_DIALOGUE_EXAMPLE_LIMIT = 4;
+export const BASELINE_DIALOGUE_EXAMPLE_LIMIT = 6;
 export const RELEVANT_DIALOGUE_EXAMPLE_LIMIT = 2;
 const EXAMPLE_REPLY_LINE_LIMIT = 6;
 const EXAMPLE_TEXT_CHAR_LIMIT = 280;
@@ -16,9 +16,17 @@ const SAVIOR_SPEAKERS: Record<AppLanguage, ReadonlySet<string>> = {
     en: new Set(['Savior']),
     zh_cn: new Set(['救援者', '救世主']),
 };
+const DIALOGUE_CANONICAL_ALIASES: ReadonlyArray<readonly [RegExp, string]> = [
+    [/할매|할망구/gu, '할머니'],
+    [/할배|영감탱이/gu, '할아버지'],
+];
 
 function compactDialogueText(text: string): string {
-    return text.normalize('NFKC').replace(/\s+/g, ' ').trim();
+    let normalized = text.normalize('NFKC').replace(/\s+/g, ' ').trim();
+    for (const [pattern, replacement] of DIALOGUE_CANONICAL_ALIASES) {
+        normalized = normalized.replace(pattern, replacement);
+    }
+    return normalized;
 }
 
 function clipDialogueText(text: string): string {
@@ -111,7 +119,7 @@ function lexicalTerms(text: string): Set<string> {
         if (token.length >= 2) {
             terms.add(token);
         }
-        if (token.length >= 4) {
+        if (token.length >= 3) {
             for (let index = 0; index < token.length - 1; index += 1) {
                 terms.add(token.slice(index, index + 2));
             }
@@ -189,4 +197,14 @@ export function selectRelevantDialogueExamples(
         .sort((left, right) => right.score - left.score || left.index - right.index)
         .slice(0, limit)
         .map((candidate) => candidate.exchange);
+}
+
+export function hasDialogueLexicalOverlap(query: string, candidate: string): boolean {
+    const queryTerms = lexicalTerms(query);
+    if (queryTerms.size === 0) return false;
+    const candidateTerms = lexicalTerms(candidate);
+    for (const term of queryTerms) {
+        if (candidateTerms.has(term)) return true;
+    }
+    return false;
 }

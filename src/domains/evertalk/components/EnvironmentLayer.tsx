@@ -56,6 +56,7 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
                 {nativeStatus.health ? <div><dt>{labels.nativeDatabasePath}</dt><dd>{nativeStatus.health.database_path}</dd></div> : null}
                 {nativeStatus.health ? <div><dt>{labels.databaseFileSize}</dt><dd>{new Intl.NumberFormat(labels.localeTag).format(nativeStatus.health.database_bytes)} B</dd></div> : null}
                 {Number.isInteger(nativeStatus.health?.process_id) ? <div><dt>{labels.nativeProcessId}</dt><dd>{nativeStatus.health?.process_id}</dd></div> : null}
+                {nativeStatus.health ? <div><dt>{labels.nativeRuntimePolicy}</dt><dd>{labels.nativeRuntimePolicyValue}</dd></div> : null}
             </dl>
         </div>
     );

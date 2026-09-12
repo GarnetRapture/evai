@@ -1,3 +1,4 @@
+/* oxlint-disable react/only-export-components -- graph builder is exported for the production layout contract test */
 import { useMemo, useState } from 'react';
 import type { CSSProperties, ReactNode } from 'react';
 import { Activity, BrainCircuit, Database, HardDrive, MessageCircle, Minus, Plus, RefreshCw, RotateCcw, Sparkles, Trophy } from 'lucide-react';
@@ -221,6 +222,7 @@ function localizedMemoryType(controller: EverTalkController, value: string): str
     if (value === 'directive') return labels.directive;
     if (value === 'episodic') return labels.episodic;
     if (value === 'semantic') return labels.semantic;
+    if (value === 'affect') return labels.affect;
     return labels.memory;
 }
 

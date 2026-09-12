@@ -3,6 +3,8 @@
 #include <array>
 #include <cstdint>
 #include <filesystem>
+#include <fstream>
+#include <functional>
 #include <iostream>
 #include <limits>
 #include <stdexcept>
@@ -17,7 +19,10 @@
 #include <fcntl.h>
 #include <io.h>
 #include <process.h>
+#include <windows.h>
 #else
+#include <fcntl.h>
+#include <sys/file.h>
 #include <unistd.h>
 #endif
 
@@ -29,6 +34,254 @@ using eversoul::native::jsonEscape;
 
 constexpr std::uint32_t kMaximumFrameBytes = 8U * 1024U * 1024U;
 constexpr std::size_t kMaximumNativeMessageResponseBytes = 1024U * 1024U;
+
+enum class DisplayLanguage { Korean, English, Chinese };
+
+std::string_view languageCode(DisplayLanguage language) {
+    switch (language) {
+    case DisplayLanguage::Korean: return "ko";
+    case DisplayLanguage::Chinese: return "zh_cn";
+    default: return "en";
+    }
+}
+
+DisplayLanguage languageFromCode(std::string_view code) {
+    if (code == "ko") return DisplayLanguage::Korean;
+    if (code == "zh_cn") return DisplayLanguage::Chinese;
+    return DisplayLanguage::English;
+}
+
+class ProcessInstanceGuard {
+public:
+    explicit ProcessInstanceGuard(const std::filesystem::path& executablePath) {
+#ifdef _WIN32
+        const auto key = std::hash<std::string>{}(executablePath.lexically_normal().string());
+        const std::wstring name = L"Local\\EverSoulNativeHost-" + std::to_wstring(key);
+        handle_ = CreateMutexW(nullptr, FALSE, name.c_str());
+        if (handle_ == nullptr) throw std::runtime_error("native_host_singleton_failed");
+        if (GetLastError() == ERROR_ALREADY_EXISTS) {
+            CloseHandle(handle_);
+            handle_ = nullptr;
+            throw std::runtime_error("native_host_already_running");
+        }
+#else
+        const auto lockPath = executablePath.parent_path() / ".eversoul-native-host.lock";
+        descriptor_ = open(lockPath.c_str(), O_CREAT | O_RDWR, 0600);
+        if (descriptor_ < 0 || flock(descriptor_, LOCK_EX | LOCK_NB) != 0) {
+            if (descriptor_ >= 0) close(descriptor_);
+            descriptor_ = -1;
+            throw std::runtime_error("native_host_already_running");
+        }
+#endif
+    }
+
+    ProcessInstanceGuard(const ProcessInstanceGuard&) = delete;
+    ProcessInstanceGuard& operator=(const ProcessInstanceGuard&) = delete;
+
+    ~ProcessInstanceGuard() {
+#ifdef _WIN32
+        if (handle_ != nullptr) CloseHandle(handle_);
+#else
+        if (descriptor_ >= 0) {
+            flock(descriptor_, LOCK_UN);
+            close(descriptor_);
+        }
+#endif
+    }
+
+private:
+#ifdef _WIN32
+    HANDLE handle_ = nullptr;
+#else
+    int descriptor_ = -1;
+#endif
+};
+
+class HostStatusConsole {
+public:
+    explicit HostStatusConsole(bool enabled) : enabled_(enabled) {
+        if (!enabled_) return;
+#ifdef _WIN32
+        if (GetConsoleWindow() == nullptr) AllocConsole();
+        SetConsoleOutputCP(CP_UTF8);
+        SetConsoleTitleW(L"EverSoul Native Host");
+        output_ = CreateFileW(L"CONOUT$", GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE,
+            nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+#endif
+    }
+
+    HostStatusConsole(const HostStatusConsole&) = delete;
+    HostStatusConsole& operator=(const HostStatusConsole&) = delete;
+
+    ~HostStatusConsole() {
+#ifdef _WIN32
+        if (output_ != nullptr && output_ != INVALID_HANDLE_VALUE) CloseHandle(output_);
+#endif
+    }
+
+    DisplayLanguage resolveLanguage(const std::filesystem::path& settingsPath) {
+        std::ifstream settings(settingsPath);
+        std::string line;
+        while (std::getline(settings, line)) {
+            constexpr std::string_view prefix = "language=";
+            if (!line.starts_with(prefix)) continue;
+            const std::string code = line.substr(prefix.size());
+            if (code == "ko" || code == "en" || code == "zh_cn") return languageFromCode(code);
+        }
+        writeUtf8(
+            "EverSoul Native Host - Display language / 표시 언어 / 显示语言\n\n"
+            "  1. 한국어\n"
+            "  2. English\n"
+            "  3. 简体中文\n\n"
+            "Select 1, 2, or 3 / 1, 2, 3 중 선택 / 请选择 1、2 或 3: ");
+        const int choice = readChoice();
+        const DisplayLanguage language = choice == 1
+            ? DisplayLanguage::Korean
+            : choice == 3 ? DisplayLanguage::Chinese : DisplayLanguage::English;
+        std::ofstream output(settingsPath, std::ios::trunc);
+        if (!output) throw std::runtime_error("native_host_ini_write_failed");
+        output << "[display]\nlanguage=" << languageCode(language) << '\n';
+        return language;
+    }
+
+    void show(
+        DisplayLanguage language,
+        bool connected,
+        std::uint64_t processId,
+        const std::filesystem::path& executablePath,
+        const std::filesystem::path& databasePath,
+        const std::filesystem::path& settingsPath) {
+        if (!enabled_) return;
+        language_ = language;
+        processId_ = processId;
+        executablePath_ = executablePath;
+        databasePath_ = databasePath;
+        settingsPath_ = settingsPath;
+        connected_ = connected;
+        render();
+    }
+
+    void markConnected() {
+        if (!enabled_ || connected_) return;
+        connected_ = true;
+        render();
+    }
+
+private:
+    int readChoice() {
+#ifdef _WIN32
+        HANDLE input = CreateFileW(L"CONIN$", GENERIC_READ | GENERIC_WRITE,
+            FILE_SHARE_READ | FILE_SHARE_WRITE, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, nullptr);
+        if (input == INVALID_HANDLE_VALUE) return 2;
+        wchar_t buffer[16]{};
+        DWORD read = 0;
+        const BOOL ok = ReadConsoleW(input, buffer, 15, &read, nullptr);
+        CloseHandle(input);
+        if (!ok || read == 0) return 2;
+        return buffer[0] == L'1' ? 1 : buffer[0] == L'3' ? 3 : 2;
+#else
+        std::ifstream terminal("/dev/tty");
+        int choice = 2;
+        if (terminal) terminal >> choice;
+        return choice;
+#endif
+    }
+
+    void writeUtf8(std::string_view text) {
+        if (!enabled_) return;
+#ifdef _WIN32
+        if (output_ != nullptr && output_ != INVALID_HANDLE_VALUE) {
+            const int length = MultiByteToWideChar(CP_UTF8, 0, text.data(), static_cast<int>(text.size()), nullptr, 0);
+            std::wstring wide(static_cast<std::size_t>(length), L'\0');
+            MultiByteToWideChar(CP_UTF8, 0, text.data(), static_cast<int>(text.size()), wide.data(), length);
+            DWORD written = 0;
+            WriteConsoleW(output_, wide.data(), static_cast<DWORD>(wide.size()), &written, nullptr);
+        }
+#else
+        std::clog << text << std::flush;
+#endif
+    }
+
+    void clear() {
+#ifdef _WIN32
+        if (output_ == nullptr || output_ == INVALID_HANDLE_VALUE) return;
+        CONSOLE_SCREEN_BUFFER_INFO info{};
+        if (!GetConsoleScreenBufferInfo(output_, &info)) return;
+        const DWORD cells = static_cast<DWORD>(info.dwSize.X) * static_cast<DWORD>(info.dwSize.Y);
+        DWORD written = 0;
+        FillConsoleOutputCharacterW(output_, L' ', cells, {0, 0}, &written);
+        FillConsoleOutputAttribute(output_, info.wAttributes, cells, {0, 0}, &written);
+        SetConsoleCursorPosition(output_, {0, 0});
+#else
+        std::clog << "\033[2J\033[H";
+#endif
+    }
+
+    void render() {
+        clear();
+        std::string title;
+        std::string connection;
+        std::string sqlite;
+        std::string pid;
+        std::string executable;
+        std::string database;
+        std::string settings;
+        std::string singleton;
+        std::string closeHint;
+        if (language_ == DisplayLanguage::Korean) {
+            title = "에버소울 네이티브 호스트";
+            connection = connected_ ? "연결 상태 : 연결됨" : "연결 상태 : 브라우저 연결 대기 중";
+            sqlite = "SQLite 상태 : 정상";
+            pid = "프로세스 PID";
+            executable = "실행 파일";
+            database = "데이터베이스";
+            settings = "언어 설정";
+            singleton = "중복 실행 방지 : 활성";
+            closeHint = "이 창을 닫으면 네이티브 호스트가 즉시 종료됩니다.";
+        }
+        else if (language_ == DisplayLanguage::Chinese) {
+            title = "EverSoul 原生主机";
+            connection = connected_ ? "连接状态：已连接" : "连接状态：等待浏览器连接";
+            sqlite = "SQLite 状态：正常";
+            pid = "进程 PID";
+            executable = "可执行文件";
+            database = "数据库";
+            settings = "语言设置";
+            singleton = "防止重复运行：已启用";
+            closeHint = "关闭此窗口将立即停止原生主机。";
+        }
+        else {
+            title = "EverSoul Native Host";
+            connection = connected_ ? "Connection : Connected" : "Connection : Waiting for browser";
+            sqlite = "SQLite : Healthy";
+            pid = "Process PID";
+            executable = "Executable";
+            database = "Database";
+            settings = "Language settings";
+            singleton = "Duplicate process prevention : Active";
+            closeHint = "Close this window to stop the native host immediately.";
+        }
+        writeUtf8(
+            title + "\n========================================\n"
+            + connection + '\n' + sqlite + '\n' + singleton + "\n\n"
+            + pid + " : " + std::to_string(processId_) + '\n'
+            + executable + " : " + executablePath_.string() + '\n'
+            + database + " : " + databasePath_.string() + '\n'
+            + settings + " : " + settingsPath_.string() + "\n\n"
+            + closeHint + '\n');
+    }
+
+    bool enabled_ = false;
+    bool connected_ = false;
+    DisplayLanguage language_ = DisplayLanguage::English;
+    std::uint64_t processId_ = 0;
+    std::filesystem::path executablePath_;
+    std::filesystem::path databasePath_;
+    std::filesystem::path settingsPath_;
+#ifdef _WIN32
+    HANDLE output_ = INVALID_HANDLE_VALUE;
+#endif
+};
 
 std::uint64_t currentProcessId() {
 #ifdef _WIN32
@@ -97,7 +350,9 @@ std::string handleRequest(
     ContextDatabase& database,
     std::string_view payload,
     const std::filesystem::path& executablePath,
-    const std::filesystem::path& databasePath) {
+    const std::filesystem::path& databasePath,
+    const std::filesystem::path& settingsPath,
+    DisplayLanguage displayLanguage) {
     auto parsed = eversoul::format::parseJson(payload);
     if (!parsed || !parsed->isObject()) {
         throw std::runtime_error("invalid_json_request");
@@ -121,7 +376,10 @@ std::string handleRequest(
             + std::to_string(databaseBytes) + ",\"database_file_bytes\":"
             + std::to_string(databaseFileBytes) + ",\"wal_bytes\":"
             + std::to_string(walBytes) + ",\"shared_memory_bytes\":"
-            + std::to_string(sharedMemoryBytes) + "}";
+            + std::to_string(sharedMemoryBytes)
+            + ",\"single_instance\":true,\"display_language\":\""
+            + std::string(languageCode(displayLanguage)) + "\",\"settings_path\":\""
+            + jsonEscape(settingsPath.string()) + "\"}";
     }
     if (operation == "statistics") {
         return "{\"ok\":true,\"statistics\":" + database.queryStatistics() + "}";
@@ -275,12 +533,19 @@ int selfTest() {
 int main(int argc, char** argv) {
     try {
         bool jsonLines = false;
+        bool consoleEnabled = true;
         const std::filesystem::path executablePath = std::filesystem::absolute(argv[0]);
         std::filesystem::path databasePath = executablePath.parent_path() / "eversoul-context.sqlite3";
         for (int index = 1; index < argc; ++index) {
             const std::string_view argument(argv[index]);
             if (argument == "--self-test") {
                 return selfTest();
+            }
+            if (argument == "--headless") {
+                consoleEnabled = false;
+            }
+            if (argument == "--visible-console") {
+                consoleEnabled = true;
             }
             if (argument == "--jsonl") {
                 jsonLines = true;
@@ -295,15 +560,25 @@ int main(int argc, char** argv) {
             _setmode(_fileno(stdout), _O_BINARY);
         }
 #endif
+        ProcessInstanceGuard instanceGuard(executablePath);
+        HostStatusConsole statusConsole(consoleEnabled);
+        const std::filesystem::path settingsPath = executablePath.parent_path() / "eversoul-native-host.ini";
+        const DisplayLanguage displayLanguage = consoleEnabled
+            ? statusConsole.resolveLanguage(settingsPath)
+            : DisplayLanguage::English;
         ContextDatabase database(databasePath);
+        statusConsole.show(displayLanguage, false, currentProcessId(), executablePath, databasePath, settingsPath);
         std::string payload;
         while (readFrame(std::cin, jsonLines, payload)) {
+            statusConsole.markConnected();
             try {
-                writeFrame(std::cout, jsonLines, handleRequest(database, payload, executablePath, databasePath));
+                writeFrame(std::cout, jsonLines, handleRequest(
+                    database, payload, executablePath, databasePath, settingsPath, displayLanguage));
             }
             catch (const std::exception& error) {
                 writeFrame(std::cout, jsonLines, errorResponse(error));
             }
+            if (payload.capacity() > 256U * 1024U) std::string{}.swap(payload);
         }
         return 0;
     }

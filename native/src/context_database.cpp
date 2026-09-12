@@ -46,6 +46,49 @@ void stepDone(sqlite3* database, sqlite3_stmt* statement) {
     }
 }
 
+void ensureFlexibleMemoryTypes(sqlite3* database) {
+    auto schema = prepare(database, "SELECT sql FROM sqlite_master WHERE type='table' AND name='memories'");
+    if (sqlite3_step(schema.get()) != SQLITE_ROW) return;
+    const auto* schemaText = sqlite3_column_text(schema.get(), 0);
+    const std::string definition = schemaText == nullptr ? std::string{} : reinterpret_cast<const char*>(schemaText);
+    if (definition.find("CHECK(memory_type") == std::string::npos) return;
+    schema.reset();
+
+    execute(database, "PRAGMA foreign_keys=OFF");
+    try {
+        execute(database, R"SQL(
+            BEGIN IMMEDIATE;
+            ALTER TABLE memory_sources RENAME TO memory_sources_legacy;
+            ALTER TABLE memories RENAME TO memories_legacy;
+            CREATE TABLE memories(
+                id TEXT PRIMARY KEY,
+                persona_id TEXT NOT NULL,
+                room_id TEXT REFERENCES rooms(id) ON DELETE CASCADE,
+                memory_type TEXT NOT NULL,
+                memory_text TEXT NOT NULL,
+                created_at TEXT NOT NULL
+            ) STRICT;
+            INSERT INTO memories SELECT id,persona_id,room_id,memory_type,memory_text,created_at FROM memories_legacy;
+            CREATE TABLE memory_sources(
+                memory_id TEXT NOT NULL REFERENCES memories(id) ON DELETE CASCADE,
+                message_id TEXT NOT NULL REFERENCES messages(id) ON DELETE CASCADE,
+                PRIMARY KEY(memory_id, message_id)
+            ) STRICT;
+            INSERT INTO memory_sources SELECT memory_id,message_id FROM memory_sources_legacy;
+            DROP TABLE memory_sources_legacy;
+            DROP TABLE memories_legacy;
+            CREATE INDEX memories_persona_type_time ON memories(persona_id, memory_type, created_at);
+            COMMIT;
+        )SQL");
+    }
+    catch (...) {
+        sqlite3_exec(database, "ROLLBACK", nullptr, nullptr, nullptr);
+        execute(database, "PRAGMA foreign_keys=ON");
+        throw;
+    }
+    execute(database, "PRAGMA foreign_keys=ON");
+}
+
 std::string columnText(sqlite3_stmt* statement, int column) {
     const auto* text = sqlite3_column_text(statement, column);
     return text == nullptr ? std::string{} : reinterpret_cast<const char*>(text);
@@ -138,7 +181,7 @@ ContextDatabase::ContextDatabase(const std::filesystem::path& path) {
             id TEXT PRIMARY KEY,
             persona_id TEXT NOT NULL,
             room_id TEXT REFERENCES rooms(id) ON DELETE CASCADE,
-            memory_type TEXT NOT NULL CHECK(memory_type IN ('episodic','semantic','directive','habit')),
+            memory_type TEXT NOT NULL,
             memory_text TEXT NOT NULL,
             created_at TEXT NOT NULL
         ) STRICT;
@@ -149,6 +192,7 @@ ContextDatabase::ContextDatabase(const std::filesystem::path& path) {
             PRIMARY KEY(memory_id, message_id)
         ) STRICT;
     )SQL");
+    ensureFlexibleMemoryTypes(database_);
 }
 
 ContextDatabase::~ContextDatabase() {

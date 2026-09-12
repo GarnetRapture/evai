@@ -61,7 +61,7 @@ export interface PersonaSpeechProfile {
     solo_lines: string[];
     dialogue_examples: PersonaDialogueExchange[];
 }
-export type PersonaDialogueSource = 'story' | 'evertalk';
+export type PersonaDialogueSource = 'story' | 'evertalk' | 'greeting';
 export interface PersonaDialogueExchange {
     source: PersonaDialogueSource;
     user_message: string;

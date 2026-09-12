@@ -10,7 +10,6 @@ export type DomainErrorCode =
     | 'invalid_model_file'
     | 'native_runtime'
     | 'persona_prompt_missing'
-    | 'persona_drift'
     | 'storage';
 
 export class DomainError extends Error {

@@ -1,5 +1,6 @@
 import { pickLocalized } from '../../shared/i18n';
 import type { AppLanguage } from '../../shared/types';
+import type { PersonaEmotionState } from './affect';
 
 export const EVERTALK_SESSION_TITLE = 'EverTalk Session';
 export const PERSONA_RESPONSE_PREFIX = '<think>';
@@ -66,6 +67,7 @@ export function buildHabitContextBlock(habits: string[]): string {
 }
 
 export const MEMORY_DIRECTIVE_LIMIT = 8;
+export const RELEVANT_DIRECTIVE_LIMIT = 4;
 
 const MEMORY_DIRECTIVE_PATTERN = new RegExp([
     '기억\\s*(해|하고|해줘|해 줘|해둬|해 둬|해라|하세요|해주세요|해 주세요|할래|하자|하기)',
@@ -195,6 +197,18 @@ export function buildRelationshipProgressBlock(messageCount: number, memoryCount
     return '\n[SHARED CONTINUITY]\n'
         + `- Familiarity level earned from persistent conversation and memories: ${familiarityLevel}\n`
         + '- This level proves continuity; it does not prescribe a canned personality stage. Let the actual memories determine what changed.\n';
+}
+
+export function buildPersonaEmotionBlock(state: PersonaEmotionState | null): string {
+    if (state === null) return '';
+    return '\n[PRESENT EMOTIONAL STATE]\n'
+        + `- Dominant mood: ${state.dominant}\n`
+        + `- Happiness: ${state.levels.happy}/100\n`
+        + `- Melancholy: ${state.levels.melancholy}/100\n`
+        + `- Boredom: ${state.levels.bored}/100\n`
+        + `- Passion: ${state.levels.passionate}/100\n`
+        + `- Last changed: ${state.updated_at}\n`
+        + 'This is your current lived mood. Express its intensity through your own established voice and let the Savior\'s present words change it naturally.\n';
 }
 
 export function buildRecalledMemoryContext(memories: string[]): string {
