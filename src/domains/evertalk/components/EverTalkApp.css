@@ -2059,7 +2059,8 @@
   padding: clamp(16px, 3vmin, 28px) clamp(16px, 3vw, 32px) 0;
 }
 
-.ever-lobby__section-title {
+.ever-lobby__section-title,
+.ever-savior-card__title {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -2070,25 +2071,23 @@
   text-shadow: 0 1px 6px rgba(20, 10, 40, 0.6);
 }
 
-.ever-lobby__section-title::after {
+.ever-lobby__section-title::after,
+.ever-savior-card__title::after {
   content: '';
   width: 109px;
   height: 13px;
-  background: var(--ever-lobby-deco) left center / 100% 100% no-repeat;
+  background: var(--ever-section-deco) left center / 100% 100% no-repeat;
 }
 
-.ever-lobby__savior {
+.ever-savior-card {
   position: relative;
   isolation: isolate;
   display: flex;
   align-items: stretch;
-  gap: 16px;
-  min-width: clamp(300px, 34vw, 460px);
-  padding: clamp(14px, 2vmin, 20px);
   overflow: hidden;
   border-radius: 16px;
-  background-color: rgba(28, 22, 44, 0.8);
-  background-image: linear-gradient(110deg, rgba(40, 28, 62, 0.92), rgba(78, 42, 84, 0.78)), var(--ever-lobby-stripe);
+  background-color: rgba(28, 22, 44, 0.86);
+  background-image: linear-gradient(110deg, rgba(34, 24, 54, 0.97), rgba(70, 38, 78, 0.95)), var(--ever-savior-card-stripe);
   background-size: auto, 64px 26px;
   border: 1px solid rgba(255, 214, 240, 0.22);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
@@ -2096,108 +2095,89 @@
   color: #fff;
 }
 
-.ever-lobby__savior-portrait {
+.ever-lobby__top .ever-savior-card {
+  min-width: clamp(340px, 36vw, 500px);
+}
+
+.ever-savior-card__portrait {
   position: relative;
   flex: 0 0 auto;
-  width: clamp(72px, 8vw, 92px);
-  height: clamp(72px, 8vw, 92px);
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
+  width: clamp(128px, 12vw, 164px);
+  align-self: stretch;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.22);
+  background: rgba(12, 8, 22, 0.5);
 }
 
-.ever-lobby__savior-portrait > img:first-child {
-  width: 46%;
-  height: 46%;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
-  z-index: 2;
-}
-
-.ever-lobby__savior-ring {
+.ever-savior-card__portrait img {
   position: absolute;
-  inset: 4%;
-  width: 92%;
-  height: 92%;
-  object-fit: contain;
-  opacity: 0.85;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
 }
 
-.ever-lobby__savior-body {
+.ever-savior-card__body {
   min-width: 0;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+  padding: clamp(14px, 2vmin, 20px);
 }
 
-.ever-lobby__savior-open {
-  padding: 6px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 999px;
-  background: rgba(107, 91, 208, 0.5);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-.ever-lobby__savior-open:hover { filter: brightness(1.16); }
-
-.ever-lobby__savior-name {
+.ever-savior-name {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  max-width: 100%;
 }
 
-.ever-lobby__savior-name strong {
+.ever-savior-name strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: clamp(1.2rem, 2.6vmin, 1.6rem);
-  font-weight: 800;
+  font-weight: 900;
 }
 
-.ever-lobby__savior-name button,
-.ever-lobby__savior-edit button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.ever-savior-name button {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
   width: 28px;
   height: 28px;
   border: none;
-  border-radius: 7px;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.14);
   color: #fff;
   cursor: pointer;
 }
 
-.ever-lobby__savior-edit {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.ever-lobby__savior-edit input {
-  width: clamp(140px, 20vw, 220px);
+.ever-savior-name input {
+  width: clamp(140px, 20vw, 240px);
   padding: 8px 12px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.32);
   color: #fff;
   font-size: 1rem;
   font-weight: 700;
 }
 
-.ever-lobby__savior-stats {
+.ever-savior-card__stats {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 6px;
 }
 
-.ever-lobby__savior-stats div {
+.ever-savior-card__stats div,
+.ever-savior-stats div {
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -2208,17 +2188,20 @@
   text-align: center;
 }
 
-.ever-lobby__savior-stats div.is-highlight {
-  background: var(--ever-lobby-badge) center 40% / 92% 86% no-repeat, rgba(242, 198, 97, 0.12);
-  box-shadow: inset 0 0 0 1px rgba(242, 198, 97, 0.35);
+.ever-savior-card__stats div.is-highlight,
+.ever-savior-stats div.is-highlight {
+  background: linear-gradient(180deg, rgba(242, 198, 97, 0.2), rgba(242, 198, 97, 0.06));
+  box-shadow: inset 0 0 0 1px rgba(242, 198, 97, 0.45);
 }
 
-.ever-lobby__savior-stats small {
+.ever-savior-card__stats small,
+.ever-savior-stats small {
   font-size: 10px;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.ever-lobby__savior-stats strong {
+.ever-savior-card__stats strong,
+.ever-savior-stats strong {
   font-size: clamp(0.9rem, 1.9vmin, 1.16rem);
   font-weight: 800;
   color: #f2c661;
@@ -2256,8 +2239,8 @@
   gap: 8px;
   padding: 14px 16px;
   border-radius: 14px;
-  background-color: rgba(28, 22, 44, 0.78);
-  background-image: linear-gradient(110deg, rgba(40, 28, 62, 0.9), rgba(60, 38, 76, 0.76)), var(--ever-lobby-stripe);
+  background-color: rgba(28, 22, 44, 0.84);
+  background-image: linear-gradient(110deg, rgba(34, 24, 54, 0.96), rgba(56, 36, 72, 0.94)), var(--ever-lobby-stripe);
   background-size: auto, 64px 26px;
   border: 1px solid rgba(255, 214, 240, 0.18);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.42);
@@ -2324,8 +2307,8 @@
   place-items: center;
   overflow: hidden;
   border-radius: 16px;
-  background-color: rgba(28, 22, 44, 0.78);
-  background-image: linear-gradient(145deg, rgba(88, 56, 110, 0.9), rgba(34, 26, 52, 0.92)), var(--ever-lobby-stripe);
+  background-color: rgba(28, 22, 44, 0.84);
+  background-image: linear-gradient(145deg, rgba(88, 56, 110, 0.95), rgba(34, 26, 52, 0.96)), var(--ever-lobby-stripe);
   background-size: auto, 64px 26px;
   border: 1px solid rgba(255, 214, 240, 0.3);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.18);
@@ -2562,27 +2545,36 @@
 .ever-lobby__empty {
   position: relative;
   z-index: 2;
-  margin: auto;
-  width: min(92vw, 380px);
+  isolation: isolate;
+  flex: 1 1 0;
+  align-self: center;
+  min-height: 180px;
+  max-height: 340px;
+  max-width: 86vw;
   aspect-ratio: 410 / 423;
+  margin: 12px auto;
+  color: #fff;
+}
+
+.ever-lobby__empty-body {
+  position: absolute;
+  inset: 16% 13% 12%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  padding: 18% 16% 14%;
-  box-sizing: border-box;
+  gap: 12px;
+  overflow: hidden;
   text-align: center;
-  color: #fff;
 }
 
 .ever-lobby__empty::before {
   content: '';
   position: absolute;
   inset: 9% 8% 8%;
-  z-index: -1;
+  z-index: -2;
   border-radius: 6px;
-  background: linear-gradient(180deg, rgba(40, 20, 44, 0.78), rgba(76, 30, 60, 0.72));
+  background: linear-gradient(180deg, rgba(40, 20, 44, 0.82), rgba(76, 30, 60, 0.78));
   backdrop-filter: blur(4px);
 }
 
@@ -2598,7 +2590,7 @@
 }
 
 .ever-lobby__empty strong {
-  font-size: clamp(0.95rem, 2vmin, 1.1rem);
+  font-size: clamp(0.85rem, 1.8vmin, 1.05rem);
   font-weight: 700;
   line-height: 1.6;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
@@ -2608,7 +2600,8 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 22px;
+  flex: 0 0 auto;
+  padding: 10px 20px;
   border: 1px solid rgba(255, 220, 236, 0.5);
   border-radius: 999px;
   background: linear-gradient(135deg, #e06a98, #9d5cd0);
@@ -2629,6 +2622,8 @@
   min-height: 0;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
+  container-type: size;
 }
 
 .ever-lobby__actor {
@@ -2638,7 +2633,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: ever-lobby-stroll var(--lobby-duration, 18s) ease-in-out var(--lobby-delay, 0s) infinite;
+  transform-origin: 50% 100%;
+  animation: ever-lobby-roam var(--lobby-duration, 18s) ease-in-out var(--lobby-delay, 0s) infinite;
 }
 
 .ever-lobby__actor.is-reacting {
@@ -2648,8 +2644,10 @@
 
 .ever-lobby__speech {
   position: relative;
-  max-width: min(52vw, 260px);
-  margin-bottom: 16px;
+  max-width: min(40vw, 240px);
+  max-height: 96px;
+  overflow: hidden;
+  margin-bottom: 12px;
   padding: 10px 16px;
   border-style: solid;
   border-width: 18px 20px;
@@ -2661,6 +2659,9 @@
   filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.34));
   animation: ever-lobby-pop 0.24s ease;
 }
+
+.ever-lobby__speech.is-start { align-self: flex-start; }
+.ever-lobby__speech.is-end { align-self: flex-end; }
 
 .ever-lobby__speech-tail {
   position: absolute;
@@ -2683,7 +2684,7 @@
 }
 
 .ever-lobby__portrait {
-  height: clamp(180px, 34vh, 360px);
+  height: clamp(120px, calc((100cqh - 220px) * var(--lobby-depth, 1)), 360px);
   width: auto;
   max-width: 40vw;
   object-fit: contain;
@@ -2719,12 +2720,13 @@
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
-@keyframes ever-lobby-stroll {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(clamp(40px, 9vw, 130px)); }
-  50% { transform: translateX(0); }
-  75% { transform: translateX(calc(-1 * clamp(40px, 9vw, 130px))); }
-  100% { transform: translateX(0); }
+@keyframes ever-lobby-roam {
+  0% { transform: translate(0, 0); }
+  18% { transform: translate(var(--lobby-range, 4vw), calc(-1 * var(--lobby-rise, 8px))); }
+  36% { transform: translate(calc(var(--lobby-range, 4vw) * 0.35), 0); }
+  54% { transform: translate(calc(var(--lobby-range, 4vw) * -0.6), calc(-0.5 * var(--lobby-rise, 8px))); }
+  76% { transform: translate(calc(var(--lobby-range, 4vw) * -1), 0); }
+  100% { transform: translate(0, 0); }
 }
 
 @keyframes ever-lobby-pop {
@@ -4309,14 +4311,19 @@ a.ever-settings-reset-button {
   100% { opacity: 0; }
 }
 
+.ever-settings-overlay.is-savior-inventory {
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  place-items: stretch;
+  padding: clamp(8px, 1.6vmin, 20px);
+}
+
 .ever-savior-modal {
-  width: min(920px, 94vw);
-  max-height: 90vh;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 20px;
+  --ever-savior-hero-size: clamp(150px, 24dvh, 280px);
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
   border-radius: 18px;
   background: #24263a;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -4327,13 +4334,40 @@ a.ever-settings-reset-button {
 .ever-savior-modal__header {
   position: relative;
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 16px;
-  border-radius: 14px;
+  align-items: stretch;
+  gap: clamp(16px, 2vw, 32px);
+  min-height: var(--ever-savior-hero-size);
+  padding-right: 64px;
   background: linear-gradient(120deg, rgba(107, 91, 208, 0.42), rgba(36, 38, 58, 0.6));
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   overflow: hidden;
+}
+
+.ever-savior-modal__body {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(0, 2.6fr);
+  gap: clamp(14px, 2vw, 28px);
+  padding: clamp(14px, 2vw, 24px);
+  overflow: hidden;
+}
+
+.ever-savior-modal__summary,
+.ever-savior-modal__body > .ever-savior-collection {
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.ever-savior-modal__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ever-savior-modal__summary > *,
+.ever-savior-modal__body > .ever-savior-collection > * {
+  flex-shrink: 0;
 }
 
 .ever-savior-modal__header::before {
@@ -4350,31 +4384,36 @@ a.ever-settings-reset-button {
 .ever-savior-modal__portrait {
   position: relative;
   flex: 0 0 auto;
-  width: 84px;
-  height: 84px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
+  width: var(--ever-savior-hero-size);
+  align-self: stretch;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.22);
+  background: rgba(12, 8, 22, 0.5);
 }
 
 .ever-savior-modal__portrait img {
-  width: 44%;
-  height: 44%;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 18%;
 }
 
 .ever-savior-modal__identity {
+  position: relative;
   min-width: 0;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
+  justify-content: center;
+  gap: 10px;
+  padding: clamp(14px, 2.4vmin, 26px) 0;
+}
+
+.ever-savior-modal__identity .ever-savior-name strong {
+  font-size: clamp(1.6rem, 3.4vmin, 2.4rem);
 }
 
 .ever-savior-ribbon {
@@ -4389,47 +4428,6 @@ a.ever-settings-reset-button {
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.04em;
-}
-
-.ever-savior-modal__name {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.ever-savior-modal__name strong {
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-
-.ever-savior-modal__name button,
-.ever-savior-modal__edit button {
-  display: inline-grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border: none;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.14);
-  color: #fff;
-  cursor: pointer;
-}
-
-.ever-savior-modal__edit {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.ever-savior-modal__edit input {
-  width: clamp(160px, 26vw, 260px);
-  padding: 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.34);
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
 }
 
 .ever-savior-modal__model {
@@ -4454,8 +4452,9 @@ a.ever-settings-reset-button {
 
 .ever-savior-modal__close {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
   display: grid;
   place-items: center;
   width: 34px;
@@ -4468,31 +4467,23 @@ a.ever-settings-reset-button {
 }
 
 .ever-savior-stats {
+  position: relative;
+  flex: 1 1 360px;
+  min-width: 0;
+  align-self: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
+  margin: 0;
+  padding: clamp(12px, 2vmin, 20px) 0;
 }
 
 .ever-savior-stats div {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  padding: 10px 8px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  text-align: center;
-}
-
-.ever-savior-stats small {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.56);
+  padding: 10px 6px 12px;
 }
 
 .ever-savior-stats strong {
-  font-size: 1.1rem;
-  font-weight: 900;
-  color: #f2c661;
+  font-size: clamp(1rem, 2.2vmin, 1.4rem);
 }
 
 .ever-savior-sigils,
@@ -4505,7 +4496,7 @@ a.ever-settings-reset-button {
 
 .ever-savior-sigils__grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
   gap: 10px;
 }
 
@@ -4553,11 +4544,8 @@ a.ever-settings-reset-button {
 
 .ever-savior-stickers__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(88px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(clamp(88px, 7vw, 120px), 1fr));
   gap: 8px;
-  max-height: 260px;
-  overflow-y: auto;
-  padding-right: 4px;
 }
 
 .ever-savior-stickers__empty {
@@ -4621,6 +4609,39 @@ a.ever-settings-reset-button {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 14px;
+}
+
+@media (max-width: 980px) {
+  .ever-savior-modal {
+    --ever-savior-hero-size: clamp(120px, 20dvh, 200px);
+  }
+
+  .ever-savior-modal__header {
+    flex-wrap: wrap;
+    padding-right: 0;
+  }
+
+  .ever-savior-modal__identity {
+    flex: 1 1 0;
+    padding-right: 60px;
+  }
+
+  .ever-savior-stats {
+    flex-basis: 100%;
+    padding: 0 clamp(12px, 2vw, 20px) clamp(12px, 2vw, 20px);
+  }
+
+  .ever-savior-modal__body {
+    grid-template-columns: minmax(0, 1fr);
+    overflow-y: auto;
+  }
+
+  .ever-savior-modal__summary,
+  .ever-savior-modal__body > .ever-savior-collection {
+    min-height: auto;
+    overflow: visible;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -4816,6 +4837,106 @@ a.ever-settings-reset-button {
 }
 
 .ever-environment-overlay.is-notification { justify-content: flex-start; }
+
+.ever-environment-layer__profile-trigger {
+  height: calc(100% - 10px);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.ever-environment-layer__profile-trigger:hover,
+.ever-environment-layer__profile-trigger.is-open {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ever-environment-overlay.is-savior-menu { background: transparent; }
+
+.ever-savior-menu {
+  width: min(500px, 100%);
+  display: grid;
+  gap: 8px;
+  margin-right: clamp(0px, 18vw, 320px);
+  padding: 12px;
+  border: 1px solid rgba(255, 214, 240, 0.2);
+  border-radius: 14px;
+  background-color: rgba(28, 22, 44, 0.97);
+  background-image: linear-gradient(145deg, rgba(64, 42, 86, 0.96), rgba(28, 22, 44, 0.98)), var(--ever-savior-menu-stripe, none);
+  color: #f5f3fb;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+.ever-savior-menu .ever-savior-card {
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.ever-savior-menu__icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 11px;
+  background-color: rgba(255, 255, 255, 0.08);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.ever-savior-menu__icon img {
+  width: 72%;
+  height: 72%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+}
+
+.ever-savior-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 8px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ever-savior-menu__item:hover,
+.ever-savior-menu__item:focus-visible {
+  border-color: rgba(255, 214, 240, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ever-savior-inventory-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.ever-savior-inventory-title img {
+  width: 44px;
+  height: auto;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.35));
+}
 
 .ever-notification-layer__panel {
   width: min(390px, 100%);

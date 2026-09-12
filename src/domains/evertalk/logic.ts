@@ -14,7 +14,7 @@ export {
 } from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LocalModelEntryGroup, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -186,6 +186,36 @@ export function splitSpiritReply(text: string): SpiritReplyParts {
         reply: blocks.filter((block) => block.type === 'text').map((block) => block.content).join('').trim(),
     };
 }
+const LOBBY_STAGE_LEFT_PERCENT = 9;
+const LOBBY_STAGE_RIGHT_PERCENT = 70;
+
+function stableUnitHash(seed: string, salt: number): number {
+    let hash = 2166136261 ^ salt;
+    for (let index = 0; index < seed.length; index += 1) {
+        hash ^= seed.charCodeAt(index);
+        hash = Math.imul(hash, 16777619);
+    }
+    return ((hash >>> 0) % 10_000) / 10_000;
+}
+
+export function resolveLobbyActorMotion(spiritId: string, index: number, count: number): LobbyActorMotion {
+    const span = LOBBY_STAGE_RIGHT_PERCENT - LOBBY_STAGE_LEFT_PERCENT;
+    const slotWidth = span / Math.max(1, count);
+    const base = count === 1
+        ? LOBBY_STAGE_LEFT_PERCENT + span * 0.46
+        : LOBBY_STAGE_LEFT_PERCENT + slotWidth * index + slotWidth * (0.2 + stableUnitHash(spiritId, 1) * 0.3);
+    const relative = (base - LOBBY_STAGE_LEFT_PERCENT) / span;
+    return {
+        base_percent: base,
+        range_vw: Math.round((1.5 + stableUnitHash(spiritId, 2) * 5.5) * 10) / 10,
+        rise_px: Math.round(4 + stableUnitHash(spiritId, 3) * 16),
+        duration_seconds: Math.round((14 + stableUnitHash(spiritId, 4) * 16) * 10) / 10,
+        delay_seconds: -Math.round(stableUnitHash(spiritId, 5) * 120) / 10,
+        depth_scale: Math.round((0.88 + stableUnitHash(spiritId, 6) * 0.16) * 100) / 100,
+        speech_alignment: relative < 0.3 ? 'start' : relative > 0.7 ? 'end' : 'center',
+    };
+}
+
 export function formatProgressPercent(progress: ModelDownloadProgress): number {
     return Math.round(progress.ratio * 100);
 }

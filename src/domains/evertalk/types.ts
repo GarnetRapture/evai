@@ -335,6 +335,16 @@ export interface LobbyScreenProps {
     onOpenSaviorProfile: () => void;
     onRenameSavior: (name: string) => void;
 }
+export type LobbySpeechAlignment = 'start' | 'center' | 'end';
+export interface LobbyActorMotion {
+    base_percent: number;
+    range_vw: number;
+    rise_px: number;
+    duration_seconds: number;
+    delay_seconds: number;
+    depth_scale: number;
+    speech_alignment: LobbySpeechAlignment;
+}
 export interface SaviorProfilePanelProps {
     open: boolean;
     profile: SaviorProfileSnapshot;
@@ -343,6 +353,16 @@ export interface SaviorProfilePanelProps {
     eventStickers: SpiritStickerBadge[];
     labels: EverTalkLabels;
     onClose: () => void;
+    onRenameSavior: (name: string) => void;
+}
+export interface SaviorNameEditorProps {
+    name: string;
+    labels: EverTalkLabels;
+    onRename: (name: string) => void;
+}
+export interface SaviorProfileCardProps {
+    profile: SaviorProfileSnapshot;
+    labels: EverTalkLabels;
     onRenameSavior: (name: string) => void;
 }
 export interface ChatWindowGeometry {

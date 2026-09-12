@@ -1,35 +1,24 @@
 import { useState } from 'react';
 import type { CSSProperties } from 'react';
-import { Check, Cpu, Pencil, Users } from 'lucide-react';
+import { Cpu, Users } from 'lucide-react';
 import { ASSET_ROOT, getSpiritVisualAssets } from '../../persona';
-import { computeFamiliarityLevel, familiaritySigilFrameUrl, pickRandomSpeechLine, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from '../logic';
+import { computeFamiliarityLevel, familiaritySigilFrameUrl, pickRandomSpeechLine, resolveFamiliaritySigilGrade, resolveLobbyActorMotion, resolveSpiritStickerBadges } from '../logic';
 import type { LobbyScreenProps } from '../types';
 import { DECOR_UI_ASSETS, EVERTALK_UI_ASSETS, LOBBY_ACTOR_SLOT_ASSETS, LOBBY_UI_ASSETS, loveFrameAssetForLevel, raceBadgeUrl } from '../uiAssets';
 import { LoadableAssetImage } from './LoadableAssetImage';
+import { SaviorProfileCard } from './SaviorProfileCard';
 
 export function LobbyScreen({ spirits, familiarityList, background, saviorProfile, memoryInsight, memoryInsightLoading, labels, maxPreferredSlots, onEnterChat, onOpenBackgroundPicker, onOpenRoster, onOpenSaviorProfile, onRenameSavior }: LobbyScreenProps) {
     const [reaction, setReaction] = useState<{ id: string; line: string } | null>(null);
-    const [editingName, setEditingName] = useState(false);
-    const [nameDraft, setNameDraft] = useState(saviorProfile.saviorName);
     const backgroundUrl = background ? `${ASSET_ROOT}/backgrounds/talk/${background}` : `${ASSET_ROOT}/backgrounds/talk/Talk_BG_Lounge.png`;
     const insightSummary = memoryInsight?.semantic_summary?.trim() ?? '';
     const insightDirectives = memoryInsight?.directives ?? [];
     const emptySlots = Math.max(0, maxPreferredSlots - spirits.length);
 
-    function submitName() {
-        const trimmed = nameDraft.trim();
-        if (trimmed.length > 0) {
-            onRenameSavior(trimmed);
-        }
-        setEditingName(false);
-    }
-
     const lobbyStyle = {
         backgroundImage: `url(${backgroundUrl})`,
-        '--ever-lobby-deco': `url(${DECOR_UI_ASSETS.sectionDeco})`,
-        '--ever-lobby-badge': `url(${DECOR_UI_ASSETS.levelBadge})`,
+        '--ever-section-deco': `url(${DECOR_UI_ASSETS.sectionDeco})`,
         '--ever-lobby-stripe': `url(${LOBBY_UI_ASSETS.stripePattern})`,
-        '--ever-lobby-edge': `url(${DECOR_UI_ASSETS.cardEdge})`,
     } as CSSProperties;
 
     return (
@@ -38,33 +27,7 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
             <img className="ever-lobby__light ever-lobby__light--left" src={LOBBY_UI_ASSETS.lightColumn} alt="" aria-hidden="true"/>
             <img className="ever-lobby__light ever-lobby__light--right" src={LOBBY_UI_ASSETS.lightColumn} alt="" aria-hidden="true"/>
             <header className="ever-lobby__top">
-                <div className="ever-lobby__savior">
-                    <span className="ever-lobby__savior-portrait" style={{ backgroundImage: `url(${EVERTALK_UI_ASSETS.saviorCardTexture})` }}>
-                        <img src={EVERTALK_UI_ASSETS.appMark} alt="" aria-hidden="true"/>
-                        <img className="ever-lobby__savior-ring" src={LOBBY_UI_ASSETS.gradeBloom} alt="" aria-hidden="true"/>
-                    </span>
-                    <div className="ever-lobby__savior-body">
-                        <span className="ever-lobby__section-title">{labels.saviorProfile}</span>
-                        {editingName ? (
-                            <span className="ever-lobby__savior-edit">
-                                <input value={nameDraft} maxLength={24} placeholder={labels.saviorNamePlaceholder} onChange={(event) => setNameDraft(event.target.value)} onKeyDown={(event) => { if (event.key === 'Enter') { submitName(); } }}/>
-                                <button type="button" aria-label={labels.saviorRename} onClick={submitName}><Check aria-hidden="true" size={16}/></button>
-                            </span>
-                        ) : (
-                            <span className="ever-lobby__savior-name">
-                                <strong>{saviorProfile.saviorName}</strong>
-                                <button type="button" aria-label={labels.saviorRename} onClick={() => { setNameDraft(saviorProfile.saviorName); setEditingName(true); }}><Pencil aria-hidden="true" size={14}/></button>
-                            </span>
-                        )}
-                        <div className="ever-lobby__savior-stats">
-                            <div><small>{labels.saviorStatPreferred}</small><strong>{saviorProfile.preferredCount}</strong></div>
-                            <div><small>{labels.saviorStatEarned}</small><strong>{saviorProfile.earnedSigils.length}</strong></div>
-                            <div><small>{labels.saviorStatMessages}</small><strong>{saviorProfile.totalMessages}</strong></div>
-                            <div className="is-highlight"><small>{labels.saviorStatHighest}</small><strong>Lv.{saviorProfile.highestLevel}</strong></div>
-                        </div>
-                        <button type="button" className="ever-lobby__savior-open" onClick={onOpenSaviorProfile}>{labels.saviorProfileOpenAction}</button>
-                    </div>
-                </div>
+                <SaviorProfileCard profile={saviorProfile} labels={labels} onRenameSavior={onRenameSavior}/>
                 <nav className="ever-lobby__top-actions" aria-label={labels.lobby}>
                     <button type="button" className="ever-lobby__action" onClick={onOpenSaviorProfile}>
                         <span className="ever-lobby__action-icon"><img src={DECOR_UI_ASSETS.inventoryIcon} alt="" aria-hidden="true"/></span>
@@ -104,11 +67,13 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
             {spirits.length === 0 ? (
                 <div className="ever-lobby__empty">
                     <img className="ever-lobby__empty-art" src={loveFrameAssetForLevel(1)} alt="" aria-hidden="true"/>
-                    <strong>{labels.lobbyEmpty}</strong>
-                    <button type="button" onClick={onOpenRoster}>
-                        <Users aria-hidden="true" size={18}/>
-                        {labels.lobbyBrowseRoster}
-                    </button>
+                    <div className="ever-lobby__empty-body">
+                        <strong>{labels.lobbyEmpty}</strong>
+                        <button type="button" onClick={onOpenRoster}>
+                            <Users aria-hidden="true" size={18}/>
+                            {labels.lobbyBrowseRoster}
+                        </button>
+                    </div>
                 </div>
             ) : (
                 <div className="ever-lobby__stage">
@@ -120,16 +85,20 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
                         const grade = resolveFamiliaritySigilGrade(levelInfo.level);
                         const stickerBadges = resolveSpiritStickerBadges(assets.assetFolder, levelInfo.level).filter((badge) => badge.unlocked);
                         const slot = LOBBY_ACTOR_SLOT_ASSETS[index % LOBBY_ACTOR_SLOT_ASSETS.length];
+                        const motion = resolveLobbyActorMotion(spirit.id, index, spirits.length);
                         const actorStyle = {
-                            '--lobby-delay': `${index * -4.5}s`,
-                            '--lobby-duration': `${17 + index * 3}s`,
-                            '--lobby-base': `${4 + index * 19}%`,
+                            '--lobby-delay': `${motion.delay_seconds}s`,
+                            '--lobby-duration': `${motion.duration_seconds}s`,
+                            '--lobby-base': `${motion.base_percent}%`,
+                            '--lobby-range': `${motion.range_vw}vw`,
+                            '--lobby-rise': `${motion.rise_px}px`,
+                            '--lobby-depth': motion.depth_scale,
                         } as CSSProperties;
                         const isReacting = reaction?.id === spirit.id;
                         return (
                             <div key={spirit.id} className={`ever-lobby__actor ${isReacting ? 'is-reacting' : ''}`} style={actorStyle}>
                                 {isReacting && reaction.line && (
-                                    <span className="ever-lobby__speech" style={{ borderImageSource: `url(${EVERTALK_UI_ASSETS.speechBubble})` }}>
+                                    <span className={`ever-lobby__speech is-${motion.speech_alignment}`} style={{ borderImageSource: `url(${EVERTALK_UI_ASSETS.speechBubble})` }}>
                                         {reaction.line}
                                         <img className="ever-lobby__speech-tail" src={EVERTALK_UI_ASSETS.speechBubbleTail} alt="" aria-hidden="true"/>
                                     </span>

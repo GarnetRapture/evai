@@ -6,6 +6,8 @@ import type { AppSettings } from '../../settings';
 import type { NativeContextStatus } from '../../native';
 import type { EverTalkLabels } from '../i18n';
 import type { SaviorProfileSnapshot, WorkspaceView } from '../types';
+import { DECOR_UI_ASSETS } from '../uiAssets';
+import { SaviorProfileCard } from './SaviorProfileCard';
 
 interface EnvironmentLayerProps {
     settings: AppSettings | null;
@@ -21,11 +23,14 @@ interface EnvironmentLayerProps {
     onNavigate?: (view: WorkspaceView) => void;
     onOpenLobby?: () => void;
     onOpenSettings?: () => void;
+    onOpenSaviorProfile?: () => void;
+    onRenameSavior?: (name: string) => void;
 }
 
-export function EnvironmentLayer({ settings, session, savior, environment, nativeStatus, labels, embedded = false, notificationItems = [], onOpenNotification, activeView = 'chat', onNavigate, onOpenLobby, onOpenSettings }: EnvironmentLayerProps) {
+export function EnvironmentLayer({ settings, session, savior, environment, nativeStatus, labels, embedded = false, notificationItems = [], onOpenNotification, activeView = 'chat', onNavigate, onOpenLobby, onOpenSettings, onOpenSaviorProfile, onRenameSavior }: EnvironmentLayerProps) {
     const [open, setOpen] = useState(false);
     const [notificationsOpen, setNotificationsOpen] = useState(false);
+    const [saviorMenuOpen, setSaviorMenuOpen] = useState(false);
     const notificationTotal = notificationItems.reduce((sum, item) => sum + item.count, 0);
     const profileName = savior.saviorName || session?.username || labels.saviorDefaultName;
     const nativeSelected = settings?.context_storage_mode === 'native_mirror';
@@ -61,16 +66,26 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
         </div>
     );
     useEffect(() => {
-        if (!open && !notificationsOpen) return undefined;
+        if (!open && !notificationsOpen && !saviorMenuOpen) return undefined;
         function closeOnEscape(event: KeyboardEvent) {
             if (event.key === 'Escape') {
                 setOpen(false);
                 setNotificationsOpen(false);
+                setSaviorMenuOpen(false);
             }
         }
         window.addEventListener('keydown', closeOnEscape);
         return () => window.removeEventListener('keydown', closeOnEscape);
-    }, [open, notificationsOpen]);
+    }, [open, notificationsOpen, saviorMenuOpen]);
+    function closeLayers() {
+        setOpen(false);
+        setNotificationsOpen(false);
+        setSaviorMenuOpen(false);
+    }
+    function openSaviorInventory() {
+        closeLayers();
+        onOpenSaviorProfile?.();
+    }
     if (embedded) return <div className="ever-environment-embedded">{details}</div>;
     return (
         <>
@@ -83,6 +98,7 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
                     aria-haspopup="dialog"
                     onClick={() => {
                         setOpen(false);
+                        setSaviorMenuOpen(false);
                         setNotificationsOpen((current) => !current);
                     }}
                 >
@@ -99,14 +115,26 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
                         ...(settings?.cheat_mode_enabled ? [['cheat', labels.navCheat, FlaskConical]] as const : []),
                     ] as const).map(([view, title, Icon]) => (
                         <button key={view} type="button" className={activeView === view ? 'is-active' : ''} aria-current={activeView === view ? 'page' : undefined} onClick={() => {
-                            setOpen(false);
-                            setNotificationsOpen(false);
+                            closeLayers();
                             onNavigate?.(view);
                         }}><Icon size={15}/><span>{title}</span></button>
                     ))}
-                    <button type="button" onClick={() => { setOpen(false); setNotificationsOpen(false); onOpenLobby?.(); }}><Home size={15}/><span>{labels.lobby}</span></button>
-                    <button type="button" onClick={() => { setOpen(false); setNotificationsOpen(false); onOpenSettings?.(); }}><Settings size={15}/><span>{labels.settings}</span></button>
+                    <button type="button" onClick={() => { closeLayers(); onOpenLobby?.(); }}><Home size={15}/><span>{labels.lobby}</span></button>
+                    <button type="button" onClick={() => { closeLayers(); onOpenSettings?.(); }}><Settings size={15}/><span>{labels.settings}</span></button>
                 </nav>
+                <button
+                    type="button"
+                    className={`ever-environment-layer__profile-trigger ${saviorMenuOpen ? 'is-open' : ''}`}
+                    aria-expanded={saviorMenuOpen}
+                    aria-haspopup="menu"
+                    onClick={() => {
+                        setOpen(false);
+                        setNotificationsOpen(false);
+                        setSaviorMenuOpen((current) => !current);
+                    }}
+                >
+                    <UserRound size={14}/>{profileName}
+                </button>
                 <button
                     type="button"
                     className="ever-environment-layer__trigger"
@@ -114,10 +142,10 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
                     aria-haspopup="dialog"
                     onClick={() => {
                         setNotificationsOpen(false);
+                        setSaviorMenuOpen(false);
                         setOpen((current) => !current);
                     }}
                 >
-                    <span className="ever-environment-layer__profile"><UserRound size={14}/>{profileName}</span>
                     <span className="ever-environment-layer__browser"><Cpu size={14}/>{browser}</span>
                     <span className={nativeSelected ? (nativeStatus.available ? 'is-ready' : 'is-warning') : ''}>
                         <Database size={14}/>{nativeSelected && nativeStatus.available ? labels.nativeContextReady : labels.browserStorage}
@@ -125,6 +153,25 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
                     <ChevronDown className={open ? 'is-open' : ''} size={15} aria-hidden="true"/>
                 </button>
             </div>
+            {saviorMenuOpen && onRenameSavior && (
+                <div
+                    className="ever-environment-overlay is-savior-menu"
+                    role="presentation"
+                    onMouseDown={(event) => {
+                        if (event.target === event.currentTarget) setSaviorMenuOpen(false);
+                    }}
+                >
+                    <section className="ever-savior-menu" role="dialog" aria-label={labels.saviorProfile}>
+                        <SaviorProfileCard profile={savior} labels={labels} onRenameSavior={onRenameSavior}/>
+                        <button type="button" className="ever-savior-menu__item" onClick={openSaviorInventory}>
+                            <span className="ever-savior-menu__icon">
+                                <img src={DECOR_UI_ASSETS.inventoryIcon} alt="" aria-hidden="true"/>
+                            </span>
+                            <span>{labels.inventory}</span>
+                        </button>
+                    </section>
+                </div>
+            )}
             {open && (
                 <div
                     className="ever-environment-overlay"

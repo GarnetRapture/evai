@@ -41,6 +41,12 @@ export const LOBBY_UI_ASSETS = {
     stripePattern: `${ASSET_ROOT}/ui/roby/pattern_singleraid.png`,
 } as const;
 
+export const SAVIOR_PORTRAIT_ASSETS = {
+    small: `${ASSET_ROOT}/savior/User_128.png`,
+    medium: `${ASSET_ROOT}/savior/User_512.png`,
+    large: `${ASSET_ROOT}/savior/User_1024.png`,
+} as const;
+
 export const DECOR_UI_ASSETS = {
     inventoryIcon: `${ASSET_ROOT}/icon/Inventory_icon.png`,
     loveFrames: [

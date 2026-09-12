@@ -71,7 +71,6 @@ export interface EverTalkLabels {
     saviorStatBonded: string;
     saviorStatHighest: string;
     saviorStatPersonas: string;
-    saviorProfileOpenAction: string;
     saviorSigilProgress: string;
     stickerCollection: string;
     stickerKindLove: string;
@@ -499,7 +498,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         saviorStatBonded: '인연 정령',
         saviorStatHighest: '최고 인연',
         saviorStatPersonas: '보유 정령',
-        saviorProfileOpenAction: '구원자 프로필 열기',
         saviorSigilProgress: '인연 문장 진행도',
         stickerCollection: '스티커 컬렉션',
         stickerKindLove: '인연 스티커',
@@ -1053,7 +1051,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         saviorStatBonded: 'Bonded spirits',
         saviorStatHighest: 'Highest bond',
         saviorStatPersonas: 'Spirits owned',
-        saviorProfileOpenAction: 'Open Savior profile',
         saviorSigilProgress: 'Bond sigil progress',
         stickerCollection: 'Sticker collection',
         stickerKindLove: 'Bond stickers',
@@ -1607,7 +1604,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         saviorStatBonded: '羁绊精灵',
         saviorStatHighest: '最高羁绊',
         saviorStatPersonas: '拥有精灵',
-        saviorProfileOpenAction: '打开救世主档案',
         saviorSigilProgress: '羁绊纹章进度',
         stickerCollection: '贴纸收藏',
         stickerKindLove: '羁绊贴纸',
