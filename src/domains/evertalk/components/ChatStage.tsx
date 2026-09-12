@@ -1,10 +1,11 @@
 import { memo, useEffect, useMemo, useRef, useState } from 'react';
 import type React from 'react';
-import { Images, MessageCircle, Send, Sparkles, Square, X, ZoomIn } from 'lucide-react';
+import { Maximize2, Minimize2, Minus, Send, Sparkles, Square, X, ZoomIn } from 'lucide-react';
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
-import { createConversationSummary, createTalkChoices, formatDateTime, formatRoomTitle, formatSkinLabel, pickRandomSpeechLine, pickPokeReactionLine } from '../logic';
+import { CHAT_PANEL_MIN_HEIGHT, CHAT_PANEL_MIN_WIDTH, CHAT_PANEL_RESIZE_HANDLES, createConversationSummary, createTalkChoices, formatDateTime, formatRoomTitle, formatSkinLabel, parseThinkBlocks, pickRandomSpeechLine, pickPokeReactionLine, resolvePanelResize } from '../logic';
 import type { SpiritVisualAssets } from '../../persona';
-import type { ChatMessageBubbleProps, ChatStageProps, GalleryTileProps, ZoomDragState, ZoomOffset } from '../types';
+import type { ChatMessageBubbleProps, ChatStageProps, GalleryTileProps, PanelGeometry, PanelResizeHandle, PanelResizeState, ZoomDragState, ZoomOffset } from '../types';
+import { EVERTALK_UI_ASSETS } from '../uiAssets';
 import { LoadableAssetImage } from './LoadableAssetImage';
 const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoomLabel, onZoom }: GalleryTileProps) {
     return (<button type="button" className="ever-gallery-tile ever-gallery-tile--button" aria-label={`${skinLabel} ${zoomLabel}`} onClick={() => onZoom(skin.portraitCandidates)}>
@@ -15,23 +16,8 @@ const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoo
       </span>
     </button>);
 });
-function parseThinkBlocks(text: string) {
-    const parts: { type: 'think' | 'text'; content: string }[] = [];
-    const regex = /<think>([\s\S]*?)(?:<\/think>|$)/gi;
-    let lastIndex = 0;
-    let match;
-    while ((match = regex.exec(text)) !== null) {
-        if (match.index > lastIndex) {
-            parts.push({ type: 'text', content: text.substring(lastIndex, match.index) });
-        }
-        parts.push({ type: 'think', content: match[1] });
-        lastIndex = regex.lastIndex;
-    }
-    if (lastIndex < text.length) {
-        parts.push({ type: 'text', content: text.substring(lastIndex) });
-    }
-    return parts;
-}
+const PANEL_SHAKE_DURATION_MS = 400;
+const PANEL_BOUNDARY_TOLERANCE_PX = 1;
 const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandidates, spiritName, showReasoning, deleteLabel, onDelete }: ChatMessageBubbleProps) {
     if (message.role === 'system') {
         return (<div className="ever-message is-system">
@@ -60,7 +46,7 @@ const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandi
       </button>
     </div>);
 });
-export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previousRooms, previousRoomsLoading, onStartNewChat, onLoadPreviousRooms, onSwitchToRoom, onDeleteMessage, onDeleteRoom, inputText, isTyping, streamingText, streamingRequestId, onCancelStreaming, activeStageTab, onInputChange, onSendMessage, onStageTabChange, messagesListRef, labels, onOpenProfileDetail, showReasoning, activeSkinId, onSelectSkin }: ChatStageProps) {
+export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previousRooms, previousRoomsLoading, onStartNewChat, onLoadPreviousRooms, onSwitchToRoom, onDeleteMessage, onDeleteRoom, inputText, isTyping, streamingText, streamingRequestId, onCancelStreaming, activeStageTab, onInputChange, onSendMessage, onStageTabChange, messagesListRef, labels, onOpenProfileDetail, showReasoning, activeSkinId }: ChatStageProps) {
     const [historyOpen, setHistoryOpen] = useState(false);
     async function toggleHistory() {
         const next = !historyOpen;
@@ -88,13 +74,175 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
     const [zoomedImageCandidates, setZoomedImageCandidates] = useState<string[] | null>(null);
     const [zoomOffset, setZoomOffset] = useState<ZoomOffset>({ x: 0, y: 0 });
     const [zoomDragStart, setZoomDragStart] = useState<ZoomDragState | null>(null);
+    const [panelState, setPanelState] = useState<'normal' | 'minimized' | 'maximized'>('normal');
+    const [panelSize, setPanelSize] = useState<{ width: number; height: number } | null>(null);
+    const [panelPos, setPanelPos] = useState<{ x: number; y: number } | null>(null);
+    const [panelShake, setPanelShake] = useState(false);
+    const panelRef = useRef<HTMLDivElement | null>(null);
+    const panelResizeRef = useRef<PanelResizeState | null>(null);
+    const panelDragRef = useRef<{ pointerId: number; startX: number; startY: number; originX: number; originY: number } | null>(null);
+    const panelShakeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const pokeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    function readPanelGeometry(): PanelGeometry | null {
+        const panel = panelRef.current;
+        const parent = panel?.offsetParent as HTMLElement | null;
+        if (!panel || !parent) {
+            return null;
+        }
+        const panelRect = panel.getBoundingClientRect();
+        const parentRect = parent.getBoundingClientRect();
+        return {
+            x: panelRect.left - parentRect.left - parent.clientLeft,
+            y: panelRect.top - parentRect.top - parent.clientTop,
+            width: panelRect.width,
+            height: panelRect.height,
+            parentWidth: parent.clientWidth,
+            parentHeight: parent.clientHeight,
+        };
+    }
+    function beginPanelDrag(event: React.PointerEvent<HTMLElement>) {
+        if (panelState === 'maximized') {
+            return;
+        }
+        const geometry = readPanelGeometry();
+        if (!geometry) {
+            return;
+        }
+        event.currentTarget.setPointerCapture(event.pointerId);
+        panelDragRef.current = {
+            pointerId: event.pointerId,
+            startX: event.clientX,
+            startY: event.clientY,
+            originX: geometry.x,
+            originY: geometry.y,
+        };
+        setPanelSize({ width: geometry.width, height: geometry.height });
+        setPanelPos({ x: geometry.x, y: geometry.y });
+    }
+    function triggerBoundaryShake() {
+        if (panelShakeTimeoutRef.current) {
+            return;
+        }
+        setPanelShake(true);
+        panelShakeTimeoutRef.current = setTimeout(() => {
+            panelShakeTimeoutRef.current = null;
+            setPanelShake(false);
+        }, PANEL_SHAKE_DURATION_MS);
+    }
+    function movePanelDrag(event: React.PointerEvent<HTMLElement>) {
+        const drag = panelDragRef.current;
+        const geometry = readPanelGeometry();
+        if (!drag || drag.pointerId !== event.pointerId || !geometry) {
+            return;
+        }
+        const rawX = drag.originX + event.clientX - drag.startX;
+        const rawY = drag.originY + event.clientY - drag.startY;
+        const maxX = geometry.parentWidth - geometry.width;
+        const maxY = geometry.parentHeight - geometry.height;
+        const clampedX = maxX <= 0 ? 0 : Math.min(Math.max(0, rawX), maxX);
+        const clampedY = maxY <= 0 ? 0 : Math.min(Math.max(0, rawY), maxY);
+        const blockedX = maxX > 0 && Math.abs(rawX - clampedX) > PANEL_BOUNDARY_TOLERANCE_PX;
+        const blockedY = maxY > 0 && Math.abs(rawY - clampedY) > PANEL_BOUNDARY_TOLERANCE_PX;
+        if (blockedX || blockedY) {
+            triggerBoundaryShake();
+        }
+        setPanelPos({ x: clampedX, y: clampedY });
+    }
+    function endPanelDrag(event: React.PointerEvent<HTMLElement>) {
+        if (panelDragRef.current?.pointerId === event.pointerId) {
+            panelDragRef.current = null;
+            if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+                event.currentTarget.releasePointerCapture(event.pointerId);
+            }
+        }
+    }
+    function beginPanelResize(event: React.PointerEvent<HTMLDivElement>, handle: PanelResizeHandle) {
+        event.stopPropagation();
+        const geometry = readPanelGeometry();
+        if (!geometry) {
+            return;
+        }
+        event.currentTarget.setPointerCapture(event.pointerId);
+        panelResizeRef.current = {
+            pointerId: event.pointerId,
+            handle,
+            startX: event.clientX,
+            startY: event.clientY,
+            originX: geometry.x,
+            originY: geometry.y,
+            originWidth: geometry.width,
+            originHeight: geometry.height,
+            parentWidth: geometry.parentWidth,
+            parentHeight: geometry.parentHeight,
+        };
+        setPanelSize({ width: geometry.width, height: geometry.height });
+        setPanelPos({ x: geometry.x, y: geometry.y });
+    }
+    function movePanelResize(event: React.PointerEvent<HTMLDivElement>) {
+        const resize = panelResizeRef.current;
+        if (!resize || resize.pointerId !== event.pointerId) {
+            return;
+        }
+        const next = resolvePanelResize(resize, event.clientX - resize.startX, event.clientY - resize.startY);
+        setPanelSize({ width: next.width, height: next.height });
+        setPanelPos({ x: next.x, y: next.y });
+        if (next.blocked) {
+            triggerBoundaryShake();
+        }
+    }
+    function endPanelResize(event: React.PointerEvent<HTMLDivElement>) {
+        if (panelResizeRef.current?.pointerId === event.pointerId) {
+            panelResizeRef.current = null;
+            if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+                event.currentTarget.releasePointerCapture(event.pointerId);
+            }
+        }
+    }
+    useEffect(() => {
+        const panel = panelRef.current;
+        const parent = panel?.offsetParent as HTMLElement | null;
+        if (!parent || panelState !== 'normal') {
+            return;
+        }
+        const observer = new ResizeObserver(() => {
+            setPanelSize((currentSize) => {
+                if (!currentSize) {
+                    return currentSize;
+                }
+                const width = Math.min(currentSize.width, Math.max(CHAT_PANEL_MIN_WIDTH, parent.clientWidth));
+                const height = Math.min(currentSize.height, Math.max(CHAT_PANEL_MIN_HEIGHT, parent.clientHeight));
+                return width === currentSize.width && height === currentSize.height ? currentSize : { width, height };
+            });
+            setPanelPos((currentPos) => {
+                if (!currentPos) {
+                    return currentPos;
+                }
+                const maxX = Math.max(0, parent.clientWidth - (panel?.offsetWidth ?? 0));
+                const maxY = Math.max(0, parent.clientHeight - (panel?.offsetHeight ?? 0));
+                const x = Math.min(currentPos.x, maxX);
+                const y = Math.min(currentPos.y, maxY);
+                return x === currentPos.x && y === currentPos.y ? currentPos : { x, y };
+            });
+        });
+        observer.observe(parent);
+        return () => observer.disconnect();
+    }, [panelState, activeStageTab]);
+    function togglePanelMaximize() {
+        setPanelState((prev) => (prev === 'maximized' ? 'normal' : 'maximized'));
+    }
+    function togglePanelMinimize() {
+        setPanelState((prev) => (prev === 'minimized' ? 'normal' : 'minimized'));
+    }
     useEffect(() => {
         setDisplayLine(speechLine);
         setPoked(false);
         return () => {
             if (pokeTimeoutRef.current) {
                 clearTimeout(pokeTimeoutRef.current);
+            }
+            if (panelShakeTimeoutRef.current) {
+                clearTimeout(panelShakeTimeoutRef.current);
+                panelShakeTimeoutRef.current = null;
             }
         };
     }, [activeDetail?.id]);
@@ -176,22 +324,25 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
               <span className="ever-character__blush" aria-hidden="true" />
             </button>
           </div>
-          {assets && assets.skinOptions.length > 1 && (<div className="ever-character__skins" aria-label={labels.skinSelector(activeDetail?.name ?? '')}>
-              {assets.skinOptions.map((skin) => (<button key={skin.id} type="button" className={skin.id === activeSkin?.id ? 'is-active' : ''} aria-pressed={skin.id === activeSkin?.id} onClick={() => void onSelectSkin(skin.id)}>
-                  {formatSkinLabel(skin, labels)}
-                </button>))}
-            </div>)}
-          {activeDetail && (<button type="button" className="ever-character__caption ever-character__caption--button" onClick={onOpenProfileDetail}>
-              <strong>{activeDetail.name_en}</strong>
-              <span>{activeDetail.profile.nick_name ?? activeDetail.race}</span>
-            </button>)}
+          <div className="ever-character__overlay">
+            {activeDetail && (<button type="button" className="ever-character__caption ever-character__caption--button" onClick={onOpenProfileDetail}>
+                <strong>{activeDetail.name_en}</strong>
+                <span>{activeDetail.profile.nick_name ?? activeDetail.race}</span>
+              </button>)}
+          </div>
         </div>
 
-        {activeStageTab === 'chat' ? (<div className="ever-chat-panel">
-            <div className="ever-chat-panel__room">
+        {activeStageTab === 'chat' ? (<div ref={panelRef} className={`ever-chat-panel is-${panelState} ${panelPos && panelState === 'normal' ? 'is-floating' : ''} ${panelShake ? 'is-shake' : ''}`} style={panelState === 'normal' ? { ...(panelSize ? { width: panelSize.width, height: panelSize.height } : {}), ...(panelPos ? { position: 'absolute', left: panelPos.x, top: panelPos.y, margin: 0 } : {}) } : undefined}>
+            <div className="ever-chat-panel__room ever-chat-panel__room--draggable" onPointerDown={beginPanelDrag} onPointerMove={movePanelDrag} onPointerUp={endPanelDrag} onPointerCancel={endPanelDrag}>
               <strong>{activeRoom ? formatRoomTitle(activeRoom, labels) : activeDetail?.name ?? labels.bondChannel}</strong>
               <span>{summary}</span>
-              <div className="ever-chat-panel__room-actions">
+              <div className="ever-chat-panel__window-controls" onPointerDown={(event) => event.stopPropagation()}>
+                <button type="button" aria-label={labels.windowMinimize} onClick={togglePanelMinimize}><Minus aria-hidden="true" size={15}/></button>
+                <button type="button" aria-label={panelState === 'maximized' ? labels.windowRestore : labels.windowMaximize} onClick={togglePanelMaximize}>
+                  {panelState === 'maximized' ? <Minimize2 aria-hidden="true" size={14}/> : <Maximize2 aria-hidden="true" size={14}/>}
+                </button>
+              </div>
+              <div className="ever-chat-panel__room-actions" onPointerDown={(event) => event.stopPropagation()}>
                 <button type="button" disabled={!activeDetail} aria-label={labels.newChat} onClick={onStartNewChat}>
                   {labels.newChat}
                 </button>
@@ -199,7 +350,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                   {labels.previousChats}
                 </button>
               </div>
-              {historyOpen && (<div className="ever-chat-panel__history">
+              {historyOpen && (<div className="ever-chat-panel__history" onPointerDown={(event) => event.stopPropagation()}>
                   {previousRoomsLoading && <span className="ever-chat-panel__history-loading">…</span>}
                   {!previousRoomsLoading && previousRooms.length === 0 && (
                     <span className="ever-chat-panel__history-empty">{labels.noPreviousChats}</span>
@@ -256,6 +407,16 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                 </button>
               )}
             </form>
+            {panelState === 'normal' && CHAT_PANEL_RESIZE_HANDLES.map((handle) => (
+              <div
+                key={handle}
+                className={`ever-chat-panel__resize ever-chat-panel__resize--${handle}`}
+                onPointerDown={(event) => beginPanelResize(event, handle)}
+                onPointerMove={movePanelResize}
+                onPointerUp={endPanelResize}
+                onPointerCancel={endPanelResize}
+              />
+            ))}
           </div>) : (<div className="ever-gallery-panel">
             <div className="ever-chat-panel__room">
               <strong>{activeDetail?.name ?? labels.selectSpirit} {labels.imageGallery}</strong>
@@ -268,11 +429,17 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
       </section>
       <nav className="ever-tabbar ever-stage-tabs" aria-label={labels.rosterTitle}>
         <button className={activeStageTab === 'chat' ? 'is-active' : ''} type="button" onClick={() => onStageTabChange('chat')}>
-          <MessageCircle aria-hidden="true" size={25}/>
+          <span className="ever-tabbar__icon">
+            <img src={EVERTALK_UI_ASSETS.tabChat} alt="" aria-hidden="true"/>
+            <img className="is-pressed" src={EVERTALK_UI_ASSETS.tabChatPressed} alt="" aria-hidden="true"/>
+          </span>
           <span>{labels.chat}</span>
         </button>
         <button className={activeStageTab === 'gallery' ? 'is-active' : ''} type="button" onClick={() => onStageTabChange('gallery')}>
-          <Images aria-hidden="true" size={25}/>
+          <span className="ever-tabbar__icon">
+            <img src={EVERTALK_UI_ASSETS.tabGallery} alt="" aria-hidden="true"/>
+            <img className="is-pressed" src={EVERTALK_UI_ASSETS.tabGalleryPressed} alt="" aria-hidden="true"/>
+          </span>
           <span>{labels.gallery}</span>
         </button>
       </nav>

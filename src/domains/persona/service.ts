@@ -82,7 +82,7 @@ export const personaService = {
             throw personaNotFoundError(id);
         }
         const localized = buildLocalizedPersonaPrompt(persona, language);
-        const assembledPrompt = wrapAssembledPersonaPrompt(localized.localized_name, localized.body, language);
+        const assembledPrompt = wrapAssembledPersonaPrompt(localized.localized_name, localized.body, language, localized.speech_profile);
         const cached = await personaRepository.getLocalizedPrompt(persona.id, language, persona.created_at);
         if (!cached || cached.assembled_prompt !== assembledPrompt || cached.localized_name !== localized.localized_name) {
             await personaRepository.saveLocalizedPrompt({
@@ -94,7 +94,11 @@ export const personaService = {
                 cached_at: createMonotonicTimestamp(),
             });
         }
-        return { localized_name: localized.localized_name, assembled_prompt: assembledPrompt };
+        return {
+            localized_name: localized.localized_name,
+            assembled_prompt: assembledPrompt,
+            speech_profile: localized.speech_profile,
+        };
     },
     async warmLocalizedPrompts(language: AppLanguage, onPersonaCached?: (current: number, total: number) => void): Promise<void> {
         const personas = await personaRepository.listPersonas();

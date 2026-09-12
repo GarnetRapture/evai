@@ -6,7 +6,7 @@ import { formatBackupFileMeta, formatDateTime, formatLanguageName } from '../log
 import type { SettingsPanelProps } from '../types';
 import { ModelCatalogSection } from './ModelCatalogSection';
 
-export function SettingsPanel({ open: isOpen, appPlatform, settings, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onRemoveLocalModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     if (!isOpen) {
         return null;
@@ -42,11 +42,11 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, modelCatalo
           <div className="ever-profile-grid">
             <div>
               <small>{labels.defaultSpirit}</small>
-              <strong>{settings?.default_persona_id ?? labels.notConfigured}</strong>
+              <strong>{preferredSpiritNames.length > 0 ? preferredSpiritNames.join(', ') : labels.notConfigured}</strong>
             </div>
             <div>
               <small>{labels.activeStyle}</small>
-              <strong>{settings?.active_style_id ?? labels.notConfigured}</strong>
+              <strong>{activeStyleName ?? labels.notConfigured}</strong>
             </div>
             <div>
               <small>{labels.language}</small>
@@ -67,7 +67,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, modelCatalo
           </label>
         </section>
 
-        <ModelCatalogSection appPlatform={appPlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareChromePromptModel={onPrepareChromePromptModel} onInstallLocalModel={onInstallLocalModel} onRemoveLocalModel={onRemoveLocalModel}/>
+        <ModelCatalogSection appPlatform={appPlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareChromePromptModel={onPrepareChromePromptModel} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel}/>
 
         <section className="ever-panel-section">
           <h3>{labels.modulesSectionTitle}</h3>

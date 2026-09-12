@@ -4,12 +4,15 @@ import type { AppSettings, GeneralSettingsRecord } from './types';
 
 export const DEFAULT_GENERAL_SETTINGS: GeneralSettingsRecord = {
     default_persona_id: null,
+    preferred_persona_ids: [],
     active_style_id: null,
     language: null,
     setup_stage: 'language',
     show_reasoning: true,
     active_model: CHROME_PROMPT_MODEL_ID,
     persona_skin_ids: {},
+    lobby_background: null,
+    savior_name: '',
     platform_guide_acknowledged: false,
 };
 
@@ -39,6 +42,7 @@ export const settingsRepository = {
 export function composeAppSettings(general: GeneralSettingsRecord): AppSettings {
     return {
         default_persona_id: general.default_persona_id,
+        preferred_persona_ids: general.preferred_persona_ids ?? [],
         active_style_id: general.active_style_id,
         language: general.language ?? 'ko',
         language_configured: general.language !== null,
@@ -46,6 +50,8 @@ export function composeAppSettings(general: GeneralSettingsRecord): AppSettings 
         show_reasoning: general.show_reasoning,
         active_model: general.active_model,
         persona_skin_ids: general.persona_skin_ids,
+        lobby_background: general.lobby_background ?? null,
+        savior_name: general.savior_name ?? '',
         platform_guide_acknowledged: general.platform_guide_acknowledged,
     };
 }

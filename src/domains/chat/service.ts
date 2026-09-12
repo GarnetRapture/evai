@@ -17,16 +17,21 @@ import {
     EPISODIC_SEARCH_CANDIDATE_LIMIT,
     EVERTALK_SESSION_TITLE,
     KNOWLEDGE_INJECT_LIMIT,
+    MEMORY_DIRECTIVE_LIMIT,
     PROMPT_HISTORY_LIMIT,
     buildBehaviorInstruction,
     buildConsolidationPrompt,
+    buildDirectiveMemoryBlock,
     buildKnowledgeContext,
     buildRecalledMemoryContext,
     buildSemanticMemoryBlock,
     buildTurnMemoryText,
+    detectMemoryDirective,
 } from './prompt';
 import { chatRepository } from './repository';
-import type { ChatMessage, ChatRoom, ChatSendRequest, PersonaSystemPrompt } from './types';
+import type { ChatMessage, ChatRoom, ChatSendRequest, PersonaMemoryInsight, PersonaSystemPrompt } from './types';
+
+const MEMORY_INSIGHT_LIMIT = 30;
 
 function toOnDeviceMessage(message: ChatMessage): OnDeviceTextMessage {
     return {
@@ -94,11 +99,30 @@ export const chatService = {
         if (modulePrompt.trim().length > 0) {
             systemPrompt += modulePrompt;
         }
+        const directives = await chatRepository.listDirectiveMemories(personaId, MEMORY_DIRECTIVE_LIMIT);
+        if (directives.length > 0) {
+            systemPrompt += buildDirectiveMemoryBlock(language, directives.map((directive) => directive.memory_text));
+        }
         const semanticMemory = await chatRepository.getSemanticMemory(personaId);
         if (semanticMemory !== null) {
             systemPrompt += buildSemanticMemoryBlock(language, semanticMemory);
         }
+        systemPrompt += buildBehaviorInstruction(language, persona.localized_name);
         return { spirit_name: persona.localized_name, system_prompt: systemPrompt };
+    },
+    async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {
+        const [semanticSummary, directives, episodic, episodicTotal] = await Promise.all([
+            chatRepository.getSemanticMemory(personaId),
+            chatRepository.listDirectiveMemories(personaId, MEMORY_DIRECTIVE_LIMIT),
+            chatRepository.listEpisodicMemories(personaId, MEMORY_INSIGHT_LIMIT),
+            chatRepository.countEpisodicMemories(personaId),
+        ]);
+        return {
+            semantic_summary: semanticSummary,
+            directives: directives.map((record) => ({ id: record.id, memory_text: record.memory_text, created_at: record.created_at })),
+            episodic: episodic.map((record) => ({ id: record.id, memory_text: record.memory_text, created_at: record.created_at })),
+            episodic_total: episodicTotal,
+        };
     },
     async focusPersonaSession(personaId: string): Promise<void> {
         const settings = await settingsRepository.readAppSettings();
@@ -118,6 +142,16 @@ export const chatService = {
             content,
             created_at: createMonotonicTimestamp(),
         });
+        if (detectMemoryDirective(content)) {
+            await chatRepository.insertDirectiveMemory({
+                id: crypto.randomUUID(),
+                persona_id: personaId,
+                memory_type: 'directive',
+                memory_text: content,
+                memory_vector: createLexicalMemoryVector(content),
+                created_at: createMonotonicTimestamp(),
+            });
+        }
 
         const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language);
         const history = await chatRepository.listRecentMessagesForPersona(roomId, personaId, PROMPT_HISTORY_LIMIT);
@@ -142,7 +176,7 @@ export const chatService = {
             persona_id: personaId,
             system_prompt: persona.system_prompt,
             messages,
-            behavior_instruction: buildBehaviorInstruction(language, persona.spirit_name),
+            behavior_instruction: '',
             signal,
             handlers: {
                 onChunk: (chunk) => {

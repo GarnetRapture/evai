@@ -1,19 +1,10 @@
 package pro.everlib.ai.llm
 
 import android.content.Context
-import com.google.ai.edge.litertlm.Backend
-import com.google.ai.edge.litertlm.Contents
-import com.google.ai.edge.litertlm.Conversation
-import com.google.ai.edge.litertlm.ConversationConfig
-import com.google.ai.edge.litertlm.Engine
-import com.google.ai.edge.litertlm.EngineConfig
-import com.google.ai.edge.litertlm.Message
-import com.google.ai.edge.litertlm.MessageCallback
 import java.io.File
-import java.util.concurrent.ConcurrentHashMap
-import kotlin.coroutines.resume
+import org.json.JSONArray
+import org.json.JSONObject
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
@@ -45,41 +36,42 @@ sealed interface LiteRtLmGenerationOutcome {
 }
 
 class LiteRtLmRuntime(private val context: Context) : AutoCloseable {
-    private data class LiteRtLmStreamResult(val text: String, val cancelled: Boolean, val error: Throwable?)
-
     private val engineMutex = Mutex()
     private val generationMutex = Mutex()
-    private val activeConversations = ConcurrentHashMap<String, Conversation>()
-    private val cancelledRequests = ConcurrentHashMap.newKeySet<String>()
-    private var engine: Engine? = null
+    private var handle: Long = 0
     private var loadedFileName: String? = null
     private var loadedBackend: String? = null
+    private var contextWindow: Int? = null
     private var lastErrorMessage: String? = null
 
     fun status(): LiteRtLmStatus = LiteRtLmStatus(
         loadedFileName = loadedFileName,
         backend = loadedBackend,
-        contextWindow = engine?.engineConfig?.maxNumTokens,
+        contextWindow = contextWindow,
         errorMessage = lastErrorMessage,
     )
 
     suspend fun load(modelFile: File): LiteRtLmStatus = engineMutex.withLock {
         withContext(Dispatchers.IO) {
-            if (loadedFileName == modelFile.name && engine?.isInitialized() == true) {
+            if (loadedFileName == modelFile.name && handle != 0L) {
                 return@withContext status()
             }
             closeEngineAfterGeneration()
-            try {
-                val gpuEngine = runCatching { createEngine(modelFile, Backend.GPU()) }
-                val created = gpuEngine.getOrNull()?.let { it to "GPU" } ?: (createEngine(modelFile, Backend.CPU()) to "CPU")
-                engine = created.first
-                loadedBackend = created.second
-                loadedFileName = modelFile.name
-                lastErrorMessage = null
-            } catch (error: Throwable) {
-                lastErrorMessage = error.message ?: error.javaClass.simpleName
-                throw error
+            val gpuHandle = EverSoulLlmJni.nativeLoad(modelFile.absolutePath, EverSoulLlmJni.BACKEND_GPU, context.cacheDir.absolutePath)
+            val (loadedHandle, backend) = if (gpuHandle != 0L) {
+                gpuHandle to "GPU"
+            } else {
+                EverSoulLlmJni.nativeLoad(modelFile.absolutePath, EverSoulLlmJni.BACKEND_CPU, context.cacheDir.absolutePath) to "CPU"
             }
+            if (loadedHandle == 0L) {
+                lastErrorMessage = "engine_load_failed"
+                throw BridgeException("native_runtime", "engine_load_failed:${modelFile.name}")
+            }
+            handle = loadedHandle
+            loadedBackend = backend
+            loadedFileName = modelFile.name
+            contextWindow = EverSoulLlmJni.nativeContextWindow(loadedHandle)
+            lastErrorMessage = null
             status()
         }
     }
@@ -90,110 +82,81 @@ class LiteRtLmRuntime(private val context: Context) : AutoCloseable {
 
     suspend fun generate(requestId: String, request: LiteRtLmGenerationRequest, onChunk: (String) -> Unit): LiteRtLmGenerationOutcome =
         generationMutex.withLock {
-            val activeEngine = engine ?: throw BridgeException("model_not_ready", "unloaded")
-            val conversation = withContext(Dispatchers.IO) {
-                activeEngine.createConversation(
-                    ConversationConfig(
-                        systemInstruction = request.systemPrompt?.let { Contents.of(it) },
-                        initialMessages = request.history.map { it.toMessage() },
-                        maxOutputToken = request.maxOutputTokens,
-                    ),
+            val activeHandle = handle
+            if (activeHandle == 0L) {
+                throw BridgeException("model_not_ready", "unloaded")
+            }
+            withContext(Dispatchers.IO) {
+                val generated = StringBuilder()
+                val resultJson = EverSoulLlmJni.nativeGenerate(
+                    activeHandle,
+                    request.systemPrompt.orEmpty(),
+                    historyJson(request.history),
+                    request.userMessage,
+                    request.maxOutputTokens,
+                    EverSoulLlmJni.ChunkSink { chunk ->
+                        if (chunk.isNotEmpty()) {
+                            generated.append(chunk)
+                            onChunk(chunk)
+                        }
+                    },
                 )
-            }
-            activeConversations[requestId] = conversation
-            if (cancelledRequests.contains(requestId)) {
-                conversation.cancelProcess()
-            }
-            try {
-                val stream = awaitGeneration(requestId, conversation, request.userMessage, onChunk)
-                when {
-                    stream.error != null && !stream.cancelled -> LiteRtLmGenerationOutcome.Failed(stream.error)
-                    stream.cancelled -> LiteRtLmGenerationOutcome.Cancelled(stream.text)
-                    else -> LiteRtLmGenerationOutcome.Completed(stream.text, withContext(Dispatchers.IO) { conversation.getTokenCount() })
-                }
-            } finally {
-                activeConversations.remove(requestId)
-                cancelledRequests.remove(requestId)
-                withContext(Dispatchers.IO) { conversation.close() }
+                parseOutcome(resultJson, generated.toString())
             }
         }
 
     fun cancel(requestId: String) {
-        cancelledRequests.add(requestId)
-        activeConversations[requestId]?.cancelProcess()
+        val activeHandle = handle
+        if (activeHandle != 0L) {
+            EverSoulLlmJni.nativeCancel(activeHandle)
+        }
     }
 
     override fun close() {
-        activeConversations.values.forEach { it.cancelProcess() }
+        val activeHandle = handle
+        if (activeHandle != 0L) {
+            EverSoulLlmJni.nativeCancel(activeHandle)
+        }
         closeEngine()
     }
 
-    private suspend fun awaitGeneration(
-        requestId: String,
-        conversation: Conversation,
-        userMessage: String,
-        onChunk: (String) -> Unit,
-    ): LiteRtLmStreamResult = suspendCancellableCoroutine { continuation ->
-        val generated = StringBuilder()
-        continuation.invokeOnCancellation { conversation.cancelProcess() }
-        conversation.sendMessageAsync(
-            Message.user(userMessage),
-            object : MessageCallback {
-                override fun onMessage(message: Message) {
-                    val chunk = message.toString()
-                    if (chunk.isNotEmpty()) {
-                        generated.append(chunk)
-                        onChunk(chunk)
-                    }
-                }
-
-                override fun onDone() {
-                    if (continuation.isActive) {
-                        continuation.resume(LiteRtLmStreamResult(generated.toString(), cancelledRequests.contains(requestId), null))
-                    }
-                }
-
-                override fun onError(throwable: Throwable) {
-                    if (continuation.isActive) {
-                        continuation.resume(LiteRtLmStreamResult(generated.toString(), cancelledRequests.contains(requestId), throwable))
-                    }
-                }
-            },
-        )
+    private fun parseOutcome(resultJson: String, streamedText: String): LiteRtLmGenerationOutcome {
+        val payload = JSONObject(resultJson)
+        if (payload.has("error")) {
+            return LiteRtLmGenerationOutcome.Failed(BridgeException(payload.getString("error"), payload.optString("detail")))
+        }
+        val generatedTokens = payload.optInt("generated_tokens", 0)
+        return if (payload.optString("status") == "cancelled") {
+            LiteRtLmGenerationOutcome.Cancelled(streamedText)
+        } else {
+            LiteRtLmGenerationOutcome.Completed(streamedText, generatedTokens)
+        }
     }
 
-    private fun createEngine(modelFile: File, backend: Backend): Engine {
-        val created = Engine(
-            EngineConfig(
-                modelPath = modelFile.absolutePath,
-                backend = backend,
-                maxNumTokens = AppConstants.LITERT_LM_MAX_NUM_TOKENS,
-                cacheDir = context.cacheDir.absolutePath,
-            ),
-        )
-        try {
-            created.initialize()
-        } catch (error: Throwable) {
-            created.close()
-            throw error
+    private fun historyJson(history: List<LiteRtLmHistoryMessage>): String {
+        val array = JSONArray()
+        for (message in history) {
+            val entry = JSONObject()
+            entry.put("role", if (message.role == LiteRtLmMessageRole.ASSISTANT) "assistant" else "user")
+            entry.put("content", message.content)
+            array.put(entry)
         }
-        return created
+        return array.toString()
     }
 
     private suspend fun closeEngineAfterGeneration() {
-        activeConversations.keys.forEach { cancel(it) }
+        cancel("")
         generationMutex.withLock { closeEngine() }
     }
 
     private fun closeEngine() {
-        engine?.close()
-        engine = null
+        val activeHandle = handle
+        if (activeHandle != 0L) {
+            EverSoulLlmJni.nativeUnload(activeHandle)
+        }
+        handle = 0
         loadedFileName = null
         loadedBackend = null
-    }
-
-    private fun LiteRtLmHistoryMessage.toMessage(): Message = when (role) {
-        LiteRtLmMessageRole.USER -> Message.user(content)
-        LiteRtLmMessageRole.ASSISTANT -> Message.model(content)
+        contextWindow = null
     }
 }

@@ -1,0 +1,1255 @@
+:root {
+    --ever-mobile-bg: #f4f1ea;
+    --ever-mobile-surface: #ffffff;
+    --ever-mobile-surface-2: #faf7f0;
+    --ever-mobile-line: rgba(30, 24, 40, 0.12);
+    --ever-mobile-ink: #241f2e;
+    --ever-mobile-ink-soft: rgba(36, 31, 46, 0.62);
+    --ever-mobile-accent: color-mix(in srgb, var(--tone, #89b8dc) 70%, #6b5bd0);
+    --ever-mobile-user-bubble: color-mix(in srgb, var(--tone, #89b8dc) 32%, #ffffff);
+    --ever-mobile-spirit-bubble: #ffffff;
+    --ever-mobile-tabbar-h: clamp(56px, 9dvh, 72px);
+    --ever-mobile-pad: clamp(12px, 3.6vw, 20px);
+    --ever-mobile-gap: clamp(8px, 2vw, 14px);
+    --ever-mobile-radius: clamp(14px, 3.4vw, 20px);
+    --ever-mobile-title: clamp(1.15rem, 5vw, 1.5rem);
+    --ever-mobile-body: clamp(0.9rem, 3.7vw, 1.05rem);
+    --ever-mobile-small: clamp(0.72rem, 3vw, 0.86rem);
+    --ever-mobile-safe-top: env(safe-area-inset-top, 0px);
+    --ever-mobile-safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.ever-mobile-shell {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100%;
+    background: var(--ever-mobile-bg);
+    color: var(--ever-mobile-ink);
+    font-size: var(--ever-mobile-body);
+    overflow: hidden;
+}
+
+.ever-mobile-screen {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.ever-mobile-screen > section {
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+}
+
+.ever-mobile-topbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: calc(var(--ever-mobile-pad) + var(--ever-mobile-safe-top)) var(--ever-mobile-pad) var(--ever-mobile-gap);
+}
+
+.ever-mobile-topbar h1 {
+    margin: 0;
+    font-size: var(--ever-mobile-title);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.ever-mobile-topbar span {
+    display: block;
+    margin-top: 2px;
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-tabbar {
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    padding: 6px 8px calc(6px + var(--ever-mobile-safe-bottom));
+    background: var(--ever-mobile-surface);
+    border-top: 1px solid var(--ever-mobile-line);
+}
+
+.ever-mobile-tabbar button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 8px 4px;
+    border: none;
+    border-radius: 12px;
+    background: transparent;
+    color: var(--ever-mobile-ink-soft);
+    font-size: clamp(0.65rem, 2.8vw, 0.78rem);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ever-mobile-tabbar button.is-active {
+    color: var(--ever-mobile-accent);
+    background: color-mix(in srgb, var(--ever-mobile-accent) 12%, transparent);
+}
+
+.ever-mobile-roster,
+.ever-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ever-mobile-roster > .ever-search {
+    margin: 0 var(--ever-mobile-pad);
+    width: auto;
+}
+
+.ever-mobile-segment {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin: var(--ever-mobile-gap) var(--ever-mobile-pad) 0;
+    padding: 4px;
+    border-radius: 12px;
+    background: var(--ever-mobile-surface-2);
+    border: 1px solid var(--ever-mobile-line);
+}
+
+.ever-mobile-segment button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 9px 4px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--ever-mobile-ink-soft);
+    font-size: var(--ever-mobile-small);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ever-mobile-segment button.is-active {
+    background: var(--ever-mobile-surface);
+    color: var(--ever-mobile-accent);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.ever-mobile-roster__list {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--ever-mobile-gap) var(--ever-mobile-pad) var(--ever-mobile-pad);
+    display: flex;
+    flex-direction: column;
+    gap: var(--ever-mobile-gap);
+}
+
+.ever-mobile-roster__list .ever-spirit-row {
+    width: 100%;
+    margin: 0;
+}
+
+.ever-mobile-roster__list .ever-roster__section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ever-mobile-gap);
+}
+
+.ever-mobile-roster__list .ever-roster__section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: var(--ever-mobile-small);
+    font-weight: 700;
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-chat {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.ever-mobile-chat.is-empty {
+    align-items: center;
+    justify-content: center;
+}
+
+.ever-mobile-chat__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--ever-mobile-ink-soft);
+    text-align: center;
+    padding: var(--ever-mobile-pad);
+}
+
+.ever-mobile-chat__empty strong {
+    font-size: var(--ever-mobile-title);
+    color: var(--ever-mobile-ink);
+}
+
+.ever-mobile-chat__empty button {
+    margin-top: 6px;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 999px;
+    background: var(--ever-mobile-accent);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ever-mobile-chat__background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.ever-mobile-chat__shade {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--ever-mobile-bg) 55%, transparent) 0%, color-mix(in srgb, var(--ever-mobile-bg) 88%, transparent) 42%, var(--ever-mobile-bg) 100%);
+}
+
+.ever-mobile-chat__header {
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: var(--ever-mobile-gap);
+    padding: calc(8px + var(--ever-mobile-safe-top)) var(--ever-mobile-pad) 8px;
+    background: color-mix(in srgb, var(--ever-mobile-surface) 82%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--ever-mobile-line);
+}
+
+.ever-mobile-chat__back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: var(--ever-mobile-surface-2);
+    color: var(--ever-mobile-ink);
+    cursor: pointer;
+}
+
+.ever-mobile-chat__title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.ever-mobile-chat__title strong {
+    font-size: var(--ever-mobile-body);
+    font-weight: 800;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.ever-mobile-chat__title span {
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-chat__engine {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: clamp(0.62rem, 2.6vw, 0.74rem);
+    font-weight: 700;
+    color: var(--ever-mobile-ink-soft);
+    white-space: nowrap;
+}
+
+.ever-mobile-chat__engine i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c2402f;
+}
+
+.ever-mobile-chat__engine.is-on i {
+    background: #38a169;
+}
+
+.ever-mobile-chat__hero {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--ever-mobile-gap);
+    padding: var(--ever-mobile-gap) var(--ever-mobile-pad) 0;
+}
+
+.ever-mobile-chat__portrait-button {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    height: clamp(150px, 30dvh, 280px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: transform 0.18s ease;
+}
+
+.ever-mobile-chat__portrait-button.is-poked {
+    transform: scale(1.04);
+}
+
+.ever-mobile-chat__portrait {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.28));
+}
+
+.ever-mobile-chat__portrait-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(120px, 26vw, 180px);
+    height: clamp(120px, 26vw, 180px);
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--tone, #89b8dc) 40%, #fff);
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.ever-mobile-chat__speech {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: min(78vw, 320px);
+    padding: 8px 14px;
+    border-radius: 16px;
+    background: color-mix(in srgb, var(--ever-mobile-surface) 92%, transparent);
+    border: 1px solid var(--ever-mobile-line);
+    font-size: var(--ever-mobile-small);
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.ever-mobile-chat__skins {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+.ever-mobile-chat__skins button {
+    padding: 6px 12px;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--ever-mobile-surface) 84%, transparent);
+    color: var(--ever-mobile-ink-soft);
+    font-size: clamp(0.68rem, 2.8vw, 0.8rem);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ever-mobile-chat__skins button.is-active {
+    background: var(--ever-mobile-accent);
+    border-color: var(--ever-mobile-accent);
+    color: #fff;
+}
+
+.ever-mobile-chat__stage-tabs {
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    margin: var(--ever-mobile-gap) var(--ever-mobile-pad) 0;
+    padding: 4px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--ever-mobile-surface-2) 88%, transparent);
+    border: 1px solid var(--ever-mobile-line);
+}
+
+.ever-mobile-chat__stage-tabs button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--ever-mobile-ink-soft);
+    font-size: var(--ever-mobile-small);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ever-mobile-chat__stage-tabs button.is-active {
+    background: var(--ever-mobile-surface);
+    color: var(--ever-mobile-accent);
+}
+
+.ever-mobile-chat__panel {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: var(--ever-mobile-gap) var(--ever-mobile-pad) 0;
+    gap: var(--ever-mobile-gap);
+}
+
+.ever-mobile-chat__roombar {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--ever-mobile-gap);
+}
+
+.ever-mobile-chat__roombar-copy {
+    min-width: 0;
+}
+
+.ever-mobile-chat__roombar-copy strong {
+    display: block;
+    font-size: var(--ever-mobile-body);
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ever-mobile-chat__roombar-copy span {
+    display: block;
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ever-mobile-chat__roombar-actions {
+    display: flex;
+    gap: 6px;
+    flex: 0 0 auto;
+}
+
+.ever-mobile-chat__roombar-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: 10px;
+    background: var(--ever-mobile-surface);
+    color: var(--ever-mobile-ink);
+    cursor: pointer;
+}
+
+.ever-mobile-chat__roombar-actions button.is-active {
+    background: var(--ever-mobile-accent);
+    border-color: var(--ever-mobile-accent);
+    color: #fff;
+}
+
+.ever-mobile-chat__history {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 30dvh;
+    overflow-y: auto;
+    padding: 8px;
+    border-radius: 12px;
+    background: var(--ever-mobile-surface);
+    border: 1px solid var(--ever-mobile-line);
+}
+
+.ever-mobile-chat__history-empty,
+.ever-mobile-chat__history-loading {
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+    padding: 6px;
+}
+
+.ever-mobile-chat__history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.ever-mobile-chat__history-item > button:first-child {
+    flex: 1 1 auto;
+    text-align: left;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 8px;
+    background: var(--ever-mobile-surface-2);
+    color: var(--ever-mobile-ink);
+    font-size: var(--ever-mobile-small);
+    cursor: pointer;
+}
+
+.ever-mobile-chat__history-item.is-active > button:first-child {
+    background: color-mix(in srgb, var(--ever-mobile-accent) 16%, transparent);
+    color: var(--ever-mobile-accent);
+    font-weight: 700;
+}
+
+.ever-mobile-chat__history-item > button:last-child {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--ever-mobile-ink-soft);
+    cursor: pointer;
+}
+
+.ever-mobile-chat__messages {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    gap: var(--ever-mobile-gap);
+    padding-bottom: var(--ever-mobile-gap);
+}
+
+.ever-mobile-chat__messages-empty {
+    margin: auto;
+    text-align: center;
+    color: var(--ever-mobile-ink-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: var(--ever-mobile-pad);
+}
+
+.ever-mobile-chat__messages-empty strong {
+    color: var(--ever-mobile-ink);
+    font-size: var(--ever-mobile-body);
+}
+
+.ever-mobile-chat__messages-empty span {
+    font-size: var(--ever-mobile-small);
+}
+
+.ever-mobile-message {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    max-width: 100%;
+}
+
+.ever-mobile-message.is-user {
+    flex-direction: row-reverse;
+}
+
+.ever-mobile-message.is-system {
+    justify-content: center;
+}
+
+.ever-mobile-message__avatar {
+    flex: 0 0 auto;
+    width: clamp(30px, 8vw, 40px);
+    height: clamp(30px, 8vw, 40px);
+    border-radius: 50%;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--tone, #89b8dc) 40%, #fff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ever-mobile-message__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ever-mobile-message__bubble {
+    max-width: 76%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: var(--ever-mobile-body);
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: pre-wrap;
+    background: var(--ever-mobile-spirit-bubble);
+    border: 1px solid var(--ever-mobile-line);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.ever-mobile-message.is-user .ever-mobile-message__bubble {
+    background: var(--ever-mobile-user-bubble);
+    border-color: transparent;
+}
+
+.ever-mobile-message.is-system .ever-mobile-message__bubble {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    color: var(--ever-mobile-ink-soft);
+    font-size: var(--ever-mobile-small);
+    text-align: center;
+}
+
+.ever-mobile-message__think {
+    margin-bottom: 6px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--ever-mobile-ink) 6%, transparent);
+    color: var(--ever-mobile-ink-soft);
+    font-size: var(--ever-mobile-small);
+    font-style: italic;
+}
+
+.ever-mobile-message__delete {
+    flex: 0 0 auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--ever-mobile-ink-soft);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.ever-mobile-typing {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.ever-mobile-typing i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--ever-mobile-ink-soft);
+    animation: ever-mobile-typing 1s infinite ease-in-out;
+}
+
+.ever-mobile-typing i:nth-child(2) { animation-delay: 0.15s; }
+.ever-mobile-typing i:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes ever-mobile-typing {
+    0%, 60%, 100% { opacity: 0.3; transform: translateY(0); }
+    30% { opacity: 1; transform: translateY(-3px); }
+}
+
+.ever-mobile-composer {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px 0 calc(var(--ever-mobile-gap) + var(--ever-mobile-safe-bottom));
+}
+
+.ever-mobile-composer__choices {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+}
+
+.ever-mobile-composer__choices button {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    padding: 6px 12px;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: 12px;
+    background: var(--ever-mobile-surface);
+    color: var(--ever-mobile-ink);
+    cursor: pointer;
+    max-width: 60vw;
+}
+
+.ever-mobile-composer__choices button span {
+    font-size: clamp(0.6rem, 2.4vw, 0.7rem);
+    color: var(--ever-mobile-accent);
+    font-weight: 700;
+}
+
+.ever-mobile-composer__choices button strong {
+    font-size: var(--ever-mobile-small);
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.ever-mobile-composer__row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ever-mobile-composer__row input {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 12px 16px;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: 999px;
+    background: var(--ever-mobile-surface);
+    color: var(--ever-mobile-ink);
+    font-size: var(--ever-mobile-body);
+}
+
+.ever-mobile-composer__row input:disabled {
+    opacity: 0.6;
+}
+
+.ever-mobile-composer__row button {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: var(--ever-mobile-accent);
+    color: #fff;
+    cursor: pointer;
+}
+
+.ever-mobile-composer__row button:disabled {
+    opacity: 0.45;
+}
+
+.ever-mobile-chat__gallery {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: var(--ever-mobile-gap) var(--ever-mobile-pad) calc(var(--ever-mobile-pad) + var(--ever-mobile-safe-bottom));
+}
+
+.ever-mobile-chat__gallery-head {
+    margin-bottom: var(--ever-mobile-gap);
+}
+
+.ever-mobile-chat__gallery-head strong {
+    display: block;
+    font-size: var(--ever-mobile-body);
+    font-weight: 700;
+}
+
+.ever-mobile-chat__gallery-head span {
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-chat__gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(110px, 40vw, 170px), 1fr));
+    gap: var(--ever-mobile-gap);
+}
+
+.ever-mobile-chat__gallery-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: var(--ever-mobile-radius);
+    overflow: hidden;
+    background: var(--ever-mobile-surface);
+    cursor: pointer;
+    aspect-ratio: 3 / 4;
+}
+
+.ever-mobile-chat__gallery-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ever-mobile-chat__gallery-tile > span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 6px 8px;
+    font-size: var(--ever-mobile-small);
+    color: #fff;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), transparent);
+    text-align: left;
+}
+
+.ever-mobile-chat__gallery-zoom {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.42);
+    color: #fff;
+}
+
+.ever-mobile-zoom-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(8, 6, 14, 0.9);
+    touch-action: none;
+}
+
+.ever-mobile-zoom-close {
+    position: absolute;
+    top: calc(12px + var(--ever-mobile-safe-top));
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    cursor: pointer;
+}
+
+.ever-mobile-zoom-frame {
+    max-width: 92vw;
+    max-height: 78dvh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+.ever-mobile-zoom-frame.is-dragging {
+    cursor: grabbing;
+}
+
+.ever-mobile-zoom-image {
+    max-width: 92vw;
+    max-height: 78dvh;
+    object-fit: contain;
+    will-change: transform;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.ever-mobile-zoom-caption {
+    position: absolute;
+    bottom: calc(16px + var(--ever-mobile-safe-bottom));
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.72);
+    font-size: var(--ever-mobile-small);
+}
+
+.ever-mobile-menu {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: calc(var(--ever-mobile-pad) + var(--ever-mobile-safe-bottom));
+    display: block;
+}
+
+.ever-mobile-menu__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 var(--ever-mobile-pad);
+}
+
+.ever-mobile-menu__actions button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: var(--ever-mobile-radius);
+    background: var(--ever-mobile-surface);
+    color: var(--ever-mobile-ink);
+    font-size: var(--ever-mobile-body);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ever-mobile-menu__actions button > span {
+    flex: 1 1 auto;
+    text-align: left;
+}
+
+.ever-mobile-menu__actions button svg:first-child {
+    color: var(--ever-mobile-accent);
+}
+
+.ever-mobile-menu__card,
+.ever-mobile-menu__section {
+    margin: var(--ever-mobile-gap) var(--ever-mobile-pad) 0;
+    padding: var(--ever-mobile-pad);
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: var(--ever-mobile-radius);
+    background: var(--ever-mobile-surface);
+}
+
+.ever-mobile-menu__card .ever-kicker {
+    margin: 0 0 4px;
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.ever-mobile-menu__spirit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+.ever-mobile-menu__spirit strong {
+    font-size: var(--ever-mobile-title);
+    font-weight: 800;
+}
+
+.ever-mobile-menu__spirit span {
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-menu__section h3 {
+    margin: 0 0 10px;
+    font-size: var(--ever-mobile-body);
+    font-weight: 700;
+}
+
+.ever-mobile-menu__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.ever-mobile-menu__grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ever-mobile-menu__grid small {
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-menu__grid strong {
+    font-size: var(--ever-mobile-body);
+    font-weight: 700;
+}
+
+.ever-mobile-menu__detail {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: 12px;
+    background: var(--ever-mobile-surface-2);
+    color: var(--ever-mobile-accent);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ever-mobile-menu__status {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ever-mobile-menu__status li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.ever-mobile-menu__status-dot {
+    grid-row: 1 / 3;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #c2b8cc;
+}
+
+.ever-mobile-menu__status li.is-ready .ever-mobile-menu__status-dot { background: #38a169; }
+.ever-mobile-menu__status li.is-warning .ever-mobile-menu__status-dot { background: #d69e2e; }
+.ever-mobile-menu__status li.is-error .ever-mobile-menu__status-dot { background: #c2402f; }
+.ever-mobile-menu__status li.is-checking .ever-mobile-menu__status-dot { background: #6b8dd6; }
+
+.ever-mobile-menu__status strong {
+    font-size: var(--ever-mobile-body);
+    font-weight: 600;
+}
+
+.ever-mobile-menu__status small {
+    grid-column: 2;
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-menu__choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ever-mobile-menu__choices div {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: var(--ever-mobile-surface-2);
+    border: 1px solid var(--ever-mobile-line);
+}
+
+.ever-mobile-menu__choices span {
+    font-size: clamp(0.6rem, 2.4vw, 0.7rem);
+    color: var(--ever-mobile-accent);
+    font-weight: 700;
+}
+
+.ever-mobile-menu__choices strong {
+    font-size: var(--ever-mobile-small);
+    font-weight: 600;
+}
+
+.ever-mobile-menu__personality {
+    margin: 0;
+    font-size: var(--ever-mobile-body);
+    line-height: 1.55;
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-menu__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.ever-mobile-menu__tags span {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--ever-mobile-surface-2);
+    border: 1px solid var(--ever-mobile-line);
+    font-size: var(--ever-mobile-small);
+}
+
+.ever-mobile-menu__asset {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    border-top: 1px solid var(--ever-mobile-line);
+}
+
+.ever-mobile-menu__asset:first-of-type {
+    border-top: none;
+}
+
+.ever-mobile-menu__asset span {
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-menu__asset strong {
+    font-size: var(--ever-mobile-small);
+    font-weight: 700;
+    text-align: right;
+    word-break: break-all;
+}
+
+.ever-mobile-menu__active-style {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--ever-mobile-accent) 12%, transparent);
+}
+
+.ever-mobile-menu__active-style strong {
+    font-size: var(--ever-mobile-body);
+}
+
+.ever-mobile-menu__active-style span {
+    font-size: var(--ever-mobile-small);
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-menu__sync {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: 12px;
+    background: var(--ever-mobile-surface-2);
+    color: var(--ever-mobile-ink);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ever-mobile-menu__style-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ever-mobile-menu__style-list button {
+    padding: 8px 14px;
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: 999px;
+    background: var(--ever-mobile-surface-2);
+    color: var(--ever-mobile-ink);
+    font-size: var(--ever-mobile-small);
+    cursor: pointer;
+}
+
+.ever-mobile-menu__style-list button.is-active {
+    background: var(--ever-mobile-accent);
+    border-color: var(--ever-mobile-accent);
+    color: #fff;
+}
+
+.ever-mobile-menu__insight {
+    padding: 0 var(--ever-mobile-pad);
+    margin-top: var(--ever-mobile-gap);
+    border: none;
+    background: transparent;
+}
+
+.ever-mobile-menu__insight .ever-panel-section {
+    margin: 0;
+    padding: var(--ever-mobile-pad);
+    border: 1px solid var(--ever-mobile-line);
+    border-radius: var(--ever-mobile-radius);
+    background: var(--ever-mobile-surface);
+}
+
+.ever-mobile-menu__insight h3 {
+    color: var(--ever-mobile-ink);
+}
+
+.ever-mobile-menu__insight .ever-memory-insight__loading,
+.ever-mobile-menu__insight .ever-memory-insight__empty,
+.ever-mobile-menu__insight .ever-memory-insight__label,
+.ever-mobile-menu__insight .ever-memory-insight__count,
+.ever-mobile-menu__insight .ever-memory-insight__episodes time {
+    color: var(--ever-mobile-ink-soft);
+}
+
+.ever-mobile-menu__insight .ever-memory-insight__summary {
+    background: var(--ever-mobile-surface-2);
+    border-color: var(--ever-mobile-line);
+}
+
+.ever-mobile-menu__insight .ever-memory-insight__summary p,
+.ever-mobile-menu__insight .ever-memory-insight__episodes li p,
+.ever-mobile-menu__insight .ever-memory-insight__directives li p {
+    color: var(--ever-mobile-ink);
+}
+
+.ever-mobile-menu__insight .ever-memory-insight__episodes li {
+    background: var(--ever-mobile-surface-2);
+}
+
+.ever-mobile-menu__insight .ever-memory-insight__directives time {
+    color: var(--ever-mobile-ink-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --ever-mobile-bg: #16131c;
+        --ever-mobile-surface: #211d2b;
+        --ever-mobile-surface-2: #1a1723;
+        --ever-mobile-line: rgba(255, 255, 255, 0.12);
+        --ever-mobile-ink: #ece8f2;
+        --ever-mobile-ink-soft: rgba(236, 232, 242, 0.6);
+        --ever-mobile-user-bubble: color-mix(in srgb, var(--tone, #89b8dc) 42%, #2a2536);
+        --ever-mobile-spirit-bubble: #262130;
+    }
+}
+
+:root[data-theme="dark"] {
+    --ever-mobile-bg: #16131c;
+    --ever-mobile-surface: #211d2b;
+    --ever-mobile-surface-2: #1a1723;
+    --ever-mobile-line: rgba(255, 255, 255, 0.12);
+    --ever-mobile-ink: #ece8f2;
+    --ever-mobile-ink-soft: rgba(236, 232, 242, 0.6);
+    --ever-mobile-user-bubble: color-mix(in srgb, var(--tone, #89b8dc) 42%, #2a2536);
+    --ever-mobile-spirit-bubble: #262130;
+}

@@ -16,6 +16,7 @@ import org.json.JSONObject
 import pro.everlib.ai.AppConstants
 import pro.everlib.ai.files.BackupDirectoryStore
 import pro.everlib.ai.files.DocumentRequestCoordinator
+import pro.everlib.ai.llm.DeviceAcceleratorDetector
 import pro.everlib.ai.llm.InstalledLiteRtLmModel
 import pro.everlib.ai.llm.LiteRtLmGenerationOutcome
 import pro.everlib.ai.llm.LiteRtLmGenerationRequest
@@ -36,11 +37,31 @@ class EverSoulAndroidBridge(
     private val backupDirectory = BackupDirectoryStore(context)
 
     @JavascriptInterface
-    fun platformInfo(): String = JSONObject()
-        .put("sdk_int", Build.VERSION.SDK_INT)
-        .put("device_model", Build.MODEL)
-        .put("manufacturer", Build.MANUFACTURER)
-        .toString()
+    fun platformInfo(): String {
+        val profile = DeviceAcceleratorDetector.detect()
+        return JSONObject()
+            .put("sdk_int", Build.VERSION.SDK_INT)
+            .put("device_model", Build.MODEL)
+            .put("manufacturer", Build.MANUFACTURER)
+            .put("accelerator_vendor", profile.vendor.name.lowercase())
+            .put("soc_model", profile.socModel)
+            .put("soc_match_keys", JSONArray(profile.socMatchKeys))
+            .toString()
+    }
+
+    @JavascriptInterface
+    fun downloadLiteRtLmModel(requestId: String, url: String, fileName: String) {
+        launchRequest(requestId) {
+            val installed = modelStore.download(url, fileName) { copiedBytes, totalBytes ->
+                val progress = JSONObject().put("loaded_bytes", copiedBytes)
+                if (totalBytes != null && totalBytes > 0) {
+                    progress.put("ratio", copiedBytes.toDouble() / totalBytes.toDouble())
+                }
+                events.emit(requestId, "progress", progress)
+            }
+            events.emit(requestId, "result", JSONObject().put("model", installed.toJson()))
+        }
+    }
 
     @JavascriptInterface
     fun listLiteRtLmModels(): String = JSONArray(modelStore.list().map { it.toJson() }).toString()

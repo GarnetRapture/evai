@@ -4,7 +4,7 @@ import type { ModelCatalogSectionProps } from '../types';
 import { ChromePromptModelItem } from './ChromePromptModelItem';
 import { LocalModelSection } from './LocalModelSection';
 
-export function ModelCatalogSection({ appPlatform, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, labels, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onRemoveLocalModel }: ModelCatalogSectionProps) {
+export function ModelCatalogSection({ appPlatform, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, labels, onRefreshModelCatalog, onSelectChatModel, onPrepareChromePromptModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel }: ModelCatalogSectionProps) {
     const entries = modelCatalog?.entries ?? [];
     const localModelGroups = groupLocalModelEntries(entries);
     return (<section className="ever-panel-section">
@@ -21,7 +21,7 @@ export function ModelCatalogSection({ appPlatform, modelCatalog, modelCatalogErr
             : null)}
         </div>
 
-        {localModelGroups.map((group) => (<LocalModelSection key={group.engine} engine={group.engine} entries={group.entries} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel} onInstallLocalModel={onInstallLocalModel} onRemoveLocalModel={onRemoveLocalModel}/>))}
+        {localModelGroups.map((group) => (<LocalModelSection key={group.engine} appPlatform={appPlatform} engine={group.engine} entries={group.entries} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel}/>))}
 
         <button type="button" className="ever-settings-reset-button" onClick={() => void onRefreshModelCatalog()}>
           <RefreshCw aria-hidden="true" size={16}/>

@@ -16,4 +16,7 @@ object AppConstants {
     const val MODEL_IMPORT_PROGRESS_STEP_BYTES = 8L * 1024 * 1024
     const val LITERT_LM_MAX_NUM_TOKENS = 4096
     const val LITERT_LM_DEFAULT_MAX_OUTPUT_TOKENS = 1024
+    const val MODEL_DOWNLOAD_TIMEOUT_MS = 30000
+    const val MODEL_DOWNLOAD_MAX_REDIRECTS = 5
+    const val MODEL_DOWNLOAD_USER_AGENT = "EverSoulAIChat/1.0 (Android; LiteRT-LM)"
 }

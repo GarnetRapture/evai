@@ -44,9 +44,20 @@ find_library(EVERSOUL_ANDROID_LIBRARY android)
 find_library(EVERSOUL_Z_LIBRARY z)
 target_link_libraries(eversoul_backend PUBLIC ${EVERSOUL_Z_LIBRARY})
 
-option(EVERSOUL_ENABLE_LITERT "Build the LiteRT compiled-graph backend and JNI bridge" OFF)
+option(EVERSOUL_ENABLE_LITERT "Build the LiteRT compiled-graph backend and JNI bridge" ON)
 
 if(EVERSOUL_ENABLE_LITERT)
+    if(NOT DEFINED EVERSOUL_LITERT_SDK_DIR)
+        set(EVERSOUL_LITERT_SDK_DIR "${CMAKE_CURRENT_SOURCE_DIR}/third_party")
+    endif()
+    if(NOT DEFINED EVERSOUL_LITERT_JNILIBS_DIR)
+        set(EVERSOUL_LITERT_JNILIBS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../jniLibs")
+    endif()
+
+    add_library(litert_runtime SHARED IMPORTED)
+    set_target_properties(litert_runtime PROPERTIES
+        IMPORTED_LOCATION "${EVERSOUL_LITERT_JNILIBS_DIR}/${ANDROID_ABI}/libLiteRt.so")
+
     add_library(eversoul_jni SHARED
         eversoul/inference/litert_compiled_graph.cpp
         eversoul/jni/code_point_classifier_jni.cpp
@@ -59,9 +70,10 @@ if(EVERSOUL_ENABLE_LITERT)
     target_include_directories(eversoul_jni PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${EVERSOUL_LITERT_SDK_DIR})
+    target_compile_options(eversoul_jni PRIVATE -Wall -Wextra)
     target_link_libraries(eversoul_jni PRIVATE
         eversoul_backend
+        litert_runtime
         ${EVERSOUL_LOG_LIBRARY}
-        ${EVERSOUL_ANDROID_LIBRARY}
-        ${EVERSOUL_LITERT_LIBRARY})
+        ${EVERSOUL_ANDROID_LIBRARY})
 endif()

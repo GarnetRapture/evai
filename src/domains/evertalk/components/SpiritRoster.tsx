@@ -1,14 +1,15 @@
-import { HeartHandshake, PanelLeftClose, PanelLeftOpen, Star, Trophy, Users } from 'lucide-react';
-import { getRaceTone, getSpiritVisualAssets, parseSpiritDetail } from '../../persona';
-import { createConversationSummary, resolvePreferredSpiritFamiliarity } from '../logic';
+import { PanelLeftClose, PanelLeftOpen, Star } from 'lucide-react';
+import { getRaceTone, parseSpiritDetail } from '../../persona';
+import { computeFamiliarityLevel, createConversationSummary, resolvePreferredSpiritsFamiliarity } from '../logic';
 import type { SpiritRosterProps } from '../types';
-import { LoadableAssetImage } from './LoadableAssetImage';
-export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, defaultPersonaId, activeTab, collapsed, bondRanking, bondRankingLoading, familiarityList, familiarityLoading, labels, appLanguage, activeSessionIds, onSearchChange, onSelect, onToggleDefault, onTabChange, onToggleCollapsed, }: SpiritRosterProps) {
+import { EVERTALK_UI_ASSETS } from '../uiAssets';
+import { RosterAvatar, RosterExpBar, RosterRankBadge } from './SpiritRosterCard';
+export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, preferredPersonaIds, activeTab, collapsed, bondRanking, bondRankingLoading, familiarityList, familiarityLoading, labels, appLanguage, activeSessionIds, personaSkinIds, onSearchChange, onSelect, onToggleDefault, onTabChange, onToggleCollapsed, onOpenFamiliarity, }: SpiritRosterProps) {
     const hasSpirits = spirits.length > 0;
-    const preferredSpirit = resolvePreferredSpiritFamiliarity(spirits, familiarityList, defaultPersonaId);
-    const preferredSpiritDetail = preferredSpirit ? parseSpiritDetail(preferredSpirit.spirit, appLanguage) : null;
-    const rankedFamiliarity = familiarityList.filter((entry) => entry.persona_id !== preferredSpirit?.spirit.id);
+    const preferredSpirits = resolvePreferredSpiritsFamiliarity(spirits, familiarityList, preferredPersonaIds);
+    const rankedFamiliarity = familiarityList.filter((entry) => !preferredPersonaIds.includes(entry.persona_id));
     return (<aside className={`ever-roster ${collapsed ? 'is-collapsed' : ''}`}>
+      <img className="ever-roster__rail" src={EVERTALK_UI_ASSETS.verticalRail} alt="" aria-hidden="true"/>
       <div className="ever-roster__top">
         {!collapsed && (<div>
             <h1>{labels.rosterTitle}</h1>
@@ -31,20 +32,19 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
           </div>)}
         {activeTab === 'list' && spirits.map((spirit) => {
                 const active = activeSpiritId === spirit.id;
-                const isDefault = defaultPersonaId === spirit.id;
+                const isDefault = preferredPersonaIds.includes(spirit.id);
                 const isSessionActive = activeSessionIds.includes(spirit.id);
                 const detail = parseSpiritDetail(spirit, appLanguage);
-                const assets = getSpiritVisualAssets(detail);
                 const preview = detail.personality.greeting || createConversationSummary(detail);
+                const famEntry = familiarityList.find((entry) => entry.persona_id === spirit.id);
+                const levelInfo = computeFamiliarityLevel(famEntry?.familiarity_score ?? 0);
                 return (<div key={spirit.id} className={`ever-spirit-row ${active ? 'is-active' : ''} ${getRaceTone(spirit.race)}`}>
                 <button className="ever-spirit-row__select" type="button" onClick={() => onSelect(spirit)}>
-                  <span className="ever-spirit-row__icon">
-                    <LoadableAssetImage candidates={assets.avatarCandidates} alt={detail.name} fallback={<span>{detail.name.charAt(0)}</span>}/>
-                    {isSessionActive && (<span className="ever-spirit-row__session-badge" title={labels.activeSessionBadge}/>)}
-                  </span>
+                  <RosterAvatar detail={detail} level={levelInfo.level} skinId={personaSkinIds[spirit.id]} sessionActive={isSessionActive} labels={labels}/>
                   <span className="ever-spirit-row__copy">
                     <strong>{detail.name}</strong>
                     <small>{preview}</small>
+                    <RosterExpBar level={levelInfo.level} ratio={levelInfo.progressRatio} isMax={levelInfo.isMax}/>
                   </span>
                 </button>
                 <span className="ever-spirit-row__meta">
@@ -67,21 +67,24 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
         {activeTab === 'bondRanking' && !bondRankingLoading && bondRanking.map((entry, index) => {
           const spirit = spirits.find((s) => s.id === entry.persona_id);
           const detail = spirit ? parseSpiritDetail(spirit, appLanguage) : null;
-          return (<div key={entry.persona_id} className={`ever-spirit-row ${activeSpiritId === entry.persona_id ? 'is-active' : ''}`}>
+          const rankLevel = computeFamiliarityLevel(familiarityList.find((candidate) => candidate.persona_id === entry.persona_id)?.familiarity_score ?? 0);
+          return (<div key={entry.persona_id} className={`ever-spirit-row ${activeSpiritId === entry.persona_id ? 'is-active' : ''} ${spirit ? getRaceTone(spirit.race) : ''}`}>
             <button className="ever-spirit-row__select" type="button" onClick={() => {
                     if (spirit) {
                         onSelect(spirit);
                     }
                 }}>
-              <span className="ever-spirit-row__icon">
-                <span>{index + 1}</span>
-              </span>
+              {detail
+                ? <RosterAvatar detail={detail} level={rankLevel.level} skinId={personaSkinIds[entry.persona_id]} sessionActive={activeSessionIds.includes(entry.persona_id)} labels={labels}/>
+                : <span className="ever-spirit-row__icon"><span className="ever-spirit-row__icon-initial">{index + 1}</span></span>}
               <span className="ever-spirit-row__copy">
                 <strong>{detail?.name ?? entry.name_en}</strong>
                 <small>{labels.messages} {entry.message_count} · {labels.memories} {entry.memory_count}</small>
+                <RosterExpBar level={rankLevel.level} ratio={rankLevel.progressRatio} isMax={rankLevel.isMax}/>
               </span>
             </button>
             <span className="ever-spirit-row__meta">
+              <RosterRankBadge rank={index + 1}/>
               <b>{entry.bond_score}</b>
             </span>
           </div>);
@@ -89,30 +92,34 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
         {activeTab === 'familiarity' && familiarityLoading && (<div className="ever-roster__empty">
             <strong>{labels.loadingFamiliarity}</strong>
           </div>)}
-        {activeTab === 'familiarity' && !familiarityLoading && preferredSpirit && preferredSpiritDetail && (<div className="ever-roster__section">
+        {activeTab === 'familiarity' && !familiarityLoading && preferredSpirits.length > 0 && (<div className="ever-roster__section">
             <span className="ever-roster__section-label">
               <Star aria-hidden="true" size={14}/>
               {labels.preferredSpirit}
             </span>
-            <div className={`ever-spirit-row is-preferred ${activeSpiritId === preferredSpirit.spirit.id ? 'is-active' : ''} ${getRaceTone(preferredSpirit.spirit.race)}`}>
-              <button className="ever-spirit-row__select" type="button" onClick={() => onSelect(preferredSpirit.spirit)}>
-                <span className="ever-spirit-row__icon">
-                  <LoadableAssetImage candidates={getSpiritVisualAssets(preferredSpiritDetail).avatarCandidates} alt={preferredSpiritDetail.name} fallback={<span>{preferredSpiritDetail.name.charAt(0)}</span>}/>
-                </span>
-                <span className="ever-spirit-row__copy">
-                  <strong>{preferredSpiritDetail.name}</strong>
-                  <small>{labels.messages} {preferredSpirit.message_count} · {labels.memories} {preferredSpirit.memory_count}</small>
-                </span>
-              </button>
-              <span className="ever-spirit-row__meta">
-                <b>{preferredSpirit.familiarity_score}</b>
-                <button className="is-default" type="button" aria-pressed={true} aria-label={labels.preferredSpiritClearAction(preferredSpiritDetail.name)} title={labels.preferredSpiritClearAction(preferredSpiritDetail.name)} onClick={() => {
-                        void onToggleDefault(preferredSpirit.spirit.id);
-                    }}>
-                  <Star aria-hidden="true" size={16}/>
+            {preferredSpirits.map((preferred) => {
+              const preferredDetail = parseSpiritDetail(preferred.spirit, appLanguage);
+              const preferredEntry = familiarityList.find((entry) => entry.persona_id === preferred.spirit.id) ?? null;
+              const preferredLevel = computeFamiliarityLevel(preferred.familiarity_score);
+              return (<div key={preferred.spirit.id} className={`ever-spirit-row is-preferred ${activeSpiritId === preferred.spirit.id ? 'is-active' : ''} ${getRaceTone(preferred.spirit.race)}`}>
+                <button className="ever-spirit-row__select" type="button" onClick={() => { if (preferredEntry) { onOpenFamiliarity(preferredEntry); } else { onSelect(preferred.spirit); } }}>
+                  <RosterAvatar detail={preferredDetail} level={preferredLevel.level} skinId={personaSkinIds[preferred.spirit.id]} sessionActive={activeSessionIds.includes(preferred.spirit.id)} labels={labels}/>
+                  <span className="ever-spirit-row__copy">
+                    <strong>{preferredDetail.name}</strong>
+                    <small>{labels.messages} {preferred.message_count} · {labels.memories} {preferred.memory_count}</small>
+                    <RosterExpBar level={preferredLevel.level} ratio={preferredLevel.progressRatio} isMax={preferredLevel.isMax}/>
+                  </span>
                 </button>
-              </span>
-            </div>
+                <span className="ever-spirit-row__meta">
+                  <b>{preferred.familiarity_score}</b>
+                  <button className="is-default" type="button" aria-pressed={true} aria-label={labels.preferredSpiritClearAction(preferredDetail.name)} title={labels.preferredSpiritClearAction(preferredDetail.name)} onClick={() => {
+                          void onToggleDefault(preferred.spirit.id);
+                      }}>
+                    <Star aria-hidden="true" size={16}/>
+                  </button>
+                </span>
+              </div>);
+            })}
           </div>)}
         {activeTab === 'familiarity' && !familiarityLoading && rankedFamiliarity.length === 0 && (<div className="ever-roster__empty">
             <strong>{labels.noFamiliarity}</strong>
@@ -121,21 +128,20 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
         {activeTab === 'familiarity' && !familiarityLoading && rankedFamiliarity.map((entry, index) => {
           const spirit = spirits.find((s) => s.id === entry.persona_id);
           const detail = spirit ? parseSpiritDetail(spirit, appLanguage) : null;
-          return (<div key={entry.persona_id} className={`ever-spirit-row ${activeSpiritId === entry.persona_id ? 'is-active' : ''}`}>
-            <button className="ever-spirit-row__select" type="button" onClick={() => {
-                    if (spirit) {
-                        onSelect(spirit);
-                    }
-                }}>
-              <span className="ever-spirit-row__icon">
-                <span>{index + 1}</span>
-              </span>
+          const entryLevel = computeFamiliarityLevel(entry.familiarity_score);
+          return (<div key={entry.persona_id} className={`ever-spirit-row ${activeSpiritId === entry.persona_id ? 'is-active' : ''} ${spirit ? getRaceTone(spirit.race) : ''}`}>
+            <button className="ever-spirit-row__select" type="button" onClick={() => onOpenFamiliarity(entry)}>
+              {detail
+                ? <RosterAvatar detail={detail} level={entryLevel.level} skinId={personaSkinIds[entry.persona_id]} sessionActive={activeSessionIds.includes(entry.persona_id)} labels={labels}/>
+                : <span className="ever-spirit-row__icon"><span className="ever-spirit-row__icon-initial">{index + 1}</span></span>}
               <span className="ever-spirit-row__copy">
                 <strong>{detail?.name ?? entry.name_en}</strong>
                 <small>{labels.messages} {entry.message_count} · {labels.memories} {entry.memory_count}</small>
+                <RosterExpBar level={entryLevel.level} ratio={entryLevel.progressRatio} isMax={entryLevel.isMax}/>
               </span>
             </button>
             <span className="ever-spirit-row__meta">
+              <RosterRankBadge rank={index + 1}/>
               <b>{entry.familiarity_score}</b>
             </span>
           </div>);
@@ -143,15 +149,24 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
       </div>
       <nav className="ever-tabbar" aria-label={labels.rosterTitle}>
         <button className={activeTab === 'list' ? 'is-active' : ''} type="button" onClick={() => onTabChange('list')}>
-          <Users aria-hidden="true" size={22}/>
+          <span className="ever-tabbar__icon">
+            <img src={EVERTALK_UI_ASSETS.tabChat} alt="" aria-hidden="true"/>
+            <img className="is-pressed" src={EVERTALK_UI_ASSETS.tabChatPressed} alt="" aria-hidden="true"/>
+          </span>
           <span>{labels.list}</span>
         </button>
         <button className={activeTab === 'bondRanking' ? 'is-active' : ''} type="button" onClick={() => onTabChange('bondRanking')}>
-          <Trophy aria-hidden="true" size={22}/>
+          <span className="ever-tabbar__icon">
+            <img src={EVERTALK_UI_ASSETS.tabGallery} alt="" aria-hidden="true"/>
+            <img className="is-pressed" src={EVERTALK_UI_ASSETS.tabGalleryPressed} alt="" aria-hidden="true"/>
+          </span>
           <span>{labels.bondRanking}</span>
         </button>
         <button className={activeTab === 'familiarity' ? 'is-active' : ''} type="button" onClick={() => onTabChange('familiarity')}>
-          <HeartHandshake aria-hidden="true" size={22}/>
+          <span className="ever-tabbar__icon">
+            <img src={EVERTALK_UI_ASSETS.tabBond} alt="" aria-hidden="true"/>
+            <img className="is-pressed" src={EVERTALK_UI_ASSETS.tabBondPressed} alt="" aria-hidden="true"/>
+          </span>
           <span>{labels.familiarity}</span>
         </button>
       </nav>

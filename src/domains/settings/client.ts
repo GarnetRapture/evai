@@ -5,7 +5,7 @@ import type { AppLanguage } from '../../shared/types';
 import { llmClient } from '../llm';
 import { personaService } from '../persona';
 import { composeAppSettings, settingsRepository } from './repository';
-import type { AppSettings, ResetSummary, SetupProgressHandler } from './types';
+import { MAX_PREFERRED_PERSONAS, type AppSettings, type ResetSummary, type SetupProgressHandler } from './types';
 
 function assertLanguage(language: string): AppLanguage {
     const normalized = normalizeAppLanguage(language);
@@ -81,5 +81,23 @@ export const settingsClient = {
         return composeAppSettings(await settingsRepository.updateGeneral({
             persona_skin_ids: { ...general.persona_skin_ids, [personaId]: skinId },
         }));
+    },
+    async togglePreferredPersona(personaId: string): Promise<AppSettings> {
+        const general = await settingsRepository.readGeneral();
+        const current = general.preferred_persona_ids ?? [];
+        const exists = current.includes(personaId);
+        const next = exists
+            ? current.filter((id) => id !== personaId)
+            : [...current, personaId].slice(-MAX_PREFERRED_PERSONAS);
+        return composeAppSettings(await settingsRepository.updateGeneral({
+            preferred_persona_ids: next,
+            default_persona_id: next[0] ?? null,
+        }));
+    },
+    async setLobbyBackground(background: string | null): Promise<AppSettings> {
+        return composeAppSettings(await settingsRepository.updateGeneral({ lobby_background: background }));
+    },
+    async setSaviorName(name: string): Promise<AppSettings> {
+        return composeAppSettings(await settingsRepository.updateGeneral({ savior_name: name.slice(0, 24) }));
     },
 };

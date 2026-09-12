@@ -43,16 +43,29 @@ val syncWebDist = tasks.register<SyncWebDistTask>("syncWebDist") {
 
 android {
     namespace = "pro.everlib.ai"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "pro.everlib.ai"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 37
         versionCode = webPackageVersionParts[0] * 10000 + webPackageVersionParts[1] * 100 + webPackageVersionParts[2]
         versionName = webPackageVersion
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
+        }
+        externalNativeBuild {
+            cmake {
+                arguments += listOf("-DEVERSOUL_ENABLE_LITERT=ON", "-DANDROID_STL=c++_shared")
+                cppFlags += "-std=c++2b"
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.31.6+"
         }
     }
 
@@ -74,8 +87,33 @@ androidComponents {
     }
 }
 
+val litertRuntimeVersion = "2.2.0"
+val litertNativeConfiguration = configurations.create("litertNativeRuntime") {
+    isCanBeConsumed = false
+    isCanBeResolved = true
+}
+
+val extractLiteRtNativeLibraries = tasks.register<Copy>("extractLiteRtNativeLibraries") {
+    val jniLibsDir = layout.projectDirectory.dir("src/main/jniLibs")
+    dependsOn(litertNativeConfiguration)
+    from({
+        litertNativeConfiguration.resolvedConfiguration.resolvedArtifacts
+            .filter { it.file.name.endsWith(".aar") }
+            .map { zipTree(it.file).matching { include("jni/**/libLiteRt.so") } }
+    })
+    eachFile {
+        path = path.removePrefix("jni/")
+    }
+    includeEmptyDirs = false
+    into(jniLibsDir)
+}
+
+tasks.named("preBuild") {
+    dependsOn(extractLiteRtNativeLibraries)
+}
+
 dependencies {
-    implementation("com.google.ai.edge.litertlm:litertlm-android:0.17.0")
+    add("litertNativeRuntime", "com.google.ai.edge.litert:litert:$litertRuntimeVersion")
     implementation("androidx.activity:activity-ktx:1.13.0")
     implementation("androidx.core:core-ktx:1.19.0")
     implementation("androidx.webkit:webkit:1.17.0")

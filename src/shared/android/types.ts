@@ -60,10 +60,15 @@ export interface AndroidBackupDirectoryState {
     writable: boolean;
 }
 
+export type AndroidAcceleratorVendor = 'qualcomm' | 'mediatek' | 'google_tensor' | 'generic';
+
 export interface AndroidPlatformInfo {
     sdk_int: number;
     device_model: string;
     manufacturer: string;
+    accelerator_vendor: AndroidAcceleratorVendor;
+    soc_model: string;
+    soc_match_keys: string[];
 }
 
 export interface AndroidRequestHandlers {
@@ -75,6 +80,7 @@ export interface EverSoulAndroidBridge {
     listLiteRtLmModels(): string;
     liteRtLmStatus(): string;
     importLiteRtLmModel(requestId: string): void;
+    downloadLiteRtLmModel(requestId: string, url: string, fileName: string): void;
     removeLiteRtLmModel(requestId: string, fileName: string): void;
     loadLiteRtLmModel(requestId: string, fileName: string): void;
     unloadLiteRtLmModel(requestId: string): void;

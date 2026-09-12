@@ -1,7 +1,7 @@
 import { EVERTALK_SESSION_TITLE } from './prompt';
 import { chatRepository } from './repository';
 import { chatService } from './service';
-import type { ChatMessage, ChatRoom, ChatSendRequest } from './types';
+import type { ChatMessage, ChatRoom, ChatSendRequest, PersonaMemoryInsight } from './types';
 
 export const chatClient = {
     async createRoom(title: string): Promise<ChatRoom> {
@@ -39,6 +39,9 @@ export const chatClient = {
     },
     async focusPersonaSession(personaId: string): Promise<void> {
         await chatService.focusPersonaSession(personaId);
+    },
+    async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {
+        return chatService.getPersonaMemoryInsight(personaId);
     },
     async sendMessage(request: ChatSendRequest): Promise<ChatMessage> {
         return chatService.sendMessage(request);

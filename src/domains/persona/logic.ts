@@ -158,6 +158,21 @@ const raidFilePrefixesByAssetFolder: Record<string, SpiritRaidAssetPrefix[]> = {
     Vivienne: [{ prefix: 'Vivienne_Raid', event: 'standard' }, { prefix: 'Vivienne_SummerRaid', event: 'summer' }],
     Xiaolian: [{ prefix: 'Xiaolian_ValentineRaid', event: 'valentine' }],
 };
+const evertalkCutFilePrefixes: Record<string, string[]> = {
+    AyameTsukuyomi: ['%20AyameTsukuyomi'],
+    JihoMir: ['Jihomir'],
+    Adrianne: ['Adrianne'],
+    Hazel: ['Hazel'],
+    Prim: ['Prim'],
+};
+const evertalkCutIndexes: Record<string, string[]> = {
+    Adrianne: ['01', '02'],
+    Hazel: ['01', '02'],
+    Prim: ['01', '02'],
+};
+const memoryFilePrefixes: Record<string, string> = {
+    Yuria: 'YuriaQueen',
+};
 const raceBackgrounds: Record<string, string> = {
     '인간형': 'Talk_BG_StreetCafe.png',
     '요정형': 'Talk_BG_LuckyFlowerField.png',
@@ -255,7 +270,10 @@ export function resolveSpiritAssetFolder(nameEn: string): string | null {
     }
     return null;
 }
-function baseSkin(assetFolder: string, assetFilePrefix: string): SpiritSkinVisualAsset {
+function costumeIconUrl(assetFolder: string, iconFilePrefix: string, slot: number): string {
+    return `${ASSET_ROOT}/spirits/${assetFolder}/icon/${iconFilePrefix}_Icon_Costume_${slot.toString().padStart(2, '0')}.png`;
+}
+function baseSkin(assetFolder: string, assetFilePrefix: string, iconFilePrefix: string): SpiritSkinVisualAsset {
     return {
         id: DEFAULT_SPIRIT_SKIN_ID,
         kind: 'base',
@@ -270,9 +288,13 @@ function baseSkin(assetFolder: string, assetFilePrefix: string): SpiritSkinVisua
             `${ASSET_ROOT}/spirits/${assetFolder}/base/${assetFilePrefix}_1024.png`,
             `${ASSET_ROOT}/spirits/${assetFolder}/base/${assetFilePrefix}_512.png`,
         ],
+        thumbnailCandidates: [
+            costumeIconUrl(assetFolder, iconFilePrefix, 0),
+            `${ASSET_ROOT}/spirits/${assetFolder}/base/${assetFilePrefix}_512.png`,
+        ],
     };
 }
-function costumeSkin(assetFolder: string, assetFilePrefix: string, index: number): SpiritSkinVisualAsset {
+function costumeSkin(assetFolder: string, assetFilePrefix: string, iconFilePrefix: string, index: number, iconSlot: number): SpiritSkinVisualAsset {
     const padded = index.toString().padStart(2, '0');
     return {
         id: `costume-${padded}`,
@@ -286,6 +308,10 @@ function costumeSkin(assetFolder: string, assetFilePrefix: string, index: number
         portraitCandidates: [
             `${ASSET_ROOT}/spirits/${assetFolder}/costume/${assetFilePrefix}_Costume${padded}_2048.png`,
             `${ASSET_ROOT}/spirits/${assetFolder}/costume/${assetFilePrefix}_Costume${padded}_1024.png`,
+            `${ASSET_ROOT}/spirits/${assetFolder}/costume/${assetFilePrefix}_Costume${padded}_512.png`,
+        ],
+        thumbnailCandidates: [
+            costumeIconUrl(assetFolder, iconFilePrefix, iconSlot),
             `${ASSET_ROOT}/spirits/${assetFolder}/costume/${assetFilePrefix}_Costume${padded}_512.png`,
         ],
     };
@@ -306,25 +332,38 @@ function raidSkin(assetFolder: string, raidAsset: SpiritRaidAssetPrefix): Spirit
             `${ASSET_ROOT}/spirits/${assetFolder}/raid/${assetFilePrefix}_1024.png`,
             `${ASSET_ROOT}/spirits/${assetFolder}/raid/${assetFilePrefix}_512.png`,
         ],
+        thumbnailCandidates: [
+            `${ASSET_ROOT}/spirits/${assetFolder}/raid/${assetFilePrefix}_512.png`,
+        ],
     };
 }
 function createSkinOptions(assetFolder: string, assetFilePrefix: string): SpiritSkinVisualAsset[] {
-    const options = [baseSkin(assetFolder, assetFilePrefix)];
+    const skinPrefix = skinFilePrefixes[assetFolder] ?? assetFilePrefix;
+    const options = [baseSkin(assetFolder, assetFilePrefix, skinPrefix)];
     for (const variantPrefix of baseVariantFilePrefixes[assetFolder] ?? []) {
         options.push({
-            ...baseSkin(assetFolder, variantPrefix),
+            ...baseSkin(assetFolder, variantPrefix, skinPrefix),
             id: `base-${variantPrefix}`,
             kind: 'base_variant',
         });
     }
-    const skinPrefix = skinFilePrefixes[assetFolder] ?? assetFilePrefix;
-    for (const index of costumeIndexesByAssetFolder[assetFolder] ?? []) {
-        options.push(costumeSkin(assetFolder, skinPrefix, index));
-    }
+    const costumeIndexes = costumeIndexesByAssetFolder[assetFolder] ?? [];
+    costumeIndexes.forEach((index, order) => {
+        options.push(costumeSkin(assetFolder, skinPrefix, skinPrefix, index, order + 1));
+    });
     for (const raidAsset of raidFilePrefixesByAssetFolder[assetFolder] ?? []) {
         options.push(raidSkin(assetFolder, raidAsset));
     }
     return options;
+}
+function createEvertalkCutCandidates(assetFolder: string, assetFilePrefix: string): string[] {
+    const namePrefixes = evertalkCutFilePrefixes[assetFolder] ?? [assetFilePrefix];
+    const indexes = evertalkCutIndexes[assetFolder] ?? ['01'];
+    return namePrefixes.flatMap((namePrefix) => indexes.map((index) => `${ASSET_ROOT}/spirits/${assetFolder}/evertalk/Evertalk_${namePrefix}_${index}.png`));
+}
+function createMemoryCandidates(assetFolder: string): string[] {
+    const memoryPrefix = memoryFilePrefixes[assetFolder] ?? assetFolder;
+    return [`${ASSET_ROOT}/spirits/${assetFolder}/memory/Memory_${memoryPrefix}.png`];
 }
 export function resolveSpiritSkin(assets: SpiritVisualAssets, skinId: string | undefined): SpiritSkinVisualAsset | null {
     if (assets.skinOptions.length === 0) {
@@ -343,6 +382,9 @@ export function getSpiritVisualAssets(detail: SpiritDetail): SpiritVisualAssets 
             assetFolder,
             avatarCandidates: [],
             portraitCandidates: [],
+            evertalkCutCandidates: [],
+            memoryCandidates: [],
+            rosterIconCandidates: [],
             background: `${ASSET_ROOT}/backgrounds/talk/${backgroundFile}`,
             skinOptions: [],
         };
@@ -351,10 +393,15 @@ export function getSpiritVisualAssets(detail: SpiritDetail): SpiritVisualAssets 
     const skinOptions = createSkinOptions(assetFolder, assetFilePrefix);
     const portraitCandidates = uniqueCandidates(skinOptions.flatMap((skin) => skin.portraitCandidates));
     const avatarCandidates = uniqueCandidates(skinOptions.flatMap((skin) => skin.avatarCandidates));
+    const evertalkCutCandidates = createEvertalkCutCandidates(assetFolder, assetFilePrefix);
+    const memoryCandidates = createMemoryCandidates(assetFolder);
     return {
         assetFolder,
         avatarCandidates,
         portraitCandidates,
+        evertalkCutCandidates,
+        memoryCandidates,
+        rosterIconCandidates: uniqueCandidates([...evertalkCutCandidates, ...(skinOptions[0]?.avatarCandidates ?? [])]),
         background: `${ASSET_ROOT}/backgrounds/talk/${backgroundFile}`,
         skinOptions,
     };

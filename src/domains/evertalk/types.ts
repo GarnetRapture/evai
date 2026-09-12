@@ -1,6 +1,6 @@
 import type React from 'react';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
-import type { ChatMessage, ChatRoom } from '../chat';
+import type { ChatMessage, ChatRoom, PersonaMemoryInsight } from '../chat';
 import type {
     ChatModelCatalog,
     ChromePromptModelEntry,
@@ -34,6 +34,34 @@ export interface ZoomDragState {
 export interface ZoomOffset {
     x: number;
     y: number;
+}
+export type PanelResizeHandle = 'n' | 's' | 'e' | 'w' | 'ne' | 'nw' | 'se' | 'sw';
+export interface PanelGeometry {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    parentWidth: number;
+    parentHeight: number;
+}
+export interface PanelResizeState {
+    pointerId: number;
+    handle: PanelResizeHandle;
+    startX: number;
+    startY: number;
+    originX: number;
+    originY: number;
+    originWidth: number;
+    originHeight: number;
+    parentWidth: number;
+    parentHeight: number;
+}
+export interface PanelResizeResult {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    blocked: boolean;
 }
 export interface ChatMessageBubbleProps {
     message: ChatMessage;
@@ -77,6 +105,7 @@ export interface SpiritRosterProps {
     spirits: PersonaConfig[];
     activeSpiritId: string;
     defaultPersonaId: string | null;
+    preferredPersonaIds: string[];
     searchQuery: string;
     loadError: string | null;
     activeTab: RosterTab;
@@ -88,11 +117,13 @@ export interface SpiritRosterProps {
     labels: EverTalkLabels;
     appLanguage: AppLanguage;
     activeSessionIds: string[];
+    personaSkinIds: Record<string, string>;
     onSearchChange: (value: string) => void;
     onSelect: (spirit: PersonaConfig) => void;
     onToggleDefault: (spiritId: string) => Promise<void>;
     onTabChange: (tab: RosterTab) => void;
     onToggleCollapsed: () => void;
+    onOpenFamiliarity: (entry: FamiliarityEntry) => void;
 }
 export interface ChatStageProps {
     activeDetail: SpiritDetail | null;
@@ -118,12 +149,13 @@ export interface ChatStageProps {
     messagesListRef: React.RefObject<HTMLDivElement | null>;
     showReasoning: boolean;
     activeSkinId: string;
-    onSelectSkin: (skinId: string) => Promise<void>;
     labels: EverTalkLabels;
     onOpenProfileDetail: () => void;
 }
 export interface SpiritProfilePanelProps {
     activeDetail: SpiritDetail | null;
+    activeSkinId: string;
+    onSelectSkin: (skinId: string) => Promise<void>;
     collapsed: boolean;
     systemStatuses: ApiStatusItem[];
     styles: StyleProfile[];
@@ -136,8 +168,96 @@ export interface SpiritProfilePanelProps {
     onOpenModuleManagement: () => void;
     onOpenBackgroundGallery: () => void;
     localStatus: LocalStatusSnapshot | null;
+    memoryInsight: PersonaMemoryInsight | null;
+    memoryInsightLoading: boolean;
     labels: EverTalkLabels;
     onOpenProfileDetail: () => void;
+}
+export interface MemoryInsightPanelProps {
+    insight: PersonaMemoryInsight | null;
+    loading: boolean;
+    labels: EverTalkLabels;
+}
+export type SpiritStickerKind = 'love' | 'special' | 'event';
+export interface SpiritStickerBadge {
+    id: string;
+    kind: SpiritStickerKind;
+    url: string;
+    unlockLevel: number;
+    unlocked: boolean;
+}
+export interface EarnedSigil {
+    assetFolder: string;
+    name: string;
+    grade: 'epic' | 'eternal' | 'legendary' | 'origin';
+    level: number;
+}
+export interface SaviorStickerEntry {
+    personaId: string;
+    name: string;
+    level: number;
+    badge: SpiritStickerBadge;
+}
+export interface SaviorProfileSnapshot {
+    saviorName: string;
+    preferredCount: number;
+    totalMessages: number;
+    chatRoomCount: number;
+    memoryCount: number;
+    personaCount: number;
+    bondedCount: number;
+    highestLevel: number;
+    earnedSigils: EarnedSigil[];
+    stickerEntries: SaviorStickerEntry[];
+    activeModelName: string;
+    modelReady: boolean;
+}
+export interface LobbyScreenProps {
+    spirits: SpiritDetail[];
+    familiarityList: FamiliarityEntry[];
+    background: string | null;
+    saviorProfile: SaviorProfileSnapshot;
+    memoryInsight: PersonaMemoryInsight | null;
+    memoryInsightLoading: boolean;
+    labels: EverTalkLabels;
+    maxPreferredSlots: number;
+    onEnterChat: (spiritId: string) => void;
+    onOpenBackgroundPicker: () => void;
+    onOpenRoster: () => void;
+    onOpenSaviorProfile: () => void;
+    onRenameSavior: (name: string) => void;
+}
+export interface SaviorProfilePanelProps {
+    open: boolean;
+    profile: SaviorProfileSnapshot;
+    memoryInsight: PersonaMemoryInsight | null;
+    memoryInsightLoading: boolean;
+    eventStickers: SpiritStickerBadge[];
+    labels: EverTalkLabels;
+    onClose: () => void;
+    onRenameSavior: (name: string) => void;
+}
+export interface ChatWindowGeometry {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    minimized: boolean;
+    maximized: boolean;
+    z: number;
+}
+export interface ChatWindowFrameProps {
+    title: string;
+    geometry: ChatWindowGeometry;
+    focused: boolean;
+    labels: EverTalkLabels;
+    onFocus: () => void;
+    onMove: (x: number, y: number) => void;
+    onResize: (width: number, height: number) => void;
+    onMinimize: () => void;
+    onToggleMaximize: () => void;
+    onClose: () => void;
+    children: React.ReactNode;
 }
 export interface ModuleManagementPanelProps {
     open: boolean;
@@ -167,6 +287,7 @@ export interface ModelCatalogSectionProps {
     onSelectChatModel: (modelId: string) => Promise<void>;
     onPrepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
     onInstallLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
+    onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
 }
 export interface LocalModelEntryGroup {
@@ -174,6 +295,7 @@ export interface LocalModelEntryGroup {
     entries: LocalModelFileEntry[];
 }
 export interface LocalModelSectionProps {
+    appPlatform: AppPlatform;
     engine: LocalModelEngineKind;
     entries: LocalModelFileEntry[];
     modelPreparation: ModelPreparationState | null;
@@ -181,6 +303,7 @@ export interface LocalModelSectionProps {
     labels: EverTalkLabels;
     onSelectChatModel: (modelId: string) => Promise<void>;
     onInstallLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
+    onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
 }
 export interface ChromePromptModelItemProps {
@@ -192,16 +315,20 @@ export interface ChromePromptModelItemProps {
     onPrepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
 }
 export interface LocalModelItemProps {
+    appPlatform: AppPlatform;
     entry: LocalModelFileEntry;
     busy: boolean;
     modelLoadingId: string | null;
     labels: EverTalkLabels;
     onSelectChatModel: (modelId: string) => Promise<void>;
+    onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
 }
 export interface SettingsPanelProps extends ModelCatalogSectionProps {
     open: boolean;
     settings: AppSettings | null;
+    preferredSpiritNames: string[];
+    activeStyleName: string | null;
     llmSessionStatuses: LlmSessionStatus[];
     llmRequestStatuses: LlmRequestStatus[];
     isResetting: boolean;
@@ -235,6 +362,8 @@ export interface BackgroundGalleryPanelProps {
     open: boolean;
     labels: EverTalkLabels;
     onClose: () => void;
+    onSelectBackground?: (fileName: string | null) => void;
+    selectedBackground?: string | null;
 }
 export interface LanguageGatePanelProps {
     open: boolean;
@@ -247,6 +376,14 @@ export interface ProfileDetailPanelProps {
     activeDetail: SpiritDetail | null;
     labels: EverTalkLabels;
     onClose: () => void;
+}
+export interface FamiliarityDetailPanelProps {
+    open: boolean;
+    entry: FamiliarityEntry | null;
+    detail: SpiritDetail | null;
+    labels: EverTalkLabels;
+    onClose: () => void;
+    onOpenChat: (personaId: string) => void;
 }
 export interface SetupProgressPanelProps {
     open: boolean;
@@ -344,6 +481,29 @@ export interface EverTalkController {
     localStatus: LocalStatusSnapshot | null;
     languageGateOpen: boolean;
     profileDetailOpen: boolean;
+    familiarityDetailOpen: boolean;
+    activeFamiliarityEntry: FamiliarityEntry | null;
+    memoryInsight: PersonaMemoryInsight | null;
+    memoryInsightLoading: boolean;
+    preferredPersonaIds: string[];
+    preferredSpiritNames: string[];
+    activeStyleName: string | null;
+    lobbyOpen: boolean;
+    lobbyBackground: string | null;
+    lobbySpirits: SpiritDetail[];
+    lobbyBackgroundPickerOpen: boolean;
+    saviorProfile: SaviorProfileSnapshot;
+    eventStickers: SpiritStickerBadge[];
+    saviorProfileOpen: boolean;
+    openSaviorProfile: () => void;
+    closeSaviorProfile: () => void;
+    openLobby: () => void;
+    closeLobby: () => void;
+    setLobbyBackground: (fileName: string | null) => Promise<void>;
+    setSaviorName: (name: string) => Promise<void>;
+    openLobbyBackgroundPicker: () => void;
+    closeLobbyBackgroundPicker: () => void;
+    enterChatFromLobby: (spiritId: string) => Promise<void>;
     activeSessionIds: string[];
     setupInProgress: boolean;
     setupProgress: SetupProgress | null;
@@ -371,6 +531,7 @@ export interface EverTalkController {
     selectChatModel: (modelId: string) => Promise<void>;
     prepareChromePromptModel: (entry: ChromePromptModelEntry) => Promise<void>;
     installLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
+    downloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     removeLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     exportBackup: () => Promise<void>;
     importBackup: () => Promise<void>;
@@ -387,6 +548,8 @@ export interface EverTalkController {
     closeLanguageGate: () => void;
     openProfileDetail: () => void;
     closeProfileDetail: () => void;
+    openFamiliarityDetail: (entry: FamiliarityEntry) => void;
+    closeFamiliarityDetail: () => void;
     setupStage: SetupPhase;
     completeSetup: () => Promise<void>;
     platformSupport: PlatformSupportStatus;

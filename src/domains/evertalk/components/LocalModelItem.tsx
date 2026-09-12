@@ -2,9 +2,10 @@ import { Download, ExternalLink, Trash2 } from 'lucide-react';
 import { formatMegabytes } from '../logic';
 import type { LocalModelItemProps } from '../types';
 
-export function LocalModelItem({ entry, busy, modelLoadingId, labels, onSelectChatModel, onRemoveLocalModel }: LocalModelItemProps) {
+export function LocalModelItem({ appPlatform, entry, busy, modelLoadingId, labels, onSelectChatModel, onDownloadLocalModel, onRemoveLocalModel }: LocalModelItemProps) {
     const sizeBytes = entry.installed_size_bytes ?? entry.source?.size_bytes ?? null;
     const loading = modelLoadingId === entry.id;
+    const canDownloadInApp = appPlatform === 'android_app' && entry.source !== null && !entry.installed;
     return (<div className={`ever-model-item ${entry.selected ? 'is-selected' : ''}`}>
         <div className="ever-model-item__main">
           <input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.installed || busy || modelLoadingId !== null} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>
@@ -27,10 +28,13 @@ export function LocalModelItem({ entry, busy, modelLoadingId, labels, onSelectCh
               <ExternalLink aria-hidden="true" size={16}/>
               {labels.localModelOpenPage}
             </a>) : null}
-          {entry.download_url && !entry.installed ? (<a className="ever-settings-reset-button" href={entry.download_url} target="_blank" rel="noreferrer">
+          {canDownloadInApp ? (<button type="button" className="ever-settings-reset-button" disabled={busy || loading} onClick={() => void onDownloadLocalModel(entry)}>
               <Download aria-hidden="true" size={16}/>
               {labels.localModelDownload}
-            </a>) : null}
+            </button>) : (entry.download_url && !entry.installed ? (<a className="ever-settings-reset-button" href={entry.download_url} target="_blank" rel="noreferrer">
+              <Download aria-hidden="true" size={16}/>
+              {labels.localModelDownload}
+            </a>) : null)}
           {entry.installed ? (<button type="button" className="ever-settings-reset-button" disabled={busy || loading} onClick={() => void onRemoveLocalModel(entry)}>
               <Trash2 aria-hidden="true" size={16}/>
               {labels.localModelRemove}

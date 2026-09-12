@@ -28,13 +28,27 @@ export interface PersonaArchiveEntry {
     archive_key: string;
     load: () => Promise<SpiritDetail>;
 }
+export type PersonaSpeechRegister = 'deferential' | 'polite' | 'archaic' | 'casual' | 'unmeasured';
+export interface PersonaExemplarTurn {
+    savior: string;
+    spirit: string;
+}
+export interface PersonaSpeechProfile {
+    address_term: string | null;
+    register: PersonaSpeechRegister;
+    signature_endings: string[];
+    exemplar_turns: PersonaExemplarTurn[];
+    solo_lines: string[];
+}
 export interface LocalizedPersonaPromptBody {
     localized_name: string;
     body: string;
+    speech_profile: PersonaSpeechProfile;
 }
 export interface AssembledPersonaPrompt {
     localized_name: string;
     assembled_prompt: string;
+    speech_profile: PersonaSpeechProfile;
 }
 export type LocalizedText = Record<AppLanguage | 'zh_tw', string>;
 export type LocalizedList = Record<AppLanguage | 'zh_tw', string[]>;
@@ -119,6 +133,9 @@ export interface SpiritVisualAssets {
     assetFolder: string | null;
     avatarCandidates: string[];
     portraitCandidates: string[];
+    evertalkCutCandidates: string[];
+    memoryCandidates: string[];
+    rosterIconCandidates: string[];
     background: string;
     skinOptions: SpiritSkinVisualAsset[];
 }
@@ -135,6 +152,7 @@ export interface SpiritSkinVisualAsset {
     raid_event: SpiritRaidEvent | null;
     avatarCandidates: string[];
     portraitCandidates: string[];
+    thumbnailCandidates: string[];
 }
 export interface BondRankingEntry {
     persona_id: string;

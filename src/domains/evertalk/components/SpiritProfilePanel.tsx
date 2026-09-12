@@ -1,13 +1,17 @@
 import { Boxes, Images, PanelRightClose, PanelRightOpen, Settings } from 'lucide-react';
-import { getRaceTone, getSpiritVisualAssets } from '../../persona';
+import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
 import { createTalkChoices } from '../logic';
 import type { SpiritProfilePanelProps } from '../types';
-import { AppInfoPanel } from './AppInfoPanel';
+import { raceBadgeUrl } from '../uiAssets';
+import { SpiritSkinPicker } from './SpiritSkinPicker';
+import { MemoryInsightPanel } from './MemoryInsightPanel';
 import { SystemStatusPanel } from './SystemStatusPanel';
-export function SpiritProfilePanel({ activeDetail, collapsed, systemStatuses, styles, activeStyle, isSyncing, onSyncStyles, onSelectStyle, onToggleCollapsed, onOpenSettings, onOpenModuleManagement, onOpenBackgroundGallery, localStatus, labels, onOpenProfileDetail, }: SpiritProfilePanelProps) {
-    const assets = activeDetail ? getSpiritVisualAssets(activeDetail) : null;
+export function SpiritProfilePanel({ activeDetail, activeSkinId, onSelectSkin, collapsed, systemStatuses, styles, activeStyle, isSyncing, onSyncStyles, onSelectStyle, onToggleCollapsed, onOpenSettings, onOpenModuleManagement, onOpenBackgroundGallery, localStatus, memoryInsight, memoryInsightLoading, labels, onOpenProfileDetail, }: SpiritProfilePanelProps) {
     const tone = activeDetail ? getRaceTone(activeDetail.race) : 'tone-neutral';
     const choices = createTalkChoices(activeDetail, labels);
+    const visualAssets = activeDetail ? getSpiritVisualAssets(activeDetail) : null;
+    const skinOptions = visualAssets?.skinOptions ?? [];
+    const activeSkin = visualAssets ? resolveSpiritSkin(visualAssets, activeSkinId) : null;
     return (<aside className={`ever-profile ${tone} ${collapsed ? 'is-collapsed' : ''}`}>
       <div className="ever-profile__toolbar">
         <button className="ever-profile__toggle" type="button" aria-label={labels.backgroundGallery} onClick={onOpenBackgroundGallery}>
@@ -25,7 +29,6 @@ export function SpiritProfilePanel({ activeDetail, collapsed, systemStatuses, st
       </div>
       {collapsed ? null : (<>
       <SystemStatusPanel statuses={systemStatuses} labels={labels}/>
-      <AppInfoPanel labels={labels}/>
       {activeDetail ? (<>
           <section className="ever-profile-card">
             <p className="ever-kicker">{labels.bondStatus}</p>
@@ -35,12 +38,19 @@ export function SpiritProfilePanel({ activeDetail, collapsed, systemStatuses, st
             <span>{activeDetail.name_en}</span>
             <div className="ever-profile-grid">
               <div><small>{labels.grade}</small><strong>{activeDetail.grade}</strong></div>
-              <div><small>{labels.race}</small><strong>{activeDetail.race}</strong></div>
+              <div><small>{labels.race}</small><strong><img className="ever-profile-race-badge" src={raceBadgeUrl(activeDetail.race)} alt=""/>{activeDetail.race}</strong></div>
               <div><small>{labels.className}</small><strong>{activeDetail.class}</strong></div>
               <div><small>{labels.union}</small><strong>{activeDetail.profile?.union ?? '-'}</strong></div>
             </div>
             <button className="ever-sync-button" type="button" onClick={onOpenProfileDetail}>{labels.profileDetail}</button>
           </section>
+
+          {skinOptions.length > 1 && (
+            <section className="ever-panel-section ever-skin-section">
+              <h3>{labels.skinSelector(activeDetail.name)}</h3>
+              <SpiritSkinPicker skinOptions={skinOptions} activeSkinId={activeSkin?.id} spiritName={activeDetail.name} labels={labels} onSelectSkin={onSelectSkin}/>
+            </section>
+          )}
 
           <section className="ever-panel-section">
             <h3>{labels.localStatus}</h3>
@@ -51,6 +61,8 @@ export function SpiritProfilePanel({ activeDetail, collapsed, systemStatuses, st
               <div><small>{labels.localMemories}</small><strong>{localStatus?.memory_count ?? '-'}</strong></div>
             </div>
           </section>
+
+          <MemoryInsightPanel insight={memoryInsight} loading={memoryInsightLoading} labels={labels}/>
 
           <section className="ever-panel-section">
             <h3>{labels.conversationKeywords}</h3>
@@ -68,18 +80,6 @@ export function SpiritProfilePanel({ activeDetail, collapsed, systemStatuses, st
             <div className="ever-tags">
               {activeDetail.profile?.like?.map((item) => <span key={`like-${item}`}>{labels.like} {item}</span>)}
               {activeDetail.profile?.hobby?.map((item) => <span key={`hobby-${item}`}>{labels.hobby} {item}</span>)}
-            </div>
-          </section>
-
-          <section className="ever-panel-section">
-            <h3>{labels.assetConnection}</h3>
-            <div className="ever-asset-status">
-              <span>{labels.folder}</span>
-              <strong>{assets?.assetFolder ?? labels.disconnected}</strong>
-            </div>
-            <div className="ever-asset-status">
-              <span>{labels.background}</span>
-              <strong>{assets?.background.split('/').slice(-1)[0]}</strong>
             </div>
           </section>
 

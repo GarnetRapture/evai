@@ -1,8 +1,24 @@
 import { EVERSOUL_INDEX, EVERSOUL_STORE, getEverSoulDatabase } from '../../shared/storage';
+import { habitMemoryId } from './habit';
 import { cosineSimilarity } from './memory';
-import type { ChatMessage, ChatRoom, PersonaMemoryRecord, PersonaMemoryType } from './types';
+import type {
+    ChatMessage,
+    ChatRoom,
+    PersonaHabitMemoryRecord,
+    PersonaMemoryRecord,
+    PersonaMemoryType,
+    PersonaRecalledMemoryRecord,
+} from './types';
 
 const TIMESTAMP_UPPER_BOUND = '￿';
+
+function isRecalledMemory(record: PersonaMemoryRecord): record is PersonaRecalledMemoryRecord {
+    return record.memory_type !== 'habit';
+}
+
+function isHabitMemory(record: PersonaMemoryRecord): record is PersonaHabitMemoryRecord {
+    return record.memory_type === 'habit';
+}
 
 function roomMessageRange(roomId: string): IDBKeyRange {
     return IDBKeyRange.bound([roomId, ''], [roomId, TIMESTAMP_UPPER_BOUND]);
@@ -92,7 +108,7 @@ export const chatRepository = {
         const database = await getEverSoulDatabase();
         await database.delete(EVERSOUL_STORE.chatMessage, messageId);
     },
-    async insertEpisodicMemory(record: PersonaMemoryRecord): Promise<void> {
+    async insertEpisodicMemory(record: PersonaRecalledMemoryRecord): Promise<void> {
         const database = await getEverSoulDatabase();
         await database.add(EVERSOUL_STORE.personaMemory, record);
     },
@@ -100,9 +116,22 @@ export const chatRepository = {
         const database = await getEverSoulDatabase();
         return database.countFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'episodic'));
     },
-    async listEpisodicMemories(personaId: string, limit: number): Promise<PersonaMemoryRecord[]> {
+    async listEpisodicMemories(personaId: string, limit: number): Promise<PersonaRecalledMemoryRecord[]> {
         const database = await getEverSoulDatabase();
         const memories = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'episodic'));
+        return memories.filter(isRecalledMemory).reverse().slice(0, limit);
+    },
+    async insertDirectiveMemory(record: PersonaRecalledMemoryRecord): Promise<void> {
+        const database = await getEverSoulDatabase();
+        await database.add(EVERSOUL_STORE.personaMemory, record);
+    },
+    async countDirectiveMemories(personaId: string): Promise<number> {
+        const database = await getEverSoulDatabase();
+        return database.countFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'directive'));
+    },
+    async listDirectiveMemories(personaId: string, limit: number): Promise<PersonaMemoryRecord[]> {
+        const database = await getEverSoulDatabase();
+        const memories = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'directive'));
         return memories.reverse().slice(0, limit);
     },
     async searchEpisodicMemories(personaId: string, queryVector: number[], limit: number, candidateLimit: number): Promise<string[]> {

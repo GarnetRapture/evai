@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
+import { Check, ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
 import { ASSET_ROOT } from '../../persona';
 import { BACKGROUND_ASSET_FILES } from '../backgroundAssets';
 import type { BackgroundGalleryPanelProps } from '../types';
 
 const PAGE_SIZE = 60;
 
-export function BackgroundGalleryPanel({ open, labels, onClose }: BackgroundGalleryPanelProps) {
+export function BackgroundGalleryPanel({ open, labels, onClose, onSelectBackground, selectedBackground }: BackgroundGalleryPanelProps) {
   const [zoomedFile, setZoomedFile] = useState<string | null>(null);
   const [page, setPage] = useState(0);
 
@@ -35,24 +35,30 @@ export function BackgroundGalleryPanel({ open, labels, onClose }: BackgroundGall
       <div className="ever-background-gallery-modal">
         <header className="ever-settings-modal__header">
           <h2>{labels.backgroundGallery} ({BACKGROUND_ASSET_FILES.length})</h2>
+          {onSelectBackground && (
+            <button type="button" className="ever-background-gallery-default" onClick={() => onSelectBackground(null)}>
+              {labels.lobbyDefaultBackground}
+            </button>
+          )}
           <button type="button" aria-label={labels.close} onClick={handleClose}>
             <X aria-hidden="true" size={20} />
           </button>
         </header>
         <div className="ever-background-gallery-grid">
           {pageFiles.map((file) => (
-            <button
-              key={file}
-              type="button"
-              className="ever-gallery-tile ever-gallery-tile--button"
-              aria-label={`${file} ${labels.zoomImage}`}
-              onClick={() => setZoomedFile(file)}
-            >
-              <img src={`${ASSET_ROOT}/backgrounds/talk/${file}`} alt={file} loading="lazy" />
-              <span className="ever-gallery-tile__zoom-hint" aria-hidden="true">
-                <ZoomIn size={18} />
-              </span>
-            </button>
+            <div key={file} className={`ever-gallery-tile ever-gallery-tile--button ${selectedBackground === file ? 'is-selected' : ''}`}>
+              <button
+                type="button"
+                className="ever-gallery-tile__image-button"
+                aria-label={onSelectBackground ? labels.lobbyPickBackground : `${file} ${labels.zoomImage}`}
+                onClick={() => (onSelectBackground ? onSelectBackground(file) : setZoomedFile(file))}
+              >
+                <img src={`${ASSET_ROOT}/backgrounds/talk/${file}`} alt={file} loading="lazy" />
+                <span className="ever-gallery-tile__zoom-hint" aria-hidden="true">
+                  {onSelectBackground ? <Check size={18} /> : <ZoomIn size={18} />}
+                </span>
+              </button>
+            </div>
           ))}
         </div>
         <div className="ever-background-gallery-pager">

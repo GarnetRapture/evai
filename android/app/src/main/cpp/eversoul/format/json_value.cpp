@@ -1,7 +1,8 @@
 #include "eversoul/format/json_value.h"
 
 #include <cctype>
-#include <charconv>
+#include <cstdlib>
+#include <string>
 #include <utility>
 
 #include "eversoul/unicode/code_point_category.h"
@@ -229,10 +230,13 @@ private:
             }
             ++position_;
         }
-        const std::string_view token = text_.substr(start, position_ - start);
-        double value = 0.0;
-        const auto result = std::from_chars(token.data(), token.data() + token.size(), value);
-        if (result.ec != std::errc() || result.ptr != token.data() + token.size()) {
+        const std::string token(text_.substr(start, position_ - start));
+        if (token.empty()) {
+            return core::fail(core::FailureCode::InvalidModelFile, "json_invalid_number");
+        }
+        char* parseEnd = nullptr;
+        const double value = std::strtod(token.c_str(), &parseEnd);
+        if (parseEnd != token.c_str() + token.size()) {
             return core::fail(core::FailureCode::InvalidModelFile, "json_invalid_number");
         }
         return JsonValue(value);

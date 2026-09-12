@@ -6,9 +6,9 @@ import { CHROME_PROMPT_MODEL_ID } from './constants';
 import { RECOMMENDED_GGUF_MODELS } from './gguf/catalog';
 import { ggufRuntime } from './gguf/runtime';
 import { findHuggingFaceModelSource, huggingFaceModelDownloadUrl, huggingFaceModelPageUrl } from './huggingface';
-import { localModelFileName, localModelId, resolveChatModelEngine } from './identity';
+import { isChatModelIdSupportedHere, localModelFileName, localModelId, platformChatModelEngines, platformDefaultChatModelId, resolveChatModelEngine, NO_CHAT_MODEL_ID } from './identity';
 import { RECOMMENDED_LITERT_LM_MODELS } from './litertlm/catalog';
-import { liteRtLmRuntime } from './litertlm/runtime';
+import { liteRtLmModelStorage, liteRtLmRuntime } from './litertlm/runtime';
 import { chromePromptRuntime } from './runtime';
 import { isLocalModelInstalled, localModelStorage } from './storage';
 import type {
@@ -28,12 +28,8 @@ const RECOMMENDED_LOCAL_MODELS: Record<LocalModelEngineKind, readonly HuggingFac
     litert_lm: RECOMMENDED_LITERT_LM_MODELS,
 };
 
-function availableChatModelEngines(): ChatModelEngineKind[] {
-    return isAndroidAppRuntime() ? ['litert_lm'] : ['chrome_prompt', 'gguf'];
-}
-
 function assertChatModelEngineAvailable(engine: ChatModelEngineKind, detail: string): void {
-    if (!availableChatModelEngines().includes(engine)) {
+    if (!platformChatModelEngines().includes(engine)) {
         throw new DomainError('invalid_model', detail);
     }
 }
@@ -119,6 +115,13 @@ export const chatModelCatalog = {
         assertChatModelEngineAvailable(engine, engine);
         return localModelStorage(engine).installFromLocalFile(onProgress);
     },
+    async downloadLocalModel(engine: LocalModelEngineKind, source: HuggingFaceModelSource, onProgress: ModelDownloadProgressHandler): Promise<InstalledModelFile | null> {
+        assertChatModelEngineAvailable(engine, engine);
+        if (engine !== 'litert_lm') {
+            throw new DomainError('invalid_model', engine);
+        }
+        return liteRtLmModelStorage.downloadFromUrl(huggingFaceModelDownloadUrl(source), source.file_name, onProgress);
+    },
     async removeLocalModel(engine: LocalModelEngineKind, fileName: string): Promise<void> {
         assertChatModelEngineAvailable(engine, engine);
         if (engine === 'gguf' && ggufRuntime.loadedFileName() === fileName) {
@@ -135,5 +138,27 @@ export const chatModelCatalog = {
         if (!(await isLocalModelInstalled(engine, localModelFileName(engine, modelId)))) {
             throw new DomainError('model_not_ready', 'unavailable');
         }
+    },
+    async resolveFallbackChatModelId(excludedModelId: string): Promise<string> {
+        const defaultId = platformDefaultChatModelId();
+        if (defaultId !== NO_CHAT_MODEL_ID && defaultId !== excludedModelId) {
+            return defaultId;
+        }
+        for (const engine of platformChatModelEngines()) {
+            if (engine === 'chrome_prompt') {
+                continue;
+            }
+            const installed = await localModelStorage(engine).list();
+            const candidate = installed
+                .map((file) => localModelId(engine, file.file_name))
+                .find((id) => id !== excludedModelId);
+            if (candidate) {
+                return candidate;
+            }
+        }
+        return NO_CHAT_MODEL_ID;
+    },
+    isChatModelUsableHere(modelId: string): boolean {
+        return isChatModelIdSupportedHere(modelId);
     },
 };

@@ -34,12 +34,32 @@ export interface ChatSendRequest {
     signal: AbortSignal;
     handlers: ChatStreamHandlers;
 }
-export type PersonaMemoryType = 'episodic' | 'semantic';
-export interface PersonaMemoryRecord {
+export type PersonaRecalledMemoryType = 'episodic' | 'semantic' | 'directive';
+export type PersonaMemoryType = PersonaRecalledMemoryType | 'habit';
+export interface PersonaMemoryRecordBase {
     id: string;
     persona_id: string;
-    memory_type: PersonaMemoryType;
     memory_text: string;
-    memory_vector: number[];
     created_at: string;
+}
+export interface PersonaRecalledMemoryRecord extends PersonaMemoryRecordBase {
+    memory_type: PersonaRecalledMemoryType;
+    memory_vector: number[];
+}
+export interface PersonaHabitMemoryRecord extends PersonaMemoryRecordBase {
+    memory_type: 'habit';
+    occurrence_count: number;
+    last_seen_at: string;
+}
+export type PersonaMemoryRecord = PersonaRecalledMemoryRecord | PersonaHabitMemoryRecord;
+export interface PersonaMemoryInsightEntry {
+    id: string;
+    memory_text: string;
+    created_at: string;
+}
+export interface PersonaMemoryInsight {
+    semantic_summary: string | null;
+    directives: PersonaMemoryInsightEntry[];
+    episodic: PersonaMemoryInsightEntry[];
+    episodic_total: number;
 }

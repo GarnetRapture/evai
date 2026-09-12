@@ -4,7 +4,7 @@ import { detectBrowserAppLanguage } from '../../shared/i18n';
 import { detectAppPlatform, detectPlatformSupport } from '../../shared/platform';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import { authClient } from '../auth';
-import { chatClient, type ChatMessage, type ChatRoom } from '../chat';
+import { chatClient, type ChatMessage, type ChatRoom, type PersonaMemoryInsight } from '../chat';
 import {
     LOCAL_MODEL_INSTALL_PREPARATION_IDS,
     llmClient,
@@ -18,13 +18,13 @@ import {
     type ModelPreparationState,
 } from '../llm';
 import { modulesClient, type ImportedModule, type ModuleControl } from '../modules';
-import { DEFAULT_SPIRIT_SKIN_ID, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaConfig, type SpiritDetail } from '../persona';
+import { DEFAULT_SPIRIT_SKIN_ID, getSpiritVisualAssets, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaConfig, type SpiritDetail } from '../persona';
 import { settingsClient, type AppSettings, type ResetSummary, type SetupProgress } from '../settings';
 import { styleClient, type StyleProfile } from '../style';
 import { syncClient, type BackupDirectoryStatus, type BackupRestoreSummary, type LocalStatusSnapshot } from '../sync';
-import { createApiStatus, filterSpirits, formatUnknownError, } from './logic';
+import { collectEventStickers, createApiStatus, computeFamiliarityLevel, filterSpirits, formatUnknownError, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from './logic';
 import { getEverTalkLabels } from './i18n';
-import type { ApiStatusItem, EverTalkController, RosterTab, StageTab } from './types';
+import type { ApiStatusItem, EarnedSigil, EverTalkController, RosterTab, SaviorProfileSnapshot, SaviorStickerEntry, SpiritStickerBadge, StageTab } from './types';
 
 const EMPTY_LLM_STATUS: LlmStatus = { is_loaded: false, availability: null, error_message: null };
 function frontendDebugLog(stage: string) {
@@ -85,6 +85,12 @@ export function useEverTalkController(): EverTalkController {
     const [backgroundGalleryOpen, setBackgroundGalleryOpen] = useState(false);
     const [languageGateOpen, setLanguageGateOpen] = useState(false);
     const [profileDetailOpen, setProfileDetailOpen] = useState(false);
+    const [activeFamiliarityEntry, setActiveFamiliarityEntry] = useState<FamiliarityEntry | null>(null);
+    const [memoryInsight, setMemoryInsight] = useState<PersonaMemoryInsight | null>(null);
+    const [memoryInsightLoading, setMemoryInsightLoading] = useState(false);
+    const [lobbyOpen, setLobbyOpen] = useState(true);
+    const [lobbyBackgroundPickerOpen, setLobbyBackgroundPickerOpen] = useState(false);
+    const [saviorProfileOpen, setSaviorProfileOpen] = useState(false);
     const [activeSessionIds, setActiveSessionIds] = useState<string[]>([]);
     const [setupInProgress, setSetupInProgress] = useState(false);
     const [setupProgress, setSetupProgress] = useState<SetupProgress | null>(null);
@@ -267,6 +273,12 @@ export function useEverTalkController(): EverTalkController {
         }
         frontendDebugLog('loadMainAppData:refreshStyles:start');
         await refreshStyles();
+        try {
+            setFamiliarityList(await personaClient.getFamiliarityList());
+        }
+        catch (err) {
+            console.error(initLabels.logFamiliarityFetchFailed, err);
+        }
         frontendDebugLog('loadMainAppData:refreshLocalStatus:start');
         await refreshLocalStatus();
         try {
@@ -324,6 +336,18 @@ export function useEverTalkController(): EverTalkController {
         }
         await refreshActiveSessions();
     }
+    async function refreshMemoryInsight(personaId: string) {
+        setMemoryInsightLoading(true);
+        try {
+            setMemoryInsight(await chatClient.getPersonaMemoryInsight(personaId));
+        }
+        catch (err) {
+            console.error(labels.logMemoryInsightFailed, err);
+        }
+        finally {
+            setMemoryInsightLoading(false);
+        }
+    }
     async function selectSpirit(spirit: PersonaConfig, languageOverride?: AppLanguage) {
         frontendDebugLog(`selectSpirit:start:${spirit.id}`);
         if (spirit.id !== activeSpiritId) {
@@ -335,17 +359,19 @@ export function useEverTalkController(): EverTalkController {
         setActiveRoom(room);
         setMessages(await chatClient.listMessagesForPersona(room.id, spirit.id));
         void focusSpiritModelSession(spirit.id);
+        void refreshMemoryInsight(spirit.id);
         await refreshLocalStatus();
         await refreshActiveSessions();
         frontendDebugLog(`selectSpirit:done:${spirit.id}`);
     }
     async function toggleDefaultSpirit(spiritId: string) {
         try {
-            const updated = await personaClient.toggleDefault(spiritId);
-            setDefaultPersonaId(updated);
-            setAppSettings(await settingsClient.get());
+            const nextSettings = await settingsClient.togglePreferredPersona(spiritId);
+            setDefaultPersonaId(nextSettings.default_persona_id);
+            setAppSettings(nextSettings);
             const spiritName = spirits.find((spirit) => spirit.id === spiritId)?.name ?? spiritId;
-            setSystemStatus(createApiStatus('persona-db', 'ready', updated ? labels.preferredSpiritSet(spiritName) : labels.preferredSpiritCleared(spiritName)));
+            const nowPreferred = nextSettings.preferred_persona_ids.includes(spiritId);
+            setSystemStatus(createApiStatus('persona-db', 'ready', nowPreferred ? labels.preferredSpiritSet(spiritName) : labels.preferredSpiritCleared(spiritName)));
             syncClient.scheduleAutomaticBackup();
         }
         catch (err) {
@@ -432,6 +458,7 @@ export function useEverTalkController(): EverTalkController {
                 if (activeRosterTab === 'familiarity') {
                     setFamiliarityList(await personaClient.getFamiliarityList());
                 }
+                await refreshMemoryInsight(spiritId);
             }
             catch (err) {
                 console.error(labels.logPostChatStateRefreshFailed, err);
@@ -598,6 +625,54 @@ export function useEverTalkController(): EverTalkController {
     }
     function closeProfileDetail() {
         setProfileDetailOpen(false);
+    }
+    function openFamiliarityDetail(entry: FamiliarityEntry) {
+        setActiveFamiliarityEntry(entry);
+    }
+    function closeFamiliarityDetail() {
+        setActiveFamiliarityEntry(null);
+    }
+    function openLobby() {
+        setLobbyOpen(true);
+    }
+    function closeLobby() {
+        setLobbyOpen(false);
+    }
+    async function setLobbyBackground(fileName: string | null) {
+        try {
+            setAppSettings(await settingsClient.setLobbyBackground(fileName));
+            setLobbyBackgroundPickerOpen(false);
+        }
+        catch (err) {
+            setSystemStatus(createApiStatus('persona-db', 'error', formatUnknownError(err, labels)));
+        }
+    }
+    async function setSaviorName(name: string) {
+        try {
+            setAppSettings(await settingsClient.setSaviorName(name));
+        }
+        catch (err) {
+            setSystemStatus(createApiStatus('persona-db', 'error', formatUnknownError(err, labels)));
+        }
+    }
+    function openLobbyBackgroundPicker() {
+        setLobbyBackgroundPickerOpen(true);
+    }
+    function closeLobbyBackgroundPicker() {
+        setLobbyBackgroundPickerOpen(false);
+    }
+    function openSaviorProfile() {
+        setSaviorProfileOpen(true);
+    }
+    function closeSaviorProfile() {
+        setSaviorProfileOpen(false);
+    }
+    async function enterChatFromLobby(spiritId: string) {
+        const spirit = spirits.find((candidate) => candidate.id === spiritId);
+        if (spirit) {
+            await selectSpirit(spirit);
+            setLobbyOpen(false);
+        }
     }
     async function resetAppData() {
         setIsResetting(true);
@@ -784,6 +859,28 @@ export function useEverTalkController(): EverTalkController {
         try {
             const installedModelId = await llmClient.installLocalModel(engine, (progress) => {
                 setModelPreparation({ model_id: LOCAL_MODEL_INSTALL_PREPARATION_IDS[engine], progress, error: null });
+            });
+            setModelPreparation(null);
+            if (installedModelId !== null) {
+                await refreshModelCatalog();
+            }
+        }
+        catch (err) {
+            console.error(labels.logModelInstallFailed, err);
+            setModelPreparation(null);
+            setModelCatalogError(formatUnknownError(err, labels));
+            await refreshModelCatalog();
+        }
+    }
+
+    async function downloadLocalModel(entry: LocalModelFileEntry) {
+        if (modelPreparation !== null || entry.source === null) {
+            return;
+        }
+        setModelCatalogError(null);
+        try {
+            const installedModelId = await llmClient.downloadLocalModel(entry.engine, entry.source, (progress) => {
+                setModelPreparation({ model_id: LOCAL_MODEL_INSTALL_PREPARATION_IDS[entry.engine], progress, error: null });
             });
             setModelPreparation(null);
             if (installedModelId !== null) {
@@ -1030,6 +1127,54 @@ export function useEverTalkController(): EverTalkController {
         }
         listEl.scrollTop = listEl.scrollHeight;
     }, [messages]);
+    const preferredPersonaIds = appSettings?.preferred_persona_ids ?? [];
+    const preferredSpiritNames = preferredPersonaIds
+        .map((personaId) => spirits.find((spirit) => spirit.id === personaId)?.name)
+        .filter((name): name is string => Boolean(name));
+    const activeStyleName = activeStyle?.name ?? null;
+    const lobbySpirits = preferredPersonaIds
+        .map((personaId) => spirits.find((spirit) => spirit.id === personaId))
+        .filter((spirit): spirit is PersonaConfig => Boolean(spirit))
+        .map((spirit) => parseSpiritDetail(spirit, appLanguage));
+    const spiritBondSnapshots = spirits.map((spirit) => {
+        const detail = parseSpiritDetail(spirit, appLanguage);
+        const assets = getSpiritVisualAssets(detail);
+        const entry = familiarityList.find((candidate) => candidate.persona_id === spirit.id);
+        const level = entry ? computeFamiliarityLevel(entry.familiarity_score).level : 1;
+        return { spirit, detail, assetFolder: assets.assetFolder, level };
+    });
+    const earnedSigils: EarnedSigil[] = spiritBondSnapshots
+        .map(({ detail, assetFolder, level }) => {
+            const grade = resolveFamiliaritySigilGrade(level);
+            if (!grade || !assetFolder) {
+                return null;
+            }
+            return { assetFolder, name: detail.name, grade, level };
+        })
+        .filter((sigil): sigil is EarnedSigil => sigil !== null);
+    const stickerEntries: SaviorStickerEntry[] = spiritBondSnapshots.flatMap(({ spirit, detail, assetFolder, level }) =>
+        resolveSpiritStickerBadges(assetFolder, level).map((badge) => ({
+            personaId: spirit.id,
+            name: detail.name,
+            level,
+            badge,
+        })));
+    const eventStickers: SpiritStickerBadge[] = collectEventStickers();
+    const saviorName = appSettings?.savior_name && appSettings.savior_name.trim().length > 0 ? appSettings.savior_name : labels.saviorDefaultName;
+    const saviorProfile: SaviorProfileSnapshot = {
+        saviorName,
+        preferredCount: preferredPersonaIds.length,
+        totalMessages: localStatus?.chat_message_count ?? 0,
+        chatRoomCount: localStatus?.chat_room_count ?? 0,
+        memoryCount: localStatus?.memory_count ?? 0,
+        personaCount: localStatus?.persona_count ?? spirits.length,
+        bondedCount: familiarityList.length,
+        highestLevel: spiritBondSnapshots.reduce((highest, snapshot) => Math.max(highest, snapshot.level), 1),
+        earnedSigils,
+        stickerEntries,
+        activeModelName: appSettings?.active_model && appSettings.active_model.trim().length > 0 ? appSettings.active_model : labels.notConfigured,
+        modelReady: llmStatus?.is_loaded ?? false,
+    };
     return {
         appInitializing,
         llmStatus,
@@ -1094,6 +1239,29 @@ export function useEverTalkController(): EverTalkController {
         localStatus,
         languageGateOpen,
         profileDetailOpen,
+        familiarityDetailOpen: activeFamiliarityEntry !== null,
+        activeFamiliarityEntry,
+        memoryInsight,
+        memoryInsightLoading,
+        preferredPersonaIds,
+        preferredSpiritNames,
+        activeStyleName,
+        lobbyOpen,
+        lobbyBackground: appSettings?.lobby_background ?? null,
+        lobbySpirits,
+        lobbyBackgroundPickerOpen,
+        saviorProfile,
+        eventStickers,
+        saviorProfileOpen,
+        openSaviorProfile,
+        closeSaviorProfile,
+        openLobby,
+        closeLobby,
+        setLobbyBackground,
+        setSaviorName,
+        openLobbyBackgroundPicker,
+        closeLobbyBackgroundPicker,
+        enterChatFromLobby,
         activeSessionIds,
         setupInProgress,
         setupProgress,
@@ -1121,6 +1289,7 @@ export function useEverTalkController(): EverTalkController {
         selectChatModel,
         prepareChromePromptModel,
         installLocalModel,
+        downloadLocalModel,
         removeLocalModel,
         modelLoadingId,
         exportBackup,
@@ -1138,6 +1307,8 @@ export function useEverTalkController(): EverTalkController {
         closeLanguageGate,
         openProfileDetail,
         closeProfileDetail,
+        openFamiliarityDetail,
+        closeFamiliarityDetail,
         setupStage: appSettings?.setup_stage ?? 'language',
         completeSetup,
         platformSupport,

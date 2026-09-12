@@ -30,6 +30,65 @@ export interface EverTalkLabels {
     loadingFamiliarity: string;
     noFamiliarity: string;
     familiarityDescription: string;
+    familiarityDetailTitle: string;
+    familiarityLevel: (stars: number) => string;
+    familiarityStarsLabel: (stars: number) => string;
+    familiarityNextLevel: (stars: number) => string;
+    familiarityStepHint: (step: number) => string;
+    familiarityOpenChat: (name: string) => string;
+    familiarityExpLabel: (current: number, needed: number) => string;
+    familiarityMaxLevelLabel: string;
+    familiaritySigilObtained: string;
+    familiaritySigilLocked: (level: number) => string;
+    familiaritySigilGradeNames: Record<'epic' | 'eternal' | 'legendary' | 'origin', string>;
+    memoryInsightTitle: string;
+    memoryInsightSummary: string;
+    memoryInsightDirectives: string;
+    memoryInsightEpisodes: string;
+    memoryInsightEmpty: string;
+    memoryInsightCount: (shown: number, total: number) => string;
+    lobby: string;
+    lobbyTitle: string;
+    lobbySubtitle: (count: number) => string;
+    lobbyEmpty: string;
+    lobbyBrowseRoster: string;
+    lobbyPickBackground: string;
+    lobbyDefaultBackground: string;
+    lobbyTapHint: string;
+    lobbyEnterChat: (name: string) => string;
+    saviorProfile: string;
+    saviorDefaultName: string;
+    saviorNamePlaceholder: string;
+    saviorRename: string;
+    saviorStatPreferred: string;
+    saviorStatEarned: string;
+    saviorStatMessages: string;
+    saviorStatRooms: string;
+    saviorStatMemories: string;
+    saviorStatBonded: string;
+    saviorStatHighest: string;
+    saviorStatPersonas: string;
+    saviorProfileOpenAction: string;
+    saviorSigilProgress: string;
+    stickerCollection: string;
+    stickerKindLove: string;
+    stickerKindSpecial: string;
+    stickerKindEvent: string;
+    stickerLockedHint: (level: number) => string;
+    stickerOwnedCount: (owned: number, total: number) => string;
+    stickerEmpty: string;
+    lobbySlotEmptyLabel: (index: number) => string;
+    lobbyInsightTitle: string;
+    lobbyModelTitle: string;
+    lobbyModelOffline: string;
+    inventory: string;
+    inventoryEmpty: string;
+    inventoryCount: (count: number) => string;
+    windowMinimize: string;
+    windowMaximize: string;
+    windowRestore: string;
+    windowClose: string;
+    windowTaskbarHint: string;
     messages: string;
     memories: string;
     score: string;
@@ -272,6 +331,7 @@ export interface EverTalkLabels {
     logLocalModelStatusCheckFailed: string;
     logBondRankingFetchFailed: string;
     logFamiliarityFetchFailed: string;
+    logMemoryInsightFailed: string;
     logBackupFailed: string;
     logModuleActionFailed: string;
     logPersistentStorageFailed: string;
@@ -298,6 +358,65 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         loadingFamiliarity: '친밀도 집계 중',
         noFamiliarity: '누적된 친밀도 데이터가 없습니다',
         familiarityDescription: '정령과 대화하면 브라우저 IndexedDB에 쌓인 메시지와 기억 누적량으로 친밀도가 산출됩니다.',
+        familiarityDetailTitle: '친밀도 상세',
+        familiarityLevel: (stars) => `친밀도 ${stars}단계`,
+        familiarityStarsLabel: (stars) => `친밀도 별 ${stars}개`,
+        familiarityNextLevel: (stars) => `${stars}단계까지`,
+        familiarityStepHint: (step) => `친밀도 ${step}점마다 별 1개가 늘어나며 상한이 없습니다.`,
+        familiarityOpenChat: (name) => `${name}와 대화하기`,
+        familiarityExpLabel: (current, needed) => `경험치 ${current} / ${needed}`,
+        familiarityMaxLevelLabel: '최대 레벨 달성',
+        familiaritySigilObtained: '인연 스티커 획득',
+        familiaritySigilLocked: (level) => `${level}레벨에서 인연 스티커 획득`,
+        familiaritySigilGradeNames: { epic: '에픽', eternal: '이터널', legendary: '레전더리', origin: '오리진' },
+        memoryInsightTitle: '기억 인사이트',
+        memoryInsightSummary: '통합 요약',
+        memoryInsightDirectives: '기억하라고 지시한 내용',
+        memoryInsightEpisodes: '최근 기억',
+        memoryInsightEmpty: '아직 이 정령이 기억한 내용이 없습니다. 대화를 나누면 브라우저 IndexedDB에 기억이 쌓입니다.',
+        memoryInsightCount: (shown, total) => `${total}개 중 최근 ${shown}개`,
+        lobby: '로비',
+        lobbyTitle: '로비',
+        lobbySubtitle: (count) => `선호정령 ${count}명이 함께 있습니다`,
+        lobbyEmpty: '선호정령이 없습니다. 정령 목록에서 별을 눌러 최대 5명을 로비에 배치하세요.',
+        lobbyBrowseRoster: '정령 목록 열기',
+        lobbyPickBackground: '배경 선택',
+        lobbyDefaultBackground: '기본 배경',
+        lobbyTapHint: '정령을 한 번 누르면 반응하고, 두 번 누르면 대화가 시작됩니다.',
+        lobbyEnterChat: (name) => `${name}와 대화 시작`,
+        saviorProfile: '구원자 프로필',
+        saviorDefaultName: '구원자',
+        saviorNamePlaceholder: '구원자 이름을 입력하세요',
+        saviorRename: '이름 변경',
+        saviorStatPreferred: '선호정령',
+        saviorStatEarned: '획득 인연',
+        saviorStatMessages: '총 대화',
+        saviorStatRooms: '대화방',
+        saviorStatMemories: '기억',
+        saviorStatBonded: '인연 정령',
+        saviorStatHighest: '최고 인연',
+        saviorStatPersonas: '보유 정령',
+        saviorProfileOpenAction: '구원자 프로필 열기',
+        saviorSigilProgress: '인연 문장 진행도',
+        stickerCollection: '스티커 컬렉션',
+        stickerKindLove: '인연 스티커',
+        stickerKindSpecial: '스페셜 스티커',
+        stickerKindEvent: '이벤트 스티커',
+        stickerLockedHint: (level) => `${level}레벨 해금`,
+        stickerOwnedCount: (owned, total) => `${owned} / ${total} 획득`,
+        stickerEmpty: '아직 획득한 스티커가 없습니다.',
+        lobbySlotEmptyLabel: (index) => `빈 슬롯 ${index}`,
+        lobbyInsightTitle: '채팅 성향 인사이트',
+        lobbyModelTitle: '활성 모델',
+        lobbyModelOffline: '모델 대기 중',
+        inventory: '인벤토리',
+        inventoryEmpty: '아직 40레벨에 도달한 정령이 없습니다. 정령과 대화해 인연을 40레벨까지 키우면 인연 스티커를 얻습니다.',
+        inventoryCount: (count) => `획득한 인연 스티커 ${count}개`,
+        windowMinimize: '최소화',
+        windowMaximize: '최대화',
+        windowRestore: '이전 크기',
+        windowClose: '닫기',
+        windowTaskbarHint: '최소화된 대화',
         messages: '메시지',
         memories: '기억',
         score: '점수',
@@ -659,6 +778,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logLocalModelStatusCheckFailed: '온디바이스 모델 상태 확인 실패',
         logBondRankingFetchFailed: '인연도 랭킹 조회 실패',
         logFamiliarityFetchFailed: '친밀도 조회 실패',
+        logMemoryInsightFailed: '기억 인사이트 조회 실패',
         logBackupFailed: '데이터 저장/불러오기 실패',
         logModuleActionFailed: 'Risu 모듈 처리 실패',
         logPersistentStorageFailed: '영구 저장소 요청 실패',
@@ -679,6 +799,65 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         loadingFamiliarity: 'Loading familiarity',
         noFamiliarity: 'No familiarity data yet',
         familiarityDescription: 'Messages and saved memories stored in this browser\'s IndexedDB are used to calculate familiarity.',
+        familiarityDetailTitle: 'Familiarity Detail',
+        familiarityLevel: (stars) => `Familiarity Lv.${stars}`,
+        familiarityStarsLabel: (stars) => `${stars} familiarity stars`,
+        familiarityNextLevel: (stars) => `To Lv.${stars}`,
+        familiarityStepHint: (step) => `One star is added for every ${step} familiarity points, with no cap.`,
+        familiarityOpenChat: (name) => `Chat with ${name}`,
+        familiarityExpLabel: (current, needed) => `EXP ${current} / ${needed}`,
+        familiarityMaxLevelLabel: 'Max level reached',
+        familiaritySigilObtained: 'Bond sticker obtained',
+        familiaritySigilLocked: (level) => `Bond sticker unlocks at Lv.${level}`,
+        familiaritySigilGradeNames: { epic: 'Epic', eternal: 'Eternal', legendary: 'Legendary', origin: 'Origin' },
+        memoryInsightTitle: 'Memory Insight',
+        memoryInsightSummary: 'Consolidated Summary',
+        memoryInsightDirectives: 'Told to Remember',
+        memoryInsightEpisodes: 'Recent Memories',
+        memoryInsightEmpty: 'This spirit has no memories yet. Chatting accumulates memories in the browser IndexedDB.',
+        memoryInsightCount: (shown, total) => `Latest ${shown} of ${total}`,
+        lobby: 'Lobby',
+        lobbyTitle: 'Lobby',
+        lobbySubtitle: (count) => `${count} preferred spirits are here with you`,
+        lobbyEmpty: 'No preferred spirits yet. Tap the star in the spirit list to place up to 5 in the lobby.',
+        lobbyBrowseRoster: 'Open spirit list',
+        lobbyPickBackground: 'Choose background',
+        lobbyDefaultBackground: 'Default background',
+        lobbyTapHint: 'Tap a spirit once to get a reaction, twice to start chatting.',
+        lobbyEnterChat: (name) => `Chat with ${name}`,
+        saviorProfile: 'Savior Profile',
+        saviorDefaultName: 'Savior',
+        saviorNamePlaceholder: 'Enter your Savior name',
+        saviorRename: 'Rename',
+        saviorStatPreferred: 'Preferred',
+        saviorStatEarned: 'Bonds earned',
+        saviorStatMessages: 'Total chats',
+        saviorStatRooms: 'Chat rooms',
+        saviorStatMemories: 'Memories',
+        saviorStatBonded: 'Bonded spirits',
+        saviorStatHighest: 'Highest bond',
+        saviorStatPersonas: 'Spirits owned',
+        saviorProfileOpenAction: 'Open Savior profile',
+        saviorSigilProgress: 'Bond sigil progress',
+        stickerCollection: 'Sticker collection',
+        stickerKindLove: 'Bond stickers',
+        stickerKindSpecial: 'Special stickers',
+        stickerKindEvent: 'Event stickers',
+        stickerLockedHint: (level) => `Unlocks at Lv.${level}`,
+        stickerOwnedCount: (owned, total) => `${owned} / ${total} collected`,
+        stickerEmpty: 'No stickers collected yet.',
+        lobbySlotEmptyLabel: (index) => `Empty slot ${index}`,
+        lobbyInsightTitle: 'Chat style insight',
+        lobbyModelTitle: 'Active model',
+        lobbyModelOffline: 'Model standby',
+        inventory: 'Inventory',
+        inventoryEmpty: 'No spirit has reached level 40 yet. Grow a bond to level 40 to earn its bond sticker.',
+        inventoryCount: (count) => `${count} bond stickers earned`,
+        windowMinimize: 'Minimize',
+        windowMaximize: 'Maximize',
+        windowRestore: 'Restore',
+        windowClose: 'Close',
+        windowTaskbarHint: 'Minimized chats',
         messages: 'Messages',
         memories: 'Memories',
         score: 'Score',
@@ -1040,6 +1219,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logLocalModelStatusCheckFailed: 'Failed to check on-device model status',
         logBondRankingFetchFailed: 'Failed to fetch bond ranking',
         logFamiliarityFetchFailed: 'Failed to fetch familiarity',
+        logMemoryInsightFailed: 'Failed to fetch memory insight',
         logBackupFailed: 'Failed to save/load data',
         logModuleActionFailed: 'Risu module operation failed',
         logPersistentStorageFailed: 'Persistent storage request failed',
@@ -1060,6 +1240,65 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         loadingFamiliarity: '正在统计亲密度',
         noFamiliarity: '暂无亲密度数据',
         familiarityDescription: '将根据本浏览器 IndexedDB 中累积的消息与记忆计算亲密度。',
+        familiarityDetailTitle: '亲密度详情',
+        familiarityLevel: (stars) => `亲密度 ${stars} 级`,
+        familiarityStarsLabel: (stars) => `亲密度星星 ${stars} 颗`,
+        familiarityNextLevel: (stars) => `距 ${stars} 级`,
+        familiarityStepHint: (step) => `亲密度每 ${step} 点增加一颗星，无上限。`,
+        familiarityOpenChat: (name) => `与 ${name} 对话`,
+        familiarityExpLabel: (current, needed) => `经验 ${current} / ${needed}`,
+        familiarityMaxLevelLabel: '已达最高等级',
+        familiaritySigilObtained: '获得羁绊贴纸',
+        familiaritySigilLocked: (level) => `${level} 级可获得羁绊贴纸`,
+        familiaritySigilGradeNames: { epic: '史诗', eternal: '永恒', legendary: '传说', origin: '起源' },
+        memoryInsightTitle: '记忆洞察',
+        memoryInsightSummary: '综合摘要',
+        memoryInsightDirectives: '要求记住的内容',
+        memoryInsightEpisodes: '最近记忆',
+        memoryInsightEmpty: '这位精灵还没有记忆。对话后会在浏览器 IndexedDB 中积累记忆。',
+        memoryInsightCount: (shown, total) => `${total} 条中最近 ${shown} 条`,
+        lobby: '大厅',
+        lobbyTitle: '大厅',
+        lobbySubtitle: (count) => `${count} 位偏好精灵与你同在`,
+        lobbyEmpty: '还没有偏好精灵。在精灵列表中点击星标，最多可将 5 位放入大厅。',
+        lobbyBrowseRoster: '打开精灵列表',
+        lobbyPickBackground: '选择背景',
+        lobbyDefaultBackground: '默认背景',
+        lobbyTapHint: '轻触精灵一次会有反应，两次即可开始对话。',
+        lobbyEnterChat: (name) => `与 ${name} 对话`,
+        saviorProfile: '救世主档案',
+        saviorDefaultName: '救世主',
+        saviorNamePlaceholder: '请输入救世主名称',
+        saviorRename: '修改名称',
+        saviorStatPreferred: '偏好精灵',
+        saviorStatEarned: '已获羁绊',
+        saviorStatMessages: '总对话',
+        saviorStatRooms: '对话房间',
+        saviorStatMemories: '记忆',
+        saviorStatBonded: '羁绊精灵',
+        saviorStatHighest: '最高羁绊',
+        saviorStatPersonas: '拥有精灵',
+        saviorProfileOpenAction: '打开救世主档案',
+        saviorSigilProgress: '羁绊纹章进度',
+        stickerCollection: '贴纸收藏',
+        stickerKindLove: '羁绊贴纸',
+        stickerKindSpecial: '特别贴纸',
+        stickerKindEvent: '活动贴纸',
+        stickerLockedHint: (level) => `${level} 级解锁`,
+        stickerOwnedCount: (owned, total) => `已收集 ${owned} / ${total}`,
+        stickerEmpty: '还没有收集到贴纸。',
+        lobbySlotEmptyLabel: (index) => `空位 ${index}`,
+        lobbyInsightTitle: '聊天倾向洞察',
+        lobbyModelTitle: '启用模型',
+        lobbyModelOffline: '模型待机',
+        inventory: '仓库',
+        inventoryEmpty: '还没有精灵达到40级。与精灵对话把羁绊提升到40级即可获得羁绊贴纸。',
+        inventoryCount: (count) => `已获得 ${count} 个羁绊贴纸`,
+        windowMinimize: '最小化',
+        windowMaximize: '最大化',
+        windowRestore: '还原',
+        windowClose: '关闭',
+        windowTaskbarHint: '最小化的对话',
         messages: '消息',
         memories: '记忆',
         score: '分数',
@@ -1421,6 +1660,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         logLocalModelStatusCheckFailed: '设备端模型状态检查失败',
         logBondRankingFetchFailed: '羁绊排行查询失败',
         logFamiliarityFetchFailed: '亲密度查询失败',
+        logMemoryInsightFailed: '记忆洞察查询失败',
         logBackupFailed: '数据保存/载入失败',
         logModuleActionFailed: 'Risu 模块处理失败',
         logPersistentStorageFailed: '持久化存储请求失败',

@@ -111,6 +111,20 @@ export const liteRtLmModelStorage = {
         onProgress({ ratio: 1, done: true });
         return toInstalledModelFile(event.model);
     },
+    async downloadFromUrl(url: string, fileName: string, onProgress: ModelDownloadProgressHandler): Promise<InstalledModelFile | null> {
+        const event = await runAndroidRequest(
+            (bridge, requestId) => bridge.downloadLiteRtLmModel(requestId, url, fileName),
+            (progress) => onProgress({ ratio: progress.ratio ?? 0, done: false }),
+        );
+        if (!event) {
+            return null;
+        }
+        if (!event.model) {
+            throw new DomainError('storage', event.request_id);
+        }
+        onProgress({ ratio: 1, done: true });
+        return toInstalledModelFile(event.model);
+    },
     async remove(fileName: string): Promise<void> {
         await runAndroidRequest((bridge, requestId) => bridge.removeLiteRtLmModel(requestId, fileName));
     },

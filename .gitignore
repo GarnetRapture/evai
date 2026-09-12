@@ -28,7 +28,7 @@ RUST_SRC/
 package-lock.json
 tmp-claude/
 
-# Android
+# Android (Gradle / Kotlin / Java build outputs)
 android/.gradle/
 android/.kotlin/
 android/local.properties
@@ -38,3 +38,13 @@ android/captures/
 android/**/*.jks
 android/**/*.keystore
 android/keystore.properties
+
+# Android native C/C++ build outputs (CMake / Ninja / NDK)
+android/.cxx/
+android/**/.cxx/
+android/app/.cxx/
+android/app/src/main/jniLibs/
+*.o
+*.obj
+*.a
+*.so.debug
