@@ -6,7 +6,14 @@ import { liteRtLmRuntime } from './litertlm/runtime';
 import { listRequestStatuses } from './requests';
 import { chromePromptRuntime } from './runtime';
 import { isLocalModelInstalled } from './storage';
-import type { ChatModelEngineKind, LlmRequestStatus, LlmSessionStatus, LlmStatus, OnDeviceGenerationRequest, OnDeviceGenerationResult } from './types';
+import type {
+    ChatModelEngineKind,
+    LlmRequestStatus,
+    LlmSessionStatus,
+    LlmStatus,
+    OnDeviceGenerationRequest,
+    OnDeviceGenerationResult,
+} from './types';
 
 async function unloadEnginesExcept(engine: ChatModelEngineKind): Promise<void> {
     if (engine !== 'chrome_prompt') {

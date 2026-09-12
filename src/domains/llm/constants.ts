@@ -24,5 +24,5 @@ export const LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE: Record<AppLanguage, string> = {
     en: 'en',
     zh_cn: 'zh',
 };
-export const CHAT_RESPONSE_TOKEN_RESERVE = 96;
+export const CHAT_RESPONSE_TOKEN_RESERVE = 384;
 export const REQUEST_STATUS_HISTORY_LIMIT = 32;

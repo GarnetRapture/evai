@@ -21,6 +21,7 @@ export interface PersonaLocalizedPrompt {
     language: AppLanguage;
     localized_name: string;
     assembled_prompt: string;
+    speech_profile?: PersonaSpeechProfile;
     source_updated_at: string;
     cached_at: string;
 }
@@ -28,16 +29,37 @@ export interface PersonaArchiveEntry {
     archive_key: string;
     load: () => Promise<SpiritDetail>;
 }
-export type PersonaSpeechRegister = 'deferential' | 'polite' | 'archaic' | 'casual' | 'unmeasured';
-export interface PersonaExemplarTurn {
-    savior: string;
-    spirit: string;
+export interface PersonaLanguageSlice {
+    name: string;
+    name_en: string;
+    grade: string;
+    race: string;
+    class: string;
+    sub_class: string;
+    stat: string;
+    nick_name: string;
+    constellation: string;
+    union: string;
+    cv_ko: string;
+    cv_jp: string;
+    birthday: string;
+    height: string;
+    weight: string;
+    like: string;
+    dislike: string;
+    hobby: string;
+    speciality: string;
+    description: string;
+    greeting: string;
+    speech_patterns: LocalizedDialogue[];
+    comments: LocalizedDialogue[];
+    evertalk: LocalizedDialogue[];
 }
+export type PersonaSpeechRegister = 'deferential' | 'polite' | 'archaic' | 'casual' | 'unmeasured';
 export interface PersonaSpeechProfile {
     address_term: string | null;
     register: PersonaSpeechRegister;
     signature_endings: string[];
-    exemplar_turns: PersonaExemplarTurn[];
     solo_lines: string[];
 }
 export interface LocalizedPersonaPromptBody {

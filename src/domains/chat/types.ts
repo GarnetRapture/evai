@@ -25,6 +25,7 @@ export interface ChatStreamHandlers {
 export interface PersonaSystemPrompt {
     spirit_name: string;
     system_prompt: string;
+    address_term: string;
 }
 export interface ChatSendRequest {
     room_id: string;

@@ -11,6 +11,12 @@ import type {
 } from './types';
 
 const TIMESTAMP_UPPER_BOUND = '￿';
+const DIRECTIVE_MEMORY_CAPACITY = 120;
+const DIRECTIVE_NORMALIZE_PATTERN = /[^\p{L}\p{N}]+/gu;
+
+function normalizeDirectiveText(text: string): string {
+    return text.normalize('NFKC').toLowerCase().replace(DIRECTIVE_NORMALIZE_PATTERN, ' ').trim();
+}
 
 function isRecalledMemory(record: PersonaMemoryRecord): record is PersonaRecalledMemoryRecord {
     return record.memory_type !== 'habit';
@@ -123,7 +129,24 @@ export const chatRepository = {
     },
     async insertDirectiveMemory(record: PersonaRecalledMemoryRecord): Promise<void> {
         const database = await getEverSoulDatabase();
+        const existing = await database.getAllFromIndex(
+            EVERSOUL_STORE.personaMemory,
+            EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated,
+            personaMemoryRange(record.persona_id, 'directive'),
+        );
+        const normalized = normalizeDirectiveText(record.memory_text);
+        const duplicate = existing.find((entry) => normalizeDirectiveText(entry.memory_text) === normalized);
+        if (duplicate) {
+            await database.put(EVERSOUL_STORE.personaMemory, { ...record, id: duplicate.id });
+            return;
+        }
         await database.add(EVERSOUL_STORE.personaMemory, record);
+        const overflow = existing.length + 1 - DIRECTIVE_MEMORY_CAPACITY;
+        if (overflow > 0) {
+            for (const stale of existing.slice(0, overflow)) {
+                await database.delete(EVERSOUL_STORE.personaMemory, stale.id);
+            }
+        }
     },
     async countDirectiveMemories(personaId: string): Promise<number> {
         const database = await getEverSoulDatabase();
@@ -167,6 +190,42 @@ export const chatRepository = {
         const database = await getEverSoulDatabase();
         const record = await database.get(EVERSOUL_STORE.personaMemory, semanticMemoryId(personaId));
         return record?.memory_text ?? null;
+    },
+    async recordHabitTokens(personaId: string, tokens: string[], observedAt: string): Promise<void> {
+        if (tokens.length === 0) {
+            return;
+        }
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction(EVERSOUL_STORE.personaMemory, 'readwrite');
+        const store = transaction.objectStore(EVERSOUL_STORE.personaMemory);
+        for (const token of tokens) {
+            const id = habitMemoryId(personaId, token);
+            const existing = await store.get(id);
+            const previous = existing && isHabitMemory(existing) ? existing.occurrence_count : 0;
+            await store.put({
+                id,
+                persona_id: personaId,
+                memory_type: 'habit',
+                memory_text: token,
+                occurrence_count: previous + 1,
+                created_at: existing?.created_at ?? observedAt,
+                last_seen_at: observedAt,
+            });
+        }
+        await transaction.done;
+    },
+    async listFrequentHabits(personaId: string, limit: number, minimumOccurrence: number): Promise<PersonaHabitMemoryRecord[]> {
+        const database = await getEverSoulDatabase();
+        const records = await database.getAllFromIndex(
+            EVERSOUL_STORE.personaMemory,
+            EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated,
+            personaMemoryRange(personaId, 'habit'),
+        );
+        return records
+            .filter(isHabitMemory)
+            .filter((record) => record.occurrence_count >= minimumOccurrence)
+            .sort((left, right) => right.occurrence_count - left.occurrence_count || right.last_seen_at.localeCompare(left.last_seen_at))
+            .slice(0, limit);
     },
     async countMessagesByPersona(): Promise<Map<string, number>> {
         const database = await getEverSoulDatabase();

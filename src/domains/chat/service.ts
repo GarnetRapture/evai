@@ -8,6 +8,8 @@ import { modulesClient } from '../modules/client';
 import { personaService } from '../persona/service';
 import { settingsRepository } from '../settings/repository';
 import { styleClient } from '../style/client';
+import { personaAddressTerm } from '../persona/prompt';
+import { extractHabitTokens } from './habit';
 import { createLexicalMemoryVector } from './memory';
 import { removeEmoji } from './output';
 import {
@@ -16,17 +18,24 @@ import {
     EPISODIC_INJECT_LIMIT,
     EPISODIC_SEARCH_CANDIDATE_LIMIT,
     EVERTALK_SESSION_TITLE,
+    HABIT_INJECT_LIMIT,
+    HABIT_INJECT_MIN_OCCURRENCE,
     KNOWLEDGE_INJECT_LIMIT,
     MEMORY_DIRECTIVE_LIMIT,
+    PERSONA_RESPONSE_PREFIX,
     PROMPT_HISTORY_LIMIT,
-    buildBehaviorInstruction,
+    SAVIOR_NAME_MAX_LENGTH,
     buildConsolidationPrompt,
     buildDirectiveMemoryBlock,
+    buildHabitContextBlock,
     buildKnowledgeContext,
     buildRecalledMemoryContext,
     buildSemanticMemoryBlock,
+    buildSessionContract,
+    buildTurnBehaviorReminder,
     buildTurnMemoryText,
-    detectMemoryDirective,
+    detectSaviorName,
+    shouldCaptureAsDirective,
 } from './prompt';
 import { chatRepository } from './repository';
 import type { ChatMessage, ChatRoom, ChatSendRequest, PersonaMemoryInsight, PersonaSystemPrompt } from './types';
@@ -44,8 +53,17 @@ function insertBeforeLast(messages: OnDeviceTextMessage[], injected: OnDeviceTex
     messages.splice(Math.max(0, messages.length - 1), 0, injected);
 }
 
-async function recordTurnMemory(modelId: string, language: AppLanguage, personaId: string, userText: string, replyText: string): Promise<void> {
-    const memoryText = buildTurnMemoryText(userText, replyText);
+interface TurnMemoryContext {
+    model_id: string;
+    language: AppLanguage;
+    persona_id: string;
+    spirit_name: string;
+    address_term: string;
+}
+
+async function recordTurnMemory(context: TurnMemoryContext, userText: string, replyText: string): Promise<void> {
+    const { model_id: modelId, language, persona_id: personaId } = context;
+    const memoryText = buildTurnMemoryText(context.address_term, context.spirit_name, userText, replyText);
     if (memoryText !== null) {
         await chatRepository.insertEpisodicMemory({
             id: crypto.randomUUID(),
@@ -91,8 +109,9 @@ export const chatService = {
         const existing = await chatRepository.findLatestGlobalSessionRoom(EVERTALK_SESSION_TITLE);
         return existing ?? chatService.createSessionRoom(EVERTALK_SESSION_TITLE, null);
     },
-    async buildPersonaBaseSystemPrompt(personaId: string, language: AppLanguage): Promise<PersonaSystemPrompt> {
-        const persona = await personaService.getAssembledPersonaPrompt(personaId, language);
+    async buildPersonaBaseSystemPrompt(personaId: string, language: AppLanguage, saviorName = ''): Promise<PersonaSystemPrompt> {
+        const persona = await personaService.getAssembledPersonaPrompt(personaId, language, saviorName);
+        const addressTerm = personaAddressTerm(language, persona.speech_profile, saviorName);
         let systemPrompt = persona.assembled_prompt;
         systemPrompt += await styleClient.getAssembledStylePrompt();
         const modulePrompt = await modulesClient.getActivePrompt();
@@ -101,14 +120,22 @@ export const chatService = {
         }
         const directives = await chatRepository.listDirectiveMemories(personaId, MEMORY_DIRECTIVE_LIMIT);
         if (directives.length > 0) {
-            systemPrompt += buildDirectiveMemoryBlock(language, directives.map((directive) => directive.memory_text));
+            systemPrompt += buildDirectiveMemoryBlock(directives.map((directive) => directive.memory_text));
         }
         const semanticMemory = await chatRepository.getSemanticMemory(personaId);
         if (semanticMemory !== null) {
-            systemPrompt += buildSemanticMemoryBlock(language, semanticMemory);
+            systemPrompt += buildSemanticMemoryBlock(semanticMemory);
         }
-        systemPrompt += buildBehaviorInstruction(language, persona.localized_name);
-        return { spirit_name: persona.localized_name, system_prompt: systemPrompt };
+        const habits = await chatRepository.listFrequentHabits(personaId, HABIT_INJECT_LIMIT, HABIT_INJECT_MIN_OCCURRENCE);
+        if (habits.length > 0) {
+            systemPrompt += buildHabitContextBlock(habits.map((habit) => habit.memory_text));
+        }
+        systemPrompt += buildSessionContract(persona.localized_name, addressTerm);
+        return {
+            spirit_name: persona.localized_name,
+            system_prompt: systemPrompt,
+            address_term: addressTerm,
+        };
     },
     async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {
         const [semanticSummary, directives, episodic, episodicTotal] = await Promise.all([
@@ -126,7 +153,7 @@ export const chatService = {
     },
     async focusPersonaSession(personaId: string): Promise<void> {
         const settings = await settingsRepository.readAppSettings();
-        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, settings.language);
+        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, settings.language, settings.savior_name);
         await chatModelRuntime.focusPersonaSession(settings.active_model, settings.language, personaId, persona.system_prompt);
     },
     async sendMessage(request: ChatSendRequest): Promise<ChatMessage> {
@@ -142,7 +169,7 @@ export const chatService = {
             content,
             created_at: createMonotonicTimestamp(),
         });
-        if (detectMemoryDirective(content)) {
+        if (shouldCaptureAsDirective(content)) {
             await chatRepository.insertDirectiveMemory({
                 id: crypto.randomUUID(),
                 persona_id: personaId,
@@ -153,7 +180,13 @@ export const chatService = {
             });
         }
 
-        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language);
+        const declaredName = detectSaviorName(content);
+        const saviorName = declaredName ?? settings.savior_name;
+        if (declaredName !== null && declaredName !== settings.savior_name) {
+            await settingsRepository.updateGeneral({ savior_name: declaredName.slice(0, SAVIOR_NAME_MAX_LENGTH) });
+        }
+
+        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language, saviorName);
         const history = await chatRepository.listRecentMessagesForPersona(roomId, personaId, PROMPT_HISTORY_LIMIT);
         const messages = history.map(toOnDeviceMessage);
         const recalledMemories = await chatRepository.searchEpisodicMemories(
@@ -163,7 +196,7 @@ export const chatService = {
             EPISODIC_SEARCH_CANDIDATE_LIMIT,
         );
         if (recalledMemories.length > 0) {
-            insertBeforeLast(messages, { role: 'user', content: buildRecalledMemoryContext(language, recalledMemories) });
+            insertBeforeLast(messages, { role: 'user', content: buildRecalledMemoryContext(recalledMemories) });
         }
         const knowledge = await knowledgeClient.search(content, KNOWLEDGE_INJECT_LIMIT);
         if (knowledge.length > 0) {
@@ -176,7 +209,8 @@ export const chatService = {
             persona_id: personaId,
             system_prompt: persona.system_prompt,
             messages,
-            behavior_instruction: '',
+            behavior_instruction: buildTurnBehaviorReminder(persona.spirit_name, persona.address_term),
+            response_prefix: PERSONA_RESPONSE_PREFIX,
             signal,
             handlers: {
                 onChunk: (chunk) => {
@@ -199,7 +233,14 @@ export const chatService = {
             created_at: createMonotonicTimestamp(),
         };
         await chatRepository.insertMessage(aiMessage);
-        void recordTurnMemory(modelId, language, personaId, content, replyText).catch((error: unknown) => {
+        await chatRepository.recordHabitTokens(personaId, extractHabitTokens(content, language), createMonotonicTimestamp());
+        void recordTurnMemory({
+            model_id: modelId,
+            language,
+            persona_id: personaId,
+            spirit_name: persona.spirit_name,
+            address_term: persona.address_term,
+        }, content, replyText).catch((error: unknown) => {
             console.error(pickLocalized(
                 language,
                 `정령 누적 기억 처리 실패: ${describeUnknownError(error)}`,
