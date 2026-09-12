@@ -6,11 +6,14 @@ import { chatRepository } from '../chat/repository';
 import { listPersonaArchiveKeys, loadPersonaPack, normalizePersonaKey } from './archive';
 import {
     parsePersonaDialogueExchanges,
+    selectBondStageDialogueExamples,
     selectRelevantDialogueExamples,
 } from './dialogue';
+import { FAMILIARITY_MAX_LEVEL } from './familiarity';
 import { personaCheatPresetKey, resolveActivePersonaCheatPreset, resolvePersonaFamiliarityScore } from './presets';
 import {
     buildPersonaSystemPrompt,
+    findPersonaProfileMentions,
     personaGreetingFromPack,
 } from './prompt';
 import { personaRepository } from './repository';
@@ -21,7 +24,7 @@ import type {
     PersonaCheatSettingsSource,
     BondRankingEntry,
     FamiliarityEntry,
-    PersonaDialogueExchange,
+    PersonaTurnReferences,
     SpiritDetail,
     StoredPersonaProfile,
 } from './types';
@@ -127,20 +130,31 @@ export const personaService = {
         }
         return assembled;
     },
-    async getRelevantDialogueExamples(
+    async getTurnPersonaReferences(
         id: string,
         language: AppLanguage,
         query: string,
         limit: number,
         excludedTerms: readonly string[],
-    ): Promise<PersonaDialogueExchange[]> {
+        familiarityLevel: number,
+    ): Promise<PersonaTurnReferences> {
         const persona = await personaRepository.getPersona(id);
         if (!persona) {
             throw personaNotFoundError(id);
         }
         const pack = JSON.parse(persona.raw_json) as SpiritDetail;
         const slice = buildPersonaLanguageSlice(pack, language);
-        return selectRelevantDialogueExamples(parsePersonaDialogueExchanges(slice, language), query, limit, excludedTerms);
+        const exchanges = parsePersonaDialogueExchanges(slice, language);
+        const topical = selectRelevantDialogueExamples(exchanges, query, limit, excludedTerms);
+        const profileMentions = findPersonaProfileMentions(slice, query);
+        if (topical.length > 0) {
+            return { voice_examples: topical, voice_reference_kind: 'topic', profile_mentions: profileMentions };
+        }
+        return {
+            voice_examples: selectBondStageDialogueExamples(exchanges, familiarityLevel, FAMILIARITY_MAX_LEVEL, limit, query),
+            voice_reference_kind: 'bond_stage',
+            profile_mentions: profileMentions,
+        };
     },
     async getEmotionSeedText(id: string, language: AppLanguage): Promise<string> {
         const persona = await personaRepository.getPersona(id);

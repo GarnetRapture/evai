@@ -14,7 +14,7 @@ type LocalizedDialogueEntry = Partial<Record<AppLanguage | 'zh_tw', LocalizedDia
 
 const FALLBACK_LANGUAGES: Array<AppLanguage | 'zh_tw'> = ['ko', 'en', 'zh_tw'];
 const WHITESPACE_PATTERN = /\s+/g;
-const ALPHANUMERIC_PATTERN = /[\p{L}\p{N}]/u;
+const VISIBLE_CHARACTER_PATTERN = /[\p{L}\p{N}\p{P}\p{S}]/u;
 
 function localizedText(value: Partial<LocalizedText> | undefined, language: AppLanguage): string {
     if (!value) {
@@ -38,7 +38,7 @@ function localizedJoinedList(value: Partial<LocalizedList> | undefined, language
 function normalizeDialogue(dialogue: LocalizedDialogue): LocalizedDialogue | null {
     const speaker = (dialogue.speaker ?? '').replace(WHITESPACE_PATTERN, ' ').trim();
     const message = (dialogue.message ?? '').replace(WHITESPACE_PATTERN, ' ').trim();
-    if (speaker.length === 0 || message.length === 0 || !ALPHANUMERIC_PATTERN.test(message)) {
+    if (speaker.length === 0 || message.length === 0 || !VISIBLE_CHARACTER_PATTERN.test(message)) {
         return null;
     }
     return { speaker, message };

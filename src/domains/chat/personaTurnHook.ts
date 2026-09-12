@@ -1,26 +1,51 @@
 import type { OnDeviceTextMessage } from '../llm';
-import { stripReasoning } from './output';
+import { PERSONA_REHEARSAL_MARKER, describePersonaSpeechStyle } from '../persona/prompt';
+import type { PersonaDialogueExchange, PersonaSpeechStyle } from '../persona/types';
+import { encodePersonaReplyEnvelope, envelopeFromStoredReply } from './replyEnvelope';
 import type { ChatMessage } from './types';
 
-export function buildPersonaTurnHook(spiritName: string, addressTerm: string, reasoningEnabled: boolean): string {
-    const reply = `write ${spiritName}'s reply to ${addressTerm}: react in character to what just happened and keep the moment going.`;
-    if (!reasoningEnabled) {
-        return `\n\n[YOUR TURN]\nNow ${reply}`;
-    }
-    return `\n\n[YOUR TURN]\nFirst, inside <think></think>, write ${spiritName}'s honest inner feelings in first person: what you feel right now about what just happened and what you want to say or do. One or two short sentences in your own inner voice, never an analysis of a message. Then close </think> and ${reply}`;
+export function buildPersonaTurnHook(spiritName: string, addressTerm: string, reasoningEnabled: boolean, speechStyle: PersonaSpeechStyle | null): string {
+    const thought = reasoningEnabled
+        ? `"inner_thought": ${spiritName}'s honest inner feelings in first person about what just happened and what you want to do, one or two short sentences in your own inner voice, never an analysis of a message. `
+        : '';
+    const shape = speechStyle === null ? 'short chat messages' : describePersonaSpeechStyle(speechStyle);
+    return `\n\n[YOUR TURN]\nNow reply as ${spiritName} to ${addressTerm}: react in character to what just happened and keep the moment going. `
+        + `${thought}"action": one short thing you physically do right now, or "" if nothing. "messages": what you text ${addressTerm}, ${shape}.`;
 }
 
-export function buildGreetingOpeningMessage(greeting: string): OnDeviceTextMessage {
-    return { role: 'assistant', content: greeting };
+export function buildPersonaRedirectHook(spiritName: string): string {
+    return `\n\n[REDIRECT]\nYour last draft slipped out of ${spiritName}'s life and talked like an AI or an assistant, so it was thrown away. Reply again purely as ${spiritName}, a person inside this story, in your own voice.`;
 }
 
-export function toPersonaHistoryMessage(message: ChatMessage): OnDeviceTextMessage {
-    if (message.role === 'assistant') {
-        return { role: 'assistant', content: stripReasoning(message.content) };
-    }
-    return { role: 'user', content: `[${message.created_at}] ${message.content}` };
+export function buildPersonaPrimingMessages(exchanges: PersonaDialogueExchange[]): OnDeviceTextMessage[] {
+    return exchanges.flatMap((exchange): OnDeviceTextMessage[] => {
+        const envelope = envelopeFromStoredReply(exchange.spirit_messages.join('\n'));
+        if (envelope.messages.length === 0) {
+            return [];
+        }
+        return [
+            { role: 'user', content: `${PERSONA_REHEARSAL_MARKER} ${exchange.user_message}` },
+            { role: 'assistant', content: encodePersonaReplyEnvelope(envelope) },
+        ];
+    });
 }
 
-export function carriesSpokenText(message: OnDeviceTextMessage): boolean {
-    return message.content.trim().length > 0;
+export function buildGreetingOpeningMessage(greeting: string): OnDeviceTextMessage[] {
+    const envelope = envelopeFromStoredReply(greeting);
+    return envelope.messages.length === 0 ? [] : [{ role: 'assistant', content: encodePersonaReplyEnvelope(envelope) }];
+}
+
+export function toPersonaHistoryMessages(messages: ChatMessage[]): OnDeviceTextMessage[] {
+    return messages.flatMap((message): OnDeviceTextMessage[] => {
+        if (message.role === 'assistant') {
+            const envelope = envelopeFromStoredReply(message.content);
+            return envelope.messages.length === 0 && envelope.action.length === 0
+                ? []
+                : [{ role: 'assistant', content: encodePersonaReplyEnvelope(envelope) }];
+        }
+        if (message.role === 'user' && message.content.trim().length > 0) {
+            return [{ role: 'user', content: `[${message.created_at}] ${message.content}` }];
+        }
+        return [];
+    });
 }

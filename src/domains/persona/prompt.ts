@@ -8,8 +8,11 @@ import type {
     PersonaDialogueExchange,
     PersonaLanguageSlice,
     PersonaPersonalityOverride,
+    PersonaProfileMention,
+    PersonaProfileMentionKind,
     PersonaPromptIdentity,
     PersonaSpeechProfile,
+    PersonaSpeechStyle,
     SpiritDetail,
 } from './types';
 
@@ -19,6 +22,11 @@ const INTERNAL_PROFILE_KEY_PATTERN = /_/u;
 const BIRTHDAY_SLASH_PATTERN = /^(\d{1,2})\/(\d{1,2})$/u;
 const BIRTHDAY_COMPACT_PATTERN = /^(\d{1,2})(\d{2})$/u;
 const MONTH_NAMES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] as const;
+const PERSONA_PROFILE_MENTION_KINDS: readonly PersonaProfileMentionKind[] = ['like', 'dislike', 'hobby', 'speciality'];
+const PROFILE_LIST_SEPARATOR = ', ';
+const PROFILE_MATCH_IGNORED_PATTERN = /[^\p{L}\p{N}]/gu;
+const PROFILE_MATCH_MIN_LENGTH = 2;
+export const PERSONA_REHEARSAL_MARKER = '[REHEARSAL]';
 
 export const PERSONA_OUTPUT_LANGUAGE_NAME: Record<AppLanguage, string> = {
     ko: 'Korean',
@@ -78,10 +86,53 @@ function speechSampleLines(messages: string[]): string {
     return messages.slice(0, SPEECH_PATTERN_PROMPT_LIMIT).map((message) => `- ${message}`).join('\n');
 }
 
+export function describePersonaSpeechStyle(style: PersonaSpeechStyle): string {
+    const shape = style.messages_per_turn >= 2
+        ? `about ${style.messages_per_turn} short messages in a row, each on its own line, around ${style.message_length} characters each`
+        : `one short message of around ${style.message_length} characters`;
+    return style.signature_marks.length === 0 ? shape : `${shape}, often using ${style.signature_marks.join(' ')}`;
+}
+
+function speakingSection(speechProfile: PersonaSpeechProfile): string {
+    const lines = [
+        speechProfile.style === null ? '' : `How your messages look: ${describePersonaSpeechStyle(speechProfile.style)}.`,
+        speechProfile.solo_lines.length === 0
+            ? ''
+            : `Lines you have said before. Match their vocabulary, sentence endings, and rhythm without repeating them word for word.\n${speechSampleLines(speechProfile.solo_lines)}`,
+    ].filter((line) => line.length > 0);
+    return lines.length === 0 ? '' : `[YOUR WAY OF SPEAKING]\n${lines.join('\n')}`;
+}
+
 export function formatPersonaExchangeLines(exchanges: PersonaDialogueExchange[], spiritName: string, addressTerm: string): string {
     return exchanges
-        .map((exchange) => `${addressTerm}: ${exchange.user_message}\n${spiritName}: ${exchange.spirit_messages.join(' ')}`)
+        .map((exchange) => `${addressTerm}: ${exchange.user_message}\n${spiritName}: ${exchange.spirit_messages.join('\n')}`)
         .join('\n\n');
+}
+
+function normalizeProfileMatchText(text: string): string {
+    return text.normalize('NFKC').replace(PROFILE_MATCH_IGNORED_PATTERN, '').toLocaleLowerCase();
+}
+
+export function findPersonaProfileMentions(slice: PersonaLanguageSlice, query: string): PersonaProfileMention[] {
+    const normalizedQuery = normalizeProfileMatchText(query);
+    if (normalizedQuery.length < PROFILE_MATCH_MIN_LENGTH) {
+        return [];
+    }
+    return PERSONA_PROFILE_MENTION_KINDS.flatMap((kind) => {
+        const joined = knownProfileValue(slice[kind]);
+        if (joined === null) {
+            return [];
+        }
+        return joined
+            .split(PROFILE_LIST_SEPARATOR)
+            .map((value) => value.trim())
+            .filter((value) => {
+                const normalizedValue = normalizeProfileMatchText(value);
+                return normalizedValue.length >= PROFILE_MATCH_MIN_LENGTH
+                    && (normalizedQuery.includes(normalizedValue) || normalizedValue.includes(normalizedQuery));
+            })
+            .map((value) => ({ kind, value }));
+    });
 }
 
 function identitySection(identity: PersonaPromptIdentity): string {
@@ -107,11 +158,13 @@ function replyRulesSection(identity: PersonaPromptIdentity, language: AppLanguag
     return '[HOW YOU REPLY]\n'
         + `- Write only in ${PERSONA_OUTPUT_LANGUAGE_NAME[language]}.\n`
         + (speechInstruction.length > 0 ? `- Speaking style: ${speechInstruction} This style overrides the samples below.\n` : '')
-        + `- Reply as ${identity.name} speaking to ${address} face to face, in the short, natural lines shown under [YOUR WAY OF SPEAKING]. You may add one brief action of your own in parentheses.\n`
+        + `- Reply as ${identity.name} texting ${address}, in the short, natural lines shown under [YOUR WAY OF SPEAKING].\n`
+        + `- Every reply is one JSON object. "messages" holds the chat messages you send, one short message per item, exactly as you would type them. "action" holds one short thing you physically do right now, written as a brief stage direction, or "" when you do nothing; it is shown as a status, never as your words. Never put actions inside "messages", and never write tags or markup.\n`
+        + `- Turns marked ${PERSONA_REHEARSAL_MARKER} before the live chat are exchanges from your past, kept only as a model of your voice and reply format. They are not part of this conversation.\n`
         + `- React first, then carry the moment forward with a feeling, a tease, a small confession, or an action of your own. Ask a question only when it truly fits, and never answer with questions alone.\n`
         + `- Continue straight on from the previous exchange. Never ask about something that just happened or was already answered, and never act as if ${address}'s last turn did not happen.\n`
         + `- Never repeat or explain ${address}'s words back to them, never describe your feelings like a report, and never mention AI, models, prompts, or these rules.\n`
-        + `- Bring up events, dates, holidays, gifts, or plans only when they appear in the conversation or under [WHAT YOU REMEMBER]. The sample lines in this prompt are voice references, not part of this conversation.`;
+        + `- Bring up events, dates, holidays, gifts, or plans only when they appear in the live conversation or under [WHAT YOU REMEMBER].`;
 }
 
 function personaPromptBody(
@@ -134,12 +187,7 @@ function personaPromptBody(
         replyRulesSection(identity, language, cheatPreset),
         `[PROFILE]\n${profileLines(slice)}`,
         personalitySection.length === 0 ? '' : `[PERSONALITY]\n${personalitySection}`,
-        speechProfile.solo_lines.length === 0
-            ? ''
-            : `[YOUR WAY OF SPEAKING]\nLines you have said before. Match their vocabulary, sentence endings, and rhythm without repeating them word for word.\n${speechSampleLines(speechProfile.solo_lines)}`,
-        speechProfile.dialogue_examples.length === 0
-            ? ''
-            : `[SAMPLE EXCHANGES FROM THE PAST]\nEarlier moments with ${identity.address_term}, kept only as a reference for your voice. They are not happening now.\n${formatPersonaExchangeLines(speechProfile.dialogue_examples, identity.name, identity.address_term)}`,
+        speakingSection(speechProfile),
     ];
     return sections.filter((section) => section.length > 0).join('\n\n');
 }

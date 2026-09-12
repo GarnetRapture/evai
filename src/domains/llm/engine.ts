@@ -13,6 +13,7 @@ import type {
     LlmStatus,
     OnDeviceGenerationRequest,
     OnDeviceGenerationResult,
+    PersonaSessionPrompt,
 } from './types';
 
 async function unloadEnginesExcept(engine: ChatModelEngineKind): Promise<void> {
@@ -57,7 +58,7 @@ export const chatModelRuntime = {
         }
         return chromePromptRuntime.getStatus(await chromePromptRuntime.resolveLanguagePlan(language));
     },
-    async focusPersonaSession(modelId: string, language: AppLanguage, personaId: string, systemPrompt: string): Promise<void> {
+    async focusPersonaSession(modelId: string, language: AppLanguage, personaId: string, sessionPrompt: PersonaSessionPrompt): Promise<void> {
         const engine = resolveChatModelEngine(modelId);
         if (engine === 'gguf') {
             await ggufRuntime.focusPersonaSession(localModelFileName(engine, modelId), personaId);
@@ -67,7 +68,7 @@ export const chatModelRuntime = {
             await liteRtLmRuntime.focusPersonaSession(localModelFileName(engine, modelId), personaId);
             return;
         }
-        await chromePromptRuntime.focusPersonaSession(personaId, await chromePromptRuntime.resolveLanguagePlan(language), systemPrompt);
+        await chromePromptRuntime.focusPersonaSession(personaId, await chromePromptRuntime.resolveLanguagePlan(language), sessionPrompt);
     },
     async generate(modelId: string, language: AppLanguage, request: OnDeviceGenerationRequest): Promise<OnDeviceGenerationResult> {
         const engine = resolveChatModelEngine(modelId);

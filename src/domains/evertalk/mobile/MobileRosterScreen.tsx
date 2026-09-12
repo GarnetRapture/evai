@@ -2,6 +2,7 @@ import { Bell, HeartHandshake, Star, Trophy, Users } from 'lucide-react';
 import { getRaceTone, parseSpiritDetail } from '../../persona';
 import { computeFamiliarityLevel, createConversationSummary, resolvePreferredSpiritsFamiliarity } from '../logic';
 import { RosterAvatar, RosterExpBar, RosterRankBadge } from '../components/SpiritRosterCard';
+import { rosterDecorationStyle } from '../uiAssets';
 import type { MobileRosterScreenProps } from './types';
 
 export function MobileRosterScreen({ controller, onOpenChat }: MobileRosterScreenProps) {
@@ -14,7 +15,7 @@ export function MobileRosterScreen({ controller, onOpenChat }: MobileRosterScree
     };
 
     return (
-        <section className="ever-mobile-roster">
+        <section className="ever-mobile-roster" style={rosterDecorationStyle()}>
             <header className="ever-mobile-topbar">
                 <div>
                     <h1>{labels.rosterTitle}</h1>

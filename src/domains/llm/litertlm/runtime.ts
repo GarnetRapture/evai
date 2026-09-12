@@ -85,12 +85,15 @@ async function ensureModelLoaded(fileName: string): Promise<LiteRtLmLoadedModel>
 function toGenerationPayload(request: OnDeviceGenerationRequest, behaviorInstruction = request.behavior_instruction): AndroidLiteRtLmGenerationPayload {
     const lastIndex = request.messages.length - 1;
     return {
-        system_prompt: request.system_prompt,
-        messages: request.messages.map((message, index) => ({
-            role: message.role,
-            content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,
-        })),
-        response_prefix: request.response_prefix,
+        system_prompt: request.session_prompt.system_prompt,
+        messages: [
+            ...request.session_prompt.priming_messages.map((message) => ({ role: message.role, content: message.content })),
+            ...request.messages.map((message, index) => ({
+                role: message.role,
+                content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,
+            })),
+        ],
+        response_prefix: request.structured_reply.soft_prefix,
         max_output_tokens: LITERT_LM_RESPONSE_TOKEN_LIMIT,
     };
 }
@@ -165,14 +168,15 @@ export const liteRtLmRuntime = {
         const status = createQueuedRequestStatus(request.request_id, request.persona_id);
         recordRequestStatus(status);
         try {
-            assertPersonaSystemPrompt(request.system_prompt, request.persona_name);
+            assertPersonaSystemPrompt(request.session_prompt.system_prompt, request.persona_name);
             await liteRtLmRuntime.focusPersonaSession(fileName, request.persona_id);
             recordRequestStatus({ ...status, state: 'running', prompt_tokens: null, generated_tokens: null });
             const payload = JSON.stringify(toGenerationPayload(request));
+            request.handlers.onChunk(request.structured_reply.soft_prefix);
             const result = await runAndroidStreamingRequest(
                 request.request_id,
                 (bridge) => bridge.generateLiteRtLm(request.request_id, payload),
-                () => undefined,
+                (chunk) => request.handlers.onChunk(chunk),
                 request.signal,
             );
             focusedPersonaAccess = Date.now();
@@ -180,7 +184,6 @@ export const liteRtLmRuntime = {
                 recordRequestStatus({ ...status, state: 'cancelled', prompt_tokens: null, generated_tokens: null });
                 return { text: result.text, cancelled: true };
             }
-            request.handlers.onChunk(result.text);
             focusedContextTokens = result.token_count ?? 0;
             recordRequestStatus({ ...status, state: 'completed', prompt_tokens: null, generated_tokens: null });
             return { text: result.text, cancelled: false };

@@ -5,4 +5,4 @@ export {
     readChromeLanguageModelAvailability,
 } from './languageModel';
 export type { ChromeLanguageModelCreateRequest } from './languageModel';
-export { assertPersonaSystemPrompt } from './personaHook';
+export { assertPersonaSystemPrompt, personaSessionPromptKey } from './personaHook';

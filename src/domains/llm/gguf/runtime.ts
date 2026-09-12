@@ -97,17 +97,14 @@ async function ensureModelLoaded(fileName: string): Promise<Wllama> {
 
 function toChatMessages(request: OnDeviceGenerationRequest, behaviorInstruction: string): ChatCompletionMessage[] {
     const lastIndex = request.messages.length - 1;
-    const messages: ChatCompletionMessage[] = [
-        { role: 'system', content: request.system_prompt },
+    return [
+        { role: 'system', content: request.session_prompt.system_prompt },
+        ...request.session_prompt.priming_messages.map((message): ChatCompletionMessage => ({ role: message.role, content: message.content })),
         ...request.messages.map((message, index): ChatCompletionMessage => ({
             role: message.role,
             content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,
         })),
     ];
-    if (request.response_prefix.length > 0) {
-        messages.push({ role: 'assistant', content: request.response_prefix });
-    }
-    return messages;
 }
 
 export const ggufRuntime = {
@@ -148,11 +145,10 @@ export const ggufRuntime = {
         let promptTokens = 0;
         let generatedTokens = 0;
         try {
-            assertPersonaSystemPrompt(request.system_prompt, request.persona_name);
+            assertPersonaSystemPrompt(request.session_prompt.system_prompt, request.persona_name);
             await ggufRuntime.focusPersonaSession(fileName, request.persona_id);
             const instance = await ensureModelLoaded(fileName);
             recordRequestStatus({ ...status, state: 'running' });
-            generatedText = request.response_prefix;
             await instance.createChatCompletion({
                 messages: toChatMessages(request, request.behavior_instruction),
                 stream: true,
@@ -163,16 +159,22 @@ export const ggufRuntime = {
                 top_k: GGUF_CHAT_TOP_K,
                 top_p: GGUF_CHAT_TOP_P,
                 penalty_repeat: GGUF_CHAT_REPEAT_PENALTY,
+                response_format: {
+                    type: 'json_schema',
+                    json_schema: { name: request.structured_reply.name, schema: request.structured_reply.json_schema, strict: true },
+                },
                 onData: (chunk: ChatCompletionChunk) => {
                     const piece = chunk.choices[0]?.delta.content;
-                    if (piece) generatedText += piece;
+                    if (piece) {
+                        generatedText += piece;
+                        request.handlers.onChunk(piece);
+                    }
                     if (chunk.usage) {
                         promptTokens = chunk.usage.prompt_tokens;
                         generatedTokens = chunk.usage.completion_tokens;
                     }
                 },
             });
-            request.handlers.onChunk(generatedText);
             lastGeneration = {
                 prompt_tokens: promptTokens,
                 cached_tokens: promptTokens + generatedTokens,

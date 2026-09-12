@@ -8,6 +8,7 @@ import type {
 
 export const BASELINE_DIALOGUE_EXAMPLE_LIMIT = 6;
 export const RELEVANT_DIALOGUE_EXAMPLE_LIMIT = 2;
+const BOND_STAGE_EXAMPLE_WINDOW = 6;
 const EXAMPLE_REPLY_LINE_LIMIT = 6;
 const EXAMPLE_TEXT_CHAR_LIMIT = 280;
 const TOKEN_PATTERN = /[\p{L}\p{N}]+/gu;
@@ -20,6 +21,10 @@ const DIALOGUE_CANONICAL_ALIASES: ReadonlyArray<readonly [RegExp, string]> = [
     [/할매|할망구/gu, '할머니'],
     [/할배|영감탱이/gu, '할아버지'],
 ];
+
+function displayDialogueText(text: string): string {
+    return text.normalize('NFC').replace(/\s+/g, ' ').trim();
+}
 
 function compactDialogueText(text: string): string {
     let normalized = text.normalize('NFKC').replace(/\s+/g, ' ').trim();
@@ -39,8 +44,8 @@ function deduplicateAdjacent(entries: LocalizedDialogue[]): LocalizedDialogue[] 
     const deduplicated: LocalizedDialogue[] = [];
     for (const entry of entries) {
         const normalized = {
-            speaker: compactDialogueText(entry.speaker),
-            message: compactDialogueText(entry.message),
+            speaker: displayDialogueText(entry.speaker),
+            message: displayDialogueText(entry.message),
         };
         if (normalized.speaker.length === 0 || normalized.message.length === 0) {
             continue;
@@ -62,13 +67,18 @@ function parseResponseExchanges(
 ): PersonaDialogueExchange[] {
     const dialogues = deduplicateAdjacent(entries);
     const saviorSpeakers = SAVIOR_SPEAKERS[language];
-    const normalizedSpiritName = compactDialogueText(spiritName);
+    const normalizedSpiritName = displayDialogueText(spiritName);
     const exchanges: PersonaDialogueExchange[] = [];
     for (let index = 0; index < dialogues.length; index += 1) {
-        const current = dialogues[index];
-        if (!saviorSpeakers.has(current.speaker)) {
+        if (!saviorSpeakers.has(dialogues[index].speaker)) {
             continue;
         }
+        const saviorMessages: string[] = [];
+        while (index < dialogues.length && saviorSpeakers.has(dialogues[index].speaker)) {
+            saviorMessages.push(dialogues[index].message);
+            index += 1;
+        }
+        index -= 1;
         const spiritMessages: string[] = [];
         let cursor = index + 1;
         while (cursor < dialogues.length && dialogues[cursor].speaker === normalizedSpiritName) {
@@ -82,7 +92,7 @@ function parseResponseExchanges(
         }
         exchanges.push({
             source,
-            user_message: clipDialogueText(current.message),
+            user_message: clipDialogueText(saviorMessages.join('\n')),
             spirit_messages: spiritMessages,
         });
     }
@@ -94,6 +104,35 @@ export function parsePersonaDialogueExchanges(slice: PersonaLanguageSlice, langu
         ...parseResponseExchanges(slice.story, 'story', slice.name, language),
         ...parseResponseExchanges(slice.evertalk, 'evertalk', slice.name, language),
     ];
+}
+
+function stableTextHash(text: string): number {
+    let hash = 2166136261;
+    for (let index = 0; index < text.length; index += 1) {
+        hash ^= text.charCodeAt(index);
+        hash = Math.imul(hash, 16777619);
+    }
+    return hash >>> 0;
+}
+
+export function selectBondStageDialogueExamples(
+    exchanges: PersonaDialogueExchange[],
+    familiarityLevel: number,
+    maxLevel: number,
+    limit: number,
+    rotationSeed: string,
+): PersonaDialogueExchange[] {
+    const timeline = exchanges.filter((exchange) => exchange.source === 'evertalk');
+    if (limit <= 0 || timeline.length === 0 || maxLevel <= 1) {
+        return [];
+    }
+    const progress = (Math.min(maxLevel, Math.max(1, familiarityLevel)) - 1) / (maxLevel - 1);
+    const center = Math.round(progress * (timeline.length - 1));
+    const windowSize = Math.min(BOND_STAGE_EXAMPLE_WINDOW, timeline.length);
+    const windowStart = Math.min(Math.max(0, center - Math.floor(windowSize / 2)), timeline.length - windowSize);
+    const stageWindow = timeline.slice(windowStart, windowStart + windowSize);
+    const offset = stableTextHash(rotationSeed) % stageWindow.length;
+    return Array.from({ length: Math.min(limit, stageWindow.length) }, (_, index) => stageWindow[(offset + index) % stageWindow.length]);
 }
 
 export function selectRepresentativeDialogueExamples(

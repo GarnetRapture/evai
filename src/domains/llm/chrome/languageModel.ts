@@ -3,6 +3,7 @@ import type { ModelDownloadProgressHandler } from '../types';
 export interface ChromeLanguageModelCreateRequest {
     declaredLanguageTag: string | null;
     systemPrompt: string | null;
+    primingMessages: LanguageModelMessage[];
     samplingMode: LanguageModelSamplingMode;
     onDownloadProgress: ModelDownloadProgressHandler | null;
     signal: AbortSignal | null;
@@ -46,7 +47,10 @@ export async function createChromeLanguageModel(request: ChromeLanguageModelCrea
     };
     if (request.systemPrompt !== null) {
         const systemMessage: LanguageModelSystemMessage = { role: 'system', content: request.systemPrompt };
-        options.initialPrompts = [systemMessage];
+        options.initialPrompts = [systemMessage, ...request.primingMessages];
+    }
+    else if (request.primingMessages.length > 0) {
+        options.initialPrompts = request.primingMessages;
     }
     if (request.signal !== null) {
         options.signal = request.signal;

@@ -1,0 +1,64 @@
+name: Build Native Hosts
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-native-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: ${{ matrix.artifact }}
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - artifact: eversoul-native-windows-x86_64
+            runner: windows-latest
+            architecture: x86_64
+            msvc_arch: x64
+          - artifact: eversoul-native-windows-arm64
+            runner: windows-latest
+            architecture: arm64
+            msvc_arch: amd64_arm64
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Configure MSVC architecture
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: ${{ matrix.msvc_arch }}
+
+      - name: Configure native host
+        shell: bash
+        run: >-
+          cmake -S native -B native/build/windows-${{ matrix.architecture }}
+          -G Ninja
+          -DCMAKE_BUILD_TYPE=Release
+          -DCMAKE_SYSTEM_PROCESSOR=${{ matrix.architecture }}
+          "-DEVERSOUL_NATIVE_OUTPUT_ROOT=${{ github.workspace }}/native/artifacts"
+          -DEVERSOUL_PORTABLE_CPU=ON
+          -DEVERSOUL_WARNINGS_AS_ERRORS=ON
+
+      - name: Build native host
+        shell: bash
+        run: cmake --build native/build/windows-${{ matrix.architecture }} --config Release --parallel
+
+      - name: Upload native host
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ matrix.artifact }}
+          path: native/artifacts/windows-${{ matrix.architecture }}/eversoul-native-host.exe
+          if-no-files-found: error
+          retention-days: 90
+          overwrite: true

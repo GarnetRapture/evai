@@ -2,7 +2,7 @@ import { Bell, PanelLeftClose, PanelLeftOpen, Star } from 'lucide-react';
 import { getRaceTone, parseSpiritDetail } from '../../persona';
 import { computeFamiliarityLevel, createConversationSummary, resolvePreferredSpiritsFamiliarity } from '../logic';
 import type { SpiritRosterProps } from '../types';
-import { EVERTALK_UI_ASSETS } from '../uiAssets';
+import { EVERTALK_UI_ASSETS, rosterDecorationStyle } from '../uiAssets';
 import { RosterAvatar, RosterExpBar, RosterRankBadge } from './SpiritRosterCard';
 function ProactiveUnreadBadge({ count, label }: { count: number; label: string }) {
     if (count <= 0) return null;
@@ -12,7 +12,7 @@ export function SpiritRoster({ spirits, activeSpiritId, searchQuery, loadError, 
     const hasSpirits = spirits.length > 0;
     const preferredSpirits = resolvePreferredSpiritsFamiliarity(spirits, familiarityList, preferredPersonaIds);
     const rankedFamiliarity = familiarityList.filter((entry) => !preferredPersonaIds.includes(entry.persona_id));
-    return (<aside className={`ever-roster ${collapsed ? 'is-collapsed' : ''}`}>
+    return (<aside className={`ever-roster ${collapsed ? 'is-collapsed' : ''}`} style={rosterDecorationStyle()}>
       <img className="ever-roster__rail" src={EVERTALK_UI_ASSETS.verticalRail} alt="" aria-hidden="true"/>
       <div className="ever-roster__top">
         {!collapsed && (<div>

@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { ASSET_ROOT } from '../persona';
 import type { PersonaEmotionPresetId, PersonaPersonalityPresetId, PersonaSpeechPresetId } from '../persona';
 import type { FamiliaritySigilGrade } from './logic';
@@ -192,6 +193,12 @@ const portraitRingByGrade: Record<FamiliaritySigilGrade, string> = {
     origin: LOBBY_UI_ASSETS.actorSlotInner,
 };
 
+export function rosterDecorationStyle(): CSSProperties {
+    return {
+        '--ever-roster-stripe': `url(${LOBBY_UI_ASSETS.stripePattern})`,
+        '--ever-roster-heart': `url(${DECOR_UI_ASSETS.heart})`,
+    } as CSSProperties;
+}
 export function spiritPortraitRingAsset(grade: FamiliaritySigilGrade | null): string {
     return grade ? portraitRingByGrade[grade] : LOBBY_UI_ASSETS.emptySlot;
 }

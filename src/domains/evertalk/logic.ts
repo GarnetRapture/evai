@@ -1,10 +1,10 @@
 import { isDomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
-import { EVERTALK_SESSION_TITLE, type ChatRoom } from '../chat';
+import { EVERTALK_SESSION_TITLE, splitPersonaReplyActions, type ChatMessage, type ChatRoom } from '../chat';
 import type { ChatModelEntry, LocalModelFileEntry, ModelDownloadProgress } from '../llm';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
-import { FAMILIARITY_MAX_LEVEL } from '../persona/familiarity';
+import { FAMILIARITY_GRADE_MILESTONES, FAMILIARITY_MAX_LEVEL, resolveFamiliarityGrade, type FamiliarityGrade } from '../persona/familiarity';
 export {
     computeFamiliarityLevel,
     familiarityCumulativeExp,
@@ -129,8 +129,8 @@ export function formatSkinLabel(skin: SpiritSkinVisualAsset, labels: EverTalkLab
     if (skin.kind === 'base') {
         return labels.skinBase;
     }
-    if (skin.kind === 'base_variant') {
-        return labels.skinBaseVariant;
+    if (skin.kind === 'special') {
+        return labels.skinSpecial;
     }
     if (skin.kind === 'costume') {
         return labels.skinCostume(skin.costume_index ?? 0);
@@ -179,15 +179,20 @@ export function parseThinkBlocks(text: string): ThinkBlock[] {
     }
     return parts;
 }
-export function splitSpiritReply(text: string): SpiritReplyParts {
+export function shouldAnnounceSpiritActions(message: ChatMessage, index: number, messageCount: number): boolean {
+    return index === messageCount - 1 && message.role === 'assistant' && message.delivery === 'proactive';
+}
+export function splitSpiritReply(text: string, streaming: boolean): SpiritReplyParts {
     const blocks = parseThinkBlocks(text);
+    const { actions, spoken } = splitPersonaReplyActions(blocks.filter((block) => block.type === 'text').map((block) => block.content).join(''), streaming);
     return {
         reasoning: blocks.filter((block) => block.type === 'think').map((block) => block.content.trim()).filter((content) => content.length > 0).join('\n\n'),
-        reply: blocks.filter((block) => block.type === 'text').map((block) => block.content).join('').trim(),
+        reply: spoken,
+        actions,
     };
 }
-const LOBBY_STAGE_LEFT_PERCENT = 9;
-const LOBBY_STAGE_RIGHT_PERCENT = 70;
+const LOBBY_STAGE_LEFT_PERCENT = 14;
+const LOBBY_STAGE_RIGHT_PERCENT = 86;
 
 function stableUnitHash(seed: string, salt: number): number {
     let hash = 2166136261 ^ salt;
@@ -202,7 +207,7 @@ export function resolveLobbyActorMotion(spiritId: string, index: number, count: 
     const span = LOBBY_STAGE_RIGHT_PERCENT - LOBBY_STAGE_LEFT_PERCENT;
     const slotWidth = span / Math.max(1, count);
     const base = count === 1
-        ? LOBBY_STAGE_LEFT_PERCENT + span * 0.46
+        ? LOBBY_STAGE_LEFT_PERCENT + span * 0.5
         : LOBBY_STAGE_LEFT_PERCENT + slotWidth * index + slotWidth * (0.2 + stableUnitHash(spiritId, 1) * 0.3);
     const relative = (base - LOBBY_STAGE_LEFT_PERCENT) / span;
     return {
@@ -325,21 +330,10 @@ export function resolvePanelResize(state: PanelResizeState, deltaX: number, delt
         blocked,
     };
 }
-export type FamiliaritySigilGrade = 'epic' | 'eternal' | 'legendary' | 'origin';
-export const FAMILIARITY_SIGIL_MILESTONES: { level: number; grade: FamiliaritySigilGrade }[] = [
-    { level: 10, grade: 'epic' },
-    { level: 20, grade: 'eternal' },
-    { level: 30, grade: 'legendary' },
-    { level: 40, grade: 'origin' },
-];
+export type FamiliaritySigilGrade = FamiliarityGrade;
+export const FAMILIARITY_SIGIL_MILESTONES = FAMILIARITY_GRADE_MILESTONES;
 export function resolveFamiliaritySigilGrade(level: number): FamiliaritySigilGrade | null {
-    let grade: FamiliaritySigilGrade | null = null;
-    for (const milestone of FAMILIARITY_SIGIL_MILESTONES) {
-        if (level >= milestone.level) {
-            grade = milestone.grade;
-        }
-    }
-    return grade;
+    return resolveFamiliarityGrade(level);
 }
 export function familiaritySigilFrameUrl(grade: FamiliaritySigilGrade): string {
     return familiaritySigilFrameAsset(grade);

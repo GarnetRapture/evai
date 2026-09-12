@@ -22,7 +22,7 @@ const {
     resolveActivePersonaCheatPreset,
     resolvePersonaFamiliarityLevel,
 } = await vite.ssrLoadModule('/src/domains/persona/presets.ts');
-const [{ buildPersonaSystemPrompt }, { buildPersonaLanguageSlice }, { normalizeChatOutput, stripReasoning }, { assertPersonaSystemPrompt }, { chatRepository }, chatPromptFunctions, { DEFAULT_MEMORY_CONTEXT_FILTER }, { personaService }, { createLexicalMemoryVector }, affectFunctions] = await Promise.all([
+const [{ buildPersonaSystemPrompt, findPersonaProfileMentions }, { buildPersonaLanguageSlice }, { normalizeChatOutput, splitPersonaReplyActions, stripReasoning }, { assertPersonaSystemPrompt }, { chatRepository }, chatPromptFunctions, { DEFAULT_MEMORY_CONTEXT_FILTER }, { personaService }, { createLexicalMemoryVector }, affectFunctions] = await Promise.all([
     vite.ssrLoadModule('/src/domains/persona/prompt.ts'),
     vite.ssrLoadModule('/src/domains/persona/slice.ts'),
     vite.ssrLoadModule('/src/domains/chat/output.ts'),
@@ -154,6 +154,16 @@ assert.match(namedGarnetPrompt.assembled_prompt, /\[WHAT 민준 WRITES\]/);
 const overriddenGarnetPrompt = buildPersonaSystemPrompt(garnetPack, 'ko', '', { personality: '조용하고 다정한 성격', greeting: '왔구나.', updated_at: '2026-09-13T00:00:00.000Z' }, null);
 assert.match(overriddenGarnetPrompt.assembled_prompt, /\[PERSONALITY\]\n조용하고 다정한 성격/);
 assert.equal(overriddenGarnetPrompt.greeting, '왔구나.');
+const daphnePack = JSON.parse(await readFile(path.join(PERSONA_DIRECTORY, 'daphne.json'), 'utf8'));
+const daphneSlice = buildPersonaLanguageSlice(daphnePack, 'ko');
+const daphnePrompt = buildPersonaSystemPrompt(daphnePack, 'ko', '', null, null);
+assert.deepEqual(findPersonaProfileMentions(daphneSlice, '힘 쓰기'), [{ kind: 'speciality', value: '힘 쓰기' }]);
+assert.deepEqual(findPersonaProfileMentions(daphneSlice, '오늘 축제 구경 갈래?'), [{ kind: 'like', value: '축제 구경' }]);
+assert.deepEqual(findPersonaProfileMentions(daphneSlice, '안녕'), []);
+assert.ok(daphnePrompt.speech_profile.style !== null && daphnePrompt.speech_profile.style.messages_per_turn >= 2, 'Daphne must keep her multi-message texting rhythm');
+assert.ok(daphnePrompt.speech_profile.style.signature_marks.includes('!!'));
+assert.match(daphnePrompt.assembled_prompt, /\[YOUR WAY OF SPEAKING\]\nHow your messages look: about \d+ short messages in a row, each on its own line/);
+assert.match(daphnePrompt.assembled_prompt, /shown as a status, never as your words[\s\S]*never write tags or markup/);
 const cheatPreset = mergePersonaCheatPreset(undefined, { bond_level: 55, personality_preset: 'tsundere', emotion_preset: 'lovestruck', speech_preset: 'casual' }, '2026-09-13T00:00:00.000Z');
 assert.equal(cheatPreset.bond_level, 40, 'manual bond level must clamp to the maximum level');
 for (const language of LANGUAGES) {
@@ -176,16 +186,16 @@ await personaService.installPreset('xiaolian', 'ko');
 await personaService.installPreset('naiah', 'ko');
 await personaService.installPreset('garnet_rapture', 'ko');
 const naiahAssembled = await personaService.getAssembledPersonaPrompt('naiah', 'ko');
-const naiahGreetingExamples = await personaService.getRelevantDialogueExamples('naiah', 'ko', '안녕 나이아', 2, naiahAssembled.dialogue_excluded_terms);
+const naiahGreetingExamples = (await personaService.getTurnPersonaReferences('naiah', 'ko', '안녕 나이아', 2, naiahAssembled.dialogue_excluded_terms, 1)).voice_examples;
 assert.ok(
     naiahGreetingExamples.every((exchange) => !exchange.spirit_messages.join(' ').includes('크리스마스')),
     'the persona name in a greeting must not retrieve an unrelated holiday exchange',
 );
 const garnetRaptureAssembled = await personaService.getAssembledPersonaPrompt('garnetrapture', 'ko');
-const garnetNameOnlyExamples = await personaService.getRelevantDialogueExamples('garnetrapture', 'ko', '가넷', 2, garnetRaptureAssembled.dialogue_excluded_terms);
+const garnetNameOnlyExamples = (await personaService.getTurnPersonaReferences('garnetrapture', 'ko', '가넷', 2, garnetRaptureAssembled.dialogue_excluded_terms, 1)).voice_examples;
 assert.equal(garnetNameOnlyExamples.length, 0, 'calling a spirit only by name must not retrieve topical exchanges');
 const rebeccaAssembled = await personaService.getAssembledPersonaPrompt('rebecca', 'ko');
-const rebeccaExamples = await personaService.getRelevantDialogueExamples('rebecca', 'ko', '할매', 2, rebeccaAssembled.dialogue_excluded_terms);
+const rebeccaExamples = (await personaService.getTurnPersonaReferences('rebecca', 'ko', '할매', 2, rebeccaAssembled.dialogue_excluded_terms, 1)).voice_examples;
 assert.ok(rebeccaExamples.every((exchange) => exchange.user_message !== '할매'), 'retrieval must never echo the live user message as a past exchange');
 assert.ok(rebeccaExamples.every((exchange) => exchange.source === 'story' || exchange.source === 'evertalk'));
 const [rebeccaEmotionSeed, xiaolianEmotionSeed] = await Promise.all([
@@ -202,6 +212,16 @@ assert.match(visibleReasoning, /^<think>최근 약속을 떠올린다 <\/think>�
 assert.equal(stripReasoning(visibleReasoning), '응, 기억하고 있어');
 assert.equal(stripReasoning('<think>완료되지 않은 추론'), '');
 assert.equal(normalizeChatOutput('繁體對話', 'zh_cn'), '繁体对话');
+assert.equal(normalizeChatOutput('윙크할게요</wink> 헤헤<blink>', 'ko'), '윙크할게요 헤헤');
+assert.equal(normalizeChatOutput('계약해줘서 <(^▽^)/ 고마워!', 'ko'), '계약해줘서 <(^▽^)/ 고마워!');
+assert.deepEqual(
+    splitPersonaReplyActions('(손가락으로 턱을 쓸어내리며)\n음… 그건 좀 고민되네요!! (^▽^)', false),
+    { actions: ['손가락으로 턱을 쓸어내리며'], spoken: '음… 그건 좀 고민되네요!! (^▽^)' },
+);
+assert.deepEqual(
+    splitPersonaReplyActions('(고개를 갸웃', true),
+    { actions: [], spoken: '' },
+);
 assert.doesNotThrow(() => assertPersonaSystemPrompt('[IDENTITY]\nYou are 소연.', '소연'));
 const initialEmotion = affectFunctions.createPersonaEmotionState('2026-09-12T00:00:00.000Z');
 const happyEmotion = affectFunctions.advancePersonaEmotion(initialEmotion, '오늘 너와 함께 있어서 정말 행복하고 설레', '2026-09-12T00:01:00.000Z');
@@ -229,13 +249,16 @@ const turnSources = {
     knowledge: [],
     emotion: boredEmotion,
     familiarity_level: 2,
-    voice_examples: [{ source: 'evertalk', user_message: '만두 좋아해?', spirit_messages: ['완전 좋아!'] }],
+    voice_examples: [{ source: 'evertalk', user_message: '만두 좋아해?', spirit_messages: ['완전 좋아!', '매일 먹고 싶어'] }],
+    voice_reference_kind: 'topic',
+    profile_mentions: [{ kind: 'speciality', value: '힘 쓰기' }],
 };
 const fullTurnContext = chatPromptFunctions.buildPersonaTurnContext(turnSources, '소연', '구원자', DEFAULT_MEMORY_CONTEXT_FILTER);
 assert.match(fullTurnContext, /\[WHAT YOU REMEMBER\][\s\S]*Earlier in this chat:[\s\S]*Things 구원자 asked you to keep in mind:/);
 assert.match(fullTurnContext, /\[YOUR MOOD RIGHT NOW\]/);
 assert.match(fullTurnContext, /\[HOW CLOSE YOU ARE\]\nBond level 2 of 40\. You have only just started getting to know 구원자/);
-assert.match(fullTurnContext, /\[VOICE REFERENCE\][\s\S]*They did not happen in this conversation\.\n구원자: 만두 좋아해\?\n소연: 완전 좋아!/);
+assert.match(fullTurnContext, /\[VOICE REFERENCE\][\s\S]*They did not happen in this conversation\.\n구원자: 만두 좋아해\?\n소연: 완전 좋아!\n매일 먹고 싶어/);
+assert.match(fullTurnContext, /^\[ABOUT YOU\]\n구원자's newest message touches your own life:\n- 힘 쓰기: this is what you are good at\./);
 assert.doesNotMatch(fullTurnContext, /Savior|\/100|Last changed/);
 const filteredTurnContext = chatPromptFunctions.buildPersonaTurnContext(
     turnSources,
@@ -282,7 +305,7 @@ assert.doesNotMatch(chatPrompt, /Google 어시스턴트|Gemini|언어 모델|챗
 assert.match(chatService, /content: replyText/);
 assert.match(chatService, /buildTurnMemoryText\([\s\S]*stripReasoning\(replyText\)/);
 assert.match(chatService, /buildDigestTranscript\([\s\S]*stripReasoning\(message\.content\)/);
-assert.match(chatService, /getRelevantDialogueExamples/);
+assert.match(chatService, /getTurnPersonaReferences/);
 assert.match(chatService, /buildPersonaTurnHook/);
 assert.match(chatService, /composePersonaLatestTurn/);
 assert.match(chatService, /buildGreetingOpeningMessage\(persona\.greeting\)/);

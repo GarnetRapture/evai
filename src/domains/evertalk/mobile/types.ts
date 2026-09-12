@@ -22,5 +22,6 @@ export interface MobileMessageBubbleProps {
     showReasoning: boolean;
     deleteLabel: string;
     innerThoughtsLabel: string;
+    showActionStatus: boolean;
     onDelete: (messageId: string) => Promise<void>;
 }

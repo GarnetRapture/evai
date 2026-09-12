@@ -2,7 +2,7 @@ import { getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
 import type { SpiritDetail } from '../../persona';
 import { familiaritySigilFrameUrl, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from '../logic';
 import type { EverTalkLabels } from '../i18n';
-import { LOBBY_UI_ASSETS, raceBadgeUrl, spiritPortraitRingAsset } from '../uiAssets';
+import { DECOR_UI_ASSETS, LOBBY_UI_ASSETS, raceBadgeUrl, spiritPortraitRingAsset } from '../uiAssets';
 import { LoadableAssetImage } from './LoadableAssetImage';
 
 export interface RosterAvatarProps {
@@ -19,7 +19,7 @@ export function RosterAvatar({ detail, level, skinId, sessionActive, labels }: R
     const sigilGrade = resolveFamiliaritySigilGrade(level);
     const stickerBadges = resolveSpiritStickerBadges(assets.assetFolder, level).filter((badge) => badge.unlocked);
     const portraitCandidates = skin
-        ? [...skin.portraitCandidates, ...assets.rosterIconCandidates]
+        ? [...skin.avatarCandidates, ...assets.rosterIconCandidates]
         : assets.rosterIconCandidates;
     return (
         <span className={`ever-spirit-row__icon ${sigilGrade ? `has-frame is-${sigilGrade}` : ''}`}>
@@ -50,6 +50,7 @@ export interface RosterExpBarProps {
 export function RosterExpBar({ level, ratio, isMax }: RosterExpBarProps) {
     return (
         <span className="ever-spirit-row__exp">
+            <img className="ever-spirit-row__exp-heart" src={DECOR_UI_ASSETS.heart} alt="" aria-hidden="true"/>
             <i className="ever-spirit-row__exp-level">Lv.{level}</i>
             <span className="ever-spirit-row__exp-bar">
                 <span className={isMax ? 'is-max' : ''} style={{ width: `${Math.round(ratio * 100)}%`, backgroundImage: `url(${LOBBY_UI_ASSETS.gaugeFill})` }}/>

@@ -51,6 +51,7 @@ const assetFilePrefixes: Record<string, string> = {
     Canney: 'Beast',
     Casper: 'Ghost',
     Irene: 'Apprentice',
+    Yuria: 'YuriaQueen',
 };
 const costumeIndexesByAssetFolder: Record<string, number[]> = {
     Adrianne: [1, 2, 3],
@@ -138,11 +139,8 @@ const costumeIndexesByAssetFolder: Record<string, number[]> = {
     YuriaApollyon: [1, 2, 3],
     YuriaQueen: [1, 2],
 };
-const skinFilePrefixes: Record<string, string> = {
-    Yuria: 'YuriaQueen',
-};
-const baseVariantFilePrefixes: Record<string, string[]> = {
-    Yuria: ['YuriaQueen'],
+const specialSkinFilePrefixes: Record<string, string[]> = {
+    Yuria: ['Yuria'],
 };
 const raidFilePrefixesByAssetFolder: Record<string, SpiritRaidAssetPrefix[]> = {
     Adrianne: [{ prefix: 'Adrianne_Raid', event: 'standard' }, { prefix: 'Adrianne_RaidMinion', event: 'minion' }],
@@ -164,6 +162,7 @@ const evertalkCutFilePrefixes: Record<string, string[]> = {
     Adrianne: ['Adrianne'],
     Hazel: ['Hazel'],
     Prim: ['Prim'],
+    Yuria: ['Yuria'],
 };
 const evertalkCutIndexes: Record<string, string[]> = {
     Adrianne: ['01', '02'],
@@ -337,19 +336,25 @@ function raidSkin(assetFolder: string, raidAsset: SpiritRaidAssetPrefix): Spirit
         ],
     };
 }
+function specialSkin(assetFolder: string, specialFilePrefix: string): SpiritSkinVisualAsset {
+    return {
+        ...baseSkin(assetFolder, specialFilePrefix, specialFilePrefix),
+        id: `special-${specialFilePrefix}`,
+        kind: 'special',
+        thumbnailCandidates: [
+            `${ASSET_ROOT}/spirits/${assetFolder}/base/${specialFilePrefix}_512.png`,
+            `${ASSET_ROOT}/spirits/${assetFolder}/base/${specialFilePrefix}_1024.png`,
+        ],
+    };
+}
 function createSkinOptions(assetFolder: string, assetFilePrefix: string): SpiritSkinVisualAsset[] {
-    const skinPrefix = skinFilePrefixes[assetFolder] ?? assetFilePrefix;
-    const options = [baseSkin(assetFolder, assetFilePrefix, skinPrefix)];
-    for (const variantPrefix of baseVariantFilePrefixes[assetFolder] ?? []) {
-        options.push({
-            ...baseSkin(assetFolder, variantPrefix, skinPrefix),
-            id: `base-${variantPrefix}`,
-            kind: 'base_variant',
-        });
+    const options = [baseSkin(assetFolder, assetFilePrefix, assetFilePrefix)];
+    for (const specialFilePrefix of specialSkinFilePrefixes[assetFolder] ?? []) {
+        options.push(specialSkin(assetFolder, specialFilePrefix));
     }
     const costumeIndexes = costumeIndexesByAssetFolder[assetFolder] ?? [];
     costumeIndexes.forEach((index, order) => {
-        options.push(costumeSkin(assetFolder, skinPrefix, skinPrefix, index, order + 1));
+        options.push(costumeSkin(assetFolder, assetFilePrefix, assetFilePrefix, index, order + 1));
     });
     for (const raidAsset of raidFilePrefixesByAssetFolder[assetFolder] ?? []) {
         options.push(raidSkin(assetFolder, raidAsset));

@@ -54,10 +54,44 @@ export interface ChatStreamHandlers {
 }
 export interface PersonaSystemPrompt {
     spirit_name: string;
-    system_prompt: string;
+    session_prompt: import('../llm').PersonaSessionPrompt;
     greeting: string;
     address_term: string;
     dialogue_excluded_terms: string[];
+    speech_style: import('../persona/types').PersonaSpeechStyle | null;
+}
+export interface PersonaReplyParts {
+    actions: string[];
+    spoken: string;
+}
+export interface PersonaReplyEnvelope {
+    inner_thought: string;
+    action: string;
+    messages: string[];
+}
+export interface PersonaReplyEnvelopeParse extends PersonaReplyEnvelope {
+    structured: boolean;
+    complete: boolean;
+}
+export interface PersonaReplyShape {
+    reasoning: boolean;
+    max_messages: number;
+}
+export interface PersonaReplyGeneration {
+    content: string;
+    cancelled: boolean;
+    redirected: boolean;
+}
+export interface PersonaReplyGenerationInput {
+    model_id: string;
+    language: import('../../shared/types').AppLanguage;
+    request_id: string;
+    persona_id: string;
+    persona: PersonaSystemPrompt;
+    messages: import('../llm').OnDeviceTextMessage[];
+    reasoning: boolean;
+    signal: AbortSignal;
+    on_text: (content: string) => void;
 }
 export type MemoryContextKind = 'digest' | 'semantic' | 'directive' | 'episodic' | 'habit' | 'affect' | 'knowledge';
 export type MemoryContextFilter = Record<MemoryContextKind, boolean>;
@@ -71,6 +105,8 @@ export interface PersonaTurnContextSources {
     emotion: import('./affect').PersonaEmotionState | null;
     familiarity_level: number;
     voice_examples: import('../persona/types').PersonaDialogueExchange[];
+    voice_reference_kind: import('../persona/types').PersonaVoiceReferenceKind;
+    profile_mentions: import('../persona/types').PersonaProfileMention[];
 }
 export interface PersonaTurnContextRequest {
     persona_id: string;
@@ -79,6 +115,7 @@ export interface PersonaTurnContextRequest {
     address_term: string;
     query: string;
     digest_summary: string;
+    live_history_since: string;
     filter: MemoryContextFilter;
     excluded_terms: string[];
     include_knowledge: boolean;

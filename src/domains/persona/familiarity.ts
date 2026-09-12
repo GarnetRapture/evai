@@ -1,6 +1,31 @@
 export const FAMILIARITY_MAX_LEVEL = 40;
 export const FAMILIARITY_EXP_STEP = 5;
 export const FAMILIARITY_MEMORY_WEIGHT = 5;
+export type FamiliarityGrade = 'epic' | 'eternal' | 'legendary' | 'origin';
+export const FAMILIARITY_GRADE_MILESTONES: ReadonlyArray<{ level: number; grade: FamiliarityGrade }> = [
+    { level: 10, grade: 'epic' },
+    { level: 20, grade: 'eternal' },
+    { level: 30, grade: 'legendary' },
+    { level: 40, grade: 'origin' },
+];
+
+export function familiarityGradeLevel(grade: FamiliarityGrade): number {
+    const milestone = FAMILIARITY_GRADE_MILESTONES.find((entry) => entry.grade === grade);
+    if (milestone === undefined) {
+        throw new RangeError(grade);
+    }
+    return milestone.level;
+}
+
+export function resolveFamiliarityGrade(level: number): FamiliarityGrade | null {
+    let grade: FamiliarityGrade | null = null;
+    for (const milestone of FAMILIARITY_GRADE_MILESTONES) {
+        if (level >= milestone.level) {
+            grade = milestone.grade;
+        }
+    }
+    return grade;
+}
 
 export interface FamiliarityLevelInfo {
     level: number;

@@ -5,9 +5,10 @@ import {
     createChromeLanguageModel,
     hasTransientUserActivation,
     isChromeLanguageModelSupported,
+    personaSessionPromptKey,
     readChromeLanguageModelAvailability,
 } from './chrome';
-import { CHAT_MINIMUM_HISTORY_TURNS, CHAT_RESPONSE_TOKEN_RESERVE, LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE } from './constants';
+import { CHAT_MINIMUM_HISTORY_TURNS, CHAT_RESPONSE_TOKEN_RESERVE, LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE, PERSONA_SESSION_SAMPLING_MODE } from './constants';
 import { createQueuedRequestStatus, recordRequestStatus } from './requests';
 import type {
     BaseModelSession,
@@ -23,6 +24,7 @@ import type {
     PersonaModelSession,
     PersonaModelSessionCreation,
     PersonaModelSessionIdentity,
+    PersonaSessionPrompt,
 } from './types';
 
 let baseSession: BaseModelSession | null = null;
@@ -47,15 +49,16 @@ function assertSessionCreatable(plan: LanguageModelLanguagePlan): void {
 function isSamePersonaSession(entry: PersonaModelSessionIdentity, identity: PersonaModelSessionIdentity): boolean {
     return entry.persona_id === identity.persona_id
         && entry.declared_language_tag === identity.declared_language_tag
-        && entry.system_prompt === identity.system_prompt;
+        && entry.session_prompt_key === identity.session_prompt_key;
 }
 
 async function createPersonaModelSession(identity: PersonaModelSessionIdentity, plan: LanguageModelLanguagePlan, cacheReset: boolean): Promise<PersonaModelSession> {
     await chromePromptRuntime.ensureBaseSession(plan, null);
     const session = await createChromeLanguageModel({
         declaredLanguageTag: identity.declared_language_tag,
-        systemPrompt: identity.system_prompt,
-        samplingMode: 'balanced',
+        systemPrompt: identity.session_prompt.system_prompt,
+        primingMessages: identity.session_prompt.priming_messages,
+        samplingMode: PERSONA_SESSION_SAMPLING_MODE,
         onDownloadProgress: null,
         signal: null,
     });
@@ -138,6 +141,7 @@ export const chromePromptRuntime = {
                 const session = await createChromeLanguageModel({
                     declaredLanguageTag: plan.declared_language_tag,
                     systemPrompt: null,
+                    primingMessages: [],
                     samplingMode: 'predictable',
                     onDownloadProgress,
                     signal: null,
@@ -169,11 +173,12 @@ export const chromePromptRuntime = {
         baseSession?.session.destroy();
         baseSession = null;
     },
-    async focusPersonaSession(personaId: string, plan: LanguageModelLanguagePlan, systemPrompt: string): Promise<PersonaModelSession> {
+    async focusPersonaSession(personaId: string, plan: LanguageModelLanguagePlan, sessionPrompt: PersonaSessionPrompt): Promise<PersonaModelSession> {
         const identity: PersonaModelSessionIdentity = {
             persona_id: personaId,
             declared_language_tag: plan.declared_language_tag,
-            system_prompt: systemPrompt,
+            session_prompt: sessionPrompt,
+            session_prompt_key: personaSessionPromptKey(sessionPrompt),
         };
         if (focusedPersonaSession && isSamePersonaSession(focusedPersonaSession, identity)) {
             focusedPersonaSession.last_access = Date.now();
@@ -214,14 +219,12 @@ export const chromePromptRuntime = {
         const signal = request.signal;
         const status: LlmRequestStatus = createQueuedRequestStatus(request.request_id, request.persona_id);
         recordRequestStatus(status);
-        const responsePrefix = request.response_prefix;
         let generatedText = '';
         try {
-            assertPersonaSystemPrompt(request.system_prompt, request.persona_name);
-            const entry = await chromePromptRuntime.focusPersonaSession(request.persona_id, plan, request.system_prompt);
+            assertPersonaSystemPrompt(request.session_prompt.system_prompt, request.persona_name);
+            const entry = await chromePromptRuntime.focusPersonaSession(request.persona_id, plan, request.session_prompt);
             const conversation = await entry.session.clone({ signal });
             try {
-                generatedText = responsePrefix;
                 const reusedPrefixTokens = conversation.contextUsage;
                 const budgeted = await selectMessagesWithinBudget(conversation, request.messages, request.behavior_instruction);
                 const promptTokens = await conversation.measureContextUsage(budgeted.messages);
@@ -233,11 +236,15 @@ export const chromePromptRuntime = {
                     truncated_prompt_tokens: budgeted.truncated_tokens,
                     cache_reset: entry.cache_reset,
                 });
-                const promptInput: LanguageModelPrompt = responsePrefix.length > 0
-                    ? [...budgeted.messages, { role: 'assistant', content: responsePrefix, prefix: true }]
-                    : budgeted.messages;
-                const stream = conversation.promptStreaming(promptInput, { signal });
-                for await (const chunk of stream) generatedText += chunk;
+                const stream = conversation.promptStreaming(budgeted.messages, {
+                    signal,
+                    responseConstraint: request.structured_reply.json_schema,
+                    omitResponseConstraintInput: true,
+                });
+                for await (const chunk of stream) {
+                    generatedText += chunk;
+                    request.handlers.onChunk(chunk);
+                }
                 const generatedTokens = Math.max(0, conversation.contextUsage - reusedPrefixTokens - promptTokens);
                 entry.last_access = Date.now();
                 entry.last_generation = {
@@ -248,7 +255,6 @@ export const chromePromptRuntime = {
                     truncated_prompt_tokens: budgeted.truncated_tokens,
                     cache_reset: entry.cache_reset,
                 };
-                request.handlers.onChunk(generatedText);
                 recordRequestStatus({ ...status, state: 'completed', prompt_tokens: promptTokens, generated_tokens: generatedTokens, reused_prefix_tokens: reusedPrefixTokens, truncated_prompt_tokens: budgeted.truncated_tokens, cache_reset: entry.cache_reset });
                 return { text: generatedText, cancelled: false };
             }

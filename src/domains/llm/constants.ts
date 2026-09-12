@@ -30,5 +30,6 @@ export const LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE: Record<AppLanguage, string> = {
     zh_cn: 'zh',
 };
 export const CHAT_RESPONSE_TOKEN_RESERVE = 384;
+export const PERSONA_SESSION_SAMPLING_MODE: LanguageModelSamplingMode = 'creative';
 export const CHAT_MINIMUM_HISTORY_TURNS = 6;
 export const REQUEST_STATUS_HISTORY_LIMIT = 32;

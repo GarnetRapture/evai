@@ -84,10 +84,27 @@ export interface PersonaLanguageSlice {
     story: LocalizedDialogue[];
     evertalk: LocalizedDialogue[];
 }
+export interface PersonaSpeechStyle {
+    messages_per_turn: number;
+    message_length: number;
+    signature_marks: string[];
+}
 export interface PersonaSpeechProfile {
     address_term: string | null;
     solo_lines: string[];
     dialogue_examples: PersonaDialogueExchange[];
+    style: PersonaSpeechStyle | null;
+}
+export type PersonaProfileMentionKind = 'like' | 'dislike' | 'hobby' | 'speciality';
+export interface PersonaProfileMention {
+    kind: PersonaProfileMentionKind;
+    value: string;
+}
+export type PersonaVoiceReferenceKind = 'topic' | 'bond_stage';
+export interface PersonaTurnReferences {
+    voice_examples: PersonaDialogueExchange[];
+    voice_reference_kind: PersonaVoiceReferenceKind;
+    profile_mentions: PersonaProfileMention[];
 }
 export type PersonaDialogueSource = 'story' | 'evertalk';
 export interface PersonaDialogueExchange {
@@ -199,7 +216,7 @@ export interface SpiritVisualAssets {
     background: string;
     skinOptions: SpiritSkinVisualAsset[];
 }
-export type SpiritSkinKind = 'base' | 'base_variant' | 'costume' | 'raid';
+export type SpiritSkinKind = 'base' | 'special' | 'costume' | 'raid';
 export type SpiritRaidEvent = 'standard' | 'minion' | 'gaon_festival' | 'wedding' | 'summer' | 'halloween' | 'valentine';
 export interface SpiritRaidAssetPrefix {
     prefix: string;

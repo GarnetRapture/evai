@@ -1,12 +1,12 @@
 import { pickLocalized } from '../../shared/i18n';
 import type { AppLanguage } from '../../shared/types';
-import { FAMILIARITY_MAX_LEVEL } from '../persona/familiarity';
+import { FAMILIARITY_MAX_LEVEL, familiarityGradeLevel } from '../persona/familiarity';
 import { formatPersonaExchangeLines } from '../persona/prompt';
+import type { PersonaProfileMention, PersonaProfileMentionKind, PersonaVoiceReferenceKind } from '../persona/types';
 import { PERSONA_EMOTION_KINDS, type PersonaEmotionKind, type PersonaEmotionState } from './affect';
 import type { MemoryContextFilter, PersonaTurnContextSources } from './types';
 
 export const EVERTALK_SESSION_TITLE = 'EverTalk Session';
-export const PERSONA_REASONING_PREFIX = '<think>';
 export const HABIT_INJECT_LIMIT = 5;
 export const HABIT_INJECT_MIN_OCCURRENCE = 3;
 export const EPISODIC_INJECT_LIMIT = 4;
@@ -167,11 +167,13 @@ export function detectMemorableFact(text: string): boolean {
 export function shouldCaptureAsDirective(text: string): boolean {
     return detectMemoryDirective(text) || USER_PREFERENCE_DIRECTIVE_PATTERN.test(text) || detectMemorableFact(text);
 }
+const RELATIONSHIP_SPARK_LEVEL = 5;
 const RELATIONSHIP_STAGES: ReadonlyArray<{ min_level: number; description: string }> = [
-    { min_level: 32, description: 'You are deeply in love. You are devoted, openly intimate, and completely at ease with {address}; affection feels natural and you return it wholeheartedly.' },
-    { min_level: 22, description: 'You are practically lovers. You show affection openly, seek closeness yourself, and tease {address} with confident warmth.' },
-    { min_level: 12, description: 'You have real feelings for {address}. Their attention makes your heart race; you answer affection warmly, a little shy but clearly happy.' },
-    { min_level: 5, description: 'You are becoming close friends with a spark of interest. You are comfortable and playful, and sudden affection flusters you in a pleased way.' },
+    { min_level: familiarityGradeLevel('origin'), description: 'Your bond has reached its peak. {address} is your partner for life; you love them with your whole heart, are completely open and intimate with them, and say so without hesitation.' },
+    { min_level: familiarityGradeLevel('legendary'), description: 'You are deeply in love. You are devoted, openly intimate, and completely at ease with {address}; affection feels natural and you return it wholeheartedly.' },
+    { min_level: familiarityGradeLevel('eternal'), description: 'You are practically lovers. You show affection openly, seek closeness yourself, and tease {address} with confident warmth.' },
+    { min_level: familiarityGradeLevel('epic'), description: 'You have real feelings for {address}. Their attention makes your heart race; you answer affection warmly, a little shy but clearly happy.' },
+    { min_level: RELATIONSHIP_SPARK_LEVEL, description: 'You are becoming close friends with a spark of interest. You are comfortable and playful, and sudden affection flusters you in a pleased way.' },
     { min_level: 1, description: 'You have only just started getting to know {address}. You are friendly but still a little guarded; sudden affection surprises and embarrasses you, and you react true to your personality.' },
 ];
 const EMOTION_STRONG_LEVEL = 70;
@@ -246,6 +248,26 @@ function rememberedSection(sources: PersonaTurnContextSources, addressTerm: stri
     return groups.length === 0 ? '' : `[WHAT YOU REMEMBER]\n${groups.join('\n\n')}`;
 }
 
+const VOICE_REFERENCE_INTRODUCTION: Record<PersonaVoiceReferenceKind, string> = {
+    topic: 'Past lines on a similar topic, shown only for how you talk.',
+    bond_stage: 'Past lines from the same stage of your relationship, shown only for how close and how openly you talk now.',
+};
+
+const PROFILE_MENTION_DESCRIPTION: Record<PersonaProfileMentionKind, string> = {
+    like: 'something you love',
+    dislike: 'something you dislike',
+    hobby: 'your hobby',
+    speciality: 'what you are good at',
+};
+
+function profileMentionSection(mentions: PersonaProfileMention[], addressTerm: string): string {
+    if (mentions.length === 0) {
+        return '';
+    }
+    const lines = mentions.map((mention) => `- ${mention.value}: this is ${PROFILE_MENTION_DESCRIPTION[mention.kind]}.`).join('\n');
+    return `[ABOUT YOU]\n${addressTerm}'s newest message touches your own life:\n${lines}\nAnswer as the person these belong to, from your own experience and feelings.`;
+}
+
 export function buildPersonaTurnContext(
     sources: PersonaTurnContextSources,
     spiritName: string,
@@ -254,12 +276,13 @@ export function buildPersonaTurnContext(
 ): string {
     const mood = filter.affect && sources.emotion !== null ? describePersonaMood(sources.emotion) : null;
     const sections = [
+        profileMentionSection(sources.profile_mentions, addressTerm),
         rememberedSection(sources, addressTerm, filter),
         mood === null ? '' : `[YOUR MOOD RIGHT NOW]\nYou feel ${mood}. Let it color how you talk without announcing it.`,
         `[HOW CLOSE YOU ARE]\nBond level ${sources.familiarity_level} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(sources.familiarity_level, addressTerm)}`,
         sources.voice_examples.length === 0
             ? ''
-            : `[VOICE REFERENCE]\nPast lines on a similar topic, shown only for how you talk. They did not happen in this conversation.\n${formatPersonaExchangeLines(sources.voice_examples, spiritName, addressTerm)}`,
+            : `[VOICE REFERENCE]\n${VOICE_REFERENCE_INTRODUCTION[sources.voice_reference_kind]} They did not happen in this conversation.\n${formatPersonaExchangeLines(sources.voice_examples, spiritName, addressTerm)}`,
     ];
     return sections.filter((section) => section.length > 0).join('\n\n');
 }
@@ -282,14 +305,15 @@ export function buildTurnMemoryText(
     spiritName: string,
     userText: string,
     spiritText: string,
-    occurredAt: string,
+    userOccurredAt: string,
+    spiritOccurredAt: string,
 ): string | null {
     const trimmedUser = userText.trim();
     const trimmedSpirit = spiritText.trim();
     if (trimmedUser.length === 0 || trimmedSpirit.length === 0) {
         return null;
     }
-    return `[${occurredAt}] ${addressTerm}: ${trimmedUser}\n[${occurredAt}] ${spiritName}: ${trimmedSpirit}`;
+    return `[${userOccurredAt}] ${addressTerm}: ${trimmedUser}\n[${spiritOccurredAt}] ${spiritName}: ${trimmedSpirit}`;
 }
 
 export function buildConsolidationPrompt(

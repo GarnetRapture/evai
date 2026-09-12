@@ -129,15 +129,24 @@ export interface OnDeviceTextMessage {
     role: 'user' | 'assistant';
     content: string;
 }
+export interface StructuredReplySpec {
+    name: string;
+    json_schema: Record<string, unknown>;
+    soft_prefix: string;
+}
+export interface PersonaSessionPrompt {
+    system_prompt: string;
+    priming_messages: OnDeviceTextMessage[];
+}
 export interface OnDeviceGenerationRequest {
     request_id: string;
     language: AppLanguage;
     persona_id: string;
     persona_name: string;
-    system_prompt: string;
+    session_prompt: PersonaSessionPrompt;
     messages: OnDeviceTextMessage[];
     behavior_instruction: string;
-    response_prefix: string;
+    structured_reply: StructuredReplySpec;
     signal: AbortSignal;
     handlers: OnDeviceGenerationHandlers;
 }
@@ -151,7 +160,8 @@ export interface OnDeviceGenerationResult {
 export interface PersonaModelSessionIdentity {
     persona_id: string;
     declared_language_tag: string | null;
-    system_prompt: string;
+    session_prompt: PersonaSessionPrompt;
+    session_prompt_key: string;
 }
 export interface PersonaModelSession extends PersonaModelSessionIdentity {
     session: LanguageModel;

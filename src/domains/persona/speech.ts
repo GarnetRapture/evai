@@ -3,6 +3,7 @@ import type {
     LocalizedDialogue,
     PersonaLanguageSlice,
     PersonaSpeechProfile,
+    PersonaSpeechStyle,
 } from './types';
 import { parsePersonaDialogueExchanges, selectRepresentativeDialogueExamples } from './dialogue';
 
@@ -11,6 +12,16 @@ const SOLO_LINE_MIN_LENGTH = 10;
 const SOLO_LINE_MAX_LENGTH = 160;
 const SOLO_LINE_MIN_SENTENCE_CHARS = 6;
 const FILLER_ONLY_PATTERN = /^[\s.…·!?~♪♥\-'"]*$/u;
+const SIGNATURE_MARK_MIN_RATIO = 0.05;
+const SIGNATURE_MARK_PATTERNS: ReadonlyArray<{ mark: string; pattern: RegExp }> = [
+    { mark: '!!', pattern: /[!！]{2,}/u },
+    { mark: '??', pattern: /[?？]{2,}/u },
+    { mark: '…', pattern: /…|\.{3}/u },
+    { mark: '~', pattern: /[~～]/u },
+    { mark: 'ㅜㅜ', pattern: /[ㅜㅠ]{2,}/u },
+    { mark: 'ㅎㅎ', pattern: /ㅎ{2,}/u },
+    { mark: 'ㅋㅋ', pattern: /ㅋ{2,}/u },
+];
 
 export const ADDRESS_TERM_CANDIDATES_BY_LANGUAGE: Record<AppLanguage, string[]> = {
     ko: ['구원자님', '구원자'],
@@ -75,6 +86,45 @@ function measureSoloLines(lines: string[]): string[] {
     });
 }
 
+function upperMedian(values: number[]): number {
+    const sorted = [...values].sort((left, right) => left - right);
+    return sorted[Math.floor(sorted.length / 2)];
+}
+
+function spiritMessageRuns(entries: LocalizedDialogue[], spiritName: string): number[] {
+    const runs: number[] = [];
+    let current = 0;
+    for (const entry of entries) {
+        if (entry.speaker === spiritName) {
+            current += 1;
+            continue;
+        }
+        if (current > 0) {
+            runs.push(current);
+        }
+        current = 0;
+    }
+    if (current > 0) {
+        runs.push(current);
+    }
+    return runs;
+}
+
+function measureSpeechStyle(slice: PersonaLanguageSlice): PersonaSpeechStyle | null {
+    const runs = [...spiritMessageRuns(slice.story, slice.name), ...spiritMessageRuns(slice.evertalk, slice.name)];
+    const lines = [...spiritDialogues(slice.story, slice.name), ...spiritDialogues(slice.evertalk, slice.name)];
+    if (runs.length === 0 || lines.length === 0) {
+        return null;
+    }
+    return {
+        messages_per_turn: upperMedian(runs),
+        message_length: upperMedian(lines.map((line) => line.length)),
+        signature_marks: SIGNATURE_MARK_PATTERNS
+            .filter(({ pattern }) => lines.filter((line) => pattern.test(line)).length / lines.length >= SIGNATURE_MARK_MIN_RATIO)
+            .map(({ mark }) => mark),
+    };
+}
+
 export function measurePersonaSpeechProfile(slice: PersonaLanguageSlice, language: AppLanguage): PersonaSpeechProfile {
     const patternLines = spiritDialogues(slice.speech_patterns, slice.name);
     const storyLines = spiritDialogues(slice.story, slice.name);
@@ -84,5 +134,6 @@ export function measurePersonaSpeechProfile(slice: PersonaLanguageSlice, languag
         address_term: measureAddressTerm(spiritLines, language),
         solo_lines: measureSoloLines(spiritLines),
         dialogue_examples: selectRepresentativeDialogueExamples(parsePersonaDialogueExchanges(slice, language)),
+        style: measureSpeechStyle(slice),
     };
 }

@@ -1,5 +1,6 @@
 import { normalizeLanguageText } from '../../shared/i18n';
 import type { AppLanguage } from '../../shared/types';
+import type { PersonaReplyParts } from './types';
 
 const EMOJI_ZWJ_SEQUENCE_PATTERN = /\p{Extended_Pictographic}(?:\u{200D}\p{Extended_Pictographic})+/gu;
 const EMOJI_KEYCAP_SEQUENCE_PATTERN = /[0-9#*]\u{FE0F}?\u{20E3}/gu;
@@ -13,9 +14,56 @@ const TRAILING_HORIZONTAL_SPACE_PATTERN = /[ \t]+(?=\n|$)/g;
 
 const THINK_BLOCK_PATTERN = /<think>[\s\S]*?<\/think>/gi;
 const UNCLOSED_THINK_PATTERN = /<think>[\s\S]*$/i;
+const MARKUP_TAG_PATTERN = /<\/?(?!think(?:ing)?\b)[A-Za-z][A-Za-z0-9_-]*\s*\/?>/g;
+const CLOSED_ACTION_PATTERN = /[(（]([^()（）\n]{1,120})[)）]|\*([^*\n]{1,120})\*/gu;
+const UNCLOSED_ACTION_PATTERN = /[(（]([^()（）\n]{1,120})$|\*([^*\n]{1,120})$/u;
+const ACTION_HANGUL_PATTERN = /[가-힣]/gu;
+const ACTION_HAN_PATTERN = /\p{Script=Han}/gu;
+const ACTION_LATIN_WORD_PATTERN = /[A-Za-z]{3,}/u;
+const ACTION_MIN_HANGUL_SYLLABLES = 2;
+const ACTION_MIN_HAN_CHARACTERS = 2;
+const SPOKEN_BLANK_LINES_PATTERN = /\n{3,}/g;
 
 export function stripReasoning(text: string): string {
     return text.replace(THINK_BLOCK_PATTERN, '').replace(UNCLOSED_THINK_PATTERN, '').trim();
+}
+
+export function stripMarkupTags(text: string): string {
+    return text.replace(MARKUP_TAG_PATTERN, '');
+}
+
+function describesAction(content: string): boolean {
+    return (content.match(ACTION_HANGUL_PATTERN)?.length ?? 0) >= ACTION_MIN_HANGUL_SYLLABLES
+        || (content.match(ACTION_HAN_PATTERN)?.length ?? 0) >= ACTION_MIN_HAN_CHARACTERS
+        || ACTION_LATIN_WORD_PATTERN.test(content);
+}
+
+function tidySpokenText(text: string): string {
+    return text
+        .split('\n')
+        .map((line) => line.replace(REPEATED_HORIZONTAL_SPACE_PATTERN, ' ').trim())
+        .join('\n')
+        .replace(SPOKEN_BLANK_LINES_PATTERN, '\n\n')
+        .trim();
+}
+
+export function splitPersonaReplyActions(text: string, streaming: boolean): PersonaReplyParts {
+    const actions: string[] = [];
+    let spoken = text.replace(CLOSED_ACTION_PATTERN, (matched, parenthesized: string | undefined, starred: string | undefined) => {
+        const content = (parenthesized ?? starred ?? '').trim();
+        if (!describesAction(content)) {
+            return matched;
+        }
+        actions.push(content);
+        return '';
+    });
+    if (streaming) {
+        spoken = spoken.replace(UNCLOSED_ACTION_PATTERN, (matched, parenthesized: string | undefined, starred: string | undefined) => {
+            const content = (parenthesized ?? starred ?? '').trim();
+            return describesAction(content) ? '' : matched;
+        });
+    }
+    return { actions, spoken: tidySpokenText(spoken) };
 }
 
 export function removeEmoji(text: string): string {
@@ -34,5 +82,5 @@ export function removeEmoji(text: string): string {
 }
 
 export function normalizeChatOutput(text: string, language: AppLanguage): string {
-    return normalizeLanguageText(removeEmoji(text), language);
+    return normalizeLanguageText(removeEmoji(stripMarkupTags(text)), language);
 }

@@ -2,7 +2,7 @@ import { memo, useEffect, useMemo, useRef, useState } from 'react';
 import type React from 'react';
 import { Maximize2, Minimize2, Minus, Send, Sparkles, Square, X, ZoomIn } from 'lucide-react';
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
-import { CHAT_PANEL_MIN_HEIGHT, CHAT_PANEL_MIN_WIDTH, CHAT_PANEL_RESIZE_HANDLES, createConversationSummary, createTalkChoices, formatDateTime, formatRoomTitle, formatSkinLabel, pickRandomSpeechLine, pickPokeReactionLine, resolvePanelResize } from '../logic';
+import { CHAT_PANEL_MIN_HEIGHT, CHAT_PANEL_MIN_WIDTH, CHAT_PANEL_RESIZE_HANDLES, createConversationSummary, createTalkChoices, formatDateTime, formatRoomTitle, formatSkinLabel, pickRandomSpeechLine, pickPokeReactionLine, resolvePanelResize, shouldAnnounceSpiritActions } from '../logic';
 import type { SpiritVisualAssets } from '../../persona';
 import type { ChatMessageBubbleProps, ChatStageProps, GalleryTileProps, PanelGeometry, PanelResizeHandle, PanelResizeState } from '../types';
 import { EVERTALK_UI_ASSETS } from '../uiAssets';
@@ -20,7 +20,7 @@ const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoo
 });
 const PANEL_SHAKE_DURATION_MS = 400;
 const PANEL_BOUNDARY_TOLERANCE_PX = 1;
-const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandidates, spiritName, showReasoning, deleteLabel, innerThoughtsLabel, onDelete }: ChatMessageBubbleProps) {
+const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandidates, spiritName, showReasoning, deleteLabel, innerThoughtsLabel, showActionStatus, onDelete }: ChatMessageBubbleProps) {
     if (message.role === 'system') {
         return (<div className="ever-message is-system">
           <div className="ever-message__bubble">{message.content}</div>
@@ -34,7 +34,7 @@ const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandi
       <div className="ever-message__bubble">
         {fromUser
           ? message.content
-          : <SpiritReplyContent text={message.content} showReasoning={showReasoning} variant="desktop" innerThoughtsLabel={innerThoughtsLabel}/>}
+          : <SpiritReplyContent text={message.content} showReasoning={showReasoning} variant="desktop" innerThoughtsLabel={innerThoughtsLabel} streaming={false} showActionStatus={showActionStatus}/>}
       </div>
       <button type="button" className="ever-message__delete" aria-label={deleteLabel} onClick={() => onDelete(message.id)}>
         <X aria-hidden="true" size={12}/>
@@ -345,14 +345,14 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                   <strong>{labels.noSavedMessages}</strong>
                   <span>{labels.firstMessageHint}</span>
                 </div>)}
-              {messages.map((message) => (<ChatMessageBubble key={message.id} message={message} avatarCandidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} spiritName={activeDetail?.name ?? ''} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} innerThoughtsLabel={labels.innerThoughts} onDelete={onDeleteMessage} />))}
+              {messages.map((message, index) => (<ChatMessageBubble key={message.id} message={message} avatarCandidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} spiritName={activeDetail?.name ?? ''} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} innerThoughtsLabel={labels.innerThoughts} showActionStatus={shouldAnnounceSpiritActions(message, index, messages.length)} onDelete={onDeleteMessage} />))}
               {isTyping && (<div className="ever-message is-spirit">
                   <div className="ever-message__avatar">
                     <LoadableAssetImage candidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} alt={activeDetail?.name ?? ''} fallback={<span>{activeDetail?.name.charAt(0) ?? 'E'}</span>}/>
                   </div>
                   <div className="ever-message__bubble">
                     {streamingText
-                      ? <SpiritReplyContent text={streamingText} showReasoning={showReasoning} variant="desktop" innerThoughtsLabel={labels.innerThoughts}/>
+                      ? <SpiritReplyContent text={streamingText} showReasoning={showReasoning} variant="desktop" innerThoughtsLabel={labels.innerThoughts} streaming showActionStatus/>
                       : <span className="ever-typing"><i /><i /><i /></span>}
                   </div>
                 </div>)}

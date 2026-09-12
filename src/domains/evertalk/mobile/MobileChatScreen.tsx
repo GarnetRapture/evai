@@ -3,7 +3,7 @@ import type React from 'react';
 import { ChevronLeft, History, Images, MessageCircle, Plus, Send, Square, X, ZoomIn } from 'lucide-react';
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
 import type { SpiritVisualAssets } from '../../persona';
-import { createTalkChoices, createConversationSummary, formatDateTime, formatRoomTitle, formatSkinLabel, pickPokeReactionLine, pickRandomSpeechLine } from '../logic';
+import { createTalkChoices, createConversationSummary, formatDateTime, formatRoomTitle, formatSkinLabel, pickPokeReactionLine, pickRandomSpeechLine, shouldAnnounceSpiritActions } from '../logic';
 import { ImageViewerOverlay } from '../components/ImageViewerOverlay';
 import { LoadableAssetImage } from '../components/LoadableAssetImage';
 import { SpiritReplyContent } from '../components/SpiritReplyContent';
@@ -163,8 +163,8 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
                                 <span>{labels.firstMessageHint}</span>
                             </div>
                         )}
-                        {messages.map((message) => (
-                            <MobileMessageBubble key={message.id} message={message} spiritName={activeDetail.name} avatarCandidates={avatarCandidates} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} innerThoughtsLabel={labels.innerThoughts} onDelete={controller.deleteChatMessage}/>
+                        {messages.map((message, index) => (
+                            <MobileMessageBubble key={message.id} message={message} spiritName={activeDetail.name} avatarCandidates={avatarCandidates} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} innerThoughtsLabel={labels.innerThoughts} showActionStatus={shouldAnnounceSpiritActions(message, index, messages.length)} onDelete={controller.deleteChatMessage}/>
                         ))}
                         {isTyping && (
                             <div className="ever-mobile-message is-spirit">
@@ -173,7 +173,7 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
                                 </div>
                                 <div className="ever-mobile-message__bubble">
                                     {streamingText
-                                        ? <SpiritReplyContent text={streamingText} showReasoning={showReasoning} variant="mobile" innerThoughtsLabel={labels.innerThoughts}/>
+                                        ? <SpiritReplyContent text={streamingText} showReasoning={showReasoning} variant="mobile" innerThoughtsLabel={labels.innerThoughts} streaming showActionStatus/>
                                         : <span className="ever-mobile-typing"><i/><i/><i/></span>}
                                 </div>
                             </div>
@@ -222,7 +222,7 @@ export function MobileChatScreen({ controller, onBrowseRoster }: MobileChatScree
     );
 }
 
-function MobileMessageBubble({ message, spiritName, avatarCandidates, showReasoning, deleteLabel, innerThoughtsLabel, onDelete }: MobileMessageBubbleProps) {
+function MobileMessageBubble({ message, spiritName, avatarCandidates, showReasoning, deleteLabel, innerThoughtsLabel, showActionStatus, onDelete }: MobileMessageBubbleProps) {
     if (message.role === 'system') {
         return (<div className="ever-mobile-message is-system"><div className="ever-mobile-message__bubble">{message.content}</div></div>);
     }
@@ -237,7 +237,7 @@ function MobileMessageBubble({ message, spiritName, avatarCandidates, showReason
             <div className="ever-mobile-message__bubble">
                 {fromUser
                     ? message.content
-                    : <SpiritReplyContent text={message.content} showReasoning={showReasoning} variant="mobile" innerThoughtsLabel={innerThoughtsLabel}/>}
+                    : <SpiritReplyContent text={message.content} showReasoning={showReasoning} variant="mobile" innerThoughtsLabel={innerThoughtsLabel} streaming={false} showActionStatus={showActionStatus}/>}
             </div>
             <button type="button" className="ever-mobile-message__delete" aria-label={deleteLabel} onClick={() => void onDelete(message.id)}><X aria-hidden="true" size={12}/></button>
         </div>

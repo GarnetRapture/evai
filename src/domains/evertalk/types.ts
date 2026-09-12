@@ -161,6 +161,7 @@ export interface ImageViewerOverlayProps {
 export interface SpiritReplyParts {
     reasoning: string;
     reply: string;
+    actions: string[];
 }
 export type SpiritReplyVariant = 'desktop' | 'mobile';
 export interface SpiritReplyContentProps {
@@ -168,6 +169,12 @@ export interface SpiritReplyContentProps {
     showReasoning: boolean;
     variant: SpiritReplyVariant;
     innerThoughtsLabel: string;
+    streaming: boolean;
+    showActionStatus: boolean;
+}
+export interface SpiritActionStatusProps {
+    actions: string[];
+    variant: SpiritReplyVariant;
 }
 export interface ChatMessageBubbleProps {
     message: ChatMessage;
@@ -176,6 +183,7 @@ export interface ChatMessageBubbleProps {
     showReasoning: boolean;
     deleteLabel: string;
     innerThoughtsLabel: string;
+    showActionStatus: boolean;
     onDelete: (messageId: string) => Promise<void>;
 }
 export interface GalleryTileProps {

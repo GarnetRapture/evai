@@ -1,4 +1,6 @@
 #include "context_database.h"
+#include "model_runtime.h"
+#include "native_settings.h"
 
 #include <array>
 #include <cstdint>
@@ -10,6 +12,7 @@
 #include <stdexcept>
 #include <string>
 #include <string_view>
+#include <utility>
 
 #include <sqlite3.h>
 
@@ -30,10 +33,53 @@ namespace {
 
 using eversoul::format::JsonValue;
 using eversoul::native::ContextDatabase;
+using eversoul::native::GenerationStatus;
+using eversoul::native::ModelConfiguration;
+using eversoul::native::ModelRuntimeStatus;
+using eversoul::native::NativeChatMessage;
+using eversoul::native::NativeGenerationPrompt;
+using eversoul::native::NativeModelRuntime;
 using eversoul::native::jsonEscape;
 
 constexpr std::uint32_t kMaximumFrameBytes = 8U * 1024U * 1024U;
 constexpr std::size_t kMaximumNativeMessageResponseBytes = 1024U * 1024U;
+
+std::string pathUtf8(const std::filesystem::path& path) {
+    const std::u8string value = path.generic_u8string();
+    return std::string(reinterpret_cast<const char*>(value.data()), value.size());
+}
+
+std::filesystem::path pathFromUtf8(const std::string& value) {
+    return std::filesystem::path(std::u8string(
+        reinterpret_cast<const char8_t*>(value.data()),
+        reinterpret_cast<const char8_t*>(value.data() + value.size())));
+}
+
+std::string nullablePathJson(const std::filesystem::path& path) {
+    return path.empty() ? "null" : "\"" + jsonEscape(pathUtf8(path)) + "\"";
+}
+
+std::string modelStatusJson(const ModelRuntimeStatus& status) {
+    return "{\"configured\":" + std::string(status.configured ? "true" : "false")
+        + ",\"model_found\":" + (status.modelFound ? "true" : "false")
+        + ",\"loaded\":" + (status.loaded ? "true" : "false")
+        + ",\"configured_model_path\":" + nullablePathJson(status.configuredModelPath)
+        + ",\"resolved_model_path\":" + nullablePathJson(status.resolvedModelPath)
+        + ",\"runtime_path\":" + nullablePathJson(status.runtimePath)
+        + ",\"backend\":\"" + jsonEscape(status.backend) + "\""
+        + ",\"architecture\":\"" + jsonEscape(status.architecture) + "\""
+        + ",\"context_window\":" + std::to_string(status.contextWindow)
+        + ",\"error\":" + (status.error.empty() ? "null" : "\"" + jsonEscape(status.error) + "\"") + '}';
+}
+
+std::string generationStatusJson(const GenerationStatus& status) {
+    return "{\"request_id\":" + (status.requestId.empty() ? "null" : "\"" + jsonEscape(status.requestId) + "\"")
+        + ",\"state\":\"" + jsonEscape(status.state) + "\""
+        + ",\"text\":\"" + jsonEscape(status.text) + "\""
+        + ",\"prompt_tokens\":" + std::to_string(status.promptTokens)
+        + ",\"generated_tokens\":" + std::to_string(status.generatedTokens)
+        + ",\"error\":" + (status.error.empty() ? "null" : "\"" + jsonEscape(status.error) + "\"") + '}';
+}
 
 enum class DisplayLanguage { Korean, English, Chinese };
 
@@ -147,9 +193,7 @@ public:
     }
 
     static void saveLanguage(const std::filesystem::path& settingsPath, DisplayLanguage language) {
-        std::ofstream output(settingsPath, std::ios::trunc);
-        if (!output) throw std::runtime_error("native_host_ini_write_failed");
-        output << "[display]\nlanguage=" << languageCode(language) << '\n';
+        eversoul::native::updateNativeSettings(settingsPath, {{"language", std::string(languageCode(language))}});
     }
 
     void show(
@@ -172,6 +216,12 @@ public:
     void markConnected() {
         if (!enabled_ || connected_) return;
         connected_ = true;
+        render();
+    }
+
+    void updateInference(ModelRuntimeStatus status) {
+        if (!enabled_) return;
+        inference_ = std::move(status);
         render();
     }
 
@@ -235,6 +285,9 @@ private:
         std::string database;
         std::string settings;
         std::string singleton;
+        std::string inference;
+        std::string model;
+        std::string runtime;
         std::string closeHint;
         if (language_ == DisplayLanguage::Korean) {
             title = "에버소울 네이티브 호스트";
@@ -245,6 +298,10 @@ private:
             database = "데이터베이스";
             settings = "언어 설정";
             singleton = "중복 실행 방지 : 활성";
+            inference = inference_.loaded ? "온디바이스 추론 : 모델 로드됨"
+                : inference_.configured ? "온디바이스 추론 : 모델 로드 대기" : "온디바이스 추론 : 경로 미설정";
+            model = "모델";
+            runtime = "LiteRT 런타임";
             closeHint = "이 창을 닫으면 네이티브 호스트가 즉시 종료됩니다.";
         }
         else if (language_ == DisplayLanguage::Chinese) {
@@ -256,6 +313,10 @@ private:
             database = "数据库";
             settings = "语言设置";
             singleton = "防止重复运行：已启用";
+            inference = inference_.loaded ? "设备端推理：模型已加载"
+                : inference_.configured ? "设备端推理：等待加载模型" : "设备端推理：未设置路径";
+            model = "模型";
+            runtime = "LiteRT 运行时";
             closeHint = "关闭此窗口将立即停止原生主机。";
         }
         else {
@@ -267,15 +328,21 @@ private:
             database = "Database";
             settings = "Language settings";
             singleton = "Duplicate process prevention : Active";
+            inference = inference_.loaded ? "On-device inference : Model loaded"
+                : inference_.configured ? "On-device inference : Waiting for model load" : "On-device inference : Path not configured";
+            model = "Model";
+            runtime = "LiteRT runtime";
             closeHint = "Close this window to stop the native host immediately.";
         }
         writeUtf8(
             title + "\n========================================\n"
-            + connection + '\n' + sqlite + '\n' + singleton + "\n\n"
+            + connection + '\n' + sqlite + '\n' + inference + '\n' + singleton + "\n\n"
             + pid + " : " + std::to_string(processId_) + '\n'
-            + executable + " : " + executablePath_.string() + '\n'
-            + database + " : " + databasePath_.string() + '\n'
-            + settings + " : " + settingsPath_.string() + "\n\n"
+            + executable + " : " + pathUtf8(executablePath_) + '\n'
+            + database + " : " + pathUtf8(databasePath_) + '\n'
+            + settings + " : " + pathUtf8(settingsPath_) + '\n'
+            + model + " : " + (inference_.resolvedModelPath.empty() ? "-" : pathUtf8(inference_.resolvedModelPath)) + '\n'
+            + runtime + " : " + (inference_.runtimePath.empty() ? "-" : pathUtf8(inference_.runtimePath)) + "\n\n"
             + closeHint + '\n');
     }
 
@@ -286,6 +353,7 @@ private:
     std::filesystem::path executablePath_;
     std::filesystem::path databasePath_;
     std::filesystem::path settingsPath_;
+    ModelRuntimeStatus inference_;
 #ifdef _WIN32
     HANDLE output_ = INVALID_HANDLE_VALUE;
 #endif
@@ -354,8 +422,35 @@ int optionalInt(const JsonValue& request, std::string_view key, int fallback) {
     return static_cast<int>(*number);
 }
 
+NativeGenerationPrompt generationPrompt(const JsonValue& request) {
+    NativeGenerationPrompt prompt;
+    prompt.systemPrompt = optionalString(request, "system_prompt");
+    prompt.responsePrefix = optionalString(request, "response_prefix");
+    for (const JsonValue& entry : requiredArray(request, "messages")) {
+        const std::string role = requiredString(entry, "role");
+        if (role != "user" && role != "assistant") throw std::runtime_error("invalid_message_role");
+        prompt.messages.push_back(NativeChatMessage{role, requiredString(entry, "content")});
+    }
+    return prompt;
+}
+
+ModelConfiguration modelConfiguration(const JsonValue& request, const NativeModelRuntime& runtime) {
+    ModelConfiguration configuration = runtime.configuration();
+    if (const JsonValue* value = request.find("model_path"); value != nullptr) {
+        auto text = value->asString();
+        if (!text || text->empty()) throw std::runtime_error("invalid_model_path");
+        configuration.modelPath = pathFromUtf8(std::string(*text));
+    }
+    if (request.find("model_file") != nullptr) configuration.modelFile = optionalString(request, "model_file");
+    if (request.find("runtime_path") != nullptr) configuration.runtimePath = pathFromUtf8(optionalString(request, "runtime_path"));
+    if (request.find("backend") != nullptr) configuration.backend = optionalString(request, "backend");
+    configuration.contextWindow = optionalInt(request, "context_window", configuration.contextWindow);
+    return configuration;
+}
+
 std::string handleRequest(
     ContextDatabase& database,
+    NativeModelRuntime& modelRuntime,
     std::string_view payload,
     const std::filesystem::path& executablePath,
     const std::filesystem::path& databasePath,
@@ -376,18 +471,64 @@ std::string handleRequest(
         const auto walBytes = fileBytes(std::filesystem::path(databasePath.string() + "-wal"));
         const auto sharedMemoryBytes = fileBytes(std::filesystem::path(databasePath.string() + "-shm"));
         const auto databaseBytes = databaseFileBytes + walBytes + sharedMemoryBytes;
-        return "{\"ok\":true,\"protocol\":1,\"storage\":\"sqlite\",\"process_id\":"
+        return "{\"ok\":true,\"protocol\":2,\"storage\":\"sqlite\",\"process_id\":"
             + std::to_string(currentProcessId()) + ",\"sqlite\":\""
             + jsonEscape(sqlite3_libversion()) + "\",\"executable_path\":\""
-            + jsonEscape(executablePath.string()) + "\",\"database_path\":\""
-            + jsonEscape(databasePath.string()) + "\",\"database_bytes\":"
+            + jsonEscape(pathUtf8(executablePath)) + "\",\"database_path\":\""
+            + jsonEscape(pathUtf8(databasePath)) + "\",\"database_bytes\":"
             + std::to_string(databaseBytes) + ",\"database_file_bytes\":"
             + std::to_string(databaseFileBytes) + ",\"wal_bytes\":"
             + std::to_string(walBytes) + ",\"shared_memory_bytes\":"
             + std::to_string(sharedMemoryBytes)
             + ",\"single_instance\":true,\"display_language\":\""
             + std::string(languageCode(displayLanguage)) + "\",\"settings_path\":\""
-            + jsonEscape(settingsPath.string()) + "\"}";
+            + jsonEscape(pathUtf8(settingsPath)) + "\",\"inference\":"
+            + modelStatusJson(modelRuntime.status()) + '}';
+    }
+    if (operation == "model_status" || operation == "inference_status") {
+        return "{\"ok\":true,\"model\":" + modelStatusJson(modelRuntime.status())
+            + ",\"generation\":" + generationStatusJson(modelRuntime.generationStatus()) + '}';
+    }
+    if (operation == "configure_model" || operation == "configure_inference") {
+        modelRuntime.configure(modelConfiguration(*parsed, modelRuntime), true);
+        return "{\"ok\":true,\"model\":" + modelStatusJson(modelRuntime.status()) + '}';
+    }
+    if (operation == "load_model") {
+        if (parsed->find("model_path") != nullptr || parsed->find("model_file") != nullptr
+            || parsed->find("runtime_path") != nullptr || parsed->find("backend") != nullptr
+            || parsed->find("context_window") != nullptr) {
+            modelRuntime.configure(modelConfiguration(*parsed, modelRuntime), true);
+        }
+        modelRuntime.load();
+        return "{\"ok\":true,\"model\":" + modelStatusJson(modelRuntime.status()) + '}';
+    }
+    if (operation == "unload_model") {
+        modelRuntime.unload();
+        return "{\"ok\":true,\"model\":" + modelStatusJson(modelRuntime.status()) + '}';
+    }
+    if (operation == "start_generation") {
+        const std::string requestId = requiredString(*parsed, "request_id");
+        modelRuntime.startGeneration(
+            requestId, generationPrompt(*parsed), optionalInt(*parsed, "max_output_tokens", 512));
+        return "{\"ok\":true,\"generation\":"
+            + generationStatusJson(modelRuntime.generationStatus(requestId)) + '}';
+    }
+    if (operation == "generation_status" || operation == "poll_generation") {
+        return "{\"ok\":true,\"generation\":"
+            + generationStatusJson(modelRuntime.generationStatus(optionalString(*parsed, "request_id"))) + '}';
+    }
+    if (operation == "cancel_generation") {
+        const std::string requestId = requiredString(*parsed, "request_id");
+        modelRuntime.cancelGeneration(requestId);
+        return "{\"ok\":true,\"generation\":"
+            + generationStatusJson(modelRuntime.generationStatus(requestId)) + '}';
+    }
+    if (operation == "generate") {
+        const std::string requestId = requiredString(*parsed, "request_id");
+        modelRuntime.startGeneration(
+            requestId, generationPrompt(*parsed), optionalInt(*parsed, "max_output_tokens", 512));
+        return "{\"ok\":true,\"generation\":"
+            + generationStatusJson(modelRuntime.waitForGeneration(requestId)) + '}';
     }
     if (operation == "statistics") {
         return "{\"ok\":true,\"statistics\":" + database.queryStatistics() + "}";
@@ -588,15 +729,20 @@ int main(int argc, char** argv) {
         HostStatusConsole statusConsole(consoleEnabled);
         const DisplayLanguage displayLanguage = statusConsole.resolveLanguage(settingsPath, consoleEnabled);
         ContextDatabase database(databasePath);
+        NativeModelRuntime modelRuntime(executablePath, settingsPath);
         statusConsole.show(displayLanguage, false, currentProcessId(), executablePath, databasePath, settingsPath);
+        statusConsole.updateInference(modelRuntime.status());
         std::string payload;
         while (readFrame(std::cin, jsonLines, payload)) {
             statusConsole.markConnected();
             try {
-                writeFrame(std::cout, jsonLines, handleRequest(
-                    database, payload, executablePath, databasePath, settingsPath, displayLanguage));
+                const std::string response = handleRequest(
+                    database, modelRuntime, payload, executablePath, databasePath, settingsPath, displayLanguage);
+                statusConsole.updateInference(modelRuntime.status());
+                writeFrame(std::cout, jsonLines, response);
             }
             catch (const std::exception& error) {
+                statusConsole.updateInference(modelRuntime.status());
                 writeFrame(std::cout, jsonLines, errorResponse(error));
             }
             if (payload.capacity() > 256U * 1024U) std::string{}.swap(payload);

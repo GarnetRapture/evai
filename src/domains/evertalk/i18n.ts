@@ -89,7 +89,6 @@ export interface EverTalkLabels {
     imageViewerPanRight: string;
     imageViewerScale: (percent: string) => string;
     lobbySlotEmptyLabel: (index: number) => string;
-    lobbyInsightTitle: string;
     lobbyModelTitle: string;
     lobbyModelOffline: string;
     inventory: string;
@@ -385,7 +384,7 @@ export interface EverTalkLabels {
     memoryFilterEmpty: string;
     memoryWorkflowNodes: Array<{ title: string; description: string }>;
     skinBase: string;
-    skinBaseVariant: string;
+    skinSpecial: string;
     skinCostume: (index: number) => string;
     skinRaid: (eventName: string) => string;
     skinSelector: (spiritName: string) => string;
@@ -516,7 +515,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         imageViewerPanRight: '오른쪽으로 이동',
         imageViewerScale: (percent) => `${percent}%`,
         lobbySlotEmptyLabel: (index) => `빈 슬롯 ${index}`,
-        lobbyInsightTitle: '채팅 성향 인사이트',
         lobbyModelTitle: '활성 모델',
         lobbyModelOffline: '모델 대기 중',
         inventory: '인벤토리',
@@ -897,7 +895,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             { title: '요약·통합', description: '응답과 핵심 사건을 저장하고 장기 그래프로 압축' },
         ],
         skinBase: '기본',
-        skinBaseVariant: '기본 (변형)',
+        skinSpecial: '특수 스킨',
         skinCostume: (index) => `코스튬 ${index}`,
         skinRaid: (eventName) => `레이드 · ${eventName}`,
         skinSelector: (spiritName) => `${spiritName} 스킨 선택`,
@@ -1069,7 +1067,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         imageViewerPanRight: 'Pan right',
         imageViewerScale: (percent) => `${percent}%`,
         lobbySlotEmptyLabel: (index) => `Empty slot ${index}`,
-        lobbyInsightTitle: 'Chat style insight',
         lobbyModelTitle: 'Active model',
         lobbyModelOffline: 'Model standby',
         inventory: 'Inventory',
@@ -1450,7 +1447,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             { title: 'Summarize and consolidate', description: 'Stores the reply and key events into a compressed long-term graph' },
         ],
         skinBase: 'Default',
-        skinBaseVariant: 'Default (Variant)',
+        skinSpecial: 'Special skin',
         skinCostume: (index) => `Costume ${index}`,
         skinRaid: (eventName) => `Raid · ${eventName}`,
         skinSelector: (spiritName) => `Choose ${spiritName} skin`,
@@ -1622,7 +1619,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         imageViewerPanRight: '向右移动',
         imageViewerScale: (percent) => `${percent}%`,
         lobbySlotEmptyLabel: (index) => `空位 ${index}`,
-        lobbyInsightTitle: '聊天倾向洞察',
         lobbyModelTitle: '启用模型',
         lobbyModelOffline: '模型待机',
         inventory: '仓库',
@@ -2003,7 +1999,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             { title: '摘要与整合', description: '保存回复与关键事件并压缩为长期图谱' },
         ],
         skinBase: '默认',
-        skinBaseVariant: '默认（变体）',
+        skinSpecial: '特殊皮肤',
         skinCostume: (index) => `服装 ${index}`,
         skinRaid: (eventName) => `团队战 · ${eventName}`,
         skinSelector: (spiritName) => `选择 ${spiritName} 的皮肤`,

@@ -6,13 +6,12 @@ import { computeFamiliarityLevel, familiaritySigilFrameUrl, pickRandomSpeechLine
 import type { LobbyScreenProps } from '../types';
 import { DECOR_UI_ASSETS, EVERTALK_UI_ASSETS, LOBBY_ACTOR_SLOT_ASSETS, LOBBY_UI_ASSETS, loveFrameAssetForLevel, raceBadgeUrl } from '../uiAssets';
 import { LoadableAssetImage } from './LoadableAssetImage';
+import { MemoryInsightPanel } from './MemoryInsightPanel';
 import { SaviorProfileCard } from './SaviorProfileCard';
 
 export function LobbyScreen({ spirits, familiarityList, background, saviorProfile, memoryInsight, memoryInsightLoading, labels, maxPreferredSlots, onEnterChat, onOpenBackgroundPicker, onOpenRoster, onOpenSaviorProfile, onRenameSavior }: LobbyScreenProps) {
     const [reaction, setReaction] = useState<{ id: string; line: string } | null>(null);
     const backgroundUrl = background ? `${ASSET_ROOT}/backgrounds/talk/${background}` : `${ASSET_ROOT}/backgrounds/talk/Talk_BG_Lounge.png`;
-    const insightSummary = memoryInsight?.semantic_summary?.trim() ?? '';
-    const insightDirectives = memoryInsight?.directives ?? [];
     const emptySlots = Math.max(0, maxPreferredSlots - spirits.length);
 
     const lobbyStyle = {
@@ -26,8 +25,7 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
             <div className="ever-lobby__shade"/>
             <img className="ever-lobby__light ever-lobby__light--left" src={LOBBY_UI_ASSETS.lightColumn} alt="" aria-hidden="true"/>
             <img className="ever-lobby__light ever-lobby__light--right" src={LOBBY_UI_ASSETS.lightColumn} alt="" aria-hidden="true"/>
-            <header className="ever-lobby__top">
-                <SaviorProfileCard profile={saviorProfile} labels={labels} onRenameSavior={onRenameSavior}/>
+            <aside className="ever-lobby__side">
                 <nav className="ever-lobby__top-actions" aria-label={labels.lobby}>
                     <button type="button" className="ever-lobby__action" onClick={onOpenSaviorProfile}>
                         <span className="ever-lobby__action-icon"><img src={DECOR_UI_ASSETS.inventoryIcon} alt="" aria-hidden="true"/></span>
@@ -42,27 +40,20 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
                         <span>{labels.lobbyBrowseRoster}</span>
                     </button>
                 </nav>
-            </header>
-
-            <aside className="ever-lobby__insight">
-                <span className="ever-lobby__section-title">{labels.lobbyInsightTitle}</span>
-                {memoryInsightLoading && <p className="ever-lobby__insight-line">{labels.checking}</p>}
-                {!memoryInsightLoading && insightSummary.length === 0 && insightDirectives.length === 0 && (
-                    <p className="ever-lobby__insight-line">{labels.memoryInsightEmpty}</p>
-                )}
-                {insightSummary.length > 0 && <p className="ever-lobby__insight-line">{insightSummary}</p>}
-                {insightDirectives.slice(0, 2).map((directive) => (
-                    <p key={directive.id} className="ever-lobby__insight-directive">
-                        <img src={EVERTALK_UI_ASSETS.keywordHeartFilled} alt="" aria-hidden="true"/>
-                        {directive.memory_text}
-                    </p>
-                ))}
-                <div className={`ever-lobby__model ${saviorProfile.modelReady ? 'is-on' : 'is-off'}`}>
-                    <Cpu aria-hidden="true" size={14}/>
-                    <span>{labels.lobbyModelTitle}</span>
-                    <strong>{saviorProfile.modelReady ? saviorProfile.activeModelName : labels.lobbyModelOffline}</strong>
-                </div>
+                <section className="ever-lobby__insight">
+                    <div className={`ever-lobby__model ${saviorProfile.modelReady ? 'is-on' : 'is-off'}`}>
+                        <Cpu aria-hidden="true" size={14}/>
+                        <span>{labels.lobbyModelTitle}</span>
+                        <strong>{saviorProfile.modelReady ? saviorProfile.activeModelName : labels.lobbyModelOffline}</strong>
+                    </div>
+                    <MemoryInsightPanel insight={memoryInsight} loading={memoryInsightLoading} labels={labels}/>
+                </section>
             </aside>
+
+            <div className="ever-lobby__main">
+            <header className="ever-lobby__top">
+                <SaviorProfileCard profile={saviorProfile} labels={labels} onRenameSavior={onRenameSavior}/>
+            </header>
 
             {spirits.length === 0 ? (
                 <div className="ever-lobby__empty">
@@ -142,21 +133,23 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
                 </div>
             )}
 
-            <div className="ever-lobby__slots">
-                {spirits.map((spirit) => (
-                    <span key={spirit.id} className="ever-lobby__slot-chip is-filled" style={{ backgroundImage: `url(${LOBBY_UI_ASSETS.emptySlotCrowned})` }}>
-                        <LoadableAssetImage candidates={getSpiritVisualAssets(spirit).rosterIconCandidates} alt={spirit.name} fallback={<span>{spirit.name.charAt(0)}</span>}/>
-                    </span>
-                ))}
-                {Array.from({ length: emptySlots }, (_unused, index) => (
-                    <button key={`empty-${index}`} type="button" className="ever-lobby__slot-chip" style={{ backgroundImage: `url(${LOBBY_UI_ASSETS.emptySlot})` }} aria-label={labels.lobbySlotEmptyLabel(spirits.length + index + 1)} onClick={onOpenRoster}>
-                        <img src={LOBBY_UI_ASSETS.diamondMarker} alt="" aria-hidden="true"/>
-                        <b className="ever-lobby__slot-number">{spirits.length + index + 1}</b>
-                    </button>
-                ))}
+            <div className="ever-lobby__floor">
+                <div className="ever-lobby__slots">
+                    {spirits.map((spirit) => (
+                        <span key={spirit.id} className="ever-lobby__slot-chip is-filled" style={{ backgroundImage: `url(${LOBBY_UI_ASSETS.emptySlotCrowned})` }}>
+                            <LoadableAssetImage candidates={getSpiritVisualAssets(spirit).rosterIconCandidates} alt={spirit.name} fallback={<span>{spirit.name.charAt(0)}</span>}/>
+                        </span>
+                    ))}
+                    {Array.from({ length: emptySlots }, (_unused, index) => (
+                        <button key={`empty-${index}`} type="button" className="ever-lobby__slot-chip" style={{ backgroundImage: `url(${LOBBY_UI_ASSETS.emptySlot})` }} aria-label={labels.lobbySlotEmptyLabel(spirits.length + index + 1)} onClick={onOpenRoster}>
+                            <img src={LOBBY_UI_ASSETS.diamondMarker} alt="" aria-hidden="true"/>
+                            <b className="ever-lobby__slot-number">{spirits.length + index + 1}</b>
+                        </button>
+                    ))}
+                </div>
+                <p className="ever-lobby__hint">{labels.lobbyTapHint}</p>
             </div>
-
-            <p className="ever-lobby__hint">{labels.lobbyTapHint}</p>
+            </div>
         </div>
     );
 }

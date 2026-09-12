@@ -38,7 +38,6 @@ import {
     KNOWLEDGE_INJECT_LIMIT,
     MEMORY_DIRECTIVE_LIMIT,
     RELEVANT_DIRECTIVE_LIMIT,
-    PERSONA_REASONING_PREFIX,
     PROMPT_HISTORY_LIMIT,
     SAVIOR_NAME_MAX_LENGTH,
     buildConsolidationPrompt,
@@ -55,10 +54,19 @@ import {
 } from './prompt';
 import {
     buildGreetingOpeningMessage,
+    buildPersonaPrimingMessages,
+    buildPersonaRedirectHook,
     buildPersonaTurnHook,
-    carriesSpokenText,
-    toPersonaHistoryMessage,
+    toPersonaHistoryMessages,
 } from './personaTurnHook';
+import {
+    buildPersonaReplySpec,
+    detectPersonaBreach,
+    normalizePersonaReplyEnvelope,
+    parsePersonaReplyEnvelope,
+    renderPersonaReplyContent,
+    resolvePersonaReplyMessageLimit,
+} from './replyEnvelope';
 import {
     PROACTIVE_ATTEMPT_COOLDOWN_MS,
     PROACTIVE_DEFAULT_CHANCE,
@@ -73,12 +81,71 @@ import type {
     ChatRoom,
     ChatSendRequest,
     PersonaMemoryInsight,
+    PersonaReplyGeneration,
+    PersonaReplyGenerationInput,
     PersonaSystemPrompt,
     PersonaTurnContextRequest,
     ProactiveGenerationOptions,
 } from './types';
 
 const MEMORY_INSIGHT_LIMIT = 30;
+const PERSONA_REPLY_ATTEMPT_LIMIT = 2;
+
+async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise<PersonaReplyGeneration> {
+    const { persona } = input;
+    const structuredReply = buildPersonaReplySpec({
+        reasoning: input.reasoning,
+        max_messages: resolvePersonaReplyMessageLimit(persona.speech_style),
+    });
+    const turnHook = buildPersonaTurnHook(persona.spirit_name, persona.address_term, input.reasoning, persona.speech_style);
+    let content = '';
+    for (let attempt = 1; attempt <= PERSONA_REPLY_ATTEMPT_LIMIT; attempt += 1) {
+        const redirectable = attempt < PERSONA_REPLY_ATTEMPT_LIMIT;
+        const attemptController = new AbortController();
+        const attemptSignal = AbortSignal.any([input.signal, attemptController.signal]);
+        let rawReply = '';
+        let streamedContent = '';
+        let breached = false;
+        const result = await chatModelRuntime.generate(input.model_id, input.language, {
+            request_id: attempt === 1 ? input.request_id : `${input.request_id}:redirect-${attempt}`,
+            language: input.language,
+            persona_id: input.persona_id,
+            persona_name: persona.spirit_name,
+            session_prompt: persona.session_prompt,
+            messages: input.messages,
+            behavior_instruction: attempt === 1 ? turnHook : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name)}`,
+            structured_reply: structuredReply,
+            signal: attemptSignal,
+            handlers: {
+                onChunk: (chunk) => {
+                    if (breached) {
+                        return;
+                    }
+                    rawReply += chunk;
+                    const envelope = normalizePersonaReplyEnvelope(parsePersonaReplyEnvelope(rawReply), input.language);
+                    if (redirectable && detectPersonaBreach(envelope)) {
+                        breached = true;
+                        attemptController.abort();
+                        return;
+                    }
+                    streamedContent = renderPersonaReplyContent(envelope);
+                    input.on_text(streamedContent);
+                },
+            },
+        });
+        if (input.signal.aborted) {
+            return { content: streamedContent, cancelled: true, redirected: attempt > 1 };
+        }
+        const finalEnvelope = normalizePersonaReplyEnvelope(parsePersonaReplyEnvelope(breached ? rawReply : result.text), input.language);
+        content = renderPersonaReplyContent(finalEnvelope);
+        if (redirectable && (breached || detectPersonaBreach(finalEnvelope))) {
+            continue;
+        }
+        input.on_text(content);
+        return { content, cancelled: result.cancelled, redirected: attempt > 1 };
+    }
+    return { content, cancelled: false, redirected: true };
+}
 
 function resolvePersonaEmotionBaseline(cheatPreset: PersonaCheatPreset | null): PersonaEmotionLevels {
     return (cheatPreset === null ? null : findEmotionPreset(cheatPreset.emotion_preset).levels) ?? PERSONA_EMOTION_BASELINE;
@@ -101,6 +168,11 @@ async function resolvePersonaEmotionSeed(
 async function collectPersonaTurnContext(request: PersonaTurnContextRequest): Promise<string> {
     const { persona_id: personaId, filter } = request;
     const queryVector = createLexicalMemoryVector(request.query);
+    const [messageCount, memoryCount] = await Promise.all([
+        chatRepository.countMessagesForPersona(personaId),
+        chatRepository.countEpisodicMemories(personaId),
+    ]);
+    const familiarityLevel = resolvePersonaFamiliarityLevel(messageCount, memoryCount, request.cheat_bond_level);
     const [
         semanticSummary,
         recentDirectives,
@@ -108,23 +180,19 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest): Pr
         episodic,
         habits,
         emotion,
-        messageCount,
-        memoryCount,
         knowledge,
-        voiceExamples,
+        personaReferences,
     ] = await Promise.all([
         filter.semantic ? chatRepository.getSemanticMemory(personaId) : Promise.resolve(null),
         filter.directive ? chatRepository.listDirectiveMemories(personaId, MEMORY_DIRECTIVE_LIMIT) : Promise.resolve([]),
         filter.directive ? chatRepository.searchDirectiveMemories(personaId, queryVector, RELEVANT_DIRECTIVE_LIMIT) : Promise.resolve([]),
         filter.episodic
-            ? chatRepository.searchEpisodicMemories(personaId, queryVector, EPISODIC_INJECT_LIMIT, EPISODIC_SEARCH_CANDIDATE_LIMIT)
+            ? chatRepository.searchEpisodicMemories(personaId, queryVector, EPISODIC_INJECT_LIMIT, EPISODIC_SEARCH_CANDIDATE_LIMIT, request.live_history_since)
             : Promise.resolve([]),
         filter.habit ? chatRepository.listFrequentHabits(personaId, HABIT_INJECT_LIMIT, HABIT_INJECT_MIN_OCCURRENCE) : Promise.resolve([]),
         filter.affect ? chatRepository.getPersonaEmotion(personaId) : Promise.resolve(null),
-        chatRepository.countMessagesForPersona(personaId),
-        chatRepository.countEpisodicMemories(personaId),
         request.include_knowledge && filter.knowledge ? knowledgeClient.search(request.query, KNOWLEDGE_INJECT_LIMIT) : Promise.resolve([]),
-        personaService.getRelevantDialogueExamples(personaId, request.language, request.query, RELEVANT_DIALOGUE_EXAMPLE_LIMIT, request.excluded_terms),
+        personaService.getTurnPersonaReferences(personaId, request.language, request.query, RELEVANT_DIALOGUE_EXAMPLE_LIMIT, request.excluded_terms, familiarityLevel),
     ]);
     return buildPersonaTurnContext({
         digest_summary: request.digest_summary,
@@ -134,8 +202,10 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest): Pr
         habits: habits.map((habit) => habit.memory_text).sort(),
         knowledge: knowledge.map((chunk) => chunk.chunk_text),
         emotion,
-        familiarity_level: resolvePersonaFamiliarityLevel(messageCount, memoryCount, request.cheat_bond_level),
-        voice_examples: voiceExamples,
+        familiarity_level: familiarityLevel,
+        voice_examples: personaReferences.voice_examples,
+        voice_reference_kind: personaReferences.voice_reference_kind,
+        profile_mentions: personaReferences.profile_mentions,
     }, request.spirit_name, request.address_term, filter);
 }
 
@@ -260,10 +330,14 @@ export const chatService = {
         const persona = await personaService.getAssembledPersonaPrompt(personaId, language, saviorName, cheatPreset);
         return {
             spirit_name: persona.localized_name,
-            system_prompt: persona.assembled_prompt,
+            session_prompt: {
+                system_prompt: persona.assembled_prompt,
+                priming_messages: buildPersonaPrimingMessages(persona.speech_profile.dialogue_examples),
+            },
             address_term: persona.address_term,
             greeting: persona.greeting,
             dialogue_excluded_terms: persona.dialogue_excluded_terms,
+            speech_style: persona.speech_profile.style,
         };
     },
     async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {
@@ -290,7 +364,7 @@ export const chatService = {
             settings.savior_name,
             resolveActivePersonaCheatPreset(settings, personaId),
         );
-        await chatModelRuntime.focusPersonaSession(settings.active_model, settings.language, personaId, persona.system_prompt);
+        await chatModelRuntime.focusPersonaSession(settings.active_model, settings.language, personaId, persona.session_prompt);
     },
     async tryGenerateProactiveMessage(options: ProactiveGenerationOptions = {}): Promise<ChatMessage | null> {
         const now = options.now ?? new Date();
@@ -324,32 +398,30 @@ export const chatService = {
         const language = settings.language;
         const digest = await chatRepository.getRoomDigest(candidate.room_id, candidate.persona_id);
         const persona = await chatService.buildPersonaBaseSystemPrompt(candidate.persona_id, language, settings.savior_name, cheatPreset);
-        const [history, turnContext] = await Promise.all([
-            chatRepository.listRecentMessagesForPersona(
-                candidate.room_id,
-                candidate.persona_id,
-                PROMPT_HISTORY_LIMIT,
-                digest?.covered_through ?? '',
-            ),
-            collectPersonaTurnContext({
-                persona_id: candidate.persona_id,
-                language,
-                spirit_name: persona.spirit_name,
-                address_term: persona.address_term,
-                query: candidate.latest_user_content,
-                digest_summary: digest?.summary ?? '',
-                filter: settings.memory_context_filter,
-                excluded_terms: persona.dialogue_excluded_terms,
-                include_knowledge: false,
-                cheat_bond_level: cheatPreset?.bond_level ?? null,
-            }),
-        ]);
-        const historyMessages = history.map(toPersonaHistoryMessage).filter(carriesSpokenText);
+        const history = await chatRepository.listRecentMessagesForPersona(
+            candidate.room_id,
+            candidate.persona_id,
+            PROMPT_HISTORY_LIMIT,
+            digest?.covered_through ?? '',
+        );
+        const turnContext = await collectPersonaTurnContext({
+            persona_id: candidate.persona_id,
+            language,
+            spirit_name: persona.spirit_name,
+            address_term: persona.address_term,
+            query: candidate.latest_user_content,
+            digest_summary: digest?.summary ?? '',
+            live_history_since: history[0]?.created_at ?? '',
+            filter: settings.memory_context_filter,
+            excluded_terms: persona.dialogue_excluded_terms,
+            include_knowledge: false,
+            cheat_bond_level: cheatPreset?.bond_level ?? null,
+        });
         const messages = [
             ...(shouldOpenWithGreeting(persona.greeting, digest?.summary ?? '', history.length, PROMPT_HISTORY_LIMIT)
-                ? [buildGreetingOpeningMessage(persona.greeting)]
+                ? buildGreetingOpeningMessage(persona.greeting)
                 : []),
-            ...historyMessages,
+            ...toPersonaHistoryMessages(history),
             {
                 role: 'user' as const,
                 content: composePersonaLatestTurn(
@@ -359,21 +431,19 @@ export const chatService = {
                 ),
             },
         ];
-        const signal = options.signal ?? new AbortController().signal;
-        const result = await chatModelRuntime.generate(settings.active_model, language, {
-            request_id: crypto.randomUUID(),
+        const result = await generatePersonaReply({
+            model_id: settings.active_model,
             language,
+            request_id: crypto.randomUUID(),
             persona_id: candidate.persona_id,
-            persona_name: persona.spirit_name,
-            system_prompt: persona.system_prompt,
+            persona,
             messages,
-            behavior_instruction: buildPersonaTurnHook(persona.spirit_name, persona.address_term, settings.show_reasoning),
-            response_prefix: settings.show_reasoning ? PERSONA_REASONING_PREFIX : '',
-            signal,
-            handlers: { onChunk: () => undefined },
+            reasoning: settings.show_reasoning,
+            signal: options.signal ?? new AbortController().signal,
+            on_text: () => undefined,
         });
-        const replyText = normalizeChatOutput(result.text, language).trim();
-        if (result.cancelled || replyText.length === 0) return null;
+        const replyText = result.content.trim();
+        if (result.cancelled || stripReasoning(replyText).length === 0) return null;
         const message: ChatMessage = {
             id: crypto.randomUUID(),
             room_id: candidate.room_id,
@@ -464,60 +534,50 @@ export const chatService = {
             ));
         }
         const digest = await chatRepository.getRoomDigest(roomId, personaId);
-        const [history, turnContext] = await Promise.all([
-            chatRepository.listRecentMessagesForPersona(
-                roomId,
-                personaId,
-                PROMPT_HISTORY_LIMIT,
-                digest?.covered_through ?? '',
-            ),
-            collectPersonaTurnContext({
-                persona_id: personaId,
-                language,
-                spirit_name: persona.spirit_name,
-                address_term: persona.address_term,
-                query: content,
-                digest_summary: digest?.summary ?? '',
-                filter: settings.memory_context_filter,
-                excluded_terms: persona.dialogue_excluded_terms,
-                include_knowledge: true,
-                cheat_bond_level: cheatPreset?.bond_level ?? null,
-            }),
-        ]);
+        const history = await chatRepository.listRecentMessagesForPersona(
+            roomId,
+            personaId,
+            PROMPT_HISTORY_LIMIT,
+            digest?.covered_through ?? '',
+        );
         const priorHistory = history.filter((message) => message.id !== userMessage.id);
+        const turnContext = await collectPersonaTurnContext({
+            persona_id: personaId,
+            language,
+            spirit_name: persona.spirit_name,
+            address_term: persona.address_term,
+            query: content,
+            digest_summary: digest?.summary ?? '',
+            live_history_since: priorHistory[0]?.created_at ?? '',
+            filter: settings.memory_context_filter,
+            excluded_terms: persona.dialogue_excluded_terms,
+            include_knowledge: true,
+            cheat_bond_level: cheatPreset?.bond_level ?? null,
+        });
         const messages = [
             ...(shouldOpenWithGreeting(persona.greeting, digest?.summary ?? '', priorHistory.length, PROMPT_HISTORY_LIMIT - 1)
-                ? [buildGreetingOpeningMessage(persona.greeting)]
+                ? buildGreetingOpeningMessage(persona.greeting)
                 : []),
-            ...priorHistory
-                .map(toPersonaHistoryMessage)
-                .filter(carriesSpokenText),
+            ...toPersonaHistoryMessages(priorHistory),
             {
                 role: 'user' as const,
                 content: composePersonaLatestTurn(turnContext, buildNewMessageHeading(persona.address_term, userOccurredAt), content),
             },
         ];
 
-        let rawReply = '';
-        const result = await chatModelRuntime.generate(modelId, language, {
-            request_id: requestId,
+        const result = await generatePersonaReply({
+            model_id: modelId,
             language,
+            request_id: requestId,
             persona_id: personaId,
-            persona_name: persona.spirit_name,
-            system_prompt: persona.system_prompt,
+            persona,
             messages,
-            behavior_instruction: buildPersonaTurnHook(persona.spirit_name, persona.address_term, settings.show_reasoning),
-            response_prefix: settings.show_reasoning ? PERSONA_REASONING_PREFIX : '',
+            reasoning: settings.show_reasoning,
             signal,
-            handlers: {
-                onChunk: (chunk) => {
-                    rawReply += chunk;
-                    handlers.onText(normalizeChatOutput(rawReply, language));
-                },
-            },
+            on_text: handlers.onText,
         });
-        const replyText = normalizeChatOutput(result.text, language);
-        if (result.cancelled && replyText.trim().length === 0) {
+        const replyText = result.content;
+        if (result.cancelled && stripReasoning(replyText).trim().length === 0) {
             throw new DomainError('cancelled', requestId);
         }
 
@@ -534,6 +594,7 @@ export const chatService = {
             persona.spirit_name,
             content,
             stripReasoning(replyText),
+            userOccurredAt,
             aiMessage.created_at,
         );
         await chatRepository.insertAssistantTurn(aiMessage, memoryText === null ? null : {

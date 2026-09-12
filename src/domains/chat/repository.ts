@@ -641,7 +641,7 @@ export const chatRepository = {
             .sort((left, right) => right.created_at.localeCompare(left.created_at))
             .slice(0, limit);
     },
-    async searchEpisodicMemories(personaId: string, queryVector: MemoryVector, limit: number, candidateLimit: number): Promise<string[]> {
+    async searchEpisodicMemories(personaId: string, queryVector: MemoryVector, limit: number, candidateLimit: number, liveHistorySince: string): Promise<string[]> {
         if (isEmptyMemoryVector(queryVector)) {
             return [];
         }
@@ -651,8 +651,11 @@ export const chatRepository = {
             if (isEmptyMemoryVector(memory.memory_vector)) {
                 continue;
             }
+            if (liveHistorySince.length > 0 && memory.created_at > liveHistorySince) {
+                continue;
+            }
             const score = cosineSimilarity(queryVector, memory.memory_vector);
-            if (score !== null) {
+            if (score !== null && score > 0) {
                 scored.push({ score, text: memory.memory_text });
             }
         }
