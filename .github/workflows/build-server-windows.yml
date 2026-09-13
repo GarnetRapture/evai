@@ -1,0 +1,61 @@
+name: Build Server Windows
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-server-windows-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: evai-server windows-x86_64
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web bundle
+        run: npm run build
+
+      - name: Set up MSYS2 UCRT64
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          install: mingw-w64-ucrt-x86_64-gcc
+
+      - name: Build server
+        shell: msys2 {0}
+        run: sh server/build.sh
+
+      - name: Package server with web bundle
+        id: package
+        shell: bash
+        run: |
+          version=$(node -p "require('./package.json').version")
+          archive="evai-server-windows-x86_64-v${version}-${GITHUB_SHA::7}.zip"
+          cp server/build/evai-server.exe dist/evai-server.exe
+          (cd dist && 7z a -tzip "../${archive}" . > /dev/null)
+          echo "archive=${archive}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload package
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.package.outputs.archive }}
+          path: ${{ steps.package.outputs.archive }}
+          archive: false
+          if-no-files-found: error
+          retention-days: 90
+          overwrite: true

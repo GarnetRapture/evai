@@ -1,0 +1,55 @@
+name: Build Server macOS
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-server-macos-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: evai-server macos-arm64
+    runs-on: macos-15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web bundle
+        run: npm run build
+
+      - name: Build server
+        env:
+          CXX: g++-15
+        run: sh server/build.sh
+
+      - name: Package server with web bundle
+        id: package
+        run: |
+          version=$(node -p "require('./package.json').version")
+          archive="evai-server-macos-arm64-v${version}-${GITHUB_SHA::7}.tar.gz"
+          cp server/build/evai-server dist/evai-server
+          chmod +x dist/evai-server
+          tar -czf "${archive}" -C dist .
+          echo "archive=${archive}" >> "$GITHUB_OUTPUT"
+
+      - name: Upload package
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.package.outputs.archive }}
+          path: ${{ steps.package.outputs.archive }}
+          archive: false
+          if-no-files-found: error
+          retention-days: 90
+          overwrite: true

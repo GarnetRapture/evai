@@ -33,7 +33,9 @@
 
 <p align="center">
   <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/Actions-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
-  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-local-server.yml"><img src="https://img.shields.io/badge/Actions-Build_Local_Server-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Local Server workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-windows.yml"><img src="https://img.shields.io/badge/Server-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Build Server Windows workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-linux.yml"><img src="https://img.shields.io/badge/Server-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Build Server Linux workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-macos.yml"><img src="https://img.shields.io/badge/Server-macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Build Server macOS workflow" /></a>
   <a href="https://github.com/GarnetRapture/evai/releases"><img src="https://img.shields.io/badge/Releases-릴리스_노트-6e7781?style=for-the-badge&logo=github&logoColor=white" alt="Releases" /></a>
 </p>
 
@@ -417,7 +419,7 @@ close this window to stop the server.
 - 앱이 쓰는 `Cross-Origin-Opener-Policy: same-origin`, `Cross-Origin-Embedder-Policy: require-corp` 헤더를 개발 서버와 똑같이 붙입니다.
 - 폴더 밖 경로로 나가는 요청은 막고, `GET`과 `HEAD`만 받습니다. 데이터베이스 기능은 아직 없습니다.
 
-GitHub Actions의 Build Local Server가 OS마다 웹 빌드와 실행 파일을 한 묶음으로 만들어 주니, 압축을 풀고 실행하면 끝입니다.
+GitHub Actions에 OS별 서버 빌드 워크플로(Build Server Windows, Build Server Linux, Build Server macOS)가 따로 있습니다. 내 OS 워크플로를 돌리면 웹 빌드와 실행 파일을 한 묶음으로 만들어 주니, 압축을 풀고 실행하면 끝입니다.
 
 ---
 
@@ -450,13 +452,17 @@ npm run server:build # server/build/evai-server(.exe) 빌드
 <p align="center">
   <a href="https://github.com/GarnetRapture/evai/fork"><img src="https://img.shields.io/badge/STEP_0-Fork_먼저_하기-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
   <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/워크플로-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
-  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-local-server.yml"><img src="https://img.shields.io/badge/워크플로-Build_Local_Server-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Local Server workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-windows.yml"><img src="https://img.shields.io/badge/워크플로-Build_Server_Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Build Server Windows workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-linux.yml"><img src="https://img.shields.io/badge/워크플로-Build_Server_Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Build Server Linux workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-macos.yml"><img src="https://img.shields.io/badge/워크플로-Build_Server_macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Build Server macOS workflow" /></a>
 </p>
 
 | 워크플로 | 결과물 | 쓰는 곳 |
 | --- | --- | --- |
 | [Build Web](.github/workflows/build-web.yml) | `evai-web-v<버전>-<커밋7자리>.zip` (`dist/`) | 정적 호스팅에 올릴 때 |
-| [Build Local Server](.github/workflows/build-local-server.yml) | `evai-local-server-windows-x86_64-v<버전>-<커밋7자리>.zip`<br/>`evai-local-server-linux-x86_64-v<버전>-<커밋7자리>.tar.gz`<br/>`evai-local-server-macos-arm64-v<버전>-<커밋7자리>.tar.gz` | 내 PC에서 실행기로 바로 열 때 (`dist/` + 실행 파일) |
+| [Build Server Windows](.github/workflows/build-server-windows.yml) | `evai-server-windows-x86_64-v<버전>-<커밋7자리>.zip` (`dist/` + `evai-server.exe`) | 윈도우 PC에서 실행기로 열 때 |
+| [Build Server Linux](.github/workflows/build-server-linux.yml) | `evai-server-linux-x86_64-v<버전>-<커밋7자리>.tar.gz` (`dist/` + `evai-server`) | 리눅스 PC에서 실행기로 열 때 |
+| [Build Server macOS](.github/workflows/build-server-macos.yml) | `evai-server-macos-arm64-v<버전>-<커밋7자리>.tar.gz` (`dist/` + `evai-server`) | Apple Silicon Mac에서 실행기로 열 때 |
 
 ### 1단계 — 내 포크에서 Actions 켜기
 
@@ -468,7 +474,7 @@ npm run server:build # server/build/evai-server(.exe) 빌드
 
 ### 2단계 — `Run workflow` 버튼 누르기
 
-왼쪽 목록에서 **Build Web**이나 **Build Local Server**를 고르고, 오른쪽의 **`Run workflow`** 를 연 다음 초록 **`Run workflow`** 버튼을 누릅니다. 입력할 값은 없고 브랜치는 기본값 그대로 두면 됩니다. 아래 그림은 Build Web 기준이고, Build Local Server도 누르는 곳은 같습니다.
+왼쪽 목록에서 **Build Web**이나 내 OS에 맞는 **Build Server Windows / Linux / macOS**를 고르고, 오른쪽의 **`Run workflow`** 를 연 다음 초록 **`Run workflow`** 버튼을 누릅니다. 입력할 값은 없고 브랜치는 기본값 그대로 두면 됩니다. 아래 그림은 Build Web 기준이고, 서버 워크플로도 누르는 곳은 같습니다.
 
 <p align="center">
   <img src="docs/images/actions/ko/2-run-workflow.svg" width="880" alt="Build Web 워크플로를 고르고 Run workflow 버튼을 누르는 화면" />
@@ -476,7 +482,7 @@ npm run server:build # server/build/evai-server(.exe) 빌드
 
 ### 3단계 — 완성된 zip 내려받기
 
-실행이 끝나면 초록 체크가 뜹니다. 그 실행을 눌러 들어가 맨 아래 **Artifacts**에서 필요한 파일을 받으면 됩니다. Build Web의 zip은 `dist/` 정적 파일 그대로이고, Build Local Server의 묶음은 여기에 내 OS용 실행 파일이 함께 들어 있습니다.
+실행이 끝나면 초록 체크가 뜹니다. 그 실행을 눌러 들어가 맨 아래 **Artifacts**에서 필요한 파일을 받으면 됩니다. Build Web의 zip은 `dist/` 정적 파일 그대로이고, 서버 워크플로의 묶음은 여기에 그 OS용 실행 파일이 함께 들어 있습니다.
 
 <p align="center">
   <img src="docs/images/actions/ko/3-download-artifact.svg" width="880" alt="빌드가 끝난 실행 화면에서 Artifacts의 zip 파일을 내려받는 화면" />
@@ -493,15 +499,15 @@ npm run server:build # server/build/evai-server(.exe) 빌드
 | 빌드 | `npm run build` = `tsc -b` 타입 검사 + `vite build` (`dist/`) |
 | 포장과 업로드 | `dist/`를 zip으로 묶어 Artifacts에 올립니다 (보관 90일) |
 
-**Build Local Server**
+**Build Server Windows / Linux / macOS**
 
-| 단계 | 내용 |
-| --- | --- |
-| 웹 빌드 | `ubuntu-latest`에서 `npm run build`로 `dist/`를 만들어 다음 단계에 넘깁니다 |
-| 윈도우 | `windows-latest` + MSYS2 UCRT64 GCC로 `sh server/build.sh`, `dist/`와 `evai-server.exe`를 zip으로 묶음 |
-| 리눅스 | `ubuntu-24.04` + `g++-14`로 빌드, `dist/`와 `evai-server`를 tar.gz로 묶음 (실행 권한 유지) |
-| macOS | `macos-15` (Apple Silicon) + Homebrew `g++-15`로 빌드, tar.gz로 묶음 |
-| 업로드 | 세 묶음을 각각 Artifacts에 올립니다 (보관 90일) |
+세 워크플로 모두 같은 순서로 돕니다. 해당 OS 러너에서 `npm install` → `npm run build`로 `dist/`를 만들고, `sh server/build.sh`로 실행 파일을 빌드한 뒤, 둘을 한 묶음으로 Artifacts에 올립니다(보관 90일).
+
+| 워크플로 | 러너 | 컴파일러 | 묶음 |
+| --- | --- | --- | --- |
+| Build Server Windows | `windows-latest` | MSYS2 UCRT64 GCC (`windres`로 아이콘과 버전 정보 포함) | zip |
+| Build Server Linux | `ubuntu-24.04` | `g++-14` | tar.gz (실행 권한 유지) |
+| Build Server macOS | `macos-15` (Apple Silicon) | Homebrew `g++-15` | tar.gz (실행 권한 유지) |
 
 ### 알아둘 점
 

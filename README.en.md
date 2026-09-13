@@ -33,7 +33,9 @@
 
 <p align="center">
   <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/Actions-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
-  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-local-server.yml"><img src="https://img.shields.io/badge/Actions-Build_Local_Server-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Local Server workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-windows.yml"><img src="https://img.shields.io/badge/Server-Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Build Server Windows workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-linux.yml"><img src="https://img.shields.io/badge/Server-Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Build Server Linux workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-macos.yml"><img src="https://img.shields.io/badge/Server-macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Build Server macOS workflow" /></a>
   <a href="https://github.com/GarnetRapture/evai/releases"><img src="https://img.shields.io/badge/Releases-Release_notes-6e7781?style=for-the-badge&logo=github&logoColor=white" alt="Releases" /></a>
 </p>
 
@@ -417,7 +419,7 @@ close this window to stop the server.
 - It sends the same `Cross-Origin-Opener-Policy: same-origin` and `Cross-Origin-Embedder-Policy: require-corp` headers as the dev server.
 - Paths that escape the folder are blocked, and only `GET` and `HEAD` are accepted. There is no database feature yet.
 
-The Build Local Server workflow packs the web build and the executable together for each OS, so you just extract and run.
+GitHub Actions has a separate server workflow for each OS (Build Server Windows, Build Server Linux, Build Server macOS). Run the one for your OS and it packs the web build and the executable together, so you just extract and run.
 
 ---
 
@@ -450,13 +452,17 @@ The workflow files come along when you fork. Press a button on your fork's **Act
 <p align="center">
   <a href="https://github.com/GarnetRapture/evai/fork"><img src="https://img.shields.io/badge/STEP_0-Fork_this_repo-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
   <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/Workflow-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
-  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-local-server.yml"><img src="https://img.shields.io/badge/Workflow-Build_Local_Server-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Local Server workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-windows.yml"><img src="https://img.shields.io/badge/Workflow-Build_Server_Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Build Server Windows workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-linux.yml"><img src="https://img.shields.io/badge/Workflow-Build_Server_Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Build Server Linux workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-server-macos.yml"><img src="https://img.shields.io/badge/Workflow-Build_Server_macOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="Build Server macOS workflow" /></a>
 </p>
 
 | Workflow | Output | Use it when |
 | --- | --- | --- |
 | [Build Web](.github/workflows/build-web.yml) | `evai-web-v<version>-<7-char commit>.zip` (`dist/`) | Uploading to a static host |
-| [Build Local Server](.github/workflows/build-local-server.yml) | `evai-local-server-windows-x86_64-v<version>-<7-char commit>.zip`<br/>`evai-local-server-linux-x86_64-v<version>-<7-char commit>.tar.gz`<br/>`evai-local-server-macos-arm64-v<version>-<7-char commit>.tar.gz` | Opening the app on your PC with the launcher (`dist/` + executable) |
+| [Build Server Windows](.github/workflows/build-server-windows.yml) | `evai-server-windows-x86_64-v<version>-<7-char commit>.zip` (`dist/` + `evai-server.exe`) | Opening the app with the launcher on Windows |
+| [Build Server Linux](.github/workflows/build-server-linux.yml) | `evai-server-linux-x86_64-v<version>-<7-char commit>.tar.gz` (`dist/` + `evai-server`) | Opening the app with the launcher on Linux |
+| [Build Server macOS](.github/workflows/build-server-macos.yml) | `evai-server-macos-arm64-v<version>-<7-char commit>.tar.gz` (`dist/` + `evai-server`) | Opening the app with the launcher on an Apple Silicon Mac |
 
 ### Step 1 — Turn Actions on in your fork
 
@@ -468,7 +474,7 @@ A forked repository starts with its workflows disabled. Open the **Actions** tab
 
 ### Step 2 — Press `Run workflow`
 
-Pick **Build Web** or **Build Local Server** in the left-hand list, open **`Run workflow`** on the right, and press the green **`Run workflow`** button. There is nothing to fill in, and the branch can stay at its default. The picture shows Build Web; Build Local Server works the same way.
+Pick **Build Web** or the **Build Server Windows / Linux / macOS** workflow for your OS in the left-hand list, open **`Run workflow`** on the right, and press the green **`Run workflow`** button. There is nothing to fill in, and the branch can stay at its default. The picture shows Build Web; the server workflows work the same way.
 
 <p align="center">
   <img src="docs/images/actions/en/2-run-workflow.svg" width="880" alt="Selecting the Build Web workflow and pressing Run workflow" />
@@ -476,7 +482,7 @@ Pick **Build Web** or **Build Local Server** in the left-hand list, open **`Run 
 
 ### Step 3 — Download the finished zip
 
-When the run finishes it gets a green check. Open that run and download what you need from **Artifacts** at the bottom. The Build Web zip is the `dist/` static output as-is; each Build Local Server package adds the executable for its OS.
+When the run finishes it gets a green check. Open that run and download what you need from **Artifacts** at the bottom. The Build Web zip is the `dist/` static output as-is; each server workflow package adds the executable for its OS.
 
 <p align="center">
   <img src="docs/images/actions/en/3-download-artifact.svg" width="880" alt="Downloading the artifact zip from a finished workflow run" />
@@ -493,15 +499,15 @@ When the run finishes it gets a green check. Open that run and download what you
 | Build | `npm run build` = `tsc -b` type check + `vite build` (`dist/`) |
 | Package and upload | `dist/` zipped and uploaded to Artifacts (kept 90 days) |
 
-**Build Local Server**
+**Build Server Windows / Linux / macOS**
 
-| Stage | Detail |
-| --- | --- |
-| Web build | `npm run build` on `ubuntu-latest`, handing `dist/` to the next jobs |
-| Windows | `windows-latest` + MSYS2 UCRT64 GCC runs `sh server/build.sh`; `dist/` and `evai-server.exe` are zipped |
-| Linux | `ubuntu-24.04` + `g++-14`; `dist/` and `evai-server` go into a tar.gz that keeps the execute bit |
-| macOS | `macos-15` (Apple Silicon) + Homebrew `g++-15`; packed as tar.gz |
-| Upload | Each of the three packages is uploaded to Artifacts (kept 90 days) |
+All three run the same steps on their own OS runner: `npm install` → `npm run build` for `dist/`, `sh server/build.sh` for the executable, then both go into one package uploaded to Artifacts (kept 90 days).
+
+| Workflow | Runner | Compiler | Package |
+| --- | --- | --- | --- |
+| Build Server Windows | `windows-latest` | MSYS2 UCRT64 GCC (`windres` embeds icon and version info) | zip |
+| Build Server Linux | `ubuntu-24.04` | `g++-14` | tar.gz (keeps the execute bit) |
+| Build Server macOS | `macos-15` (Apple Silicon) | Homebrew `g++-15` | tar.gz (keeps the execute bit) |
 
 ### Good to know
 
