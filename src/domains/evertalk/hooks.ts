@@ -111,6 +111,7 @@ export function useEverTalkController(): EverTalkController {
     const [modelLoadingId, setModelLoadingId] = useState<string | null>(null);
     const [modelCatalogError, setModelCatalogError] = useState<string | null>(null);
     const [modelPreparation, setModelPreparation] = useState<ModelPreparationState | null>(null);
+    const [chromeInstalledModelLinking, setChromeInstalledModelLinking] = useState(false);
     const [backupBusy, setBackupBusy] = useState(false);
     const [backupMessage, setBackupMessage] = useState<string | null>(null);
     const [backupError, setBackupError] = useState<string | null>(null);
@@ -999,6 +1000,51 @@ export function useEverTalkController(): EverTalkController {
         }
     }
 
+    async function linkChromeInstalledModelFolder(files: File[]) {
+        if (chromeInstalledModelLinking) {
+            return;
+        }
+        setChromeInstalledModelLinking(true);
+        setModelCatalogError(null);
+        try {
+            setModelCatalog(await llmClient.linkChromeInstalledModelFolder(files));
+            await refreshLlmStatus();
+        }
+        catch (err) {
+            console.error(labels.logModelInstallFailed, err);
+            setModelCatalogError(formatUnknownError(err, labels));
+        }
+        finally {
+            setChromeInstalledModelLinking(false);
+        }
+    }
+
+    async function linkChromeLocalState(file: File) {
+        try {
+            setModelCatalog(await llmClient.linkChromeLocalState(file));
+            setAppSettings(await settingsClient.get());
+            setModelCatalogError(null);
+            await refreshLlmStatus();
+        }
+        catch (err) {
+            console.error(labels.logLocalModelChangeFailed, err);
+            setModelCatalogError(formatUnknownError(err, labels));
+        }
+    }
+
+    async function saveChromeModelFolderPath(folderPath: string) {
+        try {
+            setModelCatalog(await llmClient.saveChromeModelFolderPath(folderPath));
+            setAppSettings(await settingsClient.get());
+            setModelCatalogError(null);
+            syncClient.scheduleAutomaticBackup();
+        }
+        catch (err) {
+            console.error(labels.logLocalModelChangeFailed, err);
+            setModelCatalogError(formatUnknownError(err, labels));
+        }
+    }
+
     async function installLocalModel(engine: LocalModelEngineKind) {
         if (modelPreparation !== null) {
             return;
@@ -1546,6 +1592,10 @@ export function useEverTalkController(): EverTalkController {
         refreshModelCatalog,
         selectChatModel,
         prepareOnDeviceSystemModel,
+        linkChromeInstalledModelFolder,
+        saveChromeModelFolderPath,
+        linkChromeLocalState,
+        chromeInstalledModelLinking,
         installLocalModel,
         downloadLocalModel,
         saveNativeHostModelPath,

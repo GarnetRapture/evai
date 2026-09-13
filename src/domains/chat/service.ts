@@ -5,9 +5,10 @@ import type { AppLanguage } from '../../shared/types';
 import { knowledgeClient } from '../knowledge/client';
 import { chatModelRuntime } from '../llm';
 import {
-    RELEVANT_DIALOGUE_EXAMPLE_LIMIT,
+    FAMILIARITY_MAX_LEVEL,
     findEmotionPreset,
     resolveActivePersonaCheatPreset,
+    resolveBondProgress,
     resolvePersonaFamiliarityLevel,
     type PersonaCheatPreset,
 } from '../persona';
@@ -17,6 +18,7 @@ import { extractHabitTokens } from './habit';
 import {
     PERSONA_EMOTION_BASELINE,
     advancePersonaEmotion,
+    applyRivalAttention,
     createPersonaEmotionState,
     createPersonaEmotionStateFromLevels,
     type PersonaEmotionLevels,
@@ -77,15 +79,18 @@ import {
     buildProactiveTurnHeading,
 } from './proactive';
 import { chatRepository } from './repository';
+import { buildPersonaRivalContexts, countPersonaRivalAttention } from './rivalContext';
 import type {
     ChatMessage,
     ChatRoom,
     ChatSendRequest,
     PersonaMemoryInsight,
+    PersonaPreparedTurnReferences,
     PersonaReplyGeneration,
     PersonaReplyGenerationInput,
     PersonaReplyViolation,
     PersonaSystemPrompt,
+    PersonaTurnContext,
     PersonaTurnContextRequest,
     ProactiveGenerationOptions,
 } from './types';
@@ -97,9 +102,9 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
     const { persona } = input;
     const structuredReply = buildPersonaReplySpec({
         reasoning: input.reasoning,
-        max_messages: resolvePersonaReplyMessageLimit(persona.speech_style),
+        max_messages: resolvePersonaReplyMessageLimit(persona.voice.style),
     });
-    const turnHook = buildPersonaTurnHook(persona.spirit_name, persona.address_term, input.reasoning, persona.speech_style, persona.voice_register);
+    const turnHook = buildPersonaTurnHook(persona.spirit_name, persona.address_term, input.reasoning, persona.voice);
     let content = '';
     let previousViolation: PersonaReplyViolation | null = null;
     for (let attempt = 1; attempt <= PERSONA_REPLY_ATTEMPT_LIMIT; attempt += 1) {
@@ -118,7 +123,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
             messages: input.messages,
             behavior_instruction: previousViolation === null
                 ? turnHook
-                : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name, previousViolation, persona.voice_register)}`,
+                : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name, previousViolation, persona.voice)}`,
             structured_reply: structuredReply,
             signal: attemptSignal,
             handlers: {
@@ -143,7 +148,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         }
         const finalEnvelope = normalizePersonaReplyEnvelope(parsePersonaReplyEnvelope(breached ? rawReply : result.text), input.language);
         content = renderPersonaReplyContent(finalEnvelope);
-        const violation = breached ? 'meta_breach' : detectPersonaReplyViolation(finalEnvelope, persona.voice_register, input.language);
+        const violation = breached ? 'meta_breach' : detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language);
         if (redirectable && violation !== null) {
             previousViolation = violation;
             continue;
@@ -172,14 +177,48 @@ async function resolvePersonaEmotionSeed(
         : createPersonaEmotionStateFromLevels(presetLevels, occurredAt);
 }
 
-async function collectPersonaTurnContext(request: PersonaTurnContextRequest): Promise<string> {
-    const { persona_id: personaId, filter } = request;
-    const queryVector = createLexicalMemoryVector(request.query);
+async function readPersonaFamiliarityLevel(personaId: string, cheatPreset: PersonaCheatPreset | null): Promise<number> {
     const [messageCount, memoryCount] = await Promise.all([
         chatRepository.countMessagesForPersona(personaId),
         chatRepository.countEpisodicMemories(personaId),
     ]);
-    const familiarityLevel = resolvePersonaFamiliarityLevel(messageCount, memoryCount, request.cheat_bond_level);
+    return resolvePersonaFamiliarityLevel(messageCount, memoryCount, cheatPreset?.bond_level ?? null);
+}
+
+async function preparePersonaTurnReferences(request: PersonaTurnContextRequest): Promise<PersonaPreparedTurnReferences> {
+    const references = await personaService.getTurnPersonaReferences({
+        persona_id: request.persona_id,
+        language: request.language,
+        query: request.query,
+        excluded_terms: request.excluded_terms,
+        familiarity_level: request.familiarity_level,
+        rival_persona_ids: request.contact.rival_attention.map((attention) => attention.persona_id),
+        mention_candidate_ids: request.contact.mention_candidate_ids,
+    });
+    return { references, rivals: buildPersonaRivalContexts(request.contact, references) };
+}
+
+async function applyPersonaRivalEmotion(
+    personaId: string,
+    prepared: PersonaPreparedTurnReferences,
+    familiarityLevel: number,
+    occurredAt: string,
+): Promise<void> {
+    const rivalAttention = countPersonaRivalAttention(prepared.rivals);
+    const current = await chatRepository.getPersonaEmotion(personaId);
+    if (rivalAttention === 0 || current === null) {
+        return;
+    }
+    await chatRepository.upsertPersonaEmotion(
+        personaId,
+        applyRivalAttention(current, rivalAttention, resolveBondProgress(familiarityLevel, FAMILIARITY_MAX_LEVEL), occurredAt),
+    );
+}
+
+async function collectPersonaTurnContext(request: PersonaTurnContextRequest, prepared: PersonaPreparedTurnReferences): Promise<PersonaTurnContext> {
+    const { persona_id: personaId, filter } = request;
+    const queryVector = createLexicalMemoryVector(request.query);
+    const { references: personaReferences, rivals } = prepared;
     const [
         semanticSummary,
         recentDirectives,
@@ -188,7 +227,6 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest): Pr
         habits,
         emotion,
         knowledge,
-        personaReferences,
     ] = await Promise.all([
         filter.semantic ? chatRepository.getSemanticMemory(personaId) : Promise.resolve(null),
         filter.directive ? chatRepository.listDirectiveMemories(personaId, MEMORY_DIRECTIVE_LIMIT) : Promise.resolve([]),
@@ -199,21 +237,24 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest): Pr
         filter.habit ? chatRepository.listFrequentHabits(personaId, HABIT_INJECT_LIMIT, HABIT_INJECT_MIN_OCCURRENCE) : Promise.resolve([]),
         filter.affect ? chatRepository.getPersonaEmotion(personaId) : Promise.resolve(null),
         request.include_knowledge && filter.knowledge ? knowledgeClient.search(request.query, KNOWLEDGE_INJECT_LIMIT) : Promise.resolve([]),
-        personaService.getTurnPersonaReferences(personaId, request.language, request.query, RELEVANT_DIALOGUE_EXAMPLE_LIMIT, request.excluded_terms, familiarityLevel),
     ]);
-    return buildPersonaTurnContext({
-        digest_summary: request.digest_summary,
-        semantic_summary: semanticSummary,
-        directives: mergeDirectiveMemories(relevantDirectives, recentDirectives.map((directive) => directive.memory_text), MEMORY_DIRECTIVE_LIMIT),
-        episodic,
-        habits: habits.map((habit) => habit.memory_text).sort(),
-        knowledge: knowledge.map((chunk) => chunk.chunk_text),
-        emotion,
-        familiarity_level: familiarityLevel,
-        voice_examples: personaReferences.voice_examples,
-        voice_reference_kind: personaReferences.voice_reference_kind,
-        profile_mentions: personaReferences.profile_mentions,
-    }, request.spirit_name, request.address_term, filter);
+    return {
+        context: buildPersonaTurnContext({
+            digest_summary: request.digest_summary,
+            semantic_summary: semanticSummary,
+            directives: mergeDirectiveMemories(relevantDirectives, recentDirectives.map((directive) => directive.memory_text), MEMORY_DIRECTIVE_LIMIT),
+            episodic,
+            habits: habits.map((habit) => habit.memory_text).sort(),
+            knowledge: knowledge.map((chunk) => chunk.chunk_text),
+            emotion,
+            familiarity_level: request.familiarity_level,
+            profile_mentions: personaReferences.profile_mentions,
+            last_contact_at: request.contact.last_contact_at,
+            rivals,
+            mentioned_relations: personaReferences.mentioned_relations,
+        }, request.spirit_name, request.address_term, filter),
+        rehearsal_messages: buildPersonaPrimingMessages(personaReferences.rehearsal_exchanges),
+    };
 }
 
 interface TurnMemoryContext {
@@ -333,19 +374,22 @@ export const chatService = {
         language: AppLanguage,
         saviorName: string,
         cheatPreset: PersonaCheatPreset | null,
+        familiarityLevel: number,
     ): Promise<PersonaSystemPrompt> {
-        const persona = await personaService.getAssembledPersonaPrompt(personaId, language, saviorName, cheatPreset);
+        const [persona, primingExchanges] = await Promise.all([
+            personaService.getAssembledPersonaPrompt(personaId, language, saviorName, cheatPreset),
+            personaService.getPrimingDialogueExchanges(personaId, language, familiarityLevel),
+        ]);
         return {
             spirit_name: persona.localized_name,
             session_prompt: {
                 system_prompt: persona.assembled_prompt,
-                priming_messages: buildPersonaPrimingMessages(persona.speech_profile.dialogue_examples),
+                priming_messages: buildPersonaPrimingMessages(primingExchanges),
             },
             address_term: persona.address_term,
             greeting: persona.greeting,
             dialogue_excluded_terms: persona.dialogue_excluded_terms,
-            speech_style: persona.speech_profile.style,
-            voice_register: persona.voice_register,
+            voice: persona.voice,
         };
     },
     async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {
@@ -366,11 +410,13 @@ export const chatService = {
     },
     async focusPersonaSession(personaId: string): Promise<void> {
         const settings = await settingsRepository.readAppSettings();
+        const cheatPreset = resolveActivePersonaCheatPreset(settings, personaId);
         const persona = await chatService.buildPersonaBaseSystemPrompt(
             personaId,
             settings.language,
             settings.savior_name,
-            resolveActivePersonaCheatPreset(settings, personaId),
+            cheatPreset,
+            await readPersonaFamiliarityLevel(personaId, cheatPreset),
         );
         await chatModelRuntime.focusPersonaSession(settings.active_model, settings.language, personaId, persona.session_prompt);
     },
@@ -396,6 +442,7 @@ export const chatService = {
 
         const settings = await settingsRepository.readAppSettings();
         const cheatPreset = resolveActivePersonaCheatPreset(settings, candidate.persona_id);
+        const contact = await chatRepository.readPersonaContactSnapshot(candidate.persona_id);
         const emotionBaseline = resolvePersonaEmotionBaseline(cheatPreset);
         const emotionSeed = await resolvePersonaEmotionSeed(candidate.persona_id, settings.language, candidate.latest_activity_at, cheatPreset);
         await chatRepository.upsertPersonaEmotion(
@@ -404,15 +451,16 @@ export const chatService = {
         );
 
         const language = settings.language;
+        const familiarityLevel = await readPersonaFamiliarityLevel(candidate.persona_id, cheatPreset);
         const digest = await chatRepository.getRoomDigest(candidate.room_id, candidate.persona_id);
-        const persona = await chatService.buildPersonaBaseSystemPrompt(candidate.persona_id, language, settings.savior_name, cheatPreset);
+        const persona = await chatService.buildPersonaBaseSystemPrompt(candidate.persona_id, language, settings.savior_name, cheatPreset, familiarityLevel);
         const history = await chatRepository.listRecentMessagesForPersona(
             candidate.room_id,
             candidate.persona_id,
             PROMPT_HISTORY_LIMIT,
             digest?.covered_through ?? '',
         );
-        const turnContext = await collectPersonaTurnContext({
+        const turnRequest: PersonaTurnContextRequest = {
             persona_id: candidate.persona_id,
             language,
             spirit_name: persona.spirit_name,
@@ -423,9 +471,14 @@ export const chatService = {
             filter: settings.memory_context_filter,
             excluded_terms: persona.dialogue_excluded_terms,
             include_knowledge: false,
-            cheat_bond_level: cheatPreset?.bond_level ?? null,
-        });
+            familiarity_level: familiarityLevel,
+            contact: { ...contact, mention_candidate_ids: [] },
+        };
+        const preparedReferences = await preparePersonaTurnReferences(turnRequest);
+        await applyPersonaRivalEmotion(candidate.persona_id, preparedReferences, familiarityLevel, attemptedAt);
+        const turnContext = await collectPersonaTurnContext(turnRequest, preparedReferences);
         const messages = [
+            ...turnContext.rehearsal_messages,
             ...(shouldOpenWithGreeting(persona.greeting, digest?.summary ?? '', history.length, PROMPT_HISTORY_LIMIT)
                 ? buildGreetingOpeningMessage(persona.greeting)
                 : []),
@@ -433,7 +486,7 @@ export const chatService = {
             {
                 role: 'user' as const,
                 content: composePersonaLatestTurn(
-                    turnContext,
+                    turnContext.context,
                     buildProactiveTurnHeading(persona.address_term, candidate.latest_activity_at, attemptedAt),
                     buildProactiveTurnBody(persona.spirit_name, persona.address_term),
                 ),
@@ -489,6 +542,7 @@ export const chatService = {
             content,
             created_at: userOccurredAt,
         };
+        const contact = await chatRepository.readPersonaContactSnapshot(personaId);
         await chatRepository.insertMessage(userMessage);
         const cheatPreset = resolveActivePersonaCheatPreset(settings, personaId);
         const emotionBaseline = resolvePersonaEmotionBaseline(cheatPreset);
@@ -522,7 +576,8 @@ export const chatService = {
             await settingsRepository.updateGeneral({ savior_name: declaredName.slice(0, SAVIOR_NAME_MAX_LENGTH) });
         }
 
-        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language, saviorName, cheatPreset);
+        const familiarityLevel = await readPersonaFamiliarityLevel(personaId, cheatPreset);
+        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language, saviorName, cheatPreset, familiarityLevel);
         const memoryContext: TurnMemoryContext = {
             model_id: modelId,
             language,
@@ -549,7 +604,7 @@ export const chatService = {
             digest?.covered_through ?? '',
         );
         const priorHistory = history.filter((message) => message.id !== userMessage.id);
-        const turnContext = await collectPersonaTurnContext({
+        const turnRequest: PersonaTurnContextRequest = {
             persona_id: personaId,
             language,
             spirit_name: persona.spirit_name,
@@ -560,16 +615,21 @@ export const chatService = {
             filter: settings.memory_context_filter,
             excluded_terms: persona.dialogue_excluded_terms,
             include_knowledge: true,
-            cheat_bond_level: cheatPreset?.bond_level ?? null,
-        });
+            familiarity_level: familiarityLevel,
+            contact,
+        };
+        const preparedReferences = await preparePersonaTurnReferences(turnRequest);
+        await applyPersonaRivalEmotion(personaId, preparedReferences, familiarityLevel, userOccurredAt);
+        const turnContext = await collectPersonaTurnContext(turnRequest, preparedReferences);
         const messages = [
+            ...turnContext.rehearsal_messages,
             ...(shouldOpenWithGreeting(persona.greeting, digest?.summary ?? '', priorHistory.length, PROMPT_HISTORY_LIMIT - 1)
                 ? buildGreetingOpeningMessage(persona.greeting)
                 : []),
             ...toPersonaHistoryMessages(priorHistory),
             {
                 role: 'user' as const,
-                content: composePersonaLatestTurn(turnContext, buildNewMessageHeading(persona.address_term, userOccurredAt), content),
+                content: composePersonaLatestTurn(turnContext.context, buildNewMessageHeading(persona.address_term, userOccurredAt), content),
             },
         ];
 

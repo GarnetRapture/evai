@@ -1,3 +1,4 @@
+import { CHROME_PROMPT_API_SUPPORTED_LANGUAGE_TAGS } from '../constants';
 import type { ChromeLanguageModelProbe, ModelDownloadProgressHandler } from '../types';
 
 export interface ChromeLanguageModelCreateRequest {
@@ -15,7 +16,7 @@ interface LanguageExpectationOptions {
 }
 
 function languageExpectations(declaredLanguageTag: string | null): LanguageExpectationOptions {
-    if (declaredLanguageTag === null) {
+    if (declaredLanguageTag === null || !CHROME_PROMPT_API_SUPPORTED_LANGUAGE_TAGS.includes(declaredLanguageTag)) {
         return {};
     }
     const inputLanguages = declaredLanguageTag === 'en' ? ['en'] : ['en', declaredLanguageTag];

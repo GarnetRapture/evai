@@ -7,15 +7,18 @@
 
 #include "c/conversation.h"
 #include "c/engine.h"
+#include "c/error_reporter.h"
 
 namespace eversoul::native {
 
 struct LiteRtLmApi {
+    decltype(&::litert_lm_get_last_error_message) lastErrorMessage = nullptr;
     decltype(&::litert_lm_set_min_log_level) setMinLogLevel = nullptr;
     decltype(&::litert_lm_engine_settings_create) engineSettingsCreate = nullptr;
     decltype(&::litert_lm_engine_settings_delete) engineSettingsDelete = nullptr;
     decltype(&::litert_lm_engine_settings_set_max_num_tokens) engineSettingsSetMaxNumTokens = nullptr;
     decltype(&::litert_lm_engine_settings_set_cache_dir) engineSettingsSetCacheDir = nullptr;
+    decltype(&::litert_lm_engine_settings_enable_benchmark) engineSettingsEnableBenchmark = nullptr;
     decltype(&::litert_lm_engine_create) engineCreate = nullptr;
     decltype(&::litert_lm_engine_delete) engineDelete = nullptr;
     decltype(&::litert_lm_engine_tokenize) engineTokenize = nullptr;
@@ -46,6 +49,12 @@ struct LiteRtLmApi {
     decltype(&::litert_lm_conversation_send_message_stream) conversationSendMessageStream = nullptr;
     decltype(&::litert_lm_conversation_cancel_process) conversationCancelProcess = nullptr;
     decltype(&::litert_lm_conversation_get_token_count) conversationGetTokenCount = nullptr;
+    decltype(&::litert_lm_conversation_get_benchmark_info) conversationGetBenchmarkInfo = nullptr;
+    decltype(&::litert_lm_benchmark_info_delete) benchmarkInfoDelete = nullptr;
+    decltype(&::litert_lm_benchmark_info_get_num_prefill_turns) benchmarkPrefillTurns = nullptr;
+    decltype(&::litert_lm_benchmark_info_get_num_decode_turns) benchmarkDecodeTurns = nullptr;
+    decltype(&::litert_lm_benchmark_info_get_prefill_token_count_at) benchmarkPrefillTokens = nullptr;
+    decltype(&::litert_lm_benchmark_info_get_decode_token_count_at) benchmarkDecodeTokens = nullptr;
     decltype(&::litert_lm_stream_chunk_get_text) streamChunkGetText = nullptr;
     decltype(&::litert_lm_stream_chunk_is_final) streamChunkIsFinal = nullptr;
     decltype(&::litert_lm_stream_chunk_get_error) streamChunkGetError = nullptr;
@@ -72,9 +81,10 @@ public:
     [[nodiscard]] const std::filesystem::path& path() const noexcept { return path_; }
 
 private:
-    LiteRtLmLibrary(void* module, LiteRtLmApi api, std::filesystem::path path) noexcept;
+    LiteRtLmLibrary(void* module, LiteRtLmApi api, std::filesystem::path path, void* searchDirectory = nullptr) noexcept;
 
     void* module_ = nullptr;
+    void* searchDirectory_ = nullptr;
     LiteRtLmApi api_;
     std::filesystem::path path_;
 };

@@ -1,4 +1,4 @@
-export const PERSONA_EMOTION_KINDS = ['happy', 'melancholy', 'bored', 'passionate'] as const;
+export const PERSONA_EMOTION_KINDS = ['happy', 'melancholy', 'bored', 'passionate', 'jealous'] as const;
 
 export type PersonaEmotionKind = (typeof PERSONA_EMOTION_KINDS)[number];
 
@@ -7,6 +7,7 @@ export interface PersonaEmotionLevels {
     melancholy: number;
     bored: number;
     passionate: number;
+    jealous: number;
 }
 
 export interface PersonaEmotionState {
@@ -20,6 +21,7 @@ export const PERSONA_EMOTION_BASELINE: PersonaEmotionLevels = {
     melancholy: 12,
     bored: 16,
     passionate: 34,
+    jealous: 4,
 };
 
 const EMOTION_SIGNALS: Record<PersonaEmotionKind, RegExp> = {
@@ -27,7 +29,11 @@ const EMOTION_SIGNALS: Record<PersonaEmotionKind, RegExp> = {
     melancholy: /슬퍼|우울|외로|힘들|아파|미안|울고|눈물|sad|depress|lonely|hurt|sorry|cry|难过|忧郁|孤独|痛苦|对不起|哭/iu,
     bored: /심심|지루|할\s*거\s*없|무료해|bored|boring|nothing\s+to\s+do|无聊|没事做/iu,
     passionate: /열정|신나|두근|설레|당장|함께|가까이|안아|키스|사랑|passion|excited|together|closer|embrace|kiss|热情|兴奋|心动|一起|靠近|拥抱|吻|爱/iu,
+    jealous: /질투|샘나|시샘|바람\s*피|다른\s*(애|여자|정령|사람)|jealous|envious|cheat(?:ing)?\s+on|吃醋|嫉妒|别的女/iu,
 };
+const RIVAL_ATTENTION_MAX_DELTA = 36;
+const RIVAL_ATTENTION_SATURATION_COUNT = 30;
+const REASSURANCE_JEALOUSY_RELIEF_RATIO = 0.5;
 
 function clampLevel(value: number): number {
     if (!Number.isFinite(value)) return 0;
@@ -95,18 +101,43 @@ export function advancePersonaEmotion(
     if (EMOTION_SIGNALS.happy.test(text) || EMOTION_SIGNALS.passionate.test(text)) {
         levels.bored -= signalDelta * 0.65;
         levels.melancholy -= signalDelta * 0.2;
+        levels.jealous -= signalDelta * REASSURANCE_JEALOUSY_RELIEF_RATIO;
     }
     if (EMOTION_SIGNALS.melancholy.test(text)) {
         levels.happy -= signalDelta * 0.28;
     }
+    return normalizeEmotionState(levels, occurredAt);
+}
 
+function normalizeEmotionState(levels: PersonaEmotionLevels, occurredAt: string): PersonaEmotionState {
     const normalized: PersonaEmotionLevels = {
         happy: clampLevel(levels.happy),
         melancholy: clampLevel(levels.melancholy),
         bored: clampLevel(levels.bored),
         passionate: clampLevel(levels.passionate),
+        jealous: clampLevel(levels.jealous),
     };
     return { levels: normalized, dominant: dominantEmotion(normalized), updated_at: occurredAt };
+}
+
+export function applyRivalAttention(
+    previous: PersonaEmotionState,
+    rivalAttentionCount: number,
+    bondProgress: number,
+    occurredAt: string,
+): PersonaEmotionState {
+    if (rivalAttentionCount <= 0) {
+        return previous;
+    }
+    const attachment = Math.min(1, Math.max(0, bondProgress));
+    const saturation = Math.min(1, Math.log2(1 + rivalAttentionCount) / Math.log2(1 + RIVAL_ATTENTION_SATURATION_COUNT));
+    const delta = RIVAL_ATTENTION_MAX_DELTA * attachment * saturation;
+    return normalizeEmotionState({
+        ...previous.levels,
+        jealous: previous.levels.jealous + delta,
+        melancholy: previous.levels.melancholy + delta * 0.25,
+        happy: previous.levels.happy - delta * 0.3,
+    }, occurredAt);
 }
 
 export function serializePersonaEmotion(state: PersonaEmotionState): string {

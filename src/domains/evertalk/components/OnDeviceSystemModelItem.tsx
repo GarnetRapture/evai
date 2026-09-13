@@ -1,4 +1,5 @@
 import { Download } from 'lucide-react';
+import { CHROME_FLAGS_PAGE_URL, CHROME_PROMPT_DEFAULT_VARIANT } from '../../llm/constants';
 import { formatDateTime, formatMegabytes, formatProgressPercent } from '../logic';
 import type { OnDeviceSystemModelItemProps } from '../types';
 
@@ -9,17 +10,32 @@ export function OnDeviceSystemModelItem({ entry, modelPreparation, modelLoadingI
     const loading = modelLoadingId === entry.id;
     const androidNano = entry.engine === 'android_gemini_nano';
     const unsupportedLabel = androidNano ? labels.modelAndroidGeminiNanoUnsupported : labels.modelApiUnsupported;
+    const variantMismatch = entry.engine === 'chrome_prompt' && entry.verification === 'flag_mismatch';
+    const showBuiltInInventory = entry.engine === 'chrome_prompt' && entry.variant === CHROME_PROMPT_DEFAULT_VARIANT;
     return (<div className={`ever-model-item ${entry.selected ? 'is-selected' : ''}`}>
         <div className="ever-model-item__main">
-          <input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.api_supported || modelLoadingId !== null} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>
+          <input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.api_supported || variantMismatch || modelLoadingId !== null} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>
           <span>
-            <strong>{androidNano ? labels.modelRoleAndroidGeminiNano : labels.modelRoleChat}</strong>
-            {entry.engine === 'chrome_prompt' && entry.variant ? <strong>{labels.chromeOnDeviceVariantTitle(entry.variant.base_model_name ?? entry.variant.component_asset_id ?? entry.variant.use_case, entry.variant.base_model_version)}</strong> : null}
+            <strong>{androidNano ? labels.modelRoleAndroidGeminiNano : entry.engine === 'chrome_prompt' ? labels.chromePromptVariantTitle[entry.variant] : labels.modelRoleChat}</strong>
             <small>{entry.id}</small>
-            {entry.engine === 'chrome_prompt' && entry.variant ? <small>{labels.chromeOnDeviceVariantDetail(entry.variant.use_case, entry.variant.component_version, entry.variant.weights_bytes === null ? null : formatMegabytes(entry.variant.weights_bytes), entry.variant.weights_format)}</small> : null}
-            {entry.engine === 'chrome_prompt' && entry.variant ? <small>{labels.chromeOnDeviceUseCaseState(entry.variant.installed, entry.variant.last_requested_at === null ? null : formatDateTime(entry.variant.last_requested_at, labels))}</small> : null}
-            {entry.engine === 'chrome_prompt' && entry.chrome_flag ? <small>{labels.chromeOnDeviceFeatureFlag(entry.chrome_flag)}</small> : null}
-            {entry.engine === 'chrome_prompt' && !entry.variant ? <small>{labels.chromeOnDeviceInventoryUnavailable(entry.inventory_detail)}</small> : null}
+            {entry.engine === 'chrome_prompt' ? <small>{labels.chromePromptVariantFlag(CHROME_FLAGS_PAGE_URL, entry.required_flag_enabled)}</small> : null}
+            {entry.engine === 'chrome_prompt' ? <small className={variantMismatch ? 'ever-model-item__error' : undefined}>{labels.chromePromptVariantVerification[entry.verification]}</small> : null}
+            {entry.engine === 'chrome_prompt' && entry.installed_model ? <small>{labels.chromePromptVariantInstalled(entry.installed_model.base_model_name, entry.installed_model.component_version, formatMegabytes(entry.installed_model.weights_bytes))}</small> : null}
+            {entry.engine === 'chrome_prompt' && !entry.installed_model && entry.asset ? <small>{labels.chromePromptVariantAsset(entry.asset.asset_id, entry.asset.requested_version)}</small> : null}
+            {entry.engine === 'chrome_prompt' && entry.last_used_at ? <small>{labels.chromePromptVariantLastUsed(formatDateTime(entry.last_used_at, labels))}</small> : null}
+            {showBuiltInInventory && entry.engine === 'chrome_prompt' && entry.inventory ? entry.inventory.apis.map((api) => (
+                <small key={`${api.kind}:${api.language_pair ?? ''}`}>
+                  {labels.chromeBuiltInAiApiState(
+                    labels.chromeBuiltInAiApiNames[api.kind],
+                    api.language_pair,
+                    !api.exposed ? labels.chromeBuiltInAiApiNotExposed
+                      : api.error !== null ? labels.chromeBuiltInAiApiFailed(api.error)
+                        : api.availability === null ? labels.chromeBuiltInAiApiNotExposed : labels.modelAvailabilityDetail(api.availability),
+                  )}
+                </small>
+              )) : null}
+            {showBuiltInInventory && entry.engine === 'chrome_prompt' && entry.inventory ? <small>{labels.chromeBuiltInAiInventoryReadAt(formatDateTime(entry.inventory.read_at, labels))}</small> : null}
+            {showBuiltInInventory && entry.engine === 'chrome_prompt' && !entry.inventory ? <small>{labels.chromeOnDeviceInventoryUnavailable(entry.inventory_detail)}</small> : null}
             <small>
               {entry.api_supported ? labels.modelAvailabilityDetail(entry.availability) : unsupportedLabel}
               {entry.context_window !== null ? ` · ${labels.modelContextWindow(entry.context_window)}` : ''}

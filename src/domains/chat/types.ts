@@ -58,8 +58,7 @@ export interface PersonaSystemPrompt {
     greeting: string;
     address_term: string;
     dialogue_excluded_terms: string[];
-    speech_style: import('../persona/types').PersonaSpeechStyle | null;
-    voice_register: import('../persona/types').PersonaSpeechRegister | null;
+    voice: import('../persona/types').PersonaVoiceAnchor;
 }
 export type PersonaReplyViolation = 'meta_breach' | 'question_only' | 'register_drift';
 export interface PersonaReplyParts {
@@ -106,9 +105,34 @@ export interface PersonaTurnContextSources {
     knowledge: string[];
     emotion: import('./affect').PersonaEmotionState | null;
     familiarity_level: number;
-    voice_examples: import('../persona/types').PersonaDialogueExchange[];
-    voice_reference_kind: import('../persona/types').PersonaVoiceReferenceKind;
     profile_mentions: import('../persona/types').PersonaProfileMention[];
+    last_contact_at: string;
+    rivals: PersonaRivalContext[];
+    mentioned_relations: import('../persona/types').PersonaRelationEvidence[];
+}
+export interface PersonaTurnContext {
+    context: string;
+    rehearsal_messages: import('../llm').OnDeviceTextMessage[];
+}
+export interface PersonaRivalAttention {
+    persona_id: string;
+    user_message_count: number;
+    latest_user_at: string;
+}
+export interface PersonaRivalContext {
+    relation: import('../persona/types').PersonaRelationEvidence;
+    user_message_count: number;
+    latest_user_at: string;
+    mentioned_now: boolean;
+}
+export interface PersonaPreparedTurnReferences {
+    references: import('../persona/types').PersonaTurnReferences;
+    rivals: PersonaRivalContext[];
+}
+export interface PersonaContactSnapshot {
+    last_contact_at: string;
+    rival_attention: PersonaRivalAttention[];
+    mention_candidate_ids: string[];
 }
 export interface PersonaTurnContextRequest {
     persona_id: string;
@@ -121,7 +145,8 @@ export interface PersonaTurnContextRequest {
     filter: MemoryContextFilter;
     excluded_terms: string[];
     include_knowledge: boolean;
-    cheat_bond_level: number | null;
+    familiarity_level: number;
+    contact: PersonaContactSnapshot;
 }
 export interface ChatSendRequest {
     room_id: string;
@@ -151,6 +176,10 @@ export interface SparseMemoryVector {
     values: number[];
 }
 export type MemoryVector = number[] | SparseMemoryVector;
+export interface RankedMemoryCandidate {
+    relevance: number;
+    created_at: string;
+}
 export interface PersonaMemoryRecordBase {
     id: string;
     persona_id: string;

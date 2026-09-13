@@ -79,31 +79,37 @@ export const PERSONA_EMOTION_PRESETS: readonly PersonaEmotionPresetOption[] = [
         id: 'cheerful',
         labels: { ko: '행복함', en: 'Happy', zh_cn: '幸福' },
         descriptions: { ko: '기분이 좋고 들떠 있는 상태', en: 'In high spirits', zh_cn: '心情很好、兴致高昂' },
-        levels: { happy: 72, melancholy: 8, bored: 8, passionate: 45 },
+        levels: { happy: 72, melancholy: 8, bored: 8, passionate: 45, jealous: 2 },
     },
     {
         id: 'calm',
         labels: { ko: '평온함', en: 'Calm', zh_cn: '平静' },
         descriptions: { ko: '차분하고 안정된 상태', en: 'Settled and at ease', zh_cn: '沉稳安定' },
-        levels: { happy: 45, melancholy: 12, bored: 14, passionate: 22 },
+        levels: { happy: 45, melancholy: 12, bored: 14, passionate: 22, jealous: 2 },
     },
     {
         id: 'lovestruck',
         labels: { ko: '두근거림', en: 'Lovestruck', zh_cn: '心动' },
         descriptions: { ko: '설렘으로 가슴이 뛰는 상태', en: 'Heart racing with affection', zh_cn: '因心动而怦怦直跳' },
-        levels: { happy: 62, melancholy: 8, bored: 6, passionate: 78 },
+        levels: { happy: 62, melancholy: 8, bored: 6, passionate: 78, jealous: 10 },
     },
     {
         id: 'wistful',
         labels: { ko: '울적함', en: 'Wistful', zh_cn: '忧郁' },
         descriptions: { ko: '조금 쓸쓸하고 가라앉은 상태', en: 'A little lonely and low', zh_cn: '有些寂寞、情绪低落' },
-        levels: { happy: 22, melancholy: 68, bored: 20, passionate: 18 },
+        levels: { happy: 22, melancholy: 68, bored: 20, passionate: 18, jealous: 12 },
     },
     {
         id: 'bored',
         labels: { ko: '심심함', en: 'Bored', zh_cn: '无聊' },
         descriptions: { ko: '할 일이 없어 관심을 바라는 상태', en: 'Restless and wanting attention', zh_cn: '闲得发慌、想被关注' },
-        levels: { happy: 30, melancholy: 18, bored: 70, passionate: 14 },
+        levels: { happy: 30, melancholy: 18, bored: 70, passionate: 14, jealous: 6 },
+    },
+    {
+        id: 'jealous',
+        labels: { ko: '질투', en: 'Jealous', zh_cn: '吃醋' },
+        descriptions: { ko: '다른 정령에게 마음을 빼앗길까 초조한 상태', en: 'Afraid of losing them to another soul', zh_cn: '担心对方被别的精灵抢走' },
+        levels: { happy: 24, melancholy: 30, bored: 10, passionate: 46, jealous: 72 },
     },
 ];
 

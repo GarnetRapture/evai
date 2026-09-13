@@ -58,6 +58,12 @@ NativeSettings readNativeSettings(const std::filesystem::path& path) {
 }
 
 void updateNativeSettings(const std::filesystem::path& path, const NativeSettings& updates) {
+    for (const auto& [key, value] : updates) {
+        if (key.empty() || key.find_first_of("=\r\n\0", 0, 4) != key.npos
+            || value.find_first_of("\r\n\0", 0, 3) != value.npos) {
+            throw std::runtime_error("invalid_native_setting");
+        }
+    }
     std::vector<std::string> lines;
     {
         std::ifstream input(path);
@@ -68,10 +74,10 @@ void updateNativeSettings(const std::filesystem::path& path, const NativeSetting
     NativeSettings remaining = updates;
     for (std::string& line : lines) {
         const std::string key = keyFromLine(line);
-        const auto replacement = remaining.find(key);
-        if (replacement == remaining.end()) continue;
+        const auto replacement = updates.find(key);
+        if (replacement == updates.end()) continue;
         line = replacement->first + '=' + replacement->second;
-        remaining.erase(replacement);
+        remaining.erase(key);
     }
     if (!remaining.empty()) {
         if (!lines.empty() && !lines.back().empty()) lines.emplace_back();

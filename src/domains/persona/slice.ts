@@ -1,4 +1,5 @@
 import { normalizeLanguageText } from '../../shared/i18n';
+import { personaCharacterKey } from './characterName';
 import { repairSaviorChoicePairSpeakers } from './dialogue';
 import type { AppLanguage } from '../../shared/types';
 import type {
@@ -66,7 +67,10 @@ function localizedDialogues(
             speaker: normalizeLanguageText(source.speaker, language),
             message: normalizeLanguageText(source.message, language),
         });
-        const dialogue = normalized?.speaker === originalName ? { ...normalized, speaker: localizedName } : normalized;
+        const dialogue = normalized !== null
+            && (normalized.speaker === originalName || personaCharacterKey(normalized.speaker) === personaCharacterKey(localizedName))
+            ? { ...normalized, speaker: localizedName }
+            : normalized;
         if (dialogue) {
             normalizedEntries.push(dialogue);
         }
@@ -126,10 +130,14 @@ function textOrPlaceholder(value: string): string {
     return value.trim().length > 0 ? value : EMPTY_SLICE_FIELD;
 }
 
+export function buildPersonaLocalizedName(pack: SpiritDetail, language: AppLanguage): string {
+    return textOrPlaceholder(localizedText(pack.i18n?.name, language) || pack.name);
+}
+
 export function buildPersonaLanguageSlice(pack: SpiritDetail, language: AppLanguage): PersonaLanguageSlice {
     const i18n = pack.i18n;
     const profile = i18n?.profile;
-    const name = textOrPlaceholder(localizedText(i18n?.name, language) || pack.name);
+    const name = buildPersonaLocalizedName(pack, language);
     return {
         name,
         name_en: pack.name_en,

@@ -1,6 +1,9 @@
 import type { DomainErrorCode } from '../../shared/errors';
 import { EVERSOUL_DATABASE_ERROR_DETAIL } from '../../shared/storage';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
+import type { ChromeBuiltInAiApiKind } from '../../shared/types/chromeOnDevice';
+import type { ChromePromptModelVariant, ChromePromptVariantVerification } from '../llm/types';
+import type { PersonaEmotionKind } from '../chat/affect';
 import type { MemoryContextKind } from '../chat/types';
 import type { LocalModelEngineKind } from '../llm/types';
 import type { SpiritRaidEvent } from '../persona/types';
@@ -70,7 +73,7 @@ export interface EverTalkLabels {
     memoryInsightTitle: string;
     memoryInsightSummary: string;
     memoryInsightEmotion: string;
-    memoryEmotionNames: Record<'happy' | 'melancholy' | 'bored' | 'passionate', string>;
+    memoryEmotionNames: Record<PersonaEmotionKind, string>;
     memoryInsightDirectives: string;
     memoryInsightEpisodes: string;
     memoryInsightEmpty: string;
@@ -298,11 +301,42 @@ export interface EverTalkLabels {
     modelSamplingParams: (defaultTopK: number, maxTopK: number, defaultTemperature: number, maxTemperature: number) => string;
     modelProbeFailed: (detail: string) => string;
     modelSamplingParamsWebUnavailable: string;
-    chromeOnDeviceVariantTitle: (modelName: string, modelVersion: string | null) => string;
-    chromeOnDeviceVariantDetail: (useCase: string, componentVersion: string | null, megabytes: number | null, format: string) => string;
-    chromeOnDeviceUseCaseState: (installed: boolean, requestedAt: string | null) => string;
-    chromeOnDeviceFeatureFlag: (feature: string) => string;
+    chromeBuiltInAiApiNames: Record<ChromeBuiltInAiApiKind, string>;
+    chromeBuiltInAiApiState: (apiName: string, languagePair: string | null, state: string) => string;
+    chromeBuiltInAiApiNotExposed: string;
+    chromeBuiltInAiApiFailed: (detail: string) => string;
+    chromeBuiltInAiInventoryReadAt: (readAt: string) => string;
     chromeOnDeviceInventoryUnavailable: (detail: string) => string;
+    chromePromptVariantTitle: Record<ChromePromptModelVariant, string>;
+    chromePromptVariantFlag: (flagUrl: string, requiresEnabled: boolean) => string;
+    chromePromptVariantVerification: Record<ChromePromptVariantVerification, string>;
+    chromePromptVariantInstalled: (modelName: string, componentVersion: string, megabytes: number) => string;
+    chromePromptVariantAsset: (assetId: string, version: string) => string;
+    chromePromptVariantLastUsed: (usedAt: string) => string;
+    chromeBrowserModelState: (gemma4FlagEnabled: boolean, chromeVersion: string | null, readAt: string) => string;
+    chromeBrowserModelStateMissing: string;
+    chromeLocalStatePath: (path: string) => string;
+    chromeLocalStateLink: string;
+    chromeInstalledModelSectionTitle: string;
+    chromeInstalledModelSectionDescription: string;
+    chromeInstalledModelEmpty: string;
+    chromeInstalledModelTitle: (modelName: string, modelVersion: string) => string;
+    chromeInstalledModelUnlinkedTitle: string;
+    chromeInstalledModelMeta: (store: string, componentVersion: string, megabytes: number, format: string, performanceHints: number[]) => string;
+    chromeInstalledModelRelinkRequired: string;
+    chromeInstalledModelNotRunnable: string;
+    chromeInstalledModelRunnable: string;
+    chromeInstalledModelPathLabel: string;
+    chromeInstalledModelPathPlaceholder: string;
+    chromeInstalledModelPathHint: string;
+    chromeInstalledModelStorePath: (storePath: string) => string;
+    chromeInstalledModelCopyPath: string;
+    chromeInstalledModelPathSave: string;
+    chromeInstalledModelPathSaving: string;
+    chromeInstalledModelLinkFolder: string;
+    chromeInstalledModelLinking: string;
+    chromeInstalledModelGuideTitle: string;
+    chromeInstalledModelGuideSteps: string[];
     modelRoleAndroidGeminiNano: string;
     modelAndroidGeminiNanoUnsupported: string;
     modelLanguageSupport: (languageTag: string, declared: boolean) => string;
@@ -499,7 +533,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryInsightTitle: '기억 인사이트',
         memoryInsightSummary: '통합 요약',
         memoryInsightEmotion: '현재 감정 상태',
-        memoryEmotionNames: { happy: '행복함', melancholy: '우울함', bored: '심심함', passionate: '열정적' },
+        memoryEmotionNames: { happy: '행복함', melancholy: '우울함', bored: '심심함', passionate: '열정적', jealous: '질투' },
         memoryInsightDirectives: '기억하라고 지시한 내용',
         memoryInsightEpisodes: '최근 기억',
         memoryInsightEmpty: '아직 이 정령이 기억한 내용이 없습니다. 대화를 나누면 브라우저 IndexedDB에 기억이 쌓입니다.',
@@ -762,11 +796,61 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSamplingParams: (defaultTopK, maxTopK, defaultTemperature, maxTemperature) => `샘플링 · topK 기본 ${defaultTopK} / 최대 ${maxTopK} · 온도 기본 ${defaultTemperature} / 최대 ${maxTemperature}`,
         modelProbeFailed: (detail) => `브라우저 모델 정보 조회 실패: ${detail}`,
         modelSamplingParamsWebUnavailable: '샘플링 파라미터 · 이 브라우저는 웹 페이지에 LanguageModel.params()를 제공하지 않음 (samplingMode로 제어)',
-        chromeOnDeviceVariantTitle: (modelName, modelVersion) => `Chrome 설치 모델 · ${modelName}${modelVersion ? ` (${modelVersion})` : ''}`,
-        chromeOnDeviceVariantDetail: (useCase, componentVersion, megabytes, format) => `유스케이스 ${useCase} · 컴포넌트 ${componentVersion ?? '-'} · ${megabytes === null ? '-' : `${megabytes} MB`} · 가중치 ${format}`,
-        chromeOnDeviceUseCaseState: (installed, requestedAt) => `${installed ? 'Available' : '설치되지 않음'}${requestedAt ? ` · Requested ${requestedAt}` : ''}`,
-        chromeOnDeviceFeatureFlag: (feature) => `chrome://flags/#gemma4-for-built-in-ai (${feature})`,
-        chromeOnDeviceInventoryUnavailable: (detail) => `Chrome 설치 모델 목록을 읽지 못함 (${detail})`,
+        chromeBuiltInAiApiNames: {
+            language_model: 'Prompt API (LanguageModel)',
+            summarizer: '요약 API (Summarizer)',
+            writer: '작성 API (Writer)',
+            rewriter: '재작성 API (Rewriter)',
+            proofreader: '교정 API (Proofreader)',
+            translator: '번역 API (Translator)',
+            language_detector: '언어 감지 API (LanguageDetector)',
+        },
+        chromeBuiltInAiApiState: (apiName, languagePair, state) => `Chrome 내장 AI · ${apiName}${languagePair ? ` ${languagePair}` : ''} · ${state}`,
+        chromeBuiltInAiApiNotExposed: '이 브라우저에 노출되지 않음',
+        chromeBuiltInAiApiFailed: (detail) => `상태 확인 실패 (${detail})`,
+        chromeBuiltInAiInventoryReadAt: (readAt) => `Chrome 내장 AI 상태 확인 시각 · ${readAt}`,
+        chromeOnDeviceInventoryUnavailable: (detail) => `Chrome 내장 AI 상태를 읽지 못함 (${detail})`,
+        chromePromptVariantTitle: { nano: '대화 생성 · Chrome Prompt API · Gemini Nano (기본)', gemma4: '대화 생성 · Chrome Prompt API · Gemma 4 (플래그 전환)' },
+        chromePromptVariantFlag: (flagUrl, requiresEnabled) => `필요한 Chrome 플래그 · ${flagUrl} = ${requiresEnabled ? 'Enabled' : 'Default'} (변경 후 Chrome 재시작)`,
+        chromePromptVariantVerification: {
+            active: 'Chrome 플래그 상태 확인됨 · 이 모델로 실행됩니다',
+            flag_mismatch: 'Chrome 플래그 상태가 이 모델과 다름 · 플래그를 바꾸고 재시작한 뒤 Local State를 다시 연결하세요',
+            unverified: 'Chrome 플래그 상태 미확인 · 아래에서 Local State 파일을 연결하면 검증합니다',
+        },
+        chromePromptVariantInstalled: (modelName, componentVersion, megabytes) => `설치됨 · ${modelName} · 컴포넌트 ${componentVersion} · ${megabytes} MB`,
+        chromePromptVariantAsset: (assetId, version) => `Chrome 모델 기록 · ${assetId} · ${version}`,
+        chromePromptVariantLastUsed: (usedAt) => `Chrome에서 마지막 사용 · ${usedAt}`,
+        chromeBrowserModelState: (gemma4FlagEnabled, chromeVersion, readAt) => `Chrome 플래그 상태 · Gemma 4 ${gemma4FlagEnabled ? '사용(Enabled)' : '기본(Nano)'}${chromeVersion ? ` · Chrome ${chromeVersion}` : ''} · 확인 ${readAt}`,
+        chromeBrowserModelStateMissing: 'Chrome 플래그 상태를 아직 읽지 않았습니다. "Local State 파일 선택"으로 연결하세요.',
+        chromeLocalStatePath: (path) => `Local State 파일 · ${path} `,
+        chromeLocalStateLink: 'Local State 파일 선택',
+        chromeInstalledModelSectionTitle: '브라우저 설치 모델 목록 (Nano · Gemma)',
+        chromeInstalledModelSectionDescription: 'Chrome 온디바이스 AI는 기본으로 Gemini Nano를 쓰고, gemma4-for-built-in-ai 플래그를 켜면 Gemma 4로 전환됩니다. 모델 폴더와 Local State를 연결하면 설치된 모델과 현재 플래그 상태가 표시되고, 위의 Prompt API 모델 선택이 실제 플래그와 맞는지 검증되어 고정됩니다. LiteRT-LM 형식 Gemma는 아래 목록에서 선택하면 이 앱이 가중치를 직접 실행합니다.',
+        chromeInstalledModelEmpty: '아직 연결된 모델 폴더가 없습니다. 아래에서 경로를 저장하고 모델 폴더를 선택하세요.',
+        chromeInstalledModelTitle: (modelName, modelVersion) => `${modelName} (${modelVersion})`,
+        chromeInstalledModelUnlinkedTitle: '저장된 선택 모델 (폴더 재연결 필요)',
+        chromeInstalledModelMeta: (store, componentVersion, megabytes, format, performanceHints) => `${store} · 컴포넌트 ${componentVersion} · ${megabytes} MB · 가중치 ${format === 'litertlm' ? 'LiteRT-LM' : 'Chrome 전용 형식'}${performanceHints.length > 0 ? ` · 성능 힌트 ${performanceHints.join(', ')}` : ''}`,
+        chromeInstalledModelRelinkRequired: '선택은 저장됨 · 이번 세션에서 모델 폴더를 다시 선택해야 실행됩니다',
+        chromeInstalledModelNotRunnable: 'Chrome 전용 형식이라 이 앱에서 직접 실행할 수 없음 (Chrome Prompt API로만 사용 가능)',
+        chromeInstalledModelRunnable: '연결됨 · 선택하면 이 모델로 고정 실행',
+        chromeInstalledModelPathLabel: '브라우저 사용자 데이터 폴더 경로',
+        chromeInstalledModelPathPlaceholder: 'C:\\Users\\사용자\\AppData\\Local\\Google\\Chrome\\User Data',
+        chromeInstalledModelPathHint: 'Chrome, Edge 등 브라우저마다 경로가 다릅니다. 저장하면 모델 폴더 경로가 아래에 표시되며, 복사해 폴더 선택 창 주소창에 붙여 넣으면 됩니다.',
+        chromeInstalledModelStorePath: (storePath) => `모델 폴더 · ${storePath} `,
+        chromeInstalledModelCopyPath: '경로 복사',
+        chromeInstalledModelPathSave: '경로 저장',
+        chromeInstalledModelPathSaving: '저장 중…',
+        chromeInstalledModelLinkFolder: '모델 폴더 선택',
+        chromeInstalledModelLinking: '모델 폴더 읽는 중…',
+        chromeInstalledModelGuideTitle: '브라우저 설치 모델 연결 방법',
+        chromeInstalledModelGuideSteps: [
+            'Gemini Nano를 쓰려면 chrome://flags/#gemma4-for-built-in-ai 를 Default로, Gemma 4를 쓰려면 Enabled로 두고 Chrome을 재시작합니다.',
+            '브라우저 사용자 데이터 폴더 경로를 입력하고 "경로 저장"을 누릅니다.',
+            '"Local State 파일 선택"으로 사용자 데이터 폴더의 Local State 파일을 선택하면 현재 플래그 상태가 확인됩니다.',
+            '"모델 폴더 선택"을 눌러 OptGuideManifestModel 폴더(Gemma)를 선택합니다. 복사한 경로를 폴더 선택 창에 붙여 넣으면 바로 이동합니다.',
+            '같은 방법으로 OptGuideOnDeviceModel 폴더(Gemini Nano)도 선택하면 두 폴더의 모델이 함께 목록에 표시됩니다.',
+            '목록에서 사용할 모델을 선택하면 저장되어 고정됩니다. 페이지를 다시 열면 모델 폴더만 다시 선택하면 같은 모델로 실행됩니다.',
+        ],
         modelRoleAndroidGeminiNano: '대화 생성 · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: '이 기기는 AICore Gemini Nano를 지원하지 않습니다 (Android 12 이상 · AICore 지원 기기 필요)',
         modelLanguageSupport: (languageTag, declared) => declared
@@ -1085,7 +1169,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryInsightTitle: 'Memory Insight',
         memoryInsightSummary: 'Consolidated Summary',
         memoryInsightEmotion: 'Current Emotional State',
-        memoryEmotionNames: { happy: 'Happy', melancholy: 'Melancholy', bored: 'Bored', passionate: 'Passionate' },
+        memoryEmotionNames: { happy: 'Happy', melancholy: 'Melancholy', bored: 'Bored', passionate: 'Passionate', jealous: 'Jealous' },
         memoryInsightDirectives: 'Told to Remember',
         memoryInsightEpisodes: 'Recent Memories',
         memoryInsightEmpty: 'This spirit has no memories yet. Chatting accumulates memories in the browser IndexedDB.',
@@ -1348,11 +1432,61 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSamplingParams: (defaultTopK, maxTopK, defaultTemperature, maxTemperature) => `Sampling · topK default ${defaultTopK} / max ${maxTopK} · temperature default ${defaultTemperature} / max ${maxTemperature}`,
         modelProbeFailed: (detail) => `Browser model probe failed: ${detail}`,
         modelSamplingParamsWebUnavailable: 'Sampling parameters · this browser does not expose LanguageModel.params() to web pages (controlled via samplingMode)',
-        chromeOnDeviceVariantTitle: (modelName, modelVersion) => `Chrome installed model · ${modelName}${modelVersion ? ` (${modelVersion})` : ''}`,
-        chromeOnDeviceVariantDetail: (useCase, componentVersion, megabytes, format) => `Use case ${useCase} · component ${componentVersion ?? '-'} · ${megabytes === null ? '-' : `${megabytes} MB`} · weights ${format}`,
-        chromeOnDeviceUseCaseState: (installed, requestedAt) => `${installed ? 'Available' : 'Not installed'}${requestedAt ? ` · Requested ${requestedAt}` : ''}`,
-        chromeOnDeviceFeatureFlag: (feature) => `chrome://flags/#gemma4-for-built-in-ai (${feature})`,
-        chromeOnDeviceInventoryUnavailable: (detail) => `Could not read Chrome installed models (${detail})`,
+        chromeBuiltInAiApiNames: {
+            language_model: 'Prompt API (LanguageModel)',
+            summarizer: 'Summarizer API',
+            writer: 'Writer API',
+            rewriter: 'Rewriter API',
+            proofreader: 'Proofreader API',
+            translator: 'Translator API',
+            language_detector: 'Language Detector API',
+        },
+        chromeBuiltInAiApiState: (apiName, languagePair, state) => `Chrome built-in AI · ${apiName}${languagePair ? ` ${languagePair}` : ''} · ${state}`,
+        chromeBuiltInAiApiNotExposed: 'Not exposed in this browser',
+        chromeBuiltInAiApiFailed: (detail) => `Status check failed (${detail})`,
+        chromeBuiltInAiInventoryReadAt: (readAt) => `Chrome built-in AI checked at · ${readAt}`,
+        chromeOnDeviceInventoryUnavailable: (detail) => `Could not read Chrome built-in AI status (${detail})`,
+        chromePromptVariantTitle: { nano: 'Chat · Chrome Prompt API · Gemini Nano (default)', gemma4: 'Chat · Chrome Prompt API · Gemma 4 (flag switch)' },
+        chromePromptVariantFlag: (flagUrl, requiresEnabled) => `Required Chrome flag · ${flagUrl} = ${requiresEnabled ? 'Enabled' : 'Default'} (relaunch Chrome after changing)`,
+        chromePromptVariantVerification: {
+            active: 'Chrome flag state verified · this model will run',
+            flag_mismatch: 'Chrome flag state does not match this model · change the flag, relaunch, then relink Local State',
+            unverified: 'Chrome flag state not verified · link the Local State file below to verify',
+        },
+        chromePromptVariantInstalled: (modelName, componentVersion, megabytes) => `Installed · ${modelName} · component ${componentVersion} · ${megabytes} MB`,
+        chromePromptVariantAsset: (assetId, version) => `Chrome model record · ${assetId} · ${version}`,
+        chromePromptVariantLastUsed: (usedAt) => `Last used in Chrome · ${usedAt}`,
+        chromeBrowserModelState: (gemma4FlagEnabled, chromeVersion, readAt) => `Chrome flag state · Gemma 4 ${gemma4FlagEnabled ? 'Enabled' : 'Default (Nano)'}${chromeVersion ? ` · Chrome ${chromeVersion}` : ''} · read ${readAt}`,
+        chromeBrowserModelStateMissing: 'Chrome flag state has not been read yet. Link it with "Select Local State file".',
+        chromeLocalStatePath: (path) => `Local State file · ${path} `,
+        chromeLocalStateLink: 'Select Local State file',
+        chromeInstalledModelSectionTitle: 'Browser-installed models (Nano · Gemma)',
+        chromeInstalledModelSectionDescription: 'Chrome on-device AI uses Gemini Nano by default and switches to Gemma 4 when the gemma4-for-built-in-ai flag is enabled. Link the model folders and Local State to show the installed models and the current flag state; the Prompt API model choice above is then verified against the real flag and pinned. Selecting a LiteRT-LM Gemma below makes this app run its weights directly.',
+        chromeInstalledModelEmpty: 'No model folder is linked yet. Save the path below and select a model folder.',
+        chromeInstalledModelTitle: (modelName, modelVersion) => `${modelName} (${modelVersion})`,
+        chromeInstalledModelUnlinkedTitle: 'Saved model choice (relink the folder)',
+        chromeInstalledModelMeta: (store, componentVersion, megabytes, format, performanceHints) => `${store} · component ${componentVersion} · ${megabytes} MB · weights ${format === 'litertlm' ? 'LiteRT-LM' : 'Chrome-only format'}${performanceHints.length > 0 ? ` · performance hints ${performanceHints.join(', ')}` : ''}`,
+        chromeInstalledModelRelinkRequired: 'Choice saved · select the model folder again in this session to run it',
+        chromeInstalledModelNotRunnable: 'Chrome-only format, cannot run directly in this app (usable only through the Chrome Prompt API)',
+        chromeInstalledModelRunnable: 'Linked · select to pin and run this model',
+        chromeInstalledModelPathLabel: 'Browser user data folder path',
+        chromeInstalledModelPathPlaceholder: 'C:\\Users\\you\\AppData\\Local\\Google\\Chrome\\User Data',
+        chromeInstalledModelPathHint: 'The path differs per browser (Chrome, Edge, …). After saving, the model folder paths appear below; copy one and paste it into the folder picker address bar.',
+        chromeInstalledModelStorePath: (storePath) => `Model folder · ${storePath} `,
+        chromeInstalledModelCopyPath: 'Copy path',
+        chromeInstalledModelPathSave: 'Save path',
+        chromeInstalledModelPathSaving: 'Saving…',
+        chromeInstalledModelLinkFolder: 'Select model folder',
+        chromeInstalledModelLinking: 'Reading model folder…',
+        chromeInstalledModelGuideTitle: 'How to link browser-installed models',
+        chromeInstalledModelGuideSteps: [
+            'To use Gemini Nano, set chrome://flags/#gemma4-for-built-in-ai to Default; to use Gemma 4, set it to Enabled, then relaunch Chrome.',
+            'Enter your browser user data folder path and press "Save path".',
+            'Use "Select Local State file" to pick the Local State file in the user data folder and verify the current flag state.',
+            'Press "Select model folder" and choose the OptGuideManifestModel folder (Gemma). Paste the copied path into the picker to jump there.',
+            'Select the OptGuideOnDeviceModel folder (Gemini Nano) the same way to list both folders together.',
+            'Pick a model in the list to save and pin it. After reopening the page, select the model folder again to run the same model.',
+        ],
         modelRoleAndroidGeminiNano: 'Chat generation · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: 'This device does not support AICore Gemini Nano (requires Android 12+ and an AICore-capable device)',
         modelLanguageSupport: (languageTag, declared) => declared
@@ -1671,7 +1805,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryInsightTitle: '记忆洞察',
         memoryInsightSummary: '综合摘要',
         memoryInsightEmotion: '当前情绪状态',
-        memoryEmotionNames: { happy: '幸福', melancholy: '忧郁', bored: '无聊', passionate: '热情' },
+        memoryEmotionNames: { happy: '幸福', melancholy: '忧郁', bored: '无聊', passionate: '热情', jealous: '吃醋' },
         memoryInsightDirectives: '要求记住的内容',
         memoryInsightEpisodes: '最近记忆',
         memoryInsightEmpty: '这位精灵还没有记忆。对话后会在浏览器 IndexedDB 中积累记忆。',
@@ -1934,11 +2068,61 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSamplingParams: (defaultTopK, maxTopK, defaultTemperature, maxTemperature) => `采样 · topK 默认 ${defaultTopK} / 最大 ${maxTopK} · 温度 默认 ${defaultTemperature} / 最大 ${maxTemperature}`,
         modelProbeFailed: (detail) => `浏览器模型信息查询失败：${detail}`,
         modelSamplingParamsWebUnavailable: '采样参数 · 此浏览器未向网页提供 LanguageModel.params()（通过 samplingMode 控制）',
-        chromeOnDeviceVariantTitle: (modelName, modelVersion) => `Chrome 已安装模型 · ${modelName}${modelVersion ? `（${modelVersion}）` : ''}`,
-        chromeOnDeviceVariantDetail: (useCase, componentVersion, megabytes, format) => `用例 ${useCase} · 组件 ${componentVersion ?? '-'} · ${megabytes === null ? '-' : `${megabytes} MB`} · 权重 ${format}`,
-        chromeOnDeviceUseCaseState: (installed, requestedAt) => `${installed ? 'Available' : '未安装'}${requestedAt ? ` · Requested ${requestedAt}` : ''}`,
-        chromeOnDeviceFeatureFlag: (feature) => `chrome://flags/#gemma4-for-built-in-ai (${feature})`,
-        chromeOnDeviceInventoryUnavailable: (detail) => `无法读取 Chrome 已安装模型（${detail}）`,
+        chromeBuiltInAiApiNames: {
+            language_model: 'Prompt API（LanguageModel）',
+            summarizer: '摘要 API（Summarizer）',
+            writer: '写作 API（Writer）',
+            rewriter: '改写 API（Rewriter）',
+            proofreader: '校对 API（Proofreader）',
+            translator: '翻译 API（Translator）',
+            language_detector: '语言检测 API（LanguageDetector）',
+        },
+        chromeBuiltInAiApiState: (apiName, languagePair, state) => `Chrome 内置 AI · ${apiName}${languagePair ? ` ${languagePair}` : ''} · ${state}`,
+        chromeBuiltInAiApiNotExposed: '此浏览器未提供',
+        chromeBuiltInAiApiFailed: (detail) => `状态检查失败（${detail}）`,
+        chromeBuiltInAiInventoryReadAt: (readAt) => `Chrome 内置 AI 检查时间 · ${readAt}`,
+        chromeOnDeviceInventoryUnavailable: (detail) => `无法读取 Chrome 内置 AI 状态（${detail}）`,
+        chromePromptVariantTitle: { nano: '对话生成 · Chrome Prompt API · Gemini Nano（默认）', gemma4: '对话生成 · Chrome Prompt API · Gemma 4（旗标切换）' },
+        chromePromptVariantFlag: (flagUrl, requiresEnabled) => `所需 Chrome 旗标 · ${flagUrl} = ${requiresEnabled ? 'Enabled' : 'Default'}（更改后重启 Chrome）`,
+        chromePromptVariantVerification: {
+            active: 'Chrome 旗标状态已确认 · 将使用此模型运行',
+            flag_mismatch: 'Chrome 旗标状态与此模型不符 · 请更改旗标并重启后重新连接 Local State',
+            unverified: 'Chrome 旗标状态未确认 · 在下方连接 Local State 文件即可验证',
+        },
+        chromePromptVariantInstalled: (modelName, componentVersion, megabytes) => `已安装 · ${modelName} · 组件 ${componentVersion} · ${megabytes} MB`,
+        chromePromptVariantAsset: (assetId, version) => `Chrome 模型记录 · ${assetId} · ${version}`,
+        chromePromptVariantLastUsed: (usedAt) => `Chrome 中最后使用 · ${usedAt}`,
+        chromeBrowserModelState: (gemma4FlagEnabled, chromeVersion, readAt) => `Chrome 旗标状态 · Gemma 4 ${gemma4FlagEnabled ? '已启用（Enabled）' : '默认（Nano）'}${chromeVersion ? ` · Chrome ${chromeVersion}` : ''} · 读取于 ${readAt}`,
+        chromeBrowserModelStateMissing: '尚未读取 Chrome 旗标状态。请通过“选择 Local State 文件”连接。',
+        chromeLocalStatePath: (path) => `Local State 文件 · ${path} `,
+        chromeLocalStateLink: '选择 Local State 文件',
+        chromeInstalledModelSectionTitle: '浏览器已安装模型列表（Nano · Gemma）',
+        chromeInstalledModelSectionDescription: 'Chrome 设备端 AI 默认使用 Gemini Nano，启用 gemma4-for-built-in-ai 旗标后切换为 Gemma 4。连接模型文件夹和 Local State 后会显示已安装模型和当前旗标状态，上方 Prompt API 的模型选择会按实际旗标验证并固定。在下方选择 LiteRT-LM 格式的 Gemma，本应用会直接运行其权重。',
+        chromeInstalledModelEmpty: '尚未连接模型文件夹。请在下方保存路径并选择模型文件夹。',
+        chromeInstalledModelTitle: (modelName, modelVersion) => `${modelName}（${modelVersion}）`,
+        chromeInstalledModelUnlinkedTitle: '已保存的模型选择（需重新连接文件夹）',
+        chromeInstalledModelMeta: (store, componentVersion, megabytes, format, performanceHints) => `${store} · 组件 ${componentVersion} · ${megabytes} MB · 权重 ${format === 'litertlm' ? 'LiteRT-LM' : 'Chrome 专用格式'}${performanceHints.length > 0 ? ` · 性能提示 ${performanceHints.join(', ')}` : ''}`,
+        chromeInstalledModelRelinkRequired: '选择已保存 · 本次会话需重新选择模型文件夹才能运行',
+        chromeInstalledModelNotRunnable: 'Chrome 专用格式，无法在本应用中直接运行（只能通过 Chrome Prompt API 使用）',
+        chromeInstalledModelRunnable: '已连接 · 选择后固定使用此模型运行',
+        chromeInstalledModelPathLabel: '浏览器用户数据文件夹路径',
+        chromeInstalledModelPathPlaceholder: 'C:\\Users\\用户\\AppData\\Local\\Google\\Chrome\\User Data',
+        chromeInstalledModelPathHint: '不同浏览器（Chrome、Edge 等）路径不同。保存后下方会显示模型文件夹路径，复制后粘贴到文件夹选择窗口的地址栏即可。',
+        chromeInstalledModelStorePath: (storePath) => `模型文件夹 · ${storePath} `,
+        chromeInstalledModelCopyPath: '复制路径',
+        chromeInstalledModelPathSave: '保存路径',
+        chromeInstalledModelPathSaving: '保存中…',
+        chromeInstalledModelLinkFolder: '选择模型文件夹',
+        chromeInstalledModelLinking: '正在读取模型文件夹…',
+        chromeInstalledModelGuideTitle: '连接浏览器已安装模型的方法',
+        chromeInstalledModelGuideSteps: [
+            '使用 Gemini Nano 时将 chrome://flags/#gemma4-for-built-in-ai 设为 Default，使用 Gemma 4 时设为 Enabled，然后重启 Chrome。',
+            '输入浏览器用户数据文件夹路径并点击“保存路径”。',
+            '通过“选择 Local State 文件”选择用户数据文件夹中的 Local State 文件，即可确认当前旗标状态。',
+            '点击“选择模型文件夹”，选择 OptGuideManifestModel 文件夹（Gemma）。把复制的路径粘贴到选择窗口即可直接跳转。',
+            '用同样方式选择 OptGuideOnDeviceModel 文件夹（Gemini Nano），两个文件夹的模型会一起列出。',
+            '在列表中选择要使用的模型即会保存并固定。重新打开页面后，只需再次选择模型文件夹即可用同一模型运行。',
+        ],
         modelRoleAndroidGeminiNano: '对话生成 · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: '此设备不支持 AICore Gemini Nano（需要 Android 12 及以上且支持 AICore 的设备）',
         modelLanguageSupport: (languageTag, declared) => declared

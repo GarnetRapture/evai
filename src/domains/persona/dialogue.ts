@@ -7,7 +7,8 @@ import type {
 } from './types';
 
 export const BASELINE_DIALOGUE_EXAMPLE_LIMIT = 6;
-export const RELEVANT_DIALOGUE_EXAMPLE_LIMIT = 2;
+export const RELEVANT_DIALOGUE_EXAMPLE_LIMIT = 3;
+export const BOND_STAGE_DIALOGUE_EXAMPLE_LIMIT = 2;
 const BOND_STAGE_EXAMPLE_WINDOW = 6;
 const EXAMPLE_REPLY_LINE_LIMIT = 6;
 const EXAMPLE_TEXT_CHAR_LIMIT = 280;
@@ -152,6 +153,30 @@ function stableTextHash(text: string): number {
     return hash >>> 0;
 }
 
+export function resolveBondProgress(familiarityLevel: number, maxLevel: number): number {
+    return maxLevel <= 1 ? 1 : (Math.min(maxLevel, Math.max(1, familiarityLevel)) - 1) / (maxLevel - 1);
+}
+
+function bondStageWindowStart(timelineLength: number, familiarityLevel: number, maxLevel: number): number {
+    const center = Math.round(resolveBondProgress(familiarityLevel, maxLevel) * (timelineLength - 1));
+    const windowSize = Math.min(BOND_STAGE_EXAMPLE_WINDOW, timelineLength);
+    return Math.min(Math.max(0, center - Math.floor(windowSize / 2)), timelineLength - windowSize);
+}
+
+export function selectStageReachedDialogueExchanges(
+    exchanges: PersonaDialogueExchange[],
+    familiarityLevel: number,
+    maxLevel: number,
+): PersonaDialogueExchange[] {
+    const timeline = exchanges.filter((exchange) => exchange.source === 'evertalk');
+    if (timeline.length === 0) {
+        return exchanges;
+    }
+    const reachedEnd = bondStageWindowStart(timeline.length, familiarityLevel, maxLevel) + Math.min(BOND_STAGE_EXAMPLE_WINDOW, timeline.length);
+    const reached = new Set(timeline.slice(0, reachedEnd));
+    return exchanges.filter((exchange) => exchange.source !== 'evertalk' || reached.has(exchange));
+}
+
 export function selectBondStageDialogueExamples(
     exchanges: PersonaDialogueExchange[],
     familiarityLevel: number,
@@ -161,15 +186,18 @@ export function selectBondStageDialogueExamples(
     excludedExchanges: readonly PersonaDialogueExchange[],
 ): PersonaDialogueExchange[] {
     const excludedKeys = new Set(excludedExchanges.map(dialogueExchangeKey));
-    const timeline = exchanges.filter((exchange) => exchange.source === 'evertalk' && !excludedKeys.has(dialogueExchangeKey(exchange)));
-    if (limit <= 0 || timeline.length === 0 || maxLevel <= 1) {
+    const timeline = exchanges.filter((exchange) => exchange.source === 'evertalk');
+    if (limit <= 0 || timeline.length === 0) {
         return [];
     }
-    const progress = (Math.min(maxLevel, Math.max(1, familiarityLevel)) - 1) / (maxLevel - 1);
-    const center = Math.round(progress * (timeline.length - 1));
     const windowSize = Math.min(BOND_STAGE_EXAMPLE_WINDOW, timeline.length);
-    const windowStart = Math.min(Math.max(0, center - Math.floor(windowSize / 2)), timeline.length - windowSize);
-    const stageWindow = timeline.slice(windowStart, windowStart + windowSize);
+    const windowStart = bondStageWindowStart(timeline.length, familiarityLevel, maxLevel);
+    const stageWindow = timeline
+        .slice(windowStart, windowStart + windowSize)
+        .filter((exchange) => !excludedKeys.has(dialogueExchangeKey(exchange)));
+    if (stageWindow.length === 0) {
+        return [];
+    }
     const offset = stableTextHash(rotationSeed) % stageWindow.length;
     return Array.from({ length: Math.min(limit, stageWindow.length) }, (_, index) => stageWindow[(offset + index) % stageWindow.length]);
 }

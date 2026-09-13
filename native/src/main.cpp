@@ -1,9 +1,13 @@
 #include "context_database.h"
+#include "browser_server.h"
 #include "local_request_channel.h"
 #include "model_runtime.h"
 #include "native_settings.h"
 
 #include <array>
+#include <charconv>
+#include <chrono>
+#include <csignal>
 #include <cstdint>
 #include <filesystem>
 #include <fstream>
@@ -15,6 +19,7 @@
 #include <stdexcept>
 #include <string>
 #include <string_view>
+#include <thread>
 #include <utility>
 
 #include <vector>
@@ -48,6 +53,23 @@ using eversoul::native::jsonEscape;
 
 constexpr std::uint32_t kMaximumFrameBytes = 8U * 1024U * 1024U;
 constexpr std::size_t kMaximumNativeMessageResponseBytes = 1024U * 1024U;
+volatile std::sig_atomic_t stopRequested = 0;
+void requestStop(int) { stopRequested = 1; }
+
+std::filesystem::path processExecutablePath() {
+#ifdef _WIN32
+    std::wstring buffer(32768, L'\0');
+    const DWORD size = GetModuleFileNameW(nullptr, buffer.data(), static_cast<DWORD>(buffer.size()));
+    if (size == 0 || size >= buffer.size()) throw std::runtime_error("executable_path_unavailable");
+    buffer.resize(size);
+    return std::filesystem::path(buffer);
+#else
+    std::array<char, 65536> buffer{};
+    const auto size = ::readlink("/proc/self/exe", buffer.data(), buffer.size());
+    if (size <= 0 || static_cast<std::size_t>(size) >= buffer.size()) throw std::runtime_error("executable_path_unavailable");
+    return std::filesystem::path(std::string(buffer.data(), static_cast<std::size_t>(size)));
+#endif
+}
 
 std::string pathUtf8(const std::filesystem::path& path) {
     const std::u8string value = path.generic_u8string();
@@ -107,8 +129,9 @@ class ProcessInstanceGuard {
 public:
     explicit ProcessInstanceGuard(const std::filesystem::path& executablePath) {
 #ifdef _WIN32
-        const auto key = std::hash<std::string>{}(executablePath.lexically_normal().string());
-        const std::wstring name = L"Local\\EverSoulNativeHost-" + std::to_wstring(key);
+        const auto endpoint = eversoul::native::localRequestEndpoint(executablePath);
+        const auto key = endpoint.substr(endpoint.rfind('-') + 1);
+        const std::wstring name = L"Local\\EverSoulNativeHost-" + std::wstring(key.begin(), key.end());
         handle_ = CreateMutexW(nullptr, FALSE, name.c_str());
         if (handle_ == nullptr) throw std::runtime_error("native_host_singleton_failed");
         if (GetLastError() == ERROR_ALREADY_EXISTS) {
@@ -491,6 +514,7 @@ std::string handleRequest(
     }
     const JsonValue* parsed = &request;
     const std::string operation = requiredString(*parsed, "operation");
+    if (operation == "disconnect_native_host") return "{\"ok\":true}";
     if (operation == "health") {
         const auto fileBytes = [](const std::filesystem::path& path) -> std::uintmax_t {
             std::error_code error;
@@ -635,7 +659,17 @@ std::string errorResponse(const std::exception& error) {
 
 bool readFrame(std::istream& input, bool jsonLines, std::string& payload) {
     if (jsonLines) {
-        return static_cast<bool>(std::getline(input, payload));
+        payload.clear();
+        char character;
+        while (input.get(character)) {
+            if (character == '\n') {
+                if (!payload.empty() && payload.back() == '\r') payload.pop_back();
+                return true;
+            }
+            if (payload.size() >= kMaximumFrameBytes) throw std::runtime_error("frame_too_large");
+            payload.push_back(character);
+        }
+        return !payload.empty();
     }
     std::array<unsigned char, 4> sizeBytes{};
     if (!input.read(reinterpret_cast<char*>(sizeBytes.data()), sizeBytes.size())) {
@@ -729,11 +763,24 @@ int main(int argc, char** argv) {
         bool jsonLines = false;
         bool consoleEnabled = true;
         int configureLanguageChoice = 0;
-        const std::filesystem::path executablePath = std::filesystem::absolute(argv[0]);
+        const std::filesystem::path executablePath = processExecutablePath();
+        bool serveWeb = false;
+        eversoul::native::BrowserServerConfiguration webConfiguration;
+        webConfiguration.webRoot = executablePath.parent_path() / "web";
         std::filesystem::path databasePath = executablePath.parent_path() / "eversoul-context.sqlite3";
         std::filesystem::path settingsPath = executablePath.parent_path() / "eversoul-native-host.ini";
         for (int index = 1; index < argc; ++index) {
             const std::string_view argument(argv[index]);
+            if (argument == "--serve") serveWeb = true;
+            else if (argument == "--web-root" && index + 1 < argc) webConfiguration.webRoot = pathFromUtf8(argv[++index]);
+            else if (argument == "--public-origin" && index + 1 < argc) webConfiguration.publicOrigin = argv[++index];
+            else if (argument == "--http-port" && index + 1 < argc) {
+                const std::string_view value(argv[++index]);
+                unsigned port = 0;
+                const auto parsed = std::from_chars(value.data(), value.data() + value.size(), port);
+                if (parsed.ec != std::errc{} || parsed.ptr != value.data() + value.size() || port == 0 || port > 65535) throw std::runtime_error("invalid_http_port");
+                webConfiguration.port = static_cast<std::uint16_t>(port);
+            }
             if (argument == "--self-test") {
                 return selfTest();
             }
@@ -776,6 +823,7 @@ int main(int argc, char** argv) {
         }
         catch (const std::runtime_error& error) {
             if (std::string_view(error.what()) != "native_host_already_running") throw;
+            if (serveWeb) throw;
             return relayToRunningHost(executablePath, jsonLines);
         }
         HostStatusConsole statusConsole(consoleEnabled);
@@ -787,30 +835,50 @@ int main(int argc, char** argv) {
         std::mutex requestMutex;
         bool shuttingDown = false;
         const auto dispatch = [&](std::string_view request) -> std::string {
-            std::scoped_lock lock(requestMutex);
+            std::unique_lock lock(requestMutex);
             if (shuttingDown) return errorResponse(std::runtime_error("native_host_shutting_down"));
             statusConsole.markConnected();
             try {
+                // A blocking generate must not monopolize the DB/dispatch lock:
+                // other browsers still need polling, cancellation and storage.
+                const auto parsed = JsonValue::parse(request, nullptr, false);
+                if (parsed.is_object() && optionalString(parsed, "operation") == "generate") {
+                    const auto requestId = requiredString(parsed, "request_id");
+                    modelRuntime.startGeneration(requestId, generationRequest(parsed));
+                    statusConsole.updateInference(modelRuntime.status());
+                    lock.unlock();
+                    const auto generation = modelRuntime.waitForGeneration(requestId);
+                    return "{\"ok\":true,\"generation\":" + generationStatusJson(generation) + '}';
+                }
                 std::string response = handleRequest(
                     database, modelRuntime, request, executablePath, databasePath, settingsPath, displayLanguage);
                 statusConsole.updateInference(modelRuntime.status());
                 return response;
             }
             catch (const std::exception& error) {
+                if (!lock.owns_lock()) lock.lock();
                 statusConsole.updateInference(modelRuntime.status());
                 return errorResponse(error);
             }
         };
         const eversoul::native::LocalRequestServer localServer(
             eversoul::native::localRequestEndpoint(executablePath), dispatch);
+        std::unique_ptr<eversoul::native::BrowserServer> browserServer;
+        if (serveWeb) {
+            browserServer = std::make_unique<eversoul::native::BrowserServer>(std::move(webConfiguration), dispatch);
+            std::signal(SIGINT, requestStop);
+            std::signal(SIGTERM, requestStop);
+            while (stopRequested == 0) std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
         std::string payload;
-        while (readFrame(std::cin, jsonLines, payload)) {
+        while (!serveWeb && readFrame(std::cin, jsonLines, payload)) {
             writeFrame(std::cout, jsonLines, dispatch(payload));
             if (payload.capacity() > 256U * 1024U) std::string{}.swap(payload);
         }
         {
             std::scoped_lock shutdownLock(requestMutex);
             shuttingDown = true;
+            modelRuntime.unload();
         }
         return 0;
     }

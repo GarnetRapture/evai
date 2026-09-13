@@ -3,7 +3,7 @@ import { normalizeAbsoluteLocalPath } from '../../shared/files';
 import { nativeHostModelService } from '../native/service';
 import { settingsRepository } from '../settings/repository';
 import { NATIVE_HOST_MAX_CONTEXT_WINDOW, NATIVE_HOST_MIN_CONTEXT_WINDOW } from './constants';
-import { chatModelCatalog } from './catalog';
+import { chatModelCatalog, mergeChromeInstalledModels } from './catalog';
 import { chatModelRuntime } from './engine';
 import { localModelId } from './identity';
 import type {
@@ -75,6 +75,26 @@ export const llmClient = {
     async prepareOnDeviceSystemModel(entry: OnDeviceSystemModelEntry, onDownloadProgress: ModelDownloadProgressHandler): Promise<ChatModelCatalog> {
         const settings = await settingsRepository.readAppSettings();
         await chatModelCatalog.prepareOnDeviceSystemModel(entry, settings.language, onDownloadProgress);
+        return llmClient.listModels();
+    },
+    async linkChromeInstalledModelFolder(files: readonly File[]): Promise<ChatModelCatalog> {
+        const sources = await chatModelCatalog.linkChromeInstalledModelFolder(files);
+        const general = await settingsRepository.readGeneral();
+        await settingsRepository.updateGeneral({
+            chrome_installed_models: mergeChromeInstalledModels(general.chrome_installed_models ?? [], sources.map((source) => source.model)),
+        });
+        return llmClient.listModels();
+    },
+    async linkChromeLocalState(file: File): Promise<ChatModelCatalog> {
+        await settingsRepository.updateGeneral({ chrome_browser_model_state: await chatModelCatalog.readChromeLocalState(file) });
+        return llmClient.listModels();
+    },
+    async saveChromeModelFolderPath(folderPath: string): Promise<ChatModelCatalog> {
+        const normalizedPath = normalizeAbsoluteLocalPath(folderPath);
+        if (normalizedPath === null || normalizedPath.length === 0) {
+            throw new DomainError('validation', folderPath);
+        }
+        await settingsRepository.updateGeneral({ chrome_model_folder_path: normalizedPath });
         return llmClient.listModels();
     },
     async installLocalModel(engine: LocalModelEngineKind, onProgress: ModelDownloadProgressHandler): Promise<string | null> {

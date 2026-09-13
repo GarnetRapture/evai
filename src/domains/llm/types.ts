@@ -1,4 +1,4 @@
-import type { ChromeOnDeviceInventory, ChromeOnDeviceModelVariant } from '../../shared/types/chromeOnDevice';
+import type { ChromeOnDeviceInventory } from '../../shared/types/chromeOnDevice';
 import type { AppLanguage } from '../../shared/types';
 
 export type OnDeviceModelAvailability = Availability;
@@ -19,7 +19,75 @@ export interface LanguageModelLanguagePlan {
     availability: OnDeviceModelAvailability;
 }
 export type LocalModelEngineKind = 'gguf' | 'litert_lm';
-export type ChatModelEngineKind = 'chrome_prompt' | 'android_gemini_nano' | 'native_host' | LocalModelEngineKind;
+export type ChatModelEngineKind = 'chrome_prompt' | 'chrome_installed' | 'android_gemini_nano' | 'native_host' | LocalModelEngineKind;
+export type ChromeInstalledModelStore = (typeof import('./constants').CHROME_INSTALLED_MODEL_STORES)[number];
+export type ChromeInstalledWeightsFormat = 'litertlm' | 'opaque';
+export interface ChromeInstalledModel {
+    key: string;
+    store: ChromeInstalledModelStore;
+    component_directory: string;
+    component_version: string;
+    base_model_name: string;
+    base_model_version: string;
+    supported_performance_hints: number[];
+    weights_bytes: number;
+    weights_format: ChromeInstalledWeightsFormat;
+}
+export interface ChromeInstalledModelSource {
+    model: ChromeInstalledModel;
+    weights: File;
+}
+export interface ChromeInstalledModelManifest {
+    version: string;
+    base_model_name: string;
+    base_model_version: string;
+    supported_performance_hints: number[];
+}
+export interface ChromeInstalledModelScan {
+    sources: ChromeInstalledModelSource[];
+    scanned_files: number;
+}
+export type ChromePromptModelVariant = (typeof import('./constants').CHROME_PROMPT_MODEL_VARIANTS)[number];
+export interface ChromeModelAssetRecord {
+    directory_key: string;
+    asset_id: string;
+    requested_version: string;
+}
+export interface ChromeBrowserModelState {
+    gemma4_flag_enabled: boolean;
+    enabled_flags: string[];
+    last_prompt_usage: Record<ChromePromptModelVariant, string | null>;
+    assets: ChromeModelAssetRecord[];
+    chrome_version: string | null;
+    read_at: string;
+}
+export type ChromePromptVariantVerification = 'active' | 'flag_mismatch' | 'unverified';
+export interface ChromeInstalledModelLibrary {
+    folder_path: string;
+    store_paths: string[];
+    local_state_path: string;
+    browser_state: ChromeBrowserModelState | null;
+    entries: ChromeInstalledModelEntry[];
+}
+export interface ChromeInstalledModelEntry {
+    engine: 'chrome_installed';
+    id: string;
+    model: ChromeInstalledModel | null;
+    model_key: string;
+    linked: boolean;
+    runnable: boolean;
+    loaded: boolean;
+    context_window: number | null;
+    selected: boolean;
+}
+export interface ChromeInstalledLoadedEngine {
+    model_key: string;
+    engine: import('@litert-lm/core').Engine;
+}
+export interface ChromeInstalledLoadingEngine {
+    model_key: string;
+    promise: Promise<ChromeInstalledLoadedEngine>;
+}
 export interface AndroidGeminiNanoModelEntry {
     engine: 'android_gemini_nano';
     id: string;
@@ -70,12 +138,20 @@ export interface ChromeOnDeviceInventoryState {
     inventory: ChromeOnDeviceInventory | null;
     detail: string;
 }
+export interface ChromeTranslatorLanguagePair {
+    source_language: string;
+    target_language: string;
+}
 export interface ChromePromptModelEntry {
     engine: 'chrome_prompt';
     id: string;
-    use_case: string | null;
-    variant: ChromeOnDeviceModelVariant | null;
-    chrome_flag: string | null;
+    variant: ChromePromptModelVariant;
+    installed_model: ChromeInstalledModel | null;
+    asset: ChromeModelAssetRecord | null;
+    last_used_at: string | null;
+    required_flag_enabled: boolean;
+    verification: ChromePromptVariantVerification;
+    inventory: ChromeOnDeviceInventory | null;
     inventory_detail: string;
     api_supported: boolean;
     availability: OnDeviceModelAvailability;
@@ -114,6 +190,7 @@ export type ChatModelEntry = OnDeviceSystemModelEntry | LocalModelFileEntry | Na
 export interface ChatModelCatalog {
     app_language: AppLanguage;
     entries: ChatModelEntry[];
+    chrome_installed: ChromeInstalledModelLibrary | null;
 }
 export interface InstalledModelFile {
     file_name: string;

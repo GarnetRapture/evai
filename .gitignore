@@ -30,7 +30,18 @@ tmp-claude/
 
 # Local upstream references (not distributed with this repository)
 third_party/
+
+# Build outputs (CMake build trees, native host artifacts, TypeScript build info)
+/build/
 native/build/
+native/artifacts/
+*.tsbuildinfo
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.lib
 
 # Android (Gradle / Kotlin / Java build outputs)
 android/.gradle/

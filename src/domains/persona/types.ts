@@ -1,7 +1,7 @@
 import type { AppLanguage } from '../../shared/types';
 
 export type PersonaPersonalityPresetId = 'dataset' | 'gentle' | 'cheerful' | 'tsundere' | 'cool' | 'shy' | 'playful' | 'devoted' | 'bold';
-export type PersonaEmotionPresetId = 'dataset' | 'cheerful' | 'calm' | 'lovestruck' | 'wistful' | 'bored';
+export type PersonaEmotionPresetId = 'dataset' | 'cheerful' | 'calm' | 'lovestruck' | 'wistful' | 'bored' | 'jealous';
 export type PersonaSpeechPresetId = 'dataset' | 'polite' | 'casual' | 'affectionate' | 'teasing' | 'formal' | 'quiet';
 export interface PersonaCheatPreset {
     bond_level: number | null;
@@ -91,24 +91,119 @@ export interface PersonaSpeechStyle {
     messages_per_turn: number;
     message_length: number;
     signature_marks: string[];
-    register: PersonaSpeechRegister | null;
 }
 export interface PersonaSpeechProfile {
     address_term: string | null;
+    register: PersonaSpeechRegister | null;
     solo_lines: string[];
-    dialogue_examples: PersonaDialogueExchange[];
+    signature_lines: string[];
     style: PersonaSpeechStyle | null;
+}
+export interface PersonaVoiceAnchor {
+    style: PersonaSpeechStyle | null;
+    register: PersonaSpeechRegister | null;
+    signature_lines: string[];
+}
+export interface PersonaSignatureTally {
+    runs: number;
+    surfaces: Map<string, number>;
 }
 export type PersonaProfileMentionKind = 'like' | 'dislike' | 'hobby' | 'speciality';
 export interface PersonaProfileMention {
     kind: PersonaProfileMentionKind;
     value: string;
 }
-export type PersonaVoiceReferenceKind = 'topic' | 'bond_stage';
+export interface PersonaCanonLine {
+    speaker: string;
+    message: string;
+}
+export type PersonaCanonUtteranceKind = 'dialogue' | 'comment' | 'monologue' | 'pattern';
+export interface PersonaCanonUtterance {
+    kind: PersonaCanonUtteranceKind;
+    owner_key: string;
+    speaker: string;
+    speaker_key: string | null;
+    message: string;
+}
+export interface PersonaCanonDialogueTrack {
+    owner_key: string;
+    lines: PersonaCanonUtterance[];
+}
+export interface PersonaCanonSourceIndex {
+    persona_id: string;
+    owner_key: string;
+    utterances: PersonaCanonUtterance[];
+    tracks: PersonaCanonDialogueTrack[];
+    text: string;
+}
+export interface PersonaCharacterIdentity {
+    key: string;
+    base_name: string;
+    lowered_base_name: string;
+    persona_ids: string[];
+    aliases: string[];
+    nick_name: string | null;
+    unions: string[];
+}
+export interface PersonaRelationEvidence {
+    character_key: string;
+    name: string;
+    persona_ids: string[];
+    nick_name: string | null;
+    unions: string[];
+    shared_union: string | null;
+    address_forms: string[];
+    self_remarks: string[];
+    other_remarks: string[];
+    shared_scenes: PersonaCanonLine[][];
+    interaction_count: number;
+    mention_count: number;
+}
+export interface PersonaRelationAccumulator {
+    address_forms: Map<string, number>;
+    self_remarks: string[];
+    other_remarks: string[];
+    remark_keys: Set<string>;
+    shared_scenes: PersonaCanonLine[][];
+    scene_keys: Set<string>;
+    interaction_count: number;
+    mention_count: number;
+}
+export interface PersonaRelationshipProfile {
+    persona_id: string;
+    character_key: string;
+    relations: PersonaRelationEvidence[];
+    external_voice_lines: string[];
+}
+export interface PersonaRelationshipGraph {
+    language: AppLanguage;
+    fingerprint: string;
+    characters: Map<string, PersonaCharacterIdentity>;
+    character_key_by_persona: Map<string, string>;
+    profiles: Map<string, PersonaRelationshipProfile>;
+}
+export interface PersonaRelationshipSource {
+    persona_id: string;
+    slice: PersonaLanguageSlice;
+}
+export interface PersonaRelationshipGraphMemo {
+    fingerprint: string;
+    graph: Promise<PersonaRelationshipGraph>;
+}
+export interface PersonaTurnReferenceRequest {
+    persona_id: string;
+    language: AppLanguage;
+    query: string;
+    excluded_terms: readonly string[];
+    familiarity_level: number;
+    rival_persona_ids: readonly string[];
+    mention_candidate_ids: readonly string[];
+}
 export interface PersonaTurnReferences {
-    voice_examples: PersonaDialogueExchange[];
-    voice_reference_kind: PersonaVoiceReferenceKind;
+    rehearsal_exchanges: PersonaDialogueExchange[];
     profile_mentions: PersonaProfileMention[];
+    mentioned_relations: PersonaRelationEvidence[];
+    rival_relations: PersonaRelationEvidence[];
 }
 export type PersonaDialogueSource = 'story' | 'evertalk';
 export interface PersonaDialogueExchange {
@@ -123,7 +218,7 @@ export interface AssembledPersonaPrompt {
     greeting: string;
     address_term: string;
     dialogue_excluded_terms: string[];
-    voice_register: PersonaSpeechRegister | null;
+    voice: PersonaVoiceAnchor;
 }
 export interface PersonaPromptIdentity {
     name: string;

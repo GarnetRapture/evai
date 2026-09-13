@@ -8,7 +8,13 @@ import {
     personaSessionPromptKey,
     readChromeLanguageModelAvailability,
 } from './chrome';
-import { CHAT_MINIMUM_HISTORY_TURNS, CHAT_RESPONSE_TOKEN_RESERVE, LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE, PERSONA_SESSION_SAMPLING_MODE } from './constants';
+import {
+    CHAT_MINIMUM_HISTORY_TURNS,
+    CHAT_RESPONSE_TOKEN_RESERVE,
+    CHROME_PROMPT_API_SUPPORTED_LANGUAGE_TAGS,
+    LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE,
+    PERSONA_SESSION_SAMPLING_MODE,
+} from './constants';
 import { createQueuedRequestStatus, recordRequestStatus } from './requests';
 import type {
     BaseModelSession,
@@ -112,9 +118,11 @@ async function selectMessagesWithinBudget(
 export const chromePromptRuntime = {
     async resolveLanguagePlan(appLanguage: AppLanguage): Promise<LanguageModelLanguagePlan> {
         const languageTag = LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE[appLanguage];
-        const declaredAvailability = await readChromeLanguageModelAvailability(languageTag, 'balanced');
-        if (declaredAvailability !== 'unavailable') {
-            return { app_language: appLanguage, language_tag: languageTag, declared_language_tag: languageTag, availability: declaredAvailability };
+        if (CHROME_PROMPT_API_SUPPORTED_LANGUAGE_TAGS.includes(languageTag)) {
+            const declaredAvailability = await readChromeLanguageModelAvailability(languageTag, 'balanced');
+            if (declaredAvailability !== 'unavailable') {
+                return { app_language: appLanguage, language_tag: languageTag, declared_language_tag: languageTag, availability: declaredAvailability };
+            }
         }
         return {
             app_language: appLanguage,

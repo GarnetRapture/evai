@@ -2,13 +2,21 @@ import type { AppLanguage } from '../../shared/types';
 import type {
     LocalizedDialogue,
     PersonaLanguageSlice,
+    PersonaSignatureTally,
     PersonaSpeechProfile,
     PersonaSpeechStyle,
 } from './types';
-import { parsePersonaDialogueExchanges, selectRepresentativeDialogueExamples } from './dialogue';
+import { EMPTY_SLICE_FIELD } from './slice';
 import { measureSpeechRegister } from './voice';
 
 export const SOLO_LINE_LIMIT = 12;
+export const SIGNATURE_LINE_LIMIT = 6;
+const SIGNATURE_LINE_MAX_LETTERS = 4;
+const SIGNATURE_LINE_MIN_RUNS = 2;
+const SIGNATURE_OPENER_PATTERN = /^(\p{L}{1,4}[\p{P}\p{S}]+)\s/u;
+const SIGNATURE_LETTER_PATTERN = /\p{L}/gu;
+const SIGNATURE_NUMBER_PATTERN = /\p{N}/u;
+const MONOLOGUE_SENTENCE_BOUNDARY_PATTERN = /\n|(?<=[.!?…♡♥♪~？！。])\s+/u;
 const SOLO_LINE_MIN_LENGTH = 10;
 const SOLO_LINE_MAX_LENGTH = 160;
 const SOLO_LINE_MIN_SENTENCE_CHARS = 6;
@@ -92,50 +100,122 @@ function upperMedian(values: number[]): number {
     return sorted[Math.floor(sorted.length / 2)];
 }
 
-function spiritMessageRuns(entries: LocalizedDialogue[], spiritName: string): number[] {
-    const runs: number[] = [];
-    let current = 0;
+function spiritLineRuns(entries: LocalizedDialogue[], spiritName: string): string[][] {
+    const runs: string[][] = [];
+    let current: string[] = [];
     for (const entry of entries) {
         if (entry.speaker === spiritName) {
-            current += 1;
+            current.push(entry.message);
             continue;
         }
-        if (current > 0) {
+        if (current.length > 0) {
             runs.push(current);
         }
-        current = 0;
+        current = [];
     }
-    if (current > 0) {
+    if (current.length > 0) {
         runs.push(current);
     }
     return runs;
 }
 
-function measureSpeechStyle(slice: PersonaLanguageSlice, language: AppLanguage): PersonaSpeechStyle | null {
-    const runs = [...spiritMessageRuns(slice.story, slice.name), ...spiritMessageRuns(slice.evertalk, slice.name)];
-    const lines = [...spiritDialogues(slice.story, slice.name), ...spiritDialogues(slice.evertalk, slice.name)];
+function measureSpeechStyle(runs: string[][]): PersonaSpeechStyle | null {
+    const lines = runs.flat();
     if (runs.length === 0 || lines.length === 0) {
         return null;
     }
     return {
-        messages_per_turn: upperMedian(runs),
+        messages_per_turn: upperMedian(runs.map((run) => run.length)),
         message_length: upperMedian(lines.map((line) => line.length)),
         signature_marks: SIGNATURE_MARK_PATTERNS
             .filter(({ pattern }) => lines.filter((line) => pattern.test(line)).length / lines.length >= SIGNATURE_MARK_MIN_RATIO)
             .map(({ mark }) => mark),
-        register: measureSpeechRegister([...spiritDialogues(slice.speech_patterns, slice.name), ...lines], language),
     };
 }
 
-export function measurePersonaSpeechProfile(slice: PersonaLanguageSlice, language: AppLanguage): PersonaSpeechProfile {
+function personaMonologueLines(slice: PersonaLanguageSlice): string[] {
+    return [slice.description, slice.greeting]
+        .filter((text) => text.trim().length > 0 && text.trim() !== EMPTY_SLICE_FIELD)
+        .flatMap((text) => text.split(MONOLOGUE_SENTENCE_BOUNDARY_PATTERN))
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0);
+}
+
+function signatureCandidate(line: string): string | null {
+    if (SIGNATURE_NUMBER_PATTERN.test(line)) {
+        return null;
+    }
+    const letterCount = line.match(SIGNATURE_LETTER_PATTERN)?.length ?? 0;
+    if (letterCount >= 1 && letterCount <= SIGNATURE_LINE_MAX_LETTERS) {
+        return line;
+    }
+    return SIGNATURE_OPENER_PATTERN.exec(line)?.[1] ?? null;
+}
+
+function signatureKey(candidate: string): string {
+    return (candidate.match(SIGNATURE_LETTER_PATTERN) ?? []).join('').toLocaleLowerCase();
+}
+
+function dominantSurface(tally: PersonaSignatureTally): string {
+    let dominant = '';
+    let dominantCount = 0;
+    for (const [surface, count] of tally.surfaces) {
+        if (count > dominantCount) {
+            dominant = surface;
+            dominantCount = count;
+        }
+    }
+    return dominant;
+}
+
+function measureSignatureLines(runs: string[][], language: AppLanguage): string[] {
+    const addressTerms = ADDRESS_TERM_CANDIDATES_BY_LANGUAGE[language];
+    const tallies = new Map<string, PersonaSignatureTally>();
+    for (const run of runs) {
+        const countedInRun = new Set<string>();
+        for (const line of run) {
+            if (addressTerms.some((term) => line.includes(term))) {
+                continue;
+            }
+            const candidate = signatureCandidate(line);
+            if (candidate === null) {
+                continue;
+            }
+            const key = signatureKey(candidate);
+            const tally = tallies.get(key) ?? { runs: 0, surfaces: new Map<string, number>() };
+            tally.surfaces.set(candidate, (tally.surfaces.get(candidate) ?? 0) + 1);
+            if (!countedInRun.has(key)) {
+                countedInRun.add(key);
+                tally.runs += 1;
+            }
+            tallies.set(key, tally);
+        }
+    }
+    return [...tallies.values()]
+        .filter((tally) => tally.runs >= SIGNATURE_LINE_MIN_RUNS)
+        .sort((left, right) => right.runs - left.runs)
+        .slice(0, SIGNATURE_LINE_LIMIT)
+        .map(dominantSurface);
+}
+
+export function measurePersonaSpeechProfile(
+    slice: PersonaLanguageSlice,
+    language: AppLanguage,
+    externalVoiceLines: readonly string[],
+): PersonaSpeechProfile {
     const patternLines = spiritDialogues(slice.speech_patterns, slice.name);
     const storyLines = spiritDialogues(slice.story, slice.name);
     const everTalkLines = spiritDialogues(slice.evertalk, slice.name);
-    const spiritLines = [...patternLines, ...storyLines, ...everTalkLines];
+    const ownLines = [...patternLines, ...storyLines, ...everTalkLines];
+    const spiritLines = [...ownLines, ...externalVoiceLines];
+    const conversationRuns = [...spiritLineRuns(slice.story, slice.name), ...spiritLineRuns(slice.evertalk, slice.name)];
+    const ownSignatureRuns = conversationRuns.length > 0 ? conversationRuns : patternLines.map((line) => [line]);
+    const signatureRuns = [...ownSignatureRuns, ...externalVoiceLines.map((line) => [line])];
     return {
-        address_term: measureAddressTerm(spiritLines, language),
+        address_term: measureAddressTerm(ownLines, language),
+        register: measureSpeechRegister([...spiritLines, ...personaMonologueLines(slice)], language),
         solo_lines: measureSoloLines(spiritLines),
-        dialogue_examples: selectRepresentativeDialogueExamples(parsePersonaDialogueExchanges(slice, language)),
-        style: measureSpeechStyle(slice, language),
+        signature_lines: measureSignatureLines(signatureRuns, language),
+        style: measureSpeechStyle(conversationRuns),
     };
 }

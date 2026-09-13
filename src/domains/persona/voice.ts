@@ -1,6 +1,6 @@
 import type { AppLanguage } from '../../shared/types';
 import { findSpeechPreset } from './presets';
-import type { PersonaCheatPreset, PersonaLineRegister, PersonaSpeechRegister, PersonaSpeechStyle } from './types';
+import type { PersonaCheatPreset, PersonaLineRegister, PersonaSpeechProfile, PersonaSpeechRegister, PersonaVoiceAnchor } from './types';
 
 const LINE_TRAILING_DECORATION = '[\\s!?.…~♡♥♪^ㅜㅠㅋㅎ;:()*\\-]*$';
 const KOREAN_POLITE_ENDING_PATTERN = new RegExp(`(?:요|니다|[습입]니까|죠|세요|십시오)${LINE_TRAILING_DECORATION}`, 'u');
@@ -47,9 +47,30 @@ export function measureSpeechRegister(lines: string[], language: AppLanguage): P
     return ratio <= REGISTER_CASUAL_RATIO ? 'casual' : 'mixed';
 }
 
-export function resolvePersonaVoiceRegister(style: PersonaSpeechStyle | null, cheatPreset: PersonaCheatPreset | null): PersonaSpeechRegister | null {
+export function resolvePersonaVoiceRegister(measuredRegister: PersonaSpeechRegister | null, cheatPreset: PersonaCheatPreset | null): PersonaSpeechRegister | null {
     const presetRegister = cheatPreset === null ? null : findSpeechPreset(cheatPreset.speech_preset).register;
-    return presetRegister ?? style?.register ?? null;
+    return presetRegister ?? measuredRegister;
+}
+
+function isRegisterCompatibleLine(line: string, register: PersonaSpeechRegister | null, language: AppLanguage): boolean {
+    if (language !== 'ko' || register === null || register === 'mixed') {
+        return true;
+    }
+    const lineRegister = classifyKoreanLineRegister(line);
+    return lineRegister === null || lineRegister === register;
+}
+
+export function resolvePersonaVoiceAnchor(
+    speechProfile: PersonaSpeechProfile,
+    cheatPreset: PersonaCheatPreset | null,
+    language: AppLanguage,
+): PersonaVoiceAnchor {
+    const register = resolvePersonaVoiceRegister(speechProfile.register, cheatPreset);
+    return {
+        style: speechProfile.style,
+        register,
+        signature_lines: speechProfile.signature_lines.filter((line) => isRegisterCompatibleLine(line, register, language)),
+    };
 }
 
 export function describePersonaVoiceRegister(register: PersonaSpeechRegister | null): string | null {

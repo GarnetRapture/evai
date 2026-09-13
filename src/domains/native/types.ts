@@ -2,7 +2,7 @@ import type { ChatMessage, PersonaMemoryRecord } from '../chat';
 import type { LocalGenerationPayload } from '../llm/types';
 
 export type ContextStorageMode = 'browser' | 'native_mirror';
-export type NativeContextTransport = 'vite_dev' | 'browser_extension' | 'unavailable';
+export type NativeContextTransport = 'browser_extension' | 'unavailable';
 
 export interface NativeContextHealth {
     ok: true;

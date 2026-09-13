@@ -2,7 +2,7 @@ import { EVERSOUL_INDEX, EVERSOUL_STORE, getEverSoulDatabase } from '../../share
 import { nativeContextService } from '../native/service';
 import { habitMemoryId } from './habit';
 import { parsePersonaEmotion, serializePersonaEmotion, type PersonaEmotionState } from './affect';
-import { cosineSimilarity, createLexicalMemoryVector, isEmptyMemoryVector } from './memory';
+import { cosineSimilarity, createLexicalMemoryVector, isEmptyMemoryVector, rankMemoriesByRelevanceAndRecency } from './memory';
 import type {
     ChatMessage,
     ChatRoom,
@@ -11,7 +11,9 @@ import type {
     MemoryVector,
     PersonaHabitMemoryRecord,
     PersonaAffectMemoryRecord,
+    PersonaContactSnapshot,
     PersonaMemoryRecord,
+    PersonaRivalAttention,
     PersonaMemoryType,
     PersonaRecalledMemoryRecord,
     ProactiveConversationCandidate,
@@ -264,7 +266,7 @@ export const chatRepository = {
         await transaction.done;
         await nativeContextService.appendMessage(storedMessage);
     },
-    async listProactiveConversationCandidates(): Promise<ProactiveConversationCandidate[]> {
+    async listRoomsWithPersonaActivities(): Promise<Map<string, ChatRoom>> {
         const database = await getEverSoulDatabase();
         const rooms = new Map<string, ChatRoom>();
         const legacyRoomIds = new Set<string>();
@@ -296,6 +298,54 @@ export const chatRepository = {
             }
             await transaction.done;
         }
+        return rooms;
+    },
+    async readPersonaContactSnapshot(personaId: string): Promise<PersonaContactSnapshot> {
+        const rooms = await chatRepository.listRoomsWithPersonaActivities();
+        let lastContactAt = '';
+        const mentionCandidateIds = new Set<string>();
+        for (const room of rooms.values()) {
+            for (const [activityPersonaId, activity] of Object.entries(room.persona_activities ?? {})) {
+                if (activityPersonaId === personaId) {
+                    if (activity.latest_activity_at > lastContactAt) lastContactAt = activity.latest_activity_at;
+                    continue;
+                }
+                if (activity.latest_user_at.length > 0) mentionCandidateIds.add(activityPersonaId);
+            }
+        }
+        if (lastContactAt.length === 0) {
+            return { last_contact_at: '', rival_attention: [], mention_candidate_ids: [...mentionCandidateIds] };
+        }
+        const database = await getEverSoulDatabase();
+        const attention = new Map<string, PersonaRivalAttention>();
+        for (const room of rooms.values()) {
+            const latestRoomActivity = Object.values(room.persona_activities ?? {})
+                .reduce((latest, activity) => activity.latest_user_at > latest ? activity.latest_user_at : latest, '');
+            if (latestRoomActivity <= lastContactAt) continue;
+            const index = database.transaction(EVERSOUL_STORE.chatMessage).store.index(EVERSOUL_INDEX.chatMessageByRoomCreated);
+            let cursor = await index.openCursor(roomMessageRangeAfter(room.id, lastContactAt));
+            while (cursor) {
+                const message = cursor.value;
+                const messagePersonaId = message.persona_id ?? room.persona_id;
+                if (message.role === 'user' && messagePersonaId !== null && messagePersonaId !== personaId) {
+                    const previous = attention.get(messagePersonaId);
+                    attention.set(messagePersonaId, {
+                        persona_id: messagePersonaId,
+                        user_message_count: (previous?.user_message_count ?? 0) + 1,
+                        latest_user_at: previous !== undefined && previous.latest_user_at > message.created_at ? previous.latest_user_at : message.created_at,
+                    });
+                }
+                cursor = await cursor.continue();
+            }
+        }
+        return {
+            last_contact_at: lastContactAt,
+            rival_attention: [...attention.values()].sort((left, right) => right.user_message_count - left.user_message_count || right.latest_user_at.localeCompare(left.latest_user_at)),
+            mention_candidate_ids: [...mentionCandidateIds],
+        };
+    },
+    async listProactiveConversationCandidates(): Promise<ProactiveConversationCandidate[]> {
+        const rooms = await chatRepository.listRoomsWithPersonaActivities();
         const latestByPersona = new Map<string, ProactiveConversationCandidate>();
         for (const room of rooms.values()) {
             for (const [personaId, activity] of Object.entries(room.persona_activities ?? {})) {
@@ -646,7 +696,7 @@ export const chatRepository = {
             return [];
         }
         const candidates = await chatRepository.listEpisodicMemories(personaId, candidateLimit);
-        const scored: Array<{ score: number; text: string }> = [];
+        const relevant: Array<{ relevance: number; created_at: string; text: string }> = [];
         for (const memory of candidates) {
             if (isEmptyMemoryVector(memory.memory_vector)) {
                 continue;
@@ -654,13 +704,12 @@ export const chatRepository = {
             if (liveHistorySince.length > 0 && memory.created_at > liveHistorySince) {
                 continue;
             }
-            const score = cosineSimilarity(queryVector, memory.memory_vector);
-            if (score !== null && score > 0) {
-                scored.push({ score, text: memory.memory_text });
+            const relevance = cosineSimilarity(queryVector, memory.memory_vector);
+            if (relevance !== null && relevance > 0) {
+                relevant.push({ relevance, created_at: memory.created_at, text: memory.memory_text });
             }
         }
-        scored.sort((left, right) => right.score - left.score);
-        return scored.slice(0, limit).map((entry) => entry.text);
+        return rankMemoriesByRelevanceAndRecency(relevant, Date.now()).slice(0, limit).map((entry) => entry.text);
     },
     async searchDirectiveMemories(personaId: string, queryVector: MemoryVector, limit: number): Promise<string[]> {
         if (limit <= 0 || isEmptyMemoryVector(queryVector)) {

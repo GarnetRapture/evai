@@ -87,6 +87,7 @@ export const CHEAT_PRESET_ICON_ASSETS: {
         lovestruck: `${GIFT_ICON_ROOT}/Icon_Gift_EverFlower.png`,
         wistful: `${GIFT_ICON_ROOT}/Icon_Gift_Handkerchief.png`,
         bored: `${GIFT_ICON_ROOT}/Icon_Gift_PotatoChips.png`,
+        jealous: `${GIFT_ICON_ROOT}/Icon_Gift_CombHandMirror.png`,
     },
     speech: {
         dataset: `${GIFT_ICON_ROOT}/Icon_Gift_MagicScrolls.png`,

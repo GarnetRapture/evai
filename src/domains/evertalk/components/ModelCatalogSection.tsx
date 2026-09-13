@@ -1,13 +1,15 @@
 import { RefreshCw } from 'lucide-react';
 import { groupLocalModelEntries } from '../logic';
 import type { ModelCatalogSectionProps } from '../types';
+import { ChromeInstalledModelSection } from './ChromeInstalledModelSection';
 import { OnDeviceSystemModelItem } from './OnDeviceSystemModelItem';
 import { LocalModelSection } from './LocalModelSection';
 import { NativeHostModelItem } from './NativeHostModelItem';
 
-export function ModelCatalogSection({ appPlatform, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, labels, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveNativeHostModelPath }: ModelCatalogSectionProps) {
+export function ModelCatalogSection({ appPlatform, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, labels, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onLinkChromeLocalState, onSaveChromeModelFolderPath, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveNativeHostModelPath }: ModelCatalogSectionProps) {
     const entries = modelCatalog?.entries ?? [];
     const localModelGroups = groupLocalModelEntries(entries);
+    const chromeInstalledLibrary = modelCatalog?.chrome_installed ?? null;
     return (<section className="ever-panel-section">
         <h3>{labels.modelListTitle}</h3>
         <div className="ever-settings-result">
@@ -21,6 +23,8 @@ export function ModelCatalogSection({ appPlatform, modelCatalog, modelCatalogErr
             ? (<OnDeviceSystemModelItem key={entry.id} entry={entry} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel} onPrepareOnDeviceSystemModel={onPrepareOnDeviceSystemModel}/>)
             : null)}
         </div>
+
+        {chromeInstalledLibrary !== null ? (<ChromeInstalledModelSection key={chromeInstalledLibrary.folder_path} library={chromeInstalledLibrary} modelLoadingId={modelLoadingId} linking={chromeInstalledModelLinking} labels={labels} onSelectChatModel={onSelectChatModel} onLinkChromeInstalledModelFolder={onLinkChromeInstalledModelFolder} onLinkChromeLocalState={onLinkChromeLocalState} onSaveChromeModelFolderPath={onSaveChromeModelFolderPath}/>) : null}
 
         {entries.map((entry) => entry.engine === 'native_host'
             ? (<NativeHostModelItem key={`${entry.id}:${entry.saved_model_path}:${entry.saved_context_window}`} entry={entry} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel} onSaveNativeHostModelPath={onSaveNativeHostModelPath}/>)

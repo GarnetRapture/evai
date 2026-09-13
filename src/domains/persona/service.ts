@@ -5,10 +5,13 @@ import type { AppLanguage } from '../../shared/types';
 import { chatRepository } from '../chat/repository';
 import { listPersonaArchiveKeys, loadPersonaPack, normalizePersonaKey } from './archive';
 import {
+    BOND_STAGE_DIALOGUE_EXAMPLE_LIMIT,
+    RELEVANT_DIALOGUE_EXAMPLE_LIMIT,
     parsePersonaDialogueExchanges,
     selectBondStageDialogueExamples,
     selectRelevantDialogueExamples,
     selectRepresentativeDialogueExamples,
+    selectStageReachedDialogueExchanges,
 } from './dialogue';
 import { FAMILIARITY_MAX_LEVEL } from './familiarity';
 import { personaCheatPresetKey, resolveActivePersonaCheatPreset, resolvePersonaFamiliarityScore } from './presets';
@@ -17,6 +20,7 @@ import {
     findPersonaProfileMentions,
     personaGreetingFromPack,
 } from './prompt';
+import { buildPersonaRelationshipGraph, findMentionedCharacterKeys, findRelationForCharacter } from './relationship';
 import { personaRepository } from './repository';
 import { buildPersonaLanguageSlice } from './slice';
 import type {
@@ -25,6 +29,12 @@ import type {
     PersonaCheatSettingsSource,
     BondRankingEntry,
     FamiliarityEntry,
+    PersonaDialogueExchange,
+    PersonaLanguageSlice,
+    PersonaRelationEvidence,
+    PersonaRelationshipGraph,
+    PersonaRelationshipGraphMemo,
+    PersonaTurnReferenceRequest,
     PersonaTurnReferences,
     SpiritDetail,
     StoredPersonaProfile,
@@ -32,10 +42,88 @@ import type {
 
 const DEFAULT_PROFILE_FIELD = '-';
 const assembledPromptMemo = new Map<string, AssembledPersonaPrompt>();
+const languageSliceMemo = new Map<string, PersonaLanguageSlice>();
+const dialogueExchangeMemo = new Map<string, PersonaDialogueExchange[]>();
+const relationshipGraphMemo = new Map<AppLanguage, PersonaRelationshipGraphMemo>();
 const BOND_MEMORY_WEIGHT = 3;
+const ROSTER_FINGERPRINT_SEPARATOR = '\n';
 
 export function personaNotFoundError(id: string): DomainError {
     return new DomainError('not_found', id);
+}
+
+function personaSourceKey(persona: StoredPersonaProfile, language: AppLanguage): string {
+    return JSON.stringify([persona.id, language, persona.created_at]);
+}
+
+function memoizedLanguageSlice(persona: StoredPersonaProfile, language: AppLanguage): PersonaLanguageSlice {
+    const key = personaSourceKey(persona, language);
+    const memoized = languageSliceMemo.get(key);
+    if (memoized) {
+        return memoized;
+    }
+    const slice = buildPersonaLanguageSlice(JSON.parse(persona.raw_json) as SpiritDetail, language);
+    languageSliceMemo.set(key, slice);
+    return slice;
+}
+
+function memoizedDialogueExchanges(persona: StoredPersonaProfile, language: AppLanguage): PersonaDialogueExchange[] {
+    const key = personaSourceKey(persona, language);
+    const memoized = dialogueExchangeMemo.get(key);
+    if (memoized) {
+        return memoized;
+    }
+    const exchanges = parsePersonaDialogueExchanges(memoizedLanguageSlice(persona, language), language);
+    dialogueExchangeMemo.set(key, exchanges);
+    return exchanges;
+}
+
+function rosterFingerprint(personas: readonly StoredPersonaProfile[]): string {
+    return personas
+        .map((persona) => `${persona.id}:${persona.created_at}`)
+        .sort()
+        .join(ROSTER_FINGERPRINT_SEPARATOR);
+}
+
+async function loadRelationshipGraph(language: AppLanguage): Promise<PersonaRelationshipGraph> {
+    const personas = await personaRepository.listPersonas();
+    const fingerprint = rosterFingerprint(personas);
+    const memoized = relationshipGraphMemo.get(language);
+    if (memoized?.fingerprint === fingerprint) {
+        return memoized.graph;
+    }
+    const graph = Promise.resolve().then(() => buildPersonaRelationshipGraph(
+        personas.map((persona) => ({ persona_id: persona.id, slice: memoizedLanguageSlice(persona, language) })),
+        language,
+        fingerprint,
+    ));
+    relationshipGraphMemo.set(language, { fingerprint, graph });
+    try {
+        return await graph;
+    }
+    catch (error) {
+        if (relationshipGraphMemo.get(language)?.graph === graph) {
+            relationshipGraphMemo.delete(language);
+        }
+        throw error;
+    }
+}
+
+function relationsForPersonaIds(graph: PersonaRelationshipGraph, personaId: string, personaIds: readonly string[]): PersonaRelationEvidence[] {
+    const characterKeys = new Set(personaIds.flatMap((id) => graph.character_key_by_persona.get(id) ?? []));
+    return [...characterKeys].flatMap((key) => findRelationForCharacter(graph, personaId, key) ?? []);
+}
+
+function primingExchanges(exchanges: PersonaDialogueExchange[], familiarityLevel: number): PersonaDialogueExchange[] {
+    return selectRepresentativeDialogueExamples(selectStageReachedDialogueExchanges(exchanges, familiarityLevel, FAMILIARITY_MAX_LEVEL));
+}
+
+async function requirePersona(id: string): Promise<StoredPersonaProfile> {
+    const persona = await personaRepository.getPersona(id);
+    if (!persona) {
+        throw personaNotFoundError(id);
+    }
+    return persona;
 }
 
 export const personaService = {
@@ -107,13 +195,21 @@ export const personaService = {
         const presetKey = personaCheatPresetKey(cheatPreset);
         const sourceUpdatedAt = persona.personality_override?.updated_at ?? persona.created_at;
         const memoKey = `${persona.id}\u0000${language}\u0000${sourceUpdatedAt}\u0000${normalizedSaviorName}\u0000${presetKey}`;
-        const memoized = assembledPromptMemo.get(memoKey);
+        const graph = await loadRelationshipGraph(language);
+        const graphMemoKey = JSON.stringify([memoKey, graph.fingerprint]);
+        const memoized = assembledPromptMemo.get(graphMemoKey);
         if (memoized) {
             return memoized;
         }
-        const pack = JSON.parse(persona.raw_json) as SpiritDetail;
-        const assembled = buildPersonaSystemPrompt(pack, language, normalizedSaviorName, persona.personality_override, cheatPreset);
-        assembledPromptMemo.set(memoKey, assembled);
+        const assembled = buildPersonaSystemPrompt(
+            memoizedLanguageSlice(persona, language),
+            language,
+            normalizedSaviorName,
+            persona.personality_override,
+            cheatPreset,
+            graph.profiles.get(persona.id) ?? null,
+        );
+        assembledPromptMemo.set(graphMemoKey, assembled);
         if (normalizedSaviorName.length > 0 || cheatPreset !== null) {
             return assembled;
         }
@@ -131,30 +227,37 @@ export const personaService = {
         }
         return assembled;
     },
-    async getTurnPersonaReferences(
-        id: string,
-        language: AppLanguage,
-        query: string,
-        limit: number,
-        excludedTerms: readonly string[],
-        familiarityLevel: number,
-    ): Promise<PersonaTurnReferences> {
-        const persona = await personaRepository.getPersona(id);
-        if (!persona) {
-            throw personaNotFoundError(id);
-        }
-        const pack = JSON.parse(persona.raw_json) as SpiritDetail;
-        const slice = buildPersonaLanguageSlice(pack, language);
-        const exchanges = parsePersonaDialogueExchanges(slice, language);
-        const topical = selectRelevantDialogueExamples(exchanges, query, limit, excludedTerms);
-        const profileMentions = findPersonaProfileMentions(slice, query);
-        if (topical.length > 0) {
-            return { voice_examples: topical, voice_reference_kind: 'topic', profile_mentions: profileMentions };
-        }
+    async getPrimingDialogueExchanges(id: string, language: AppLanguage, familiarityLevel: number): Promise<PersonaDialogueExchange[]> {
+        const persona = await requirePersona(id);
+        return primingExchanges(memoizedDialogueExchanges(persona, language), familiarityLevel);
+    },
+    async getTurnPersonaReferences(request: PersonaTurnReferenceRequest): Promise<PersonaTurnReferences> {
+        const { language, query, familiarity_level: familiarityLevel } = request;
+        const persona = await requirePersona(request.persona_id);
+        const slice = memoizedLanguageSlice(persona, language);
+        const exchanges = memoizedDialogueExchanges(persona, language);
+        const primed = primingExchanges(exchanges, familiarityLevel);
+        const primedSet = new Set(primed);
+        const stageReached = selectStageReachedDialogueExchanges(exchanges, familiarityLevel, FAMILIARITY_MAX_LEVEL)
+            .filter((exchange) => !primedSet.has(exchange));
+        const topical = selectRelevantDialogueExamples(stageReached, query, RELEVANT_DIALOGUE_EXAMPLE_LIMIT, request.excluded_terms);
+        const bondStage = selectBondStageDialogueExamples(
+            exchanges,
+            familiarityLevel,
+            FAMILIARITY_MAX_LEVEL,
+            BOND_STAGE_DIALOGUE_EXAMPLE_LIMIT,
+            query,
+            [...primed, ...topical],
+        );
+        const graph = await loadRelationshipGraph(language);
+        const canonRelationKeys = (graph.profiles.get(persona.id)?.relations ?? []).map((relation) => relation.character_key);
+        const chattedKeys = request.mention_candidate_ids.flatMap((id) => graph.character_key_by_persona.get(id) ?? []);
+        const mentionedKeys = findMentionedCharacterKeys(graph, persona.id, query, new Set([...canonRelationKeys, ...chattedKeys]));
         return {
-            voice_examples: selectBondStageDialogueExamples(exchanges, familiarityLevel, FAMILIARITY_MAX_LEVEL, limit, query, selectRepresentativeDialogueExamples(exchanges)),
-            voice_reference_kind: 'bond_stage',
-            profile_mentions: profileMentions,
+            rehearsal_exchanges: [...bondStage, ...topical],
+            profile_mentions: findPersonaProfileMentions(slice, query),
+            mentioned_relations: mentionedKeys.flatMap((key) => findRelationForCharacter(graph, persona.id, key) ?? []),
+            rival_relations: relationsForPersonaIds(graph, persona.id, request.rival_persona_ids),
         };
     },
     async getEmotionSeedText(id: string, language: AppLanguage): Promise<string> {

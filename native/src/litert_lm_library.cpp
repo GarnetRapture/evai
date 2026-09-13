@@ -52,7 +52,7 @@ std::string binaryArchitecture(const std::filesystem::path& path) {
     std::array<unsigned char, 64> header{};
     input.read(reinterpret_cast<char*>(header.data()), static_cast<std::streamsize>(header.size()));
     if (input.gcount() < 20) return "unknown";
-    if (header[0] == 'M' && header[1] == 'Z') {
+    if (input.gcount() == static_cast<std::streamsize>(header.size()) && header[0] == 'M' && header[1] == 'Z') {
         const std::uint32_t offset = static_cast<std::uint32_t>(header[0x3c])
             | (static_cast<std::uint32_t>(header[0x3d]) << 8U)
             | (static_cast<std::uint32_t>(header[0x3e]) << 16U)
@@ -61,7 +61,8 @@ std::string binaryArchitecture(const std::filesystem::path& path) {
         input.seekg(static_cast<std::streamoff>(offset));
         std::array<unsigned char, 6> signature{};
         input.read(reinterpret_cast<char*>(signature.data()), static_cast<std::streamsize>(signature.size()));
-        if (input.gcount() == static_cast<std::streamsize>(signature.size()) && signature[0] == 'P' && signature[1] == 'E') {
+        if (input.gcount() == static_cast<std::streamsize>(signature.size()) && signature[0] == 'P' && signature[1] == 'E'
+            && signature[2] == 0 && signature[3] == 0) {
             return architectureForMachine(static_cast<std::uint16_t>(signature[4] | (signature[5] << 8U)), true);
         }
         return "unknown";
@@ -85,7 +86,7 @@ std::vector<std::filesystem::path> libraryCandidates(
         candidates.push_back(std::filesystem::is_directory(configuredPath, error)
             ? configuredPath / kLibraryFileName : configuredPath);
     }
-    if (!executableDirectory.empty()) candidates.push_back(executableDirectory / kLibraryFileName);
+    else if (!executableDirectory.empty()) candidates.push_back(executableDirectory / kLibraryFileName);
     return candidates;
 }
 
@@ -123,11 +124,13 @@ bool bindSymbol(void* module, Function& target, const char* name) {
 
 const char* bindApi(void* module, LiteRtLmApi& api) {
 #define EVERSOUL_BIND_LITERT_LM(member, symbol) if (!bindSymbol(module, api.member, #symbol)) return #symbol
+    EVERSOUL_BIND_LITERT_LM(lastErrorMessage, litert_lm_get_last_error_message);
     EVERSOUL_BIND_LITERT_LM(setMinLogLevel, litert_lm_set_min_log_level);
     EVERSOUL_BIND_LITERT_LM(engineSettingsCreate, litert_lm_engine_settings_create);
     EVERSOUL_BIND_LITERT_LM(engineSettingsDelete, litert_lm_engine_settings_delete);
     EVERSOUL_BIND_LITERT_LM(engineSettingsSetMaxNumTokens, litert_lm_engine_settings_set_max_num_tokens);
     EVERSOUL_BIND_LITERT_LM(engineSettingsSetCacheDir, litert_lm_engine_settings_set_cache_dir);
+    EVERSOUL_BIND_LITERT_LM(engineSettingsEnableBenchmark, litert_lm_engine_settings_enable_benchmark);
     EVERSOUL_BIND_LITERT_LM(engineCreate, litert_lm_engine_create);
     EVERSOUL_BIND_LITERT_LM(engineDelete, litert_lm_engine_delete);
     EVERSOUL_BIND_LITERT_LM(engineTokenize, litert_lm_engine_tokenize);
@@ -158,6 +161,12 @@ const char* bindApi(void* module, LiteRtLmApi& api) {
     EVERSOUL_BIND_LITERT_LM(conversationSendMessageStream, litert_lm_conversation_send_message_stream);
     EVERSOUL_BIND_LITERT_LM(conversationCancelProcess, litert_lm_conversation_cancel_process);
     EVERSOUL_BIND_LITERT_LM(conversationGetTokenCount, litert_lm_conversation_get_token_count);
+    EVERSOUL_BIND_LITERT_LM(conversationGetBenchmarkInfo, litert_lm_conversation_get_benchmark_info);
+    EVERSOUL_BIND_LITERT_LM(benchmarkInfoDelete, litert_lm_benchmark_info_delete);
+    EVERSOUL_BIND_LITERT_LM(benchmarkPrefillTurns, litert_lm_benchmark_info_get_num_prefill_turns);
+    EVERSOUL_BIND_LITERT_LM(benchmarkDecodeTurns, litert_lm_benchmark_info_get_num_decode_turns);
+    EVERSOUL_BIND_LITERT_LM(benchmarkPrefillTokens, litert_lm_benchmark_info_get_prefill_token_count_at);
+    EVERSOUL_BIND_LITERT_LM(benchmarkDecodeTokens, litert_lm_benchmark_info_get_decode_token_count_at);
     EVERSOUL_BIND_LITERT_LM(streamChunkGetText, litert_lm_stream_chunk_get_text);
     EVERSOUL_BIND_LITERT_LM(streamChunkIsFinal, litert_lm_stream_chunk_is_final);
     EVERSOUL_BIND_LITERT_LM(streamChunkGetError, litert_lm_stream_chunk_get_error);
@@ -208,26 +217,44 @@ std::unique_ptr<LiteRtLmLibrary> LiteRtLmLibrary::open(
         error = std::move(resolution.error);
         return nullptr;
     }
-    void* module = openModule(resolution.path);
-    if (module == nullptr) {
-        error = "litert_lm_runtime_load_failed:" + pathUtf8(resolution.path);
+    auto library = std::unique_ptr<LiteRtLmLibrary>(new LiteRtLmLibrary(nullptr, {}, std::move(resolution.path)));
+#ifdef _WIN32
+    if (!SetDefaultDllDirectories(LOAD_LIBRARY_SEARCH_DEFAULT_DIRS)) {
+        error = "litert_lm_dll_search_configuration_failed:" + std::to_string(GetLastError());
         return nullptr;
     }
-    LiteRtLmApi api;
-    if (const char* missing = bindApi(module, api); missing != nullptr) {
-        closeModule(module);
+    library->searchDirectory_ = AddDllDirectory(library->path_.parent_path().c_str());
+    if (library->searchDirectory_ == nullptr) {
+        error = "litert_lm_dll_directory_failed:" + std::to_string(GetLastError());
+        return nullptr;
+    }
+#endif
+    library->module_ = openModule(library->path_);
+    if (library->module_ == nullptr) {
+        error = "litert_lm_runtime_load_failed:" + pathUtf8(library->path_);
+#ifdef _WIN32
+        error += ":win32=" + std::to_string(GetLastError());
+#else
+        if (const char* detail = dlerror(); detail != nullptr) error += ':' + std::string(detail);
+#endif
+        return nullptr;
+    }
+    if (const char* missing = bindApi(library->module_, library->api_); missing != nullptr) {
         error = "litert_lm_runtime_incompatible:" + std::string(missing);
         return nullptr;
     }
     error.clear();
-    return std::unique_ptr<LiteRtLmLibrary>(new LiteRtLmLibrary(module, api, std::move(resolution.path)));
+    return library;
 }
 
-LiteRtLmLibrary::LiteRtLmLibrary(void* module, LiteRtLmApi api, std::filesystem::path path) noexcept
-    : module_(module), api_(api), path_(std::move(path)) {}
+LiteRtLmLibrary::LiteRtLmLibrary(void* module, LiteRtLmApi api, std::filesystem::path path, void* searchDirectory) noexcept
+    : module_(module), searchDirectory_(searchDirectory), api_(api), path_(std::move(path)) {}
 
 LiteRtLmLibrary::~LiteRtLmLibrary() {
     closeModule(module_);
+#ifdef _WIN32
+    if (searchDirectory_ != nullptr) RemoveDllDirectory(searchDirectory_);
+#endif
 }
 
 }

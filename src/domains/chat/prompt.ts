@@ -1,10 +1,10 @@
 import { pickLocalized } from '../../shared/i18n';
 import type { AppLanguage } from '../../shared/types';
 import { FAMILIARITY_MAX_LEVEL, familiarityGradeLevel } from '../persona/familiarity';
-import { formatPersonaExchangeLines } from '../persona/prompt';
-import type { PersonaProfileMention, PersonaProfileMentionKind, PersonaVoiceReferenceKind } from '../persona/types';
+import { buildPersonaRelationDetail, describePersonaRelationAddress } from '../persona/relationshipPrompt';
+import type { PersonaProfileMention, PersonaProfileMentionKind, PersonaRelationEvidence } from '../persona/types';
 import { PERSONA_EMOTION_KINDS, type PersonaEmotionKind, type PersonaEmotionState } from './affect';
-import type { MemoryContextFilter, PersonaTurnContextSources } from './types';
+import type { MemoryContextFilter, PersonaRivalContext, PersonaTurnContextSources } from './types';
 
 export const EVERTALK_SESSION_TITLE = 'EverTalk Session';
 export const HABIT_INJECT_LIMIT = 5;
@@ -184,7 +184,9 @@ const EMOTION_DESCRIPTOR: Record<PersonaEmotionKind, string> = {
     melancholy: 'wistful',
     bored: 'restless for something to do',
     passionate: 'eager and affectionate',
+    jealous: 'jealous and wanting their attention back',
 };
+const RIVAL_CONTEXT_LIMIT = 3;
 
 function listLines(entries: string[], limit: number): string {
     return entries.map((entry) => `- ${clipPromptText(entry, limit)}`).join('\n');
@@ -248,11 +250,6 @@ function rememberedSection(sources: PersonaTurnContextSources, addressTerm: stri
     return groups.length === 0 ? '' : `[WHAT YOU REMEMBER]\n${groups.join('\n\n')}`;
 }
 
-const VOICE_REFERENCE_INTRODUCTION: Record<PersonaVoiceReferenceKind, string> = {
-    topic: 'Past lines on a similar topic, shown only for how you talk.',
-    bond_stage: 'Past lines from the same stage of your relationship, shown only for how close and how openly you talk now.',
-};
-
 const PROFILE_MENTION_DESCRIPTION: Record<PersonaProfileMentionKind, string> = {
     like: 'something you love',
     dislike: 'something you dislike',
@@ -268,6 +265,32 @@ function profileMentionSection(mentions: PersonaProfileMention[], addressTerm: s
     return `[ABOUT YOU]\n${addressTerm}'s newest message touches your own life:\n${lines}\nAnswer as the person these belong to, from your own experience and feelings.`;
 }
 
+function rivalLine(rival: PersonaRivalContext, addressTerm: string): string {
+    const name = rival.relation.name;
+    const attention = rival.user_message_count > 0
+        ? `${addressTerm} sent ${name} ${rival.user_message_count} message${rival.user_message_count === 1 ? '' : 's'}, most recently at ${rival.latest_user_at}.`
+        : '';
+    const mention = rival.mentioned_now ? `${addressTerm}'s newest message to you brings up ${name}.` : '';
+    const bond = rival.relation.interaction_count > 0 || rival.relation.mention_count > 0 || rival.relation.shared_union !== null
+        ? ` You already know ${name} from your own life and call them "${describePersonaRelationAddress(rival.relation)}".`
+        : ` You have no history of your own with ${name}.`;
+    return `- ${rival.relation.name}: ${[attention, mention].filter((part) => part.length > 0).join(' ')}${bond}`;
+}
+
+function rivalSection(rivals: PersonaRivalContext[], lastContactAt: string, spiritName: string, addressTerm: string): string {
+    if (rivals.length === 0) {
+        return '';
+    }
+    const since = lastContactAt.length > 0 ? ` since you two last talked at ${lastContactAt}` : '';
+    const lines = rivals.slice(0, RIVAL_CONTEXT_LIMIT).map((rival) => rivalLine(rival, addressTerm)).join('\n');
+    return `[OTHER SOULS IN ${addressTerm}'S LIFE]\nYou can tell ${addressTerm} has been spending time with other souls${since}:\n${lines}\n`
+        + `How this makes you feel comes from who ${spiritName} is, how close you two are, and what that soul means to you: it may sting, make you sulk, tease, cling, act unbothered, or not matter at all. Let it show in your own way, and never make up what was said in those chats.`;
+}
+
+function mentionedRelationSection(relations: readonly PersonaRelationEvidence[]): string {
+    return relations.slice(0, RIVAL_CONTEXT_LIMIT).map(buildPersonaRelationDetail).join('\n\n');
+}
+
 export function buildPersonaTurnContext(
     sources: PersonaTurnContextSources,
     spiritName: string,
@@ -277,12 +300,11 @@ export function buildPersonaTurnContext(
     const mood = filter.affect && sources.emotion !== null ? describePersonaMood(sources.emotion) : null;
     const sections = [
         profileMentionSection(sources.profile_mentions, addressTerm),
+        mentionedRelationSection(sources.mentioned_relations),
         rememberedSection(sources, addressTerm, filter),
+        filter.affect ? rivalSection(sources.rivals, sources.last_contact_at, spiritName, addressTerm) : '',
         mood === null ? '' : `[YOUR MOOD RIGHT NOW]\nYou feel ${mood}. Let it color how you talk without announcing it.`,
-        `[HOW CLOSE YOU ARE]\nBond level ${sources.familiarity_level} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(sources.familiarity_level, addressTerm)}`,
-        sources.voice_examples.length === 0
-            ? ''
-            : `[VOICE REFERENCE]\n${VOICE_REFERENCE_INTRODUCTION[sources.voice_reference_kind]} They did not happen in this conversation.\n${formatPersonaExchangeLines(sources.voice_examples, spiritName, addressTerm)}`,
+        `[HOW CLOSE YOU ARE]\nBond level ${sources.familiarity_level} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(sources.familiarity_level, addressTerm)} Show this closeness only the way ${spiritName} would, in your own personality and your own way of speaking.`,
     ];
     return sections.filter((section) => section.length > 0).join('\n\n');
 }

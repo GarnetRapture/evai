@@ -1,20 +1,21 @@
 import type { AppLanguage } from '../../shared/types';
 import { findPersonalityPreset, findSpeechPreset } from './presets';
+import { buildPersonaRelationshipSection } from './relationshipPrompt';
 import { buildPersonaLanguageSlice } from './slice';
 import { ADDRESS_TERM_CANDIDATES_BY_LANGUAGE, measurePersonaSpeechProfile } from './speech';
-import { describePersonaVoiceRegister, resolvePersonaVoiceRegister } from './voice';
+import { describePersonaVoiceRegister, resolvePersonaVoiceAnchor } from './voice';
 import type {
     AssembledPersonaPrompt,
     PersonaCheatPreset,
-    PersonaDialogueExchange,
     PersonaLanguageSlice,
     PersonaPersonalityOverride,
     PersonaProfileMention,
     PersonaProfileMentionKind,
     PersonaPromptIdentity,
+    PersonaRelationshipProfile,
     PersonaSpeechProfile,
-    PersonaSpeechRegister,
     PersonaSpeechStyle,
+    PersonaVoiceAnchor,
     SpiritDetail,
 } from './types';
 
@@ -95,22 +96,23 @@ export function describePersonaSpeechStyle(style: PersonaSpeechStyle): string {
     return style.signature_marks.length === 0 ? shape : `${shape}, often using ${style.signature_marks.join(' ')}`;
 }
 
-function speakingSection(speechProfile: PersonaSpeechProfile, voiceRegister: PersonaSpeechRegister | null): string {
-    const registerDescription = describePersonaVoiceRegister(voiceRegister);
+export function describePersonaSignatureLines(signatureLines: string[]): string {
+    return signatureLines.map((line) => `"${line}"`).join(', ');
+}
+
+function speakingSection(speechProfile: PersonaSpeechProfile, voice: PersonaVoiceAnchor): string {
+    const registerDescription = describePersonaVoiceRegister(voice.register);
     const lines = [
-        speechProfile.style === null ? '' : `How your messages look: ${describePersonaSpeechStyle(speechProfile.style)}.`,
+        voice.style === null ? '' : `How your messages look: ${describePersonaSpeechStyle(voice.style)}.`,
         registerDescription === null ? '' : `You always speak in ${registerDescription}.`,
+        voice.signature_lines.length === 0
+            ? ''
+            : `Reactions and words you use again and again, which make you sound like yourself: ${describePersonaSignatureLines(voice.signature_lines)}. Use them where they fit naturally.`,
         speechProfile.solo_lines.length === 0
             ? ''
             : `Lines you have said before. Match their vocabulary, sentence endings, and rhythm without repeating them word for word.\n${speechSampleLines(speechProfile.solo_lines)}`,
     ].filter((line) => line.length > 0);
     return lines.length === 0 ? '' : `[YOUR WAY OF SPEAKING]\n${lines.join('\n')}`;
-}
-
-export function formatPersonaExchangeLines(exchanges: PersonaDialogueExchange[], spiritName: string, addressTerm: string): string {
-    return exchanges
-        .map((exchange) => `${addressTerm}: ${exchange.user_message}\n${spiritName}: ${exchange.spirit_messages.join('\n')}`)
-        .join('\n\n');
 }
 
 function normalizeProfileMatchText(text: string): string {
@@ -171,6 +173,27 @@ function replyRulesSection(identity: PersonaPromptIdentity, language: AppLanguag
         + `- Bring up events, dates, holidays, gifts, or plans only when they appear in the live conversation or under [WHAT YOU REMEMBER].`;
 }
 
+function personalitySection(slice: PersonaLanguageSlice, override: PersonaPersonalityOverride | null, cheatPreset: PersonaCheatPreset | null): string {
+    const overridePersonality = knownProfileValue(override?.personality ?? '');
+    const selfIntroduction = overridePersonality === null ? knownProfileValue(slice.description) : null;
+    const personalityInstruction = cheatPreset === null ? '' : findPersonalityPreset(cheatPreset.personality_preset).instruction;
+    const presetLine = personalityInstruction.length > 0
+        ? `Everything above stays who you are. On top of it, this side of you comes forward more right now: ${personalityInstruction}`
+        : '';
+    if (overridePersonality !== null) {
+        return ['[PERSONALITY]', overridePersonality, presetLine].filter((line) => line.length > 0).join('\n');
+    }
+    if (selfIntroduction !== null) {
+        return [
+            '[IN YOUR OWN WORDS]',
+            'This is how you once introduced yourself. It shows who you are, and it is exactly how you talk: your words, your sentence endings, your little sounds and marks.',
+            selfIntroduction,
+            presetLine,
+        ].filter((line) => line.length > 0).join('\n');
+    }
+    return presetLine.length === 0 ? '' : `[PERSONALITY]\n${presetLine}`;
+}
+
 function personaPromptBody(
     slice: PersonaLanguageSlice,
     language: AppLanguage,
@@ -178,20 +201,17 @@ function personaPromptBody(
     identity: PersonaPromptIdentity,
     override: PersonaPersonalityOverride | null,
     cheatPreset: PersonaCheatPreset | null,
+    voice: PersonaVoiceAnchor,
+    relationship: PersonaRelationshipProfile | null,
 ): string {
-    const personality = knownProfileValue(override?.personality ?? '') ?? knownProfileValue(slice.description);
-    const personalityInstruction = cheatPreset === null ? '' : findPersonalityPreset(cheatPreset.personality_preset).instruction;
-    const personalitySection = [
-        personality ?? '',
-        personalityInstruction.length > 0 ? `Everything above stays who you are. On top of it, this side of you comes forward more right now: ${personalityInstruction}` : '',
-    ].filter((line) => line.length > 0).join('\n');
     const sections = [
         identitySection(identity),
         partnerInputSection(identity),
         replyRulesSection(identity, language, cheatPreset),
         `[PROFILE]\n${profileLines(slice)}`,
-        personalitySection.length === 0 ? '' : `[PERSONALITY]\n${personalitySection}`,
-        speakingSection(speechProfile, resolvePersonaVoiceRegister(speechProfile.style, cheatPreset)),
+        personalitySection(slice, override, cheatPreset),
+        relationship === null ? '' : buildPersonaRelationshipSection(relationship.relations),
+        speakingSection(speechProfile, voice),
     ];
     return sections.filter((section) => section.length > 0).join('\n\n');
 }
@@ -207,14 +227,14 @@ export function buildPersonaDialogueExcludedTerms(slice: PersonaLanguageSlice, l
 }
 
 export function buildPersonaSystemPrompt(
-    pack: SpiritDetail,
+    slice: PersonaLanguageSlice,
     language: AppLanguage,
     saviorName: string,
     override: PersonaPersonalityOverride | null,
     cheatPreset: PersonaCheatPreset | null,
+    relationship: PersonaRelationshipProfile | null,
 ): AssembledPersonaPrompt {
-    const slice = buildPersonaLanguageSlice(pack, language);
-    const speechProfile = measurePersonaSpeechProfile(slice, language);
+    const speechProfile = measurePersonaSpeechProfile(slice, language, relationship?.external_voice_lines ?? []);
     const normalizedSaviorName = saviorName.trim();
     const identity: PersonaPromptIdentity = {
         name: slice.name,
@@ -223,14 +243,15 @@ export function buildPersonaSystemPrompt(
         address_term: personaAddressTerm(language, speechProfile, normalizedSaviorName),
         address_is_personal_name: normalizedSaviorName.length > 0,
     };
+    const voice = resolvePersonaVoiceAnchor(speechProfile, cheatPreset, language);
     return {
         localized_name: slice.name,
-        assembled_prompt: personaPromptBody(slice, language, speechProfile, identity, override, cheatPreset),
+        assembled_prompt: personaPromptBody(slice, language, speechProfile, identity, override, cheatPreset, voice, relationship),
         speech_profile: speechProfile,
         greeting: knownProfileValue(override?.greeting ?? '') ?? knownProfileValue(slice.greeting) ?? '',
         address_term: identity.address_term,
         dialogue_excluded_terms: buildPersonaDialogueExcludedTerms(slice, language, identity.address_term),
-        voice_register: resolvePersonaVoiceRegister(speechProfile.style, cheatPreset),
+        voice,
     };
 }
 

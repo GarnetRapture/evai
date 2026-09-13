@@ -5,6 +5,8 @@ import type { UserSession } from '../auth';
 import type { ChatMessage, ChatRoom, MemoryContextFilter, MemoryContextKind, PersonaMemoryInsight } from '../chat';
 import type {
     ChatModelCatalog,
+    ChromeInstalledModelEntry,
+    ChromeInstalledModelLibrary,
     OnDeviceSystemModelEntry,
     LlmRequestStatus,
     LlmSessionStatus,
@@ -447,10 +449,30 @@ export interface ModelCatalogSectionProps {
     onRefreshModelCatalog: () => Promise<void>;
     onSelectChatModel: (modelId: string) => Promise<void>;
     onPrepareOnDeviceSystemModel: (entry: OnDeviceSystemModelEntry) => Promise<void>;
+    onLinkChromeInstalledModelFolder: (files: File[]) => Promise<void>;
+    onLinkChromeLocalState: (file: File) => Promise<void>;
+    onSaveChromeModelFolderPath: (folderPath: string) => Promise<void>;
+    chromeInstalledModelLinking: boolean;
     onInstallLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
     onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onSaveNativeHostModelPath: (modelPath: string, contextWindow: number) => Promise<void>;
+}
+export interface ChromeInstalledModelSectionProps {
+    library: ChromeInstalledModelLibrary;
+    modelLoadingId: string | null;
+    linking: boolean;
+    labels: EverTalkLabels;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onLinkChromeInstalledModelFolder: (files: File[]) => Promise<void>;
+    onLinkChromeLocalState: (file: File) => Promise<void>;
+    onSaveChromeModelFolderPath: (folderPath: string) => Promise<void>;
+}
+export interface ChromeInstalledModelItemProps {
+    entry: ChromeInstalledModelEntry;
+    modelLoadingId: string | null;
+    labels: EverTalkLabels;
+    onSelectChatModel: (modelId: string) => Promise<void>;
 }
 export interface NativeHostModelItemProps {
     entry: NativeHostModelEntry;
@@ -735,6 +757,10 @@ export interface EverTalkController {
     refreshModelCatalog: () => Promise<void>;
     selectChatModel: (modelId: string) => Promise<void>;
     prepareOnDeviceSystemModel: (entry: OnDeviceSystemModelEntry) => Promise<void>;
+    linkChromeInstalledModelFolder: (files: File[]) => Promise<void>;
+    saveChromeModelFolderPath: (folderPath: string) => Promise<void>;
+    linkChromeLocalState: (file: File) => Promise<void>;
+    chromeInstalledModelLinking: boolean;
     installLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
     downloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     saveNativeHostModelPath: (modelPath: string, contextWindow: number) => Promise<void>;

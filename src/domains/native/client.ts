@@ -23,7 +23,6 @@ interface NativeFailure {
     error: string;
 }
 
-const DEVELOPMENT_ENDPOINT = '/__eversoul/native-context';
 const EXTENSION_REQUEST = 'eversoul-native-context-request';
 const EXTENSION_RESPONSE = 'eversoul-native-context-response';
 let preferredExecutablePath = '';
@@ -74,22 +73,7 @@ function isNativeFailure(value: unknown): value is NativeFailure {
 async function send(request: Record<string, unknown>): Promise<unknown> {
     const routedRequest = requestWithExecutablePath(request);
     let response: unknown;
-    if (import.meta.env.DEV) {
-        if (preferredExecutablePath.length === 0) {
-            throw new Error('native_executable_path_not_configured');
-        }
-        const result = await fetch(DEVELOPMENT_ENDPOINT, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(routedRequest),
-        });
-        response = await result.json();
-        if (!result.ok) {
-            const detail = isNativeFailure(response) ? response.error : `native_http_${result.status}`;
-            throw new Error(detail);
-        }
-    }
-    else if (window.__EVERSOUL_NATIVE_CONTEXT__) {
+    if (window.__EVERSOUL_NATIVE_CONTEXT__) {
         response = await window.__EVERSOUL_NATIVE_CONTEXT__.send(routedRequest);
     }
     else {
@@ -102,7 +86,6 @@ async function send(request: Record<string, unknown>): Promise<unknown> {
 }
 
 function transport(): NativeContextStatus['transport'] {
-    if (import.meta.env.DEV) return 'vite_dev';
     if (typeof window !== 'undefined') return 'browser_extension';
     return 'unavailable';
 }

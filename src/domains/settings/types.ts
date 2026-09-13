@@ -1,5 +1,6 @@
 import type { AppLanguage } from '../../shared/types';
 import type { MemoryContextFilter } from '../chat/types';
+import type { ChromeBrowserModelState, ChromeInstalledModel } from '../llm/types';
 import type { ContextStorageMode } from '../native/types';
 import type { PersonaCheatPreset } from '../persona/types';
 
@@ -22,6 +23,9 @@ export interface AppSettings {
     native_executable_path: string;
     native_model_path: string;
     native_model_context_window: number;
+    chrome_model_folder_path: string;
+    chrome_installed_models: ChromeInstalledModel[];
+    chrome_browser_model_state: ChromeBrowserModelState | null;
     memory_context_filter: MemoryContextFilter;
     cheat_mode_enabled: boolean;
     persona_cheat_presets: Record<string, PersonaCheatPreset>;
@@ -49,6 +53,9 @@ export interface GeneralSettingsRecord {
     native_executable_path: string;
     native_model_path: string;
     native_model_context_window: number;
+    chrome_model_folder_path: string;
+    chrome_installed_models: ChromeInstalledModel[];
+    chrome_browser_model_state: ChromeBrowserModelState | null;
     memory_context_filter: MemoryContextFilter;
     cheat_mode_enabled: boolean;
     persona_cheat_presets: Record<string, PersonaCheatPreset>;
