@@ -21,9 +21,9 @@ import {
 import { modulesClient, type ImportedModule, type ModuleControl } from '../modules';
 import { nativeContextClient, type ContextStorageMode, type NativeContextStatus } from '../native';
 import { DEFAULT_SPIRIT_SKIN_ID, getSpiritVisualAssets, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaCheatPresetPatch, type PersonaConfig, type SpiritDetail } from '../persona';
-import { settingsClient, type AppSettings, type ResetSummary, type SetupProgress } from '../settings';
+import { settingsClient, type AppSettings, type SetupProgress } from '../settings';
 import { styleClient, type StyleProfile } from '../style';
-import { inspectBrowserStorage, syncClient, type BackupDirectoryStatus, type BackupRestoreSummary, type BrowserStorageInspection, type LocalStatusSnapshot } from '../sync';
+import { inspectBrowserStorage, syncClient, type BackupDirectoryStatus, type BrowserStorageInspection, type LocalStatusSnapshot } from '../sync';
 import { collectEventStickers, createApiStatus, computeFamiliarityLevel, filterSpirits, formatUnknownError, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from './logic';
 import { getEverTalkLabels, type EverTalkLabels } from './i18n';
 import type { ApiStatusItem, EarnedSigil, EverTalkController, RosterTab, SaviorProfileSnapshot, SaviorStickerEntry, SpiritStickerBadge, StageTab, WorkspaceView } from './types';
@@ -98,7 +98,6 @@ export function useEverTalkController(): EverTalkController {
     const [activeSessionIds, setActiveSessionIds] = useState<string[]>([]);
     const [setupInProgress, setSetupInProgress] = useState(false);
     const [setupProgress, setSetupProgress] = useState<SetupProgress | null>(null);
-    const pendingLanguageRef = useRef<AppLanguage | null>(null);
     const [appSettings, setAppSettings] = useState<AppSettings | null>(null);
     const [userSession, setUserSession] = useState<UserSession | null>(null);
     const [deviceEnvironment, setDeviceEnvironment] = useState<DeviceEnvironmentInfo | null>(null);
@@ -113,14 +112,12 @@ export function useEverTalkController(): EverTalkController {
     const [modelCatalogError, setModelCatalogError] = useState<string | null>(null);
     const [modelPreparation, setModelPreparation] = useState<ModelPreparationState | null>(null);
     const [backupBusy, setBackupBusy] = useState(false);
-    const [backupRestoreSummary, setBackupRestoreSummary] = useState<BackupRestoreSummary | null>(null);
     const [backupMessage, setBackupMessage] = useState<string | null>(null);
     const [backupError, setBackupError] = useState<string | null>(null);
     const [backupDirectoryStatus, setBackupDirectoryStatus] = useState<BackupDirectoryStatus | null>(null);
     const [llmSessionStatuses, setLlmSessionStatuses] = useState<LlmSessionStatus[]>([]);
     const [llmRequestStatuses, setLlmRequestStatuses] = useState<LlmRequestStatus[]>([]);
     const [isResetting, setIsResetting] = useState(false);
-    const [resetSummary, setResetSummary] = useState<ResetSummary | null>(null);
     const [resetError, setResetError] = useState<string | null>(null);
     const [importedModules, setImportedModules] = useState<ImportedModule[]>([]);
     const [moduleBusy, setModuleBusy] = useState(false);
@@ -660,13 +657,11 @@ export function useEverTalkController(): EverTalkController {
     }
     async function openSettings() {
         setSettingsOpen(true);
-        setResetSummary(null);
         setResetError(null);
         setModuleError(null);
         setModuleMessage(null);
         setBackupMessage(null);
         setBackupError(null);
-        setBackupRestoreSummary(null);
         try {
             const current = await settingsClient.get();
             setAppSettings(current);
@@ -774,34 +769,12 @@ export function useEverTalkController(): EverTalkController {
         setResetError(null);
         try {
             releaseFocusedChatRequest();
-            const summary = await settingsClient.reset();
-            setResetSummary(summary);
-            setAppSettings(await settingsClient.get());
-            setAppLanguage(detectBrowserAppLanguage());
-            pendingLanguageRef.current = null;
-            setLanguageGateOpen(true);
-            setActiveSpiritId('');
-            setActiveDetail(null);
-            setActiveRoom(null);
-            setMessages([]);
-            setDefaultPersonaId(null);
-            setActiveStyle(null);
-            setStyles([]);
-            setSpirits([]);
-            setLlmStatus(null);
-            setActiveSessionIds([]);
-            setModelCatalog(null);
-            setLlmSessionStatuses([]);
-            setLlmRequestStatuses([]);
-            setImportedModules([]);
-            setModuleError(null);
-            setModuleMessage(null);
+            await settingsClient.resetForReload();
+            window.location.reload();
         }
         catch (err) {
             console.error(labels.logSettingsResetFailed, err);
             setResetError(formatUnknownError(err, labels));
-        }
-        finally {
             setIsResetting(false);
         }
     }
@@ -951,7 +924,6 @@ export function useEverTalkController(): EverTalkController {
         setBackupBusy(true);
         setBackupMessage(null);
         setBackupError(null);
-        setBackupRestoreSummary(null);
         try {
             await action();
         }
@@ -962,11 +934,6 @@ export function useEverTalkController(): EverTalkController {
         finally {
             setBackupBusy(false);
         }
-    }
-
-    function applyRestoredBackup(summary: BackupRestoreSummary) {
-        setBackupRestoreSummary(summary);
-        window.location.reload();
     }
 
     async function refreshModelCatalog() {
@@ -1124,9 +1091,8 @@ export function useEverTalkController(): EverTalkController {
 
     async function importBackup() {
         await runBackupAction(async () => {
-            const summary = await syncClient.importBackupFromFile();
-            if (summary !== null) {
-                applyRestoredBackup(summary);
+            if (await syncClient.importBackupFromFileForReload()) {
+                window.location.reload();
             }
         });
     }
@@ -1166,7 +1132,8 @@ export function useEverTalkController(): EverTalkController {
             return;
         }
         await runBackupAction(async () => {
-            applyRestoredBackup(await syncClient.restoreBackupDirectoryFile(fileName));
+            await syncClient.restoreBackupDirectoryFileForReload(fileName);
+            window.location.reload();
         });
     }
 
@@ -1504,14 +1471,12 @@ export function useEverTalkController(): EverTalkController {
         modelCatalogError,
         modelPreparation,
         backupBusy,
-        backupRestoreSummary,
         backupMessage,
         backupError,
         backupDirectoryStatus,
         llmSessionStatuses,
         llmRequestStatuses,
         isResetting,
-        resetSummary,
         resetError,
         importedModules,
         moduleBusy,

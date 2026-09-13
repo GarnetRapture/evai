@@ -5,12 +5,12 @@ import {
     exportDatabaseSnapshot,
     getEverSoulDatabase,
     parseDatabaseSnapshot,
-    restoreDatabaseSnapshot,
+    restoreDatabaseSnapshotForReload,
     type EverSoulDatabaseSnapshot,
 } from '../../shared/storage';
 import { createMonotonicTimestamp } from '../../shared/time';
 import { backupDirectoryAccess } from './directory';
-import type { BackupDirectoryStatus, BackupRestoreSummary, SyncMetadataKey } from './types';
+import type { BackupDirectoryStatus, SyncMetadataKey } from './types';
 
 const BACKUP_FILE_PREFIX = 'eversoul-ai-chat-backup';
 const BACKUP_FILE_EXTENSION = '.json';
@@ -58,17 +58,6 @@ function isBackupFile(fileName: string): boolean {
     return fileName.startsWith(`${BACKUP_FILE_PREFIX}-`) && fileName.endsWith(BACKUP_FILE_EXTENSION);
 }
 
-function restoreSummary(snapshot: EverSoulDatabaseSnapshot): BackupRestoreSummary {
-    return {
-        restored_chat_rooms: snapshot.stores.chat_room.length,
-        restored_chat_messages: snapshot.stores.chat_message.length,
-        restored_personas: snapshot.stores.persona_profile.length,
-        restored_persona_memories: snapshot.stores.persona_memory.length,
-        restored_modules: snapshot.stores.imported_module.length,
-        restored_native_context: false,
-    };
-}
-
 async function isBackupDirectoryGranted(): Promise<boolean> {
     return (await backupDirectoryAccess().state())?.permission === 'granted';
 }
@@ -106,9 +95,20 @@ async function writeSnapshotToDirectory(): Promise<string> {
 }
 
 export const backupService = {
+    cancelScheduledAutomaticBackup(): void {
+        if (automaticBackupTimer !== null) {
+            window.clearTimeout(automaticBackupTimer);
+            automaticBackupTimer = null;
+        }
+    },
     async exportToFile(): Promise<string | null> {
-        const snapshot = await exportDatabaseSnapshot();
-        return saveLocalFile(BACKUP_FILE_TYPE, BACKUP_FILE_PICKER_ID, timestampedBackupFileName(snapshot.exported_at), snapshotBlob(snapshot));
+        const exportedAt = createMonotonicTimestamp();
+        return saveLocalFile(
+            BACKUP_FILE_TYPE,
+            BACKUP_FILE_PICKER_ID,
+            timestampedBackupFileName(exportedAt),
+            async () => snapshotBlob(await exportDatabaseSnapshot(exportedAt)),
+        );
     },
     async pickSnapshotFile(): Promise<EverSoulDatabaseSnapshot | null> {
         const file = await openLocalFile(BACKUP_FILE_TYPE, BACKUP_FILE_PICKER_ID);
@@ -118,13 +118,9 @@ export const backupService = {
         await ensureBackupDirectoryGranted();
         return parseDatabaseSnapshot(await backupDirectoryAccess().read(fileName));
     },
-    async restoreSnapshot(snapshot: EverSoulDatabaseSnapshot): Promise<BackupRestoreSummary> {
-        if (automaticBackupTimer !== null) {
-            window.clearTimeout(automaticBackupTimer);
-            automaticBackupTimer = null;
-        }
-        await restoreDatabaseSnapshot(snapshot);
-        return restoreSummary(snapshot);
+    async restoreSnapshotForReload(snapshot: EverSoulDatabaseSnapshot): Promise<void> {
+        backupService.cancelScheduledAutomaticBackup();
+        await restoreDatabaseSnapshotForReload(snapshot);
     },
     async linkDirectory(): Promise<BackupDirectoryStatus | null> {
         if (!(await backupDirectoryAccess().link())) {
@@ -134,10 +130,7 @@ export const backupService = {
         return backupService.readDirectoryStatus();
     },
     async unlinkDirectory(): Promise<BackupDirectoryStatus> {
-        if (automaticBackupTimer !== null) {
-            window.clearTimeout(automaticBackupTimer);
-            automaticBackupTimer = null;
-        }
+        backupService.cancelScheduledAutomaticBackup();
         await backupDirectoryAccess().unlink();
         return backupService.readDirectoryStatus();
     },

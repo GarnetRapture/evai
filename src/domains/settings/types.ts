@@ -53,15 +53,6 @@ export interface GeneralSettingsRecord {
     cheat_mode_enabled: boolean;
     persona_cheat_presets: Record<string, PersonaCheatPreset>;
 }
-export interface ResetSummary {
-    cleared_chat_rooms: number;
-    cleared_chat_messages: number;
-    cleared_personas: number;
-    cleared_styles: number;
-    cleared_knowledge_chunks: number;
-    cleared_persona_memories: number;
-    cleared_native_context: boolean;
-}
 export interface SettingsError {
     code: 'io' | 'database' | 'validation';
     message: string;

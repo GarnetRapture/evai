@@ -1,6 +1,8 @@
 import type { AppLanguage } from '../../shared/types';
 import type { LocalizedDialogue, LocalizedList, LocalizedText, PersonaConfig, SpiritDetail, SpiritRaidAssetPrefix, SpiritSkinVisualAsset, SpiritVisualAssets } from './types';
-export const ASSET_ROOT = './eversoul-assets';
+export const ASSET_ROOT = typeof document === 'undefined'
+    ? './eversoul-assets'
+    : new URL('eversoul-assets', document.baseURI).href;
 export const DEFAULT_SPIRIT_SKIN_ID = 'base';
 const explicitAssetFolders: Record<string, string> = {
     'Ayame': 'Oyome',

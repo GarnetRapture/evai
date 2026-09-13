@@ -11,7 +11,7 @@
 <p align="center"><i>브라우저 로컬 AI와 선택형 네이티브 SQLite를 연결한 서브컬처 인연 채팅</i></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.0.1-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.0.3-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/license-Apache_2.0-green?style=flat-square" alt="License" />
   <img src="https://img.shields.io/badge/Chrome-Prompt_API-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome Prompt API" />
   <img src="https://img.shields.io/badge/React-19.3-61DAFB?style=flat-square&logo=react" alt="React" />

@@ -8,7 +8,7 @@ import { ModelCatalogSection } from './ModelCatalogSection';
 import { ContextStorageSelector } from './ContextStorageSelector';
 import { EnvironmentLayer } from './EnvironmentLayer';
 
-export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, nativeContextStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onSetContextStorageMode, onSetNativeExecutablePath, onConnectNativeProgram, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveNativeHostModelPath, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupMessage, backupError, backupDirectoryStatus, nativeContextStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onSetContextStorageMode, onSetNativeExecutablePath, onConnectNativeProgram, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveNativeHostModelPath, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     const [activeSection, setActiveSection] = useState<SettingsSectionKey>('general');
     const contentRef = useRef<HTMLDivElement>(null);
@@ -212,10 +212,6 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
           {backupError && (<div className="ever-settings-error">
               <span>{backupError}</span>
             </div>)}
-          {backupRestoreSummary && (<div className="ever-settings-result">
-              <span>{labels.backupRestored(backupRestoreSummary.restored_chat_rooms, backupRestoreSummary.restored_chat_messages, backupRestoreSummary.restored_persona_memories)}</span>
-              {backupRestoreSummary.restored_native_context ? <span>{labels.backupNativeRestored}</span> : null}
-            </div>)}
         </section>
 
         <section className="ever-panel-section ever-settings-danger" data-settings-section="reset">
@@ -224,17 +220,6 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
             {labels.resetDescription}
           </p>
           <div className="ever-settings-result"><span>{labels.resetStorageScope(nativeSelected, nativeContextStatus.available)}</span></div>
-
-          {resetSummary && (<div className="ever-settings-result">
-              <strong>{labels.resetComplete}</strong>
-              <span>{labels.resetChatRooms(resetSummary.cleared_chat_rooms)}</span>
-              <span>{labels.resetMessages(resetSummary.cleared_chat_messages)}</span>
-              <span>{labels.resetPersonas(resetSummary.cleared_personas)}</span>
-              <span>{labels.resetStyles(resetSummary.cleared_styles)}</span>
-              <span>{labels.resetKnowledgeChunks(resetSummary.cleared_knowledge_chunks)}</span>
-              <span>{labels.resetLocalMemories(resetSummary.cleared_persona_memories)}</span>
-              {resetSummary.cleared_native_context ? <span>{labels.resetNativeCleared}</span> : null}
-            </div>)}
 
           {resetError && (<div className="ever-roster__error">
               <strong>{labels.resetFailed}</strong>

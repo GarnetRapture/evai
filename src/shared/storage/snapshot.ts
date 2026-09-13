@@ -1,6 +1,12 @@
 import { DomainError } from '../errors';
 import { createMonotonicTimestamp } from '../time';
-import { getEverSoulDatabase } from './database';
+import {
+    beginEverSoulDatabaseMaintenance,
+    endEverSoulDatabaseMaintenance,
+    getEverSoulDatabase,
+    openEverSoulDatabaseForMaintenance,
+    type EverSoulDatabase,
+} from './database';
 import {
     BACKUP_DIRECTORY_HANDLE_KEY,
     EVERSOUL_BACKUP_FORMAT,
@@ -27,7 +33,7 @@ export const SNAPSHOT_STORE_NAMES: EverSoulSnapshotStoreName[] = [
     EVERSOUL_STORE.importedModule,
 ];
 
-export async function exportDatabaseSnapshot(): Promise<EverSoulDatabaseSnapshot> {
+export async function exportDatabaseSnapshot(exportedAt: string = createMonotonicTimestamp()): Promise<EverSoulDatabaseSnapshot> {
     const database = await getEverSoulDatabase();
     const transaction = database.transaction(SNAPSHOT_STORE_NAMES, 'readonly');
     const [
@@ -59,7 +65,7 @@ export async function exportDatabaseSnapshot(): Promise<EverSoulDatabaseSnapshot
     return {
         format: EVERSOUL_BACKUP_FORMAT,
         format_version: EVERSOUL_BACKUP_FORMAT_VERSION,
-        exported_at: createMonotonicTimestamp(),
+        exported_at: exportedAt,
         stores: {
             auth_session: authSession,
             chat_room: chatRoom,
@@ -80,6 +86,78 @@ function isRecordObject(value: unknown): value is Record<string, unknown> {
     return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
 
+function requiredString(record: Record<string, unknown>, field: string, storeName: string): string {
+    const value = record[field];
+    if (typeof value !== 'string' || value.length === 0) {
+        throw new DomainError('invalid_backup', `${storeName}.${field}`);
+    }
+    return value;
+}
+
+function snapshotRecordKey(storeName: EverSoulSnapshotStoreName, record: Record<string, unknown>): string {
+    switch (storeName) {
+        case EVERSOUL_STORE.authSession:
+        case EVERSOUL_STORE.generalSettings:
+            return SINGLETON_RECORD_KEY;
+        case EVERSOUL_STORE.personaLocalizedPrompt:
+            return JSON.stringify([
+                requiredString(record, 'persona_id', storeName),
+                requiredString(record, 'language', storeName),
+                requiredString(record, 'source_updated_at', storeName),
+            ]);
+        case EVERSOUL_STORE.syncMetadata:
+            return requiredString(record, 'key', storeName);
+        default:
+            return requiredString(record, 'id', storeName);
+    }
+}
+
+function validateIndexedFields(storeName: EverSoulSnapshotStoreName, record: Record<string, unknown>): void {
+    switch (storeName) {
+        case EVERSOUL_STORE.chatRoom:
+            if (record.persona_id !== null && typeof record.persona_id !== 'string') {
+                throw new DomainError('invalid_backup', `${storeName}.persona_id`);
+            }
+            requiredString(record, 'updated_at', storeName);
+            return;
+        case EVERSOUL_STORE.chatMessage:
+            requiredString(record, 'room_id', storeName);
+            requiredString(record, 'created_at', storeName);
+            return;
+        case EVERSOUL_STORE.personaMemory:
+            requiredString(record, 'persona_id', storeName);
+            requiredString(record, 'memory_type', storeName);
+            requiredString(record, 'created_at', storeName);
+            return;
+        default:
+            return;
+    }
+}
+
+function validateSnapshotStores(stores: Record<string, unknown>): void {
+    for (const storeName of SNAPSHOT_STORE_NAMES) {
+        const records = stores[storeName];
+        if (!Array.isArray(records)) {
+            throw new DomainError('invalid_backup', storeName);
+        }
+        if ((storeName === EVERSOUL_STORE.authSession || storeName === EVERSOUL_STORE.generalSettings) && records.length > 1) {
+            throw new DomainError('invalid_backup', `${storeName}.${SINGLETON_RECORD_KEY}`);
+        }
+        const keys = new Set<string>();
+        for (const value of records) {
+            if (!isRecordObject(value)) {
+                throw new DomainError('invalid_backup', `${storeName}.record`);
+            }
+            validateIndexedFields(storeName, value);
+            const key = snapshotRecordKey(storeName, value);
+            if (keys.has(key)) {
+                throw new DomainError('invalid_backup', `${storeName}.${key}`);
+            }
+            keys.add(key);
+        }
+    }
+}
+
 export function parseDatabaseSnapshot(text: string): EverSoulDatabaseSnapshot {
     let parsed: unknown;
     try {
@@ -92,21 +170,32 @@ export function parseDatabaseSnapshot(text: string): EverSoulDatabaseSnapshot {
         || parsed.format !== EVERSOUL_BACKUP_FORMAT
         || parsed.format_version !== EVERSOUL_BACKUP_FORMAT_VERSION
         || typeof parsed.exported_at !== 'string'
+        || !Number.isFinite(Date.parse(parsed.exported_at))
         || !isRecordObject(parsed.stores)) {
         throw new DomainError('invalid_backup', `${EVERSOUL_BACKUP_FORMAT} v${EVERSOUL_BACKUP_FORMAT_VERSION}`);
     }
-    const stores = parsed.stores;
-    for (const storeName of SNAPSHOT_STORE_NAMES) {
-        if (!Array.isArray(stores[storeName])) {
-            throw new DomainError('invalid_backup', storeName);
-        }
-    }
+    validateSnapshotStores(parsed.stores);
     return parsed as unknown as EverSoulDatabaseSnapshot;
 }
 
-export async function restoreDatabaseSnapshot(snapshot: EverSoulDatabaseSnapshot): Promise<void> {
-    const stores: EverSoulDatabaseSnapshotStores = snapshot.stores;
-    const database = await getEverSoulDatabase();
+export async function restoreDatabaseSnapshotForReload(snapshot: EverSoulDatabaseSnapshot): Promise<void> {
+    await beginEverSoulDatabaseMaintenance();
+    try {
+        const database = await openEverSoulDatabaseForMaintenance();
+        try {
+            await writeDatabaseSnapshot(database, snapshot.stores);
+        }
+        finally {
+            database.close();
+        }
+    }
+    catch (error) {
+        endEverSoulDatabaseMaintenance();
+        throw error;
+    }
+}
+
+async function writeDatabaseSnapshot(database: EverSoulDatabase, stores: EverSoulDatabaseSnapshotStores): Promise<void> {
     const transaction = database.transaction(SNAPSHOT_STORE_NAMES, 'readwrite');
     await Promise.all(SNAPSHOT_STORE_NAMES.map((storeName) => transaction.objectStore(storeName).clear()));
     const writes: Promise<unknown>[] = [];
@@ -145,8 +234,7 @@ export async function restoreDatabaseSnapshot(snapshot: EverSoulDatabaseSnapshot
     for (const record of stores.imported_module) {
         writes.push(transaction.objectStore(EVERSOUL_STORE.importedModule).put(record));
     }
-    await Promise.all(writes);
-    await transaction.done;
+    await Promise.all([...writes, transaction.done]);
 }
 
 export async function readBackupDirectoryHandle(): Promise<FileSystemDirectoryHandle | null> {

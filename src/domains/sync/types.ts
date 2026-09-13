@@ -50,14 +50,6 @@ export interface SyncMetadataRecord {
     value: string;
     updated_at: string;
 }
-export interface BackupRestoreSummary {
-    restored_chat_rooms: number;
-    restored_chat_messages: number;
-    restored_personas: number;
-    restored_persona_memories: number;
-    restored_modules: number;
-    restored_native_context: boolean;
-}
 export interface StorageStoreUsage {
     store_name: string;
     record_count: number;

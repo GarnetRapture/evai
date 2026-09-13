@@ -10,7 +10,8 @@ export type DomainErrorCode =
     | 'invalid_model_file'
     | 'native_runtime'
     | 'persona_prompt_missing'
-    | 'storage';
+    | 'storage'
+    | 'database';
 
 export class DomainError extends Error {
     readonly code: DomainErrorCode;

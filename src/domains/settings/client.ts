@@ -1,7 +1,13 @@
 import { DomainError } from '../../shared/errors';
 import { normalizeAbsoluteLocalPath } from '../../shared/files';
 import { normalizeAppLanguage } from '../../shared/i18n';
-import { EVERSOUL_STORE, clearStores, countStoreRecords, getEverSoulDatabase } from '../../shared/storage';
+import {
+    EVERSOUL_STORE,
+    beginEverSoulDatabaseMaintenance,
+    deleteOriginIndexedDatabases,
+    endEverSoulDatabaseMaintenance,
+    getEverSoulDatabase,
+} from '../../shared/storage';
 import type { AppLanguage } from '../../shared/types';
 import { createMonotonicTimestamp } from '../../shared/time';
 import { createPersonaEmotionStateFromLevels } from '../chat/affect';
@@ -14,8 +20,9 @@ import { llmClient } from '../llm';
 import { nativeContextClient } from '../native/client';
 import type { ContextStorageMode } from '../native/types';
 import { personaService } from '../persona';
+import { backupService } from '../sync/backup';
 import { composeAppSettings, settingsRepository } from './repository';
-import { MAX_PREFERRED_PERSONAS, type AppSettings, type ResetSummary, type SetupProgressHandler } from './types';
+import { MAX_PREFERRED_PERSONAS, type AppSettings, type SetupProgressHandler } from './types';
 
 function assertLanguage(language: string): AppLanguage {
     const normalized = normalizeAppLanguage(language);
@@ -64,45 +71,25 @@ export const settingsClient = {
         nativeContextClient.setPreferredExecutablePath(settings.native_executable_path);
         return settings;
     },
-    async reset(): Promise<ResetSummary> {
+    async resetForReload(): Promise<void> {
         const general = await settingsRepository.readGeneral();
-        const nativeEnabled = general.context_storage_mode === 'native_mirror';
         nativeContextClient.setPreferredExecutablePath(general.native_executable_path ?? '');
-        const [chatRooms, chatMessages, personas, styles, knowledgeChunks, personaMemories] = await Promise.all([
-            countStoreRecords(EVERSOUL_STORE.chatRoom),
-            countStoreRecords(EVERSOUL_STORE.chatMessage),
-            countStoreRecords(EVERSOUL_STORE.personaProfile),
-            countStoreRecords(EVERSOUL_STORE.styleProfile),
-            countStoreRecords(EVERSOUL_STORE.knowledgeChunk),
-            countStoreRecords(EVERSOUL_STORE.personaMemory),
-        ]);
-        if (nativeEnabled) {
+        if (general.context_storage_mode === 'native_mirror') {
             const status = await nativeContextClient.health();
             if (!status.available) throw new DomainError('storage', status.detail);
             await nativeContextClient.clearAll();
         }
-        await clearStores([
-            EVERSOUL_STORE.chatMessage,
-            EVERSOUL_STORE.chatRoom,
-            EVERSOUL_STORE.personaMemory,
-            EVERSOUL_STORE.personaLocalizedPrompt,
-            EVERSOUL_STORE.personaProfile,
-            EVERSOUL_STORE.styleProfile,
-            EVERSOUL_STORE.knowledgeChunk,
-            EVERSOUL_STORE.authSession,
-            EVERSOUL_STORE.syncMetadata,
-        ]);
-        await settingsRepository.resetAll();
+        backupService.cancelScheduledAutomaticBackup();
         await llmClient.unloadEngine();
-        return {
-            cleared_chat_rooms: chatRooms,
-            cleared_chat_messages: chatMessages,
-            cleared_personas: personas,
-            cleared_styles: styles,
-            cleared_knowledge_chunks: knowledgeChunks,
-            cleared_persona_memories: personaMemories,
-            cleared_native_context: nativeEnabled,
-        };
+        await beginEverSoulDatabaseMaintenance();
+        try {
+            await deleteOriginIndexedDatabases();
+            localStorage.clear();
+        }
+        catch (error) {
+            endEverSoulDatabaseMaintenance();
+            throw error;
+        }
     },
     async setLanguage(language: AppLanguage): Promise<AppSettings> {
         const normalized = assertLanguage(language);

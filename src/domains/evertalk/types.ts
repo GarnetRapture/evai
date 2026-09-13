@@ -17,9 +17,9 @@ import type {
 import type { ImportedModule, ModuleControl } from '../modules';
 import type { ContextStorageMode, NativeContextStatus } from '../native';
 import type { BondRankingEntry, FamiliarityEntry, PersonaCheatPreset, PersonaCheatPresetPatch, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
-import type { AppSettings, ResetSummary, SetupPhase, SetupProgress } from '../settings';
+import type { AppSettings, SetupPhase, SetupProgress } from '../settings';
 import type { StyleProfile } from '../style';
-import type { BackupDirectoryStatus, BackupRestoreSummary, BrowserStorageInspection, LocalStatusSnapshot } from '../sync';
+import type { BackupDirectoryStatus, BrowserStorageInspection, LocalStatusSnapshot } from '../sync';
 import type { EverTalkLabels, PlatformBlockedReason } from './i18n';
 export interface LoadableAssetImageProps {
     candidates: string[];
@@ -506,14 +506,12 @@ export interface SettingsPanelProps extends ModelCatalogSectionProps {
     llmSessionStatuses: LlmSessionStatus[];
     llmRequestStatuses: LlmRequestStatus[];
     isResetting: boolean;
-    resetSummary: ResetSummary | null;
     resetError: string | null;
     importedModules: ImportedModule[];
     moduleBusy: boolean;
     moduleError: string | null;
     moduleMessage: string | null;
     backupBusy: boolean;
-    backupRestoreSummary: BackupRestoreSummary | null;
     backupMessage: string | null;
     backupError: string | null;
     backupDirectoryStatus: BackupDirectoryStatus | null;
@@ -662,14 +660,12 @@ export interface EverTalkController {
     modelLoadingId: string | null;
     modelPreparation: ModelPreparationState | null;
     backupBusy: boolean;
-    backupRestoreSummary: BackupRestoreSummary | null;
     backupMessage: string | null;
     backupError: string | null;
     backupDirectoryStatus: BackupDirectoryStatus | null;
     llmSessionStatuses: LlmSessionStatus[];
     llmRequestStatuses: LlmRequestStatus[];
     isResetting: boolean;
-    resetSummary: ResetSummary | null;
     resetError: string | null;
     importedModules: ImportedModule[];
     moduleBusy: boolean;

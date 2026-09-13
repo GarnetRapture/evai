@@ -1,4 +1,5 @@
 import type { DomainErrorCode } from '../../shared/errors';
+import { EVERSOUL_DATABASE_ERROR_DETAIL } from '../../shared/storage';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import type { MemoryContextKind } from '../chat/types';
 import type { LocalModelEngineKind } from '../llm/types';
@@ -197,15 +198,8 @@ export interface EverTalkLabels {
     refreshEnvironment: string;
     resetData: string;
     resetDescription: string;
-    resetComplete: string;
     resetFailed: string;
     notConfigured: string;
-    resetChatRooms: (count: number) => string;
-    resetMessages: (count: number) => string;
-    resetPersonas: (count: number) => string;
-    resetStyles: (count: number) => string;
-    resetKnowledgeChunks: (count: number) => string;
-    resetLocalMemories: (count: number) => string;
     resetting: string;
     resetConfirm: string;
     resetAllData: string;
@@ -341,12 +335,10 @@ export interface EverTalkLabels {
     backupTitle: string;
     backupDescription: string;
     backupStorageScope: (native: boolean, connected: boolean) => string;
-    backupNativeRestored: string;
     backupExport: string;
     backupImport: string;
     backupWorking: string;
     backupSaved: (fileName: string) => string;
-    backupRestored: (rooms: number, messages: number, memories: number) => string;
     moduleImported: string;
     backupFolderTitle: string;
     backupFolderDescription: string;
@@ -365,7 +357,6 @@ export interface EverTalkLabels {
     backupRestoreConfirm: (fileName: string) => string;
     backupWritten: (fileName: string) => string;
     resetStorageScope: (native: boolean, connected: boolean) => string;
-    resetNativeCleared: string;
     navChat: string;
     navRanking: string;
     navMemory: string;
@@ -635,16 +626,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         connectNativeProgram: '네이티브 프로그램 연결',
         refreshEnvironment: '환경 다시 확인',
         resetData: '데이터 초기화',
-        resetDescription: '대화 기록, 정령/스타일/지식팩 데이터, 정령별 누적 기억과 설정값을 모두 삭제해 앱을 초기 상태로 되돌립니다.',
-        resetComplete: '초기화 완료',
+        resetDescription: '현재 origin의 IndexedDB 데이터베이스 전체와 localStorage를 삭제해 대화, 정령/스타일/지식팩, 기억, 모듈, 설정 및 파일 연결을 초기 상태로 되돌린 뒤 페이지를 다시 불러옵니다. 다른 탭이 데이터베이스를 붙잡고 있으면 삭제를 중단하고 오류를 표시합니다.',
         resetFailed: '초기화 실패',
         notConfigured: '미지정',
-        resetChatRooms: (count) => `대화방 ${count}개`,
-        resetMessages: (count) => `메시지 ${count}개`,
-        resetPersonas: (count) => `정령 프로필 ${count}개`,
-        resetStyles: (count) => `스타일 ${count}개`,
-        resetKnowledgeChunks: (count) => `지식 청크 ${count}개`,
-        resetLocalMemories: (count) => `누적 기억 ${count}개`,
         resetting: '초기화 중...',
         resetConfirm: '정말 초기화하시겠습니까? 다시 클릭 시 실행',
         resetAllData: '모든 데이터 초기화',
@@ -871,16 +855,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · 컨텍스트 ${cachedTokens}/${contextWindow} · 재사용 ${reusedTokens}`,
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 입력 ${promptTokens ?? '-'} · 생성 ${generatedTokens ?? '-'} · 잘림 ${truncatedTokens}`,
         backupTitle: '데이터 저장 · 불러오기',
-        backupDescription: '대화, 정령 기억, 설정, 모듈 등 이 브라우저 IndexedDB의 데이터를 PC에 JSON 파일로 저장하거나, 저장한 파일을 다시 불러옵니다. 불러오면 현재 데이터가 파일 내용으로 교체됩니다.',
+        backupDescription: '이 브라우저 IndexedDB의 직렬화 가능한 데이터(대화, 기억, 설정, 모듈 등)를 JSON으로 저장하고, 불러올 때는 검증 후 한 번의 트랜잭션으로 교체한 뒤 페이지를 다시 불러옵니다. localStorage와 PC 백업 폴더 권한은 포함하지 않으며 기존 폴더 연결은 유지합니다.',
         backupStorageScope: (native, connected) => native
-            ? `JSON은 브라우저 IndexedDB 원본을 저장합니다. 복원 시 IndexedDB를 교체한 뒤 EXE 옆 로컬 SQLite를 비우고 동일 데이터로 다시 동기화합니다. 네이티브 연결: ${connected ? '확인됨' : '필요함'}. 외부 SQL 서버는 사용하지 않습니다.`
-            : 'JSON은 현재 브라우저의 IndexedDB만 저장·복원합니다. 기존 네이티브 SQLite 파일은 변경하지 않으며 외부 SQL 서버는 사용하지 않습니다.',
-        backupNativeRestored: '네이티브 SQLite도 비운 뒤 복원 데이터와 동일하게 동기화했습니다.',
+            ? `JSON은 브라우저 IndexedDB의 직렬화 가능한 원본을 저장합니다. 복원 시 이를 교체하고 페이지를 다시 불러온 뒤 EXE 옆 로컬 SQLite를 비우고 동일 데이터로 다시 동기화합니다. localStorage와 폴더 권한은 제외됩니다. 네이티브 연결: ${connected ? '확인됨' : '필요함'}.`
+            : 'JSON은 현재 브라우저 IndexedDB의 직렬화 가능한 데이터만 교체 복원합니다. localStorage와 PC 백업 폴더 권한은 제외되고, 기존 네이티브 SQLite는 변경하지 않습니다.',
         backupExport: 'PC 파일로 내보내기',
         backupImport: 'PC 파일에서 불러오기',
         backupWorking: '처리 중...',
-        backupSaved: (fileName) => `${fileName} 저장을 시작했습니다.`,
-        backupRestored: (rooms, messages, memories) => `대화방 ${rooms}개 · 메시지 ${messages}개 · 기억 ${memories}개를 불러왔습니다.`,
+        backupSaved: (fileName) => `${fileName} 파일을 저장했습니다.`,
         moduleImported: '모듈을 가져왔습니다.',
         backupFolderTitle: 'PC 백업 폴더',
         backupFolderDescription: 'PC의 폴더를 연결하면 대화·설정이 바뀔 때마다 그 폴더에 백업 파일이 자동으로 저장되고, 목록에서 원하는 시점으로 복원할 수 있습니다. 최근 10개의 백업과 최신 백업 파일이 유지됩니다.',
@@ -907,9 +889,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupRestoreConfirm: (fileName) => `${fileName} 파일로 복원하면 현재 데이터가 모두 교체됩니다. 계속할까요?`,
         backupWritten: (fileName) => `${fileName} 백업을 저장했습니다.`,
         resetStorageScope: (native, connected) => native
-            ? `브라우저 IndexedDB와 EXE 옆 로컬 SQLite를 함께 초기화합니다. 네이티브 연결: ${connected ? '확인됨' : '필요함 — 연결되지 않으면 삭제를 시작하지 않습니다'}.`
-            : '현재 브라우저 IndexedDB만 초기화합니다. 별도로 남아 있는 네이티브 SQLite 파일은 변경하지 않습니다.',
-        resetNativeCleared: 'EXE 옆 네이티브 SQLite도 초기화했습니다.',
+            ? `현재 origin의 localStorage, IndexedDB 데이터베이스 전체, EXE 옆 로컬 SQLite를 함께 초기화합니다. 네이티브 연결: ${connected ? '확인됨' : '필요함 — 연결되지 않으면 삭제를 시작하지 않습니다'}.`
+            : '현재 origin의 localStorage와 IndexedDB 데이터베이스 전체를 초기화합니다. 별도로 남아 있는 네이티브 SQLite 파일은 변경하지 않습니다.',
         navChat: '대화',
         navRanking: '인연 순위',
         navMemory: '기억 흐름',
@@ -1041,6 +1022,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `설치할 수 없는 모델 파일입니다. 웹에서는 2GB 이하의 .gguf 파일을, 안드로이드 앱에서는 .litertlm 파일을 고르세요 (${detail})`;
                 case 'storage':
                     return `폴더 접근 권한이 없습니다: ${detail}`;
+                case 'database':
+                    return detail.startsWith(EVERSOUL_DATABASE_ERROR_DETAIL.deleteBlocked)
+                        ? `다른 탭이나 창이 브라우저 데이터베이스를 사용 중이라 삭제하지 못했습니다. 이 앱의 다른 탭을 모두 닫고 다시 시도하세요 (${detail})`
+                        : `브라우저 데이터베이스 작업이 진행 중입니다. 페이지를 다시 불러오세요 (${detail})`;
                 case 'native_runtime':
                     return `기기 AI 엔진에서 오류가 발생했습니다: ${detail}`;
             }
@@ -1227,16 +1212,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         connectNativeProgram: 'Connect native program',
         refreshEnvironment: 'Check environment again',
         resetData: 'Reset Data',
-        resetDescription: 'Deletes chat history, soul/style/knowledge data, saved memories, and settings.',
-        resetComplete: 'Reset complete',
+        resetDescription: 'Deletes every IndexedDB database and the localStorage of this origin, including chats, soul/style/knowledge data, memories, modules, settings, and file links, then reloads the page. If another tab holds the database open, deletion stops and an error is shown.',
         resetFailed: 'Reset failed',
         notConfigured: 'Not set',
-        resetChatRooms: (count) => `${count} rooms`,
-        resetMessages: (count) => `${count} messages`,
-        resetPersonas: (count) => `${count} soul profiles`,
-        resetStyles: (count) => `${count} styles`,
-        resetKnowledgeChunks: (count) => `${count} knowledge chunks`,
-        resetLocalMemories: (count) => `${count} saved memories`,
         resetting: 'Resetting...',
         resetConfirm: 'Click again to confirm reset',
         resetAllData: 'Reset all data',
@@ -1463,16 +1441,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · context ${cachedTokens}/${contextWindow} · reused ${reusedTokens}`,
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · prompt ${promptTokens ?? '-'} · generated ${generatedTokens ?? '-'} · truncated ${truncatedTokens}`,
         backupTitle: 'Save · Load Data',
-        backupDescription: 'Save this browser\'s IndexedDB data (chats, soul memories, settings, modules) to a JSON file on your PC, or load a saved file. Loading replaces the current data with the file contents.',
+        backupDescription: 'Save serializable IndexedDB data (chats, memories, settings, modules, and more) as JSON. Loading validates the file, replaces the data in a single transaction, and reloads the page. localStorage and PC backup-folder permissions are excluded; the existing folder link is preserved.',
         backupStorageScope: (native, connected) => native
-            ? `JSON stores the browser IndexedDB source. Restore replaces IndexedDB, then clears and resynchronizes the local SQLite beside the EXE. Native connection: ${connected ? 'verified' : 'required'}. No external SQL server is used.`
-            : 'JSON saves and restores only this browser\'s IndexedDB. Any existing native SQLite file is untouched, and no external SQL server is used.',
-        backupNativeRestored: 'The native SQLite database was cleared and synchronized to the restored data.',
+            ? `JSON stores the serializable browser IndexedDB source. Restore replaces it, reloads the page, then clears and resynchronizes SQLite beside the EXE. localStorage and folder permissions are excluded. Native connection: ${connected ? 'verified' : 'required'}.`
+            : 'JSON replaces only serializable data in this browser\'s IndexedDB. localStorage and PC backup-folder permissions are excluded, and existing native SQLite is untouched.',
         backupExport: 'Export to PC file',
         backupImport: 'Import from PC file',
         backupWorking: 'Working...',
-        backupSaved: (fileName) => `Started saving ${fileName}.`,
-        backupRestored: (rooms, messages, memories) => `Loaded ${rooms} rooms · ${messages} messages · ${memories} memories.`,
+        backupSaved: (fileName) => `Saved ${fileName}.`,
         moduleImported: 'Module imported.',
         backupFolderTitle: 'PC Backup Folder',
         backupFolderDescription: 'Link a folder on your PC and a backup file is written there automatically whenever chats or settings change; restore any point from the list. The 10 most recent backups and a latest backup file are kept.',
@@ -1499,9 +1475,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupRestoreConfirm: (fileName) => `Restoring ${fileName} replaces all current data. Continue?`,
         backupWritten: (fileName) => `Saved backup ${fileName}.`,
         resetStorageScope: (native, connected) => native
-            ? `Resets both browser IndexedDB and the local SQLite beside the EXE. Native connection: ${connected ? 'verified' : 'required — deletion will not start while disconnected'}.`
-            : 'Resets only this browser\'s IndexedDB. A separate native SQLite file is not changed.',
-        resetNativeCleared: 'The native SQLite beside the EXE was also reset.',
+            ? `Resets this origin's localStorage, every IndexedDB database, and local SQLite beside the EXE. Native connection: ${connected ? 'verified' : 'required — deletion will not start while disconnected'}.`
+            : 'Resets this origin\'s localStorage and every IndexedDB database. A separate native SQLite file is not changed.',
         navChat: 'Chat',
         navRanking: 'Bond Ranking',
         navMemory: 'Memory Flow',
@@ -1633,6 +1608,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `This model file cannot be installed. Choose a .gguf file of 2 GB or less on the web, or a .litertlm file in the Android app (${detail})`;
                 case 'storage':
                     return `No folder access permission: ${detail}`;
+                case 'database':
+                    return detail.startsWith(EVERSOUL_DATABASE_ERROR_DETAIL.deleteBlocked)
+                        ? `The browser database could not be deleted because another tab or window is using it. Close every other tab of this app and try again (${detail})`
+                        : `A browser database operation is in progress. Reload the page (${detail})`;
                 case 'native_runtime':
                     return `The on-device AI engine reported an error: ${detail}`;
             }
@@ -1819,16 +1798,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         connectNativeProgram: '连接原生程序',
         refreshEnvironment: '重新检查环境',
         resetData: '重置数据',
-        resetDescription: '删除聊天记录、精灵/风格/知识数据、累积记忆与设置。',
-        resetComplete: '重置完成',
+        resetDescription: '删除当前来源的全部 IndexedDB 数据库与 localStorage，包括聊天、精灵/风格/知识数据、记忆、模块、设置及文件连接，然后重新载入页面。如果其他标签页仍占用数据库，删除会中止并显示错误。',
         resetFailed: '重置失败',
         notConfigured: '未设置',
-        resetChatRooms: (count) => `${count} 个聊天室`,
-        resetMessages: (count) => `${count} 条消息`,
-        resetPersonas: (count) => `${count} 个精灵资料`,
-        resetStyles: (count) => `${count} 个风格`,
-        resetKnowledgeChunks: (count) => `${count} 个知识片段`,
-        resetLocalMemories: (count) => `${count} 个累积记忆`,
         resetting: '正在重置...',
         resetConfirm: '再次点击确认重置',
         resetAllData: '重置全部数据',
@@ -2055,16 +2027,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · 上下文 ${cachedTokens}/${contextWindow} · 复用 ${reusedTokens}`,
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 输入 ${promptTokens ?? '-'} · 生成 ${generatedTokens ?? '-'} · 截断 ${truncatedTokens}`,
         backupTitle: '数据保存 · 载入',
-        backupDescription: '将本浏览器 IndexedDB 中的对话、精灵记忆、设置、模块等数据以 JSON 文件保存到电脑，或重新载入已保存的文件。载入时当前数据会被文件内容替换。',
+        backupDescription: '将本浏览器 IndexedDB 中可序列化的数据（聊天、记忆、设置、模块等）保存为 JSON；导入时先验证，再以单个事务替换数据并重新载入页面。localStorage 与电脑备份文件夹权限不包含在内，现有文件夹连接会保留。',
         backupStorageScope: (native, connected) => native
-            ? `JSON 保存浏览器 IndexedDB 原始数据。恢复时先替换 IndexedDB，再清空 EXE 旁的本地 SQLite 并同步相同数据。原生连接：${connected ? '已确认' : '必需'}。不使用外部 SQL 服务器。`
-            : 'JSON 只保存和恢复当前浏览器的 IndexedDB。已有的原生 SQLite 文件不会改变，也不使用外部 SQL 服务器。',
-        backupNativeRestored: '原生 SQLite 已清空并同步为恢复后的数据。',
+            ? `JSON 保存浏览器 IndexedDB 中可序列化的原始数据。恢复时先替换数据并重新载入页面，再清空 EXE 旁的本地 SQLite 并同步。localStorage 与文件夹权限不包含在内。原生连接：${connected ? '已确认' : '必需'}。`
+            : 'JSON 只替换恢复当前浏览器 IndexedDB 中可序列化的数据。localStorage 与电脑备份文件夹权限不包含在内，已有原生 SQLite 不会改变。',
         backupExport: '导出为电脑文件',
         backupImport: '从电脑文件导入',
         backupWorking: '处理中...',
-        backupSaved: (fileName) => `已开始保存 ${fileName}。`,
-        backupRestored: (rooms, messages, memories) => `已载入 ${rooms} 个聊天室 · ${messages} 条消息 · ${memories} 条记忆。`,
+        backupSaved: (fileName) => `已保存 ${fileName}。`,
         moduleImported: '模块已导入。',
         backupFolderTitle: '电脑备份文件夹',
         backupFolderDescription: '连接电脑上的文件夹后，每当对话或设置变化时都会自动在该文件夹写入备份文件，并可从列表恢复到任意时间点。保留最近 10 个备份和最新备份文件。',
@@ -2091,9 +2061,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupRestoreConfirm: (fileName) => `使用 ${fileName} 恢复会替换当前全部数据。是否继续？`,
         backupWritten: (fileName) => `已保存备份 ${fileName}。`,
         resetStorageScope: (native, connected) => native
-            ? `同时重置浏览器 IndexedDB 与 EXE 旁的本地 SQLite。原生连接：${connected ? '已确认' : '必需——未连接时不会开始删除'}。`
-            : '只重置当前浏览器的 IndexedDB，单独存在的原生 SQLite 文件不会改变。',
-        resetNativeCleared: 'EXE 旁的原生 SQLite 也已重置。',
+            ? `同时重置当前来源的 localStorage、全部 IndexedDB 数据库与 EXE 旁的本地 SQLite。原生连接：${connected ? '已确认' : '必需——未连接时不会开始删除'}。`
+            : '重置当前来源的 localStorage 与全部 IndexedDB 数据库，单独存在的原生 SQLite 文件不会改变。',
         navChat: '对话',
         navRanking: '羁绊排行',
         navMemory: '记忆流程',
@@ -2225,6 +2194,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `无法安装此模型文件。网页版请选择不超过 2GB 的 .gguf 文件，安卓应用请选择 .litertlm 文件（${detail}）`;
                 case 'storage':
                     return `没有文件夹访问权限：${detail}`;
+                case 'database':
+                    return detail.startsWith(EVERSOUL_DATABASE_ERROR_DETAIL.deleteBlocked)
+                        ? `其他标签页或窗口正在使用浏览器数据库，无法删除。请关闭本应用的其他所有标签页后重试（${detail}）`
+                        : `浏览器数据库操作正在进行中，请重新载入页面（${detail}）`;
                 case 'native_runtime':
                     return `设备端 AI 引擎发生错误：${detail}`;
             }

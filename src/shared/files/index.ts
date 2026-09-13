@@ -99,9 +99,9 @@ export async function openLinkedFile(handle: FileSystemFileHandle): Promise<File
     return handle.getFile();
 }
 
-export async function saveLocalFile(fileType: LocalFileType, pickerId: string, suggestedName: string, blob: Blob): Promise<string | null> {
+export async function saveLocalFile(fileType: LocalFileType, pickerId: string, suggestedName: string, createBlob: () => Promise<Blob>): Promise<string | null> {
     if (isAndroidAppRuntime()) {
-        return saveFileWithAndroidBridge(fileType, suggestedName, blob);
+        return saveFileWithAndroidBridge(fileType, suggestedName, await createBlob());
     }
     let handle: FileSystemFileHandle;
     try {
@@ -113,6 +113,7 @@ export async function saveLocalFile(fileType: LocalFileType, pickerId: string, s
         }
         throw error;
     }
+    const blob = await createBlob();
     const writable = await handle.createWritable();
     await writable.write(blob);
     await writable.close();

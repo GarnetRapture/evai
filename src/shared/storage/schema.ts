@@ -10,6 +10,11 @@ import type { SyncMetadataKey, SyncMetadataRecord } from '../../domains/sync/typ
 import type { AppLanguage } from '../types';
 
 export const EVERSOUL_DATABASE_NAME = 'eversoul-ai-chat';
+export const EVERSOUL_DATABASE_ERROR_DETAIL = {
+    maintenanceActive: 'indexeddb_maintenance_active',
+    maintenanceNotActive: 'indexeddb_maintenance_not_active',
+    deleteBlocked: 'indexeddb_delete_blocked',
+} as const;
 export const SINGLETON_RECORD_KEY = 'current';
 export const BACKUP_DIRECTORY_HANDLE_KEY = 'backup_directory';
 
