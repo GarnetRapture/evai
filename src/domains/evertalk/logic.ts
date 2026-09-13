@@ -14,7 +14,7 @@ export {
 } from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphEdge, MemoryGraphViewportScroll, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphEdge, MemoryGraphViewportScroll, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -431,6 +431,17 @@ export function collectEventStickers(): SpiritStickerBadge[] {
             unlockLevel: 0,
             unlocked: true,
         })),
+    ];
+}
+export function settingsSectionNavItems(labels: EverTalkLabels): SettingsSectionNavItem[] {
+    return [
+        { key: 'general', label: labels.currentSettings },
+        { key: 'environment', label: labels.environmentTitle },
+        { key: 'models', label: labels.modelListTitle },
+        { key: 'modules', label: labels.modulesSectionTitle },
+        { key: 'sessions', label: labels.localModel },
+        { key: 'data', label: labels.backupTitle },
+        { key: 'reset', label: labels.resetData },
     ];
 }
 export function groupLocalModelEntries(entries: ChatModelEntry[]): LocalModelEntryGroup[] {

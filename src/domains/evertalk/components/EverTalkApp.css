@@ -4184,8 +4184,116 @@
   gap: 8px;
 }
 
-.ever-settings-modal--wide {
-  width: min(800px, 90vw);
+.ever-settings-overlay.is-settings {
+  grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+  place-items: stretch;
+  padding: clamp(8px, 1.6vmin, 20px);
+}
+
+.ever-settings-modal--full {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  overflow: hidden;
+  padding: 0;
+  gap: 0;
+  grid-template-columns: clamp(180px, 14vw, 240px) minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.ever-settings-nav {
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: clamp(12px, 1.6vmin, 20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.ever-settings-nav button {
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: rgba(249, 247, 241, 0.72);
+  font: inherit;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ever-settings-nav button:hover,
+.ever-settings-nav button.is-active {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.ever-settings-content {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  display: grid;
+  align-content: start;
+  gap: clamp(12px, 1.8vmin, 20px);
+  padding: clamp(14px, 2.4vmin, 28px) clamp(16px, 3vmin, 36px) clamp(24px, 4vmin, 48px);
+}
+
+.ever-settings-content > :is(.ever-panel-section, .ever-settings-content__anchor) {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  scroll-margin-top: 12px;
+}
+
+.ever-settings-content .ever-profile-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+}
+
+.ever-settings-content .ever-model-list,
+.ever-settings-content .ever-module-list {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr));
+}
+
+@media (max-width: 820px) {
+  .ever-settings-modal--full {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr);
+  }
+
+  .ever-settings-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    scrollbar-width: none;
+  }
+
+  .ever-settings-nav button {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
+.ever-settings-modal--full .ever-context-storage dl div {
+  grid-template-columns: minmax(7em, auto) minmax(0, 1fr);
+}
+
+.ever-settings-modal--full > .ever-settings-modal__header {
+  grid-column: 1 / -1;
+  padding: clamp(12px, 2vmin, 20px) clamp(18px, 3vmin, 30px);
+  background: #252a3c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.ever-settings-modal--full > .ever-panel-section {
+  margin-bottom: 0;
 }
 
 .ever-settings-toggle {
@@ -5013,9 +5121,12 @@ a.ever-settings-reset-button {
 }
 
 .ever-environment-layer__trigger {
+  flex: 0 1 auto;
   min-width: 0;
   max-width: 100%;
   height: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
   display: flex;
   align-items: center;
   gap: 11px;
@@ -5325,8 +5436,9 @@ a.ever-settings-reset-button {
   .ever-context-storage dl div { grid-template-columns: 1fr; gap: 2px; }
 }
 
-.ever-top-navigation { min-width: 0; height: 100%; display: flex; align-items: center; justify-content: center; gap: 3px; margin: 0 auto; }
-.ever-top-navigation button { height: calc(100% - 10px); display: inline-flex; align-items: center; gap: 5px; padding: 0 10px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: #c8c5d8; font: inherit; font-weight: 700; cursor: pointer; }
+.ever-top-navigation { flex: 1 1 auto; min-width: 0; height: 100%; display: flex; align-items: center; justify-content: safe center; gap: 3px; margin: 0 auto; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }
+.ever-top-navigation button { flex: 0 0 auto; height: calc(100% - 10px); display: inline-flex; align-items: center; gap: 5px; padding: 0 10px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: #c8c5d8; font: inherit; font-weight: 700; white-space: nowrap; cursor: pointer; }
+.ever-notification-layer__trigger, .ever-environment-layer__profile-trigger { flex: 0 0 auto; white-space: nowrap; }
 .ever-top-navigation button:hover, .ever-top-navigation button.is-active { border-color: rgba(255,255,255,.16); background: rgba(255,255,255,.1); color: #fff; }
 .ever-workspace-page { position: relative; isolation: isolate; height: calc(100dvh - var(--ever-environment-bar-height)); margin-top: var(--ever-environment-bar-height); padding: 28px clamp(18px,4vw,58px) 54px; overflow: auto; box-sizing: border-box; background: linear-gradient(145deg,#f6f3ed,#eeebf2); color: #343247; }
 .ever-workspace-page__content { position: relative; z-index: 1; }

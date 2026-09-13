@@ -1,15 +1,17 @@
 import { isAndroidAppRuntime } from '../../shared/android';
 import { DomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
-import { isChromeLanguageModelSupported } from './chrome';
+import { describeUnknownError } from '../../shared/errors';
+import { isChromeLanguageModelSupported, probeChromeLanguageModel } from './chrome';
+import { readChromeOnDeviceInventory } from './chrome/inventory';
 import { nativeHostModelService } from '../native/service';
 import { settingsRepository } from '../settings/repository';
 import { androidGeminiNanoRuntime } from './androidNano/runtime';
-import { ANDROID_GEMINI_NANO_MODEL_ID, CHROME_PROMPT_MODEL_ID, NATIVE_HOST_MODEL_ID } from './constants';
+import { ANDROID_GEMINI_NANO_MODEL_ID, CHROME_FOUNDATIONAL_MODEL_FEATURE, CHROME_PROMPT_MODEL_ID, NATIVE_HOST_MODEL_ID } from './constants';
 import { RECOMMENDED_GGUF_MODELS } from './gguf/catalog';
 import { ggufRuntime } from './gguf/runtime';
 import { findHuggingFaceModelSource, huggingFaceModelDownloadUrl, huggingFaceModelPageUrl } from './huggingface';
-import { isChatModelIdSupportedHere, localModelFileName, localModelId, platformChatModelEngines, platformDefaultChatModelId, resolveChatModelEngine, NO_CHAT_MODEL_ID } from './identity';
+import { chromePromptModelId, isChatModelIdSupportedHere, localModelFileName, localModelId, platformChatModelEngines, platformDefaultChatModelId, resolveChatModelEngine, NO_CHAT_MODEL_ID } from './identity';
 import { RECOMMENDED_LITERT_LM_MODELS } from './litertlm/catalog';
 import { liteRtLmModelStorage, liteRtLmRuntime } from './litertlm/runtime';
 import { chromePromptRuntime } from './runtime';
@@ -18,6 +20,7 @@ import type {
     AndroidGeminiNanoModelEntry,
     ChatModelCatalog,
     ChatModelEngineKind,
+    ChromeOnDeviceInventoryState,
     ChromePromptModelEntry,
     HuggingFaceModelSource,
     InstalledModelFile,
@@ -133,7 +136,7 @@ async function listLocalModelEntries(engine: LocalModelEngineKind, activeChatMod
 }
 
 export const chatModelCatalog = {
-    async list(language: AppLanguage, activeChatModelId: string): Promise<ChatModelCatalog> {
+    async list(language: AppLanguage, activeChatModelId: string, includeNativeHost: boolean): Promise<ChatModelCatalog> {
         if (isAndroidAppRuntime()) {
             return {
                 app_language: language,
@@ -141,19 +144,53 @@ export const chatModelCatalog = {
             };
         }
         const plan = await chromePromptRuntime.resolveLanguagePlan(language);
-        const chromeEntry: ChromePromptModelEntry = {
-            engine: 'chrome_prompt',
-            id: CHROME_PROMPT_MODEL_ID,
+        let probe: ChromePromptModelEntry['probe'] = null;
+        let probeError: string | null = null;
+        try {
+            probe = await probeChromeLanguageModel();
+        }
+        catch (error) {
+            probeError = describeUnknownError(error);
+        }
+        let inventoryState: ChromeOnDeviceInventoryState;
+        try {
+            inventoryState = await readChromeOnDeviceInventory();
+        }
+        catch (error) {
+            inventoryState = { inventory: null, detail: describeUnknownError(error) };
+        }
+        const inventory = inventoryState.inventory;
+        const chromeEntryBase = {
+            engine: 'chrome_prompt' as const,
+            inventory_detail: inventoryState.detail,
             api_supported: isChromeLanguageModelSupported(),
             availability: plan.availability,
+            probe,
+            probe_error: probeError,
             language_tag: plan.language_tag,
             language_declared: plan.declared_language_tag !== null,
             context_window: chromePromptRuntime.baseContextWindow(plan),
-            selected: activeChatModelId === CHROME_PROMPT_MODEL_ID,
         };
+        const chromeEntries: ChromePromptModelEntry[] = inventory
+            ? inventory.variants.filter((variant) => variant.installed || variant.use_case === inventory.default_use_case).map((variant) => {
+                const id = chromePromptModelId(variant.use_case, inventory.default_use_case);
+                return {
+                    ...chromeEntryBase,
+                    id,
+                    use_case: variant.use_case,
+                    variant,
+                    chrome_flag: variant.model_version_key ? `${CHROME_FOUNDATIONAL_MODEL_FEATURE}:model_version/${variant.model_version_key}` : null,
+                    selected: activeChatModelId === id,
+                };
+            })
+            : [{ ...chromeEntryBase, id: CHROME_PROMPT_MODEL_ID, use_case: null, variant: null, chrome_flag: null, selected: activeChatModelId === CHROME_PROMPT_MODEL_ID }];
         return {
             app_language: language,
-            entries: [chromeEntry, await nativeHostModelEntry(activeChatModelId), ...(await listLocalModelEntries('gguf', activeChatModelId))],
+            entries: [
+                ...chromeEntries,
+                ...(includeNativeHost ? [await nativeHostModelEntry(activeChatModelId)] : []),
+                ...(await listLocalModelEntries('gguf', activeChatModelId)),
+            ],
         };
     },
     async prepareOnDeviceSystemModel(entry: OnDeviceSystemModelEntry, language: AppLanguage, onDownloadProgress: ModelDownloadProgressHandler): Promise<void> {

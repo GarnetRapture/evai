@@ -2,6 +2,8 @@ import type { AppLanguage } from '../../shared/types';
 import type { LocalModelEngineKind } from './types';
 
 export const CHROME_PROMPT_MODEL_ID = 'chrome-prompt-api';
+export const CHROME_PROMPT_MODEL_ID_PREFIX = 'chrome-prompt-api:';
+export const CHROME_FOUNDATIONAL_MODEL_FEATURE = 'AIApiFoundationalModel';
 export const GGUF_MODEL_ID_PREFIX = 'gguf:';
 export const GGUF_FILE_EXTENSION = '.gguf';
 export const GGUF_MAX_FILE_BYTES = 2 * 1024 * 1024 * 1024;

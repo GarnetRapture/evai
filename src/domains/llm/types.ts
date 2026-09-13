@@ -1,3 +1,4 @@
+import type { ChromeOnDeviceInventory, ChromeOnDeviceModelVariant } from '../../shared/types/chromeOnDevice';
 import type { AppLanguage } from '../../shared/types';
 
 export type OnDeviceModelAvailability = Availability;
@@ -50,11 +51,36 @@ export interface NativeHostModelEntry {
     recommended_models: NativeHostRecommendedModel[];
     selected: boolean;
 }
+export interface ChromeLanguageModelInputAvailability {
+    text: OnDeviceModelAvailability;
+    image: OnDeviceModelAvailability;
+    audio: OnDeviceModelAvailability;
+}
+export interface ChromeLanguageModelSamplingParams {
+    default_top_k: number;
+    max_top_k: number;
+    default_temperature: number;
+    max_temperature: number;
+}
+export interface ChromeLanguageModelProbe {
+    input_availability: ChromeLanguageModelInputAvailability;
+    sampling_params: ChromeLanguageModelSamplingParams | null;
+}
+export interface ChromeOnDeviceInventoryState {
+    inventory: ChromeOnDeviceInventory | null;
+    detail: string;
+}
 export interface ChromePromptModelEntry {
     engine: 'chrome_prompt';
     id: string;
+    use_case: string | null;
+    variant: ChromeOnDeviceModelVariant | null;
+    chrome_flag: string | null;
+    inventory_detail: string;
     api_supported: boolean;
     availability: OnDeviceModelAvailability;
+    probe: ChromeLanguageModelProbe | null;
+    probe_error: string | null;
     language_tag: string;
     language_declared: boolean;
     context_window: number | null;

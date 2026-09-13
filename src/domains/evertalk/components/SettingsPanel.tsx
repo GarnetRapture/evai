@@ -1,17 +1,23 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import type { ChangeEvent } from 'react';
 import { Box, FolderOpen, FolderPlus, History, RotateCcw, Save, ShieldCheck, Trash2, Unlink, X } from 'lucide-react';
 import type { AppLanguage } from '../../../shared/types';
-import { formatBackupFileMeta, formatDateTime, formatLanguageName } from '../logic';
-import type { SettingsPanelProps } from '../types';
+import { formatBackupFileMeta, formatDateTime, formatLanguageName, settingsSectionNavItems } from '../logic';
+import type { SettingsPanelProps, SettingsSectionKey } from '../types';
 import { ModelCatalogSection } from './ModelCatalogSection';
 import { ContextStorageSelector } from './ContextStorageSelector';
 import { EnvironmentLayer } from './EnvironmentLayer';
 
 export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetSummary, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupRestoreSummary, backupMessage, backupError, backupDirectoryStatus, nativeContextStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onSetContextStorageMode, onSetNativeExecutablePath, onConnectNativeProgram, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveNativeHostModelPath, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
+    const [activeSection, setActiveSection] = useState<SettingsSectionKey>('general');
+    const contentRef = useRef<HTMLDivElement>(null);
     if (!isOpen) {
         return null;
+    }
+    function scrollToSection(key: SettingsSectionKey) {
+        setActiveSection(key);
+        contentRef.current?.querySelector<HTMLElement>(`[data-settings-section="${key}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     function handleResetClick() {
         if (!confirming) {
@@ -31,8 +37,8 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
     const backupFolderLinked = backupDirectoryStatus?.linked ?? false;
     const backupFolderGranted = backupDirectoryStatus?.permission === 'granted';
     const nativeSelected = settings?.context_storage_mode === 'native_mirror';
-    return (<div className="ever-settings-overlay" role="dialog" aria-modal="true">
-      <div className="ever-settings-modal ever-settings-modal--wide">
+    return (<div className="ever-settings-overlay is-settings" role="dialog" aria-modal="true">
+      <div className="ever-settings-modal ever-settings-modal--full">
         <header className="ever-settings-modal__header">
           <h2>{labels.settings}</h2>
           <button type="button" aria-label={labels.close} onClick={handleClose}>
@@ -40,7 +46,14 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
           </button>
         </header>
 
-        <section className="ever-panel-section">
+        <nav className="ever-settings-nav" aria-label={labels.settings}>
+          {settingsSectionNavItems(labels).map((item) => (<button key={item.key} type="button" className={activeSection === item.key ? 'is-active' : ''} aria-current={activeSection === item.key ? 'true' : undefined} onClick={() => scrollToSection(item.key)}>
+              {item.label}
+            </button>))}
+        </nav>
+
+        <div ref={contentRef} className="ever-settings-content">
+        <section className="ever-panel-section" data-settings-section="general">
           <h3>{labels.currentSettings}</h3>
           <div className="ever-profile-grid">
             <div>
@@ -77,14 +90,16 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
           </label>
         </section>
 
-        <section className="ever-panel-section">
+        <section className="ever-panel-section" data-settings-section="environment">
           <EnvironmentLayer embedded settings={settings} session={userSession} savior={saviorProfile} environment={deviceEnvironment} nativeStatus={nativeContextStatus} labels={labels}/>
           <ContextStorageSelector mode={settings?.context_storage_mode ?? 'browser'} status={nativeContextStatus} executablePath={settings?.native_executable_path ?? ''} labels={labels} onChange={onSetContextStorageMode} onExecutablePathChange={onSetNativeExecutablePath} onConnect={onConnectNativeProgram}/>
         </section>
 
+        <div className="ever-settings-content__anchor" data-settings-section="models">
         <ModelCatalogSection appPlatform={appPlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareOnDeviceSystemModel={onPrepareOnDeviceSystemModel} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel} onSaveNativeHostModelPath={onSaveNativeHostModelPath}/>
+        </div>
 
-        <section className="ever-panel-section">
+        <section className="ever-panel-section" data-settings-section="modules">
           <h3>{labels.modulesSectionTitle}</h3>
           <p>{labels.modulesSectionDescription}</p>
           {importedModules.length === 0 ? (<div className="ever-settings-result">
@@ -116,7 +131,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
           </button>
         </section>
 
-        <section className="ever-panel-section">
+        <section className="ever-panel-section" data-settings-section="sessions">
           <h3>{labels.localModel}</h3>
           <div className="ever-settings-result">
             <strong>{labels.modelSessionStatus}</strong>
@@ -132,7 +147,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
           </div>
         </section>
 
-        <section className="ever-panel-section">
+        <section className="ever-panel-section" data-settings-section="data">
           <h3>{labels.backupTitle}</h3>
           <p>{labels.backupDescription}</p>
           <div className="ever-settings-result"><span>{labels.backupStorageScope(nativeSelected, nativeContextStatus.available)}</span></div>
@@ -203,7 +218,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
             </div>)}
         </section>
 
-        <section className="ever-panel-section ever-settings-danger">
+        <section className="ever-panel-section ever-settings-danger" data-settings-section="reset">
           <h3>{labels.resetData}</h3>
           <p>
             {labels.resetDescription}
@@ -231,6 +246,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
             {isResetting ? labels.resetting : confirming ? labels.resetConfirm : labels.resetAllData}
           </button>
         </section>
+        </div>
       </div>
     </div>);
 }

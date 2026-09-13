@@ -66,7 +66,11 @@ export const llmClient = {
     },
     async listModels(): Promise<ChatModelCatalog> {
         const settings = await settingsRepository.readAppSettings();
-        return chatModelCatalog.list(settings.language, settings.active_model);
+        return chatModelCatalog.list(settings.language, settings.active_model, true);
+    },
+    async listModelsWithoutNativeHost(): Promise<ChatModelCatalog> {
+        const settings = await settingsRepository.readAppSettings();
+        return chatModelCatalog.list(settings.language, settings.active_model, false);
     },
     async prepareOnDeviceSystemModel(entry: OnDeviceSystemModelEntry, onDownloadProgress: ModelDownloadProgressHandler): Promise<ChatModelCatalog> {
         const settings = await settingsRepository.readAppSettings();

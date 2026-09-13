@@ -1,12 +1,13 @@
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
-import { execFileSync, spawn } from 'node:child_process'
+import { spawn } from 'node:child_process'
 import type { ChildProcessWithoutNullStreams } from 'node:child_process'
-import { closeSync, existsSync, openSync, readFileSync, statSync } from 'node:fs'
-import { homedir } from 'node:os'
+import { closeSync, existsSync, openSync, statSync } from 'node:fs'
 import { basename, isAbsolute, join, resolve } from 'node:path'
 import type { IncomingMessage } from 'node:http'
 import { defineConfig, type Plugin } from 'vite'
+import type { ChromeOnDeviceInventoryResponse } from './src/shared/types/chromeOnDevice.ts'
+import { readChromeOnDeviceInventory } from './vite/chromeOnDeviceInventory.ts'
 
 const crossOriginIsolationHeaders = {
   'Cross-Origin-Opener-Policy': 'same-origin',
@@ -15,7 +16,6 @@ const crossOriginIsolationHeaders = {
 
 const maximumNativeRequestBytes = 8 * 1024 * 1024
 const maximumPendingNativeCalls = 128
-const nativeHostName = 'pro.everlib.eversoul.context'
 const nativeExecutableName = process.platform === 'win32' ? 'eversoul-native-host.exe' : 'eversoul-native-host'
 
 function existingNativeExecutable(candidate: string | undefined): string | null {
@@ -31,110 +31,9 @@ function existingNativeExecutable(candidate: string | undefined): string | null 
     : null
 }
 
-function executableFromManifest(manifestPath: string): string | null {
-  try {
-    const manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as { path?: unknown }
-    return typeof manifest.path === 'string' ? existingNativeExecutable(manifest.path) : null
-  } catch {
-    return null
-  }
-}
-
-function windowsRegisteredManifestPaths(): string[] {
-  if (process.platform !== 'win32') return []
-  const keys = [
-    `HKCU\\Software\\Google\\Chrome\\NativeMessagingHosts\\${nativeHostName}`,
-    `HKLM\\Software\\Google\\Chrome\\NativeMessagingHosts\\${nativeHostName}`,
-    `HKCU\\Software\\Microsoft\\Edge\\NativeMessagingHosts\\${nativeHostName}`,
-    `HKLM\\Software\\Microsoft\\Edge\\NativeMessagingHosts\\${nativeHostName}`,
-    `HKCU\\Software\\Mozilla\\NativeMessagingHosts\\${nativeHostName}`,
-    `HKLM\\Software\\Mozilla\\NativeMessagingHosts\\${nativeHostName}`,
-  ]
-  const manifests: string[] = []
-  for (const key of keys) {
-    try {
-      const output = execFileSync('reg.exe', ['query', key, '/ve'], {
-        encoding: 'utf8',
-        windowsHide: true,
-        stdio: ['ignore', 'pipe', 'ignore'],
-      })
-      const match = output.match(/REG_(?:SZ|EXPAND_SZ)\s+(.+)$/imu)
-      if (match?.[1]) manifests.push(match[1].trim())
-    } catch {
-      // This browser has no registered host; continue through the discovery list.
-    }
-  }
-  return manifests
-}
-
-function registeredManifestPaths(): string[] {
-  if (process.platform === 'win32') return windowsRegisteredManifestPaths()
-  const home = homedir()
-  return [
-    join(home, '.config', 'google-chrome', 'NativeMessagingHosts', `${nativeHostName}.json`),
-    join(home, '.config', 'chromium', 'NativeMessagingHosts', `${nativeHostName}.json`),
-    join(home, '.config', 'microsoft-edge', 'NativeMessagingHosts', `${nativeHostName}.json`),
-    join(home, '.mozilla', 'native-messaging-hosts', `${nativeHostName}.json`),
-    `/etc/opt/chrome/native-messaging-hosts/${nativeHostName}.json`,
-    `/etc/chromium/native-messaging-hosts/${nativeHostName}.json`,
-    `/usr/lib/mozilla/native-messaging-hosts/${nativeHostName}.json`,
-  ]
-}
-
-const nativeArtifactPlatformNames: Partial<Record<NodeJS.Platform, string>> = { win32: 'windows', linux: 'linux' }
-const nativeArtifactArchitectureNames: Partial<Record<NodeJS.Architecture, string>> = { x64: 'x86_64', arm64: 'arm64' }
-
-function projectNativeArtifactExecutable(): string {
-  const platform = nativeArtifactPlatformNames[process.platform] ?? process.platform
-  const architecture = nativeArtifactArchitectureNames[process.arch] ?? process.arch
-  return join(process.cwd(), 'native', 'artifacts', `${platform}-${architecture}`, nativeExecutableName)
-}
-
-function standardNativeExecutableCandidates(): string[] {
-  const projectArtifact = projectNativeArtifactExecutable()
-  const projectBuild = join(process.cwd(), 'native', 'build', nativeExecutableName)
-  if (process.platform === 'win32') {
-    const candidates = [
-      process.env.EVERSOUL_NATIVE_HOST ?? '',
-      projectArtifact,
-      projectBuild,
-      join(process.cwd(), nativeExecutableName),
-    ]
-    if (process.env.LOCALAPPDATA) {
-      candidates.push(
-        join(process.env.LOCALAPPDATA, 'EverSoulAI', nativeExecutableName),
-        join(process.env.LOCALAPPDATA, 'Programs', 'EverSoulAI', nativeExecutableName),
-      )
-    }
-    if (process.env.ProgramFiles) candidates.push(join(process.env.ProgramFiles, 'EverSoulAI', nativeExecutableName))
-    if (process.env['ProgramFiles(x86)']) candidates.push(join(process.env['ProgramFiles(x86)'], 'EverSoulAI', nativeExecutableName))
-    return candidates
-  }
-  return [
-    process.env.EVERSOUL_NATIVE_HOST ?? '',
-    projectArtifact,
-    projectBuild,
-    join(process.cwd(), nativeExecutableName),
-    join(homedir(), '.local', 'lib', 'eversoul-ai', nativeExecutableName),
-    join('/usr/local/lib/eversoul-ai', nativeExecutableName),
-    join('/opt/eversoul-ai', nativeExecutableName),
-  ]
-}
-
-function discoverNativeExecutable(preferredPath: string | null): string | null {
-  if (preferredPath) {
-    if (!isAbsolute(preferredPath)) return null
-    return existingNativeExecutable(preferredPath)
-  }
-  for (const manifestPath of registeredManifestPaths()) {
-    const executable = executableFromManifest(manifestPath)
-    if (executable) return executable
-  }
-  for (const candidate of standardNativeExecutableCandidates()) {
-    const executable = existingNativeExecutable(candidate)
-    if (executable) return executable
-  }
-  return null
+function resolveConfiguredNativeExecutable(preferredPath: string): string | null {
+  if (!isAbsolute(preferredPath)) return null
+  return existingNativeExecutable(preferredPath)
 }
 
 async function readRequestBody(request: IncomingMessage): Promise<string> {
@@ -299,6 +198,19 @@ function nativeContextDevelopmentBridge(): Plugin {
     apply: 'serve',
     configureServer(server) {
       server.httpServer?.once('close', () => { void nativeHost.close() })
+      server.middlewares.use('/__eversoul/chrome-on-device', (request, response) => {
+        response.setHeader('Content-Type', 'application/json; charset=utf-8')
+        response.setHeader('Cache-Control', 'no-store')
+        const browserVersion = new URL(request.url ?? '', 'http://localhost').searchParams.get('browser_version')
+        try {
+          const inventory = readChromeOnDeviceInventory(browserVersion)
+          const body: ChromeOnDeviceInventoryResponse = { ok: true, inventory, detail: inventory ? 'ready' : 'chrome_on_device_state_not_found' }
+          response.end(JSON.stringify(body))
+        } catch (error) {
+          response.statusCode = 500
+          response.end(JSON.stringify({ ok: false, error: error instanceof Error ? error.message : 'chrome_on_device_read_failed' }))
+        }
+      })
       server.middlewares.use('/__eversoul/native-context', async (request, response) => {
         response.setHeader('Content-Type', 'application/json; charset=utf-8')
         response.setHeader('Cache-Control', 'no-store')
@@ -318,10 +230,15 @@ function nativeContextDevelopmentBridge(): Plugin {
           const preferredPath = typeof payload.host_executable_path === 'string' && payload.host_executable_path.trim().length > 0
             ? payload.host_executable_path.trim()
             : null
-          const executable = discoverNativeExecutable(preferredPath)
+          if (!preferredPath) {
+            response.statusCode = 503
+            response.end(JSON.stringify({ ok: false, error: 'native_executable_path_not_configured' }))
+            return
+          }
+          const executable = resolveConfiguredNativeExecutable(preferredPath)
           if (!executable) {
             response.statusCode = 503
-            response.end(JSON.stringify({ ok: false, error: preferredPath ? 'native_host_path_not_found' : 'native_host_not_found' }))
+            response.end(JSON.stringify({ ok: false, error: 'native_host_path_not_found' }))
             return
           }
           response.end(await nativeHost.call(executable, body))

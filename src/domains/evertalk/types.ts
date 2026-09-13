@@ -493,6 +493,11 @@ export interface LocalModelItemProps {
     onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
 }
+export type SettingsSectionKey = 'general' | 'environment' | 'models' | 'modules' | 'sessions' | 'data' | 'reset';
+export interface SettingsSectionNavItem {
+    key: SettingsSectionKey;
+    label: string;
+}
 export interface SettingsPanelProps extends ModelCatalogSectionProps {
     open: boolean;
     settings: AppSettings | null;

@@ -1,6 +1,6 @@
 import { isAndroidAppRuntime } from '../../shared/android';
 import { DomainError } from '../../shared/errors';
-import { ANDROID_GEMINI_NANO_MODEL_ID, CHROME_PROMPT_MODEL_ID, NATIVE_HOST_MODEL_ID } from './constants';
+import { ANDROID_GEMINI_NANO_MODEL_ID, CHROME_PROMPT_MODEL_ID, CHROME_PROMPT_MODEL_ID_PREFIX, NATIVE_HOST_MODEL_ID } from './constants';
 import { ggufFileNameFromModelId, ggufModelId, isGgufModelId } from './gguf/catalog';
 import { isLiteRtLmModelId, liteRtLmFileNameFromModelId, liteRtLmModelId } from './litertlm/catalog';
 import type { ChatModelEngineKind, LocalModelEngineKind } from './types';
@@ -27,8 +27,16 @@ export function isChatModelIdSupportedHere(modelId: string): boolean {
     }
 }
 
+export function chromePromptModelId(useCase: string, defaultUseCase: string): string {
+    return useCase === defaultUseCase ? CHROME_PROMPT_MODEL_ID : `${CHROME_PROMPT_MODEL_ID_PREFIX}${useCase}`;
+}
+
+export function chromePromptUseCaseFromModelId(modelId: string): string | null {
+    return modelId.startsWith(CHROME_PROMPT_MODEL_ID_PREFIX) ? modelId.slice(CHROME_PROMPT_MODEL_ID_PREFIX.length) : null;
+}
+
 export function resolveChatModelEngine(modelId: string): ChatModelEngineKind {
-    if (modelId === CHROME_PROMPT_MODEL_ID) {
+    if (modelId === CHROME_PROMPT_MODEL_ID || modelId.startsWith(CHROME_PROMPT_MODEL_ID_PREFIX)) {
         return 'chrome_prompt';
     }
     if (modelId === ANDROID_GEMINI_NANO_MODEL_ID) {

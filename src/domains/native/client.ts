@@ -75,6 +75,9 @@ async function send(request: Record<string, unknown>): Promise<unknown> {
     const routedRequest = requestWithExecutablePath(request);
     let response: unknown;
     if (import.meta.env.DEV) {
+        if (preferredExecutablePath.length === 0) {
+            throw new Error('native_executable_path_not_configured');
+        }
         const result = await fetch(DEVELOPMENT_ENDPOINT, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

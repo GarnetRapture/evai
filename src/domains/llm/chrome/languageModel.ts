@@ -1,4 +1,4 @@
-import type { ModelDownloadProgressHandler } from '../types';
+import type { ChromeLanguageModelProbe, ModelDownloadProgressHandler } from '../types';
 
 export interface ChromeLanguageModelCreateRequest {
     declaredLanguageTag: string | null;
@@ -38,6 +38,32 @@ export async function readChromeLanguageModelAvailability(declaredLanguageTag: s
         return 'unavailable';
     }
     return LanguageModel.availability({ ...languageExpectations(declaredLanguageTag), samplingMode });
+}
+
+async function readModalityAvailability(type: LanguageModelExpected['type']): Promise<Availability> {
+    return LanguageModel.availability({ expectedInputs: [{ type }] });
+}
+
+export async function probeChromeLanguageModel(): Promise<ChromeLanguageModelProbe | null> {
+    if (!isChromeLanguageModelSupported()) {
+        return null;
+    }
+    const paramsSupported = typeof LanguageModel.params === 'function';
+    const [params, text, image, audio] = await Promise.all([
+        paramsSupported ? LanguageModel.params() : Promise.resolve(null),
+        readModalityAvailability('text'),
+        readModalityAvailability('image'),
+        readModalityAvailability('audio'),
+    ]);
+    return {
+        input_availability: { text, image, audio },
+        sampling_params: params === null ? null : {
+            default_top_k: params.defaultTopK,
+            max_top_k: params.maxTopK,
+            default_temperature: params.defaultTemperature,
+            max_temperature: params.maxTemperature,
+        },
+    };
 }
 
 export async function createChromeLanguageModel(request: ChromeLanguageModelCreateRequest): Promise<LanguageModel> {

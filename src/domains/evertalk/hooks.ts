@@ -971,6 +971,8 @@ export function useEverTalkController(): EverTalkController {
 
     async function refreshModelCatalog() {
         try {
+            setModelCatalog(await llmClient.listModelsWithoutNativeHost());
+            setModelCatalogError(null);
             setModelCatalog(await llmClient.listModels());
             setModelCatalogError(null);
         }

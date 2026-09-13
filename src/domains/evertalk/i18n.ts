@@ -300,6 +300,15 @@ export interface EverTalkLabels {
     modelListTitle: string;
     modelListDescription: Record<AppPlatform, string>;
     modelRoleChat: string;
+    modelInputModalities: (image: string, audio: string) => string;
+    modelSamplingParams: (defaultTopK: number, maxTopK: number, defaultTemperature: number, maxTemperature: number) => string;
+    modelProbeFailed: (detail: string) => string;
+    modelSamplingParamsWebUnavailable: string;
+    chromeOnDeviceVariantTitle: (modelName: string, modelVersion: string | null) => string;
+    chromeOnDeviceVariantDetail: (useCase: string, componentVersion: string | null, megabytes: number | null, format: string) => string;
+    chromeOnDeviceUseCaseState: (installed: boolean, requestedAt: string | null) => string;
+    chromeOnDeviceFeatureFlag: (feature: string) => string;
+    chromeOnDeviceInventoryUnavailable: (detail: string) => string;
     modelRoleAndroidGeminiNano: string;
     modelAndroidGeminiNanoUnsupported: string;
     modelLanguageSupport: (languageTag: string, declared: boolean) => string;
@@ -703,7 +712,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         roomCount: (count) => `${count}개 대화방`,
         roomMessageCount: (rooms, messages) => `${rooms}개 대화방 · ${messages}개 메시지`,
         manualSyncWaiting: '수동 동기화 대기',
-        modelLoaded: 'Gemini Nano 세션 준비됨',
+        modelLoaded: '브라우저 내장 모델 세션 준비됨',
         modelAvailabilityDetail: (availability) => {
             if (availability === 'available') {
                 return '사용 가능';
@@ -764,7 +773,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             web_chrome: 'Chrome Prompt API 모델과 브라우저에서 직접 실행하는 GGUF 모델을 선택할 수 있습니다. Chrome API가 없으면 GGUF를 설치하세요. WebGPU가 확인되면 GPU를 사용하고, 사용할 수 없으면 CPU로 실행합니다.',
             android_app: '이 기기에서 Google LiteRT-LM 엔진으로 실행하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 설치하고 선택하세요. 모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 사용할 수 없으면 CPU 백엔드로 실행합니다.',
         },
-        modelRoleChat: '대화 생성 · Prompt API (Gemini Nano)',
+        modelRoleChat: '대화 생성 · Chrome Prompt API (브라우저 내장 모델)',
+        modelInputModalities: (image, audio) => `입력 지원 · 텍스트 · 이미지 ${image} · 오디오 ${audio}`,
+        modelSamplingParams: (defaultTopK, maxTopK, defaultTemperature, maxTemperature) => `샘플링 · topK 기본 ${defaultTopK} / 최대 ${maxTopK} · 온도 기본 ${defaultTemperature} / 최대 ${maxTemperature}`,
+        modelProbeFailed: (detail) => `브라우저 모델 정보 조회 실패: ${detail}`,
+        modelSamplingParamsWebUnavailable: '샘플링 파라미터 · 이 브라우저는 웹 페이지에 LanguageModel.params()를 제공하지 않음 (samplingMode로 제어)',
+        chromeOnDeviceVariantTitle: (modelName, modelVersion) => `Chrome 설치 모델 · ${modelName}${modelVersion ? ` (${modelVersion})` : ''}`,
+        chromeOnDeviceVariantDetail: (useCase, componentVersion, megabytes, format) => `유스케이스 ${useCase} · 컴포넌트 ${componentVersion ?? '-'} · ${megabytes === null ? '-' : `${megabytes} MB`} · 가중치 ${format}`,
+        chromeOnDeviceUseCaseState: (installed, requestedAt) => `${installed ? 'Available' : '설치되지 않음'}${requestedAt ? ` · Requested ${requestedAt}` : ''}`,
+        chromeOnDeviceFeatureFlag: (feature) => `chrome://flags/#gemma4-for-built-in-ai (${feature})`,
+        chromeOnDeviceInventoryUnavailable: (detail) => `Chrome 설치 모델 목록을 읽지 못함 (${detail})`,
         modelRoleAndroidGeminiNano: '대화 생성 · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: '이 기기는 AICore Gemini Nano를 지원하지 않습니다 (Android 12 이상 · AICore 지원 기기 필요)',
         modelLanguageSupport: (languageTag, declared) => declared
@@ -1286,7 +1304,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         roomCount: (count) => `${count} rooms`,
         roomMessageCount: (rooms, messages) => `${rooms} rooms · ${messages} messages`,
         manualSyncWaiting: 'Manual sync waiting',
-        modelLoaded: 'Gemini Nano session ready',
+        modelLoaded: 'Built-in browser model session ready',
         modelAvailabilityDetail: (availability) => {
             if (availability === 'available') {
                 return 'Available';
@@ -1347,7 +1365,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             web_chrome: 'Choose between Chrome Prompt API and GGUF models run directly in the browser. Install GGUF when the Chrome API is unavailable. A verified WebGPU adapter uses the GPU; otherwise the model falls back to CPU.',
             android_app: 'On-device AI models run on this device by the Google LiteRT-LM engine. Install and choose the model used for chat. Loading a model tries the GPU backend first and falls back to the CPU backend when the GPU cannot be used.',
         },
-        modelRoleChat: 'Chat generation · Prompt API (Gemini Nano)',
+        modelRoleChat: 'Chat generation · Chrome Prompt API (built-in browser model)',
+        modelInputModalities: (image, audio) => `Inputs · text · image ${image} · audio ${audio}`,
+        modelSamplingParams: (defaultTopK, maxTopK, defaultTemperature, maxTemperature) => `Sampling · topK default ${defaultTopK} / max ${maxTopK} · temperature default ${defaultTemperature} / max ${maxTemperature}`,
+        modelProbeFailed: (detail) => `Browser model probe failed: ${detail}`,
+        modelSamplingParamsWebUnavailable: 'Sampling parameters · this browser does not expose LanguageModel.params() to web pages (controlled via samplingMode)',
+        chromeOnDeviceVariantTitle: (modelName, modelVersion) => `Chrome installed model · ${modelName}${modelVersion ? ` (${modelVersion})` : ''}`,
+        chromeOnDeviceVariantDetail: (useCase, componentVersion, megabytes, format) => `Use case ${useCase} · component ${componentVersion ?? '-'} · ${megabytes === null ? '-' : `${megabytes} MB`} · weights ${format}`,
+        chromeOnDeviceUseCaseState: (installed, requestedAt) => `${installed ? 'Available' : 'Not installed'}${requestedAt ? ` · Requested ${requestedAt}` : ''}`,
+        chromeOnDeviceFeatureFlag: (feature) => `chrome://flags/#gemma4-for-built-in-ai (${feature})`,
+        chromeOnDeviceInventoryUnavailable: (detail) => `Could not read Chrome installed models (${detail})`,
         modelRoleAndroidGeminiNano: 'Chat generation · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: 'This device does not support AICore Gemini Nano (requires Android 12+ and an AICore-capable device)',
         modelLanguageSupport: (languageTag, declared) => declared
@@ -1869,7 +1896,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         roomCount: (count) => `${count} 个聊天室`,
         roomMessageCount: (rooms, messages) => `${rooms} 个聊天室 · ${messages} 条消息`,
         manualSyncWaiting: '等待手动同步',
-        modelLoaded: 'Gemini Nano 会话已就绪',
+        modelLoaded: '浏览器内置模型会话已就绪',
         modelAvailabilityDetail: (availability) => {
             if (availability === 'available') {
                 return '可用';
@@ -1930,7 +1957,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             web_chrome: '可选择 Chrome Prompt API 或直接在浏览器中运行的 GGUF 模型。Chrome API 不可用时请安装 GGUF。确认 WebGPU 适配器后使用 GPU，否则回退到 CPU。',
             android_app: '这是在本设备上由 Google LiteRT-LM 引擎运行的设备端 AI 模型。请安装并选择用于对话的模型。加载模型时会优先尝试 GPU 后端，无法使用时改用 CPU 后端运行。',
         },
-        modelRoleChat: '对话生成 · Prompt API (Gemini Nano)',
+        modelRoleChat: '对话生成 · Chrome Prompt API（浏览器内置模型）',
+        modelInputModalities: (image, audio) => `输入支持 · 文本 · 图像 ${image} · 音频 ${audio}`,
+        modelSamplingParams: (defaultTopK, maxTopK, defaultTemperature, maxTemperature) => `采样 · topK 默认 ${defaultTopK} / 最大 ${maxTopK} · 温度 默认 ${defaultTemperature} / 最大 ${maxTemperature}`,
+        modelProbeFailed: (detail) => `浏览器模型信息查询失败：${detail}`,
+        modelSamplingParamsWebUnavailable: '采样参数 · 此浏览器未向网页提供 LanguageModel.params()（通过 samplingMode 控制）',
+        chromeOnDeviceVariantTitle: (modelName, modelVersion) => `Chrome 已安装模型 · ${modelName}${modelVersion ? `（${modelVersion}）` : ''}`,
+        chromeOnDeviceVariantDetail: (useCase, componentVersion, megabytes, format) => `用例 ${useCase} · 组件 ${componentVersion ?? '-'} · ${megabytes === null ? '-' : `${megabytes} MB`} · 权重 ${format}`,
+        chromeOnDeviceUseCaseState: (installed, requestedAt) => `${installed ? 'Available' : '未安装'}${requestedAt ? ` · Requested ${requestedAt}` : ''}`,
+        chromeOnDeviceFeatureFlag: (feature) => `chrome://flags/#gemma4-for-built-in-ai (${feature})`,
+        chromeOnDeviceInventoryUnavailable: (detail) => `无法读取 Chrome 已安装模型（${detail}）`,
         modelRoleAndroidGeminiNano: '对话生成 · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: '此设备不支持 AICore Gemini Nano（需要 Android 12 及以上且支持 AICore 的设备）',
         modelLanguageSupport: (languageTag, declared) => declared

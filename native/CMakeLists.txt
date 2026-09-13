@@ -43,6 +43,7 @@ add_executable(eversoul-native-host
     src/main.cpp
     src/context_database.cpp
     src/litert_lm_library.cpp
+    src/local_request_channel.cpp
     src/model_runtime.cpp
     src/native_settings.cpp)
 if(WIN32)

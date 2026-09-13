@@ -1,4 +1,5 @@
 #include "context_database.h"
+#include "local_request_channel.h"
 #include "model_runtime.h"
 #include "native_settings.h"
 
@@ -9,6 +10,8 @@
 #include <functional>
 #include <iostream>
 #include <limits>
+#include <memory>
+#include <mutex>
 #include <stdexcept>
 #include <string>
 #include <string_view>
@@ -673,6 +676,23 @@ void writeFrame(std::ostream& output, bool jsonLines, std::string_view payload) 
     output.flush();
 }
 
+int relayToRunningHost(const std::filesystem::path& executablePath, bool jsonLines) {
+    std::string error;
+    const std::unique_ptr<eversoul::native::LocalRequestClient> client =
+        eversoul::native::LocalRequestClient::connect(eversoul::native::localRequestEndpoint(executablePath), error);
+    std::string payload;
+    while (readFrame(std::cin, jsonLines, payload)) {
+        try {
+            if (!client) throw std::runtime_error("native_host_already_running:" + error);
+            writeFrame(std::cout, jsonLines, client->exchange(payload));
+        }
+        catch (const std::exception& failure) {
+            writeFrame(std::cout, jsonLines, errorResponse(failure));
+        }
+    }
+    return 0;
+}
+
 int selfTest() {
     const auto path = std::filesystem::temp_directory_path() / "eversoul-native-context-self-test.sqlite3";
     std::error_code ignored;
@@ -750,27 +770,47 @@ int main(int argc, char** argv) {
             _setmode(_fileno(stdout), _O_BINARY);
         }
 #endif
-        ProcessInstanceGuard instanceGuard(executablePath);
+        std::unique_ptr<ProcessInstanceGuard> instanceGuard;
+        try {
+            instanceGuard = std::make_unique<ProcessInstanceGuard>(executablePath);
+        }
+        catch (const std::runtime_error& error) {
+            if (std::string_view(error.what()) != "native_host_already_running") throw;
+            return relayToRunningHost(executablePath, jsonLines);
+        }
         HostStatusConsole statusConsole(consoleEnabled);
         const DisplayLanguage displayLanguage = statusConsole.resolveLanguage(settingsPath, consoleEnabled);
         ContextDatabase database(databasePath);
         NativeModelRuntime modelRuntime(executablePath, settingsPath);
         statusConsole.show(displayLanguage, false, currentProcessId(), executablePath, databasePath, settingsPath);
         statusConsole.updateInference(modelRuntime.status());
-        std::string payload;
-        while (readFrame(std::cin, jsonLines, payload)) {
+        std::mutex requestMutex;
+        bool shuttingDown = false;
+        const auto dispatch = [&](std::string_view request) -> std::string {
+            std::scoped_lock lock(requestMutex);
+            if (shuttingDown) return errorResponse(std::runtime_error("native_host_shutting_down"));
             statusConsole.markConnected();
             try {
-                const std::string response = handleRequest(
-                    database, modelRuntime, payload, executablePath, databasePath, settingsPath, displayLanguage);
+                std::string response = handleRequest(
+                    database, modelRuntime, request, executablePath, databasePath, settingsPath, displayLanguage);
                 statusConsole.updateInference(modelRuntime.status());
-                writeFrame(std::cout, jsonLines, response);
+                return response;
             }
             catch (const std::exception& error) {
                 statusConsole.updateInference(modelRuntime.status());
-                writeFrame(std::cout, jsonLines, errorResponse(error));
+                return errorResponse(error);
             }
+        };
+        const eversoul::native::LocalRequestServer localServer(
+            eversoul::native::localRequestEndpoint(executablePath), dispatch);
+        std::string payload;
+        while (readFrame(std::cin, jsonLines, payload)) {
+            writeFrame(std::cout, jsonLines, dispatch(payload));
             if (payload.capacity() > 256U * 1024U) std::string{}.swap(payload);
+        }
+        {
+            std::scoped_lock shutdownLock(requestMutex);
+            shuttingDown = true;
         }
         return 0;
     }
