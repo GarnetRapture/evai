@@ -228,12 +228,12 @@ export function resolveActivePersonaCheatPreset(source: PersonaCheatSettingsSour
     return source.cheat_mode_enabled ? source.persona_cheat_presets[personaId] ?? null : null;
 }
 
-export function resolvePersonaFamiliarityScore(messageCount: number, memoryCount: number, cheatLevel: number | null): number {
-    return cheatLevel === null ? familiarityScore(messageCount, memoryCount) : familiarityCumulativeExp(clampPersonaBondLevel(cheatLevel));
+export function resolvePersonaFamiliarityScore(messageCount: number, memoryCount: number, affinityExp: number, cheatLevel: number | null): number {
+    return cheatLevel === null ? familiarityScore(messageCount, memoryCount, affinityExp) : familiarityCumulativeExp(clampPersonaBondLevel(cheatLevel));
 }
 
-export function resolvePersonaFamiliarityLevel(messageCount: number, memoryCount: number, cheatLevel: number | null): number {
-    return computeFamiliarityLevel(resolvePersonaFamiliarityScore(messageCount, memoryCount, cheatLevel)).level;
+export function resolvePersonaFamiliarityLevel(messageCount: number, memoryCount: number, affinityExp: number, cheatLevel: number | null): number {
+    return computeFamiliarityLevel(resolvePersonaFamiliarityScore(messageCount, memoryCount, affinityExp, cheatLevel)).level;
 }
 
 export function personaCheatPresetKey(preset: PersonaCheatPreset | null): string {

@@ -1,12 +1,17 @@
-#include "context_database.h"
+#include "context_database/context_database.h"
 
 #include <algorithm>
 #include <cstdint>
+#include <filesystem>
 #include <memory>
 #include <stdexcept>
 #include <string>
+#include <string_view>
+#include <vector>
 
 #include <sqlite3.h>
+
+#include "json_text/json_text.h"
 
 namespace eversoul::native {
 namespace {
@@ -118,33 +123,6 @@ void appendJsonString(std::string& output, std::string_view key, std::string_vie
     output += '"' + jsonEscape(key) + "\":\"" + jsonEscape(value) + '"';
 }
 
-}
-
-std::string jsonEscape(std::string_view text) {
-    std::string escaped;
-    escaped.reserve(text.size() + 8);
-    constexpr char hex[] = "0123456789abcdef";
-    for (const unsigned char character : text) {
-        switch (character) {
-            case '"': escaped += "\\\""; break;
-            case '\\': escaped += "\\\\"; break;
-            case '\b': escaped += "\\b"; break;
-            case '\f': escaped += "\\f"; break;
-            case '\n': escaped += "\\n"; break;
-            case '\r': escaped += "\\r"; break;
-            case '\t': escaped += "\\t"; break;
-            default:
-                if (character < 0x20) {
-                    escaped += "\\u00";
-                    escaped.push_back(hex[character >> 4]);
-                    escaped.push_back(hex[character & 0x0f]);
-                }
-                else {
-                    escaped.push_back(static_cast<char>(character));
-                }
-        }
-    }
-    return escaped;
 }
 
 ContextDatabase::ContextDatabase(const std::filesystem::path& path) {

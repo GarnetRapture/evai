@@ -1,0 +1,120 @@
+set(EVERSOUL_PC_RUNTIME_SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/core/pc_runtime/text_data_processor_factory.cc"
+    "${CMAKE_CURRENT_SOURCE_DIR}/core/pc_runtime/text_data_processors.cc"
+    "${CMAKE_CURRENT_SOURCE_DIR}/core/pc_runtime/text_engine.cc"
+    "${CMAKE_CURRENT_SOURCE_DIR}/core/pc_runtime/text_execution_manager.cc"
+    "${CMAKE_CURRENT_SOURCE_DIR}/core/pc_runtime/text_resource_manager.cc")
+
+set(EVERSOUL_LITERT_LM_UPSTREAM_SOURCES
+    "${EVERSOUL_LITERT_LM_ROOT}/c/conversation.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/c/engine.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/c/error_reporter.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/composite_constraint.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/constrained_decoder.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/constraint.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/constraint_provider_factory.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/external_constraint_provider.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/llg_constraint.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/llg_constraint_provider.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/logit_mask.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/no_repeat_ngram_constraint.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/repetition_penalty_constraint.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/suppress_tokens_constraint.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/constrained_decoding/thinking_budget_constraint.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/embedding_lookup/embedding_lookup_end_of_multi_modal.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/embedding_lookup/embedding_lookup_manager.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/embedding_lookup/embedding_lookup_multi_modal.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/embedding_lookup/embedding_lookup_text.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/model_resources_litert_lm.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/model_resources_task.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/prompt_template.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/sampler_factory.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/sampling_cpu_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/scoring_cpu_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/stop_token_detector.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/tool_use/fc_parser_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/tool_use/fc_tool_format_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/tool_use/json_parser_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/tool_use/parser_common.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/tool_use/parser_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/tool_use/python_parser_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/tool_use/python_tool_format_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/components/top_p_cpu_sampler.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/channel_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/conversation.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/internal_callback_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/io_types.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/model_data_processor/data_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/model_data_processor/function_gemma_data_processor.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/model_data_processor/minicpm5_data_processor.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/model_data_processor/qwen3_data_processor.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/conversation/prompt_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/core/session_advanced.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/core/session_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/core/tasks.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/engine/cpu_affinity_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/engine/embedding_engine_settings.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/engine/engine_settings.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/engine/io_types.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/audio/audio_executor_settings.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/common_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/embedding/embedding_executor_settings.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/executor_settings_base.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/executor_stats.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/litert/state.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/litert_compiled_model_executor_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/llm_executor_io_types.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/llm_executor_processed_tokens.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/llm_executor_settings.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/llm_executor_settings_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/llm_litert_compiled_model_cache_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/llm_litert_compiled_model_executor.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/llm_litert_compiled_model_executor_factory.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/llm_litert_mtp_drafter.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/magic_number_configs_helper.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/executor/vision/vision_executor_settings.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/framework/resource_management/context_handler/context_handler.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/framework/resource_management/utils/resource_manager_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/framework/threadpool.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/framework/worker_thread.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/data_stream.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/file_format_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/file_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/litert_lm_loader.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/litert_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/log_tensor_buffer.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/logging.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/logging_tensor_buffer.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/lora_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/metadata_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/model_asset_bundle_resources.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/model_type_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/safetensors_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/tensor_buffer_util.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/zip_readonly_mem_file.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/runtime/util/zip_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/schema/core/litertlm_read.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/schema/core/litertlm_utils.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/support/tokenizer/buffered_streaming_detokenizer.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/support/tokenizer/huggingface_tokenizer.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/support/tokenizer/sentencepiece_tokenizer.cc"
+    "${EVERSOUL_LITERT_LM_ROOT}/support/util/io_types.cc")
+
+if(WIN32)
+    list(APPEND EVERSOUL_LITERT_LM_UPSTREAM_SOURCES "${EVERSOUL_LITERT_LM_ROOT}/support/util/memory_mapped_file_win.cc")
+else()
+    list(APPEND EVERSOUL_LITERT_LM_UPSTREAM_SOURCES "${EVERSOUL_LITERT_LM_ROOT}/support/util/memory_mapped_file_posix.cc")
+endif()
+
+set(EVERSOUL_LITERT_LM_PROTO_FILES
+    runtime/executor/proto/constrained_decoding_options.proto
+    runtime/proto/embedding_metadata.proto
+    runtime/proto/embedding_model_type.proto
+    runtime/proto/engine.proto
+    runtime/proto/executor_metadata.proto
+    runtime/proto/litert_lm_metrics.proto
+    runtime/proto/llm_metadata.proto
+    runtime/proto/llm_model_type.proto
+    runtime/proto/sampler_params.proto
+    runtime/proto/token.proto
+    runtime/util/external_file.proto)

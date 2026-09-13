@@ -5,10 +5,11 @@ import { PERSONA_EMOTION_KINDS } from '../../chat/affect';
 
 export function MemoryInsightPanel({ insight, loading, labels }: MemoryInsightPanelProps) {
     const hasSummary = Boolean(insight?.semantic_summary && insight.semantic_summary.trim().length > 0);
+    const reflection = insight?.reflection ?? null;
     const directives = insight?.directives ?? [];
     const episodes = insight?.episodic ?? [];
     const emotion = insight?.emotion ?? null;
-    const isEmpty = !loading && emotion === null && !hasSummary && directives.length === 0 && episodes.length === 0;
+    const isEmpty = !loading && emotion === null && !hasSummary && reflection === null && directives.length === 0 && episodes.length === 0;
     return (
         <section className="ever-panel-section ever-memory-insight">
             <h3><BrainCircuit aria-hidden="true" size={16}/>{labels.memoryInsightTitle}</h3>
@@ -39,6 +40,13 @@ export function MemoryInsightPanel({ insight, loading, labels }: MemoryInsightPa
                             </li>
                         ))}
                     </ul>
+                </div>
+            )}
+            {reflection !== null && (
+                <div className="ever-memory-insight__summary ever-memory-insight__reflection">
+                    <span className="ever-memory-insight__label">{labels.memoryInsightReflection}</span>
+                    <time>{formatDateTime(reflection.created_at, labels)}</time>
+                    <p>{reflection.memory_text}</p>
                 </div>
             )}
             {hasSummary && (

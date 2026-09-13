@@ -46,6 +46,4 @@ private:
     sqlite3* database_ = nullptr;
 };
 
-[[nodiscard]] std::string jsonEscape(std::string_view text);
-
 }

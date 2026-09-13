@@ -6,7 +6,9 @@ import type {
     PersonaSpeechProfile,
     PersonaSpeechStyle,
 } from './types';
+import { personaBaseName } from './characterName';
 import { EMPTY_SLICE_FIELD } from './slice';
+import { PERSONA_SAVIOR_ADDRESS_FORMS, findVocativeSaviorAddressForms, measurePersonaSelfReference, measureSaviorAddressForm, saviorAddressReferent } from './speechForms';
 import { measureSpeechRegister } from './voice';
 
 export const SOLO_LINE_LIMIT = 12;
@@ -36,41 +38,10 @@ const SIGNATURE_MARK_PATTERNS: ReadonlyArray<{ mark: string; pattern: RegExp }> 
     { mark: '☆', pattern: /[☆★]/u },
 ];
 
-export const ADDRESS_TERM_CANDIDATES_BY_LANGUAGE: Record<AppLanguage, string[]> = {
-    ko: ['구원자님', '구원자'],
-    en: ['Savior'],
-    zh_cn: ['救援者大人', '救援者', '救世主大人', '救世主'],
-};
+export const ADDRESS_TERM_CANDIDATES_BY_LANGUAGE: Record<AppLanguage, readonly string[]> = PERSONA_SAVIOR_ADDRESS_FORMS;
 
 function spiritDialogues(entries: LocalizedDialogue[], spiritName: string): string[] {
     return entries.filter((entry) => entry.speaker === spiritName).map((entry) => entry.message);
-}
-
-function measureAddressTerm(lines: string[], language: AppLanguage): string | null {
-    const candidates = ADDRESS_TERM_CANDIDATES_BY_LANGUAGE[language];
-    const counts = new Map<string, number>();
-    for (const line of lines) {
-        let cursor = 0;
-        while (cursor < line.length) {
-            const matched = candidates.find((candidate) => line.startsWith(candidate, cursor));
-            if (matched === undefined) {
-                cursor += 1;
-                continue;
-            }
-            counts.set(matched, (counts.get(matched) ?? 0) + 1);
-            cursor += matched.length;
-        }
-    }
-    let best: string | null = null;
-    let bestCount = 0;
-    for (const candidate of candidates) {
-        const count = counts.get(candidate) ?? 0;
-        if (count > bestCount) {
-            best = candidate;
-            bestCount = count;
-        }
-    }
-    return best;
 }
 
 function isSubstantiveLine(text: string): boolean {
@@ -173,12 +144,11 @@ function dominantSurface(tally: PersonaSignatureTally): string {
 }
 
 function measureSignatureLines(runs: string[][], language: AppLanguage): string[] {
-    const addressTerms = ADDRESS_TERM_CANDIDATES_BY_LANGUAGE[language];
     const tallies = new Map<string, PersonaSignatureTally>();
     for (const run of runs) {
         const countedInRun = new Set<string>();
         for (const line of run) {
-            if (addressTerms.some((term) => line.includes(term))) {
+            if (findVocativeSaviorAddressForms(line, language).length > 0) {
                 continue;
             }
             const candidate = signatureCandidate(line);
@@ -215,8 +185,12 @@ export function measurePersonaSpeechProfile(
     const conversationRuns = [...spiritLineRuns(slice.story, slice.name), ...spiritLineRuns(slice.evertalk, slice.name)];
     const ownSignatureRuns = conversationRuns.length > 0 ? conversationRuns : patternLines.map((line) => [line]);
     const signatureRuns = [...ownSignatureRuns, ...externalVoiceLines.map((line) => [line])];
+    const ownVoiceLines = [...ownLines, ...personaMonologueLines(slice)];
+    const addressCall = measureSaviorAddressForm(ownVoiceLines, language);
     return {
-        address_term: measureAddressTerm(ownLines, language),
+        address_term: addressCall === null ? null : saviorAddressReferent(addressCall, language),
+        address_call: addressCall,
+        self_reference: measurePersonaSelfReference([...storyLines, ...everTalkLines], personaBaseName(slice.name), language),
         register: measureSpeechRegister([...spiritLines, ...personaMonologueLines(slice)], language),
         solo_lines: measureSoloLines(spiritLines),
         signature_lines: measureSignatureLines(signatureRuns, language),

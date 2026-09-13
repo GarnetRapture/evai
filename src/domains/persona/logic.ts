@@ -1,5 +1,6 @@
 import type { AppLanguage } from '../../shared/types';
-import type { LocalizedDialogue, LocalizedList, LocalizedText, PersonaConfig, SpiritDetail, SpiritRaidAssetPrefix, SpiritSkinVisualAsset, SpiritVisualAssets } from './types';
+import { resolveLocalizedProfileItems } from './profileList';
+import type { LocalizedDialogue, LocalizedText, PersonaConfig, SpiritDetail, SpiritRaidAssetPrefix, SpiritSkinVisualAsset, SpiritVisualAssets } from './types';
 export const ASSET_ROOT = typeof document === 'undefined'
     ? './eversoul-assets'
     : new URL('eversoul-assets', document.baseURI).href;
@@ -192,13 +193,6 @@ function nullableLocalizedText(source: LocalizedText | undefined, fallback: stri
     const value = localizedText(source, fallback, language).trim();
     return value.length > 0 ? value : null;
 }
-function localizedList(source: LocalizedList | undefined, fallback: string[] | undefined, language: AppLanguage): string[] {
-    if (!source) {
-        return fallback ?? [];
-    }
-    const selected = source[language] ?? source.ko ?? source.en ?? source.zh_tw ?? [];
-    return selected.filter((item) => item.trim().length > 0);
-}
 function localizedDialogue(source: Record<AppLanguage | 'zh_tw', LocalizedDialogue> | undefined, language: AppLanguage): LocalizedDialogue | null {
     if (!source) {
         return null;
@@ -243,10 +237,10 @@ export function parseSpiritDetail(persona: PersonaConfig, language: AppLanguage 
             union: nullableLocalizedText(i18n.profile?.union, detail.profile.union, language),
             cv_ko: nullableLocalizedText(i18n.profile?.cv_ko, detail.profile.cv_ko, language),
             cv_jp: nullableLocalizedText(i18n.profile?.cv_jp, detail.profile.cv_jp, language),
-            like: localizedList(i18n.profile?.like, detail.profile.like, language),
-            dislike: localizedList(i18n.profile?.dislike, detail.profile.dislike, language),
-            hobby: localizedList(i18n.profile?.hobby, detail.profile.hobby, language),
-            speciality: localizedList(i18n.profile?.speciality, detail.profile.speciality, language),
+            like: resolveLocalizedProfileItems(i18n.profile?.like, language, detail.profile.like ?? []),
+            dislike: resolveLocalizedProfileItems(i18n.profile?.dislike, language, detail.profile.dislike ?? []),
+            hobby: resolveLocalizedProfileItems(i18n.profile?.hobby, language, detail.profile.hobby ?? []),
+            speciality: resolveLocalizedProfileItems(i18n.profile?.speciality, language, detail.profile.speciality ?? []),
         },
         personality: {
             description: nullableLocalizedText(i18n.personality?.description, detail.personality.description, language),

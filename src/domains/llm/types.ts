@@ -285,13 +285,24 @@ export interface PersonaSessionPrompt {
     system_prompt: string;
     priming_messages: OnDeviceTextMessage[];
 }
+export interface OnDeviceTurnContextSection {
+    priority: number;
+    text: string;
+}
+export interface OnDeviceTurn {
+    heading: string;
+    body: string;
+    context_sections: OnDeviceTurnContextSection[];
+}
 export interface OnDeviceGenerationRequest {
     request_id: string;
     language: AppLanguage;
     persona_id: string;
     persona_name: string;
     session_prompt: PersonaSessionPrompt;
-    messages: OnDeviceTextMessage[];
+    prefix_messages: OnDeviceTextMessage[];
+    history_messages: OnDeviceTextMessage[];
+    turn: OnDeviceTurn;
     behavior_instruction: string;
     structured_reply: StructuredReplySpec;
     signal: AbortSignal;
@@ -303,6 +314,7 @@ export interface OnDeviceGenerationHandlers {
 export interface OnDeviceGenerationResult {
     text: string;
     cancelled: boolean;
+    truncated_message_count: number;
 }
 export interface PersonaModelSessionIdentity {
     persona_id: string;
@@ -326,5 +338,6 @@ export interface BaseModelSession {
 export interface BudgetedMessages {
     messages: LanguageModelMessage[];
     truncated_tokens: number;
+    truncated_message_count: number;
     prompt_tokens: number;
 }

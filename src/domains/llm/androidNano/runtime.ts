@@ -102,7 +102,7 @@ export const androidGeminiNanoRuntime = {
             const payload = JSON.stringify(buildPersonaGenerationPayload(request, ANDROID_GEMINI_NANO_RESPONSE_TOKEN_LIMIT));
             const result = await streamGeneration(request.request_id, payload, (chunk) => request.handlers.onChunk(chunk), request.signal);
             recordRequestStatus({ ...status, state: result.cancelled ? 'cancelled' : 'completed' });
-            return { text: result.text, cancelled: result.cancelled };
+            return { text: result.text, cancelled: result.cancelled, truncated_message_count: 0 };
         }
         catch (error) {
             recordRequestStatus({ ...status, state: 'failed', error_message: describeUnknownError(error) });

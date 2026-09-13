@@ -1,10 +1,10 @@
-# Build only the upstream inference library and its dependency closure. Never
-# download a release C API paired with headers from a different source revision.
-if(NOT EXISTS "${EVERSOUL_LITERT_LM_SOURCE_DIR}/c/BUILD")
-    message(FATAL_ERROR "LiteRT-LM source missing: ${EVERSOUL_LITERT_LM_SOURCE_DIR}")
+cmake_path(NORMAL_PATH EVERSOUL_LITERT_LM_SOURCE_DIR OUTPUT_VARIABLE EVERSOUL_LITERT_LM_ROOT)
+string(REGEX REPLACE "/$" "" EVERSOUL_LITERT_LM_ROOT "${EVERSOUL_LITERT_LM_ROOT}")
+if(NOT EXISTS "${EVERSOUL_LITERT_LM_ROOT}/c/engine.cc")
+    message(FATAL_ERROR "LiteRT-LM source missing: ${EVERSOUL_LITERT_LM_ROOT}")
 endif()
 foreach(header engine.h conversation.h error_reporter.h)
-    file(SHA256 "${EVERSOUL_LITERT_LM_SOURCE_DIR}/c/${header}" upstream_hash)
+    file(SHA256 "${EVERSOUL_LITERT_LM_ROOT}/c/${header}" upstream_hash)
     file(SHA256 "${EVERSOUL_LITERT_LM_INCLUDE_DIR}/c/${header}" host_hash)
     if(NOT upstream_hash STREQUAL host_hash)
         message(FATAL_ERROR "LiteRT-LM header/source mismatch: ${header}")
@@ -12,69 +12,133 @@ foreach(header engine.h conversation.h error_reporter.h)
 endforeach()
 
 if(WIN32 AND EVERSOUL_ARCH STREQUAL "x86_64")
-    set(core_platform windows_x86_64)
-    set(core_filename litert-lm.dll)
-    set(core_flags --cxxopt=/std:c++latest)
-    set(core_accelerators libLiteRt.dll libLiteRtWebGpuAccelerator.dll
+    set(EVERSOUL_LITERT_PREBUILT_PLATFORM windows_x86_64)
+    set(core_runtime_files libLiteRt.dll libLiteRtWebGpuAccelerator.dll
         libLiteRtTopKWebGpuSampler.dll libwebgpu_dawn.dll libGemmaModelConstraintProvider.dll)
 elseif(CMAKE_SYSTEM_NAME STREQUAL "Linux" AND EVERSOUL_ARCH MATCHES "^(x86_64|arm64)$")
-    set(core_platform linux_${EVERSOUL_ARCH})
-    set(core_filename liblitert-lm.so)
-    set(core_flags --cxxopt=-std=c++23)
-    if(EVERSOUL_ARCH STREQUAL "arm64")
-        list(APPEND core_flags --config=linux_arm64)
-    endif()
-    set(core_accelerators libLiteRt.so libLiteRtWebGpuAccelerator.so
+    set(EVERSOUL_LITERT_PREBUILT_PLATFORM linux_${EVERSOUL_ARCH})
+    set(core_runtime_files libLiteRt.so libLiteRtWebGpuAccelerator.so
         libLiteRtTopKWebGpuSampler.so libwebgpu_dawn.so libGemmaModelConstraintProvider.so)
 else()
     message(FATAL_ERROR "Supported native targets: Windows x86_64, Linux x86_64/arm64")
 endif()
 
-find_program(EVERSOUL_BAZEL NAMES bazelisk bazel REQUIRED)
-if(MSVC)
-    string(REGEX REPLACE "/Tools/MSVC/.*" "" core_vc_directory "${CMAKE_CXX_COMPILER}")
-endif()
-set(core_source "${CMAKE_CURRENT_BINARY_DIR}/litert-source")
-execute_process(COMMAND ${CMAKE_COMMAND}
-    "-DSOURCE_DIR=${EVERSOUL_LITERT_LM_SOURCE_DIR}"
-    "-DSTAGING_DIR=${core_source}" "-DCORE_PLATFORM=${core_platform}"
-    -P "${CMAKE_CURRENT_LIST_DIR}/StageLiteRtCore.cmake"
-    RESULT_VARIABLE stage_result)
-if(NOT stage_result EQUAL 0)
-    message(FATAL_ERROR "LiteRT-LM core staging failed")
-endif()
-set(EVERSOUL_BAZEL_OUTPUT_ROOT "${CMAKE_CURRENT_BINARY_DIR}/bazel" CACHE PATH "Bazel output/cache root")
-set(core_output "${CMAKE_CURRENT_BINARY_DIR}/litert-core/${core_filename}")
-# A build target, not a configure-time compiler invocation or runtime test.
-add_custom_target(eversoul_litert_core
-    COMMAND ${CMAKE_COMMAND}
-        "-DBAZEL=${EVERSOUL_BAZEL}"
-        "-DSOURCE_DIR=${core_source}"
-        "-DOUTPUT_ROOT=${EVERSOUL_BAZEL_OUTPUT_ROOT}"
-        "-DCORE_FLAGS=${core_flags}"
-        "-DCORE_FILENAME=${core_filename}"
-        "-DCORE_OUTPUT=${core_output}"
-        "-DVC_DIRECTORY=${core_vc_directory}"
-        -P "${CMAKE_CURRENT_LIST_DIR}/BuildLiteRtCore.cmake"
-    BYPRODUCTS "${core_output}"
-    USES_TERMINAL VERBATIM)
-add_dependencies(eversoul-native-host eversoul_litert_core)
-
-set(core_files "${core_output}")
-foreach(accelerator IN LISTS core_accelerators)
-    set(accelerator_path "${EVERSOUL_LITERT_LM_SOURCE_DIR}/prebuilt/${core_platform}/${accelerator}")
-    if(NOT EXISTS "${accelerator_path}")
-        message(FATAL_ERROR "Required upstream accelerator missing: ${accelerator_path}")
+set(core_prebuilt_files "")
+foreach(runtime_file IN LISTS core_runtime_files)
+    set(runtime_path "${EVERSOUL_LITERT_LM_ROOT}/prebuilt/${EVERSOUL_LITERT_PREBUILT_PLATFORM}/${runtime_file}")
+    if(NOT EXISTS "${runtime_path}")
+        message(FATAL_ERROR "Required upstream runtime missing: ${runtime_path}")
     endif()
-    file(SIZE "${accelerator_path}" accelerator_bytes)
-    if(accelerator_bytes LESS 1024)
-        message(FATAL_ERROR "Fetch the LiteRT-LM Git LFS file: ${accelerator_path}")
+    file(SIZE "${runtime_path}" runtime_bytes)
+    if(runtime_bytes LESS 1024)
+        message(FATAL_ERROR "Fetch the LiteRT-LM Git LFS file: ${runtime_path}")
     endif()
-    list(APPEND core_files "${accelerator_path}")
+    list(APPEND core_prebuilt_files "${runtime_path}")
 endforeach()
+
+include("${CMAKE_CURRENT_LIST_DIR}/LiteRtSources.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/LiteRtDependencies.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/LiteRtRust.cmake")
+
+set_source_files_properties(${EVERSOUL_RUST_BRIDGE_SOURCES} ${EVERSOUL_RUST_BRIDGE_HEADERS} PROPERTIES GENERATED TRUE)
+add_library(eversoul-litert-lm SHARED
+    ${EVERSOUL_PC_RUNTIME_SOURCES}
+    ${EVERSOUL_LITERT_LM_UPSTREAM_SOURCES}
+    ${EVERSOUL_LITERT_LM_PROTO_SOURCES}
+    "${EVERSOUL_LITERT_LM_SCHEMA_HEADER}"
+    ${EVERSOUL_LITERT_HEADER_ONLY_SUPPORT_SOURCES}
+    ${EVERSOUL_RUST_BRIDGE_SOURCES}
+    "${EVERSOUL_RUST_CXX_DIR}/src/cxx.cc")
+add_dependencies(eversoul-litert-lm eversoul_litert_rust)
+target_compile_features(eversoul-litert-lm PRIVATE cxx_std_20)
+set_target_properties(eversoul-litert-lm PROPERTIES
+    OUTPUT_NAME litert-lm
+    CXX_STANDARD 20
+    CXX_STANDARD_REQUIRED ON
+    CXX_EXTENSIONS OFF
+    POSITION_INDEPENDENT_CODE ON
+    CXX_VISIBILITY_PRESET hidden
+    VISIBILITY_INLINES_HIDDEN ON)
+if(EVERSOUL_NATIVE_OUTPUT_ROOT)
+    set_target_properties(eversoul-litert-lm PROPERTIES
+        RUNTIME_OUTPUT_DIRECTORY "${EVERSOUL_NATIVE_OUTPUT_ROOT}/${EVERSOUL_INSTALL_DESTINATION}"
+        LIBRARY_OUTPUT_DIRECTORY "${EVERSOUL_NATIVE_OUTPUT_ROOT}/${EVERSOUL_INSTALL_DESTINATION}")
+endif()
+target_include_directories(eversoul-litert-lm PRIVATE
+    "${CMAKE_CURRENT_SOURCE_DIR}/core"
+    "${EVERSOUL_LITERT_LM_ROOT}"
+    "${EVERSOUL_LITERT_GENERATED_DIR}"
+    "${EVERSOUL_RUST_GENERATED_DIR}")
+target_include_directories(eversoul-litert-lm SYSTEM PRIVATE
+    "${eversoul_litert_SOURCE_DIR}"
+    "${EVERSOUL_RUST_INCLUDE_DIR}"
+    "${EVERSOUL_RUST_LLGUIDANCE_DIR}"
+    "${EVERSOUL_RUST_TOKENIZERS_CPP_DIR}")
+target_compile_definitions(eversoul-litert-lm PRIVATE
+    ENABLE_HUGGINGFACE_TOKENIZER
+    ENABLE_SENTENCEPIECE_TOKENIZER
+    LITERT_DISABLE_NPU=
+    LITERT_DISABLE_OPENCL_SUPPORT=1)
+if(WIN32)
+    target_compile_definitions(eversoul-litert-lm PRIVATE NOMINMAX WIN32_LEAN_AND_MEAN NOGDI _USE_MATH_DEFINES
+        _ENABLE_EXTENDED_ALIGNED_STORAGE)
+endif()
+if(MSVC)
+    target_compile_options(eversoul-litert-lm PRIVATE /bigobj /utf-8 /Zc:__cplusplus /Zc:preprocessor /EHsc)
+endif()
+target_link_libraries(eversoul-litert-lm PRIVATE
+    eversoul_litert_runtime
+    eversoul_gemma_constraint_provider
+    eversoul_litert_rust_library
+    eversoul_sentencepiece
+    eversoul_minizip
+    eversoul_zlib
+    re2::re2
+    flatbuffers
+    protobuf::libprotobuf
+    nlohmann_json::nlohmann_json
+    absl::absl_check
+    absl::absl_log
+    absl::any_invocable
+    absl::base
+    absl::btree
+    absl::check
+    absl::cleanup
+    absl::core_headers
+    absl::flat_hash_map
+    absl::flat_hash_set
+    absl::function_ref
+    absl::hash
+    absl::log
+    absl::log_initialize
+    absl::log_severity
+    absl::log_sink
+    absl::log_sink_registry
+    absl::memory
+    absl::no_destructor
+    absl::nullability
+    absl::random_distributions
+    absl::random_random
+    absl::span
+    absl::status
+    absl::statusor
+    absl::str_format
+    absl::strings
+    absl::synchronization
+    absl::time)
+if(UNIX)
+    set_target_properties(eversoul-litert-lm PROPERTIES BUILD_RPATH "$ORIGIN" INSTALL_RPATH "$ORIGIN")
+    target_link_libraries(eversoul-litert-lm PRIVATE pthread dl)
+endif()
+add_dependencies(eversoul-native-host eversoul-litert-lm)
+
+set(core_files "$<TARGET_FILE:eversoul-litert-lm>" "${EVERSOUL_RUST_LIBRARY}" ${core_prebuilt_files})
 add_custom_command(TARGET eversoul-native-host POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different ${core_files} "$<TARGET_FILE_DIR:eversoul-native-host>"
     VERBATIM)
-install(FILES ${core_files} DESTINATION "${EVERSOUL_PLATFORM}-${EVERSOUL_ARCH}")
+install(TARGETS eversoul-litert-lm
+    RUNTIME DESTINATION "${EVERSOUL_INSTALL_DESTINATION}"
+    LIBRARY DESTINATION "${EVERSOUL_INSTALL_DESTINATION}")
+install(FILES "${EVERSOUL_RUST_LIBRARY}" ${core_prebuilt_files} DESTINATION "${EVERSOUL_INSTALL_DESTINATION}")
 install(FILES "${EVERSOUL_LITERT_LM_INCLUDE_DIR}/LICENSE"
     DESTINATION "${EVERSOUL_PLATFORM}-${EVERSOUL_ARCH}/licenses/LiteRT-LM")

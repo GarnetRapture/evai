@@ -1,5 +1,6 @@
-#include "context_database.h"
 #include "browser_server.h"
+#include "context_database_client.h"
+#include "json_text/json_text.h"
 #include "local_request_channel.h"
 #include "model_runtime.h"
 #include "native_settings.h"
@@ -21,11 +22,9 @@
 #include <string_view>
 #include <thread>
 #include <utility>
-
 #include <vector>
 
 #include <nlohmann/json.hpp>
-#include <sqlite3.h>
 
 #ifdef _WIN32
 #include <fcntl.h>
@@ -41,7 +40,7 @@
 namespace {
 
 using JsonValue = nlohmann::json;
-using eversoul::native::ContextDatabase;
+using eversoul::native::ContextDatabaseClient;
 using eversoul::native::GenerationStatus;
 using eversoul::native::ModelConfiguration;
 using eversoul::native::ModelRuntimeStatus;
@@ -501,7 +500,7 @@ ModelConfiguration modelConfiguration(const JsonValue& request, const NativeMode
 }
 
 std::string handleRequest(
-    ContextDatabase& database,
+    ContextDatabaseClient& database,
     NativeModelRuntime& modelRuntime,
     std::string_view payload,
     const std::filesystem::path& executablePath,
@@ -527,7 +526,7 @@ std::string handleRequest(
         const auto databaseBytes = databaseFileBytes + walBytes + sharedMemoryBytes;
         return "{\"ok\":true,\"protocol\":2,\"storage\":\"sqlite\",\"process_id\":"
             + std::to_string(currentProcessId()) + ",\"sqlite\":\""
-            + jsonEscape(sqlite3_libversion()) + "\",\"executable_path\":\""
+            + jsonEscape(ContextDatabaseClient::engineVersion()) + "\",\"executable_path\":\""
             + jsonEscape(pathUtf8(executablePath)) + "\",\"database_path\":\""
             + jsonEscape(pathUtf8(databasePath)) + "\",\"database_bytes\":"
             + std::to_string(databaseBytes) + ",\"database_file_bytes\":"
@@ -732,7 +731,7 @@ int selfTest() {
     std::error_code ignored;
     std::filesystem::remove(path, ignored);
     {
-        ContextDatabase database(path);
+        ContextDatabaseClient database(path);
         database.appendMessage("u1", "r1", "xiaolian", "user", "만두 먹자", "2026-09-12T00:00:00.000Z");
         database.appendMessage("a1", "r1", "xiaolian", "assistant", "좋아!", "2026-09-12T00:00:01.000Z");
         database.appendMemory("m1", "xiaolian", "r1", "episodic", "함께 만두를 먹기로 했다", "2026-09-12T00:00:02.000Z", {"u1"});
@@ -828,7 +827,7 @@ int main(int argc, char** argv) {
         }
         HostStatusConsole statusConsole(consoleEnabled);
         const DisplayLanguage displayLanguage = statusConsole.resolveLanguage(settingsPath, consoleEnabled);
-        ContextDatabase database(databasePath);
+        ContextDatabaseClient database(databasePath);
         NativeModelRuntime modelRuntime(executablePath, settingsPath);
         statusConsole.show(displayLanguage, false, currentProcessId(), executablePath, databasePath, settingsPath);
         statusConsole.updateInference(modelRuntime.status());
@@ -839,8 +838,6 @@ int main(int argc, char** argv) {
             if (shuttingDown) return errorResponse(std::runtime_error("native_host_shutting_down"));
             statusConsole.markConnected();
             try {
-                // A blocking generate must not monopolize the DB/dispatch lock:
-                // other browsers still need polling, cancellation and storage.
                 const auto parsed = JsonValue::parse(request, nullptr, false);
                 if (parsed.is_object() && optionalString(parsed, "operation") == "generate") {
                     const auto requestId = requiredString(parsed, "request_id");

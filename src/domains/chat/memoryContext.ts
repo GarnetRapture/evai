@@ -1,10 +1,11 @@
 import type { MemoryContextFilter, MemoryContextKind } from './types';
 
-export const MEMORY_CONTEXT_KINDS: readonly MemoryContextKind[] = ['digest', 'semantic', 'directive', 'episodic', 'habit', 'affect', 'knowledge'];
+export const MEMORY_CONTEXT_KINDS: readonly MemoryContextKind[] = ['digest', 'semantic', 'reflection', 'directive', 'episodic', 'habit', 'affect', 'knowledge'];
 
 export const DEFAULT_MEMORY_CONTEXT_FILTER: MemoryContextFilter = {
     digest: true,
     semantic: true,
+    reflection: true,
     directive: true,
     episodic: true,
     habit: true,

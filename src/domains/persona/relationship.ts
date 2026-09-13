@@ -9,6 +9,8 @@ import {
     personaCharacterKey,
 } from './characterName';
 import { EMPTY_SLICE_FIELD } from './slice';
+import { ADDRESS_TERM_CANDIDATES_BY_LANGUAGE } from './speech';
+import { buildPersonaWorldCodex } from './world';
 import type {
     LocalizedDialogue,
     PersonaCanonDialogueTrack,
@@ -109,6 +111,32 @@ function buildCharacterIdentities(sources: readonly PersonaRelationshipSource[])
         characters.set(key, identity);
     }
     return characters;
+}
+
+function addDatasetSpeakerIdentities(
+    characters: Map<string, PersonaCharacterIdentity>,
+    sources: readonly PersonaRelationshipSource[],
+    language: AppLanguage,
+): void {
+    const addressTerms = new Set(ADDRESS_TERM_CANDIDATES_BY_LANGUAGE[language]);
+    for (const { slice } of sources) {
+        for (const line of [...slice.comments, ...slice.story, ...slice.evertalk]) {
+            const baseName = personaBaseName(line.speaker);
+            const key = personaCharacterKey(line.speaker);
+            if (baseName.length === 0 || baseName === EMPTY_SLICE_FIELD || addressTerms.has(baseName) || characters.has(key)) {
+                continue;
+            }
+            characters.set(key, {
+                key,
+                base_name: baseName,
+                lowered_base_name: baseName.toLocaleLowerCase(),
+                persona_ids: [],
+                aliases: [],
+                nick_name: null,
+                unions: [],
+            });
+        }
+    }
 }
 
 function aliasCandidates(identity: PersonaCharacterIdentity, characters: ReadonlyMap<string, PersonaCharacterIdentity>, language: AppLanguage): string[] {
@@ -349,6 +377,7 @@ export function buildPersonaRelationshipGraph(
     fingerprint: string,
 ): PersonaRelationshipGraph {
     const characters = buildCharacterIdentities(sources);
+    addDatasetSpeakerIdentities(characters, sources, language);
     const indexes = sources.map((source) => indexSource(source, characters));
     resolveAliases(characters, indexes, language);
     const store = new Map<string, PersonaRelationAccumulator>();
@@ -360,6 +389,7 @@ export function buildPersonaRelationshipGraph(
         }
     }
     const characterKeyByPersona = new Map(sources.map((source) => [source.persona_id, personaCharacterKey(source.slice.name)]));
+    const world = buildPersonaWorldCodex(sources);
     const profiles = new Map<string, PersonaRelationshipProfile>();
     for (const source of sources) {
         const selfKey = personaCharacterKey(source.slice.name);
@@ -375,7 +405,16 @@ export function buildPersonaRelationshipGraph(
             external_voice_lines: externalVoiceLines(source, indexes),
         });
     }
-    return { language, fingerprint, characters, character_key_by_persona: characterKeyByPersona, profiles };
+    return { language, fingerprint, characters, character_key_by_persona: characterKeyByPersona, profiles, world };
+}
+
+export function countCharacterMentions(graph: PersonaRelationshipGraph, personaId: string, texts: readonly string[]): number {
+    const characterKey = graph.character_key_by_persona.get(personaId);
+    const identity = characterKey === undefined ? undefined : graph.characters.get(characterKey);
+    if (identity === undefined) {
+        return 0;
+    }
+    return texts.reduce((total, text) => total + (mentionSurfaces(text.normalize('NFC'), identity, graph.language).length > 0 ? 1 : 0), 0);
 }
 
 export function findRelationForCharacter(

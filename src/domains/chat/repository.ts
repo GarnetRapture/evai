@@ -1,8 +1,11 @@
-import { EVERSOUL_INDEX, EVERSOUL_STORE, getEverSoulDatabase } from '../../shared/storage';
+import type { IDBPObjectStore, StoreNames } from 'idb';
+import type { AppLanguage } from '../../shared/types';
+import { EVERSOUL_INDEX, EVERSOUL_STORE, getEverSoulDatabase, type EverSoulDatabaseSchema } from '../../shared/storage';
 import { nativeContextService } from '../native/service';
-import { habitMemoryId } from './habit';
+import { EMPTY_AFFINITY_LEDGER, parseAffinityLedger, serializeAffinityLedger, withoutAffinityMessages } from './affinity';
+import { extractHabitTokens, habitMemoryId } from './habit';
 import { parsePersonaEmotion, serializePersonaEmotion, type PersonaEmotionState } from './affect';
-import { cosineSimilarity, createLexicalMemoryVector, isEmptyMemoryVector, rankMemoriesByRelevanceAndRecency } from './memory';
+import { cosineSimilarity, createLexicalMemoryVector, isEmptyMemoryVector, orderMemoriesChronologically, retainMostRelevantMemory } from './memory';
 import type {
     ChatMessage,
     ChatRoom,
@@ -11,17 +14,26 @@ import type {
     MemoryVector,
     PersonaHabitMemoryRecord,
     PersonaAffectMemoryRecord,
+    PersonaAffinityLedger,
+    PersonaAffinityMemoryRecord,
     PersonaContactSnapshot,
+    PersonaKeywordObservation,
     PersonaMemoryRecord,
+    PersonaReflectionMemoryRecord,
     PersonaRivalAttention,
     PersonaMemoryType,
     PersonaRecalledMemoryRecord,
+    PersonaSessionContinuation,
+    PersonaSessionDigestEntry,
     ProactiveConversationCandidate,
+    RelevantMemoryCandidate,
 } from './types';
 
 const TIMESTAMP_UPPER_BOUND = '￿';
 const NATIVE_MEMORY_SCAN_LIMIT = 2_147_483_647;
 const DIRECTIVE_NORMALIZE_PATTERN = /[^\p{L}\p{N}]+/gu;
+const RIVAL_TOPIC_LIMIT = 6;
+const SESSION_LAST_EXCHANGE_MESSAGE_COUNT = 4;
 
 function normalizeDirectiveText(text: string): string {
     return text.normalize('NFKC').toLowerCase().replace(DIRECTIVE_NORMALIZE_PATTERN, ' ').trim();
@@ -37,6 +49,100 @@ function isHabitMemory(record: PersonaMemoryRecord): record is PersonaHabitMemor
 
 function isAffectMemory(record: PersonaMemoryRecord): record is PersonaAffectMemoryRecord {
     return record.memory_type === 'affect';
+}
+
+function isReflectionMemory(record: PersonaMemoryRecord): record is PersonaReflectionMemoryRecord {
+    return record.memory_type === 'reflection';
+}
+
+function normalizeHabitRecord(record: PersonaHabitMemoryRecord): PersonaHabitMemoryRecord {
+    return {
+        ...record,
+        spirit_occurrence_count: record.spirit_occurrence_count ?? 0,
+        sources: record.sources ?? [],
+    };
+}
+
+function habitWithoutMemories(record: PersonaHabitMemoryRecord, removedMemoryIds: ReadonlySet<string>): PersonaHabitMemoryRecord | null {
+    const normalized = normalizeHabitRecord(record);
+    const removed = normalized.sources.filter((source) => removedMemoryIds.has(source.memory_id));
+    if (removed.length === 0) {
+        return normalized;
+    }
+    const sources = normalized.sources.filter((source) => !removedMemoryIds.has(source.memory_id));
+    const userCount = Math.max(0, normalized.occurrence_count - removed.filter((source) => source.user).length);
+    const spiritCount = Math.max(0, normalized.spirit_occurrence_count - removed.filter((source) => source.spirit).length);
+    if (userCount === 0 && spiritCount === 0) {
+        return null;
+    }
+    return {
+        ...normalized,
+        occurrence_count: userCount,
+        spirit_occurrence_count: spiritCount,
+        sources,
+        last_seen_at: sources.reduce((latest, source) => source.occurred_at > latest ? source.occurred_at : latest, normalized.created_at),
+    };
+}
+
+async function removeKeywordSources<TxStores extends ArrayLike<StoreNames<EverSoulDatabaseSchema>>>(
+    store: IDBPObjectStore<EverSoulDatabaseSchema, TxStores, typeof EVERSOUL_STORE.personaMemory, 'readwrite'>,
+    removedMemoryIds: ReadonlySet<string>,
+): Promise<void> {
+    if (removedMemoryIds.size === 0) {
+        return;
+    }
+    let cursor = await store.index(EVERSOUL_INDEX.personaMemoryByType).openCursor('habit');
+    while (cursor) {
+        const record = cursor.value;
+        if (isHabitMemory(record)) {
+            const updated = habitWithoutMemories(record, removedMemoryIds);
+            if (updated === null) {
+                await cursor.delete();
+            }
+            else if (updated !== record && updated.sources.length !== (record.sources ?? []).length) {
+                await cursor.update(updated);
+            }
+        }
+        cursor = await cursor.continue();
+    }
+}
+
+async function removeAffinityMessageEvents<TxStores extends ArrayLike<StoreNames<EverSoulDatabaseSchema>>>(
+    store: IDBPObjectStore<EverSoulDatabaseSchema, TxStores, typeof EVERSOUL_STORE.personaMemory, 'readwrite'>,
+    removedMessageIds: ReadonlySet<string>,
+): Promise<void> {
+    if (removedMessageIds.size === 0) {
+        return;
+    }
+    let cursor = await store.index(EVERSOUL_INDEX.personaMemoryByType).openCursor('affinity');
+    while (cursor) {
+        const record = cursor.value;
+        if (isAffinityMemory(record)) {
+            const ledger = parseAffinityLedger(record.memory_text);
+            const updated = withoutAffinityMessages(ledger, removedMessageIds);
+            if (updated.events.length !== ledger.events.length) {
+                await cursor.update({ ...record, memory_text: serializeAffinityLedger(updated) });
+            }
+        }
+        cursor = await cursor.continue();
+    }
+}
+
+function isPersonaAggregateMemory(record: PersonaMemoryRecord): boolean {
+    return record.memory_type === 'semantic'
+        || record.memory_type === 'reflection'
+        || (isHabitMemory(record) && normalizeHabitRecord(record).sources.length === 0);
+}
+
+function isSessionMessage(message: ChatMessage): boolean {
+    return message.role === 'user' || message.role === 'assistant';
+}
+
+function rankedTopics(counts: ReadonlyMap<string, number>): string[] {
+    return [...counts.entries()]
+        .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]))
+        .slice(0, RIVAL_TOPIC_LIMIT)
+        .map(([token]) => token);
 }
 
 function roomMessageRange(roomId: string): IDBKeyRange {
@@ -91,12 +197,24 @@ function affectMemoryId(personaId: string): string {
     return `affect-${personaId}`;
 }
 
+function affinityMemoryId(personaId: string): string {
+    return `affinity-${personaId}`;
+}
+
+function isAffinityMemory(record: PersonaMemoryRecord): record is PersonaAffinityMemoryRecord {
+    return record.memory_type === 'affinity';
+}
+
+function reflectionMemoryId(personaId: string): string {
+    return `reflection-${personaId}`;
+}
+
 function memoryReferencesMessage(record: PersonaMemoryRecord, messageId: string): boolean {
-    return isRecalledMemory(record) && record.source_message_ids?.includes(messageId) === true;
+    return (isRecalledMemory(record) || isReflectionMemory(record)) && record.source_message_ids?.includes(messageId) === true;
 }
 
 function memoryReferencesRoom(record: PersonaMemoryRecord, roomId: string): boolean {
-    return isRecalledMemory(record) && record.source_room_id === roomId;
+    return (isRecalledMemory(record) || isReflectionMemory(record)) && record.source_room_id === roomId;
 }
 
 function mergeNativeMessages(
@@ -300,7 +418,7 @@ export const chatRepository = {
         }
         return rooms;
     },
-    async readPersonaContactSnapshot(personaId: string): Promise<PersonaContactSnapshot> {
+    async readPersonaContactSnapshot(personaId: string, language: AppLanguage): Promise<PersonaContactSnapshot> {
         const rooms = await chatRepository.listRoomsWithPersonaActivities();
         let lastContactAt = '';
         const mentionCandidateIds = new Set<string>();
@@ -318,29 +436,52 @@ export const chatRepository = {
         }
         const database = await getEverSoulDatabase();
         const attention = new Map<string, PersonaRivalAttention>();
+        const topicCounts = new Map<string, Map<string, number>>();
         for (const room of rooms.values()) {
             const latestRoomActivity = Object.values(room.persona_activities ?? {})
-                .reduce((latest, activity) => activity.latest_user_at > latest ? activity.latest_user_at : latest, '');
+                .reduce((latest, activity) => activity.latest_activity_at > latest ? activity.latest_activity_at : latest, '');
             if (latestRoomActivity <= lastContactAt) continue;
             const index = database.transaction(EVERSOUL_STORE.chatMessage).store.index(EVERSOUL_INDEX.chatMessageByRoomCreated);
             let cursor = await index.openCursor(roomMessageRangeAfter(room.id, lastContactAt));
             while (cursor) {
                 const message = cursor.value;
                 const messagePersonaId = message.persona_id ?? room.persona_id;
-                if (message.role === 'user' && messagePersonaId !== null && messagePersonaId !== personaId) {
-                    const previous = attention.get(messagePersonaId);
-                    attention.set(messagePersonaId, {
+                if (isSessionMessage(message) && messagePersonaId !== null && messagePersonaId !== personaId) {
+                    const previous = attention.get(messagePersonaId) ?? {
                         persona_id: messagePersonaId,
-                        user_message_count: (previous?.user_message_count ?? 0) + 1,
-                        latest_user_at: previous !== undefined && previous.latest_user_at > message.created_at ? previous.latest_user_at : message.created_at,
+                        user_message_count: 0,
+                        spirit_message_count: 0,
+                        first_user_at: '',
+                        latest_user_at: '',
+                        topics: [],
+                        exchange_texts: [],
+                    };
+                    const fromUser = message.role === 'user';
+                    attention.set(messagePersonaId, {
+                        ...previous,
+                        user_message_count: previous.user_message_count + (fromUser ? 1 : 0),
+                        spirit_message_count: previous.spirit_message_count + (fromUser ? 0 : 1),
+                        first_user_at: fromUser && (previous.first_user_at.length === 0 || message.created_at < previous.first_user_at) ? message.created_at : previous.first_user_at,
+                        latest_user_at: fromUser && message.created_at > previous.latest_user_at ? message.created_at : previous.latest_user_at,
+                        exchange_texts: [...previous.exchange_texts, message.content],
                     });
+                    if (fromUser) {
+                        const counts = topicCounts.get(messagePersonaId) ?? new Map<string, number>();
+                        for (const token of extractHabitTokens(message.content, language)) {
+                            counts.set(token, (counts.get(token) ?? 0) + 1);
+                        }
+                        topicCounts.set(messagePersonaId, counts);
+                    }
                 }
                 cursor = await cursor.continue();
             }
         }
         return {
             last_contact_at: lastContactAt,
-            rival_attention: [...attention.values()].sort((left, right) => right.user_message_count - left.user_message_count || right.latest_user_at.localeCompare(left.latest_user_at)),
+            rival_attention: [...attention.values()]
+                .filter((entry) => entry.user_message_count > 0)
+                .map((entry) => ({ ...entry, topics: rankedTopics(topicCounts.get(entry.persona_id) ?? new Map()) }))
+                .sort((left, right) => right.user_message_count - left.user_message_count || right.latest_user_at.localeCompare(left.latest_user_at)),
             mention_candidate_ids: [...mentionCandidateIds],
         };
     },
@@ -426,25 +567,30 @@ export const chatRepository = {
             affectedPersonaIds.add(room.persona_id);
         }
         const messageIndex = transaction.objectStore(EVERSOUL_STORE.chatMessage).index(EVERSOUL_INDEX.chatMessageByRoomCreated);
+        const removedMessageIds = new Set<string>();
         let cursor = await messageIndex.openCursor(roomMessageRange(roomId));
         while (cursor) {
             if (cursor.value.persona_id) {
                 affectedPersonaIds.add(cursor.value.persona_id);
             }
+            removedMessageIds.add(cursor.value.id);
             await cursor.delete();
             cursor = await cursor.continue();
         }
         const memoryStore = transaction.objectStore(EVERSOUL_STORE.personaMemory);
+        const removedMemoryIds = new Set<string>();
         let memoryCursor = await memoryStore.openCursor();
         while (memoryCursor) {
             const memory = memoryCursor.value;
-            const resetPersonaAggregate = affectedPersonaIds.has(memory.persona_id)
-                && (memory.memory_type === 'semantic' || memory.memory_type === 'habit');
+            const resetPersonaAggregate = affectedPersonaIds.has(memory.persona_id) && isPersonaAggregateMemory(memory);
             if (memoryReferencesRoom(memory, roomId) || resetPersonaAggregate) {
+                removedMemoryIds.add(memory.id);
                 await memoryCursor.delete();
             }
             memoryCursor = await memoryCursor.continue();
         }
+        await removeKeywordSources(memoryStore, removedMemoryIds);
+        await removeAffinityMessageEvents(memoryStore, removedMessageIds);
         await roomStore.delete(roomId);
         await transaction.done;
         await nativeContextService.deleteRoom(roomId);
@@ -467,17 +613,22 @@ export const chatRepository = {
         await messageStore.delete(messageId);
 
         const memoryStore = transaction.objectStore(EVERSOUL_STORE.personaMemory);
+        const removedMemoryIds = new Set<string>();
         let memoryCursor = await memoryStore.openCursor();
         while (memoryCursor) {
             const memory = memoryCursor.value;
             const resetPersonaAggregate = personaId !== null
                 && memory.persona_id === personaId
-                && (memory.memory_type === 'semantic' || (message.role === 'user' && memory.memory_type === 'habit'));
+                && isPersonaAggregateMemory(memory)
+                && (!isHabitMemory(memory) || message.role === 'user');
             if (memoryReferencesMessage(memory, messageId) || resetPersonaAggregate) {
+                removedMemoryIds.add(memory.id);
                 await memoryCursor.delete();
             }
             memoryCursor = await memoryCursor.continue();
         }
+        await removeKeywordSources(memoryStore, removedMemoryIds);
+        await removeAffinityMessageEvents(memoryStore, new Set([messageId]));
 
         if (room && personaId !== null) {
             const digests = { ...room.digests };
@@ -634,6 +785,35 @@ export const chatRepository = {
             .sort((left, right) => right.created_at.localeCompare(left.created_at))
             .slice(0, limit);
     },
+    async listEpisodicMemoriesAfter(personaId: string, createdAfter: string, limit: number): Promise<PersonaRecalledMemoryRecord[]> {
+        if (limit <= 0) {
+            return [];
+        }
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const memories: PersonaRecalledMemoryRecord[] = [];
+        let cursor = await index.openCursor(personaMemoryRangeAfter(personaId, 'episodic', createdAfter));
+        while (cursor && memories.length < limit) {
+            if (isRecalledMemory(cursor.value)) {
+                memories.push(cursor.value);
+            }
+            cursor = await cursor.continue();
+        }
+        const native = await nativeContextService.queryContext(personaId, '', 0, NATIVE_MEMORY_SCAN_LIMIT);
+        const merged = new Map(memories.map((memory) => [memory.id, memory]));
+        for (const memory of native?.memories ?? []) {
+            if (memory.memory_type !== 'episodic' || merged.has(memory.id) || memory.created_at <= createdAfter) continue;
+            merged.set(memory.id, {
+                ...memory,
+                persona_id: personaId,
+                memory_type: 'episodic',
+                memory_vector: createLexicalMemoryVector(memory.memory_text),
+            });
+        }
+        return [...merged.values()]
+            .sort((left, right) => left.created_at.localeCompare(right.created_at))
+            .slice(0, limit);
+    },
     async insertDirectiveMemory(record: PersonaRecalledMemoryRecord): Promise<void> {
         const database = await getEverSoulDatabase();
         const transaction = database.transaction(EVERSOUL_STORE.personaMemory, 'readwrite');
@@ -691,25 +871,88 @@ export const chatRepository = {
             .sort((left, right) => right.created_at.localeCompare(left.created_at))
             .slice(0, limit);
     },
-    async searchEpisodicMemories(personaId: string, queryVector: MemoryVector, limit: number, candidateLimit: number, liveHistorySince: string): Promise<string[]> {
-        if (isEmptyMemoryVector(queryVector)) {
+    async searchEpisodicMemories(personaId: string, queryVector: MemoryVector, limit: number, liveHistorySince: string): Promise<string[]> {
+        if (limit <= 0 || isEmptyMemoryVector(queryVector)) {
             return [];
         }
-        const candidates = await chatRepository.listEpisodicMemories(personaId, candidateLimit);
-        const relevant: Array<{ relevance: number; created_at: string; text: string }> = [];
-        for (const memory of candidates) {
-            if (isEmptyMemoryVector(memory.memory_vector)) {
-                continue;
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const selected: RelevantMemoryCandidate[] = [];
+        const knownIds = new Set<string>();
+        let cursor = await index.openCursor(personaMemoryRange(personaId, 'episodic'));
+        while (cursor) {
+            const memory = cursor.value;
+            knownIds.add(memory.id);
+            const beforeLiveHistory = liveHistorySince.length === 0 || memory.created_at < liveHistorySince;
+            if (beforeLiveHistory && isRecalledMemory(memory) && !isEmptyMemoryVector(memory.memory_vector)) {
+                const relevance = cosineSimilarity(queryVector, memory.memory_vector);
+                if (relevance !== null && relevance > 0) {
+                    retainMostRelevantMemory(selected, { relevance, created_at: memory.created_at, text: memory.memory_text }, limit);
+                }
             }
-            if (liveHistorySince.length > 0 && memory.created_at > liveHistorySince) {
-                continue;
-            }
-            const relevance = cosineSimilarity(queryVector, memory.memory_vector);
+            cursor = await cursor.continue();
+        }
+        const native = await nativeContextService.queryContext(personaId, '', 0, NATIVE_MEMORY_SCAN_LIMIT);
+        for (const memory of native?.memories ?? []) {
+            if (memory.memory_type !== 'episodic' || knownIds.has(memory.id)) continue;
+            if (liveHistorySince.length > 0 && memory.created_at >= liveHistorySince) continue;
+            const relevance = cosineSimilarity(queryVector, createLexicalMemoryVector(memory.memory_text));
             if (relevance !== null && relevance > 0) {
-                relevant.push({ relevance, created_at: memory.created_at, text: memory.memory_text });
+                retainMostRelevantMemory(selected, { relevance, created_at: memory.created_at, text: memory.memory_text }, limit);
             }
         }
-        return rankMemoriesByRelevanceAndRecency(relevant, Date.now()).slice(0, limit).map((entry) => entry.text);
+        return orderMemoriesChronologically(selected).map((entry) => entry.text);
+    },
+    async getEpisodicMemoriesByIds(memoryIds: readonly string[]): Promise<PersonaRecalledMemoryRecord[]> {
+        const database = await getEverSoulDatabase();
+        const store = database.transaction(EVERSOUL_STORE.personaMemory).store;
+        const records = await Promise.all(memoryIds.map((memoryId) => store.get(memoryId)));
+        return records
+            .filter((record): record is PersonaRecalledMemoryRecord => record !== undefined && isRecalledMemory(record) && record.memory_type === 'episodic')
+            .sort((left, right) => left.created_at.localeCompare(right.created_at));
+    },
+    async getMessagesByIds(messageIds: readonly string[]): Promise<ChatMessage[]> {
+        const database = await getEverSoulDatabase();
+        const store = database.transaction(EVERSOUL_STORE.chatMessage).store;
+        const messages = await Promise.all(messageIds.map((messageId) => store.get(messageId)));
+        return messages.filter((message): message is ChatMessage => message !== undefined);
+    },
+    async readPersonaSessionContinuation(personaId: string, currentRoomId: string): Promise<PersonaSessionContinuation> {
+        const rooms = await chatRepository.listRoomsWithPersonaActivities();
+        const previousSessions: PersonaSessionDigestEntry[] = [];
+        let latestOtherRoom: ChatRoom | null = null;
+        for (const room of rooms.values()) {
+            if (room.id === currentRoomId) continue;
+            const activity = room.persona_activities?.[personaId];
+            if (activity === undefined || activity.latest_activity_at.length === 0) continue;
+            if (latestOtherRoom === null || activity.latest_activity_at > (latestOtherRoom.persona_activities?.[personaId]?.latest_activity_at ?? '')) {
+                latestOtherRoom = room;
+            }
+            const digest = room.digests?.[personaId];
+            if (digest !== undefined && digest.summary.trim().length > 0) {
+                previousSessions.push({
+                    room_id: room.id,
+                    covered_from: digest.nodes?.[0]?.covered_from ?? room.session_started_at,
+                    covered_through: digest.covered_through,
+                    summary: digest.summary,
+                });
+            }
+        }
+        previousSessions.sort((left, right) => left.covered_through.localeCompare(right.covered_through));
+        if (latestOtherRoom === null) {
+            return { previous_sessions: previousSessions, last_exchange: [] };
+        }
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.chatMessage).store.index(EVERSOUL_INDEX.chatMessageByRoomCreated);
+        const lastExchange: ChatMessage[] = [];
+        let cursor = await index.openCursor(roomMessageRange(latestOtherRoom.id), 'prev');
+        while (cursor && lastExchange.length < SESSION_LAST_EXCHANGE_MESSAGE_COUNT) {
+            if (isSessionMessage(cursor.value) && belongsToPersona(cursor.value, latestOtherRoom, personaId)) {
+                lastExchange.push(cursor.value);
+            }
+            cursor = await cursor.continue();
+        }
+        return { previous_sessions: previousSessions, last_exchange: lastExchange.reverse() };
     },
     async searchDirectiveMemories(personaId: string, queryVector: MemoryVector, limit: number): Promise<string[]> {
         if (limit <= 0 || isEmptyMemoryVector(queryVector)) {
@@ -790,26 +1033,31 @@ export const chatRepository = {
         const record = await database.get(EVERSOUL_STORE.personaMemory, semanticMemoryId(personaId));
         return record && isRecalledMemory(record) && record.memory_type === 'semantic' ? record : null;
     },
-    async recordHabitTokens(personaId: string, tokens: string[], observedAt: string): Promise<void> {
-        if (tokens.length === 0) {
+    async recordKeywordObservations(personaId: string, observations: readonly PersonaKeywordObservation[], memoryId: string, observedAt: string): Promise<void> {
+        if (observations.length === 0) {
             return;
         }
         const database = await getEverSoulDatabase();
         const transaction = database.transaction(EVERSOUL_STORE.personaMemory, 'readwrite');
         const store = transaction.objectStore(EVERSOUL_STORE.personaMemory);
         const mirrored: PersonaHabitMemoryRecord[] = [];
-        for (const token of tokens) {
-            const id = habitMemoryId(personaId, token);
+        for (const observation of observations) {
+            const id = habitMemoryId(personaId, observation.token);
             const existing = await store.get(id);
-            const previous = existing && isHabitMemory(existing) ? existing.occurrence_count : 0;
+            const previous = existing && isHabitMemory(existing) ? normalizeHabitRecord(existing) : null;
             const record: PersonaHabitMemoryRecord = {
                 id,
                 persona_id: personaId,
                 memory_type: 'habit',
-                memory_text: token,
-                occurrence_count: previous + 1,
-                created_at: existing?.created_at ?? observedAt,
+                memory_text: observation.token,
+                occurrence_count: (previous?.occurrence_count ?? 0) + observation.user_count,
+                spirit_occurrence_count: (previous?.spirit_occurrence_count ?? 0) + observation.spirit_count,
+                created_at: previous?.created_at ?? observedAt,
                 last_seen_at: observedAt,
+                sources: [
+                    ...(previous?.sources ?? []),
+                    { memory_id: memoryId, occurred_at: observedAt, user: observation.user_count > 0, spirit: observation.spirit_count > 0 },
+                ],
             };
             await store.put(record);
             mirrored.push(record);
@@ -817,26 +1065,60 @@ export const chatRepository = {
         await transaction.done;
         for (const record of mirrored) await nativeContextService.appendMemory(record);
     },
-    async listFrequentHabits(personaId: string, limit: number, minimumOccurrence: number): Promise<PersonaHabitMemoryRecord[]> {
-        if (limit <= 0) {
-            return [];
-        }
+    async listKeywordRecords(personaId: string): Promise<PersonaHabitMemoryRecord[]> {
         const database = await getEverSoulDatabase();
-        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
-        const selected: PersonaHabitMemoryRecord[] = [];
-        let cursor = await index.openCursor(personaMemoryRange(personaId, 'habit'));
-        while (cursor) {
-            const record = cursor.value;
-            if (isHabitMemory(record) && record.occurrence_count >= minimumOccurrence) {
-                selected.push(record);
-                selected.sort((left, right) => right.occurrence_count - left.occurrence_count || right.last_seen_at.localeCompare(left.last_seen_at));
-                if (selected.length > limit) {
-                    selected.pop();
-                }
-            }
-            cursor = await cursor.continue();
+        const records = await database.getAllFromIndex(
+            EVERSOUL_STORE.personaMemory,
+            EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated,
+            personaMemoryRange(personaId, 'habit'),
+        );
+        return records.filter(isHabitMemory).map(normalizeHabitRecord);
+    },
+    async upsertPersonaReflection(record: PersonaReflectionMemoryRecord): Promise<void> {
+        const database = await getEverSoulDatabase();
+        await database.put(EVERSOUL_STORE.personaMemory, { ...record, id: reflectionMemoryId(record.persona_id) });
+        await nativeContextService.appendMemory({ ...record, id: reflectionMemoryId(record.persona_id) });
+    },
+    async getPersonaAffinityLedger(personaId: string): Promise<PersonaAffinityLedger> {
+        const database = await getEverSoulDatabase();
+        const stored = await database.get(EVERSOUL_STORE.personaMemory, affinityMemoryId(personaId));
+        return stored !== undefined && isAffinityMemory(stored) ? parseAffinityLedger(stored.memory_text) : EMPTY_AFFINITY_LEDGER;
+    },
+    async upsertPersonaAffinityLedger(personaId: string, ledger: PersonaAffinityLedger, updatedAt: string): Promise<void> {
+        const record: PersonaAffinityMemoryRecord = {
+            id: affinityMemoryId(personaId),
+            persona_id: personaId,
+            memory_type: 'affinity',
+            memory_text: serializeAffinityLedger(ledger),
+            created_at: updatedAt,
+        };
+        const database = await getEverSoulDatabase();
+        await database.put(EVERSOUL_STORE.personaMemory, record);
+        await nativeContextService.appendMemory(record);
+    },
+    async listAffinityExpByPersona(): Promise<Map<string, number>> {
+        const database = await getEverSoulDatabase();
+        const records = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByType, 'affinity');
+        return new Map(records.filter(isAffinityMemory).map((record) => [record.persona_id, parseAffinityLedger(record.memory_text).bonus_exp]));
+    },
+    async getPersonaReflection(personaId: string): Promise<PersonaReflectionMemoryRecord | null> {
+        const database = await getEverSoulDatabase();
+        const stored = await database.get(EVERSOUL_STORE.personaMemory, reflectionMemoryId(personaId));
+        if (stored && isReflectionMemory(stored)) {
+            return stored;
         }
-        return selected;
+        const native = await nativeContextService.queryContext(personaId, '', 0, NATIVE_MEMORY_SCAN_LIMIT);
+        const mirrored = native?.memories.find((memory) => memory.id === reflectionMemoryId(personaId) && memory.memory_type === 'reflection');
+        return mirrored === undefined ? null : {
+            id: mirrored.id,
+            persona_id: personaId,
+            memory_type: 'reflection',
+            memory_text: mirrored.memory_text,
+            created_at: mirrored.created_at,
+            covered_through: mirrored.created_at,
+            source_room_id: '',
+            source_message_ids: [],
+        };
     },
     async countMessagesByPersona(): Promise<Map<string, number>> {
         const database = await getEverSoulDatabase();
@@ -857,6 +1139,35 @@ export const chatRepository = {
             messageCursor = await messageCursor.continue();
         }
         return counts;
+    },
+    async listPersonaEmotionsByPersona(): Promise<Map<string, PersonaEmotionState>> {
+        const database = await getEverSoulDatabase();
+        const records = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByType, 'affect');
+        const emotions = new Map<string, PersonaEmotionState>();
+        for (const record of records.filter(isAffectMemory)) {
+            const emotion = parsePersonaEmotion(record.memory_text);
+            if (emotion !== null) {
+                emotions.set(record.persona_id, emotion);
+            }
+        }
+        return emotions;
+    },
+    async listPersonaReflectionsByPersona(): Promise<Map<string, PersonaReflectionMemoryRecord>> {
+        const database = await getEverSoulDatabase();
+        const records = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByType, 'reflection');
+        return new Map(records.filter(isReflectionMemory).map((record) => [record.persona_id, record]));
+    },
+    async listLatestDirectiveMemoryByPersona(): Promise<Map<string, PersonaMemoryRecord>> {
+        const database = await getEverSoulDatabase();
+        const records = await database.getAllFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByType, 'directive');
+        const latest = new Map<string, PersonaMemoryRecord>();
+        for (const record of records) {
+            const current = latest.get(record.persona_id);
+            if (current === undefined || record.created_at > current.created_at) {
+                latest.set(record.persona_id, record);
+            }
+        }
+        return latest;
     },
     async countEpisodicMemoriesByPersona(): Promise<Map<string, number>> {
         const database = await getEverSoulDatabase();

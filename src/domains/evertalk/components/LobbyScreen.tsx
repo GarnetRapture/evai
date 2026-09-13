@@ -6,10 +6,10 @@ import { computeFamiliarityLevel, familiaritySigilFrameUrl, pickRandomSpeechLine
 import type { LobbyScreenProps } from '../types';
 import { DECOR_UI_ASSETS, EVERTALK_UI_ASSETS, LOBBY_ACTOR_SLOT_ASSETS, LOBBY_UI_ASSETS, loveFrameAssetForLevel, raceBadgeUrl } from '../uiAssets';
 import { LoadableAssetImage } from './LoadableAssetImage';
-import { MemoryInsightPanel } from './MemoryInsightPanel';
+import { MemoryOverviewPanel } from './MemoryOverviewPanel';
 import { SaviorProfileCard } from './SaviorProfileCard';
 
-export function LobbyScreen({ spirits, familiarityList, background, saviorProfile, memoryInsight, memoryInsightLoading, labels, maxPreferredSlots, onEnterChat, onOpenBackgroundPicker, onOpenRoster, onOpenSaviorProfile, onRenameSavior }: LobbyScreenProps) {
+export function LobbyScreen({ spirits, allSpirits, appLanguage, familiarityList, background, saviorProfile, memoryOverview, memoryOverviewLoading, labels, maxPreferredSlots, onEnterChat, onOpenBackgroundPicker, onOpenRoster, onOpenSaviorProfile, onRenameSavior }: LobbyScreenProps) {
     const [reaction, setReaction] = useState<{ id: string; line: string } | null>(null);
     const backgroundUrl = background ? `${ASSET_ROOT}/backgrounds/talk/${background}` : `${ASSET_ROOT}/backgrounds/talk/Talk_BG_Lounge.png`;
     const emptySlots = Math.max(0, maxPreferredSlots - spirits.length);
@@ -46,7 +46,7 @@ export function LobbyScreen({ spirits, familiarityList, background, saviorProfil
                         <span>{labels.lobbyModelTitle}</span>
                         <strong>{saviorProfile.modelReady ? saviorProfile.activeModelName : labels.lobbyModelOffline}</strong>
                     </div>
-                    <MemoryInsightPanel insight={memoryInsight} loading={memoryInsightLoading} labels={labels}/>
+                    <MemoryOverviewPanel overview={memoryOverview} loading={memoryOverviewLoading} allSpirits={allSpirits} appLanguage={appLanguage} labels={labels} onOpenSpirit={onEnterChat}/>
                 </section>
             </aside>
 

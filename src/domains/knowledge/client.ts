@@ -1,31 +1,19 @@
 import { EVERSOUL_STORE, getEverSoulDatabase } from '../../shared/storage';
+import { extractKnowledgeKeywords, knowledgeKeywordMatches } from './keywords';
 import type { KnowledgeChunk } from './types';
 
 const DEFAULT_KNOWLEDGE_SEARCH_LIMIT = 5;
-const MIN_SEARCH_TERM_LENGTH = 2;
-const MAX_SEARCH_TERMS = 8;
+const MAX_SEARCH_TERMS = 12;
 
-function knowledgeSearchTerms(query: string): string[] {
-    const terms: string[] = [];
-    for (const term of query.split(/[^\p{L}\p{N}]+/u)) {
-        if (Array.from(term).length < MIN_SEARCH_TERM_LENGTH) {
-            continue;
-        }
-        const lowered = term.toLowerCase();
-        if (terms.at(-1) !== lowered) {
-            terms.push(lowered);
-        }
-    }
-    return terms.slice(0, MAX_SEARCH_TERMS);
+function scoreKnowledgeChunk(chunk: KnowledgeChunk, terms: readonly string[]): number {
+    const keywords = chunk.keywords ?? extractKnowledgeKeywords(chunk.chunk_text);
+    return terms.filter((term) => keywords.some((keyword) => knowledgeKeywordMatches(term, keyword))).length;
 }
 
 export const knowledgeClient = {
-    async search(query: string, limit: number = DEFAULT_KNOWLEDGE_SEARCH_LIMIT): Promise<KnowledgeChunk[]> {
-        if (query.trim().length === 0) {
-            return [];
-        }
-        const terms = knowledgeSearchTerms(query);
-        if (terms.length === 0) {
+    async search(query: string, limit: number = DEFAULT_KNOWLEDGE_SEARCH_LIMIT, documentNames: ReadonlySet<string> | null = null): Promise<KnowledgeChunk[]> {
+        const terms = extractKnowledgeKeywords(query).slice(0, MAX_SEARCH_TERMS);
+        if (terms.length === 0 || limit <= 0) {
             return [];
         }
         const database = await getEverSoulDatabase();
@@ -34,18 +22,35 @@ export const knowledgeClient = {
         let cursor = await store.openCursor();
         while (cursor) {
             const chunk = cursor.value;
-            const lowered = chunk.chunk_text.toLowerCase();
-            const score = terms.filter((term) => lowered.includes(term)).length;
-            if (score > 0) {
-                scored.push({ score, chunk });
-                scored.sort((left, right) => right.score - left.score);
-                if (scored.length > limit) {
-                    scored.pop();
+            if (documentNames === null || documentNames.has(chunk.document_name)) {
+                const score = scoreKnowledgeChunk(chunk, terms);
+                if (score > 0) {
+                    scored.push({ score, chunk });
+                    scored.sort((left, right) => right.score - left.score || left.chunk.id.localeCompare(right.chunk.id));
+                    if (scored.length > limit) {
+                        scored.pop();
+                    }
                 }
             }
             cursor = await cursor.continue();
         }
         return scored.map((entry) => entry.chunk);
+    },
+    async replaceDocuments(documentNames: ReadonlySet<string>, chunks: readonly KnowledgeChunk[]): Promise<void> {
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction(EVERSOUL_STORE.knowledgeChunk, 'readwrite');
+        const retainedIds = new Set(chunks.map((chunk) => chunk.id));
+        let cursor = await transaction.store.openCursor();
+        while (cursor) {
+            if (documentNames.has(cursor.value.document_name) && !retainedIds.has(cursor.value.id)) {
+                await cursor.delete();
+            }
+            cursor = await cursor.continue();
+        }
+        for (const chunk of chunks) {
+            await transaction.store.put(chunk);
+        }
+        await transaction.done;
     },
     async insertChunk(chunk: KnowledgeChunk): Promise<void> {
         const database = await getEverSoulDatabase();

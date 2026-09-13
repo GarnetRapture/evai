@@ -1,4 +1,5 @@
 import type { AppLanguage } from '../../shared/types';
+import type { PersonaKeywordObservation } from './types';
 
 export const HABIT_TOKEN_MIN_LENGTH_CJK = 2;
 export const HABIT_TOKEN_MIN_LENGTH_LATIN = 4;
@@ -108,4 +109,16 @@ export function extractHabitTokens(text: string, language: AppLanguage): string[
 
 export function habitMemoryId(personaId: string, token: string): string {
     return `habit-${personaId}-${token}`;
+}
+
+export function collectKeywordObservations(userText: string, spiritText: string, language: AppLanguage): PersonaKeywordObservation[] {
+    const observations = new Map<string, PersonaKeywordObservation>();
+    for (const token of extractHabitTokens(userText, language)) {
+        observations.set(token, { token, user_count: 1, spirit_count: 0 });
+    }
+    for (const token of extractHabitTokens(spiritText, language)) {
+        const existing = observations.get(token);
+        observations.set(token, { token, user_count: existing?.user_count ?? 0, spirit_count: 1 });
+    }
+    return [...observations.values()];
 }

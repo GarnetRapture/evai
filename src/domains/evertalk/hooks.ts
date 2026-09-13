@@ -4,7 +4,7 @@ import { detectBrowserAppLanguage } from '../../shared/i18n';
 import { detectAppPlatform, detectPlatformSupport, inspectDeviceEnvironment, type DeviceEnvironmentInfo } from '../../shared/platform';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import { authClient, type UserSession } from '../auth';
-import { DEFAULT_MEMORY_CONTEXT_FILTER, PROACTIVE_CHECK_INTERVAL_MS, PROACTIVE_INITIAL_DELAY_MS, chatClient, type ChatMessage, type ChatRoom, type MemoryContextKind, type PersonaMemoryInsight } from '../chat';
+import { DEFAULT_MEMORY_CONTEXT_FILTER, PROACTIVE_CHECK_INTERVAL_MS, PROACTIVE_INITIAL_DELAY_MS, chatClient, type ChatMessage, type ChatRoom, type MemoryContextKind, type PersonaContextGraph, type PersonaMaintenanceTask, type PersonaMemoryInsight, type PersonaMemoryOverview } from '../chat';
 import {
     LOCAL_MODEL_INSTALL_PREPARATION_IDS,
     NATIVE_HOST_MODEL_ID,
@@ -92,6 +92,13 @@ export function useEverTalkController(): EverTalkController {
     const [activeFamiliarityEntry, setActiveFamiliarityEntry] = useState<FamiliarityEntry | null>(null);
     const [memoryInsight, setMemoryInsight] = useState<PersonaMemoryInsight | null>(null);
     const [memoryInsightLoading, setMemoryInsightLoading] = useState(false);
+    const [memoryOverview, setMemoryOverview] = useState<PersonaMemoryOverview | null>(null);
+    const [memoryOverviewLoading, setMemoryOverviewLoading] = useState(false);
+    const [contextGraph, setContextGraph] = useState<PersonaContextGraph | null>(null);
+    const [contextGraphLoading, setContextGraphLoading] = useState(false);
+    const [contextGraphPersonaId, setContextGraphPersonaId] = useState('');
+    const contextGraphRequestRef = useRef('');
+    const [maintenanceTasks, setMaintenanceTasks] = useState<PersonaMaintenanceTask[]>(() => chatClient.listMaintenanceTasks());
     const [lobbyOpen, setLobbyOpen] = useState(true);
     const [lobbyBackgroundPickerOpen, setLobbyBackgroundPickerOpen] = useState(false);
     const [saviorProfileOpen, setSaviorProfileOpen] = useState(false);
@@ -138,6 +145,7 @@ export function useEverTalkController(): EverTalkController {
     const appInitStartedRef = useRef(false);
     const renderedLanguageRef = useRef<AppLanguage | null>(null);
     const proactiveCheckRunningRef = useRef(false);
+    const maintenanceTasksRef = useRef<PersonaMaintenanceTask[]>([]);
     const filteredSpirits = useMemo(() => filterSpirits(spirits, searchQuery), [searchQuery, spirits]);
     function setSystemStatus(status: ApiStatusItem) {
         setSystemStatuses((prev) => prev.map((item) => (item.id === status.id ? status : item)));
@@ -356,6 +364,7 @@ export function useEverTalkController(): EverTalkController {
         catch (err) {
             console.error(initLabels.logFamiliarityFetchFailed, err);
         }
+        await refreshMemoryOverview();
         frontendDebugLog('loadMainAppData:refreshLocalStatus:start');
         await refreshLocalStatus();
         try {
@@ -425,6 +434,55 @@ export function useEverTalkController(): EverTalkController {
             setMemoryInsightLoading(false);
         }
     }
+    async function refreshMemoryOverview() {
+        setMemoryOverviewLoading(true);
+        try {
+            setMemoryOverview(await chatClient.getPersonaMemoryOverview());
+        }
+        catch (err) {
+            console.error(labels.logMemoryInsightFailed, err);
+        }
+        finally {
+            setMemoryOverviewLoading(false);
+        }
+    }
+    async function loadContextGraph(personaId: string, roomId: string) {
+        contextGraphRequestRef.current = personaId;
+        setContextGraphPersonaId(personaId);
+        setContextGraphLoading(true);
+        try {
+            const graph = await chatClient.getPersonaContextGraph(personaId, roomId);
+            if (contextGraphRequestRef.current === personaId) {
+                setContextGraph(graph);
+            }
+        }
+        catch (err) {
+            console.error(labels.logMemoryInsightFailed, err);
+        }
+        finally {
+            if (contextGraphRequestRef.current === personaId) {
+                setContextGraphLoading(false);
+            }
+        }
+    }
+    function resolveContextGraphPersonaId(): string {
+        return contextGraphPersonaId || activeSpiritId;
+    }
+    async function refreshContextGraph() {
+        const personaId = resolveContextGraphPersonaId();
+        if (!personaId || !activeRoom) {
+            setContextGraph(null);
+            return;
+        }
+        await loadContextGraph(personaId, activeRoom.id);
+    }
+    async function viewContextGraphPersona(personaId: string) {
+        const room = activeRoom ?? await chatClient.getEverTalkSessionRoom();
+        if (activeRoom === null) {
+            setActiveRoom(room);
+        }
+        await loadContextGraph(personaId, room.id);
+    }
     async function acknowledgeProactiveMessages(personaId: string) {
         await chatClient.markProactiveMessagesRead(personaId);
         setProactiveUnreadCounts((current) => {
@@ -447,6 +505,14 @@ export function useEverTalkController(): EverTalkController {
         setMessages(await chatClient.listMessagesForPersona(room.id, spirit.id));
         void focusSpiritModelSession(spirit.id);
         void refreshMemoryInsight(spirit.id);
+        if (workspaceView === 'memory') {
+            void loadContextGraph(spirit.id, room.id);
+        }
+        else {
+            contextGraphRequestRef.current = '';
+            setContextGraphPersonaId('');
+            setContextGraph(null);
+        }
         await refreshLocalStatus();
         await refreshActiveSessions();
         frontendDebugLog(`selectSpirit:done:${spirit.id}`);
@@ -565,6 +631,12 @@ export function useEverTalkController(): EverTalkController {
                     setFamiliarityList(await personaClient.getFamiliarityList());
                 }
                 await refreshMemoryInsight(spiritId);
+                if (lobbyOpen) {
+                    await refreshMemoryOverview();
+                }
+                if (workspaceView === 'memory') {
+                    await loadContextGraph(spiritId, room.id);
+                }
             }
             catch (err) {
                 console.error(labels.logPostChatStateRefreshFailed, err);
@@ -742,6 +814,7 @@ export function useEverTalkController(): EverTalkController {
     function openLobby() {
         setWorkspaceView('chat');
         setLobbyOpen(true);
+        void refreshMemoryOverview();
     }
     function closeLobby() {
         setLobbyOpen(false);
@@ -1292,9 +1365,12 @@ export function useEverTalkController(): EverTalkController {
             await Promise.all([loadBondRanking(), loadFamiliarityList()]);
         }
         if (view === 'memory' || view === 'storage') {
+            const graphPersonaId = resolveContextGraphPersonaId();
             await Promise.all([
-                refreshStorageInspection(),
+                view === 'storage' ? refreshStorageInspection() : Promise.resolve(),
+                view === 'memory' ? loadFamiliarityList() : Promise.resolve(),
                 view === 'memory' && activeSpiritId ? refreshMemoryInsight(activeSpiritId) : Promise.resolve(),
+                view === 'memory' && graphPersonaId ? viewContextGraphPersona(graphPersonaId) : Promise.resolve(),
             ]);
         }
     }
@@ -1406,6 +1482,25 @@ export function useEverTalkController(): EverTalkController {
     useEffect(() => {
         refreshForRenderedLanguage(appLanguage);
     }, [appLanguage]);
+    const handleMaintenanceTasks = useEffectEvent((tasks: readonly PersonaMaintenanceTask[]) => {
+        const settledPersonaIds = maintenanceTasksRef.current
+            .map((task) => task.persona_id)
+            .filter((personaId) => !tasks.some((task) => task.persona_id === personaId));
+        maintenanceTasksRef.current = [...tasks];
+        setMaintenanceTasks([...tasks]);
+        if (lobbyOpen && settledPersonaIds.length > 0) {
+            void refreshMemoryOverview();
+        }
+        const graphPersonaId = resolveContextGraphPersonaId();
+        if (workspaceView === 'memory' && activeRoom && graphPersonaId && settledPersonaIds.includes(graphPersonaId)) {
+            void loadContextGraph(graphPersonaId, activeRoom.id);
+        }
+        if (!activeSpiritId || !settledPersonaIds.includes(activeSpiritId)) {
+            return;
+        }
+        void refreshMemoryInsight(activeSpiritId);
+    });
+    useEffect(() => chatClient.subscribeMaintenance((tasks) => handleMaintenanceTasks(tasks)), []);
     useEffect(() => {
         if (appInitializing || appSettings?.setup_stage !== 'done' || !llmStatus?.is_loaded) return undefined;
         const initialTimer = window.setTimeout(() => void runProactiveConversationCheck(), PROACTIVE_INITIAL_DELAY_MS);
@@ -1561,6 +1656,11 @@ export function useEverTalkController(): EverTalkController {
         activeFamiliarityEntry,
         memoryInsight,
         memoryInsightLoading,
+        memoryOverview,
+        memoryOverviewLoading,
+        contextGraph,
+        contextGraphLoading,
+        maintenanceTasks,
         preferredPersonaIds,
         preferredSpiritNames,
         activeStyleName,
@@ -1644,5 +1744,8 @@ export function useEverTalkController(): EverTalkController {
         acknowledgePlatformGuide,
         navigateWorkspace,
         refreshStorageInspection,
+        refreshContextGraph,
+        contextGraphPersonaId: resolveContextGraphPersonaId(),
+        viewContextGraphPersona,
     };
 }

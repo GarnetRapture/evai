@@ -92,8 +92,15 @@ export interface PersonaSpeechStyle {
     message_length: number;
     signature_marks: string[];
 }
+export type PersonaSelfReferenceKind = 'name' | 'pronoun';
+export interface PersonaSelfReference {
+    kind: PersonaSelfReferenceKind;
+    surface: string;
+}
 export interface PersonaSpeechProfile {
     address_term: string | null;
+    address_call: string | null;
+    self_reference: PersonaSelfReference | null;
     register: PersonaSpeechRegister | null;
     solo_lines: string[];
     signature_lines: string[];
@@ -103,6 +110,7 @@ export interface PersonaVoiceAnchor {
     style: PersonaSpeechStyle | null;
     register: PersonaSpeechRegister | null;
     signature_lines: string[];
+    self_reference: PersonaSelfReference | null;
 }
 export interface PersonaSignatureTally {
     runs: number;
@@ -175,16 +183,42 @@ export interface PersonaRelationshipProfile {
     relations: PersonaRelationEvidence[];
     external_voice_lines: string[];
 }
+export interface PersonaWorldGroup {
+    name: string;
+    member_names: string[];
+    member_persona_ids: string[];
+}
+export interface PersonaWorldGroupAccumulator {
+    names: Set<string>;
+    persona_ids: Set<string>;
+}
+export interface PersonaWorldCanonLine {
+    persona_id: string;
+    speaker: string;
+    message: string;
+}
+export interface PersonaWorldCodex {
+    world_name: string | null;
+    unions: PersonaWorldGroup[];
+    races: PersonaWorldGroup[];
+    canon_lines: PersonaWorldCanonLine[];
+}
+export interface PersonaWorldPlacement {
+    race: PersonaWorldGroup | null;
+    union: PersonaWorldGroup | null;
+}
 export interface PersonaRelationshipGraph {
     language: AppLanguage;
     fingerprint: string;
     characters: Map<string, PersonaCharacterIdentity>;
     character_key_by_persona: Map<string, string>;
     profiles: Map<string, PersonaRelationshipProfile>;
+    world: PersonaWorldCodex;
 }
 export interface PersonaRelationshipSource {
     persona_id: string;
     slice: PersonaLanguageSlice;
+    world_union_key: string | null;
 }
 export interface PersonaRelationshipGraphMemo {
     fingerprint: string;
@@ -196,14 +230,34 @@ export interface PersonaTurnReferenceRequest {
     query: string;
     excluded_terms: readonly string[];
     familiarity_level: number;
+    occurred_at: string;
     rival_persona_ids: readonly string[];
+    rival_exchanges: readonly PersonaRivalExchangeTexts[];
     mention_candidate_ids: readonly string[];
+}
+export type EdenHolidayId = 'new_year' | 'love_day' | 'memory_day' | 'eve_day' | 'knowledge_day' | 'martial_arts_day';
+export interface EdenHoliday {
+    id: EdenHolidayId;
+    names: Record<AppLanguage, readonly string[]>;
+    month_days: ReadonlyArray<readonly [number, number]>;
+}
+export interface PersonaHolidayReference {
+    holiday_id: EdenHolidayId;
+    name: string;
+    spirit_lines: string[];
 }
 export interface PersonaTurnReferences {
     rehearsal_exchanges: PersonaDialogueExchange[];
     profile_mentions: PersonaProfileMention[];
     mentioned_relations: PersonaRelationEvidence[];
     rival_relations: PersonaRelationEvidence[];
+    rival_mentions_of_self: Record<string, number>;
+    today_holidays: PersonaHolidayReference[];
+    mentioned_holidays: PersonaHolidayReference[];
+}
+export interface PersonaRivalExchangeTexts {
+    persona_id: string;
+    texts: readonly string[];
 }
 export type PersonaDialogueSource = 'story' | 'evertalk';
 export interface PersonaDialogueExchange {
@@ -219,12 +273,14 @@ export interface AssembledPersonaPrompt {
     address_term: string;
     dialogue_excluded_terms: string[];
     voice: PersonaVoiceAnchor;
+    inner_voice_core: string;
 }
 export interface PersonaPromptIdentity {
     name: string;
     name_en: string;
     nick_name: string;
     address_term: string;
+    address_call: string;
     address_is_personal_name: boolean;
 }
 export type LocalizedText = Record<AppLanguage | 'zh_tw', string>;
@@ -345,6 +401,7 @@ export interface FamiliarityEntry {
     name_en: string;
     message_count: number;
     memory_count: number;
+    affinity_exp: number;
     familiarity_score: number;
 }
 export interface PersonaError {

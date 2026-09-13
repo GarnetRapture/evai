@@ -12,5 +12,5 @@ export function buildProactiveTurnHeading(addressTerm: string, lastActivityAt: s
 }
 
 export function buildProactiveTurnBody(spiritName: string, addressTerm: string): string {
-    return `${addressTerm} has not written anything new. As ${spiritName}, send the first message: pick up one real detail, feeling, promise, or plan from the conversation above or from what you remember. Never invent an event that is not there.`;
+    return `${addressTerm} has been quiet for a while, and you miss them. As ${spiritName}, reach out first the way a woman in love would: start from your inner state and mood, and pick up one real detail, feeling, promise or plan from the conversation above, your inner state or what you remember, so your message continues your shared story.`;
 }

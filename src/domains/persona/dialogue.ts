@@ -18,36 +18,48 @@ const SAVIOR_SPEAKERS: Record<AppLanguage, ReadonlySet<string>> = {
     en: new Set(['Savior']),
     zh_cn: new Set(['救援者', '救世主']),
 };
+const CANONICAL_SAVIOR_SPEAKER: Record<AppLanguage, string> = {
+    ko: '구원자',
+    en: 'Savior',
+    zh_cn: '救援者',
+};
+const SAVIOR_CHOICE_RUN_LENGTH = 2;
 
-function isSaviorChoicePair(entries: LocalizedDialogue[], index: number, saviorSpeaker: string): boolean {
-    const current = entries[index];
-    return current.speaker === saviorSpeaker
-        && ((entries[index - 1]?.speaker === saviorSpeaker && entries[index - 1].message === current.message)
-            || (entries[index + 1]?.speaker === saviorSpeaker && entries[index + 1].message === current.message));
+export function isSaviorSpeaker(speaker: string, language: AppLanguage): boolean {
+    return SAVIOR_SPEAKERS[language].has(speaker);
 }
 
-export function repairSaviorChoicePairSpeakers(entries: LocalizedDialogue[], language: AppLanguage, spiritName: string): LocalizedDialogue[] {
-    const saviorSpeakers = SAVIOR_SPEAKERS[language];
+function choiceRunKey(message: string): string {
+    return message.normalize('NFC').replace(/\s+/gu, ' ').trim();
+}
+
+export function repairSaviorChoicePairSpeakers(
+    entries: LocalizedDialogue[],
+    language: AppLanguage,
+    spiritName: string,
+    isSpiritVocativeLine: (message: string) => boolean,
+): LocalizedDialogue[] {
     const repaired = entries.map((entry) => ({ ...entry }));
-    for (let index = 1; index < repaired.length; index += 1) {
-        const previous = repaired[index - 1];
-        const current = repaired[index];
-        const saviorSpeaker = saviorSpeakers.has(previous.speaker) ? previous.speaker : saviorSpeakers.has(current.speaker) ? current.speaker : null;
-        if (saviorSpeaker === null || previous.message !== current.message || previous.speaker === current.speaker) {
-            continue;
+    let runStart = 0;
+    while (runStart < repaired.length) {
+        const key = choiceRunKey(repaired[runStart].message);
+        let runEnd = runStart + 1;
+        while (runEnd < repaired.length && choiceRunKey(repaired[runEnd].message) === key) {
+            runEnd += 1;
         }
-        const spiritSpeaker = saviorSpeakers.has(previous.speaker) ? current.speaker : previous.speaker;
-        if (spiritSpeaker !== spiritName) {
-            continue;
-        }
-        previous.speaker = saviorSpeaker;
-        current.speaker = saviorSpeaker;
-        for (const neighborIndex of [index - 2, index + 1]) {
-            const neighbor = repaired[neighborIndex];
-            if (neighbor !== undefined && neighbor.speaker === saviorSpeaker && !isSaviorChoicePair(repaired, neighborIndex, saviorSpeaker)) {
-                neighbor.speaker = spiritName;
+        const run = repaired.slice(runStart, runEnd);
+        const belongsToConversation = run.every((entry) => entry.speaker === spiritName || isSaviorSpeaker(entry.speaker, language));
+        if (run.length === SAVIOR_CHOICE_RUN_LENGTH && belongsToConversation && !isSpiritVocativeLine(key)) {
+            for (const entry of run) {
+                entry.speaker = CANONICAL_SAVIOR_SPEAKER[language];
             }
         }
+        if (run.length > SAVIOR_CHOICE_RUN_LENGTH && belongsToConversation) {
+            for (const entry of run) {
+                entry.speaker = spiritName;
+            }
+        }
+        runStart = runEnd;
     }
     return repaired;
 }

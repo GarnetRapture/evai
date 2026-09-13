@@ -1,8 +1,6 @@
-import type { MemoryVector, RankedMemoryCandidate, SparseMemoryVector } from './types';
+import type { MemoryVector, RelevantMemoryCandidate, SparseMemoryVector } from './types';
 
 export const MEMORY_VECTOR_DIMENSIONS = 512;
-export const MEMORY_RECENCY_DECAY_PER_HOUR = 0.995;
-const MILLISECONDS_PER_HOUR = 3_600_000;
 const FNV_OFFSET_BASIS = 0x811c9dc5;
 const FNV_PRIME = 0x01000193;
 const MEMORY_NGRAM_SIZES = [1, 2, 3] as const;
@@ -85,27 +83,19 @@ export function createLexicalMemoryVector(text: string): MemoryVector {
     };
 }
 
-function minMaxNormalize(values: number[]): number[] {
-    const minimum = Math.min(...values);
-    const span = Math.max(...values) - minimum;
-    return values.map((value) => span <= Number.EPSILON ? 1 : (value - minimum) / span);
+export function retainMostRelevantMemory(selected: RelevantMemoryCandidate[], candidate: RelevantMemoryCandidate, limit: number): void {
+    if (limit <= 0) {
+        return;
+    }
+    selected.push(candidate);
+    selected.sort((left, right) => right.relevance - left.relevance || left.created_at.localeCompare(right.created_at));
+    if (selected.length > limit) {
+        selected.pop();
+    }
 }
 
-export function rankMemoriesByRelevanceAndRecency<Entry extends RankedMemoryCandidate>(entries: Entry[], nowMs: number): Entry[] {
-    if (entries.length === 0) {
-        return [];
-    }
-    const recency = entries.map((entry) => {
-        const createdMs = Date.parse(entry.created_at);
-        const hours = Number.isFinite(createdMs) ? Math.max(0, nowMs - createdMs) / MILLISECONDS_PER_HOUR : 0;
-        return MEMORY_RECENCY_DECAY_PER_HOUR ** hours;
-    });
-    const normalizedRecency = minMaxNormalize(recency);
-    const normalizedRelevance = minMaxNormalize(entries.map((entry) => entry.relevance));
-    return entries
-        .map((entry, index) => ({ entry, score: normalizedRelevance[index] + normalizedRecency[index] }))
-        .sort((left, right) => right.score - left.score || right.entry.created_at.localeCompare(left.entry.created_at))
-        .map(({ entry }) => entry);
+export function orderMemoriesChronologically(selected: readonly RelevantMemoryCandidate[]): RelevantMemoryCandidate[] {
+    return [...selected].sort((left, right) => left.created_at.localeCompare(right.created_at));
 }
 
 export function cosineSimilarity(left: MemoryVector, right: MemoryVector): number | null {

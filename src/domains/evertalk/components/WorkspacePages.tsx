@@ -1,15 +1,14 @@
-/* oxlint-disable react/only-export-components -- graph builder is exported for the production layout contract test */
 import { useMemo, useState } from 'react';
-import { Activity, Database, HardDrive, RefreshCw, Search, Trophy } from 'lucide-react';
+import { Database, HardDrive, RefreshCw, Search, Trophy } from 'lucide-react';
 import { MEMORY_CONTEXT_KINDS } from '../../chat';
-import { isMemoryContextKind } from '../../chat/memoryContext';
-import { computeFamiliarityLevel, parseSpiritDetail } from '../../persona';
-import type { SpiritDetail } from '../../persona';
-import { MEMORY_GRAPH_COLUMN_DISTANCE, MEMORY_GRAPH_MARGIN, MEMORY_GRAPH_NODE_HEIGHT, MEMORY_GRAPH_NODE_WIDTH, MEMORY_GRAPH_ROW_DISTANCE } from '../logic';
-import type { EverTalkController, MemoryGraphEdge, MemoryGraphLayout, MemoryGraphNode, MemoryGraphViewFilter, WorkspacePageProps } from '../types';
+import { parseSpiritDetail } from '../../persona';
+import { buildMemoryContextGraphLayout, filterMemoryKeywordThreads } from '../logic';
+import type { EverTalkController, MemoryGraphSelection, WorkspacePageProps } from '../types';
 import { LOBBY_UI_ASSETS } from '../uiAssets';
 import { CheatModePage } from './CheatModePage';
+import { MemoryKeywordDetail, MemoryRelationDetail } from './MemoryContextDetails';
 import { MemoryGraphCanvas } from './MemoryGraphCanvas';
+import { MemorySpiritRoster } from './MemorySpiritRoster';
 import { SpiritViewAvatar, WorkspaceSurface } from './WorkspaceSurface';
 
 function formatBytes(bytes: number | null, locale: string): string {
@@ -136,158 +135,35 @@ export function BondRankingPage({ controller }: WorkspacePageProps) {
     </WorkspaceSurface>;
 }
 
-function localizedMemoryType(controller: EverTalkController, value: string): string {
-    return isMemoryContextKind(value) ? controller.labels.memoryContextKinds[value] : controller.labels.memoriesLabel;
-}
-
-function memorySampleVisible(value: string, viewFilter: MemoryGraphViewFilter): boolean {
-    return !isMemoryContextKind(value) || viewFilter.memoryContextFilter[value];
-}
-
-function spiritMatchesQuery(detail: SpiritDetail, personaId: string, query: string): boolean {
-    const normalized = query.trim().toLocaleLowerCase();
-    if (normalized.length === 0) return true;
-    return [detail.name, detail.name_en, personaId].some((candidate) => candidate.toLocaleLowerCase().includes(normalized));
-}
-
-export function buildMemoryGraph(controller: EverTalkController, viewFilter: MemoryGraphViewFilter): MemoryGraphLayout {
-    const labels = controller.labels;
-    const flow = labels.memoryWorkflowNodes;
-    const browserUsage = new Map((controller.storageInspection?.personas ?? []).map((entry) => [entry.persona_id, entry]));
-    const nativeUsage = new Map((controller.storageInspection?.native_statistics?.personas ?? []).map((entry) => [entry.persona_id, entry]));
-    const bonds = new Map(controller.bondRanking.map((entry) => [entry.persona_id, entry]));
-    const familiarity = new Map(controller.familiarityList.map((entry) => [entry.persona_id, entry]));
-    const orderedSpirits = [...controller.allSpirits].sort((left, right) => {
-        const rightScore = bonds.get(right.id)?.bond_score ?? 0;
-        const leftScore = bonds.get(left.id)?.bond_score ?? 0;
-        return rightScore - leftScore || left.id.localeCompare(right.id);
-    });
-    const nodes: MemoryGraphNode[] = [];
-    const edges: MemoryGraphEdge[] = [];
-    let laneTop = MEMORY_GRAPH_MARGIN;
-    let edgeIndex = 0;
-
-    function addNode(node: Omit<MemoryGraphNode, 'x' | 'y'>, column: number, y: number): MemoryGraphNode {
-        const positioned = { ...node, x: MEMORY_GRAPH_MARGIN + column * MEMORY_GRAPH_COLUMN_DISTANCE, y };
-        nodes.push(positioned);
-        return positioned;
-    }
-    function connect(source: MemoryGraphNode, target: MemoryGraphNode, feedback = false) {
-        edges.push({ id: `edge-${edgeIndex++}`, source, target, feedback });
-    }
-
-    const anyMemoryKindVisible = MEMORY_CONTEXT_KINDS.some((kind) => viewFilter.memoryContextFilter[kind]);
-    for (const spirit of orderedSpirits) {
-        const detail = parseSpiritDetail(spirit, controller.appLanguage);
-        const browser = browserUsage.get(spirit.id);
-        const native = nativeUsage.get(spirit.id);
-        const messageCount = native?.message_count ?? browser?.message_count ?? 0;
-        const memoryCount = native?.memory_count ?? browser?.memory_count ?? 0;
-        if (!spiritMatchesQuery(detail, spirit.id, viewFilter.query)) continue;
-        if (viewFilter.activeOnly && messageCount === 0 && memoryCount === 0) continue;
-        const samples = browser?.samples ?? [];
-        const messageSamples = samples.filter((sample) => sample.kind === 'message');
-        const memorySamples = samples.filter((sample) => sample.kind === 'memory' && memorySampleVisible(sample.role_or_type, viewFilter));
-        const branchRows = Math.max(1, messageSamples.length || (messageCount > 0 ? 1 : 0), memorySamples.length || (memoryCount > 0 ? 1 : 0));
-        const laneHeight = Math.max(MEMORY_GRAPH_NODE_HEIGHT + 36, branchRows * MEMORY_GRAPH_ROW_DISTANCE + 28);
-        const laneCenter = laneTop + (laneHeight - MEMORY_GRAPH_NODE_HEIGHT) / 2;
-        const familiarityScore = familiarity.get(spirit.id)?.familiarity_score ?? 0;
-        const level = computeFamiliarityLevel(familiarityScore).level;
-        const bondScore = bonds.get(spirit.id)?.bond_score ?? 0;
-        const personaNode = addNode({
-            id: `${spirit.id}-persona`, personaId: spirit.id, kind: 'persona', title: detail.name,
-            description: `${flow[0]?.title ?? ''} · ${detail.grade}`,
-            value: `Lv.${level}`,
-        }, 0, laneCenter);
-        const messageNodes: MemoryGraphNode[] = [];
-        const memoryNodes: MemoryGraphNode[] = [];
-
-        if (messageSamples.length > 0) {
-            messageSamples.forEach((sample, index) => {
-                const speaker = sample.role_or_type === 'assistant' ? detail.name : labels.saviorProfile;
-                const node = addNode({
-                    id: `${spirit.id}-message-${sample.id}`, personaId: spirit.id, kind: 'conversation',
-                    title: `${flow[1]?.title ?? labels.messagesLabel} · ${speaker}`,
-                    description: sample.content,
-                    value: new Date(sample.created_at).toLocaleString(labels.localeTag),
-                }, 1, laneTop + index * MEMORY_GRAPH_ROW_DISTANCE);
-                messageNodes.push(node);
-                connect(personaNode, node);
-            });
-        }
-        else if (messageCount > 0) {
-            const node = addNode({
-                id: `${spirit.id}-messages`, personaId: spirit.id, kind: 'conversation',
-                title: flow[1]?.title ?? labels.messagesLabel, description: flow[1]?.description ?? '',
-                value: `${messageCount.toLocaleString(labels.localeTag)} ${labels.recordsLabel}`,
-            }, 1, laneCenter);
-            messageNodes.push(node);
-            connect(personaNode, node);
-        }
-
-        if (memorySamples.length > 0) {
-            memorySamples.forEach((sample, index) => {
-                const node = addNode({
-                    id: `${spirit.id}-memory-${sample.id}`, personaId: spirit.id, kind: 'memory',
-                    title: `${flow[2]?.title ?? labels.memoriesLabel} · ${localizedMemoryType(controller, sample.role_or_type)}`,
-                    description: sample.content,
-                    value: new Date(sample.created_at).toLocaleString(labels.localeTag),
-                }, 2, laneTop + index * MEMORY_GRAPH_ROW_DISTANCE);
-                memoryNodes.push(node);
-                (messageNodes.length ? messageNodes : [personaNode]).forEach((source) => connect(source, node));
-            });
-        }
-        else if (memoryCount > 0 && anyMemoryKindVisible && !samples.some((sample) => sample.kind === 'memory')) {
-            const node = addNode({
-                id: `${spirit.id}-memories`, personaId: spirit.id, kind: 'memory',
-                title: flow[2]?.title ?? labels.memoriesLabel, description: flow[2]?.description ?? '',
-                value: `${memoryCount.toLocaleString(labels.localeTag)} ${labels.recordsLabel}`,
-            }, 2, laneCenter);
-            memoryNodes.push(node);
-            (messageNodes.length ? messageNodes : [personaNode]).forEach((source) => connect(source, node));
-        }
-
-        if (messageCount > 0 || memoryCount > 0 || bondScore > 0) {
-            const bondNode = addNode({
-                id: `${spirit.id}-bond`, personaId: spirit.id, kind: 'bond',
-                title: flow[3]?.title ?? labels.bondScoreLabel, description: flow[3]?.description ?? '',
-                value: `Lv.${level} · ${labels.bondScoreLabel} ${bondScore.toLocaleString(labels.localeTag)}`,
-            }, 3, laneCenter);
-            (memoryNodes.length ? memoryNodes : messageNodes.length ? messageNodes : [personaNode]).forEach((source) => connect(source, bondNode));
-            const replyNode = addNode({
-                id: `${spirit.id}-reply`, personaId: spirit.id, kind: 'reply',
-                title: flow[4]?.title ?? labels.messagesLabel, description: flow[4]?.description ?? '',
-                value: `${messageCount.toLocaleString(labels.localeTag)} ${labels.messagesLabel}`,
-            }, 4, laneCenter);
-            connect(bondNode, replyNode);
-            const summaryNode = addNode({
-                id: `${spirit.id}-summary`, personaId: spirit.id, kind: 'summary',
-                title: flow[5]?.title ?? labels.memoriesLabel, description: flow[5]?.description ?? '',
-                value: `${memoryCount.toLocaleString(labels.localeTag)} ${labels.memoriesLabel}`,
-            }, 5, laneCenter);
-            connect(replyNode, summaryNode);
-            connect(summaryNode, personaNode, true);
-        }
-        laneTop += laneHeight + 28;
-    }
-    return {
-        nodes,
-        edges,
-        width: MEMORY_GRAPH_MARGIN * 2 + MEMORY_GRAPH_COLUMN_DISTANCE * 5 + MEMORY_GRAPH_NODE_WIDTH,
-        height: Math.max(240, laneTop + 16),
-    };
-}
-
 export function MemoryWorkflowPage({ controller }: WorkspacePageProps) {
     const [query, setQuery] = useState('');
-    const [activeOnly, setActiveOnly] = useState(false);
-    const { labels, memoryContextFilter } = controller;
-    const graph = useMemo(
-        () => buildMemoryGraph(controller, { query, activeOnly, memoryContextFilter }),
-        [controller, query, activeOnly, memoryContextFilter],
+    const [recentOnly, setRecentOnly] = useState(false);
+    const [selection, setSelection] = useState<MemoryGraphSelection | null>(null);
+    const { labels, memoryContextFilter, contextGraph } = controller;
+    const threads = useMemo(
+        () => contextGraph === null ? [] : filterMemoryKeywordThreads(contextGraph.keyword_threads, { query, recentOnly }),
+        [contextGraph, query, recentOnly],
     );
+    const saviorName = controller.saviorProfile.saviorName;
+    const graphSpiritName = contextGraph === null ? '' : spiritName(controller, contextGraph.persona_id);
+    const graph = useMemo(
+        () => contextGraph === null
+            ? null
+            : buildMemoryContextGraphLayout(contextGraph, { spirit_name: graphSpiritName, savior_name: saviorName }, threads, labels),
+        [contextGraph, graphSpiritName, labels, saviorName, threads],
+    );
+    const selectedThread = selection?.kind === 'keyword' ? threads.find((thread) => `keyword:${thread.keyword.token}` === selection.id) ?? null : null;
+    const selectedRelation = selection?.kind === 'relation'
+        ? contextGraph?.relations.find((relation) => `relation:${relation.relation.character_key}` === selection.id) ?? null
+        : null;
     return <WorkspaceSurface controller={controller} labelledBy="memory-page-title" layout="canvas">
-        <header className="ever-workspace-page__header"><div><p>{labels.navMemory}</p><h1 id="memory-page-title">{labels.memoryPageTitle}</h1><span>{labels.memoryPageDescription}</span></div><Activity size={34}/></header>
+        <header className="ever-workspace-page__header">
+            <div><p>{labels.navMemory}</p><h1 id="memory-page-title">{labels.memoryPageTitle}</h1><span>{labels.memoryPageDescription}</span></div>
+            <button type="button" disabled={controller.contextGraphLoading || controller.contextGraphPersonaId.length === 0} onClick={() => void controller.refreshContextGraph()}>
+                <RefreshCw size={17} className={controller.contextGraphLoading ? 'is-spinning' : ''}/>{labels.refreshAnalysis}
+            </button>
+        </header>
+        <MemorySpiritRoster controller={controller}/>
         <section className="ever-memory-filter" aria-labelledby="memory-filter-title">
             <div className="ever-memory-filter__head">
                 <strong id="memory-filter-title">{labels.memoryFilterTitle}</strong>
@@ -312,12 +188,27 @@ export function MemoryWorkflowPage({ controller }: WorkspacePageProps) {
                     <input type="search" value={query} placeholder={labels.memoryFilterSearchPlaceholder} aria-label={labels.memoryFilterSearchPlaceholder} onChange={(event) => setQuery(event.target.value)}/>
                 </label>
                 <label className="ever-memory-filter__toggle">
-                    <input type="checkbox" checked={activeOnly} onChange={(event) => setActiveOnly(event.target.checked)}/>
-                    <span>{labels.memoryFilterActiveOnly}</span>
+                    <input type="checkbox" checked={recentOnly} onChange={(event) => setRecentOnly(event.target.checked)}/>
+                    <span>{labels.memoryGraphRecentOnly}</span>
                 </label>
             </div>
         </section>
-        <MemoryGraphCanvas controller={controller} graph={graph}/>
+        {contextGraph === null || graph === null ? (
+            <p className="ever-memory-graph-empty">{controller.contextGraphLoading ? labels.checking : labels.memoryGraphNoSpirit}</p>
+        ) : (
+            <MemoryGraphCanvas
+                key={contextGraph.persona_id}
+                controller={controller}
+                graph={graph}
+                selection={selection}
+                selectionDetail={selectedThread !== null
+                    ? <MemoryKeywordDetail thread={selectedThread} spiritName={graphSpiritName} labels={labels}/>
+                    : selectedRelation !== null ? <MemoryRelationDetail relation={selectedRelation} labels={labels}/> : null}
+                hint={labels.memoryGraphSelectHint}
+                emptyMessage={threads.length === 0 ? labels.memoryFilterEmpty : null}
+                onSelect={setSelection}
+            />
+        )}
     </WorkspaceSurface>;
 }
 

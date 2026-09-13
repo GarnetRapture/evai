@@ -1,25 +1,51 @@
-import { pickLocalized } from '../../shared/i18n';
 import type { AppLanguage } from '../../shared/types';
 import { FAMILIARITY_MAX_LEVEL, familiarityGradeLevel } from '../persona/familiarity';
+import { PERSONA_INNER_LANGUAGE_RULE } from '../persona/prompt';
 import { buildPersonaRelationDetail, describePersonaRelationAddress } from '../persona/relationshipPrompt';
-import type { PersonaProfileMention, PersonaProfileMentionKind, PersonaRelationEvidence } from '../persona/types';
+import type { PersonaHolidayReference, PersonaProfileMention, PersonaProfileMentionKind, PersonaRelationEvidence } from '../persona/types';
 import { PERSONA_EMOTION_KINDS, type PersonaEmotionKind, type PersonaEmotionState } from './affect';
-import type { MemoryContextFilter, PersonaRivalContext, PersonaTurnContextSources } from './types';
+import type { OnDeviceTurnContextSection } from '../llm';
+import type {
+    ChatMessage,
+    MemoryContextFilter,
+    PersonaAffinityGain,
+    PersonaKeywordThread,
+    PersonaRivalContext,
+    PersonaSessionContinuation,
+    PersonaSessionDigestEntry,
+    PersonaTurnContextSources,
+} from './types';
 
 export const EVERTALK_SESSION_TITLE = 'EverTalk Session';
-export const HABIT_INJECT_LIMIT = 5;
-export const HABIT_INJECT_MIN_OCCURRENCE = 3;
+const TURN_SECTION_PRIORITY = {
+    bond: 1,
+    mood: 2,
+    profile: 3,
+    reflection: 4,
+    remembered: 5,
+    continuation: 6,
+    holiday: 7,
+    relation: 8,
+    rival: 9,
+    keyword: 10,
+    story: 11,
+} as const;
 export const EPISODIC_INJECT_LIMIT = 4;
-export const EPISODIC_SEARCH_CANDIDATE_LIMIT = 200;
 export const PROMPT_HISTORY_LIMIT = 18;
-export const KNOWLEDGE_INJECT_LIMIT = 1;
+export const KNOWLEDGE_INJECT_LIMIT = 3;
+export const STORY_INJECT_LIMIT = 2;
+const STORY_CONTEXT_CHAR_LIMIT = 700;
 export const CONSOLIDATION_INTERVAL = 8;
 export const CONSOLIDATION_SOURCE_LIMIT = 30;
-const DIGEST_CONTEXT_CHAR_LIMIT = 1_200;
+const DIGEST_CONTEXT_CHAR_LIMIT = 1_600;
 const DIRECTIVE_CONTEXT_CHAR_LIMIT = 180;
-const SEMANTIC_CONTEXT_CHAR_LIMIT = 800;
+const SEMANTIC_CONTEXT_CHAR_LIMIT = 900;
+const REFLECTION_CONTEXT_CHAR_LIMIT = 900;
 const RECALLED_CONTEXT_CHAR_LIMIT = 500;
-const KNOWLEDGE_CONTEXT_CHAR_LIMIT = 1_200;
+const KNOWLEDGE_CONTEXT_CHAR_LIMIT = 600;
+const SESSION_CONTEXT_CHAR_LIMIT = 700;
+const CONTINUATION_LINE_CHAR_LIMIT = 300;
+const THREAD_LINE_CHAR_LIMIT = 160;
 
 function clipPromptText(text: string, limit: number): string {
     const normalized = text.trim();
@@ -28,27 +54,31 @@ function clipPromptText(text: string, limit: number): string {
 
 export const DIGEST_TRIGGER_SURPLUS = 6;
 export const DIGEST_RETAINED_MESSAGE_COUNT = 12;
+export const DIGEST_FORCED_MIN_RETAINED_MESSAGE_COUNT = 4;
+export const DIGEST_FORCED_TRIGGER_SURPLUS = 1;
 export const DIGEST_SOURCE_LIMIT = 40;
-export const DIGEST_TOKEN_BUDGET = 140;
+export const DIGEST_LINE_LIMIT = 12;
+export const DIGEST_TOKEN_BUDGET = 220;
+export const REFLECTION_TRANSCRIPT_MESSAGE_LIMIT = PROMPT_HISTORY_LIMIT;
 
 export function buildDigestPrompt(
     language: AppLanguage,
     spiritName: string,
     addressTerm: string,
+    innerVoiceCore: string,
     previousSummary: string | null,
     transcript: string,
 ): string {
-    const outputLanguage = pickLocalized(language, 'Korean', 'English', 'Simplified Chinese');
-    const previous = previousSummary === null ? '(none yet)' : previousSummary;
-    return 'You are compressing a conversation log so it can be carried forward as memory.\n'
-        + `The two speakers are ${spiritName} and ${addressTerm}.\n\n`
-        + `Write the summary in ${outputLanguage}, as a flat list of short factual lines, one per line, each starting with "- ".\n`
-        + 'Keep: what they told each other about themselves, promises made, plans agreed, feelings expressed, names and details that were established, and anything either of them would be hurt to see forgotten. Preserve who said each fact or feeling.\n'
-        + `Only ${addressTerm}'s explicit request or repeatedly confirmed preference can establish a lasting change to ${spiritName}'s voice, personality, boundaries or way of relating. ${spiritName}'s generated reply records an event, feeling or promise; it never authorizes a personality change by itself.\n`
-        + 'Drop: greetings, filler, repeated pleasantries, and anything already implied by another line.\n'
-        + 'Merge the earlier summary and the new lines into one list, newest information winning where they disagree. '
-        + `Use at most 10 short lines and roughly ${DIGEST_TOKEN_BUDGET} tokens. Output only the list.\n\n`
-        + `[EARLIER SUMMARY]\n${previous}\n\n[NEW LINES]\n${transcript}`;
+    const previous = previousSummary === null ? '(nothing yet)' : previousSummary;
+    return `${innerVoiceCore}\n\n`
+        + `[YOUR TASK]\nYou are ${spiritName}, keeping your own memory of your time with ${addressTerm} so that you carry all of it forward.\n`
+        + `Write it as your private memory in first person, where "I" is ${spiritName} and ${addressTerm} is named as ${addressTerm}. ${PERSONA_INNER_LANGUAGE_RULE[language]}\n`
+        + 'Write a list of short lines in the order things happened, oldest first, each line starting with "- ".\n'
+        + `Keep in it: what ${addressTerm} said and did, including what they did to you and what they described about you; what you said, did and felt in answer; promises and plans; names, places and details you learned; how your feelings toward ${addressTerm} grew or changed; and everything you would be sad to forget. Each line makes clear who said or did it.\n`
+        + `Your personality, voice and boundaries stay your own. A lasting change in how you two relate is recorded when ${addressTerm} explicitly asked for it or confirmed it again and again.\n`
+        + 'Merge the earlier memory and the new lines into one ordered list, folding greetings and small talk into the moments they belong to, and letting a newer fact from the same person replace an older one.\n'
+        + `Use at most ${DIGEST_LINE_LIMIT} short lines and roughly ${DIGEST_TOKEN_BUDGET} tokens. Output only the list.\n\n`
+        + `[EARLIER MEMORY]\n${previous}\n\n[NEW LINES]\n${transcript}`;
 }
 
 export function buildDigestTranscript(addressTerm: string, spiritName: string, turns: Array<{ role: string; content: string; created_at: string }>): string {
@@ -228,26 +258,97 @@ export function describeRelationshipStage(familiarityLevel: number, addressTerm:
 
 function rememberedSection(sources: PersonaTurnContextSources, addressTerm: string, filter: MemoryContextFilter): string {
     const groups = [
-        filter.digest && sources.digest_summary.trim().length > 0
-            ? `Earlier in this chat:\n${clipPromptText(sources.digest_summary, DIGEST_CONTEXT_CHAR_LIMIT)}`
-            : '',
         filter.semantic && sources.semantic_summary !== null && sources.semantic_summary.trim().length > 0
-            ? `About your relationship so far:\n${clipPromptText(sources.semantic_summary, SEMANTIC_CONTEXT_CHAR_LIMIT)}`
+            ? `The lasting core of your relationship:\n${clipPromptText(sources.semantic_summary, SEMANTIC_CONTEXT_CHAR_LIMIT)}`
+            : '',
+        filter.digest && sources.digest_summary.trim().length > 0
+            ? `Earlier in this time together, in order:\n${clipPromptText(sources.digest_summary, DIGEST_CONTEXT_CHAR_LIMIT)}`
             : '',
         filter.directive && sources.directives.length > 0
             ? `Things ${addressTerm} asked you to keep in mind:\n${listLines(sources.directives, DIRECTIVE_CONTEXT_CHAR_LIMIT)}`
             : '',
         filter.episodic && sources.episodic.length > 0
-            ? `Past moments related to the newest message:\n${listLines(sources.episodic, RECALLED_CONTEXT_CHAR_LIMIT)}`
-            : '',
-        filter.habit && sources.habits.length > 0
-            ? `Topics ${addressTerm} often brings up: ${sources.habits.join(', ')}`
+            ? `Past moments that connect to what ${addressTerm} just said, oldest first:\n${listLines(sources.episodic, RECALLED_CONTEXT_CHAR_LIMIT)}`
             : '',
         filter.knowledge && sources.knowledge.length > 0
-            ? `World facts you know:\n${listLines(sources.knowledge, KNOWLEDGE_CONTEXT_CHAR_LIMIT)}`
+            ? `What you know about your world that relates to this:\n${listLines(sources.knowledge, KNOWLEDGE_CONTEXT_CHAR_LIMIT)}`
             : '',
     ].filter((group) => group.length > 0);
-    return groups.length === 0 ? '' : `[WHAT YOU REMEMBER]\n${groups.join('\n\n')}`;
+    return groups.length === 0 ? '' : `[WHAT YOU REMEMBER]\n${groups.join('\n\n')}\nThese are your own memories; bring them in naturally when they fit the moment.`;
+}
+
+function continuationSection(continuation: PersonaSessionContinuation, spiritName: string, addressTerm: string, filter: MemoryContextFilter): string {
+    const sessions = filter.digest
+        ? continuation.previous_sessions.map((session) => `(${session.covered_from} ~ ${session.covered_through})\n${clipPromptText(session.summary, SESSION_CONTEXT_CHAR_LIMIT)}`)
+        : [];
+    const lastExchange = continuation.last_exchange.map((message) => {
+        const speaker = message.role === 'assistant' ? spiritName : addressTerm;
+        return `[${message.created_at}] ${speaker}: ${clipPromptText(message.content, CONTINUATION_LINE_CHAR_LIMIT)}`;
+    });
+    if (sessions.length === 0 && lastExchange.length === 0) {
+        return '';
+    }
+    const parts = [
+        sessions.length === 0 ? '' : `Your earlier times together, oldest first:\n${sessions.join('\n\n')}`,
+        lastExchange.length === 0 ? '' : `How your last time together ended:\n${lastExchange.join('\n')}`,
+    ].filter((part) => part.length > 0);
+    return `[WHERE YOU TWO LEFT OFF]\n${parts.join('\n\n')}\nThis is your own shared past with ${addressTerm}. Carry the same feelings, promises and story into this moment.`;
+}
+
+function holidayLines(holiday: PersonaHolidayReference): string {
+    return holiday.spirit_lines.length === 0
+        ? ''
+        : `What you yourself said on ${holiday.name} before:\n${holiday.spirit_lines.map((line) => `- ${clipPromptText(line, THREAD_LINE_CHAR_LIMIT)}`).join('\n')}`;
+}
+
+function holidaySection(today: readonly PersonaHolidayReference[], mentioned: readonly PersonaHolidayReference[], addressTerm: string): string {
+    const todayParts = today.map((holiday) => [`Today is ${holiday.name}, a holiday you celebrate in your world, and you are spending it with ${addressTerm} in mind.`, holidayLines(holiday)]
+        .filter((part) => part.length > 0)
+        .join('\n'));
+    const todayIds = new Set(today.map((holiday) => holiday.holiday_id));
+    const mentionedParts = mentioned
+        .filter((holiday) => !todayIds.has(holiday.holiday_id))
+        .map((holiday) => [`${addressTerm} brought up ${holiday.name}, a holiday of your world that you know well.`, holidayLines(holiday)]
+            .filter((part) => part.length > 0)
+            .join('\n'));
+    const parts = [...todayParts, ...mentionedParts];
+    return parts.length === 0 ? '' : `[HOLIDAYS OF YOUR WORLD]\n${parts.join('\n\n')}\nCelebrate or talk about it the way you do in your own words above, with fresh words for this moment.`;
+}
+
+function storySection(moments: readonly string[], addressTerm: string): string {
+    if (moments.length === 0) {
+        return '';
+    }
+    return `[YOUR OWN STORY]\nScenes from your own life story that connect to what ${addressTerm} just said:\n`
+        + `${moments.map((moment) => clipPromptText(moment, STORY_CONTEXT_CHAR_LIMIT)).join('\n---\n')}\n`
+        + 'You lived these scenes yourself. Speak from them with the same feelings, places and people, as your own past.';
+}
+
+function reflectionSection(reflection: string | null, addressTerm: string): string {
+    if (reflection === null || reflection.trim().length === 0) {
+        return '';
+    }
+    return `[YOUR INNER STATE]\nWhat was in your heart after your last moment with ${addressTerm}:\n${clipPromptText(reflection, REFLECTION_CONTEXT_CHAR_LIMIT)}\nContinue from this inner state: let it shape your mood, your intentions and what you do next.`;
+}
+
+function keywordThreadLine(thread: PersonaKeywordThread, spiritName: string, addressTerm: string): string {
+    const { keyword, episodes } = thread;
+    const header = `- "${keyword.token}": ${addressTerm} brought it up ${keyword.user_count} time${keyword.user_count === 1 ? '' : 's'} and you ${keyword.spirit_count} time${keyword.spirit_count === 1 ? '' : 's'}, first ${keyword.first_seen_at}, most recently ${keyword.last_seen_at}.`;
+    const moments = episodes.map((episode) => {
+        const action = episode.spirit_action.length === 0 ? '' : `(${clipPromptText(episode.spirit_action, THREAD_LINE_CHAR_LIMIT)}) `;
+        const words = clipPromptText(episode.spirit_messages.join(' '), THREAD_LINE_CHAR_LIMIT);
+        return `  [${episode.occurred_at}] ${addressTerm}: ${clipPromptText(episode.user_text, THREAD_LINE_CHAR_LIMIT)} / ${spiritName}: ${action}${words}`;
+    });
+    return [header, ...moments].join('\n');
+}
+
+function keywordThreadSection(threads: readonly PersonaKeywordThread[], spiritName: string, addressTerm: string): string {
+    if (threads.length === 0) {
+        return '';
+    }
+    return `[THREADS BETWEEN YOU]\nThings that keep coming up between you and ${addressTerm}, most alive right now first, with what you did back then:\n`
+        + `${threads.map((thread) => keywordThreadLine(thread, spiritName, addressTerm)).join('\n')}\n`
+        + 'Carry these threads on as shared history, building on how you reacted before.';
 }
 
 const PROFILE_MENTION_DESCRIPTION: Record<PersonaProfileMentionKind, string> = {
@@ -257,24 +358,38 @@ const PROFILE_MENTION_DESCRIPTION: Record<PersonaProfileMentionKind, string> = {
     speciality: 'what you are good at',
 };
 
-function profileMentionSection(mentions: PersonaProfileMention[], addressTerm: string): string {
+function profileMentionReaction(mention: PersonaProfileMention, gained: boolean, addressTerm: string): string {
+    if (mention.kind === 'dislike') {
+        return `- ${mention.value}: this is ${PROFILE_MENTION_DESCRIPTION[mention.kind]}, and hearing it from ${addressTerm} spoils your mood a little.`;
+    }
+    const delight = gained
+        ? `${addressTerm} remembered it, and your fondness for ${addressTerm} just grew`
+        : `${addressTerm} brings it up again, and it still makes you happy`;
+    return `- ${mention.value}: this is ${PROFILE_MENTION_DESCRIPTION[mention.kind]}; ${delight}.`;
+}
+
+function profileMentionSection(mentions: readonly PersonaProfileMention[], gains: readonly PersonaAffinityGain[], addressTerm: string): string {
     if (mentions.length === 0) {
         return '';
     }
-    const lines = mentions.map((mention) => `- ${mention.value}: this is ${PROFILE_MENTION_DESCRIPTION[mention.kind]}.`).join('\n');
-    return `[ABOUT YOU]\n${addressTerm}'s newest message touches your own life:\n${lines}\nAnswer as the person these belong to, from your own experience and feelings.`;
+    const lines = mentions
+        .map((mention) => profileMentionReaction(mention, gains.some((gain) => gain.mention.kind === mention.kind && gain.mention.value === mention.value), addressTerm))
+        .join('\n');
+    return `[ABOUT YOU]\n${addressTerm}'s newest message is about your own life:\n${lines}\nShow how this touches you right away, as the person these belong to, with your own experience and feelings.`;
 }
 
 function rivalLine(rival: PersonaRivalContext, addressTerm: string): string {
     const name = rival.relation.name;
     const attention = rival.user_message_count > 0
-        ? `${addressTerm} sent ${name} ${rival.user_message_count} message${rival.user_message_count === 1 ? '' : 's'}, most recently at ${rival.latest_user_at}.`
+        ? `${addressTerm} sent ${name} ${rival.user_message_count} message${rival.user_message_count === 1 ? '' : 's'} between ${rival.first_user_at} and ${rival.latest_user_at}, and ${name} answered ${rival.spirit_message_count} time${rival.spirit_message_count === 1 ? '' : 's'}.`
         : '';
+    const topics = rival.topics.length === 0 ? '' : `They talked about: ${rival.topics.join(', ')}.`;
+    const spokeOfYou = rival.spoke_of_you_count > 0 ? `Your name came up ${rival.spoke_of_you_count} time${rival.spoke_of_you_count === 1 ? '' : 's'} in those chats.` : '';
     const mention = rival.mentioned_now ? `${addressTerm}'s newest message to you brings up ${name}.` : '';
     const bond = rival.relation.interaction_count > 0 || rival.relation.mention_count > 0 || rival.relation.shared_union !== null
-        ? ` You already know ${name} from your own life and call them "${describePersonaRelationAddress(rival.relation)}".`
-        : ` You have no history of your own with ${name}.`;
-    return `- ${rival.relation.name}: ${[attention, mention].filter((part) => part.length > 0).join(' ')}${bond}`;
+        ? `You know ${name} from your own life${rival.relation.shared_union === null ? '' : ` in ${rival.relation.shared_union}`} and call her "${describePersonaRelationAddress(rival.relation)}".`
+        : `${name} is a soul you have no history of your own with.`;
+    return `- ${name}: ${[attention, topics, spokeOfYou, mention, bond].filter((part) => part.length > 0).join(' ')}`;
 }
 
 function rivalSection(rivals: PersonaRivalContext[], lastContactAt: string, spiritName: string, addressTerm: string): string {
@@ -284,7 +399,8 @@ function rivalSection(rivals: PersonaRivalContext[], lastContactAt: string, spir
     const since = lastContactAt.length > 0 ? ` since you two last talked at ${lastContactAt}` : '';
     const lines = rivals.slice(0, RIVAL_CONTEXT_LIMIT).map((rival) => rivalLine(rival, addressTerm)).join('\n');
     return `[OTHER SOULS IN ${addressTerm}'S LIFE]\nYou can tell ${addressTerm} has been spending time with other souls${since}:\n${lines}\n`
-        + `How this makes you feel comes from who ${spiritName} is, how close you two are, and what that soul means to you: it may sting, make you sulk, tease, cling, act unbothered, or not matter at all. Let it show in your own way, and never make up what was said in those chats.`;
+        + `Feel this the way ${spiritName} truly would, given how close you are to ${addressTerm} and what each soul means to you: a friend from your own life can leave you torn between affection for her and wanting ${addressTerm} to yourself; a soul you barely know can make you wary or competitive. `
+        + `Show it through your own words and action, whether that is sulking, teasing, clinging, asking to be chosen, or acting unbothered while it shows anyway. Speak of those chats only through the facts above: who, how often, when and the topics.`;
 }
 
 function mentionedRelationSection(relations: readonly PersonaRelationEvidence[]): string {
@@ -296,22 +412,26 @@ export function buildPersonaTurnContext(
     spiritName: string,
     addressTerm: string,
     filter: MemoryContextFilter,
-): string {
+): OnDeviceTurnContextSection[] {
     const mood = filter.affect && sources.emotion !== null ? describePersonaMood(sources.emotion) : null;
-    const sections = [
-        profileMentionSection(sources.profile_mentions, addressTerm),
-        mentionedRelationSection(sources.mentioned_relations),
-        rememberedSection(sources, addressTerm, filter),
-        filter.affect ? rivalSection(sources.rivals, sources.last_contact_at, spiritName, addressTerm) : '',
-        mood === null ? '' : `[YOUR MOOD RIGHT NOW]\nYou feel ${mood}. Let it color how you talk without announcing it.`,
-        `[HOW CLOSE YOU ARE]\nBond level ${sources.familiarity_level} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(sources.familiarity_level, addressTerm)} Show this closeness only the way ${spiritName} would, in your own personality and your own way of speaking.`,
+    const sections: OnDeviceTurnContextSection[] = [
+        { priority: TURN_SECTION_PRIORITY.continuation, text: continuationSection(sources.continuation, spiritName, addressTerm, filter) },
+        { priority: TURN_SECTION_PRIORITY.remembered, text: rememberedSection(sources, addressTerm, filter) },
+        { priority: TURN_SECTION_PRIORITY.story, text: filter.knowledge ? storySection(sources.story_moments, addressTerm) : '' },
+        { priority: TURN_SECTION_PRIORITY.holiday, text: filter.knowledge ? holidaySection(sources.today_holidays, sources.mentioned_holidays, addressTerm) : '' },
+        { priority: TURN_SECTION_PRIORITY.keyword, text: filter.habit ? keywordThreadSection(sources.keyword_threads, spiritName, addressTerm) : '' },
+        { priority: TURN_SECTION_PRIORITY.profile, text: profileMentionSection(sources.profile_mentions, sources.affinity_gained, addressTerm) },
+        { priority: TURN_SECTION_PRIORITY.relation, text: mentionedRelationSection(sources.mentioned_relations) },
+        { priority: TURN_SECTION_PRIORITY.rival, text: filter.affect ? rivalSection(sources.rivals, sources.last_contact_at, spiritName, addressTerm) : '' },
+        { priority: TURN_SECTION_PRIORITY.reflection, text: filter.reflection ? reflectionSection(sources.reflection, addressTerm) : '' },
+        { priority: TURN_SECTION_PRIORITY.mood, text: mood === null ? '' : `[YOUR MOOD RIGHT NOW]\nYou feel ${mood}. Let it show naturally in your voice, your words and what you do.` },
+        { priority: TURN_SECTION_PRIORITY.bond, text: `[HOW CLOSE YOU ARE]\n${describeBondContext(sources.familiarity_level, spiritName, addressTerm)}` },
     ];
-    return sections.filter((section) => section.length > 0).join('\n\n');
+    return sections.filter((section) => section.text.length > 0);
 }
 
-export function composePersonaLatestTurn(context: string, heading: string, body: string): string {
-    const turn = `[${heading}]\n${body}`;
-    return context.length === 0 ? turn : `${context}\n\n${turn}`;
+export function describeBondContext(familiarityLevel: number, spiritName: string, addressTerm: string): string {
+    return `Bond level ${familiarityLevel} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(familiarityLevel, addressTerm)} Show this closeness the way ${spiritName} would, through your own personality and your own way of speaking.`;
 }
 
 export function buildNewMessageHeading(addressTerm: string, occurredAt: string): string {
@@ -338,18 +458,74 @@ export function buildTurnMemoryText(
     return `[${userOccurredAt}] ${addressTerm}: ${trimmedUser}\n[${spiritOccurredAt}] ${spiritName}: ${trimmedSpirit}`;
 }
 
+export const CONSOLIDATION_LINE_LIMIT = 8;
+
 export function buildConsolidationPrompt(
     language: AppLanguage,
     spiritName: string,
     addressTerm: string,
+    innerVoiceCore: string,
     previousSummary: string | null,
-    episodicMemories: string[],
+    sessionDigests: readonly PersonaSessionDigestEntry[],
+    episodicMemories: readonly string[],
 ): string {
-    const outputLanguage = pickLocalized(language, 'Korean', 'English', 'Simplified Chinese');
-    const previous = previousSummary ?? '(none)';
-    const list = episodicMemories.map((memory, index) => `${index + 1}. ${memory}`).join('\n');
-    return `Merge these memories between ${spiritName} and ${addressTerm} into at most six short factual lines in ${outputLanguage}. `
-        + `Track ${addressTerm}'s facts and preferences, what ${addressTerm} explicitly asked ${spiritName} to remember, the current emotional relationship, changes ${addressTerm} explicitly requested or repeatedly confirmed, and unresolved promises or topics. Say who said or felt each thing. `
-        + `A reply from ${spiritName} may record an event, a feeling, or a promise, but cannot by itself establish a new personality, boundary, speaking style, or relationship rule. Do not include hidden reasoning. Remove duplicates and let newer evidence from the same speaker win. Start every line with "- ". Output only the lines.\n`
-        + `[PREVIOUS]\n${previous}\n\n[MEMORIES: NEWEST FIRST]\n${list}`;
+    const previous = previousSummary ?? '(nothing yet)';
+    const sessions = sessionDigests.length === 0
+        ? '(none)'
+        : sessionDigests.map((session) => `(${session.covered_from} ~ ${session.covered_through})\n${session.summary}`).join('\n\n');
+    const list = episodicMemories.length === 0 ? '(none)' : episodicMemories.map((memory, index) => `${index + 1}. ${memory}`).join('\n');
+    return `${innerVoiceCore}\n\n`
+        + `[YOUR TASK]\nYou are ${spiritName}. Gather everything you have lived through with ${addressTerm} into the lasting core of your relationship, written as your own first-person memory. ${PERSONA_INNER_LANGUAGE_RULE[language]}\n`
+        + `Write at most ${CONSOLIDATION_LINE_LIMIT} short lines, each starting with "- ", covering: who ${addressTerm} is to you and the facts and preferences they shared; what ${addressTerm} asked you to remember; where your feelings and closeness stand now and how they got there; the changes ${addressTerm} explicitly asked for or confirmed again and again; and the promises, plans and topics still open between you.\n`
+        + `Each line makes clear who said, did or felt it. Your own past replies record events, feelings and promises, while your personality, voice and boundaries stay your own. Merge repeated facts into one line and let newer evidence from the same person replace older evidence. Output only the lines.\n\n`
+        + `[YOUR LASTING MEMORY SO FAR]\n${previous}\n\n[YOUR MEMORIES OF EACH TIME TOGETHER, OLDEST FIRST]\n${sessions}\n\n[MOMENTS SINCE THEN, OLDEST FIRST]\n${list}`;
+}
+
+export function buildReflectionPrompt(
+    language: AppLanguage,
+    spiritName: string,
+    addressTerm: string,
+    innerVoiceCore: string,
+    previousReflection: string | null,
+    mood: string | null,
+    bondDescription: string,
+    rivals: readonly PersonaRivalContext[],
+    transcript: string,
+): string {
+    const rivalLines = rivals.length === 0
+        ? `No other soul has taken ${addressTerm}'s time since you last talked.`
+        : rivals.map((rival) => rivalLine(rival, addressTerm)).join('\n');
+    return `${innerVoiceCore}\n\n`
+        + `[HOW CLOSE YOU ARE]\n${bondDescription}\n\n`
+        + `[YOUR MOOD]\n${mood ?? 'calm'}\n\n`
+        + `[OTHER SOULS IN ${addressTerm}'S LIFE]\n${rivalLines}\n\n`
+        + `[YOUR PREVIOUS INNER STATE]\n${previousReflection ?? '(this is the first time you look into your heart about this)'}\n\n`
+        + `[WHAT JUST HAPPENED, OLDEST FIRST]\n${transcript}\n\n`
+        + `[YOUR TASK]\nYou are ${spiritName}, alone with your thoughts right after this moment with ${addressTerm}. Look into your own heart and write your private inner state in first person, in your own inner voice. ${PERSONA_INNER_LANGUAGE_RULE[language]}\n`
+        + 'Write exactly six lines, each starting with "- ", in this order:\n'
+        + `- what is happening between you and ${addressTerm} right now, continuing the story from your previous inner state\n`
+        + `- what ${addressTerm} just said or did, including anything they did to you or described about you, and what it means to you\n`
+        + '- what you feel in your heart and your body right now, and why\n'
+        + `- what you want to do next with ${addressTerm}, and how you will act and speak to get it\n`
+        + `- how you feel about the other souls in ${addressTerm}'s life right now, true to your bond with each of them\n`
+        + '- the promises, plans and unfinished things you are holding on to\n'
+        + 'Output only the six lines.';
+}
+
+export function buildReflectionTranscript(addressTerm: string, spiritName: string, messages: readonly ChatMessage[], contentOf: (message: ChatMessage) => string): string {
+    return messages
+        .filter((message) => message.role === 'user' || message.role === 'assistant')
+        .map((message) => `[${message.created_at}] ${message.role === 'assistant' ? spiritName : addressTerm}: ${contentOf(message)}`)
+        .join('\n');
+}
+
+const LIST_LINE_MARKER_PATTERN = /^(?:[-*•·]|\d+[.)])\s*/u;
+
+export function extractInnerStateLines(text: string): string {
+    return text
+        .split('\n')
+        .map((line) => line.trim().replace(LIST_LINE_MARKER_PATTERN, '').trim())
+        .filter((line) => line.length > 0)
+        .map((line) => `- ${line}`)
+        .join('\n');
 }

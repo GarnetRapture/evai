@@ -1,6 +1,6 @@
 import type { AppLanguage } from '../../shared/types';
 import { findSpeechPreset } from './presets';
-import type { PersonaCheatPreset, PersonaLineRegister, PersonaSpeechProfile, PersonaSpeechRegister, PersonaVoiceAnchor } from './types';
+import type { PersonaCheatPreset, PersonaLineRegister, PersonaSelfReference, PersonaSpeechProfile, PersonaSpeechRegister, PersonaVoiceAnchor } from './types';
 
 const LINE_TRAILING_DECORATION = '[\\s!?.…~♡♥♪^ㅜㅠㅋㅎ;:()*\\-]*$';
 const KOREAN_POLITE_ENDING_PATTERN = new RegExp(`(?:요|니다|[습입]니까|죠|세요|십시오)${LINE_TRAILING_DECORATION}`, 'u');
@@ -8,9 +8,7 @@ const KOREAN_CASUAL_ENDING_PATTERN = new RegExp(`(?:야|어|아|지|해|네|래|
 const REGISTER_MEASURE_MIN_LINES = 12;
 const REGISTER_POLITE_RATIO = 0.65;
 const REGISTER_CASUAL_RATIO = 0.35;
-const REGISTER_DRIFT_MIN_LINES = 2;
-const REGISTER_DRIFT_POLITE_FLOOR = 0.34;
-const REGISTER_DRIFT_CASUAL_CEILING = 0.66;
+const KOREAN_SENTENCE_BOUNDARY_PATTERN = /(?<=[!?.…~♡♥♪])\s+|,\s+/u;
 
 const REGISTER_DESCRIPTION: Record<PersonaLineRegister, string> = {
     polite: 'polite Korean (존댓말) with -요 or -습니다 endings',
@@ -70,20 +68,33 @@ export function resolvePersonaVoiceAnchor(
         style: speechProfile.style,
         register,
         signature_lines: speechProfile.signature_lines.filter((line) => isRegisterCompatibleLine(line, register, language)),
+        self_reference: speechProfile.self_reference,
     };
+}
+
+export function describePersonaSelfReference(selfReference: PersonaSelfReference | null): string | null {
+    if (selfReference === null) {
+        return null;
+    }
+    return selfReference.kind === 'name'
+        ? `You often call yourself by your own name, "${selfReference.surface}", where others would say "I".`
+        : `You refer to yourself as "${selfReference.surface}".`;
 }
 
 export function describePersonaVoiceRegister(register: PersonaSpeechRegister | null): string | null {
     return register === null || register === 'mixed' ? null : REGISTER_DESCRIPTION[register];
 }
 
-export function detectVoiceRegisterDrift(messages: string[], register: PersonaSpeechRegister | null, language: AppLanguage): boolean {
+function splitKoreanSentences(lines: readonly string[]): string[] {
+    return lines.flatMap((line) => line.split(KOREAN_SENTENCE_BOUNDARY_PATTERN)).map((sentence) => sentence.trim()).filter((sentence) => sentence.length > 0);
+}
+
+export function detectVoiceRegisterDrift(lines: readonly string[], register: PersonaSpeechRegister | null, language: AppLanguage): boolean {
     if (language !== 'ko' || register === null || register === 'mixed') {
         return false;
     }
-    const { ratio, classified } = politeRatio(messages);
-    if (classified < REGISTER_DRIFT_MIN_LINES) {
-        return false;
-    }
-    return register === 'polite' ? ratio < REGISTER_DRIFT_POLITE_FLOOR : ratio > REGISTER_DRIFT_CASUAL_CEILING;
+    return splitKoreanSentences(lines).some((sentence) => {
+        const sentenceRegister = classifyKoreanLineRegister(sentence);
+        return sentenceRegister !== null && sentenceRegister !== register;
+    });
 }

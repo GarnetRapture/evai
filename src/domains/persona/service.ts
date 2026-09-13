@@ -20,9 +20,12 @@ import {
     findPersonaProfileMentions,
     personaGreetingFromPack,
 } from './prompt';
-import { buildPersonaRelationshipGraph, findMentionedCharacterKeys, findRelationForCharacter } from './relationship';
+import { collectPersonaHolidayReference, findMentionedEdenHolidays, resolveEdenHolidaysOn } from './calendar';
+import { buildPersonaRelationshipGraph, countCharacterMentions, findMentionedCharacterKeys, findRelationForCharacter } from './relationship';
 import { personaRepository } from './repository';
 import { buildPersonaLanguageSlice } from './slice';
+import { buildPersonaStoryKnowledgeChunks, buildPersonaWorldKnowledgeChunks, personaStoryDocumentName, personaWorldDocumentName } from './world';
+import { knowledgeClient } from '../knowledge/client';
 import type {
     AssembledPersonaPrompt,
     PersonaCheatPreset,
@@ -34,6 +37,7 @@ import type {
     PersonaRelationEvidence,
     PersonaRelationshipGraph,
     PersonaRelationshipGraphMemo,
+    PersonaRelationshipSource,
     PersonaTurnReferenceRequest,
     PersonaTurnReferences,
     SpiritDetail,
@@ -45,6 +49,8 @@ const assembledPromptMemo = new Map<string, AssembledPersonaPrompt>();
 const languageSliceMemo = new Map<string, PersonaLanguageSlice>();
 const dialogueExchangeMemo = new Map<string, PersonaDialogueExchange[]>();
 const relationshipGraphMemo = new Map<AppLanguage, PersonaRelationshipGraphMemo>();
+const datasetSourcesMemo = new Map<AppLanguage, Promise<PersonaRelationshipSource[]>>();
+const worldKnowledgeFingerprints = new Map<AppLanguage, string>();
 const BOND_MEMORY_WEIGHT = 3;
 const ROSTER_FINGERPRINT_SEPARATOR = '\n';
 
@@ -78,21 +84,43 @@ function memoizedDialogueExchanges(persona: StoredPersonaProfile, language: AppL
     return exchanges;
 }
 
-function rosterFingerprint(personaIds: readonly string[]): string {
-    return [...personaIds].sort().join(ROSTER_FINGERPRINT_SEPARATOR);
+function datasetFingerprint(archiveKeys: readonly string[]): string {
+    return [...archiveKeys].sort().join(ROSTER_FINGERPRINT_SEPARATOR);
+}
+
+function datasetPersonaId(pack: SpiritDetail, archiveKey: string): string {
+    return normalizePersonaKey(pack.name_en ?? archiveKey);
+}
+
+function loadDatasetSources(language: AppLanguage): Promise<PersonaRelationshipSource[]> {
+    const memoized = datasetSourcesMemo.get(language);
+    if (memoized !== undefined) {
+        return memoized;
+    }
+    const sources = Promise.all(listPersonaArchiveKeys().map(async (archiveKey): Promise<PersonaRelationshipSource> => {
+        const pack = await loadPersonaPack(archiveKey);
+        return {
+            persona_id: datasetPersonaId(pack, archiveKey),
+            slice: buildPersonaLanguageSlice(pack, language),
+            world_union_key: pack.profile?.union ?? null,
+        };
+    }));
+    datasetSourcesMemo.set(language, sources);
+    sources.catch(() => {
+        if (datasetSourcesMemo.get(language) === sources) {
+            datasetSourcesMemo.delete(language);
+        }
+    });
+    return sources;
 }
 
 async function loadRelationshipGraph(language: AppLanguage): Promise<PersonaRelationshipGraph> {
-    const fingerprint = rosterFingerprint(await personaRepository.listPersonaIds());
+    const fingerprint = datasetFingerprint(listPersonaArchiveKeys());
     const memoized = relationshipGraphMemo.get(language);
     if (memoized?.fingerprint === fingerprint) {
         return memoized.graph;
     }
-    const graph = personaRepository.listPersonas().then((personas) => buildPersonaRelationshipGraph(
-        personas.map((persona) => ({ persona_id: persona.id, slice: memoizedLanguageSlice(persona, language) })),
-        language,
-        fingerprint,
-    ));
+    const graph = loadDatasetSources(language).then((sources) => buildPersonaRelationshipGraph(sources, language, fingerprint));
     relationshipGraphMemo.set(language, { fingerprint, graph });
     try {
         return await graph;
@@ -103,6 +131,22 @@ async function loadRelationshipGraph(language: AppLanguage): Promise<PersonaRela
         }
         throw error;
     }
+}
+
+async function syncWorldKnowledge(graph: PersonaRelationshipGraph, language: AppLanguage): Promise<void> {
+    if (worldKnowledgeFingerprints.get(language) === graph.fingerprint) {
+        return;
+    }
+    const sources = await loadDatasetSources(language);
+    const createdAt = createMonotonicTimestamp();
+    await knowledgeClient.replaceDocuments(
+        new Set([personaWorldDocumentName(language), ...sources.map((source) => personaStoryDocumentName(language, source.persona_id))]),
+        [
+            ...buildPersonaWorldKnowledgeChunks(sources, graph.world, language, createdAt),
+            ...sources.flatMap((source) => buildPersonaStoryKnowledgeChunks(source, language, createdAt)),
+        ],
+    );
+    worldKnowledgeFingerprints.set(language, graph.fingerprint);
 }
 
 function relationsForPersonaIds(graph: PersonaRelationshipGraph, personaId: string, personaIds: readonly string[]): PersonaRelationEvidence[] {
@@ -127,7 +171,7 @@ export const personaService = {
         const pack = await loadPersonaPack(archiveKey);
         const nameEn = pack.name_en ?? archiveKey;
         const persona: StoredPersonaProfile = {
-            id: normalizePersonaKey(nameEn),
+            id: datasetPersonaId(pack, archiveKey),
             name: pack.name ?? archiveKey,
             name_en: nameEn,
             grade: pack.grade ?? DEFAULT_PROFILE_FIELD,
@@ -198,12 +242,14 @@ export const personaService = {
             return memoized;
         }
         const assembled = buildPersonaSystemPrompt(
+            persona.id,
             memoizedLanguageSlice(persona, language),
             language,
             normalizedSaviorName,
             persona.personality_override,
             cheatPreset,
             graph.profiles.get(persona.id) ?? null,
+            graph.world,
         );
         assembledPromptMemo.set(graphMemoKey, assembled);
         if (normalizedSaviorName.length > 0 || cheatPreset !== null) {
@@ -249,12 +295,29 @@ export const personaService = {
         const canonRelationKeys = (graph.profiles.get(persona.id)?.relations ?? []).map((relation) => relation.character_key);
         const chattedKeys = request.mention_candidate_ids.flatMap((id) => graph.character_key_by_persona.get(id) ?? []);
         const mentionedKeys = findMentionedCharacterKeys(graph, persona.id, query, new Set([...canonRelationKeys, ...chattedKeys]));
+        await syncWorldKnowledge(graph, language);
         return {
             rehearsal_exchanges: [...bondStage, ...topical],
             profile_mentions: findPersonaProfileMentions(slice, query),
             mentioned_relations: mentionedKeys.flatMap((key) => findRelationForCharacter(graph, persona.id, key) ?? []),
             rival_relations: relationsForPersonaIds(graph, persona.id, request.rival_persona_ids),
+            rival_mentions_of_self: Object.fromEntries(request.rival_exchanges.map((exchange) => [
+                exchange.persona_id,
+                countCharacterMentions(graph, persona.id, exchange.texts),
+            ])),
+            today_holidays: resolveEdenHolidaysOn(request.occurred_at).map((holiday) => collectPersonaHolidayReference(slice, holiday, language)),
+            mentioned_holidays: findMentionedEdenHolidays(query, language).map((holiday) => collectPersonaHolidayReference(slice, holiday, language)),
         };
+    },
+    async getPersonaRelations(personaId: string, language: AppLanguage, limit: number): Promise<PersonaRelationEvidence[]> {
+        const graph = await loadRelationshipGraph(language);
+        return (graph.profiles.get(personaId)?.relations ?? []).slice(0, limit);
+    },
+    worldKnowledgeDocuments(language: AppLanguage): ReadonlySet<string> {
+        return new Set([personaWorldDocumentName(language)]);
+    },
+    storyKnowledgeDocuments(language: AppLanguage, personaId: string): ReadonlySet<string> {
+        return new Set([personaStoryDocumentName(language, personaId)]);
     },
     async getEmotionSeedText(id: string, language: AppLanguage): Promise<string> {
         const persona = await personaRepository.getPersona(id);
@@ -312,15 +375,17 @@ export const personaService = {
         return entries.sort((left, right) => right.bond_score - left.bond_score);
     },
     async getFamiliarityList(cheatSource: PersonaCheatSettingsSource): Promise<FamiliarityEntry[]> {
-        const [personas, messageCounts, memoryCounts] = await Promise.all([
+        const [personas, messageCounts, memoryCounts, affinityExps] = await Promise.all([
             personaRepository.listPersonas(),
             chatRepository.countMessagesByPersona(),
             chatRepository.countEpisodicMemoriesByPersona(),
+            chatRepository.listAffinityExpByPersona(),
         ]);
         const entries: FamiliarityEntry[] = [];
         for (const persona of personas) {
             const messageCount = messageCounts.get(persona.id) ?? 0;
             const memoryCount = memoryCounts.get(persona.id) ?? 0;
+            const affinityExp = affinityExps.get(persona.id) ?? 0;
             const cheatLevel = resolveActivePersonaCheatPreset(cheatSource, persona.id)?.bond_level ?? null;
             if (messageCount === 0 && memoryCount === 0 && cheatLevel === null) {
                 continue;
@@ -331,7 +396,8 @@ export const personaService = {
                 name_en: persona.name_en,
                 message_count: messageCount,
                 memory_count: memoryCount,
-                familiarity_score: resolvePersonaFamiliarityScore(messageCount, memoryCount, cheatLevel),
+                affinity_exp: affinityExp,
+                familiarity_score: resolvePersonaFamiliarityScore(messageCount, memoryCount, affinityExp, cheatLevel),
             });
         }
         return entries.sort((left, right) => right.familiarity_score - left.familiarity_score);

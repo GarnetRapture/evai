@@ -1,7 +1,18 @@
+import { listPersonaMaintenanceTasks, subscribePersonaMaintenance } from './maintenance';
 import { EVERTALK_SESSION_TITLE } from './prompt';
 import { chatRepository } from './repository';
 import { chatService } from './service';
-import type { ChatMessage, ChatRoom, ChatSendRequest, PersonaMemoryInsight, ProactiveGenerationOptions } from './types';
+import type {
+    ChatMessage,
+    ChatRoom,
+    ChatSendRequest,
+    PersonaContextGraph,
+    PersonaMaintenanceListener,
+    PersonaMaintenanceTask,
+    PersonaMemoryInsight,
+    PersonaMemoryOverview,
+    ProactiveGenerationOptions,
+} from './types';
 
 export const chatClient = {
     async createRoom(title: string): Promise<ChatRoom> {
@@ -42,6 +53,18 @@ export const chatClient = {
     },
     async getPersonaMemoryInsight(personaId: string): Promise<PersonaMemoryInsight> {
         return chatService.getPersonaMemoryInsight(personaId);
+    },
+    async getPersonaMemoryOverview(): Promise<PersonaMemoryOverview> {
+        return chatService.getPersonaMemoryOverview();
+    },
+    async getPersonaContextGraph(personaId: string, roomId: string): Promise<PersonaContextGraph> {
+        return chatService.getPersonaContextGraph(personaId, roomId);
+    },
+    subscribeMaintenance(listener: PersonaMaintenanceListener): () => void {
+        return subscribePersonaMaintenance(listener);
+    },
+    listMaintenanceTasks(): PersonaMaintenanceTask[] {
+        return listPersonaMaintenanceTasks();
     },
     async sendMessage(request: ChatSendRequest): Promise<ChatMessage> {
         return chatService.sendMessage(request);

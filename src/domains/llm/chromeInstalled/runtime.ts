@@ -144,7 +144,7 @@ async function streamPayload(
                 onChunk(piece);
             }
         }
-        return { text: generatedText, cancelled: signal.aborted };
+        return { text: generatedText, cancelled: signal.aborted, truncated_message_count: 0 };
     }
     finally {
         signal.removeEventListener('abort', abort);
@@ -211,7 +211,7 @@ export const chromeInstalledModelRuntime = {
         catch (error) {
             if (isAbortError(error) || request.signal.aborted) {
                 recordRequestStatus({ ...status, state: 'cancelled' });
-                return { text: '', cancelled: true };
+                return { text: '', cancelled: true, truncated_message_count: 0 };
             }
             recordRequestStatus({ ...status, state: 'failed', error_message: describeUnknownError(error) });
             throw error;

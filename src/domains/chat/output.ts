@@ -17,8 +17,9 @@ const TRAILING_HORIZONTAL_SPACE_PATTERN = /[ \t]+(?=\n|$)/g;
 const THINK_BLOCK_PATTERN = /<think>[\s\S]*?<\/think>/gi;
 const UNCLOSED_THINK_PATTERN = /<think>[\s\S]*$/i;
 const MARKUP_TAG_PATTERN = /<\/?(?!think(?:ing)?\b)[A-Za-z][A-Za-z0-9_-]*\s*\/?>/g;
-const CLOSED_ACTION_PATTERN = /[(（]([^()（）\n]{1,120})[)）]|\*([^*\n]{1,120})\*/gu;
-const UNCLOSED_ACTION_PATTERN = /[(（]([^()（）\n]{1,120})$|\*([^*\n]{1,120})$/u;
+const ACTION_LINE_PATTERN = /^\s*(?:[(（](.+)[)）]|\*([^*]+)\*)\s*$/u;
+const UNCLOSED_ACTION_LINE_PATTERN = /^\s*(?:[(（]([^)）]+)|\*([^*]+))$/u;
+const EMPHASIS_SPAN_PATTERN = /\*([^*\n]*\p{L}[^*\n]*)\*/gu;
 const ACTION_HANGUL_PATTERN = /[가-힣]/gu;
 const ACTION_HAN_PATTERN = /\p{Script=Han}/gu;
 const ACTION_LATIN_WORD_PATTERN = /[A-Za-z]{3,}/u;
@@ -49,23 +50,34 @@ function tidySpokenText(text: string): string {
         .trim();
 }
 
+export function unwrapEmphasisSpans(text: string): string {
+    return text.replace(EMPHASIS_SPAN_PATTERN, '$1');
+}
+
+function actionLineContent(line: string, pattern: RegExp): string | null {
+    const matched = pattern.exec(line);
+    if (matched === null) {
+        return null;
+    }
+    const content = (matched[1] ?? matched[2] ?? '').trim();
+    return describesAction(content) ? content : null;
+}
+
 export function splitPersonaReplyActions(text: string, streaming: boolean): PersonaReplyParts {
     const actions: string[] = [];
-    let spoken = text.replace(CLOSED_ACTION_PATTERN, (matched, parenthesized: string | undefined, starred: string | undefined) => {
-        const content = (parenthesized ?? starred ?? '').trim();
-        if (!describesAction(content)) {
-            return matched;
+    const lines = text.split('\n');
+    const spokenLines = lines.flatMap((line, index) => {
+        const action = actionLineContent(line, ACTION_LINE_PATTERN);
+        if (action !== null) {
+            actions.push(action);
+            return [];
         }
-        actions.push(content);
-        return '';
+        if (streaming && index === lines.length - 1 && actionLineContent(line, UNCLOSED_ACTION_LINE_PATTERN) !== null) {
+            return [];
+        }
+        return [unwrapEmphasisSpans(line)];
     });
-    if (streaming) {
-        spoken = spoken.replace(UNCLOSED_ACTION_PATTERN, (matched, parenthesized: string | undefined, starred: string | undefined) => {
-            const content = (parenthesized ?? starred ?? '').trim();
-            return describesAction(content) ? '' : matched;
-        });
-    }
-    return { actions, spoken: tidySpokenText(spoken) };
+    return { actions, spoken: tidySpokenText(spokenLines.join('\n')) };
 }
 
 export function removeEmoji(text: string): string {

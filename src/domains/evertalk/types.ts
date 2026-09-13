@@ -2,7 +2,19 @@ import type React from 'react';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import type { DeviceEnvironmentInfo } from '../../shared/platform';
 import type { UserSession } from '../auth';
-import type { ChatMessage, ChatRoom, MemoryContextFilter, MemoryContextKind, PersonaMemoryInsight } from '../chat';
+import type {
+    ChatMessage,
+    ChatRoom,
+    MemoryContextFilter,
+    MemoryContextKind,
+    PersonaContextGraph,
+    PersonaKeywordThread,
+    PersonaMaintenanceTask,
+    PersonaContextRelation,
+    PersonaMemoryInsight,
+    PersonaMemoryOverview,
+    PersonaMemoryOverviewEntry,
+} from '../chat';
 import type {
     ChatModelCatalog,
     ChromeInstalledModelEntry,
@@ -127,22 +139,90 @@ export interface CheatPresetGridProps<Id extends string> {
     language: AppLanguage;
     onSelect: (id: Id) => void;
 }
-export type MemoryGraphNodeKind = 'persona' | 'conversation' | 'memory' | 'bond' | 'reply' | 'summary';
+export type MemoryGraphNodeKind = 'persona' | 'savior' | 'keyword' | 'relation' | 'stage' | 'session';
+export type MemoryGraphEmphasis = 'query' | 'recent' | 'history';
+export type MemoryGraphEdgeKind = 'topic' | 'savior_bond' | 'canon_bond' | 'relation_savior' | 'rival_attention' | 'procedure' | 'session';
+export interface MemoryGraphPoint {
+    x: number;
+    y: number;
+}
+export interface MemoryGraphArcPlacement {
+    center: MemoryGraphPoint;
+    startRadius: number;
+    startAngle: number;
+    endAngle: number;
+    startClearance: number;
+    endClearance: number;
+}
+export interface MemoryGraphBounds {
+    left: number;
+    top: number;
+    right: number;
+    bottom: number;
+}
+export interface MemoryGraphViewTransform {
+    x: number;
+    y: number;
+    zoom: number;
+}
+export interface MemorySpiritRosterEntry {
+    personaId: string;
+    name: string;
+    level: number;
+    messageCount: number;
+    score: number;
+}
+export interface MemoryGraphDetailPosition {
+    left: number;
+    top: number;
+}
+export interface MemoryGraphLayoutSubject {
+    spirit_name: string;
+    savior_name: string;
+}
+export interface MemoryGraphNodeDragSession {
+    pointerId: number;
+    nodeId: string;
+    startX: number;
+    startY: number;
+    origin: MemoryGraphPoint;
+    moved: boolean;
+}
+export interface MemoryGraphNodeDragController {
+    positions: ReadonlyMap<string, MemoryGraphPoint>;
+    draggingNodeId: string | null;
+    beginNodeDrag: (event: React.PointerEvent<HTMLElement>, node: MemoryGraphNode) => void;
+    moveNodeDrag: (event: React.PointerEvent<HTMLElement>) => void;
+    endNodeDrag: (event: React.PointerEvent<HTMLElement>) => void;
+    consumeDragClick: (nodeId: string) => boolean;
+    resetPositions: () => void;
+}
+export interface ElementFullscreenController {
+    fullscreen: boolean;
+    toggleFullscreen: () => void;
+}
 export interface MemoryGraphNode {
     id: string;
     personaId: string;
     kind: MemoryGraphNodeKind;
     x: number;
     y: number;
+    width: number;
+    height: number;
     title: string;
-    description: string;
     value: string;
+    lines: string[];
+    emphasis: MemoryGraphEmphasis;
+    rank: number;
 }
 export interface MemoryGraphEdge {
     id: string;
     source: MemoryGraphNode;
     target: MemoryGraphNode;
-    feedback?: boolean;
+    kind: MemoryGraphEdgeKind;
+    label: string;
+    weight: number;
+    emphasis: MemoryGraphEmphasis;
 }
 export interface MemoryGraphLayout {
     nodes: MemoryGraphNode[];
@@ -152,33 +232,54 @@ export interface MemoryGraphLayout {
 }
 export interface MemoryGraphViewFilter {
     query: string;
-    activeOnly: boolean;
-    memoryContextFilter: MemoryContextFilter;
+    recentOnly: boolean;
 }
-export interface MemoryGraphViewportScroll {
-    left: number;
-    top: number;
+export interface MemoryGraphSelection {
+    kind: MemoryGraphNodeKind;
+    id: string;
+}
+export interface MemoryKeywordDetailProps {
+    thread: PersonaKeywordThread;
+    spiritName: string;
+    labels: EverTalkLabels;
+}
+export interface MemoryRelationDetailProps {
+    relation: PersonaContextRelation;
+    labels: EverTalkLabels;
+}
+export interface PersonaMaintenanceStatusProps {
+    tasks: PersonaMaintenanceTask[];
+    spiritName: string;
+    labels: EverTalkLabels;
 }
 export interface MemoryGraphPanSession {
     pointerId: number;
     startX: number;
     startY: number;
-    origin: MemoryGraphViewportScroll;
+    origin: MemoryGraphViewTransform;
 }
 export interface MemoryGraphViewportController {
     viewportRef: React.RefObject<HTMLDivElement | null>;
-    zoom: number;
+    view: MemoryGraphViewTransform;
     panning: boolean;
     zoomIn: () => void;
     zoomOut: () => void;
     resetZoom: () => void;
-    fitZoom: () => void;
+    fitView: (bounds: MemoryGraphBounds) => void;
     onPointerDown: (event: React.PointerEvent<HTMLDivElement>) => void;
     onPointerMove: (event: React.PointerEvent<HTMLDivElement>) => void;
     onPointerEnd: (event: React.PointerEvent<HTMLDivElement>) => void;
 }
+export interface MemoryGraphCardNodeProps {
+    node: MemoryGraphNode;
+}
 export interface MemoryGraphCanvasProps extends WorkspacePageProps {
     graph: MemoryGraphLayout;
+    selection: MemoryGraphSelection | null;
+    selectionDetail: React.ReactNode;
+    hint: string;
+    emptyMessage: string | null;
+    onSelect: (selection: MemoryGraphSelection | null) => void;
 }
 export interface ImageViewerOverlayProps {
     open: boolean;
@@ -292,6 +393,7 @@ export interface ChatStageProps {
     messagesListRef: React.RefObject<HTMLDivElement | null>;
     showReasoning: boolean;
     activeSkinId: string;
+    maintenanceTasks: PersonaMaintenanceTask[];
     labels: EverTalkLabels;
     onOpenProfileDetail: () => void;
 }
@@ -355,13 +457,27 @@ export interface SaviorProfileSnapshot {
     activeModelName: string;
     modelReady: boolean;
 }
+export interface MemoryOverviewRow {
+    entry: PersonaMemoryOverviewEntry;
+    name: string;
+}
+export interface MemoryOverviewPanelProps {
+    overview: PersonaMemoryOverview | null;
+    loading: boolean;
+    allSpirits: PersonaConfig[];
+    appLanguage: AppLanguage;
+    labels: EverTalkLabels;
+    onOpenSpirit: (spiritId: string) => void;
+}
 export interface LobbyScreenProps {
     spirits: SpiritDetail[];
+    allSpirits: PersonaConfig[];
+    appLanguage: AppLanguage;
     familiarityList: FamiliarityEntry[];
     background: string | null;
     saviorProfile: SaviorProfileSnapshot;
-    memoryInsight: PersonaMemoryInsight | null;
-    memoryInsightLoading: boolean;
+    memoryOverview: PersonaMemoryOverview | null;
+    memoryOverviewLoading: boolean;
     labels: EverTalkLabels;
     maxPreferredSlots: number;
     onEnterChat: (spiritId: string) => void;
@@ -708,6 +824,11 @@ export interface EverTalkController {
     activeFamiliarityEntry: FamiliarityEntry | null;
     memoryInsight: PersonaMemoryInsight | null;
     memoryInsightLoading: boolean;
+    memoryOverview: PersonaMemoryOverview | null;
+    memoryOverviewLoading: boolean;
+    contextGraph: PersonaContextGraph | null;
+    contextGraphLoading: boolean;
+    maintenanceTasks: PersonaMaintenanceTask[];
     preferredPersonaIds: string[];
     preferredSpiritNames: string[];
     activeStyleName: string | null;
@@ -790,4 +911,7 @@ export interface EverTalkController {
     acknowledgePlatformGuide: () => Promise<void>;
     navigateWorkspace: (view: WorkspaceView) => Promise<void>;
     refreshStorageInspection: () => Promise<void>;
+    refreshContextGraph: () => Promise<void>;
+    contextGraphPersonaId: string;
+    viewContextGraphPersona: (personaId: string) => Promise<void>;
 }

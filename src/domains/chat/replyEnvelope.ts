@@ -3,7 +3,7 @@ import type { StructuredReplySpec } from '../llm';
 import type { PersonaSpeechRegister, PersonaSpeechStyle } from '../persona/types';
 import { detectVoiceRegisterDrift } from '../persona/voice';
 import { containsForeignLanguage } from './languageGuard';
-import { normalizeChatOutput, splitPersonaReplyActions, stripReasoning } from './output';
+import { normalizeChatOutput, splitPersonaReplyActions, stripReasoning, unwrapEmphasisSpans } from './output';
 import type { PersonaReplyEnvelope, PersonaReplyEnvelopeParse, PersonaReplyShape, PersonaReplyViolation } from './types';
 
 export const PERSONA_REPLY_SPEC_NAME = 'persona_reply';
@@ -186,10 +186,10 @@ export function parsePersonaReplyEnvelope(text: string): PersonaReplyEnvelopePar
 
 export function normalizePersonaReplyEnvelope(envelope: PersonaReplyEnvelope, language: AppLanguage): PersonaReplyEnvelope {
     return {
-        inner_thought: normalizeChatOutput(envelope.inner_thought, language).trim(),
+        inner_thought: unwrapEmphasisSpans(normalizeChatOutput(envelope.inner_thought, language)).trim(),
         action: normalizeChatOutput(envelope.action, language).replace(ACTION_WRAPPER_PATTERN, '').trim(),
         messages: envelope.messages
-            .map((message) => normalizeChatOutput(message, language).trim())
+            .map((message) => unwrapEmphasisSpans(normalizeChatOutput(message, language)).trim())
             .filter((message) => message.length > 0),
     };
 }
@@ -239,7 +239,7 @@ export function detectPersonaReplyViolation(
     if (isQuestionOnlyReply(envelope)) {
         return 'question_only';
     }
-    return detectVoiceRegisterDrift(envelope.messages, register, language) ? 'register_drift' : null;
+    return detectVoiceRegisterDrift([envelope.inner_thought, ...envelope.messages], register, language) ? 'register_drift' : null;
 }
 
 export function resolvePersonaReplyMessageLimit(style: PersonaSpeechStyle | null): number {

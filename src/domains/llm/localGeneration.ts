@@ -7,6 +7,7 @@ import {
     LITERT_LM_CONSOLIDATION_TOP_P,
     LITERT_LM_SAMPLING_SEED_LIMIT,
 } from './constants';
+import { composeOnDeviceConversationMessages } from './turn';
 import type { LocalGenerationPayload, LocalSamplingParameters, OnDeviceGenerationRequest, OnDeviceTextMessage } from './types';
 
 function randomSamplingSeed(): number {
@@ -29,13 +30,9 @@ function consolidationSampling(): LocalSamplingParameters {
 }
 
 function personaConversationMessages(request: OnDeviceGenerationRequest): OnDeviceTextMessage[] {
-    const lastIndex = request.messages.length - 1;
     return [
         ...request.session_prompt.priming_messages.map((message) => ({ role: message.role, content: message.content })),
-        ...request.messages.map((message, index) => ({
-            role: message.role,
-            content: index === lastIndex ? `${message.content}${request.behavior_instruction}` : message.content,
-        })),
+        ...composeOnDeviceConversationMessages(request),
     ];
 }
 

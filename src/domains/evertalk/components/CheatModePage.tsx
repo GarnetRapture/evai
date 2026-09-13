@@ -77,7 +77,7 @@ function CheatSpiritEditor({ controller, personaId }: WorkspacePageProps & { per
     const spirit = controller.allSpirits.find((candidate) => candidate.id === personaId);
     const preset = controller.personaCheatPresets[personaId];
     const entry = controller.familiarityList.find((candidate) => candidate.persona_id === personaId);
-    const automaticLevel = computeFamiliarityLevel(familiarityScore(entry?.message_count ?? 0, entry?.memory_count ?? 0)).level;
+    const automaticLevel = computeFamiliarityLevel(familiarityScore(entry?.message_count ?? 0, entry?.memory_count ?? 0, entry?.affinity_exp ?? 0)).level;
     const committedLevel = preset?.bond_level ?? null;
     const [draftLevel, setDraftLevel] = useState<number>(committedLevel ?? automaticLevel);
     if (!spirit) return null;

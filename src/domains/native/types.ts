@@ -78,7 +78,7 @@ export interface NativeContextMessage {
 
 export interface NativeContextMemory {
     id: string;
-    memory_type: 'episodic' | 'semantic' | 'directive' | 'habit' | 'affect';
+    memory_type: 'episodic' | 'semantic' | 'directive' | 'habit' | 'affect' | 'reflection' | 'affinity';
     memory_text: string;
     created_at: string;
 }

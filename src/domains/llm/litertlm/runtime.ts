@@ -166,11 +166,11 @@ export const liteRtLmRuntime = {
             focusedPersonaAccess = Date.now();
             if (result.cancelled) {
                 recordRequestStatus({ ...status, state: 'cancelled', prompt_tokens: null, generated_tokens: null });
-                return { text: result.text, cancelled: true };
+                return { text: result.text, cancelled: true, truncated_message_count: 0 };
             }
             focusedContextTokens = result.token_count ?? 0;
             recordRequestStatus({ ...status, state: 'completed', prompt_tokens: null, generated_tokens: null });
-            return { text: result.text, cancelled: false };
+            return { text: result.text, cancelled: false, truncated_message_count: 0 };
         }
         catch (error) {
             recordRequestStatus({ ...status, state: 'failed', prompt_tokens: null, generated_tokens: null, error_message: describeUnknownError(error) });

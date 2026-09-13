@@ -8,6 +8,7 @@ import type { ChatMessageBubbleProps, ChatStageProps, GalleryTileProps, PanelGeo
 import { EVERTALK_UI_ASSETS } from '../uiAssets';
 import { ImageViewerOverlay } from './ImageViewerOverlay';
 import { LoadableAssetImage } from './LoadableAssetImage';
+import { PersonaMaintenanceStatus } from './PersonaMaintenanceStatus';
 import { SpiritReplyContent } from './SpiritReplyContent';
 import { isEditableInteractionTarget } from '../../../shared/interaction';
 const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoomLabel, onZoom }: GalleryTileProps) {
@@ -42,7 +43,7 @@ const ChatMessageBubble = memo(function ChatMessageBubble({ message, avatarCandi
       </button>
     </div>);
 });
-export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previousRooms, previousRoomsLoading, onStartNewChat, onLoadPreviousRooms, onSwitchToRoom, onDeleteMessage, onDeleteRoom, inputText, isTyping, streamingText, streamingRequestId, onCancelStreaming, activeStageTab, onInputChange, onSendMessage, onStageTabChange, messagesListRef, labels, onOpenProfileDetail, showReasoning, activeSkinId }: ChatStageProps) {
+export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previousRooms, previousRoomsLoading, onStartNewChat, onLoadPreviousRooms, onSwitchToRoom, onDeleteMessage, onDeleteRoom, inputText, isTyping, streamingText, streamingRequestId, onCancelStreaming, activeStageTab, onInputChange, onSendMessage, onStageTabChange, messagesListRef, labels, onOpenProfileDetail, showReasoning, activeSkinId, maintenanceTasks }: ChatStageProps) {
     const [historyOpen, setHistoryOpen] = useState(false);
     async function toggleHistory() {
         const next = !historyOpen;
@@ -65,7 +66,8 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
     const gallerySkins = useMemo(() => assets?.skinOptions ?? [], [assets]);
     const openingGreeting = activeDetail?.personality.greeting?.trim() ?? '';
     const speechLine = useMemo(() => pickRandomSpeechLine(activeDetail), [activeDetail]);
-    const canUseComposer = Boolean(activeDetail && llmStatus?.is_loaded && !isTyping);
+    const canUseComposer = Boolean(activeDetail && llmStatus?.is_loaded);
+    const canSubmitMessage = canUseComposer && !isTyping && inputText.trim().length > 0;
     const [poked, setPoked] = useState(false);
     const [displayLine, setDisplayLine] = useState(speechLine);
     const [zoomedImageCandidates, setZoomedImageCandidates] = useState<string[] | null>(null);
@@ -82,6 +84,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
     }, [onDeleteMessage]);
     const handleDeleteMessage = useCallback((messageId: string) => deleteMessageRef.current(messageId), []);
     const messageAvatarCandidates = useMemo(() => activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? [], [activeSkin, assets]);
+    const activeMaintenanceTasks = useMemo(() => maintenanceTasks.filter((task) => task.persona_id === activeSpiritKey), [activeSpiritKey, maintenanceTasks]);
     useEffect(() => {
         if (activeStageTab !== 'chat' || panelState === 'minimized' || !canUseComposer) {
             return;
@@ -394,6 +397,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                   </div>
                 </div>)}
             </div>
+            <PersonaMaintenanceStatus tasks={activeMaintenanceTasks} spiritName={activeDetail?.name ?? ''} labels={labels}/>
             <form className="ever-composer" onSubmit={onSendMessage}>
               {choices.length > 0 && (<div className="ever-choice-strip">
                   {choices.map((choice) => (<button key={choice.id} type="button" onClick={() => { onInputChange(choice.label); composerInputRef.current?.focus({ preventScroll: true }); }}>
@@ -407,7 +411,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                   <Square aria-hidden="true" size={22}/>
                 </button>
               ) : (
-                <button type="submit" aria-label={labels.send} disabled={!canUseComposer || !inputText.trim()}>
+                <button type="submit" aria-label={labels.send} disabled={!canSubmitMessage}>
                   <Send aria-hidden="true" size={22}/>
                 </button>
               )}

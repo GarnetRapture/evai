@@ -140,6 +140,30 @@ export function applyRivalAttention(
     }, occurredAt);
 }
 
+const PROFILE_DELIGHT_HAPPY_DELTA = 12;
+const PROFILE_DELIGHT_PASSION_DELTA = 8;
+const PROFILE_DELIGHT_BOREDOM_RELIEF = 6;
+const PROFILE_DISLIKE_MELANCHOLY_DELTA = 10;
+const PROFILE_DISLIKE_HAPPY_DROP = 8;
+
+export function applyProfileMentionEmotion(
+    previous: PersonaEmotionState,
+    delightedCount: number,
+    dislikedCount: number,
+    occurredAt: string,
+): PersonaEmotionState {
+    if (delightedCount === 0 && dislikedCount === 0) {
+        return previous;
+    }
+    return normalizeEmotionState({
+        ...previous.levels,
+        happy: previous.levels.happy + delightedCount * PROFILE_DELIGHT_HAPPY_DELTA - dislikedCount * PROFILE_DISLIKE_HAPPY_DROP,
+        passionate: previous.levels.passionate + delightedCount * PROFILE_DELIGHT_PASSION_DELTA,
+        bored: previous.levels.bored - delightedCount * PROFILE_DELIGHT_BOREDOM_RELIEF,
+        melancholy: previous.levels.melancholy + dislikedCount * PROFILE_DISLIKE_MELANCHOLY_DELTA,
+    }, occurredAt);
+}
+
 export function serializePersonaEmotion(state: PersonaEmotionState): string {
     return JSON.stringify(state);
 }

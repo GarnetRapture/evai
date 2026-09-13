@@ -158,12 +158,12 @@ export const nativeHostRuntime = {
                 prompt_tokens: outcome.status.prompt_tokens,
                 generated_tokens: outcome.status.generated_tokens,
             });
-            return { text: generatedText, cancelled: outcome.cancelled };
+            return { text: generatedText, cancelled: outcome.cancelled, truncated_message_count: 0 };
         }
         catch (error) {
             if (isAbortError(error) || request.signal.aborted) {
                 recordRequestStatus({ ...status, state: 'cancelled' });
-                return { text: generatedText, cancelled: true };
+                return { text: generatedText, cancelled: true, truncated_message_count: 0 };
             }
             recordRequestStatus({ ...status, state: 'failed', error_message: describeUnknownError(error) });
             throw error;

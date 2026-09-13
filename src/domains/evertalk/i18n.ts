@@ -4,7 +4,8 @@ import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shar
 import type { ChromeBuiltInAiApiKind } from '../../shared/types/chromeOnDevice';
 import type { ChromePromptModelVariant, ChromePromptVariantVerification } from '../llm/types';
 import type { PersonaEmotionKind } from '../chat/affect';
-import type { MemoryContextKind } from '../chat/types';
+import type { MemoryContextKind, PersonaBehaviorStageKind, PersonaMaintenanceTaskKind } from '../chat/types';
+import type { MemoryGraphEdgeKind } from './types';
 import type { LocalModelEngineKind } from '../llm/types';
 import type { SpiritRaidEvent } from '../persona/types';
 
@@ -76,8 +77,17 @@ export interface EverTalkLabels {
     memoryEmotionNames: Record<PersonaEmotionKind, string>;
     memoryInsightDirectives: string;
     memoryInsightEpisodes: string;
+    memoryInsightReflection: string;
     memoryInsightEmpty: string;
     memoryInsightCount: (shown: number, total: number) => string;
+    memoryOverviewTitle: string;
+    memoryOverviewTotals: (spirits: number, messages: number, memories: number) => string;
+    memoryOverviewMoodAverage: string;
+    memoryOverviewDominantCount: (count: number) => string;
+    memoryOverviewSpirits: string;
+    memoryOverviewSpiritStats: (messages: number, memories: number) => string;
+    memoryOverviewEmpty: string;
+    maintenanceStatus: Record<PersonaMaintenanceTaskKind, (spiritName: string) => string>;
     lobby: string;
     lobbyTitle: string;
     lobbySubtitle: (count: number) => string;
@@ -442,9 +452,48 @@ export interface EverTalkLabels {
     memoryFilterTitle: string;
     memoryFilterDescription: string;
     memoryFilterSearchPlaceholder: string;
-    memoryFilterActiveOnly: string;
     memoryFilterEmpty: string;
-    memoryWorkflowNodes: Array<{ title: string; description: string }>;
+    memoryGraphRecentOnly: string;
+    memoryGraphNoSpirit: string;
+    memoryGraphSelectHint: string;
+    memorySpiritRosterTitle: string;
+    memorySpiritRosterSearch: string;
+    memorySpiritRosterEmpty: string;
+    memorySpiritRosterMeta: (level: number, messageCount: number) => string;
+    memoryGraphLegend: Record<'query' | 'recent' | 'history', string>;
+    memoryGraphLegendTitle: string;
+    memoryGraphKeywordCounts: (userCount: number, spiritCount: number) => string;
+    memoryGraphSaviorValue: (messageCount: number) => string;
+    memoryGraphRelationValue: (saviorLevel: number | null) => string;
+    memoryGraphEdgeKinds: Record<MemoryGraphEdgeKind, string>;
+    memoryGraphEdgeTopicLabel: (priority: number) => string;
+    memoryGraphEdgeSaviorBondLabel: (level: number, messageCount: number) => string;
+    memoryGraphEdgeCanonBondLabel: (strength: number, sharedUnion: string | null) => string;
+    memoryGraphEdgeRelationSaviorLabel: (level: number) => string;
+    memoryGraphEdgeRivalLabel: (messageCount: number) => string;
+    memoryGraphFullscreen: string;
+    memoryGraphExitFullscreen: string;
+    memoryGraphResetLayout: string;
+    memoryRelationCanonStats: (interactionCount: number, mentionCount: number) => string;
+    memoryRelationSaviorBond: (level: number, messageCount: number) => string;
+    memoryRelationNoSaviorBond: string;
+    memoryKeywordDetailTitle: (token: string) => string;
+    memoryKeywordStats: (userCount: number, spiritCount: number, firstSeen: string, lastSeen: string) => string;
+    memoryKeywordRecent: (recentCount: number) => string;
+    memoryKeywordQueryMatch: string;
+    memoryKeywordSavior: string;
+    memoryKeywordNoEpisodes: string;
+    memoryRivalDetailTitle: (name: string) => string;
+    memoryRivalStats: (userCount: number, spiritCount: number, firstAt: string, latestAt: string) => string;
+    memoryRivalNoContact: string;
+    memoryRivalTopics: string;
+    memoryRivalSpokeOfYou: (count: number) => string;
+    memoryRivalMentionedNow: string;
+    memoryRivalCanonBond: (addressForm: string) => string;
+    memoryRivalSharedUnion: (union: string) => string;
+    memoryBehaviorStages: Record<PersonaBehaviorStageKind, { title: string; description: string }>;
+    memoryBehaviorStageEmpty: string;
+    memorySessionsTitle: string;
     skinBase: string;
     skinSpecial: string;
     skinCostume: (index: number) => string;
@@ -538,6 +587,19 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryInsightEpisodes: '최근 기억',
         memoryInsightEmpty: '아직 이 정령이 기억한 내용이 없습니다. 대화를 나누면 브라우저 IndexedDB에 기억이 쌓입니다.',
         memoryInsightCount: (shown, total) => `${total}개 중 최근 ${shown}개`,
+        memoryOverviewTitle: '전체 정령 인사이트',
+        memoryOverviewTotals: (spirits, messages, memories) => `정령 ${spirits} · 메시지 ${messages} · 기억 ${memories}`,
+        memoryOverviewMoodAverage: '정령들의 평균 감정',
+        memoryOverviewDominantCount: (count) => `${count}명`,
+        memoryOverviewSpirits: '정령별 내면 상태',
+        memoryOverviewSpiritStats: (messages, memories) => `메시지 ${messages} · 기억 ${memories}`,
+        memoryOverviewEmpty: '아직 기억을 쌓은 정령이 없습니다. 정령과 대화하면 전체 인사이트가 채워집니다.',
+        memoryInsightReflection: '정령의 내면 상태',
+        maintenanceStatus: {
+            digest: (spiritName) => `${spiritName}이(가) 지난 대화를 기억으로 정리하는 중…`,
+            reflection: (spiritName) => `${spiritName}이(가) 방금 나눈 대화를 마음속으로 되새기는 중…`,
+            consolidation: (spiritName) => `${spiritName}이(가) 쌓인 추억을 하나로 요약하는 중…`,
+        },
         lobby: '로비',
         lobbyTitle: '로비',
         lobbySubtitle: (count) => `선호정령 ${count}명이 함께 있습니다`,
@@ -1020,22 +1082,71 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         rankingPageDescription: '누적 대화와 기억에서 계산된 실제 인연 점수를 모든 정령과 함께 비교합니다.',
         bondScoreLabel: '인연 점수',
         memoryPageTitle: '기억 알고리즘 흐름',
-        memoryPageDescription: '초기 페르소나에서 현재 응답과 장기 기억으로 이어지는 실제 데이터 흐름입니다.',
+        memoryPageDescription: 'DB에 저장된 전체 대화에서 키워드 우선순위·다른 정령과의 관계·내면 상태를 분석해 다음 응답의 행동 절차를 만드는 실제 흐름입니다.',
         memoryGraphConnections: '연결선',
-        memoryContextKinds: { digest: '대화 요약', semantic: '통합 기억', directive: '사용자 지시', episodic: '대화 사건', habit: '자주 나온 화제', affect: '감정 상태', knowledge: '세계관 지식' },
+        memoryContextKinds: { digest: '대화 요약', semantic: '통합 기억', reflection: '내면 상태', directive: '사용자 지시', episodic: '대화 사건', habit: '키워드 스레드', affect: '감정·질투', knowledge: '세계관 지식' },
         memoryFilterTitle: '응답에 쓰는 기억',
-        memoryFilterDescription: '끈 종류는 이 그래프에서 숨겨지고, 정령의 다음 응답 컨텍스트에서도 제외됩니다.',
-        memoryFilterSearchPlaceholder: '정령 이름 또는 영문명',
-        memoryFilterActiveOnly: '대화 기록이 있는 정령만',
-        memoryFilterEmpty: '조건에 맞는 정령이 없습니다.',
-        memoryWorkflowNodes: [
-            { title: '초기 페르소나', description: '프로필·성격·실제 대화 말투 예시' },
-            { title: '최근 대화', description: '시간순 사용자·정령 응답과 현재 세션' },
-            { title: '관련 기억 회상', description: '지시·사실·감정·에피소드 관련도 검색' },
-            { title: '진화한 인연 상태', description: '누적 경험이 말투·반응·감정에 작용' },
-            { title: '정령의 다음 응답', description: '현재 대화의 다음 턴을 페르소나로 표현' },
-            { title: '요약·통합', description: '응답과 핵심 사건을 저장하고 장기 그래프로 압축' },
-        ],
+        memoryFilterDescription: '끈 종류는 정령의 다음 응답 컨텍스트에서 제외됩니다.',
+        memoryFilterSearchPlaceholder: '키워드 검색',
+        memoryFilterEmpty: '표시할 키워드가 없습니다. 정령과 대화를 나누면 키워드 그래프가 쌓입니다.',
+        memoryGraphRecentOnly: '최근 대화 맥락 키워드만',
+        memoryGraphNoSpirit: '정령을 선택하면 그 정령의 기억 그래프를 분석합니다.',
+        memoryGraphSelectHint: '휠로 확대·축소, 빈 곳을 끌어 이동, 노드를 끌어 배치합니다. 키워드나 정령을 누르면 그때 나눈 대화와 정령의 행동이 표시됩니다.',
+        memorySpiritRosterTitle: '분석할 정령',
+        memorySpiritRosterSearch: '정령 이름 검색',
+        memorySpiritRosterEmpty: '검색과 일치하는 정령이 없습니다.',
+        memorySpiritRosterMeta: (level, messageCount) => `Lv.${level} · 메시지 ${messageCount}`,
+        memoryGraphLegend: { query: '방금 입력·언급과 연결', recent: '최근 대화 맥락', history: '누적 기억' },
+        memoryGraphLegendTitle: '그래프 범례',
+        memoryGraphKeywordCounts: (userCount, spiritCount) => `구원자 ${userCount} · 정령 ${spiritCount}`,
+        memoryGraphSaviorValue: (messageCount) => `나눈 메시지 ${messageCount}`,
+        memoryGraphRelationValue: (saviorLevel) => saviorLevel === null ? '구원자와 인연 없음' : `구원자 인연 Lv.${saviorLevel}`,
+        memoryGraphEdgeKinds: {
+            savior_bond: '정령 ↔ 구원자 인연',
+            topic: '함께 나눈 화제 (굵을수록 우선)',
+            canon_bond: '원작 속 정령 간 인연 (굵을수록 깊음)',
+            relation_savior: '다른 정령 ↔ 구원자 인연',
+            rival_attention: '마지막 대화 이후 구원자가 다른 정령과 대화 (질투)',
+            procedure: '응답 행동 절차',
+            session: '이전 세션 흐름',
+        },
+        memoryGraphEdgeTopicLabel: (priority) => `우선도 ${priority}`,
+        memoryGraphEdgeSaviorBondLabel: (level, messageCount) => `인연 Lv.${level} · 메시지 ${messageCount}`,
+        memoryGraphEdgeCanonBondLabel: (strength, sharedUnion) => sharedUnion === null ? `원작 인연 ${strength}` : `같은 소속 ${sharedUnion} · 인연 ${strength}`,
+        memoryGraphEdgeRelationSaviorLabel: (level) => `구원자 인연 Lv.${level}`,
+        memoryGraphEdgeRivalLabel: (messageCount) => `질투 · 메시지 ${messageCount}`,
+        memoryGraphFullscreen: '전체화면',
+        memoryGraphExitFullscreen: '전체화면 종료',
+        memoryGraphResetLayout: '노드 배치 초기화',
+        memoryRelationCanonStats: (interactionCount, mentionCount) => `원작 속 교류 ${interactionCount}회 · 언급 ${mentionCount}회`,
+        memoryRelationSaviorBond: (level, messageCount) => `구원자와의 인연 Lv.${level} · 나눈 메시지 ${messageCount}개`,
+        memoryRelationNoSaviorBond: '아직 구원자와 대화한 기록이 없습니다.',
+        memoryKeywordDetailTitle: (token) => `키워드 · ${token}`,
+        memoryKeywordStats: (userCount, spiritCount, firstSeen, lastSeen) => `구원자 ${userCount}회 · 정령 ${spiritCount}회 · 처음 ${firstSeen} · 최근 ${lastSeen}`,
+        memoryKeywordRecent: (recentCount) => `최근 대화에서 ${recentCount}회`,
+        memoryKeywordQueryMatch: '방금 입력한 말과 연결됨',
+        memoryKeywordSavior: '구원자',
+        memoryKeywordNoEpisodes: '이 키워드와 연결된 대화 기록이 아직 없습니다.',
+        memoryRivalDetailTitle: (name) => `다른 정령 · ${name}`,
+        memoryRivalStats: (userCount, spiritCount, firstAt, latestAt) => `구원자가 보낸 메시지 ${userCount}개 · 답장 ${spiritCount}개 · ${firstAt} ~ ${latestAt}`,
+        memoryRivalNoContact: '마지막 대화 이후 이 정령과 나눈 대화는 없습니다.',
+        memoryRivalTopics: '나눈 화제',
+        memoryRivalSpokeOfYou: (count) => `그 대화에서 이 정령이 ${count}번 언급됨`,
+        memoryRivalMentionedNow: '방금 입력에서 언급됨',
+        memoryRivalCanonBond: (addressForm) => `원작에서 부르는 호칭: ${addressForm}`,
+        memoryRivalSharedUnion: (union) => `같은 소속: ${union}`,
+        memoryBehaviorStages: {
+            input: { title: '구원자의 입력', description: '방금 받은 말·행동·묘사' },
+            keywords: { title: '키워드 스레드', description: '입력·최근 맥락과 연결된 우선 키워드' },
+            recall: { title: '기억 회상', description: '통합 기억과 관련 대화 사건(시간순)' },
+            social: { title: '다른 정령 분석', description: '질투·경쟁을 만드는 대화 기록' },
+            inner_state: { title: '내면 상태', description: '정령이 직접 정리한 마음과 다음 의도' },
+            emotion: { title: '감정', description: '현재 감정 수치' },
+            bond: { title: '인연 단계', description: '친밀도 레벨' },
+            reply: { title: '정령의 응답', description: '가장 최근 응답' },
+        },
+        memoryBehaviorStageEmpty: '아직 데이터 없음',
+        memorySessionsTitle: '이전 대화 세션',
         skinBase: '기본',
         skinSpecial: '특수 스킨',
         skinCostume: (index) => `코스튬 ${index}`,
@@ -1174,6 +1285,19 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryInsightEpisodes: 'Recent Memories',
         memoryInsightEmpty: 'This spirit has no memories yet. Chatting accumulates memories in the browser IndexedDB.',
         memoryInsightCount: (shown, total) => `Latest ${shown} of ${total}`,
+        memoryOverviewTitle: 'All Spirits Insight',
+        memoryOverviewTotals: (spirits, messages, memories) => `${spirits} spirits · ${messages} messages · ${memories} memories`,
+        memoryOverviewMoodAverage: 'Average mood of the spirits',
+        memoryOverviewDominantCount: (count) => `${count}`,
+        memoryOverviewSpirits: 'Inner state by spirit',
+        memoryOverviewSpiritStats: (messages, memories) => `${messages} messages · ${memories} memories`,
+        memoryOverviewEmpty: 'No spirit has built memories yet. Chat with spirits to fill this insight.',
+        memoryInsightReflection: 'Spirit\'s inner state',
+        maintenanceStatus: {
+            digest: (spiritName) => `${spiritName} is summarizing your earlier conversation into memory…`,
+            reflection: (spiritName) => `${spiritName} is reflecting on what you just shared…`,
+            consolidation: (spiritName) => `${spiritName} is gathering your memories together…`,
+        },
         lobby: 'Lobby',
         lobbyTitle: 'Lobby',
         lobbySubtitle: (count) => `${count} preferred spirits are here with you`,
@@ -1656,22 +1780,71 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         rankingPageDescription: 'Compare every spirit using real bond scores calculated from accumulated conversations and memories.',
         bondScoreLabel: 'Bond score',
         memoryPageTitle: 'Memory Algorithm Flow',
-        memoryPageDescription: 'The live data flow from the starting persona through the current response and long-term memory.',
+        memoryPageDescription: 'The live flow that analyzes every stored conversation for keyword priority, relationships with other spirits and inner state to build the behavior steps of the next reply.',
         memoryGraphConnections: 'connections',
-        memoryContextKinds: { digest: 'Chat summary', semantic: 'Consolidated memory', directive: 'User directive', episodic: 'Conversation event', habit: 'Frequent topic', affect: 'Emotional state', knowledge: 'World knowledge' },
+        memoryContextKinds: { digest: 'Chat summary', semantic: 'Consolidated memory', reflection: 'Inner state', directive: 'User directive', episodic: 'Conversation event', habit: 'Keyword threads', affect: 'Emotion & jealousy', knowledge: 'World knowledge' },
         memoryFilterTitle: 'Memories used in replies',
-        memoryFilterDescription: 'Kinds you turn off are hidden in this graph and also left out of the spirit\'s next reply context.',
-        memoryFilterSearchPlaceholder: 'Spirit name or English name',
-        memoryFilterActiveOnly: 'Only spirits with conversation history',
-        memoryFilterEmpty: 'No spirit matches these filters.',
-        memoryWorkflowNodes: [
-            { title: 'Starting persona', description: 'Profile, personality, and real dialogue voice examples' },
-            { title: 'Recent conversation', description: 'Time-ordered user and spirit replies in the current session' },
-            { title: 'Relevant recall', description: 'Retrieves directives, facts, feelings, and episodes by relevance' },
-            { title: 'Evolved bond state', description: 'Shared experience changes voice, reaction, and emotion' },
-            { title: 'Spirit\'s next reply', description: 'Expresses the next conversational turn in character' },
-            { title: 'Summarize and consolidate', description: 'Stores the reply and key events into a compressed long-term graph' },
-        ],
+        memoryFilterDescription: 'Kinds you turn off are left out of the spirit\'s next reply context.',
+        memoryFilterSearchPlaceholder: 'Search keywords',
+        memoryFilterEmpty: 'No keywords to show yet. Talk with the spirit and the keyword graph will grow.',
+        memoryGraphRecentOnly: 'Only keywords in the recent conversation',
+        memoryGraphNoSpirit: 'Select a spirit to analyze that spirit\'s memory graph.',
+        memoryGraphSelectHint: 'Scroll to zoom, drag empty space to pan, drag nodes to arrange. Select a keyword or spirit to see the conversations and what the spirit did at the time.',
+        memorySpiritRosterTitle: 'Spirit to analyze',
+        memorySpiritRosterSearch: 'Search spirit name',
+        memorySpiritRosterEmpty: 'No spirit matches the search.',
+        memorySpiritRosterMeta: (level, messageCount) => `Lv.${level} · ${messageCount} messages`,
+        memoryGraphLegend: { query: 'Linked to the latest input or mention', recent: 'Recent conversation', history: 'Accumulated memory' },
+        memoryGraphLegendTitle: 'Graph legend',
+        memoryGraphKeywordCounts: (userCount, spiritCount) => `Savior ${userCount} · Spirit ${spiritCount}`,
+        memoryGraphSaviorValue: (messageCount) => `${messageCount} messages shared`,
+        memoryGraphRelationValue: (saviorLevel) => saviorLevel === null ? 'No bond with the Savior' : `Savior bond Lv.${saviorLevel}`,
+        memoryGraphEdgeKinds: {
+            savior_bond: 'Spirit ↔ Savior bond',
+            topic: 'Shared topics (thicker = higher priority)',
+            canon_bond: 'Canon bond between spirits (thicker = deeper)',
+            relation_savior: 'Other spirit ↔ Savior bond',
+            rival_attention: 'Savior talked with another spirit since the last chat (jealousy)',
+            procedure: 'Reply behavior steps',
+            session: 'Earlier session flow',
+        },
+        memoryGraphEdgeTopicLabel: (priority) => `priority ${priority}`,
+        memoryGraphEdgeSaviorBondLabel: (level, messageCount) => `bond Lv.${level} · ${messageCount} messages`,
+        memoryGraphEdgeCanonBondLabel: (strength, sharedUnion) => sharedUnion === null ? `canon bond ${strength}` : `same group ${sharedUnion} · bond ${strength}`,
+        memoryGraphEdgeRelationSaviorLabel: (level) => `Savior bond Lv.${level}`,
+        memoryGraphEdgeRivalLabel: (messageCount) => `jealousy · ${messageCount} messages`,
+        memoryGraphFullscreen: 'Full screen',
+        memoryGraphExitFullscreen: 'Exit full screen',
+        memoryGraphResetLayout: 'Reset node layout',
+        memoryRelationCanonStats: (interactionCount, mentionCount) => `${interactionCount} canon interactions · ${mentionCount} mentions`,
+        memoryRelationSaviorBond: (level, messageCount) => `Bond with the Savior Lv.${level} · ${messageCount} messages`,
+        memoryRelationNoSaviorBond: 'No conversation with the Savior yet.',
+        memoryKeywordDetailTitle: (token) => `Keyword · ${token}`,
+        memoryKeywordStats: (userCount, spiritCount, firstSeen, lastSeen) => `Savior ${userCount}× · Spirit ${spiritCount}× · first ${firstSeen} · latest ${lastSeen}`,
+        memoryKeywordRecent: (recentCount) => `${recentCount}× in the recent conversation`,
+        memoryKeywordQueryMatch: 'Linked to what was just said',
+        memoryKeywordSavior: 'Savior',
+        memoryKeywordNoEpisodes: 'No conversation is linked to this keyword yet.',
+        memoryRivalDetailTitle: (name) => `Other spirit · ${name}`,
+        memoryRivalStats: (userCount, spiritCount, firstAt, latestAt) => `${userCount} messages from the Savior · ${spiritCount} replies · ${firstAt} – ${latestAt}`,
+        memoryRivalNoContact: 'No conversation with this spirit since the last chat.',
+        memoryRivalTopics: 'Topics',
+        memoryRivalSpokeOfYou: (count) => `This spirit was mentioned ${count} times there`,
+        memoryRivalMentionedNow: 'Mentioned in the latest input',
+        memoryRivalCanonBond: (addressForm) => `Canon form of address: ${addressForm}`,
+        memoryRivalSharedUnion: (union) => `Same group: ${union}`,
+        memoryBehaviorStages: {
+            input: { title: 'Savior\'s input', description: 'Words, actions and descriptions just received' },
+            keywords: { title: 'Keyword threads', description: 'Priority keywords linked to the input and recent context' },
+            recall: { title: 'Memory recall', description: 'Consolidated memory and related events in time order' },
+            social: { title: 'Other spirits', description: 'Conversations that drive jealousy and rivalry' },
+            inner_state: { title: 'Inner state', description: 'The spirit\'s own heart and next intention' },
+            emotion: { title: 'Emotion', description: 'Current emotion levels' },
+            bond: { title: 'Bond stage', description: 'Familiarity level' },
+            reply: { title: 'Spirit\'s reply', description: 'Latest reply' },
+        },
+        memoryBehaviorStageEmpty: 'No data yet',
+        memorySessionsTitle: 'Earlier sessions',
         skinBase: 'Default',
         skinSpecial: 'Special skin',
         skinCostume: (index) => `Costume ${index}`,
@@ -1810,6 +1983,19 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryInsightEpisodes: '最近记忆',
         memoryInsightEmpty: '这位精灵还没有记忆。对话后会在浏览器 IndexedDB 中积累记忆。',
         memoryInsightCount: (shown, total) => `${total} 条中最近 ${shown} 条`,
+        memoryOverviewTitle: '全体精灵洞察',
+        memoryOverviewTotals: (spirits, messages, memories) => `精灵 ${spirits} · 消息 ${messages} · 记忆 ${memories}`,
+        memoryOverviewMoodAverage: '精灵们的平均情绪',
+        memoryOverviewDominantCount: (count) => `${count}位`,
+        memoryOverviewSpirits: '各精灵的内心状态',
+        memoryOverviewSpiritStats: (messages, memories) => `消息 ${messages} · 记忆 ${memories}`,
+        memoryOverviewEmpty: '还没有积累记忆的精灵。与精灵对话后将填充全体洞察。',
+        memoryInsightReflection: '精灵的内心状态',
+        maintenanceStatus: {
+            digest: (spiritName) => `${spiritName}正在把之前的对话整理成回忆…`,
+            reflection: (spiritName) => `${spiritName}正在心里回味刚才的对话…`,
+            consolidation: (spiritName) => `${spiritName}正在汇总你们累积的回忆…`,
+        },
         lobby: '大厅',
         lobbyTitle: '大厅',
         lobbySubtitle: (count) => `${count} 位偏好精灵与你同在`,
@@ -2292,22 +2478,71 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         rankingPageDescription: '依据累积对话与记忆计算的真实羁绊分数，比较所有精灵。',
         bondScoreLabel: '羁绊分数',
         memoryPageTitle: '记忆算法流程',
-        memoryPageDescription: '从初始角色设定到当前回复与长期记忆的实际数据流程。',
+        memoryPageDescription: '从数据库中保存的全部对话分析关键词优先级、与其他精灵的关系和内心状态，构建下一次回复行为步骤的实际流程。',
         memoryGraphConnections: '连接线',
-        memoryContextKinds: { digest: '对话摘要', semantic: '整合记忆', directive: '用户指示', episodic: '对话事件', habit: '常聊话题', affect: '情绪状态', knowledge: '世界观知识' },
+        memoryContextKinds: { digest: '对话摘要', semantic: '整合记忆', reflection: '内心状态', directive: '用户指示', episodic: '对话事件', habit: '关键词线索', affect: '情绪与吃醋', knowledge: '世界观知识' },
         memoryFilterTitle: '用于回复的记忆',
-        memoryFilterDescription: '关闭的类型会在此图中隐藏，也不会进入精灵下一次回复的上下文。',
-        memoryFilterSearchPlaceholder: '精灵名称或英文名',
-        memoryFilterActiveOnly: '仅显示有对话记录的精灵',
-        memoryFilterEmpty: '没有符合条件的精灵。',
-        memoryWorkflowNodes: [
-            { title: '初始角色设定', description: '档案、性格与真实对话语气示例' },
-            { title: '最近对话', description: '当前会话中按时间排序的用户与精灵回复' },
-            { title: '相关记忆召回', description: '按相关度检索指示、事实、感情与事件' },
-            { title: '进化后的羁绊状态', description: '共同经历改变语气、反应与情感' },
-            { title: '精灵的下一句回复', description: '以角色身份表达对话的下一回合' },
-            { title: '摘要与整合', description: '保存回复与关键事件并压缩为长期图谱' },
-        ],
+        memoryFilterDescription: '关闭的类型不会进入精灵下一次回复的上下文。',
+        memoryFilterSearchPlaceholder: '搜索关键词',
+        memoryFilterEmpty: '暂无可显示的关键词。与精灵对话后关键词图谱会逐渐形成。',
+        memoryGraphRecentOnly: '仅显示最近对话中的关键词',
+        memoryGraphNoSpirit: '选择精灵后将分析该精灵的记忆图谱。',
+        memoryGraphSelectHint: '滚轮缩放，拖动空白处平移，拖动节点调整布局。点击关键词或精灵，查看当时的对话与精灵的行动。',
+        memorySpiritRosterTitle: '分析的精灵',
+        memorySpiritRosterSearch: '搜索精灵名称',
+        memorySpiritRosterEmpty: '没有与搜索匹配的精灵。',
+        memorySpiritRosterMeta: (level, messageCount) => `Lv.${level} · 消息 ${messageCount}`,
+        memoryGraphLegend: { query: '与刚才的输入或提及相关', recent: '最近对话脉络', history: '累积记忆' },
+        memoryGraphLegendTitle: '图谱图例',
+        memoryGraphKeywordCounts: (userCount, spiritCount) => `救援者 ${userCount} · 精灵 ${spiritCount}`,
+        memoryGraphSaviorValue: (messageCount) => `交流消息 ${messageCount}`,
+        memoryGraphRelationValue: (saviorLevel) => saviorLevel === null ? '与救援者尚无羁绊' : `救援者羁绊 Lv.${saviorLevel}`,
+        memoryGraphEdgeKinds: {
+            savior_bond: '精灵 ↔ 救援者羁绊',
+            topic: '共同聊过的话题（越粗优先度越高）',
+            canon_bond: '原作中精灵之间的羁绊（越粗越深）',
+            relation_savior: '其他精灵 ↔ 救援者羁绊',
+            rival_attention: '上次对话后救援者与其他精灵聊天（吃醋）',
+            procedure: '回复行为步骤',
+            session: '之前的对话流程',
+        },
+        memoryGraphEdgeTopicLabel: (priority) => `优先度 ${priority}`,
+        memoryGraphEdgeSaviorBondLabel: (level, messageCount) => `羁绊 Lv.${level} · 消息 ${messageCount}`,
+        memoryGraphEdgeCanonBondLabel: (strength, sharedUnion) => sharedUnion === null ? `原作羁绊 ${strength}` : `同属 ${sharedUnion} · 羁绊 ${strength}`,
+        memoryGraphEdgeRelationSaviorLabel: (level) => `救援者羁绊 Lv.${level}`,
+        memoryGraphEdgeRivalLabel: (messageCount) => `吃醋 · 消息 ${messageCount}`,
+        memoryGraphFullscreen: '全屏',
+        memoryGraphExitFullscreen: '退出全屏',
+        memoryGraphResetLayout: '重置节点布局',
+        memoryRelationCanonStats: (interactionCount, mentionCount) => `原作交流 ${interactionCount} 次 · 提及 ${mentionCount} 次`,
+        memoryRelationSaviorBond: (level, messageCount) => `与救援者的羁绊 Lv.${level} · 消息 ${messageCount} 条`,
+        memoryRelationNoSaviorBond: '尚无与救援者的对话记录。',
+        memoryKeywordDetailTitle: (token) => `关键词 · ${token}`,
+        memoryKeywordStats: (userCount, spiritCount, firstSeen, lastSeen) => `救援者 ${userCount} 次 · 精灵 ${spiritCount} 次 · 首次 ${firstSeen} · 最近 ${lastSeen}`,
+        memoryKeywordRecent: (recentCount) => `最近对话中 ${recentCount} 次`,
+        memoryKeywordQueryMatch: '与刚才说的话相关',
+        memoryKeywordSavior: '救援者',
+        memoryKeywordNoEpisodes: '暂无与该关键词相关的对话记录。',
+        memoryRivalDetailTitle: (name) => `其他精灵 · ${name}`,
+        memoryRivalStats: (userCount, spiritCount, firstAt, latestAt) => `救援者发送 ${userCount} 条 · 回复 ${spiritCount} 条 · ${firstAt} ~ ${latestAt}`,
+        memoryRivalNoContact: '上次对话后没有与该精灵的对话。',
+        memoryRivalTopics: '聊过的话题',
+        memoryRivalSpokeOfYou: (count) => `在那些对话中提到该精灵 ${count} 次`,
+        memoryRivalMentionedNow: '在刚才的输入中被提到',
+        memoryRivalCanonBond: (addressForm) => `原作中的称呼：${addressForm}`,
+        memoryRivalSharedUnion: (union) => `同属：${union}`,
+        memoryBehaviorStages: {
+            input: { title: '救援者的输入', description: '刚收到的话语、行动与描写' },
+            keywords: { title: '关键词线索', description: '与输入和最近脉络相关的优先关键词' },
+            recall: { title: '记忆召回', description: '整合记忆与相关事件（按时间顺序）' },
+            social: { title: '其他精灵分析', description: '引发吃醋与竞争的对话记录' },
+            inner_state: { title: '内心状态', description: '精灵自己整理的心情与下一步意图' },
+            emotion: { title: '情绪', description: '当前情绪数值' },
+            bond: { title: '羁绊阶段', description: '亲密度等级' },
+            reply: { title: '精灵的回复', description: '最近一次回复' },
+        },
+        memoryBehaviorStageEmpty: '暂无数据',
+        memorySessionsTitle: '之前的对话',
         skinBase: '默认',
         skinSpecial: '特殊皮肤',
         skinCostume: (index) => `服装 ${index}`,

@@ -13,6 +13,7 @@ import {
     GGUF_RESPONSE_TOKEN_LIMIT,
 } from '../constants';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
+import { composeOnDeviceConversationMessages } from '../turn';
 import type {
     GgufLoadedModel,
     GgufLoadingModel,
@@ -95,15 +96,11 @@ async function ensureModelLoaded(fileName: string): Promise<Wllama> {
     return wllama;
 }
 
-function toChatMessages(request: OnDeviceGenerationRequest, behaviorInstruction: string): ChatCompletionMessage[] {
-    const lastIndex = request.messages.length - 1;
+function toChatMessages(request: OnDeviceGenerationRequest): ChatCompletionMessage[] {
     return [
         { role: 'system', content: request.session_prompt.system_prompt },
         ...request.session_prompt.priming_messages.map((message): ChatCompletionMessage => ({ role: message.role, content: message.content })),
-        ...request.messages.map((message, index): ChatCompletionMessage => ({
-            role: message.role,
-            content: index === lastIndex ? `${message.content}${behaviorInstruction}` : message.content,
-        })),
+        ...composeOnDeviceConversationMessages(request).map((message): ChatCompletionMessage => ({ role: message.role, content: message.content })),
     ];
 }
 
@@ -150,7 +147,7 @@ export const ggufRuntime = {
             const instance = await ensureModelLoaded(fileName);
             recordRequestStatus({ ...status, state: 'running' });
             await instance.createChatCompletion({
-                messages: toChatMessages(request, request.behavior_instruction),
+                messages: toChatMessages(request),
                 stream: true,
                 abortSignal: request.signal,
                 max_tokens: GGUF_RESPONSE_TOKEN_LIMIT,
@@ -185,12 +182,12 @@ export const ggufRuntime = {
             };
             focusedPersonaAccess = Date.now();
             recordRequestStatus({ ...status, state: 'completed', prompt_tokens: promptTokens, generated_tokens: generatedTokens });
-            return { text: generatedText, cancelled: false };
+            return { text: generatedText, cancelled: false, truncated_message_count: 0 };
         }
         catch (error) {
             if (isAbortError(error) || (error instanceof Error && error.name === 'AbortError') || request.signal.aborted) {
                 recordRequestStatus({ ...status, state: 'cancelled' });
-                return { text: generatedText, cancelled: true };
+                return { text: generatedText, cancelled: true, truncated_message_count: 0 };
             }
             recordRequestStatus({ ...status, state: 'failed', error_message: describeUnknownError(error) });
             throw error;

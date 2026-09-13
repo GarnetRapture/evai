@@ -9,7 +9,7 @@ npm run native:configure
 npm run native:build
 ```
 
-CMake는 SQLite 3.53.4 공식 amalgamation을 SHA3-256으로 검증해 빌드 디렉터리에만 받는다. 저장소에 vendor 파일이나 빌드 산출물을 커밋하지 않는다. 실행 파일은 `native/build/eversoul-native-host` 또는 Windows의 `native/build/eversoul-native-host.exe`다. `--db`를 생략하면 DB는 작업 디렉터리가 아니라 반드시 실행 파일과 같은 디렉터리의 `eversoul-context.sqlite3`로 생성된다.
+CMake는 SQLite 3.53.4 공식 amalgamation을 SHA3-256으로 검증해 빌드 디렉터리에만 받는다. 저장소에 vendor 파일이나 빌드 산출물을 커밋하지 않는다. 실행 파일은 `native/build/eversoul-native-host` 또는 Windows의 `native/build/eversoul-native-host.exe`이며 부트스트랩·통신·모델 서빙을 담당한다. SQLite 대화/기억 저장소 관리자는 같은 폴더의 `eversoul-context-database.dll`(Linux `libeversoul-context-database.so`)로 분리되어 C ABI(`src/context_database/context_database_api.h`)로만 호출되며, 할당한 모듈이 해제한다. `--db`를 생략하면 DB는 작업 디렉터리가 아니라 반드시 실행 파일과 같은 디렉터리의 `eversoul-context.sqlite3`로 생성된다.
 
 ## 통신 계약
 
@@ -25,7 +25,7 @@ native/build/eversoul-native-host --jsonl
 
 ## 모델 서빙
 
-`third_party/LiteRT-LM`의 실제 소스로 추론 라이브러리를 빌드한다. CMake와 C++23 이상 컴파일러, Bazelisk/Bazel 및 upstream 네이티브 빌드 도구가 필요하다. `EVERSOUL_LITERT_LM_SOURCE_DIR`로 체크아웃 위치를 지정할 수 있다. 코어와 의존성의 소스만 빌드 디렉터리로 복사하고 C API의 `engine.cc`, `conversation.cc`, `error_reporter.cc`를 빌드한다. 원본 체크아웃·Android·TypeScript는 수정하지 않는다. 릴리스 C API DLL을 내려받아 대체하지 않는다. 코어 헤더와 소스는 SHA-256 일치를 확인하며 해당 소스에 포함된 플랫폼 가속기만 함께 배포한다.
+`third_party/LiteRT-LM`의 실제 소스로 추론 라이브러리를 빌드한다. CMake와 C++23 이상 컴파일러, Bazelisk/Bazel, Rust(cargo) 및 upstream 네이티브 빌드 도구가 필요하다. upstream의 Rust 구성요소(minijinja 템플릿, 도구 호출 파서, llguidance, HuggingFace tokenizers C API)는 cargo로 `eversoul_litert_rust.dll` 하나로 빌드하고, 코어는 cxx 브리지 헤더와 가져오기 라이브러리로 이 DLL을 호출한다. `EVERSOUL_LITERT_LM_SOURCE_DIR`로 체크아웃 위치를 지정할 수 있다. 코어와 의존성의 소스만 빌드 디렉터리로 복사하고 C API의 `engine.cc`, `conversation.cc`, `error_reporter.cc`를 빌드한다. 원본 체크아웃·Android·TypeScript는 수정하지 않는다. 릴리스 C API DLL을 내려받아 대체하지 않는다. 코어 헤더와 소스는 SHA-256 일치를 확인하며 해당 소스에 포함된 플랫폼 가속기만 함께 배포한다.
 
 `configure_model`, `load_model`, `unload_model`, `model_status`, `start_generation`, `generation_status`, `cancel_generation`, `generate`가 기존 프론트엔드의 JSON 계약을 사용한다. 모델은 `.litertlm` 또는 `.task` 파일이나 해당 파일 하나가 들어 있는 폴더를 지정한다. 폴더에 후보가 여러 개면 `model_file`을 지정해야 한다. GPU 엔진 생성 실패 시 CPU로 시도하고 `active_backend`에는 실제 성공한 백엔드를 반환한다. 일반 GGUF 파일이나 Chrome 내부 모델 파일을 LiteRT-LM 모델로 간주하지 않는다.
 

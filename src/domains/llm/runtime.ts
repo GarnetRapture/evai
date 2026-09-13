@@ -16,6 +16,7 @@ import {
     PERSONA_SESSION_SAMPLING_MODE,
 } from './constants';
 import { createQueuedRequestStatus, recordRequestStatus } from './requests';
+import { composeOnDeviceTurnMessage } from './turn';
 import type {
     BaseModelSession,
     BudgetedMessages,
@@ -27,6 +28,7 @@ import type {
     OnDeviceGenerationRequest,
     OnDeviceGenerationResult,
     OnDeviceTextMessage,
+    OnDeviceTurnContextSection,
     PersonaModelSession,
     PersonaModelSessionCreation,
     PersonaModelSessionIdentity,
@@ -77,51 +79,81 @@ async function createPersonaModelSession(identity: PersonaModelSessionIdentity, 
     };
 }
 
-async function selectMessagesWithinBudget(
-    conversation: LanguageModel,
-    history: OnDeviceTextMessage[],
-    behaviorInstruction: string,
-): Promise<BudgetedMessages> {
+function toLanguageModelMessage(message: OnDeviceTextMessage): LanguageModelMessage {
+    return { role: message.role, content: message.content };
+}
+
+function assembleBudgetedMessages(
+    request: OnDeviceGenerationRequest,
+    includedPrefix: ReadonlySet<number>,
+    includedHistory: ReadonlySet<number>,
+    includedSections: ReadonlySet<OnDeviceTurnContextSection>,
+): LanguageModelMessage[] {
+    return [
+        ...request.prefix_messages.filter((_, index) => includedPrefix.has(index)).map(toLanguageModelMessage),
+        ...request.history_messages.filter((_, index) => includedHistory.has(index)).map(toLanguageModelMessage),
+        toLanguageModelMessage(composeOnDeviceTurnMessage(request.turn, includedSections, request.behavior_instruction)),
+    ];
+}
+
+async function selectMessagesWithinBudget(conversation: LanguageModel, request: OnDeviceGenerationRequest): Promise<BudgetedMessages> {
     const budget = conversation.contextWindow - conversation.contextUsage - CHAT_RESPONSE_TOKEN_RESERVE;
-    const lastIndex = history.length - 1;
-    const allMessages: LanguageModelMessage[] = history.map((source, index) => ({
-        role: source.role,
-        content: index === lastIndex ? `${source.content}${behaviorInstruction}` : source.content,
-    }));
+    const allPrefix = new Set(request.prefix_messages.map((_, index) => index));
+    const allHistory = new Set(request.history_messages.map((_, index) => index));
+    const allSections = new Set(request.turn.context_sections);
+    const allMessages = assembleBudgetedMessages(request, allPrefix, allHistory, allSections);
     const allMessagesUsage = await conversation.measureContextUsage(allMessages);
     if (allMessagesUsage <= budget) {
-        return { messages: allMessages, truncated_tokens: 0, prompt_tokens: allMessagesUsage };
+        return { messages: allMessages, truncated_tokens: 0, truncated_message_count: 0, prompt_tokens: allMessagesUsage };
     }
-    const selectedNewestFirst: LanguageModelMessage[] = [];
-    let truncatedTokens = 0;
-    for (let index = lastIndex; index >= 0; index -= 1) {
-        const source = history[index];
-        const block: LanguageModelMessage = {
-            role: source.role,
-            content: index === lastIndex ? `${source.content}${behaviorInstruction}` : source.content,
-        };
-        if (index === lastIndex) {
-            selectedNewestFirst.push(block);
-            continue;
-        }
-        const candidate = [block, ...[...selectedNewestFirst].reverse()];
-        const usage = await conversation.measureContextUsage(candidate);
-        const withinReservedBudget = usage <= budget;
-        const belowMinimumHistory = selectedNewestFirst.length < CHAT_MINIMUM_HISTORY_TURNS;
-        const fitsAbsoluteWindow = usage <= conversation.contextWindow - conversation.contextUsage;
-        if (!withinReservedBudget && !(belowMinimumHistory && fitsAbsoluteWindow)) {
-            for (let older = index; older >= 0; older -= 1) {
-                truncatedTokens += await conversation.measureContextUsage([{
-                    role: history[older].role,
-                    content: history[older].content,
-                }]);
-            }
+    const includedPrefix = new Set<number>();
+    const includedHistory = new Set<number>();
+    const includedSections = new Set<OnDeviceTurnContextSection>();
+    const fits = async (): Promise<boolean> => (await conversation.measureContextUsage(assembleBudgetedMessages(request, includedPrefix, includedHistory, includedSections))) <= budget;
+    const newestHistory = [...allHistory].reverse();
+    for (const index of newestHistory.slice(0, CHAT_MINIMUM_HISTORY_TURNS)) {
+        includedHistory.add(index);
+        if (!(await fits())) {
+            includedHistory.delete(index);
             break;
         }
-        selectedNewestFirst.push(block);
     }
-    const selected = selectedNewestFirst.reverse();
-    return { messages: selected, truncated_tokens: truncatedTokens, prompt_tokens: await conversation.measureContextUsage(selected) };
+    const prioritizedSections = [...request.turn.context_sections].sort((left, right) => left.priority - right.priority);
+    for (const section of prioritizedSections) {
+        includedSections.add(section);
+        if (!(await fits())) {
+            includedSections.delete(section);
+        }
+    }
+    for (const index of newestHistory.slice(CHAT_MINIMUM_HISTORY_TURNS)) {
+        includedHistory.add(index);
+        if (!(await fits())) {
+            includedHistory.delete(index);
+            break;
+        }
+    }
+    for (const index of [...allPrefix].reverse()) {
+        includedPrefix.add(index);
+        if (!(await fits())) {
+            includedPrefix.delete(index);
+            break;
+        }
+    }
+    const droppedHistory = request.history_messages.filter((_, index) => !includedHistory.has(index));
+    const droppedPrefix = request.prefix_messages.filter((_, index) => !includedPrefix.has(index));
+    const droppedSections = request.turn.context_sections.filter((section) => !includedSections.has(section));
+    const truncatedTokens = await conversation.measureContextUsage([
+        ...droppedPrefix.map(toLanguageModelMessage),
+        ...droppedHistory.map(toLanguageModelMessage),
+        ...droppedSections.map((section): LanguageModelMessage => ({ role: 'user', content: section.text })),
+    ]);
+    const selected = assembleBudgetedMessages(request, includedPrefix, includedHistory, includedSections);
+    return {
+        messages: selected,
+        truncated_tokens: truncatedTokens,
+        truncated_message_count: droppedHistory.length,
+        prompt_tokens: await conversation.measureContextUsage(selected),
+    };
 }
 
 export const chromePromptRuntime = {
@@ -243,7 +275,7 @@ export const chromePromptRuntime = {
             const conversation = await entry.session.clone({ signal });
             try {
                 const reusedPrefixTokens = conversation.contextUsage;
-                const budgeted = await selectMessagesWithinBudget(conversation, request.messages, request.behavior_instruction);
+                const budgeted = await selectMessagesWithinBudget(conversation, request);
                 const promptTokens = budgeted.prompt_tokens;
                 recordRequestStatus({
                     ...status,
@@ -273,7 +305,7 @@ export const chromePromptRuntime = {
                     cache_reset: entry.cache_reset,
                 };
                 recordRequestStatus({ ...status, state: 'completed', prompt_tokens: promptTokens, generated_tokens: generatedTokens, reused_prefix_tokens: reusedPrefixTokens, truncated_prompt_tokens: budgeted.truncated_tokens, cache_reset: entry.cache_reset });
-                return { text: generatedText, cancelled: false };
+                return { text: generatedText, cancelled: false, truncated_message_count: budgeted.truncated_message_count };
             }
             finally {
                 conversation.destroy();
@@ -282,7 +314,7 @@ export const chromePromptRuntime = {
         catch (error) {
             if (isAbortError(error) || signal.aborted) {
                 recordRequestStatus({ ...status, state: 'cancelled' });
-                return { text: generatedText, cancelled: true };
+                return { text: generatedText, cancelled: true, truncated_message_count: 0 };
             }
             recordRequestStatus({ ...status, state: 'failed', error_message: error instanceof Error ? error.message : String(error) });
             throw error;

@@ -38,8 +38,8 @@ export interface FamiliarityLevelInfo {
     progressRatio: number;
 }
 
-export function familiarityScore(messageCount: number, memoryCount: number): number {
-    return Math.max(0, messageCount) + Math.max(0, memoryCount) * FAMILIARITY_MEMORY_WEIGHT;
+export function familiarityScore(messageCount: number, memoryCount: number, affinityExp: number): number {
+    return Math.max(0, messageCount) + Math.max(0, memoryCount) * FAMILIARITY_MEMORY_WEIGHT + Math.max(0, affinityExp);
 }
 
 export function familiarityCumulativeExp(level: number): number {
