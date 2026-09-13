@@ -8,12 +8,13 @@
 </p>
 
 <h1 align="center">EverSoul AI Chat</h1>
-<p align="center"><i>브라우저 로컬 AI와 선택형 네이티브 SQLite를 연결한 서브컬처 인연 채팅</i></p>
+<p align="center"><i>Chrome 온디바이스 AI와 내 PC의 Ollama로 돌아가는 에버소울 정령 채팅</i></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.0.3-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.0.4-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/license-Apache_2.0-green?style=flat-square" alt="License" />
   <img src="https://img.shields.io/badge/Chrome-Prompt_API-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome Prompt API" />
+  <img src="https://img.shields.io/badge/Ollama-local-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
   <img src="https://img.shields.io/badge/React-19.3-61DAFB?style=flat-square&logo=react" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-7.0-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Vite-8.3-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
@@ -31,16 +32,24 @@
 </p>
 
 <p align="center">
-  <sub>PC Chrome의 Prompt API 또는 최신 데스크톱 브라우저의 GGUF 로컬 모델을 사용하며, 네이티브 SQLite 확장은 고객이 선택합니다.</sub>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/Actions-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-local-server.yml"><img src="https://img.shields.io/badge/Actions-Build_Local_Server-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Local Server workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/releases"><img src="https://img.shields.io/badge/Releases-릴리스_노트-6e7781?style=for-the-badge&logo=github&logoColor=white" alt="Releases" /></a>
+</p>
+
+<p align="center">
+  <sub>Chrome에서는 브라우저에 내장된 AI를, 그 밖의 브라우저에서는 내 PC에 설치한 Ollama를 대화 엔진으로 씁니다.</sub>
 </p>
 
 ---
 
-## 🌟 개요
+## 개요
 
-**EverSoul AI Chat**은 에버소울을 간직할 새로운 AI 채팅 프로젝트입니다. 정령들의 기억을 보존한다는 의미로 만들었습니다. 에버소울에 등장하는 정령 99명을 실제 게임 데이터 그대로 불러와, 각자의 성격과 말투로 자유롭게 대화할 수 있습니다.
+**EverSoul AI Chat**은 에버소울을 간직하려고 만든 AI 채팅 프로젝트입니다. 정령들의 기억을 남겨 두자는 마음으로 시작했습니다. 게임에 나오는 정령 99명을 실제 게임 데이터 그대로 불러와서, 정령마다 자기 성격과 말투로 대화합니다.
 
-이 프로젝트는 로컬 우선 웹 앱입니다. Chrome에서는 내장 Prompt API를, 최신 데스크톱 브라우저에서는 GGUF/Wllama를 사용할 수 있습니다. 대화·기억·설정은 IndexedDB에 저장되고, 고객이 네이티브 확장을 선택하면 EXE 옆 SQLite에도 미러링됩니다. 저장된 데이터는 PC 파일로 내보내거나 PC 폴더에 자동 백업할 수 있습니다.
+서버에 대화를 보내지 않는 로컬 우선 웹 앱입니다. Chrome에서는 브라우저에 내장된 Prompt API 모델을 쓰고, Firefox 같은 다른 브라우저에서는 내 PC에서 돌고 있는 Ollama에 직접 연결합니다. 대화와 기억, 설정은 브라우저 IndexedDB에만 저장되고, 필요하면 PC 파일로 내보내거나 PC 폴더에 자동으로 백업할 수 있습니다.
+
+웹 서버를 따로 띄우기 번거로우면 `evai-server` 실행기를 쓰면 됩니다. 빌드된 웹 파일 옆에 두고 실행하면 이 PC에서만 접속할 수 있는 주소로 앱을 열어 줍니다.
 
 정령 99명 전원의 실제 게임 그림, 대화 배경 522장, 에버톡 화면에서 쓰던 UI까지 프로젝트 안에 그대로 담아뒀습니다. 각 정령의 이름과 성격, 말투는 `data/personas/`에 정령마다 하나씩 정리되어 있고, 한국어·영어·중국어(번체/간체) 언어별 값이 미리 준비되어 있어서 언어를 바꿔도 그 정령다움은 그대로 유지됩니다.
 
@@ -55,7 +64,7 @@
 
 ---
 
-## 🎨 전체 정령 갤러리 (99종)
+## 전체 정령 갤러리 (99종)
 
 `data/personas/*.json` 99개 파일을 전부 살펴서 정령 그림과 한국어(ko)·영어(en)·중국어 간체(zh_cn) 이름을 실제 데이터 그대로 나열한 도감입니다. 그림 폴더 이름은 `src/domains/persona/logic.ts`의 `resolveSpiritAssetFolder`가 찾는 방식 그대로 가져왔습니다(게임 내 표시명과 실제 그림 폴더명이 다른 27명은 `explicitAssetFolders` 매핑을, 그림 파일 접두사가 폴더명과 다른 Canney·Casper·Irene은 `assetFilePrefixes` 매핑을 그대로 따랐습니다).
 
@@ -204,18 +213,33 @@
 
 ---
 
-## 🚀 주요 기능
+## 어떤 브라우저에서 쓰나요
 
-- 💻 **PC 로컬 AI**: Chrome은 내장 Prompt API를, 최신 데스크톱 브라우저는 설치한 GGUF 모델을 WebGPU 또는 CPU로 실행합니다.
-- 🔒 **실행 환경과 첫 진입 안내**: 데스크톱 브라우저는 진입할 수 있고, 초기 설정에서 사용 가능한 모델 경로와 IndexedDB/네이티브 SQLite 저장소 선택을 안내합니다.
-- 🎭 **99명의 정령, 각자의 성격 그대로**: 이름과 등급, 종족, 직업, 생일, 좋아하는 것, 대표 대사와 에버톡 대화 예시까지 불러와 정령마다 시스템 프롬프트를 만들고, 그 정령답게 말하도록 합니다.
-- 🧠 **정령이 나와의 대화를 기억함**: 매 턴의 대화를 정령별 기억으로 응답과 함께 원자적으로 저장하고, 다음 대화에서 관련된 기억을 떠올려 함께 전달합니다. 아직 통합하지 않은 기억이 8개 쌓이면 온디바이스 AI가 다시 정리한 요약을 시스템 프롬프트에 넣습니다.
-- 🎯 **지금 채팅 중인 정령에만 집중**: 대화는 매 턴 바로 저장되므로, 다른 정령으로 바꾸면 이전 정령의 생성 중인 응답을 멈추고 모델 세션도 지금 정령 하나만 유지합니다.
-- 🌐 **언어를 바꿔도 그 정령 그대로**: UI·안내·오류 메시지와 정령 원본 데이터는 한국어·영어·중국어(간체)로 전환됩니다. 소형 로컬 모델이 규칙을 안정적으로 따르도록 시스템 지침은 짧은 영문으로 고정하고, 실제 응답 언어만 설정값으로 강제합니다.
-- ⭐ **선호정령**: 목록의 별로 선호정령을 지정·해제하고, 친밀도 탭 맨 위에 선호정령으로 표시됩니다. 앱을 다시 켜면 선호정령이 먼저 선택됩니다.
-- 🧩 **Risu 모듈**: `.risum` 모듈을 가져와 켜고 끌 수 있고, 활성 모듈의 설명과 로어북이 시스템 프롬프트에 추가됩니다.
-- 📂 **내 PC에 저장·백업**: 대화, 기억, 설정, 모듈은 브라우저 IndexedDB에 저장되고, PC 파일로 내보내기·불러오기와 PC 백업 폴더 자동 백업·시점 복원을 지원합니다.
-- 🖼️ **대화 배경도 그대로**: 에버소울 정식 일러스트 배경 522장을 언제든 꺼내서 대화창 분위기를 바꿀 수 있습니다.
+PC 데스크톱 브라우저라면 들어갈 수 있습니다. 차이는 대화 엔진을 어디서 가져오느냐뿐입니다. 모바일 웹은 지원하지 않습니다.
+
+| 브라우저 | 대화 엔진 | 따로 준비할 것 |
+| --- | --- | --- |
+| <img src="https://img.shields.io/badge/Chrome-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome" /> | Chrome 내장 AI(Gemini Nano, 플래그를 켜면 Gemma 4) 또는 로컬 Ollama | 설정에서 모델 "다운로드 및 준비" 한 번 |
+| <img src="https://img.shields.io/badge/Firefox-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white" alt="Firefox" /> | 로컬 Ollama | Ollama 설치와 모델 하나 |
+| <img src="https://img.shields.io/badge/Edge-0078D7?style=flat-square&logo=microsoftedge&logoColor=white" alt="Edge" /> | 로컬 Ollama (브라우저가 `LanguageModel` API를 노출하면 내장 AI도 목록에 나옵니다) | Ollama 설치와 모델 하나 |
+| <img src="https://img.shields.io/badge/Whale-00C73C?style=flat-square&logo=naver&logoColor=white" alt="Whale" /> | 로컬 Ollama | Ollama 설치와 모델 하나 |
+| <img src="https://img.shields.io/badge/Brave-FB542B?style=flat-square&logo=brave&logoColor=white" alt="Brave" /> <img src="https://img.shields.io/badge/Opera-FF1B2D?style=flat-square&logo=opera&logoColor=white" alt="Opera" /> | 로컬 Ollama | Ollama 설치와 모델 하나 |
+
+앱은 처음 들어올 때 이 브라우저에 Chrome 내장 AI가 있는지 확인합니다. 없으면 초기 설정 화면에 Ollama 연결 가이드가 바로 뜨고, 연결이 되면 그때부터 Ollama가 대화를 맡습니다.
+
+---
+
+## 주요 기능
+
+- **정령 99명, 각자의 성격 그대로**: 이름, 등급, 종족, 직업, 생일, 좋아하는 것, 대표 대사, 에버톡 대화 예시까지 불러와 정령마다 시스템 프롬프트를 따로 만듭니다.
+- **대화 엔진 두 갈래**: Chrome에서는 브라우저 내장 모델을, 다른 브라우저에서는 내 PC의 Ollama를 씁니다. Ollama는 어떤 모델이든 쓸 수 있고, 실행 중인 모델을 먼저 잡습니다.
+- **정령이 나와의 대화를 기억함**: 매 턴의 대화를 응답과 함께 정령별 기억으로 저장하고, 다음 대화에서 관련된 기억을 꺼내 함께 넘깁니다. 아직 정리하지 않은 기억이 8개 쌓이면 모델이 요약을 다시 만들어 시스템 프롬프트에 넣습니다.
+- **지금 대화하는 정령에게만 집중**: 다른 정령으로 바꾸면 이전 정령의 응답 생성을 멈추고, 모델 세션도 지금 정령 하나만 유지합니다.
+- **언어를 바꿔도 그 정령 그대로**: 화면 문구, 안내, 오류 메시지, 정령 원본 데이터가 한국어·영어·중국어(간체)로 바뀝니다.
+- **선호정령**: 목록의 별로 선호정령을 지정하면 친밀도 탭 맨 위에 올라가고, 앱을 다시 켤 때 먼저 선택됩니다.
+- **Risu 모듈**: `.risum` 모듈을 가져와 켜고 끌 수 있고, 켠 모듈의 설명과 로어북이 시스템 프롬프트에 붙습니다.
+- **내 PC에 저장과 백업**: 모든 데이터는 브라우저 IndexedDB에 있고, PC 파일로 내보내기와 불러오기, 백업 폴더 자동 백업, 시점 복원을 지원합니다.
+- **대화 배경**: 에버소울 정식 일러스트 배경 522장으로 대화창 분위기를 바꿀 수 있습니다.
 
 <p align="center">
   <img src="public/eversoul-assets/backgrounds/talk/Talk_BG_Castle.png" width="150" alt="Talk BG Castle" />
@@ -228,9 +252,9 @@
 
 ---
 
-## 🏗 아키텍처
+## 아키텍처
 
-IndexedDB와 브라우저 로컬 모델을 기본으로 사용하는 React 웹 앱입니다. 선택형 C++26 네이티브 확장을 설치하면 EXE 옆 SQLite에 대화·기억을 미러링하고 복구 조회에 함께 사용합니다. 개발 중에는 Vite가 EXE를 중계하고, 배포본은 Chromium/Firefox Native Messaging 확장이 중계합니다.
+React 웹 앱 하나가 전부입니다. 데이터는 IndexedDB에 두고, 대화 엔진은 Chrome 내장 AI나 Chrome이 받아 둔 모델 파일, 또는 로컬 Ollama 중 하나를 씁니다. `evai-server`는 빌드된 웹 파일을 `127.0.0.1`에서 서빙하는 역할만 하고, 데이터나 모델에는 관여하지 않습니다.
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#cde2fb', 'primaryBorderColor': '#2a78d6', 'primaryTextColor': '#0b0b0b', 'lineColor': '#52514e', 'clusterBkg': '#fcfcfb', 'clusterBorder': '#c3c2b7', 'fontFamily': 'system-ui, -apple-system, Segoe UI, sans-serif'}}}%%
@@ -245,8 +269,9 @@ flowchart TB
     subgraph DOMAIN["도메인 서비스 · src/domains"]
         direction LR
         D1["persona · chat · style<br/>knowledge · modules"]
-        D2["llm<br/>runtime · catalog · chrome"]
-        D3["settings · sync · auth · native"]
+        D2["llm<br/>engine · catalog · chrome<br/>chromeInstalled · ollama"]
+        D3["settings · sync · auth"]
+        D4["ollama<br/>HTTP client · 연결 가이드"]
     end
 
     subgraph SHARED["공용 모듈 · src/shared"]
@@ -261,9 +286,11 @@ flowchart TB
     PACK["data/personas/*.json<br/>99개 · import.meta.glob"] --> D1
     S1 -- "대화방 · 메시지 · 정령 · 기억 · 설정 · 모듈" --> DB[("IndexedDB<br/>eversoul-ai-chat")]
     S2 -- "JSON 내보내기·불러오기<br/>백업 폴더 자동 백업" --> PC[("PC 파일 / 백업 폴더")]
-    D2 -- "availability · create · clone<br/>promptStreaming" --> LLM["Chrome Prompt API<br/>LanguageModel · Gemini Nano"]
-    D2 -- "브라우저 WASM · WebGPU/CPU" --> GGUF["GGUF · Wllama"]
-    D3 -- "dev API / 브라우저 확장" --> NATIVE["C++26 Native Host<br/>SQLite · EXE 옆 DB"]
+    D2 -- "availability · create · clone<br/>promptStreaming" --> LLM["Chrome Prompt API<br/>Gemini Nano · Gemma 4"]
+    D2 -- "LiteRT-LM · WebGPU" --> CHROMEFILE["Chrome 설치 모델 파일<br/>OptGuide 폴더 연결"]
+    D2 --> D4
+    D4 -- "HTTP /api/chat · /api/tags · /api/ps" --> OLLAMA["로컬 Ollama<br/>127.0.0.1:11434"]
+    SERVER["evai-server (C++26)<br/>127.0.0.1:47831 정적 서빙"] -- "index.html · assets" --> UI
 
     classDef uiStyle fill:#cde2fb,stroke:#2a78d6,stroke-width:2px,color:#0b0b0b
     classDef domainStyle fill:#e3ddf7,stroke:#4a3aa7,stroke-width:2px,color:#0b0b0b
@@ -272,80 +299,164 @@ flowchart TB
     classDef llmStyle fill:#fbdcc9,stroke:#eb6834,stroke-width:2px,color:#0b0b0b
 
     class UI1,UI2,UI3 uiStyle
-    class D1,D2,D3 domainStyle
+    class D1,D2,D3,D4 domainStyle
     class S1,S2,S3,PACK sharedStyle
     class DB,PC dbStyle
-    class LLM,GGUF,NATIVE llmStyle
+    class LLM,CHROMEFILE,OLLAMA,SERVER llmStyle
 ```
 
-- **이용 환경 판별**: PC 데스크톱 브라우저는 진입을 허용합니다. Chrome Prompt API가 있으면 내장 모델을, 그 밖의 지원 브라우저에서는 GGUF 모델을 선택합니다. 최상위 `EnvironmentLayer`가 기존 구원자/인증 프로필, 실제 브라우저·버전·플랫폼, `requestAdapter()`로 확인한 WebGPU, 네이티브 API와 EXE/DB 경로를 설정 언어로 표시합니다.
+- **이용 환경 판별**: PC 데스크톱 브라우저는 들어갈 수 있습니다. `LanguageModel`이 있으면 Chrome 내장 AI를 쓰고, 없으면 초기 설정에서 Ollama 연결 가이드를 보여 줍니다. 상단 `EnvironmentLayer`는 프로필, 브라우저와 버전, 플랫폼, `requestAdapter()`로 확인한 WebGPU 정보를 보여 줍니다.
 - **정령 데이터**: `src/domains/persona/archive.ts`가 `import.meta.glob`으로 `data/personas/*.json`을 불러오고, 초기 설정 때 IndexedDB `persona_profile`에 설치합니다. 언어별 시스템 프롬프트는 `persona_localized_prompt`에 캐시합니다.
 - **시스템 프롬프트**: 정령 원본의 프로필·성격·인사, 전체 말투/스토리/에버톡 말뭉치에서 분산 표집한 정령 발화 12개와 실제 `구원자 → 정령` 반응쌍 4개를 시작 정체성으로 조립합니다. 매 턴에는 현재 발화와 관련된 실제 반응쌍 최대 2개, 최근 대화 최대 18개, 관련 기억 최대 4개(후보 200개 중), 지식 데이터 최대 1개가 동적으로 추가됩니다. 누적된 digest·명시 기억·semantic 관계 상태·습관·인연 수치는 실제 기록이 생긴 뒤에만 시작값을 변화시킵니다. `zh_cn`은 OpenCC로 간체화하고 출력 이모지를 제거합니다.
-- **온디바이스 세션**: 지금 채팅 중인 정령 하나의 세션만 유지합니다. 시스템 프롬프트를 `initialPrompts`의 첫 `system`으로 넣고, 해당 정령 JSON의 실제 `구원자 → 정령` 반응쌍을 뒤이은 `user/assistant` few-shot 메시지로 분리해 Chrome·GGUF·LiteRT-LM에 동일하게 전달합니다. 요청마다 세션을 `clone()`하고, `contextWindow`·`contextUsage`·`measureContextUsage()`로 응답용 384토큰을 남기면서 최근 연속 대화를 고릅니다. 생성 결과는 임시 버퍼에서 `<think>...</think>` 완결, 설정 언어, 정령 발화 여부를 검사하고 1회 복구 생성한 뒤 화면에 전달합니다.
+- **Chrome 세션**: 지금 대화하는 정령 하나의 세션만 유지합니다. 시스템 프롬프트를 `initialPrompts`의 첫 `system`으로 넣고, 정령 JSON의 실제 `구원자 → 정령` 반응쌍을 이어지는 `user/assistant` 예시 대화로 넣습니다. 요청마다 세션을 `clone()`하고 `contextWindow`·`contextUsage`·`measureContextUsage()`로 응답용 384토큰을 남긴 채 최근 대화를 고릅니다.
+- **Ollama 세션**: 같은 시스템 프롬프트와 예시 대화를 `/api/chat`으로 보냅니다. Mistral 계열처럼 user/assistant 교대를 강제하는 템플릿이 있어서, 연속된 같은 역할 메시지는 내용을 그대로 합쳐 보냅니다. Ollama가 넘친 대화를 조용히 잘라내지 않도록 `truncate: false`, `shift: false`를 주고, 생성 전에 1토큰짜리 측정 요청으로 실제 프롬프트 길이를 잽니다. 넘치면 오래된 맥락부터 빼고, 시스템 프롬프트와 예시 대화, 이번 턴 지시는 끝까지 남깁니다. 컨텍스트 크기는 Ollama가 실제로 올린 값(`/api/ps`의 `context_length`)을 따릅니다.
+- **응답 검사**: 모든 엔진의 결과를 같은 JSON 스키마로 받고, 말투와 언어를 어기면 한 번 다시 생성합니다.
 - **언어 선언**: `availability()`와 `create()`에 같은 옵션을 사용합니다. 시스템 지시문 언어인 영어와 앱 언어를 `expectedInputs`에, 앱 언어만 `expectedOutputs`에 선언하며, 해당 조합을 지원하지 않으면 모델의 기본 다국어 능력으로 전환합니다.
-- **기억**: 응답 메시지와 매 턴의 `구원자/정령` 에피소드 기억은 하나의 IndexedDB 트랜잭션으로 저장됩니다. 1~3글자 n-gram을 FNV-1a로 512차원에 희소 저장한 어휘 벡터와 코사인 유사도로 관련 기억을 찾고, 마지막 성공 이후 기억이 8개 쌓이면 최근 30개를 온디바이스 AI로 통합합니다. 최근 원문 범위를 벗어날 대화가 6개 이상 쌓이면 먼저 압축해 같은 턴의 시스템 프롬프트에 고정합니다.
-- **저장소**: IndexedDB `eversoul-ai-chat`가 권위 저장소이며 시작할 때 영구 저장을 요청합니다. 설정에서 `native_mirror`를 선택하면 `src/domains/native`가 메시지·기억·삭제를 SQLite에 미러링하고 조회 결과를 병합합니다. 개발 API와 브라우저 확장 모두 같은 Native Messaging 연산 계약을 사용하며 실패 시 IndexedDB로 자동 유지됩니다.
+- **기억**: 응답 메시지와 매 턴의 `구원자/정령` 에피소드 기억은 하나의 IndexedDB 트랜잭션으로 저장됩니다. 1~3글자 n-gram을 FNV-1a로 512차원에 희소 저장한 어휘 벡터와 코사인 유사도로 관련 기억을 찾고, 마지막 성공 이후 기억이 8개 쌓이면 최근 30개를 대화 모델로 통합합니다. 최근 원문 범위를 벗어날 대화가 6개 이상 쌓이면 먼저 압축해 같은 턴의 시스템 프롬프트에 고정합니다.
+- **저장소**: IndexedDB `eversoul-ai-chat` 하나에 모든 데이터를 두고, 시작할 때 영구 저장을 요청합니다. SQL 서버 연동은 아직 없습니다.
 - **백업**: File System Access API로 전체 데이터(`file_handle` 제외)를 JSON 파일로 내보내고 불러옵니다. PC 폴더를 연결하면 응답 완료, 메시지·대화방 삭제, 모듈 변경, 언어·추론 표시·스킨·선호정령·대화 모델·안내 확인 변경 후 5초 뒤(연속 변경은 마지막 기준) `eversoul-ai-chat-backup-<시각>.json`과 `eversoul-ai-chat-backup-latest.json`을 쓰고, 시각별 백업은 최근 10개만 남깁니다. 폴더 핸들은 IndexedDB `file_handle`에 보관되며, 목록에서 원하는 시점으로 복원할 수 있습니다.
 - **다국어**: UI 문구, 안내, 차단 화면, 상태·오류 메시지는 `src/domains/evertalk/i18n.ts`의 한국어·영어·중국어(간체) 라벨로 표시됩니다. 도메인 오류는 코드(`DomainError`)로 전달되고 화면에서 라벨로 바뀝니다.
 
 ---
 
-## 🛠 기술 스택
+## 기술 스택
 
-### Web App
+### 웹 앱
 
-- **Framework**: `React 19.3` + `TypeScript 7.0` + `Vite 8.3` (`base: './'` 정적 빌드)
-- **State Management**: `TanStack React Query v5`, `Zustand v5`
-- **Styling**: `Tailwind CSS v4`(`@tailwindcss/vite`) + `clsx`
-- **Icons**: `lucide-react`
-- **Lint**: `oxlint`
+- **프레임워크**: `React 19.3` + `TypeScript 7.0` + `Vite 8.3` (`base: './'` 정적 빌드)
+- **상태 관리**: `TanStack React Query v5`, `Zustand v5`
+- **스타일**: `Tailwind CSS v4`(`@tailwindcss/vite`) + `clsx`
+- **아이콘**: `lucide-react`
+- **검사**: `oxlint`
 
-### Browser Platform
+### 브라우저 쪽
 
-- **On-device AI**: Chrome Prompt API(`LanguageModel`) 또는 GGUF/Wllama(WebGPU·CPU)
-- **Storage**: IndexedDB(`idb` 8) 기본 + 선택형 C++26/SQLite 네이티브 미러
+- **대화 엔진**: Chrome Prompt API(`LanguageModel`), Chrome 설치 모델 파일(`@litert-lm/core`, WebGPU), 로컬 Ollama(HTTP)
+- **저장소**: IndexedDB(`idb` 8)
 - **중국어 간체 고정**: `opencc-js`의 번체→간체 변환
-- **PC 파일·폴더**: File System Access API(`showOpenFilePicker`, `showSaveFilePicker`, `showDirectoryPicker`) — 타입 `@types/wicg-file-system-access`
-- **실행 환경 판별**: User-Agent Client Hints/UA fallback, 실제 `navigator.gpu.requestAdapter()`, 네이티브 `health`
+- **PC 파일과 폴더**: File System Access API(`showOpenFilePicker`, `showSaveFilePicker`, `showDirectoryPicker`)
+- **실행 환경 판별**: User-Agent Client Hints와 UA 문자열, `navigator.gpu.requestAdapter()`
+
+### 로컬 서버 실행기
+
+- **언어**: C++26, CMake 없이 컴파일러로 바로 빌드 (`server/build.sh`, GCC 16 기준 `-std=c++26`)
+- **윈도우**: MSYS2 UCRT64 MinGW-w64, `windres`로 아이콘과 버전 정보를 넣고 정적 링크해 exe 하나로 동작
 
 ---
 
-## 📦 온디바이스 모델
+## 대화 모델
 
-Chrome에서는 내장 Prompt API 모델을 쓸 수 있고, Chrome API가 없는 데스크톱 브라우저에서는 설정에서 GGUF 파일을 설치해 Wllama로 실행할 수 있습니다.
+### Chrome 내장 AI
 
-- **준비**: 설정 > 온디바이스 모델 목록에서 "다운로드 및 준비"를 누르면 Chrome이 모델을 내려받고 진행률이 표시됩니다. 내려받기는 사용자 클릭(user activation)이 있어야 시작됩니다.
-- **모델 선택**: Gemini Nano의 크기와 GPU/CPU 실행 방식은 Chrome이 기기 성능에 맞춰 고르며, 웹 페이지가 직접 고를 수 없습니다.
-- **Chrome 요구 사항**([Chrome 공식 문서](https://developer.chrome.com/docs/ai/prompt-api)): Windows 10/11, macOS 13 이상, Linux, ChromeOS(Chromebook Plus). Chrome 프로필이 있는 볼륨에 22GB 이상 여유 공간, GPU VRAM 4GB 초과 또는 RAM 16GB 이상·CPU 4코어 이상, 데이터 무제한 네트워크. Android·iOS용 Chrome에서는 동작하지 않습니다.
-- **개발·진단 플래그**: API가 노출되지 않는 개발 버전에서는 `chrome://flags/#prompt-api-for-gemini-nano`를 확인하고, 모델 상태는 `chrome://on-device-internals`에서 확인합니다. 과거의 `chrome://flags/#optimization-guide-on-device-model` 및 `Enabled BypassPerfRequirement`는 성능 요구조건 우회용이지 시스템 프롬프트 해제 옵션이 아닙니다. 일반 웹 JS는 `chrome://flags` 값을 변경할 수 없습니다.
+- **준비**: 설정 > 온디바이스 모델 목록에서 "다운로드 및 준비"를 누르면 Chrome이 모델을 받습니다. 사용자가 직접 클릭해야 받기가 시작됩니다.
+- **모델 선택**: Gemini Nano의 크기와 GPU/CPU 실행 방식은 Chrome이 기기에 맞춰 고릅니다. `chrome://flags/#gemma4-for-built-in-ai`를 켜고 재시작하면 Gemma 4로 바뀌고, 앱은 Local State 파일로 실제 플래그 상태를 확인합니다.
+- **Chrome 요구 사항**([Chrome 공식 문서](https://developer.chrome.com/docs/ai/prompt-api)): Windows 10/11, macOS 13 이상, Linux, ChromeOS(Chromebook Plus). Chrome 프로필이 있는 드라이브에 22GB 이상 여유 공간, GPU VRAM 4GB 초과 또는 RAM 16GB 이상과 CPU 4코어 이상, 데이터 무제한 네트워크가 필요합니다. Android·iOS용 Chrome에서는 동작하지 않습니다.
+- **진단**: 모델 상태는 `chrome://on-device-internals`에서 볼 수 있습니다. 일반 웹 페이지는 `chrome://flags` 값을 바꿀 수 없습니다.
 
----
+### 로컬 Ollama
 
-## 💻 실행 및 빌드 가이드
+Chrome 내장 AI가 없는 브라우저에서는 Ollama가 대화를 맡습니다. Chrome에서도 설정의 "로컬 Ollama 모델 목록"에서 직접 고를 수 있습니다. 모델은 PC 사양에 맞춰 무엇이든 쓰면 됩니다. 작은 3B 모델부터 30B, 120B 모델까지 Ollama가 돌릴 수 있으면 앱도 씁니다.
 
-- [Node.js](https://nodejs.org/)와 최신 PC 데스크톱 브라우저가 필요합니다. Chrome은 Prompt API를, Chrome·Edge·Firefox·Whale 등은 GGUF 경로를 사용할 수 있습니다.
-- 네이티브 SQLite 확장을 개발 서버에서 함께 시험하려면 먼저 `npm run native:build`를 실행합니다.
+1. [ollama.com](https://ollama.com/download)에서 Ollama를 설치하고 실행합니다.
+2. 쓸 모델을 받습니다.
 
-```bash
-npm install      # 의존성 설치
-npm run native:build # 선택형 EXE 빌드
-npm run dev      # Vite 개발 서버 실행 후 데스크톱 브라우저로 접속
-npm run lint     # oxlint 검사
-npm run build    # tsc -b 타입 검사 + vite build 정적 빌드(dist/)
+   ```bash
+   ollama --version
+   ollama pull <모델이름:태그>
+   ollama pull hf.co/<사용자>/<저장소>:<양자화>
+   ```
+
+   이미 가지고 있는 GGUF 파일로 모델을 만들 수도 있습니다. 윈도우 PowerShell 기준입니다.
+
+   ```powershell
+   Set-Content "$env:TEMP\Modelfile.evai" 'FROM D:\model\내모델.gguf'
+   ollama create 내모델이름 -f "$env:TEMP\Modelfile.evai"
+   Remove-Item "$env:TEMP\Modelfile.evai" -Force
+   ```
+
+3. 모델을 한 번 실행해 보고 목록을 확인합니다. 앱은 `ollama ps`에 떠 있는 모델을 먼저 연결하고, 없으면 가장 최근에 받은 모델을 씁니다.
+
+   ```bash
+   ollama run 내모델이름
+   ollama ls
+   ollama ps
+   ```
+
+4. 앱을 열면 초기 설정 화면(또는 설정 > 로컬 Ollama 모델 목록)에서 "연결 확인"을 누릅니다. 모델 이름을 입력하면 그 이름으로 받기, 실행, 삭제 명령을 만들어 줍니다.
+
+**주소에 따라 한 가지를 더 해야 할 수 있습니다.** Ollama는 기본적으로 `localhost`, `127.0.0.1`, `0.0.0.0`에서 온 요청만 받습니다. `evai-server`나 `npm run dev`로 이 PC에서 열었다면 그대로 연결됩니다. [ai.everlib.pro](https://ai.everlib.pro/)처럼 다른 주소에서 열었다면 Ollama를 켜기 전에 `OLLAMA_ORIGINS`에 그 주소를 넣어야 합니다. 연결 가이드가 지금 페이지 주소에 맞는 명령을 보여 줍니다.
+
+```powershell
+[Environment]::SetEnvironmentVariable('OLLAMA_ORIGINS', 'https://ai.everlib.pro', 'User')
 ```
 
-`dist/`는 서버 코드 없이 정적 파일만 담고 있으므로 어떤 정적 호스팅에도 그대로 올릴 수 있습니다. 운영 주소는 [ai.everlib.pro](https://ai.everlib.pro/)입니다. `navigator.userAgentData`와 File System Access API는 보안 컨텍스트(HTTPS 또는 localhost)에서만 동작합니다.
+macOS는 `launchctl setenv OLLAMA_ORIGINS "주소"`, systemd를 쓰는 리눅스는 `systemctl edit ollama.service`에 `Environment="OLLAMA_ORIGINS=주소"`를 넣고 Ollama를 다시 시작합니다. 공개 사이트에서 Chrome이 로컬 네트워크 접근 권한을 물으면 허용해야 합니다.
 
 ---
 
-## ⚙️ GitHub Actions로 빌드하기 — 버튼만 누르면 됩니다
+## 로컬 서버 실행기 (evai-server)
 
-이 저장소를 포크하면 워크플로 파일 [`.github/workflows/build-web.yml`](.github/workflows/build-web.yml)도 함께 복사됩니다. 포크한 사람은 각자 자기 저장소에서 이 워크플로를 돌릴 수 있습니다. **Node.js 설치도, 명령어 입력도, 설정값 입력도 필요 없습니다.** 포크한 저장소의 **Actions** 탭에서 버튼을 누르면 GitHub가 대신 `npm install` → `npm run build`를 실행하고, `dist/` 정적 파일을 zip으로 묶어 내려받을 수 있게 올려줍니다.
+윈도우, 리눅스, macOS에서 모두 돌아갑니다. 웹 빌드 결과물(`index.html`과 `assets/` 등)과 같은 폴더에 실행 파일을 두고 실행하면 됩니다.
+
+| OS | 실행 파일 | 실행 방법 |
+| --- | --- | --- |
+| <img src="https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows" /> x86_64 | `evai-server.exe` | 더블클릭하면 명령 창이 뜹니다. 창을 닫으면 서버도 꺼집니다. |
+| <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" /> x86_64 | `evai-server` | 터미널에서 `./evai-server` |
+| <img src="https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS" /> Apple Silicon | `evai-server` | 터미널에서 `./evai-server`. 인터넷에서 받은 파일이면 처음 한 번 `xattr -d com.apple.quarantine evai-server`가 필요할 수 있습니다. |
+
+```text
+EVAI local server
+root: C:\EVAI
+open: http://127.0.0.1:47831/
+close this window to stop the server.
+```
+
+- 항상 실행 파일이 있는 폴더를 기준으로 파일을 서빙합니다. 어디서 실행했든 상관없고, 그 폴더에 `index.html`이 없으면 바로 종료합니다.
+- `127.0.0.1`에만 열리므로 다른 PC에서는 접속할 수 없습니다. Host 헤더가 `127.0.0.1:포트`나 `localhost:포트`가 아니면 거절합니다.
+- 기본 포트는 `47831`이고 `evai-server --port 48000`처럼 바꿀 수 있습니다.
+- 앱이 쓰는 `Cross-Origin-Opener-Policy: same-origin`, `Cross-Origin-Embedder-Policy: require-corp` 헤더를 개발 서버와 똑같이 붙입니다.
+- 폴더 밖 경로로 나가는 요청은 막고, `GET`과 `HEAD`만 받습니다. 데이터베이스 기능은 아직 없습니다.
+
+GitHub Actions의 Build Local Server가 OS마다 웹 빌드와 실행 파일을 한 묶음으로 만들어 주니, 압축을 풀고 실행하면 끝입니다.
+
+---
+
+## 실행 및 빌드
+
+필요한 것은 [Node.js](https://nodejs.org/)와 PC 데스크톱 브라우저입니다. 실행기를 직접 빌드하려면 `-std=c++26`을 받는 C++ 컴파일러가 필요합니다.
+
+- 윈도우: [MSYS2](https://www.msys2.org/) UCRT64 셸에서 `pacman -S mingw-w64-ucrt-x86_64-gcc`
+- 리눅스: GCC 14 이상 (예: `CXX=g++-14`)
+- macOS: Homebrew GCC (예: `brew install gcc` 후 `CXX=g++-15`)
+
+```bash
+npm install          # 의존성 설치
+npm run dev          # Vite 개발 서버 (http://localhost:5173)
+npm run lint         # oxlint 검사
+npm run build        # tsc -b 타입 검사 + vite build (dist/)
+npm run server:build # server/build/evai-server(.exe) 빌드
+```
+
+세 OS 모두 같은 `server/build.sh`로 빌드하고, 컴파일러는 `CXX=g++-14 npm run server:build`처럼 지정합니다. 윈도우에서는 이 스크립트가 `windres`로 아이콘과 버전 정보(`package.json`의 버전, 제작사 everlib)를 exe에 넣습니다.
+
+`dist/`는 정적 파일뿐이라 어떤 정적 호스팅에도 올릴 수 있습니다. 운영 주소는 [ai.everlib.pro](https://ai.everlib.pro/)입니다. File System Access API는 HTTPS나 localhost에서만 동작합니다.
+
+---
+
+## GitHub Actions로 빌드하기
+
+포크하면 워크플로 파일도 같이 따라옵니다. 내 포크의 **Actions** 탭에서 버튼만 누르면 GitHub가 빌드해서 zip으로 올려 줍니다. PC에 Node.js나 컴파일러를 설치할 필요가 없습니다.
 
 <p align="center">
   <a href="https://github.com/GarnetRapture/evai/fork"><img src="https://img.shields.io/badge/STEP_0-Fork_먼저_하기-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
   <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/워크플로-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-local-server.yml"><img src="https://img.shields.io/badge/워크플로-Build_Local_Server-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Local Server workflow" /></a>
 </p>
+
+| 워크플로 | 결과물 | 쓰는 곳 |
+| --- | --- | --- |
+| [Build Web](.github/workflows/build-web.yml) | `evai-web-v<버전>-<커밋7자리>.zip` (`dist/`) | 정적 호스팅에 올릴 때 |
+| [Build Local Server](.github/workflows/build-local-server.yml) | `evai-local-server-windows-x86_64-v<버전>-<커밋7자리>.zip`<br/>`evai-local-server-linux-x86_64-v<버전>-<커밋7자리>.tar.gz`<br/>`evai-local-server-macos-arm64-v<버전>-<커밋7자리>.tar.gz` | 내 PC에서 실행기로 바로 열 때 (`dist/` + 실행 파일) |
 
 ### 1단계 — 내 포크에서 Actions 켜기
 
@@ -357,7 +468,7 @@ npm run build    # tsc -b 타입 검사 + vite build 정적 빌드(dist/)
 
 ### 2단계 — `Run workflow` 버튼 누르기
 
-왼쪽 목록에서 **Build Web**을 고르고, 오른쪽의 **`Run workflow`** 를 연 다음 초록 **`Run workflow`** 버튼을 누릅니다. 입력할 값은 하나도 없고 브랜치는 기본값 그대로 두면 됩니다.
+왼쪽 목록에서 **Build Web**이나 **Build Local Server**를 고르고, 오른쪽의 **`Run workflow`** 를 연 다음 초록 **`Run workflow`** 버튼을 누릅니다. 입력할 값은 없고 브랜치는 기본값 그대로 두면 됩니다. 아래 그림은 Build Web 기준이고, Build Local Server도 누르는 곳은 같습니다.
 
 <p align="center">
   <img src="docs/images/actions/ko/2-run-workflow.svg" width="880" alt="Build Web 워크플로를 고르고 Run workflow 버튼을 누르는 화면" />
@@ -365,7 +476,7 @@ npm run build    # tsc -b 타입 검사 + vite build 정적 빌드(dist/)
 
 ### 3단계 — 완성된 zip 내려받기
 
-실행이 끝나면 초록 체크가 뜹니다. 그 실행을 눌러 들어가 맨 아래 **Artifacts**의 `evai-web-v<버전>-<커밋7자리>.zip`을 내려받으세요. 압축을 풀면 `npm run build` 결과인 `dist/` 정적 파일 그대로라서, 그 폴더를 어떤 정적 호스팅에 올리든 바로 동작합니다.
+실행이 끝나면 초록 체크가 뜹니다. 그 실행을 눌러 들어가 맨 아래 **Artifacts**에서 필요한 파일을 받으면 됩니다. Build Web의 zip은 `dist/` 정적 파일 그대로이고, Build Local Server의 묶음은 여기에 내 OS용 실행 파일이 함께 들어 있습니다.
 
 <p align="center">
   <img src="docs/images/actions/ko/3-download-artifact.svg" width="880" alt="빌드가 끝난 실행 화면에서 Artifacts의 zip 파일을 내려받는 화면" />
@@ -373,25 +484,42 @@ npm run build    # tsc -b 타입 검사 + vite build 정적 빌드(dist/)
 
 ### 워크플로가 실제로 하는 일
 
+**Build Web**
+
 | 단계 | 내용 |
 | --- | --- |
-| 실행 환경 | `ubuntu-latest` + `actions/setup-node@v7` Node.js 24 |
-| 의존성 설치 | `npm install` (이 저장소는 `package-lock.json`을 배포하지 않으므로 `npm ci`가 아닌 `npm install`을 씁니다) |
-| 빌드 | `npm run build` = `tsc -b` 타입 검사 + `vite build` 정적 빌드(`dist/`) |
-| 포장 | `dist/` 전체를 `evai-web-v<package.json 버전>-<커밋 7자리>.zip`으로 압축 |
-| 업로드 | `actions/upload-artifact@v7`로 그 zip 하나를 그대로 업로드(보관 90일) |
-| 릴리스 | `v`로 시작하는 태그를 푸시했을 때만, 같은 zip을 첨부해 **내 포크의** Releases에 릴리스를 생성 |
+| 실행 환경 | `ubuntu-latest` + Node.js 24 |
+| 의존성 설치 | `npm install` (`package-lock.json`을 배포하지 않아서 `npm ci` 대신 씁니다) |
+| 빌드 | `npm run build` = `tsc -b` 타입 검사 + `vite build` (`dist/`) |
+| 포장과 업로드 | `dist/`를 zip으로 묶어 Artifacts에 올립니다 (보관 90일) |
+
+**Build Local Server**
+
+| 단계 | 내용 |
+| --- | --- |
+| 웹 빌드 | `ubuntu-latest`에서 `npm run build`로 `dist/`를 만들어 다음 단계에 넘깁니다 |
+| 윈도우 | `windows-latest` + MSYS2 UCRT64 GCC로 `sh server/build.sh`, `dist/`와 `evai-server.exe`를 zip으로 묶음 |
+| 리눅스 | `ubuntu-24.04` + `g++-14`로 빌드, `dist/`와 `evai-server`를 tar.gz로 묶음 (실행 권한 유지) |
+| macOS | `macos-15` (Apple Silicon) + Homebrew `g++-15`로 빌드, tar.gz로 묶음 |
+| 업로드 | 세 묶음을 각각 Artifacts에 올립니다 (보관 90일) |
 
 ### 알아둘 점
 
 - 워크플로를 수동 실행하는 **`Run workflow` 버튼은 기본 브랜치에 워크플로 파일이 있을 때만** 나타납니다([GitHub 공식 문서](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)). 포크 직후에는 그대로 있으니 신경 쓰지 않아도 됩니다.
-- 빌드는 각자의 저장소에서 각자의 계정으로 돌아갑니다. 공개 저장소에서 GitHub 제공 표준 러너를 쓰면 [Actions 사용료는 무료](https://docs.github.com/en/billing/concepts/product-billing/github-actions)이고, 비공개 포크는 각 계정 플랜의 무료 분(GitHub Free 기준 월 2,000분)에서 차감됩니다.
-- 원본 저장소에 푸시 권한이 없어도 됩니다. 포크는 완전히 독립된 내 저장소이고, 빌드 결과물도 내 저장소의 Artifacts/Releases에만 올라갑니다.
-- 선택형 C++26 네이티브 SQLite 호스트(`native/`)는 이 워크플로에 포함되지 않습니다. 그쪽은 위의 실행 및 빌드 가이드대로 `npm run native:build`로 각자 PC에서 빌드합니다.
+- 빌드는 각자의 저장소에서 각자의 계정으로 돌아갑니다. 공개 저장소에서 GitHub 제공 표준 러너를 쓰면 [Actions 사용료는 무료](https://docs.github.com/en/billing/concepts/product-billing/github-actions)입니다. 비공개 포크는 계정 플랜의 무료 분에서 차감되고, 윈도우와 macOS 러너는 리눅스보다 분이 더 많이 깎입니다.
+- 원본 저장소에 푸시 권한이 없어도 됩니다. 빌드 결과물은 내 저장소의 Artifacts에만 올라갑니다.
+- 공식 Releases에는 빌드 파일을 첨부하지 않습니다. 실행 파일과 웹 파일은 위 워크플로로 직접 받아 주세요.
+- 안드로이드 앱 빌드는 지금 워크플로에 없습니다. 아래 안드로이드 항목을 참고하세요.
 
 ---
 
-## 🧩 정령(페르소나) 데이터 스키마
+## 안드로이드 앱
+
+`android/`에 AICore Gemini Nano와 LiteRT-LM을 쓰는 안드로이드 앱 코드가 있지만, 지금은 개발을 잠시 멈춘 상태입니다. 빌드 워크플로와 배포도 당분간 하지 않습니다.
+
+---
+
+## 정령(페르소나) 데이터 스키마
 
 정령은 종족(`race`)에 따라 일곱 갈래로 나뉩니다.
 
@@ -476,20 +604,21 @@ npm run build    # tsc -b 타입 검사 + vite build 정적 빌드(dist/)
 ```
 
 - `i18n` 블록은 필드 이름을 키로 두고 그 아래 `{ ko, en, zh_tw, zh_cn }` 4개 언어 값을 나란히 갖는 **필드-우선 구조**이며, `name` · `grade` · `race` · `class` · `sub_class` · `stat`은 물론 `profile.nick_name` · `profile.constellation` · `profile.union` · `profile.cv_ko` · `profile.cv_jp` · `profile.like` · `profile.dislike` · `profile.hobby` · `profile.speciality`까지 세부 필드 단위로 번역이 존재합니다.
-- 화면에 보여줄 때는 `src/domains/persona/logic.ts`의 `parseSpiritDetail`이 이 `raw_json`을 파싱해 언어별로 골라내고, 온디바이스 AI에게 보낼 시스템 프롬프트는 이것과 별개로 `src/domains/persona/prompt.ts`가 `raw_json`을 다시 파싱해 조립합니다 — 두 곳 다 최종적으로는 IndexedDB의 `raw_json`을 소스로 씁니다.
+- 화면에 보여줄 때는 `src/domains/persona/logic.ts`의 `parseSpiritDetail`이 이 `raw_json`을 파싱해 언어별로 골라내고, 대화 모델에 보낼 시스템 프롬프트는 `src/domains/persona/prompt.ts`가 `raw_json`을 따로 파싱해 조립합니다. 두 곳 모두 IndexedDB의 `raw_json`을 원본으로 씁니다.
 - 정령별 원화는 `public/eversoul-assets/spirits/{영문명}/` 하위에 `base`(기본 일러스트 512/1024/2048), `costume`(코스튬), `gacha`(가챠 연출), `raid`(레이드 연출), `srg`(스토리) 등 카테고리 폴더로 분리되어 있으며, `LoadableAssetImage` 컴포넌트(`src/domains/evertalk/components/LoadableAssetImage.tsx`)가 후보 경로 배열을 순차 시도(`useFirstLoadableImage`)해 존재하는 첫 이미지를 렌더링합니다.
 
 ---
 
-## 📌 버전 관리 규칙
+## 버전 관리
 
-이 저장소는 **커밋 1회당 patch 버전 +1**을 원칙으로 합니다. 버전은 `package.json`의 `version` 필드 하나로 관리합니다. Tauri 데스크톱 앱에서 Chrome 온디바이스 AI 웹 앱으로 전환하면서 새 프로젝트로 초기화해 `0.0.0`부터 다시 시작했으며, 현재 버전은 `0.0.1`입니다.
+버전은 `package.json`의 `version` 하나로 관리하고, 윈도우 실행 파일의 버전 정보도 여기서 가져갑니다. Tauri 데스크톱 앱에서 웹 앱으로 옮기면서 `0.0.0`부터 다시 시작했고, 지금 버전은 `0.0.4`입니다.
 
 ---
 
-## 📄 라이선스
+## 라이선스
 
-이 저장소의 **Apache License 2.0**은 이 프로젝트가 직접 작성한 웹 앱 소스 코드(`src/`)에만 적용됩니다. 아래 제3자 저작물에 대한 권리는 이 프로젝트가 보유하지 않습니다.
+이 저장소의 **Apache License 2.0**은 이 프로젝트가 직접 작성한 소스 코드(`src/`, `server/`)에만 적용됩니다. 아래 제3자 저작물에 대한 권리는 이 프로젝트에 없습니다.
 
-- **온디바이스 모델 Gemini Nano** — Google이 Chrome을 통해 제공하는 모델입니다. 이 저장소는 모델 가중치를 포함하거나 재배포하지 않으며, 모델은 사용자 PC의 Chrome이 직접 내려받아 관리합니다.
+- **Gemini Nano, Gemma 4** — Google이 Chrome을 통해 제공하는 모델입니다. 이 저장소는 모델 가중치를 담거나 재배포하지 않고, 모델은 사용자 PC의 Chrome이 직접 받아서 관리합니다.
+- **Ollama와 Ollama에서 쓰는 모델** — 사용자가 직접 설치하며, 각 모델은 그 모델의 라이선스를 따릅니다. 이 저장소는 어떤 모델도 포함하지 않습니다.
 - **에버소울 게임 리소스** — 정령 일러스트, 대화 배경, 정령 프로필 원본 데이터, 음성의 저작권은 원저작권자에게 있습니다. 이 프로젝트는 해당 저작물의 권리를 주장하지 않으며 비상업적 팬 프로젝트로 이용합니다.

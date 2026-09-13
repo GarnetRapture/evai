@@ -2,7 +2,7 @@ import { DomainError, describeUnknownError, isAbortError, isDomainError } from '
 import { ollamaClient, type OllamaGenerationRequest } from '../../ollama';
 import { settingsRepository } from '../../settings/repository';
 import { assertPersonaSystemPrompt } from '../chrome/personaHook';
-import { CHAT_MINIMUM_HISTORY_TURNS, OLLAMA_CONSOLIDATION_TOKEN_LIMIT, OLLAMA_CONTEXT_WINDOW_LIMIT, OLLAMA_RESPONSE_TOKEN_LIMIT } from '../constants';
+import { CHAT_MINIMUM_HISTORY_TURNS, OLLAMA_CONSOLIDATION_TOKEN_LIMIT, OLLAMA_RESPONSE_TOKEN_LIMIT } from '../constants';
 import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload } from '../localGeneration';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
 import { composeOnDeviceTurnMessage } from '../turn';
@@ -54,8 +54,7 @@ async function loadServerModel(baseUrl: string, modelName: string, generation: n
         await releaseServerModel(previous);
     }
     const profile = await ollamaClient.showModel(baseUrl, modelName);
-    const contextWindow = Math.min(profile.context_length ?? OLLAMA_CONTEXT_WINDOW_LIMIT, OLLAMA_CONTEXT_WINDOW_LIMIT);
-    await ollamaClient.loadModel(baseUrl, modelName, { num_ctx: contextWindow });
+    const contextWindow = await ollamaClient.loadModel(baseUrl, modelName);
     const loaded: OllamaLoadedModel = { base_url: baseUrl, profile, context_window: contextWindow };
     if (generation !== loadGeneration) {
         await releaseServerModel(loaded);
@@ -106,7 +105,6 @@ function toGenerationRequest(
         ...(format === null ? {} : { format }),
         ...(ollamaClient.supportsThinking(model.profile) ? { think: false } : {}),
         options: {
-            num_ctx: model.context_window,
             num_predict: payload.max_output_tokens,
             temperature: payload.sampling.temperature,
             top_k: payload.sampling.top_k,

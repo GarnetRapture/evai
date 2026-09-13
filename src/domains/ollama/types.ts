@@ -27,6 +27,7 @@ export interface OllamaRunningModel {
     size: number;
     size_vram: number;
     expires_at: string;
+    context_length: number;
 }
 
 export interface OllamaPsResponse {
@@ -38,7 +39,6 @@ export interface OllamaVersionResponse {
 }
 
 export interface OllamaShowResponse {
-    model_info: Record<string, unknown>;
     capabilities: string[] | undefined;
 }
 
@@ -47,11 +47,7 @@ export interface OllamaChatMessage {
     content: string;
 }
 
-export interface OllamaLoadOptions {
-    num_ctx: number;
-}
-
-export interface OllamaChatOptions extends OllamaLoadOptions {
+export interface OllamaChatOptions {
     num_predict: number;
     temperature: number;
     top_k: number;
@@ -64,7 +60,7 @@ export interface OllamaChatRequest {
     messages: OllamaChatMessage[];
     stream: boolean;
     format?: Record<string, unknown>;
-    options?: OllamaChatOptions | OllamaLoadOptions;
+    options?: OllamaChatOptions;
     think?: boolean;
     keep_alive?: number;
     truncate?: boolean;
@@ -111,7 +107,6 @@ export interface OllamaServerStatus {
 
 export interface OllamaModelProfile {
     name: string;
-    context_length: number | null;
     capabilities: string[];
 }
 
@@ -124,7 +119,12 @@ export interface OllamaChatCompletion {
 
 export type OllamaCommandShell = 'powershell' | 'posix';
 
-export type OllamaCommandStepKey = 'verify_install' | 'pull_model' | 'create_from_gguf' | 'remove_model' | 'run_model' | 'allow_origin';
+export type OllamaCommandStepKey = 'verify_install' | 'pull_model' | 'create_from_gguf' | 'run_model' | 'remove_model' | 'allow_origin';
+
+export interface OllamaCommandGuideInput {
+    model_name: string;
+    gguf_path: string;
+}
 
 export interface OllamaCommandStep {
     key: OllamaCommandStepKey;

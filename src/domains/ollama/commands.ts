@@ -1,12 +1,21 @@
-import type { OllamaCommandShell, OllamaCommandStep, OllamaOriginAccess } from './types';
+import type { OllamaCommandGuideInput, OllamaCommandShell, OllamaCommandStep, OllamaOriginAccess } from './types';
 
 const WINDOWS_PLATFORM_PATTERN = /^win/iu;
 const MACOS_PLATFORM_PATTERN = /^mac/iu;
-const EXAMPLE_MODEL_NAME = 'evai-model';
-const EXAMPLE_REMOVED_MODEL_NAME = 'old-model';
-const EXAMPLE_HUB_MODEL_NAME = 'llama3.2';
-const EXAMPLE_WINDOWS_GGUF_PATH = 'D:\\model\\my-model.gguf';
-const EXAMPLE_POSIX_GGUF_PATH = '/path/to/my-model.gguf';
+const POWERSHELL_SINGLE_QUOTE_PATTERN = /'/gu;
+const POSIX_SINGLE_QUOTE_PATTERN = /'/gu;
+
+function quotePowerShell(value: string): string {
+    return `'${value.replace(POWERSHELL_SINGLE_QUOTE_PATTERN, "''")}'`;
+}
+
+function quotePosix(value: string): string {
+    return `'${value.replace(POSIX_SINGLE_QUOTE_PATTERN, "'\\''")}'`;
+}
+
+function quoteForShell(shell: OllamaCommandShell, value: string): string {
+    return shell === 'powershell' ? quotePowerShell(value) : quotePosix(value);
+}
 
 export function resolveOllamaCommandShell(platform: string): OllamaCommandShell {
     return WINDOWS_PLATFORM_PATTERN.test(platform) ? 'powershell' : 'posix';
@@ -27,29 +36,33 @@ function allowOriginCommands(shell: OllamaCommandShell, platform: string, origin
     ];
 }
 
-export function buildOllamaCommandGuide(platform: string, originAccess: OllamaOriginAccess): OllamaCommandStep[] {
-    const shell = resolveOllamaCommandShell(platform);
-    const steps: OllamaCommandStep[] = [
-        { key: 'verify_install', commands: ['ollama --version'] },
-        { key: 'pull_model', commands: [`ollama pull ${EXAMPLE_HUB_MODEL_NAME}`] },
-        {
-            key: 'create_from_gguf',
-            commands: shell === 'powershell'
-                ? [
-                    `Set-Content "$env:TEMP\\Modelfile.evai" 'FROM ${EXAMPLE_WINDOWS_GGUF_PATH}'`,
-                    `ollama create ${EXAMPLE_MODEL_NAME} -f "$env:TEMP\\Modelfile.evai"`,
-                    'Remove-Item "$env:TEMP\\Modelfile.evai" -Force',
-                ]
-                : [
-                    `printf 'FROM ${EXAMPLE_POSIX_GGUF_PATH}\\n' > /tmp/Modelfile.evai`,
-                    `ollama create ${EXAMPLE_MODEL_NAME} -f /tmp/Modelfile.evai`,
-                    'rm -f /tmp/Modelfile.evai',
-                ],
-        },
-        { key: 'remove_model', commands: [`ollama rm ${EXAMPLE_REMOVED_MODEL_NAME}`] },
-        { key: 'run_model', commands: [`ollama run ${EXAMPLE_MODEL_NAME}`, 'ollama ls', 'ollama ps'] },
+function createFromGgufCommands(shell: OllamaCommandShell, modelName: string, ggufPath: string): string[] {
+    const quotedModel = quoteForShell(shell, modelName);
+    if (shell === 'powershell') {
+        return [
+            `Set-Content "$env:TEMP\\Modelfile.evai" ${quotePowerShell(`FROM ${ggufPath}`)}`,
+            `ollama create ${quotedModel} -f "$env:TEMP\\Modelfile.evai"`,
+            'Remove-Item "$env:TEMP\\Modelfile.evai" -Force',
+        ];
+    }
+    return [
+        `printf '%s\\n' ${quotePosix(`FROM ${ggufPath}`)} > /tmp/Modelfile.evai`,
+        `ollama create ${quotedModel} -f /tmp/Modelfile.evai`,
+        'rm -f /tmp/Modelfile.evai',
     ];
-    return originAccess.allowed_by_default
-        ? steps
-        : [...steps, { key: 'allow_origin', commands: allowOriginCommands(shell, platform, originAccess.origin) }];
+}
+
+export function buildOllamaCommandGuide(platform: string, originAccess: OllamaOriginAccess, input: OllamaCommandGuideInput): OllamaCommandStep[] {
+    const shell = resolveOllamaCommandShell(platform);
+    const modelName = input.model_name.trim();
+    const ggufPath = input.gguf_path.trim();
+    const quotedModel = quoteForShell(shell, modelName);
+    return [
+        { key: 'verify_install', commands: ['ollama --version'] },
+        ...(modelName.length > 0 ? [{ key: 'pull_model' as const, commands: [`ollama pull ${quotedModel}`] }] : []),
+        ...(modelName.length > 0 && ggufPath.length > 0 ? [{ key: 'create_from_gguf' as const, commands: createFromGgufCommands(shell, modelName, ggufPath) }] : []),
+        { key: 'run_model', commands: modelName.length > 0 ? [`ollama run ${quotedModel}`, 'ollama ls', 'ollama ps'] : ['ollama ls', 'ollama ps'] },
+        ...(modelName.length > 0 ? [{ key: 'remove_model' as const, commands: [`ollama rm ${quotedModel}`] }] : []),
+        ...(originAccess.allowed_by_default ? [] : [{ key: 'allow_origin' as const, commands: allowOriginCommands(shell, platform, originAccess.origin) }]),
+    ];
 }

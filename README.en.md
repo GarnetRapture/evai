@@ -8,12 +8,13 @@
 </p>
 
 <h1 align="center">EverSoul AI Chat</h1>
-<p align="center"><i>A subculture bond chat connecting browser-local AI with optional native SQLite</i></p>
+<p align="center"><i>EverSoul spirit chat running on Chrome's built-in AI or the Ollama on your own PC</i></p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.0.3-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/version-0.0.4-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/license-Apache_2.0-green?style=flat-square" alt="License" />
   <img src="https://img.shields.io/badge/Chrome-Prompt_API-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome Prompt API" />
+  <img src="https://img.shields.io/badge/Ollama-local-000000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
   <img src="https://img.shields.io/badge/React-19.3-61DAFB?style=flat-square&logo=react" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-7.0-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Vite-8.3-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
@@ -31,16 +32,24 @@
 </p>
 
 <p align="center">
-  <sub>Uses Chrome Prompt API or local GGUF models in current desktop browsers, with native SQLite remaining the customer's choice.</sub>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/Actions-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-local-server.yml"><img src="https://img.shields.io/badge/Actions-Build_Local_Server-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Local Server workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/releases"><img src="https://img.shields.io/badge/Releases-Release_notes-6e7781?style=for-the-badge&logo=github&logoColor=white" alt="Releases" /></a>
+</p>
+
+<p align="center">
+  <sub>Chrome uses its built-in AI. Every other browser uses the Ollama installed on your PC as the chat engine.</sub>
 </p>
 
 ---
 
-## 🌟 Overview
+## Overview
 
-**EverSoul AI Chat** is a new AI chat project made to keep EverSoul close. It was built with one idea in mind: preserving the memories of the spirits. It brings all 99 spirits from EverSoul to life using the real game data, so you can talk with each of them in their own personality and voice.
+**EverSoul AI Chat** is an AI chat project made to keep EverSoul close. It started from a simple wish to hold on to the spirits' memories. All 99 spirits are loaded straight from the real game data, and each one talks in their own personality and voice.
 
-This is a local-first web app. It can use Chrome's built-in Prompt API or GGUF/Wllama in current desktop browsers. Conversations, memories, and settings remain in IndexedDB and, when the customer selects the native extension, are also mirrored to SQLite beside the EXE. Stored data can be exported or backed up to a linked PC folder.
+It is a local-first web app that never sends your conversations to a server. In Chrome it uses the Prompt API model built into the browser; in other browsers such as Firefox it talks directly to the Ollama running on your PC. Conversations, memories, and settings live only in the browser's IndexedDB, and you can export them to a file or back them up to a PC folder automatically.
+
+If running a web server is a hassle, use the `evai-server` launcher. Put it next to the built web files and run it, and it opens the app on an address only this PC can reach.
 
 The full official artwork of all 99 spirits, 522 conversation backgrounds, and the UI that EverTalk itself used are all bundled directly into this project. Each spirit's name, personality, and speech patterns are organized one file at a time under `data/personas/`, with per-language values prepared in Korean, English, and Chinese (Traditional/Simplified) — so switching languages never breaks what makes that spirit feel like itself.
 
@@ -55,7 +64,7 @@ The full official artwork of all 99 spirits, 522 conversation backgrounds, and t
 
 ---
 
-## 🎨 Full Spirit Gallery (99 Spirits)
+## Full Spirit Gallery (99 Spirits)
 
 A complete gallery built by looking through all 99 `data/personas/*.json` files, listing each spirit's artwork alongside its real Korean (ko), English (en), and Simplified Chinese (zh_cn) names exactly as stored in the data. The artwork folder names are taken exactly the way `resolveSpiritAssetFolder` in `src/domains/persona/logic.ts` looks them up (27 spirits whose in-game display name differs from their actual artwork folder name follow the `explicitAssetFolders` mapping as-is, and Canney, Casper, and Irene, whose artwork file prefix differs from the folder name, follow the `assetFilePrefixes` mapping).
 
@@ -204,18 +213,33 @@ Each spirit's artwork doesn't stop at a single picture. It's split across folder
 
 ---
 
-## 🚀 Key Features
+## Which browser can I use?
 
-- 💻 **Local AI on your PC**: Chrome can use its built-in Prompt API, while current desktop browsers can run an installed GGUF model with Wllama/WebGPU or CPU.
-- 🔒 **Environment and first-entry notice**: Desktop browsers are admitted and the setup explains the available model and storage routes. Mobile web remains separate from the dedicated Android LiteRT-LM app.
-- 🎭 **99 spirits, each with their own personality**: Name, grade, race, class, birthday, likes, representative lines, and EverTalk dialogue samples are loaded to build each spirit's system prompt, so every spirit speaks like themselves.
-- 🧠 **A spirit that remembers talking with you**: Every turn is atomically stored with the reply as that spirit's memory, and related memories are recalled in later conversations. After 8 unconsolidated memories, the on-device AI refreshes the summary carried in the system prompt.
-- 🎯 **Focus on the spirit you are chatting with**: Conversations are saved every turn, so switching to another spirit stops the previous spirit's in-progress reply and keeps a model session only for the current spirit.
-- 🌐 **Switch languages, the spirit stays the same**: UI text, notices, errors, and source spirit data switch among Korean, English, and Simplified Chinese. System instructions stay concise and English for small local models, while the configured response language is enforced separately.
-- ⭐ **Preferred Soul**: The star in the list sets or clears your Preferred Soul, which is shown at the top of the Familiarity tab and selected first when you reopen the app.
-- 🧩 **Risu modules**: Import `.risum` modules and turn them on or off; the description and lorebook of active modules are added to the system prompt.
-- 📂 **Saved and backed up on your PC**: IndexedDB is primary. The optional native extension mirrors conversations and memories to SQLite beside the EXE, with file backup remaining available.
-- 🖼️ **Backgrounds stay too**: All 522 official EverSoul illustration backgrounds are ready to pull up and change the mood of the conversation whenever you like.
+Any PC desktop browser gets in. The only difference is where the chat engine comes from. Mobile web is not supported.
+
+| Browser | Chat engine | What you prepare |
+| --- | --- | --- |
+| <img src="https://img.shields.io/badge/Chrome-4285F4?style=flat-square&logo=googlechrome&logoColor=white" alt="Chrome" /> | Chrome's built-in AI (Gemini Nano, or Gemma 4 with the flag on) or local Ollama | Press "Download and prepare" once in Settings |
+| <img src="https://img.shields.io/badge/Firefox-FF7139?style=flat-square&logo=firefoxbrowser&logoColor=white" alt="Firefox" /> | Local Ollama | Install Ollama and one model |
+| <img src="https://img.shields.io/badge/Edge-0078D7?style=flat-square&logo=microsoftedge&logoColor=white" alt="Edge" /> | Local Ollama (built-in AI also appears if the browser exposes the `LanguageModel` API) | Install Ollama and one model |
+| <img src="https://img.shields.io/badge/Whale-00C73C?style=flat-square&logo=naver&logoColor=white" alt="Whale" /> | Local Ollama | Install Ollama and one model |
+| <img src="https://img.shields.io/badge/Brave-FB542B?style=flat-square&logo=brave&logoColor=white" alt="Brave" /> <img src="https://img.shields.io/badge/Opera-FF1B2D?style=flat-square&logo=opera&logoColor=white" alt="Opera" /> | Local Ollama | Install Ollama and one model |
+
+On first entry the app checks whether this browser has Chrome's built-in AI. If it doesn't, the setup screen shows the Ollama connection guide right away, and once Ollama connects it takes over the chat.
+
+---
+
+## Key Features
+
+- **99 spirits, each with their own personality**: Name, grade, race, class, birthday, likes, representative lines, and EverTalk dialogue samples go into a separate system prompt for every spirit.
+- **Two chat engines**: Chrome uses the browser's built-in model; other browsers use the Ollama on your PC. Any Ollama model works, and a model that is already running is picked first.
+- **A spirit that remembers you**: Each turn is saved with the reply as that spirit's memory, and related memories are pulled back into later conversations. After 8 memories that have not been summarized yet, the model rebuilds the summary carried in the system prompt.
+- **Focus on the spirit you are talking to**: Switching spirits stops the previous spirit's reply and keeps a model session only for the current one.
+- **Switch languages, the spirit stays the same**: UI text, notices, errors, and source spirit data switch among Korean, English, and Simplified Chinese.
+- **Preferred Soul**: Star a spirit to pin it to the top of the Familiarity tab and have it selected first when you reopen the app.
+- **Risu modules**: Import `.risum` modules and turn them on or off; the description and lorebook of active modules are added to the system prompt.
+- **Saved and backed up on your PC**: All data lives in the browser's IndexedDB, with file export and import, automatic folder backup, and point-in-time restore.
+- **Backgrounds**: 522 official EverSoul illustration backgrounds to change the mood of the chat.
 
 <p align="center">
   <img src="public/eversoul-assets/backgrounds/talk/Talk_BG_Castle.png" width="150" alt="Talk BG Castle" />
@@ -228,9 +252,9 @@ Each spirit's artwork doesn't stop at a single picture. It's split across folder
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
-A local-first React web app. IndexedDB and browser-local inference form the base path; the optional C++26 host mirrors context to SQLite beside the EXE through the Vite development bridge or a Chromium/Firefox Native Messaging extension.
+It is a single React web app. Data stays in IndexedDB, and the chat engine is Chrome's built-in AI, the model files Chrome already downloaded, or local Ollama. `evai-server` only serves the built web files on `127.0.0.1`; it never touches data or models.
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': {'primaryColor': '#cde2fb', 'primaryBorderColor': '#2a78d6', 'primaryTextColor': '#0b0b0b', 'lineColor': '#52514e', 'clusterBkg': '#fcfcfb', 'clusterBorder': '#c3c2b7', 'fontFamily': 'system-ui, -apple-system, Segoe UI, sans-serif'}}}%%
@@ -245,8 +269,9 @@ flowchart TB
     subgraph DOMAIN["Domain services · src/domains"]
         direction LR
         D1["persona · chat · style<br/>knowledge · modules"]
-        D2["llm<br/>runtime · catalog · chrome"]
+        D2["llm<br/>engine · catalog · chrome<br/>chromeInstalled · ollama"]
         D3["settings · sync · auth"]
+        D4["ollama<br/>HTTP client · connection guide"]
     end
 
     subgraph SHARED["Shared modules · src/shared"]
@@ -261,7 +286,11 @@ flowchart TB
     PACK["data/personas/*.json<br/>99 files · import.meta.glob"] --> D1
     S1 -- "rooms · messages · spirits · memories · settings · modules" --> DB[("IndexedDB<br/>eversoul-ai-chat")]
     S2 -- "JSON export / import<br/>automatic folder backup" --> PC[("PC files / backup folder")]
-    D2 -- "availability · create · clone<br/>promptStreaming" --> LLM["Chrome Prompt API<br/>LanguageModel · Gemini Nano"]
+    D2 -- "availability · create · clone<br/>promptStreaming" --> LLM["Chrome Prompt API<br/>Gemini Nano · Gemma 4"]
+    D2 -- "LiteRT-LM · WebGPU" --> CHROMEFILE["Chrome-installed model files<br/>linked OptGuide folders"]
+    D2 --> D4
+    D4 -- "HTTP /api/chat · /api/tags · /api/ps" --> OLLAMA["Local Ollama<br/>127.0.0.1:11434"]
+    SERVER["evai-server (C++26)<br/>static serving on 127.0.0.1:47831"] -- "index.html · assets" --> UI
 
     classDef uiStyle fill:#cde2fb,stroke:#2a78d6,stroke-width:2px,color:#0b0b0b
     classDef domainStyle fill:#e3ddf7,stroke:#4a3aa7,stroke-width:2px,color:#0b0b0b
@@ -270,77 +299,164 @@ flowchart TB
     classDef llmStyle fill:#fbdcc9,stroke:#eb6834,stroke-width:2px,color:#0b0b0b
 
     class UI1,UI2,UI3 uiStyle
-    class D1,D2,D3 domainStyle
+    class D1,D2,D3,D4 domainStyle
     class S1,S2,S3,PACK sharedStyle
     class DB,PC dbStyle
-    class LLM llmStyle
+    class LLM,CHROMEFILE,OLLAMA,SERVER llmStyle
 ```
 
-- **Environment detection**: PC desktop browsers are admitted. `EnvironmentLayer` shows the existing user profile, browser/version/platform, an adapter verified through `requestAdapter()`, and native API/EXE/DB paths in the configured UI language.
+- **Environment detection**: PC desktop browsers are admitted. If `LanguageModel` exists the app uses Chrome's built-in AI; otherwise the setup screen shows the Ollama connection guide. `EnvironmentLayer` at the top shows the profile, browser and version, platform, and the WebGPU adapter confirmed through `requestAdapter()`.
 - **Spirit data**: `src/domains/persona/archive.ts` loads `data/personas/*.json` through `import.meta.glob`, and the initial setup installs them into the IndexedDB `persona_profile` store. Per-language system prompts are cached in `persona_localized_prompt`.
 - **System prompt**: The starting identity is assembled from the spirit's profile, personality and greeting, 12 lines sampled across the complete speech/story/EverTalk corpus, and 4 real `Savior → spirit` response exchanges. Each turn dynamically adds up to 2 topic-relevant real exchanges, 18 recent messages, 4 related memories out of 200 candidates, and 1 knowledge chunk. Digest, explicit memories, semantic relationship state, habits and bond counts alter the starting values only after real records exist. `zh_cn` is normalized to Simplified Chinese with OpenCC and emoji are removed from output.
-- **On-device session**: Only the active spirit session is retained. Its persona is the first `system` entry and real JSON `Savior → spirit` exchanges follow as role-separated `user/assistant` few-shot messages across Chrome, GGUF, and LiteRT-LM. Every request preserves contiguous recent history and reserves the response budget.
+- **Chrome session**: Only the active spirit's session is kept. The system prompt is the first `system` entry of `initialPrompts`, followed by the spirit's real `Savior → spirit` exchanges as `user/assistant` examples. Each request `clone()`s the session and picks recent history with `contextWindow`, `contextUsage`, and `measureContextUsage()` while leaving 384 tokens for the reply.
+- **Ollama session**: The same system prompt and examples go to `/api/chat`. Some templates, such as Mistral's, insist on strictly alternating user/assistant turns, so consecutive messages from the same role are merged with their content intact. Requests carry `truncate: false` and `shift: false` so Ollama never silently cuts the conversation, and a 1-token measurement request checks the real prompt length first. If it does not fit, the oldest context goes first; the system prompt, the examples, and this turn's instruction always stay. The context size follows what Ollama actually loaded (`context_length` from `/api/ps`).
+- **Reply checks**: Every engine returns the same JSON schema, and a reply that breaks the voice or language rules is generated once more.
 - **Language declaration**: `availability()` and `create()` use identical options. English (the system-instruction language) and the selected app language are declared in `expectedInputs`, while only the app language is declared in `expectedOutputs`; unsupported combinations fall back to the model's base multilingual capability.
 - **Memory**: The reply and its episodic `Savior/Spirit` memory are committed in one IndexedDB transaction. Related memories are found with a sparse lexical vector — 1–3 character n-grams hashed with FNV-1a into 512 dimensions — and cosine similarity. After 8 memories since the last successful consolidation, the latest 30 are summarized. Once at least 6 messages are about to leave the recent raw window, they are compacted and anchored in the same turn's system prompt.
-- **Storage**: IndexedDB remains authoritative. Selecting `native_mirror` backfills and mirrors messages, memories, and deletions to SQLite; reads merge both sources and automatically fall back to IndexedDB when native health fails.
+- **Storage**: Everything lives in the IndexedDB database `eversoul-ai-chat`, and persistent storage is requested at startup. There is no SQL server integration yet.
 - **Backup**: The File System Access API exports and imports all data (except `file_handle`) as a JSON file. When a PC folder is linked, `eversoul-ai-chat-backup-<timestamp>.json` and `eversoul-ai-chat-backup-latest.json` are written 5 seconds after a completed reply, a message or room deletion, a module change, or a change of language, reasoning display, skin, Preferred Soul, chat model, or notice acknowledgment (consecutive changes restart the 5-second wait), keeping only the 10 most recent timestamped backups. The folder handle is kept in the IndexedDB `file_handle` store, and you can restore any point from the list.
 - **Localization**: UI text, notices, the blocked screen, and status/error messages are shown from the Korean, English, and Simplified Chinese labels in `src/domains/evertalk/i18n.ts`. Domain errors travel as codes (`DomainError`) and are turned into labels in the UI.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
-### Web App
+### Web app
+
 - **Framework**: `React 19.3` + `TypeScript 7.0` + `Vite 8.3` (static build with `base: './'`)
-- **State Management**: `TanStack React Query v5`, `Zustand v5`
+- **State**: `TanStack React Query v5`, `Zustand v5`
 - **Styling**: `Tailwind CSS v4` (`@tailwindcss/vite`) + `clsx`
 - **Icons**: `lucide-react`
 - **Lint**: `oxlint`
 
-### Browser Platform
-- **On-device AI**: Chrome Prompt API (`LanguageModel`, Gemini Nano) — types from `@types/dom-chromium-ai`
-- **Storage**: IndexedDB (`idb` 8) plus optional C++26/SQLite native mirror
-- **Simplified Chinese enforcement**: Traditional-to-Simplified conversion with `opencc-js`
-- **PC files and folders**: File System Access API (`showOpenFilePicker`, `showSaveFilePicker`, `showDirectoryPicker`) — types from `@types/wicg-file-system-access`
-- **Environment detection**: User-Agent Client Hints (`navigator.userAgentData`) — types from `user-agent-data-types`
+### Browser side
+
+- **Chat engines**: Chrome Prompt API (`LanguageModel`), Chrome-installed model files (`@litert-lm/core`, WebGPU), local Ollama (HTTP)
+- **Storage**: IndexedDB (`idb` 8)
+- **Simplified Chinese**: Traditional-to-Simplified conversion with `opencc-js`
+- **PC files and folders**: File System Access API (`showOpenFilePicker`, `showSaveFilePicker`, `showDirectoryPicker`)
+- **Environment detection**: User-Agent Client Hints with a UA string fallback, `navigator.gpu.requestAdapter()`
+
+### Local server launcher
+
+- **Language**: C++26, built straight with the compiler, no CMake (`server/build.sh`, `-std=c++26`)
+- **Windows**: MSYS2 UCRT64 MinGW-w64; `windres` embeds the icon and version info, and static linking leaves a single exe
 
 ---
 
-## 📦 On-device Model
+## Chat Models
 
-No model file is shipped in the repository or downloaded by the app itself. The app uses the Gemini Nano model that Chrome provides, through the Prompt API.
+### Chrome built-in AI
 
-- **Preparation**: Press "Download and prepare" in Settings > On-device Models; Chrome downloads the model and the progress is shown. The download starts only with a user click (user activation).
-- **Model choice**: Chrome picks the Gemini Nano size and the GPU/CPU backend to fit the device; a web page cannot choose it.
-- **Chrome requirements** ([official Chrome docs](https://developer.chrome.com/docs/ai/prompt-api)): Windows 10/11, macOS 13+, Linux, or ChromeOS (Chromebook Plus); at least 22 GB of free space on the volume that holds the Chrome profile; a GPU with more than 4 GB of VRAM, or 16 GB of RAM and 4 CPU cores or more; an unlimited or unmetered network. It does not work in Chrome for Android or iOS.
-- **Development diagnostics**: If a development Chrome build does not expose the API, inspect `chrome://flags/#prompt-api-for-gemini-nano`; inspect model installation at `chrome://on-device-internals`. The historical `chrome://flags/#optimization-guide-on-device-model` `Enabled BypassPerfRequirement` value bypasses hardware checks—it does not disable a system prompt. Ordinary web JavaScript cannot change `chrome://flags`.
+- **Preparation**: Press "Download and prepare" in Settings > On-device Models and Chrome downloads the model. The download only starts from a user click.
+- **Model choice**: Chrome picks the Gemini Nano size and GPU/CPU backend for the device. Turning on `chrome://flags/#gemma4-for-built-in-ai` and restarting switches to Gemma 4, and the app confirms the real flag state from the Local State file.
+- **Chrome requirements** ([official Chrome docs](https://developer.chrome.com/docs/ai/prompt-api)): Windows 10/11, macOS 13+, Linux, or ChromeOS (Chromebook Plus); at least 22 GB free on the drive holding the Chrome profile; a GPU with more than 4 GB of VRAM, or 16 GB of RAM and 4+ CPU cores; an unmetered network. It does not work in Chrome for Android or iOS.
+- **Diagnostics**: Model state is shown at `chrome://on-device-internals`. Regular web pages cannot change `chrome://flags`.
 
----
+### Local Ollama
 
-## 💻 Run & Build Guide
+In browsers without Chrome's built-in AI, Ollama handles the chat. In Chrome you can also pick it yourself from "Local Ollama Models" in Settings. Use whatever model fits your PC; from a small 3B model up to 30B or 120B, if Ollama can run it, the app can use it.
 
-- You need [Node.js](https://nodejs.org/) and [Google Chrome](https://www.google.com/chrome/) for PC.
-- Open the development server in a current desktop browser. Build the optional EXE first to exercise the native development API.
+1. Install and start Ollama from [ollama.com](https://ollama.com/download).
+2. Download the model you want.
 
-```bash
-npm install      # install dependencies
-npm run dev      # start the Vite dev server, then open it in Chrome on a PC
-npm run lint     # run oxlint
-npm run build    # tsc -b type check + vite build static output (dist/)
+   ```bash
+   ollama --version
+   ollama pull <model:tag>
+   ollama pull hf.co/<user>/<repository>:<quantization>
+   ```
+
+   You can also build a model from a GGUF file you already have. This is Windows PowerShell:
+
+   ```powershell
+   Set-Content "$env:TEMP\Modelfile.evai" 'FROM D:\model\my-model.gguf'
+   ollama create my-model -f "$env:TEMP\Modelfile.evai"
+   Remove-Item "$env:TEMP\Modelfile.evai" -Force
+   ```
+
+3. Run the model once and check the lists. The app connects to a model shown by `ollama ps` first, and otherwise uses the most recently downloaded one.
+
+   ```bash
+   ollama run my-model
+   ollama ls
+   ollama ps
+   ```
+
+4. Open the app and press "Check connection" on the setup screen (or in Settings > Local Ollama Models). Type a model name and the guide builds the download, run, and remove commands for it.
+
+**Depending on the address, one more step may be needed.** By default Ollama only accepts requests from `localhost`, `127.0.0.1`, and `0.0.0.0`. If you opened the app on this PC through `evai-server` or `npm run dev`, it connects as-is. If you opened it from another address such as [ai.everlib.pro](https://ai.everlib.pro/), add that address to `OLLAMA_ORIGINS` before starting Ollama. The connection guide shows the command for the page you are on.
+
+```powershell
+[Environment]::SetEnvironmentVariable('OLLAMA_ORIGINS', 'https://ai.everlib.pro', 'User')
 ```
 
-`dist/` contains only static files with no server code, so it can be deployed as-is to any static host. The production address is [ai.everlib.pro](https://ai.everlib.pro/). `navigator.userAgentData` and the File System Access API work only in a secure context (HTTPS or localhost).
+On macOS use `launchctl setenv OLLAMA_ORIGINS "address"`; on Linux with systemd, add `Environment="OLLAMA_ORIGINS=address"` through `systemctl edit ollama.service` and restart Ollama. When Chrome asks for local network access from a public site, allow it.
 
 ---
 
-## ⚙️ Build with GitHub Actions — Just Press the Button
+## Local Server Launcher (evai-server)
 
-Forking this repository also copies the workflow file [`.github/workflows/build-web.yml`](.github/workflows/build-web.yml), so everyone who forks can run that build in their own repository. **No Node.js install, no commands to type, no inputs to fill in.** Press the button on the **Actions** tab of your fork and GitHub runs `npm install` → `npm run build` for you, then packs the `dist/` static output into a zip you can download.
+It runs on Windows, Linux, and macOS. Put the executable in the same folder as the web build (`index.html`, `assets/`, and so on) and run it.
+
+| OS | Executable | How to run |
+| --- | --- | --- |
+| <img src="https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows" /> x86_64 | `evai-server.exe` | Double-click it and a console window opens. Closing the window stops the server. |
+| <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" /> x86_64 | `evai-server` | `./evai-server` in a terminal |
+| <img src="https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS" /> Apple Silicon | `evai-server` | `./evai-server` in a terminal. A downloaded file may need `xattr -d com.apple.quarantine evai-server` the first time. |
+
+```text
+EVAI local server
+root: C:\EVAI
+open: http://127.0.0.1:47831/
+close this window to stop the server.
+```
+
+- Files are always served from the folder that holds the executable, no matter where you launch it from. If that folder has no `index.html`, it exits right away.
+- It listens only on `127.0.0.1`, so other PCs cannot reach it. Requests whose Host header is not `127.0.0.1:port` or `localhost:port` are refused.
+- The default port is `47831`; change it with `evai-server --port 48000`.
+- It sends the same `Cross-Origin-Opener-Policy: same-origin` and `Cross-Origin-Embedder-Policy: require-corp` headers as the dev server.
+- Paths that escape the folder are blocked, and only `GET` and `HEAD` are accepted. There is no database feature yet.
+
+The Build Local Server workflow packs the web build and the executable together for each OS, so you just extract and run.
+
+---
+
+## Run & Build
+
+You need [Node.js](https://nodejs.org/) and a PC desktop browser. To build the launcher yourself you need a C++ compiler that accepts `-std=c++26`.
+
+- Windows: `pacman -S mingw-w64-ucrt-x86_64-gcc` in an [MSYS2](https://www.msys2.org/) UCRT64 shell
+- Linux: GCC 14 or newer (for example `CXX=g++-14`)
+- macOS: Homebrew GCC (for example `brew install gcc`, then `CXX=g++-15`)
+
+```bash
+npm install          # install dependencies
+npm run dev          # Vite dev server (http://localhost:5173)
+npm run lint         # oxlint
+npm run build        # tsc -b type check + vite build (dist/)
+npm run server:build # build server/build/evai-server(.exe)
+```
+
+All three OSes build with the same `server/build.sh`; choose the compiler with something like `CXX=g++-14 npm run server:build`. On Windows the script uses `windres` to embed the icon and version info (the `package.json` version, company everlib) into the exe.
+
+`dist/` is only static files, so it can go on any static host. The production address is [ai.everlib.pro](https://ai.everlib.pro/). The File System Access API works only on HTTPS or localhost.
+
+---
+
+## Build with GitHub Actions
+
+The workflow files come along when you fork. Press a button on your fork's **Actions** tab and GitHub builds everything and uploads a package. You don't need Node.js or a compiler on your PC.
 
 <p align="center">
   <a href="https://github.com/GarnetRapture/evai/fork"><img src="https://img.shields.io/badge/STEP_0-Fork_this_repo-238636?style=for-the-badge&logo=github&logoColor=white" alt="Fork" /></a>
   <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-web.yml"><img src="https://img.shields.io/badge/Workflow-Build_Web-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Web workflow" /></a>
+  <a href="https://github.com/GarnetRapture/evai/actions/workflows/build-local-server.yml"><img src="https://img.shields.io/badge/Workflow-Build_Local_Server-0969da?style=for-the-badge&logo=githubactions&logoColor=white" alt="Build Local Server workflow" /></a>
 </p>
+
+| Workflow | Output | Use it when |
+| --- | --- | --- |
+| [Build Web](.github/workflows/build-web.yml) | `evai-web-v<version>-<7-char commit>.zip` (`dist/`) | Uploading to a static host |
+| [Build Local Server](.github/workflows/build-local-server.yml) | `evai-local-server-windows-x86_64-v<version>-<7-char commit>.zip`<br/>`evai-local-server-linux-x86_64-v<version>-<7-char commit>.tar.gz`<br/>`evai-local-server-macos-arm64-v<version>-<7-char commit>.tar.gz` | Opening the app on your PC with the launcher (`dist/` + executable) |
 
 ### Step 1 — Turn Actions on in your fork
 
@@ -352,7 +468,7 @@ A forked repository starts with its workflows disabled. Open the **Actions** tab
 
 ### Step 2 — Press `Run workflow`
 
-Pick **Build Web** in the left-hand list, open **`Run workflow`** on the right, and press the green **`Run workflow`** button. There is nothing to fill in, and the branch can stay at its default.
+Pick **Build Web** or **Build Local Server** in the left-hand list, open **`Run workflow`** on the right, and press the green **`Run workflow`** button. There is nothing to fill in, and the branch can stay at its default. The picture shows Build Web; Build Local Server works the same way.
 
 <p align="center">
   <img src="docs/images/actions/en/2-run-workflow.svg" width="880" alt="Selecting the Build Web workflow and pressing Run workflow" />
@@ -360,7 +476,7 @@ Pick **Build Web** in the left-hand list, open **`Run workflow`** on the right, 
 
 ### Step 3 — Download the finished zip
 
-When the run finishes it gets a green check. Open that run and download `evai-web-v<version>-<7-char commit>.zip` from **Artifacts** at the bottom. Unzipped, it is exactly the `dist/` static output of `npm run build`, so it works as-is on any static host.
+When the run finishes it gets a green check. Open that run and download what you need from **Artifacts** at the bottom. The Build Web zip is the `dist/` static output as-is; each Build Local Server package adds the executable for its OS.
 
 <p align="center">
   <img src="docs/images/actions/en/3-download-artifact.svg" width="880" alt="Downloading the artifact zip from a finished workflow run" />
@@ -368,25 +484,42 @@ When the run finishes it gets a green check. Open that run and download `evai-we
 
 ### What the workflow actually does
 
+**Build Web**
+
 | Stage | Detail |
 | --- | --- |
-| Runner | `ubuntu-latest` with `actions/setup-node@v7` Node.js 24 |
-| Dependencies | `npm install` (this repository does not ship `package-lock.json`, so it uses `npm install` rather than `npm ci`) |
-| Build | `npm run build` = `tsc -b` type check + `vite build` static output (`dist/`) |
-| Packaging | The whole `dist/` compressed into `evai-web-v<package.json version>-<7-char commit>.zip` |
-| Upload | That single zip uploaded as-is by `actions/upload-artifact@v7` (kept for 90 days) |
-| Release | Only when a tag starting with `v` is pushed: the same zip is attached to a release in **your own** fork's Releases |
+| Runner | `ubuntu-latest` with Node.js 24 |
+| Dependencies | `npm install` (no `package-lock.json` is shipped, so it is used instead of `npm ci`) |
+| Build | `npm run build` = `tsc -b` type check + `vite build` (`dist/`) |
+| Package and upload | `dist/` zipped and uploaded to Artifacts (kept 90 days) |
+
+**Build Local Server**
+
+| Stage | Detail |
+| --- | --- |
+| Web build | `npm run build` on `ubuntu-latest`, handing `dist/` to the next jobs |
+| Windows | `windows-latest` + MSYS2 UCRT64 GCC runs `sh server/build.sh`; `dist/` and `evai-server.exe` are zipped |
+| Linux | `ubuntu-24.04` + `g++-14`; `dist/` and `evai-server` go into a tar.gz that keeps the execute bit |
+| macOS | `macos-15` (Apple Silicon) + Homebrew `g++-15`; packed as tar.gz |
+| Upload | Each of the three packages is uploaded to Artifacts (kept 90 days) |
 
 ### Good to know
 
 - The manual **`Run workflow` button appears only while the workflow file is on the default branch** ([official GitHub docs](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow)). Right after a fork it already is, so there is nothing to do.
-- The build runs in your own repository on your own account. On a public repository with GitHub-hosted standard runners, [Actions usage is free](https://docs.github.com/en/billing/concepts/product-billing/github-actions); a private fork draws on that account's included minutes (2,000 per month on GitHub Free).
-- You do not need push access to the upstream repository. A fork is fully your own, and the build output lands only in your repository's Artifacts and Releases.
-- The optional C++26 native SQLite host (`native/`) is not part of this workflow. Build it on your own PC with `npm run native:build` as described in the run and build guide above.
+- The build runs in your own repository on your own account. On a public repository with GitHub-hosted standard runners, [Actions usage is free](https://docs.github.com/en/billing/concepts/product-billing/github-actions). A private fork draws on the account's included minutes, and Windows and macOS runners use them up faster than Linux.
+- You do not need push access to the upstream repository. Build output lands only in your repository's Artifacts.
+- Official Releases carry no build files. Get the executable and web files from the workflows above.
+- There is no Android build in the workflows right now; see the Android section below.
 
 ---
 
-## 🧩 Spirit (Persona) Data Schema
+## Android App
+
+`android/` holds an Android app that uses AICore Gemini Nano and LiteRT-LM, but its development is paused for now. There is no build workflow or distribution for it for the time being.
+
+---
+
+## Spirit (Persona) Data Schema
 
 Spirits fall into seven races (`race`).
 
@@ -446,47 +579,21 @@ The source of that data is the 99 `data/personas/*.json` files. Below is the rea
 ```
 
 - The `i18n` block is a **field-first structure**: each field name is the key, and beneath it sit the 4 language values `{ ko, en, zh_tw, zh_cn }`. Translations exist down to the individual field level for `name` · `grade` · `race` · `class` · `sub_class` · `stat`, as well as `profile.nick_name` · `profile.constellation` · `profile.union` · `profile.cv_ko` · `profile.cv_jp` · `profile.like` · `profile.dislike` · `profile.hobby` · `profile.speciality`.
-- For display, `parseSpiritDetail` in `src/domains/persona/logic.ts` parses this same `raw_json` and picks the right language. The system prompt sent to the on-device AI is assembled separately — `src/domains/persona/prompt.ts` re-parses `raw_json` on its own — but both ultimately read from the `raw_json` in IndexedDB.
+- For display, `parseSpiritDetail` in `src/domains/persona/logic.ts` parses this `raw_json` and picks the right language. The system prompt for the chat model is built separately by `src/domains/persona/prompt.ts`, which parses `raw_json` on its own. Both read the `raw_json` stored in IndexedDB.
 - Each spirit's artwork lives under `public/eversoul-assets/spirits/{EnglishName}/`, split into category folders: `base` (base illustration at 512/1024/2048), `costume`, `gacha`, `raid`, and `srg` (story). The `LoadableAssetImage` component (`src/domains/evertalk/components/LoadableAssetImage.tsx`) tries a list of candidate paths in order (`useFirstLoadableImage`) and renders the first one that actually loads.
 
 ---
 
-## 📌 Versioning Rule
+## Versioning
 
-This repository follows the principle of **incrementing the patch version by 1 for every commit**. The version is managed by the single `version` field in `package.json`. The project was re-initialized at `0.0.0` when it moved from the Tauri desktop app to the Chrome on-device AI web app, and the current version is `0.0.1`. The table below is the version history of the former Tauri desktop app.
-
-| Version | Commit |
-| --- | --- |
-| 0.0.1 | `first` |
-| 0.0.2 | `초기세팅` |
-| 0.0.3 | `초기세팅2` |
-| 0.0.4 | `초기세팅3` |
-| 0.0.5 | `초기셋팅4` |
-| 0.0.6 | `update_i18n : en , kr , zh_tw , zh_cn` |
-| 0.0.7 | Trilingual README overhaul + versioning rule documentation |
-| 0.0.7 | `up` |
-| 0.0.8 | `bugfix` |
-| 0.0.9 | `up` |
-| 0.0.10 | `fix` |
-| 0.0.11 | `1` |
-| 0.0.12 | `초기릴리즈` |
-| 0.0.13 | `클린` |
-| 0.0.14 | `feat:` |
-| 0.0.15 | `feat: 로컬 LLM 및 외부 API 연동 하이브리드 구동 모드 추가 및 설정 UI/다국어 적용` |
-| 0.0.17 | `Merge pull request #1 from GarnetRapture/codex/setup-from-v0.0.11` |
-| 0.0.18 | `fix` |
-| 0.0.19 | `ㅇ` |
-| 0.0.20 | `버그수정` |
-| 0.0.20 | `도메인 컨트롤러 분리 및 다국어 에러 통일, 프론트-백엔드 정합화` |
-| 0.0.21 | `Fix local inference correctness, wire streaming chat, add fork-and-build CI` |
-| 0.0.22 | `Untrack local runtime config` |
-| 0.0.23 | `Keep Cargo.lock in sync with the version bump` |
+The version lives in the single `version` field of `package.json`, and the Windows executable's version info is taken from it too. The project restarted at `0.0.0` when it moved from the Tauri desktop app to a web app, and the current version is `0.0.4`.
 
 ---
 
-## 📄 License
+## License
 
-The **Apache License 2.0** in this repository covers only the web app source code this project wrote itself (`src/`). This project holds no rights to the third-party works below.
+The **Apache License 2.0** in this repository covers only the source code this project wrote itself (`src/`, `server/`). This project holds no rights to the third-party works below.
 
-- **On-device model Gemini Nano** — a model Google provides through Chrome. This repository neither bundles nor redistributes the model weights; Chrome on the user's PC downloads and manages the model itself.
+- **Gemini Nano, Gemma 4** — models Google provides through Chrome. This repository neither bundles nor redistributes the weights; Chrome on the user's PC downloads and manages them.
+- **Ollama and the models used with it** — installed by the user, and each model follows its own license. This repository ships no models.
 - **EverSoul game resources** — spirit illustrations, talk backgrounds, source persona data, and voice lines remain the property of their original rights holders. This project claims no rights to them and uses them as a non-commercial fan project.

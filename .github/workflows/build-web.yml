@@ -2,12 +2,9 @@ name: Build Web
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'v*'
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: build-web-${{ github.ref }}
@@ -49,9 +46,3 @@ jobs:
           if-no-files-found: error
           retention-days: 90
           overwrite: true
-
-      - name: Publish release
-        if: startsWith(github.ref, 'refs/tags/v')
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" "${{ steps.package.outputs.archive }}" --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --generate-notes

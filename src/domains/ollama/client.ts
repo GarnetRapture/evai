@@ -2,7 +2,6 @@ import { DomainError, describeUnknownError, isAbortError, isDomainError } from '
 import {
     OLLAMA_API_PATH,
     OLLAMA_CAPABILITY_THINKING,
-    OLLAMA_CONTEXT_LENGTH_KEY_SUFFIX,
     OLLAMA_CONTEXT_OVERFLOW_MARKERS,
     OLLAMA_CONTEXT_OVERFLOW_TOKEN_COUNT_PATTERN,
     OLLAMA_MEASUREMENT_PREDICT_TOKENS,
@@ -17,7 +16,6 @@ import type {
     OllamaChatResponse,
     OllamaErrorResponse,
     OllamaGenerationRequest,
-    OllamaLoadOptions,
     OllamaModelProfile,
     OllamaPromptMeasurement,
     OllamaPsResponse,
@@ -64,11 +62,6 @@ async function requestOllama(baseUrl: string, path: string, init: RequestInit): 
 async function readJson<T>(baseUrl: string, path: string, init: RequestInit): Promise<T> {
     const response = await requestOllama(baseUrl, path, init);
     return await response.json() as T;
-}
-
-function contextLengthFromModelInfo(modelInfo: Record<string, unknown>): number | null {
-    const entry = Object.entries(modelInfo).find(([key, value]) => key.endsWith(OLLAMA_CONTEXT_LENGTH_KEY_SUFFIX) && typeof value === 'number' && Number.isInteger(value) && value > 0);
-    return entry === undefined ? null : entry[1] as number;
 }
 
 function contextOverflowTokenCount(error: unknown): number | null | undefined {
@@ -150,16 +143,20 @@ export const ollamaClient = {
         });
         return {
             name: modelName,
-            context_length: contextLengthFromModelInfo(response.model_info ?? {}),
             capabilities: response.capabilities ?? [],
         };
     },
     supportsThinking(profile: OllamaModelProfile): boolean {
         return profile.capabilities.includes(OLLAMA_CAPABILITY_THINKING);
     },
-    async loadModel(baseUrl: string, modelName: string, options: OllamaLoadOptions): Promise<void> {
-        const request: OllamaChatRequest = { model: modelName, messages: [], stream: false, options };
+    async loadModel(baseUrl: string, modelName: string): Promise<number> {
+        const request: OllamaChatRequest = { model: modelName, messages: [], stream: false };
         await requestOllama(baseUrl, OLLAMA_API_PATH.chat, { method: 'POST', headers: JSON_HEADERS, body: JSON.stringify(request) });
+        const running = (await ollamaClient.listRunningModels(baseUrl)).find((model) => model.name === modelName);
+        if (running === undefined || !Number.isInteger(running.context_length) || running.context_length <= 0) {
+            throw new DomainError('ollama_runtime', `${OLLAMA_API_PATH.ps} · ${modelName}`);
+        }
+        return running.context_length;
     },
     async unloadModel(baseUrl: string, modelName: string): Promise<void> {
         const request: OllamaChatRequest = { model: modelName, messages: [], stream: false, keep_alive: OLLAMA_UNLOAD_KEEP_ALIVE };

@@ -10,7 +10,7 @@ const crossOriginIsolationHeaders = {
 
 const applicationEntryDocuments = ['index.html']
 
-const nonApplicationDirectories = ['android', 'build', 'native', 'third_party', 'tmp-claude', 'docs', 'vite', '.claude', '.github']
+const nonApplicationDirectories = ['android', 'build', 'native', 'server', 'third_party', 'tmp-claude', 'docs', 'vite', '.claude', '.github']
 
 const nonApplicationWatchPatterns = nonApplicationDirectories
   .map((directory) => `${normalizePath(resolve(import.meta.dirname, directory))}/**`)

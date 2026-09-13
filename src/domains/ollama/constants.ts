@@ -8,7 +8,6 @@ export const OLLAMA_API_PATH = {
 } as const;
 export const OLLAMA_PROBE_TIMEOUT_MS = 3_000;
 export const OLLAMA_CAPABILITY_THINKING = 'thinking';
-export const OLLAMA_CONTEXT_LENGTH_KEY_SUFFIX = '.context_length';
 export const OLLAMA_UNLOAD_KEEP_ALIVE = 0;
 export const OLLAMA_ALLOWED_URL_PROTOCOLS: readonly string[] = ['http:', 'https:'];
 export const OLLAMA_STATUS_DETAIL_READY = 'ready';

@@ -1,16 +1,14 @@
 {
   "name": "evai",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "native:configure": "cmake -S native -B native/build -G Ninja -DCMAKE_BUILD_TYPE=Release",
-    "native:build": "cmake --build native/build --config Release",
-    "native:test": "ctest --test-dir native/build --output-on-failure -C Release",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server:build": "sh server/build.sh"
   },
   "dependencies": {
     "@litert-lm/core": "^0.17.0",
