@@ -1,7 +1,6 @@
 import type { AppLanguage } from '../../shared/types';
 import type { MemoryContextFilter } from '../chat/types';
 import type { ChromeBrowserModelState, ChromeInstalledModel } from '../llm/types';
-import type { ContextStorageMode } from '../native/types';
 import type { PersonaCheatPreset } from '../persona/types';
 
 export type SetupPhase = 'language' | 'done';
@@ -19,10 +18,7 @@ export interface AppSettings {
     lobby_background: string | null;
     savior_name: string;
     platform_guide_acknowledged: boolean;
-    context_storage_mode: ContextStorageMode;
-    native_executable_path: string;
-    native_model_path: string;
-    native_model_context_window: number;
+    ollama_base_url: string;
     chrome_model_folder_path: string;
     chrome_installed_models: ChromeInstalledModel[];
     chrome_browser_model_state: ChromeBrowserModelState | null;
@@ -49,10 +45,7 @@ export interface GeneralSettingsRecord {
     lobby_background: string | null;
     savior_name: string;
     platform_guide_acknowledged: boolean;
-    context_storage_mode: ContextStorageMode;
-    native_executable_path: string;
-    native_model_path: string;
-    native_model_context_window: number;
+    ollama_base_url: string;
     chrome_model_folder_path: string;
     chrome_installed_models: ChromeInstalledModel[];
     chrome_browser_model_state: ChromeBrowserModelState | null;

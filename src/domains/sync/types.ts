@@ -78,5 +78,4 @@ export interface BrowserStorageInspection {
     estimated_snapshot_bytes: number;
     stores: StorageStoreUsage[];
     personas: PersonaStorageUsage[];
-    native_statistics: import('../native').NativeContextStatistics | null;
 }

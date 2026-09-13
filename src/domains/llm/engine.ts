@@ -3,10 +3,9 @@ import type { AppLanguage } from '../../shared/types';
 import { androidGeminiNanoRuntime } from './androidNano/runtime';
 import { assertChromePromptVariantActive } from './chrome/variantGuard';
 import { chromeInstalledModelRuntime } from './chromeInstalled/runtime';
-import { ggufRuntime } from './gguf/runtime';
-import { chromeInstalledModelKey, localModelFileName, resolveChatModelEngine } from './identity';
+import { chromeInstalledModelKey, localModelFileName, ollamaModelName, resolveChatModelEngine } from './identity';
 import { liteRtLmRuntime } from './litertlm/runtime';
-import { nativeHostRuntime } from './native/runtime';
+import { ollamaRuntime } from './ollama/runtime';
 import { listRequestStatuses } from './requests';
 import { chromePromptRuntime } from './runtime';
 import { isLocalModelInstalled } from './storage';
@@ -27,11 +26,8 @@ async function unloadEnginesExcept(engine: ChatModelEngineKind): Promise<void> {
     if (engine !== 'chrome_installed') {
         await chromeInstalledModelRuntime.unload();
     }
-    if (engine !== 'gguf') {
-        await ggufRuntime.unload();
-    }
-    if (engine !== 'native_host' && !isAndroidAppRuntime()) {
-        await nativeHostRuntime.unload();
+    if (engine !== 'ollama' && !isAndroidAppRuntime()) {
+        await ollamaRuntime.unload();
     }
     if (engine !== 'litert_lm' && isAndroidAppRuntime()) {
         await liteRtLmRuntime.unload();
@@ -54,14 +50,10 @@ export const chatModelRuntime = {
             await androidGeminiNanoRuntime.load();
             return androidGeminiNanoRuntime.getStatus();
         }
-        if (engine === 'native_host') {
-            await nativeHostRuntime.load();
-            return nativeHostRuntime.getStatus();
-        }
-        if (engine === 'gguf') {
-            const fileName = localModelFileName(engine, modelId);
-            await ggufRuntime.load(fileName);
-            return ggufRuntime.getStatus(fileName, true);
+        if (engine === 'ollama') {
+            const modelName = ollamaModelName(modelId);
+            await ollamaRuntime.load(modelName);
+            return ollamaRuntime.getStatus(modelName);
         }
         if (engine === 'litert_lm') {
             const fileName = localModelFileName(engine, modelId);
@@ -81,12 +73,8 @@ export const chatModelRuntime = {
         if (engine === 'android_gemini_nano') {
             return androidGeminiNanoRuntime.getStatus();
         }
-        if (engine === 'native_host') {
-            return nativeHostRuntime.getStatus();
-        }
-        if (engine === 'gguf') {
-            const fileName = localModelFileName(engine, modelId);
-            return ggufRuntime.getStatus(fileName, await isLocalModelInstalled(engine, fileName));
+        if (engine === 'ollama') {
+            return ollamaRuntime.getStatus(ollamaModelName(modelId));
         }
         if (engine === 'litert_lm') {
             const fileName = localModelFileName(engine, modelId);
@@ -104,12 +92,8 @@ export const chatModelRuntime = {
             await androidGeminiNanoRuntime.focusPersonaSession(personaId);
             return;
         }
-        if (engine === 'native_host') {
-            await nativeHostRuntime.focusPersonaSession(personaId);
-            return;
-        }
-        if (engine === 'gguf') {
-            await ggufRuntime.focusPersonaSession(localModelFileName(engine, modelId), personaId);
+        if (engine === 'ollama') {
+            await ollamaRuntime.focusPersonaSession(ollamaModelName(modelId), personaId);
             return;
         }
         if (engine === 'litert_lm') {
@@ -127,11 +111,8 @@ export const chatModelRuntime = {
         if (engine === 'android_gemini_nano') {
             return androidGeminiNanoRuntime.generate(request);
         }
-        if (engine === 'native_host') {
-            return nativeHostRuntime.generate(request);
-        }
-        if (engine === 'gguf') {
-            return ggufRuntime.generate(localModelFileName(engine, modelId), request);
+        if (engine === 'ollama') {
+            return ollamaRuntime.generate(ollamaModelName(modelId), request);
         }
         if (engine === 'litert_lm') {
             return liteRtLmRuntime.generate(localModelFileName(engine, modelId), request);
@@ -147,11 +128,8 @@ export const chatModelRuntime = {
         if (engine === 'android_gemini_nano') {
             return androidGeminiNanoRuntime.promptOnce(prompt);
         }
-        if (engine === 'native_host') {
-            return nativeHostRuntime.promptOnce(prompt);
-        }
-        if (engine === 'gguf') {
-            return ggufRuntime.promptOnce(localModelFileName(engine, modelId), prompt);
+        if (engine === 'ollama') {
+            return ollamaRuntime.promptOnce(ollamaModelName(modelId), prompt);
         }
         if (engine === 'litert_lm') {
             return liteRtLmRuntime.promptOnce(localModelFileName(engine, modelId), prompt);
@@ -162,22 +140,21 @@ export const chatModelRuntime = {
     async unload(): Promise<void> {
         chromePromptRuntime.unload();
         await chromeInstalledModelRuntime.unload();
-        await ggufRuntime.unload();
         if (isAndroidAppRuntime()) {
             await liteRtLmRuntime.unload();
             androidGeminiNanoRuntime.unload();
         }
         else {
-            await nativeHostRuntime.unload();
+            await ollamaRuntime.unload();
         }
     },
     activeSessionIds(): string[] {
         const liteRtLmSessions = isAndroidAppRuntime() ? [...liteRtLmRuntime.activeSessionIds(), ...androidGeminiNanoRuntime.activeSessionIds()] : [];
-        return [...chromePromptRuntime.activeSessionIds(), ...chromeInstalledModelRuntime.activeSessionIds(), ...ggufRuntime.activeSessionIds(), ...nativeHostRuntime.activeSessionIds(), ...liteRtLmSessions];
+        return [...chromePromptRuntime.activeSessionIds(), ...chromeInstalledModelRuntime.activeSessionIds(), ...ollamaRuntime.activeSessionIds(), ...liteRtLmSessions];
     },
     sessionStatuses(): LlmSessionStatus[] {
         const liteRtLmSessions = isAndroidAppRuntime() ? liteRtLmRuntime.sessionStatuses() : [];
-        return [...chromePromptRuntime.sessionStatuses(), ...chromeInstalledModelRuntime.sessionStatuses(), ...ggufRuntime.sessionStatuses(), ...nativeHostRuntime.sessionStatuses(), ...liteRtLmSessions];
+        return [...chromePromptRuntime.sessionStatuses(), ...chromeInstalledModelRuntime.sessionStatuses(), ...ollamaRuntime.sessionStatuses(), ...liteRtLmSessions];
     },
     requestStatuses(): LlmRequestStatus[] {
         return listRequestStatuses();

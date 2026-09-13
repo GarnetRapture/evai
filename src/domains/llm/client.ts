@@ -1,9 +1,9 @@
 import { DomainError, describeUnknownError } from '../../shared/errors';
 import { normalizeAbsoluteLocalPath } from '../../shared/files';
-import { nativeHostModelService } from '../native/service';
+import { normalizeOllamaBaseUrl } from '../ollama';
 import { settingsRepository } from '../settings/repository';
-import { NATIVE_HOST_MAX_CONTEXT_WINDOW, NATIVE_HOST_MIN_CONTEXT_WINDOW } from './constants';
 import { chatModelCatalog, mergeChromeInstalledModels } from './catalog';
+import { isChromeLanguageModelSupported } from './chrome';
 import { chatModelRuntime } from './engine';
 import { localModelId } from './identity';
 import type {
@@ -14,11 +14,17 @@ import type {
     LlmStatus,
     LocalModelEngineKind,
     ModelDownloadProgressHandler,
+    OllamaModelLibrary,
     OnDeviceSystemModelEntry,
 } from './types';
 
 async function resolveUsableActiveModelId(): Promise<string | null> {
     const settings = await settingsRepository.readAppSettings();
+    const ollamaServingModelId = await chatModelCatalog.resolveOllamaServingModelId(settings.active_model);
+    if (ollamaServingModelId !== null) {
+        await settingsRepository.updateGeneral({ active_model: ollamaServingModelId });
+        return ollamaServingModelId;
+    }
     if (chatModelCatalog.isChatModelUsableHere(settings.active_model)) {
         return settings.active_model;
     }
@@ -66,11 +72,7 @@ export const llmClient = {
     },
     async listModels(): Promise<ChatModelCatalog> {
         const settings = await settingsRepository.readAppSettings();
-        return chatModelCatalog.list(settings.language, settings.active_model, true);
-    },
-    async listModelsWithoutNativeHost(): Promise<ChatModelCatalog> {
-        const settings = await settingsRepository.readAppSettings();
-        return chatModelCatalog.list(settings.language, settings.active_model, false);
+        return chatModelCatalog.list(settings.language, settings.active_model);
     },
     async prepareOnDeviceSystemModel(entry: OnDeviceSystemModelEntry, onDownloadProgress: ModelDownloadProgressHandler): Promise<ChatModelCatalog> {
         const settings = await settingsRepository.readAppSettings();
@@ -97,6 +99,20 @@ export const llmClient = {
         await settingsRepository.updateGeneral({ chrome_model_folder_path: normalizedPath });
         return llmClient.listModels();
     },
+    isChromeOnDeviceAiSupported(): boolean {
+        return isChromeLanguageModelSupported();
+    },
+    async inspectOllamaConnection(): Promise<OllamaModelLibrary | null> {
+        return (await llmClient.listModels()).ollama;
+    },
+    async saveOllamaBaseUrl(baseUrl: string): Promise<ChatModelCatalog> {
+        const normalized = normalizeOllamaBaseUrl(baseUrl);
+        if (normalized === null) {
+            throw new DomainError('validation', baseUrl);
+        }
+        await settingsRepository.updateGeneral({ ollama_base_url: normalized });
+        return llmClient.listModels();
+    },
     async installLocalModel(engine: LocalModelEngineKind, onProgress: ModelDownloadProgressHandler): Promise<string | null> {
         const installed = await chatModelCatalog.installLocalModel(engine, onProgress);
         return installed ? localModelId(engine, installed.file_name) : null;
@@ -111,21 +127,6 @@ export const llmClient = {
         await chatModelCatalog.removeLocalModel(engine, fileName);
         if (settings.active_model === removedModelId) {
             await settingsRepository.updateGeneral({ active_model: await chatModelCatalog.resolveFallbackChatModelId(removedModelId) });
-        }
-        return llmClient.listModels();
-    },
-    async saveNativeHostModelPath(modelPath: string, contextWindow: number): Promise<ChatModelCatalog> {
-        const normalizedPath = normalizeAbsoluteLocalPath(modelPath);
-        if (normalizedPath === null || normalizedPath.length === 0) {
-            throw new DomainError('validation', modelPath);
-        }
-        if (!Number.isInteger(contextWindow) || contextWindow < NATIVE_HOST_MIN_CONTEXT_WINDOW || contextWindow > NATIVE_HOST_MAX_CONTEXT_WINDOW) {
-            throw new DomainError('validation', String(contextWindow));
-        }
-        await settingsRepository.updateGeneral({ native_model_path: normalizedPath, native_model_context_window: contextWindow });
-        const snapshot = await nativeHostModelService.snapshot();
-        if (snapshot.host_available) {
-            await nativeHostModelService.configureModel({ model_path: normalizedPath, context_window: contextWindow });
         }
         return llmClient.listModels();
     },

@@ -3,7 +3,6 @@ import { Bell, ChevronDown, Cpu, Database, FlaskConical, HardDrive, Home, Messag
 import type { DeviceEnvironmentInfo } from '../../../shared/platform';
 import type { UserSession } from '../../auth';
 import type { AppSettings } from '../../settings';
-import type { NativeContextStatus } from '../../native';
 import type { EverTalkLabels } from '../i18n';
 import type { SaviorProfileSnapshot, WorkspaceView } from '../types';
 import { DECOR_UI_ASSETS } from '../uiAssets';
@@ -14,7 +13,6 @@ interface EnvironmentLayerProps {
     session: UserSession | null;
     savior: SaviorProfileSnapshot;
     environment: DeviceEnvironmentInfo | null;
-    nativeStatus: NativeContextStatus;
     labels: EverTalkLabels;
     embedded?: boolean;
     notificationItems?: Array<{ personaId: string; name: string; count: number }>;
@@ -27,13 +25,12 @@ interface EnvironmentLayerProps {
     onRenameSavior?: (name: string) => void;
 }
 
-export function EnvironmentLayer({ settings, session, savior, environment, nativeStatus, labels, embedded = false, notificationItems = [], onOpenNotification, activeView = 'chat', onNavigate, onOpenLobby, onOpenSettings, onOpenSaviorProfile, onRenameSavior }: EnvironmentLayerProps) {
+export function EnvironmentLayer({ settings, session, savior, environment, labels, embedded = false, notificationItems = [], onOpenNotification, activeView = 'chat', onNavigate, onOpenLobby, onOpenSettings, onOpenSaviorProfile, onRenameSavior }: EnvironmentLayerProps) {
     const [open, setOpen] = useState(false);
     const [notificationsOpen, setNotificationsOpen] = useState(false);
     const [saviorMenuOpen, setSaviorMenuOpen] = useState(false);
     const notificationTotal = notificationItems.reduce((sum, item) => sum + item.count, 0);
     const profileName = savior.saviorName || session?.username || labels.saviorDefaultName;
-    const nativeSelected = settings?.context_storage_mode === 'native_mirror';
     const browser = environment ? `${environment.browser.browser} ${environment.browser.version}`.trim() : labels.checking;
     const device = environment
         ? [environment.browser.platform, environment.browser.platform_version, environment.browser.architecture, environment.browser.bitness ? `${environment.browser.bitness}-bit` : ''].filter(Boolean).join(' · ')
@@ -53,15 +50,10 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
             </div>
             <dl>
                 <div><dt>{labels.userProfile}</dt><dd>{profileName}{session?.email ? ` · ${session.email}` : ''}</dd></div>
-                <div><dt>{labels.contextStorage}</dt><dd>{nativeSelected ? labels.nativeMirrorStorage : labels.browserStorage}</dd></div>
+                <div><dt>{labels.contextStorage}</dt><dd>{labels.browserStorage}</dd></div>
                 <div><dt>{labels.browserInfo}</dt><dd>{browser}</dd></div>
                 <div><dt>{labels.deviceProfile}</dt><dd>{device}</dd></div>
                 <div><dt>{labels.webGpuInfo}</dt><dd>{gpu}</dd></div>
-                {nativeStatus.health ? <div><dt>{labels.nativeExecutablePath}</dt><dd>{nativeStatus.health.executable_path}</dd></div> : null}
-                {nativeStatus.health ? <div><dt>{labels.nativeDatabasePath}</dt><dd>{nativeStatus.health.database_path}</dd></div> : null}
-                {nativeStatus.health ? <div><dt>{labels.databaseFileSize}</dt><dd>{new Intl.NumberFormat(labels.localeTag).format(nativeStatus.health.database_bytes)} B</dd></div> : null}
-                {Number.isInteger(nativeStatus.health?.process_id) ? <div><dt>{labels.nativeProcessId}</dt><dd>{nativeStatus.health?.process_id}</dd></div> : null}
-                {nativeStatus.health ? <div><dt>{labels.nativeRuntimePolicy}</dt><dd>{labels.nativeRuntimePolicyValue}</dd></div> : null}
             </dl>
         </div>
     );
@@ -147,8 +139,8 @@ export function EnvironmentLayer({ settings, session, savior, environment, nativ
                     }}
                 >
                     <span className="ever-environment-layer__browser"><Cpu size={14}/>{browser}</span>
-                    <span className={nativeSelected ? (nativeStatus.available ? 'is-ready' : 'is-warning') : ''}>
-                        <Database size={14}/>{nativeSelected && nativeStatus.available ? labels.nativeContextReady : labels.browserStorage}
+                    <span>
+                        <Database size={14}/>{labels.browserStorage}
                     </span>
                     <ChevronDown className={open ? 'is-open' : ''} size={15} aria-hidden="true"/>
                 </button>

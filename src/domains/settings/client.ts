@@ -1,12 +1,9 @@
 import { DomainError } from '../../shared/errors';
-import { normalizeAbsoluteLocalPath } from '../../shared/files';
 import { normalizeAppLanguage } from '../../shared/i18n';
 import {
-    EVERSOUL_STORE,
     beginEverSoulDatabaseMaintenance,
     deleteOriginIndexedDatabases,
     endEverSoulDatabaseMaintenance,
-    getEverSoulDatabase,
 } from '../../shared/storage';
 import type { AppLanguage } from '../../shared/types';
 import { createMonotonicTimestamp } from '../../shared/time';
@@ -17,8 +14,6 @@ import type { MemoryContextKind } from '../chat/types';
 import { findEmotionPreset, mergePersonaCheatPreset } from '../persona/presets';
 import type { PersonaCheatPresetPatch } from '../persona/types';
 import { llmClient } from '../llm';
-import { nativeContextClient } from '../native/client';
-import type { ContextStorageMode } from '../native/types';
 import { personaService } from '../persona';
 import { backupService } from '../sync/backup';
 import { composeAppSettings, settingsRepository } from './repository';
@@ -32,53 +27,11 @@ function assertLanguage(language: string): AppLanguage {
     return normalized;
 }
 
-function normalizeNativeExecutablePath(path: string): string {
-    const normalized = normalizeAbsoluteLocalPath(path);
-    if (normalized === null) {
-        throw new DomainError('validation', path);
-    }
-    return normalized;
-}
-
-async function reconcileNativeContext(): Promise<void> {
-    const general = await settingsRepository.readGeneral();
-    nativeContextClient.setPreferredExecutablePath(general.native_executable_path ?? '');
-    const status = await nativeContextClient.health();
-    if (!status.available) return;
-    await nativeContextClient.clearAll();
-    const database = await getEverSoulDatabase();
-    const [rooms, messages, memories] = await Promise.all([
-        database.getAll(EVERSOUL_STORE.chatRoom),
-        database.getAll(EVERSOUL_STORE.chatMessage),
-        database.getAll(EVERSOUL_STORE.personaMemory),
-    ]);
-    const roomPersonas = new Map(rooms.map((room) => [room.id, room.persona_id]));
-    const normalizedMessages = messages.map((message) => ({
-            ...message,
-            persona_id: message.persona_id ?? roomPersonas.get(message.room_id) ?? null,
-        }));
-    for (let index = 0; index < normalizedMessages.length; index += 100) {
-        await nativeContextClient.syncMessages(normalizedMessages.slice(index, index + 100));
-    }
-    for (let index = 0; index < memories.length; index += 100) {
-        await nativeContextClient.syncMemories(memories.slice(index, index + 100));
-    }
-}
-
 export const settingsClient = {
     async get(): Promise<AppSettings> {
-        const settings = await settingsRepository.readAppSettings();
-        nativeContextClient.setPreferredExecutablePath(settings.native_executable_path);
-        return settings;
+        return settingsRepository.readAppSettings();
     },
     async resetForReload(): Promise<void> {
-        const general = await settingsRepository.readGeneral();
-        nativeContextClient.setPreferredExecutablePath(general.native_executable_path ?? '');
-        if (general.context_storage_mode === 'native_mirror') {
-            const status = await nativeContextClient.health();
-            if (!status.available) throw new DomainError('storage', status.detail);
-            await nativeContextClient.clearAll();
-        }
         backupService.cancelScheduledAutomaticBackup();
         await llmClient.unloadEngine();
         await beginEverSoulDatabaseMaintenance();
@@ -121,27 +74,6 @@ export const settingsClient = {
     },
     async setShowReasoning(showReasoning: boolean): Promise<AppSettings> {
         return composeAppSettings(await settingsRepository.updateGeneral({ show_reasoning: showReasoning }));
-    },
-    async setContextStorageMode(contextStorageMode: ContextStorageMode): Promise<AppSettings> {
-        if (contextStorageMode !== 'browser' && contextStorageMode !== 'native_mirror') {
-            throw new DomainError('validation', contextStorageMode);
-        }
-        const settings = composeAppSettings(await settingsRepository.updateGeneral({ context_storage_mode: contextStorageMode }));
-        nativeContextClient.setPreferredExecutablePath(settings.native_executable_path);
-        return settings;
-    },
-    async setNativeExecutablePath(path: string): Promise<AppSettings> {
-        const nativeExecutablePath = normalizeNativeExecutablePath(path);
-        const settings = composeAppSettings(await settingsRepository.updateGeneral({
-            native_executable_path: nativeExecutablePath,
-        }));
-        nativeContextClient.setPreferredExecutablePath(nativeExecutablePath);
-        return settings;
-    },
-    async reconcileNativeContext(): Promise<void> {
-        const settings = await settingsRepository.readGeneral();
-        nativeContextClient.setPreferredExecutablePath(settings.native_executable_path ?? '');
-        if (settings.context_storage_mode === 'native_mirror') await reconcileNativeContext();
     },
     async setPersonaSkin(personaId: string, skinId: string): Promise<AppSettings> {
         const general = await settingsRepository.readGeneral();

@@ -1,8 +1,7 @@
-import { DomainError, describeUnknownError } from '../../shared/errors';
+import { describeUnknownError } from '../../shared/errors';
 import { EVERSOUL_STORE, countStoreRecords, getEverSoulDatabase } from '../../shared/storage';
 import { createMonotonicTimestamp } from '../../shared/time';
 import { llmClient } from '../llm';
-import { nativeContextClient } from '../native/client';
 import { listPersonaArchiveKeys, personaService } from '../persona';
 import { settingsRepository } from '../settings/repository';
 import { backupService } from './backup';
@@ -10,12 +9,6 @@ import type { BackupDirectoryStatus, LocalStatusSnapshot, SyncMetadataKey, SyncR
 import type { EverSoulDatabaseSnapshot } from '../../shared/storage';
 
 async function restoreSnapshotForReload(snapshot: EverSoulDatabaseSnapshot): Promise<void> {
-    const restoredSettings = snapshot.stores.general_settings.at(0);
-    if (restoredSettings?.context_storage_mode === 'native_mirror') {
-        nativeContextClient.setPreferredExecutablePath(restoredSettings.native_executable_path ?? '');
-        const status = await nativeContextClient.health();
-        if (!status.available) throw new DomainError('storage', status.detail);
-    }
     await llmClient.unloadEngine();
     await backupService.restoreSnapshotForReload(snapshot);
 }

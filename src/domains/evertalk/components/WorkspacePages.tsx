@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Database, HardDrive, RefreshCw, Search, Trophy } from 'lucide-react';
+import { Database, RefreshCw, Search, Trophy } from 'lucide-react';
 import { MEMORY_CONTEXT_KINDS } from '../../chat';
 import { parseSpiritDetail } from '../../persona';
 import { buildMemoryContextGraphLayout, filterMemoryKeywordThreads } from '../logic';
@@ -25,23 +25,9 @@ function spiritName(controller: EverTalkController, personaId: string): string {
 }
 
 export function StorageAnalyticsPage({ controller }: WorkspacePageProps) {
-    const { labels, storageInspection: inspection, nativeContextStatus: nativeStatus } = controller;
+    const { labels, storageInspection: inspection } = controller;
     const locale = labels.localeTag;
-    const nativeSelected = controller.appSettings?.context_storage_mode === 'native_mirror';
-    const nativeStatistics = inspection?.native_statistics ?? null;
-    const personaRows = nativeSelected && nativeStatistics
-        ? nativeStatistics.personas.map((nativePersona) => {
-            const browserPersona = inspection?.personas.find((entry) => entry.persona_id === nativePersona.persona_id);
-            return {
-                persona_id: nativePersona.persona_id,
-                message_count: nativePersona.message_count,
-                memory_count: nativePersona.memory_count,
-                estimated_bytes: nativePersona.content_bytes,
-                latest_activity_at: nativePersona.latest_activity_at || null,
-                samples: browserPersona?.samples ?? [],
-            };
-        })
-        : inspection?.personas ?? [];
+    const personaRows = inspection?.personas ?? [];
     const totalStoreBytes = inspection?.stores.reduce((sum, store) => sum + store.estimated_bytes, 0) ?? 0;
     const maxPersonaBytes = Math.max(1, ...personaRows.map((persona) => persona.estimated_bytes));
     const messageStore = inspection?.stores.find((store) => store.store_name === 'chat_message');
@@ -58,25 +44,14 @@ export function StorageAnalyticsPage({ controller }: WorkspacePageProps) {
             </header>
             {controller.storageInspectionError ? <div className="ever-workspace-error">{controller.storageInspectionError}</div> : null}
             <section className="ever-storage-location-grid">
-                <article className={`ever-insight-card ${nativeSelected ? '' : 'is-active'}`}>
+                <article className="ever-insight-card is-active">
                     <div className="ever-insight-card__title"><Database size={20}/><strong>{labels.browserManagedLocation}</strong></div>
                     <p>{labels.browserManagedLocationDetail}</p>
                     <dl><div><dt>Origin</dt><dd>{inspection?.origin || '-'}</dd></div><div><dt>IndexedDB</dt><dd>{inspection?.database_name || '-'}</dd></div></dl>
                 </article>
-                <article className={`ever-insight-card ${nativeSelected ? 'is-active' : ''}`}>
-                    <div className="ever-insight-card__title"><HardDrive size={20}/><strong>{labels.nativeMirrorStorage}</strong></div>
-                    <p>{labels.nativeLocalLocationDetail}</p>
-                    <dl>
-                        <div><dt>{labels.nativeExecutablePath}</dt><dd>{nativeStatus.health?.executable_path ?? labels.notConfigured}</dd></div>
-                        <div><dt>{labels.nativeDatabasePath}</dt><dd>{nativeStatus.health?.database_path ?? labels.notConfigured}</dd></div>
-                        <div><dt>{labels.databaseFileSize}</dt><dd>{formatBytes(nativeStatus.health?.database_bytes ?? null, locale)}</dd></div>
-                        {nativeStatus.health ? <div><dt>DB / WAL / SHM</dt><dd>{formatBytes(nativeStatus.health.database_file_bytes, locale)} / {formatBytes(nativeStatus.health.wal_bytes, locale)} / {formatBytes(nativeStatus.health.shared_memory_bytes, locale)}</dd></div> : null}
-                        <div><dt>{labels.recordsLabel}</dt><dd>{nativeStatistics ? `${labels.messagesLabel} ${nativeStatistics.message_count} · ${labels.memoriesLabel} ${nativeStatistics.memory_count}` : '-'}</dd></div>
-                    </dl>
-                </article>
             </section>
             <section className="ever-metric-grid">
-                <article><small>{labels.storageModeActive}</small><strong>{nativeSelected ? labels.nativeMirrorStorage : labels.browserStorage}</strong></article>
+                <article><small>{labels.storageModeActive}</small><strong>{labels.browserStorage}</strong></article>
                 <article><small>{labels.storageUsage}</small><strong>{formatBytes(inspection?.usage_bytes ?? null, locale)}</strong></article>
                 <article><small>{labels.storageQuota}</small><strong>{formatBytes(inspection?.quota_bytes ?? null, locale)}</strong></article>
                 <article><small>{labels.snapshotEstimate}</small><strong>{formatBytes(inspection?.estimated_snapshot_bytes ?? null, locale)}</strong></article>

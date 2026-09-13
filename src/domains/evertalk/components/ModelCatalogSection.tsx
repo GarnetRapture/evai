@@ -4,12 +4,13 @@ import type { ModelCatalogSectionProps } from '../types';
 import { ChromeInstalledModelSection } from './ChromeInstalledModelSection';
 import { OnDeviceSystemModelItem } from './OnDeviceSystemModelItem';
 import { LocalModelSection } from './LocalModelSection';
-import { NativeHostModelItem } from './NativeHostModelItem';
+import { OllamaModelSection } from './OllamaModelSection';
 
-export function ModelCatalogSection({ appPlatform, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, labels, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onLinkChromeLocalState, onSaveChromeModelFolderPath, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveNativeHostModelPath }: ModelCatalogSectionProps) {
+export function ModelCatalogSection({ appPlatform, devicePlatform, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, labels, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onLinkChromeLocalState, onSaveChromeModelFolderPath, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveOllamaBaseUrl }: ModelCatalogSectionProps) {
     const entries = modelCatalog?.entries ?? [];
     const localModelGroups = groupLocalModelEntries(entries);
     const chromeInstalledLibrary = modelCatalog?.chrome_installed ?? null;
+    const ollamaLibrary = modelCatalog?.ollama ?? null;
     return (<section className="ever-panel-section">
         <h3>{labels.modelListTitle}</h3>
         <div className="ever-settings-result">
@@ -26,9 +27,7 @@ export function ModelCatalogSection({ appPlatform, modelCatalog, modelCatalogErr
 
         {chromeInstalledLibrary !== null ? (<ChromeInstalledModelSection key={chromeInstalledLibrary.folder_path} library={chromeInstalledLibrary} modelLoadingId={modelLoadingId} linking={chromeInstalledModelLinking} labels={labels} onSelectChatModel={onSelectChatModel} onLinkChromeInstalledModelFolder={onLinkChromeInstalledModelFolder} onLinkChromeLocalState={onLinkChromeLocalState} onSaveChromeModelFolderPath={onSaveChromeModelFolderPath}/>) : null}
 
-        {entries.map((entry) => entry.engine === 'native_host'
-            ? (<NativeHostModelItem key={`${entry.id}:${entry.saved_model_path}:${entry.saved_context_window}`} entry={entry} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel} onSaveNativeHostModelPath={onSaveNativeHostModelPath}/>)
-            : null)}
+        {ollamaLibrary !== null ? (<OllamaModelSection key={ollamaLibrary.base_url} library={ollamaLibrary} modelLoadingId={modelLoadingId} platform={devicePlatform} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onSaveOllamaBaseUrl={onSaveOllamaBaseUrl}/>) : null}
 
         {localModelGroups.map((group) => (<LocalModelSection key={group.engine} appPlatform={appPlatform} engine={group.engine} entries={group.entries} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel}/>))}
 

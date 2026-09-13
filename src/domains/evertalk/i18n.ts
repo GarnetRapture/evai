@@ -7,6 +7,7 @@ import type { PersonaEmotionKind } from '../chat/affect';
 import type { MemoryContextKind, PersonaBehaviorStageKind, PersonaMaintenanceTaskKind } from '../chat/types';
 import type { MemoryGraphEdgeKind } from './types';
 import type { LocalModelEngineKind } from '../llm/types';
+import type { OllamaCommandStepKey } from '../ollama';
 import type { SpiritRaidEvent } from '../persona/types';
 
 export type PlatformBlockedReason = Exclude<PlatformSupportStatus, 'supported'>;
@@ -18,30 +19,6 @@ export interface LocalModelSectionLabels {
     customModel: string;
     guideTitle: string;
     guideSteps: (downloadLabel: string, installLabel: string, useLabel: string, removeLabel: string) => string[];
-}
-
-export interface NativeHostModelLabels {
-    title: string;
-    description: string;
-    modelName: string;
-    hostReady: string;
-    hostUnavailable: (detail: string) => string;
-    pathMissing: string;
-    savedPath: (path: string) => string;
-    resolvedPath: (path: string) => string;
-    modelMissing: string;
-    loaded: string;
-    notLoaded: string;
-    errorDetail: (error: string) => string;
-    pathLabel: string;
-    pathPlaceholder: string;
-    pathHint: string;
-    contextWindowLabel: string;
-    save: string;
-    saving: string;
-    recommendedTitle: string;
-    guideTitle: string;
-    guideSteps: string[];
 }
 
 export interface EverTalkLabels {
@@ -193,21 +170,6 @@ export interface EverTalkLabels {
     webGpuUnavailable: string;
     contextStorage: string;
     browserStorage: string;
-    browserStorageDescription: string;
-    nativeMirrorStorage: string;
-    nativeMirrorStorageDescription: string;
-    nativeContextReady: string;
-    nativeContextUnavailable: string;
-    nativeExecutablePath: string;
-    nativeExecutablePathPlaceholder: string;
-    nativeExecutablePathDescription: string;
-    nativeExecutablePathNotFound: string;
-    nativeExecutablePathMismatch: string;
-    nativeDatabasePath: string;
-    nativeProcessId: string;
-    nativeRuntimePolicy: string;
-    nativeRuntimePolicyValue: string;
-    connectNativeProgram: string;
     refreshEnvironment: string;
     resetData: string;
     resetDescription: string;
@@ -347,6 +309,29 @@ export interface EverTalkLabels {
     chromeInstalledModelLinking: string;
     chromeInstalledModelGuideTitle: string;
     chromeInstalledModelGuideSteps: string[];
+    ollamaModelSectionTitle: string;
+    ollamaModelSectionDescription: string;
+    ollamaServerConnected: (version: string) => string;
+    ollamaServerUnavailable: string;
+    ollamaModelEmpty: string;
+    ollamaModelReady: string;
+    ollamaModelMeta: (family: string, parameterSize: string, quantization: string, megabytes: number) => string;
+    ollamaBaseUrlLabel: string;
+    ollamaBaseUrlPlaceholder: string;
+    ollamaBaseUrlHint: string;
+    ollamaBaseUrlSave: string;
+    ollamaBaseUrlSaving: string;
+    ollamaGuideTitle: string;
+    ollamaGuideDescription: string;
+    ollamaConnectionChecking: string;
+    ollamaConnectionNotChecked: string;
+    ollamaConnectionReady: (version: string, modelCount: number) => string;
+    ollamaConnectionCheck: string;
+    ollamaOriginAllowed: (origin: string) => string;
+    ollamaOriginRequired: (origin: string) => string;
+    ollamaCommandStepTitles: Record<OllamaCommandStepKey, string>;
+    ollamaCommandStepDescriptions: Record<OllamaCommandStepKey, string>;
+    ollamaCommandCopy: string;
     modelRoleAndroidGeminiNano: string;
     modelAndroidGeminiNanoUnsupported: string;
     modelLanguageSupport: (languageTag: string, declared: boolean) => string;
@@ -368,7 +353,6 @@ export interface EverTalkLabels {
     localModelOpenPage: string;
     localModelDownload: string;
     localModelHttpLink: string;
-    nativeHostModel: NativeHostModelLabels;
     localModelGated: string;
     localModelBackend: (backend: string) => string;
     localModelFileMeta: (fileName: string, sizeMb: number | null, license: string | null) => string;
@@ -378,7 +362,7 @@ export interface EverTalkLabels {
     modelRequestDetail: (state: string, promptTokens: number | null, generatedTokens: number | null, truncatedTokens: number) => string;
     backupTitle: string;
     backupDescription: string;
-    backupStorageScope: (native: boolean, connected: boolean) => string;
+    backupStorageScope: string;
     backupExport: string;
     backupImport: string;
     backupWorking: string;
@@ -400,7 +384,7 @@ export interface EverTalkLabels {
     backupFileRestore: string;
     backupRestoreConfirm: (fileName: string) => string;
     backupWritten: (fileName: string) => string;
-    resetStorageScope: (native: boolean, connected: boolean) => string;
+    resetStorageScope: string;
     navChat: string;
     navRanking: string;
     navMemory: string;
@@ -429,11 +413,9 @@ export interface EverTalkLabels {
     storageModeActive: string;
     browserManagedLocation: string;
     browserManagedLocationDetail: string;
-    nativeLocalLocationDetail: string;
     storageUsage: string;
     storageQuota: string;
     snapshotEstimate: string;
-    databaseFileSize: string;
     storeBreakdown: string;
     personaBreakdown: string;
     storedContents: string;
@@ -705,21 +687,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         webGpuUnavailable: '사용 불가',
         contextStorage: '대화 맥락 저장소',
         browserStorage: '브라우저 저장소',
-        browserStorageDescription: 'IndexedDB를 기본 저장소로 사용합니다. 별도 프로그램이 필요 없습니다.',
-        nativeMirrorStorage: '네이티브 SQLite 확장',
-        nativeMirrorStorageDescription: '브라우저 저장과 함께 EXE 옆 SQLite에 대화·기억을 보조 저장하고 다시 불러옵니다.',
-        nativeContextReady: '네이티브 API 연결됨',
-        nativeContextUnavailable: '네이티브 API 미연결 · IndexedDB로 자동 유지',
-        nativeExecutablePath: '실행 파일',
-        nativeExecutablePathPlaceholder: '예: C:\\Program Files\\EverSoulAI\\eversoul-native-host.exe',
-        nativeExecutablePathDescription: '비워두면 Native Messaging 등록정보와 표준 설치 위치에서 자동으로 찾습니다. 개발 서버는 입력한 파일 또는 폴더를 직접 사용하고, 배포 브라우저는 등록된 호스트의 실제 경로와 일치하는지 확인합니다.',
-        nativeExecutablePathNotFound: '입력한 위치와 자동 탐색 위치에서 실행 파일을 찾지 못했습니다.',
-        nativeExecutablePathMismatch: '입력한 경로와 브라우저가 연결한 실행 파일의 실제 경로가 다릅니다.',
-        nativeDatabasePath: 'SQLite DB',
-        nativeProcessId: '네이티브 프로세스 PID',
-        nativeRuntimePolicy: '호스트 실행 정책',
-        nativeRuntimePolicyValue: '단일 인스턴스 · 고정 상태창 · 창을 닫으면 즉시 종료',
-        connectNativeProgram: '네이티브 프로그램 연결',
         refreshEnvironment: '환경 다시 확인',
         resetData: '데이터 초기화',
         resetDescription: '현재 origin의 IndexedDB 데이터베이스 전체와 localStorage를 삭제해 대화, 정령/스타일/지식팩, 기억, 모듈, 설정 및 파일 연결을 초기 상태로 되돌린 뒤 페이지를 다시 불러옵니다. 다른 탭이 데이터베이스를 붙잡고 있으면 삭제를 중단하고 오류를 표시합니다.',
@@ -825,10 +792,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: '이용 환경 안내',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                'PC Chrome에서는 내장 Prompt API 모델을, 지원되는 데스크톱 브라우저에서는 설치한 GGUF 로컬 모델을 사용할 수 있습니다.',
-                '대화·인연·기억은 기본적으로 이 브라우저의 IndexedDB에 저장됩니다. 네이티브 확장을 선택하면 EXE와 같은 폴더의 SQLite에도 보조 저장됩니다.',
-                '네이티브 확장이 연결되지 않더라도 웹 기본 저장소는 계속 동작하며, 저장소 선택은 언제든 설정에서 바꿀 수 있습니다.',
-                `처음 대화하기 전에 ${modelSettingsPath}에서 이 브라우저가 지원하는 로컬 모델을 준비해야 합니다.`,
+                '웹 버전은 PC Chrome 온디바이스 AI를 기본으로 사용합니다. Chrome 내장 Prompt API 모델(Gemini Nano · Gemma 4)과 Chrome이 설치한 온디바이스 모델로 대화하며, 이 PC에 Ollama가 실행 중이면 로컬 Ollama 모델로도 대화할 수 있습니다. Hugging Face 모델과 EXE 확장은 제공하지 않습니다.',
+                '대화·인연·기억은 이 브라우저의 IndexedDB에 저장되며, PC 파일로 내보내거나 연결한 PC 폴더에 자동 백업할 수 있습니다.',
+                `처음 대화하기 전에 ${modelSettingsPath}에서 Chrome 온디바이스 모델을 준비해야 합니다.`,
             ],
             android_app: (modelSettingsPath) => [
                 '에버톡 AI 채팅 안드로이드 앱은 Google LiteRT-LM 온디바이스 엔진으로 이 기기 안에서 AI를 실행합니다. 대화와 모델 파일은 서버로 전송되지 않습니다.',
@@ -837,7 +803,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             ],
         },
         platformGuideCheckbox: {
-            web_chrome: '위 안내와 로컬 모델·저장소 선택 방식을 확인했습니다.',
+            web_chrome: '위 안내와 Chrome 온디바이스 모델·브라우저 저장 방식을 확인했습니다.',
             android_app: '위 안내를 확인했으며, 이 앱은 기기에 설치한 LiteRT-LM 모델로만 동작함을 이해했습니다.',
         },
         platformGuideConfirm: '확인하고 입장',
@@ -850,7 +816,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         messageSendFailed: '응답 생성에 실패했습니다. 다시 시도해 주세요.',
         modelListTitle: '온디바이스 모델 목록',
         modelListDescription: {
-            web_chrome: 'Chrome Prompt API 모델과 브라우저에서 직접 실행하는 GGUF 모델을 선택할 수 있습니다. Chrome API가 없으면 GGUF를 설치하세요. WebGPU가 확인되면 GPU를 사용하고, 사용할 수 없으면 CPU로 실행합니다.',
+            web_chrome: '웹 버전은 Chrome 온디바이스 AI를 기본으로 사용합니다. Chrome Prompt API 모델(Gemini Nano · Gemma 4)과 Chrome이 설치한 온디바이스 모델을 선택할 수 있고, 이 PC에 Ollama가 실행 중이면 로컬 Ollama 모델도 선택할 수 있습니다. Hugging Face 모델과 EXE 확장은 제공하지 않습니다.',
             android_app: '이 기기에서 Google LiteRT-LM 엔진으로 실행하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 설치하고 선택하세요. 모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 사용할 수 없으면 CPU 백엔드로 실행합니다.',
         },
         modelRoleChat: '대화 생성 · Chrome Prompt API (브라우저 내장 모델)',
@@ -913,6 +879,45 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             '같은 방법으로 OptGuideOnDeviceModel 폴더(Gemini Nano)도 선택하면 두 폴더의 모델이 함께 목록에 표시됩니다.',
             '목록에서 사용할 모델을 선택하면 저장되어 고정됩니다. 페이지를 다시 열면 모델 폴더만 다시 선택하면 같은 모델로 실행됩니다.',
         ],
+        ollamaModelSectionTitle: '로컬 Ollama 모델 목록',
+        ollamaModelSectionDescription: '이 PC에 Ollama가 실행 중이면 Ollama에 설치된 모델을 대화 모델로 선택할 수 있습니다. 모델 실행은 로컬 Ollama가 담당하고, 대화·기억·페르소나 규칙은 똑같이 적용됩니다.',
+        ollamaServerConnected: (version) => `Ollama 연결됨 · 버전 ${version}`,
+        ollamaServerUnavailable: 'Ollama에 연결되지 않음 · Ollama 실행 여부와 허용 origin 설정을 확인하세요',
+        ollamaModelEmpty: 'Ollama에 설치된 모델이 없습니다. 터미널에서 ollama pull 로 모델을 받으세요.',
+        ollamaModelReady: 'Ollama 설치됨 · 선택하면 불러옵니다',
+        ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
+        ollamaBaseUrlLabel: 'Ollama 주소',
+        ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
+        ollamaBaseUrlHint: '경로 없이 프로토콜·호스트·포트만 입력합니다. 기본값은 http://127.0.0.1:11434 입니다.',
+        ollamaBaseUrlSave: '주소 저장',
+        ollamaBaseUrlSaving: '저장 중…',
+        ollamaGuideTitle: '로컬 Ollama 연결 가이드',
+        ollamaGuideDescription: '이 브라우저에는 Chrome 온디바이스 AI가 없으므로 이 PC의 Ollama를 대화 엔진으로 사용합니다. 아래 명령으로 모델을 준비하고 "연결 확인"을 누르세요. HTTP 연결이 성공하고 모델이 있으면 실행 중인 모델(없으면 가장 최근 모델)로 자동 연결됩니다.',
+        ollamaConnectionChecking: 'Ollama 연결 확인 중…',
+        ollamaConnectionNotChecked: '아직 Ollama 연결을 확인하지 않았습니다',
+        ollamaConnectionReady: (version, modelCount) => modelCount > 0
+            ? `Ollama HTTP 연결 성공 · 버전 ${version} · 모델 ${modelCount}개`
+            : `Ollama HTTP 연결 성공 · 버전 ${version} · 설치된 모델 없음 (아래 명령으로 모델을 준비하세요)`,
+        ollamaConnectionCheck: '연결 확인',
+        ollamaOriginAllowed: (origin) => `현재 페이지 origin ${origin} 은 Ollama 기본 허용 목록(localhost · 127.0.0.1 · 0.0.0.0)에 포함되어 추가 설정이 필요 없습니다.`,
+        ollamaOriginRequired: (origin) => `현재 페이지 origin ${origin} 은 Ollama 기본 허용 목록에 없습니다. 마지막 단계 명령으로 OLLAMA_ORIGINS에 추가한 뒤 Ollama를 완전히 종료하고 다시 실행해야 연결됩니다.`,
+        ollamaCommandStepTitles: {
+            verify_install: '1. 설치 확인',
+            pull_model: '2. 모델 받기 (Ollama 라이브러리)',
+            create_from_gguf: '3. 로컬 GGUF 파일로 모델 만들기',
+            remove_model: '4. 필요 없는 모델 삭제',
+            run_model: '5. 모델 실행 및 목록 확인',
+            allow_origin: '6. 이 페이지 origin 허용',
+        },
+        ollamaCommandStepDescriptions: {
+            verify_install: 'Ollama를 설치한 뒤 버전이 출력되는지 확인합니다. 명령을 찾지 못하면 Ollama를 다시 설치하세요.',
+            pull_model: 'Ollama 라이브러리 모델을 받습니다. llama3.2 자리에 원하는 모델 이름을 넣으세요.',
+            create_from_gguf: 'PC에 있는 GGUF 파일(또는 Ollama blobs의 sha256 파일)을 FROM 경로로 지정해 모델을 만듭니다. 경로와 evai-model 이름을 실제 값으로 바꾸세요.',
+            remove_model: '더 이상 쓰지 않는 모델을 지웁니다. old-model 자리에 ollama ls 로 확인한 이름을 넣으세요.',
+            run_model: '모델을 한 번 실행해 동작을 확인하고(/bye 로 종료), ollama ls 로 설치 목록을, ollama ps 로 실행 중인 모델을 확인합니다.',
+            allow_origin: '환경 변수를 등록한 뒤 Ollama를 완전히 종료하고 다시 실행합니다.',
+        },
+        ollamaCommandCopy: '명령 복사',
         modelRoleAndroidGeminiNano: '대화 생성 · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: '이 기기는 AICore Gemini Nano를 지원하지 않습니다 (Android 12 이상 · AICore 지원 기기 필요)',
         modelLanguageSupport: (languageTag, declared) => declared
@@ -928,20 +933,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRefresh: '상태 새로고침',
         modelLoading: '모델을 불러오는 중...',
         localModelSections: {
-            gguf: {
-                title: 'Hugging Face GGUF 모델',
-                description: 'PC에 받아 둔 Hugging Face GGUF 파일을 복사하지 않고 그 자리에서 연결해 이 브라우저 안에서 실행합니다. 연결은 저장되어 다음에 열어도 유지되며, 대화·기억·페르소나 규칙은 똑같이 적용됩니다.',
-                installFile: 'GGUF 파일 연결',
-                customModel: '연결한 GGUF',
-                guideTitle: 'Hugging Face GGUF 연결 가이드',
-                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
-                    `추천 모델의 "HTTP 직접 링크"로 .gguf 파일을 PC의 원하는 폴더에 내려받습니다. 약관 동의가 필요한 모델은 Hugging Face에 로그인해 모델 페이지에서 약관에 동의한 뒤 받을 수 있습니다. ("${downloadLabel}"은 안드로이드 앱 전용입니다.)`,
-                    `"${installLabel}"을 눌러 그 .gguf 파일을 한 번 고르면 파일 위치가 저장됩니다. 파일은 복사되지 않으므로 원본을 옮기거나 지우면 다시 연결해야 합니다. 파일 하나는 2GB 이하여야 합니다.`,
-                    `연결된 모델의 "${useLabel}"를 고르면 원본 파일에서 바로 불러옵니다. 브라우저를 다시 열었을 때 파일 읽기 권한을 한 번 더 물어볼 수 있습니다.`,
-                    'Chrome의 WebGPU를 사용할 수 있으면 GPU로 실행하고, 사용할 수 없으면 CPU로 실행되어 느려집니다. 여러 CPU 스레드로 실행하려면 사이트가 Cross-Origin-Opener-Policy: same-origin 과 Cross-Origin-Embedder-Policy: require-corp 헤더로 제공되어야 합니다.',
-                    `"${removeLabel}"는 연결만 해제하고 PC의 원본 파일은 그대로 둡니다. 사용 중인 모델의 연결을 해제하면 Chrome 온디바이스 모델로 돌아갑니다.`,
-                ],
-            },
             litert_lm: {
                 title: 'Hugging Face LiteRT-LM 모델',
                 description: 'Google LiteRT-LM 엔진으로 Hugging Face litert-community의 .litertlm 모델을 이 기기 안에서 실행합니다. 모델 파일은 앱 내부 저장소에만 보관되며, 대화·기억·페르소나·이모지 금지 규칙은 똑같이 적용됩니다.',
@@ -965,34 +956,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelOpenPage: 'Hugging Face 페이지',
         localModelDownload: '다운로드',
         localModelHttpLink: 'HTTP 직접 링크',
-        nativeHostModel: {
-            title: 'EverSoul 네이티브 exe 모델 (경로 지정)',
-            description: 'PC에 있는 모델 파일 경로를 지정하면 EverSoul 네이티브 exe가 그 경로에서 직접 읽어 실행합니다. Chrome이 아닌 브라우저에서도 같은 방식으로 대화할 수 있고, 경로와 설정은 이 앱과 exe 설정 파일에 저장되어 계속 유지됩니다.',
-            modelName: '네이티브 exe 모델',
-            hostReady: 'exe 연결됨',
-            hostUnavailable: (detail) => `exe에 연결되지 않음 (${detail}) · 저장한 경로는 exe가 연결되면 적용됩니다`,
-            pathMissing: '아직 모델 경로가 저장되지 않았습니다',
-            savedPath: (path) => `저장된 경로 ${path}`,
-            resolvedPath: (path) => `exe가 찾은 모델 파일 ${path}`,
-            modelMissing: '저장된 경로에서 .litertlm 또는 .task 모델 파일을 찾지 못했습니다',
-            loaded: '모델 불러옴',
-            notLoaded: '대화를 시작하면 모델을 불러옵니다',
-            errorDetail: (error) => `exe 오류 ${error}`,
-            pathLabel: '모델 파일 또는 폴더 경로',
-            pathPlaceholder: 'C:\\Models\\gemma-4-E2B-it.litertlm  또는  /home/user/models/',
-            pathHint: 'Windows는 C:\\폴더\\파일 처럼 \\, Linux·macOS는 /폴더/파일 처럼 / 로 적은 절대 경로를 입력합니다. 폴더를 지정하면 그 안의 모델 파일 하나를 사용합니다.',
-            contextWindowLabel: '컨텍스트 크기(토큰)',
-            save: '경로 저장',
-            saving: '저장 중...',
-            recommendedTitle: 'exe에서 쓸 수 있는 Hugging Face LiteRT-LM 모델',
-            guideTitle: '네이티브 exe 모델 설치 가이드',
-            guideSteps: [
-                '저장소 설정에서 EverSoul 네이티브 exe 경로를 지정하고 연결합니다. exe가 실행 중이어야 모델을 읽을 수 있습니다.',
-                '아래 추천 모델의 "HTTP 직접 링크"로 .litertlm 파일을 PC의 원하는 폴더에 내려받습니다. 약관 동의가 필요한 모델은 Hugging Face에 로그인한 뒤 받습니다.',
-                '받은 파일이나 그 파일이 든 폴더의 절대 경로를 입력하고 "경로 저장"을 누릅니다. 경로는 복사 없이 저장되며 다음에 열어도 유지됩니다.',
-                '"대화에 사용"을 고르면 대화를 시작할 때 exe가 그 경로의 모델을 불러와 응답합니다.',
-            ],
-        },
         localModelGated: 'Hugging Face 로그인과 모델 약관 동의 후 다운로드할 수 있습니다',
         localModelBackend: (backend) => `백엔드 ${backend}`,
         localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `라이선스 ${license}`].filter((part) => part !== null).join(' · '),
@@ -1002,9 +965,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 입력 ${promptTokens ?? '-'} · 생성 ${generatedTokens ?? '-'} · 잘림 ${truncatedTokens}`,
         backupTitle: '데이터 저장 · 불러오기',
         backupDescription: '이 브라우저 IndexedDB의 직렬화 가능한 데이터(대화, 기억, 설정, 모듈 등)를 JSON으로 저장하고, 불러올 때는 검증 후 한 번의 트랜잭션으로 교체한 뒤 페이지를 다시 불러옵니다. localStorage와 PC 백업 폴더 권한은 포함하지 않으며 기존 폴더 연결은 유지합니다.',
-        backupStorageScope: (native, connected) => native
-            ? `JSON은 브라우저 IndexedDB의 직렬화 가능한 원본을 저장합니다. 복원 시 이를 교체하고 페이지를 다시 불러온 뒤 EXE 옆 로컬 SQLite를 비우고 동일 데이터로 다시 동기화합니다. localStorage와 폴더 권한은 제외됩니다. 네이티브 연결: ${connected ? '확인됨' : '필요함'}.`
-            : 'JSON은 현재 브라우저 IndexedDB의 직렬화 가능한 데이터만 교체 복원합니다. localStorage와 PC 백업 폴더 권한은 제외되고, 기존 네이티브 SQLite는 변경하지 않습니다.',
+        backupStorageScope: 'JSON은 현재 브라우저 IndexedDB의 직렬화 가능한 데이터만 교체 복원합니다. localStorage와 PC 백업 폴더 권한은 제외됩니다.',
         backupExport: 'PC 파일로 내보내기',
         backupImport: 'PC 파일에서 불러오기',
         backupWorking: '처리 중...',
@@ -1034,9 +995,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: '복원',
         backupRestoreConfirm: (fileName) => `${fileName} 파일로 복원하면 현재 데이터가 모두 교체됩니다. 계속할까요?`,
         backupWritten: (fileName) => `${fileName} 백업을 저장했습니다.`,
-        resetStorageScope: (native, connected) => native
-            ? `현재 origin의 localStorage, IndexedDB 데이터베이스 전체, EXE 옆 로컬 SQLite를 함께 초기화합니다. 네이티브 연결: ${connected ? '확인됨' : '필요함 — 연결되지 않으면 삭제를 시작하지 않습니다'}.`
-            : '현재 origin의 localStorage와 IndexedDB 데이터베이스 전체를 초기화합니다. 별도로 남아 있는 네이티브 SQLite 파일은 변경하지 않습니다.',
+        resetStorageScope: '현재 origin의 localStorage와 IndexedDB 데이터베이스 전체를 초기화합니다.',
         navChat: '대화',
         navRanking: '인연 순위',
         navMemory: '기억 흐름',
@@ -1065,11 +1024,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageModeActive: '현재 저장 모드',
         browserManagedLocation: '브라우저 관리 저장소',
         browserManagedLocationDetail: 'IndexedDB의 실제 OS 파일 경로는 브라우저 보안 정책상 웹에 공개되지 않습니다. 아래 origin과 논리 DB 이름으로 관리됩니다.',
-        nativeLocalLocationDetail: '이 파일은 외부 SQL 서버가 아니라 실행 중인 네이티브 EXE와 같은 PC에 있는 로컬 SQLite입니다.',
         storageUsage: '브라우저 전체 사용량',
         storageQuota: '브라우저 할당량',
         snapshotEstimate: '앱 데이터 추정량',
-        databaseFileSize: 'SQLite 파일 크기',
         storeBreakdown: '저장소별 구성',
         personaBreakdown: '정령별 저장량',
         storedContents: '최근 저장 내용',
@@ -1214,7 +1171,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'invalid_backup':
                     return `지원하는 EverSoul 백업 파일이 아닙니다 (${detail})`;
                 case 'invalid_model_file':
-                    return `설치할 수 없는 모델 파일입니다. 웹에서는 2GB 이하의 .gguf 파일을, 안드로이드 앱에서는 .litertlm 파일을 고르세요 (${detail})`;
+                    return `사용할 수 없는 모델 파일입니다. 웹에서는 Chrome 모델 폴더(OptGuideOnDeviceModel · OptGuideManifestModel)와 Local State 파일을, 안드로이드 앱에서는 .litertlm 파일을 고르세요 (${detail})`;
                 case 'storage':
                     return `폴더 접근 권한이 없습니다: ${detail}`;
                 case 'database':
@@ -1223,6 +1180,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                         : `브라우저 데이터베이스 작업이 진행 중입니다. 페이지를 다시 불러오세요 (${detail})`;
                 case 'native_runtime':
                     return `기기 AI 엔진에서 오류가 발생했습니다: ${detail}`;
+                case 'ollama_unavailable':
+                    return `로컬 Ollama에 연결하지 못했습니다. Ollama 실행 여부, 주소, OLLAMA_ORIGINS, Chrome 로컬 네트워크 권한을 확인하세요 (${detail})`;
+                case 'ollama_runtime':
+                    return `로컬 Ollama에서 오류가 발생했습니다: ${detail}`;
             }
         },
         logStylePackLoadFailed: '스타일팩 DB 로드 실패',
@@ -1403,21 +1364,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         webGpuUnavailable: 'Unavailable',
         contextStorage: 'Conversation context storage',
         browserStorage: 'Browser storage',
-        browserStorageDescription: 'Uses IndexedDB as the primary store with no additional program required.',
-        nativeMirrorStorage: 'Native SQLite extension',
-        nativeMirrorStorageDescription: 'Mirrors and recalls conversations and memories in SQLite beside the EXE while retaining browser storage.',
-        nativeContextReady: 'Native API connected',
-        nativeContextUnavailable: 'Native API disconnected · automatically continuing with IndexedDB',
-        nativeExecutablePath: 'Executable',
-        nativeExecutablePathPlaceholder: 'Example: C:\\Program Files\\EverSoulAI\\eversoul-native-host.exe',
-        nativeExecutablePathDescription: 'Leave blank to discover it from Native Messaging registration and standard install locations. The dev server uses the entered file or folder directly; a deployed browser verifies it against the registered host path.',
-        nativeExecutablePathNotFound: 'The executable was not found at the entered path or any automatic discovery location.',
-        nativeExecutablePathMismatch: 'The entered path does not match the executable actually connected by the browser.',
-        nativeDatabasePath: 'SQLite DB',
-        nativeProcessId: 'Native process PID',
-        nativeRuntimePolicy: 'Host runtime policy',
-        nativeRuntimePolicyValue: 'Single instance · fixed status window · closes with the window',
-        connectNativeProgram: 'Connect native program',
         refreshEnvironment: 'Check environment again',
         resetData: 'Reset Data',
         resetDescription: 'Deletes every IndexedDB database and the localStorage of this origin, including chats, soul/style/knowledge data, memories, modules, settings, and file links, then reloads the page. If another tab holds the database open, deletion stops and an error is shown.',
@@ -1523,10 +1469,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: 'Supported Environment',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                'On PC Chrome you can use the built-in Prompt API model; supported desktop browsers can use an installed local GGUF model.',
-                'Chats, bonds, and memories are stored in this browser\'s IndexedDB by default. Native mode also mirrors them to SQLite beside the EXE.',
-                'The browser store continues working when the native extension is disconnected, and you can change the storage choice in Settings.',
-                `Before your first chat, prepare a local model supported by this browser in ${modelSettingsPath}.`,
+                'The web version uses PC Chrome on-device AI by default. Chats use the built-in Chrome Prompt API models (Gemini Nano · Gemma 4) and on-device models installed by Chrome, and local Ollama models when Ollama is running on this PC. Hugging Face models and the EXE extension are not provided.',
+                'Chats, bonds, and memories are stored in this browser\'s IndexedDB and can be exported to a PC file or automatically backed up to a linked PC folder.',
+                `Before your first chat, prepare a Chrome on-device model in ${modelSettingsPath}.`,
             ],
             android_app: (modelSettingsPath) => [
                 'The EverTalk AI Chat Android app runs AI inside this device with the Google LiteRT-LM on-device engine. Conversations and model files are never sent to a server.',
@@ -1535,7 +1480,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             ],
         },
         platformGuideCheckbox: {
-            web_chrome: 'I have reviewed the local model and storage choices above.',
+            web_chrome: 'I have reviewed the Chrome on-device model and browser storage described above.',
             android_app: 'I have read the notice above and understand that this app works only with LiteRT-LM models installed on this device.',
         },
         platformGuideConfirm: 'Confirm and Enter',
@@ -1548,7 +1493,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         messageSendFailed: 'Failed to generate a response. Please try again.',
         modelListTitle: 'On-device Models',
         modelListDescription: {
-            web_chrome: 'Choose between Chrome Prompt API and GGUF models run directly in the browser. Install GGUF when the Chrome API is unavailable. A verified WebGPU adapter uses the GPU; otherwise the model falls back to CPU.',
+            web_chrome: 'The web version uses Chrome on-device AI by default. You can choose the Chrome Prompt API models (Gemini Nano · Gemma 4) and on-device models installed by Chrome, and local Ollama models when Ollama is running on this PC. Hugging Face models and the EXE extension are not provided.',
             android_app: 'On-device AI models run on this device by the Google LiteRT-LM engine. Install and choose the model used for chat. Loading a model tries the GPU backend first and falls back to the CPU backend when the GPU cannot be used.',
         },
         modelRoleChat: 'Chat generation · Chrome Prompt API (built-in browser model)',
@@ -1611,6 +1556,45 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             'Select the OptGuideOnDeviceModel folder (Gemini Nano) the same way to list both folders together.',
             'Pick a model in the list to save and pin it. After reopening the page, select the model folder again to run the same model.',
         ],
+        ollamaModelSectionTitle: 'Local Ollama Models',
+        ollamaModelSectionDescription: 'When Ollama is running on this PC, models installed in Ollama can be chosen as the chat model. The local Ollama server runs the model, and conversation, memory, and persona rules apply the same way.',
+        ollamaServerConnected: (version) => `Ollama connected · version ${version}`,
+        ollamaServerUnavailable: 'Ollama is not connected · check that Ollama is running and that this origin is allowed',
+        ollamaModelEmpty: 'No models are installed in Ollama. Download one with ollama pull in a terminal.',
+        ollamaModelReady: 'Installed in Ollama · loads when selected',
+        ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
+        ollamaBaseUrlLabel: 'Ollama address',
+        ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
+        ollamaBaseUrlHint: 'Enter only the protocol, host, and port without a path. The default is http://127.0.0.1:11434.',
+        ollamaBaseUrlSave: 'Save address',
+        ollamaBaseUrlSaving: 'Saving…',
+        ollamaGuideTitle: 'Local Ollama Connection Guide',
+        ollamaGuideDescription: 'This browser has no Chrome on-device AI, so the Ollama server on this PC is used as the chat engine. Prepare a model with the commands below and press "Check connection". When the HTTP connection succeeds and a model exists, the app connects to the running model (or the most recent model when none is running).',
+        ollamaConnectionChecking: 'Checking the Ollama connection…',
+        ollamaConnectionNotChecked: 'The Ollama connection has not been checked yet',
+        ollamaConnectionReady: (version, modelCount) => modelCount > 0
+            ? `Ollama HTTP connection succeeded · version ${version} · ${modelCount} models`
+            : `Ollama HTTP connection succeeded · version ${version} · no models installed (prepare one with the commands below)`,
+        ollamaConnectionCheck: 'Check connection',
+        ollamaOriginAllowed: (origin) => `This page origin ${origin} is in Ollama's default allow list (localhost · 127.0.0.1 · 0.0.0.0), so no extra setup is needed.`,
+        ollamaOriginRequired: (origin) => `This page origin ${origin} is not in Ollama's default allow list. Add it to OLLAMA_ORIGINS with the last step, then fully quit and restart Ollama.`,
+        ollamaCommandStepTitles: {
+            verify_install: '1. Verify installation',
+            pull_model: '2. Download a model (Ollama library)',
+            create_from_gguf: '3. Create a model from a local GGUF file',
+            remove_model: '4. Remove models you no longer need',
+            run_model: '5. Run the model and check the lists',
+            allow_origin: '6. Allow this page origin',
+        },
+        ollamaCommandStepDescriptions: {
+            verify_install: 'After installing Ollama, check that a version is printed. If the command is not found, reinstall Ollama.',
+            pull_model: 'Download a model from the Ollama library. Replace llama3.2 with the model you want.',
+            create_from_gguf: 'Create a model whose FROM path is a GGUF file on your PC (or a sha256 file in Ollama blobs). Replace the path and the evai-model name with real values.',
+            remove_model: 'Delete a model you no longer use. Replace old-model with a name shown by ollama ls.',
+            run_model: 'Run the model once to confirm it works (exit with /bye), list installed models with ollama ls, and running models with ollama ps.',
+            allow_origin: 'After registering the environment variable, fully quit Ollama and start it again.',
+        },
+        ollamaCommandCopy: 'Copy commands',
         modelRoleAndroidGeminiNano: 'Chat generation · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: 'This device does not support AICore Gemini Nano (requires Android 12+ and an AICore-capable device)',
         modelLanguageSupport: (languageTag, declared) => declared
@@ -1626,20 +1610,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRefresh: 'Refresh status',
         modelLoading: 'Loading model...',
         localModelSections: {
-            gguf: {
-                title: 'Hugging Face GGUF Models',
-                description: 'Link a Hugging Face GGUF file saved on your PC in place, without copying it, and run it inside this browser. The link is saved and kept the next time you open the app, and conversation, memory, and persona rules apply the same way.',
-                installFile: 'Link GGUF file',
-                customModel: 'Linked GGUF',
-                guideTitle: 'Hugging Face GGUF Link Guide',
-                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
-                    `Use a recommended model's "Direct HTTP link" to download its .gguf file into any folder on your PC. For models that require accepting terms, sign in to Hugging Face and accept the terms on the model page first. ("${downloadLabel}" is only available in the Android app.)`,
-                    `Press "${installLabel}" and choose that .gguf file once; its location is saved. The file is not copied, so if you move or delete the original you need to link it again. Each file must be 2 GB or smaller.`,
-                    `Choose "${useLabel}" on a linked model to load it straight from the original file. When the browser is reopened it may ask once more for permission to read the file.`,
-                    'If Chrome\'s WebGPU is available the model runs on the GPU; otherwise it runs on the CPU and is slower. To use multiple CPU threads, the site must be served with the Cross-Origin-Opener-Policy: same-origin and Cross-Origin-Embedder-Policy: require-corp headers.',
-                    `"${removeLabel}" only removes the link and leaves the original file on your PC. Unlinking the model in use switches back to the Chrome on-device model.`,
-                ],
-            },
             litert_lm: {
                 title: 'Hugging Face LiteRT-LM Models',
                 description: 'Runs .litertlm models from Hugging Face litert-community inside this device with the Google LiteRT-LM engine. Model files are kept only in the app\'s internal storage, and conversations, memories, persona rules, and the no-emoji rule apply the same way.',
@@ -1663,34 +1633,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelOpenPage: 'Hugging Face page',
         localModelDownload: 'Download',
         localModelHttpLink: 'Direct HTTP link',
-        nativeHostModel: {
-            title: 'EverSoul Native exe Model (by path)',
-            description: 'Enter the path of a model file on your PC and the EverSoul native exe reads and runs it directly from that path. Browsers other than Chrome can chat the same way, and the path and settings are saved in this app and in the exe settings file so they stay in place.',
-            modelName: 'Native exe model',
-            hostReady: 'exe connected',
-            hostUnavailable: (detail) => `exe not connected (${detail}) · the saved path is applied once the exe connects`,
-            pathMissing: 'No model path has been saved yet',
-            savedPath: (path) => `Saved path ${path}`,
-            resolvedPath: (path) => `Model file found by the exe ${path}`,
-            modelMissing: 'No .litertlm or .task model file was found at the saved path',
-            loaded: 'Model loaded',
-            notLoaded: 'The model loads when a chat starts',
-            errorDetail: (error) => `exe error ${error}`,
-            pathLabel: 'Model file or folder path',
-            pathPlaceholder: 'C:\\Models\\gemma-4-E2B-it.litertlm  or  /home/user/models/',
-            pathHint: 'Enter an absolute path: C:\\folder\\file with \\ on Windows, /folder/file with / on Linux and macOS. If you enter a folder, the single model file inside it is used.',
-            contextWindowLabel: 'Context size (tokens)',
-            save: 'Save path',
-            saving: 'Saving...',
-            recommendedTitle: 'Hugging Face LiteRT-LM models for the exe',
-            guideTitle: 'Native exe Model Setup Guide',
-            guideSteps: [
-                'In storage settings, set the EverSoul native exe path and connect it. The exe must be running to read the model.',
-                'Download a recommended model below into any folder on your PC with its "Direct HTTP link". For models that require accepting terms, sign in to Hugging Face first.',
-                'Enter the absolute path of the downloaded file, or of the folder that contains it, and press "Save path". The path is saved without copying anything and stays in place the next time you open the app.',
-                'Choose "Use for chat" and the exe loads the model from that path and replies when a chat starts.',
-            ],
-        },
         localModelGated: 'Requires signing in to Hugging Face and accepting the model terms before downloading',
         localModelBackend: (backend) => `Backend ${backend}`,
         localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `License ${license}`].filter((part) => part !== null).join(' · '),
@@ -1700,9 +1642,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · prompt ${promptTokens ?? '-'} · generated ${generatedTokens ?? '-'} · truncated ${truncatedTokens}`,
         backupTitle: 'Save · Load Data',
         backupDescription: 'Save serializable IndexedDB data (chats, memories, settings, modules, and more) as JSON. Loading validates the file, replaces the data in a single transaction, and reloads the page. localStorage and PC backup-folder permissions are excluded; the existing folder link is preserved.',
-        backupStorageScope: (native, connected) => native
-            ? `JSON stores the serializable browser IndexedDB source. Restore replaces it, reloads the page, then clears and resynchronizes SQLite beside the EXE. localStorage and folder permissions are excluded. Native connection: ${connected ? 'verified' : 'required'}.`
-            : 'JSON replaces only serializable data in this browser\'s IndexedDB. localStorage and PC backup-folder permissions are excluded, and existing native SQLite is untouched.',
+        backupStorageScope: 'JSON replaces only serializable data in this browser\'s IndexedDB. localStorage and PC backup-folder permissions are excluded.',
         backupExport: 'Export to PC file',
         backupImport: 'Import from PC file',
         backupWorking: 'Working...',
@@ -1732,9 +1672,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: 'Restore',
         backupRestoreConfirm: (fileName) => `Restoring ${fileName} replaces all current data. Continue?`,
         backupWritten: (fileName) => `Saved backup ${fileName}.`,
-        resetStorageScope: (native, connected) => native
-            ? `Resets this origin's localStorage, every IndexedDB database, and local SQLite beside the EXE. Native connection: ${connected ? 'verified' : 'required — deletion will not start while disconnected'}.`
-            : 'Resets this origin\'s localStorage and every IndexedDB database. A separate native SQLite file is not changed.',
+        resetStorageScope: 'Resets this origin\'s localStorage and every IndexedDB database.',
         navChat: 'Chat',
         navRanking: 'Bond Ranking',
         navMemory: 'Memory Flow',
@@ -1763,11 +1701,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageModeActive: 'Active storage mode',
         browserManagedLocation: 'Browser-managed storage',
         browserManagedLocationDetail: 'Browser security does not expose the exact OS path of IndexedDB to the web. It is identified by the origin and logical database name below.',
-        nativeLocalLocationDetail: 'This is a local SQLite file on the same PC as the running native EXE, not an external SQL server.',
         storageUsage: 'Total browser usage',
         storageQuota: 'Browser quota',
         snapshotEstimate: 'Estimated app data',
-        databaseFileSize: 'SQLite file size',
         storeBreakdown: 'Store composition',
         personaBreakdown: 'Storage by spirit',
         storedContents: 'Recent stored content',
@@ -1912,7 +1848,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'invalid_backup':
                     return `Not a supported EverSoul backup file (${detail})`;
                 case 'invalid_model_file':
-                    return `This model file cannot be installed. Choose a .gguf file of 2 GB or less on the web, or a .litertlm file in the Android app (${detail})`;
+                    return `This model file cannot be used. On the web, choose the Chrome model folders (OptGuideOnDeviceModel · OptGuideManifestModel) and the Local State file; in the Android app, choose a .litertlm file (${detail})`;
                 case 'storage':
                     return `No folder access permission: ${detail}`;
                 case 'database':
@@ -1921,6 +1857,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                         : `A browser database operation is in progress. Reload the page (${detail})`;
                 case 'native_runtime':
                     return `The on-device AI engine reported an error: ${detail}`;
+                case 'ollama_unavailable':
+                    return `Could not reach local Ollama. Check that Ollama is running, the address, OLLAMA_ORIGINS, and Chrome's local network permission (${detail})`;
+                case 'ollama_runtime':
+                    return `Local Ollama reported an error: ${detail}`;
             }
         },
         logStylePackLoadFailed: 'Failed to load style pack DB',
@@ -2101,21 +2041,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         webGpuUnavailable: '不可用',
         contextStorage: '对话上下文存储',
         browserStorage: '浏览器存储',
-        browserStorageDescription: '使用 IndexedDB 作为主存储，无需安装其他程序。',
-        nativeMirrorStorage: '原生 SQLite 扩展',
-        nativeMirrorStorageDescription: '保留浏览器存储，同时将对话与记忆镜像到 EXE 同目录的 SQLite 并用于恢复。',
-        nativeContextReady: '原生 API 已连接',
-        nativeContextUnavailable: '原生 API 未连接 · 自动继续使用 IndexedDB',
-        nativeExecutablePath: '可执行文件',
-        nativeExecutablePathPlaceholder: '例如：C:\\Program Files\\EverSoulAI\\eversoul-native-host.exe',
-        nativeExecutablePathDescription: '留空时会从 Native Messaging 注册信息和标准安装位置自动查找。开发服务器会直接使用输入的文件或文件夹；部署浏览器会核对已注册主机的实际路径。',
-        nativeExecutablePathNotFound: '在输入位置和自动查找位置中均未找到可执行文件。',
-        nativeExecutablePathMismatch: '输入路径与浏览器实际连接的可执行文件路径不一致。',
-        nativeDatabasePath: 'SQLite 数据库',
-        nativeProcessId: '原生进程 PID',
-        nativeRuntimePolicy: '主机运行策略',
-        nativeRuntimePolicyValue: '单实例 · 固定状态窗口 · 关闭窗口即停止',
-        connectNativeProgram: '连接原生程序',
         refreshEnvironment: '重新检查环境',
         resetData: '重置数据',
         resetDescription: '删除当前来源的全部 IndexedDB 数据库与 localStorage，包括聊天、精灵/风格/知识数据、记忆、模块、设置及文件连接，然后重新载入页面。如果其他标签页仍占用数据库，删除会中止并显示错误。',
@@ -2221,10 +2146,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: '使用环境说明',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                'PC Chrome 可使用内置 Prompt API 模型；受支持的桌面浏览器可使用已安装的本地 GGUF 模型。',
-                '对话、羁绊与记忆默认保存在本浏览器的 IndexedDB 中。选择原生扩展后，也会镜像到 EXE 同目录的 SQLite。',
-                '原生扩展断开时浏览器存储仍会继续工作，并可随时在设置中更改存储方式。',
-                `首次对话前，请在“${modelSettingsPath}”中准备此浏览器支持的本地模型。`,
+                '网页版默认使用 PC Chrome 设备端 AI。使用 Chrome 内置 Prompt API 模型（Gemini Nano · Gemma 4）和 Chrome 安装的设备端模型进行对话；本电脑正在运行 Ollama 时，也可以使用本地 Ollama 模型。不提供 Hugging Face 模型和 EXE 扩展。',
+                '对话、羁绊与记忆保存在本浏览器的 IndexedDB 中，可导出为电脑文件或自动备份到已关联的电脑文件夹。',
+                `首次对话前，请在“${modelSettingsPath}”中准备 Chrome 设备端模型。`,
             ],
             android_app: (modelSettingsPath) => [
                 'EverTalk AI 聊天安卓应用通过 Google LiteRT-LM 设备端引擎在本设备内运行 AI。对话和模型文件不会发送到服务器。',
@@ -2233,7 +2157,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             ],
         },
         platformGuideCheckbox: {
-            web_chrome: '我已确认以上本地模型与存储选择方式。',
+            web_chrome: '我已确认以上 Chrome 设备端模型与浏览器存储方式。',
             android_app: '我已阅读以上说明，并了解本应用仅能使用安装在本设备上的 LiteRT-LM 模型运行。',
         },
         platformGuideConfirm: '确认并进入',
@@ -2246,7 +2170,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         messageSendFailed: '生成响应失败。请重试。',
         modelListTitle: '设备端模型列表',
         modelListDescription: {
-            web_chrome: '可选择 Chrome Prompt API 或直接在浏览器中运行的 GGUF 模型。Chrome API 不可用时请安装 GGUF。确认 WebGPU 适配器后使用 GPU，否则回退到 CPU。',
+            web_chrome: '网页版默认使用 Chrome 设备端 AI。可以选择 Chrome Prompt API 模型（Gemini Nano · Gemma 4）和 Chrome 安装的设备端模型；本电脑正在运行 Ollama 时，也可以选择本地 Ollama 模型。不提供 Hugging Face 模型和 EXE 扩展。',
             android_app: '这是在本设备上由 Google LiteRT-LM 引擎运行的设备端 AI 模型。请安装并选择用于对话的模型。加载模型时会优先尝试 GPU 后端，无法使用时改用 CPU 后端运行。',
         },
         modelRoleChat: '对话生成 · Chrome Prompt API（浏览器内置模型）',
@@ -2309,6 +2233,45 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             '用同样方式选择 OptGuideOnDeviceModel 文件夹（Gemini Nano），两个文件夹的模型会一起列出。',
             '在列表中选择要使用的模型即会保存并固定。重新打开页面后，只需再次选择模型文件夹即可用同一模型运行。',
         ],
+        ollamaModelSectionTitle: '本地 Ollama 模型列表',
+        ollamaModelSectionDescription: '本电脑正在运行 Ollama 时，可以选择 Ollama 中已安装的模型作为对话模型。模型由本地 Ollama 运行，对话、记忆和角色设定规则同样适用。',
+        ollamaServerConnected: (version) => `Ollama 已连接 · 版本 ${version}`,
+        ollamaServerUnavailable: '未连接 Ollama · 请确认 Ollama 正在运行且已允许此来源',
+        ollamaModelEmpty: 'Ollama 中没有已安装的模型。请在终端中使用 ollama pull 下载模型。',
+        ollamaModelReady: '已安装于 Ollama · 选择后加载',
+        ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
+        ollamaBaseUrlLabel: 'Ollama 地址',
+        ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
+        ollamaBaseUrlHint: '只输入协议、主机和端口，不含路径。默认值为 http://127.0.0.1:11434。',
+        ollamaBaseUrlSave: '保存地址',
+        ollamaBaseUrlSaving: '正在保存…',
+        ollamaGuideTitle: '本地 Ollama 连接指南',
+        ollamaGuideDescription: '此浏览器没有 Chrome 设备端 AI，因此使用本电脑上的 Ollama 作为对话引擎。请用下方命令准备模型，然后点击“检查连接”。HTTP 连接成功且存在模型时，会自动连接正在运行的模型（没有则连接最新的模型）。',
+        ollamaConnectionChecking: '正在检查 Ollama 连接…',
+        ollamaConnectionNotChecked: '尚未检查 Ollama 连接',
+        ollamaConnectionReady: (version, modelCount) => modelCount > 0
+            ? `Ollama HTTP 连接成功 · 版本 ${version} · 模型 ${modelCount} 个`
+            : `Ollama HTTP 连接成功 · 版本 ${version} · 没有已安装的模型（请用下方命令准备模型）`,
+        ollamaConnectionCheck: '检查连接',
+        ollamaOriginAllowed: (origin) => `当前页面来源 ${origin} 位于 Ollama 默认允许列表（localhost · 127.0.0.1 · 0.0.0.0）中，无需额外设置。`,
+        ollamaOriginRequired: (origin) => `当前页面来源 ${origin} 不在 Ollama 默认允许列表中。请用最后一步命令将其加入 OLLAMA_ORIGINS，然后完全退出并重新启动 Ollama。`,
+        ollamaCommandStepTitles: {
+            verify_install: '1. 确认安装',
+            pull_model: '2. 下载模型（Ollama 模型库）',
+            create_from_gguf: '3. 用本地 GGUF 文件创建模型',
+            remove_model: '4. 删除不需要的模型',
+            run_model: '5. 运行模型并查看列表',
+            allow_origin: '6. 允许此页面来源',
+        },
+        ollamaCommandStepDescriptions: {
+            verify_install: '安装 Ollama 后确认能输出版本号。如果找不到命令，请重新安装 Ollama。',
+            pull_model: '从 Ollama 模型库下载模型。请将 llama3.2 替换为想要的模型名称。',
+            create_from_gguf: '以电脑中的 GGUF 文件（或 Ollama blobs 中的 sha256 文件）作为 FROM 路径创建模型。请将路径和 evai-model 名称替换为实际值。',
+            remove_model: '删除不再使用的模型。请将 old-model 替换为 ollama ls 显示的名称。',
+            run_model: '运行一次模型确认可用（用 /bye 退出），用 ollama ls 查看已安装模型，用 ollama ps 查看正在运行的模型。',
+            allow_origin: '注册环境变量后，完全退出 Ollama 并重新启动。',
+        },
+        ollamaCommandCopy: '复制命令',
         modelRoleAndroidGeminiNano: '对话生成 · Android AICore (Gemini Nano)',
         modelAndroidGeminiNanoUnsupported: '此设备不支持 AICore Gemini Nano（需要 Android 12 及以上且支持 AICore 的设备）',
         modelLanguageSupport: (languageTag, declared) => declared
@@ -2324,20 +2287,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRefresh: '刷新状态',
         modelLoading: '正在加载模型...',
         localModelSections: {
-            gguf: {
-                title: 'Hugging Face GGUF 模型',
-                description: '将电脑中已下载的 Hugging Face GGUF 文件原地关联（不复制），在此浏览器中运行。关联会被保存，下次打开时仍然保留，对话、记忆和角色设定规则同样适用。',
-                installFile: '关联 GGUF 文件',
-                customModel: '已关联的 GGUF',
-                guideTitle: 'Hugging Face GGUF 关联指南',
-                guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
-                    `通过推荐模型的“HTTP 直链”将 .gguf 文件下载到电脑中的任意文件夹。需要同意条款的模型，请先登录 Hugging Face 并在模型页面同意条款后再下载。（“${downloadLabel}”仅限 Android 应用。）`,
-                    `点击“${installLabel}”并选择该 .gguf 文件一次，文件位置就会被保存。文件不会被复制，如果移动或删除原文件，需要重新关联。单个文件必须不超过 2GB。`,
-                    `选择已关联模型的“${useLabel}”即可直接从原文件加载。重新打开浏览器时，可能会再次请求读取文件的权限。`,
-                    '如果可以使用 Chrome 的 WebGPU，则在 GPU 上运行；否则在 CPU 上运行，速度较慢。若要使用多个 CPU 线程，网站必须以 Cross-Origin-Opener-Policy: same-origin 和 Cross-Origin-Embedder-Policy: require-corp 标头提供。',
-                    `“${removeLabel}”只会解除关联，电脑中的原文件保持不变。解除正在使用的模型后会切换回 Chrome 设备端模型。`,
-                ],
-            },
             litert_lm: {
                 title: 'Hugging Face LiteRT-LM 模型',
                 description: '通过 Google LiteRT-LM 引擎在本设备内运行 Hugging Face litert-community 的 .litertlm 模型。模型文件只保存在应用内部存储中，对话、记忆、角色设定和禁用表情符号的规则同样适用。',
@@ -2361,34 +2310,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         localModelOpenPage: 'Hugging Face 页面',
         localModelDownload: '下载',
         localModelHttpLink: 'HTTP 直链',
-        nativeHostModel: {
-            title: 'EverSoul 原生 exe 模型（指定路径）',
-            description: '指定电脑中模型文件的路径后，EverSoul 原生 exe 会直接从该路径读取并运行。非 Chrome 浏览器也可以用同样的方式对话，路径和设置会保存在本应用和 exe 设置文件中并一直保留。',
-            modelName: '原生 exe 模型',
-            hostReady: 'exe 已连接',
-            hostUnavailable: (detail) => `exe 未连接（${detail}）· 已保存的路径会在 exe 连接后生效`,
-            pathMissing: '尚未保存模型路径',
-            savedPath: (path) => `已保存的路径 ${path}`,
-            resolvedPath: (path) => `exe 找到的模型文件 ${path}`,
-            modelMissing: '在已保存的路径中找不到 .litertlm 或 .task 模型文件',
-            loaded: '模型已加载',
-            notLoaded: '开始对话时加载模型',
-            errorDetail: (error) => `exe 错误 ${error}`,
-            pathLabel: '模型文件或文件夹路径',
-            pathPlaceholder: 'C:\\Models\\gemma-4-E2B-it.litertlm  或  /home/user/models/',
-            pathHint: '请输入绝对路径：Windows 使用 \\，如 C:\\文件夹\\文件；Linux 和 macOS 使用 /，如 /文件夹/文件。指定文件夹时会使用其中唯一的模型文件。',
-            contextWindowLabel: '上下文大小（tokens）',
-            save: '保存路径',
-            saving: '正在保存...',
-            recommendedTitle: '可在 exe 中使用的 Hugging Face LiteRT-LM 模型',
-            guideTitle: '原生 exe 模型设置指南',
-            guideSteps: [
-                '在存储设置中指定 EverSoul 原生 exe 的路径并连接。exe 必须正在运行才能读取模型。',
-                '通过下方推荐模型的“HTTP 直链”将 .litertlm 文件下载到电脑中的任意文件夹。需要同意条款的模型，请先登录 Hugging Face。',
-                '输入下载文件或所在文件夹的绝对路径，然后点击“保存路径”。路径不会复制任何文件，保存后下次打开时仍然保留。',
-                '选择“用于对话”后，开始对话时 exe 会从该路径加载模型并回复。',
-            ],
-        },
         localModelGated: '需要登录 Hugging Face 并同意模型条款后才能下载',
         localModelBackend: (backend) => `后端 ${backend}`,
         localModelFileMeta: (fileName, sizeMb, license) => [fileName, sizeMb === null ? null : `${sizeMb}MB`, license === null ? null : `许可证 ${license}`].filter((part) => part !== null).join(' · '),
@@ -2398,9 +2319,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 输入 ${promptTokens ?? '-'} · 生成 ${generatedTokens ?? '-'} · 截断 ${truncatedTokens}`,
         backupTitle: '数据保存 · 载入',
         backupDescription: '将本浏览器 IndexedDB 中可序列化的数据（聊天、记忆、设置、模块等）保存为 JSON；导入时先验证，再以单个事务替换数据并重新载入页面。localStorage 与电脑备份文件夹权限不包含在内，现有文件夹连接会保留。',
-        backupStorageScope: (native, connected) => native
-            ? `JSON 保存浏览器 IndexedDB 中可序列化的原始数据。恢复时先替换数据并重新载入页面，再清空 EXE 旁的本地 SQLite 并同步。localStorage 与文件夹权限不包含在内。原生连接：${connected ? '已确认' : '必需'}。`
-            : 'JSON 只替换恢复当前浏览器 IndexedDB 中可序列化的数据。localStorage 与电脑备份文件夹权限不包含在内，已有原生 SQLite 不会改变。',
+        backupStorageScope: 'JSON 只替换恢复当前浏览器 IndexedDB 中可序列化的数据。localStorage 与电脑备份文件夹权限不包含在内。',
         backupExport: '导出为电脑文件',
         backupImport: '从电脑文件导入',
         backupWorking: '处理中...',
@@ -2430,9 +2349,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: '恢复',
         backupRestoreConfirm: (fileName) => `使用 ${fileName} 恢复会替换当前全部数据。是否继续？`,
         backupWritten: (fileName) => `已保存备份 ${fileName}。`,
-        resetStorageScope: (native, connected) => native
-            ? `同时重置当前来源的 localStorage、全部 IndexedDB 数据库与 EXE 旁的本地 SQLite。原生连接：${connected ? '已确认' : '必需——未连接时不会开始删除'}。`
-            : '重置当前来源的 localStorage 与全部 IndexedDB 数据库，单独存在的原生 SQLite 文件不会改变。',
+        resetStorageScope: '重置当前来源的 localStorage 与全部 IndexedDB 数据库。',
         navChat: '对话',
         navRanking: '羁绊排行',
         navMemory: '记忆流程',
@@ -2461,11 +2378,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageModeActive: '当前存储模式',
         browserManagedLocation: '浏览器管理的存储',
         browserManagedLocationDetail: '浏览器安全策略不会向网页公开 IndexedDB 的实际系统文件路径。它由下方来源与逻辑数据库名称标识。',
-        nativeLocalLocationDetail: '这是与原生 EXE 位于同一台电脑上的本地 SQLite 文件，并非外部 SQL 服务器。',
         storageUsage: '浏览器总用量',
         storageQuota: '浏览器配额',
         snapshotEstimate: '应用数据估算',
-        databaseFileSize: 'SQLite 文件大小',
         storeBreakdown: '各存储构成',
         personaBreakdown: '各精灵存储量',
         storedContents: '最近保存内容',
@@ -2610,7 +2525,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'invalid_backup':
                     return `不是受支持的 EverSoul 备份文件（${detail}）`;
                 case 'invalid_model_file':
-                    return `无法安装此模型文件。网页版请选择不超过 2GB 的 .gguf 文件，安卓应用请选择 .litertlm 文件（${detail}）`;
+                    return `无法使用此模型文件。网页版请选择 Chrome 模型文件夹（OptGuideOnDeviceModel · OptGuideManifestModel）和 Local State 文件，安卓应用请选择 .litertlm 文件（${detail}）`;
                 case 'storage':
                     return `没有文件夹访问权限：${detail}`;
                 case 'database':
@@ -2619,6 +2534,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                         : `浏览器数据库操作正在进行中，请重新载入页面（${detail}）`;
                 case 'native_runtime':
                     return `设备端 AI 引擎发生错误：${detail}`;
+                case 'ollama_unavailable':
+                    return `无法连接本地 Ollama。请检查 Ollama 是否正在运行、地址、OLLAMA_ORIGINS 以及 Chrome 本地网络权限（${detail}）`;
+                case 'ollama_runtime':
+                    return `本地 Ollama 发生错误：${detail}`;
             }
         },
         logStylePackLoadFailed: '风格包数据库加载失败',

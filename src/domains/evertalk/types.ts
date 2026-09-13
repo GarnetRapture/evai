@@ -25,11 +25,11 @@ import type {
     LlmStatus,
     LocalModelEngineKind,
     LocalModelFileEntry,
-    NativeHostModelEntry,
     ModelPreparationState,
+    OllamaModelEntry,
+    OllamaModelLibrary,
 } from '../llm';
 import type { ImportedModule, ModuleControl } from '../modules';
-import type { ContextStorageMode, NativeContextStatus } from '../native';
 import type { BondRankingEntry, FamiliarityEntry, PersonaCheatPreset, PersonaCheatPresetPatch, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { AppSettings, SetupPhase, SetupProgress } from '../settings';
 import type { StyleProfile } from '../style';
@@ -338,7 +338,7 @@ export interface TalkChoice {
 export type ApiConnectionState = 'checking' | 'ready' | 'warning' | 'error';
 export type RosterTab = 'list' | 'bondRanking' | 'familiarity';
 export type StageTab = 'chat' | 'gallery';
-export type SystemStatusId = 'auth' | 'persona-archive' | 'persona-db' | 'chat-db' | 'style-db' | 'llm' | 'native-context' | 'sync';
+export type SystemStatusId = 'auth' | 'persona-archive' | 'persona-db' | 'chat-db' | 'style-db' | 'llm' | 'context-storage' | 'sync';
 export interface ApiStatusItem {
     id: SystemStatusId;
     state: ApiConnectionState;
@@ -557,6 +557,7 @@ export interface SystemStatusPanelProps {
 }
 export interface ModelCatalogSectionProps {
     appPlatform: AppPlatform;
+    devicePlatform: string;
     modelCatalog: ChatModelCatalog | null;
     modelCatalogError: string | null;
     modelPreparation: ModelPreparationState | null;
@@ -572,7 +573,30 @@ export interface ModelCatalogSectionProps {
     onInstallLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
     onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
-    onSaveNativeHostModelPath: (modelPath: string, contextWindow: number) => Promise<void>;
+    onSaveOllamaBaseUrl: (baseUrl: string) => Promise<void>;
+}
+export interface OllamaModelSectionProps {
+    library: OllamaModelLibrary;
+    modelLoadingId: string | null;
+    platform: string;
+    labels: EverTalkLabels;
+    onRefreshModelCatalog: () => Promise<void>;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onSaveOllamaBaseUrl: (baseUrl: string) => Promise<void>;
+}
+export interface OllamaConnectionGuideProps {
+    library: OllamaModelLibrary | null;
+    checking: boolean;
+    introVisible: boolean;
+    platform: string;
+    labels: EverTalkLabels;
+    onCheck: () => Promise<void>;
+}
+export interface OllamaModelItemProps {
+    entry: OllamaModelEntry;
+    modelLoadingId: string | null;
+    labels: EverTalkLabels;
+    onSelectChatModel: (modelId: string) => Promise<void>;
 }
 export interface ChromeInstalledModelSectionProps {
     library: ChromeInstalledModelLibrary;
@@ -589,13 +613,6 @@ export interface ChromeInstalledModelItemProps {
     modelLoadingId: string | null;
     labels: EverTalkLabels;
     onSelectChatModel: (modelId: string) => Promise<void>;
-}
-export interface NativeHostModelItemProps {
-    entry: NativeHostModelEntry;
-    modelLoadingId: string | null;
-    labels: EverTalkLabels;
-    onSelectChatModel: (modelId: string) => Promise<void>;
-    onSaveNativeHostModelPath: (modelPath: string, contextWindow: number) => Promise<void>;
 }
 export interface LocalModelEntryGroup {
     engine: LocalModelEngineKind;
@@ -653,7 +670,6 @@ export interface SettingsPanelProps extends ModelCatalogSectionProps {
     backupMessage: string | null;
     backupError: string | null;
     backupDirectoryStatus: BackupDirectoryStatus | null;
-    nativeContextStatus: NativeContextStatus;
     deviceEnvironment: DeviceEnvironmentInfo | null;
     userSession: UserSession | null;
     saviorProfile: SaviorProfileSnapshot;
@@ -662,9 +678,6 @@ export interface SettingsPanelProps extends ModelCatalogSectionProps {
     onSetLanguage: (language: AppLanguage) => Promise<void>;
     onSetShowReasoning: (show: boolean) => Promise<void>;
     onSetCheatModeEnabled: (enabled: boolean) => Promise<void>;
-    onSetContextStorageMode: (mode: ContextStorageMode) => Promise<void>;
-    onSetNativeExecutablePath: (path: string) => Promise<void>;
-    onConnectNativeProgram: () => Promise<void>;
     onImportModule: () => Promise<void>;
     onSetModuleEnabled: (id: string, enabled: boolean) => Promise<void>;
     onDeleteModule: (id: string) => Promise<void>;
@@ -713,13 +726,12 @@ export interface SetupWizardProps {
     appPlatform: AppPlatform;
     language: AppLanguage;
     labels: EverTalkLabels;
-    contextStorageMode: ContextStorageMode;
-    nativeExecutablePath: string;
-    nativeContextStatus: NativeContextStatus;
+    ollamaGuideVisible: boolean;
+    ollamaConnection: OllamaModelLibrary | null;
+    ollamaConnectionChecking: boolean;
+    devicePlatform: string;
+    onCheckOllamaConnection: () => Promise<void>;
     onSelectLanguage: (language: AppLanguage) => Promise<void>;
-    onSetContextStorageMode: (mode: ContextStorageMode) => Promise<void>;
-    onSetNativeExecutablePath: (path: string) => Promise<void>;
-    onConnectNativeProgram: () => Promise<void>;
     onCompleteSetup: () => Promise<void>;
 }
 export interface PlatformGuideNoticeProps {
@@ -731,6 +743,11 @@ export interface PlatformGuideNoticeProps {
 export interface PlatformGuideGateProps {
     appPlatform: AppPlatform;
     labels: EverTalkLabels;
+    ollamaGuideVisible: boolean;
+    ollamaConnection: OllamaModelLibrary | null;
+    ollamaConnectionChecking: boolean;
+    devicePlatform: string;
+    onCheckOllamaConnection: () => Promise<void>;
     onAcknowledge: () => Promise<void>;
 }
 export interface PlatformBlockedPanelProps {
@@ -791,7 +808,6 @@ export interface EverTalkController {
     backgroundGalleryOpen: boolean;
     appSettings: AppSettings | null;
     userSession: UserSession | null;
-    nativeContextStatus: NativeContextStatus;
     deviceEnvironment: DeviceEnvironmentInfo | null;
     modelCatalog: ChatModelCatalog | null;
     modelCatalogError: string | null;
@@ -871,9 +887,6 @@ export interface EverTalkController {
     resetAppData: () => Promise<void>;
     setLanguage: (language: AppLanguage) => Promise<void>;
     setShowReasoning: (show: boolean) => Promise<void>;
-    setContextStorageMode: (mode: ContextStorageMode) => Promise<void>;
-    setNativeExecutablePath: (path: string) => Promise<void>;
-    connectNativeProgram: () => Promise<void>;
     refreshEnvironment: () => Promise<void>;
     refreshModelCatalog: () => Promise<void>;
     selectChatModel: (modelId: string) => Promise<void>;
@@ -884,7 +897,12 @@ export interface EverTalkController {
     chromeInstalledModelLinking: boolean;
     installLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
     downloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
-    saveNativeHostModelPath: (modelPath: string, contextWindow: number) => Promise<void>;
+    saveOllamaBaseUrl: (baseUrl: string) => Promise<void>;
+    ollamaGuideVisible: boolean;
+    ollamaConnection: OllamaModelLibrary | null;
+    ollamaConnectionChecking: boolean;
+    devicePlatform: string;
+    checkOllamaConnection: () => Promise<void>;
     removeLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     exportBackup: () => Promise<void>;
     importBackup: () => Promise<void>;

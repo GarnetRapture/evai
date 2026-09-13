@@ -4390,10 +4390,6 @@
   }
 }
 
-.ever-settings-modal--full .ever-context-storage dl div {
-  grid-template-columns: minmax(7em, auto) minmax(0, 1fr);
-}
-
 .ever-settings-modal--full > .ever-settings-modal__header {
   grid-column: 1 / -1;
   padding: clamp(12px, 2vmin, 20px) clamp(18px, 3vmin, 30px);
@@ -5481,30 +5477,11 @@ a.ever-settings-reset-button {
   box-shadow: none;
 }
 
-.ever-environment-layer__details dl,
-.ever-context-storage dl { display: grid; gap: 7px; margin: 0; }
-.ever-environment-layer__details dl div,
-.ever-context-storage dl div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px; }
-.ever-environment-layer__details dt,
-.ever-context-storage dt { opacity: 0.64; }
-.ever-environment-layer__details dd,
-.ever-context-storage dd { margin: 0; overflow-wrap: anywhere; }
+.ever-environment-layer__details dl { display: grid; gap: 7px; margin: 0; }
+.ever-environment-layer__details dl div { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px; }
+.ever-environment-layer__details dt { opacity: 0.64; }
+.ever-environment-layer__details dd { margin: 0; overflow-wrap: anywhere; }
 
-.ever-context-storage { display: grid; gap: 9px; margin-top: 14px; }
-.ever-context-storage > h3 { margin: 0; }
-.ever-context-storage > label {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 9px;
-  align-items: start;
-  padding: 10px;
-  border: 1px solid rgba(91, 85, 119, 0.2);
-  border-radius: 9px;
-  cursor: pointer;
-}
-.ever-context-storage > label.is-active { border-color: #595273; background: rgba(89, 82, 115, 0.09); }
-.ever-context-storage label span { display: grid; gap: 3px; }
-.ever-context-storage label small { opacity: 0.7; line-height: 1.45; }
 .ever-context-storage__path {
   display: grid;
   gap: 6px;
@@ -5527,7 +5504,14 @@ a.ever-settings-reset-button {
 .ever-context-storage__path > small,
 .ever-context-storage__detail { opacity: 0.7; line-height: 1.45; overflow-wrap: anywhere; }
 .ever-context-storage__health { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-.ever-context-storage__health button { border: 1px solid currentColor; border-radius: 7px; padding: 5px 8px; background: transparent; color: inherit; cursor: pointer; }
+.ever-ollama-guide { display: grid; gap: 9px; margin-top: 14px; }
+.ever-ollama-guide > h3 { margin: 0; }
+.ever-ollama-guide > p { margin: 0; line-height: 1.5; }
+.ever-ollama-guide__steps { display: grid; gap: 10px; margin: 0; padding-left: 0; list-style: none; }
+.ever-ollama-guide__steps > li { display: grid; gap: 5px; padding: 10px; border: 1px solid rgba(89, 82, 115, 0.18); border-radius: 9px; background: rgba(89, 82, 115, 0.05); }
+.ever-ollama-guide__steps small { opacity: 0.7; line-height: 1.45; }
+.ever-ollama-guide__steps > li > button { justify-self: start; }
+.ever-ollama-guide__command { margin: 0; padding: 9px 10px; overflow-x: auto; border-radius: 8px; background: #262a38; color: #eef0f7; font-size: 12px; line-height: 1.5; white-space: pre; }
 .ever-context-storage__health.is-ready { color: #168153; }
 .ever-context-storage__health.is-warning { color: #9a6914; }
 
@@ -5542,8 +5526,7 @@ a.ever-settings-reset-button {
   .ever-environment-layer > .ever-environment-layer__trigger { flex: 1 1 0; justify-content: flex-end; gap: 6px; padding: 0 2px 0 4px; overflow-x: auto; scrollbar-width: none; }
   .ever-environment-layer__browser, .ever-environment-layer__trigger span { flex: 0 0 auto; }
   .ever-environment-overlay { padding: 8px; }
-  .ever-environment-layer__details dl div,
-  .ever-context-storage dl div { grid-template-columns: 1fr; gap: 2px; }
+  .ever-environment-layer__details dl div { grid-template-columns: 1fr; gap: 2px; }
 }
 
 .ever-top-navigation { flex: 1 1 auto; min-width: 0; height: 100%; display: flex; align-items: center; justify-content: safe center; gap: 3px; margin: 0 auto; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; }

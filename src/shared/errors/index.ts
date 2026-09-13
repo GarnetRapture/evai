@@ -9,6 +9,8 @@ export type DomainErrorCode =
     | 'invalid_backup'
     | 'invalid_model_file'
     | 'native_runtime'
+    | 'ollama_unavailable'
+    | 'ollama_runtime'
     | 'persona_prompt_missing'
     | 'storage'
     | 'database';

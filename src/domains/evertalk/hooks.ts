@@ -7,7 +7,6 @@ import { authClient, type UserSession } from '../auth';
 import { DEFAULT_MEMORY_CONTEXT_FILTER, PROACTIVE_CHECK_INTERVAL_MS, PROACTIVE_INITIAL_DELAY_MS, chatClient, type ChatMessage, type ChatRoom, type MemoryContextKind, type PersonaContextGraph, type PersonaMaintenanceTask, type PersonaMemoryInsight, type PersonaMemoryOverview } from '../chat';
 import {
     LOCAL_MODEL_INSTALL_PREPARATION_IDS,
-    NATIVE_HOST_MODEL_ID,
     llmClient,
     type ChatModelCatalog,
     type OnDeviceSystemModelEntry,
@@ -17,9 +16,9 @@ import {
     type LlmSessionStatus,
     type LlmStatus,
     type ModelPreparationState,
+    type OllamaModelLibrary,
 } from '../llm';
 import { modulesClient, type ImportedModule, type ModuleControl } from '../modules';
-import { nativeContextClient, type ContextStorageMode, type NativeContextStatus } from '../native';
 import { DEFAULT_SPIRIT_SKIN_ID, getSpiritVisualAssets, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaCheatPresetPatch, type PersonaConfig, type SpiritDetail } from '../persona';
 import { settingsClient, type AppSettings, type SetupProgress } from '../settings';
 import { styleClient, type StyleProfile } from '../style';
@@ -62,7 +61,7 @@ export function useEverTalkController(): EverTalkController {
         createApiStatus('chat-db', 'checking', labels.checking),
         createApiStatus('style-db', 'checking', labels.checking),
         createApiStatus('llm', 'checking', labels.checking),
-        createApiStatus('native-context', 'checking', labels.checking),
+        createApiStatus('context-storage', 'checking', labels.checking),
         createApiStatus('sync', 'warning', labels.manualSyncWaiting),
     ]);
     const [searchQuery, setSearchQuery] = useState('');
@@ -108,17 +107,14 @@ export function useEverTalkController(): EverTalkController {
     const [appSettings, setAppSettings] = useState<AppSettings | null>(null);
     const [userSession, setUserSession] = useState<UserSession | null>(null);
     const [deviceEnvironment, setDeviceEnvironment] = useState<DeviceEnvironmentInfo | null>(null);
-    const [nativeContextStatus, setNativeContextStatus] = useState<NativeContextStatus>({
-        available: false,
-        transport: 'unavailable',
-        detail: 'not_checked',
-        health: null,
-    });
     const [modelCatalog, setModelCatalog] = useState<ChatModelCatalog | null>(null);
     const [modelLoadingId, setModelLoadingId] = useState<string | null>(null);
     const [modelCatalogError, setModelCatalogError] = useState<string | null>(null);
     const [modelPreparation, setModelPreparation] = useState<ModelPreparationState | null>(null);
     const [chromeInstalledModelLinking, setChromeInstalledModelLinking] = useState(false);
+    const [ollamaGuideVisible] = useState(() => appPlatform === 'web_chrome' && !llmClient.isChromeOnDeviceAiSupported());
+    const [ollamaConnection, setOllamaConnection] = useState<OllamaModelLibrary | null>(null);
+    const [ollamaConnectionChecking, setOllamaConnectionChecking] = useState(false);
     const [backupBusy, setBackupBusy] = useState(false);
     const [backupMessage, setBackupMessage] = useState<string | null>(null);
     const [backupError, setBackupError] = useState<string | null>(null);
@@ -169,42 +165,16 @@ export function useEverTalkController(): EverTalkController {
                     return createApiStatus('style-db', styles.length > 0 ? 'ready' : 'warning', uiLabels.loadedCount(styles.length));
                 case 'llm':
                     return createApiStatus('llm', llmStatus?.is_loaded ? 'ready' : 'warning', llmStatus?.is_loaded ? uiLabels.modelLoaded : uiLabels.modelAvailabilityDetail(llmStatus?.availability ?? null));
-                case 'native-context': {
-                    const selected = appSettings?.context_storage_mode === 'native_mirror';
-                    return createApiStatus(
-                        'native-context',
-                        !selected || nativeContextStatus.available ? 'ready' : 'warning',
-                        !selected ? uiLabels.browserStorage : nativeContextStatus.available ? uiLabels.nativeContextReady : uiLabels.nativeContextUnavailable,
-                    );
-                }
+                case 'context-storage':
+                    return createApiStatus('context-storage', 'ready', uiLabels.browserStorage);
                 case 'sync':
                     return createApiStatus('sync', 'warning', uiLabels.manualSyncWaiting);
             }
         }));
     }
-    async function refreshEnvironment(reconcile = true, connectNative = appSettings?.context_storage_mode === 'native_mirror') {
-        const environment = await inspectDeviceEnvironment();
-        const nativeStatus: NativeContextStatus = connectNative
-            ? await nativeContextClient.health()
-            : { available: false, transport: 'unavailable', detail: 'not_checked', health: null };
-        setDeviceEnvironment(environment);
-        setNativeContextStatus(nativeStatus);
-        if (nativeStatus.available && reconcile) await settingsClient.reconcileNativeContext();
-        setSystemStatus(createApiStatus(
-            'native-context',
-            !connectNative || nativeStatus.available ? 'ready' : 'warning',
-            !connectNative ? labels.browserStorage : nativeStatus.available ? labels.nativeContextReady : `${labels.nativeContextUnavailable} (${nativeStatus.detail})`,
-        ));
-    }
-    async function connectNativeProgram() {
-        const nativeStatus = await nativeContextClient.health();
-        setNativeContextStatus(nativeStatus);
-        if (nativeStatus.available) await settingsClient.reconcileNativeContext();
-        setSystemStatus(createApiStatus(
-            'native-context',
-            nativeStatus.available ? 'ready' : 'warning',
-            nativeStatus.available ? labels.nativeContextReady : `${labels.nativeContextUnavailable} (${nativeStatus.detail})`,
-        ));
+    async function refreshEnvironment() {
+        setDeviceEnvironment(await inspectDeviceEnvironment());
+        setSystemStatus(createApiStatus('context-storage', 'ready', labels.browserStorage));
     }
     async function refreshStyles() {
         try {
@@ -289,7 +259,7 @@ export function useEverTalkController(): EverTalkController {
     async function refreshProactiveUnreadCounts() {
         setProactiveUnreadCounts(await chatClient.listProactiveUnreadCounts());
     }
-    async function loadMainAppData(initialLanguage: AppLanguage, contextStorageMode: ContextStorageMode) {
+    async function loadMainAppData(initialLanguage: AppLanguage) {
         frontendDebugLog('loadMainAppData:start');
         
         const initLabels = getEverTalkLabels(initialLanguage);
@@ -338,7 +308,7 @@ export function useEverTalkController(): EverTalkController {
             refreshStyles(),
             refreshLocalStatus(),
             refreshProactiveUnreadCounts(),
-            refreshEnvironment(true, contextStorageMode === 'native_mirror'),
+            refreshEnvironment(),
         ];
 
         await Promise.all(loadPromises);
@@ -389,7 +359,7 @@ export function useEverTalkController(): EverTalkController {
             const staged = await settingsClient.completeInitialSetup(setupLanguage, setSetupProgress);
             setAppSettings(staged);
             setAppLanguage(staged.language);
-            await loadMainAppData(staged.language, staged.context_storage_mode);
+            await loadMainAppData(staged.language);
         }
         catch (err) {
             console.error(labels.logInitialSetupFailed, err);
@@ -950,34 +920,6 @@ export function useEverTalkController(): EverTalkController {
         }
     }
 
-    async function setContextStorageMode(mode: ContextStorageMode) {
-        const updated = await settingsClient.setContextStorageMode(mode);
-        setAppSettings(updated);
-        if (mode === 'browser' && nativeContextStatus.available) {
-            try {
-                await nativeContextClient.disconnect();
-            }
-            catch (error) {
-                console.warn('Native context host disconnect failed.', error);
-            }
-        }
-        setNativeContextStatus({ available: false, transport: 'unavailable', detail: 'not_checked', health: null });
-        syncClient.scheduleAutomaticBackup();
-    }
-
-    async function setNativeExecutablePath(path: string) {
-        try {
-            const updated = await settingsClient.setNativeExecutablePath(path);
-            setAppSettings(updated);
-            syncClient.scheduleAutomaticBackup();
-        }
-        catch (error) {
-            setNativeContextStatus({ available: false, transport: 'unavailable', detail: 'native_host_path_not_found', health: null });
-            setSystemStatus(createApiStatus('native-context', 'error', formatUnknownError(error, labels)));
-            throw error;
-        }
-    }
-
     async function acknowledgePlatformGuide() {
         const updated = await settingsClient.acknowledgePlatformGuide();
         setAppSettings(updated);
@@ -987,7 +929,7 @@ export function useEverTalkController(): EverTalkController {
         }
         setAppInitializing(true);
         try {
-            await loadMainAppData(updated.language, updated.context_storage_mode);
+            await loadMainAppData(updated.language);
         }
         finally {
             setAppInitializing(false);
@@ -1030,8 +972,6 @@ export function useEverTalkController(): EverTalkController {
 
     async function refreshModelCatalog() {
         try {
-            setModelCatalog(await llmClient.listModelsWithoutNativeHost());
-            setModelCatalogError(null);
             setModelCatalog(await llmClient.listModels());
             setModelCatalogError(null);
         }
@@ -1180,16 +1120,26 @@ export function useEverTalkController(): EverTalkController {
         }
     }
 
-    async function saveNativeHostModelPath(modelPath: string, contextWindow: number) {
+    async function checkOllamaConnection() {
+        setOllamaConnectionChecking(true);
         try {
-            setModelCatalog(await llmClient.saveNativeHostModelPath(modelPath, contextWindow));
+            setOllamaConnection(await llmClient.inspectOllamaConnection());
+        }
+        catch (err) {
+            console.error(labels.logLocalModelStatusCheckFailed, err);
+            setModelCatalogError(formatUnknownError(err, labels));
+        }
+        finally {
+            setOllamaConnectionChecking(false);
+        }
+    }
+
+    async function saveOllamaBaseUrl(baseUrl: string) {
+        try {
+            setModelCatalog(await llmClient.saveOllamaBaseUrl(baseUrl));
             setAppSettings(await settingsClient.get());
             setModelCatalogError(null);
             syncClient.scheduleAutomaticBackup();
-            if (appSettings?.active_model === NATIVE_HOST_MODEL_ID) {
-                await refreshLlmStatus();
-                await refocusActiveSpiritSession();
-            }
         }
         catch (err) {
             console.error(labels.logLocalModelChangeFailed, err);
@@ -1348,7 +1298,7 @@ export function useEverTalkController(): EverTalkController {
         setStorageInspectionLoading(true);
         setStorageInspectionError(null);
         try {
-            setStorageInspection(await inspectBrowserStorage(appSettings?.context_storage_mode === 'native_mirror'));
+            setStorageInspection(await inspectBrowserStorage());
         }
         catch (err) {
             setStorageInspectionError(formatUnknownError(err, labels));
@@ -1388,17 +1338,15 @@ export function useEverTalkController(): EverTalkController {
     const initializeApp = useEffectEvent(async () => {
         frontendDebugLog('initApp:start');
         let initialLanguage: AppLanguage = appLanguage;
-        let initialContextStorageMode: ContextStorageMode = 'browser';
         let needsGate = true;
         try {
             frontendDebugLog('initApp:settings_get:start');
             const currentSettings = await settingsClient.get();
             initialLanguage = currentSettings.language_configured ? currentSettings.language : detectBrowserAppLanguage();
-            initialContextStorageMode = currentSettings.context_storage_mode;
             setAppSettings(currentSettings);
             setAppLanguage(initialLanguage);
             needsGate = currentSettings.setup_stage !== 'done' || !currentSettings.platform_guide_acknowledged;
-            await refreshEnvironment(true, currentSettings.context_storage_mode === 'native_mirror');
+            await refreshEnvironment();
         }
         catch (err) {
             console.error(labels.logSettingsFetchFailed, err);
@@ -1414,11 +1362,14 @@ export function useEverTalkController(): EverTalkController {
         if (needsGate) {
             frontendDebugLog('initApp:needs_gate');
             setAppInitializing(false);
+            if (ollamaGuideVisible) {
+                await checkOllamaConnection();
+            }
             return;
         }
         try {
             frontendDebugLog('initApp:loadMainAppData:start');
-            await loadMainAppData(initialLanguage, initialContextStorageMode);
+            await loadMainAppData(initialLanguage);
         }
         finally {
             setAppInitializing(false);
@@ -1437,7 +1388,7 @@ export function useEverTalkController(): EverTalkController {
                 refreshLocalStatus(),
                 refreshLlmStatus(),
                 refreshModelCatalog(),
-                refreshEnvironment(true, appSettings?.context_storage_mode === 'native_mirror'),
+                refreshEnvironment(),
             ]);
             if (activeSpiritId && (await ensureLlmReadyForPersonaCache())) {
                 await chatClient.focusPersonaSession(activeSpiritId);
@@ -1624,7 +1575,6 @@ export function useEverTalkController(): EverTalkController {
         backgroundGalleryOpen,
         appSettings,
         userSession,
-        nativeContextStatus,
         deviceEnvironment,
         modelCatalog,
         modelCatalogError,
@@ -1703,9 +1653,6 @@ export function useEverTalkController(): EverTalkController {
         resetAppData,
         setLanguage,
         setShowReasoning,
-        setContextStorageMode,
-        setNativeExecutablePath,
-        connectNativeProgram,
         refreshEnvironment,
         refreshModelCatalog,
         selectChatModel,
@@ -1716,7 +1663,12 @@ export function useEverTalkController(): EverTalkController {
         chromeInstalledModelLinking,
         installLocalModel,
         downloadLocalModel,
-        saveNativeHostModelPath,
+        saveOllamaBaseUrl,
+        ollamaGuideVisible,
+        ollamaConnection,
+        ollamaConnectionChecking,
+        devicePlatform: deviceEnvironment?.browser.platform ?? navigator.platform,
+        checkOllamaConnection,
         removeLocalModel,
         modelLoadingId,
         exportBackup,

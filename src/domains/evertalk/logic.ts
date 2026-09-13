@@ -882,7 +882,7 @@ export function settingsSectionNavItems(labels: EverTalkLabels): SettingsSection
 export function groupLocalModelEntries(entries: ChatModelEntry[]): LocalModelEntryGroup[] {
     const groups: LocalModelEntryGroup[] = [];
     for (const entry of entries) {
-        if (entry.engine === 'chrome_prompt' || entry.engine === 'android_gemini_nano' || entry.engine === 'native_host') {
+        if (entry.engine === 'chrome_prompt' || entry.engine === 'android_gemini_nano') {
             continue;
         }
         const localEntry: LocalModelFileEntry = entry;
@@ -938,7 +938,7 @@ export function formatSystemStatusLabel(statusId: SystemStatusId, labels: EverTa
             return labels.styleDb;
         case 'llm':
             return labels.localModel;
-        case 'native-context':
+        case 'context-storage':
             return labels.contextStorage;
         case 'sync':
             return labels.dataSync;

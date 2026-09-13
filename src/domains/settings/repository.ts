@@ -1,6 +1,7 @@
 import { EVERSOUL_STORE, SINGLETON_RECORD_KEY, clearStores, getEverSoulDatabase } from '../../shared/storage';
 import { DEFAULT_MEMORY_CONTEXT_FILTER, normalizeMemoryContextFilter } from '../chat/memoryContext';
-import { CHROME_PROMPT_MODEL_ID, NATIVE_HOST_DEFAULT_CONTEXT_WINDOW } from '../llm/constants';
+import { CHROME_PROMPT_MODEL_ID } from '../llm/constants';
+import { OLLAMA_DEFAULT_BASE_URL } from '../ollama/constants';
 import type { AppSettings, GeneralSettingsRecord } from './types';
 
 export const DEFAULT_GENERAL_SETTINGS: GeneralSettingsRecord = {
@@ -15,10 +16,7 @@ export const DEFAULT_GENERAL_SETTINGS: GeneralSettingsRecord = {
     lobby_background: null,
     savior_name: '',
     platform_guide_acknowledged: false,
-    context_storage_mode: 'browser',
-    native_executable_path: '',
-    native_model_path: '',
-    native_model_context_window: NATIVE_HOST_DEFAULT_CONTEXT_WINDOW,
+    ollama_base_url: OLLAMA_DEFAULT_BASE_URL,
     chrome_model_folder_path: '',
     chrome_installed_models: [],
     chrome_browser_model_state: null,
@@ -64,10 +62,7 @@ export function composeAppSettings(general: GeneralSettingsRecord): AppSettings 
         lobby_background: general.lobby_background ?? null,
         savior_name: general.savior_name ?? '',
         platform_guide_acknowledged: general.platform_guide_acknowledged,
-        context_storage_mode: general.context_storage_mode,
-        native_executable_path: general.native_executable_path ?? '',
-        native_model_path: general.native_model_path ?? '',
-        native_model_context_window: general.native_model_context_window ?? NATIVE_HOST_DEFAULT_CONTEXT_WINDOW,
+        ollama_base_url: general.ollama_base_url ?? OLLAMA_DEFAULT_BASE_URL,
         chrome_model_folder_path: general.chrome_model_folder_path ?? '',
         chrome_installed_models: general.chrome_installed_models ?? [],
         chrome_browser_model_state: general.chrome_browser_model_state ?? null,

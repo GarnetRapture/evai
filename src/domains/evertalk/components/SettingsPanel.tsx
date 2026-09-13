@@ -5,10 +5,9 @@ import type { AppLanguage } from '../../../shared/types';
 import { formatBackupFileMeta, formatDateTime, formatLanguageName, settingsSectionNavItems } from '../logic';
 import type { SettingsPanelProps, SettingsSectionKey } from '../types';
 import { ModelCatalogSection } from './ModelCatalogSection';
-import { ContextStorageSelector } from './ContextStorageSelector';
 import { EnvironmentLayer } from './EnvironmentLayer';
 
-export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupMessage, backupError, backupDirectoryStatus, nativeContextStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onSetContextStorageMode, onSetNativeExecutablePath, onConnectNativeProgram, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onSaveChromeModelFolderPath, onLinkChromeLocalState, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveNativeHostModelPath, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, appPlatform, devicePlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupMessage, backupError, backupDirectoryStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onSaveChromeModelFolderPath, onLinkChromeLocalState, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveOllamaBaseUrl, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     const [activeSection, setActiveSection] = useState<SettingsSectionKey>('general');
     const contentRef = useRef<HTMLDivElement>(null);
@@ -36,7 +35,6 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
     }
     const backupFolderLinked = backupDirectoryStatus?.linked ?? false;
     const backupFolderGranted = backupDirectoryStatus?.permission === 'granted';
-    const nativeSelected = settings?.context_storage_mode === 'native_mirror';
     return (<div className="ever-settings-overlay is-settings" role="dialog" aria-modal="true">
       <div className="ever-settings-modal ever-settings-modal--full">
         <header className="ever-settings-modal__header">
@@ -91,12 +89,11 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
         </section>
 
         <section className="ever-panel-section" data-settings-section="environment">
-          <EnvironmentLayer embedded settings={settings} session={userSession} savior={saviorProfile} environment={deviceEnvironment} nativeStatus={nativeContextStatus} labels={labels}/>
-          <ContextStorageSelector mode={settings?.context_storage_mode ?? 'browser'} status={nativeContextStatus} executablePath={settings?.native_executable_path ?? ''} labels={labels} onChange={onSetContextStorageMode} onExecutablePathChange={onSetNativeExecutablePath} onConnect={onConnectNativeProgram}/>
+          <EnvironmentLayer embedded settings={settings} session={userSession} savior={saviorProfile} environment={deviceEnvironment} labels={labels}/>
         </section>
 
         <div className="ever-settings-content__anchor" data-settings-section="models">
-        <ModelCatalogSection appPlatform={appPlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareOnDeviceSystemModel={onPrepareOnDeviceSystemModel} onLinkChromeInstalledModelFolder={onLinkChromeInstalledModelFolder} onSaveChromeModelFolderPath={onSaveChromeModelFolderPath} onLinkChromeLocalState={onLinkChromeLocalState} chromeInstalledModelLinking={chromeInstalledModelLinking} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel} onSaveNativeHostModelPath={onSaveNativeHostModelPath}/>
+        <ModelCatalogSection appPlatform={appPlatform} devicePlatform={devicePlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareOnDeviceSystemModel={onPrepareOnDeviceSystemModel} onLinkChromeInstalledModelFolder={onLinkChromeInstalledModelFolder} onSaveChromeModelFolderPath={onSaveChromeModelFolderPath} onLinkChromeLocalState={onLinkChromeLocalState} chromeInstalledModelLinking={chromeInstalledModelLinking} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel} onSaveOllamaBaseUrl={onSaveOllamaBaseUrl}/>
         </div>
 
         <section className="ever-panel-section" data-settings-section="modules">
@@ -150,7 +147,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
         <section className="ever-panel-section" data-settings-section="data">
           <h3>{labels.backupTitle}</h3>
           <p>{labels.backupDescription}</p>
-          <div className="ever-settings-result"><span>{labels.backupStorageScope(nativeSelected, nativeContextStatus.available)}</span></div>
+          <div className="ever-settings-result"><span>{labels.backupStorageScope}</span></div>
           <div className="ever-settings-actions">
             <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onExportBackup()}>
               <Save aria-hidden="true" size={16}/>
@@ -219,7 +216,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, settings, preferredSp
           <p>
             {labels.resetDescription}
           </p>
-          <div className="ever-settings-result"><span>{labels.resetStorageScope(nativeSelected, nativeContextStatus.available)}</span></div>
+          <div className="ever-settings-result"><span>{labels.resetStorageScope}</span></div>
 
           {resetError && (<div className="ever-roster__error">
               <strong>{labels.resetFailed}</strong>

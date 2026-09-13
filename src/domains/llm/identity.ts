@@ -7,16 +7,30 @@ import {
     CHROME_PROMPT_MODEL_ID,
     CHROME_PROMPT_MODEL_ID_PREFIX,
     CHROME_PROMPT_MODEL_VARIANTS,
-    NATIVE_HOST_MODEL_ID,
+    OLLAMA_MODEL_ID_PREFIX,
 } from './constants';
-import { ggufFileNameFromModelId, ggufModelId, isGgufModelId } from './gguf/catalog';
 import { isLiteRtLmModelId, liteRtLmFileNameFromModelId, liteRtLmModelId } from './litertlm/catalog';
-import type { ChatModelEngineKind, ChromePromptModelVariant, LocalModelEngineKind } from './types';
+import type { ChatModelEngineKind, ChromePromptModelVariant, LocalModelEngineKind, LocalModelIdentityCodec } from './types';
 
 export const NO_CHAT_MODEL_ID = '';
 
+const LOCAL_MODEL_IDENTITY_CODECS: Record<LocalModelEngineKind, LocalModelIdentityCodec> = {
+    litert_lm: { modelId: liteRtLmModelId, fileName: liteRtLmFileNameFromModelId },
+};
+
 export function platformChatModelEngines(): ChatModelEngineKind[] {
-    return isAndroidAppRuntime() ? ['android_gemini_nano', 'litert_lm'] : ['chrome_prompt', 'chrome_installed', 'native_host', 'gguf'];
+    return isAndroidAppRuntime() ? ['android_gemini_nano', 'litert_lm'] : ['chrome_prompt', 'chrome_installed', 'ollama'];
+}
+
+export function ollamaModelId(modelName: string): string {
+    return `${OLLAMA_MODEL_ID_PREFIX}${modelName}`;
+}
+
+export function ollamaModelName(modelId: string): string {
+    if (!modelId.startsWith(OLLAMA_MODEL_ID_PREFIX) || modelId.length === OLLAMA_MODEL_ID_PREFIX.length) {
+        throw new DomainError('invalid_model', modelId);
+    }
+    return modelId.slice(OLLAMA_MODEL_ID_PREFIX.length);
 }
 
 export function chromePromptModelIdForVariant(variant: ChromePromptModelVariant): string {
@@ -65,11 +79,8 @@ export function resolveChatModelEngine(modelId: string): ChatModelEngineKind {
     if (modelId === ANDROID_GEMINI_NANO_MODEL_ID) {
         return 'android_gemini_nano';
     }
-    if (modelId === NATIVE_HOST_MODEL_ID) {
-        return 'native_host';
-    }
-    if (isGgufModelId(modelId)) {
-        return 'gguf';
+    if (modelId.startsWith(OLLAMA_MODEL_ID_PREFIX) && modelId.length > OLLAMA_MODEL_ID_PREFIX.length) {
+        return 'ollama';
     }
     if (isLiteRtLmModelId(modelId)) {
         return 'litert_lm';
@@ -78,9 +89,9 @@ export function resolveChatModelEngine(modelId: string): ChatModelEngineKind {
 }
 
 export function localModelId(engine: LocalModelEngineKind, fileName: string): string {
-    return engine === 'gguf' ? ggufModelId(fileName) : liteRtLmModelId(fileName);
+    return LOCAL_MODEL_IDENTITY_CODECS[engine].modelId(fileName);
 }
 
 export function localModelFileName(engine: LocalModelEngineKind, modelId: string): string {
-    return engine === 'gguf' ? ggufFileNameFromModelId(modelId) : liteRtLmFileNameFromModelId(modelId);
+    return LOCAL_MODEL_IDENTITY_CODECS[engine].fileName(modelId);
 }

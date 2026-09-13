@@ -18,8 +18,51 @@ export interface LanguageModelLanguagePlan {
     declared_language_tag: string | null;
     availability: OnDeviceModelAvailability;
 }
-export type LocalModelEngineKind = 'gguf' | 'litert_lm';
-export type ChatModelEngineKind = 'chrome_prompt' | 'chrome_installed' | 'android_gemini_nano' | 'native_host' | LocalModelEngineKind;
+export type LocalModelEngineKind = 'litert_lm';
+export type ChatModelEngineKind = 'chrome_prompt' | 'chrome_installed' | 'android_gemini_nano' | 'ollama' | LocalModelEngineKind;
+export interface OllamaModelEntry {
+    engine: 'ollama';
+    id: string;
+    model_name: string;
+    family: string;
+    parameter_size: string;
+    quantization_level: string;
+    size_bytes: number;
+    loaded: boolean;
+    context_window: number | null;
+    selected: boolean;
+}
+export interface OllamaModelLibrary {
+    base_url: string;
+    server: import('../ollama').OllamaServerStatus;
+    entries: OllamaModelEntry[];
+    list_error: string | null;
+}
+export interface OllamaLoadedModel {
+    base_url: string;
+    profile: import('../ollama').OllamaModelProfile;
+    context_window: number;
+}
+export type OllamaContextRemovalKind = 'prefix' | 'history' | 'section';
+export interface OllamaContextRemoval {
+    kind: OllamaContextRemovalKind;
+    index: number;
+}
+export interface OllamaContextSelection {
+    request: import('../ollama').OllamaGenerationRequest;
+    prompt_tokens: number;
+    truncated_prompt_tokens: number;
+    truncated_message_count: number;
+}
+export interface OllamaLoadingModel {
+    base_url: string;
+    model_name: string;
+    promise: Promise<OllamaLoadedModel>;
+}
+export interface LocalModelIdentityCodec {
+    modelId: (fileName: string) => string;
+    fileName: (modelId: string) => string;
+}
 export type ChromeInstalledModelStore = (typeof import('./constants').CHROME_INSTALLED_MODEL_STORES)[number];
 export type ChromeInstalledWeightsFormat = 'litertlm' | 'opaque';
 export interface ChromeInstalledModel {
@@ -97,28 +140,6 @@ export interface AndroidGeminiNanoModelEntry {
     context_window: number | null;
     selected: boolean;
 }
-export interface NativeHostRecommendedModel {
-    source: HuggingFaceModelSource;
-    page_url: string;
-    download_url: string;
-}
-export interface NativeHostModelEntry {
-    engine: 'native_host';
-    id: string;
-    host_available: boolean;
-    host_detail: string;
-    saved_model_path: string;
-    saved_context_window: number;
-    configured_model_path: string | null;
-    resolved_model_path: string | null;
-    model_found: boolean;
-    loaded: boolean;
-    context_window: number | null;
-    backend: string | null;
-    error: string | null;
-    recommended_models: NativeHostRecommendedModel[];
-    selected: boolean;
-}
 export interface ChromeLanguageModelInputAvailability {
     text: OnDeviceModelAvailability;
     image: OnDeviceModelAvailability;
@@ -186,11 +207,12 @@ export interface LocalModelFileEntry {
     selected: boolean;
 }
 export type OnDeviceSystemModelEntry = ChromePromptModelEntry | AndroidGeminiNanoModelEntry;
-export type ChatModelEntry = OnDeviceSystemModelEntry | LocalModelFileEntry | NativeHostModelEntry;
+export type ChatModelEntry = OnDeviceSystemModelEntry | LocalModelFileEntry;
 export interface ChatModelCatalog {
     app_language: AppLanguage;
     entries: ChatModelEntry[];
     chrome_installed: ChromeInstalledModelLibrary | null;
+    ollama: OllamaModelLibrary | null;
 }
 export interface InstalledModelFile {
     file_name: string;
@@ -206,14 +228,6 @@ export interface LocalModelStorage {
     list(): Promise<InstalledModelFile[]>;
     installFromLocalFile(onProgress: ModelDownloadProgressHandler): Promise<InstalledModelFile | null>;
     remove(fileName: string): Promise<void>;
-}
-export interface GgufLoadedModel {
-    file_name: string;
-    context_window: number;
-}
-export interface GgufLoadingModel {
-    file_name: string;
-    promise: Promise<GgufLoadedModel>;
 }
 export interface LiteRtLmLoadedModel {
     file_name: string;

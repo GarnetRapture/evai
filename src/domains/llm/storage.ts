@@ -1,9 +1,12 @@
-import { ggufModelStorage } from './gguf/storage';
 import { liteRtLmModelStorage } from './litertlm/runtime';
 import type { LocalModelEngineKind, LocalModelStorage } from './types';
 
+const LOCAL_MODEL_STORAGES: Record<LocalModelEngineKind, LocalModelStorage> = {
+    litert_lm: liteRtLmModelStorage,
+};
+
 export function localModelStorage(engine: LocalModelEngineKind): LocalModelStorage {
-    return engine === 'gguf' ? ggufModelStorage : liteRtLmModelStorage;
+    return LOCAL_MODEL_STORAGES[engine];
 }
 
 export async function isLocalModelInstalled(engine: LocalModelEngineKind, fileName: string): Promise<boolean> {

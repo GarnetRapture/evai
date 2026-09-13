@@ -1,7 +1,6 @@
 import { EVERSOUL_DATABASE_NAME, exportDatabaseSnapshot } from '../../shared/storage';
 import type { ChatMessage, PersonaMemoryRecord } from '../chat';
 import type { BrowserStorageInspection, PersonaStorageContentSample, PersonaStorageUsage } from './types';
-import { nativeContextClient } from '../native';
 
 const CONTENT_SAMPLE_LIMIT = 6;
 
@@ -14,7 +13,7 @@ function preview(text: string): string {
     return normalized.length <= 240 ? normalized : `${normalized.slice(0, 237)}...`;
 }
 
-export async function inspectBrowserStorage(includeNative = false): Promise<BrowserStorageInspection> {
+export async function inspectBrowserStorage(): Promise<BrowserStorageInspection> {
     const snapshot = await exportDatabaseSnapshot();
     const roomPersona = new Map(snapshot.stores.chat_room.map((room) => [room.id, room.persona_id]));
     const personaRows = new Map<string, { messages: ChatMessage[]; memories: PersonaMemoryRecord[]; bytes: number }>();
@@ -66,11 +65,6 @@ export async function inspectBrowserStorage(includeNative = false): Promise<Brow
     const estimate = typeof navigator !== 'undefined' && navigator.storage?.estimate
         ? await navigator.storage.estimate()
         : {};
-    let nativeStatistics: BrowserStorageInspection['native_statistics'] = null;
-    if (includeNative) {
-        const status = await nativeContextClient.health();
-        if (status.available) nativeStatistics = await nativeContextClient.statistics();
-    }
     return {
         database_name: EVERSOUL_DATABASE_NAME,
         origin: typeof window === 'undefined' ? '' : window.location.origin,
@@ -79,6 +73,5 @@ export async function inspectBrowserStorage(includeNative = false): Promise<Brow
         estimated_snapshot_bytes: jsonBytes(snapshot.stores),
         stores,
         personas,
-        native_statistics: nativeStatistics,
     };
 }

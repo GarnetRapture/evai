@@ -5,7 +5,7 @@ import { describeUnknownError } from '../../shared/errors';
 import { isChromeLanguageModelSupported, probeChromeLanguageModel } from './chrome';
 import { readChromeOnDeviceInventory } from './chrome/inventory';
 import { assertChromePromptVariantActive } from './chrome/variantGuard';
-import { nativeHostModelService } from '../native/service';
+import { ollamaClient } from '../ollama';
 import { settingsRepository } from '../settings/repository';
 import { androidGeminiNanoRuntime } from './androidNano/runtime';
 import { chromeInstalledModelRuntime } from './chromeInstalled/runtime';
@@ -16,7 +16,6 @@ import {
     CHROME_INSTALLED_MODEL_STORES,
     CHROME_INSTALLED_PATH_SEPARATOR,
     CHROME_LOCAL_STATE_FILE_NAME,
-    NATIVE_HOST_MODEL_ID,
 } from './constants';
 import {
     chromePromptVariantRequiresGemma4Flag,
@@ -26,12 +25,11 @@ import {
     readChromeLocalStateFile,
     verifyChromePromptVariant,
 } from './chrome/localState';
-import { RECOMMENDED_GGUF_MODELS } from './gguf/catalog';
-import { ggufRuntime } from './gguf/runtime';
 import { findHuggingFaceModelSource, huggingFaceModelDownloadUrl, huggingFaceModelPageUrl } from './huggingface';
-import { chromeInstalledModelId, chromeInstalledModelKey, chromePromptModelIdForVariant, chromePromptModelVariant, isChatModelIdSupportedHere, localModelFileName, localModelId, platformChatModelEngines, platformDefaultChatModelId, resolveChatModelEngine, NO_CHAT_MODEL_ID } from './identity';
+import { chromeInstalledModelId, chromeInstalledModelKey, chromePromptModelIdForVariant, chromePromptModelVariant, isChatModelIdSupportedHere, localModelFileName, localModelId, ollamaModelId, ollamaModelName, platformChatModelEngines, platformDefaultChatModelId, resolveChatModelEngine, NO_CHAT_MODEL_ID } from './identity';
 import { RECOMMENDED_LITERT_LM_MODELS } from './litertlm/catalog';
 import { liteRtLmModelStorage, liteRtLmRuntime } from './litertlm/runtime';
+import { ollamaRuntime } from './ollama/runtime';
 import { chromePromptRuntime } from './runtime';
 import { isLocalModelInstalled, localModelStorage } from './storage';
 import type {
@@ -50,12 +48,12 @@ import type {
     LocalModelFileEntry,
     LocalModelLoadState,
     ModelDownloadProgressHandler,
-    NativeHostModelEntry,
+    OllamaModelEntry,
+    OllamaModelLibrary,
     OnDeviceSystemModelEntry,
 } from './types';
 
 const RECOMMENDED_LOCAL_MODELS: Record<LocalModelEngineKind, readonly HuggingFaceModelSource[]> = {
-    gguf: RECOMMENDED_GGUF_MODELS,
     litert_lm: RECOMMENDED_LITERT_LM_MODELS,
 };
 
@@ -117,11 +115,7 @@ function assertChatModelEngineAvailable(engine: ChatModelEngineKind, detail: str
     }
 }
 
-function localModelLoadState(engine: LocalModelEngineKind): LocalModelLoadState {
-    if (engine === 'gguf') {
-        const fileName = ggufRuntime.loadedFileName();
-        return { file_name: fileName, backend: null, context_window: fileName === null ? null : ggufRuntime.loadedContextWindow(fileName) };
-    }
+function liteRtLmModelLoadState(): LocalModelLoadState {
     const loaded = liteRtLmRuntime.loadedModel();
     return { file_name: loaded?.file_name ?? null, backend: loaded?.backend ?? null, context_window: loaded?.context_window ?? null };
 }
@@ -153,30 +147,37 @@ function localModelEntry(
     };
 }
 
-async function nativeHostModelEntry(activeChatModelId: string): Promise<NativeHostModelEntry> {
-    const [settings, snapshot] = await Promise.all([settingsRepository.readGeneral(), nativeHostModelService.snapshot()]);
-    const model = snapshot.model;
-    return {
-        engine: 'native_host',
-        id: NATIVE_HOST_MODEL_ID,
-        host_available: snapshot.host_available,
-        host_detail: snapshot.host_detail,
-        saved_model_path: settings.native_model_path,
-        saved_context_window: settings.native_model_context_window,
-        configured_model_path: model?.configured_model_path ?? null,
-        resolved_model_path: model?.resolved_model_path ?? null,
-        model_found: model?.model_found ?? false,
-        loaded: model?.loaded ?? false,
-        context_window: model?.context_window ?? null,
-        backend: model?.active_backend ?? model?.backend ?? null,
-        error: model?.error ?? null,
-        recommended_models: RECOMMENDED_LITERT_LM_MODELS.map((source) => ({
-            source,
-            page_url: huggingFaceModelPageUrl(source),
-            download_url: huggingFaceModelDownloadUrl(source),
-        })),
-        selected: activeChatModelId === NATIVE_HOST_MODEL_ID,
-    };
+async function ollamaModelLibrary(baseUrl: string, activeChatModelId: string): Promise<OllamaModelLibrary> {
+    const server = await ollamaClient.probe(baseUrl);
+    if (!server.available) {
+        return { base_url: baseUrl, server, entries: [], list_error: null };
+    }
+    try {
+        const models = await ollamaClient.listModels(baseUrl);
+        return {
+            base_url: baseUrl,
+            server,
+            list_error: null,
+            entries: models.map((model): OllamaModelEntry => {
+                const id = ollamaModelId(model.name);
+                return {
+                    engine: 'ollama',
+                    id,
+                    model_name: model.name,
+                    family: model.details.family,
+                    parameter_size: model.details.parameter_size,
+                    quantization_level: model.details.quantization_level,
+                    size_bytes: model.size,
+                    loaded: ollamaRuntime.isLoaded(model.name),
+                    context_window: ollamaRuntime.loadedContextWindow(model.name),
+                    selected: activeChatModelId === id,
+                };
+            }),
+        };
+    }
+    catch (error) {
+        return { base_url: baseUrl, server, entries: [], list_error: describeUnknownError(error) };
+    }
 }
 
 function androidGeminiNanoModelEntry(activeChatModelId: string): AndroidGeminiNanoModelEntry {
@@ -193,7 +194,7 @@ function androidGeminiNanoModelEntry(activeChatModelId: string): AndroidGeminiNa
 
 async function listLocalModelEntries(engine: LocalModelEngineKind, activeChatModelId: string): Promise<LocalModelFileEntry[]> {
     const installedFiles = await localModelStorage(engine).list();
-    const loadState = localModelLoadState(engine);
+    const loadState = liteRtLmModelLoadState();
     const sources = RECOMMENDED_LOCAL_MODELS[engine];
     const recommendedEntries = sources.map((source) => localModelEntry(
         engine,
@@ -210,12 +211,13 @@ async function listLocalModelEntries(engine: LocalModelEngineKind, activeChatMod
 }
 
 export const chatModelCatalog = {
-    async list(language: AppLanguage, activeChatModelId: string, includeNativeHost: boolean): Promise<ChatModelCatalog> {
+    async list(language: AppLanguage, activeChatModelId: string): Promise<ChatModelCatalog> {
         if (isAndroidAppRuntime()) {
             return {
                 app_language: language,
                 entries: [androidGeminiNanoModelEntry(activeChatModelId), ...(await listLocalModelEntries('litert_lm', activeChatModelId))],
                 chrome_installed: null,
+                ollama: null,
             };
         }
         const plan = await chromePromptRuntime.resolveLanguagePlan(language);
@@ -263,11 +265,7 @@ export const chatModelCatalog = {
         }));
         return {
             app_language: language,
-            entries: [
-                ...chromeEntries,
-                ...(includeNativeHost ? [await nativeHostModelEntry(activeChatModelId)] : []),
-                ...(await listLocalModelEntries('gguf', activeChatModelId)),
-            ],
+            entries: chromeEntries,
             chrome_installed: {
                 folder_path: general.chrome_model_folder_path ?? '',
                 store_paths: chromeInstalledStorePaths(general.chrome_model_folder_path ?? ''),
@@ -275,6 +273,7 @@ export const chatModelCatalog = {
                 browser_state: browserState,
                 entries: chromeInstalledModelEntries(general.chrome_installed_models ?? [], activeChatModelId),
             },
+            ollama: await ollamaModelLibrary(general.ollama_base_url, activeChatModelId),
         };
     },
     async prepareOnDeviceSystemModel(entry: OnDeviceSystemModelEntry, language: AppLanguage, onDownloadProgress: ModelDownloadProgressHandler): Promise<void> {
@@ -300,16 +299,10 @@ export const chatModelCatalog = {
     },
     async downloadLocalModel(engine: LocalModelEngineKind, source: HuggingFaceModelSource, onProgress: ModelDownloadProgressHandler): Promise<InstalledModelFile | null> {
         assertChatModelEngineAvailable(engine, engine);
-        if (engine !== 'litert_lm') {
-            throw new DomainError('invalid_model', engine);
-        }
         return liteRtLmModelStorage.downloadFromUrl(huggingFaceModelDownloadUrl(source), source.file_name, onProgress);
     },
     async removeLocalModel(engine: LocalModelEngineKind, fileName: string): Promise<void> {
         assertChatModelEngineAvailable(engine, engine);
-        if (engine === 'gguf' && ggufRuntime.loadedFileName() === fileName) {
-            await ggufRuntime.unload();
-        }
         await localModelStorage(engine).remove(fileName);
     },
     async assertSelectableChatModel(modelId: string): Promise<void> {
@@ -339,10 +332,11 @@ export const chatModelCatalog = {
             }
             return;
         }
-        if (engine === 'native_host') {
-            const snapshot = await nativeHostModelService.snapshot();
-            if (!snapshot.host_available) {
-                throw new DomainError('native_runtime', snapshot.host_detail);
+        if (engine === 'ollama') {
+            const modelName = ollamaModelName(modelId);
+            const models = await ollamaClient.listModels((await settingsRepository.readGeneral()).ollama_base_url);
+            if (!models.some((model) => model.name === modelName)) {
+                throw new DomainError('model_not_ready', modelName);
             }
             return;
         }
@@ -356,7 +350,7 @@ export const chatModelCatalog = {
             return defaultId;
         }
         for (const engine of platformChatModelEngines()) {
-            if (engine === 'chrome_prompt' || engine === 'chrome_installed' || engine === 'native_host' || engine === 'android_gemini_nano') {
+            if (engine === 'chrome_prompt' || engine === 'chrome_installed' || engine === 'android_gemini_nano' || engine === 'ollama') {
                 continue;
             }
             const installed = await localModelStorage(engine).list();
@@ -368,6 +362,21 @@ export const chatModelCatalog = {
             }
         }
         return NO_CHAT_MODEL_ID;
+    },
+    async resolveOllamaServingModelId(activeChatModelId: string): Promise<string | null> {
+        if (isAndroidAppRuntime() || isChromeLanguageModelSupported()) {
+            return null;
+        }
+        if (isChatModelIdSupportedHere(activeChatModelId) && resolveChatModelEngine(activeChatModelId) !== 'chrome_prompt') {
+            return null;
+        }
+        const baseUrl = (await settingsRepository.readGeneral()).ollama_base_url;
+        const server = await ollamaClient.probe(baseUrl);
+        if (!server.available) {
+            return null;
+        }
+        const modelName = await ollamaClient.resolveServingModelName(baseUrl);
+        return modelName === null ? null : ollamaModelId(modelName);
     },
     isChatModelUsableHere(modelId: string): boolean {
         return isChatModelIdSupportedHere(modelId);
