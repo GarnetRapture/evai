@@ -1,4 +1,4 @@
-import { memo, useEffect, useMemo, useRef, useState } from 'react';
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type React from 'react';
 import { Maximize2, Minimize2, Minus, Send, Sparkles, Square, X, ZoomIn } from 'lucide-react';
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
@@ -9,6 +9,7 @@ import { EVERTALK_UI_ASSETS } from '../uiAssets';
 import { ImageViewerOverlay } from './ImageViewerOverlay';
 import { LoadableAssetImage } from './LoadableAssetImage';
 import { SpiritReplyContent } from './SpiritReplyContent';
+import { isEditableInteractionTarget } from '../../../shared/interaction';
 const GalleryTile = memo(function GalleryTile({ skin, skinLabel, spiritName, zoomLabel, onZoom }: GalleryTileProps) {
     return (<button type="button" className="ever-gallery-tile ever-gallery-tile--button" aria-label={`${skinLabel} ${zoomLabel}`} onClick={() => onZoom(skin.portraitCandidates)}>
       <LoadableAssetImage candidates={skin.portraitCandidates} alt={spiritName} fallback={<span>{skinLabel}</span>}/>
@@ -73,6 +74,42 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
     const [panelPos, setPanelPos] = useState<{ x: number; y: number } | null>(null);
     const [panelShake, setPanelShake] = useState(false);
     const panelRef = useRef<HTMLDivElement | null>(null);
+    const composerInputRef = useRef<HTMLInputElement | null>(null);
+    const activeSpiritKey = activeDetail?.id ?? null;
+    const deleteMessageRef = useRef(onDeleteMessage);
+    useEffect(() => {
+        deleteMessageRef.current = onDeleteMessage;
+    }, [onDeleteMessage]);
+    const handleDeleteMessage = useCallback((messageId: string) => deleteMessageRef.current(messageId), []);
+    const messageAvatarCandidates = useMemo(() => activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? [], [activeSkin, assets]);
+    useEffect(() => {
+        if (activeStageTab !== 'chat' || panelState === 'minimized' || !canUseComposer) {
+            return;
+        }
+        const frame = requestAnimationFrame(() => {
+            const input = composerInputRef.current;
+            if (input && document.activeElement !== input) {
+                input.focus({ preventScroll: true });
+            }
+        });
+        return () => cancelAnimationFrame(frame);
+    }, [activeSpiritKey, activeRoom?.id, activeStageTab, canUseComposer, panelState]);
+    useEffect(() => {
+        if (activeStageTab !== 'chat' || panelState === 'minimized' || !canUseComposer) {
+            return;
+        }
+        const redirectTypingToComposer = (event: KeyboardEvent) => {
+            const input = composerInputRef.current;
+            if (!input || event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey || isEditableInteractionTarget(event.target)) {
+                return;
+            }
+            if (event.key.length === 1 || event.key === 'Process') {
+                input.focus({ preventScroll: true });
+            }
+        };
+        document.addEventListener('keydown', redirectTypingToComposer, true);
+        return () => document.removeEventListener('keydown', redirectTypingToComposer, true);
+    }, [activeStageTab, canUseComposer, panelState]);
     const panelResizeRef = useRef<PanelResizeState | null>(null);
     const panelDragRef = useRef<{ pointerId: number; startX: number; startY: number; originX: number; originY: number } | null>(null);
     const panelShakeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -345,7 +382,7 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
                   <strong>{labels.noSavedMessages}</strong>
                   <span>{labels.firstMessageHint}</span>
                 </div>)}
-              {messages.map((message, index) => (<ChatMessageBubble key={message.id} message={message} avatarCandidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} spiritName={activeDetail?.name ?? ''} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} innerThoughtsLabel={labels.innerThoughts} showActionStatus={shouldAnnounceSpiritActions(message, index, messages.length)} onDelete={onDeleteMessage} />))}
+              {messages.map((message, index) => (<ChatMessageBubble key={message.id} message={message} avatarCandidates={messageAvatarCandidates} spiritName={activeDetail?.name ?? ''} showReasoning={showReasoning} deleteLabel={labels.deleteMessage} innerThoughtsLabel={labels.innerThoughts} showActionStatus={shouldAnnounceSpiritActions(message, index, messages.length)} onDelete={handleDeleteMessage} />))}
               {isTyping && (<div className="ever-message is-spirit">
                   <div className="ever-message__avatar">
                     <LoadableAssetImage candidates={activeSkin?.avatarCandidates ?? assets?.avatarCandidates ?? []} alt={activeDetail?.name ?? ''} fallback={<span>{activeDetail?.name.charAt(0) ?? 'E'}</span>}/>
@@ -359,12 +396,12 @@ export function ChatStage({ activeDetail, activeRoom, llmStatus, messages, previ
             </div>
             <form className="ever-composer" onSubmit={onSendMessage}>
               {choices.length > 0 && (<div className="ever-choice-strip">
-                  {choices.map((choice) => (<button key={choice.id} type="button" onClick={() => onInputChange(choice.label)}>
+                  {choices.map((choice) => (<button key={choice.id} type="button" onClick={() => { onInputChange(choice.label); composerInputRef.current?.focus({ preventScroll: true }); }}>
                       <span>{choice.source}</span>
                       <strong>{choice.label}</strong>
                     </button>))}
                 </div>)}
-              <input value={inputText} onChange={(event) => onInputChange(event.target.value)} disabled={!canUseComposer} placeholder={activeDetail && llmStatus?.is_loaded ? labels.messagePlaceholder(activeDetail.name) : labels.modelRequiredPlaceholder}/>
+              <input ref={composerInputRef} value={inputText} onChange={(event) => onInputChange(event.target.value)} disabled={!canUseComposer} autoComplete="off" enterKeyHint="send" placeholder={activeDetail && llmStatus?.is_loaded ? labels.messagePlaceholder(activeDetail.name) : labels.modelRequiredPlaceholder}/>
               {streamingRequestId ? (
                 <button type="button" aria-label={labels.stopGenerating} onClick={onCancelStreaming}>
                   <Square aria-hidden="true" size={22}/>

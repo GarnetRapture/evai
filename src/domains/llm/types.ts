@@ -326,4 +326,5 @@ export interface BaseModelSession {
 export interface BudgetedMessages {
     messages: LanguageModelMessage[];
     truncated_tokens: number;
+    prompt_tokens: number;
 }

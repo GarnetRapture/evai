@@ -102,6 +102,105 @@ std::string rustFloatDebug(double value) {
     return sign + decimalParts(decimal, 1);
 }
 
+std::string rustFloatExponential(double magnitude, std::size_t precision) {
+    if (magnitude == 0.0) {
+        std::string text = precision > 0 ? "0." : "0";
+        text.append(precision, '0');
+        text.append("e0");
+        return text;
+    }
+    std::string buffer(precision + 64, '\0');
+    const auto result = std::to_chars(buffer.data(), buffer.data() + buffer.size(), magnitude, std::chars_format::scientific,
+        static_cast<int>(precision));
+    const std::string_view text(buffer.data(), static_cast<std::size_t>(result.ptr - buffer.data()));
+    const std::size_t marker = text.find('e');
+    std::string output(text.substr(0, marker));
+    std::string_view exponentText = text.substr(marker + 1);
+    bool negative = false;
+    if (exponentText.front() == '+' || exponentText.front() == '-') {
+        negative = exponentText.front() == '-';
+        exponentText.remove_prefix(1);
+    }
+    int exponent = 0;
+    std::from_chars(exponentText.data(), exponentText.data() + exponentText.size(), exponent);
+    output.push_back('e');
+    if (negative && exponent != 0) output.push_back('-');
+    output.append(std::to_string(exponent));
+    return output;
+}
+
+std::string rustFloatFixed(double magnitude, std::size_t precision) {
+    std::string buffer(precision + 400, '\0');
+    const auto result = std::to_chars(buffer.data(), buffer.data() + buffer.size(), magnitude, std::chars_format::fixed,
+        static_cast<int>(precision));
+    return std::string(buffer.data(), static_cast<std::size_t>(result.ptr - buffer.data()));
+}
+
+std::string rustIntegerExponential(UInt128 value, std::optional<std::size_t> precision) {
+    const UInt128 ten{10};
+    const auto remainder10 = [&ten](UInt128 number) { return divideUnsigned(number, ten).remainder.low(); };
+    const auto quotient10 = [&ten](UInt128 number) { return divideUnsigned(number, ten).quotient; };
+    UInt128 number = value;
+    std::size_t exponent = 0;
+    while (remainder10(number) == 0 && number >= ten) {
+        number = quotient10(number);
+        ++exponent;
+    }
+    std::size_t addedPrecision = 0;
+    std::size_t subtractedPrecision = 0;
+    if (precision) {
+        UInt128 temporary = number;
+        std::size_t digits = 0;
+        while (temporary >= ten) {
+            temporary = quotient10(temporary);
+            ++digits;
+        }
+        addedPrecision = *precision > digits ? *precision - digits : 0;
+        subtractedPrecision = digits > *precision ? digits - *precision : 0;
+    }
+    for (std::size_t index = 1; index < subtractedPrecision; ++index) {
+        number = quotient10(number);
+        ++exponent;
+    }
+    if (subtractedPrecision != 0) {
+        const std::uint64_t remainder = remainder10(number);
+        number = quotient10(number);
+        ++exponent;
+        if (remainder > 5 || (remainder == 5 && (remainder10(number) % 2 != 0 || subtractedPrecision > 1))) {
+            const std::string before = toDecimalString(number);
+            number = wrappingAdd(number, UInt128{1});
+            if (toDecimalString(number).size() > before.size()) {
+                number = quotient10(number);
+                ++exponent;
+            }
+        }
+    }
+    const std::string digits = toDecimalString(number);
+    exponent += digits.size() - 1;
+    std::string output(1, digits.front());
+    if (digits.size() > 1 || addedPrecision != 0) output.push_back('.');
+    output.append(digits, 1);
+    output.append(addedPrecision, '0');
+    output.push_back('e');
+    output.append(std::to_string(exponent));
+    return output;
+}
+
+std::string uint128InRadix(UInt128 value, unsigned radix, bool uppercase) {
+    constexpr std::string_view lowerDigits = "0123456789abcdef";
+    constexpr std::string_view upperDigits = "0123456789ABCDEF";
+    const std::string_view digits = uppercase ? upperDigits : lowerDigits;
+    if (value.isZero()) return "0";
+    std::string output;
+    const UInt128 base{radix};
+    while (!value.isZero()) {
+        const UInt128Division division = divideUnsigned(value, base);
+        output.push_back(digits[division.remainder.low()]);
+        value = division.quotient;
+    }
+    return std::string(output.rbegin(), output.rend());
+}
+
 std::string jsonFloatText(double value) {
     const std::string sign = std::signbit(value) ? "-" : "";
     const double magnitude = std::fabs(value);

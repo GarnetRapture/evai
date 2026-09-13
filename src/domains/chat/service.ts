@@ -63,8 +63,8 @@ import {
 } from './personaTurnHook';
 import {
     buildPersonaReplySpec,
-    detectPersonaBreach,
     detectPersonaReplyViolation,
+    detectPersonaStreamingViolation,
     normalizePersonaReplyEnvelope,
     parsePersonaReplyEnvelope,
     renderPersonaReplyContent,
@@ -84,6 +84,7 @@ import type {
     ChatMessage,
     ChatRoom,
     ChatSendRequest,
+    PersonaContactSnapshot,
     PersonaMemoryInsight,
     PersonaPreparedTurnReferences,
     PersonaReplyGeneration,
@@ -104,7 +105,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         reasoning: input.reasoning,
         max_messages: resolvePersonaReplyMessageLimit(persona.voice.style),
     });
-    const turnHook = buildPersonaTurnHook(persona.spirit_name, persona.address_term, input.reasoning, persona.voice);
+    const turnHook = buildPersonaTurnHook(persona.spirit_name, persona.address_term, input.reasoning, persona.voice, input.language);
     let content = '';
     let previousViolation: PersonaReplyViolation | null = null;
     for (let attempt = 1; attempt <= PERSONA_REPLY_ATTEMPT_LIMIT; attempt += 1) {
@@ -113,7 +114,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         const attemptSignal = AbortSignal.any([input.signal, attemptController.signal]);
         let rawReply = '';
         let streamedContent = '';
-        let breached = false;
+        let breachViolation: PersonaReplyViolation | null = null;
         const result = await chatModelRuntime.generate(input.model_id, input.language, {
             request_id: attempt === 1 ? input.request_id : `${input.request_id}:redirect-${attempt}`,
             language: input.language,
@@ -123,22 +124,23 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
             messages: input.messages,
             behavior_instruction: previousViolation === null
                 ? turnHook
-                : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name, previousViolation, persona.voice)}`,
+                : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name, previousViolation, persona.voice, input.language)}`,
             structured_reply: structuredReply,
             signal: attemptSignal,
             handlers: {
                 onChunk: (chunk) => {
-                    if (breached) {
+                    if (breachViolation !== null) {
                         return;
                     }
                     rawReply += chunk;
-                    const envelope = normalizePersonaReplyEnvelope(parsePersonaReplyEnvelope(rawReply), input.language);
-                    if (redirectable && detectPersonaBreach(envelope)) {
-                        breached = true;
+                    const rawEnvelope = parsePersonaReplyEnvelope(rawReply);
+                    const streamingViolation = redirectable ? detectPersonaStreamingViolation(rawEnvelope, input.language) : null;
+                    if (streamingViolation !== null) {
+                        breachViolation = streamingViolation;
                         attemptController.abort();
                         return;
                     }
-                    streamedContent = renderPersonaReplyContent(envelope);
+                    streamedContent = renderPersonaReplyContent(normalizePersonaReplyEnvelope(rawEnvelope, input.language));
                     input.on_text(streamedContent);
                 },
             },
@@ -146,9 +148,12 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         if (input.signal.aborted) {
             return { content: streamedContent, cancelled: true, redirected: attempt > 1 };
         }
-        const finalEnvelope = normalizePersonaReplyEnvelope(parsePersonaReplyEnvelope(breached ? rawReply : result.text), input.language);
+        const rawFinalEnvelope = parsePersonaReplyEnvelope(breachViolation !== null ? rawReply : result.text);
+        const finalEnvelope = normalizePersonaReplyEnvelope(rawFinalEnvelope, input.language);
         content = renderPersonaReplyContent(finalEnvelope);
-        const violation = breached ? 'meta_breach' : detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language);
+        const violation = breachViolation
+            ?? detectPersonaStreamingViolation(rawFinalEnvelope, input.language)
+            ?? detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language);
         if (redirectable && violation !== null) {
             previousViolation = violation;
             continue;
@@ -185,17 +190,26 @@ async function readPersonaFamiliarityLevel(personaId: string, cheatPreset: Perso
     return resolvePersonaFamiliarityLevel(messageCount, memoryCount, cheatPreset?.bond_level ?? null);
 }
 
-async function preparePersonaTurnReferences(request: PersonaTurnContextRequest): Promise<PersonaPreparedTurnReferences> {
+let memoryMaintenanceQueue: Promise<void> = Promise.resolve();
+
+async function preparePersonaTurnReferences(
+    personaId: string,
+    language: AppLanguage,
+    query: string,
+    excludedTerms: readonly string[],
+    familiarityLevel: number,
+    contact: PersonaContactSnapshot,
+): Promise<PersonaPreparedTurnReferences> {
     const references = await personaService.getTurnPersonaReferences({
-        persona_id: request.persona_id,
-        language: request.language,
-        query: request.query,
-        excluded_terms: request.excluded_terms,
-        familiarity_level: request.familiarity_level,
-        rival_persona_ids: request.contact.rival_attention.map((attention) => attention.persona_id),
-        mention_candidate_ids: request.contact.mention_candidate_ids,
+        persona_id: personaId,
+        language,
+        query,
+        excluded_terms: excludedTerms,
+        familiarity_level: familiarityLevel,
+        rival_persona_ids: contact.rival_attention.map((attention) => attention.persona_id),
+        mention_candidate_ids: contact.mention_candidate_ids,
     });
-    return { references, rivals: buildPersonaRivalContexts(request.contact, references) };
+    return { references, rivals: buildPersonaRivalContexts(contact, references) };
 }
 
 async function applyPersonaRivalEmotion(
@@ -474,7 +488,17 @@ export const chatService = {
             familiarity_level: familiarityLevel,
             contact: { ...contact, mention_candidate_ids: [] },
         };
-        const preparedReferences = await preparePersonaTurnReferences(turnRequest);
+        const [preparedReferences] = await Promise.all([
+            preparePersonaTurnReferences(
+                turnRequest.persona_id,
+                language,
+                turnRequest.query,
+                turnRequest.excluded_terms,
+                familiarityLevel,
+                turnRequest.contact,
+            ),
+            memoryMaintenanceQueue,
+        ]);
         await applyPersonaRivalEmotion(candidate.persona_id, preparedReferences, familiarityLevel, attemptedAt);
         const turnContext = await collectPersonaTurnContext(turnRequest, preparedReferences);
         const messages = [
@@ -530,9 +554,6 @@ export const chatService = {
     },
     async sendMessage(request: ChatSendRequest): Promise<ChatMessage> {
         const { room_id: roomId, persona_id: personaId, content, request_id: requestId, signal, handlers } = request;
-        const settings = await settingsRepository.readAppSettings();
-        const language = settings.language;
-        const modelId = settings.active_model;
         const userOccurredAt = createMonotonicTimestamp();
         const userMessage: ChatMessage = {
             id: crypto.randomUUID(),
@@ -542,41 +563,46 @@ export const chatService = {
             content,
             created_at: userOccurredAt,
         };
-        const contact = await chatRepository.readPersonaContactSnapshot(personaId);
+        const [settings, contact] = await Promise.all([
+            settingsRepository.readAppSettings(),
+            chatRepository.readPersonaContactSnapshot(personaId),
+        ]);
+        const language = settings.language;
+        const modelId = settings.active_model;
         await chatRepository.insertMessage(userMessage);
         const cheatPreset = resolveActivePersonaCheatPreset(settings, personaId);
         const emotionBaseline = resolvePersonaEmotionBaseline(cheatPreset);
-        const emotionSeed = await resolvePersonaEmotionSeed(personaId, language, userOccurredAt, cheatPreset);
-        await chatRepository.upsertPersonaEmotion(
-            personaId,
-            advancePersonaEmotion(
-                emotionSeed,
-                content,
-                userOccurredAt,
-                1,
-                emotionBaseline,
-            ),
-        );
-        if (shouldCaptureAsDirective(content)) {
-            await chatRepository.insertDirectiveMemory({
-                id: crypto.randomUUID(),
-                persona_id: personaId,
-                memory_type: 'directive',
-                memory_text: content,
-                memory_vector: createLexicalMemoryVector(content),
-                created_at: createMonotonicTimestamp(),
-                source_room_id: roomId,
-                source_message_ids: [userMessage.id],
-            });
-        }
-
         const declaredName = detectSaviorName(content);
         const saviorName = declaredName ?? settings.savior_name;
-        if (declaredName !== null && declaredName !== settings.savior_name) {
-            await settingsRepository.updateGeneral({ savior_name: declaredName.slice(0, SAVIOR_NAME_MAX_LENGTH) });
-        }
-
-        const familiarityLevel = await readPersonaFamiliarityLevel(personaId, cheatPreset);
+        const [familiarityLevel] = await Promise.all([
+            readPersonaFamiliarityLevel(personaId, cheatPreset),
+            resolvePersonaEmotionSeed(personaId, language, userOccurredAt, cheatPreset).then((emotionSeed) => chatRepository.upsertPersonaEmotion(
+                personaId,
+                advancePersonaEmotion(
+                    emotionSeed,
+                    content,
+                    userOccurredAt,
+                    1,
+                    emotionBaseline,
+                ),
+            )),
+            shouldCaptureAsDirective(content)
+                ? chatRepository.insertDirectiveMemory({
+                    id: crypto.randomUUID(),
+                    persona_id: personaId,
+                    memory_type: 'directive',
+                    memory_text: content,
+                    memory_vector: createLexicalMemoryVector(content),
+                    created_at: createMonotonicTimestamp(),
+                    source_room_id: roomId,
+                    source_message_ids: [userMessage.id],
+                })
+                : Promise.resolve(),
+            declaredName !== null && declaredName !== settings.savior_name
+                ? settingsRepository.updateGeneral({ savior_name: declaredName.slice(0, SAVIOR_NAME_MAX_LENGTH) })
+                : Promise.resolve(),
+            memoryMaintenanceQueue,
+        ]);
         const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language, saviorName, cheatPreset, familiarityLevel);
         const memoryContext: TurnMemoryContext = {
             model_id: modelId,
@@ -585,24 +611,31 @@ export const chatService = {
             spirit_name: persona.spirit_name,
             address_term: persona.address_term,
         };
-        try {
-            await compressRoomHistory(memoryContext, roomId);
-        }
-        catch (error) {
-            console.error(pickLocalized(
-                language,
-                `대화 압축 실패: ${describeUnknownError(error)}`,
-                `Failed to compress conversation history: ${describeUnknownError(error)}`,
-                `对话压缩失败：${describeUnknownError(error)}`,
-            ));
-        }
-        const digest = await chatRepository.getRoomDigest(roomId, personaId);
-        const history = await chatRepository.listRecentMessagesForPersona(
-            roomId,
-            personaId,
-            PROMPT_HISTORY_LIMIT,
-            digest?.covered_through ?? '',
-        );
+        const loadHistoryAfterCompression = async () => {
+            try {
+                await compressRoomHistory(memoryContext, roomId);
+            }
+            catch (error) {
+                console.error(pickLocalized(
+                    language,
+                    `대화 압축 실패: ${describeUnknownError(error)}`,
+                    `Failed to compress conversation history: ${describeUnknownError(error)}`,
+                    `对话压缩失败：${describeUnknownError(error)}`,
+                ));
+            }
+            const roomDigest = await chatRepository.getRoomDigest(roomId, personaId);
+            const recentHistory = await chatRepository.listRecentMessagesForPersona(
+                roomId,
+                personaId,
+                PROMPT_HISTORY_LIMIT,
+                roomDigest?.covered_through ?? '',
+            );
+            return { roomDigest, recentHistory };
+        };
+        const [{ roomDigest: digest, recentHistory: history }, preparedReferences] = await Promise.all([
+            loadHistoryAfterCompression(),
+            preparePersonaTurnReferences(personaId, language, content, persona.dialogue_excluded_terms, familiarityLevel, contact),
+        ]);
         const priorHistory = history.filter((message) => message.id !== userMessage.id);
         const turnRequest: PersonaTurnContextRequest = {
             persona_id: personaId,
@@ -618,7 +651,6 @@ export const chatService = {
             familiarity_level: familiarityLevel,
             contact,
         };
-        const preparedReferences = await preparePersonaTurnReferences(turnRequest);
         await applyPersonaRivalEmotion(personaId, preparedReferences, familiarityLevel, userOccurredAt);
         const turnContext = await collectPersonaTurnContext(turnRequest, preparedReferences);
         const messages = [
@@ -675,28 +707,27 @@ export const chatService = {
             source_room_id: roomId,
             source_message_ids: [userMessage.id, aiMessage.id],
         });
-        await chatRepository.upsertPersonaEmotion(
-            personaId,
-            advancePersonaEmotion(
-                await chatRepository.getPersonaEmotion(personaId),
-                stripReasoning(replyText),
-                aiMessage.created_at,
-                0.35,
-                emotionBaseline,
-            ),
-        );
-        await chatRepository.recordHabitTokens(personaId, extractHabitTokens(content, language), createMonotonicTimestamp());
-        try {
-            await consolidateTurnMemory(memoryContext);
-        }
-        catch (error) {
+        await Promise.all([
+            chatRepository.getPersonaEmotion(personaId).then((currentEmotion) => chatRepository.upsertPersonaEmotion(
+                personaId,
+                advancePersonaEmotion(
+                    currentEmotion,
+                    stripReasoning(replyText),
+                    aiMessage.created_at,
+                    0.35,
+                    emotionBaseline,
+                ),
+            )),
+            chatRepository.recordHabitTokens(personaId, extractHabitTokens(content, language), createMonotonicTimestamp()),
+        ]);
+        memoryMaintenanceQueue = memoryMaintenanceQueue.then(() => consolidateTurnMemory(memoryContext)).catch((error: unknown) => {
             console.error(pickLocalized(
                 language,
                 `정령 누적 기억 처리 실패: ${describeUnknownError(error)}`,
                 `Failed to process accumulated persona memory: ${describeUnknownError(error)}`,
                 `精灵累积记忆处理失败：${describeUnknownError(error)}`,
             ));
-        }
+        });
         return aiMessage;
     },
 };

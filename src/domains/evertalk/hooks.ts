@@ -492,6 +492,15 @@ export function useEverTalkController(): EverTalkController {
         };
         setMessages((prev) => [...prev, optimisticUserMessage]);
         let aiMessage: ChatMessage | null = null;
+        let pendingStreamingText: string | null = null;
+        let streamingFrame: number | null = null;
+        const flushStreamingText = () => {
+            streamingFrame = null;
+            if (pendingStreamingText !== null && isFocusedRequest()) {
+                setStreamingText(pendingStreamingText);
+            }
+            pendingStreamingText = null;
+        };
         try {
             aiMessage = await chatClient.sendMessage({
                 room_id: room.id,
@@ -501,12 +510,17 @@ export function useEverTalkController(): EverTalkController {
                 signal: requestController.signal,
                 handlers: {
                     onText: (text) => {
-                        if (isFocusedRequest()) {
-                            setStreamingText(text);
+                        pendingStreamingText = text;
+                        if (streamingFrame === null) {
+                            streamingFrame = requestAnimationFrame(flushStreamingText);
                         }
                     },
                 },
             });
+            if (streamingFrame !== null) {
+                cancelAnimationFrame(streamingFrame);
+                streamingFrame = null;
+            }
             const completedMessage = aiMessage;
             if (isFocusedRequest()) {
                 setMessages((prev) => [...prev, completedMessage]);
@@ -528,6 +542,10 @@ export function useEverTalkController(): EverTalkController {
             }
         }
         finally {
+            if (streamingFrame !== null) {
+                cancelAnimationFrame(streamingFrame);
+                streamingFrame = null;
+            }
             if (isFocusedRequest()) {
                 focusedChatRequestRef.current = null;
                 setStreamingText('');

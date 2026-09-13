@@ -2,6 +2,7 @@ import type { AppLanguage } from '../../shared/types';
 import type { StructuredReplySpec } from '../llm';
 import type { PersonaSpeechRegister, PersonaSpeechStyle } from '../persona/types';
 import { detectVoiceRegisterDrift } from '../persona/voice';
+import { containsForeignLanguage } from './languageGuard';
 import { normalizeChatOutput, splitPersonaReplyActions, stripReasoning } from './output';
 import type { PersonaReplyEnvelope, PersonaReplyEnvelopeParse, PersonaReplyShape, PersonaReplyViolation } from './types';
 
@@ -209,6 +210,17 @@ export function encodePersonaReplyEnvelope(envelope: PersonaReplyEnvelope): stri
 
 export function detectPersonaBreach(envelope: PersonaReplyEnvelope): boolean {
     return PERSONA_BREACH_PATTERN.test([envelope.action, ...envelope.messages].join('\n'));
+}
+
+export function detectPersonaLanguageDrift(envelope: PersonaReplyEnvelope, language: AppLanguage): boolean {
+    return containsForeignLanguage([envelope.inner_thought, envelope.action, ...envelope.messages].join('\n'), language);
+}
+
+export function detectPersonaStreamingViolation(rawEnvelope: PersonaReplyEnvelope, language: AppLanguage): PersonaReplyViolation | null {
+    if (detectPersonaBreach(rawEnvelope)) {
+        return 'meta_breach';
+    }
+    return detectPersonaLanguageDrift(rawEnvelope, language) ? 'language_drift' : null;
 }
 
 function isQuestionOnlyReply(envelope: PersonaReplyEnvelope): boolean {

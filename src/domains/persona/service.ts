@@ -78,21 +78,17 @@ function memoizedDialogueExchanges(persona: StoredPersonaProfile, language: AppL
     return exchanges;
 }
 
-function rosterFingerprint(personas: readonly StoredPersonaProfile[]): string {
-    return personas
-        .map((persona) => `${persona.id}:${persona.created_at}`)
-        .sort()
-        .join(ROSTER_FINGERPRINT_SEPARATOR);
+function rosterFingerprint(personaIds: readonly string[]): string {
+    return [...personaIds].sort().join(ROSTER_FINGERPRINT_SEPARATOR);
 }
 
 async function loadRelationshipGraph(language: AppLanguage): Promise<PersonaRelationshipGraph> {
-    const personas = await personaRepository.listPersonas();
-    const fingerprint = rosterFingerprint(personas);
+    const fingerprint = rosterFingerprint(await personaRepository.listPersonaIds());
     const memoized = relationshipGraphMemo.get(language);
     if (memoized?.fingerprint === fingerprint) {
         return memoized.graph;
     }
-    const graph = Promise.resolve().then(() => buildPersonaRelationshipGraph(
+    const graph = personaRepository.listPersonas().then((personas) => buildPersonaRelationshipGraph(
         personas.map((persona) => ({ persona_id: persona.id, slice: memoizedLanguageSlice(persona, language) })),
         language,
         fingerprint,

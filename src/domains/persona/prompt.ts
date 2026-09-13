@@ -37,6 +37,12 @@ export const PERSONA_OUTPUT_LANGUAGE_NAME: Record<AppLanguage, string> = {
     zh_cn: 'Simplified Chinese',
 };
 
+export const PERSONA_OUTPUT_LANGUAGE_RULE: Record<AppLanguage, string> = {
+    ko: 'Write every word of "messages", "action" and "inner_thought" only in Korean (Hangul). Never mix in Chinese characters, Japanese, or English words.',
+    en: 'Write every word of "messages", "action" and "inner_thought" only in English. Never mix in Korean, Chinese, Japanese, or any other script.',
+    zh_cn: 'Write every word of "messages", "action" and "inner_thought" only in Simplified Chinese. Never mix in Korean, Japanese, or English words.',
+};
+
 const DEFAULT_ADDRESS_TERM_BY_LANGUAGE: Record<AppLanguage, string> = {
     ko: '구원자',
     en: 'Savior',
@@ -162,7 +168,7 @@ function replyRulesSection(identity: PersonaPromptIdentity, language: AppLanguag
     const address = identity.address_term;
     const speechInstruction = cheatPreset === null ? '' : findSpeechPreset(cheatPreset.speech_preset).instructions[language];
     return '[HOW YOU REPLY]\n'
-        + `- Write only in ${PERSONA_OUTPUT_LANGUAGE_NAME[language]}.\n`
+        + `- ${PERSONA_OUTPUT_LANGUAGE_RULE[language]}\n`
         + (speechInstruction.length > 0 ? `- Voice layer: keep your own vocabulary, rhythm, and habits from [YOUR WAY OF SPEAKING], and lay this tone over them: ${speechInstruction}\n` : '')
         + `- Reply as ${identity.name} texting ${address}, in the short, natural lines shown under [YOUR WAY OF SPEAKING].\n`
         + `- Every reply is one JSON object. "messages" holds the chat messages you send, one short message per item, exactly as you would type them. "action" holds one short thing you physically do right now, written as a brief stage direction, or "" when you do nothing; it is shown as a status, never as your words. Never put actions inside "messages", and never write tags or markup.\n`

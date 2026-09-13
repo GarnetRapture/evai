@@ -30,6 +30,10 @@ const SIGNATURE_MARK_PATTERNS: ReadonlyArray<{ mark: string; pattern: RegExp }> 
     { mark: 'ㅜㅜ', pattern: /[ㅜㅠ]{2,}/u },
     { mark: 'ㅎㅎ', pattern: /ㅎ{2,}/u },
     { mark: 'ㅋㅋ', pattern: /ㅋ{2,}/u },
+    { mark: '♡', pattern: /♡/u },
+    { mark: '♥', pattern: /♥/u },
+    { mark: '♪', pattern: /[♪♬]/u },
+    { mark: '☆', pattern: /[☆★]/u },
 ];
 
 export const ADDRESS_TERM_CANDIDATES_BY_LANGUAGE: Record<AppLanguage, string[]> = {

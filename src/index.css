@@ -41,6 +41,27 @@
     overflow: hidden;
   }
 
+  html,
+  body,
+  #root {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  img,
+  a,
+  svg {
+    -webkit-user-drag: none;
+  }
+
+  input,
+  textarea,
+  [contenteditable="true"] {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
   ::-webkit-scrollbar {
     width: 6px;
   }

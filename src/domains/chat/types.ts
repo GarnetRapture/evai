@@ -60,7 +60,7 @@ export interface PersonaSystemPrompt {
     dialogue_excluded_terms: string[];
     voice: import('../persona/types').PersonaVoiceAnchor;
 }
-export type PersonaReplyViolation = 'meta_breach' | 'question_only' | 'register_drift';
+export type PersonaReplyViolation = 'meta_breach' | 'language_drift' | 'question_only' | 'register_drift';
 export interface PersonaReplyParts {
     actions: string[];
     spoken: string;

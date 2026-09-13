@@ -84,6 +84,14 @@ async function selectMessagesWithinBudget(
 ): Promise<BudgetedMessages> {
     const budget = conversation.contextWindow - conversation.contextUsage - CHAT_RESPONSE_TOKEN_RESERVE;
     const lastIndex = history.length - 1;
+    const allMessages: LanguageModelMessage[] = history.map((source, index) => ({
+        role: source.role,
+        content: index === lastIndex ? `${source.content}${behaviorInstruction}` : source.content,
+    }));
+    const allMessagesUsage = await conversation.measureContextUsage(allMessages);
+    if (allMessagesUsage <= budget) {
+        return { messages: allMessages, truncated_tokens: 0, prompt_tokens: allMessagesUsage };
+    }
     const selectedNewestFirst: LanguageModelMessage[] = [];
     let truncatedTokens = 0;
     for (let index = lastIndex; index >= 0; index -= 1) {
@@ -112,7 +120,8 @@ async function selectMessagesWithinBudget(
         }
         selectedNewestFirst.push(block);
     }
-    return { messages: selectedNewestFirst.reverse(), truncated_tokens: truncatedTokens };
+    const selected = selectedNewestFirst.reverse();
+    return { messages: selected, truncated_tokens: truncatedTokens, prompt_tokens: await conversation.measureContextUsage(selected) };
 }
 
 export const chromePromptRuntime = {
@@ -235,7 +244,7 @@ export const chromePromptRuntime = {
             try {
                 const reusedPrefixTokens = conversation.contextUsage;
                 const budgeted = await selectMessagesWithinBudget(conversation, request.messages, request.behavior_instruction);
-                const promptTokens = await conversation.measureContextUsage(budgeted.messages);
+                const promptTokens = budgeted.prompt_tokens;
                 recordRequestStatus({
                     ...status,
                     state: 'running',

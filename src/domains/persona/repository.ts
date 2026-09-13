@@ -16,6 +16,10 @@ export const personaRepository = {
         const stored = await database.get(EVERSOUL_STORE.personaProfile, id);
         return stored ? normalizeStoredPersona(stored) : null;
     },
+    async listPersonaIds(): Promise<string[]> {
+        const database = await getEverSoulDatabase();
+        return (await database.getAllKeys(EVERSOUL_STORE.personaProfile)).map(String);
+    },
     async listPersonas(): Promise<StoredPersonaProfile[]> {
         const database = await getEverSoulDatabase();
         return (await database.getAll(EVERSOUL_STORE.personaProfile)).map(normalizeStoredPersona);
