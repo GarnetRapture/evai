@@ -215,11 +215,13 @@ export function findSpeechPreset(id: PersonaSpeechPresetId): PersonaSpeechPreset
 export function mergePersonaCheatPreset(current: PersonaCheatPreset | undefined, patch: PersonaCheatPresetPatch, updatedAt: string): PersonaCheatPreset {
     const base = current ?? { ...DEFAULT_PERSONA_CHEAT_PRESET, updated_at: updatedAt };
     const bondLevel = patch.bond_level === undefined ? base.bond_level : patch.bond_level === null ? null : clampPersonaBondLevel(patch.bond_level);
+    const emotionAppliedAt = patch.emotion_preset === undefined ? base.emotion_applied_at : updatedAt;
     return {
         bond_level: bondLevel,
         personality_preset: findPersonalityPreset(patch.personality_preset ?? base.personality_preset).id,
         emotion_preset: findEmotionPreset(patch.emotion_preset ?? base.emotion_preset).id,
         speech_preset: findSpeechPreset(patch.speech_preset ?? base.speech_preset).id,
+        ...(emotionAppliedAt === undefined ? {} : { emotion_applied_at: emotionAppliedAt }),
         updated_at: updatedAt,
     };
 }

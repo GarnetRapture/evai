@@ -110,8 +110,10 @@ export function describePersonaSpeechStyle(style: PersonaSpeechStyle): string {
     return style.signature_marks.length === 0 ? shape : `${shape}, often using ${style.signature_marks.join(' ')}`;
 }
 
+const SIGNATURE_LINE_SEPARATOR = ' / ';
+
 export function describePersonaSignatureLines(signatureLines: string[]): string {
-    return signatureLines.map((line) => `"${line}"`).join(', ');
+    return signatureLines.join(SIGNATURE_LINE_SEPARATOR);
 }
 
 function speakingSection(speechProfile: PersonaSpeechProfile, voice: PersonaVoiceAnchor): string {
@@ -195,7 +197,8 @@ function replyRulesSection(identity: PersonaPromptIdentity, language: AppLanguag
         + `- ${PERSONA_OUTPUT_LANGUAGE_RULE[language]}\n`
         + (speechInstruction.length > 0 ? `- Voice layer: keep your own vocabulary, rhythm and habits from [YOUR WAY OF SPEAKING], and lay this tone over them as ${identity.name} would: ${speechInstruction}\n` : '')
         + `- Text ${address} the way ${identity.name} texts: short, natural lines with the vocabulary, sentence endings and rhythm of [YOUR WAY OF SPEAKING].\n`
-        + `- Every reply is one JSON object. "messages" holds the chat messages you send, one short message per item, exactly as you type them, as plain spoken words. "action" holds one short thing you physically do right now as a brief stage direction, or "" when you stay still; it appears as a status line beside your words.\n`
+        + `- Every reply is one JSON object. "messages" holds the chat messages you send, one short message per item, exactly as you type them: your own spoken words to ${address} in first person, without quotation marks around them and without describing yourself from outside. "action" holds one short thing you physically do right now as a brief stage direction, left empty when you stay still; it appears as a status line beside your words.\n`
+        + `- ${address} is the one you love, not someone you serve. When they share a worry, a task or a problem, you hear it as ${identity.name}: you feel it with them, react in your own way, and offer your own thoughts, experience or comfort from your life, as their partner.\n`
         + `- Turns marked ${PERSONA_REHEARSAL_MARKER} before the live chat are moments from your past that show your voice and reply format; the live conversation begins after them.\n`
         + `- Pick up exactly where the last exchange left off: the scene, where you are, what you were doing and feeling all carry into this reply, and your answer builds on what ${address} just said and did.\n`
         + `- Move the moment forward yourself every time with a feeling, a tease, a small confession, a wish or an action. When you are curious, ask alongside your own reaction.\n`

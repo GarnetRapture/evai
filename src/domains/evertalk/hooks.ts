@@ -670,6 +670,18 @@ export function useEverTalkController(): EverTalkController {
             setMessages((prev) => prev.filter((message) => message.id !== messageId));
             await refreshProactiveUnreadCounts();
             syncClient.scheduleAutomaticBackup();
+            if (activeSpiritId) {
+                await refreshMemoryInsight(activeSpiritId);
+            }
+            if (lobbyOpen) {
+                await refreshMemoryOverview();
+            }
+            if (workspaceView === 'memory') {
+                await refreshContextGraph();
+            }
+            if (activeRosterTab === 'familiarity') {
+                setFamiliarityList(await personaClient.getFamiliarityList());
+            }
         }
         catch (err) {
             console.error(labels.logRoomSwitchCacheFailed, err);

@@ -26,6 +26,7 @@ import { personaRepository } from './repository';
 import { buildPersonaLanguageSlice } from './slice';
 import { buildPersonaStoryKnowledgeChunks, buildPersonaWorldKnowledgeChunks, personaStoryDocumentName, personaWorldDocumentName } from './world';
 import { knowledgeClient } from '../knowledge/client';
+import type { PersonaEmotionReplayDetectors } from '../chat/types';
 import type {
     AssembledPersonaPrompt,
     PersonaCheatPreset,
@@ -318,6 +319,20 @@ export const personaService = {
     },
     storyKnowledgeDocuments(language: AppLanguage, personaId: string): ReadonlySet<string> {
         return new Set([personaStoryDocumentName(language, personaId)]);
+    },
+    async getEmotionReplayDetectors(personaId: string, language: AppLanguage): Promise<PersonaEmotionReplayDetectors> {
+        const persona = await requirePersona(personaId);
+        const slice = memoizedLanguageSlice(persona, language);
+        const graph = await loadRelationshipGraph(language);
+        return {
+            profile_mentions: (text) => findPersonaProfileMentions(slice, text),
+            mentioned_persona_count: (text, personaIds) => findMentionedCharacterKeys(
+                graph,
+                persona.id,
+                text,
+                new Set(personaIds.flatMap((id) => graph.character_key_by_persona.get(id) ?? [])),
+            ).length,
+        };
     },
     async getEmotionSeedText(id: string, language: AppLanguage): Promise<string> {
         const persona = await personaRepository.getPersona(id);

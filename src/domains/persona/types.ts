@@ -8,9 +8,10 @@ export interface PersonaCheatPreset {
     personality_preset: PersonaPersonalityPresetId;
     emotion_preset: PersonaEmotionPresetId;
     speech_preset: PersonaSpeechPresetId;
+    emotion_applied_at?: string;
     updated_at: string;
 }
-export type PersonaCheatPresetPatch = Partial<Omit<PersonaCheatPreset, 'updated_at'>>;
+export type PersonaCheatPresetPatch = Partial<Omit<PersonaCheatPreset, 'updated_at' | 'emotion_applied_at'>>;
 export interface PersonaCheatSettingsSource {
     cheat_mode_enabled: boolean;
     persona_cheat_presets: Record<string, PersonaCheatPreset>;

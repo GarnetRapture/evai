@@ -15,6 +15,7 @@ const REPEATED_HORIZONTAL_SPACE_PATTERN = /[ \t]{2,}/g;
 const TRAILING_HORIZONTAL_SPACE_PATTERN = /[ \t]+(?=\n|$)/g;
 
 const THINK_BLOCK_PATTERN = /<think>[\s\S]*?<\/think>/gi;
+const THINK_CONTENT_PATTERN = /<think>([\s\S]*?)<\/think>/gi;
 const UNCLOSED_THINK_PATTERN = /<think>[\s\S]*$/i;
 const MARKUP_TAG_PATTERN = /<\/?(?!think(?:ing)?\b)[A-Za-z][A-Za-z0-9_-]*\s*\/?>/g;
 const ACTION_LINE_PATTERN = /^\s*(?:[(（](.+)[)）]|\*([^*]+)\*)\s*$/u;
@@ -29,6 +30,10 @@ const SPOKEN_BLANK_LINES_PATTERN = /\n{3,}/g;
 
 export function stripReasoning(text: string): string {
     return text.replace(THINK_BLOCK_PATTERN, '').replace(UNCLOSED_THINK_PATTERN, '').trim();
+}
+
+export function extractReasoning(text: string): string {
+    return [...text.matchAll(THINK_CONTENT_PATTERN)].map((match) => match[1].trim()).filter((thought) => thought.length > 0).join('\n');
 }
 
 export function stripMarkupTags(text: string): string {

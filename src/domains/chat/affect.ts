@@ -1,3 +1,9 @@
+import { resolveBondProgress } from '../persona/dialogue';
+import { FAMILIARITY_MAX_LEVEL } from '../persona/familiarity';
+import { resolvePersonaFamiliarityLevel } from '../persona/presets';
+import { stripReasoning } from './output';
+import type { PersonaEmotionReplayRequest } from './types';
+
 export const PERSONA_EMOTION_KINDS = ['happy', 'melancholy', 'bored', 'passionate', 'jealous'] as const;
 
 export type PersonaEmotionKind = (typeof PERSONA_EMOTION_KINDS)[number];
@@ -162,6 +168,89 @@ export function applyProfileMentionEmotion(
         bored: previous.levels.bored - delightedCount * PROFILE_DELIGHT_BOREDOM_RELIEF,
         melancholy: previous.levels.melancholy + dislikedCount * PROFILE_DISLIKE_MELANCHOLY_DELTA,
     }, occurredAt);
+}
+
+export const USER_MESSAGE_EMOTION_INFLUENCE = 1;
+export const SPIRIT_MESSAGE_EMOTION_INFLUENCE = 0.35;
+export const IDLE_EMOTION_INFLUENCE = 1;
+
+export function replayPersonaEmotion(request: PersonaEmotionReplayRequest): PersonaEmotionState | null {
+    const episodicTimes = [...request.episodic_created_at].sort();
+    const affinityEvents = [...request.affinity_events].sort((left, right) => left.occurred_at.localeCompare(right.occurred_at));
+    const preset = request.preset;
+    const pendingRivalIds = new Set<string>();
+    let pendingRivalCount = 0;
+    let hasContact = false;
+    let presetDue = preset !== null;
+    let state: PersonaEmotionState | null = null;
+    let messageCount = 0;
+    let episodicCount = 0;
+    let affinityIndex = 0;
+    let affinityExp = 0;
+    const familiarityAt = (occurredAt: string, countedMessages: number): number => {
+        while (episodicCount < episodicTimes.length && episodicTimes[episodicCount] < occurredAt) {
+            episodicCount += 1;
+        }
+        while (affinityIndex < affinityEvents.length && affinityEvents[affinityIndex].occurred_at <= occurredAt) {
+            affinityExp += affinityEvents[affinityIndex].exp;
+            affinityIndex += 1;
+        }
+        return resolvePersonaFamiliarityLevel(countedMessages, episodicCount, affinityExp, request.bond_level_override);
+    };
+    for (const { message, persona_id: personaId } of request.timeline) {
+        const sessionMessage = message.role === 'user' || message.role === 'assistant';
+        if (personaId !== request.persona_id) {
+            if (sessionMessage && message.role === 'user' && hasContact) {
+                pendingRivalCount += 1;
+                pendingRivalIds.add(personaId);
+            }
+            continue;
+        }
+        if (!sessionMessage) {
+            messageCount += 1;
+            continue;
+        }
+        const occurredAt = message.created_at;
+        if (presetDue && preset !== null && preset.applied_at < occurredAt) {
+            state = createPersonaEmotionStateFromLevels(preset.levels, preset.applied_at);
+            presetDue = false;
+        }
+        if (message.role === 'user') {
+            messageCount += 1;
+            const familiarityLevel = familiarityAt(occurredAt, messageCount);
+            state = advancePersonaEmotion(state ?? createPersonaEmotionState(occurredAt, request.seed_text), message.content, occurredAt, USER_MESSAGE_EMOTION_INFLUENCE, request.baseline);
+            const mentions = request.detectors.profile_mentions(message.content);
+            if (mentions.length > 0) {
+                const delighted = mentions.filter((mention) => mention.kind !== 'dislike').length;
+                state = applyProfileMentionEmotion(state, delighted, mentions.length - delighted, occurredAt);
+            }
+            if (pendingRivalCount > 0) {
+                const rivalAttention = pendingRivalCount + request.detectors.mentioned_persona_count(message.content, [...pendingRivalIds]);
+                state = applyRivalAttention(state, rivalAttention, resolveBondProgress(familiarityLevel, FAMILIARITY_MAX_LEVEL), occurredAt);
+            }
+        }
+        else if (state !== null) {
+            if (message.delivery === 'proactive') {
+                const familiarityLevel = familiarityAt(occurredAt, messageCount);
+                state = advancePersonaEmotion(state, '', occurredAt, IDLE_EMOTION_INFLUENCE, request.baseline);
+                if (pendingRivalCount > 0) {
+                    state = applyRivalAttention(state, pendingRivalCount, resolveBondProgress(familiarityLevel, FAMILIARITY_MAX_LEVEL), occurredAt);
+                }
+            }
+            messageCount += 1;
+            state = advancePersonaEmotion(state, stripReasoning(message.content), occurredAt, SPIRIT_MESSAGE_EMOTION_INFLUENCE, request.baseline);
+        }
+        else {
+            messageCount += 1;
+        }
+        pendingRivalCount = 0;
+        pendingRivalIds.clear();
+        hasContact = true;
+    }
+    if (presetDue && preset !== null) {
+        return createPersonaEmotionStateFromLevels(preset.levels, preset.applied_at);
+    }
+    return state;
 }
 
 export function serializePersonaEmotion(state: PersonaEmotionState): string {

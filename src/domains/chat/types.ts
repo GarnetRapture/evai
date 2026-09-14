@@ -87,7 +87,41 @@ export interface PersonaReplyGeneration {
 }
 export interface PersonaTurnContinuity {
     latest_user_text: string | null;
-    previous_reply: PersonaReplyEnvelope | null;
+}
+export interface PersonaConversationStateRequest {
+    history: ChatMessage[];
+    latest_user_text: string | null;
+    latest_at: string;
+}
+export interface PersonaConversationState {
+    has_previous_exchange: boolean;
+    last_spirit_inner_thought: string;
+    last_spirit_asked_question: boolean;
+    minutes_since_last_message: number | null;
+    responds_to_user_message: boolean;
+}
+export interface PersonaTimelineEntry {
+    message: ChatMessage;
+    persona_id: string;
+}
+export interface PersonaEmotionPresetApplication {
+    levels: import('./affect').PersonaEmotionLevels;
+    applied_at: string;
+}
+export interface PersonaEmotionReplayDetectors {
+    profile_mentions: (text: string) => import('../persona/types').PersonaProfileMention[];
+    mentioned_persona_count: (text: string, personaIds: readonly string[]) => number;
+}
+export interface PersonaEmotionReplayRequest {
+    persona_id: string;
+    timeline: readonly PersonaTimelineEntry[];
+    episodic_created_at: readonly string[];
+    affinity_events: readonly PersonaAffinityEvent[];
+    bond_level_override: number | null;
+    baseline: import('./affect').PersonaEmotionLevels;
+    preset: PersonaEmotionPresetApplication | null;
+    seed_text: string;
+    detectors: PersonaEmotionReplayDetectors;
 }
 export interface PersonaReplyGenerationInput {
     continuity: PersonaTurnContinuity;
@@ -138,6 +172,7 @@ export interface PersonaKeywordThread {
     episodes: PersonaKeywordEpisode[];
 }
 export interface PersonaTurnContextSources {
+    conversation: PersonaConversationState;
     digest_summary: string;
     continuation: PersonaSessionContinuation;
     semantic_summary: string | null;
@@ -204,6 +239,7 @@ export interface PersonaTurnContextRequest {
     spirit_name: string;
     address_term: string;
     query: string;
+    conversation: PersonaConversationStateRequest;
     digest_summary: string;
     live_history_since: string;
     recent_texts: string[];

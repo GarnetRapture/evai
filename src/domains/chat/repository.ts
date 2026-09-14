@@ -24,6 +24,7 @@ import type {
     PersonaRecalledMemoryRecord,
     PersonaSessionContinuation,
     PersonaSessionDigestEntry,
+    PersonaTimelineEntry,
     ProactiveConversationCandidate,
     RelevantMemoryCandidate,
 } from './types';
@@ -528,7 +529,44 @@ export const chatRepository = {
         }
         await transaction.done;
     },
-    async deleteRoom(roomId: string): Promise<void> {
+    async listPersonaTimeline(): Promise<PersonaTimelineEntry[]> {
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction([EVERSOUL_STORE.chatRoom, EVERSOUL_STORE.chatMessage]);
+        const roomPersonaById = new Map<string, string | null>();
+        let roomCursor = await transaction.objectStore(EVERSOUL_STORE.chatRoom).openCursor();
+        while (roomCursor) {
+            roomPersonaById.set(roomCursor.value.id, roomCursor.value.persona_id);
+            roomCursor = await roomCursor.continue();
+        }
+        const timeline: PersonaTimelineEntry[] = [];
+        let messageCursor = await transaction.objectStore(EVERSOUL_STORE.chatMessage).openCursor();
+        while (messageCursor) {
+            const message = messageCursor.value;
+            const personaId = message.persona_id ?? roomPersonaById.get(message.room_id) ?? null;
+            if (personaId !== null) {
+                timeline.push({ message, persona_id: personaId });
+            }
+            messageCursor = await messageCursor.continue();
+        }
+        await transaction.done;
+        return timeline.sort((left, right) => left.message.created_at.localeCompare(right.message.created_at) || left.message.id.localeCompare(right.message.id));
+    },
+    async listEpisodicMemoryTimestamps(personaId: string): Promise<string[]> {
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const timestamps: string[] = [];
+        let cursor = await index.openKeyCursor(personaMemoryRange(personaId, 'episodic'));
+        while (cursor) {
+            timestamps.push(cursor.key[2]);
+            cursor = await cursor.continue();
+        }
+        return timestamps;
+    },
+    async deletePersonaEmotion(personaId: string): Promise<void> {
+        const database = await getEverSoulDatabase();
+        await database.delete(EVERSOUL_STORE.personaMemory, affectMemoryId(personaId));
+    },
+    async deleteRoom(roomId: string): Promise<string[]> {
         const database = await getEverSoulDatabase();
         const transaction = database.transaction(
             [EVERSOUL_STORE.chatMessage, EVERSOUL_STORE.chatRoom, EVERSOUL_STORE.personaMemory],
@@ -567,8 +605,9 @@ export const chatRepository = {
         await removeAffinityMessageEvents(memoryStore, removedMessageIds);
         await roomStore.delete(roomId);
         await transaction.done;
+        return [...affectedPersonaIds];
     },
-    async deleteMessage(messageId: string): Promise<void> {
+    async deleteMessage(messageId: string): Promise<string | null> {
         const database = await getEverSoulDatabase();
         const transaction = database.transaction(
             [EVERSOUL_STORE.chatMessage, EVERSOUL_STORE.chatRoom, EVERSOUL_STORE.personaMemory],
@@ -578,7 +617,7 @@ export const chatRepository = {
         const message = await messageStore.get(messageId);
         if (!message) {
             await transaction.done;
-            return;
+            return null;
         }
         const roomStore = transaction.objectStore(EVERSOUL_STORE.chatRoom);
         const room = await roomStore.get(message.room_id);
@@ -632,6 +671,7 @@ export const chatRepository = {
             });
         }
         await transaction.done;
+        return personaId;
     },
     async getRoomDigest(roomId: string, personaId: string): Promise<ChatRoomDigest | null> {
         const room = await chatRepository.getRoom(roomId);

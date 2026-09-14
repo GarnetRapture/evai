@@ -37,10 +37,16 @@ export const chatClient = {
         return chatService.createSessionRoom(EVERTALK_SESSION_TITLE, personaId);
     },
     async deleteRoom(roomId: string): Promise<void> {
-        await chatRepository.deleteRoom(roomId);
+        const affectedPersonaIds = await chatRepository.deleteRoom(roomId);
+        for (const personaId of affectedPersonaIds) {
+            await chatService.rebuildPersonaEmotion(personaId);
+        }
     },
     async deleteMessage(messageId: string): Promise<void> {
-        await chatRepository.deleteMessage(messageId);
+        const personaId = await chatRepository.deleteMessage(messageId);
+        if (personaId !== null) {
+            await chatService.rebuildPersonaEmotion(personaId);
+        }
     },
     async listMessages(roomId: string): Promise<ChatMessage[]> {
         return chatRepository.listMessages(roomId);

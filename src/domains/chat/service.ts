@@ -28,24 +28,32 @@ import {
     selectContextKeywordNodes,
     selectKeywordEpisodeIds,
 } from './keywordGraph';
+import { analyzeConversationState } from './conversationState';
 import { runPersonaMaintenanceTask } from './maintenance';
 import {
     PERSONA_EMOTION_BASELINE,
+    SPIRIT_MESSAGE_EMOTION_INFLUENCE,
+    USER_MESSAGE_EMOTION_INFLUENCE,
+    IDLE_EMOTION_INFLUENCE,
     advancePersonaEmotion,
     applyProfileMentionEmotion,
     applyRivalAttention,
     createPersonaEmotionState,
     createPersonaEmotionStateFromLevels,
+    replayPersonaEmotion,
     type PersonaEmotionLevels,
     type PersonaEmotionState,
 } from './affect';
 import { recordProfileMentionAffinity } from './affinity';
 import { createLexicalMemoryVector } from './memory';
 import { buildPersonaMemoryOverview } from './memoryOverview';
-import { normalizeChatOutput, stripReasoning } from './output';
+import { extractReasoning, normalizeChatOutput, stripReasoning } from './output';
 import {
     CONSOLIDATION_INTERVAL,
+    CONSOLIDATION_LINE_LIMIT,
     CONSOLIDATION_SOURCE_LIMIT,
+    DIGEST_LINE_LIMIT,
+    REFLECTION_LINE_LIMIT,
     DIGEST_FORCED_MIN_RETAINED_MESSAGE_COUNT,
     DIGEST_FORCED_TRIGGER_SURPLUS,
     DIGEST_SOURCE_LIMIT,
@@ -158,7 +166,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
             turn: input.turn,
             behavior_instruction: previousViolation === null
                 ? turnHook
-                : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name, previousViolation, persona.voice, input.language)}`,
+                : `${turnHook}${buildPersonaRedirectHook(persona.spirit_name, persona.address_term, previousViolation, persona.voice, input.language)}`,
             structured_reply: structuredReply,
             signal: attemptSignal,
             handlers: {
@@ -364,6 +372,7 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
     const keywordThreads = await resolveKeywordThreads(keywordNodes, KEYWORD_THREAD_EPISODE_LIMIT, request.live_history_since);
     return {
         context_sections: buildPersonaTurnContext({
+            conversation: analyzeConversationState(request.conversation),
             digest_summary: request.digest_summary,
             continuation,
             semantic_summary: semanticSummary,
@@ -433,7 +442,7 @@ async function writeRoomDigest(context: TurnMemoryContext, roomId: string, pendi
         context.spirit_name,
         pending.map((message) => ({
             role: message.role,
-            content: stripReasoning(message.content),
+            content: describeRecordedTurnContent(message),
             created_at: message.created_at,
         })),
     );
@@ -448,7 +457,7 @@ async function writeRoomDigest(context: TurnMemoryContext, roomId: string, pendi
     const summary = extractInnerStateLines(stripReasoning(normalizeChatOutput(
         await chatModelRuntime.promptOnce(context.model_id, context.language, prompt),
         context.language,
-    )));
+    )), DIGEST_LINE_LIMIT);
     if (summary.length === 0) {
         return;
     }
@@ -515,7 +524,7 @@ async function consolidateTurnMemory(context: TurnMemoryContext, roomId: string)
         const consolidated = extractInnerStateLines(stripReasoning(normalizeChatOutput(
             await chatModelRuntime.promptOnce(modelId, language, prompt),
             language,
-        )));
+        )), CONSOLIDATION_LINE_LIMIT);
         if (consolidated.length === 0) {
             return;
         }
@@ -527,6 +536,12 @@ interface ReflectionTurnContext {
     room_id: string;
     familiarity_level: number;
     rivals: PersonaRivalContext[];
+}
+
+function describeRecordedTurnContent(message: Pick<ChatMessage, 'role' | 'content'>): string {
+    const spoken = stripReasoning(message.content);
+    const thought = message.role === 'assistant' ? extractReasoning(message.content) : '';
+    return thought.length === 0 ? spoken : `${spoken} [your inner thought at that moment: ${thought}]`;
 }
 
 async function reflectOnLatestExchange(context: TurnMemoryContext, turn: ReflectionTurnContext): Promise<void> {
@@ -555,12 +570,12 @@ async function reflectOnLatestExchange(context: TurnMemoryContext, turn: Reflect
             emotion === null ? null : describePersonaMood(emotion),
             describeBondContext(turn.familiarity_level, context.spirit_name, context.address_term),
             turn.rivals,
-            buildReflectionTranscript(context.address_term, context.spirit_name, sessionMessages, (message) => stripReasoning(message.content)),
+            buildReflectionTranscript(context.address_term, context.spirit_name, sessionMessages, describeRecordedTurnContent),
         );
         const innerState = extractInnerStateLines(stripReasoning(normalizeChatOutput(
             await chatModelRuntime.promptOnce(context.model_id, language, prompt),
             language,
-        )));
+        )), REFLECTION_LINE_LIMIT);
         if (innerState.length === 0) {
             return;
         }
@@ -689,6 +704,38 @@ export const chatService = {
             latest_directives: latestDirectives,
         });
     },
+    async rebuildPersonaEmotion(personaId: string): Promise<void> {
+        const settings = await settingsRepository.readAppSettings();
+        const language = settings.language;
+        const cheatPreset = resolveActivePersonaCheatPreset(settings, personaId);
+        const presetLevels = cheatPreset === null ? null : findEmotionPreset(cheatPreset.emotion_preset).levels;
+        if (presetLevels !== null && cheatPreset?.emotion_applied_at === undefined) {
+            return;
+        }
+        const [timeline, episodicCreatedAt, affinityLedger, detectors, seedText] = await Promise.all([
+            chatRepository.listPersonaTimeline(),
+            chatRepository.listEpisodicMemoryTimestamps(personaId),
+            chatRepository.getPersonaAffinityLedger(personaId),
+            personaService.getEmotionReplayDetectors(personaId, language),
+            personaService.getEmotionSeedText(personaId, language),
+        ]);
+        const rebuilt = replayPersonaEmotion({
+            persona_id: personaId,
+            timeline,
+            episodic_created_at: episodicCreatedAt,
+            affinity_events: affinityLedger.events,
+            bond_level_override: cheatPreset?.bond_level ?? null,
+            baseline: resolvePersonaEmotionBaseline(cheatPreset),
+            preset: presetLevels === null || cheatPreset?.emotion_applied_at === undefined ? null : { levels: presetLevels, applied_at: cheatPreset.emotion_applied_at },
+            seed_text: seedText,
+            detectors,
+        });
+        if (rebuilt === null) {
+            await chatRepository.deletePersonaEmotion(personaId);
+            return;
+        }
+        await chatRepository.upsertPersonaEmotion(personaId, rebuilt);
+    },
     async focusPersonaSession(personaId: string): Promise<void> {
         const settings = await settingsRepository.readAppSettings();
         const cheatPreset = resolveActivePersonaCheatPreset(settings, personaId);
@@ -781,7 +828,7 @@ export const chatService = {
         const emotionSeed = await resolvePersonaEmotionSeed(candidate.persona_id, settings.language, candidate.latest_activity_at, cheatPreset);
         await chatRepository.upsertPersonaEmotion(
             candidate.persona_id,
-            advancePersonaEmotion(emotionSeed, '', attemptedAt, 1, emotionBaseline),
+            advancePersonaEmotion(emotionSeed, '', attemptedAt, IDLE_EMOTION_INFLUENCE, emotionBaseline),
         );
 
         const language = settings.language;
@@ -801,6 +848,7 @@ export const chatService = {
             spirit_name: persona.spirit_name,
             address_term: persona.address_term,
             query: candidate.latest_user_content,
+            conversation: { history, latest_user_text: null, latest_at: attemptedAt },
             digest_summary: digest?.summary ?? '',
             live_history_since: history[0]?.created_at ?? '',
             recent_texts: history.map((message) => message.content),
@@ -833,12 +881,8 @@ export const chatService = {
                 : []),
         ];
         const historyMessages = toPersonaHistoryMessages(history);
-        const previousSpiritMessage = [...history].reverse().find((entry) => entry.role === 'assistant') ?? null;
         const result = await generatePersonaReply({
-            continuity: {
-                latest_user_text: null,
-                previous_reply: previousSpiritMessage === null ? null : envelopeFromStoredReply(previousSpiritMessage.content),
-            },
+            continuity: { latest_user_text: null },
             model_id: settings.active_model,
             language,
             request_id: crypto.randomUUID(),
@@ -874,7 +918,7 @@ export const chatService = {
                 await chatRepository.getPersonaEmotion(candidate.persona_id),
                 stripReasoning(replyText),
                 attemptedAt,
-                0.35,
+                SPIRIT_MESSAGE_EMOTION_INFLUENCE,
                 emotionBaseline,
             ),
         );
@@ -923,7 +967,7 @@ export const chatService = {
                     emotionSeed,
                     content,
                     userOccurredAt,
-                    1,
+                    USER_MESSAGE_EMOTION_INFLUENCE,
                     emotionBaseline,
                 ),
             )),
@@ -988,6 +1032,7 @@ export const chatService = {
             spirit_name: persona.spirit_name,
             address_term: persona.address_term,
             query: content,
+            conversation: { history: priorHistory, latest_user_text: content, latest_at: userOccurredAt },
             digest_summary: digest?.summary ?? '',
             live_history_since: priorHistory[0]?.created_at ?? userOccurredAt,
             recent_texts: priorHistory.map((message) => message.content),
@@ -1008,13 +1053,8 @@ export const chatService = {
                 : []),
         ];
         const historyMessages = toPersonaHistoryMessages(priorHistory);
-
-        const previousSpiritMessage = [...priorHistory].reverse().find((entry) => entry.role === 'assistant') ?? null;
         const result = await generatePersonaReply({
-            continuity: {
-                latest_user_text: content,
-                previous_reply: previousSpiritMessage === null ? null : envelopeFromStoredReply(previousSpiritMessage.content),
-            },
+            continuity: { latest_user_text: content },
             model_id: modelId,
             language,
             request_id: requestId,
@@ -1048,7 +1088,7 @@ export const chatService = {
             persona.address_term,
             persona.spirit_name,
             content,
-            stripReasoning(replyText),
+            describeRecordedTurnContent(aiMessage),
             userOccurredAt,
             aiMessage.created_at,
         );
@@ -1071,7 +1111,7 @@ export const chatService = {
                     currentEmotion,
                     stripReasoning(replyText),
                     aiMessage.created_at,
-                    0.35,
+                    SPIRIT_MESSAGE_EMOTION_INFLUENCE,
                     emotionBaseline,
                 ),
             )),
