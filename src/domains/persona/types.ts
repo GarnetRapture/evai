@@ -89,6 +89,7 @@ export type PersonaSpeechRegister = 'polite' | 'casual' | 'mixed';
 export type PersonaLineRegister = Exclude<PersonaSpeechRegister, 'mixed'>;
 export interface PersonaSpeechStyle {
     messages_per_turn: number;
+    message_length: number;
     signature_marks: string[];
 }
 export type PersonaSelfReferenceKind = 'name' | 'pronoun';
@@ -103,14 +104,12 @@ export interface PersonaSpeechProfile {
     register: PersonaSpeechRegister | null;
     solo_lines: string[];
     signature_lines: string[];
-    distinctive_endings: string[];
     style: PersonaSpeechStyle | null;
 }
 export interface PersonaVoiceAnchor {
     style: PersonaSpeechStyle | null;
     register: PersonaSpeechRegister | null;
     signature_lines: string[];
-    distinctive_endings: string[];
     self_reference: PersonaSelfReference | null;
 }
 export interface PersonaSignatureTally {
@@ -183,7 +182,6 @@ export interface PersonaRelationshipProfile {
     character_key: string;
     relations: PersonaRelationEvidence[];
     external_voice_lines: string[];
-    distinctive_endings: string[];
 }
 export interface PersonaWorldGroup {
     name: string;

@@ -10,7 +10,6 @@ import {
 } from './characterName';
 import { EMPTY_SLICE_FIELD } from './slice';
 import { ADDRESS_TERM_CANDIDATES_BY_LANGUAGE } from './speech';
-import { buildDistinctiveEndingIndex } from './speechEndings';
 import { buildPersonaWorldCodex } from './world';
 import type {
     LocalizedDialogue,
@@ -391,7 +390,6 @@ export function buildPersonaRelationshipGraph(
     }
     const characterKeyByPersona = new Map(sources.map((source) => [source.persona_id, personaCharacterKey(source.slice.name)]));
     const world = buildPersonaWorldCodex(sources);
-    const distinctiveEndings = buildDistinctiveEndingIndex(sources, language);
     const profiles = new Map<string, PersonaRelationshipProfile>();
     for (const source of sources) {
         const selfKey = personaCharacterKey(source.slice.name);
@@ -405,7 +403,6 @@ export function buildPersonaRelationshipGraph(
             character_key: selfKey,
             relations,
             external_voice_lines: externalVoiceLines(source, indexes),
-            distinctive_endings: distinctiveEndings.get(source.persona_id) ?? [],
         });
     }
     return { language, fingerprint, characters, character_key_by_persona: characterKeyByPersona, profiles, world };

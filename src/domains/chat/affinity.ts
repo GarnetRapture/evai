@@ -11,7 +11,7 @@ export const PROFILE_MENTION_AFFINITY_EXP: Record<PersonaProfileMentionKind, num
 
 export const EMPTY_AFFINITY_LEDGER: PersonaAffinityLedger = { bonus_exp: 0, events: [] };
 
-export function localDateKey(occurredAt: string): string {
+function localDateKey(occurredAt: string): string {
     const date = new Date(occurredAt);
     return Number.isNaN(date.getTime()) ? occurredAt : `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 }

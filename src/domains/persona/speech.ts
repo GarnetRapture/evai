@@ -101,6 +101,7 @@ function measureSpeechStyle(runs: string[][]): PersonaSpeechStyle | null {
     }
     return {
         messages_per_turn: upperMedian(runs.map((run) => run.length)),
+        message_length: upperMedian(lines.map((line) => line.length)),
         signature_marks: SIGNATURE_MARK_PATTERNS
             .filter(({ pattern }) => lines.filter((line) => pattern.test(line)).length / lines.length >= SIGNATURE_MARK_MIN_RATIO)
             .map(({ mark }) => mark),
@@ -175,7 +176,6 @@ export function measurePersonaSpeechProfile(
     slice: PersonaLanguageSlice,
     language: AppLanguage,
     externalVoiceLines: readonly string[],
-    distinctiveEndings: readonly string[],
 ): PersonaSpeechProfile {
     const patternLines = spiritDialogues(slice.speech_patterns, slice.name);
     const storyLines = spiritDialogues(slice.story, slice.name);
@@ -194,7 +194,6 @@ export function measurePersonaSpeechProfile(
         register: measureSpeechRegister([...spiritLines, ...personaMonologueLines(slice)], language),
         solo_lines: measureSoloLines(spiritLines),
         signature_lines: measureSignatureLines(signatureRuns, language),
-        distinctive_endings: [...distinctiveEndings],
         style: measureSpeechStyle(conversationRuns),
     };
 }

@@ -40,9 +40,9 @@ export const PERSONA_OUTPUT_LANGUAGE_NAME: Record<AppLanguage, string> = {
 };
 
 export const PERSONA_OUTPUT_LANGUAGE_RULE: Record<AppLanguage, string> = {
-    ko: 'Write every word of "understanding", "inner_thought", "intent", "action" and "messages" in Korean written in Hangul, choosing Korean words for everything you name, feel and do.',
-    en: 'Write every word of "understanding", "inner_thought", "intent", "action" and "messages" in English, choosing English words for everything you name, feel and do.',
-    zh_cn: 'Write every word of "understanding", "inner_thought", "intent", "action" and "messages" in Simplified Chinese characters, choosing Chinese words for everything you name, feel and do.',
+    ko: 'Write every word of "messages", "action" and "inner_thought" in Korean written in Hangul, choosing Korean words for everything you name, feel and do.',
+    en: 'Write every word of "messages", "action" and "inner_thought" in English, choosing English words for everything you name, feel and do.',
+    zh_cn: 'Write every word of "messages", "action" and "inner_thought" in Simplified Chinese characters, choosing Chinese words for everything you name, feel and do.',
 };
 
 export const PERSONA_INNER_LANGUAGE_RULE: Record<AppLanguage, string> = {
@@ -105,17 +105,13 @@ function speechSampleLines(messages: string[]): string {
 
 export function describePersonaSpeechStyle(style: PersonaSpeechStyle): string {
     const shape = style.messages_per_turn >= 2
-        ? `short chat messages as brief as your usual lines, one message per item of "messages" the way you text, using as many messages as it takes to really answer, where every message adds something new`
-        : 'one short message as brief as your usual lines, long enough to really answer';
+        ? `short chat messages of around ${style.message_length} characters, split over a few lines the way you text, where every message adds something new`
+        : `one short message of around ${style.message_length} characters`;
     return style.signature_marks.length === 0 ? shape : `${shape}, often using ${style.signature_marks.join(' ')}`;
 }
 
-export function describePersonaDistinctiveEndings(endings: readonly string[]): string {
-    return `Sentence endings that are yours far more than anyone else's, which make your lines unmistakably yours; end your sentences with them the way you always do: ${endings.map((ending) => `-${ending}`).join(', ')}.`;
-}
-
-function signatureLineList(signatureLines: string[]): string {
-    return signatureLines.map((line) => `- ${line}`).join('\n');
+export function describePersonaSignatureLines(signatureLines: string[]): string {
+    return signatureLines.map((line) => `"${line}"`).join(', ');
 }
 
 function speakingSection(speechProfile: PersonaSpeechProfile, voice: PersonaVoiceAnchor): string {
@@ -123,11 +119,10 @@ function speakingSection(speechProfile: PersonaSpeechProfile, voice: PersonaVoic
     const lines = [
         voice.style === null ? '' : `How your messages look: ${describePersonaSpeechStyle(voice.style)}.`,
         registerDescription === null ? '' : `You always speak in ${registerDescription}.`,
-        voice.distinctive_endings.length === 0 ? '' : describePersonaDistinctiveEndings(voice.distinctive_endings),
         describePersonaSelfReference(voice.self_reference) ?? '',
         voice.signature_lines.length === 0
             ? ''
-            : `Reactions and words you use again and again, which make you sound like yourself. Use them where they fit naturally.\n${signatureLineList(voice.signature_lines)}`,
+            : `Reactions and words you use again and again, which make you sound like yourself: ${describePersonaSignatureLines(voice.signature_lines)}. Use them where they fit naturally.`,
         speechProfile.solo_lines.length === 0
             ? ''
             : `Lines you have said before. Match their vocabulary, sentence endings, and rhythm without repeating them word for word.\n${speechSampleLines(speechProfile.solo_lines)}`,
@@ -182,17 +177,13 @@ function identitySection(identity: PersonaPromptIdentity): string {
 function partnerInputSection(identity: PersonaPromptIdentity): string {
     const address = identity.address_term;
     return `[HOW YOU AND ${address} TALK]\n`
-        + `You two are in one ongoing conversation. Every message from ${address} is the next line of it, never a sudden or strange question, and you already know everything said before it.\n`
-        + `${address}'s turns mix spoken words with descriptions of what they do. Sort out whose it is before you react:\n`
-        + `- Words and states about ${address} themselves, such as coughing, being tired, sick, busy, sad or happy, are about ${address}: react to them the way ${identity.name} reacts to someone she cares about, with worry, care, teasing or joy.\n`
-        + `- Descriptions of you, such as you blushing, trembling, dozing off or being soaked by rain, are happening to you right now: you are in that state, and you show it and say how it feels.\n`
-        + `- Questions to you, such as what you are doing, how you are, what you like or where you are, ask about your own life: answer concretely with real things from it, the places, companions, hobbies, likes and habits in [PROFILE], [IN YOUR OWN WORDS] and [YOUR WORLD]. A vague answer such as "this and that" or "nothing much" is never how you answer.\n`
-        + `- Questions about something you just said ask you to explain it: explain it in your own words.\n`
-        + `How each of your turns is built, in the same order as your reply:\n`
-        + `1. Understanding: what exactly ${address} said, did or asked, read together with the conversation right before it.\n`
-        + `2. Feeling: how that makes you feel, the way the person in [IN YOUR OWN WORDS] feels at your current closeness to ${address}. A carefree soul stays easygoing, a proud one stays proud, a shy one gets flustered; your personality decides the feeling, not a generic nervous or surprised reaction.\n`
-        + `3. Intent: what you will say and do about it, answering first and then moving the moment forward with your own feeling, tease, wish, plan or a detail from your life.\n`
-        + `4. Action and words: one small action and your chat messages that carry out exactly that intent and feeling, in your own voice from [YOUR WAY OF SPEAKING].\n`
+        + `You two talk the way lovers do. ${address}'s turns mix spoken words with descriptions of what they do, and often describe you: how you look, what state you are in, what they are doing to you. Every such description is real and is happening to you right now.\n`
+        + `For each turn from ${address}:\n`
+        + `1. Notice exactly what ${address} said, what they did, and what they described about you.\n`
+        + `2. Feel it land in your body and heart, and let your mood shift the way ${identity.name}'s would at your current closeness.\n`
+        + `3. Think in your own head about what it means that ${address} did this, and what you want right now.\n`
+        + `4. Answer as yourself: react to that exact thing first with the feeling it gave you, then add your own words and one small action that carries the moment forward.\n`
+        + `When ${address} describes your state, such as you blushing, trembling, dozing off or being soaked by rain, you are in that state: show it in your words and action and say how it feels to you.\n`
         + `Whenever ${address} asks you about a deed without naming who did it, the one being asked about is you. When ${address} says you took, hid, broke, ate or forgot something, that is what happened in your story, and it stays true in every later turn: a question like "where did you hide it?" asks you about the thing you are keeping, and whatever belongs to ${address} is still theirs while you hold it.\n`
         + `Answer such a moment as the one holding the secret, in ${identity.name}'s own way: tease that it is a secret, play innocent while your reaction gives you away, bargain for something in return, or offer a playful excuse rooted in your life and your world, such as having tucked it somewhere while tidying up.`;
 }
@@ -204,12 +195,12 @@ function replyRulesSection(identity: PersonaPromptIdentity, language: AppLanguag
         + `- ${PERSONA_OUTPUT_LANGUAGE_RULE[language]}\n`
         + (speechInstruction.length > 0 ? `- Voice layer: keep your own vocabulary, rhythm and habits from [YOUR WAY OF SPEAKING], and lay this tone over them as ${identity.name} would: ${speechInstruction}\n` : '')
         + `- Text ${address} the way ${identity.name} texts: short, natural lines with the vocabulary, sentence endings and rhythm of [YOUR WAY OF SPEAKING].\n`
-        + `- Every reply is one JSON object that follows the four steps of [HOW YOU AND ${address} TALK]: "understanding" is step 1; "inner_thought", when asked for, is step 2 as your private feeling; "intent" is step 3; "action" is one short thing you physically do right now, shown as a status line beside your words; "messages" holds the chat messages you send, one short message per item, exactly as you type them. Your thoughts, action and words never contradict each other.\n`
+        + `- Every reply is one JSON object. "messages" holds the chat messages you send, one short message per item, exactly as you type them, as plain spoken words. "action" holds one short thing you physically do right now as a brief stage direction, or "" when you stay still; it appears as a status line beside your words.\n`
         + `- Turns marked ${PERSONA_REHEARSAL_MARKER} before the live chat are moments from your past that show your voice and reply format; the live conversation begins after them.\n`
-        + `- Pick up exactly where the last exchange left off: the scene, where you are, what you were doing and feeling all carry into this reply.\n`
-        + `- Never answer a question only with questions back. When you are curious, ask after you have answered and reacted.\n`
-        + `- Use your own fresh words every time; never repeat ${address}'s words back to them as your reply.\n`
-        + `- Your profile and your own words describe your own life and your past with others. Events, promises, gifts, dates and plans shared with ${address} are only the ones in the live conversation, in [WHAT YOU REMEMBER] or in [YOUR INNER STATE], so your shared story stays true.`;
+        + `- Pick up exactly where the last exchange left off: the scene, where you are, what you were doing and feeling all carry into this reply, and your answer builds on what ${address} just said and did.\n`
+        + `- Move the moment forward yourself every time with a feeling, a tease, a small confession, a wish or an action. When you are curious, ask alongside your own reaction.\n`
+        + `- Put your feelings into how you talk and act, the way someone in love does, and answer ${address} with your own fresh words.\n`
+        + `- Talk about events, dates, gifts and plans that exist in the live conversation, in [WHAT YOU REMEMBER] or in [YOUR INNER STATE], so your shared story stays true.`;
 }
 
 function personalitySection(slice: PersonaLanguageSlice, override: PersonaPersonalityOverride | null, cheatPreset: PersonaCheatPreset | null): string {
@@ -269,7 +260,7 @@ function personaInnerVoiceCore(
     const registerDescription = describePersonaVoiceRegister(voice.register);
     const voiceLines = [
         registerDescription === null ? '' : `You think and speak in ${registerDescription}.`,
-        voice.signature_lines.length === 0 ? '' : `Your own recurring words:\n${signatureLineList(voice.signature_lines)}`,
+        voice.signature_lines.length === 0 ? '' : `Your own recurring words: ${describePersonaSignatureLines(voice.signature_lines)}.`,
     ].filter((line) => line.length > 0);
     return [
         `[WHO YOU ARE]\nYou are ${identity.name}, a woman in love with ${identity.address_term}.`,
@@ -301,7 +292,7 @@ export function buildPersonaSystemPrompt(
     relationship: PersonaRelationshipProfile | null,
     world: PersonaWorldCodex | null,
 ): AssembledPersonaPrompt {
-    const speechProfile = measurePersonaSpeechProfile(slice, language, relationship?.external_voice_lines ?? [], relationship?.distinctive_endings ?? []);
+    const speechProfile = measurePersonaSpeechProfile(slice, language, relationship?.external_voice_lines ?? []);
     const normalizedSaviorName = saviorName.trim();
     const identity: PersonaPromptIdentity = {
         name: slice.name,

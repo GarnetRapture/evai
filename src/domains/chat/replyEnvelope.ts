@@ -3,8 +3,7 @@ import type { StructuredReplySpec } from '../llm';
 import type { PersonaSpeechRegister, PersonaSpeechStyle } from '../persona/types';
 import { detectVoiceRegisterDrift } from '../persona/voice';
 import { containsForeignLanguage } from './languageGuard';
-import { cosineSimilarity, createLexicalMemoryVector } from './memory';
-import { extractReasoning, normalizeChatOutput, splitPersonaReplyActions, stripReasoning, stripStructuredOutputResidue, unwrapEmphasisSpans } from './output';
+import { normalizeChatOutput, splitPersonaReplyActions, stripReasoning, unwrapEmphasisSpans } from './output';
 import type { PersonaReplyEnvelope, PersonaReplyEnvelopeParse, PersonaReplyShape, PersonaReplyViolation } from './types';
 
 export const PERSONA_REPLY_SPEC_NAME = 'persona_reply';
@@ -12,11 +11,7 @@ const PERSONA_REPLY_MESSAGE_HEADROOM = 3;
 const PERSONA_REPLY_MIN_MESSAGES = 3;
 const PERSONA_REPLY_MAX_MESSAGES = 10;
 const PERSONA_REPLY_DEFAULT_MESSAGES = 6;
-const ENVELOPE_KEY_UNDERSTANDING = 'understanding';
 const ENVELOPE_KEY_INNER_THOUGHT = 'inner_thought';
-const ENVELOPE_KEY_INTENT = 'intent';
-const INTENT_MIN_COMPARABLE_LENGTH = 4;
-const INTENT_MIN_SIMILARITY = 0.12;
 const ENVELOPE_KEY_ACTION = 'action';
 const ENVELOPE_KEY_MESSAGES = 'messages';
 const JSON_WHITESPACE_PATTERN = /[\s,]/u;
@@ -25,14 +20,7 @@ const PERSONA_BREACH_PATTERN = /\b(?:AI|A\.I\.|LLM|chat ?bot|language model|assi
 const JSON_ESCAPES: Record<string, string> = { '"': '"', '\\': '\\', '/': '/', b: '\b', f: '\f', n: '\n', r: '\r', t: '\t' };
 const UNICODE_ESCAPE_LENGTH = 4;
 const QUESTION_ONLY_MIN_MESSAGES = 2;
-const SPOKEN_CONTENT_PATTERN = /[\p{L}\p{N}]/u;
 const QUESTION_ENDING_PATTERN = /[?？][\s!.…~♡♥♪ㅜㅠㅋㅎ]*$/u;
-const ECHO_IGNORED_CHARACTER_PATTERN = /[^\p{L}\p{N}]/gu;
-const ECHO_MIN_COMPARABLE_LENGTH = 2;
-const ECHO_LENGTH_RATIO = 1.2;
-const ECHO_LINE_SHARE_DENOMINATOR = 4;
-const DEFLECTION_QUESTION_SHARE_NUMERATOR = 1;
-const DEFLECTION_QUESTION_SHARE_DENOMINATOR = 2;
 
 interface JsonStringRead {
     value: string;
@@ -41,12 +29,7 @@ interface JsonStringRead {
 }
 
 function emptyEnvelope(): PersonaReplyEnvelope {
-    return { understanding: '', inner_thought: '', intent: '', action: '', messages: [] };
-}
-
-function readEnvelopeString(record: Record<string, unknown>, key: string): string {
-    const value = record[key];
-    return typeof value === 'string' ? value : '';
+    return { inner_thought: '', action: '', messages: [] };
 }
 
 function readJsonString(source: string, quoteIndex: number): JsonStringRead {
@@ -90,14 +73,8 @@ function skipSeparators(source: string, index: number): number {
 }
 
 function assignEnvelopeString(envelope: PersonaReplyEnvelope, key: string, value: string): void {
-    if (key === ENVELOPE_KEY_UNDERSTANDING) {
-        envelope.understanding = value;
-    }
-    else if (key === ENVELOPE_KEY_INNER_THOUGHT) {
+    if (key === ENVELOPE_KEY_INNER_THOUGHT) {
         envelope.inner_thought = value;
-    }
-    else if (key === ENVELOPE_KEY_INTENT) {
-        envelope.intent = value;
     }
     else if (key === ENVELOPE_KEY_ACTION) {
         envelope.action = value;
@@ -172,10 +149,8 @@ function coerceEnvelope(value: unknown): PersonaReplyEnvelope | null {
         ? (record[ENVELOPE_KEY_MESSAGES] as unknown[]).filter((item): item is string => typeof item === 'string')
         : [];
     return {
-        understanding: readEnvelopeString(record, ENVELOPE_KEY_UNDERSTANDING),
-        inner_thought: readEnvelopeString(record, ENVELOPE_KEY_INNER_THOUGHT),
-        intent: readEnvelopeString(record, ENVELOPE_KEY_INTENT),
-        action: readEnvelopeString(record, ENVELOPE_KEY_ACTION),
+        inner_thought: typeof record[ENVELOPE_KEY_INNER_THOUGHT] === 'string' ? record[ENVELOPE_KEY_INNER_THOUGHT] : '',
+        action: typeof record[ENVELOPE_KEY_ACTION] === 'string' ? record[ENVELOPE_KEY_ACTION] : '',
         messages,
     };
 }
@@ -183,8 +158,7 @@ function coerceEnvelope(value: unknown): PersonaReplyEnvelope | null {
 function envelopeFromPlainText(text: string): PersonaReplyEnvelope {
     const { actions, spoken } = splitPersonaReplyActions(stripReasoning(text), false);
     return {
-        ...emptyEnvelope(),
-        inner_thought: extractReasoning(text),
+        inner_thought: '',
         action: actions.join(' '),
         messages: spoken.split('\n').map((line) => line.trim()).filter((line) => line.length > 0),
     };
@@ -212,13 +186,11 @@ export function parsePersonaReplyEnvelope(text: string): PersonaReplyEnvelopePar
 
 export function normalizePersonaReplyEnvelope(envelope: PersonaReplyEnvelope, language: AppLanguage): PersonaReplyEnvelope {
     return {
-        understanding: normalizeChatOutput(envelope.understanding, language).trim(),
         inner_thought: unwrapEmphasisSpans(normalizeChatOutput(envelope.inner_thought, language)).trim(),
-        intent: normalizeChatOutput(envelope.intent, language).trim(),
         action: normalizeChatOutput(envelope.action, language).replace(ACTION_WRAPPER_PATTERN, '').trim(),
         messages: envelope.messages
-            .map((message) => stripStructuredOutputResidue(unwrapEmphasisSpans(normalizeChatOutput(message, language))))
-            .filter((message) => SPOKEN_CONTENT_PATTERN.test(message)),
+            .map((message) => unwrapEmphasisSpans(normalizeChatOutput(message, language)).trim())
+            .filter((message) => message.length > 0),
     };
 }
 
@@ -241,16 +213,7 @@ export function detectPersonaBreach(envelope: PersonaReplyEnvelope): boolean {
 }
 
 export function detectPersonaLanguageDrift(envelope: PersonaReplyEnvelope, language: AppLanguage): boolean {
-    return containsForeignLanguage([envelope.understanding, envelope.inner_thought, envelope.intent, envelope.action, ...envelope.messages].join('\n'), language);
-}
-
-function isIntentMismatch(envelope: PersonaReplyEnvelope): boolean {
-    const plan = [envelope.inner_thought, envelope.intent].join(' ').trim();
-    const carried = [envelope.action, ...envelope.messages].join(' ').trim();
-    if (echoComparableText(envelope.intent).length < INTENT_MIN_COMPARABLE_LENGTH || carried.length === 0) {
-        return false;
-    }
-    return (cosineSimilarity(createLexicalMemoryVector(plan), createLexicalMemoryVector(carried)) ?? 0) < INTENT_MIN_SIMILARITY;
+    return containsForeignLanguage([envelope.inner_thought, envelope.action, ...envelope.messages].join('\n'), language);
 }
 
 export function detectPersonaStreamingViolation(rawEnvelope: PersonaReplyEnvelope, language: AppLanguage): PersonaReplyViolation | null {
@@ -261,59 +224,20 @@ export function detectPersonaStreamingViolation(rawEnvelope: PersonaReplyEnvelop
 }
 
 function isQuestionOnlyReply(envelope: PersonaReplyEnvelope): boolean {
-    const questions = envelope.messages.filter((message) => QUESTION_ENDING_PATTERN.test(message.trim()));
-    return envelope.messages.length >= QUESTION_ONLY_MIN_MESSAGES && questions.length * 2 >= envelope.messages.length;
-}
-
-function echoComparableText(text: string): string {
-    return text.normalize('NFKC').replace(ECHO_IGNORED_CHARACTER_PATTERN, '').toLocaleLowerCase();
-}
-
-function isEchoOfUserMessage(envelope: PersonaReplyEnvelope, latestUserText: string | null): boolean {
-    if (latestUserText === null) {
-        return false;
-    }
-    const user = echoComparableText(latestUserText);
-    if (user.length < ECHO_MIN_COMPARABLE_LENGTH) {
-        return false;
-    }
-    const lines = envelope.messages.map(echoComparableText).filter((line) => line.length > 0);
-    if (lines.length === 0) {
-        return false;
-    }
-    const echoedLines = lines.filter((line) => line === user || (line.length <= user.length * ECHO_LENGTH_RATIO && user.includes(line)));
-    return echoedLines.length > 0 && echoedLines.length * ECHO_LINE_SHARE_DENOMINATOR >= lines.length;
-}
-
-function isDeflectedQuestion(envelope: PersonaReplyEnvelope, latestUserText: string | null): boolean {
-    if (latestUserText === null || !QUESTION_ENDING_PATTERN.test(latestUserText.trim())) {
-        return false;
-    }
-    const lines = envelope.messages.map((message) => message.trim()).filter((message) => message.length > 0);
-    const questions = lines.filter((line) => QUESTION_ENDING_PATTERN.test(line));
-    return lines.length > 0 && questions.length * DEFLECTION_QUESTION_SHARE_DENOMINATOR >= lines.length * DEFLECTION_QUESTION_SHARE_NUMERATOR;
+    return envelope.messages.length >= QUESTION_ONLY_MIN_MESSAGES
+        && envelope.messages.every((message) => QUESTION_ENDING_PATTERN.test(message.trim()));
 }
 
 export function detectPersonaReplyViolation(
     envelope: PersonaReplyEnvelope,
     register: PersonaSpeechRegister | null,
     language: AppLanguage,
-    latestUserText: string | null,
 ): PersonaReplyViolation | null {
     if (detectPersonaBreach(envelope)) {
         return 'meta_breach';
     }
-    if (isEchoOfUserMessage(envelope, latestUserText)) {
-        return 'echo_user';
-    }
-    if (isDeflectedQuestion(envelope, latestUserText)) {
-        return 'deflected_question';
-    }
     if (isQuestionOnlyReply(envelope)) {
         return 'question_only';
-    }
-    if (isIntentMismatch(envelope)) {
-        return 'intent_mismatch';
     }
     return detectVoiceRegisterDrift([envelope.inner_thought, ...envelope.messages], register, language) ? 'register_drift' : null;
 }
@@ -327,10 +251,8 @@ export function resolvePersonaReplyMessageLimit(style: PersonaSpeechStyle | null
 
 export function buildPersonaReplySpec(shape: PersonaReplyShape): StructuredReplySpec {
     const properties: Record<string, unknown> = {
-        [ENVELOPE_KEY_UNDERSTANDING]: { type: 'string', minLength: 1 },
-        ...(shape.reasoning ? { [ENVELOPE_KEY_INNER_THOUGHT]: { type: 'string', minLength: 1 } } : {}),
-        [ENVELOPE_KEY_INTENT]: { type: 'string', minLength: 1 },
-        [ENVELOPE_KEY_ACTION]: { type: 'string', minLength: 1 },
+        ...(shape.reasoning ? { [ENVELOPE_KEY_INNER_THOUGHT]: { type: 'string' } } : {}),
+        [ENVELOPE_KEY_ACTION]: { type: 'string' },
         [ENVELOPE_KEY_MESSAGES]: { type: 'array', items: { type: 'string' }, minItems: 1, maxItems: shape.max_messages },
     };
     return {
@@ -338,13 +260,7 @@ export function buildPersonaReplySpec(shape: PersonaReplyShape): StructuredReply
         json_schema: {
             type: 'object',
             properties,
-            required: [
-                ENVELOPE_KEY_UNDERSTANDING,
-                ...(shape.reasoning ? [ENVELOPE_KEY_INNER_THOUGHT] : []),
-                ENVELOPE_KEY_INTENT,
-                ENVELOPE_KEY_ACTION,
-                ENVELOPE_KEY_MESSAGES,
-            ],
+            required: [...(shape.reasoning ? [ENVELOPE_KEY_INNER_THOUGHT] : []), ENVELOPE_KEY_ACTION, ENVELOPE_KEY_MESSAGES],
             additionalProperties: false,
         },
     };

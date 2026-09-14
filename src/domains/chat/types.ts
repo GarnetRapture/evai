@@ -61,15 +61,13 @@ export interface PersonaSystemPrompt {
     voice: import('../persona/types').PersonaVoiceAnchor;
     inner_voice_core: string;
 }
-export type PersonaReplyViolation = 'meta_breach' | 'language_drift' | 'question_only' | 'register_drift' | 'echo_user' | 'deflected_question' | 'intent_mismatch';
+export type PersonaReplyViolation = 'meta_breach' | 'language_drift' | 'question_only' | 'register_drift';
 export interface PersonaReplyParts {
     actions: string[];
     spoken: string;
 }
 export interface PersonaReplyEnvelope {
-    understanding: string;
     inner_thought: string;
-    intent: string;
     action: string;
     messages: string[];
 }
@@ -89,6 +87,7 @@ export interface PersonaReplyGeneration {
 }
 export interface PersonaTurnContinuity {
     latest_user_text: string | null;
+    previous_reply: PersonaReplyEnvelope | null;
 }
 export interface PersonaReplyGenerationInput {
     continuity: PersonaTurnContinuity;
@@ -106,78 +105,6 @@ export interface PersonaReplyGenerationInput {
 }
 export type MemoryContextKind = 'digest' | 'semantic' | 'reflection' | 'directive' | 'episodic' | 'habit' | 'affect' | 'knowledge';
 export type MemoryContextFilter = Record<MemoryContextKind, boolean>;
-export interface PersonaTimelineEntry {
-    message: ChatMessage;
-    persona_id: string;
-}
-export interface PersonaEmotionPresetApplication {
-    levels: import('./affect').PersonaEmotionLevels;
-    applied_at: string;
-}
-export interface PersonaEmotionOrigin {
-    baseline: import('./affect').PersonaEmotionLevels;
-    preset: PersonaEmotionPresetApplication | null;
-    seed_text: string;
-}
-export interface PersonaEmotionSnapshot {
-    at: string;
-    room_id: string;
-    role: 'user' | 'assistant';
-    levels: import('./affect').PersonaEmotionLevels;
-    dominant: import('./affect').PersonaEmotionKind;
-    familiarity_level: number;
-}
-export interface PersonaLedgerDetectors {
-    profile_mentions: (text: string) => import('../persona/types').PersonaProfileMention[];
-    mentioned_persona_count: (text: string, personaIds: readonly string[]) => number;
-}
-export interface PersonaRelationshipLedgerRequest {
-    persona_id: string;
-    language: import('../../shared/types').AppLanguage;
-    timeline: readonly PersonaTimelineEntry[];
-    episodic_created_at: readonly string[];
-    affinity_events: readonly PersonaAffinityEvent[];
-    bond_level_override: number | null;
-    emotion_origin: PersonaEmotionOrigin;
-    detectors: PersonaLedgerDetectors;
-    now: string;
-}
-export interface PersonaRivalShare {
-    persona_id: string;
-    user_message_count: number;
-    latest_user_at: string;
-}
-export interface PersonaSessionOutline {
-    room_id: string;
-    covered_from: string;
-    covered_through: string;
-    exchange_count: number;
-    topics: string[];
-    closing_emotion: import('./affect').PersonaEmotionKind | null;
-}
-export interface PersonaRelationshipState {
-    persona_id: string;
-    emotion: import('./affect').PersonaEmotionState | null;
-    first_contact_at: string;
-    last_contact_at: string;
-    exchange_count: number;
-    shared_day_count: number;
-    familiarity_level: number;
-    familiarity_level_at_first_contact: number;
-    familiarity_level_before_recent: number;
-    recent_emotion_change: import('./affect').PersonaEmotionLevels | null;
-    recent_dominants: import('./affect').PersonaEmotionKind[];
-    lasting_dominant: import('./affect').PersonaEmotionKind | null;
-    sessions: PersonaSessionOutline[];
-}
-export interface PersonaSessionOutlineContinuation {
-    previous_sessions: PersonaSessionOutline[];
-    earlier_in_session: PersonaSessionOutline | null;
-    last_exchange: ChatMessage[];
-}
-export interface PersonaTimelineContactSnapshot extends PersonaContactSnapshot {
-    rival_totals: PersonaRivalShare[];
-}
 export interface PersonaSessionDigestEntry {
     room_id: string;
     covered_from: string;
@@ -210,28 +137,7 @@ export interface PersonaKeywordThread {
     keyword: PersonaKeywordNode;
     episodes: PersonaKeywordEpisode[];
 }
-export interface PersonaConversationExchange {
-    user_text: string;
-    user_at: string | null;
-    spirit_action: string;
-    spirit_lines: string[];
-    spirit_at: string | null;
-}
-export interface PersonaConversationState {
-    last_exchange: PersonaConversationExchange | null;
-    last_spirit_words: string[];
-    open_questions: string[];
-    related_exchange: PersonaConversationExchange | null;
-    repeats_earlier_message: boolean;
-    minutes_since_last_message: number | null;
-}
-export interface PersonaConversationStateRequest {
-    history: ChatMessage[];
-    latest_user_text: string | null;
-    latest_at: string;
-}
 export interface PersonaTurnContextSources {
-    conversation: PersonaConversationState;
     digest_summary: string;
     continuation: PersonaSessionContinuation;
     semantic_summary: string | null;
@@ -298,7 +204,6 @@ export interface PersonaTurnContextRequest {
     spirit_name: string;
     address_term: string;
     query: string;
-    conversation: PersonaConversationStateRequest;
     digest_summary: string;
     live_history_since: string;
     recent_texts: string[];

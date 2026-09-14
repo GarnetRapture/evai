@@ -8,9 +8,7 @@ export function composeOnDeviceTurnContent(turn: OnDeviceTurn, includedSections:
         .map((section) => section.text)
         .join(TURN_SECTION_SEPARATOR);
     const heading = `[${turn.heading}]\n${turn.body}`;
-    return [context, behaviorInstruction.trim(), heading]
-        .filter((part) => part.length > 0)
-        .join(TURN_SECTION_SEPARATOR);
+    return `${context.length === 0 ? heading : `${context}${TURN_SECTION_SEPARATOR}${heading}`}${behaviorInstruction}`;
 }
 
 export function composeOnDeviceTurnMessage(turn: OnDeviceTurn, includedSections: ReadonlySet<OnDeviceTurnContextSection>, behaviorInstruction: string): OnDeviceTextMessage {

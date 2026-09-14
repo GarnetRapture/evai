@@ -15,7 +15,6 @@ const REPEATED_HORIZONTAL_SPACE_PATTERN = /[ \t]{2,}/g;
 const TRAILING_HORIZONTAL_SPACE_PATTERN = /[ \t]+(?=\n|$)/g;
 
 const THINK_BLOCK_PATTERN = /<think>[\s\S]*?<\/think>/gi;
-const THINK_BLOCK_CAPTURE_PATTERN = /<think>([\s\S]*?)<\/think>/gi;
 const UNCLOSED_THINK_PATTERN = /<think>[\s\S]*$/i;
 const MARKUP_TAG_PATTERN = /<\/?(?!think(?:ing)?\b)[A-Za-z][A-Za-z0-9_-]*\s*\/?>/g;
 const ACTION_LINE_PATTERN = /^\s*(?:[(（](.+)[)）]|\*([^*]+)\*)\s*$/u;
@@ -27,12 +26,6 @@ const ACTION_LATIN_WORD_PATTERN = /[A-Za-z]{3,}/u;
 const ACTION_MIN_HANGUL_SYLLABLES = 2;
 const ACTION_MIN_HAN_CHARACTERS = 2;
 const SPOKEN_BLANK_LINES_PATTERN = /\n{3,}/g;
-const CONJOINING_JAMO_PATTERN = /[\u{1100}-\u{11FF}\u{A960}-\u{A97F}\u{D7B0}-\u{D7FF}]/gu;
-const STRUCTURED_OUTPUT_RESIDUE_PATTERN = /\s*["']?\s*[\]}][\s"'\]},]*$/u;
-
-export function extractReasoning(text: string): string {
-    return [...text.matchAll(THINK_BLOCK_CAPTURE_PATTERN)].map((match) => match[1].trim()).filter((thought) => thought.length > 0).join('\n');
-}
 
 export function stripReasoning(text: string): string {
     return text.replace(THINK_BLOCK_PATTERN, '').replace(UNCLOSED_THINK_PATTERN, '').trim();
@@ -103,10 +96,5 @@ export function removeEmoji(text: string): string {
 }
 
 export function normalizeChatOutput(text: string, language: AppLanguage): string {
-    const composed = text.normalize('NFC').replace(CONJOINING_JAMO_PATTERN, '');
-    return removeForeignLanguage(normalizeLanguageText(removeEmoji(stripMarkupTags(composed)), language), language);
-}
-
-export function stripStructuredOutputResidue(text: string): string {
-    return text.replace(STRUCTURED_OUTPUT_RESIDUE_PATTERN, '').trim();
+    return removeForeignLanguage(normalizeLanguageText(removeEmoji(stripMarkupTags(text)), language), language);
 }
