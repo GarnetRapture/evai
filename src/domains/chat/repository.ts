@@ -24,6 +24,7 @@ import type {
     PersonaRecalledMemoryRecord,
     PersonaSessionContinuation,
     PersonaSessionDigestEntry,
+    PersonaTimelineEntry,
     ProactiveConversationCandidate,
     RelevantMemoryCandidate,
 } from './types';
@@ -32,6 +33,7 @@ const TIMESTAMP_UPPER_BOUND = '￿';
 const DIRECTIVE_NORMALIZE_PATTERN = /[^\p{L}\p{N}]+/gu;
 const RIVAL_TOPIC_LIMIT = 6;
 const SESSION_LAST_EXCHANGE_MESSAGE_COUNT = 4;
+const EPISODIC_MEMORY_TYPE: PersonaMemoryType = 'episodic';
 
 function normalizeDirectiveText(text: string): string {
     return text.normalize('NFKC').toLowerCase().replace(DIRECTIVE_NORMALIZE_PATTERN, ' ').trim();
@@ -459,6 +461,28 @@ export const chatRepository = {
             mention_candidate_ids: [...mentionCandidateIds],
         };
     },
+    async listPersonaTimeline(): Promise<PersonaTimelineEntry[]> {
+        const database = await getEverSoulDatabase();
+        const transaction = database.transaction([EVERSOUL_STORE.chatRoom, EVERSOUL_STORE.chatMessage]);
+        const roomPersonaById = new Map<string, string | null>();
+        let roomCursor = await transaction.objectStore(EVERSOUL_STORE.chatRoom).openCursor();
+        while (roomCursor) {
+            roomPersonaById.set(roomCursor.value.id, roomCursor.value.persona_id);
+            roomCursor = await roomCursor.continue();
+        }
+        const timeline: PersonaTimelineEntry[] = [];
+        let messageCursor = await transaction.objectStore(EVERSOUL_STORE.chatMessage).openCursor();
+        while (messageCursor) {
+            const message = messageCursor.value;
+            const personaId = message.persona_id ?? roomPersonaById.get(message.room_id) ?? null;
+            if (personaId !== null) {
+                timeline.push({ message, persona_id: personaId });
+            }
+            messageCursor = await messageCursor.continue();
+        }
+        await transaction.done;
+        return timeline.sort((left, right) => left.message.created_at.localeCompare(right.message.created_at) || left.message.id.localeCompare(right.message.id));
+    },
     async listProactiveConversationCandidates(): Promise<ProactiveConversationCandidate[]> {
         const rooms = await chatRepository.listRoomsWithPersonaActivities();
         const latestByPersona = new Map<string, ProactiveConversationCandidate>();
@@ -694,6 +718,17 @@ export const chatRepository = {
         const database = await getEverSoulDatabase();
         await database.add(EVERSOUL_STORE.personaMemory, record);
     },
+    async listEpisodicMemoryTimestamps(personaId: string): Promise<string[]> {
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const timestamps: string[] = [];
+        let cursor = await index.openKeyCursor(personaMemoryRange(personaId, EPISODIC_MEMORY_TYPE));
+        while (cursor) {
+            timestamps.push(cursor.key[2]);
+            cursor = await cursor.continue();
+        }
+        return timestamps;
+    },
     async countEpisodicMemories(personaId: string): Promise<number> {
         const database = await getEverSoulDatabase();
         return database.countFromIndex(EVERSOUL_STORE.personaMemory, EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, personaMemoryRange(personaId, 'episodic'));
@@ -872,28 +907,6 @@ export const chatRepository = {
         }
         return { previous_sessions: previousSessions, last_exchange: lastExchange.reverse() };
     },
-    async searchDirectiveMemories(personaId: string, queryVector: MemoryVector, limit: number): Promise<string[]> {
-        if (limit <= 0 || isEmptyMemoryVector(queryVector)) {
-            return [];
-        }
-        const database = await getEverSoulDatabase();
-        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
-        const scored: Array<{ id: string; score: number; created_at: string; text: string }> = [];
-        let cursor = await index.openCursor(personaMemoryRange(personaId, 'directive'));
-        while (cursor) {
-            const memory = cursor.value;
-            if (isRecalledMemory(memory) && !isEmptyMemoryVector(memory.memory_vector)) {
-                const score = cosineSimilarity(queryVector, memory.memory_vector);
-                if (score !== null && score > 0) {
-                    scored.push({ id: memory.id, score, created_at: memory.created_at, text: memory.memory_text });
-                    scored.sort((left, right) => right.score - left.score || right.created_at.localeCompare(left.created_at));
-                    if (scored.length > limit) scored.pop();
-                }
-            }
-            cursor = await cursor.continue();
-        }
-        return scored.map((entry) => entry.text);
-    },
     async upsertPersonaEmotion(personaId: string, state: PersonaEmotionState): Promise<void> {
         const record: PersonaAffectMemoryRecord = {
             id: affectMemoryId(personaId),
@@ -929,6 +942,28 @@ export const chatRepository = {
         const database = await getEverSoulDatabase();
         const record = await database.get(EVERSOUL_STORE.personaMemory, semanticMemoryId(personaId));
         return record && isRecalledMemory(record) && record.memory_type === 'semantic' ? record : null;
+    },
+    async searchDirectiveMemories(personaId: string, queryVector: MemoryVector, limit: number): Promise<string[]> {
+        if (limit <= 0 || isEmptyMemoryVector(queryVector)) {
+            return [];
+        }
+        const database = await getEverSoulDatabase();
+        const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
+        const scored: Array<{ id: string; score: number; created_at: string; text: string }> = [];
+        let cursor = await index.openCursor(personaMemoryRange(personaId, 'directive'));
+        while (cursor) {
+            const memory = cursor.value;
+            if (isRecalledMemory(memory) && !isEmptyMemoryVector(memory.memory_vector)) {
+                const score = cosineSimilarity(queryVector, memory.memory_vector);
+                if (score !== null && score > 0) {
+                    scored.push({ id: memory.id, score, created_at: memory.created_at, text: memory.memory_text });
+                    scored.sort((left, right) => right.score - left.score || right.created_at.localeCompare(left.created_at));
+                    if (scored.length > limit) scored.pop();
+                }
+            }
+            cursor = await cursor.continue();
+        }
+        return scored.map((entry) => entry.text);
     },
     async recordKeywordObservations(personaId: string, observations: readonly PersonaKeywordObservation[], memoryId: string, observedAt: string): Promise<void> {
         if (observations.length === 0) {

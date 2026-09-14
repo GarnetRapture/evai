@@ -28,6 +28,7 @@ import {
     selectContextKeywordNodes,
     selectKeywordEpisodeIds,
 } from './keywordGraph';
+import { analyzeConversationState } from './conversationState';
 import { runPersonaMaintenanceTask } from './maintenance';
 import {
     PERSONA_EMOTION_BASELINE,
@@ -42,10 +43,13 @@ import {
 import { recordProfileMentionAffinity } from './affinity';
 import { createLexicalMemoryVector } from './memory';
 import { buildPersonaMemoryOverview } from './memoryOverview';
-import { normalizeChatOutput, stripReasoning } from './output';
+import { extractReasoning, normalizeChatOutput, stripReasoning } from './output';
 import {
     CONSOLIDATION_INTERVAL,
+    CONSOLIDATION_LINE_LIMIT,
     CONSOLIDATION_SOURCE_LIMIT,
+    DIGEST_LINE_LIMIT,
+    REFLECTION_LINE_LIMIT,
     DIGEST_FORCED_MIN_RETAINED_MESSAGE_COUNT,
     DIGEST_FORCED_TRIGGER_SURPLUS,
     DIGEST_SOURCE_LIMIT,
@@ -188,7 +192,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         content = renderPersonaReplyContent(finalEnvelope);
         const violation = breachViolation
             ?? detectPersonaStreamingViolation(rawFinalEnvelope, input.language)
-            ?? detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language);
+            ?? detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language, input.continuity.latest_user_text);
         if (redirectable && violation !== null) {
             previousViolation = violation;
             continue;
@@ -358,12 +362,14 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
             : Promise.resolve([]),
     ]);
     const keywordNodes = selectContextKeywordNodes(
-        buildPersonaKeywordNodes(keywordRecords, request.recent_texts, request.query, request.language),
+        buildPersonaKeywordNodes(keywordRecords, request.recent_texts, request.query, request.language)
+            .filter((node) => request.live_history_since.length === 0 || node.first_seen_at < request.live_history_since),
         KEYWORD_THREAD_PROMPT_LIMIT,
     );
     const keywordThreads = await resolveKeywordThreads(keywordNodes, KEYWORD_THREAD_EPISODE_LIMIT, request.live_history_since);
     return {
         context_sections: buildPersonaTurnContext({
+            conversation: analyzeConversationState(request.conversation),
             digest_summary: request.digest_summary,
             continuation,
             semantic_summary: semanticSummary,
@@ -382,7 +388,7 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
             mentioned_relations: personaReferences.mentioned_relations,
             today_holidays: personaReferences.today_holidays,
             mentioned_holidays: personaReferences.mentioned_holidays,
-        }, request.spirit_name, request.address_term, filter),
+        }, request.spirit_name, request.address_term, filter, request.conversation.latest_user_text !== null),
         rehearsal_messages: buildPersonaPrimingMessages(personaReferences.rehearsal_exchanges),
     };
 }
@@ -426,6 +432,11 @@ async function compressRoomHistory(context: TurnMemoryContext, roomId: string, p
     await runPersonaMaintenanceTask(context.persona_id, 'digest', () => writeRoomDigest(context, roomId, pending));
 }
 
+async function sourceMessagesStillExist(messageIds: readonly string[]): Promise<boolean> {
+    const uniqueIds = [...new Set(messageIds)];
+    return (await chatRepository.getMessagesByIds(uniqueIds)).length === uniqueIds.length;
+}
+
 async function writeRoomDigest(context: TurnMemoryContext, roomId: string, pending: ChatMessage[]): Promise<void> {
     const previous = await chatRepository.getRoomDigest(roomId, context.persona_id);
     const transcript = buildDigestTranscript(
@@ -433,7 +444,7 @@ async function writeRoomDigest(context: TurnMemoryContext, roomId: string, pendi
         context.spirit_name,
         pending.map((message) => ({
             role: message.role,
-            content: stripReasoning(message.content),
+            content: describeRecordedTurnContent(message),
             created_at: message.created_at,
         })),
     );
@@ -448,8 +459,8 @@ async function writeRoomDigest(context: TurnMemoryContext, roomId: string, pendi
     const summary = extractInnerStateLines(stripReasoning(normalizeChatOutput(
         await chatModelRuntime.promptOnce(context.model_id, context.language, prompt),
         context.language,
-    )));
-    if (summary.length === 0) {
+    )), DIGEST_LINE_LIMIT);
+    if (summary.length === 0 || !(await sourceMessagesStillExist(pending.map((message) => message.id)))) {
         return;
     }
     const updatedAt = createMonotonicTimestamp();
@@ -515,8 +526,12 @@ async function consolidateTurnMemory(context: TurnMemoryContext, roomId: string)
         const consolidated = extractInnerStateLines(stripReasoning(normalizeChatOutput(
             await chatModelRuntime.promptOnce(modelId, language, prompt),
             language,
-        )));
+        )), CONSOLIDATION_LINE_LIMIT);
         if (consolidated.length === 0) {
+            return;
+        }
+        const remainingEpisodic = await chatRepository.getEpisodicMemoriesByIds(episodic.map((memory) => memory.id));
+        if (remainingEpisodic.length !== episodic.length) {
             return;
         }
         await chatRepository.upsertSemanticMemory(personaId, consolidated, createLexicalMemoryVector(consolidated), foldedUntil);
@@ -527,6 +542,12 @@ interface ReflectionTurnContext {
     room_id: string;
     familiarity_level: number;
     rivals: PersonaRivalContext[];
+}
+
+function describeRecordedTurnContent(message: Pick<ChatMessage, 'role' | 'content'>): string {
+    const spoken = stripReasoning(message.content);
+    const thought = message.role === 'assistant' ? extractReasoning(message.content) : '';
+    return thought.length === 0 ? spoken : `${spoken} [your inner thought at that moment: ${thought}]`;
 }
 
 async function reflectOnLatestExchange(context: TurnMemoryContext, turn: ReflectionTurnContext): Promise<void> {
@@ -555,13 +576,13 @@ async function reflectOnLatestExchange(context: TurnMemoryContext, turn: Reflect
             emotion === null ? null : describePersonaMood(emotion),
             describeBondContext(turn.familiarity_level, context.spirit_name, context.address_term),
             turn.rivals,
-            buildReflectionTranscript(context.address_term, context.spirit_name, sessionMessages, (message) => stripReasoning(message.content)),
+            buildReflectionTranscript(context.address_term, context.spirit_name, sessionMessages, describeRecordedTurnContent),
         );
         const innerState = extractInnerStateLines(stripReasoning(normalizeChatOutput(
             await chatModelRuntime.promptOnce(context.model_id, language, prompt),
             language,
-        )));
-        if (innerState.length === 0) {
+        )), REFLECTION_LINE_LIMIT);
+        if (innerState.length === 0 || !(await sourceMessagesStillExist(sessionMessages.map((message) => message.id)))) {
             return;
         }
         const coveredThrough = sessionMessages[sessionMessages.length - 1].created_at;
@@ -801,6 +822,7 @@ export const chatService = {
             spirit_name: persona.spirit_name,
             address_term: persona.address_term,
             query: candidate.latest_user_content,
+            conversation: { history, latest_user_text: null, latest_at: attemptedAt },
             digest_summary: digest?.summary ?? '',
             live_history_since: history[0]?.created_at ?? '',
             recent_texts: history.map((message) => message.content),
@@ -833,12 +855,8 @@ export const chatService = {
                 : []),
         ];
         const historyMessages = toPersonaHistoryMessages(history);
-        const previousSpiritMessage = [...history].reverse().find((entry) => entry.role === 'assistant') ?? null;
         const result = await generatePersonaReply({
-            continuity: {
-                latest_user_text: null,
-                previous_reply: previousSpiritMessage === null ? null : envelopeFromStoredReply(previousSpiritMessage.content),
-            },
+            continuity: { latest_user_text: null },
             model_id: settings.active_model,
             language,
             request_id: crypto.randomUUID(),
@@ -988,6 +1006,7 @@ export const chatService = {
             spirit_name: persona.spirit_name,
             address_term: persona.address_term,
             query: content,
+            conversation: { history: priorHistory, latest_user_text: content, latest_at: userOccurredAt },
             digest_summary: digest?.summary ?? '',
             live_history_since: priorHistory[0]?.created_at ?? userOccurredAt,
             recent_texts: priorHistory.map((message) => message.content),
@@ -1008,13 +1027,8 @@ export const chatService = {
                 : []),
         ];
         const historyMessages = toPersonaHistoryMessages(priorHistory);
-
-        const previousSpiritMessage = [...priorHistory].reverse().find((entry) => entry.role === 'assistant') ?? null;
         const result = await generatePersonaReply({
-            continuity: {
-                latest_user_text: content,
-                previous_reply: previousSpiritMessage === null ? null : envelopeFromStoredReply(previousSpiritMessage.content),
-            },
+            continuity: { latest_user_text: content },
             model_id: modelId,
             language,
             request_id: requestId,
@@ -1048,7 +1062,7 @@ export const chatService = {
             persona.address_term,
             persona.spirit_name,
             content,
-            stripReasoning(replyText),
+            describeRecordedTurnContent(aiMessage),
             userOccurredAt,
             aiMessage.created_at,
         );

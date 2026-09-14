@@ -68,6 +68,7 @@ export function resolvePersonaVoiceAnchor(
         style: speechProfile.style,
         register,
         signature_lines: speechProfile.signature_lines.filter((line) => isRegisterCompatibleLine(line, register, language)),
+        distinctive_endings: speechProfile.distinctive_endings.filter((ending) => isRegisterCompatibleLine(ending, register, language)),
         self_reference: speechProfile.self_reference,
     };
 }

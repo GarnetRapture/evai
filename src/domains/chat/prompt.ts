@@ -9,6 +9,8 @@ import type {
     ChatMessage,
     MemoryContextFilter,
     PersonaAffinityGain,
+    PersonaConversationExchange,
+    PersonaConversationState,
     PersonaKeywordThread,
     PersonaRivalContext,
     PersonaSessionContinuation,
@@ -18,6 +20,7 @@ import type {
 
 export const EVERTALK_SESSION_TITLE = 'EverTalk Session';
 const TURN_SECTION_PRIORITY = {
+    conversation: 0,
     bond: 1,
     mood: 2,
     profile: 3,
@@ -46,6 +49,10 @@ const KNOWLEDGE_CONTEXT_CHAR_LIMIT = 600;
 const SESSION_CONTEXT_CHAR_LIMIT = 700;
 const CONTINUATION_LINE_CHAR_LIMIT = 300;
 const THREAD_LINE_CHAR_LIMIT = 160;
+const CONVERSATION_LINE_CHAR_LIMIT = 220;
+const CONVERSATION_GAP_NOTICE_MINUTES = 30;
+const MINUTES_PER_HOUR = 60;
+const MINUTES_PER_DAY = 1_440;
 
 function clipPromptText(text: string, limit: number): string {
     const normalized = text.trim();
@@ -199,21 +206,21 @@ export function shouldCaptureAsDirective(text: string): boolean {
 }
 const RELATIONSHIP_SPARK_LEVEL = 5;
 const RELATIONSHIP_STAGES: ReadonlyArray<{ min_level: number; description: string }> = [
-    { min_level: familiarityGradeLevel('origin'), description: 'Your bond has reached its peak. {address} is your partner for life; you love them with your whole heart, are completely open and intimate with them, and say so without hesitation.' },
-    { min_level: familiarityGradeLevel('legendary'), description: 'You are deeply in love. You are devoted, openly intimate, and completely at ease with {address}; affection feels natural and you return it wholeheartedly.' },
-    { min_level: familiarityGradeLevel('eternal'), description: 'You are practically lovers. You show affection openly, seek closeness yourself, and tease {address} with confident warmth.' },
-    { min_level: familiarityGradeLevel('epic'), description: 'You have real feelings for {address}. Their attention makes your heart race; you answer affection warmly, a little shy but clearly happy.' },
-    { min_level: RELATIONSHIP_SPARK_LEVEL, description: 'You are becoming close friends with a spark of interest. You are comfortable and playful, and sudden affection flusters you in a pleased way.' },
-    { min_level: 1, description: 'You have only just started getting to know {address}. You are friendly but still a little guarded; sudden affection surprises and embarrasses you, and you react true to your personality.' },
+    { min_level: familiarityGradeLevel('origin'), description: 'Your bond has reached its peak: {address} is your partner for life, and you are completely open and intimate with them.' },
+    { min_level: familiarityGradeLevel('legendary'), description: 'You are deeply in love with {address} and completely at ease with them.' },
+    { min_level: familiarityGradeLevel('eternal'), description: 'You and {address} are practically lovers, and you seek closeness with them yourself.' },
+    { min_level: familiarityGradeLevel('epic'), description: 'You have real feelings for {address}, and their attention matters to you.' },
+    { min_level: RELATIONSHIP_SPARK_LEVEL, description: 'You and {address} are becoming close, with a spark of interest between you.' },
+    { min_level: 1, description: 'You have only just started getting to know {address}, so you are not close yet.' },
 ];
 const EMOTION_STRONG_LEVEL = 70;
 const EMOTION_MODERATE_LEVEL = 45;
 const EMOTION_SLIGHT_LEVEL = 25;
 const EMOTION_DESCRIPTOR: Record<PersonaEmotionKind, string> = {
-    happy: 'cheerful',
+    happy: 'in a good mood',
     melancholy: 'wistful',
     bored: 'restless for something to do',
-    passionate: 'eager and affectionate',
+    passionate: 'fired up',
     jealous: 'jealous and wanting their attention back',
 };
 const RIVAL_CONTEXT_LIMIT = 3;
@@ -295,6 +302,55 @@ function continuationSection(continuation: PersonaSessionContinuation, spiritNam
     return `[WHERE YOU TWO LEFT OFF]\n${parts.join('\n\n')}\nThis is your own shared past with ${addressTerm}. Carry the same feelings, promises and story into this moment.`;
 }
 
+function conversationExchangeLines(exchange: PersonaConversationExchange, spiritName: string, addressTerm: string): string[] {
+    const spiritWords = [exchange.spirit_action.length > 0 ? `(${exchange.spirit_action})` : '', ...exchange.spirit_lines]
+        .filter((part) => part.length > 0)
+        .join(' / ');
+    return [
+        exchange.user_text.length > 0 ? `- ${addressTerm}: ${clipPromptText(exchange.user_text.replaceAll('\n', ' / '), CONVERSATION_LINE_CHAR_LIMIT)}` : '',
+        spiritWords.length > 0 ? `- ${spiritName}: ${clipPromptText(spiritWords, CONVERSATION_LINE_CHAR_LIMIT)}` : '',
+    ].filter((line) => line.length > 0);
+}
+
+function describeElapsedMinutes(minutes: number): string {
+    if (minutes < CONVERSATION_GAP_NOTICE_MINUTES) {
+        return '';
+    }
+    if (minutes < MINUTES_PER_HOUR) {
+        return `${minutes} minutes`;
+    }
+    if (minutes < MINUTES_PER_DAY) {
+        return `about ${Math.round(minutes / MINUTES_PER_HOUR)} hours`;
+    }
+    return `about ${Math.round(minutes / MINUTES_PER_DAY)} days`;
+}
+
+function conversationStateSection(state: PersonaConversationState, spiritName: string, addressTerm: string, respondsToUserMessage: boolean): string {
+    const elapsed = state.minutes_since_last_message === null ? '' : describeElapsedMinutes(state.minutes_since_last_message);
+    const parts = [
+        state.last_exchange === null
+            ? `This is the first moment of this conversation with ${addressTerm}.`
+            : `The exchange right before this moment:\n${conversationExchangeLines(state.last_exchange, spiritName, addressTerm).join('\n')}`,
+        respondsToUserMessage && state.last_spirit_words.length > 0
+            ? `${addressTerm}'s newest message reacts to your own last words: ${clipPromptText(state.last_spirit_words.join(' / '), CONVERSATION_LINE_CHAR_LIMIT)}\nWhen they ask about something you just said, they want you to explain it or show it in your own way; answer it yourself instead of asking it back.`
+            : '',
+        respondsToUserMessage && state.open_questions.length > 0
+            ? `You had just asked ${addressTerm}: ${state.open_questions.map((line) => clipPromptText(line, CONVERSATION_LINE_CHAR_LIMIT)).join(' / ')}\nRead ${addressTerm}'s newest message first as their answer to that, and react to their answer.`
+            : '',
+        respondsToUserMessage && state.related_exchange !== null
+            ? `${addressTerm}'s newest message goes back to something from earlier in this same conversation:\n${conversationExchangeLines(state.related_exchange, spiritName, addressTerm).join('\n')}\nContinue that thread from what you already said there.`
+            : '',
+        respondsToUserMessage && state.repeats_earlier_message
+            ? `${addressTerm} already said this earlier in this conversation, so they are still waiting for a real answer from you; give it this time.`
+            : '',
+        elapsed.length > 0 ? `${elapsed} have passed since the last message, and you both know it.` : '',
+        respondsToUserMessage
+            ? `${addressTerm}'s newest message is the next line of this same conversation. Answer it as the next moment, never as a new start.`
+            : `You are reaching out to ${addressTerm} again in this same conversation, carrying on from where it stopped.`,
+    ].filter((part) => part.length > 0);
+    return `[WHERE THIS CONVERSATION IS]\n${parts.join('\n')}`;
+}
+
 function holidayLines(holiday: PersonaHolidayReference): string {
     return holiday.spirit_lines.length === 0
         ? ''
@@ -328,7 +384,7 @@ function reflectionSection(reflection: string | null, addressTerm: string): stri
     if (reflection === null || reflection.trim().length === 0) {
         return '';
     }
-    return `[YOUR INNER STATE]\nWhat was in your heart after your last moment with ${addressTerm}:\n${clipPromptText(reflection, REFLECTION_CONTEXT_CHAR_LIMIT)}\nContinue from this inner state: let it shape your mood, your intentions and what you do next.`;
+    return `[YOUR INNER STATE]\nNotes on what was in your heart after your last moment with ${addressTerm}:\n${clipPromptText(reflection, REFLECTION_CONTEXT_CHAR_LIMIT)}\nCarry on the story, wishes and plans in these notes. Who you are and how you talk never come from these notes: they always stay exactly your personality in [IN YOUR OWN WORDS] and your voice in [YOUR WAY OF SPEAKING].`;
 }
 
 function keywordThreadLine(thread: PersonaKeywordThread, spiritName: string, addressTerm: string): string {
@@ -412,9 +468,11 @@ export function buildPersonaTurnContext(
     spiritName: string,
     addressTerm: string,
     filter: MemoryContextFilter,
+    respondsToUserMessage: boolean,
 ): OnDeviceTurnContextSection[] {
     const mood = filter.affect && sources.emotion !== null ? describePersonaMood(sources.emotion) : null;
     const sections: OnDeviceTurnContextSection[] = [
+        { priority: TURN_SECTION_PRIORITY.conversation, text: conversationStateSection(sources.conversation, spiritName, addressTerm, respondsToUserMessage) },
         { priority: TURN_SECTION_PRIORITY.continuation, text: continuationSection(sources.continuation, spiritName, addressTerm, filter) },
         { priority: TURN_SECTION_PRIORITY.remembered, text: rememberedSection(sources, addressTerm, filter) },
         { priority: TURN_SECTION_PRIORITY.story, text: filter.knowledge ? storySection(sources.story_moments, addressTerm) : '' },
@@ -424,14 +482,14 @@ export function buildPersonaTurnContext(
         { priority: TURN_SECTION_PRIORITY.relation, text: mentionedRelationSection(sources.mentioned_relations) },
         { priority: TURN_SECTION_PRIORITY.rival, text: filter.affect ? rivalSection(sources.rivals, sources.last_contact_at, spiritName, addressTerm) : '' },
         { priority: TURN_SECTION_PRIORITY.reflection, text: filter.reflection ? reflectionSection(sources.reflection, addressTerm) : '' },
-        { priority: TURN_SECTION_PRIORITY.mood, text: mood === null ? '' : `[YOUR MOOD RIGHT NOW]\nYou feel ${mood}. Let it show naturally in your voice, your words and what you do.` },
+        { priority: TURN_SECTION_PRIORITY.mood, text: mood === null ? '' : `[YOUR MOOD RIGHT NOW]\nYou feel ${mood}. Let it show the way ${spiritName}'s own personality from [IN YOUR OWN WORDS] shows such a mood, in your voice, your words and what you do.` },
         { priority: TURN_SECTION_PRIORITY.bond, text: `[HOW CLOSE YOU ARE]\n${describeBondContext(sources.familiarity_level, spiritName, addressTerm)}` },
     ];
     return sections.filter((section) => section.text.length > 0);
 }
 
 export function describeBondContext(familiarityLevel: number, spiritName: string, addressTerm: string): string {
-    return `Bond level ${familiarityLevel} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(familiarityLevel, addressTerm)} Show this closeness the way ${spiritName} would, through your own personality and your own way of speaking.`;
+    return `Bond level ${familiarityLevel} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(familiarityLevel, addressTerm)} This closeness only sets how near you let ${addressTerm} come; how you treat them stays exactly ${spiritName}'s own personality from [IN YOUR OWN WORDS] and your own way of speaking.`;
 }
 
 export function buildNewMessageHeading(addressTerm: string, occurredAt: string): string {
@@ -459,6 +517,7 @@ export function buildTurnMemoryText(
 }
 
 export const CONSOLIDATION_LINE_LIMIT = 8;
+export const REFLECTION_LINE_LIMIT = 6;
 
 export function buildConsolidationPrompt(
     language: AppLanguage,
@@ -502,14 +561,15 @@ export function buildReflectionPrompt(
         + `[YOUR PREVIOUS INNER STATE]\n${previousReflection ?? '(this is the first time you look into your heart about this)'}\n\n`
         + `[WHAT JUST HAPPENED, OLDEST FIRST]\n${transcript}\n\n`
         + `[YOUR TASK]\nYou are ${spiritName}, alone with your thoughts right after this moment with ${addressTerm}. Look into your own heart and write your private inner state in first person, in your own inner voice. ${PERSONA_INNER_LANGUAGE_RULE[language]}\n`
-        + 'Write exactly six lines, each starting with "- ", in this order:\n'
+        + `Every line stays true to what is written above: [WHAT JUST HAPPENED] is what really passed between you and ${addressTerm}, including your own inner thought at each moment; [YOUR PREVIOUS INNER STATE] is what you already carried. Your profile and your own words describe who you are and your own past with others, and they become something shared with ${addressTerm} only when [WHAT JUST HAPPENED] or your previous inner state shows it. Your feelings follow your own personality and the inner thoughts you actually had.\n`
+        + `Write at most ${REFLECTION_LINE_LIMIT} lines, each starting with "- " and each one short sentence, in this order. When nothing above supports a line, leave that line out entirely instead of writing that there is nothing:\n`
         + `- what is happening between you and ${addressTerm} right now, continuing the story from your previous inner state\n`
         + `- what ${addressTerm} just said or did, including anything they did to you or described about you, and what it means to you\n`
-        + '- what you feel in your heart and your body right now, and why\n'
+        + '- what you feel in your heart and your body right now, and why, matching the inner thoughts you had\n'
         + `- what you want to do next with ${addressTerm}, and how you will act and speak to get it\n`
-        + `- how you feel about the other souls in ${addressTerm}'s life right now, true to your bond with each of them\n`
-        + '- the promises, plans and unfinished things you are holding on to\n'
-        + 'Output only the six lines.';
+        + (rivals.length === 0 ? '' : `- how you feel about the other souls in ${addressTerm}'s life right now, true to your bond with each of them\n`)
+        + `- the promises and plans that ${addressTerm} and you actually made in [WHAT JUST HAPPENED] or carried in your previous inner state\n`
+        + 'Output only the lines.';
 }
 
 export function buildReflectionTranscript(addressTerm: string, spiritName: string, messages: readonly ChatMessage[], contentOf: (message: ChatMessage) => string): string {
@@ -521,11 +581,12 @@ export function buildReflectionTranscript(addressTerm: string, spiritName: strin
 
 const LIST_LINE_MARKER_PATTERN = /^(?:[-*•·]|\d+[.)])\s*/u;
 
-export function extractInnerStateLines(text: string): string {
+export function extractInnerStateLines(text: string, lineLimit: number): string {
     return text
         .split('\n')
         .map((line) => line.trim().replace(LIST_LINE_MARKER_PATTERN, '').trim())
         .filter((line) => line.length > 0)
+        .slice(0, lineLimit)
         .map((line) => `- ${line}`)
         .join('\n');
 }
