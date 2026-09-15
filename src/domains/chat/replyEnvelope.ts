@@ -18,6 +18,8 @@ const ENVELOPE_KEY_MESSAGES = 'messages';
 const JSON_WHITESPACE_PATTERN = /[\s,]/u;
 const ACTION_WRAPPER_PATTERN = /^[(（*\s]+|[)）*\s]+$/gu;
 const MESSAGE_QUOTE_WRAPPER_PATTERN = /^(?:"([^"]+)"|“([^”]+)”|「([^」]+)」|『([^』]+)』)$/u;
+const EMBEDDED_QUOTE_BOUNDARY_PATTERN = /["”」』]\s*[,，、]?\s*["“「『]/u;
+const UTTERANCE_EDGE_QUOTE_PATTERN = /^["“「『]+|["”」』]+$/gu;
 const PERSONA_BREACH_PATTERN = /\b(?:AI|A\.I\.|LLM|chat ?bot|language model|assistant|system prompt)\b|인공지능|언어\s*모델|어시스턴트|챗봇|프롬프트|人工智能|语言模型|聊天机器人|提示词/iu;
 const JSON_ESCAPES: Record<string, string> = { '"': '"', '\\': '\\', '/': '/', b: '\b', f: '\f', n: '\n', r: '\r', t: '\t' };
 const UNICODE_ESCAPE_LENGTH = 4;
@@ -192,12 +194,22 @@ function unwrapWholeMessageQuotes(message: string): string {
     return matched === null ? message : (matched[1] ?? matched[2] ?? matched[3] ?? matched[4]).trim();
 }
 
+function splitQuotedUtterances(message: string): string[] {
+    if (!EMBEDDED_QUOTE_BOUNDARY_PATTERN.test(message)) {
+        return [unwrapWholeMessageQuotes(message)];
+    }
+    return message
+        .split(EMBEDDED_QUOTE_BOUNDARY_PATTERN)
+        .map((utterance) => utterance.replace(UTTERANCE_EDGE_QUOTE_PATTERN, '').trim())
+        .filter((utterance) => utterance.length > 0);
+}
+
 export function normalizePersonaReplyEnvelope(envelope: PersonaReplyEnvelope, language: AppLanguage): PersonaReplyEnvelope {
     return {
         inner_thought: unwrapEmphasisSpans(normalizeChatOutput(envelope.inner_thought, language)).trim(),
         action: normalizeChatOutput(envelope.action, language).replace(ACTION_WRAPPER_PATTERN, '').trim(),
         messages: envelope.messages
-            .map((message) => unwrapWholeMessageQuotes(unwrapEmphasisSpans(normalizeChatOutput(message, language)).trim()))
+            .flatMap((message) => splitQuotedUtterances(unwrapEmphasisSpans(normalizeChatOutput(message, language)).trim()))
             .filter((message) => message.length > 0),
     };
 }

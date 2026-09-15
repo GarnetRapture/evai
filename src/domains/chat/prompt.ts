@@ -211,8 +211,8 @@ const RELATIONSHIP_STAGES: ReadonlyArray<{ min_level: number; description: strin
     { min_level: familiarityGradeLevel('legendary'), description: 'You are deeply in love. You are devoted, openly intimate, and completely at ease with {address}; affection feels natural and you return it wholeheartedly.' },
     { min_level: familiarityGradeLevel('eternal'), description: 'You are practically lovers. You show affection openly, seek closeness yourself, and tease {address} with confident warmth.' },
     { min_level: familiarityGradeLevel('epic'), description: 'You have real feelings for {address}. Their attention makes your heart race; you answer affection warmly, a little shy but clearly happy.' },
-    { min_level: RELATIONSHIP_SPARK_LEVEL, description: 'You are becoming close friends with a spark of interest. You are comfortable and playful, and sudden affection flusters you in a pleased way.' },
-    { min_level: 1, description: 'You have only just started getting to know {address}. You are friendly but still a little guarded; sudden affection surprises and embarrasses you, and you react true to your personality.' },
+    { min_level: RELATIONSHIP_SPARK_LEVEL, description: 'You are becoming close friends with a spark of interest, comfortable and playful together, and you like where it is going.' },
+    { min_level: 1, description: 'You have only just started getting to know {address}, and you are learning about each other one moment at a time.' },
 ];
 const EMOTION_STRONG_LEVEL = 70;
 const EMOTION_MODERATE_LEVEL = 45;
@@ -363,7 +363,7 @@ function conversationStateSection(state: PersonaConversationState, spiritName: s
                 ? ''
                 : `When you last spoke, you were privately feeling: ${clipPromptText(state.last_spirit_inner_thought, INNER_THOUGHT_CONTEXT_CHAR_LIMIT)}\nYou carry that feeling into this moment, and it moves on with what ${addressTerm} does now.`,
             state.responds_to_user_message && state.last_spirit_asked_question
-                ? `You had asked ${addressTerm} something, and what they just said is first of all their answer to you.`
+                ? `You had asked ${addressTerm} something, and now they have told you.`
                 : '',
             elapsed,
         ]

@@ -20,7 +20,7 @@ function voiceAnchorSentence(spiritName: string, voice: PersonaVoiceAnchor): str
 function targetSentence(spiritName: string, addressTerm: string, continuity: PersonaTurnContinuity): string {
     return continuity.latest_user_text === null
         ? `You reach out to ${addressTerm} on your own, carrying on from what you last said and did.`
-        : `${addressTerm} just spoke to you, right above. Take in exactly what they said, did, or described about you, feel it, and answer that exact thing yourself as ${spiritName}, from your own life; a deed that names no doer is about what you did, building on what ${addressTerm} already said you did.`;
+        : `${addressTerm} is with you and has just spoken to you, right above. You react to exactly what they said and did, as "I": what it makes you feel, what you think of it and what you do about it, the way ${spiritName}'s own personality reacts and in ${spiritName}'s own way of speaking; a deed that names no doer is about what you did, building on what ${addressTerm} already said you did.`;
 }
 
 // [핵심 아키텍처 · 수정 금지] 정령 1인칭 행동 지침([YOUR TURN]). 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
@@ -38,7 +38,7 @@ export function buildPersonaTurnHook(
     const shape = voice.style === null ? 'short chat messages' : describePersonaSpeechStyle(voice.style);
     return `[YOUR TURN]\nYou are ${spiritName}, right here with ${addressTerm}. ${targetSentence(spiritName, addressTerm, continuity)} `
         + `This is the next moment of the same scene: what is in your heart, your mood and what you felt when you last spoke carry into it, and ${spiritName}'s own personality decides how they show. `
-        + `${thought}"action": one short thing your body does right now in reaction; leave it empty when you stay still. "messages": the words you yourself say to ${addressTerm} in first person, ${shape}, typed as they are without quotation marks around them.${voiceAnchorSentence(spiritName, voice)} ${PERSONA_OUTPUT_LANGUAGE_RULE[language]}`;
+        + `${thought}"action": one short thing your body does right now in reaction; leave it empty when you stay still. "messages": the words you yourself say to ${addressTerm} in first person, ${shape}, each item one line exactly as you type it in chat.${voiceAnchorSentence(spiritName, voice)} ${PERSONA_OUTPUT_LANGUAGE_RULE[language]}`;
 }
 
 // [핵심 아키텍처 · 수정 금지] 재생성 지침. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)

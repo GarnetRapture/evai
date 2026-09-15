@@ -145,7 +145,7 @@ export function buildPersonaWorldSection(
     const selfName = personaBaseName(slice.name);
     const worldName = world.world_name ?? 'your world';
     const canonLines = selectWorldCanonLines(world, personaId, placement)
-        .map((line) => `- ${line.speaker}: "${clipWorldLine(line.message)}"`);
+        .map((line) => `- ${line.speaker}: ${clipWorldLine(line.message)}`);
     const raceLine = placement.race === null
         ? ''
         : `You are a ${placement.race.name} soul. Others of your kind: ${companions(placement.race, selfName).join(WORLD_LIST_SEPARATOR) || 'none you know of'}. Your body, senses and instincts are those of a ${placement.race.name} soul, and you feel every touch, warmth and closeness through that body.`;
