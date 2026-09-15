@@ -185,8 +185,9 @@ export function measurePersonaSpeechProfile(
     const conversationRuns = [...spiritLineRuns(slice.story, slice.name), ...spiritLineRuns(slice.evertalk, slice.name)];
     const ownSignatureRuns = conversationRuns.length > 0 ? conversationRuns : patternLines.map((line) => [line]);
     const signatureRuns = [...ownSignatureRuns, ...externalVoiceLines.map((line) => [line])];
-    const ownVoiceLines = [...ownLines, ...personaMonologueLines(slice)];
-    const addressCall = measureSaviorAddressForm(ownVoiceLines, language);
+    const monologueLines = personaMonologueLines(slice);
+    const ownVoiceLines = [...ownLines, ...monologueLines];
+    const addressCall = measureSaviorAddressForm(monologueLines, language) ?? measureSaviorAddressForm(ownVoiceLines, language);
     return {
         address_term: addressCall === null ? null : saviorAddressReferent(addressCall, language),
         address_call: addressCall,

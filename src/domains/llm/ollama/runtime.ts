@@ -139,27 +139,48 @@ function assembleContextMessages(request: OnDeviceGenerationRequest, removals: r
     ];
 }
 
+// [핵심 아키텍처 · 수정 금지] Ollama 컨텍스트 창 선택. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-4)
 async function selectContextWithinWindow(model: OllamaLoadedModel, request: OnDeviceGenerationRequest, payload: LocalGenerationPayload): Promise<OllamaContextSelection> {
     const promptBudget = model.context_window - payload.max_output_tokens;
     const removalOrder = contextRemovalOrder(request);
-    let fullPromptTokens: number | null = null;
-    for (let removedCount = 0; removedCount <= removalOrder.length; removedCount += 1) {
-        const removals = removalOrder.slice(0, removedCount);
-        const candidate = toGenerationRequest(model, payload, assembleContextMessages(request, removals), request.structured_reply.json_schema);
+    const candidateFor = (removedCount: number) => toGenerationRequest(
+        model,
+        payload,
+        assembleContextMessages(request, removalOrder.slice(0, removedCount)),
+        request.structured_reply.json_schema,
+    );
+    const selectionFor = (removedCount: number, candidate: OllamaGenerationRequest, promptTokens: number, fullPromptTokens: number | null): OllamaContextSelection => ({
+        request: candidate,
+        prompt_tokens: promptTokens,
+        truncated_prompt_tokens: fullPromptTokens === null ? 0 : Math.max(0, fullPromptTokens - promptTokens),
+        truncated_message_count: removalOrder.slice(0, removedCount).filter((removal) => removal.kind === 'history').length,
+    });
+    const fullCandidate = candidateFor(0);
+    const fullMeasurement = await ollamaClient.measurePrompt(model.base_url, fullCandidate, request.signal);
+    if (fullMeasurement.fits_context && fullMeasurement.prompt_tokens <= promptBudget) {
+        return selectionFor(0, fullCandidate, fullMeasurement.prompt_tokens, fullMeasurement.prompt_tokens);
+    }
+    const leanestCandidate = candidateFor(removalOrder.length);
+    const leanestMeasurement = await ollamaClient.measurePrompt(model.base_url, leanestCandidate, request.signal);
+    if (!leanestMeasurement.fits_context || leanestMeasurement.prompt_tokens > promptBudget) {
+        throw new DomainError('ollama_runtime', `${model.profile.name} · num_ctx ${model.context_window} · prompt budget ${promptBudget}`);
+    }
+    let best = selectionFor(removalOrder.length, leanestCandidate, leanestMeasurement.prompt_tokens, fullMeasurement.prompt_tokens);
+    let low = 1;
+    let high = removalOrder.length - 1;
+    while (low <= high) {
+        const middle = Math.floor((low + high) / 2);
+        const candidate = candidateFor(middle);
         const measurement = await ollamaClient.measurePrompt(model.base_url, candidate, request.signal);
-        if (removedCount === 0) {
-            fullPromptTokens = measurement.prompt_tokens;
-        }
         if (measurement.fits_context && measurement.prompt_tokens <= promptBudget) {
-            return {
-                request: candidate,
-                prompt_tokens: measurement.prompt_tokens,
-                truncated_prompt_tokens: fullPromptTokens === null ? 0 : Math.max(0, fullPromptTokens - measurement.prompt_tokens),
-                truncated_message_count: removals.filter((removal) => removal.kind === 'history').length,
-            };
+            best = selectionFor(middle, candidate, measurement.prompt_tokens, fullMeasurement.prompt_tokens);
+            high = middle - 1;
+        }
+        else {
+            low = middle + 1;
         }
     }
-    throw new DomainError('ollama_runtime', `${model.profile.name} · num_ctx ${model.context_window} · prompt budget ${promptBudget}`);
+    return best;
 }
 
 export const ollamaRuntime = {

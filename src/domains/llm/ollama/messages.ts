@@ -20,6 +20,7 @@ function mergeConsecutiveRoles(messages: readonly OnDeviceTextMessage[]): OnDevi
     return merged;
 }
 
+// [핵심 아키텍처 · 수정 금지] Ollama 메시지 교대 변환. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-4)
 export function toAlternatingOllamaMessages(systemPrompt: string, messages: readonly OnDeviceTextMessage[]): OllamaChatMessage[] {
     const merged = mergeConsecutiveRoles(messages);
     const firstUserIndex = merged.findIndex((message) => message.role === 'user');

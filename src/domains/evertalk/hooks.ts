@@ -592,21 +592,15 @@ export function useEverTalkController(): EverTalkController {
         if (aiMessage) {
             syncClient.scheduleAutomaticBackup();
             try {
-                await refreshLocalStatus();
-                await refreshActiveSessions();
-                if (activeRosterTab === 'bondRanking') {
-                    setBondRanking(await personaClient.getBondRanking());
-                }
-                if (activeRosterTab === 'familiarity') {
-                    setFamiliarityList(await personaClient.getFamiliarityList());
-                }
-                await refreshMemoryInsight(spiritId);
-                if (lobbyOpen) {
-                    await refreshMemoryOverview();
-                }
-                if (workspaceView === 'memory') {
-                    await loadContextGraph(spiritId, room.id);
-                }
+                await Promise.all([
+                    refreshLocalStatus(),
+                    refreshActiveSessions(),
+                    activeRosterTab === 'bondRanking' ? personaClient.getBondRanking().then(setBondRanking) : Promise.resolve(),
+                    activeRosterTab === 'familiarity' ? personaClient.getFamiliarityList().then(setFamiliarityList) : Promise.resolve(),
+                    refreshMemoryInsight(spiritId),
+                    lobbyOpen ? refreshMemoryOverview() : Promise.resolve(),
+                    workspaceView === 'memory' ? loadContextGraph(spiritId, room.id) : Promise.resolve(),
+                ]);
             }
             catch (err) {
                 console.error(labels.logPostChatStateRefreshFailed, err);
@@ -670,18 +664,12 @@ export function useEverTalkController(): EverTalkController {
             setMessages((prev) => prev.filter((message) => message.id !== messageId));
             await refreshProactiveUnreadCounts();
             syncClient.scheduleAutomaticBackup();
-            if (activeSpiritId) {
-                await refreshMemoryInsight(activeSpiritId);
-            }
-            if (lobbyOpen) {
-                await refreshMemoryOverview();
-            }
-            if (workspaceView === 'memory') {
-                await refreshContextGraph();
-            }
-            if (activeRosterTab === 'familiarity') {
-                setFamiliarityList(await personaClient.getFamiliarityList());
-            }
+            await Promise.all([
+                activeSpiritId ? refreshMemoryInsight(activeSpiritId) : Promise.resolve(),
+                lobbyOpen ? refreshMemoryOverview() : Promise.resolve(),
+                workspaceView === 'memory' ? refreshContextGraph() : Promise.resolve(),
+                activeRosterTab === 'familiarity' ? personaClient.getFamiliarityList().then(setFamiliarityList) : Promise.resolve(),
+            ]);
         }
         catch (err) {
             console.error(labels.logRoomSwitchCacheFailed, err);

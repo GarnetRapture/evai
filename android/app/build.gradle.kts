@@ -1,44 +1,6 @@
-import groovy.json.JsonSlurper
-import javax.inject.Inject
-
 plugins {
     id("com.android.application")
-}
-
-abstract class SyncWebDistTask : DefaultTask() {
-    @get:InputDirectory
-    abstract val webDistDirectory: DirectoryProperty
-
-    @get:OutputDirectory
-    abstract val outputDirectory: DirectoryProperty
-
-    @get:Inject
-    abstract val fileSystemOperations: FileSystemOperations
-
-    @TaskAction
-    fun synchronize() {
-        fileSystemOperations.sync {
-            from(webDistDirectory)
-            into(outputDirectory)
-        }
-    }
-}
-
-val webProjectDirectory: Directory = rootProject.layout.projectDirectory.dir("..")
-val webPackageVersion: String = (JsonSlurper().parse(webProjectDirectory.file("package.json").asFile) as Map<*, *>)["version"] as String
-val webPackageVersionParts: List<Int> = webPackageVersion.split(".").map { it.toInt() }
-val npmExecutable: String = if (System.getProperty("os.name").lowercase().contains("windows")) "npm.cmd" else "npm"
-
-val buildWebApp = tasks.register<Exec>("buildWebApp") {
-    group = "build"
-    workingDir = webProjectDirectory.asFile
-    commandLine(npmExecutable, "run", "build")
-}
-
-val syncWebDist = tasks.register<SyncWebDistTask>("syncWebDist") {
-    dependsOn(buildWebApp)
-    webDistDirectory.set(webProjectDirectory.dir("dist"))
-    outputDirectory.set(layout.buildDirectory.dir("generated/webDist"))
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -49,8 +11,8 @@ android {
         applicationId = "pro.everlib.ai"
         minSdk = 26
         targetSdk = 37
-        versionCode = webPackageVersionParts[0] * 10000 + webPackageVersionParts[1] * 100 + webPackageVersionParts[2]
-        versionName = webPackageVersion
+        versionCode = 4
+        versionName = "0.0.4"
         ndk {
             abiFilters += listOf("arm64-v8a", "x86_64")
         }
@@ -68,10 +30,8 @@ android {
     }
 }
 
-androidComponents {
-    onVariants { variant ->
-        variant.sources.assets?.addGeneratedSourceDirectory(syncWebDist, SyncWebDistTask::outputDirectory)
-    }
+kotlin {
+    jvmToolchain(17)
 }
 
 dependencies {

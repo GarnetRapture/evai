@@ -1,6 +1,6 @@
 import { isDomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
-import { EVERTALK_SESSION_TITLE, splitPersonaReplyActions, type ChatMessage, type ChatRoom, type PersonaContextGraph, type PersonaContextRelation, type PersonaKeywordThread, type PersonaMemoryOverview } from '../chat';
+import { EVERTALK_SESSION_TITLE, repairHangulComposition, splitPersonaReplyActions, type ChatMessage, type ChatRoom, type PersonaContextGraph, type PersonaContextRelation, type PersonaKeywordThread, type PersonaMemoryOverview } from '../chat';
 import type { ChatModelEntry, LocalModelFileEntry, ModelDownloadProgress } from '../llm';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
@@ -184,7 +184,7 @@ export function shouldAnnounceSpiritActions(message: ChatMessage, index: number,
     return index === messageCount - 1 && message.role === 'assistant' && message.delivery === 'proactive';
 }
 export function splitSpiritReply(text: string, streaming: boolean): SpiritReplyParts {
-    const blocks = parseThinkBlocks(text);
+    const blocks = parseThinkBlocks(repairHangulComposition(text));
     const { actions, spoken } = splitPersonaReplyActions(blocks.filter((block) => block.type === 'text').map((block) => block.content).join(''), streaming);
     return {
         reasoning: blocks.filter((block) => block.type === 'think').map((block) => block.content.trim()).filter((content) => content.length > 0).join('\n\n'),

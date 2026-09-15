@@ -20,6 +20,7 @@ import type {
     PersonaMemoryRecord,
     PersonaReflectionMemoryRecord,
     PersonaRivalAttention,
+    PersonaRivalHistory,
     PersonaMemoryType,
     PersonaRecalledMemoryRecord,
     PersonaSessionContinuation,
@@ -156,6 +157,10 @@ function roomMessageRangeAfter(roomId: string, createdAfter: string): IDBKeyRang
     );
 }
 
+function personaMemoryOwnerRange(personaId: string): IDBKeyRange {
+    return IDBKeyRange.bound([personaId, '', ''], [personaId, TIMESTAMP_UPPER_BOUND, TIMESTAMP_UPPER_BOUND]);
+}
+
 function personaMemoryRange(personaId: string, memoryType: PersonaMemoryType): IDBKeyRange {
     return IDBKeyRange.bound([personaId, memoryType, ''], [personaId, memoryType, TIMESTAMP_UPPER_BOUND]);
 }
@@ -177,15 +182,22 @@ function recordRoomPersonaActivity(
     personaId: string,
     message: ChatMessage,
 ): Record<string, ChatRoomPersonaActivity> {
-    const previous = activities[personaId] ?? { latest_activity_at: '', latest_user_at: '', latest_user_content: '' };
+    const previous = activities[personaId] ?? { latest_activity_at: '', latest_user_at: '', latest_user_content: '', user_message_count: 0, spirit_message_count: 0 };
     return {
         ...activities,
         [personaId]: {
             latest_activity_at: message.created_at > previous.latest_activity_at ? message.created_at : previous.latest_activity_at,
             latest_user_at: message.role === 'user' && message.created_at > previous.latest_user_at ? message.created_at : previous.latest_user_at,
             latest_user_content: message.role === 'user' && message.created_at > previous.latest_user_at ? message.content : previous.latest_user_content,
+            user_message_count: previous.user_message_count + (message.role === 'user' ? 1 : 0),
+            spirit_message_count: previous.spirit_message_count + (message.role === 'assistant' ? 1 : 0),
         },
     };
+}
+
+function hasCountedPersonaActivities(room: ChatRoom): boolean {
+    return room.persona_activities !== undefined
+        && Object.values(room.persona_activities).every((activity) => Number.isFinite(activity.user_message_count) && Number.isFinite(activity.spirit_message_count));
 }
 
 function semanticMemoryId(personaId: string): string {
@@ -366,7 +378,7 @@ export const chatRepository = {
         let roomCursor = await database.transaction(EVERSOUL_STORE.chatRoom).store.openCursor();
         while (roomCursor) {
             rooms.set(roomCursor.value.id, roomCursor.value);
-            if (roomCursor.value.persona_activities === undefined) legacyRoomIds.add(roomCursor.value.id);
+            if (!hasCountedPersonaActivities(roomCursor.value)) legacyRoomIds.add(roomCursor.value.id);
             roomCursor = await roomCursor.continue();
         }
         if (legacyRoomIds.size > 0) {
@@ -396,18 +408,32 @@ export const chatRepository = {
     async readPersonaContactSnapshot(personaId: string, language: AppLanguage): Promise<PersonaContactSnapshot> {
         const rooms = await chatRepository.listRoomsWithPersonaActivities();
         let lastContactAt = '';
+        let ownUserMessageCount = 0;
         const mentionCandidateIds = new Set<string>();
+        const history = new Map<string, PersonaRivalHistory>();
         for (const room of rooms.values()) {
             for (const [activityPersonaId, activity] of Object.entries(room.persona_activities ?? {})) {
                 if (activityPersonaId === personaId) {
                     if (activity.latest_activity_at > lastContactAt) lastContactAt = activity.latest_activity_at;
+                    ownUserMessageCount += activity.user_message_count;
                     continue;
                 }
-                if (activity.latest_user_at.length > 0) mentionCandidateIds.add(activityPersonaId);
+                if (activity.latest_user_at.length === 0) continue;
+                mentionCandidateIds.add(activityPersonaId);
+                const previous = history.get(activityPersonaId) ?? { persona_id: activityPersonaId, user_message_count: 0, spirit_message_count: 0, latest_user_at: '' };
+                history.set(activityPersonaId, {
+                    persona_id: activityPersonaId,
+                    user_message_count: previous.user_message_count + activity.user_message_count,
+                    spirit_message_count: previous.spirit_message_count + activity.spirit_message_count,
+                    latest_user_at: activity.latest_user_at > previous.latest_user_at ? activity.latest_user_at : previous.latest_user_at,
+                });
             }
         }
+        const rivalHistory = [...history.values()]
+            .filter((entry) => entry.user_message_count > 0)
+            .sort((left, right) => right.user_message_count - left.user_message_count || right.latest_user_at.localeCompare(left.latest_user_at));
         if (lastContactAt.length === 0) {
-            return { last_contact_at: '', rival_attention: [], mention_candidate_ids: [...mentionCandidateIds] };
+            return { last_contact_at: '', own_user_message_count: ownUserMessageCount, rival_attention: [], rival_history: rivalHistory, mention_candidate_ids: [...mentionCandidateIds] };
         }
         const database = await getEverSoulDatabase();
         const attention = new Map<string, PersonaRivalAttention>();
@@ -453,6 +479,8 @@ export const chatRepository = {
         }
         return {
             last_contact_at: lastContactAt,
+            own_user_message_count: ownUserMessageCount,
+            rival_history: rivalHistory,
             rival_attention: [...attention.values()]
                 .filter((entry) => entry.user_message_count > 0)
                 .map((entry) => ({ ...entry, topics: rankedTopics(topicCounts.get(entry.persona_id) ?? new Map()) }))
@@ -626,12 +654,12 @@ export const chatRepository = {
 
         const memoryStore = transaction.objectStore(EVERSOUL_STORE.personaMemory);
         const removedMemoryIds = new Set<string>();
-        let memoryCursor = await memoryStore.openCursor();
+        let memoryCursor = personaId === null
+            ? null
+            : await memoryStore.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated).openCursor(personaMemoryOwnerRange(personaId));
         while (memoryCursor) {
             const memory = memoryCursor.value;
-            const resetPersonaAggregate = personaId !== null
-                && memory.persona_id === personaId
-                && isPersonaAggregateMemory(memory)
+            const resetPersonaAggregate = isPersonaAggregateMemory(memory)
                 && (!isHabitMemory(memory) || message.role === 'user');
             if (memoryReferencesMessage(memory, messageId) || resetPersonaAggregate) {
                 removedMemoryIds.add(memory.id);
@@ -918,21 +946,19 @@ export const chatRepository = {
         }
         const database = await getEverSoulDatabase();
         const index = database.transaction(EVERSOUL_STORE.personaMemory).store.index(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated);
-        const scored: Array<{ id: string; score: number; created_at: string; text: string }> = [];
+        const selected: RelevantMemoryCandidate[] = [];
         let cursor = await index.openCursor(personaMemoryRange(personaId, 'directive'));
         while (cursor) {
             const memory = cursor.value;
             if (isRecalledMemory(memory) && !isEmptyMemoryVector(memory.memory_vector)) {
-                const score = cosineSimilarity(queryVector, memory.memory_vector);
-                if (score !== null && score > 0) {
-                    scored.push({ id: memory.id, score, created_at: memory.created_at, text: memory.memory_text });
-                    scored.sort((left, right) => right.score - left.score || right.created_at.localeCompare(left.created_at));
-                    if (scored.length > limit) scored.pop();
+                const relevance = cosineSimilarity(queryVector, memory.memory_vector);
+                if (relevance !== null && relevance > 0) {
+                    retainMostRelevantMemory(selected, { relevance, created_at: memory.created_at, text: memory.memory_text }, limit, 'newer_first');
                 }
             }
             cursor = await cursor.continue();
         }
-        return scored.map((entry) => entry.text);
+        return selected.map((entry) => entry.text);
     },
     async upsertPersonaEmotion(personaId: string, state: PersonaEmotionState): Promise<void> {
         const record: PersonaAffectMemoryRecord = {

@@ -119,6 +119,7 @@ import type {
     PersonaBehaviorStage,
     PersonaContactSnapshot,
     PersonaContextGraph,
+    PersonaFamiliaritySource,
     PersonaKeywordNode,
     PersonaKeywordThread,
     PersonaMemoryInsight,
@@ -138,6 +139,7 @@ import type {
 const MEMORY_INSIGHT_LIMIT = 30;
 const PERSONA_REPLY_ATTEMPT_LIMIT = 2;
 
+// [핵심 아키텍처 · 수정 금지] 응답 생성·검증·재생성 루프. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
 async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise<PersonaReplyGeneration> {
     const { persona } = input;
     const structuredReply = buildPersonaReplySpec({
@@ -196,7 +198,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         content = renderPersonaReplyContent(finalEnvelope);
         const violation = breachViolation
             ?? detectPersonaStreamingViolation(rawFinalEnvelope, input.language)
-            ?? detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language);
+            ?? detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language, input.continuity.previous_spirit_lines);
         if (redirectable && violation !== null) {
             previousViolation = violation;
             continue;
@@ -225,13 +227,21 @@ async function resolvePersonaEmotionSeed(
         : createPersonaEmotionStateFromLevels(presetLevels, occurredAt);
 }
 
-async function readPersonaFamiliarityLevel(personaId: string, cheatPreset: PersonaCheatPreset | null): Promise<number> {
+async function readPersonaFamiliaritySource(personaId: string): Promise<PersonaFamiliaritySource> {
     const [messageCount, memoryCount, affinityLedger] = await Promise.all([
         chatRepository.countMessagesForPersona(personaId),
         chatRepository.countEpisodicMemories(personaId),
         chatRepository.getPersonaAffinityLedger(personaId),
     ]);
-    return resolvePersonaFamiliarityLevel(messageCount, memoryCount, affinityLedger.bonus_exp, cheatPreset?.bond_level ?? null);
+    return { message_count: messageCount, memory_count: memoryCount, bonus_exp: affinityLedger.bonus_exp };
+}
+
+function resolvePersonaFamiliaritySourceLevel(source: PersonaFamiliaritySource, gainedExp: number, cheatPreset: PersonaCheatPreset | null): number {
+    return resolvePersonaFamiliarityLevel(source.message_count, source.memory_count, source.bonus_exp + gainedExp, cheatPreset?.bond_level ?? null);
+}
+
+async function readPersonaFamiliarityLevel(personaId: string, cheatPreset: PersonaCheatPreset | null): Promise<number> {
+    return resolvePersonaFamiliaritySourceLevel(await readPersonaFamiliaritySource(personaId), 0, cheatPreset);
 }
 
 async function applyProfileMentionAffinity(
@@ -276,7 +286,10 @@ async function preparePersonaTurnReferences(
         query,
         excluded_terms: excludedTerms,
         familiarity_level: familiarityLevel,
-        rival_persona_ids: contact.rival_attention.map((attention) => attention.persona_id),
+        rival_persona_ids: [...new Set([
+            ...contact.rival_attention.map((attention) => attention.persona_id),
+            ...contact.rival_history.map((history) => history.persona_id),
+        ])],
         rival_exchanges: contact.rival_attention.map((attention) => ({ persona_id: attention.persona_id, texts: attention.exchange_texts })),
         mention_candidate_ids: contact.mention_candidate_ids,
     });
@@ -332,6 +345,7 @@ async function readUnfoldedSessionContinuation(
     };
 }
 
+// [핵심 아키텍처 · 수정 금지] DB 기반 턴 맥락 수집. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
 async function collectPersonaTurnContext(request: PersonaTurnContextRequest, prepared: PersonaPreparedTurnReferences): Promise<PersonaTurnContext> {
     const { persona_id: personaId, filter } = request;
     const queryVector = createLexicalMemoryVector(request.query);
@@ -345,8 +359,7 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
         episodic,
         keywordRecords,
         emotion,
-        knowledge,
-        storyMoments,
+        [knowledge, storyMoments],
     ] = await Promise.all([
         filter.semantic ? chatRepository.getSemanticMemory(personaId) : Promise.resolve(null),
         filter.reflection ? chatRepository.getPersonaReflection(personaId) : Promise.resolve(null),
@@ -358,12 +371,10 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
             : Promise.resolve([]),
         filter.habit ? chatRepository.listKeywordRecords(personaId) : Promise.resolve([]),
         filter.affect ? chatRepository.getPersonaEmotion(personaId) : Promise.resolve(null),
-        request.include_knowledge && filter.knowledge
-            ? knowledgeClient.search(request.query, KNOWLEDGE_INJECT_LIMIT, personaService.worldKnowledgeDocuments(request.language))
-            : Promise.resolve([]),
-        filter.knowledge
-            ? knowledgeClient.search(request.query, STORY_INJECT_LIMIT, personaService.storyKnowledgeDocuments(request.language, personaId))
-            : Promise.resolve([]),
+        knowledgeClient.searchGroups(request.query, [
+            { limit: request.include_knowledge && filter.knowledge ? KNOWLEDGE_INJECT_LIMIT : 0, document_names: personaService.worldKnowledgeDocuments(request.language) },
+            { limit: filter.knowledge ? STORY_INJECT_LIMIT : 0, document_names: personaService.storyKnowledgeDocuments(request.language, personaId) },
+        ]),
     ]);
     const keywordNodes = selectContextKeywordNodes(
         buildPersonaKeywordNodes(keywordRecords, request.recent_texts, request.query, request.language),
@@ -387,6 +398,7 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
             profile_mentions: personaReferences.profile_mentions,
             affinity_gained: request.affinity_gained,
             last_contact_at: request.contact.last_contact_at,
+            own_user_message_count: request.contact.own_user_message_count,
             rivals,
             mentioned_relations: personaReferences.mentioned_relations,
             today_holidays: personaReferences.today_holidays,
@@ -538,9 +550,17 @@ interface ReflectionTurnContext {
     rivals: PersonaRivalContext[];
 }
 
+function latestSpiritReplyLines(history: readonly ChatMessage[]): string[] {
+    const latest = history.findLast((message) => message.role === 'assistant' && envelopeFromStoredReply(message.content).messages.length > 0);
+    return latest === undefined ? [] : envelopeFromStoredReply(latest.content).messages;
+}
+
+const RECORDED_LINE_BREAK_PATTERN = /\s*\n+\s*/gu;
+const RECORDED_LINE_JOINER = ' / ';
+
 function describeRecordedTurnContent(message: Pick<ChatMessage, 'role' | 'content'>): string {
-    const spoken = stripReasoning(message.content);
-    const thought = message.role === 'assistant' ? extractReasoning(message.content) : '';
+    const spoken = stripReasoning(message.content).replace(RECORDED_LINE_BREAK_PATTERN, RECORDED_LINE_JOINER);
+    const thought = message.role === 'assistant' ? extractReasoning(message.content).replace(RECORDED_LINE_BREAK_PATTERN, RECORDED_LINE_JOINER) : '';
     return thought.length === 0 ? spoken : `${spoken} [your inner thought at that moment: ${thought}]`;
 }
 
@@ -801,6 +821,7 @@ export const chatService = {
             ),
         };
     },
+    // [핵심 아키텍처 · 수정 금지] 먼저 말 걸기 턴 조립. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
     async tryGenerateProactiveMessage(options: ProactiveGenerationOptions = {}): Promise<ChatMessage | null> {
         const now = options.now ?? new Date();
         const nowTime = now.getTime();
@@ -860,18 +881,15 @@ export const chatService = {
             familiarity_level: familiarityLevel,
             contact: { ...contact, mention_candidate_ids: [] },
         };
-        const [preparedReferences] = await Promise.all([
-            preparePersonaTurnReferences(
-                turnRequest.persona_id,
-                language,
-                turnRequest.query,
-                turnRequest.excluded_terms,
-                familiarityLevel,
-                turnRequest.contact,
-                attemptedAt,
-            ),
-            memoryMaintenanceQueue,
-        ]);
+        const preparedReferences = await preparePersonaTurnReferences(
+            turnRequest.persona_id,
+            language,
+            turnRequest.query,
+            turnRequest.excluded_terms,
+            familiarityLevel,
+            turnRequest.contact,
+            attemptedAt,
+        );
         await applyPersonaRivalEmotion(candidate.persona_id, preparedReferences, familiarityLevel, attemptedAt);
         const turnContext = await collectPersonaTurnContext(turnRequest, preparedReferences);
         const prefixMessages = [
@@ -882,7 +900,7 @@ export const chatService = {
         ];
         const historyMessages = toPersonaHistoryMessages(history);
         const result = await generatePersonaReply({
-            continuity: { latest_user_text: null },
+            continuity: { latest_user_text: null, previous_spirit_lines: latestSpiritReplyLines(history) },
             model_id: settings.active_model,
             language,
             request_id: crypto.randomUUID(),
@@ -932,13 +950,16 @@ export const chatService = {
         };
         const reflectionTurn: ReflectionTurnContext = { room_id: candidate.room_id, familiarity_level: familiarityLevel, rivals: preparedReferences.rivals };
         enqueuePersonaMaintenance(language, async () => {
-            if (result.truncated_message_count > 0) {
-                await compressRoomHistory(memoryContext, candidate.room_id, forcedDigestCompaction(historyMessages.length, result.truncated_message_count));
-            }
+            await compressRoomHistory(
+                memoryContext,
+                candidate.room_id,
+                result.truncated_message_count > 0 ? forcedDigestCompaction(historyMessages.length, result.truncated_message_count) : ROUTINE_DIGEST_COMPACTION,
+            );
             await reflectOnLatestExchange(memoryContext, reflectionTurn);
         });
         return message;
     },
+    // [핵심 아키텍처 · 수정 금지] 사용자 메시지 턴 조립. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
     async sendMessage(request: ChatSendRequest): Promise<ChatMessage> {
         const { room_id: roomId, persona_id: personaId, content, request_id: requestId, signal, handlers } = request;
         const userOccurredAt = createMonotonicTimestamp();
@@ -959,8 +980,8 @@ export const chatService = {
         const emotionBaseline = resolvePersonaEmotionBaseline(cheatPreset);
         const declaredName = detectSaviorName(content);
         const saviorName = declaredName ?? settings.savior_name;
-        const [familiarityLevel] = await Promise.all([
-            readPersonaFamiliarityLevel(personaId, cheatPreset),
+        const [familiaritySource] = await Promise.all([
+            readPersonaFamiliaritySource(personaId),
             resolvePersonaEmotionSeed(personaId, language, userOccurredAt, cheatPreset).then((emotionSeed) => chatRepository.upsertPersonaEmotion(
                 personaId,
                 advancePersonaEmotion(
@@ -986,8 +1007,8 @@ export const chatService = {
             declaredName !== null && declaredName !== settings.savior_name
                 ? settingsRepository.updateGeneral({ savior_name: declaredName.slice(0, SAVIOR_NAME_MAX_LENGTH) })
                 : Promise.resolve(),
-            memoryMaintenanceQueue,
         ]);
+        const familiarityLevel = resolvePersonaFamiliaritySourceLevel(familiaritySource, 0, cheatPreset);
         const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language, saviorName, cheatPreset, familiarityLevel);
         const memoryContext: TurnMemoryContext = {
             model_id: modelId,
@@ -997,18 +1018,7 @@ export const chatService = {
             address_term: persona.address_term,
             inner_voice_core: persona.inner_voice_core,
         };
-        const loadHistoryAfterCompression = async () => {
-            try {
-                await compressRoomHistory(memoryContext, roomId, ROUTINE_DIGEST_COMPACTION);
-            }
-            catch (error) {
-                console.error(pickLocalized(
-                    language,
-                    `대화 압축 실패: ${describeUnknownError(error)}`,
-                    `Failed to compress conversation history: ${describeUnknownError(error)}`,
-                    `对话压缩失败：${describeUnknownError(error)}`,
-                ));
-            }
+        const loadRecentHistory = async () => {
             const roomDigest = await chatRepository.getRoomDigest(roomId, personaId);
             const recentHistory = await chatRepository.listRecentMessagesForPersona(
                 roomId,
@@ -1019,12 +1029,14 @@ export const chatService = {
             return { roomDigest, recentHistory };
         };
         const [{ roomDigest: digest, recentHistory: history }, preparedReferences] = await Promise.all([
-            loadHistoryAfterCompression(),
+            loadRecentHistory(),
             preparePersonaTurnReferences(personaId, language, content, persona.dialogue_excluded_terms, familiarityLevel, contact, userOccurredAt),
         ]);
         const priorHistory = history.filter((message) => message.id !== userMessage.id);
         const affinityGained = await applyProfileMentionAffinity(personaId, preparedReferences, userMessage.id, userOccurredAt);
-        const turnFamiliarityLevel = affinityGained.length > 0 ? await readPersonaFamiliarityLevel(personaId, cheatPreset) : familiarityLevel;
+        const turnFamiliarityLevel = affinityGained.length > 0
+            ? resolvePersonaFamiliaritySourceLevel(familiaritySource, affinityGained.reduce((total, gain) => total + gain.exp, 0), cheatPreset)
+            : familiarityLevel;
         const turnRequest: PersonaTurnContextRequest = {
             persona_id: personaId,
             room_id: roomId,
@@ -1054,7 +1066,7 @@ export const chatService = {
         ];
         const historyMessages = toPersonaHistoryMessages(priorHistory);
         const result = await generatePersonaReply({
-            continuity: { latest_user_text: content },
+            continuity: { latest_user_text: content, previous_spirit_lines: latestSpiritReplyLines(priorHistory) },
             model_id: modelId,
             language,
             request_id: requestId,
@@ -1087,7 +1099,7 @@ export const chatService = {
         const memoryText = buildTurnMemoryText(
             persona.address_term,
             persona.spirit_name,
-            content,
+            describeRecordedTurnContent(userMessage),
             describeRecordedTurnContent(aiMessage),
             userOccurredAt,
             aiMessage.created_at,
@@ -1126,11 +1138,14 @@ export const chatService = {
         ]);
         const reflectionTurn: ReflectionTurnContext = { room_id: roomId, familiarity_level: turnFamiliarityLevel, rivals: preparedReferences.rivals };
         enqueuePersonaMaintenance(language, async () => {
-            if (result.truncated_message_count > 0) {
-                await compressRoomHistory(memoryContext, roomId, forcedDigestCompaction(historyMessages.length, result.truncated_message_count));
-            }
+            await compressRoomHistory(
+                memoryContext,
+                roomId,
+                result.truncated_message_count > 0 ? forcedDigestCompaction(historyMessages.length, result.truncated_message_count) : ROUTINE_DIGEST_COMPACTION,
+            );
             await reflectOnLatestExchange(memoryContext, reflectionTurn);
             await consolidateTurnMemory(memoryContext, roomId);
+            await chatService.focusPersonaSession(personaId);
         });
         return aiMessage;
     },

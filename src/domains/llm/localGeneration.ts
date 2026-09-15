@@ -36,6 +36,7 @@ function personaConversationMessages(request: OnDeviceGenerationRequest): OnDevi
     ];
 }
 
+// [핵심 아키텍처 · 수정 금지] 로컬 엔진 공통 생성 페이로드. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-3)
 export function buildPersonaGenerationPayload(request: OnDeviceGenerationRequest, maxOutputTokens: number): LocalGenerationPayload {
     return {
         system_prompt: request.session_prompt.system_prompt,

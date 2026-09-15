@@ -6,6 +6,7 @@ export function buildPersonaRivalContexts(contact: PersonaContactSnapshot, refer
     return references.rival_relations
         .map((relation): PersonaRivalContext => {
             const attention = contact.rival_attention.filter((entry) => relation.persona_ids.includes(entry.persona_id));
+            const history = contact.rival_history.filter((entry) => relation.persona_ids.includes(entry.persona_id));
             return {
                 relation,
                 user_message_count: attention.reduce((total, entry) => total + entry.user_message_count, 0),
@@ -15,11 +16,15 @@ export function buildPersonaRivalContexts(contact: PersonaContactSnapshot, refer
                 topics: [...new Set(attention.flatMap((entry) => entry.topics))],
                 mentioned_now: mentionedKeys.has(relation.character_key),
                 spoke_of_you_count: attention.reduce((total, entry) => total + (references.rival_mentions_of_self[entry.persona_id] ?? 0), 0),
+                total_user_message_count: history.reduce((total, entry) => total + entry.user_message_count, 0),
+                total_spirit_message_count: history.reduce((total, entry) => total + entry.spirit_message_count, 0),
+                total_latest_user_at: history.reduce((latest, entry) => entry.latest_user_at > latest ? entry.latest_user_at : latest, ''),
             };
         })
         .sort((left, right) => Number(right.mentioned_now) - Number(left.mentioned_now)
             || right.user_message_count - left.user_message_count
-            || right.latest_user_at.localeCompare(left.latest_user_at));
+            || right.total_user_message_count - left.total_user_message_count
+            || right.total_latest_user_at.localeCompare(left.total_latest_user_at));
 }
 
 export function countPersonaRivalAttention(rivals: readonly PersonaRivalContext[]): number {

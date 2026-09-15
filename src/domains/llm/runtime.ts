@@ -96,6 +96,30 @@ function assembleBudgetedMessages(
     ];
 }
 
+async function largestFittingPrefixCount<Item>(
+    candidates: readonly Item[],
+    included: Set<Item>,
+    fits: () => Promise<boolean>,
+): Promise<void> {
+    let low = 0;
+    let high = candidates.length;
+    while (low < high) {
+        const middle = Math.ceil((low + high) / 2);
+        const trial = candidates.slice(0, middle);
+        trial.forEach((item) => included.add(item));
+        const trialFits = await fits();
+        trial.forEach((item) => included.delete(item));
+        if (trialFits) {
+            low = middle;
+        }
+        else {
+            high = middle - 1;
+        }
+    }
+    candidates.slice(0, low).forEach((item) => included.add(item));
+}
+
+// [핵심 아키텍처 · 수정 금지] Chrome 컨텍스트 예산 선택. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-2)
 async function selectMessagesWithinBudget(conversation: LanguageModel, request: OnDeviceGenerationRequest): Promise<BudgetedMessages> {
     const budget = conversation.contextWindow - conversation.contextUsage - CHAT_RESPONSE_TOKEN_RESERVE;
     const allPrefix = new Set(request.prefix_messages.map((_, index) => index));
@@ -111,34 +135,20 @@ async function selectMessagesWithinBudget(conversation: LanguageModel, request: 
     const includedSections = new Set<OnDeviceTurnContextSection>();
     const fits = async (): Promise<boolean> => (await conversation.measureContextUsage(assembleBudgetedMessages(request, includedPrefix, includedHistory, includedSections))) <= budget;
     const newestHistory = [...allHistory].reverse();
-    for (const index of newestHistory.slice(0, CHAT_MINIMUM_HISTORY_TURNS)) {
-        includedHistory.add(index);
-        if (!(await fits())) {
-            includedHistory.delete(index);
-            break;
-        }
-    }
+    await largestFittingPrefixCount(newestHistory.slice(0, CHAT_MINIMUM_HISTORY_TURNS), includedHistory, fits);
     const prioritizedSections = [...request.turn.context_sections].sort((left, right) => left.priority - right.priority);
-    for (const section of prioritizedSections) {
-        includedSections.add(section);
-        if (!(await fits())) {
-            includedSections.delete(section);
+    prioritizedSections.forEach((section) => includedSections.add(section));
+    if (!(await fits())) {
+        includedSections.clear();
+        for (const section of prioritizedSections) {
+            includedSections.add(section);
+            if (!(await fits())) {
+                includedSections.delete(section);
+            }
         }
     }
-    for (const index of newestHistory.slice(CHAT_MINIMUM_HISTORY_TURNS)) {
-        includedHistory.add(index);
-        if (!(await fits())) {
-            includedHistory.delete(index);
-            break;
-        }
-    }
-    for (const index of [...allPrefix].reverse()) {
-        includedPrefix.add(index);
-        if (!(await fits())) {
-            includedPrefix.delete(index);
-            break;
-        }
-    }
+    await largestFittingPrefixCount(newestHistory.slice(CHAT_MINIMUM_HISTORY_TURNS), includedHistory, fits);
+    await largestFittingPrefixCount([...allPrefix].reverse(), includedPrefix, fits);
     const droppedHistory = request.history_messages.filter((_, index) => !includedHistory.has(index));
     const droppedPrefix = request.prefix_messages.filter((_, index) => !includedPrefix.has(index));
     const droppedSections = request.turn.context_sections.filter((section) => !includedSections.has(section));
@@ -222,6 +232,7 @@ export const chromePromptRuntime = {
         baseSession?.session.destroy();
         baseSession = null;
     },
+    // [핵심 아키텍처 · 수정 금지] 정령 세션 생성(initialPrompts)과 요청별 복제. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-2)
     async focusPersonaSession(personaId: string, plan: LanguageModelLanguagePlan, sessionPrompt: PersonaSessionPrompt): Promise<PersonaModelSession> {
         const identity: PersonaModelSessionIdentity = {
             persona_id: personaId,

@@ -1,4 +1,4 @@
-import type { MemoryVector, RelevantMemoryCandidate, SparseMemoryVector } from './types';
+import type { MemoryVector, RelevantMemoryCandidate, RelevantMemoryTieOrder, SparseMemoryVector } from './types';
 
 export const MEMORY_VECTOR_DIMENSIONS = 512;
 const FNV_OFFSET_BASIS = 0x811c9dc5;
@@ -83,12 +83,24 @@ export function createLexicalMemoryVector(text: string): MemoryVector {
     };
 }
 
-export function retainMostRelevantMemory(selected: RelevantMemoryCandidate[], candidate: RelevantMemoryCandidate, limit: number): void {
-    if (limit <= 0) {
+function relevantMemoryRanksBefore(left: RelevantMemoryCandidate, right: RelevantMemoryCandidate, tieOrder: RelevantMemoryTieOrder): boolean {
+    if (left.relevance !== right.relevance) {
+        return left.relevance > right.relevance;
+    }
+    return tieOrder === 'older_first' ? left.created_at < right.created_at : left.created_at > right.created_at;
+}
+
+export function retainMostRelevantMemory(
+    selected: RelevantMemoryCandidate[],
+    candidate: RelevantMemoryCandidate,
+    limit: number,
+    tieOrder: RelevantMemoryTieOrder = 'older_first',
+): void {
+    if (limit <= 0 || (selected.length >= limit && !relevantMemoryRanksBefore(candidate, selected[selected.length - 1], tieOrder))) {
         return;
     }
-    selected.push(candidate);
-    selected.sort((left, right) => right.relevance - left.relevance || left.created_at.localeCompare(right.created_at));
+    const position = selected.findIndex((entry) => relevantMemoryRanksBefore(candidate, entry, tieOrder));
+    selected.splice(position < 0 ? selected.length : position, 0, candidate);
     if (selected.length > limit) {
         selected.pop();
     }

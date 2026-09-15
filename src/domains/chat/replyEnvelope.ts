@@ -3,7 +3,8 @@ import type { StructuredReplySpec } from '../llm';
 import type { PersonaSpeechRegister, PersonaSpeechStyle } from '../persona/types';
 import { detectVoiceRegisterDrift } from '../persona/voice';
 import { containsForeignLanguage } from './languageGuard';
-import { normalizeChatOutput, splitPersonaReplyActions, stripReasoning, unwrapEmphasisSpans } from './output';
+import { cosineSimilarity, createLexicalMemoryVector } from './memory';
+import { normalizeChatOutput, repairHangulComposition, splitPersonaReplyActions, stripReasoning, unwrapEmphasisSpans } from './output';
 import type { PersonaReplyEnvelope, PersonaReplyEnvelopeParse, PersonaReplyShape, PersonaReplyViolation } from './types';
 
 export const PERSONA_REPLY_SPEC_NAME = 'persona_reply';
@@ -21,6 +22,7 @@ const PERSONA_BREACH_PATTERN = /\b(?:AI|A\.I\.|LLM|chat ?bot|language model|assi
 const JSON_ESCAPES: Record<string, string> = { '"': '"', '\\': '\\', '/': '/', b: '\b', f: '\f', n: '\n', r: '\r', t: '\t' };
 const UNICODE_ESCAPE_LENGTH = 4;
 const QUESTION_ONLY_MIN_MESSAGES = 2;
+const REPEATED_REPLY_SIMILARITY = 0.7;
 const QUESTION_ENDING_PATTERN = /[?？][\s!.…~♡♥♪ㅜㅠㅋㅎ]*$/u;
 
 interface JsonStringRead {
@@ -157,7 +159,7 @@ function coerceEnvelope(value: unknown): PersonaReplyEnvelope | null {
 }
 
 function envelopeFromPlainText(text: string): PersonaReplyEnvelope {
-    const { actions, spoken } = splitPersonaReplyActions(stripReasoning(text), false);
+    const { actions, spoken } = splitPersonaReplyActions(stripReasoning(repairHangulComposition(text)), false);
     return {
         inner_thought: '',
         action: actions.join(' '),
@@ -222,6 +224,7 @@ export function detectPersonaLanguageDrift(envelope: PersonaReplyEnvelope, langu
     return containsForeignLanguage([envelope.inner_thought, envelope.action, ...envelope.messages].join('\n'), language);
 }
 
+// [핵심 아키텍처 · 수정 금지] 스트리밍 중 응답 검증. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
 export function detectPersonaStreamingViolation(rawEnvelope: PersonaReplyEnvelope, language: AppLanguage): PersonaReplyViolation | null {
     if (detectPersonaBreach(rawEnvelope)) {
         return 'meta_breach';
@@ -229,18 +232,32 @@ export function detectPersonaStreamingViolation(rawEnvelope: PersonaReplyEnvelop
     return detectPersonaLanguageDrift(rawEnvelope, language) ? 'language_drift' : null;
 }
 
+function isRepeatedReply(envelope: PersonaReplyEnvelope, previousSpiritLines: readonly string[]): boolean {
+    const current = envelope.messages.join(' ');
+    const previous = previousSpiritLines.join(' ');
+    if (current.trim().length === 0 || previous.trim().length === 0) {
+        return false;
+    }
+    return (cosineSimilarity(createLexicalMemoryVector(current), createLexicalMemoryVector(previous)) ?? 0) >= REPEATED_REPLY_SIMILARITY;
+}
+
 function isQuestionOnlyReply(envelope: PersonaReplyEnvelope): boolean {
     return envelope.messages.length >= QUESTION_ONLY_MIN_MESSAGES
         && envelope.messages.every((message) => QUESTION_ENDING_PATTERN.test(message.trim()));
 }
 
+// [핵심 아키텍처 · 수정 금지] 최종 응답 검증. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
 export function detectPersonaReplyViolation(
     envelope: PersonaReplyEnvelope,
     register: PersonaSpeechRegister | null,
     language: AppLanguage,
+    previousSpiritLines: readonly string[],
 ): PersonaReplyViolation | null {
     if (detectPersonaBreach(envelope)) {
         return 'meta_breach';
+    }
+    if (isRepeatedReply(envelope, previousSpiritLines)) {
+        return 'repeated_reply';
     }
     if (isQuestionOnlyReply(envelope)) {
         return 'question_only';
@@ -255,6 +272,7 @@ export function resolvePersonaReplyMessageLimit(style: PersonaSpeechStyle | null
     return Math.min(PERSONA_REPLY_MAX_MESSAGES, Math.max(PERSONA_REPLY_MIN_MESSAGES, style.messages_per_turn + PERSONA_REPLY_MESSAGE_HEADROOM));
 }
 
+// [핵심 아키텍처 · 수정 금지] 응답 JSON 스키마. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
 export function buildPersonaReplySpec(shape: PersonaReplyShape): StructuredReplySpec {
     const properties: Record<string, unknown> = {
         ...(shape.reasoning ? { [ENVELOPE_KEY_INNER_THOUGHT]: { type: 'string' } } : {}),

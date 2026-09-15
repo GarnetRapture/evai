@@ -20,6 +20,8 @@ export interface ChatRoomPersonaActivity {
     latest_activity_at: string;
     latest_user_at: string;
     latest_user_content: string;
+    user_message_count: number;
+    spirit_message_count: number;
 }
 export interface ChatRoom {
     id: string;
@@ -61,7 +63,7 @@ export interface PersonaSystemPrompt {
     voice: import('../persona/types').PersonaVoiceAnchor;
     inner_voice_core: string;
 }
-export type PersonaReplyViolation = 'meta_breach' | 'language_drift' | 'question_only' | 'register_drift';
+export type PersonaReplyViolation = 'meta_breach' | 'language_drift' | 'question_only' | 'register_drift' | 'repeated_reply';
 export interface PersonaReplyParts {
     actions: string[];
     spoken: string;
@@ -87,6 +89,7 @@ export interface PersonaReplyGeneration {
 }
 export interface PersonaTurnContinuity {
     latest_user_text: string | null;
+    previous_spirit_lines: string[];
 }
 export interface PersonaConversationStateRequest {
     history: ChatMessage[];
@@ -99,6 +102,11 @@ export interface PersonaConversationState {
     last_spirit_asked_question: boolean;
     minutes_since_last_message: number | null;
     responds_to_user_message: boolean;
+}
+export interface PersonaFamiliaritySource {
+    message_count: number;
+    memory_count: number;
+    bonus_exp: number;
 }
 export interface PersonaTimelineEntry {
     message: ChatMessage;
@@ -187,6 +195,7 @@ export interface PersonaTurnContextSources {
     profile_mentions: import('../persona/types').PersonaProfileMention[];
     affinity_gained: PersonaAffinityGain[];
     last_contact_at: string;
+    own_user_message_count: number;
     rivals: PersonaRivalContext[];
     mentioned_relations: import('../persona/types').PersonaRelationEvidence[];
     today_holidays: import('../persona/types').PersonaHolidayReference[];
@@ -214,14 +223,25 @@ export interface PersonaRivalContext {
     topics: string[];
     mentioned_now: boolean;
     spoke_of_you_count: number;
+    total_user_message_count: number;
+    total_spirit_message_count: number;
+    total_latest_user_at: string;
 }
 export interface PersonaPreparedTurnReferences {
     references: import('../persona/types').PersonaTurnReferences;
     rivals: PersonaRivalContext[];
 }
+export interface PersonaRivalHistory {
+    persona_id: string;
+    user_message_count: number;
+    spirit_message_count: number;
+    latest_user_at: string;
+}
 export interface PersonaContactSnapshot {
     last_contact_at: string;
+    own_user_message_count: number;
     rival_attention: PersonaRivalAttention[];
+    rival_history: PersonaRivalHistory[];
     mention_candidate_ids: string[];
 }
 export type PersonaMaintenanceTaskKind = 'digest' | 'reflection' | 'consolidation';
@@ -298,6 +318,7 @@ export interface SparseMemoryVector {
     values: number[];
 }
 export type MemoryVector = number[] | SparseMemoryVector;
+export type RelevantMemoryTieOrder = 'older_first' | 'newer_first';
 export interface RelevantMemoryCandidate {
     relevance: number;
     created_at: string;

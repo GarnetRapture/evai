@@ -14,6 +14,7 @@ const DECORATIVE_SYMBOL_PATTERN = /[♢♤♧♫♩※]/gu;
 const REPEATED_HORIZONTAL_SPACE_PATTERN = /[ \t]{2,}/g;
 const TRAILING_HORIZONTAL_SPACE_PATTERN = /[ \t]+(?=\n|$)/g;
 
+const CONJOINING_JAMO_PATTERN = /[ᄀ-ᇿꥠ-꥿ힰ-퟿]/gu;
 const THINK_BLOCK_PATTERN = /<think>[\s\S]*?<\/think>/gi;
 const THINK_CONTENT_PATTERN = /<think>([\s\S]*?)<\/think>/gi;
 const UNCLOSED_THINK_PATTERN = /<think>[\s\S]*$/i;
@@ -27,6 +28,10 @@ const ACTION_LATIN_WORD_PATTERN = /[A-Za-z]{3,}/u;
 const ACTION_MIN_HANGUL_SYLLABLES = 2;
 const ACTION_MIN_HAN_CHARACTERS = 2;
 const SPOKEN_BLANK_LINES_PATTERN = /\n{3,}/g;
+
+export function repairHangulComposition(text: string): string {
+    return text.normalize('NFC').replace(CONJOINING_JAMO_PATTERN, '');
+}
 
 export function stripReasoning(text: string): string {
     return text.replace(THINK_BLOCK_PATTERN, '').replace(UNCLOSED_THINK_PATTERN, '').trim();
@@ -101,5 +106,5 @@ export function removeEmoji(text: string): string {
 }
 
 export function normalizeChatOutput(text: string, language: AppLanguage): string {
-    return removeForeignLanguage(normalizeLanguageText(removeEmoji(stripMarkupTags(text)), language), language);
+    return removeForeignLanguage(normalizeLanguageText(removeEmoji(stripMarkupTags(repairHangulComposition(text))), language), language);
 }

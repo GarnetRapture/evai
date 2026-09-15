@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>EverSoul AI Chat · Native Runtime</title>
+  <style>
+    :root {
+      --bg-color: #12151f;
+      --card-bg: #1c2133;
+      --accent: #7c4dff;
+      --accent-hover: #9e75ff;
+      --text-main: #f0f2f5;
+      --text-muted: #9aa3b2;
+      --border: #2e3650;
+      --success: #00c853;
+      --warn: #ffd600;
+      --error: #ff5252;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      padding: 20px;
+      line-height: 1.5;
+    }
+    header {
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+    }
+    h1 { font-size: 1.4rem; font-weight: 700; color: #fff; }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: var(--accent);
+      color: #fff;
+      margin-top: 6px;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      margin-bottom: 12px;
+      color: #cbd5e1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      font-size: 0.9rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .info-label { color: var(--text-muted); }
+    .info-value { font-family: monospace; font-weight: 600; }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      margin-right: 6px;
+    }
+    button:active { background: var(--accent-hover); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    pre {
+      background: #0d0f17;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      margin-top: 8px;
+      color: #a5b4fc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EverSoul AI Chat</h1>
+    <span class="badge">Standalone Internal App · React Native Ready</span>
+  </header>
+
+  <section class="card">
+    <h2>디바이스 & 하드웨어 가속 프로필</h2>
+    <div id="device-info">
+      <div class="info-row"><span class="info-label">상태</span><span class="info-value">감지 중...</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Gemini Nano 온디바이스 런타임</h2>
+    <div id="nano-info">
+      <div class="info-row"><span class="info-label">가용성</span><span class="info-value">확인 중...</span></div>
+    </div>
+    <button id="btn-nano-prepare">Gemini Nano 준비/다운로드</button>
+  </section>
+
+  <section class="card">
+    <h2>LiteRT-LM 로컬 모델 스토어</h2>
+    <div id="litert-info">
+      <div class="info-row"><span class="info-label">엔진 상태</span><span class="info-value">확인 중...</span></div>
+    </div>
+    <div style="margin-top: 10px;">
+      <button id="btn-model-import">모델 가져오기 (.litertlm)</button>
+      <button id="btn-model-refresh">목록 새로고침</button>
+    </div>
+    <pre id="model-list">(설치된 로컬 모델 목록 로드 대기)</pre>
+  </section>
+
+  <section class="card">
+    <h2>백업 스토리지</h2>
+    <div id="backup-info">
+      <div class="info-row"><span class="info-label">스토리지 연동</span><span class="info-value">확인 중...</span></div>
+    </div>
+    <button id="btn-backup-link">백업 폴더 연결</button>
+  </section>
+
+  <script>
+    const pendingCallbacks = new Map();
+
+    window.__everSoulAndroidReceive = function(rawJson) {
+      try {
+        const event = JSON.parse(rawJson);
+        const reqId = event.request_id;
+        if (pendingCallbacks.has(reqId)) {
+          const handler = pendingCallbacks.get(reqId);
+          handler(event);
+          if (event.type === 'result' || event.type === 'error' || event.type === 'cancelled') {
+            pendingCallbacks.delete(reqId);
+          }
+        }
+      } catch (err) {
+        console.error('Failed to parse bridge event', err);
+      }
+    };
+
+    function callBridgeAsync(funcName, ...args) {
+      return new Promise((resolve, reject) => {
+        const reqId = 'req_' + Date.now() + '_' + Math.random().toString(36).substr(2, 6);
+        pendingCallbacks.set(reqId, (event) => {
+          if (event.type === 'error') {
+            reject(new Error(event.code + ': ' + (event.detail || '')));
+          } else {
+            resolve(event);
+          }
+        });
+        if (window.EverSoulAndroid && typeof window.EverSoulAndroid[funcName] === 'function') {
+          window.EverSoulAndroid[funcName](reqId, ...args);
+        } else {
+          reject(new Error('Bridge method not available: ' + funcName));
+        }
+      });
+    }
+
+    function initDashboard() {
+      if (!window.EverSoulAndroid) {
+        document.getElementById('device-info').innerHTML = '<div class="info-row" style="color:var(--warn);">Native Bridge not detected (Running in plain browser).</div>';
+        return;
+      }
+
+      try {
+        const platform = JSON.parse(window.EverSoulAndroid.platformInfo());
+        document.getElementById('device-info').innerHTML = `
+          <div class="info-row"><span class="info-label">제조사 / 모델</span><span class="info-value">${platform.manufacturer} ${platform.device_model}</span></div>
+          <div class="info-row"><span class="info-label">Android SDK</span><span class="info-value">API ${platform.sdk_int}</span></div>
+          <div class="info-row"><span class="info-label">가속기 벤더</span><span class="info-value" style="color:var(--success);">${platform.accelerator_vendor}</span></div>
+          <div class="info-row"><span class="info-label">SoC 모델</span><span class="info-value">${platform.soc_model || 'N/A'}</span></div>
+        `;
+      } catch (e) {
+        document.getElementById('device-info').innerHTML = '<div class="info-row" style="color:var(--error);">' + e.message + '</div>';
+      }
+
+      refreshLiteRtStatus();
+    }
+
+    function refreshLiteRtStatus() {
+      if (!window.EverSoulAndroid) return;
+      try {
+        const status = JSON.parse(window.EverSoulAndroid.liteRtLmStatus());
+        document.getElementById('litert-info').innerHTML = `
+          <div class="info-row"><span class="info-label">로드된 모델</span><span class="info-value">${status.loaded_file_name || '없음'}</span></div>
+          <div class="info-row"><span class="info-label">활성 백엔드</span><span class="info-value">${status.backend || '없음'}</span></div>
+          <div class="info-row"><span class="info-label">컨텍스트 윈도우</span><span class="info-value">${status.context_window || 0}</span></div>
+        `;
+        const models = JSON.parse(window.EverSoulAndroid.listLiteRtLmModels());
+        document.getElementById('model-list').textContent = JSON.stringify(models, null, 2);
+      } catch (e) {
+        document.getElementById('litert-info').innerHTML = '<div class="info-row" style="color:var(--error);">' + e.message + '</div>';
+      }
+    }
+
+    document.getElementById('btn-nano-prepare').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-nano-prepare');
+      btn.disabled = true;
+      try {
+        await callBridgeAsync('prepareGeminiNano');
+        document.getElementById('nano-info').innerHTML = '<div class="info-row"><span class="info-label">상태</span><span class="info-value" style="color:var(--success);">준비 완료</span></div>';
+      } catch (e) {
+        document.getElementById('nano-info').innerHTML = '<div class="info-row"><span class="info-label">오류</span><span class="info-value" style="color:var(--error);">' + e.message + '</span></div>';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('btn-model-import').addEventListener('click', async () => {
+      try {
+        await callBridgeAsync('importLiteRtLmModel');
+        refreshLiteRtStatus();
+      } catch (e) {
+        alert('모델 가져오기 실패: ' + e.message);
+      }
+    });
+
+    document.getElementById('btn-model-refresh').addEventListener('click', refreshLiteRtStatus);
+
+    document.getElementById('btn-backup-link').addEventListener('click', async () => {
+      try {
+        await callBridgeAsync('linkBackupDirectory');
+        document.getElementById('backup-info').innerHTML = '<div class="info-row"><span class="info-label">상태</span><span class="info-value" style="color:var(--success);">연동 완료</span></div>';
+      } catch (e) {
+        alert('백업 연동 실패: ' + e.message);
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', initDashboard);
+  </script>
+</body>
+</html>
+
