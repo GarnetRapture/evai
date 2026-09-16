@@ -1225,7 +1225,17 @@
   text-overflow: ellipsis;
   pointer-events: none;
   opacity: 0;
-  animation: ever-action-status-flash 4.2s ease forwards;
+  animation: ever-action-status-flash 9s ease forwards;
+}
+
+.ever-action-note {
+  display: block;
+  margin-bottom: 6px;
+  color: #6a5fa8;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 @keyframes ever-action-status-flash {
@@ -6284,6 +6294,86 @@ a.ever-settings-reset-button {
 .ever-memory-roster__empty { margin: 0; color: #bdb7cc; font-size: 13px; }
 .ever-workspace-page.is-canvas .ever-memory-roster { flex: 0 0 auto; max-width: none; width: 100%; margin: 0 0 12px; }
 .ever-memory-graph-empty { margin: 0; padding: 18px 20px; color: #c3bdd2; font-size: 15px; }
+.ever-memory-workbench { flex: 1 1 auto; min-height: 0; display: grid; grid-template-columns: minmax(0,1fr) 400px; gap: 12px; }
+.ever-workspace-page.is-canvas .ever-memory-workbench .ever-memory-graph-shell { min-height: 0; }
+.ever-memory-graph > svg path { animation: ever-graph-edge-enter .7s ease-out both; animation-delay: min(calc(var(--ever-node-order, 0) * 30ms), 1.4s); }
+.ever-memory-graph > svg path.is-rival_attention { animation: ever-graph-edge-enter .7s ease-out both, ever-graph-dash 1.2s linear infinite; }
+.ever-memory-graph > svg path.is-jealousy { stroke: #ff5f7a; stroke-dasharray: 2 6; opacity: .95; animation: ever-graph-edge-enter .7s ease-out both, ever-graph-dash 1.6s linear infinite; }
+.ever-memory-graph > svg path.is-jealousy.is-query { stroke: #ff3d64; filter: drop-shadow(0 0 4px rgba(255,61,100,.55)); }
+.ever-memory-graph > svg text.is-jealousy { fill: #ffb3c0; }
+.ever-memory-graph-legend .is-jealousy i { border-top: 3px dotted #ff5f7a; }
+.ever-memory-node, .ever-memory-card { animation: ever-graph-node-enter .55s cubic-bezier(.2,.9,.3,1.25) both; animation-delay: min(calc(var(--ever-node-order, 0) * 45ms), 1.6s); }
+.ever-memory-node.is-rival { border-color: #ff5f7a; background: radial-gradient(circle at 35% 30%,rgba(122,62,80,.98),rgba(58,40,54,.98)); box-shadow: 0 0 0 5px rgba(255,95,122,.16),0 8px 18px rgba(10,9,18,.3); }
+.ever-memory-node.is-rival > .ever-spirit-row__icon { width: 52%; height: 52%; }
+.ever-memory-node.is-rival strong { font-size: 12px; }
+.ever-memory-node.is-rival small { color: #ffc2cd; }
+@keyframes ever-graph-node-enter { from { opacity: 0; transform: translate(-50%,-50%) scale(.4); } to { opacity: 1; transform: translate(-50%,-50%) scale(1); } }
+@keyframes ever-graph-edge-enter { from { opacity: 0; } }
+.ever-memory-heart { --ever-heart-affection: #3987e5; --ever-heart-trust: #d95926; --ever-heart-longing: #199e70; --ever-heart-hurt: #c98500; --ever-heart-jealousy: #ff5f7a; min-height: 0; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; padding: 16px; border: 1px solid #4c4962; border-radius: 18px; background: #292839; color: #f5f2fa; box-shadow: 0 18px 38px rgba(43,39,64,.2); }
+.ever-memory-heart__head { display: flex; align-items: flex-start; gap: 10px; }
+.ever-memory-heart__head > svg { flex: 0 0 auto; margin-top: 2px; color: #ff9ec2; }
+.ever-memory-heart__head div { display: grid; gap: 4px; }
+.ever-memory-heart__head strong { font-size: 16px; font-weight: 900; }
+.ever-memory-heart__head span { color: #bdb7cc; font-size: 12px; line-height: 1.45; }
+.ever-memory-heart__empty { margin: 0; color: #c3bdd2; font-size: 14px; }
+.ever-memory-heart__tiles { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 6px; }
+.ever-memory-heart__tiles article { display: grid; gap: 2px; padding: 8px 6px; border: 1px solid rgba(255,255,255,.08); border-radius: 10px; background: rgba(255,255,255,.04); text-align: center; }
+.ever-memory-heart__tiles span { display: inline-flex; align-items: center; justify-content: center; gap: 4px; color: #cfc8e2; font-size: 11px; font-weight: 700; }
+.ever-memory-heart__tiles b { color: #f5f2fa; font-size: 22px; font-weight: 900; font-variant-numeric: tabular-nums; }
+.ever-memory-heart i { display: inline-block; flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; background: #7d7699; }
+.ever-memory-heart .is-affection i { background: var(--ever-heart-affection); }
+.ever-memory-heart .is-trust i { background: var(--ever-heart-trust); }
+.ever-memory-heart .is-longing i { background: var(--ever-heart-longing); }
+.ever-memory-heart .is-hurt i { background: var(--ever-heart-hurt); }
+.ever-memory-heart .is-jealousy i { background: var(--ever-heart-jealousy); }
+.ever-memory-heart__expressions { display: grid; gap: 6px; }
+.ever-memory-heart__expressions div { display: grid; grid-template-columns: 128px minmax(0,1fr) 44px; align-items: center; gap: 8px; font-size: 12px; }
+.ever-memory-heart__expressions span { color: #cfc8e2; }
+.ever-memory-heart__expressions b { text-align: right; font-variant-numeric: tabular-nums; }
+.ever-memory-heart__expressions meter { width: 100%; height: 8px; }
+.ever-memory-heart__summary { color: #a9a3ba; font-size: 12px; }
+.ever-memory-heart__legend { display: flex; flex-wrap: wrap; gap: 4px 14px; color: #d8d3e8; font-size: 12px; }
+.ever-memory-heart__legend span { display: inline-flex; align-items: center; gap: 6px; }
+.ever-memory-heart__legend .is-rival b { width: 10px; height: 10px; border-radius: 2px; background: #7d7699; }
+.ever-memory-heart__chart { position: relative; }
+.ever-memory-heart__chart svg { display: block; width: 100%; height: auto; touch-action: pan-y; }
+.ever-memory-heart__tick line { stroke: rgba(255,255,255,.08); stroke-width: 1; }
+.ever-memory-heart__tick text, .ever-memory-heart__day { fill: #a9a3ba; font-size: 10px; dominant-baseline: middle; font-variant-numeric: tabular-nums; }
+.ever-memory-heart__tick text { text-anchor: end; }
+.ever-memory-heart__day.is-end { text-anchor: end; }
+.ever-memory-heart__line { fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; animation: ever-heart-line-enter 1.1s ease-out both; }
+.ever-memory-heart__line.is-affection, .ever-memory-heart__dot.is-affection, .ever-memory-heart__crosshair circle.is-affection { stroke: var(--ever-heart-affection); }
+.ever-memory-heart__line.is-trust, .ever-memory-heart__dot.is-trust, .ever-memory-heart__crosshair circle.is-trust { stroke: var(--ever-heart-trust); }
+.ever-memory-heart__line.is-longing, .ever-memory-heart__dot.is-longing, .ever-memory-heart__crosshair circle.is-longing { stroke: var(--ever-heart-longing); }
+.ever-memory-heart__line.is-hurt, .ever-memory-heart__dot.is-hurt, .ever-memory-heart__crosshair circle.is-hurt { stroke: var(--ever-heart-hurt); }
+.ever-memory-heart__dot, .ever-memory-heart__crosshair circle { fill: #292839; stroke-width: 2; }
+.ever-memory-heart__end { fill: #d8d3e8; font-size: 10px; font-weight: 700; dominant-baseline: middle; }
+.ever-memory-heart__baseline { stroke: rgba(255,255,255,.18); stroke-width: 1; }
+.ever-memory-heart__bar { fill: #7d7699; }
+.ever-memory-heart__crosshair line { stroke: rgba(255,255,255,.35); stroke-width: 1; stroke-dasharray: 3 3; }
+.ever-memory-heart__tooltip { position: absolute; top: 4px; z-index: 2; display: grid; gap: 3px; min-width: 132px; padding: 8px 10px; transform: translateX(-50%); border: 1px solid rgba(255,255,255,.14); border-radius: 10px; background: rgba(33,32,46,.96); box-shadow: 0 10px 22px rgba(10,9,18,.4); color: #f5f2fa; font-size: 12px; pointer-events: none; }
+.ever-memory-heart__tooltip span { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 6px; color: #cfc8e2; }
+.ever-memory-heart__tooltip b { color: #f5f2fa; font-variant-numeric: tabular-nums; }
+.ever-memory-heart__tooltip small { color: #a9a3ba; }
+.ever-memory-heart__table summary { cursor: pointer; color: #d8d3e8; font-size: 12px; font-weight: 700; }
+.ever-memory-heart__table table { width: 100%; margin-top: 8px; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+.ever-memory-heart__table th, .ever-memory-heart__table td { padding: 4px 6px; border-bottom: 1px solid rgba(255,255,255,.08); text-align: right; }
+.ever-memory-heart__table th:first-child { text-align: left; }
+.ever-memory-heart__table thead th { color: #a9a3ba; font-weight: 700; }
+@keyframes ever-heart-line-enter { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+@media (max-width: 1180px) {
+  .ever-workspace-page.is-canvas { overflow-y: auto; }
+  .ever-memory-workbench { grid-template-columns: minmax(0,1fr); }
+  .ever-workspace-page.is-canvas .ever-memory-workbench .ever-memory-graph-shell { min-height: 520px; }
+  .ever-memory-heart { overflow: visible; }
+}
+@media (max-width: 680px) {
+  .ever-memory-heart__tiles { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .ever-memory-heart__expressions div { grid-template-columns: 104px minmax(0,1fr) 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ever-memory-node, .ever-memory-card, .ever-memory-graph > svg path, .ever-memory-heart__line { animation: none; }
+}
 .ever-settings-toggle > span { display: grid; gap: 2px; }
 .ever-settings-toggle > span small { color: #aaa4b9; font-size: 11px; line-height: 1.4; }
 .ever-cheat-layout { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: minmax(240px, 320px) minmax(0, 1fr); gap: 16px; align-items: start; }

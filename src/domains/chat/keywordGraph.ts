@@ -128,7 +128,7 @@ export function buildPersonaKeywordEpisode(memory: PersonaRecalledMemoryRecord, 
         memory_id: memory.id,
         occurred_at: memory.created_at,
         user_text: userMessage?.content ?? turnMemoryLineBody(userLine),
-        spirit_action: spiritEnvelope.action,
+        spirit_action: spiritMessage?.spirit_action ?? spiritEnvelope.action,
         spirit_messages: spiritEnvelope.messages,
     };
 }

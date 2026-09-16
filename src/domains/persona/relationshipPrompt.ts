@@ -47,7 +47,7 @@ export function buildPersonaRelationshipSection(relations: readonly PersonaRelat
     });
     return lines.length === 0
         ? ''
-        : '[SOULS YOU KNOW]\nOther souls from your own life, closest first. Speak of them the way your own words below show, call them the way you always do, and never invent events with them.\n'
+        : '[SOULS YOU KNOW]\nOther souls from your own life, closest first. Speak of them the way your own words below show, call them the way you always do, and speak of what you have really shared with them as shown here.\n'
             + lines.join('\n');
 }
 

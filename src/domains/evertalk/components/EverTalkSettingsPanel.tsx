@@ -36,6 +36,7 @@ export function EverTalkSettingsPanel({ controller }: WorkspacePageProps) {
             onReset={controller.resetAppData}
             onSetLanguage={controller.setLanguage}
             onSetShowReasoning={controller.setShowReasoning}
+            onSetProactiveMessagesEnabled={controller.setProactiveMessagesEnabled}
             onSetCheatModeEnabled={controller.setCheatModeEnabled}
             onRefreshModelCatalog={controller.refreshModelCatalog}
             onSelectChatModel={controller.selectChatModel}

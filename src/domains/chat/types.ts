@@ -46,6 +46,7 @@ export interface ChatMessage {
     created_at: string;
     delivery?: ChatMessageDelivery;
     read_at?: string | null;
+    spirit_action?: string;
 }
 export interface ChatError {
     code: string;
@@ -63,7 +64,7 @@ export interface PersonaSystemPrompt {
     voice: import('../persona/types').PersonaVoiceAnchor;
     inner_voice_core: string;
 }
-export type PersonaReplyViolation = 'meta_breach' | 'language_drift' | 'question_only' | 'register_drift' | 'repeated_reply';
+export type PersonaReplyViolation = 'meta_breach' | 'language_drift' | 'echo_user' | 'deflected_question' | 'question_only' | 'register_drift' | 'repeated_reply';
 export interface PersonaReplyParts {
     actions: string[];
     spoken: string;
@@ -83,6 +84,7 @@ export interface PersonaReplyShape {
 }
 export interface PersonaReplyGeneration {
     content: string;
+    action: string;
     cancelled: boolean;
     redirected: boolean;
     truncated_message_count: number;
@@ -99,6 +101,7 @@ export interface PersonaConversationStateRequest {
 export interface PersonaConversationState {
     has_previous_exchange: boolean;
     last_spirit_inner_thought: string;
+    last_spirit_lines: string[];
     last_spirit_asked_question: boolean;
     minutes_since_last_message: number | null;
     responds_to_user_message: boolean;
@@ -111,6 +114,59 @@ export interface PersonaFamiliaritySource {
 export interface PersonaTimelineEntry {
     message: ChatMessage;
     persona_id: string;
+}
+export interface PersonaHeartState {
+    affection: number;
+    trust: number;
+    longing: number;
+    hurt: number;
+    jealousy: number;
+    contact_days: number;
+    savior_message_count: number;
+    affectionate_message_count: number;
+    hurtful_message_count: number;
+    last_contact_at: string;
+    hours_since_contact: number | null;
+}
+export interface PersonaHeartExpression {
+    heart: PersonaHeartState;
+    openness: number;
+    outward_warmth: number;
+    receptiveness: number;
+    initiative: number;
+}
+export interface PersonaHeartTimelinePoint {
+    day: string;
+    affection: number;
+    trust: number;
+    longing: number;
+    hurt: number;
+    savior_message_count: number;
+    rival_message_count: number;
+}
+export interface PersonaJealousyLink {
+    from_persona_id: string;
+    to_persona_id: string;
+    stir: number;
+    savior_messages_to_target: number;
+    recent_messages_to_target: number;
+}
+export interface PersonaProactiveSchedule {
+    urge: number;
+    persistence: number;
+    unanswered_count: number;
+    min_idle_ms: number;
+    cooldown_ms: number;
+    chance: number;
+    max_unanswered: number;
+}
+export interface PersonaHeartRequest {
+    persona_id: string;
+    timeline: readonly PersonaTimelineEntry[];
+    now: string;
+    temperament: import('../persona/types').PersonaTemperament;
+    familiarity_level: number;
+    jealousy: number | null;
 }
 export interface PersonaEmotionPresetApplication {
     levels: import('./affect').PersonaEmotionLevels;
@@ -191,6 +247,7 @@ export interface PersonaTurnContextSources {
     knowledge: string[];
     story_moments: string[];
     emotion: import('./affect').PersonaEmotionState | null;
+    heart: PersonaHeartExpression | null;
     familiarity_level: number;
     profile_mentions: import('../persona/types').PersonaProfileMention[];
     affinity_gained: PersonaAffinityGain[];
@@ -270,6 +327,7 @@ export interface PersonaTurnContextRequest {
     affinity_gained: PersonaAffinityGain[];
     familiarity_level: number;
     contact: PersonaContactSnapshot;
+    temperament: import('../persona/types').PersonaTemperament;
 }
 export interface ChatSendRequest {
     room_id: string;
@@ -427,4 +485,7 @@ export interface PersonaContextGraph {
     relations: PersonaContextRelation[];
     sessions: PersonaSessionDigestEntry[];
     behavior_stages: PersonaBehaviorStage[];
+    heart: PersonaHeartExpression | null;
+    heart_timeline: PersonaHeartTimelinePoint[];
+    jealousy_links: PersonaJealousyLink[];
 }

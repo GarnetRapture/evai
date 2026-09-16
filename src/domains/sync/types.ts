@@ -133,7 +133,6 @@ export interface BrowserStorageInspection {
     backend: AppStorageKind;
     database_name: string;
     engine_version: string | null;
-    schema_version: string | null;
     server_version: string | null;
     server_port: number | null;
     origin: string;

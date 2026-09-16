@@ -24,9 +24,24 @@ const CANONICAL_SAVIOR_SPEAKER: Record<AppLanguage, string> = {
     zh_cn: '救援者',
 };
 const SAVIOR_CHOICE_RUN_LENGTH = 2;
+const SYSTEM_NOTICE_WRAPPED_PATTERN = /^\s*(?:\[([^\]]*)\]|［([^］]*)］|\(([^)]*)\)|（([^）]*)）)\s*$/u;
+const SYSTEM_NOTICE_LETTER_PATTERN = /[\p{Lu}\p{Ll}\p{Lo}]/gu;
+const SYSTEM_NOTICE_MIN_LETTERS = 3;
+const KOREAN_HONORIFIC_SELF_SUBJECT_SUFFIX = ' 님이 ';
 
 export function isSaviorSpeaker(speaker: string, language: AppLanguage): boolean {
     return SAVIOR_SPEAKERS[language].has(speaker);
+}
+
+export function isKoreanSystemNoticeDialogue(dialogue: LocalizedDialogue): boolean {
+    const speaker = dialogue.speaker.replace(/\s+/gu, ' ').trim();
+    const message = dialogue.message.replace(/\s+/gu, ' ').trim();
+    const wrapped = SYSTEM_NOTICE_WRAPPED_PATTERN.exec(message);
+    if (wrapped !== null) {
+        const inner = wrapped[1] ?? wrapped[2] ?? wrapped[3] ?? wrapped[4] ?? '';
+        return (inner.match(SYSTEM_NOTICE_LETTER_PATTERN)?.length ?? 0) >= SYSTEM_NOTICE_MIN_LETTERS;
+    }
+    return speaker.length > 0 && message.startsWith(`${speaker}${KOREAN_HONORIFIC_SELF_SUBJECT_SUFFIX}`);
 }
 
 function choiceRunKey(message: string): string {

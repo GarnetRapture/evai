@@ -93,7 +93,6 @@ export async function inspectBrowserStorage(): Promise<BrowserStorageInspection>
         backend: isLocalServer ? 'sqlite' : 'indexeddb',
         database_name: serverStatus === null ? EVERSOUL_DATABASE_NAME : serverStatus.database_path,
         engine_version: serverSchema?.sqlite_version ?? null,
-        schema_version: serverSchema?.schema_version ?? null,
         server_version: runtime.server?.version ?? null,
         server_port: runtime.server?.port ?? null,
         origin: typeof window === 'undefined' ? '' : window.location.origin,

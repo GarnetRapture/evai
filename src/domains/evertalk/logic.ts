@@ -1,6 +1,6 @@
 import { isDomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
-import { EVERTALK_SESSION_TITLE, removeJsonResidue, repairHangulComposition, splitPersonaReplyActions, type ChatMessage, type ChatRoom, type PersonaContextGraph, type PersonaContextRelation, type PersonaKeywordThread, type PersonaMemoryOverview } from '../chat';
+import { EVERTALK_SESSION_TITLE, removeJsonResidue, repairHangulComposition, splitPersonaReplyActions, type ChatMessage, type ChatRoom, type PersonaContextGraph, type PersonaContextRelation, type PersonaHeartTimelinePoint, type PersonaKeywordThread, type PersonaMemoryOverview } from '../chat';
 import type { ChatModelCatalog, ChatModelEntry, LlmStatus, LocalModelFileEntry, ModelDownloadProgress, OllamaModelLibrary, OnDeviceSystemModelEntry } from '../llm';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
@@ -15,7 +15,7 @@ export {
 } from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, ChatModelModeSelection, ChatModelSelection, GuideChecklistDraft, GuideChecklistInput, GuideChecklistStep, GuideStepState, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphArcPlacement, MemoryGraphBounds, MemoryGraphDetailPosition, MemoryGraphEdge, MemoryGraphEmphasis, MemoryGraphLayout, MemoryGraphLayoutSubject, MemoryGraphNode, MemoryGraphPoint, MemoryGraphViewFilter, MemoryGraphViewTransform, GenerationEngineLimit, MemoryOverviewRow, MemorySpiritRosterEntry, SelectableChatModelOption, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice, TopNavigationEntry, TopNavigationOptions } from './types';
+import type { ApiConnectionState, ApiStatusItem, ChatModelModeSelection, ChatModelSelection, GuideChecklistDraft, GuideChecklistInput, GuideChecklistStep, GuideStepState, HeartTimelineChart, HeartTimelineSeries, HeartTimelineSeriesKey, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphArcPlacement, MemoryGraphBounds, MemoryGraphDetailPosition, MemoryGraphEdge, MemoryGraphEmphasis, MemoryGraphLayout, MemoryGraphLayoutSubject, MemoryGraphNode, MemoryGraphPoint, MemoryGraphViewFilter, MemoryGraphViewTransform, GenerationEngineLimit, MemoryOverviewRow, MemorySpiritRosterEntry, SelectableChatModelOption, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice, TopNavigationEntry, TopNavigationOptions } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -180,6 +180,10 @@ export function parseThinkBlocks(text: string): ThinkBlock[] {
     }
     return parts;
 }
+export function collectSpiritActions(inlineActions: readonly string[], storedAction: string | undefined): string[] {
+    const stored = storedAction?.trim() ?? '';
+    return [...new Set([...inlineActions, ...(stored.length > 0 ? [stored] : [])])];
+}
 export function shouldAnnounceSpiritActions(message: ChatMessage, index: number, messageCount: number): boolean {
     return index === messageCount - 1 && message.role === 'assistant' && message.delivery === 'proactive';
 }
@@ -292,6 +296,12 @@ const MEMORY_GRAPH_CARD_GAP = 28;
 const MEMORY_GRAPH_STAGE_COLUMNS = 2;
 const MEMORY_GRAPH_ROW_GAP = 130;
 const MEMORY_GRAPH_MIN_EDGE_WEIGHT = 0.15;
+const MEMORY_GRAPH_NETWORK_RADIUS = 58;
+const HEART_SCALE_MAX = 100;
+const HEART_TIMELINE_Y_TICKS = [0, 25, 50, 75, 100];
+const HEART_TIMELINE_SERIES_KEYS: readonly HeartTimelineSeriesKey[] = ['affection', 'trust', 'longing', 'hurt'];
+const HEART_TIMELINE_BAR_GAP_PX = 2;
+const HEART_TIMELINE_END_LABEL_GAP_PX = 12;
 
 function memoryKeywordEmphasis(thread: PersonaKeywordThread): MemoryGraphEmphasis {
     if (thread.keyword.query_match) return 'query';
@@ -687,7 +697,7 @@ export function buildMemoryContextGraphLayout(
         width: MEMORY_GRAPH_PERSONA_RADIUS * 2,
         height: MEMORY_GRAPH_PERSONA_RADIUS * 2,
         title: subject.spirit_name,
-        value: `Lv.${graph.familiarity_level}`,
+        value: labels.memoryGraphPersonaHeartValue(graph.familiarity_level, graph.heart?.heart.affection ?? null),
         lines: [],
         emphasis: 'query',
         rank: 0,
@@ -724,7 +734,30 @@ export function buildMemoryContextGraphLayout(
         rank: order + 1,
     }));
     const stagesBottom = stageNodes.length === 0 ? center.y : stageTop + stageRows * (MEMORY_GRAPH_STAGE_HEIGHT + MEMORY_GRAPH_CARD_GAP) - MEMORY_GRAPH_CARD_GAP;
-    const sessionY = Math.max(center.y + clusterHalfHeight, stagesBottom) + MEMORY_GRAPH_ROW_GAP + MEMORY_GRAPH_SESSION_HEIGHT / 2;
+    const relationNodeIdByPersona = new Map(graph.relations.flatMap((relation) => relation.relation.persona_ids.map((personaId) => [personaId, `relation:${relation.relation.character_key}`] as const)));
+    const networkPersonaIds = [...new Set(graph.jealousy_links.flatMap((link) => [link.from_persona_id, link.to_persona_id]))]
+        .filter((personaId) => personaId !== graph.persona_id && !relationNodeIdByPersona.has(personaId));
+    const networkY = center.y + clusterHalfHeight + MEMORY_GRAPH_ROW_GAP + MEMORY_GRAPH_NETWORK_RADIUS;
+    const networkSpacing = MEMORY_GRAPH_NETWORK_RADIUS * 2 + MEMORY_GRAPH_CARD_GAP;
+    const networkNodes = networkPersonaIds.map((personaId, order): MemoryGraphNode => {
+        const strongestStir = Math.max(0, ...graph.jealousy_links.filter((link) => link.from_persona_id === personaId || link.to_persona_id === personaId).map((link) => link.stir));
+        return {
+            id: `spirit:${personaId}`,
+            personaId,
+            kind: 'rival',
+            x: center.x + (order - (networkPersonaIds.length - 1) / 2) * networkSpacing,
+            y: networkY,
+            width: MEMORY_GRAPH_NETWORK_RADIUS * 2,
+            height: MEMORY_GRAPH_NETWORK_RADIUS * 2,
+            title: subject.resolve_spirit_name(personaId),
+            value: labels.memoryGraphJealousyNodeValue(strongestStir),
+            lines: [],
+            emphasis: 'recent',
+            rank: order + 1,
+        };
+    });
+    const networkBottom = networkNodes.length === 0 ? center.y : networkY + MEMORY_GRAPH_NETWORK_RADIUS;
+    const sessionY = Math.max(center.y + clusterHalfHeight, stagesBottom, networkBottom) + MEMORY_GRAPH_ROW_GAP + MEMORY_GRAPH_SESSION_HEIGHT / 2;
     const sessionRowLeft = saviorX - MEMORY_GRAPH_SAVIOR_RADIUS;
     const sessionNodes = graph.sessions.map((session, order): MemoryGraphNode => ({
         id: `session:${session.room_id}`,
@@ -824,6 +857,7 @@ export function buildMemoryContextGraphLayout(
                 emphasis: 'history',
             }];
         }),
+        ...buildJealousyEdges(graph, persona, [...relationNodes, ...networkNodes], relationNodeIdByPersona, subject, labels),
         ...stageNodes.map((node, order): MemoryGraphEdge => ({
             id: `edge:${node.id}`,
             source: order === 0 ? persona : stageNodes[order - 1],
@@ -844,11 +878,104 @@ export function buildMemoryContextGraphLayout(
         })),
     ];
     return normalizeMemoryGraphLayout({
-        nodes: [savior, persona, ...keywordNodes, ...relationNodes, ...stageNodes, ...sessionNodes],
+        nodes: [savior, persona, ...keywordNodes, ...relationNodes, ...networkNodes, ...stageNodes, ...sessionNodes],
         edges,
         width: 0,
         height: 0,
     });
+}
+
+function buildJealousyEdges(
+    graph: PersonaContextGraph,
+    persona: MemoryGraphNode,
+    spiritNodes: readonly MemoryGraphNode[],
+    relationNodeIdByPersona: ReadonlyMap<string, string>,
+    subject: MemoryGraphLayoutSubject,
+    labels: EverTalkLabels,
+): MemoryGraphEdge[] {
+    const nodeById = new Map(spiritNodes.map((node) => [node.id, node]));
+    const nodeForPersona = (personaId: string): MemoryGraphNode | undefined => personaId === graph.persona_id
+        ? persona
+        : nodeById.get(relationNodeIdByPersona.get(personaId) ?? `spirit:${personaId}`);
+    const pairs = new Map<string, { first: string; second: string; forward: number | null; backward: number | null }>();
+    for (const link of graph.jealousy_links) {
+        const [first, second] = [link.from_persona_id, link.to_persona_id].sort();
+        const key = `${first} ${second}`;
+        const current = pairs.get(key) ?? { first, second, forward: null, backward: null };
+        if (link.from_persona_id === first) {
+            current.forward = link.stir;
+        }
+        else {
+            current.backward = link.stir;
+        }
+        pairs.set(key, current);
+    }
+    return [...pairs.values()].flatMap((pair): MemoryGraphEdge[] => {
+        const source = nodeForPersona(pair.first);
+        const target = nodeForPersona(pair.second);
+        if (source === undefined || target === undefined) {
+            return [];
+        }
+        const strongest = Math.max(pair.forward ?? 0, pair.backward ?? 0);
+        return [{
+            id: `edge:jealousy:${pair.first}:${pair.second}`,
+            source,
+            target,
+            kind: 'jealousy',
+            label: labels.memoryGraphEdgeJealousyLabel(subject.resolve_spirit_name(pair.first), pair.forward, subject.resolve_spirit_name(pair.second), pair.backward),
+            weight: Math.max(MEMORY_GRAPH_MIN_EDGE_WEIGHT, strongest / HEART_SCALE_MAX),
+            emphasis: strongest >= HEART_SCALE_MAX / 2 ? 'query' : 'recent',
+        }];
+    });
+}
+
+export function buildHeartTimelineChart(points: readonly PersonaHeartTimelinePoint[], width: number, plotHeight: number, barHeight: number, barGap: number): HeartTimelineChart {
+    const stepX = points.length <= 1 ? 0 : width / (points.length - 1);
+    const xPositions = points.map((_, index) => points.length <= 1 ? width / 2 : index * stepX);
+    const yFor = (value: number) => plotHeight - (Math.max(0, Math.min(HEART_SCALE_MAX, value)) / HEART_SCALE_MAX) * plotHeight;
+    const series = HEART_TIMELINE_SERIES_KEYS.map((key): HeartTimelineSeries => {
+        const coordinates = points.map((point, index) => ({ x: xPositions[index], y: yFor(point[key]) }));
+        const last = coordinates.at(-1) ?? { x: 0, y: plotHeight };
+        return {
+            key,
+            path: coordinates.map((coordinate, index) => `${index === 0 ? 'M' : 'L'} ${coordinate.x.toFixed(1)} ${coordinate.y.toFixed(1)}`).join(' '),
+            coordinates,
+            end: last,
+            end_label_y: last.y,
+            end_value: points.at(-1)?.[key] ?? 0,
+        };
+    });
+    const endLabelOrder = [...series].sort((a, b) => a.end.y - b.end.y);
+    for (let index = 1; index < endLabelOrder.length; index += 1) {
+        endLabelOrder[index].end_label_y = Math.max(endLabelOrder[index].end_label_y, endLabelOrder[index - 1].end_label_y + HEART_TIMELINE_END_LABEL_GAP_PX);
+    }
+    const maxRivalCount = Math.max(0, ...points.map((point) => point.rival_message_count));
+    const barTop = plotHeight + barGap;
+    const barWidth = Math.max(1, (points.length <= 1 ? width / 4 : stepX) - HEART_TIMELINE_BAR_GAP_PX);
+    return {
+        width,
+        plot_height: plotHeight,
+        bar_top: barTop,
+        bar_height: barHeight,
+        x_positions: xPositions,
+        y_ticks: HEART_TIMELINE_Y_TICKS.map((value) => ({ value, y: yFor(value) })),
+        series,
+        bars: points.map((point, index) => {
+            const height = maxRivalCount === 0 ? 0 : (point.rival_message_count / maxRivalCount) * barHeight;
+            return { day: point.day, x: xPositions[index] - barWidth / 2, y: barTop + barHeight - height, width: barWidth, height, count: point.rival_message_count };
+        }),
+        max_rival_count: maxRivalCount,
+    };
+}
+
+export function nearestHeartTimelineIndex(chart: HeartTimelineChart, x: number): number {
+    let nearest = 0;
+    chart.x_positions.forEach((position, index) => {
+        if (Math.abs(position - x) < Math.abs(chart.x_positions[nearest] - x)) {
+            nearest = index;
+        }
+    });
+    return nearest;
 }
 
 function normalizeMemoryGraphLayout(layout: MemoryGraphLayout): MemoryGraphLayout {

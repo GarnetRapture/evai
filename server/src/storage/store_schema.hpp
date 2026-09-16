@@ -54,7 +54,6 @@ struct QueryPlan {
 [[nodiscard]] const StoreIndex* find_store_index(const StoreDescriptor& descriptor, std::string_view index);
 [[nodiscard]] std::span<const std::string_view> restore_store_order();
 [[nodiscard]] std::string_view evai_schema_sql();
-[[nodiscard]] std::string_view evai_schema_version();
 
 [[nodiscard]] std::string build_get_sql(const StoreDescriptor& descriptor);
 [[nodiscard]] std::string build_put_sql(const StoreDescriptor& descriptor, bool insert_only);

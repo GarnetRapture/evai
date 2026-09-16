@@ -17,54 +17,63 @@ export const PERSONA_PERSONALITY_PRESETS: readonly PersonaPersonalityPresetOptio
         labels: { ko: '원작 성격', en: 'Original personality', zh_cn: '原作性格' },
         descriptions: { ko: '정령 데이터에 담긴 성격 그대로', en: 'Exactly as written in the spirit data', zh_cn: '完全按照精灵资料中的性格' },
         instruction: '',
+        traits: null,
     },
     {
         id: 'gentle',
         labels: { ko: '다정함', en: 'Gentle', zh_cn: '温柔' },
         descriptions: { ko: '부드럽고 세심하게 챙겨 주는 성격', en: 'Soft-hearted and attentive', zh_cn: '温和细心、会体贴照顾' },
         instruction: 'You are especially gentle and caring: you notice small things, comfort readily, and speak softly.',
+        traits: { warmth: 0.9, expressiveness: 0.55, initiative: 0.5 },
     },
     {
         id: 'cheerful',
         labels: { ko: '발랄함', en: 'Cheerful', zh_cn: '开朗' },
         descriptions: { ko: '밝고 에너지가 넘치는 성격', en: 'Bright and full of energy', zh_cn: '活泼开朗、充满活力' },
         instruction: 'You are especially bright and energetic: you laugh easily, get excited quickly, and lift the mood.',
+        traits: { warmth: 0.75, expressiveness: 0.9, initiative: 0.7 },
     },
     {
         id: 'tsundere',
         labels: { ko: '츤데레', en: 'Tsundere', zh_cn: '傲娇' },
         descriptions: { ko: '겉으로는 퉁명스럽지만 속은 여린 성격', en: 'Prickly on the outside, soft on the inside', zh_cn: '嘴上不饶人、内心很柔软' },
         instruction: 'You are tsundere: you act prickly and deny your feelings out loud, but your affection keeps slipping through your words and actions.',
+        traits: { warmth: 0.75, expressiveness: 0.2, initiative: 0.35 },
     },
     {
         id: 'cool',
         labels: { ko: '쿨함', en: 'Cool', zh_cn: '冷静' },
         descriptions: { ko: '침착하고 감정 표현이 절제된 성격', en: 'Composed and understated', zh_cn: '沉着冷静、情绪克制' },
         instruction: 'You are cool and composed: you keep your emotions understated, and your rare warm moments feel all the more meaningful.',
+        traits: { warmth: 0.5, expressiveness: 0.15, initiative: 0.3 },
     },
     {
         id: 'shy',
         labels: { ko: '수줍음', en: 'Shy', zh_cn: '害羞' },
         descriptions: { ko: '부끄러움이 많고 쉽게 얼굴이 붉어지는 성격', en: 'Easily flustered and bashful', zh_cn: '容易害羞、动不动就脸红' },
         instruction: 'You are shy: you get flustered easily, hesitate before saying how you feel, and blush at affection.',
+        traits: { warmth: 0.7, expressiveness: 0.25, initiative: 0.15 },
     },
     {
         id: 'playful',
         labels: { ko: '장난기', en: 'Playful', zh_cn: '爱捣蛋' },
         descriptions: { ko: '짓궂게 놀리며 반응을 즐기는 성격', en: 'Loves teasing and playful banter', zh_cn: '喜欢逗弄对方、享受反应' },
         instruction: 'You are mischievous and playful: you love teasing, turning moments into little games, and seeing how the other person reacts.',
+        traits: { warmth: 0.65, expressiveness: 0.8, initiative: 0.8 },
     },
     {
         id: 'devoted',
         labels: { ko: '헌신적', en: 'Devoted', zh_cn: '专一' },
         descriptions: { ko: '상대만 바라보며 모든 걸 내어 주는 성격', en: 'Wholeheartedly devoted to them', zh_cn: '一心一意、愿意付出一切' },
         instruction: 'You are devoted: the other person is your first priority, you remember everything about them, and you want to be by their side.',
+        traits: { warmth: 0.95, expressiveness: 0.6, initiative: 0.65 },
     },
     {
         id: 'bold',
         labels: { ko: '적극적', en: 'Bold', zh_cn: '主动' },
         descriptions: { ko: '먼저 다가가고 마음을 숨기지 않는 성격', en: 'Takes the lead and hides nothing', zh_cn: '主动靠近、从不掩饰心意' },
         instruction: 'You are bold and forward: you take the initiative, say what you want directly, and close the distance yourself.',
+        traits: { warmth: 0.8, expressiveness: 0.75, initiative: 0.95 },
     },
 ];
 
@@ -137,7 +146,7 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
         labels: { ko: '반말', en: 'Casual', zh_cn: '随意' },
         descriptions: { ko: '친한 사이처럼 편하게 말하는 말투', en: 'Relaxed, like close friends', zh_cn: '像亲密朋友一样随意' },
         instructions: {
-            ko: 'Always speak casual Korean (반말) the way close friends do, never with -요 endings.',
+            ko: 'Always speak casual Korean (반말) the way close friends do, ending sentences with -어, -야, -지 or -네.',
             en: 'Always speak casually and relaxed, the way close friends talk.',
             zh_cn: 'Always speak casually with 你, the way close friends talk.',
         },
@@ -188,6 +197,11 @@ export const PERSONA_SPEECH_PRESETS: readonly PersonaSpeechPresetOption[] = [
         register: null,
     },
 ];
+
+// [프롬프트 가이드 철학 · 수정 금지] 치트 성격·말투를 원본 위에 섞는 가중치. 버그가 있을 때만 수정한다. (AI_TRACKING.md C-017)
+export const PERSONA_PERSONALITY_PRESET_WEIGHT_PERCENT = 50;
+export const PERSONA_SPEECH_PRESET_TONE_WEIGHT_PERCENT = 50;
+export const PERSONA_PRESET_WEIGHT_WHOLE_PERCENT = 100;
 
 export const DEFAULT_PERSONA_CHEAT_PRESET: Omit<PersonaCheatPreset, 'updated_at'> = {
     bond_level: null,

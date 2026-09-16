@@ -35,7 +35,7 @@ constexpr std::array<ConsoleMessages, 3> messages{{
         "EverSoul AI Chat by Nekoi - Server",
         "실행 폴더",
         "데이터베이스",
-        "구동 중 · SQLite 스키마",
+        "구동 중",
         "저장된 레코드",
         "Ollama",
         "연결됨",
@@ -50,7 +50,7 @@ constexpr std::array<ConsoleMessages, 3> messages{{
         "EverSoul AI Chat by Nekoi - Server",
         "Root folder",
         "Database",
-        "running · SQLite schema",
+        "running",
         "stored records",
         "Ollama",
         "connected",
@@ -65,7 +65,7 @@ constexpr std::array<ConsoleMessages, 3> messages{{
         "EverSoul AI Chat by Nekoi - Server",
         "运行文件夹",
         "数据库",
-        "运行中 · SQLite 架构",
+        "运行中",
         "已保存记录",
         "Ollama",
         "已连接",
@@ -146,7 +146,7 @@ void print_status_report(ConsoleLanguage language, const ServerStatusReport& rep
     const ConsoleMessages& text = localized(language);
     std::cout << clear_screen;
     print_banner();
-    std::cout << ready << "  ●  " << bright << text.database_label << reset << "  " << text.database_ready << ' ' << report.database_schema_version
+    std::cout << ready << "  ●  " << bright << text.database_label << reset << "  " << text.database_ready
               << dim << "  ·  " << reset << text.database_records << ' ' << report.database_record_count << '\n'
               << dim << "     " << report.database_file.string() << reset << "\n\n"
               << (report.ollama_available ? ready : warning) << "  ●  " << bright << text.ollama_label << reset << "  "

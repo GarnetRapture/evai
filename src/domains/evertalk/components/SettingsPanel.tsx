@@ -7,7 +7,7 @@ import type { SettingsPanelProps, SettingsSectionKey } from '../types';
 import { ModelCatalogSection } from './ModelCatalogSection';
 import { EnvironmentLayer } from './EnvironmentLayer';
 
-export function SettingsPanel({ open: isOpen, appPlatform, storageKind, llmStatus, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelCatalogRefreshing, modelPreparation, modelLoadingId, generationEngineLimits, llmSessionStatuses, llmRequestStatuses, isResetting, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupMessage, backupError, backupDirectoryStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onRefreshModelCatalog, onSelectChatModel, onOpenGuide, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onSaveChromeModelFolderPath, onLinkChromeLocalState, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveOllamaBaseUrl, onSaveGenerationLimits, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, appPlatform, storageKind, llmStatus, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelCatalogRefreshing, modelPreparation, modelLoadingId, generationEngineLimits, llmSessionStatuses, llmRequestStatuses, isResetting, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupMessage, backupError, backupDirectoryStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetProactiveMessagesEnabled, onSetCheatModeEnabled, onRefreshModelCatalog, onSelectChatModel, onOpenGuide, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onSaveChromeModelFolderPath, onLinkChromeLocalState, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveOllamaBaseUrl, onSaveGenerationLimits, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     const [activeSection, setActiveSection] = useState<SettingsSectionKey>('general');
     const contentRef = useRef<HTMLDivElement>(null);
@@ -78,6 +78,13 @@ export function SettingsPanel({ open: isOpen, appPlatform, storageKind, llmStatu
           <label className="ever-settings-toggle">
             <span>{labels.showReasoning}</span>
             <input type="checkbox" checked={settings?.show_reasoning ?? true} onChange={(event) => void onSetShowReasoning(event.target.checked)}/>
+          </label>
+          <label className="ever-settings-toggle">
+            <span>
+              {labels.proactiveMessages}
+              <small>{labels.proactiveMessagesDescription}</small>
+            </span>
+            <input type="checkbox" checked={settings?.proactive_messages_enabled ?? true} onChange={(event) => void onSetProactiveMessagesEnabled(event.target.checked)}/>
           </label>
           <label className="ever-settings-toggle">
             <span>

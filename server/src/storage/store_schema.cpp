@@ -12,15 +12,8 @@ namespace evai::server::storage {
 
 namespace {
 
-constexpr std::string_view schema_version = "1";
-
 constexpr std::string_view schema_sql = R"sql(
 PRAGMA foreign_keys = OFF;
-
-CREATE TABLE IF NOT EXISTS schema_meta (
-    meta_key TEXT PRIMARY KEY,
-    meta_value TEXT NOT NULL
-) STRICT, WITHOUT ROWID;
 
 CREATE TABLE IF NOT EXISTS persona (
     id TEXT PRIMARY KEY,
@@ -362,11 +355,6 @@ std::span<const std::string_view> restore_store_order()
 std::string_view evai_schema_sql()
 {
     return schema_sql;
-}
-
-std::string_view evai_schema_version()
-{
-    return schema_version;
 }
 
 std::string build_get_sql(const StoreDescriptor& descriptor)

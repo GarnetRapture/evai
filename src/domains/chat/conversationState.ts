@@ -16,7 +16,7 @@ function findLastSpiritReply(history: readonly ChatMessage[]): ChatMessage | nul
             return false;
         }
         const envelope = envelopeFromStoredReply(message.content);
-        return envelope.messages.length > 0 || envelope.action.length > 0;
+        return envelope.messages.length > 0;
     }) ?? null;
 }
 
@@ -24,10 +24,12 @@ export function analyzeConversationState(request: PersonaConversationStateReques
     const sessionHistory = request.history.filter((message) => message.role === 'user' || message.role === 'assistant');
     const lastSpiritReply = findLastSpiritReply(sessionHistory);
     const lastMessage = sessionHistory.at(-1);
+    const lastSpiritEnvelope = lastSpiritReply === null ? null : envelopeFromStoredReply(lastSpiritReply.content);
     return {
         has_previous_exchange: lastSpiritReply !== null,
         last_spirit_inner_thought: lastSpiritReply === null ? '' : extractReasoning(lastSpiritReply.content),
-        last_spirit_asked_question: lastSpiritReply !== null && envelopeFromStoredReply(lastSpiritReply.content).messages.some((line) => QUESTION_MARK_PATTERN.test(line)),
+        last_spirit_lines: lastSpiritEnvelope?.messages ?? [],
+        last_spirit_asked_question: lastSpiritEnvelope !== null && lastSpiritEnvelope.messages.some((line) => QUESTION_MARK_PATTERN.test(line)),
         minutes_since_last_message: lastMessage === undefined ? null : minutesBetween(lastMessage.created_at, request.latest_at),
         responds_to_user_message: request.latest_user_text !== null,
     };

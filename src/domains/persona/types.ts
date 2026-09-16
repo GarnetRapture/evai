@@ -23,6 +23,23 @@ export interface PersonaPresetOption<Id extends string> {
 }
 export interface PersonaPersonalityPresetOption extends PersonaPresetOption<PersonaPersonalityPresetId> {
     instruction: string;
+    traits: PersonaTemperamentTraits | null;
+}
+export type PersonaTemperamentTrait = 'warmth' | 'expressiveness' | 'initiative';
+export type PersonaTemperamentTraits = Record<PersonaTemperamentTrait, number>;
+export interface PersonaTemperamentEvidence {
+    measured_lines: number;
+    warm_lines: number;
+    cold_lines: number;
+    expressive_lines: number;
+    reserved_lines: number;
+    proposal_lines: number;
+}
+export interface PersonaTemperament {
+    warmth: number | null;
+    expressiveness: number | null;
+    initiative: number | null;
+    evidence: PersonaTemperamentEvidence;
 }
 export interface PersonaSpeechPresetOption extends PersonaPresetOption<PersonaSpeechPresetId> {
     instructions: Record<AppLanguage, string>;

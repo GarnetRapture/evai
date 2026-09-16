@@ -9,6 +9,7 @@ import { CheatModePage } from './CheatModePage';
 import { GuidePage } from './GuidePage';
 import { MemoryKeywordDetail, MemoryRelationDetail } from './MemoryContextDetails';
 import { MemoryGraphCanvas } from './MemoryGraphCanvas';
+import { MemoryHeartPanel } from './MemoryHeartPanel';
 import { MemorySpiritRoster } from './MemorySpiritRoster';
 import { StorageStoreCard } from './StorageDataManager';
 import { SpiritViewAvatar, WorkspaceSurface } from './WorkspaceSurface';
@@ -54,7 +55,6 @@ export function StorageAnalyticsPage({ controller }: WorkspacePageProps) {
                         <div><dt>Origin</dt><dd>{inspection?.origin || '-'}</dd></div>
                         <div><dt>{labels.storageBackendName[inspection?.backend ?? controller.storageKind]}</dt><dd>{inspection?.database_name || '-'}</dd></div>
                         {inspection?.engine_version ? <div><dt>SQLite</dt><dd>{inspection.engine_version}</dd></div> : null}
-                        {inspection?.schema_version ? <div><dt>{labels.storageSchemaVersion}</dt><dd>{inspection.schema_version}</dd></div> : null}
                         {inspection?.server_version ? (<div>
                             <dt>{labels.storageServerVersion}</dt>
                             <dd>{inspection.server_version}{inspection.server_port === null ? '' : ` · :${inspection.server_port}`}</dd>
@@ -157,11 +157,16 @@ export function MemoryWorkflowPage({ controller }: WorkspacePageProps) {
     );
     const saviorName = controller.saviorProfile.saviorName;
     const graphSpiritName = contextGraph === null ? '' : spiritName(controller, contextGraph.persona_id);
+    const { allSpirits, appLanguage } = controller;
+    const spiritNames = useMemo(
+        () => new Map(allSpirits.map((spirit) => [spirit.id, parseSpiritDetail(spirit, appLanguage).name])),
+        [allSpirits, appLanguage],
+    );
     const graph = useMemo(
         () => contextGraph === null
             ? null
-            : buildMemoryContextGraphLayout(contextGraph, { spirit_name: graphSpiritName, savior_name: saviorName }, threads, labels),
-        [contextGraph, graphSpiritName, labels, saviorName, threads],
+            : buildMemoryContextGraphLayout(contextGraph, { spirit_name: graphSpiritName, savior_name: saviorName, resolve_spirit_name: (personaId) => spiritNames.get(personaId) ?? personaId }, threads, labels),
+        [contextGraph, graphSpiritName, labels, saviorName, spiritNames, threads],
     );
     const selectedThread = selection?.kind === 'keyword' ? threads.find((thread) => `keyword:${thread.keyword.token}` === selection.id) ?? null : null;
     const selectedRelation = selection?.kind === 'relation'
@@ -207,18 +212,21 @@ export function MemoryWorkflowPage({ controller }: WorkspacePageProps) {
         {contextGraph === null || graph === null ? (
             <p className="ever-memory-graph-empty">{controller.contextGraphLoading ? labels.checking : labels.memoryGraphNoSpirit}</p>
         ) : (
-            <MemoryGraphCanvas
-                key={contextGraph.persona_id}
-                controller={controller}
-                graph={graph}
-                selection={selection}
-                selectionDetail={selectedThread !== null
-                    ? <MemoryKeywordDetail thread={selectedThread} spiritName={graphSpiritName} labels={labels}/>
-                    : selectedRelation !== null ? <MemoryRelationDetail relation={selectedRelation} labels={labels}/> : null}
-                hint={labels.memoryGraphSelectHint}
-                emptyMessage={threads.length === 0 ? labels.memoryFilterEmpty : null}
-                onSelect={setSelection}
-            />
+            <div className="ever-memory-workbench">
+                <MemoryGraphCanvas
+                    key={contextGraph.persona_id}
+                    controller={controller}
+                    graph={graph}
+                    selection={selection}
+                    selectionDetail={selectedThread !== null
+                        ? <MemoryKeywordDetail thread={selectedThread} spiritName={graphSpiritName} labels={labels}/>
+                        : selectedRelation !== null ? <MemoryRelationDetail relation={selectedRelation} labels={labels}/> : null}
+                    hint={labels.memoryGraphSelectHint}
+                    emptyMessage={threads.length === 0 ? labels.memoryFilterEmpty : null}
+                    onSelect={setSelection}
+                />
+                <MemoryHeartPanel key={`heart:${contextGraph.persona_id}`} graph={contextGraph} spiritName={graphSpiritName} labels={labels}/>
+            </div>
         )}
     </WorkspaceSurface>;
 }

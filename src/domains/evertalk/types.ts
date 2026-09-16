@@ -179,9 +179,44 @@ export interface CheatPresetGridProps<Id extends string> {
     language: AppLanguage;
     onSelect: (id: Id) => void;
 }
-export type MemoryGraphNodeKind = 'persona' | 'savior' | 'keyword' | 'relation' | 'stage' | 'session';
+export type MemoryGraphNodeKind = 'persona' | 'savior' | 'keyword' | 'relation' | 'rival' | 'stage' | 'session';
 export type MemoryGraphEmphasis = 'query' | 'recent' | 'history';
-export type MemoryGraphEdgeKind = 'topic' | 'savior_bond' | 'canon_bond' | 'relation_savior' | 'rival_attention' | 'procedure' | 'session';
+export type MemoryGraphEdgeKind = 'topic' | 'savior_bond' | 'canon_bond' | 'relation_savior' | 'rival_attention' | 'jealousy' | 'procedure' | 'session';
+export type HeartTimelineSeriesKey = 'affection' | 'trust' | 'longing' | 'hurt';
+export type HeartMetricKey = HeartTimelineSeriesKey | 'jealousy';
+export type HeartExpressionKey = 'openness' | 'outward_warmth' | 'receptiveness' | 'initiative';
+export interface HeartTimelineSeries {
+    key: HeartTimelineSeriesKey;
+    path: string;
+    coordinates: MemoryGraphPoint[];
+    end: MemoryGraphPoint;
+    end_label_y: number;
+    end_value: number;
+}
+export interface HeartTimelineBar {
+    day: string;
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+    count: number;
+}
+export interface HeartTimelineChart {
+    width: number;
+    plot_height: number;
+    bar_top: number;
+    bar_height: number;
+    x_positions: number[];
+    y_ticks: Array<{ value: number; y: number }>;
+    series: HeartTimelineSeries[];
+    bars: HeartTimelineBar[];
+    max_rival_count: number;
+}
+export interface MemoryHeartPanelProps {
+    graph: PersonaContextGraph;
+    spiritName: string;
+    labels: EverTalkLabels;
+}
 export interface MemoryGraphPoint {
     x: number;
     y: number;
@@ -219,6 +254,7 @@ export interface MemoryGraphDetailPosition {
 export interface MemoryGraphLayoutSubject {
     spirit_name: string;
     savior_name: string;
+    resolve_spirit_name: (personaId: string) => string;
 }
 export interface MemoryGraphNodeDragSession {
     pointerId: number;
@@ -336,13 +372,16 @@ export interface SpiritReplyParts {
 }
 export interface SpiritReplyContentProps {
     text: string;
+    spiritAction: string | undefined;
     showReasoning: boolean;
     innerThoughtsLabel: string;
     streaming: boolean;
     showActionStatus: boolean;
+    actionNoteLabel: (actions: string) => string;
 }
 export interface SpiritActionStatusProps {
     actions: string[];
+    onFinished: () => void;
 }
 export interface ChatMessageBubbleProps {
     message: ChatMessage;
@@ -352,6 +391,7 @@ export interface ChatMessageBubbleProps {
     deleteLabel: string;
     innerThoughtsLabel: string;
     showActionStatus: boolean;
+    actionNoteLabel: (actions: string) => string;
     onDelete: (messageId: string) => Promise<void>;
 }
 export interface GalleryTileProps {
@@ -777,6 +817,7 @@ export interface SettingsPanelProps extends ModelCatalogSectionProps {
     onReset: () => void;
     onSetLanguage: (language: AppLanguage) => Promise<void>;
     onSetShowReasoning: (show: boolean) => Promise<void>;
+    onSetProactiveMessagesEnabled: (enabled: boolean) => Promise<void>;
     onSetCheatModeEnabled: (enabled: boolean) => Promise<void>;
     onImportModule: () => Promise<void>;
     onSetModuleEnabled: (id: string, enabled: boolean) => Promise<void>;
@@ -868,6 +909,7 @@ export interface EverTalkController {
     cheatModeEnabled: boolean;
     personaCheatPresets: Record<string, PersonaCheatPreset>;
     setCheatModeEnabled: (enabled: boolean) => Promise<void>;
+    setProactiveMessagesEnabled: (enabled: boolean) => Promise<void>;
     updatePersonaCheatPreset: (personaId: string, patch: PersonaCheatPresetPatch) => Promise<void>;
     clearPersonaCheatPreset: (personaId: string) => Promise<void>;
     storageInspection: BrowserStorageInspection | null;

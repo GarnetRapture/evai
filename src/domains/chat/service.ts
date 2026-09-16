@@ -16,6 +16,9 @@ import {
 import { personaService } from '../persona/service';
 import { settingsRepository } from '../settings/repository';
 import { collectKeywordObservations } from './habit';
+import { derivePersonaHeartTimeline, resolvePersonaHeartExpression, resolvePersonaJealousyNetwork } from './heart';
+import type { AppSettings } from '../settings/types';
+import type { PersonaTemperament } from '../persona/types';
 import {
     CONTEXT_GRAPH_RELATION_LIMIT,
     buildPersonaContextRelations,
@@ -99,15 +102,15 @@ import {
     normalizePersonaReplyEnvelope,
     parsePersonaReplyEnvelope,
     renderPersonaReplyContent,
+    renderPersonaStoredReplyContent,
     resolvePersonaReplyMessageLimit,
 } from './replyEnvelope';
 import {
-    PROACTIVE_ATTEMPT_COOLDOWN_MS,
-    PROACTIVE_DEFAULT_CHANCE,
-    PROACTIVE_MAX_UNREAD_PER_PERSONA,
-    PROACTIVE_MIN_IDLE_MS,
     buildProactiveTurnBody,
     buildProactiveTurnHeading,
+    countUnansweredProactiveMessages,
+    pickProactiveCandidateByUrge,
+    resolveProactiveSchedule,
 } from './proactive';
 import { chatRepository } from './repository';
 import { buildPersonaRivalContexts, countPersonaRivalAttention } from './rivalContext';
@@ -115,11 +118,14 @@ import type {
     ChatMessage,
     ChatRoom,
     ChatSendRequest,
+    PersonaReplyEnvelope,
     PersonaAffinityGain,
     PersonaBehaviorStage,
     PersonaContactSnapshot,
     PersonaContextGraph,
     PersonaFamiliaritySource,
+    PersonaHeartExpression,
+    PersonaTimelineEntry,
     PersonaKeywordNode,
     PersonaKeywordThread,
     PersonaMemoryInsight,
@@ -148,6 +154,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
     });
     const turnHook = buildPersonaTurnHook(persona.spirit_name, persona.address_term, input.reasoning, persona.voice, input.language, input.continuity);
     let content = '';
+    let action = '';
     let truncatedMessageCount = 0;
     let previousViolation: PersonaReplyViolation | null = null;
     for (let attempt = 1; attempt <= PERSONA_REPLY_ATTEMPT_LIMIT; attempt += 1) {
@@ -155,7 +162,7 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
         const attemptController = new AbortController();
         const attemptSignal = AbortSignal.any([input.signal, attemptController.signal]);
         let rawReply = '';
-        let streamedContent = '';
+        const streamed: { envelope: PersonaReplyEnvelope | null } = { envelope: null };
         let breachViolation: PersonaReplyViolation | null = null;
         const result = await chatModelRuntime.generate(input.model_id, input.language, {
             request_id: attempt === 1 ? input.request_id : `${input.request_id}:redirect-${attempt}`,
@@ -184,29 +191,37 @@ async function generatePersonaReply(input: PersonaReplyGenerationInput): Promise
                         attemptController.abort();
                         return;
                     }
-                    streamedContent = renderPersonaReplyContent(normalizePersonaReplyEnvelope(rawEnvelope, input.language));
-                    input.on_text(streamedContent);
+                    const streamedEnvelope = normalizePersonaReplyEnvelope(rawEnvelope, input.language);
+                    streamed.envelope = streamedEnvelope;
+                    input.on_text(renderPersonaReplyContent(streamedEnvelope));
                 },
             },
         });
         truncatedMessageCount = Math.max(truncatedMessageCount, result.truncated_message_count);
         if (input.signal.aborted) {
-            return { content: streamedContent, cancelled: true, redirected: attempt > 1, truncated_message_count: truncatedMessageCount };
+            return {
+                content: streamed.envelope === null ? '' : renderPersonaStoredReplyContent(streamed.envelope),
+                action: streamed.envelope?.action ?? '',
+                cancelled: true,
+                redirected: attempt > 1,
+                truncated_message_count: truncatedMessageCount,
+            };
         }
         const rawFinalEnvelope = parsePersonaReplyEnvelope(breachViolation !== null ? rawReply : result.text);
         const finalEnvelope = normalizePersonaReplyEnvelope(rawFinalEnvelope, input.language);
-        content = renderPersonaReplyContent(finalEnvelope);
+        content = renderPersonaStoredReplyContent(finalEnvelope);
+        action = finalEnvelope.action;
         const violation = breachViolation
             ?? detectPersonaStreamingViolation(rawFinalEnvelope, input.language)
-            ?? detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language, input.continuity.previous_spirit_lines);
+            ?? detectPersonaReplyViolation(finalEnvelope, persona.voice.register, input.language, input.continuity.previous_spirit_lines, input.continuity.latest_user_text);
         if (redirectable && violation !== null) {
             previousViolation = violation;
             continue;
         }
-        input.on_text(content);
-        return { content, cancelled: result.cancelled, redirected: attempt > 1, truncated_message_count: truncatedMessageCount };
+        input.on_text(renderPersonaReplyContent(finalEnvelope));
+        return { content, action, cancelled: result.cancelled, redirected: attempt > 1, truncated_message_count: truncatedMessageCount };
     }
-    return { content, cancelled: false, redirected: true, truncated_message_count: truncatedMessageCount };
+    return { content, action, cancelled: false, redirected: true, truncated_message_count: truncatedMessageCount };
 }
 
 function resolvePersonaEmotionBaseline(cheatPreset: PersonaCheatPreset | null): PersonaEmotionLevels {
@@ -266,6 +281,56 @@ async function applyProfileMentionAffinity(
         emotion === null ? Promise.resolve() : chatRepository.upsertPersonaEmotion(personaId, applyProfileMentionEmotion(emotion, delighted, disliked, occurredAt)),
     ]);
     return update.gains;
+}
+
+interface PersonaHeartParticipant {
+    persona_id: string;
+    familiarity_level: number;
+    temperament: PersonaTemperament;
+    cheat_preset: PersonaCheatPreset | null;
+    expression: PersonaHeartExpression;
+}
+
+async function readPersonaHeartParticipants(
+    settings: AppSettings,
+    timeline: readonly PersonaTimelineEntry[],
+    personaIds: readonly string[],
+    now: string,
+): Promise<PersonaHeartParticipant[]> {
+    const [messageCounts, memoryCounts, affinityExps, emotions] = await Promise.all([
+        chatRepository.countMessagesByPersona(),
+        chatRepository.countEpisodicMemoriesByPersona(),
+        chatRepository.listAffinityExpByPersona(),
+        chatRepository.listPersonaEmotionsByPersona(),
+    ]);
+    return Promise.all(personaIds.map(async (personaId): Promise<PersonaHeartParticipant> => {
+        const cheatPreset = resolveActivePersonaCheatPreset(settings, personaId);
+        const familiarityLevel = resolvePersonaFamiliarityLevel(
+            messageCounts.get(personaId) ?? 0,
+            memoryCounts.get(personaId) ?? 0,
+            affinityExps.get(personaId) ?? 0,
+            cheatPreset?.bond_level ?? null,
+        );
+        const temperament = await personaService.getPersonaTemperament(personaId, settings.language, cheatPreset);
+        return {
+            persona_id: personaId,
+            familiarity_level: familiarityLevel,
+            temperament,
+            cheat_preset: cheatPreset,
+            expression: resolvePersonaHeartExpression({
+                persona_id: personaId,
+                timeline,
+                now,
+                temperament,
+                familiarity_level: familiarityLevel,
+                jealousy: emotions.get(personaId)?.levels.jealous ?? null,
+            }),
+        };
+    }));
+}
+
+function listTimelinePersonaIds(timeline: readonly PersonaTimelineEntry[]): string[] {
+    return [...new Set(timeline.filter((entry) => entry.message.role === 'user').map((entry) => entry.persona_id))];
 }
 
 let memoryMaintenanceQueue: Promise<void> = Promise.resolve();
@@ -359,6 +424,7 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
         episodic,
         keywordRecords,
         emotion,
+        timeline,
         [knowledge, storyMoments],
     ] = await Promise.all([
         filter.semantic ? chatRepository.getSemanticMemory(personaId) : Promise.resolve(null),
@@ -371,6 +437,7 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
             : Promise.resolve([]),
         filter.habit ? chatRepository.listKeywordRecords(personaId) : Promise.resolve([]),
         filter.affect ? chatRepository.getPersonaEmotion(personaId) : Promise.resolve(null),
+        filter.affect ? chatRepository.listPersonaTimeline() : Promise.resolve([]),
         knowledgeClient.searchGroups(request.query, [
             { limit: request.include_knowledge && filter.knowledge ? KNOWLEDGE_INJECT_LIMIT : 0, document_names: personaService.worldKnowledgeDocuments(request.language) },
             { limit: filter.knowledge ? STORY_INJECT_LIMIT : 0, document_names: personaService.storyKnowledgeDocuments(request.language, personaId) },
@@ -394,6 +461,16 @@ async function collectPersonaTurnContext(request: PersonaTurnContextRequest, pre
             knowledge: knowledge.map((chunk) => chunk.chunk_text),
             story_moments: storyMoments.map((chunk) => chunk.chunk_text),
             emotion,
+            heart: filter.affect
+                ? resolvePersonaHeartExpression({
+                    persona_id: personaId,
+                    timeline,
+                    now: request.conversation.latest_at,
+                    temperament: request.temperament,
+                    familiarity_level: request.familiarity_level,
+                    jealousy: emotion?.levels.jealous ?? null,
+                })
+                : null,
             familiarity_level: request.familiarity_level,
             profile_mentions: personaReferences.profile_mentions,
             affinity_gained: request.affinity_gained,
@@ -794,7 +871,22 @@ export const chatService = {
             personaService.getFamiliarityList(settings),
             chatRepository.countMessagesForPersona(personaId),
         ]);
+        const generatedAt = createMonotonicTimestamp();
+        const timeline = await chatRepository.listPersonaTimeline();
+        const networkIds = [personaId, ...listTimelinePersonaIds(timeline).filter((id) => id !== personaId)];
+        const participants = await readPersonaHeartParticipants(settings, timeline, networkIds, generatedAt);
+        const focused = participants[0];
         return {
+            heart: focused.expression,
+            heart_timeline: derivePersonaHeartTimeline({
+                persona_id: personaId,
+                timeline,
+                now: generatedAt,
+                temperament: focused.temperament,
+                familiarity_level: focused.familiarity_level,
+                jealousy: emotion?.levels.jealous ?? null,
+            }),
+            jealousy_links: resolvePersonaJealousyNetwork(timeline, participants.map((participant) => ({ persona_id: participant.persona_id, heart: participant.expression.heart }))),
             persona_id: personaId,
             generated_at: createMonotonicTimestamp(),
             familiarity_level: familiarityLevel,
@@ -825,25 +917,41 @@ export const chatService = {
     async tryGenerateProactiveMessage(options: ProactiveGenerationOptions = {}): Promise<ChatMessage | null> {
         const now = options.now ?? new Date();
         const nowTime = now.getTime();
+        const nowIso = now.toISOString();
         const random = options.random ?? Math.random;
-        const chance = Math.min(1, Math.max(0, options.chance ?? PROACTIVE_DEFAULT_CHANCE));
-        const unreadCounts = await chatRepository.listProactiveUnreadCounts();
-        const candidates = (await chatRepository.listProactiveConversationCandidates()).filter((candidate) => {
-            const lastActivity = Date.parse(candidate.latest_activity_at);
-            const lastAttempt = candidate.last_attempt_at === null ? Number.NEGATIVE_INFINITY : Date.parse(candidate.last_attempt_at);
-            return Number.isFinite(lastActivity)
-                && nowTime - lastActivity >= PROACTIVE_MIN_IDLE_MS
-                && nowTime - lastAttempt >= PROACTIVE_ATTEMPT_COOLDOWN_MS
-                && (unreadCounts[candidate.persona_id] ?? 0) < PROACTIVE_MAX_UNREAD_PER_PERSONA;
+        const settings = await settingsRepository.readAppSettings();
+        if (!settings.proactive_messages_enabled) return null;
+        const [conversationCandidates, timeline] = await Promise.all([
+            chatRepository.listProactiveConversationCandidates(),
+            chatRepository.listPersonaTimeline(),
+        ]);
+        const participants = await readPersonaHeartParticipants(settings, timeline, conversationCandidates.map((entry) => entry.persona_id), nowIso);
+        const scoredCandidates = conversationCandidates.map((conversationCandidate, order) => {
+            const participant = participants[order];
+            return {
+                candidate: conversationCandidate,
+                schedule: resolveProactiveSchedule(participant.expression, participant.temperament, countUnansweredProactiveMessages(timeline, participant.persona_id)),
+                familiarity_level: participant.familiarity_level,
+                temperament: participant.temperament,
+                cheat_preset: participant.cheat_preset,
+            };
         });
-        if (candidates.length === 0) return null;
-        const candidate = candidates[Math.min(candidates.length - 1, Math.floor(random() * candidates.length))];
-        const attemptedAt = now.toISOString();
+        const eligible = scoredCandidates.filter(({ candidate: conversationCandidate, schedule }) => {
+            const lastActivity = Date.parse(conversationCandidate.latest_activity_at);
+            const lastAttempt = conversationCandidate.last_attempt_at === null ? Number.NEGATIVE_INFINITY : Date.parse(conversationCandidate.last_attempt_at);
+            return Number.isFinite(lastActivity)
+                && nowTime - lastActivity >= schedule.min_idle_ms
+                && nowTime - lastAttempt >= schedule.cooldown_ms
+                && schedule.unanswered_count < schedule.max_unanswered;
+        });
+        const selected = pickProactiveCandidateByUrge(eligible, random());
+        if (selected === null) return null;
+        const { candidate, familiarity_level: familiarityLevel, temperament, cheat_preset: cheatPreset } = selected;
+        const chance = Math.min(1, Math.max(0, options.chance ?? selected.schedule.chance));
+        const attemptedAt = nowIso;
         await chatRepository.markProactiveAttempt(candidate.room_id, candidate.persona_id, attemptedAt);
         if (random() >= chance) return null;
 
-        const settings = await settingsRepository.readAppSettings();
-        const cheatPreset = resolveActivePersonaCheatPreset(settings, candidate.persona_id);
         const contact = await chatRepository.readPersonaContactSnapshot(candidate.persona_id, settings.language);
         const emotionBaseline = resolvePersonaEmotionBaseline(cheatPreset);
         const emotionSeed = await resolvePersonaEmotionSeed(candidate.persona_id, settings.language, candidate.latest_activity_at, cheatPreset);
@@ -853,7 +961,6 @@ export const chatService = {
         );
 
         const language = settings.language;
-        const familiarityLevel = await readPersonaFamiliarityLevel(candidate.persona_id, cheatPreset);
         const digest = await chatRepository.getRoomDigest(candidate.room_id, candidate.persona_id);
         const persona = await chatService.buildPersonaBaseSystemPrompt(candidate.persona_id, language, settings.savior_name, cheatPreset, familiarityLevel);
         const history = await chatRepository.listRecentMessagesForPersona(
@@ -880,6 +987,7 @@ export const chatService = {
             affinity_gained: [],
             familiarity_level: familiarityLevel,
             contact: { ...contact, mention_candidate_ids: [] },
+            temperament,
         };
         const preparedReferences = await preparePersonaTurnReferences(
             turnRequest.persona_id,
@@ -926,6 +1034,7 @@ export const chatService = {
             role: 'assistant',
             content: replyText,
             created_at: attemptedAt,
+            ...(result.action.length > 0 ? { spirit_action: result.action } : {}),
             delivery: 'proactive',
             read_at: null,
         };
@@ -1009,7 +1118,10 @@ export const chatService = {
                 : Promise.resolve(),
         ]);
         const familiarityLevel = resolvePersonaFamiliaritySourceLevel(familiaritySource, 0, cheatPreset);
-        const persona = await chatService.buildPersonaBaseSystemPrompt(personaId, language, saviorName, cheatPreset, familiarityLevel);
+        const [persona, temperament] = await Promise.all([
+            chatService.buildPersonaBaseSystemPrompt(personaId, language, saviorName, cheatPreset, familiarityLevel),
+            personaService.getPersonaTemperament(personaId, language, cheatPreset),
+        ]);
         const memoryContext: TurnMemoryContext = {
             model_id: modelId,
             language,
@@ -1055,6 +1167,7 @@ export const chatService = {
             affinity_gained: affinityGained,
             familiarity_level: turnFamiliarityLevel,
             contact,
+            temperament,
         };
         await applyPersonaRivalEmotion(personaId, preparedReferences, turnFamiliarityLevel, userOccurredAt);
         const turnContext = await collectPersonaTurnContext(turnRequest, preparedReferences);
@@ -1095,6 +1208,7 @@ export const chatService = {
             role: 'assistant',
             content: replyText,
             created_at: createMonotonicTimestamp(),
+            ...(result.action.length > 0 ? { spirit_action: result.action } : {}),
         };
         const memoryText = buildTurnMemoryText(
             persona.address_term,
@@ -1131,7 +1245,7 @@ export const chatService = {
                 ? Promise.resolve()
                 : chatRepository.recordKeywordObservations(
                     personaId,
-                    collectKeywordObservations(content, [spiritEnvelope.action, ...spiritEnvelope.messages].join('\n'), language),
+                    collectKeywordObservations(content, spiritEnvelope.messages.join('\n'), language),
                     episodicMemoryId,
                     aiMessage.created_at,
                 ),

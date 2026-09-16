@@ -81,14 +81,12 @@ std::string describe_exception(const std::exception& error)
 EvaiDatabase::EvaiDatabase(const std::filesystem::path& file)
     : database_(file)
 {
-    apply_evai_schema(database_);
 }
 
 DatabaseSummary EvaiDatabase::read_summary()
 {
     const std::lock_guard<std::mutex> lock(mutex_);
-    SqliteStatement version = database_.prepare("SELECT meta_value FROM schema_meta WHERE meta_key = 'schema_version'");
-    DatabaseSummary summary{version.step() ? version.column_text(0) : std::string{}, 0};
+    DatabaseSummary summary{0};
     for (const StoreDescriptor& descriptor : store_descriptors()) {
         SqliteStatement statement = database_.prepare(std::format("SELECT count(*) FROM {}", descriptor.table));
         summary.record_count += statement.step() ? statement.column_integer(0) : 0;
@@ -571,11 +569,8 @@ StorageResponse EvaiDatabase::read_schema()
             }
             tables += details.column_text(0);
         }
-        SqliteStatement version = database_.prepare("SELECT meta_value FROM schema_meta WHERE meta_key = 'schema_version'");
-        const std::string schema_version = version.step() ? version.column_text(0) : std::string{};
         return StorageResponse{200, std::format(
-            "{{\"schema_version\":\"{}\",\"sqlite_version\":\"{}\",\"link_row_count\":{},\"tables\":[{}]}}",
-            http::json_escaped(schema_version),
+            "{{\"sqlite_version\":\"{}\",\"link_row_count\":{},\"tables\":[{}]}}",
             http::json_escaped(sqlite_library_version()),
             link_rows,
             tables)};
@@ -617,10 +612,6 @@ StorageResponse EvaiDatabase::read_status()
 void apply_evai_schema(SqliteDatabase& database)
 {
     database.execute(evai_schema_sql());
-    SqliteStatement statement = database.prepare("INSERT INTO schema_meta (meta_key, meta_value) VALUES ('schema_version', ?1) "
-                                                 "ON CONFLICT (meta_key) DO UPDATE SET meta_value = excluded.meta_value");
-    statement.bind_text(1, evai_schema_version());
-    statement.run();
 }
 
 void create_evai_database(const std::filesystem::path& file)

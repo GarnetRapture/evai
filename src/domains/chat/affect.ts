@@ -30,6 +30,16 @@ export const PERSONA_EMOTION_BASELINE: PersonaEmotionLevels = {
     jealous: 4,
 };
 
+export const SAVIOR_HURTFUL_SIGNAL_PATTERN = /싫어|짜증|귀찮|꺼져|닥쳐|멍청|바보\s*같|헤어지|그만\s*만나|질렸|필요\s*없어|hate you|annoying|shut up|go away|stupid|break up|讨厌|烦死|滚|闭嘴|笨蛋|分手/iu;
+
+export function isAffectionateText(text: string): boolean {
+    return EMOTION_SIGNALS.happy.test(text) || EMOTION_SIGNALS.passionate.test(text);
+}
+
+export function isHurtfulText(text: string): boolean {
+    return SAVIOR_HURTFUL_SIGNAL_PATTERN.test(text);
+}
+
 const EMOTION_SIGNALS: Record<PersonaEmotionKind, RegExp> = {
     happy: /좋아|기뻐|행복|고마|웃|귀여|즐거|사랑|love|happy|glad|thank|smil|喜欢|开心|幸福|谢谢|可爱|爱/iu,
     melancholy: /슬퍼|우울|외로|힘들|아파|미안|울고|눈물|sad|depress|lonely|hurt|sorry|cry|难过|忧郁|孤独|痛苦|对不起|哭/iu,

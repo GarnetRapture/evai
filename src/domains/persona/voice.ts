@@ -12,7 +12,7 @@ const KOREAN_SENTENCE_BOUNDARY_PATTERN = /(?<=[!?.…~♡♥♪])\s+|,\s+/u;
 
 const REGISTER_DESCRIPTION: Record<PersonaLineRegister, string> = {
     polite: 'polite Korean (존댓말) with -요 or -습니다 endings',
-    casual: 'casual Korean (반말) without -요 endings',
+    casual: 'casual Korean (반말) with endings such as -어, -야, -지 and -네',
 };
 
 export function classifyKoreanLineRegister(line: string): PersonaLineRegister | null {

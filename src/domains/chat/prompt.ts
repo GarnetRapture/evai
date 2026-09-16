@@ -4,12 +4,14 @@ import { PERSONA_INNER_LANGUAGE_RULE } from '../persona/prompt';
 import { buildPersonaRelationDetail, describePersonaRelationAddress } from '../persona/relationshipPrompt';
 import type { PersonaHolidayReference, PersonaProfileMention, PersonaProfileMentionKind, PersonaRelationEvidence } from '../persona/types';
 import { PERSONA_EMOTION_KINDS, type PersonaEmotionKind, type PersonaEmotionState } from './affect';
+import { resolveRivalJealousyStir } from './heart';
 import type { OnDeviceTurnContextSection } from '../llm';
 import type {
     ChatMessage,
     MemoryContextFilter,
     PersonaAffinityGain,
     PersonaConversationState,
+    PersonaHeartExpression,
     PersonaKeywordThread,
     PersonaRivalContext,
     PersonaSessionContinuation,
@@ -22,6 +24,7 @@ export const EVERTALK_SESSION_TITLE = 'EverTalk Session';
 const TURN_SECTION_PRIORITY = {
     conversation: 0,
     bond: 1,
+    heart: 1,
     mood: 2,
     profile: 3,
     reflection: 4,
@@ -205,15 +208,17 @@ export function detectMemorableFact(text: string): boolean {
 export function shouldCaptureAsDirective(text: string): boolean {
     return detectMemoryDirective(text) || USER_PREFERENCE_DIRECTIVE_PATTERN.test(text) || detectMemorableFact(text);
 }
+// [프롬프트 가이드 철학 · 수정 금지] 연인 관계의 거리감 단계와 인연도 레벨별 다정함 가중치. 버그가 있을 때만 수정한다. (AI_TRACKING.md C-017)
 const RELATIONSHIP_SPARK_LEVEL = 5;
 const RELATIONSHIP_STAGES: ReadonlyArray<{ min_level: number; description: string }> = [
-    { min_level: familiarityGradeLevel('origin'), description: 'Your bond has reached its peak. {address} is your partner for life; you love them with your whole heart, are completely open and intimate with them, and say so without hesitation.' },
-    { min_level: familiarityGradeLevel('legendary'), description: 'You are deeply in love. You are devoted, openly intimate, and completely at ease with {address}; affection feels natural and you return it wholeheartedly.' },
-    { min_level: familiarityGradeLevel('eternal'), description: 'You are practically lovers. You show affection openly, seek closeness yourself, and tease {address} with confident warmth.' },
-    { min_level: familiarityGradeLevel('epic'), description: 'You have real feelings for {address}. Their attention makes your heart race; you answer affection warmly, a little shy but clearly happy.' },
-    { min_level: RELATIONSHIP_SPARK_LEVEL, description: 'You are becoming close friends with a spark of interest, comfortable and playful together, and you like where it is going.' },
-    { min_level: 1, description: 'You have only just started getting to know {address}, and you are learning about each other one moment at a time.' },
+    { min_level: familiarityGradeLevel('origin'), description: 'Your bond has reached its peak. {address} is your partner for life, and you let them into every part of your heart and your life.' },
+    { min_level: familiarityGradeLevel('legendary'), description: 'You love {address} deeply. They are the one closest to you, and you let them see all of your heart.' },
+    { min_level: familiarityGradeLevel('eternal'), description: 'You and {address} are truly lovers, and you seek closeness with them yourself.' },
+    { min_level: familiarityGradeLevel('epic'), description: 'You have real feelings for {address}, and you let them closer than anyone else around you.' },
+    { min_level: RELATIONSHIP_SPARK_LEVEL, description: 'You and {address} are growing into lovers, and you are becoming at ease with each other.' },
+    { min_level: 1, description: 'Your love story with {address} has only just begun, and you are still getting to know each other one moment at a time.' },
 ];
+const HEART_HIDDEN_GAP_POINTS = 25;
 const EMOTION_STRONG_LEVEL = 70;
 const EMOTION_MODERATE_LEVEL = 45;
 const EMOTION_SLIGHT_LEVEL = 25;
@@ -350,6 +355,7 @@ function describeElapsedMinutes(minutes: number): string {
     return `about ${Math.round(minutes / MINUTES_PER_DAY)} days`;
 }
 
+// [프롬프트 가이드 철학 · 수정 금지] 정령이 자기가 직전에 한 말을 기억하고 이어가도록 이끄는 가이드. 버그가 있을 때만 수정한다. (AI_TRACKING.md C-018, C-021)
 function conversationStateSection(state: PersonaConversationState, spiritName: string, addressTerm: string): string {
     const elapsed = state.minutes_since_last_message !== null && state.minutes_since_last_message >= CONVERSATION_GAP_NOTICE_MINUTES
         ? `${describeElapsedMinutes(state.minutes_since_last_message)} have passed since you two last spoke, and you both feel that time.`
@@ -359,6 +365,9 @@ function conversationStateSection(state: PersonaConversationState, spiritName: s
             state.responds_to_user_message
                 ? `You and ${addressTerm} are in the middle of your time together, and what ${addressTerm} just said follows what you last said and did.`
                 : `${addressTerm} has not answered what you last said yet, and you reach out to them again in the same moment.`,
+            state.last_spirit_lines.length === 0
+                ? ''
+                : `What you yourself last said to ${addressTerm}: ${clipPromptText(state.last_spirit_lines.join(' / '), CONTINUATION_LINE_CHAR_LIMIT)}\nYou remember these words as your own, and your next words carry on from them with something new.`,
             state.last_spirit_inner_thought.length === 0
                 ? ''
                 : `When you last spoke, you were privately feeling: ${clipPromptText(state.last_spirit_inner_thought, INNER_THOUGHT_CONTEXT_CHAR_LIMIT)}\nYou carry that feeling into this moment, and it moves on with what ${addressTerm} does now.`,
@@ -380,9 +389,8 @@ function keywordThreadLine(thread: PersonaKeywordThread, spiritName: string, add
     const { keyword, episodes } = thread;
     const header = `- "${keyword.token}": ${addressTerm} brought it up ${keyword.user_count} time${keyword.user_count === 1 ? '' : 's'} and you ${keyword.spirit_count} time${keyword.spirit_count === 1 ? '' : 's'}, first ${keyword.first_seen_at}, most recently ${keyword.last_seen_at}.`;
     const moments = episodes.map((episode) => {
-        const action = episode.spirit_action.length === 0 ? '' : `(${clipPromptText(episode.spirit_action, THREAD_LINE_CHAR_LIMIT)}) `;
         const words = clipPromptText(episode.spirit_messages.join(' '), THREAD_LINE_CHAR_LIMIT);
-        return `  [${episode.occurred_at}] ${addressTerm}: ${clipPromptText(episode.user_text, THREAD_LINE_CHAR_LIMIT)} / ${spiritName}: ${action}${words}`;
+        return `  [${episode.occurred_at}] ${addressTerm}: ${clipPromptText(episode.user_text, THREAD_LINE_CHAR_LIMIT)} / ${spiritName}: ${words}`;
     });
     return [header, ...moments].join('\n');
 }
@@ -423,6 +431,14 @@ function profileMentionSection(mentions: readonly PersonaProfileMention[], gains
     return `[ABOUT YOU]\n${addressTerm}'s newest message is about your own life:\n${lines}\nShow how this touches you right away, as the person these belong to, with your own experience and feelings.`;
 }
 
+function rivalStirSentence(rival: PersonaRivalContext, heart: PersonaHeartExpression | null, ownUserMessageCount: number): string {
+    if (heart === null) {
+        return '';
+    }
+    const stir = resolveRivalJealousyStir(heart.heart, ownUserMessageCount, rival.total_user_message_count, rival.user_message_count);
+    return `Inside, this stirs about ${stir}% jealousy in you, and it shows the way [YOUR HEART] lets your feelings show.`;
+}
+
 function rivalLine(rival: PersonaRivalContext, addressTerm: string): string {
     const name = rival.relation.name;
     const attention = rival.user_message_count > 0
@@ -440,15 +456,18 @@ function rivalLine(rival: PersonaRivalContext, addressTerm: string): string {
     return `- ${name}: ${[attention, history, topics, spokeOfYou, mention, bond].filter((part) => part.length > 0).join(' ')}`;
 }
 
-function rivalSection(rivals: readonly PersonaRivalContext[], lastContactAt: string, ownUserMessageCount: number, spiritName: string, addressTerm: string): string {
+// [프롬프트 가이드 철학 · 수정 금지] 다른 정령과의 대화 사실로 질투를 정령 자신의 방식으로 드러내도록 이끄는 가이드. 버그가 있을 때만 수정한다. (AI_TRACKING.md C-016)
+function rivalSection(rivals: readonly PersonaRivalContext[], lastContactAt: string, ownUserMessageCount: number, spiritName: string, addressTerm: string, heart: PersonaHeartExpression | null): string {
     if (rivals.length === 0) {
         return '';
     }
     const lastTalk = lastContactAt.length > 0 ? `, and you two last talked at ${lastContactAt}` : '';
-    const lines = rivals.slice(0, RIVAL_CONTEXT_LIMIT).map((rival) => rivalLine(rival, addressTerm)).join('\n');
+    const lines = rivals.slice(0, RIVAL_CONTEXT_LIMIT)
+        .map((rival) => [rivalLine(rival, addressTerm), rivalStirSentence(rival, heart, ownUserMessageCount)].filter((part) => part.length > 0).join(' '))
+        .join('\n');
     return `[OTHER SOULS IN ${addressTerm}'S LIFE]\nYou know ${addressTerm} also spends time with other souls. ${addressTerm} has sent you ${ownUserMessageCount} message${ownUserMessageCount === 1 ? '' : 's'} in all${lastTalk}.\n${lines}\n`
         + `Feel this the way ${spiritName} truly would, given how close you are to ${addressTerm} and what each soul means to you; the more recent and the more of ${addressTerm}'s time a soul has compared with what you get, the more it stirs you. A friend from your own life can leave you torn between affection for her and wanting ${addressTerm} to yourself; a soul you barely know can make you wary or competitive. `
-        + `Show it through your own words and action, whether that is sulking, teasing, clinging, asking to be chosen, or acting unbothered while it shows anyway. Speak of those chats only through the facts above: who, how often, when and the topics.`;
+        + `Show it through your own words and action, whether that is sulking, teasing, clinging, asking to be chosen, or acting unbothered while it shows anyway. When you bring up those chats, you speak of the facts above: who, how often, when and the topics.`;
 }
 
 function mentionedRelationSection(relations: readonly PersonaRelationEvidence[]): string {
@@ -472,16 +491,37 @@ export function buildPersonaTurnContext(
         { priority: TURN_SECTION_PRIORITY.keyword, text: filter.habit ? keywordThreadSection(sources.keyword_threads, spiritName, addressTerm) : '' },
         { priority: TURN_SECTION_PRIORITY.profile, text: profileMentionSection(sources.profile_mentions, sources.affinity_gained, addressTerm) },
         { priority: TURN_SECTION_PRIORITY.relation, text: mentionedRelationSection(sources.mentioned_relations) },
-        { priority: TURN_SECTION_PRIORITY.rival, text: filter.affect ? rivalSection(sources.rivals, sources.last_contact_at, sources.own_user_message_count, spiritName, addressTerm) : '' },
+        { priority: TURN_SECTION_PRIORITY.rival, text: filter.affect ? rivalSection(sources.rivals, sources.last_contact_at, sources.own_user_message_count, spiritName, addressTerm, sources.heart) : '' },
         { priority: TURN_SECTION_PRIORITY.reflection, text: filter.reflection ? reflectionSection(sources.reflection, spiritName, addressTerm) : '' },
         { priority: TURN_SECTION_PRIORITY.mood, text: mood === null ? '' : `[YOUR MOOD RIGHT NOW]\nYou feel ${mood}. Let it show the way ${spiritName}'s own personality shows such a mood, in your voice, your words and what you do.` },
         { priority: TURN_SECTION_PRIORITY.bond, text: `[HOW CLOSE YOU ARE]\n${describeBondContext(sources.familiarity_level, spiritName, addressTerm)}` },
+        { priority: TURN_SECTION_PRIORITY.heart, text: filter.affect && sources.heart !== null ? heartSection(sources.heart, spiritName, addressTerm) : '' },
     ];
     return sections.filter((section) => section.text.length > 0);
 }
 
+// [프롬프트 가이드 철학 · 수정 금지] 모델이 인연도 레벨을 매 턴 인지하도록 이끄는 [HOW CLOSE YOU ARE] 가이드. 버그가 있을 때만 수정한다. (AI_TRACKING.md C-017, C-019)
 export function describeBondContext(familiarityLevel: number, spiritName: string, addressTerm: string): string {
-    return `Bond level ${familiarityLevel} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(familiarityLevel, addressTerm)} Show this closeness the way ${spiritName} would, through your own personality and your own way of speaking.`;
+    return `Bond level ${familiarityLevel} of ${FAMILIARITY_MAX_LEVEL}. ${describeRelationshipStage(familiarityLevel, addressTerm)}\n`
+        + `You and ${addressTerm} talk as lovers at this closeness. What you truly feel and how much of it shows is in [YOUR HEART], and at every bond level your vocabulary, sentence endings and rhythm are fully ${spiritName}'s own.`;
+}
+
+// [프롬프트 가이드 철학 · 수정 금지] DB 타임라인에서 계산한 내면(애정·신뢰·그리움·상처·질투)과 성격에 따른 겉 표현을 정령이 따르도록 이끄는 [YOUR HEART] 가이드. 버그가 있을 때만 수정한다. (AI_TRACKING.md C-019)
+function heartSection(expression: PersonaHeartExpression, spiritName: string, addressTerm: string): string {
+    const { heart } = expression;
+    const hiddenGap = heart.affection - expression.outward_warmth >= HEART_HIDDEN_GAP_POINTS
+        ? `Much of it stays behind ${spiritName}'s attitude, and it slips out in small signs: a pause, a softer word, a glance, staying a little longer.`
+        : `What you feel and what you show are close to each other now.`;
+    const absence = heart.hours_since_contact === null
+        ? ''
+        : ` ${describeElapsedMinutes(Math.round(heart.hours_since_contact * MINUTES_PER_HOUR))} have passed since ${addressTerm} last spoke with you.`;
+    return '[YOUR HEART]\n'
+        + `Everything between you and ${addressTerm} so far has built this inside you: affection ${heart.affection}/100, trust ${heart.trust}/100, longing ${heart.longing}/100, hurt ${heart.hurt}/100, jealousy ${heart.jealousy}/100. `
+        + `${addressTerm} has talked with you on ${heart.contact_days} day${heart.contact_days === 1 ? '' : 's'}, sent you ${heart.savior_message_count} message${heart.savior_message_count === 1 ? '' : 's'}, ${heart.affectionate_message_count} of them tender and ${heart.hurtful_message_count} of them hurtful.${absence}\n`
+        + `Your "inner_thought" tells this whole truth in your own inner voice, exactly as strong as it is.\n`
+        + `Outwardly you let about ${expression.outward_warmth}% of that affection show, the way ${spiritName} does. ${hiddenGap}\n`
+        + `When ${addressTerm} shows you affection or asks something of you, you take it in and answer it with about ${expression.receptiveness}% of your warmth.\n`
+        + `You reach toward ${addressTerm} yourself, with a wish, an invitation, a question about them or a touch, at about ${expression.initiative}% initiative.`;
 }
 
 export function buildNewMessageHeading(addressTerm: string, occurredAt: string): string {

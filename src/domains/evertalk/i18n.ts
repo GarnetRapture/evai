@@ -6,7 +6,7 @@ import type { ChromeBuiltInAiApiKind } from '../../shared/types/chromeOnDevice';
 import type { ChromePromptModelVariant, ChromePromptVariantVerification } from '../llm/types';
 import type { PersonaEmotionKind } from '../chat/affect';
 import type { MemoryContextKind, PersonaBehaviorStageKind, PersonaMaintenanceTaskKind } from '../chat/types';
-import type { ChatModelMode, ChatModelRuntimeState, GuideConceptLabel, GuidePathKind, GuideStepAction, GuideStepKey, GuideStepState, MemoryGraphEdgeKind } from './types';
+import type { ChatModelMode, ChatModelRuntimeState, GuideConceptLabel, GuidePathKind, GuideStepAction, GuideStepKey, GuideStepState, HeartExpressionKey, HeartMetricKey, MemoryGraphEdgeKind } from './types';
 import type { LocalModelEngineKind } from '../llm/types';
 import type { OllamaCommandShell, OllamaCommandStepKey } from '../ollama';
 import type { SpiritRaidEvent } from '../persona/types';
@@ -437,6 +437,9 @@ export interface EverTalkLabels {
     chatModelOptionCount: (count: number) => string;
     chatModelOllamaLocalServerOnly: string;
     chatModelSavedTo: (storageName: string) => string;
+    spiritActionNote: (spiritName: string, actions: string) => string;
+    proactiveMessages: string;
+    proactiveMessagesDescription: string;
     cheatMode: string;
     cheatModeDescription: string;
     cheatPageTitle: string;
@@ -465,7 +468,6 @@ export interface EverTalkLabels {
     snapshotEstimate: string;
     storeBreakdown: string;
     storageStructureTitle: string;
-    storageSchemaVersion: string;
     storageKeyPath: string;
     storageColumns: string;
     storageIndexes: string;
@@ -527,6 +529,20 @@ export interface EverTalkLabels {
     memoryGraphEdgeCanonBondLabel: (strength: number, sharedUnion: string | null) => string;
     memoryGraphEdgeRelationSaviorLabel: (level: number) => string;
     memoryGraphEdgeRivalLabel: (messageCount: number) => string;
+    memoryGraphEdgeJealousyLabel: (firstName: string, firstToSecondStir: number | null, secondName: string, secondToFirstStir: number | null) => string;
+    memoryGraphPersonaHeartValue: (level: number, affection: number | null) => string;
+    memoryGraphJealousyNodeValue: (strongestStir: number) => string;
+    memoryHeartTitle: string;
+    memoryHeartDescription: (spiritName: string) => string;
+    memoryHeartMetrics: Record<HeartMetricKey, string>;
+    memoryHeartExpressions: Record<HeartExpressionKey, string>;
+    memoryHeartChartLabel: (spiritName: string) => string;
+    memoryHeartRivalBarLabel: string;
+    memoryHeartRivalCount: (count: number) => string;
+    memoryHeartContactSummary: (contactDays: number, saviorMessages: number) => string;
+    memoryHeartEmpty: string;
+    memoryHeartTableToggle: string;
+    memoryHeartDayLabel: string;
     memoryGraphFullscreen: string;
     memoryGraphExitFullscreen: string;
     memoryGraphResetLayout: string;
@@ -1194,6 +1210,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         chatModelOptionCount: (count) => `선택 가능 ${count}개`,
         chatModelOllamaLocalServerOnly: '로컬 Ollama 모드는 EVAI 로컬 서버로 열었을 때만 사용할 수 있습니다. 실행 방법은 가이드에 있습니다.',
         chatModelSavedTo: (storageName) => `선택한 모델은 ${storageName}에 저장되고 모든 화면에 같은 값으로 적용됩니다.`,
+        spiritActionNote: (spiritName, actions) => `${spiritName}의 행동: ${actions}`,
+        proactiveMessages: '정령이 먼저 말 걸기',
+        proactiveMessagesDescription: '켜면 대화 중인 정령과 다른 정령 모두, 대화로 쌓인 그리움·애정·질투와 성격에 따라 먼저 메시지를 보냅니다. 적극적인 정령은 답장이 올 때까지 여러 번 보낼 수 있습니다.',
         cheatMode: '치트모드',
         cheatModeDescription: '켜면 상단에 치트모드 화면이 생기고, 정령별 인연 레벨·성격·감정·말투 프리셋이 실제 응답에 적용됩니다.',
         cheatPageTitle: '정령 치트 설정',
@@ -1222,7 +1241,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         snapshotEstimate: '앱 데이터 추정량',
         storeBreakdown: '저장소별 구성',
         storageStructureTitle: '데이터베이스 구조',
-        storageSchemaVersion: '스키마 버전',
         storageKeyPath: '키',
         storageColumns: '컬럼',
         storageIndexes: '인덱스',
@@ -1284,6 +1302,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             canon_bond: '원작 속 정령 간 인연 (굵을수록 깊음)',
             relation_savior: '다른 정령 ↔ 구원자 인연',
             rival_attention: '마지막 대화 이후 구원자가 다른 정령과 대화 (질투)',
+            jealousy: '정령끼리 서로 느끼는 질투 (굵을수록 강함)',
             procedure: '응답 행동 절차',
             session: '이전 세션 흐름',
         },
@@ -1292,6 +1311,23 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryGraphEdgeCanonBondLabel: (strength, sharedUnion) => sharedUnion === null ? `원작 인연 ${strength}` : `같은 소속 ${sharedUnion} · 인연 ${strength}`,
         memoryGraphEdgeRelationSaviorLabel: (level) => `구원자 인연 Lv.${level}`,
         memoryGraphEdgeRivalLabel: (messageCount) => `질투 · 메시지 ${messageCount}`,
+        memoryGraphEdgeJealousyLabel: (firstName, firstToSecondStir, secondName, secondToFirstStir) => [
+            firstToSecondStir === null ? null : `${firstName}→${secondName} ${firstToSecondStir}%`,
+            secondToFirstStir === null ? null : `${secondName}→${firstName} ${secondToFirstStir}%`,
+        ].filter((part) => part !== null).join(' · '),
+        memoryGraphPersonaHeartValue: (level, affection) => affection === null ? `Lv.${level}` : `Lv.${level} · 애정 ${affection}`,
+        memoryGraphJealousyNodeValue: (strongestStir) => `질투 최대 ${strongestStir}%`,
+        memoryHeartTitle: '감정 기복',
+        memoryHeartDescription: (spiritName) => `${spiritName}와(과) 나눈 대화 기록을 날짜별로 누적해 계산한 내면 상태입니다. 먼저 말 걸기와 질투 판단에 그대로 쓰입니다.`,
+        memoryHeartMetrics: { affection: '애정', trust: '신뢰', longing: '그리움', hurt: '상처', jealousy: '질투' },
+        memoryHeartExpressions: { openness: '마음 열림', outward_warmth: '겉으로 드러나는 온기', receptiveness: '받아주는 정도', initiative: '먼저 다가가는 정도' },
+        memoryHeartChartLabel: (spiritName) => `${spiritName}의 날짜별 애정·신뢰·그리움·상처 변화`,
+        memoryHeartRivalBarLabel: '구원자가 다른 정령과 나눈 메시지',
+        memoryHeartRivalCount: (count) => `다른 정령 메시지 ${count}`,
+        memoryHeartContactSummary: (contactDays, saviorMessages) => `대화한 날 ${contactDays}일 · 구원자 메시지 ${saviorMessages}`,
+        memoryHeartEmpty: '아직 대화 기록이 없어 감정 변화를 계산할 수 없습니다.',
+        memoryHeartTableToggle: '표로 보기',
+        memoryHeartDayLabel: '날짜',
         memoryGraphFullscreen: '전체화면',
         memoryGraphExitFullscreen: '전체화면 종료',
         memoryGraphResetLayout: '노드 배치 초기화',
@@ -2019,6 +2055,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         chatModelOptionCount: (count) => `${count} selectable`,
         chatModelOllamaLocalServerOnly: 'Local Ollama mode is available only when the app is opened through the EVAI local server. The guide explains how to run it.',
         chatModelSavedTo: (storageName) => `The selected model is saved in the ${storageName} and applied identically on every screen.`,
+        spiritActionNote: (spiritName, actions) => `${spiritName}'s action: ${actions}`,
+        proactiveMessages: 'Spirits message you first',
+        proactiveMessagesDescription: 'When on, the spirit you are chatting with and your other spirits send you messages on their own, driven by the longing, affection and jealousy built up in your conversations and by their personality. Forward spirits may send several before you reply.',
         cheatMode: 'Cheat mode',
         cheatModeDescription: 'Adds a Cheat Mode view to the top bar and applies each spirit\'s bond level, personality, emotion, and speech presets to real replies.',
         cheatPageTitle: 'Spirit Cheat Settings',
@@ -2047,7 +2086,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         snapshotEstimate: 'Estimated app data',
         storeBreakdown: 'Store composition',
         storageStructureTitle: 'Database structure',
-        storageSchemaVersion: 'Schema version',
         storageKeyPath: 'key',
         storageColumns: 'Columns',
         storageIndexes: 'Indexes',
@@ -2109,6 +2147,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             canon_bond: 'Canon bond between spirits (thicker = deeper)',
             relation_savior: 'Other spirit ↔ Savior bond',
             rival_attention: 'Savior talked with another spirit since the last chat (jealousy)',
+            jealousy: 'Jealousy spirits feel toward each other (thicker is stronger)',
             procedure: 'Reply behavior steps',
             session: 'Earlier session flow',
         },
@@ -2117,6 +2156,23 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryGraphEdgeCanonBondLabel: (strength, sharedUnion) => sharedUnion === null ? `canon bond ${strength}` : `same group ${sharedUnion} · bond ${strength}`,
         memoryGraphEdgeRelationSaviorLabel: (level) => `Savior bond Lv.${level}`,
         memoryGraphEdgeRivalLabel: (messageCount) => `jealousy · ${messageCount} messages`,
+        memoryGraphEdgeJealousyLabel: (firstName, firstToSecondStir, secondName, secondToFirstStir) => [
+            firstToSecondStir === null ? null : `${firstName}→${secondName} ${firstToSecondStir}%`,
+            secondToFirstStir === null ? null : `${secondName}→${firstName} ${secondToFirstStir}%`,
+        ].filter((part) => part !== null).join(' · '),
+        memoryGraphPersonaHeartValue: (level, affection) => affection === null ? `Lv.${level}` : `Lv.${level} · affection ${affection}`,
+        memoryGraphJealousyNodeValue: (strongestStir) => `jealousy up to ${strongestStir}%`,
+        memoryHeartTitle: 'Emotional swings',
+        memoryHeartDescription: (spiritName) => `Inner state of ${spiritName}, accumulated day by day from your stored conversations. It drives who messages first and who gets jealous.`,
+        memoryHeartMetrics: { affection: 'Affection', trust: 'Trust', longing: 'Longing', hurt: 'Hurt', jealousy: 'Jealousy' },
+        memoryHeartExpressions: { openness: 'Openness', outward_warmth: 'Warmth shown outwardly', receptiveness: 'Receptiveness', initiative: 'Initiative' },
+        memoryHeartChartLabel: (spiritName) => `Daily affection, trust, longing and hurt of ${spiritName}`,
+        memoryHeartRivalBarLabel: 'Savior messages to other spirits',
+        memoryHeartRivalCount: (count) => `${count} messages to other spirits`,
+        memoryHeartContactSummary: (contactDays, saviorMessages) => `${contactDays} days talked · ${saviorMessages} Savior messages`,
+        memoryHeartEmpty: 'No conversation yet, so there are no emotional changes to chart.',
+        memoryHeartTableToggle: 'View as table',
+        memoryHeartDayLabel: 'Date',
         memoryGraphFullscreen: 'Full screen',
         memoryGraphExitFullscreen: 'Exit full screen',
         memoryGraphResetLayout: 'Reset node layout',
@@ -2844,6 +2900,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         chatModelOptionCount: (count) => `可选择 ${count} 个`,
         chatModelOllamaLocalServerOnly: '只有通过 EVAI 本地服务器打开时才能使用本地 Ollama 模式。运行方法请查看指南。',
         chatModelSavedTo: (storageName) => `所选模型保存在${storageName}中，并在所有页面以同一值生效。`,
+        spiritActionNote: (spiritName, actions) => `${spiritName}的行动：${actions}`,
+        proactiveMessages: '精灵主动发消息',
+        proactiveMessagesDescription: '开启后，正在聊天的精灵和其他精灵都会根据对话中累积的思念、好感、嫉妒以及各自的性格主动发来消息。主动的精灵可能在你回复前连续发送多条。',
         cheatMode: '作弊模式',
         cheatModeDescription: '开启后顶部会出现作弊模式页面，每位精灵的羁绊等级、性格、情绪与语气预设会应用到实际回复中。',
         cheatPageTitle: '精灵作弊设置',
@@ -2872,7 +2931,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         snapshotEstimate: '应用数据估算',
         storeBreakdown: '各存储构成',
         storageStructureTitle: '数据库结构',
-        storageSchemaVersion: '架构版本',
         storageKeyPath: '键',
         storageColumns: '列',
         storageIndexes: '索引',
@@ -2934,6 +2992,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             canon_bond: '原作中精灵之间的羁绊（越粗越深）',
             relation_savior: '其他精灵 ↔ 救援者羁绊',
             rival_attention: '上次对话后救援者与其他精灵聊天（吃醋）',
+            jealousy: '精灵之间互相产生的嫉妒（越粗越强）',
             procedure: '回复行为步骤',
             session: '之前的对话流程',
         },
@@ -2942,6 +3001,23 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         memoryGraphEdgeCanonBondLabel: (strength, sharedUnion) => sharedUnion === null ? `原作羁绊 ${strength}` : `同属 ${sharedUnion} · 羁绊 ${strength}`,
         memoryGraphEdgeRelationSaviorLabel: (level) => `救援者羁绊 Lv.${level}`,
         memoryGraphEdgeRivalLabel: (messageCount) => `吃醋 · 消息 ${messageCount}`,
+        memoryGraphEdgeJealousyLabel: (firstName, firstToSecondStir, secondName, secondToFirstStir) => [
+            firstToSecondStir === null ? null : `${firstName}→${secondName} ${firstToSecondStir}%`,
+            secondToFirstStir === null ? null : `${secondName}→${firstName} ${secondToFirstStir}%`,
+        ].filter((part) => part !== null).join(' · '),
+        memoryGraphPersonaHeartValue: (level, affection) => affection === null ? `Lv.${level}` : `Lv.${level} · 爱意 ${affection}`,
+        memoryGraphJealousyNodeValue: (strongestStir) => `嫉妒最高 ${strongestStir}%`,
+        memoryHeartTitle: '情绪起伏',
+        memoryHeartDescription: (spiritName) => `根据与${spiritName}保存的对话按日期累积计算的内心状态，直接用于主动搭话与嫉妒判断。`,
+        memoryHeartMetrics: { affection: '爱意', trust: '信任', longing: '思念', hurt: '伤心', jealousy: '嫉妒' },
+        memoryHeartExpressions: { openness: '心扉敞开', outward_warmth: '外露的温度', receptiveness: '接纳程度', initiative: '主动程度' },
+        memoryHeartChartLabel: (spiritName) => `${spiritName}按日期的爱意、信任、思念、伤心变化`,
+        memoryHeartRivalBarLabel: '救援者发给其他精灵的消息',
+        memoryHeartRivalCount: (count) => `其他精灵消息 ${count}`,
+        memoryHeartContactSummary: (contactDays, saviorMessages) => `对话天数 ${contactDays} · 救援者消息 ${saviorMessages}`,
+        memoryHeartEmpty: '还没有对话记录，无法计算情绪变化。',
+        memoryHeartTableToggle: '以表格查看',
+        memoryHeartDayLabel: '日期',
         memoryGraphFullscreen: '全屏',
         memoryGraphExitFullscreen: '退出全屏',
         memoryGraphResetLayout: '重置节点布局',

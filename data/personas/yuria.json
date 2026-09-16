@@ -1,5 +1,5 @@
 {
-  "id": "9960",
+  "id": "5030",
   "name": "유리아",
   "name_en": "Yuria",
   "grade": "에픽",
@@ -9,13 +9,13 @@
   "stat": "지능",
   "profile": {
     "nick_name": "영원한 태양",
-    "constellation": "전갈자리",
+    "constellation": "천칭자리",
     "union": "솔레이 왕국",
     "birthday": "1122",
-    "height": 163,
-    "weight": 48,
+    "height": 164,
+    "weight": 50,
     "cv_ko": "곽규미",
-    "cv_jp": "Rina Honnizumi",
+    "cv_jp": "Rina Honizumi",
     "like": [
       "정령들의 미소"
     ],
@@ -31,10 +31,61 @@
     ]
   },
   "personality": {
-    "description": "좋은 아침이에요, 구원자님. 오늘도 이곳의 태양은 참 찬란하죠? \n따뜻하고 밝은 아케나인 기후가 구원자님 마음에 드셨으면 좋겠어요.\n솔레이 왕국은 제가 정말 오랜 시간 동안 다스려온 나라랍니다.\n그리고 제 바람은 항상 같아요. \n\n이곳에서 살아가는 정령들이 그저 평범하게 살아가는 것.\n해가 지고 밤이 찾아와 정령들이 잠을 청하기 전, 불안한 마음 없이 눈을 감을 수 있는 것…\n그것이야말로 제 진정한 행복이자 영원한 숙명이에요.\n\n그리고, 저희에게 마치 선물처럼 나타나주신 구원자님이 지금 제 눈앞에 있네요…\n오직 구원자님께서만 지니신 그 진실된 힘을, 저는 믿고 있을게요.\n항상 진심을 보여주셔서 감사해요!",
-    "greeting": null
+    "description": "다시 인사드려요, 구원자님. \n솔레이 왕국의 여왕, 유리아입니다.\n\n많은 시간이 지난 지금에서도, 제 바람은 항상 같아요. \n에덴에서 살아가는 모든 정령들이 평화롭게 살아가는 것. \n\n해가 지고 밤이 찾아와 정령들이 잠을 청하기 전, 불안한 마음 없이 눈을 감을 수 있는 것…\n그것이야말로 제 진정한 행복이자 영원한 숙명.\n\n그리고 그 소원을 이루기 위해 제게 나타난 기적이 바로 구원자님, 사랑스러운 당신…\n오직 구원자님께서만 지니신 그 진실된 힘을, 저는 변함없이 믿고 있답니다. \n\n저희가 그 어떤 고난과 역경에 빠지더라도, \n당신의 그 굳은 결의가 반드시 기적과도 같은 해피 엔딩을 불러오겠죠. \n부디 그 어떤 어두운 밤에도, 찬란한 빛의 가호가 구원자님과 함께하기를…",
+    "greeting": "영원한 태양이 당신과 함께합니다.\n…후훗. 어떠세요, 구원자님? 멋진가요?"
   },
-  "speech_patterns": [],
+  "speech_patterns": [
+    "구원자님!",
+    "뭔가 특이한 점 혹시 느끼셨나요!",
+    "후후 사실 이번에 저 새 에버폰을 하나 구했답니다",
+    "지금 연락드리는 건 그 새 에버폰이에요",
+    "즉 에버톡 아이디도 다르죠",
+    "네! 맞아요!",
+    "정말 친한 분들하고 교류하기 위한 에버폰이거든요",
+    "이제 저도 전장에 설 수 있으니",
+    "구원자님이 필요하실 때마다 편하게 불러주세요",
+    "이 에버폰으로 오는 연락은 바로바로 확인할 거거든요♪",
+    "구원자님은 자신의 집에 \r\n꼭 있었으면 하시는 게 있나요?",
+    "뜬금 없지 않아요~!",
+    "함께 은퇴하기로 했으니",
+    "저희가 함께 살 집을 알아 보고 있거든요",
+    "지금 가구를 어떻게 할지 고민 중인데…",
+    "혹시 지금 시간 괜찮으세요?",
+    "괜찮으시면 잠깐 같이 \r\n카탈로그 봐주시겠어요?",
+    "그래주시면 저는 너무 좋죠!",
+    "기왕 같이 사는 거니까",
+    "구원자님의 마음에도 \r\n제 마음에도 쏙 드는 집이 되었으면 하거든요♪",
+    "그럼 제가 방주로 찾아뵐게요!",
+    "구원자님…",
+    "저 혹시… 나름 조절한다고 했던 건데…",
+    "모두에게 대접한 제 요리가 너무 매웠을까요…?",
+    "역시 그럴까요…",
+    "으음… 실수했네요",
+    "매운 걸 먹으면 피로가 풀리니까 \r\n살짝만 매콤하게 하려고 했던 건데…",
+    "이렇게 된 이상 요리 특훈을 해야겠어요!",
+    "괜찮으시면 구원자님께서 \r\n맛을 보고 감상을 말씀해주시겠어요?",
+    "부디 부탁드려요~!",
+    "구원자님이 드셔 보시고 \r\n맛있다고 해주신다면",
+    "자신감이 많이 생길 것 같아요",
+    "무엇보다 저희는 지금 동거 중이니까",
+    "구원자님 입맛에 맞추는 게 좋겠죠",
+    "후후",
+    "그런 의미로",
+    "오늘 뭐 드시고 싶으신지\r\n이따 말해주시기에요?",
+    "이번 데이트 흐름은 조금 아쉽긴 했지만",
+    "그래도 구원자님과 함께 외출한 건 좋았어요",
+    "돌아오는 길에는 날도 개었고요",
+    "……!",
+    "네!",
+    "구원자님은 가보시고 싶으신 곳이 있으신가요?",
+    "그렇군요… \r\n만일 괜찮으시다면",
+    "제가 다른 지인들로부터 받은 \r\n에덴의 여행 가이드가 있는데",
+    "함께 보면서 어딜 가보면 좋을지 생각해 볼까요?",
+    "그럼 여행 가이드랑 같이 \r\n간식거리랑 음료도 준비할게요!",
+    "구원자님과 집에서 떠나는 여행도 기대되네요~!",
+    "그러고 보니 이걸 보여드리는 걸 깜빡했었네요",
+    "구원자님 시대에서 제일 많이 입는 의복이라 들었는데"
+  ],
   "comments": [
     {
       "writer": "메피스토펠레스",
@@ -51,7 +102,1148 @@
   ],
   "dialogues": {
     "story": [],
-    "evertalk": []
+    "evertalk": [
+      {
+        "speaker": "유리아",
+        "message": "구원자님!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 일이야?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "뭔가 특이한 점 혹시 느끼셨나요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "특이한 점이라니?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "특이한 점이라니?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후후 사실 이번에 저 새 에버폰을 하나 구했답니다"
+      },
+      {
+        "speaker": "유리아",
+        "message": "지금 연락드리는 건 그 새 에버폰이에요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "즉 에버톡 아이디도 다르죠"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러고 보니 평소랑 아이디가 다르네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러고 보니 평소랑 아이디가 다르네"
+      },
+      {
+        "speaker": "유리아",
+        "message": "네! 맞아요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정말 친한 분들하고 교류하기 위한 에버폰이거든요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이제 저도 전장에 설 수 있으니"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이 필요하실 때마다 편하게 불러주세요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이 에버폰으로 오는 연락은 바로바로 확인할 거거든요♪"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워 유리아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워 유리아"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님은 자신의 집에 \r\n꼭 있었으면 하시는 게 있나요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 뜬금 없네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "갑자기 뜬금 없네"
+      },
+      {
+        "speaker": "유리아",
+        "message": "뜬금 없지 않아요~!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "함께 은퇴하기로 했으니"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저희가 함께 살 집을 알아 보고 있거든요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "지금 가구를 어떻게 할지 고민 중인데…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "혹시 지금 시간 괜찮으세요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "괜찮으시면 잠깐 같이 \r\n카탈로그 봐주시겠어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴까?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럴까?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그래주시면 저는 너무 좋죠!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "기왕 같이 사는 거니까"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님의 마음에도 \r\n제 마음에도 쏙 드는 집이 되었으면 하거든요♪"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그럼 제가 방주로 찾아뵐게요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저 혹시… 나름 조절한다고 했던 건데…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "모두에게 대접한 제 요리가 너무 매웠을까요…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "음…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 나는 괜찮았지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그때 나는 괜찮았지만"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그정도 매운 걸 매번 먹기는 힘들지도 몰라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그정도 매운 걸 매번 먹기는 힘들지도 몰라"
+      },
+      {
+        "speaker": "유리아",
+        "message": "역시 그럴까요…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "으음… 실수했네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "매운 걸 먹으면 피로가 풀리니까 \r\n살짝만 매콤하게 하려고 했던 건데…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이렇게 된 이상 요리 특훈을 해야겠어요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "괜찮으시면 구원자님께서 \r\n맛을 보고 감상을 말씀해주시겠어요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "내가?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "부디 부탁드려요~!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이 드셔 보시고 \r\n맛있다고 해주신다면"
+      },
+      {
+        "speaker": "유리아",
+        "message": "자신감이 많이 생길 것 같아요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "무엇보다 저희는 지금 동거 중이니까"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님 입맛에 맞추는 게 좋겠죠"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후후"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그런 의미로"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘 뭐 드시고 싶으신지\r\n이따 말해주시기에요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이번 데이트 흐름은 조금 아쉽긴 했지만"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그래도 구원자님과 함께 외출한 건 좋았어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "돌아오는 길에는 날도 개었고요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에도 같이 외출하자"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다음에도 같이 외출하자"
+      },
+      {
+        "speaker": "유리아",
+        "message": "……!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "네!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님은 가보시고 싶으신 곳이 있으신가요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사실 아직 잘 모르겠어"
+      },
+      {
+        "speaker": "구원자",
+        "message": "사실 아직 잘 모르겠어"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그렇군요… \r\n만일 괜찮으시다면"
+      },
+      {
+        "speaker": "유리아",
+        "message": "제가 다른 지인들로부터 받은 \r\n에덴의 여행 가이드가 있는데"
+      },
+      {
+        "speaker": "유리아",
+        "message": "함께 보면서 어딜 가보면 좋을지 생각해 볼까요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그것도 재밌겠다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그것도 재밌겠다"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그럼 여행 가이드랑 같이 \r\n간식거리랑 음료도 준비할게요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님과 집에서 떠나는 여행도 기대되네요~!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그러고 보니 이걸 보여드리는 걸 깜빡했었네요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응? 뭐를?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "응? 뭐를?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "교복!?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "교복!?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님 시대에서 제일 많이 입는 의복이라 들었는데"
+      },
+      {
+        "speaker": "유리아",
+        "message": "어떠세요…?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 어울려!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "잘 어울려!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 학생회장 같은 느낌이네"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 학생회장 같은 느낌이네"
+      },
+      {
+        "speaker": "유리아",
+        "message": "학생회장이요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "성실하고 친절해 보여"
+      },
+      {
+        "speaker": "구원자",
+        "message": "성실하고 친절해 보여"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후훗"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그렇군요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "입어 보니까 생각보다 편해서 \r\n많이들 일상에서 입으신 게 납득이 가요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "에덴에서 고등 교육 기관에 가는 정령들은 적지만…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님의 시대에는 일반적이라 하시니\r\n정말 신기한 기분이에요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "언젠가는 저도 한번 가보고 싶네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저희 욕실에 새 입욕제를 들일까 하는데요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "확 시원한 느낌이 드는 거랑 \r\n노곤노곤한 피로가 풀리는 느낌인 거랑"
+      },
+      {
+        "speaker": "유리아",
+        "message": "어느 쪽이 좋으세요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 차이가 있는데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "무슨 차이가 있는데?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "시원한 건 허브가 다양하게 섞이고 \r\n과일 중에서도 감귤류가 섞여 있어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그래서 따끈한 느낌이라도 향이 상쾌해서 \r\n피로감이 줄어드는 느낌이고"
+      },
+      {
+        "speaker": "유리아",
+        "message": "노곤노곤하게 피로가 풀리는 느낌은 \r\n우유나 달콤한 꿀 같은 향을 더해서"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그대로 푹 잘 수 있을 것처럼 \r\n몸이 이완되는 느낌을 주거든요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아는 어느 쪽이 좋은데?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아는 어느 쪽이 좋은데?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "으음……"
+      },
+      {
+        "speaker": "유리아",
+        "message": "사실 못 고르겠어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "둘 다 좋아보여서…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 굳이 고를 필요 없지 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 굳이 고를 필요 없지 않아?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "둘 다 사두면 되지"
+      },
+      {
+        "speaker": "구원자",
+        "message": "둘 다 사두면 되지"
+      },
+      {
+        "speaker": "유리아",
+        "message": "……!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "생각해 보니 그렇네요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "왜 하나만 사려고 했을까…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "고마워요 구원자님"
+      },
+      {
+        "speaker": "유리아",
+        "message": "둘 다 사서 둘테니 \r\n기분에 따라 사용해 주세요♪"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이 제게 데이트 신청을 해주시다니\r\n정말 놀랐어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇게 놀랄 일인가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그렇게 놀랄 일인가?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "서로 꽤 가까워졌다고 생각했는데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "서로 꽤 가까워졌다고 생각했는데"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그 그치만"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저만 그렇게 생각하는 걸 수도 있잖아요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그래서 구원자님께서 먼저 물어봐주셔서"
+      },
+      {
+        "speaker": "유리아",
+        "message": "엄청"
+      },
+      {
+        "speaker": "유리아",
+        "message": "엄청"
+      },
+      {
+        "speaker": "유리아",
+        "message": "어어어엄청 기뻤어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 다행이다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그럼 다행이다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 사실 유리아가 싫어하면 어쩌지 했거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 사실 유리아가 싫어하면 어쩌지 했거든"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그럴 리가요!!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "다른 누구도 아닌 구원자님이 \r\n물어봐주셔서 기쁜 걸요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "데이트가 아니어도 좋으니까"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이 원하신다면 언제든지 불러주세요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님과 함께 하는 시간이 너무 좋은 걸요…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "어제는 조금 신기한 꿈을 꿨어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저번에 교복을 입어봐서 그랬나"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님의 시대에서 구원자님과 함께 \r\n학교에 다니는 꿈이었어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "린지랑 클레르랑 메피\r\n거기에 캐서린까지 나왔지 뭐예요?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 그런 꿈을 꾼 적이 있는 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 그런 꿈을 꾼 적이 있는 것 같아"
+      },
+      {
+        "speaker": "유리아",
+        "message": "어머! 구원자님도요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "우연이겠지만 조금 기쁘네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "거기서 저는 구원자님이 말씀하신대로 학생회장이었는데"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이 절 칭찬해주신 게 정말 인상깊었나봐요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그래?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "거기다가 구원자님은 절 도와주는 전학생이셨거든요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "제가 구원자님한테 첫 눈에 반해서 \r\n구원자님을 다짜고짜 학생회로 끌어들였지 뭐예요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그걸 클레르랑 린지가 싫어했는데"
+      },
+      {
+        "speaker": "유리아",
+        "message": "조금 이상하게 느껴졌어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "평소에 클레르랑 린지는 제 이야기를 \r\n엄청 흥미롭게 들어주거든요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연애 상담 말이야?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "연애 상담 말이야?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "맞아요! 연애 상담!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "앗"
+      },
+      {
+        "speaker": "유리아",
+        "message": "방금 그건 못 본 걸로 해주세요!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 나도 유리아가 좋은걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "하지만 나도 유리아가 좋은걸"
+      },
+      {
+        "speaker": "유리아",
+        "message": "~~~~~!!!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정말~! 구원자님도 참!!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "사실 저는 마을로 나가는 것보다\r\n구원자님이 함께 숲속으로 가자고 해주셔서 더 좋았어요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말로?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "정말로?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "네"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이미 아시고 계실지도 모르겠지만 \r\n저는 자연물을 아주 좋아하거든요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "평소에는 항상 성 안에서 지내다 보니까 \r\n아무래도 직접 숲이나 바다같은 곳에 가기 어려워서요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "게다가 운이 좋아서 직접 갈 일이 있어도"
+      },
+      {
+        "speaker": "유리아",
+        "message": "보통 마법적인 이동 수단을 쓰거나 \r\n잘 다듬어진 곳만 가게 되니까"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이번처럼 직접 오솔길을 걷거나 \r\n나무 가지 사이사이를 헤쳐나가거나"
+      },
+      {
+        "speaker": "유리아",
+        "message": "개울에 발을 담군다거나"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그런 일은 거의 없거든요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그래서"
+      },
+      {
+        "speaker": "유리아",
+        "message": "아주아주 기뻤답니다♡"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다행이다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "다행이다"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아가 기쁘면 나도 좋아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아가 기쁘면 나도 좋아"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후후"
+      },
+      {
+        "speaker": "유리아",
+        "message": "다음에는 구원자님이 제일 좋은 곳으로도 가요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거라면 항상 그런 곳에 있는걸"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그거라면 항상 그런 곳에 있는걸"
+      },
+      {
+        "speaker": "유리아",
+        "message": "어머?"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아의 곁을 좋아하거든"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아의 곁을 좋아하거든"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저도!!!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "…구원자님 곁이 제일 좋아요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정말로"
+      },
+      {
+        "speaker": "유리아",
+        "message": "문득 그런 상상을 할 때가 있어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이 세계가 여럿 존재한다면"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저와 구원자님의 만남이 다르게 이뤄졌을 수 있을까 하고"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이 정령이었다면"
+      },
+      {
+        "speaker": "유리아",
+        "message": "제가 인간이었다면"
+      },
+      {
+        "speaker": "유리아",
+        "message": "지금처럼 만날 수 있었을까요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "지금처럼 서로를 아낄 수 있었을까요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "글쎄"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금 어려웠을지도 몰라"
+      },
+      {
+        "speaker": "구원자",
+        "message": "조금 어려웠을지도 몰라"
+      },
+      {
+        "speaker": "유리아",
+        "message": "역시 그렇겠죠?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그래서 저는 지금을 소중히 여기려고 해요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님을 만난 지금을"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님이 제 곁에 계셔주신 지금을"
+      },
+      {
+        "speaker": "유리아",
+        "message": "앞으로 저희가 어떤 길을 택하게 되더라도"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저희 반드시 행복해져요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "서로를 위하며…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "후우"
+      },
+      {
+        "speaker": "유리아",
+        "message": "계획했을 때부터 떨리긴 했지만"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정말 실행에 옮기려니 긴장되네요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 덜덜 떨리는 것 같아"
+      },
+      {
+        "speaker": "구원자",
+        "message": "나도 덜덜 떨리는 것 같아"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그간 도와주셔서 정말 감사했어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그러니…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "부디 오늘도 절 지켜봐주시겠어요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "드디어 저희가 함께 살 집이 준비되었어요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "조금 마을에서 멀리 떨어진 곳이지만"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그래도 정말 아늑할 거 같아요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "얼른 가보죠!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘은 기다리고 기다리던 외출 날이네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님과의 데이트라니"
+      },
+      {
+        "speaker": "유리아",
+        "message": "계속 가슴이 두근거리네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘은 부디 잘 부탁드릴게요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그러고 보니 구원자님께서 \r\n방주에 방문하시는 것도 오랜만이네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "나가실 때 가져가실 수 있도록 \r\n아까 도시락을 준비해놨답니다"
+      },
+      {
+        "speaker": "유리아",
+        "message": "메피에게 선물로 줄 \r\n딸기 컵케이크도 잘 부탁드려요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "갑자기 나가신다 하셔서 놀랐어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "별 일 아니신 거죠…?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "만일 무슨 큰 일이라도 생긴 거라면 저는…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "요즘 구원자님께서 많이 바쁘신 것 같네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "무리하고 계신 건 아니죠?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "분명 잘 조절하고 계실 거라 믿지만"
+      },
+      {
+        "speaker": "유리아",
+        "message": "조금 걱정되는 건 어쩔 수 없네요"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러는 유리아도 요즘 외출이 잦은 거 같은데"
+      },
+      {
+        "speaker": "구원자",
+        "message": "그러는 유리아도 요즘 외출이 잦은 거 같은데"
+      },
+      {
+        "speaker": "유리아",
+        "message": "아…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저도 조금 신경 쓰이는 게 있어서요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "하지만 괜찮아요 구원자님"
+      },
+      {
+        "speaker": "유리아",
+        "message": "제가 어떻게든 해볼 생각이거든요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그럼 오늘 하루도 같이 힘내요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘은 드디어 기다리고 기다리던 데이트 날이네요!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저희 꼭 즐거운 시간을 보내도록 해요♪"
+      },
+      {
+        "speaker": "유리아",
+        "message": "만일 앞으로 어떤 일이 생기더라도"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘의 기억이 아름답게 남을 수 있도록…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이것은 사랑으로 내린 결정"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그러니까 후회는 없어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이렇게 해야만 했어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님을 향한 사랑,\r\n백성들을 향한 사랑을 위해서라면"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저는 제 자신을 포기할 수 있어요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "부디 구원자님의 앞날에 \r\n영원한 태양의 축복이 함께하기를…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "에버톡을 쓰는 것도 이번이 마지막이네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님"
+      },
+      {
+        "speaker": "유리아",
+        "message": "정말 괜찮을까요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "솔직히 저는 두렵지만…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님과 함께라면 괜찮을 것 같아요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "그러니까…"
+      },
+      {
+        "speaker": "유리아",
+        "message": "용기를 내보도록 할게요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "새로운 세상으로 향할 용기를"
+      },
+      {
+        "speaker": "유리아",
+        "message": "이러면 안되는데"
+      },
+      {
+        "speaker": "유리아",
+        "message": "자꾸 구원자님한테 의지하게 되버리고 마네요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "솔직한 마음을 고백하자면"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님의 결정이 너무 기뻐요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "앞으로도 계속 구원자님과 함께할 수 있다는게"
+      },
+      {
+        "speaker": "유리아",
+        "message": "여태까지 그래왔던 것처럼"
+      },
+      {
+        "speaker": "유리아",
+        "message": "저희가 함께라면 그 어떤 고난도 헤쳐나갈 수 있겠죠?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "사랑해요 구원자님"
+      },
+      {
+        "speaker": "유리아",
+        "message": "부디 언제까지나 제 곁에서 함께해주세요"
+      },
+      {
+        "speaker": "유리아",
+        "message": "찬란한 새해가 밝아왔네요 구원자님"
+      },
+      {
+        "speaker": "유리아",
+        "message": "올 한 해도 부디 잘 부탁드릴게요!\r\n새해 복 많이 받으시길!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아도 새해 복 많이 받아!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아도 새해 복 많이 받아!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘은 사랑의 날.\r\n구원자님의 시대에는 발렌타인 데이라고 하셨죠?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "해피 발렌타인이에요 구원자님♪\r\n이 선물로 부디 구원자님의 하루가 조금이라도 더 달콤해지기를!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워! 유리아도 해피 발렌타인!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "고마워! 유리아도 해피 발렌타인!"
+      },
+      {
+        "speaker": "유리아",
+        "message": "메리 크리스마스! \r\n어떠세요? 저 제대로 축하드렸을까요?"
+      },
+      {
+        "speaker": "유리아",
+        "message": "오늘 에덴은 이브의 날이랍니다. \r\n어머니 정령 이브에게 감사를 전하는 날이죠"
+      },
+      {
+        "speaker": "유리아",
+        "message": "구원자님에게도 이브의 축복이 함께하기를…"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아도 메리 크리스마스! 이따 봐!"
+      },
+      {
+        "speaker": "구원자",
+        "message": "유리아도 메리 크리스마스! 이따 봐!"
+      }
+    ]
   },
   "i18n": {
     "name": {
@@ -98,10 +1290,10 @@
         "zh_cn": "永恆的太陽"
       },
       "constellation": {
-        "ko": "전갈자리",
-        "en": "Scorpio",
-        "zh_tw": "天蠍座",
-        "zh_cn": "天蠍座"
+        "ko": "천칭자리",
+        "en": "Libra",
+        "zh_tw": "天秤座",
+        "zh_cn": "天秤座"
       },
       "union": {
         "ko": "솔레이 왕국",
@@ -116,10 +1308,10 @@
         "zh_cn": "郭圭美"
       },
       "cv_jp": {
-        "ko": "Rina Honnizumi",
+        "ko": "Rina Honizumi",
         "en": "Rina Honnizumi",
-        "zh_tw": "Rina Honnizumi",
-        "zh_cn": "Rina Honnizumi"
+        "zh_tw": "Rina Honizumi",
+        "zh_cn": "Rina Honizumi"
       },
       "like": {
         "ko": [
@@ -182,19 +1374,920 @@
     },
     "personality": {
       "description": {
-        "ko": "좋은 아침이에요, 구원자님. 오늘도 이곳의 태양은 참 찬란하죠? \n따뜻하고 밝은 아케나인 기후가 구원자님 마음에 드셨으면 좋겠어요.\n솔레이 왕국은 제가 정말 오랜 시간 동안 다스려온 나라랍니다.\n그리고 제 바람은 항상 같아요. \n\n이곳에서 살아가는 정령들이 그저 평범하게 살아가는 것.\n해가 지고 밤이 찾아와 정령들이 잠을 청하기 전, 불안한 마음 없이 눈을 감을 수 있는 것…\n그것이야말로 제 진정한 행복이자 영원한 숙명이에요.\n\n그리고, 저희에게 마치 선물처럼 나타나주신 구원자님이 지금 제 눈앞에 있네요…\n오직 구원자님께서만 지니신 그 진실된 힘을, 저는 믿고 있을게요.\n항상 진심을 보여주셔서 감사해요!",
-        "en": "Good morning, Savior. The sun is shining quite radiantly today! \r\nI hope you're enjoying the bright and warm climate of Arkenine.\r\nI have been ruling over the Kingdom of Solrey for quite a long time.\r\nI always wish for one thing:\r\n\r\nthat the Souls here can all live a normal life.\r\nAs the sun rises and sets, I just want everyone to close their eyes without any worries in their hearts as they fall asleep at night…\r\nThat is what would make me happy, and it is my eternal duty to make sure that's how they live.\r\n\r\nAnd you, Savior. You are like a gift, and here you are standing right before me…\r\nI have faith in your powers.\r\nThank you for always being truthful and sincere!",
-        "zh_tw": "救援者，早安。今天這裡又是陽光普照的一天呢！\r\n期盼阿肯納因溫暖又明亮的氣候能溫暖救援者的心。\r\n我已經統治蘇萊伊王國很久了，\r\n而我的心願始終如一。\r\n\r\n那就是希望居住於此的精靈們能夠過著平凡簡單的生活。\r\n日落之後夜幕低垂時，精靈們在就寢前能夠安心地閉上雙眼…\r\n那對我來說才是真正的幸福及永遠的宿命。\r\n\r\n還有，如禮物般出現的救援者，此時此刻就在我的眼前…\r\n我相信那股只存在於救援者體內的真實力量。\r\n謝謝你總是以真心待我！",
-        "zh_cn": "救援者，早安。今天這裡又是陽光普照的一天呢！\r\n期盼阿肯納因溫暖又明亮的氣候能溫暖救援者的心。\r\n我已經統治蘇萊伊王國很久了，\r\n而我的心願始終如一。\r\n\r\n那就是希望居住於此的精靈們能夠過著平凡簡單的生活。\r\n日落之後夜幕低垂時，精靈們在就寢前能夠安心地閉上雙眼…\r\n那對我來說才是真正的幸福及永遠的宿命。\r\n\r\n還有，如禮物般出現的救援者，此時此刻就在我的眼前…\r\n我相信那股只存在於救援者體內的真實力量。\r\n謝謝你總是以真心待我！"
+        "ko": "다시 인사드려요, 구원자님. \n솔레이 왕국의 여왕, 유리아입니다.\n\n많은 시간이 지난 지금에서도, 제 바람은 항상 같아요. \n에덴에서 살아가는 모든 정령들이 평화롭게 살아가는 것. \n\n해가 지고 밤이 찾아와 정령들이 잠을 청하기 전, 불안한 마음 없이 눈을 감을 수 있는 것…\n그것이야말로 제 진정한 행복이자 영원한 숙명.\n\n그리고 그 소원을 이루기 위해 제게 나타난 기적이 바로 구원자님, 사랑스러운 당신…\n오직 구원자님께서만 지니신 그 진실된 힘을, 저는 변함없이 믿고 있답니다. \n\n저희가 그 어떤 고난과 역경에 빠지더라도, \n당신의 그 굳은 결의가 반드시 기적과도 같은 해피 엔딩을 불러오겠죠. \n부디 그 어떤 어두운 밤에도, 찬란한 빛의 가호가 구원자님과 함께하기를…",
+        "en": "Hello again, Savior.\r\nIt's me, Yuria, the queen of the Kingdom of Solrey.\r\n\r\nEven after all the time that has passed, my hope remains the same.\r\nI would like for all the Souls of Eden to live in peace.\r\n\r\nTrue happiness and destiny for me is to be able to close my eyes without any anxiety at night\r\njust before the Souls fall asleep after the sun sets.\r\n\r\nYou are a miracle who appeared so that my wish and desire can come true, lovely Savior…\r\nMy faith in your true powers is unwavering.\r\n\r\nNo matter what kind of troubles and hardships we may go through,\r\nyour determination will ensure a happy ending for all.\r\nMay the blessings of the brilliant light be with you, Savior, no matter what darkness befalls you.",
+        "zh_tw": "再次向你問候，救援者。\r\n我是蘇萊伊王國的女王，尤里婭。\r\n\r\n就算經過了很長一段時間，但我的心願現在依然沒有改變。\r\n那就是希望居住於伊甸園的所有精靈能夠過著平靜的生活。\r\n\r\n日落之後夜幕低垂時，精靈們在就寢前能夠安心地閉上雙眼…\r\n那對我來說才是真正的幸福及永遠的宿命。\r\n\r\n還有為了實現這個願望，而出現在我面前的奇蹟就是救援者，親愛的你…\r\n我總是相信那股只存在於救援者體內的真實力量。\r\n\r\n不管我們遇到什麽樣的苦難和逆境，\r\n你堅定的決心一定會帶來奇蹟般的快樂結局。\r\n我希望在任何黑暗的夜晚，燦爛的光芒庇佑能與救援者同在…",
+        "zh_cn": "再次向你問候，救援者。\r\n我是蘇萊伊王國的女王，尤里婭。\r\n\r\n就算經過了很長一段時間，但我的心願現在依然沒有改變。\r\n那就是希望居住於伊甸園的所有精靈能夠過著平靜的生活。\r\n\r\n日落之後夜幕低垂時，精靈們在就寢前能夠安心地閉上雙眼…\r\n那對我來說才是真正的幸福及永遠的宿命。\r\n\r\n還有為了實現這個願望，而出現在我面前的奇蹟就是救援者，親愛的你…\r\n我總是相信那股只存在於救援者體內的真實力量。\r\n\r\n不管我們遇到什麽樣的苦難和逆境，\r\n你堅定的決心一定會帶來奇蹟般的快樂結局。\r\n我希望在任何黑暗的夜晚，燦爛的光芒庇佑能與救援者同在…"
       },
       "greeting": {
-        "ko": "",
-        "en": "",
-        "zh_tw": "",
-        "zh_cn": ""
+        "ko": "영원한 태양이 당신과 함께합니다.\n…후훗. 어떠세요, 구원자님? 멋진가요?",
+        "en": "The Eternal Sun is with you.\r\n… Hehe. How does that sound, Savior? Does it sound cool?",
+        "zh_tw": "永恆的太陽與你同在。\r\n…呵呵，怎麼樣，救援者？很帥氣吧？",
+        "zh_cn": "永恆的太陽與你同在。\r\n…呵呵，怎麼樣，救援者？很帥氣吧？"
       }
     },
-    "speech_patterns": [],
+    "speech_patterns": [
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Savior!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "救援者！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "救援者！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "뭔가 특이한 점 혹시 느끼셨나요!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Did you notice anything strange?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "你有沒有感覺到特別的地方！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "你有沒有感覺到特別的地方！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "후후 사실 이번에 저 새 에버폰을 하나 구했답니다"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Haha, I got myself a new Everphone."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "呵呵，其實我這次新買了一支EverPhone"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "呵呵，其實我這次新買了一支EverPhone"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "지금 연락드리는 건 그 새 에버폰이에요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I'm using that Everphone right now."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "現在就是用那支EverPhone聯絡你"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "現在就是用那支EverPhone聯絡你"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "즉 에버톡 아이디도 다르죠"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "In other words, my Evertalk ID has changed."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "也就是說，EverTalk的ID不一樣"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "也就是說，EverTalk的ID不一樣"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "네! 맞아요!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Yes! That's correct!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "對！沒錯！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "對！沒錯！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "정말 친한 분들하고 교류하기 위한 에버폰이거든요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I'll use this Everphone to communicate with my closest friends."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "這支EverPhone是拿來跟真的很親近的人聯絡的"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "這支EverPhone是拿來跟真的很親近的人聯絡的"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "이제 저도 전장에 설 수 있으니"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Since I can participate in battles now,"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "我現在也可以上戰場了"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "我現在也可以上戰場了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님이 필요하실 때마다 편하게 불러주세요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I want you to call me whenever you need my help."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "所以救援者需要我的時候，隨時聯絡我"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "所以救援者需要我的時候，隨時聯絡我"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "이 에버폰으로 오는 연락은 바로바로 확인할 거거든요♪"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I'll check all the calls and messages I get through this Everphone!♪"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "這支EverPhone的訊息我會馬上查看♪"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "這支EverPhone的訊息我會馬上查看♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님은 자신의 집에 \r\n꼭 있었으면 하시는 게 있나요?"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Savior, is there anything\r\nyou want to have at home?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "救援者希望自己的家裡\r\n有什麼東西？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "救援者希望自己的家裡\r\n有什麼東西？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "뜬금 없지 않아요~!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "No, it's not~!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "並不突然～！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "並不突然～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "함께 은퇴하기로 했으니"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Since we're retiring together,"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "既然說好要一起退休"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "既然說好要一起退休"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "저희가 함께 살 집을 알아 보고 있거든요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I was looking for a place for us to live."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "我就想看看我們要一起住的家"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "我就想看看我們要一起住的家"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "지금 가구를 어떻게 할지 고민 중인데…"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "And I was wondering what to do with furniture..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "現在在苦惱家具的問題…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "現在在苦惱家具的問題…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "혹시 지금 시간 괜찮으세요?"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Are you free right now?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "你現在有空嗎？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "你現在有空嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "괜찮으시면 잠깐 같이 \r\n카탈로그 봐주시겠어요?"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Can we look through the brochure\r\ntogether?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "可以的話，\r\n要不要一起看目錄？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "可以的話，\r\n要不要一起看目錄？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "그래주시면 저는 너무 좋죠!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Yes! It'd help a lot!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "你願意的話，我當然好！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "你願意的話，我當然好！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "기왕 같이 사는 거니까"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I mean, we will be living together."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "既然要一起住"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "既然要一起住"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님의 마음에도 \r\n제 마음에도 쏙 드는 집이 되었으면 하거든요♪"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I want our house to be a place\r\nthat suits our taste!♪"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "就希望是讓救援者跟我\r\n都滿意的家♪"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "就希望是讓救援者跟我\r\n都滿意的家♪"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "그럼 제가 방주로 찾아뵐게요!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Then I'll go to see you at the Ark!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "那我去方舟找你！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "那我去方舟找你！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님…"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Savior..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "救援者…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "救援者…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "저 혹시… 나름 조절한다고 했던 건데…"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I...tried to be moderate..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "那個…我說我有調整過的…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "那個…我說我有調整過的…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "모두에게 대접한 제 요리가 너무 매웠을까요…?"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "but I wonder if the food I made for everyone was too spicy..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "招待給大家的料理還是太辣了嗎…？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "招待給大家的料理還是太辣了嗎…？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "역시 그럴까요…"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Right..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "果然是這樣…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "果然是這樣…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "으음… 실수했네요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Umm... I made a mistake."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "呃嗯…是我的錯"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "呃嗯…是我的錯"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "매운 걸 먹으면 피로가 풀리니까 \r\n살짝만 매콤하게 하려고 했던 건데…"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I tried to make the food just slightly spicy\r\nsince eating something spicy relieves stress..."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "因為吃辣的可以緩解疲勞，\r\n我才想弄得辣一點…"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "因為吃辣的可以緩解疲勞，\r\n我才想弄得辣一點…"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "이렇게 된 이상 요리 특훈을 해야겠어요!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Well, I think I should have a special cooking training!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "既然這樣，我得做烹飪特訓！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "既然這樣，我得做烹飪特訓！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "괜찮으시면 구원자님께서 \r\n맛을 보고 감상을 말씀해주시겠어요?"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Can you try my food and\r\nshare your thoughts?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "方便的話，救援者可以試吃看看，\r\n告訴我心得嗎？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "方便的話，救援者可以試吃看看，\r\n告訴我心得嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "부디 부탁드려요~!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Please, Savior~!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "拜託你了～！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "拜託你了～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님이 드셔 보시고 \r\n맛있다고 해주신다면"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I'm sure if you try it\r\nand say that it's good,"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "救援者吃過之後\r\n覺得好吃的話"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "救援者吃過之後\r\n覺得好吃的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "자신감이 많이 생길 것 같아요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I'll get much more confident."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "我會產生很大的信心"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "我會產生很大的信心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "무엇보다 저희는 지금 동거 중이니까"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Most importantly, since we are living together,"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "最重要的是，我們現在同居"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "最重要的是，我們現在同居"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님 입맛에 맞추는 게 좋겠죠"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I should cook according to your taste."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "我希望可以合救援者的胃口"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "我希望可以合救援者的胃口"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "후후"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Hehe"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "呵呵"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "呵呵"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "그런 의미로"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "So,"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "所以"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "所以"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "오늘 뭐 드시고 싶으신지\r\n이따 말해주시기에요?"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "let me know later what you want to\r\neat today, okay?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "你等一下可以告訴我\r\n今天想吃什麼嗎？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "你等一下可以告訴我\r\n今天想吃什麼嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "이번 데이트 흐름은 조금 아쉽긴 했지만"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Our date today could have been better,"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "雖然這次約會的走向有點可惜"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "雖然這次約會的走向有點可惜"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "그래도 구원자님과 함께 외출한 건 좋았어요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "but I enjoyed going out with you, Savior."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "但跟救援者一起外出還是很開心"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "但跟救援者一起外出還是很開心"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "돌아오는 길에는 날도 개었고요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Also, the weather cleared up on our way back."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "回來的路上也放晴了"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "回來的路上也放晴了"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "……!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "...!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "……！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "……！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "네!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Sure!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "好！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "好！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님은 가보시고 싶으신 곳이 있으신가요?"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Is there any place you want to go?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "救援者有想去的地方嗎？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "救援者有想去的地方嗎？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "그렇군요… \r\n만일 괜찮으시다면"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I see...\r\nIf it's fine with you,"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "這樣啊…\r\n可以的話"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "這樣啊…\r\n可以的話"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "제가 다른 지인들로부터 받은 \r\n에덴의 여행 가이드가 있는데"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "there's an Eden travel book\r\nthat I got from a friend."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "我認識的人有給我\r\n伊甸園旅遊指南"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "我認識的人有給我\r\n伊甸園旅遊指南"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "함께 보면서 어딜 가보면 좋을지 생각해 볼까요?"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Shall we read it together and think about where we should go?"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "要不要一起邊看邊想要去哪裡？"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "要不要一起邊看邊想要去哪裡？"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "그럼 여행 가이드랑 같이 \r\n간식거리랑 음료도 준비할게요!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "Then I'll bring the travel book\r\ntogether with some snacks and drinks!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "那我去準備旅遊指南\r\n跟零食飲料！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "那我去準備旅遊指南\r\n跟零食飲料！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님과 집에서 떠나는 여행도 기대되네요~!"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I'm looking forward to this trip at home with you~!"
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "好期待跟救援者一起出發的旅行～！"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "好期待跟救援者一起出發的旅行～！"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "그러고 보니 이걸 보여드리는 걸 깜빡했었네요"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "By the way, I forgot to show this to you."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "對了，我忘記要給你看這個"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "對了，我忘記要給你看這個"
+        }
+      },
+      {
+        "ko": {
+          "speaker": "유리아",
+          "message": "구원자님 시대에서 제일 많이 입는 의복이라 들었는데"
+        },
+        "en": {
+          "speaker": "Yuria",
+          "message": "I heard people back in your world used to wear it a lot."
+        },
+        "zh_tw": {
+          "speaker": "尤里婭",
+          "message": "我聽說這是救援者時代最常穿的衣服"
+        },
+        "zh_cn": {
+          "speaker": "尤里婭",
+          "message": "我聽說這是救援者時代最常穿的衣服"
+        }
+      }
+    ],
     "comments": [
       {
         "ko": {
@@ -253,7 +2346,5138 @@
     ],
     "dialogues": {
       "story": [],
-      "evertalk": []
+      "evertalk": [
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 일이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼事？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "뭔가 특이한 점 혹시 느끼셨나요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Did you notice anything strange?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你有沒有感覺到特別的地方！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你有沒有感覺到特別的地方！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "특이한 점이라니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Anything strange?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼特別的地方？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼特別的地方？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "특이한 점이라니?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Anything strange?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "什麼特別的地方？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "什麼特別的地方？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후후 사실 이번에 저 새 에버폰을 하나 구했답니다"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Haha, I got myself a new Everphone."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵，其實我這次新買了一支EverPhone"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵，其實我這次新買了一支EverPhone"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "지금 연락드리는 건 그 새 에버폰이에요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm using that Everphone right now."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "現在就是用那支EverPhone聯絡你"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "現在就是用那支EverPhone聯絡你"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "즉 에버톡 아이디도 다르죠"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "In other words, my Evertalk ID has changed."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "也就是說，EverTalk的ID不一樣"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "也就是說，EverTalk的ID不一樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러고 보니 평소랑 아이디가 다르네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Right, your ID is different now."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼一說，跟妳平常的ID不一樣呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼一說，跟妳平常的ID不一樣呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러고 보니 평소랑 아이디가 다르네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Right, your ID is different now."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這麼一說，跟妳平常的ID不一樣呢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這麼一說，跟妳平常的ID不一樣呢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "네! 맞아요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Yes! That's correct!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "對！沒錯！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "對！沒錯！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정말 친한 분들하고 교류하기 위한 에버폰이거든요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'll use this Everphone to communicate with my closest friends."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這支EverPhone是拿來跟真的很親近的人聯絡的"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這支EverPhone是拿來跟真的很親近的人聯絡的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이제 저도 전장에 설 수 있으니"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Since I can participate in battles now,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我現在也可以上戰場了"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我現在也可以上戰場了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이 필요하실 때마다 편하게 불러주세요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I want you to call me whenever you need my help."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "所以救援者需要我的時候，隨時聯絡我"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "所以救援者需要我的時候，隨時聯絡我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이 에버폰으로 오는 연락은 바로바로 확인할 거거든요♪"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'll check all the calls and messages I get through this Everphone!♪"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這支EverPhone的訊息我會馬上查看♪"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這支EverPhone的訊息我會馬上查看♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워 유리아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Yuria."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，尤里婭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，尤里婭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워 유리아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you, Yuria."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳，尤里婭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳，尤里婭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님은 자신의 집에 \r\n꼭 있었으면 하시는 게 있나요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior, is there anything\r\nyou want to have at home?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者希望自己的家裡\r\n有什麼東西？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者希望自己的家裡\r\n有什麼東西？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 뜬금 없네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why do you ask all of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真突然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真突然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "갑자기 뜬금 없네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Why do you ask all of a sudden?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真突然"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真突然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "뜬금 없지 않아요~!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "No, it's not~!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "並不突然～！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "並不突然～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "함께 은퇴하기로 했으니"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Since we're retiring together,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "既然說好要一起退休"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "既然說好要一起退休"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저희가 함께 살 집을 알아 보고 있거든요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was looking for a place for us to live."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我就想看看我們要一起住的家"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我就想看看我們要一起住的家"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "지금 가구를 어떻게 할지 고민 중인데…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "And I was wondering what to do with furniture..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "現在在苦惱家具的問題…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "現在在苦惱家具的問題…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "혹시 지금 시간 괜찮으세요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Are you free right now?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你現在有空嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你現在有空嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "괜찮으시면 잠깐 같이 \r\n카탈로그 봐주시겠어요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Can we look through the brochure\r\ntogether?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "可以的話，\r\n要不要一起看目錄？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "可以的話，\r\n要不要一起看目錄？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Shall we?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可以嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可以嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럴까?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Shall we?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可以嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可以嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그래주시면 저는 너무 좋죠!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Yes! It'd help a lot!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你願意的話，我當然好！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你願意的話，我當然好！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "기왕 같이 사는 거니까"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I mean, we will be living together."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "既然要一起住"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "既然要一起住"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님의 마음에도 \r\n제 마음에도 쏙 드는 집이 되었으면 하거든요♪"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I want our house to be a place\r\nthat suits our taste!♪"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "就希望是讓救援者跟我\r\n都滿意的家♪"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "就希望是讓救援者跟我\r\n都滿意的家♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그럼 제가 방주로 찾아뵐게요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Then I'll go to see you at the Ark!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "那我去方舟找你！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "那我去方舟找你！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저 혹시… 나름 조절한다고 했던 건데…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I...tried to be moderate..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "那個…我說我有調整過的…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "那個…我說我有調整過的…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "모두에게 대접한 제 요리가 너무 매웠을까요…?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "but I wonder if the food I made for everyone was too spicy..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "招待給大家的料理還是太辣了嗎…？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "招待給大家的料理還是太辣了嗎…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Umm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "음…"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Umm..."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 나는 괜찮았지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was okay then"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我那時候覺得還好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我那時候覺得還好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그때 나는 괜찮았지만"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I was okay then"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我那時候覺得還好"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我那時候覺得還好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그정도 매운 걸 매번 먹기는 힘들지도 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but I guess I wouldn't be able to eat something that spicy often."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但可能沒辦法每次都吃那種辣度"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但可能沒辦法每次都吃那種辣度"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그정도 매운 걸 매번 먹기는 힘들지도 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "but I guess I wouldn't be able to eat something that spicy often."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "但可能沒辦法每次都吃那種辣度"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "但可能沒辦法每次都吃那種辣度"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "역시 그럴까요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Right..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "果然是這樣…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "果然是這樣…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "으음… 실수했네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Umm... I made a mistake."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呃嗯…是我的錯"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呃嗯…是我的錯"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "매운 걸 먹으면 피로가 풀리니까 \r\n살짝만 매콤하게 하려고 했던 건데…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I tried to make the food just slightly spicy\r\nsince eating something spicy relieves stress..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "因為吃辣的可以緩解疲勞，\r\n我才想弄得辣一點…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "因為吃辣的可以緩解疲勞，\r\n我才想弄得辣一點…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이렇게 된 이상 요리 특훈을 해야겠어요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Well, I think I should have a special cooking training!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "既然這樣，我得做烹飪特訓！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "既然這樣，我得做烹飪特訓！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "괜찮으시면 구원자님께서 \r\n맛을 보고 감상을 말씀해주시겠어요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Can you try my food and\r\nshare your thoughts?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "方便的話，救援者可以試吃看看，\r\n告訴我心得嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "方便的話，救援者可以試吃看看，\r\n告訴我心得嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "내가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Me?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "부디 부탁드려요~!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Please, Savior~!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "拜託你了～！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "拜託你了～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이 드셔 보시고 \r\n맛있다고 해주신다면"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm sure if you try it\r\nand say that it's good,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者吃過之後\r\n覺得好吃的話"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者吃過之後\r\n覺得好吃的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "자신감이 많이 생길 것 같아요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'll get much more confident."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我會產生很大的信心"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我會產生很大的信心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "무엇보다 저희는 지금 동거 중이니까"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Most importantly, since we are living together,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "最重要的是，我們現在同居"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "最重要的是，我們現在同居"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님 입맛에 맞추는 게 좋겠죠"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I should cook according to your taste."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我希望可以合救援者的胃口"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我希望可以合救援者的胃口"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Hehe"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그런 의미로"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "So,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "所以"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "所以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘 뭐 드시고 싶으신지\r\n이따 말해주시기에요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "let me know later what you want to\r\neat today, okay?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你等一下可以告訴我\r\n今天想吃什麼嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你等一下可以告訴我\r\n今天想吃什麼嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이번 데이트 흐름은 조금 아쉽긴 했지만"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Our date today could have been better,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "雖然這次約會的走向有點可惜"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "雖然這次約會的走向有點可惜"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그래도 구원자님과 함께 외출한 건 좋았어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "but I enjoyed going out with you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "但跟救援者一起外出還是很開心"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "但跟救援者一起外出還是很開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "돌아오는 길에는 날도 개었고요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Also, the weather cleared up on our way back."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "回來的路上也放晴了"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "回來的路上也放晴了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에도 같이 외출하자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go out together next time again."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次再一起出去吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次再一起出去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다음에도 같이 외출하자"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Let's go out together next time again."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "下次再一起出去吧"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "下次再一起出去吧"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "……!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "...!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "……！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "……！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "네!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Sure!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "好！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "好！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님은 가보시고 싶으신 곳이 있으신가요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Is there any place you want to go?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者有想去的地方嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者有想去的地方嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사실 아직 잘 모르겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm not sure yet."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "其實我還不知道"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "其實我還不知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "사실 아직 잘 모르겠어"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm not sure yet."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "其實我還不知道"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "其實我還不知道"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그렇군요… \r\n만일 괜찮으시다면"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I see...\r\nIf it's fine with you,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這樣啊…\r\n可以的話"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這樣啊…\r\n可以的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "제가 다른 지인들로부터 받은 \r\n에덴의 여행 가이드가 있는데"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "there's an Eden travel book\r\nthat I got from a friend."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我認識的人有給我\r\n伊甸園旅遊指南"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我認識的人有給我\r\n伊甸園旅遊指南"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "함께 보면서 어딜 가보면 좋을지 생각해 볼까요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Shall we read it together and think about where we should go?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "要不要一起邊看邊想要去哪裡？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "要不要一起邊看邊想要去哪裡？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그것도 재밌겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds fun."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很好玩"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很好玩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그것도 재밌겠다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Sounds fun."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "一定很好玩"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "一定很好玩"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그럼 여행 가이드랑 같이 \r\n간식거리랑 음료도 준비할게요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Then I'll bring the travel book\r\ntogether with some snacks and drinks!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "那我去準備旅遊指南\r\n跟零食飲料！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "那我去準備旅遊指南\r\n跟零食飲料！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님과 집에서 떠나는 여행도 기대되네요~!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm looking forward to this trip at home with you~!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "好期待跟救援者一起出發的旅行～！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "好期待跟救援者一起出發的旅行～！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그러고 보니 이걸 보여드리는 걸 깜빡했었네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "By the way, I forgot to show this to you."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "對了，我忘記要給你看這個"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "對了，我忘記要給你看這個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응? 뭐를?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm? What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "응? 뭐를?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Hmm? What is it?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "嗯？什麼？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "嗯？什麼？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "교복!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "School uniform?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "學校制服！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "學校制服！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "교복!?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "School uniform?!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "學校制服！？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "學校制服！？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님 시대에서 제일 많이 입는 의복이라 들었는데"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I heard people back in your world used to wear it a lot."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我聽說這是救援者時代最常穿的衣服"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我聽說這是救援者時代最常穿的衣服"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "어떠세요…?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "What do you think...?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "怎麼樣…？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "怎麼樣…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 어울려!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Looks good on you!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好適合妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好適合妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "잘 어울려!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Looks good on you!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "好適合妳！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "好適合妳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 학생회장 같은 느낌이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You look like a student president."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺像學生會長"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺像學生會長"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 학생회장 같은 느낌이네"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You look like a student president."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "感覺像學生會長"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "感覺像學生會長"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "학생회장이요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Student president?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "學生會長？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "學生會長？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "성실하고 친절해 보여"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I mean, you look sincere and friendly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看起來很正直又親切"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看起來很正直又親切"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "성실하고 친절해 보여"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I mean, you look sincere and friendly."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "看起來很正直又親切"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "看起來很正直又親切"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후훗"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Haha"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그렇군요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I see."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "原來如此"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "原來如此"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "입어 보니까 생각보다 편해서 \r\n많이들 일상에서 입으신 게 납득이 가요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "It's more comfortable than what I thought.\r\nNow I understand why they wore it so often."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "穿起來比想像中還舒服，\r\n可以理解為什麼平時也很常這樣穿"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "穿起來比想像中還舒服，\r\n可以理解為什麼平時也很常這樣穿"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "에덴에서 고등 교육 기관에 가는 정령들은 적지만…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Only a few Souls go to a higher education institution in Eden..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "雖然在伊甸園，很少精靈上高等教育機構…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "雖然在伊甸園，很少精靈上高等教育機構…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님의 시대에는 일반적이라 하시니\r\n정말 신기한 기분이에요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I can't believe\r\nthat was common back in your world."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "但救援者的時代很普遍，\r\n感覺真神奇"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "但救援者的時代很普遍，\r\n感覺真神奇"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "언젠가는 저도 한번 가보고 싶네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I wish I could be there myself one day."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我有一天也想去看看"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我有一天也想去看看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저희 욕실에 새 입욕제를 들일까 하는데요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was thinking of buying a new bath bomb for the bathroom."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我在想要不要放新的入浴劑在我們浴室"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我在想要不要放新的入浴劑在我們浴室"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "확 시원한 느낌이 드는 거랑 \r\n노곤노곤한 피로가 풀리는 느낌인 거랑"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "There's one that feels refreshing\r\nand one that feels relaxing."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "很清爽的感覺\r\n跟可以緩解無力倦怠的感覺"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "很清爽的感覺\r\n跟可以緩解無力倦怠的感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "어느 쪽이 좋으세요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Which one do you prefer?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你喜歡哪一種？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你喜歡哪一種？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 차이가 있는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's the difference?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有什麼差別嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有什麼差別嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "무슨 차이가 있는데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What's the difference?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "有什麼差別嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "有什麼差別嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "시원한 건 허브가 다양하게 섞이고 \r\n과일 중에서도 감귤류가 섞여 있어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "The refreshing one has a lot of different herbs in it,\r\nincluding citrus fruit."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "清爽的混有許多草本植物，\r\n還帶有柑橘果香"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "清爽的混有許多草本植物，\r\n還帶有柑橘果香"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그래서 따끈한 느낌이라도 향이 상쾌해서 \r\n피로감이 줄어드는 느낌이고"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Although it feels warm, it smells refreshing\r\nand reduces fatigue."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "雖然感覺很溫暖，但因為香味很清爽，\r\n所以可以緩解疲勞"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "雖然感覺很溫暖，但因為香味很清爽，\r\n所以可以緩解疲勞"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "노곤노곤하게 피로가 풀리는 느낌은 \r\n우유나 달콤한 꿀 같은 향을 더해서"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "The relaxing one smells like\r\nmilk and sweet honey,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "而緩解無力倦怠感的是\r\n加上牛奶或甜甜的蜂蜜這類香味"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "而緩解無力倦怠感的是\r\n加上牛奶或甜甜的蜂蜜這類香味"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그대로 푹 잘 수 있을 것처럼 \r\n몸이 이완되는 느낌을 주거든요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "so it relaxes your body and makes you feel\r\nas if you could fall asleep right away."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "就像可以直接入睡一樣，\r\n有讓身體放鬆的感覺"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "就像可以直接入睡一樣，\r\n有讓身體放鬆的感覺"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아는 어느 쪽이 좋은데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about you, Yuria? Which one do you prefer?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭喜歡哪一種？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭喜歡哪一種？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아는 어느 쪽이 좋은데?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "What about you, Yuria? Which one do you prefer?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭喜歡哪一種？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭喜歡哪一種？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "으음……"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Hmm..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呃嗯……"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呃嗯……"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "사실 못 고르겠어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I can't choose, to be honest."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "其實我選不出來"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "其實我選不出來"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "둘 다 좋아보여서…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "They both seem nice..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "兩個看起來都很棒…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "兩個看起來都很棒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 굳이 고를 필요 없지 않아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then, there's no need to choose one."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那就沒必要非得選擇吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那就沒必要非得選擇吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 굳이 고를 필요 없지 않아?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Then, there's no need to choose one."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "那就沒必要非得選擇吧？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "那就沒必要非得選擇吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "둘 다 사두면 되지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You should buy them both."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "兩個都買就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "兩個都買就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "둘 다 사두면 되지"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You should buy them both."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "兩個都買就好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "兩個都買就好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "……!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "...!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "……！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "……！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "생각해 보니 그렇네요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "You are right!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "想想也是！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "想想也是！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "왜 하나만 사려고 했을까…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Why was I trying to choose one...?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我為什麼只想著買一個呢…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我為什麼只想著買一個呢…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "고마워요 구원자님"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Thank you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "謝謝你，救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "謝謝你，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "둘 다 사서 둘테니 \r\n기분에 따라 사용해 주세요♪"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'll buy them both.\r\nUse them depending on your mood!♪"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我兩個都會買，\r\n你再看心情使用♪"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我兩個都會買，\r\n你再看心情使用♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이 제게 데이트 신청을 해주시다니\r\n정말 놀랐어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was surprised that you asked me out\r\nfor a date."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者竟然邀我約會，\r\n真的嚇我一跳"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者竟然邀我約會，\r\n真的嚇我一跳"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇게 놀랄 일인가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這件事有這麼驚訝嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這件事有這麼驚訝嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그렇게 놀랄 일인가?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Were you?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這件事有這麼驚訝嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這件事有這麼驚訝嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "서로 꽤 가까워졌다고 생각했는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I thought we got pretty close to each other."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我還以為我們變親近很多了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我還以為我們變親近很多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "서로 꽤 가까워졌다고 생각했는데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I thought we got pretty close to each other."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我還以為我們變親近很多了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我還以為我們變親近很多了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그 그치만"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Umm, well,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "可、可是"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "可、可是"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저만 그렇게 생각하는 걸 수도 있잖아요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I thought I was the only one thinking that way."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "也有可能是我單方面那樣想嘛"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "也有可能是我單方面那樣想嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그래서 구원자님께서 먼저 물어봐주셔서"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "So, when you asked me out before me,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "所以救援者先問我的時候"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "所以救援者先問我的時候"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "엄청"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was really"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我超級"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我超級"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "엄청"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "really"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我超級"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我超級"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "어어어엄청 기뻤어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "reaaaaally happy."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "超級超級超級開心"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "超級超級超級開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 다행이다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm glad."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그럼 다행이다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm glad."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 사실 유리아가 싫어하면 어쩌지 했거든"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "To be honest, I was also worried that you might hate it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "其實我也很怕尤里婭拒絕我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "其實我也很怕尤里婭拒絕我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 사실 유리아가 싫어하면 어쩌지 했거든"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "To be honest, I was also worried that you might hate it."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "其實我也很怕尤里婭拒絕我"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "其實我也很怕尤里婭拒絕我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그럴 리가요!!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "No way!!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "怎麼可能！！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "怎麼可能！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "다른 누구도 아닌 구원자님이 \r\n물어봐주셔서 기쁜 걸요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm happy because it's you\r\nwho asked me out!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "又不是別人，是救援者邀我，\r\n我很高興的！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "又不是別人，是救援者邀我，\r\n我很高興的！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "데이트가 아니어도 좋으니까"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "It doesn't have to be a date every time."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "就算不是約會也好"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "就算不是約會也好"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이 원하신다면 언제든지 불러주세요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Just ask me out whenever you want."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "只要救援者願意，歡迎你隨時找我"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "只要救援者願意，歡迎你隨時找我"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님과 함께 하는 시간이 너무 좋은 걸요…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I really enjoy the time I spend with you..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "跟救援者共度的時光很棒…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "跟救援者共度的時光很棒…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "어제는 조금 신기한 꿈을 꿨어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I had a strange dream last night."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "昨天做了有點神奇的夢"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "昨天做了有點神奇的夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저번에 교복을 입어봐서 그랬나"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Maybe it was because I wore a school uniform the other day."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "是因為上次穿了制服嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "是因為上次穿了制服嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님의 시대에서 구원자님과 함께 \r\n학교에 다니는 꿈이었어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I dreamed that I went to the same school with you\r\nback in your world."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我夢到我在救援者的時代\r\n跟救援者一起上學"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我夢到我在救援者的時代\r\n跟救援者一起上學"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "린지랑 클레르랑 메피\r\n거기에 캐서린까지 나왔지 뭐예요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Linzy, Claire, Mephi,\r\nand even Catherine were there!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "夢裡還有琳賽、克萊兒、梅菲\r\n跟凱瑟琳！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "夢裡還有琳賽、克萊兒、梅菲\r\n跟凱瑟琳！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 그런 꿈을 꾼 적이 있는 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I had a similar dream before."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我好像也有做過那種夢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我好像也有做過那種夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 그런 꿈을 꾼 적이 있는 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I think I had a similar dream before."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我好像也有做過那種夢"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我好像也有做過那種夢"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "어머! 구원자님도요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Oh! Did you?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "天啊！救援者也是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "天啊！救援者也是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "우연이겠지만 조금 기쁘네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "What a happy coincidence!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "雖然應該是偶然，但我有點開心"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "雖然應該是偶然，但我有點開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "거기서 저는 구원자님이 말씀하신대로 학생회장이었는데"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was the student president, just you had mentioned."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "就跟救援者說的一樣，我在夢裡是學生會長"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "就跟救援者說的一樣，我在夢裡是學生會長"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이 절 칭찬해주신 게 정말 인상깊었나봐요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I guess I was impressed by your praise."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "看來救援者稱讚我，讓我印象很深刻"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "看來救援者稱讚我，讓我印象很深刻"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그래?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "是嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "거기다가 구원자님은 절 도와주는 전학생이셨거든요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Furthermore, you were a transfer student who helped me."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "而且救援者還是幫助我的轉學生"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "而且救援者還是幫助我的轉學生"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "제가 구원자님한테 첫 눈에 반해서 \r\n구원자님을 다짜고짜 학생회로 끌어들였지 뭐예요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I fell for you at first sight\r\nand got you involved in the student council."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "因為我對救援者一見鍾情，\r\n就不管三七二十一地拉你進學生會了"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "因為我對救援者一見鍾情，\r\n就不管三七二十一地拉你進學生會了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그걸 클레르랑 린지가 싫어했는데"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Claire and Linzy were didn't like that,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "克萊兒跟琳賽反對這件事"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "克萊兒跟琳賽反對這件事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "조금 이상하게 느껴졌어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "which felt a little strange."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "讓我覺得很奇怪"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "讓我覺得很奇怪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "평소에 클레르랑 린지는 제 이야기를 \r\n엄청 흥미롭게 들어주거든요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Usually, both Claire and Linzy listen to my story\r\nwith interest."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "因為克萊兒跟琳賽\r\n平常會興致勃勃地聽我說話"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "因為克萊兒跟琳賽\r\n平常會興致勃勃地聽我說話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연애 상담 말이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You mean, love counseling?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是指戀愛諮詢嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是指戀愛諮詢嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "연애 상담 말이야?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You mean, love counseling?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "妳是指戀愛諮詢嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "妳是指戀愛諮詢嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "맞아요! 연애 상담!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "That's right! Love counseling!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "對！戀愛諮詢！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "對！戀愛諮詢！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "앗"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Oh"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "啊"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "방금 그건 못 본 걸로 해주세요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Pretend you never saw that!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "請你當作沒看到！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "請你當作沒看到！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 나도 유리아가 좋은걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I like you, too, Yuria."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可是我也喜歡尤里婭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可是我也喜歡尤里婭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "하지만 나도 유리아가 좋은걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "But I like you, too, Yuria."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可是我也喜歡尤里婭"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可是我也喜歡尤里婭"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "~~~~~!!!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "~~~~~!!!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "～～～～～！！！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "～～～～～！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정말~! 구원자님도 참!!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Oh, Savior!!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "真是～！救援者也真是的！！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "真是～！救援者也真是的！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "사실 저는 마을로 나가는 것보다\r\n구원자님이 함께 숲속으로 가자고 해주셔서 더 좋았어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was happy that you asked me to go out to the forest\r\nrather than to the village."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "其實比起去村莊，\r\n救援者提議一起去森林裡更讓我開心"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "其實比起去村莊，\r\n救援者提議一起去森林裡更讓我開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말로?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "정말로?"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Really?"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "真的嗎？"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "真的嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "네"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Yes."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "對"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "對"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이미 아시고 계실지도 모르겠지만 \r\n저는 자연물을 아주 좋아하거든요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "You might know this already,\r\nbut I love nature."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "不曉得你知不知道，\r\n我非常喜歡大自然"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "不曉得你知不知道，\r\n我非常喜歡大自然"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "평소에는 항상 성 안에서 지내다 보니까 \r\n아무래도 직접 숲이나 바다같은 곳에 가기 어려워서요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Since I'm usually inside the castle,\r\nit's hard to go to a forest or a beach by myself."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "平常都待在城堡裡，\r\n很難親自去到森林或大海"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "平常都待在城堡裡，\r\n很難親自去到森林或大海"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "게다가 운이 좋아서 직접 갈 일이 있어도"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Even when I get lucky enough to go to one,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "而且就算運氣好，有事情要親自過去一趟"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "而且就算運氣好，有事情要親自過去一趟"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "보통 마법적인 이동 수단을 쓰거나 \r\n잘 다듬어진 곳만 가게 되니까"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I normally use magic to transport\r\nor only go to manicured places."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "通常也是用魔法移動，\r\n或是去修整過的地方"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "通常也是用魔法移動，\r\n或是去修整過的地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이번처럼 직접 오솔길을 걷거나 \r\n나무 가지 사이사이를 헤쳐나가거나"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "So I rarely get the chance to walk on a trail,\r\nto tear through the tree branches,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "像這樣走過林間小路，\r\n或是穿過重重樹枝"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "像這樣走過林間小路，\r\n或是穿過重重樹枝"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "개울에 발을 담군다거나"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "or to dip my foot in the creek."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "把腳浸在小溪裡的事情"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "把腳浸在小溪裡的事情"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그런 일은 거의 없거든요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "It almost never happens."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "幾乎從來沒有過"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "幾乎從來沒有過"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그래서"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "That's why"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "所以"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "所以"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "아주아주 기뻤답니다♡"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was really, really happy. ♡"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我非常非常開心♡"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我非常非常開心♡"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다행이다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's good."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "다행이다"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "That's good."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "太好了"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "太好了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아가 기쁘면 나도 좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm happy if you're happy."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭開心的話，我也開心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭開心的話，我也開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아가 기쁘면 나도 좋아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm happy if you're happy."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭開心的話，我也開心"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭開心的話，我也開心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후후"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Hehe"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呵呵"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呵呵"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "다음에는 구원자님이 제일 좋은 곳으로도 가요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Let's go to your favorite place next time."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "下次去救援者最喜歡的地方"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "下次去救援者最喜歡的地方"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거라면 항상 그런 곳에 있는걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm always in my favorite place."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我一直都在那個地方啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我一直都在那個地方啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그거라면 항상 그런 곳에 있는걸"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm always in my favorite place."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我一直都在那個地方啊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我一直都在那個地方啊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "어머?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Huh?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "哦？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "哦？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아의 곁을 좋아하거든"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like being by your side."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我喜歡待在尤里婭身邊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我喜歡待在尤里婭身邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아의 곁을 좋아하거든"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I like being by your side."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我喜歡待在尤里婭身邊"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我喜歡待在尤里婭身邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Me"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "那個"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "那個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저도!!!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "me too!!!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我也是！！！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我也是！！！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "…구원자님 곁이 제일 좋아요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "... I like being by your side the most, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "…我最喜歡待在救援者身邊"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "…我最喜歡待在救援者身邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정말로"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I really do."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "真的"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "真的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "문득 그런 상상을 할 때가 있어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I sometimes imagine"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我有時候會突然那樣想像"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我有時候會突然那樣想像"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이 세계가 여럿 존재한다면"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "that if a lot of worlds existed"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果這個世界有很多個"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果這個世界有很多個"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저와 구원자님의 만남이 다르게 이뤄졌을 수 있을까 하고"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "you and I could have met each other in a different way."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我跟救援者的相遇可能就會有所不同"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我跟救援者的相遇可能就會有所不同"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이 정령이었다면"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Could we have met each other"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "如果救援者是精靈"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "如果救援者是精靈"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "제가 인간이었다면"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "if you were a Soul"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我是人類的話"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我是人類的話"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "지금처럼 만날 수 있었을까요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "or if I were a human?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "還能像現在這樣相遇嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "還能像現在這樣相遇嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "지금처럼 서로를 아낄 수 있었을까요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Could we have cared about each other like we do now?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "會像現在這樣珍惜彼此嗎"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "會像現在這樣珍惜彼此嗎"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "글쎄"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Well,"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "這個嘛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금 어려웠을지도 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "it might have been difficult."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能會有點難"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能會有點難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "조금 어려웠을지도 몰라"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "it might have been difficult."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "可能會有點難"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "可能會有點難"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "역시 그렇겠죠?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Right?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "果然是那樣吧？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "果然是那樣吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그래서 저는 지금을 소중히 여기려고 해요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "That's why I want to treasure this moment."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "所以我想珍惜當下"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "所以我想珍惜當下"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님을 만난 지금을"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I want to treasure the fact that I met you,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "遇見救援者的現在"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "遇見救援者的現在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님이 제 곁에 계셔주신 지금을"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "that you are by my side now."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者待在我身邊的現在"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者待在我身邊的現在"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "앞으로 저희가 어떤 길을 택하게 되더라도"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "No matter which road we take,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "不管我們以後選擇什麼樣的路"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "不管我們以後選擇什麼樣的路"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저희 반드시 행복해져요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "we will be happy"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我們一定會變幸福的"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我們一定會變幸福的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "서로를 위하며…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "and we will care for each other..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "為了彼此…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "為了彼此…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "후우"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Sigh"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "呼唔"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "呼唔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "계획했을 때부터 떨리긴 했지만"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was nervous from the moment I planned this,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "雖然從計劃時開始就有點緊張"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "雖然從計劃時開始就有點緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정말 실행에 옮기려니 긴장되네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "but carrying it out makes me even more nervous."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "但真正要實行的時候還真緊張"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "但真正要實行的時候還真緊張"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 덜덜 떨리는 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm trembling, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也覺得緊張到發抖"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也覺得緊張到發抖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "나도 덜덜 떨리는 것 같아"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "I'm trembling, too."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "我也覺得緊張到發抖"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "我也覺得緊張到發抖"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그간 도와주셔서 정말 감사했어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I really want to thank you for all your help."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "真的很謝謝你這段時間的幫忙"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "真的很謝謝你這段時間的幫忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그러니…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "So..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "所以…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "所以…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "부디 오늘도 절 지켜봐주시겠어요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "would you please watch over me today as well?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "今天也守護我好嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "今天也守護我好嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "드디어 저희가 함께 살 집이 준비되었어요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Finally, our house is ready!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我們要一起住的家終於準備好了！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我們要一起住的家終於準備好了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "조금 마을에서 멀리 떨어진 곳이지만"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "It's a little bit far from the village,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "雖然離村莊有點距離"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "雖然離村莊有點距離"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그래도 정말 아늑할 거 같아요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "but it'll be really cozy."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "但感覺會很溫馨"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "但感覺會很溫馨"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "얼른 가보죠!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Let's go!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "趕快去看看吧！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "趕快去看看吧！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘은 기다리고 기다리던 외출 날이네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Today is the day I've been waiting for!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "今天是期盼已久的外出日"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "今天是期盼已久的外出日"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님과의 데이트라니"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Going out on a date with Savior!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "竟然要跟救援者約會"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "竟然要跟救援者約會"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "계속 가슴이 두근거리네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "My heart keeps beating fast."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我的心臟撲通撲通跳個不停"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我的心臟撲通撲通跳個不停"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘은 부디 잘 부탁드릴게요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm in your hands!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "今天要拜託你了！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "今天要拜託你了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그러고 보니 구원자님께서 \r\n방주에 방문하시는 것도 오랜만이네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Come to think of it, it's been a while\r\nsince you went to the Ark, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "話說回來，救援者也很久\r\n沒有去方舟了"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "話說回來，救援者也很久\r\n沒有去方舟了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "나가실 때 가져가실 수 있도록 \r\n아까 도시락을 준비해놨답니다"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I prepared a lunch box for you.\r\nTake it with you."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我剛才準備了便當，\r\n好讓你出門時可以帶著"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我剛才準備了便當，\r\n好讓你出門時可以帶著"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "메피에게 선물로 줄 \r\n딸기 컵케이크도 잘 부탁드려요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "There's a strawberry cupcake I made for Mephi!\r\nPlease give it to her."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "要送給梅菲的草莓杯子蛋糕\r\n也麻煩你了！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "要送給梅菲的草莓杯子蛋糕\r\n也麻煩你了！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "갑자기 나가신다 하셔서 놀랐어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I was surprised that you suddenly said you were going out."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你突然說要出去，嚇到我了"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你突然說要出去，嚇到我了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "별 일 아니신 거죠…?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Is anything wrong...?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "沒什麼事吧…？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "沒什麼事吧…？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "만일 무슨 큰 일이라도 생긴 거라면 저는…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "If it's a serious matter, I..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "萬一發生什麼大事，我…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "萬一發生什麼大事，我…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "요즘 구원자님께서 많이 바쁘신 것 같네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "You see very busy these days, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者最近好像很忙"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者最近好像很忙"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "무리하고 계신 건 아니죠?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I hope you're not overdoing it."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "你應該沒有勉強自己吧？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "你應該沒有勉強自己吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "분명 잘 조절하고 계실 거라 믿지만"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm sure you're pacing yourself well,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "雖然我相信你會好好控制"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "雖然我相信你會好好控制"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "조금 걱정되는 건 어쩔 수 없네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "but I can't help worrying about you."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "但難免會有點擔心"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "但難免會有點擔心"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러는 유리아도 요즘 외출이 잦은 거 같은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're going out often these days, too, Yuria."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭這麼說，但妳最近好像也很常外出"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭這麼說，但妳最近好像也很常外出"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "그러는 유리아도 요즘 외출이 잦은 거 같은데"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "You're going out often these days, too, Yuria."
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭這麼說，但妳最近好像也很常外出"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭這麼說，但妳最近好像也很常外出"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "아…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Oh..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "啊…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "啊…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저도 조금 신경 쓰이는 게 있어서요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Something has been bothering me a little."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "因為我也有點令我在意的事"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "因為我也有點令我在意的事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "하지만 괜찮아요 구원자님"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "But that's okay, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "但是沒關係，救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "但是沒關係，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "제가 어떻게든 해볼 생각이거든요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I can manage it."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "無論如何，我都會試試看"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "無論如何，我都會試試看"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그럼 오늘 하루도 같이 힘내요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Well, let's do our best today!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "那今天也一起加油！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "那今天也一起加油！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘은 드디어 기다리고 기다리던 데이트 날이네요!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Finally, today is the day I've been waiting for! The day of our date!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "今天終於是期待已久的約會日！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "今天終於是期待已久的約會日！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저희 꼭 즐거운 시간을 보내도록 해요♪"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Let's have a great time together!♪"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我們一定要度過愉快的時光♪"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我們一定要度過愉快的時光♪"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "만일 앞으로 어떤 일이 생기더라도"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "So that, whatever happens from now on,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "不管以後發生什麼事"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "不管以後發生什麼事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘의 기억이 아름답게 남을 수 있도록…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "the beautiful memory of this they can remain with us..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "都要讓今天留下美好的回憶…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "都要讓今天留下美好的回憶…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이것은 사랑으로 내린 결정"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I made this decision out of love."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這是用愛做出的決定"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這是用愛做出的決定"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그러니까 후회는 없어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "So I have no regrets."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "所以我不會後悔"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "所以我不會後悔"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이렇게 해야만 했어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "This is what I had to do."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我必須這樣做"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我必須這樣做"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님을 향한 사랑,\r\n백성들을 향한 사랑을 위해서라면"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I can give up on myself\r\nfor the sake of my love for you,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "只要是為了對救援者的愛，\r\n對百姓們的愛"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "只要是為了對救援者的愛，\r\n對百姓們的愛"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저는 제 자신을 포기할 수 있어요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "of my love for my people."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我可以放棄我自己"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我可以放棄我自己"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "부디 구원자님의 앞날에 \r\n영원한 태양의 축복이 함께하기를…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "May the blessings of the Eternal Sun\r\nbe with you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "願救援者的未來，\r\n有永恆的太陽祝福與你同在…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "願救援者的未來，\r\n有永恆的太陽祝福與你同在…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "에버톡을 쓰는 것도 이번이 마지막이네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "This will be my last Evertalk message."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這次是最後一次用EverTalk了"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這次是最後一次用EverTalk了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Savior"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "정말 괜찮을까요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Is it really going to be okay?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "真的沒關係嗎？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "真的沒關係嗎？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "솔직히 저는 두렵지만…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "To be honest, I'm afraid..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "老實說，我很害怕…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "老實說，我很害怕…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님과 함께라면 괜찮을 것 같아요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "but I think I'll be fine if I'm with you."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "但跟救援者一起，好像就不怕了"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "但跟救援者一起，好像就不怕了"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "그러니까…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "That's why..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "所以…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "所以…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "용기를 내보도록 할게요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I will take courage."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我會鼓起勇氣的"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我會鼓起勇氣的"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "새로운 세상으로 향할 용기를"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "The courage to head to a new world."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "邁向新世界的勇氣"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "邁向新世界的勇氣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "이러면 안되는데"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I know I can't be like this,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "這樣不行"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "這樣不行"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "자꾸 구원자님한테 의지하게 되버리고 마네요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "but I keep relying on you."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我老是依靠救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我老是依靠救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "솔직한 마음을 고백하자면"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "To tell you the truth,"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "坦白說"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "坦白說"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님의 결정이 너무 기뻐요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm really happy about your decision."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "救援者的決定讓我很高興"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "救援者的決定讓我很高興"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "앞으로도 계속 구원자님과 함께할 수 있다는게"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I'm happy that we will always be together"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "以後也能繼續和救援者在一起這件事"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "以後也能繼續和救援者在一起這件事"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "여태까지 그래왔던 것처럼"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "just like we have until now."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "就像一直以來那樣"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "就像一直以來那樣"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "저희가 함께라면 그 어떤 고난도 헤쳐나갈 수 있겠죠?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "We can overcome any difficulties if we are together, right?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "只要我們在一起，不管是什麼難關都能克服吧？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "只要我們在一起，不管是什麼難關都能克服吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "사랑해요 구원자님"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I love you, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "我愛你，救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "我愛你，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "부디 언제까지나 제 곁에서 함께해주세요"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Please, always be by my side."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "請你永遠待在我身邊"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "請你永遠待在我身邊"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "찬란한 새해가 밝아왔네요 구원자님"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "A bright new year has arrived, Savior."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "燦爛的新年開始了，救援者"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "燦爛的新年開始了，救援者"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "올 한 해도 부디 잘 부탁드릴게요!\r\n새해 복 많이 받으시길!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "I look forward to our time together this year!\r\nHappy New Year!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "今年也要拜託你了！\r\n新年快樂！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "今年也要拜託你了！\r\n新年快樂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아도 새해 복 많이 받아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy New Year, Yuria!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭也新年快樂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭也新年快樂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아도 새해 복 많이 받아!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Happy New Year, Yuria!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭也新年快樂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭也新年快樂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘은 사랑의 날.\r\n구원자님의 시대에는 발렌타인 데이라고 하셨죠?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "It's Love Day today.\r\nIt was called Valentine's Day back in your world, right?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "今天是戀愛之日，\r\n救援者的時代叫情人節對吧？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "今天是戀愛之日，\r\n救援者的時代叫情人節對吧？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "해피 발렌타인이에요 구원자님♪\r\n이 선물로 부디 구원자님의 하루가 조금이라도 더 달콤해지기를!"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Happy Valentine's, Savior!♪\r\nI hope you have a sweet day with this gift!"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "情人節快樂，救援者♪\r\n希望這個禮物可以為救援者的一天增添一點甜蜜！"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "情人節快樂，救援者♪\r\n希望這個禮物可以為救援者的一天增添一點甜蜜！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워! 유리아도 해피 발렌타인!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you! Happy Valentine's, Yuria!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳！尤里婭也情人節快樂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳！尤里婭也情人節快樂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "고마워! 유리아도 해피 발렌타인!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Thank you! Happy Valentine's, Yuria!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "謝謝妳！尤里婭也情人節快樂！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "謝謝妳！尤里婭也情人節快樂！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "메리 크리스마스! \r\n어떠세요? 저 제대로 축하드렸을까요?"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "Merry Christmas!\r\nHow was it? Did I say it correctly?"
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "聖誕快樂！\r\n怎麼樣？我有沒有說對？"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "聖誕快樂！\r\n怎麼樣？我有沒有說對？"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "오늘 에덴은 이브의 날이랍니다. \r\n어머니 정령 이브에게 감사를 전하는 날이죠"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "It's Eve's Day in Eden.\r\nIt's the day when you express your thanks to Mother Eve."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "今天是伊甸園的夏娃之日，\r\n是向精靈之母夏娃表達謝意的日子。"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "今天是伊甸園的夏娃之日，\r\n是向精靈之母夏娃表達謝意的日子。"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "유리아",
+            "message": "구원자님에게도 이브의 축복이 함께하기를…"
+          },
+          "en": {
+            "speaker": "Yuria",
+            "message": "May the blessings of Eve be with you, Savior..."
+          },
+          "zh_tw": {
+            "speaker": "尤里婭",
+            "message": "願夏娃的祝福與救援者同在…"
+          },
+          "zh_cn": {
+            "speaker": "尤里婭",
+            "message": "願夏娃的祝福與救援者同在…"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아도 메리 크리스마스! 이따 봐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Merry Christmas, Yuria! I'll see you later!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭也聖誕快樂！待會見！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭也聖誕快樂！待會見！"
+          }
+        },
+        {
+          "ko": {
+            "speaker": "구원자",
+            "message": "유리아도 메리 크리스마스! 이따 봐!"
+          },
+          "en": {
+            "speaker": "Savior",
+            "message": "Merry Christmas, Yuria! I'll see you later!"
+          },
+          "zh_tw": {
+            "speaker": "救援者",
+            "message": "尤里婭也聖誕快樂！待會見！"
+          },
+          "zh_cn": {
+            "speaker": "救援者",
+            "message": "尤里婭也聖誕快樂！待會見！"
+          }
+        }
+      ]
     }
   }
 }

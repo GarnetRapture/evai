@@ -29,6 +29,10 @@ const UNICODE_ESCAPE_LENGTH = 4;
 const QUESTION_ONLY_MIN_MESSAGES = 2;
 const REPEATED_REPLY_SIMILARITY = 0.7;
 const QUESTION_ENDING_PATTERN = /[?？][\s!.…~♡♥♪ㅜㅠㅋㅎ]*$/u;
+const ECHO_IGNORED_CHARACTER_PATTERN = /[^\p{L}\p{N}]/gu;
+const ECHO_MIN_LENGTH = 4;
+const ECHO_SIMILARITY = 0.8;
+const ECHO_MESSAGE_RATIO = 0.5;
 
 interface JsonStringRead {
     value: string;
@@ -253,6 +257,10 @@ export function renderPersonaReplyContent(envelope: PersonaReplyEnvelope): strin
     return `${thought}${lines.join('\n')}`;
 }
 
+export function renderPersonaStoredReplyContent(envelope: PersonaReplyEnvelope): string {
+    return renderPersonaReplyContent({ ...envelope, action: '' });
+}
+
 export function envelopeFromStoredReply(content: string): PersonaReplyEnvelope {
     return envelopeFromPlainText(content);
 }
@@ -291,15 +299,55 @@ function isQuestionOnlyReply(envelope: PersonaReplyEnvelope): boolean {
         && envelope.messages.every((message) => QUESTION_ENDING_PATTERN.test(message.trim()));
 }
 
-// [핵심 아키텍처 · 수정 금지] 최종 응답 검증. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-1)
+function normalizeEchoText(text: string): string {
+    return text.normalize('NFKC').replace(ECHO_IGNORED_CHARACTER_PATTERN, '').toLocaleLowerCase();
+}
+
+function isEchoedMessage(message: string, normalizedUserText: string, userVector: ReturnType<typeof createLexicalMemoryVector>): boolean {
+    const normalizedMessage = normalizeEchoText(message);
+    if (normalizedMessage.length < ECHO_MIN_LENGTH) {
+        return false;
+    }
+    return normalizedUserText.includes(normalizedMessage)
+        || (cosineSimilarity(createLexicalMemoryVector(message), userVector) ?? 0) >= ECHO_SIMILARITY;
+}
+
+function isEchoUserReply(envelope: PersonaReplyEnvelope, latestUserText: string | null): boolean {
+    if (latestUserText === null || envelope.messages.length === 0) {
+        return false;
+    }
+    const normalizedUserText = normalizeEchoText(latestUserText);
+    if (normalizedUserText.length < ECHO_MIN_LENGTH) {
+        return false;
+    }
+    const userVector = createLexicalMemoryVector(latestUserText);
+    const echoedCount = envelope.messages.filter((message) => isEchoedMessage(message, normalizedUserText, userVector)).length;
+    return echoedCount > 0 && echoedCount / envelope.messages.length >= ECHO_MESSAGE_RATIO;
+}
+
+function isDeflectedQuestionReply(envelope: PersonaReplyEnvelope, latestUserText: string | null): boolean {
+    return latestUserText !== null
+        && QUESTION_ENDING_PATTERN.test(latestUserText.trim())
+        && envelope.messages.length > 0
+        && envelope.messages.every((message) => QUESTION_ENDING_PATTERN.test(message.trim()));
+}
+
+// [프롬프트 가이드 철학 · 수정 금지] 정령 답의 되풀이·회피·반복·말투 이탈을 잡아 재생성으로 되돌리는 최종 검증. 버그가 있을 때만 수정한다. (AI_TRACKING.md 5A L-1, C-018)
 export function detectPersonaReplyViolation(
     envelope: PersonaReplyEnvelope,
     register: PersonaSpeechRegister | null,
     language: AppLanguage,
     previousSpiritLines: readonly string[],
+    latestUserText: string | null,
 ): PersonaReplyViolation | null {
     if (detectPersonaBreach(envelope)) {
         return 'meta_breach';
+    }
+    if (isEchoUserReply(envelope, latestUserText)) {
+        return 'echo_user';
+    }
+    if (isDeflectedQuestionReply(envelope, latestUserText)) {
+        return 'deflected_question';
     }
     if (isRepeatedReply(envelope, previousSpiritLines)) {
         return 'repeated_reply';

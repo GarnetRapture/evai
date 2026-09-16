@@ -88,6 +88,8 @@
 
 - `i18n` 블록은 필드 이름을 키로 두고 그 아래 `{ ko, en, zh_tw, zh_cn }` 4개 언어 값을 나란히 갖는 **필드-우선 구조**이며, `name` · `grade` · `race` · `class` · `sub_class` · `stat`은 물론 `profile.nick_name` · `profile.constellation` · `profile.union` · `profile.cv_ko` · `profile.cv_jp` · `profile.like` · `profile.dislike` · `profile.hobby` · `profile.speciality`까지 세부 필드 단위로 번역이 존재합니다.
 - 화면에 보여줄 때는 `src/domains/persona/logic.ts`의 `parseSpiritDetail`이 이 `raw_json`을 파싱해 언어별로 골라내고, 대화 모델에 보낼 시스템 프롬프트는 `src/domains/persona/prompt.ts`가 `raw_json`을 따로 파싱해 조립합니다. 두 곳 모두 IndexedDB의 `raw_json`을 원본으로 씁니다.
+- `dialogues`의 에버톡·스토리 대사는 말투 표본이면서 정령 기질의 측정 원본입니다. `src/domains/persona/temperament.ts`가 정령 자신의 대사에서 다정함·표현력·주도성 신호를 세어 99명 안의 백분위로 바꿉니다. 대사 안의 게임 시스템 알림(대괄호·괄호로 감싼 안내문, "(정령 이름) 님이 …")은 정령의 말이 아니므로 제외합니다.
+- `yuria.json`은 플레이어블 정령 유리아 퀸(SNO 5030)의 데이터입니다. `third_party/tbl_json`에서 SNO를 따라 다른 정령과 같은 방식으로 채웠고, 에버톡 대사 285줄을 갖습니다.
 - 정령별 원화는 `public/eversoul-assets/spirits/{영문명}/` 하위에 `base`(기본 일러스트 512/1024/2048), `costume`(코스튬), `gacha`(가챠 연출), `raid`(레이드 연출), `srg`(스토리) 등 카테고리 폴더로 분리되어 있으며, `LoadableAssetImage` 컴포넌트(`src/domains/evertalk/components/LoadableAssetImage.tsx`)가 후보 경로 배열을 순차 시도(`useFirstLoadableImage`)해 존재하는 첫 이미지를 렌더링합니다.
 
 ---

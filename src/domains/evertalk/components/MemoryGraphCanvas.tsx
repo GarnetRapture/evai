@@ -13,7 +13,7 @@ import {
 import type { MemoryGraphCanvasProps, MemoryGraphCardNodeProps, MemoryGraphEdgeKind } from '../types';
 import { SpiritViewAvatar } from './WorkspaceSurface';
 
-const MEMORY_GRAPH_LEGEND_EDGE_KINDS: readonly MemoryGraphEdgeKind[] = ['savior_bond', 'topic', 'canon_bond', 'relation_savior', 'rival_attention', 'procedure', 'session'];
+const MEMORY_GRAPH_LEGEND_EDGE_KINDS: readonly MemoryGraphEdgeKind[] = ['savior_bond', 'topic', 'canon_bond', 'relation_savior', 'rival_attention', 'jealousy', 'procedure', 'session'];
 
 function MemoryGraphCardNode({ node }: MemoryGraphCardNodeProps) {
     return (
@@ -78,16 +78,16 @@ export function MemoryGraphCanvas({ controller, graph, selection, selectionDetai
                 <div className="ever-memory-graph-stage">
                     <div className="ever-memory-graph" style={{ width: layout.width, height: layout.height, transform: `translate(${view.x}px, ${view.y}px) scale(${view.zoom})` }}>
                         <svg width={layout.width} height={layout.height} aria-hidden="true">
-                            {layout.edges.map((edge) => (
-                                <path key={edge.id} className={`is-${edge.kind} is-${edge.emphasis}`} style={{ strokeWidth: 1 + edge.weight * 5 }} d={memoryGraphEdgePath(edge)}/>
+                            {layout.edges.map((edge, order) => (
+                                <path key={edge.id} className={`is-${edge.kind} is-${edge.emphasis}`} style={{ strokeWidth: 1 + edge.weight * 5, '--ever-node-order': order } as React.CSSProperties} d={memoryGraphEdgePath(edge)}/>
                             ))}
                             {layout.edges.filter((edge) => edge.label.length > 0).map((edge) => {
                                 const point = memoryGraphEdgeLabelPoint(edge);
                                 return <text key={`${edge.id}:label`} className={`is-${edge.kind}`} x={point.x} y={point.y}>{edge.label}</text>;
                             })}
                         </svg>
-                        {layout.nodes.map((node) => {
-                            const geometry = { left: node.x, top: node.y, width: node.width, height: node.height };
+                        {layout.nodes.map((node, order) => {
+                            const geometry = { left: node.x, top: node.y, width: node.width, height: node.height, '--ever-node-order': order } as React.CSSProperties;
                             const dragging = draggingNodeId === node.id ? 'is-dragging' : '';
                             const dragHandlers = {
                                 'data-graph-node': node.id,
@@ -96,10 +96,10 @@ export function MemoryGraphCanvas({ controller, graph, selection, selectionDetai
                                 onPointerUp: endNodeDrag,
                                 onPointerCancel: endNodeDrag,
                             };
-                            if (node.kind === 'persona' || node.kind === 'savior') {
+                            if (node.kind === 'persona' || node.kind === 'savior' || node.kind === 'rival') {
                                 return (
                                     <div key={node.id} className={`ever-memory-node is-${node.kind} ${dragging}`} style={geometry} {...dragHandlers}>
-                                        {node.kind === 'persona' ? <SpiritViewAvatar controller={controller} personaId={node.personaId}/> : <UserRound size={30} aria-hidden="true"/>}
+                                        {node.kind === 'savior' ? <UserRound size={30} aria-hidden="true"/> : <SpiritViewAvatar controller={controller} personaId={node.personaId}/>}
                                         <strong>{node.title}</strong>
                                         <small>{node.value}</small>
                                     </div>

@@ -13,6 +13,7 @@ export interface AppSettings {
     language_configured: boolean;
     setup_stage: SetupPhase;
     show_reasoning: boolean;
+    proactive_messages_enabled: boolean;
     active_model: string;
     persona_skin_ids: Record<string, string>;
     lobby_background: string | null;
@@ -42,6 +43,7 @@ export interface GeneralSettingsRecord {
     language: AppLanguage | null;
     setup_stage: SetupPhase;
     show_reasoning: boolean;
+    proactive_messages_enabled: boolean;
     active_model: string;
     persona_skin_ids: Record<string, string>;
     lobby_background: string | null;

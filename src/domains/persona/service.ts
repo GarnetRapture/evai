@@ -14,7 +14,8 @@ import {
     selectStageReachedDialogueExchanges,
 } from './dialogue';
 import { FAMILIARITY_MAX_LEVEL } from './familiarity';
-import { personaCheatPresetKey, resolveActivePersonaCheatPreset, resolvePersonaFamiliarityScore } from './presets';
+import { findPersonalityPreset, personaCheatPresetKey, resolveActivePersonaCheatPreset, resolvePersonaFamiliarityScore } from './presets';
+import { measurePersonaTemperamentEvidence, resolvePersonaTemperament } from './temperament';
 import {
     buildPersonaSystemPrompt,
     findPersonaProfileMentions,
@@ -39,6 +40,8 @@ import type {
     PersonaRelationshipGraph,
     PersonaRelationshipGraphMemo,
     PersonaRelationshipSource,
+    PersonaTemperament,
+    PersonaTemperamentEvidence,
     PersonaTurnReferenceRequest,
     PersonaTurnReferences,
     SpiritDetail,
@@ -51,6 +54,7 @@ const languageSliceMemo = new Map<string, PersonaLanguageSlice>();
 const dialogueExchangeMemo = new Map<string, PersonaDialogueExchange[]>();
 const relationshipGraphMemo = new Map<AppLanguage, PersonaRelationshipGraphMemo>();
 const datasetSourcesMemo = new Map<AppLanguage, Promise<PersonaRelationshipSource[]>>();
+const temperamentCorpusMemo = new Map<AppLanguage, Promise<PersonaTemperamentEvidence[]>>();
 const worldKnowledgeFingerprints = new Map<AppLanguage, string>();
 const BOND_MEMORY_WEIGHT = 3;
 const ROSTER_FINGERPRINT_SEPARATOR = '\n';
@@ -83,6 +87,21 @@ function memoizedDialogueExchanges(persona: StoredPersonaProfile, language: AppL
     const exchanges = parsePersonaDialogueExchanges(memoizedLanguageSlice(persona, language), language);
     dialogueExchangeMemo.set(key, exchanges);
     return exchanges;
+}
+
+function loadTemperamentCorpus(language: AppLanguage): Promise<PersonaTemperamentEvidence[]> {
+    const memoized = temperamentCorpusMemo.get(language);
+    if (memoized !== undefined) {
+        return memoized;
+    }
+    const corpus = loadDatasetSources(language).then((sources) => sources.map((source) => measurePersonaTemperamentEvidence(source.slice, language)));
+    temperamentCorpusMemo.set(language, corpus);
+    corpus.catch(() => {
+        if (temperamentCorpusMemo.get(language) === corpus) {
+            temperamentCorpusMemo.delete(language);
+        }
+    });
+    return corpus;
 }
 
 function datasetFingerprint(archiveKeys: readonly string[]): string {
@@ -333,6 +352,13 @@ export const personaService = {
                 new Set(personaIds.flatMap((id) => graph.character_key_by_persona.get(id) ?? [])),
             ).length,
         };
+    },
+    async getPersonaTemperament(personaId: string, language: AppLanguage, cheatPreset: PersonaCheatPreset | null): Promise<PersonaTemperament> {
+        const persona = await requirePersona(personaId);
+        const evidence = measurePersonaTemperamentEvidence(memoizedLanguageSlice(persona, language), language);
+        const corpus = await loadTemperamentCorpus(language);
+        const presetTraits = cheatPreset === null ? null : findPersonalityPreset(cheatPreset.personality_preset).traits;
+        return resolvePersonaTemperament(evidence, corpus, presetTraits);
     },
     async getEmotionSeedText(id: string, language: AppLanguage): Promise<string> {
         const persona = await personaRepository.getPersona(id);

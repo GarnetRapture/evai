@@ -69,7 +69,6 @@ export interface LocalServerSchemaTable {
 }
 
 export interface LocalServerSchema {
-    schema_version: string;
     sqlite_version: string;
     link_row_count: number;
     tables: LocalServerSchemaTable[];

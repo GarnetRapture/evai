@@ -55,7 +55,11 @@ int run_server(const evai::server::app::ServerOptions& options)
         return 1;
     }
     const std::filesystem::path database_directory = root / evai::server::app::database_directory_name;
-    evai::server::storage::EvaiDatabase database(database_directory / evai::server::app::database_file_name);
+    const std::filesystem::path database_file = database_directory / evai::server::app::database_file_name;
+    if (!std::filesystem::is_regular_file(database_file)) {
+        evai::server::storage::create_evai_database(database_file);
+    }
+    evai::server::storage::EvaiDatabase database(database_file);
     const evai::server::storage::DatabaseSummary summary = database.read_summary();
     evai::server::storage::BackupStore backups(root / evai::server::storage::backup_directory_name);
     const evai::server::net::SocketRuntime socket_runtime;
@@ -66,7 +70,6 @@ int run_server(const evai::server::app::ServerOptions& options)
     evai::server::app::print_status_report(config.language, {
         context.site.root_directory,
         database.file(),
-        summary.schema_version,
         summary.record_count,
         ollama_base_url,
         ollama.available,

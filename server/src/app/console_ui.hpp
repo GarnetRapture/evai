@@ -12,7 +12,6 @@ namespace evai::server::app {
 struct ServerStatusReport {
     std::filesystem::path root_directory;
     std::filesystem::path database_file;
-    std::string database_schema_version;
     std::int64_t database_record_count;
     std::string ollama_base_url;
     bool ollama_available;

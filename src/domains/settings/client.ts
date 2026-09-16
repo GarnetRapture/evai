@@ -74,6 +74,9 @@ export const settingsClient = {
     async setShowReasoning(showReasoning: boolean): Promise<AppSettings> {
         return composeAppSettings(await settingsRepository.updateGeneral({ show_reasoning: showReasoning }));
     },
+    async setProactiveMessagesEnabled(enabled: boolean): Promise<AppSettings> {
+        return composeAppSettings(await settingsRepository.updateGeneral({ proactive_messages_enabled: enabled }));
+    },
     async setPersonaSkin(personaId: string, skinId: string): Promise<AppSettings> {
         const general = await settingsRepository.readGeneral();
         return composeAppSettings(await settingsRepository.updateGeneral({

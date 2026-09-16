@@ -1,6 +1,6 @@
 import { normalizeLanguageText } from '../../shared/i18n';
 import { personaCharacterKey } from './characterName';
-import { isSaviorSpeaker, repairSaviorChoicePairSpeakers } from './dialogue';
+import { isKoreanSystemNoticeDialogue, isSaviorSpeaker, repairSaviorChoicePairSpeakers } from './dialogue';
 import { PERSONA_PROFILE_LIST_JOINER, resolveLocalizedProfileItems } from './profileList';
 import { isSaviorVocativeOnlyLine } from './speechForms';
 import type { AppLanguage } from '../../shared/types';
@@ -58,6 +58,10 @@ function localizedDialogues(
         const source = entry[language]
             ?? FALLBACK_LANGUAGES.map((fallback) => entry[fallback]).find((dialogue) => dialogue !== undefined);
         if (!source) {
+            continue;
+        }
+        const canonicalKorean = entry.ko;
+        if (canonicalKorean !== undefined && isKoreanSystemNoticeDialogue(canonicalKorean)) {
             continue;
         }
         const normalized = normalizeDialogue({

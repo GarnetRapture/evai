@@ -900,6 +900,15 @@ export function useEverTalkController(): EverTalkController {
         syncClient.scheduleAutomaticBackup();
     }
 
+    async function setProactiveMessagesEnabled(enabled: boolean) {
+        try {
+            setAppSettings(await settingsClient.setProactiveMessagesEnabled(enabled));
+        }
+        catch (err) {
+            setSystemStatus(createApiStatus('persona-db', 'error', formatUnknownError(err, labels)));
+        }
+    }
+
     async function setCheatModeEnabled(enabled: boolean) {
         try {
             setAppSettings(await settingsClient.setCheatModeEnabled(enabled));
@@ -1460,7 +1469,7 @@ export function useEverTalkController(): EverTalkController {
         });
     });
     const runProactiveConversationCheck = useEffectEvent(async () => {
-        if (proactiveCheckRunningRef.current || appInitializing || appSettings?.setup_stage !== 'done' || !llmStatus?.is_loaded || isTyping) {
+        if (proactiveCheckRunningRef.current || appInitializing || appSettings?.setup_stage !== 'done' || appSettings.proactive_messages_enabled === false || !llmStatus?.is_loaded || isTyping) {
             return;
         }
         proactiveCheckRunningRef.current = true;
@@ -1514,14 +1523,14 @@ export function useEverTalkController(): EverTalkController {
     });
     useEffect(() => chatClient.subscribeMaintenance((tasks) => handleMaintenanceTasks(tasks)), []);
     useEffect(() => {
-        if (appInitializing || appSettings?.setup_stage !== 'done' || !llmStatus?.is_loaded) return undefined;
+        if (appInitializing || appSettings?.setup_stage !== 'done' || appSettings.proactive_messages_enabled === false || !llmStatus?.is_loaded) return undefined;
         const initialTimer = window.setTimeout(() => void runProactiveConversationCheck(), PROACTIVE_INITIAL_DELAY_MS);
         const interval = window.setInterval(() => void runProactiveConversationCheck(), PROACTIVE_CHECK_INTERVAL_MS);
         return () => {
             window.clearTimeout(initialTimer);
             window.clearInterval(interval);
         };
-    }, [appInitializing, appSettings?.setup_stage, llmStatus?.is_loaded]);
+    }, [appInitializing, appSettings?.setup_stage, appSettings?.proactive_messages_enabled, llmStatus?.is_loaded]);
     useEffect(() => {
         const listEl = messagesListRef.current;
         if (!listEl) {
@@ -1592,6 +1601,7 @@ export function useEverTalkController(): EverTalkController {
         cheatModeEnabled: appSettings?.cheat_mode_enabled ?? false,
         personaCheatPresets: appSettings?.persona_cheat_presets ?? {},
         setCheatModeEnabled,
+        setProactiveMessagesEnabled,
         updatePersonaCheatPreset,
         clearPersonaCheatPreset,
         storageInspection,
