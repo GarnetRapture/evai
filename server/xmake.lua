@@ -83,7 +83,7 @@ target("evai-server")
 
     if is_plat("windows", "mingw") then
         add_files("resources/evai_server.rc")
-        add_syslinks("ws2_32", "user32")
+        add_syslinks("ws2_32", "user32", "shell32")
     else
         add_syslinks("pthread", "dl", "m")
     end

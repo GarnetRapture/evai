@@ -25,5 +25,6 @@ void print_banner();
 void print_status_report(ConsoleLanguage language, const ServerStatusReport& report);
 void print_startup_failure(ConsoleLanguage language, std::string_view detail);
 void print_config_location(ConsoleLanguage language, const std::filesystem::path& file);
+void print_browser_launch(ConsoleLanguage language, std::string_view url, bool opened);
 
 }

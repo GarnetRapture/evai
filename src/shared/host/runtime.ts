@@ -9,6 +9,7 @@ import {
 
 const WEB_RUNTIME: AppHostRuntime = { kind: 'web', storage: 'indexeddb', server: null };
 const RUNTIME_PROBE_TIMEOUT_MS = 4_000;
+const RUNTIME_PROBE_RETRY_DELAY_MS = 1_000;
 
 let resolvedRuntime: AppHostRuntime | null = null;
 let runtimeResolution: Promise<AppHostRuntime> | null = null;
@@ -27,25 +28,53 @@ function isLocalServerRuntimeInfo(value: unknown): value is LocalServerRuntimeIn
         && typeof candidate.port === 'number';
 }
 
-async function probeLocalServer(): Promise<AppHostRuntime> {
-    if (isAndroidAppRuntime()) {
-        return WEB_RUNTIME;
-    }
+function isHttpOrigin(): boolean {
+    return window.location.protocol === 'http:' || window.location.protocol === 'https:';
+}
+
+function waitForProbeRetry(): Promise<void> {
+    return new Promise((resolve) => {
+        window.setTimeout(resolve, RUNTIME_PROBE_RETRY_DELAY_MS);
+    });
+}
+
+async function readRuntimeResponse(): Promise<Response | null> {
     try {
-        const response = await fetch(LOCAL_SERVER_RUNTIME_PATH, {
+        return await fetch(LOCAL_SERVER_RUNTIME_PATH, {
             cache: 'no-store',
             headers: { Accept: 'application/json' },
             signal: AbortSignal.timeout(RUNTIME_PROBE_TIMEOUT_MS),
         });
-        if (!response.ok) {
-            return WEB_RUNTIME;
-        }
-        const payload: unknown = await response.json();
-        return isLocalServerRuntimeInfo(payload) ? { kind: 'local_server', storage: 'sqlite', server: payload } : WEB_RUNTIME;
+    }
+    catch (error) {
+        console.warn('[eversoul-frontend] host runtime probe unanswered, retrying', error);
+        return null;
+    }
+}
+
+async function readRuntimePayload(response: Response): Promise<unknown> {
+    try {
+        return await response.json();
     }
     catch {
+        return null;
+    }
+}
+
+async function probeLocalServer(): Promise<AppHostRuntime> {
+    if (isAndroidAppRuntime() || !isHttpOrigin()) {
         return WEB_RUNTIME;
     }
+    let response = await readRuntimeResponse();
+    while (response === null) {
+        await waitForProbeRetry();
+        response = await readRuntimeResponse();
+    }
+    if (!response.ok) {
+        return WEB_RUNTIME;
+    }
+    const payload = await readRuntimePayload(response);
+    return isLocalServerRuntimeInfo(payload) ? { kind: 'local_server', storage: 'sqlite', server: payload } : WEB_RUNTIME;
 }
 
 export function initializeAppHostRuntime(): Promise<AppHostRuntime> {

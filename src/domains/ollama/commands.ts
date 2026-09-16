@@ -1,5 +1,5 @@
 import { LOCAL_SERVER_DEFAULT_URL } from '../../shared/host';
-import { OLLAMA_DEFAULT_NETWORK_HOST } from './constants';
+import { OLLAMA_DEFAULT_NETWORK_HOST, OLLAMA_RECOMMENDED_CHAT_MODEL_NAME } from './constants';
 import type { OllamaCommandGuideInput, OllamaCommandShell, OllamaCommandStep } from './types';
 
 const WINDOWS_PLATFORM_PATTERN = /^win/iu;
@@ -17,6 +17,10 @@ function quotePosix(value: string): string {
 
 function quoteForShell(shell: OllamaCommandShell, value: string): string {
     return shell === 'powershell' ? quotePowerShell(value) : quotePosix(value);
+}
+
+export function buildOllamaRecommendedPullCommand(): string {
+    return `ollama pull ${OLLAMA_RECOMMENDED_CHAT_MODEL_NAME}`;
 }
 
 export function resolveOllamaCommandShell(platform: string): OllamaCommandShell {

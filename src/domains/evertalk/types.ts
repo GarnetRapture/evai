@@ -497,6 +497,7 @@ export interface ChatModelSelection {
     modes: ChatModelModeSelection[];
     active_mode: ChatModelMode | null;
 }
+export type SetupModelReadiness = 'not_selected' | 'loading' | 'failed' | 'ready';
 export interface ChatModelSelectorProps {
     catalog: ChatModelCatalog | null;
     catalogError: string | null;

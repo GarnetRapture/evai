@@ -3177,6 +3177,53 @@
   background: var(--ever-selector-note);
 }
 
+.ever-chat-model-selector .ever-chat-model-selector__recommend {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--ever-selector-border);
+  border-radius: 10px;
+  background: var(--ever-selector-note);
+}
+
+.ever-chat-model-selector .ever-chat-model-selector__recommend strong {
+  color: var(--ever-selector-text);
+  font-size: 0.9rem;
+}
+
+.ever-chat-model-selector .ever-chat-model-selector__recommend small {
+  color: var(--ever-selector-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.ever-chat-model-selector .ever-chat-model-selector__recommend pre {
+  margin: 0;
+  padding: 8px 10px;
+  overflow-x: auto;
+  border-radius: 8px;
+  background: #262a38;
+  color: #eef0f7;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+.ever-chat-model-selector .ever-chat-model-selector__recommend button {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--ever-selector-border);
+  border-radius: 8px;
+  background: var(--ever-selector-card);
+  color: var(--ever-selector-text);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
 .ever-chat-model-selector .ever-chat-model-selector__error {
   margin: 0;
   color: var(--ever-selector-error);

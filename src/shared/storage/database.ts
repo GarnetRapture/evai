@@ -81,20 +81,28 @@ function deleteIndexedDatabase(name: string): Promise<void> {
     });
 }
 
+async function deleteOriginIndexedDatabases(): Promise<string[]> {
+    const originDatabaseNames = (await indexedDB.databases())
+        .map((entry) => entry.name)
+        .filter((name): name is string => typeof name === 'string' && name.length > 0);
+    for (const name of originDatabaseNames) {
+        await deleteIndexedDatabase(name);
+    }
+    return originDatabaseNames;
+}
+
 export async function resetEverSoulStorage(): Promise<string[]> {
     assertMaintenanceActive();
     if ((await resolveAppHostRuntime()).kind === 'local_server') {
         await localServerStorageClient.reset();
-        return [EVERSOUL_DATABASE_NAME];
+        const leftoverDatabaseNames = await deleteOriginIndexedDatabases();
+        return [EVERSOUL_DATABASE_NAME, ...leftoverDatabaseNames];
     }
-    const originDatabaseNames = (await indexedDB.databases())
-        .map((entry) => entry.name)
-        .filter((name): name is string => typeof name === 'string' && name.length > 0);
-    const databaseNames = [...new Set([EVERSOUL_DATABASE_NAME, ...originDatabaseNames])];
-    for (const name of databaseNames) {
-        await deleteIndexedDatabase(name);
+    const originDatabaseNames = await deleteOriginIndexedDatabases();
+    if (!originDatabaseNames.includes(EVERSOUL_DATABASE_NAME)) {
+        await deleteIndexedDatabase(EVERSOUL_DATABASE_NAME);
     }
-    return databaseNames;
+    return [...new Set([EVERSOUL_DATABASE_NAME, ...originDatabaseNames])];
 }
 
 export async function requestPersistentStorage(): Promise<boolean> {

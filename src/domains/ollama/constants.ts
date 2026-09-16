@@ -13,6 +13,7 @@ export const OLLAMA_ALLOWED_URL_PROTOCOLS: readonly string[] = ['http:'];
 export const OLLAMA_HOST_NAME_PATTERN = /^[A-Za-z0-9._-]+$/u;
 export const OLLAMA_DOWNLOAD_URL = 'https://ollama.com/download';
 export const OLLAMA_MODEL_LIBRARY_URL = 'https://ollama.com/search';
+export const OLLAMA_RECOMMENDED_CHAT_MODEL_NAME = 'jaahas/qwen3.5-uncensored:4b';
 export const HUGGING_FACE_OLLAMA_GUIDE_URL = 'https://huggingface.co/docs/hub/ollama';
 export const OLLAMA_PROXY_ERROR_HEADER = 'X-Evai-Proxy-Error';
 export const OLLAMA_PROXY_UPSTREAM_UNREACHABLE = 'upstream_unreachable';

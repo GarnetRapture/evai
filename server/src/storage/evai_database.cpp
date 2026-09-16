@@ -475,6 +475,7 @@ StorageResponse EvaiDatabase::reset_storage()
     }
     database_.execute("PRAGMA wal_checkpoint(TRUNCATE)");
     database_.execute("VACUUM");
+    database_.execute("PRAGMA wal_checkpoint(TRUNCATE)");
     return StorageResponse{200, "{\"cleared\":true}"};
 }
 
@@ -623,6 +624,7 @@ void create_evai_database(const std::filesystem::path& file)
     apply_evai_schema(database);
     database.execute("PRAGMA wal_checkpoint(TRUNCATE)");
     database.execute("VACUUM");
+    database.execute("PRAGMA wal_checkpoint(TRUNCATE)");
 }
 
 }

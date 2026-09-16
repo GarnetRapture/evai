@@ -350,6 +350,8 @@ export interface EverTalkLabels {
     ollamaCommandStepTitles: Record<OllamaCommandStepKey, string>;
     ollamaCommandStepDescriptions: Record<OllamaCommandStepKey, string>;
     ollamaCommandCopy: string;
+    ollamaRecommendedModelTitle: (modelName: string) => string;
+    ollamaRecommendedModelHint: string;
     ollamaGuideModelNameLabel: string;
     ollamaGuideModelNamePlaceholder: string;
     ollamaGuideModelNameHint: string;
@@ -477,6 +479,8 @@ export interface EverTalkLabels {
     lastActivityLabel: string;
     setupModelSelectionHint: string;
     setupModelRequired: string;
+    setupModelLoading: string;
+    setupModelLoadFailed: (detail: string) => string;
     storageObjectKinds: Record<StorageObjectKind, string>;
     storageDefinition: string;
     storageLinkRowCount: (count: number) => string;
@@ -780,7 +784,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         refreshEnvironment: '환경 다시 확인',
         resetData: '데이터 초기화',
         resetDescription: {
-            sqlite: '로컬 서버 SQLite 데이터베이스의 모든 행과 이 origin의 localStorage를 삭제해 대화, 정령/스타일/지식팩, 기억, 모듈, 설정을 초기 상태로 되돌린 뒤 페이지를 다시 불러옵니다.',
+            sqlite: '로컬 서버 SQLite 데이터베이스의 모든 행, 이 origin의 localStorage, 예전 버전이 남긴 이 origin의 IndexedDB를 삭제해 대화, 정령/스타일/지식팩, 기억, 모듈, 설정을 초기 상태로 되돌린 뒤 페이지를 다시 불러옵니다.',
             indexeddb: '현재 origin의 IndexedDB 데이터베이스 전체와 localStorage를 삭제해 대화, 정령/스타일/지식팩, 기억, 모듈, 설정 및 파일 연결을 초기 상태로 되돌린 뒤 페이지를 다시 불러옵니다. 다른 탭이 데이터베이스를 붙잡고 있으면 삭제를 중단하고 오류를 표시합니다.',
         },
         resetFailed: '초기화 실패',
@@ -1036,6 +1040,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             run_local_server: '웹 번들과 같은 폴더에서 EVAI 로컬 서버를 실행하고 http://127.0.0.1:9999/ 를 엽니다. 브라우저는 이 서버를 통해서만 Ollama와 통신합니다.',
         },
         ollamaCommandCopy: '명령 복사',
+        ollamaRecommendedModelTitle: (modelName) => `추천 모델: ${modelName}`,
+        ollamaRecommendedModelHint: '터미널에서 아래 명령으로 모델을 받은 뒤 새로고침을 누르면 목록에 나타납니다.',
         ollamaGuideModelNameLabel: '사용할 모델 이름',
         ollamaGuideModelNamePlaceholder: '모델이름:태그 또는 hf.co/사용자/저장소:양자화',
         ollamaGuideModelNameHint: '입력한 이름으로 받기·실행·삭제 명령이 만들어집니다. 이미 설치된 모델은 아래 버튼으로 고를 수 있습니다.',
@@ -1125,7 +1131,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupRestoreConfirm: (fileName) => `${fileName} 파일로 복원하면 현재 데이터가 모두 교체됩니다. 계속할까요?`,
         backupWritten: (fileName) => `${fileName} 백업을 저장했습니다.`,
         resetStorageScope: {
-            sqlite: '로컬 서버 SQLite 데이터베이스와 이 origin의 localStorage를 초기화합니다.',
+            sqlite: '로컬 서버 SQLite 데이터베이스와 이 origin의 localStorage를 초기화하고, 이 origin에 남은 IndexedDB를 삭제합니다.',
             indexeddb: '현재 origin의 localStorage와 IndexedDB 데이터베이스 전체를 초기화합니다.',
         },
         navChat: '대화',
@@ -1250,6 +1256,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         lastActivityLabel: '최근 활동',
         setupModelSelectionHint: '대화에 쓸 모드와 모델을 지금 고릅니다. 여기서 고른 값은 설정 > 대화 모델과 같은 저장값입니다.',
         setupModelRequired: '모델을 하나 선택해야 시작할 수 있습니다.',
+        setupModelLoading: '선택한 모델이 완전히 로드되어 작동 중이 되면 시작할 수 있습니다.',
+        setupModelLoadFailed: (detail) => `선택한 모델을 로드하지 못해 시작할 수 없습니다. 모델을 다시 선택하거나 목록을 새로 고치세요. (${detail})`,
         storageObjectKinds: { object_store: '오브젝트 스토어', table: '테이블', view: '뷰' },
         storageDefinition: '정의',
         storageLinkRowCount: (count) => `기억-메시지 연결 ${count}행`,
@@ -1625,7 +1633,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         refreshEnvironment: 'Check environment again',
         resetData: 'Reset Data',
         resetDescription: {
-            sqlite: 'Deletes every row of the local server SQLite database and the localStorage of this origin, including chats, soul/style/knowledge data, memories, modules, and settings, then reloads the page.',
+            sqlite: 'Deletes every row of the local server SQLite database, the localStorage of this origin and any IndexedDB left on this origin by earlier versions, including chats, soul/style/knowledge data, memories, modules, and settings, then reloads the page.',
             indexeddb: 'Deletes every IndexedDB database and the localStorage of this origin, including chats, soul/style/knowledge data, memories, modules, settings, and file links, then reloads the page. If another tab holds the database open, deletion stops and an error is shown.',
         },
         resetFailed: 'Reset failed',
@@ -1881,6 +1889,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             run_local_server: 'Run the EVAI local server from the folder that holds the web bundle and open http://127.0.0.1:9999/. The browser talks to Ollama only through this server.',
         },
         ollamaCommandCopy: 'Copy commands',
+        ollamaRecommendedModelTitle: (modelName) => `Recommended model: ${modelName}`,
+        ollamaRecommendedModelHint: 'Download it in a terminal with the command below, then press Refresh to see it in the list.',
         ollamaGuideModelNameLabel: 'Model name to use',
         ollamaGuideModelNamePlaceholder: 'model:tag or hf.co/user/repository:quantization',
         ollamaGuideModelNameHint: 'Download, run, and remove commands are built from the entered name. Installed models can be picked with the buttons below.',
@@ -1970,7 +1980,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupRestoreConfirm: (fileName) => `Restoring ${fileName} replaces all current data. Continue?`,
         backupWritten: (fileName) => `Saved backup ${fileName}.`,
         resetStorageScope: {
-            sqlite: 'Resets the local server SQLite database and this origin\'s localStorage.',
+            sqlite: 'Resets the local server SQLite database and this origin\'s localStorage, and deletes any IndexedDB left on this origin.',
             indexeddb: 'Resets this origin\'s localStorage and every IndexedDB database.',
         },
         navChat: 'Chat',
@@ -2095,6 +2105,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         lastActivityLabel: 'Last activity',
         setupModelSelectionHint: 'Choose the chat mode and model now. What you pick here is the same saved value as Settings > Chat Models.',
         setupModelRequired: 'Select one model to start.',
+        setupModelLoading: 'You can start once the selected model is fully loaded and running.',
+        setupModelLoadFailed: (detail) => `The selected model could not be loaded, so setup cannot start. Select the model again or refresh the list. (${detail})`,
         storageObjectKinds: { object_store: 'Object store', table: 'Table', view: 'View' },
         storageDefinition: 'Definition',
         storageLinkRowCount: (count) => `Memory-message links: ${count} rows`,
@@ -2470,7 +2482,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         refreshEnvironment: '重新检查环境',
         resetData: '重置数据',
         resetDescription: {
-            sqlite: '删除本地服务器 SQLite 数据库的全部数据与当前来源的 localStorage，包括聊天、精灵/风格/知识数据、记忆、模块与设置，然后重新载入页面。',
+            sqlite: '删除本地服务器 SQLite 数据库的全部数据、当前来源的 localStorage 以及旧版本在当前来源留下的 IndexedDB，包括聊天、精灵/风格/知识数据、记忆、模块与设置，然后重新载入页面。',
             indexeddb: '删除当前来源的全部 IndexedDB 数据库与 localStorage，包括聊天、精灵/风格/知识数据、记忆、模块、设置及文件连接，然后重新载入页面。如果其他标签页仍占用数据库，删除会中止并显示错误。',
         },
         resetFailed: '重置失败',
@@ -2726,6 +2738,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             run_local_server: '在存放网页包的文件夹中运行 EVAI 本地服务器，并打开 http://127.0.0.1:9999/。浏览器只通过该服务器与 Ollama 通信。',
         },
         ollamaCommandCopy: '复制命令',
+        ollamaRecommendedModelTitle: (modelName) => `推荐模型：${modelName}`,
+        ollamaRecommendedModelHint: '在终端中用下面的命令下载模型，然后点击刷新即可在列表中看到。',
         ollamaGuideModelNameLabel: '要使用的模型名称',
         ollamaGuideModelNamePlaceholder: '模型名:标签 或 hf.co/用户/仓库:量化',
         ollamaGuideModelNameHint: '会根据输入的名称生成下载、运行和删除命令。已安装的模型可以通过下方按钮选择。',
@@ -2815,7 +2829,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupRestoreConfirm: (fileName) => `使用 ${fileName} 恢复会替换当前全部数据。是否继续？`,
         backupWritten: (fileName) => `已保存备份 ${fileName}。`,
         resetStorageScope: {
-            sqlite: '重置本地服务器 SQLite 数据库与当前来源的 localStorage。',
+            sqlite: '重置本地服务器 SQLite 数据库与当前来源的 localStorage，并删除当前来源残留的 IndexedDB。',
             indexeddb: '重置当前来源的 localStorage 与全部 IndexedDB 数据库。',
         },
         navChat: '对话',
@@ -2940,6 +2954,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         lastActivityLabel: '最近活动',
         setupModelSelectionHint: '现在选择对话模式与模型。这里选择的值与 设置 > 对话模型 使用同一保存值。',
         setupModelRequired: '需要选择一个模型才能开始。',
+        setupModelLoading: '所选模型完全加载并运行后即可开始。',
+        setupModelLoadFailed: (detail) => `所选模型加载失败，无法开始。请重新选择模型或刷新列表。（${detail}）`,
         storageObjectKinds: { object_store: '对象存储', table: '数据表', view: '视图' },
         storageDefinition: '定义',
         storageLinkRowCount: (count) => `记忆与消息关联 ${count} 行`,

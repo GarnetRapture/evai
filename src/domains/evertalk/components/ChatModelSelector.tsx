@@ -1,6 +1,7 @@
-import { BookOpen, RefreshCw } from 'lucide-react';
+import { BookOpen, Copy, RefreshCw } from 'lucide-react';
 import { useState } from 'react';
-import { buildChatModelSelection } from '../logic';
+import { buildOllamaRecommendedPullCommand, OLLAMA_RECOMMENDED_CHAT_MODEL_NAME } from '../../ollama';
+import { buildChatModelSelection, shouldRecommendOllamaModel } from '../logic';
 import type { ChatModelMode, ChatModelSelectorProps } from '../types';
 
 export function ChatModelSelector({ catalog, catalogError, catalogRefreshing, llmStatus, modelLoadingId, storageKind, labels, onSelectChatModel, onRefreshModelCatalog, onOpenGuide }: ChatModelSelectorProps) {
@@ -32,6 +33,15 @@ export function ChatModelSelector({ catalog, catalogError, catalogRefreshing, ll
         {catalogError !== null ? <p className="ever-chat-model-selector__error">{catalogError}</p> : null}
         <div className="ever-chat-model-selector__options" role="radiogroup" aria-label={labels.chatModelModeTitles[visibleMode.mode]}>
           {visibleMode.options.length === 0 ? <p className="ever-chat-model-selector__empty">{catalog === null ? labels.checking : labels.chatModelModeEmpty[visibleMode.mode]}</p> : null}
+          {visibleMode.mode === 'ollama' && shouldRecommendOllamaModel(catalog) ? (<div className="ever-chat-model-selector__recommend">
+              <strong>{labels.ollamaRecommendedModelTitle(OLLAMA_RECOMMENDED_CHAT_MODEL_NAME)}</strong>
+              <small>{labels.ollamaRecommendedModelHint}</small>
+              <pre>{buildOllamaRecommendedPullCommand()}</pre>
+              <button type="button" onClick={() => void navigator.clipboard.writeText(buildOllamaRecommendedPullCommand())}>
+                <Copy aria-hidden="true" size={14}/>
+                {labels.ollamaCommandCopy}
+              </button>
+            </div>) : null}
           {visibleMode.options.map((option) => (<label key={option.id} className={`ever-chat-model-selector__option ${option.selected ? 'is-selected' : ''}`}>
               <input
                 type="radio"

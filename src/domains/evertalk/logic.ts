@@ -1,6 +1,7 @@
 import { isDomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
 import { EVERTALK_SESSION_TITLE, removeJsonResidue, repairHangulComposition, splitPersonaReplyActions, type ChatMessage, type ChatRoom, type PersonaContextGraph, type PersonaContextRelation, type PersonaHeartTimelinePoint, type PersonaKeywordThread, type PersonaMemoryOverview } from '../chat';
+import { NO_CHAT_MODEL_ID } from '../llm';
 import type { ChatModelCatalog, ChatModelEntry, LlmStatus, LocalModelFileEntry, ModelDownloadProgress, OllamaModelLibrary, OnDeviceSystemModelEntry } from '../llm';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
@@ -15,7 +16,7 @@ export {
 } from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, ChatModelModeSelection, ChatModelSelection, GuideChecklistDraft, GuideChecklistInput, GuideChecklistStep, GuideStepState, HeartTimelineChart, HeartTimelineSeries, HeartTimelineSeriesKey, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphArcPlacement, MemoryGraphBounds, MemoryGraphDetailPosition, MemoryGraphEdge, MemoryGraphEmphasis, MemoryGraphLayout, MemoryGraphLayoutSubject, MemoryGraphNode, MemoryGraphPoint, MemoryGraphViewFilter, MemoryGraphViewTransform, GenerationEngineLimit, MemoryOverviewRow, MemorySpiritRosterEntry, SelectableChatModelOption, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice, TopNavigationEntry, TopNavigationOptions } from './types';
+import type { ApiConnectionState, ApiStatusItem, ChatModelModeSelection, ChatModelSelection, GuideChecklistDraft, GuideChecklistInput, GuideChecklistStep, GuideStepState, HeartTimelineChart, HeartTimelineSeries, HeartTimelineSeriesKey, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphArcPlacement, MemoryGraphBounds, MemoryGraphDetailPosition, MemoryGraphEdge, MemoryGraphEmphasis, MemoryGraphLayout, MemoryGraphLayoutSubject, MemoryGraphNode, MemoryGraphPoint, MemoryGraphViewFilter, MemoryGraphViewTransform, GenerationEngineLimit, MemoryOverviewRow, MemorySpiritRosterEntry, SelectableChatModelOption, SetupModelReadiness, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice, TopNavigationEntry, TopNavigationOptions } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -568,6 +569,25 @@ export function buildChatModelSelection(catalog: ChatModelCatalog | null, llmSta
     }
     const activeMode = modes.find((selection) => selection.options.some((option) => option.selected))?.mode ?? null;
     return { modes, active_mode: activeMode };
+}
+
+export function shouldRecommendOllamaModel(catalog: ChatModelCatalog | null): boolean {
+    const library = catalog?.ollama ?? null;
+    return library !== null && library.server.available && library.list_error === null && library.entries.length === 0;
+}
+
+export function resolveSetupModelReadiness(selection: ChatModelSelection, llmStatus: LlmStatus | null, activeModelId: string, modelLoadingId: string | null, catalogRefreshing: boolean): SetupModelReadiness {
+    if (activeModelId.length === 0 || activeModelId === NO_CHAT_MODEL_ID) {
+        return 'not_selected';
+    }
+    if (modelLoadingId !== null || catalogRefreshing) {
+        return 'loading';
+    }
+    const loaded = selection.modes.some((mode) => mode.options.some((option) => option.id === activeModelId && option.selected && option.running));
+    if (loaded) {
+        return 'ready';
+    }
+    return llmStatus !== null && llmStatus.error_message !== null ? 'failed' : 'loading';
 }
 
 export function buildGuideChecklist(input: GuideChecklistInput): GuideChecklistStep[] {

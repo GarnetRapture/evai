@@ -6,12 +6,14 @@
 #include "app/server_options.hpp"
 #include "net/socket_runtime.hpp"
 #include "net/tcp_socket.hpp"
+#include "platform/browser_launcher.hpp"
 #include "platform/executable_directory.hpp"
 #include "storage/backup_store.hpp"
 #include "storage/evai_database.hpp"
 
 #include <exception>
 #include <filesystem>
+#include <format>
 #include <iostream>
 #include <string>
 #include <string_view>
@@ -77,6 +79,8 @@ int run_server(const evai::server::app::ServerOptions& options)
         options.port,
     });
     evai::server::app::print_config_location(config.language, config_file);
+    const std::string site_url = std::format("http://127.0.0.1:{}/", options.port);
+    evai::server::app::print_browser_launch(config.language, site_url, evai::server::platform::open_default_browser(site_url));
     for (;;) {
         evai::server::net::TcpSocket client = listener.accept_client();
         if (!client.valid()) {

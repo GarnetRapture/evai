@@ -28,6 +28,9 @@ struct ConsoleMessages {
     std::string_view config_label;
     std::string_view close_hint;
     std::string_view failure_label;
+    std::string_view browser_label;
+    std::string_view browser_opened;
+    std::string_view browser_failed;
 };
 
 constexpr std::array<ConsoleMessages, 3> messages{{
@@ -45,6 +48,9 @@ constexpr std::array<ConsoleMessages, 3> messages{{
         "설정 파일",
         "이 창을 닫으면 서버가 꺼집니다.",
         "서버 오류",
+        "브라우저",
+        "기본 브라우저로 열었습니다",
+        "기본 브라우저를 열지 못했습니다. 아래 주소를 직접 여세요",
     },
     {
         "EverSoul AI Chat by Nekoi - Server",
@@ -60,6 +66,9 @@ constexpr std::array<ConsoleMessages, 3> messages{{
         "Config file",
         "Closing this window stops the server.",
         "Server error",
+        "Browser",
+        "opened in the default browser",
+        "could not open the default browser; open this address yourself",
     },
     {
         "EverSoul AI Chat by Nekoi - Server",
@@ -75,6 +84,9 @@ constexpr std::array<ConsoleMessages, 3> messages{{
         "配置文件",
         "关闭此窗口即停止服务器。",
         "服务器错误",
+        "浏览器",
+        "已在默认浏览器中打开",
+        "无法打开默认浏览器，请手动打开以下地址",
     },
 }};
 
@@ -167,6 +179,15 @@ void print_config_location(ConsoleLanguage language, const std::filesystem::path
     const ConsoleMessages& text = localized(language);
     std::cout << dim << "  " << text.config_label << "  " << file.string() << reset << '\n'
               << dim << "  " << text.close_hint << reset << "\n\n"
+              << std::flush;
+}
+
+void print_browser_launch(ConsoleLanguage language, std::string_view url, bool opened)
+{
+    const ConsoleMessages& text = localized(language);
+    std::cout << (opened ? ready : warning) << "  ●  " << bright << text.browser_label << reset << "  "
+              << (opened ? text.browser_opened : text.browser_failed)
+              << dim << "  ·  " << reset << accent << url << reset << "\n\n"
               << std::flush;
 }
 

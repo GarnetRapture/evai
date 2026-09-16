@@ -1,6 +1,5 @@
 import type { AppLanguage } from '../../../shared/types';
-import { NO_CHAT_MODEL_ID } from '../../llm';
-import { formatLanguageName } from '../logic';
+import { buildChatModelSelection, formatLanguageName, resolveSetupModelReadiness } from '../logic';
 import type { SetupWizardProps } from '../types';
 import { ChatModelSelector } from './ChatModelSelector';
 import { PlatformGuideNotice } from './PlatformGuideNotice';
@@ -26,7 +25,7 @@ export function SetupWizard({
     onSelectLanguage,
     onCompleteSetup,
 }: SetupWizardProps) {
-    const modelChosen = activeModelId.length > 0 && activeModelId !== NO_CHAT_MODEL_ID;
+    const readiness = resolveSetupModelReadiness(buildChatModelSelection(modelCatalog, llmStatus, labels), llmStatus, activeModelId, modelLoadingId, modelCatalogRefreshing);
 
     return (
         <div className="ever-settings-overlay ever-setup-wizard" role="dialog" aria-modal="true">
@@ -63,10 +62,12 @@ export function SetupWizard({
                             onOpenGuide={onOpenGuide}
                         />
                     </section>
-                    <button type="button" className="ever-setup-wizard__next" disabled={!platformGuideConfirmed || !modelChosen} onClick={() => void onCompleteSetup()}>
+                    <button type="button" className="ever-setup-wizard__next" disabled={!platformGuideConfirmed || readiness !== 'ready'} onClick={() => void onCompleteSetup()}>
                         {labels.continue}
                     </button>
-                    {!modelChosen ? <small className="ever-setup-wizard__blocked">{labels.setupModelRequired}</small> : null}
+                    {readiness === 'not_selected' ? <small className="ever-setup-wizard__blocked">{labels.setupModelRequired}</small> : null}
+                    {readiness === 'loading' ? <small className="ever-setup-wizard__blocked">{labels.setupModelLoading}</small> : null}
+                    {readiness === 'failed' ? <small className="ever-setup-wizard__blocked">{labels.setupModelLoadFailed(llmStatus?.error_message ?? '')}</small> : null}
                 </div>
             </div>
         </div>
