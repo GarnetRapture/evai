@@ -27,7 +27,6 @@ import type {
     LocalModelEngineKind,
     LocalModelFileEntry,
     ModelPreparationState,
-    OllamaModelEntry,
     OllamaModelLibrary,
 } from '../llm';
 import type { ImportedModule, ModuleControl } from '../modules';
@@ -57,7 +56,46 @@ export interface ZoomOffset {
     y: number;
 }
 export type PanelResizeHandle = 'n' | 's' | 'e' | 'w' | 'ne' | 'nw' | 'se' | 'sw';
-export type WorkspaceView = 'chat' | 'ranking' | 'memory' | 'storage' | 'cheat';
+export type WorkspaceView = 'chat' | 'ranking' | 'memory' | 'storage' | 'cheat' | 'guide';
+export interface TopNavigationEntry {
+    view: WorkspaceView;
+    title: string;
+    disabled: boolean;
+}
+export interface TopNavigationOptions {
+    cheatModeEnabled: boolean;
+    gatePending: boolean;
+}
+export type GuidePathKind = 'web' | 'local_server';
+export type GuideStepKey = 'use_pc_chrome' | 'prepare_on_device' | 'get_local_server' | 'run_local_server' | 'install_ollama' | 'pull_model' | 'select_model' | 'start_chat';
+export type GuideStepState = 'checking' | 'done' | 'current' | 'todo' | 'optional';
+export type GuideStepAction = 'open_ollama_download' | 'open_ollama_library' | 'open_hugging_face_guide' | 'open_repository' | 'open_settings' | 'choose_model' | 'open_chat' | 'finish_setup' | 'refresh_status';
+export interface GuideChecklistDraft {
+    key: GuideStepKey;
+    done: boolean | null;
+    optional: boolean;
+    actions: GuideStepAction[];
+}
+export interface GuideChecklistStep {
+    key: GuideStepKey;
+    state: GuideStepState;
+    actions: GuideStepAction[];
+}
+export interface GuideChecklistInput {
+    path: GuidePathKind;
+    catalog: ChatModelCatalog | null;
+    activeModelId: string;
+    llmStatus: LlmStatus | null;
+    gatePending: boolean;
+}
+export interface GuideConceptLabel {
+    term: string;
+    description: string;
+}
+export interface GuideStepActionButtonProps {
+    action: GuideStepAction;
+    controller: EverTalkController;
+}
 export interface PanelGeometry {
     x: number;
     y: number;
@@ -399,6 +437,55 @@ export interface ChatStageProps {
     labels: EverTalkLabels;
     onOpenProfileDetail: () => void;
 }
+export interface SelectableChatModelOption {
+    id: string;
+    engine: string;
+    title: string;
+    detail: string;
+    selected: boolean;
+    running: boolean;
+}
+export type ChatModelMode = 'on_device' | 'ollama';
+export type ChatModelRuntimeState = 'checking' | 'running' | 'ready' | 'needs_preparation' | 'unavailable';
+export interface ChatModelModeSelection {
+    mode: ChatModelMode;
+    state: ChatModelRuntimeState;
+    detail: string;
+    options: SelectableChatModelOption[];
+}
+export interface ChatModelSelection {
+    modes: ChatModelModeSelection[];
+    active_mode: ChatModelMode | null;
+}
+export interface ChatModelSelectorProps {
+    catalog: ChatModelCatalog | null;
+    catalogError: string | null;
+    catalogRefreshing: boolean;
+    llmStatus: LlmStatus | null;
+    modelLoadingId: string | null;
+    storageKind: AppStorageKind;
+    labels: EverTalkLabels;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onRefreshModelCatalog: () => Promise<void>;
+    onOpenGuide: () => void;
+}
+export interface EnvironmentLayerProps {
+    settings: AppSettings | null;
+    session: UserSession | null;
+    savior: SaviorProfileSnapshot;
+    environment: DeviceEnvironmentInfo | null;
+    labels: EverTalkLabels;
+    embedded?: boolean;
+    gatePending?: boolean;
+    notificationItems?: Array<{ personaId: string; name: string; count: number }>;
+    onOpenNotification?: (personaId: string) => void;
+    activeView?: WorkspaceView;
+    onNavigate?: (view: WorkspaceView) => void;
+    onOpenLobby?: () => void;
+    onOpenSettings?: () => void;
+    onOpenSaviorProfile?: () => void;
+    onRenameSavior?: (name: string) => void;
+}
 export interface GenerationEngineLimit {
     engine_label: string;
     maximum_context_length: number | null;
@@ -578,15 +665,17 @@ export interface LocalServerNoticeProps {
 }
 export interface ModelCatalogSectionProps {
     appPlatform: AppPlatform;
-    localServerNoticeVisible: boolean;
-    devicePlatform: string;
+    storageKind: AppStorageKind;
+    llmStatus: LlmStatus | null;
     modelCatalog: ChatModelCatalog | null;
     modelCatalogError: string | null;
+    modelCatalogRefreshing: boolean;
     modelPreparation: ModelPreparationState | null;
     modelLoadingId: string | null;
     labels: EverTalkLabels;
     onRefreshModelCatalog: () => Promise<void>;
     onSelectChatModel: (modelId: string) => Promise<void>;
+    onOpenGuide: () => void;
     onPrepareOnDeviceSystemModel: (entry: OnDeviceSystemModelEntry) => Promise<void>;
     onLinkChromeInstalledModelFolder: (files: File[]) => Promise<void>;
     onLinkChromeLocalState: (file: File) => Promise<void>;
@@ -603,11 +692,7 @@ export interface ModelCatalogSectionProps {
 }
 export interface OllamaModelSectionProps {
     library: OllamaModelLibrary;
-    modelLoadingId: string | null;
-    platform: string;
     labels: EverTalkLabels;
-    onRefreshModelCatalog: () => Promise<void>;
-    onSelectChatModel: (modelId: string) => Promise<void>;
     onSaveOllamaBaseUrl: (baseUrl: string) => Promise<void>;
 }
 export interface OllamaConnectionGuideProps {
@@ -618,18 +703,11 @@ export interface OllamaConnectionGuideProps {
     labels: EverTalkLabels;
     onCheck: () => Promise<void>;
 }
-export interface OllamaModelItemProps {
-    entry: OllamaModelEntry;
-    modelLoadingId: string | null;
-    labels: EverTalkLabels;
-    onSelectChatModel: (modelId: string) => Promise<void>;
-}
 export interface ChromeInstalledModelSectionProps {
     library: ChromeInstalledModelLibrary;
     modelLoadingId: string | null;
     linking: boolean;
     labels: EverTalkLabels;
-    onSelectChatModel: (modelId: string) => Promise<void>;
     onLinkChromeInstalledModelFolder: (files: File[]) => Promise<void>;
     onLinkChromeLocalState: (file: File) => Promise<void>;
     onSaveChromeModelFolderPath: (folderPath: string) => Promise<void>;
@@ -638,7 +716,6 @@ export interface ChromeInstalledModelItemProps {
     entry: ChromeInstalledModelEntry;
     modelLoadingId: string | null;
     labels: EverTalkLabels;
-    onSelectChatModel: (modelId: string) => Promise<void>;
 }
 export interface LocalModelEntryGroup {
     engine: LocalModelEngineKind;
@@ -651,7 +728,6 @@ export interface LocalModelSectionProps {
     modelPreparation: ModelPreparationState | null;
     modelLoadingId: string | null;
     labels: EverTalkLabels;
-    onSelectChatModel: (modelId: string) => Promise<void>;
     onInstallLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
     onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
@@ -661,7 +737,6 @@ export interface OnDeviceSystemModelItemProps {
     modelPreparation: ModelPreparationState | null;
     modelLoadingId: string | null;
     labels: EverTalkLabels;
-    onSelectChatModel: (modelId: string) => Promise<void>;
     onPrepareOnDeviceSystemModel: (entry: OnDeviceSystemModelEntry) => Promise<void>;
 }
 export interface LocalModelItemProps {
@@ -670,7 +745,6 @@ export interface LocalModelItemProps {
     busy: boolean;
     modelLoadingId: string | null;
     labels: EverTalkLabels;
-    onSelectChatModel: (modelId: string) => Promise<void>;
     onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
 }
@@ -681,7 +755,6 @@ export interface SettingsSectionNavItem {
 }
 export interface SettingsPanelProps extends ModelCatalogSectionProps {
     open: boolean;
-    storageKind: AppStorageKind;
     settings: AppSettings | null;
     preferredSpiritNames: string[];
     activeStyleName: string | null;
@@ -748,32 +821,37 @@ export interface SetupProgressPanelProps {
     progress: SetupProgress | null;
     labels: EverTalkLabels;
 }
-export interface SetupWizardProps extends ModelCatalogSectionProps {
-    open: boolean;
+export interface SetupWizardProps {
+    appPlatform: AppPlatform;
     language: AppLanguage;
-    ollamaGuideVisible: boolean;
-    ollamaConnection: OllamaModelLibrary | null;
-    ollamaConnectionChecking: boolean;
+    labels: EverTalkLabels;
+    storageKind: AppStorageKind;
+    llmStatus: LlmStatus | null;
     activeModelId: string;
-    onCheckOllamaConnection: () => Promise<void>;
+    modelCatalog: ChatModelCatalog | null;
+    modelCatalogError: string | null;
+    modelCatalogRefreshing: boolean;
+    modelLoadingId: string | null;
+    onSelectChatModel: (modelId: string) => Promise<void>;
+    onRefreshModelCatalog: () => Promise<void>;
+    onOpenGuide: () => void;
+    platformGuideConfirmed: boolean;
+    onPlatformGuideConfirmedChange: (confirmed: boolean) => void;
     onSelectLanguage: (language: AppLanguage) => Promise<void>;
     onCompleteSetup: () => Promise<void>;
+}
+export interface PlatformGuideConfirmation {
+    acknowledged: boolean;
+    onAcknowledgedChange: (acknowledged: boolean) => void;
 }
 export interface PlatformGuideNoticeProps {
     appPlatform: AppPlatform;
     labels: EverTalkLabels;
-    acknowledged: boolean;
-    onAcknowledgedChange: (acknowledged: boolean) => void;
+    confirmation: PlatformGuideConfirmation;
 }
 export interface PlatformGuideGateProps {
     appPlatform: AppPlatform;
-    localServerNoticeVisible: boolean;
     labels: EverTalkLabels;
-    ollamaGuideVisible: boolean;
-    ollamaConnection: OllamaModelLibrary | null;
-    ollamaConnectionChecking: boolean;
-    devicePlatform: string;
-    onCheckOllamaConnection: () => Promise<void>;
     onAcknowledge: () => Promise<void>;
 }
 export interface PlatformBlockedPanelProps {
@@ -843,6 +921,7 @@ export interface EverTalkController {
     deviceEnvironment: DeviceEnvironmentInfo | null;
     modelCatalog: ChatModelCatalog | null;
     modelCatalogError: string | null;
+    modelCatalogRefreshing: boolean;
     modelLoadingId: string | null;
     modelPreparation: ModelPreparationState | null;
     backupBusy: boolean;
@@ -933,10 +1012,8 @@ export interface EverTalkController {
     saveGenerationLimits: (contextWindowTokens: number | null, maxOutputTokens: number | null) => Promise<void>;
     generationEngineLimits: GenerationEngineLimit[];
     ollamaGuideVisible: boolean;
-    ollamaConnection: OllamaModelLibrary | null;
-    ollamaConnectionChecking: boolean;
     devicePlatform: string;
-    checkOllamaConnection: () => Promise<void>;
+    openGuide: () => void;
     removeLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     exportBackup: () => Promise<void>;
     importBackup: () => Promise<void>;
@@ -963,6 +1040,9 @@ export interface EverTalkController {
     storageKind: AppStorageKind;
     localServerNoticeVisible: boolean;
     platformGuideAcknowledged: boolean;
+    platformGuideConfirmed: boolean;
+    setPlatformGuideConfirmed: (confirmed: boolean) => void;
+    gatePending: boolean;
     acknowledgePlatformGuide: () => Promise<void>;
     navigateWorkspace: (view: WorkspaceView) => Promise<void>;
     refreshStorageInspection: () => Promise<void>;

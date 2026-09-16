@@ -49,6 +49,7 @@ export interface OllamaChatMessage {
 }
 
 export interface OllamaChatOptions {
+    num_ctx: number;
     num_predict: number;
     temperature: number;
     top_k: number;

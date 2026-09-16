@@ -1,5 +1,5 @@
 export { ollamaClient } from './client';
-export { buildOllamaCommandGuide } from './commands';
-export { OLLAMA_DEFAULT_BASE_URL } from './constants';
-export { normalizeOllamaBaseUrl, ollamaProxyEndpoint, ollamaUpstreamHeaders } from './url';
-export type { OllamaChatMessage, OllamaCommandGuideInput, OllamaCommandStep, OllamaCommandStepKey, OllamaGenerationRequest, OllamaModelProfile, OllamaServerStatus, OllamaTagModel } from './types';
+export { buildOllamaCommandGuide, resolveOllamaCommandShell } from './commands';
+export { HUGGING_FACE_OLLAMA_GUIDE_URL, OLLAMA_DEFAULT_BASE_URL, OLLAMA_DOWNLOAD_URL, OLLAMA_MODEL_LIBRARY_URL } from './constants';
+export { normalizeOllamaBaseUrl, ollamaProxyEndpoint } from './url';
+export type { OllamaChatMessage, OllamaCommandGuideInput, OllamaCommandShell, OllamaCommandStep, OllamaCommandStepKey, OllamaGenerationRequest, OllamaModelProfile, OllamaServerStatus, OllamaTagModel } from './types';

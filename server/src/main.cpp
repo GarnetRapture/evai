@@ -61,13 +61,14 @@ int run_server(const evai::server::app::ServerOptions& options)
     const evai::server::net::SocketRuntime socket_runtime;
     const evai::server::app::HttpServiceContext context = evai::server::app::create_http_service_context(root, database_directory, database, backups, options.port);
     const evai::server::net::TcpSocket listener = evai::server::net::TcpSocket::listen_loopback(options.port);
-    const evai::server::api::OllamaProbe ollama = evai::server::api::probe_ollama(config.ollama_base_url);
+    const std::string ollama_base_url = evai::server::api::resolve_ollama_base_url(database.read_ollama_base_url());
+    const evai::server::api::OllamaProbe ollama = evai::server::api::probe_ollama(ollama_base_url);
     evai::server::app::print_status_report(config.language, {
         context.site.root_directory,
         database.file(),
         summary.schema_version,
         summary.record_count,
-        config.ollama_base_url,
+        ollama_base_url,
         ollama.available,
         ollama.detail,
         options.port,

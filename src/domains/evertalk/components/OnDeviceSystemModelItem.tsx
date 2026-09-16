@@ -3,7 +3,7 @@ import { CHROME_FLAGS_PAGE_URL, CHROME_PROMPT_DEFAULT_VARIANT } from '../../llm/
 import { formatDateTime, formatMegabytes, formatProgressPercent } from '../logic';
 import type { OnDeviceSystemModelItemProps } from '../types';
 
-export function OnDeviceSystemModelItem({ entry, modelPreparation, modelLoadingId, labels, onSelectChatModel, onPrepareOnDeviceSystemModel }: OnDeviceSystemModelItemProps) {
+export function OnDeviceSystemModelItem({ entry, modelPreparation, modelLoadingId, labels, onPrepareOnDeviceSystemModel }: OnDeviceSystemModelItemProps) {
     const preparation = modelPreparation?.model_id === entry.id ? modelPreparation : null;
     const progress = preparation?.progress ?? null;
     const needsPreparation = entry.api_supported && (entry.availability === 'downloadable' || entry.availability === 'downloading');
@@ -14,7 +14,6 @@ export function OnDeviceSystemModelItem({ entry, modelPreparation, modelLoadingI
     const showBuiltInInventory = entry.engine === 'chrome_prompt' && entry.variant === CHROME_PROMPT_DEFAULT_VARIANT;
     return (<div className={`ever-model-item ${entry.selected ? 'is-selected' : ''}`}>
         <div className="ever-model-item__main">
-          <input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.api_supported || variantMismatch || modelLoadingId !== null} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>
           <span>
             <strong>{androidNano ? labels.modelRoleAndroidGeminiNano : entry.engine === 'chrome_prompt' ? labels.chromePromptVariantTitle[entry.variant] : labels.modelRoleChat}</strong>
             <small>{entry.id}</small>

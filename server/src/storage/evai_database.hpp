@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <filesystem>
 #include <mutex>
+#include <optional>
 #include <string>
 #include <string_view>
 
@@ -25,6 +26,7 @@ public:
     explicit EvaiDatabase(const std::filesystem::path& file);
 
     [[nodiscard]] DatabaseSummary read_summary();
+    [[nodiscard]] std::optional<std::string> read_ollama_base_url();
 
     [[nodiscard]] StorageResponse read_document(std::string_view request_body);
     [[nodiscard]] StorageResponse query_entries(std::string_view request_body);

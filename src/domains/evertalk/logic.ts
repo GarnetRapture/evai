@@ -1,7 +1,7 @@
 import { isDomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
 import { EVERTALK_SESSION_TITLE, removeJsonResidue, repairHangulComposition, splitPersonaReplyActions, type ChatMessage, type ChatRoom, type PersonaContextGraph, type PersonaContextRelation, type PersonaKeywordThread, type PersonaMemoryOverview } from '../chat';
-import type { ChatModelCatalog, ChatModelEntry, LocalModelFileEntry, ModelDownloadProgress } from '../llm';
+import type { ChatModelCatalog, ChatModelEntry, LlmStatus, LocalModelFileEntry, ModelDownloadProgress, OllamaModelLibrary, OnDeviceSystemModelEntry } from '../llm';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import { FAMILIARITY_GRADE_MILESTONES, FAMILIARITY_MAX_LEVEL, computeFamiliarityLevel, resolveFamiliarityGrade, type FamiliarityGrade } from '../persona/familiarity';
@@ -15,7 +15,7 @@ export {
 } from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphArcPlacement, MemoryGraphBounds, MemoryGraphDetailPosition, MemoryGraphEdge, MemoryGraphEmphasis, MemoryGraphLayout, MemoryGraphLayoutSubject, MemoryGraphNode, MemoryGraphPoint, MemoryGraphViewFilter, MemoryGraphViewTransform, GenerationEngineLimit, MemoryOverviewRow, MemorySpiritRosterEntry, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, ChatModelModeSelection, ChatModelSelection, GuideChecklistDraft, GuideChecklistInput, GuideChecklistStep, GuideStepState, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphArcPlacement, MemoryGraphBounds, MemoryGraphDetailPosition, MemoryGraphEdge, MemoryGraphEmphasis, MemoryGraphLayout, MemoryGraphLayoutSubject, MemoryGraphNode, MemoryGraphPoint, MemoryGraphViewFilter, MemoryGraphViewTransform, GenerationEngineLimit, MemoryOverviewRow, MemorySpiritRosterEntry, SelectableChatModelOption, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice, TopNavigationEntry, TopNavigationOptions } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -431,29 +431,204 @@ export function filterMemoryKeywordThreads(threads: readonly PersonaKeywordThrea
         && (!filter.recentOnly || thread.keyword.query_match || thread.keyword.recent_count > 0));
 }
 
+export function describeChatModelStatus(status: LlmStatus | null, activeModelId: string, labels: EverTalkLabels): string {
+    if (status?.is_loaded === true) {
+        return labels.modelLoaded;
+    }
+    if (activeModelId.length === 0) {
+        return labels.modelNotSelected;
+    }
+    return labels.modelAvailabilityDetail(status?.availability ?? null);
+}
+
+function isOnDeviceSystemModelSelectable(entry: OnDeviceSystemModelEntry): boolean {
+    if (!entry.api_supported || entry.availability === 'unavailable') {
+        return false;
+    }
+    return entry.engine !== 'chrome_prompt' || entry.verification !== 'flag_mismatch';
+}
+
+function withContextWindow(detail: string, contextWindow: number | null, labels: EverTalkLabels): string {
+    return contextWindow === null ? detail : `${detail} · ${labels.modelContextWindow(contextWindow)}`;
+}
+
+function onDeviceModelOptions(catalog: ChatModelCatalog, llmStatus: LlmStatus | null, labels: EverTalkLabels): SelectableChatModelOption[] {
+    const options: SelectableChatModelOption[] = [];
+    const activeLoaded = llmStatus?.is_loaded === true;
+    for (const entry of catalog.entries) {
+        if (entry.engine === 'chrome_prompt' || entry.engine === 'android_gemini_nano') {
+            if (isOnDeviceSystemModelSelectable(entry)) {
+                options.push({
+                    id: entry.id,
+                    engine: entry.engine,
+                    title: entry.engine === 'chrome_prompt' ? labels.chromePromptVariantTitle[entry.variant] : labels.modelRoleAndroidGeminiNano,
+                    detail: withContextWindow(
+                        entry.engine === 'chrome_prompt'
+                            ? `${labels.modelAvailabilityDetail(entry.availability)} · ${labels.chromePromptVariantVerification[entry.verification]}`
+                            : labels.modelAvailabilityDetail(entry.availability),
+                        entry.context_window,
+                        labels,
+                    ),
+                    selected: entry.selected,
+                    running: entry.selected && activeLoaded,
+                });
+            }
+            continue;
+        }
+        if (entry.installed) {
+            options.push({
+                id: entry.id,
+                engine: entry.engine,
+                title: entry.display_name,
+                detail: withContextWindow(entry.backend === null ? entry.file_name : labels.localModelBackend(entry.backend), entry.context_window, labels),
+                selected: entry.selected,
+                running: entry.loaded,
+            });
+        }
+    }
+    for (const entry of catalog.chrome_installed?.entries ?? []) {
+        if (entry.runnable && entry.model !== null) {
+            options.push({
+                id: entry.id,
+                engine: entry.engine,
+                title: labels.chromeInstalledModelTitle(entry.model.base_model_name, entry.model.base_model_version),
+                detail: withContextWindow(entry.linked ? labels.chromeInstalledModelRunnable : labels.chromeInstalledModelRelinkRequired, entry.context_window, labels),
+                selected: entry.selected,
+                running: entry.loaded,
+            });
+        }
+    }
+    return options;
+}
+
+function describeOnDeviceMode(catalog: ChatModelCatalog, options: readonly SelectableChatModelOption[], labels: EverTalkLabels): ChatModelModeSelection {
+    const systemEntries = catalog.entries.filter((entry): entry is OnDeviceSystemModelEntry => entry.engine === 'chrome_prompt' || entry.engine === 'android_gemini_nano');
+    const systemEntry = systemEntries[0] ?? null;
+    const systemDetail = systemEntry === null
+        ? labels.modelAvailabilityDetail(null)
+        : !systemEntry.api_supported
+            ? (systemEntry.engine === 'android_gemini_nano' ? labels.modelAndroidGeminiNanoUnsupported : labels.modelApiUnsupported)
+            : labels.modelAvailabilityDetail(systemEntry.availability);
+    const detail = options.length === 0 ? systemDetail : `${systemDetail} · ${labels.chatModelOptionCount(options.length)}`;
+    if (options.some((option) => option.running)) {
+        return { mode: 'on_device', state: 'running', detail, options: [...options] };
+    }
+    if (options.length > 0) {
+        const usableWithoutPreparation = options.some((option) => {
+            const system = systemEntries.find((entry) => entry.id === option.id);
+            return system === undefined || system.availability === 'available';
+        });
+        return { mode: 'on_device', state: usableWithoutPreparation ? 'ready' : 'needs_preparation', detail, options: [...options] };
+    }
+    if (systemEntry !== null && systemEntry.api_supported && systemEntry.availability === null) {
+        return { mode: 'on_device', state: 'checking', detail, options: [] };
+    }
+    return { mode: 'on_device', state: 'unavailable', detail, options: [] };
+}
+
+function describeOllamaMode(library: OllamaModelLibrary, activeLoaded: boolean, labels: EverTalkLabels): ChatModelModeSelection {
+    if (!library.server.available) {
+        return { mode: 'ollama', state: 'unavailable', detail: `${labels.ollamaServerUnavailable} · ${library.server.detail}`, options: [] };
+    }
+    if (library.list_error !== null) {
+        return { mode: 'ollama', state: 'unavailable', detail: library.list_error, options: [] };
+    }
+    const options: SelectableChatModelOption[] = library.entries.map((entry) => ({
+        id: entry.id,
+        engine: entry.engine,
+        title: entry.model_name,
+        detail: withContextWindow(labels.ollamaModelMeta(entry.family, entry.parameter_size, entry.quantization_level, formatMegabytes(entry.size_bytes)), entry.context_window, labels),
+        selected: entry.selected,
+        running: entry.selected && entry.loaded && activeLoaded,
+    }));
+    const detail = labels.ollamaConnectionReady(library.server.version ?? '', options.length);
+    if (options.length === 0) {
+        return { mode: 'ollama', state: 'unavailable', detail, options };
+    }
+    return { mode: 'ollama', state: options.some((option) => option.running) ? 'running' : 'ready', detail, options };
+}
+
+export function buildChatModelSelection(catalog: ChatModelCatalog | null, llmStatus: LlmStatus | null, labels: EverTalkLabels): ChatModelSelection {
+    if (catalog === null) {
+        return { modes: [{ mode: 'on_device', state: 'checking', detail: labels.checking, options: [] }], active_mode: null };
+    }
+    const modes = [describeOnDeviceMode(catalog, onDeviceModelOptions(catalog, llmStatus, labels), labels)];
+    if (catalog.ollama !== null) {
+        modes.push(describeOllamaMode(catalog.ollama, llmStatus?.is_loaded === true, labels));
+    }
+    const activeMode = modes.find((selection) => selection.options.some((option) => option.selected))?.mode ?? null;
+    return { modes, active_mode: activeMode };
+}
+
+export function buildGuideChecklist(input: GuideChecklistInput): GuideChecklistStep[] {
+    const { catalog } = input;
+    const known = <T>(evaluate: (loaded: ChatModelCatalog) => T): T | null => catalog === null ? null : evaluate(catalog);
+    const modelStep: GuideChecklistDraft = { key: 'select_model', done: input.activeModelId.length > 0, optional: false, actions: ['choose_model'] };
+    const chatStep: GuideChecklistDraft = { key: 'start_chat', done: input.llmStatus?.is_loaded === true, optional: false, actions: [input.gatePending ? 'finish_setup' : 'open_chat'] };
+    const drafts: GuideChecklistDraft[] = input.path === 'local_server'
+        ? [
+            { key: 'run_local_server', done: true, optional: false, actions: [] },
+            { key: 'install_ollama', done: known((loaded) => loaded.ollama?.server.available === true), optional: false, actions: ['open_ollama_download', 'refresh_status'] },
+            { key: 'pull_model', done: known((loaded) => loaded.ollama?.server.available === true && loaded.ollama.entries.length > 0), optional: false, actions: ['open_ollama_library', 'open_hugging_face_guide', 'refresh_status'] },
+            modelStep,
+            chatStep,
+        ]
+        : [
+            { key: 'use_pc_chrome', done: known((loaded) => loaded.entries.some((entry) => entry.engine === 'chrome_prompt' && entry.api_supported)), optional: false, actions: ['refresh_status'] },
+            { key: 'prepare_on_device', done: known((loaded) => loaded.entries.some((entry) => entry.engine === 'chrome_prompt' && entry.api_supported && entry.availability === 'available') || (loaded.chrome_installed?.entries.some((entry) => entry.runnable) ?? false)), optional: false, actions: ['open_settings', 'refresh_status'] },
+            modelStep,
+            chatStep,
+            { key: 'get_local_server', done: false, optional: true, actions: ['open_repository'] },
+        ];
+    let currentAssigned = false;
+    return drafts.map((draft) => {
+        if (draft.optional) {
+            return { key: draft.key, state: 'optional', actions: draft.actions };
+        }
+        if (draft.done === null) {
+            return { key: draft.key, state: 'checking', actions: draft.actions };
+        }
+        if (draft.done) {
+            return { key: draft.key, state: 'done', actions: draft.actions };
+        }
+        const state: GuideStepState = currentAssigned ? 'todo' : 'current';
+        currentAssigned = true;
+        return { key: draft.key, state, actions: draft.actions };
+    });
+}
+
+export function buildTopNavigationEntries(labels: EverTalkLabels, options: TopNavigationOptions): TopNavigationEntry[] {
+    const entries: TopNavigationEntry[] = [
+        { view: 'chat', title: options.gatePending ? labels.navSetup : labels.navChat, disabled: false },
+        { view: 'ranking', title: labels.navRanking, disabled: options.gatePending },
+        { view: 'memory', title: labels.navMemory, disabled: options.gatePending },
+        { view: 'storage', title: labels.navStorage, disabled: options.gatePending },
+    ];
+    if (options.cheatModeEnabled) {
+        entries.push({ view: 'cheat', title: labels.navCheat, disabled: options.gatePending });
+    }
+    entries.push({ view: 'guide', title: labels.navGuide, disabled: false });
+    return entries;
+}
+
 export function buildGenerationEngineLimits(catalog: ChatModelCatalog | null): GenerationEngineLimit[] {
     if (catalog === null) {
         return [];
     }
     const limits: GenerationEngineLimit[] = [];
-    for (const entry of catalog.ollama?.entries ?? []) {
-        if (!entry.selected && !entry.loaded) {
-            continue;
-        }
-        limits.push({
-            engine_label: entry.model_name,
-            maximum_context_length: entry.maximum_context_window,
-            active_context_length: entry.context_window,
-        });
-    }
     for (const entry of catalog.entries) {
-        if (entry.selected && entry.context_window !== null) {
-            limits.push({ engine_label: entry.id, maximum_context_length: entry.context_window, active_context_length: entry.context_window });
+        if (entry.selected) {
+            limits.push({ engine_label: entry.id, maximum_context_length: entry.maximum_context_window, active_context_length: entry.context_window });
         }
     }
     for (const entry of catalog.chrome_installed?.entries ?? []) {
-        if (entry.selected && entry.context_window !== null) {
-            limits.push({ engine_label: entry.id, maximum_context_length: entry.context_window, active_context_length: entry.context_window });
+        if (entry.selected) {
+            limits.push({ engine_label: entry.id, maximum_context_length: entry.maximum_context_window, active_context_length: entry.context_window });
+        }
+    }
+    for (const entry of catalog.ollama?.entries ?? []) {
+        if (entry.selected || entry.loaded) {
+            limits.push({ engine_label: entry.model_name, maximum_context_length: entry.maximum_context_window, active_context_length: entry.context_window });
         }
     }
     return limits;

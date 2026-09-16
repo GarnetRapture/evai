@@ -122,6 +122,7 @@ export interface ChromeInstalledModelEntry {
     runnable: boolean;
     loaded: boolean;
     context_window: number | null;
+    maximum_context_window: number | null;
     selected: boolean;
 }
 export interface ChromeInstalledLoadedEngine {
@@ -140,6 +141,7 @@ export interface AndroidGeminiNanoModelEntry {
     availability: OnDeviceModelAvailability;
     error_message: string | null;
     context_window: number | null;
+    maximum_context_window: number | null;
     selected: boolean;
 }
 export interface ChromeLanguageModelInputAvailability {
@@ -183,6 +185,7 @@ export interface ChromePromptModelEntry {
     language_tag: string;
     language_declared: boolean;
     context_window: number | null;
+    maximum_context_window: number | null;
     selected: boolean;
 }
 export interface HuggingFaceModelSource {
@@ -206,6 +209,7 @@ export interface LocalModelFileEntry {
     loaded: boolean;
     backend: string | null;
     context_window: number | null;
+    maximum_context_window: number | null;
     selected: boolean;
 }
 export type OnDeviceSystemModelEntry = ChromePromptModelEntry | AndroidGeminiNanoModelEntry;
@@ -340,6 +344,7 @@ export interface PersonaModelSessionIdentity {
 }
 export interface PersonaModelSession extends PersonaModelSessionIdentity {
     session: LanguageModel;
+    applied_context_window: number;
     last_access: number;
     cache_reset: boolean;
     last_generation: LlmSessionGenerationStats | null;

@@ -229,7 +229,8 @@ void handle_request(const net::TcpSocket& client, const HttpServiceContext& cont
         }
         if (path->starts_with(api::ollama_proxy_prefix)) {
             const std::string_view target = request.target;
-            api::proxy_ollama_request(client, request, target.substr(api::ollama_proxy_prefix.size()));
+            const std::string base_url = api::resolve_ollama_base_url(context.database->read_ollama_base_url());
+            api::proxy_ollama_request(client, request, base_url, target.substr(api::ollama_proxy_prefix.size()));
             return;
         }
         http::send_json(client, 404, "Not Found", http::json_error_body("unknown_endpoint", *path));

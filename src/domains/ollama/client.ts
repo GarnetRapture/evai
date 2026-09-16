@@ -32,7 +32,7 @@ import type {
     OllamaTagsResponse,
     OllamaVersionResponse,
 } from './types';
-import { ollamaProxyEndpoint, ollamaUpstreamHeaders } from './url';
+import { ollamaProxyEndpoint } from './url';
 
 const JSON_HEADERS = { 'Content-Type': 'application/json' };
 const NDJSON_LINE_SEPARATOR = '\n';
@@ -63,10 +63,7 @@ function isOllamaErrorResponse(value: unknown): value is OllamaErrorResponse {
 async function requestOllama(baseUrl: string, path: string, init: RequestInit): Promise<Response> {
     let response: Response;
     try {
-        response = await fetch(ollamaProxyEndpoint(path), {
-            ...init,
-            headers: { ...ollamaUpstreamHeaders(baseUrl), ...init.headers },
-        });
+        response = await fetch(ollamaProxyEndpoint(path), init);
     }
     catch (error) {
         if (isCallerCancellation(init.signal, error)) {

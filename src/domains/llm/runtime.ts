@@ -74,6 +74,7 @@ async function createPersonaModelSession(identity: PersonaModelSessionIdentity, 
     return {
         ...identity,
         session,
+        applied_context_window: await resolveContextWindowLimit(session.contextWindow),
         last_access: Date.now(),
         cache_reset: cacheReset,
         last_generation: null,
@@ -353,7 +354,7 @@ export const chromePromptRuntime = {
         return [{
             persona_id: focusedPersonaSession.persona_id,
             cached_tokens: focusedPersonaSession.session.contextUsage,
-            context_window: focusedPersonaSession.session.contextWindow,
+            context_window: focusedPersonaSession.applied_context_window,
             last_access: focusedPersonaSession.last_access,
             last_generation: focusedPersonaSession.last_generation,
         }];

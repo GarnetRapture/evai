@@ -228,6 +228,9 @@ export const chromeInstalledModelRuntime = {
         );
         return result.text;
     },
+    loadedContextWindow(modelKey: string): number | null {
+        return loadedEngine?.model_key === modelKey ? loadedEngine.context_window : null;
+    },
     activeSessionIds(): string[] {
         return loadedEngine && focusedPersonaId ? [focusedPersonaId] : [];
     },

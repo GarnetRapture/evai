@@ -1,12 +1,11 @@
 import { formatMegabytes } from '../logic';
 import type { ChromeInstalledModelItemProps } from '../types';
 
-export function ChromeInstalledModelItem({ entry, modelLoadingId, labels, onSelectChatModel }: ChromeInstalledModelItemProps) {
+export function ChromeInstalledModelItem({ entry, modelLoadingId, labels }: ChromeInstalledModelItemProps) {
     const loading = modelLoadingId === entry.id;
     const model = entry.model;
     return (<div className={`ever-model-item ${entry.selected ? 'is-selected' : ''}`}>
         <div className="ever-model-item__main">
-          <input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.runnable || modelLoadingId !== null} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>
           <span>
             <strong>{model === null ? labels.chromeInstalledModelUnlinkedTitle : labels.chromeInstalledModelTitle(model.base_model_name, model.base_model_version)}</strong>
             <small>{entry.model_key}</small>

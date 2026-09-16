@@ -3,6 +3,7 @@ export type DomainErrorCode =
     | 'not_found'
     | 'validation'
     | 'invalid_model'
+    | 'model_not_selected'
     | 'model_not_ready'
     | 'cancelled'
     | 'invalid_format'

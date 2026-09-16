@@ -2,13 +2,12 @@ import { Download, ExternalLink, Link2, Trash2 } from 'lucide-react';
 import { formatMegabytes } from '../logic';
 import type { LocalModelItemProps } from '../types';
 
-export function LocalModelItem({ appPlatform, entry, busy, modelLoadingId, labels, onSelectChatModel, onDownloadLocalModel, onRemoveLocalModel }: LocalModelItemProps) {
+export function LocalModelItem({ appPlatform, entry, busy, modelLoadingId, labels, onDownloadLocalModel, onRemoveLocalModel }: LocalModelItemProps) {
     const sizeBytes = entry.installed_size_bytes ?? entry.source?.size_bytes ?? null;
     const loading = modelLoadingId === entry.id;
     const canDownloadInApp = appPlatform === 'android_app' && entry.source !== null && !entry.installed;
     return (<div className={`ever-model-item ${entry.selected ? 'is-selected' : ''}`}>
         <div className="ever-model-item__main">
-          <input type="radio" name="ever-chat-model" checked={entry.selected} disabled={!entry.installed || busy || modelLoadingId !== null} aria-label={labels.modelUseForChat} onChange={() => void onSelectChatModel(entry.id)}/>
           <span>
             <strong>{entry.display_name}</strong>
             <small>{entry.source ? entry.source.repo : labels.localModelSections[entry.engine].customModel}</small>

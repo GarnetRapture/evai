@@ -1,32 +1,21 @@
 import { useEffect, useState } from 'react';
-import { Bell, ChevronDown, Cpu, Database, FlaskConical, HardDrive, Home, MessageCircle, Settings, Trophy, UserRound, Workflow, X } from 'lucide-react';
+import { BookOpen, Bell, ChevronDown, Cpu, Database, FlaskConical, HardDrive, Home, MessageCircle, Settings, Trophy, UserRound, Workflow, X, type LucideIcon } from 'lucide-react';
 import { readAppStorageKind } from '../../../shared/host';
-import type { DeviceEnvironmentInfo } from '../../../shared/platform';
-import type { UserSession } from '../../auth';
-import type { AppSettings } from '../../settings';
-import type { EverTalkLabels } from '../i18n';
-import type { SaviorProfileSnapshot, WorkspaceView } from '../types';
+import { buildTopNavigationEntries } from '../logic';
+import type { EnvironmentLayerProps, WorkspaceView } from '../types';
 import { DECOR_UI_ASSETS } from '../uiAssets';
 import { SaviorProfileCard } from './SaviorProfileCard';
 
-interface EnvironmentLayerProps {
-    settings: AppSettings | null;
-    session: UserSession | null;
-    savior: SaviorProfileSnapshot;
-    environment: DeviceEnvironmentInfo | null;
-    labels: EverTalkLabels;
-    embedded?: boolean;
-    notificationItems?: Array<{ personaId: string; name: string; count: number }>;
-    onOpenNotification?: (personaId: string) => void;
-    activeView?: WorkspaceView;
-    onNavigate?: (view: WorkspaceView) => void;
-    onOpenLobby?: () => void;
-    onOpenSettings?: () => void;
-    onOpenSaviorProfile?: () => void;
-    onRenameSavior?: (name: string) => void;
-}
+const TOP_NAVIGATION_ICONS: Record<WorkspaceView, LucideIcon> = {
+    chat: MessageCircle,
+    ranking: Trophy,
+    memory: Workflow,
+    storage: HardDrive,
+    cheat: FlaskConical,
+    guide: BookOpen,
+};
 
-export function EnvironmentLayer({ settings, session, savior, environment, labels, embedded = false, notificationItems = [], onOpenNotification, activeView = 'chat', onNavigate, onOpenLobby, onOpenSettings, onOpenSaviorProfile, onRenameSavior }: EnvironmentLayerProps) {
+export function EnvironmentLayer({ settings, session, savior, environment, labels, embedded = false, gatePending = false, notificationItems = [], onOpenNotification, activeView = 'chat', onNavigate, onOpenLobby, onOpenSettings, onOpenSaviorProfile, onRenameSavior }: EnvironmentLayerProps) {
     const [open, setOpen] = useState(false);
     const [notificationsOpen, setNotificationsOpen] = useState(false);
     const [saviorMenuOpen, setSaviorMenuOpen] = useState(false);
@@ -100,19 +89,16 @@ export function EnvironmentLayer({ settings, session, savior, environment, label
                     {notificationTotal > 0 && <b>{notificationTotal > 99 ? '99+' : notificationTotal}</b>}
                 </button>
                 <nav className="ever-top-navigation" aria-label={labels.rosterTitle}>
-                    {([
-                        ['chat', labels.navChat, MessageCircle],
-                        ['ranking', labels.navRanking, Trophy],
-                        ['memory', labels.navMemory, Workflow],
-                        ['storage', labels.navStorage, HardDrive],
-                        ...(settings?.cheat_mode_enabled ? [['cheat', labels.navCheat, FlaskConical]] as const : []),
-                    ] as const).map(([view, title, Icon]) => (
-                        <button key={view} type="button" className={activeView === view ? 'is-active' : ''} aria-current={activeView === view ? 'page' : undefined} onClick={() => {
-                            closeLayers();
-                            onNavigate?.(view);
-                        }}><Icon size={15}/><span>{title}</span></button>
-                    ))}
-                    <button type="button" onClick={() => { closeLayers(); onOpenLobby?.(); }}><Home size={15}/><span>{labels.lobby}</span></button>
+                    {buildTopNavigationEntries(labels, { cheatModeEnabled: settings?.cheat_mode_enabled ?? false, gatePending }).map((entry) => {
+                        const Icon = TOP_NAVIGATION_ICONS[entry.view];
+                        return (
+                            <button key={entry.view} type="button" className={activeView === entry.view ? 'is-active' : ''} aria-current={activeView === entry.view ? 'page' : undefined} disabled={entry.disabled} title={entry.disabled ? labels.navRequiresSetup : undefined} onClick={() => {
+                                closeLayers();
+                                onNavigate?.(entry.view);
+                            }}><Icon size={15}/><span>{entry.title}</span></button>
+                        );
+                    })}
+                    <button type="button" disabled={gatePending} title={gatePending ? labels.navRequiresSetup : undefined} onClick={() => { closeLayers(); onOpenLobby?.(); }}><Home size={15}/><span>{labels.lobby}</span></button>
                     <button type="button" onClick={() => { closeLayers(); onOpenSettings?.(); }}><Settings size={15}/><span>{labels.settings}</span></button>
                 </nav>
                 <button
@@ -156,12 +142,14 @@ export function EnvironmentLayer({ settings, session, savior, environment, label
                 >
                     <section className="ever-savior-menu" role="dialog" aria-label={labels.saviorProfile}>
                         <SaviorProfileCard profile={savior} labels={labels} onRenameSavior={onRenameSavior}/>
-                        <button type="button" className="ever-savior-menu__item" onClick={openSaviorInventory}>
-                            <span className="ever-savior-menu__icon">
-                                <img src={DECOR_UI_ASSETS.inventoryIcon} alt="" aria-hidden="true"/>
-                            </span>
-                            <span>{labels.inventory}</span>
-                        </button>
+                        {onOpenSaviorProfile ? (
+                            <button type="button" className="ever-savior-menu__item" onClick={openSaviorInventory}>
+                                <span className="ever-savior-menu__icon">
+                                    <img src={DECOR_UI_ASSETS.inventoryIcon} alt="" aria-hidden="true"/>
+                                </span>
+                                <span>{labels.inventory}</span>
+                            </button>
+                        ) : null}
                     </section>
                 </div>
             )}

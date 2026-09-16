@@ -6,6 +6,7 @@ import { buildMemoryContextGraphLayout, filterMemoryKeywordThreads } from '../lo
 import type { EverTalkController, MemoryGraphSelection, WorkspacePageProps } from '../types';
 import { DECOR_UI_ASSETS, LOBBY_UI_ASSETS } from '../uiAssets';
 import { CheatModePage } from './CheatModePage';
+import { GuidePage } from './GuidePage';
 import { MemoryKeywordDetail, MemoryRelationDetail } from './MemoryContextDetails';
 import { MemoryGraphCanvas } from './MemoryGraphCanvas';
 import { MemorySpiritRoster } from './MemorySpiritRoster';
@@ -227,5 +228,6 @@ export function WorkspacePage({ controller }: WorkspacePageProps) {
     if (controller.workspaceView === 'memory') return <MemoryWorkflowPage controller={controller}/>;
     if (controller.workspaceView === 'storage') return <StorageAnalyticsPage controller={controller}/>;
     if (controller.workspaceView === 'cheat' && controller.cheatModeEnabled) return <CheatModePage controller={controller}/>;
+    if (controller.workspaceView === 'guide') return <GuidePage controller={controller}/>;
     return null;
 }

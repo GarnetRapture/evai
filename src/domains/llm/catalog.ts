@@ -27,11 +27,12 @@ import {
     verifyChromePromptVariant,
 } from './chrome/localState';
 import { findHuggingFaceModelSource, huggingFaceModelDownloadUrl, huggingFaceModelPageUrl } from './huggingface';
-import { chromeInstalledModelId, chromeInstalledModelKey, chromePromptModelIdForVariant, chromePromptModelVariant, isChatModelIdSupportedHere, localModelFileName, localModelId, ollamaModelId, ollamaModelName, platformChatModelEngines, platformDefaultChatModelId, resolveChatModelEngine, NO_CHAT_MODEL_ID } from './identity';
+import { chromeInstalledModelId, chromeInstalledModelKey, chromePromptModelIdForVariant, chromePromptModelVariant, isChatModelIdSupportedHere, localModelFileName, localModelId, ollamaModelId, ollamaModelName, platformChatModelEngines, resolveChatModelEngine } from './identity';
 import { RECOMMENDED_LITERT_LM_MODELS } from './litertlm/catalog';
 import { liteRtLmModelStorage, liteRtLmRuntime } from './litertlm/runtime';
 import { ollamaRuntime } from './ollama/runtime';
 import { chromePromptRuntime } from './runtime';
+import { resolveContextWindowLimit } from './localGeneration';
 import { isLocalModelInstalled, localModelStorage } from './storage';
 import type {
     AndroidGeminiNanoModelEntry,
@@ -77,7 +78,8 @@ function chromeInstalledModelEntry(model: ChromeInstalledModel | null, modelKey:
         linked: chromeInstalledModelRuntime.isLinked(modelKey),
         runnable: model?.weights_format === 'litertlm',
         loaded,
-        context_window: loaded ? CHROME_INSTALLED_CONTEXT_WINDOW : null,
+        context_window: loaded ? chromeInstalledModelRuntime.loadedContextWindow(modelKey) : null,
+        maximum_context_window: CHROME_INSTALLED_CONTEXT_WINDOW,
         selected: activeChatModelId === id,
     };
 }
@@ -144,6 +146,7 @@ function localModelEntry(
         loaded,
         backend: loaded ? loadState.backend : null,
         context_window: loaded ? loadState.context_window : null,
+        maximum_context_window: loaded ? loadState.context_window : null,
         selected: activeChatModelId === id,
     };
 }
@@ -190,6 +193,7 @@ function androidGeminiNanoModelEntry(activeChatModelId: string): AndroidGeminiNa
         availability: androidGeminiNanoRuntime.availability(),
         error_message: androidGeminiNanoRuntime.errorMessage(),
         context_window: null,
+        maximum_context_window: null,
         selected: activeChatModelId === ANDROID_GEMINI_NANO_MODEL_ID,
     };
 }
@@ -245,6 +249,10 @@ export const chatModelCatalog = {
             chromeInstalledModelRuntime.listLinkedSources().map((source) => source.model),
         );
         const activeChromeVariant = resolveActiveChromePromptSelection(activeChatModelId) ? chromePromptModelVariant(activeChatModelId) : null;
+        const chromePromptMaximumContextWindow = chromePromptRuntime.baseContextWindow(plan);
+        const chromePromptAppliedContextWindow = chromePromptMaximumContextWindow === null
+            ? null
+            : await resolveContextWindowLimit(chromePromptMaximumContextWindow);
         const chromeEntries: ChromePromptModelEntry[] = listChromePromptModelVariants().map((variant) => ({
             engine: 'chrome_prompt',
             id: chromePromptModelIdForVariant(variant),
@@ -262,7 +270,8 @@ export const chatModelCatalog = {
             probe_error: probeError,
             language_tag: plan.language_tag,
             language_declared: plan.declared_language_tag !== null,
-            context_window: activeChromeVariant === variant ? chromePromptRuntime.baseContextWindow(plan) : null,
+            context_window: activeChromeVariant === variant ? chromePromptAppliedContextWindow : null,
+            maximum_context_window: activeChromeVariant === variant ? chromePromptMaximumContextWindow : null,
             selected: activeChromeVariant === variant,
         }));
         return {
@@ -345,25 +354,6 @@ export const chatModelCatalog = {
         if (!(await isLocalModelInstalled(engine, localModelFileName(engine, modelId)))) {
             throw new DomainError('model_not_ready', 'unavailable');
         }
-    },
-    async resolveFallbackChatModelId(excludedModelId: string): Promise<string> {
-        const defaultId = platformDefaultChatModelId();
-        if (defaultId !== NO_CHAT_MODEL_ID && defaultId !== excludedModelId) {
-            return defaultId;
-        }
-        for (const engine of platformChatModelEngines()) {
-            if (engine === 'chrome_prompt' || engine === 'chrome_installed' || engine === 'android_gemini_nano' || engine === 'ollama') {
-                continue;
-            }
-            const installed = await localModelStorage(engine).list();
-            const candidate = installed
-                .map((file) => localModelId(engine, file.file_name))
-                .find((id) => id !== excludedModelId);
-            if (candidate) {
-                return candidate;
-            }
-        }
-        return NO_CHAT_MODEL_ID;
     },
     isChatModelUsableHere(modelId: string): boolean {
         return isChatModelIdSupportedHere(modelId);

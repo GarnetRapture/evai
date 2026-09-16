@@ -77,11 +77,11 @@ export function buildOllamaCommandGuide(platform: string, input: OllamaCommandGu
     const quotedModel = quoteForShell(shell, modelName);
     return [
         { key: 'verify_install', commands: ['ollama --version'] },
-        { key: 'expose_network', commands: exposeNetworkCommands(shell, platform) },
         ...(modelName.length > 0 ? [{ key: 'pull_model' as const, commands: [`ollama pull ${quotedModel}`] }] : []),
         ...(modelName.length > 0 && ggufPath.length > 0 ? [{ key: 'create_from_gguf' as const, commands: createFromGgufCommands(shell, modelName, ggufPath) }] : []),
         { key: 'run_model', commands: modelName.length > 0 ? [`ollama run ${quotedModel}`, 'ollama ls', 'ollama ps'] : ['ollama ls', 'ollama ps'] },
         ...(modelName.length > 0 ? [{ key: 'remove_model' as const, commands: [`ollama rm ${quotedModel}`] }] : []),
         { key: 'run_local_server', commands: runLocalServerCommands(shell, platform) },
+        { key: 'expose_network', commands: exposeNetworkCommands(shell, platform) },
     ];
 }

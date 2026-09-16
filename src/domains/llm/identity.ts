@@ -57,10 +57,6 @@ export function chromeInstalledModelKey(modelId: string): string {
     return modelId.slice(CHROME_INSTALLED_MODEL_ID_PREFIX.length);
 }
 
-export function platformDefaultChatModelId(): string {
-    return isAndroidAppRuntime() ? ANDROID_GEMINI_NANO_MODEL_ID : CHROME_PROMPT_MODEL_ID;
-}
-
 export function isChatModelIdSupportedHere(modelId: string): boolean {
     if (modelId === NO_CHAT_MODEL_ID) {
         return false;
@@ -74,6 +70,9 @@ export function isChatModelIdSupportedHere(modelId: string): boolean {
 }
 
 export function resolveChatModelEngine(modelId: string): ChatModelEngineKind {
+    if (modelId === NO_CHAT_MODEL_ID) {
+        throw new DomainError('model_not_selected', NO_CHAT_MODEL_ID);
+    }
     if (modelId === CHROME_PROMPT_MODEL_ID || modelId.startsWith(CHROME_PROMPT_MODEL_ID_PREFIX)) {
         return 'chrome_prompt';
     }

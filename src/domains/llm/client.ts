@@ -4,7 +4,7 @@ import { normalizeOllamaBaseUrl } from '../ollama';
 import { normalizeTokenSetting, settingsRepository } from '../settings/repository';
 import { chatModelCatalog, mergeChromeInstalledModels } from './catalog';
 import { chatModelRuntime } from './engine';
-import { localModelId } from './identity';
+import { NO_CHAT_MODEL_ID, localModelId } from './identity';
 import type {
     ChatModelCatalog,
     HuggingFaceModelSource,
@@ -13,24 +13,12 @@ import type {
     LlmStatus,
     LocalModelEngineKind,
     ModelDownloadProgressHandler,
-    OllamaModelLibrary,
     OnDeviceSystemModelEntry,
 } from './types';
 
 async function resolveUsableActiveModelId(): Promise<string | null> {
     const settings = await settingsRepository.readAppSettings();
-    if (chatModelCatalog.isChatModelUsableHere(settings.active_model)) {
-        return settings.active_model;
-    }
-    if (settings.active_model === NO_CHAT_MODEL_ID) {
-        return null;
-    }
-    const fallback = await chatModelCatalog.resolveFallbackChatModelId(settings.active_model);
-    if (fallback === settings.active_model) {
-        return null;
-    }
-    await settingsRepository.updateGeneral({ active_model: fallback });
-    return chatModelCatalog.isChatModelUsableHere(fallback) ? fallback : null;
+    return chatModelCatalog.isChatModelUsableHere(settings.active_model) ? settings.active_model : null;
 }
 
 export const llmClient = {
@@ -96,9 +84,6 @@ export const llmClient = {
         await settingsRepository.updateGeneral({ chrome_model_folder_path: normalizedPath });
         return llmClient.listModels();
     },
-    async inspectOllamaConnection(): Promise<OllamaModelLibrary | null> {
-        return (await llmClient.listModels()).ollama;
-    },
     async saveOllamaBaseUrl(baseUrl: string): Promise<ChatModelCatalog> {
         const normalized = normalizeOllamaBaseUrl(baseUrl);
         if (normalized === null) {
@@ -127,7 +112,7 @@ export const llmClient = {
         const removedModelId = localModelId(engine, fileName);
         await chatModelCatalog.removeLocalModel(engine, fileName);
         if (settings.active_model === removedModelId) {
-            await settingsRepository.updateGeneral({ active_model: await chatModelCatalog.resolveFallbackChatModelId(removedModelId) });
+            await settingsRepository.updateGeneral({ active_model: NO_CHAT_MODEL_ID });
         }
         return llmClient.listModels();
     },

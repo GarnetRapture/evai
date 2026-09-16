@@ -10,7 +10,6 @@ namespace evai::server::app {
 namespace {
 
 constexpr std::string_view language_key = "language";
-constexpr std::string_view ollama_key = "ollama_base_url";
 
 std::string trim(std::string_view value)
 {
@@ -55,7 +54,7 @@ std::string_view language_code(ConsoleLanguage language)
 
 ServerConfig read_server_config(const std::filesystem::path& file)
 {
-    ServerConfig config{ConsoleLanguage::korean, false, std::string(default_ollama_base_url)};
+    ServerConfig config{ConsoleLanguage::korean, false};
     std::ifstream stream(file);
     if (!stream) {
         return config;
@@ -71,9 +70,6 @@ ServerConfig read_server_config(const std::filesystem::path& file)
         if (key == language_key) {
             config.language = parse_language(value, config.language_configured);
         }
-        else if (key == ollama_key && !value.empty()) {
-            config.ollama_base_url = value;
-        }
     }
     return config;
 }
@@ -85,8 +81,7 @@ void write_server_config(const std::filesystem::path& file, const ServerConfig& 
         return;
     }
     stream << "[evai-server]\n"
-           << language_key << " = " << language_code(config.language) << '\n'
-           << ollama_key << " = " << config.ollama_base_url << '\n';
+           << language_key << " = " << language_code(config.language) << '\n';
 }
 
 }

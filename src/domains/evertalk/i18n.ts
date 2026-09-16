@@ -6,9 +6,9 @@ import type { ChromeBuiltInAiApiKind } from '../../shared/types/chromeOnDevice';
 import type { ChromePromptModelVariant, ChromePromptVariantVerification } from '../llm/types';
 import type { PersonaEmotionKind } from '../chat/affect';
 import type { MemoryContextKind, PersonaBehaviorStageKind, PersonaMaintenanceTaskKind } from '../chat/types';
-import type { MemoryGraphEdgeKind } from './types';
+import type { ChatModelMode, ChatModelRuntimeState, GuideConceptLabel, GuidePathKind, GuideStepAction, GuideStepKey, GuideStepState, MemoryGraphEdgeKind } from './types';
 import type { LocalModelEngineKind } from '../llm/types';
-import type { OllamaCommandStepKey } from '../ollama';
+import type { OllamaCommandShell, OllamaCommandStepKey } from '../ollama';
 import type { SpiritRaidEvent } from '../persona/types';
 import type { StorageObjectKind } from '../sync/types';
 
@@ -245,6 +245,7 @@ export interface EverTalkLabels {
     roomMessageCount: (rooms: number, messages: number) => string;
     manualSyncWaiting: string;
     modelLoaded: string;
+    modelNotSelected: string;
     modelAvailabilityDetail: (availability: string | null) => string;
     preferredSpiritSet: (name: string) => string;
     preferredSpiritCleared: (name: string) => string;
@@ -316,7 +317,6 @@ export interface EverTalkLabels {
     ollamaServerConnected: (version: string) => string;
     ollamaServerUnavailable: string;
     ollamaModelEmpty: string;
-    ollamaModelReady: string;
     ollamaModelMeta: (family: string, parameterSize: string, quantization: string, megabytes: number) => string;
     ollamaBaseUrlLabel: string;
     ollamaBaseUrlPlaceholder: string;
@@ -359,7 +359,6 @@ export interface EverTalkLabels {
     modelRoleAndroidGeminiNano: string;
     modelAndroidGeminiNanoUnsupported: string;
     modelLanguageSupport: (languageTag: string, declared: boolean) => string;
-    modelUseForChat: string;
     modelInUse: string;
     modelPrepare: string;
     modelPreparing: (percent: number) => string;
@@ -414,6 +413,30 @@ export interface EverTalkLabels {
     navMemory: string;
     navStorage: string;
     navCheat: string;
+    navGuide: string;
+    navSetup: string;
+    navRequiresSetup: string;
+    guidePageTitle: string;
+    guidePageDescription: string;
+    guideBeginnerTitle: string;
+    guideBeginnerIntro: string;
+    guideConcepts: GuideConceptLabel[];
+    guideChecklistTitle: string;
+    guideChecklistIntro: Record<GuidePathKind, string>;
+    guideStepTitles: Record<GuideStepKey, string>;
+    guideStepDescriptions: Record<GuideStepKey, string>;
+    guideStepStates: Record<GuideStepState, string>;
+    guideActionLabels: Record<GuideStepAction, string>;
+    guideTerminalTitle: string;
+    guideTerminalSteps: Record<OllamaCommandShell, string[]>;
+    chatModelSelectorDescription: string;
+    chatModelModeTitles: Record<ChatModelMode, string>;
+    chatModelRuntimeStates: Record<ChatModelRuntimeState, string>;
+    chatModelModeEmpty: Record<ChatModelMode, string>;
+    chatModelActiveMode: string;
+    chatModelOptionCount: (count: number) => string;
+    chatModelOllamaLocalServerOnly: string;
+    chatModelSavedTo: (storageName: string) => string;
     cheatMode: string;
     cheatModeDescription: string;
     cheatPageTitle: string;
@@ -764,7 +787,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         deleteChat: '채팅 삭제',
         confirmDeleteChat: '이 채팅 기록을 삭제하시겠습니까?',
         noSavedMessages: '저장된 대화가 없습니다',
-        firstMessageHint: '첫 메시지부터 이 브라우저에 대화가 누적되며, 네이티브 SQLite 확장을 선택했다면 EXE 옆 DB에도 함께 보조 저장됩니다.',
+        firstMessageHint: '첫 메시지부터 대화가 누적됩니다. 일반 웹에서는 이 브라우저의 IndexedDB에, EVAI 로컬 서버에서는 서버 폴더의 SQLite 데이터베이스에 저장됩니다.',
         messagePlaceholder: (name) => `${name}에게 메시지를 입력하세요...`,
         modelRequiredPlaceholder: '설정 > 온디바이스 모델 목록에서 모델을 준비하세요',
         send: '전송',
@@ -814,6 +837,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         roomMessageCount: (rooms, messages) => `${rooms}개 대화방 · ${messages}개 메시지`,
         manualSyncWaiting: '수동 동기화 대기',
         modelLoaded: '브라우저 내장 모델 세션 준비됨',
+        modelNotSelected: '대화 모델 미선택',
         modelAvailabilityDetail: (availability) => {
             if (availability === 'available') {
                 return '사용 가능';
@@ -846,7 +870,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: '이용 환경 안내',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                '브라우저에서 바로 열면 PC Chrome 온디바이스 AI(Prompt API · Gemini Nano · Gemma 4)와 Chrome이 설치한 온디바이스 모델로 대화합니다. EVAI 로컬 서버로 열면 같은 화면에서 로컬 Ollama 모델도 선택할 수 있습니다. Hugging Face 모델과 EXE 확장은 제공하지 않습니다.',
+                '브라우저에서 바로 열면 PC Chrome 온디바이스 AI(Prompt API · Gemini Nano · Gemma 4)와 Chrome이 설치한 온디바이스 모델로 대화합니다. EVAI 로컬 서버로 열면 같은 화면에서 로컬 Ollama 모드도 선택할 수 있고, Ollama 라이브러리 모델·Hugging Face(hf.co/…) GGUF 모델·PC의 GGUF 파일로 만든 모델을 모두 사용할 수 있습니다.',
                 '일반 웹으로 열면 대화·인연·기억은 이 브라우저의 IndexedDB에 저장되고, EVAI 로컬 서버로 열면 서버 폴더의 SQLite 데이터베이스에 저장됩니다. 어느 쪽이든 JSON 파일로 내보내고 되돌릴 수 있습니다.',
                 `처음 대화하기 전에 ${modelSettingsPath}에서 Chrome 온디바이스 모델을 준비해야 합니다.`,
             ],
@@ -868,9 +892,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         },
         platformBlockedHint: '지원 환경: Windows · macOS · Linux · ChromeOS의 최신 데스크톱 브라우저',
         messageSendFailed: '응답 생성에 실패했습니다. 다시 시도해 주세요.',
-        modelListTitle: '온디바이스 모델 목록',
+        modelListTitle: '대화 모델',
         modelListDescription: {
-            web_chrome: 'Chrome Prompt API 모델(Gemini Nano · Gemma 4)과 Chrome이 설치한 온디바이스 모델을 선택할 수 있습니다. EVAI 로컬 서버로 열었을 때는 로컬 Ollama 모델 목록이 함께 표시되며, 선택한 모델이 대화에 고정됩니다. Hugging Face 모델과 EXE 확장은 제공하지 않습니다.',
+            web_chrome: 'Chrome Prompt API 모델(Gemini Nano · Gemma 4)과 Chrome이 설치한 온디바이스 모델을 선택할 수 있습니다. EVAI 로컬 서버로 열었을 때는 Ollama에 설치된 모델(Ollama 라이브러리·Hugging Face GGUF·GGUF 파일로 만든 모델)이 로컬 Ollama 모드에 함께 표시되며, 선택한 모델이 대화에 고정됩니다.',
             android_app: '이 기기에서 Google LiteRT-LM 엔진으로 실행하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 설치하고 선택하세요. 모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 사용할 수 없으면 CPU 백엔드로 실행합니다.',
         },
         modelRoleChat: '대화 생성 · Chrome Prompt API (브라우저 내장 모델)',
@@ -907,14 +931,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         chromeLocalStatePath: (path) => `Local State 파일 · ${path} `,
         chromeLocalStateLink: 'Local State 파일 선택',
         chromeInstalledModelSectionTitle: '브라우저 설치 모델 목록 (Nano · Gemma)',
-        chromeInstalledModelSectionDescription: 'Chrome 온디바이스 AI는 기본으로 Gemini Nano를 쓰고, gemma4-for-built-in-ai 플래그를 켜면 Gemma 4로 전환됩니다. 모델 폴더와 Local State를 연결하면 설치된 모델과 현재 플래그 상태가 표시되고, 위의 Prompt API 모델 선택이 실제 플래그와 맞는지 검증되어 고정됩니다. LiteRT-LM 형식 Gemma는 아래 목록에서 선택하면 이 앱이 가중치를 직접 실행합니다.',
+        chromeInstalledModelSectionDescription: 'Chrome 온디바이스 AI는 기본으로 Gemini Nano를 쓰고, gemma4-for-built-in-ai 플래그를 켜면 Gemma 4로 전환됩니다. 모델 폴더와 Local State를 연결하면 설치된 모델과 현재 플래그 상태가 표시되고, 위 대화 모델 선택의 Prompt API 모델이 실제 플래그와 맞는지 검증됩니다. 연결된 LiteRT-LM 형식 Gemma는 위 대화 모델 선택의 온디바이스 AI 모드에 나타나며, 고르면 이 앱이 가중치를 직접 실행합니다.',
         chromeInstalledModelEmpty: '아직 연결된 모델 폴더가 없습니다. 아래에서 경로를 저장하고 모델 폴더를 선택하세요.',
         chromeInstalledModelTitle: (modelName, modelVersion) => `${modelName} (${modelVersion})`,
         chromeInstalledModelUnlinkedTitle: '저장된 선택 모델 (폴더 재연결 필요)',
         chromeInstalledModelMeta: (store, componentVersion, megabytes, format, performanceHints) => `${store} · 컴포넌트 ${componentVersion} · ${megabytes} MB · 가중치 ${format === 'litertlm' ? 'LiteRT-LM' : 'Chrome 전용 형식'}${performanceHints.length > 0 ? ` · 성능 힌트 ${performanceHints.join(', ')}` : ''}`,
         chromeInstalledModelRelinkRequired: '선택은 저장됨 · 이번 세션에서 모델 폴더를 다시 선택해야 실행됩니다',
         chromeInstalledModelNotRunnable: 'Chrome 전용 형식이라 이 앱에서 직접 실행할 수 없음 (Chrome Prompt API로만 사용 가능)',
-        chromeInstalledModelRunnable: '연결됨 · 선택하면 이 모델로 고정 실행',
+        chromeInstalledModelRunnable: '연결됨 · 대화 모델 선택의 온디바이스 AI 모드에서 고를 수 있음',
         chromeInstalledModelPathLabel: '브라우저 사용자 데이터 폴더 경로',
         chromeInstalledModelPathPlaceholder: 'C:\\Users\\사용자\\AppData\\Local\\Google\\Chrome\\User Data',
         chromeInstalledModelPathHint: 'Chrome, Edge 등 브라우저마다 경로가 다릅니다. 저장하면 모델 폴더 경로가 아래에 표시되며, 복사해 폴더 선택 창 주소창에 붙여 넣으면 됩니다.',
@@ -931,18 +955,17 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             '"Local State 파일 선택"으로 사용자 데이터 폴더의 Local State 파일을 선택하면 현재 플래그 상태가 확인됩니다.',
             '"모델 폴더 선택"을 눌러 OptGuideManifestModel 폴더(Gemma)를 선택합니다. 복사한 경로를 폴더 선택 창에 붙여 넣으면 바로 이동합니다.',
             '같은 방법으로 OptGuideOnDeviceModel 폴더(Gemini Nano)도 선택하면 두 폴더의 모델이 함께 목록에 표시됩니다.',
-            '목록에서 사용할 모델을 선택하면 저장되어 고정됩니다. 페이지를 다시 열면 모델 폴더만 다시 선택하면 같은 모델로 실행됩니다.',
+            '위 대화 모델 선택의 온디바이스 AI 모드에서 모델을 고르면 저장되어 고정됩니다. 페이지를 다시 열면 모델 폴더만 다시 선택하면 같은 모델로 실행됩니다.',
         ],
         ollamaModelSectionTitle: '로컬 Ollama 모델 목록',
-        ollamaModelSectionDescription: 'EVAI 로컬 서버가 Ollama에 중계하므로, Ollama에 설치된 모든 모델이 아래 목록에 그대로 나타납니다. 선택한 모델이 대화 모델로 고정되며, 대화·기억·페르소나 규칙은 Chrome 온디바이스 모드와 동일하게 적용됩니다.',
+        ollamaModelSectionDescription: 'EVAI 로컬 서버가 중계할 Ollama의 연결 상태와 주소를 관리합니다. Ollama에 설치된 모든 모델은 위 대화 모델 선택의 로컬 Ollama 모드에 나타나며, 대화·기억·페르소나 규칙은 온디바이스 AI 모드와 동일하게 적용됩니다.',
         ollamaServerConnected: (version) => `Ollama 연결됨 · 버전 ${version}`,
         ollamaServerUnavailable: 'Ollama에 연결되지 않음 · Ollama 실행 여부와 EVAI 로컬 서버의 Ollama 주소를 확인하세요',
         ollamaModelEmpty: 'Ollama에 설치된 모델이 없습니다. 터미널에서 ollama pull 로 모델을 받으세요.',
-        ollamaModelReady: 'Ollama 설치됨 · 선택하면 이 모델로 고정됩니다',
         ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
         ollamaBaseUrlLabel: 'Ollama 주소',
         ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
-        ollamaBaseUrlHint: 'EVAI 로컬 서버가 중계할 Ollama 주소입니다. 경로 없이 http 프로토콜·호스트·포트만 입력합니다. 기본값은 http://127.0.0.1:11434 입니다.',
+        ollamaBaseUrlHint: 'EVAI 로컬 서버가 중계할 Ollama 주소입니다. 경로 없이 http 프로토콜·호스트·포트만 입력합니다. 기본값은 http://127.0.0.1:11434 입니다. 저장한 값은 서버의 SQLite 설정에 기록되고, 서버 중계와 서버 콘솔의 Ollama 연결 점검이 모두 이 한 값만 사용합니다.',
         ollamaBaseUrlSave: '주소 저장',
         generationLimitsTitle: '컨텍스트와 응답 길이',
         generationLimitsDescription: '여기에 적은 값만큼 모델을 올리고 그만큼 씁니다. 비워두면 엔진이 보고하는 값을 그대로 씁니다.',
@@ -957,7 +980,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         generationLimitsUnknownMaximum: '모델 최대치는 모델을 올린 뒤에 확인됩니다',
         ollamaBaseUrlSaving: '저장 중…',
         ollamaGuideTitle: '로컬 Ollama 연결 가이드',
-        ollamaGuideDescription: 'EVAI 로컬 서버가 이 PC의 Ollama로 요청을 중계합니다. 아래 명령으로 Ollama를 준비하고 로컬 서버를 실행한 뒤 "연결 확인"을 누르세요. 연결되면 아래 목록에서 사용할 모델을 직접 선택하고, 선택한 모델이 대화에 고정됩니다.',
+        ollamaGuideDescription: 'EVAI 로컬 서버가 이 PC의 Ollama로 요청을 중계합니다. 아래 명령으로 Ollama를 준비하고 로컬 서버를 실행한 뒤 "연결 확인"을 누르세요. 연결된 모델은 셋업과 설정의 대화 모델에서 로컬 Ollama 모드로 선택하며, 선택한 모델이 대화에 고정됩니다.',
         ollamaConnectionChecking: 'Ollama 연결 확인 중…',
         ollamaConnectionNotChecked: '아직 Ollama 연결을 확인하지 않았습니다',
         ollamaConnectionReady: (version, modelCount) => modelCount > 0
@@ -965,7 +988,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             : `Ollama HTTP 연결 성공 · 버전 ${version} · 설치된 모델 없음 (아래 명령으로 모델을 준비하세요)`,
         ollamaConnectionCheck: '연결 확인',
         localServerNoticeTitle: '로컬 실행 권장',
-        localServerNoticeDescription: '지금은 일반 웹으로 열려 있어 Chrome 온디바이스 AI만 사용할 수 있고, 데이터는 이 브라우저 IndexedDB에 저장됩니다. 저장소에서 EVAI 로컬 서버를 받아 실행하면 Ollama 모델과 SQLite 데이터베이스를 함께 쓸 수 있습니다.',
+        localServerNoticeDescription: '지금은 일반 웹으로 열려 있어 Chrome 온디바이스 AI만 사용할 수 있고, 데이터는 이 브라우저 IndexedDB에 저장됩니다. 저장소에서 EVAI 로컬 서버를 받아 실행하면 로컬 Ollama 모드(Ollama 라이브러리·Hugging Face GGUF 모델)와 SQLite 데이터베이스를 함께 쓸 수 있습니다.',
         localServerNoticeSteps: [
             '아래 저장소에서 EVAI 로컬 서버(evai-server)와 웹 번들을 내려받습니다.',
             '압축을 푼 폴더에서 evai-server를 실행합니다. index.html과 evai-database 폴더가 같은 폴더에 있어야 합니다.',
@@ -984,16 +1007,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             create_from_gguf: '로컬 GGUF·blob 파일로 모델 만들기',
             run_model: '모델 실행 및 목록 확인',
             remove_model: '모델 삭제',
-            expose_network: 'Ollama 외부 접속 허용',
+            expose_network: '(다른 PC의 Ollama를 쓸 때만) 외부 접속 허용',
             run_local_server: 'EVAI 로컬 서버 실행',
         },
         ollamaCommandStepDescriptions: {
-            verify_install: 'Ollama를 설치한 뒤 버전이 출력되는지 확인합니다. 명령을 찾지 못하면 Ollama를 다시 설치하세요.',
+            verify_install: 'Ollama를 설치한 뒤 버전 번호가 출력되는지 확인합니다. 명령을 찾지 못하면 터미널을 닫았다가 다시 열고, 그래도 안 되면 Ollama를 다시 설치하세요.',
             pull_model: '입력한 모델을 Ollama 라이브러리나 Hugging Face(hf.co/…)에서 받습니다. PC 사양에 맞는 어떤 모델이든 사용할 수 있습니다.',
             create_from_gguf: '입력한 GGUF 파일(또는 Ollama blobs의 sha256 파일)을 FROM으로 지정해 입력한 이름의 모델을 만듭니다.',
-            run_model: '모델을 한 번 실행해 동작을 확인하고(/bye 로 종료), ollama ls 로 설치 목록을, ollama ps 로 실행 중인 모델을 확인합니다. 앱에서는 설정의 모델 목록에서 직접 선택한 모델만 사용합니다.',
+            run_model: '모델을 한 번 실행해 동작을 확인하고(/bye 로 종료), ollama ls 로 설치 목록을, ollama ps 로 실행 중인 모델을 확인합니다. 앱에서는 대화 모델 선택의 로컬 Ollama 모드에서 직접 고른 모델만 사용합니다.',
             remove_model: '더 이상 쓰지 않는 모델을 지웁니다.',
-            expose_network: 'Ollama 설정의 "Expose Ollama to the network"를 켜거나 OLLAMA_HOST를 0.0.0.0:11434로 지정한 뒤 Ollama를 다시 실행합니다. EVAI 로컬 서버가 이 주소로 중계합니다.',
+            expose_network: 'Ollama와 EVAI 로컬 서버가 같은 PC에 있으면 이 단계는 필요 없습니다. 다른 PC에서 실행 중인 Ollama를 쓸 때만 그 PC에서 Ollama 설정의 "Expose Ollama to the network"를 켜거나 OLLAMA_HOST를 0.0.0.0:11434로 지정해 다시 실행하고, 설정 > 대화 모델의 Ollama 주소를 그 PC 주소로 바꿉니다.',
             run_local_server: '웹 번들과 같은 폴더에서 EVAI 로컬 서버를 실행하고 http://127.0.0.1:9999/ 를 엽니다. 브라우저는 이 서버를 통해서만 Ollama와 통신합니다.',
         },
         ollamaCommandCopy: '명령 복사',
@@ -1008,7 +1031,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelLanguageSupport: (languageTag, declared) => declared
             ? `대화 언어 ${languageTag}: Chrome 공식 지원 언어로 세션 생성`
             : `대화 언어 ${languageTag}: Chrome 공식 지원 목록에 없음 · 모델 기본 능력으로 대화`,
-        modelUseForChat: '대화에 사용',
         modelInUse: '사용 중',
         modelPrepare: '다운로드 및 준비',
         modelPreparing: (percent) => `준비 중 ${percent}%`,
@@ -1027,7 +1049,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
                     `추천 모델의 "${downloadLabel}"를 누르면 브라우저에서 Hugging Face가 열리고 .litertlm 파일을 이 기기에 내려받습니다. 약관 동의가 필요한 모델은 브라우저에서 Hugging Face에 로그인해 모델 페이지에서 약관에 동의한 뒤 받을 수 있습니다.`,
                     `"${installLabel}"을 눌러 내려받은 .litertlm 파일을 고르면 앱 내부 저장소로 복사됩니다. 복사가 끝나면 다운로드 폴더의 원본 파일은 지워도 됩니다. 다른 .litertlm 파일도 같은 방법으로 설치할 수 있습니다.`,
-                    `설치된 모델의 "${useLabel}"를 고르면 모델을 불러옵니다. 불러오기가 끝나면 선택한 정령과 바로 대화할 수 있습니다.`,
+                    `위 "${useLabel}"의 온디바이스 AI 모드에서 설치된 모델을 고르면 모델을 불러옵니다. 불러오기가 끝나면 선택한 정령과 바로 대화할 수 있습니다.`,
                     '모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 기기가 지원하지 않으면 CPU 백엔드로 실행되어 느려집니다. 사용 중인 백엔드와 컨텍스트 크기는 모델 목록에 표시됩니다.',
                     `다 쓴 모델은 "${removeLabel}"로 앱 저장소에서 지웁니다. 사용 중인 모델을 지우면 다른 모델을 다시 선택해야 합니다.`,
                 ],
@@ -1095,6 +1117,83 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         navMemory: '기억 흐름',
         navStorage: '저장소',
         navCheat: '치트모드',
+        navGuide: '가이드',
+        navSetup: '셋업',
+        navRequiresSetup: '셋업을 마친 뒤 사용할 수 있습니다',
+        guidePageTitle: '연결 가이드',
+        guidePageDescription: 'AI 모델이 무엇인지부터 정령과 첫 대화를 나누기까지, 지금 내 PC 상태에 맞춰 순서대로 안내합니다.',
+        guideBeginnerTitle: '처음이라면 여기부터 읽어 주세요',
+        guideBeginnerIntro: '에버톡은 인터넷의 AI 서비스가 아니라 내 PC 안에서 돌아가는 AI로 정령의 대답을 만듭니다. 대화 내용이 외부로 전송되지 않는 대신, 대답을 만들어 줄 AI 모델을 PC에 준비해야 합니다. 아래 용어를 한 번 읽고, "지금 내 상태로 따라하기"의 단계를 위에서부터 차례대로 진행하면 됩니다.',
+        guideConcepts: [
+            { term: 'AI 모델 (LLM)', description: '글을 읽고 이어서 답을 써 주는 인공지능 파일입니다. 정령의 성격·말투·기억은 에버톡이 정리해서 모델에게 건네고, 모델은 그 내용에 맞춰 정령의 대답을 씁니다.' },
+            { term: '로컬 LLM', description: '회사 서버가 아니라 내 PC의 그래픽카드(GPU)와 메모리로 직접 돌리는 AI 모델입니다. 사용료가 없고 대화가 PC 밖으로 나가지 않지만, PC 성능에 따라 답변 속도와 쓸 수 있는 모델 크기가 달라집니다.' },
+            { term: 'Chrome 온디바이스 AI', description: 'PC용 Chrome에 들어 있는 AI(기본 Gemini Nano, 플래그를 켜면 Gemma 4)입니다. 프로그램을 따로 설치할 필요가 없고, 처음 한 번 Chrome이 모델을 내려받습니다. 가장 쉽게 시작하는 방법입니다.' },
+            { term: 'Ollama (올라마)', description: '로컬 LLM을 내려받고 실행해 주는 무료 프로그램입니다. 설치하면 백그라운드에서 켜져 있고, 명령어 한 줄로 원하는 모델을 받습니다. Chrome 내장 모델보다 크고 표현력이 좋은 모델을 고를 수 있습니다.' },
+            { term: '모델 이름과 크기', description: 'Ollama 모델은 "이름:태그" 형태로 부릅니다. 태그의 4b, 9b 같은 숫자는 모델 규모(40억, 90억 개 매개변수)로, 클수록 똑똑하지만 메모리를 더 씁니다. q4, Q4_K_M 같은 표시는 용량을 줄인 버전입니다. 처음에는 모델 파일 크기가 그래픽카드 메모리(VRAM)보다 작은 것을 고르세요.' },
+            { term: 'Hugging Face · GGUF', description: 'Hugging Face는 AI 모델이 공개되는 사이트이고, GGUF는 로컬 LLM용 모델 파일 형식입니다. Hugging Face의 GGUF 모델은 ollama pull hf.co/사용자/저장소 명령으로 Ollama에 바로 받을 수 있고, 이미 가진 GGUF 파일도 Ollama 모델로 만들 수 있습니다.' },
+            { term: 'EVAI 로컬 서버', description: '에버톡 화면을 내 PC에서 띄워 주는 작은 프로그램(evai-server)입니다. 이 서버로 열어야 Ollama 모델을 쓸 수 있고, 대화·기억·설정이 서버 폴더의 SQLite 데이터베이스에 저장됩니다. 일반 웹 주소로 열면 Chrome 온디바이스 AI만 쓸 수 있고 데이터는 이 브라우저(IndexedDB)에 저장됩니다.' },
+        ],
+        guideChecklistTitle: '지금 내 상태로 따라하기',
+        guideChecklistIntro: {
+            web: '지금은 일반 웹으로 열려 있습니다. Chrome 온디바이스 AI로 바로 시작할 수 있고, Ollama 모델을 쓰려면 마지막 선택 단계대로 EVAI 로컬 서버를 실행하세요. 각 단계의 완료 표시는 이 PC의 실제 상태를 읽어서 보여 줍니다.',
+            local_server: '지금은 EVAI 로컬 서버로 열려 있어 Ollama 모델을 쓸 수 있습니다(Chrome 온디바이스 AI도 함께 쓸 수 있습니다). 각 단계의 완료 표시는 이 PC의 실제 상태를 읽어서 보여 주며, 단계를 마친 뒤 "상태 새로고침"을 누르면 다시 확인합니다.',
+        },
+        guideStepTitles: {
+            use_pc_chrome: 'PC용 Chrome으로 열기',
+            prepare_on_device: 'Chrome 내장 AI 모델 준비',
+            get_local_server: '(선택) Ollama 모델을 쓰려면 EVAI 로컬 서버 실행',
+            run_local_server: 'EVAI 로컬 서버로 열기',
+            install_ollama: 'Ollama 설치하고 켜기',
+            pull_model: '대화에 쓸 모델 받기',
+            select_model: '대화 모델 고르기',
+            start_chat: '정령과 대화 시작',
+        },
+        guideStepDescriptions: {
+            use_pc_chrome: '온디바이스 AI는 Windows·macOS·Linux의 최신 PC용 Chrome에서만 동작합니다. 여유 저장 공간 22GB 이상, 그래픽카드 메모리 4GB 초과(또는 RAM 16GB 이상)가 필요합니다. 완료로 바뀌지 않으면 Chrome을 최신 버전으로 업데이트한 뒤 "상태 새로고침"을 누르세요.',
+            prepare_on_device: '"설정 열기" > 대화 모델에서 Gemini Nano 항목의 "다운로드 및 준비"를 누르면 Chrome이 모델을 내려받습니다. 크기가 커서 몇 분 걸릴 수 있으며, 상태가 "사용 가능"이 되면 완료입니다.',
+            get_local_server: '"저장소 열기"에서 evai-server를 내려받아 실행한 뒤 브라우저로 http://127.0.0.1:9999/ 를 열면, 이 가이드가 Ollama 설치 단계로 바뀝니다.',
+            run_local_server: '지금 이 화면이 EVAI 로컬 서버에서 열려 있으므로 완료입니다. 서버 창을 닫으면 앱이 멈추니 사용하는 동안 켜 두세요.',
+            install_ollama: '"Ollama 내려받기"로 공식 사이트에서 설치 파일을 받아 설치합니다. 설치가 끝나면 Ollama가 자동으로 켜집니다(Windows는 작업 표시줄 오른쪽 알림 영역에 Ollama 아이콘이 보입니다). 그다음 "상태 새로고침"을 누르면 연결을 확인합니다.',
+            pull_model: '아래 "명령어 입력하는 법"대로 터미널을 열고 ollama pull 모델이름 을 입력합니다. 모델은 "Ollama 모델 찾아보기"나 "Hugging Face GGUF 안내"에서 고르고, 아래 연결 가이드의 "사용할 모델 이름"에 넣으면 명령이 자동으로 만들어집니다. 받기가 끝나면 "상태 새로고침"을 누르세요.',
+            select_model: '셋업 화면이나 설정 > 대화 모델에서 온디바이스 AI 모드 또는 로컬 Ollama 모드를 고른 뒤 모델 하나를 선택합니다. 고른 모델은 저장되어 모든 화면에 똑같이 적용됩니다.',
+            start_chat: '모델이 "작동 중"이 되면 준비 끝입니다. 로비나 대화 화면에서 정령을 골라 말을 걸어 보세요. 첫 대답은 모델을 불러오느라 조금 늦을 수 있습니다.',
+        },
+        guideStepStates: { checking: '확인 중', done: '완료', current: '지금 할 단계', todo: '대기', optional: '선택' },
+        guideActionLabels: {
+            open_ollama_download: 'Ollama 내려받기',
+            open_ollama_library: 'Ollama 모델 찾아보기',
+            open_hugging_face_guide: 'Hugging Face GGUF 안내',
+            open_repository: '저장소 열기',
+            open_settings: '설정 열기',
+            choose_model: '모델 고르러 가기',
+            open_chat: '대화 화면으로',
+            finish_setup: '셋업으로 돌아가기',
+            refresh_status: '상태 새로고침',
+        },
+        guideTerminalTitle: '명령어 입력하는 법',
+        guideTerminalSteps: {
+            powershell: [
+                '시작 버튼을 누르고 "PowerShell"을 검색해 Windows PowerShell을 엽니다.',
+                '아래 단계의 "명령 복사"를 누른 뒤, PowerShell 창에서 마우스 오른쪽 버튼을 누르면 붙여 넣어집니다.',
+                'Enter를 누르면 실행됩니다. 모델 받기처럼 오래 걸리는 명령은 진행률이 끝날 때까지 창을 닫지 마세요.',
+            ],
+            posix: [
+                'macOS는 Spotlight(⌘+Space)에서 "터미널"을, Linux는 배포판의 터미널 앱을 엽니다.',
+                '아래 단계의 "명령 복사"를 누른 뒤 터미널에 붙여 넣습니다(macOS ⌘+V, Linux Ctrl+Shift+V).',
+                'Enter를 누르면 실행됩니다. 모델 받기처럼 오래 걸리는 명령은 진행률이 끝날 때까지 창을 닫지 마세요.',
+            ],
+        },
+        chatModelSelectorDescription: '온디바이스 AI 모드와 로컬 Ollama 모드 중 하나를 고르고, 그 모드에서 실제로 연결된 모델을 선택합니다. 셋업과 설정은 같은 목록과 같은 저장값을 사용합니다.',
+        chatModelModeTitles: { on_device: '온디바이스 AI 모드', ollama: '로컬 Ollama 모드' },
+        chatModelRuntimeStates: { checking: '확인 중', running: '작동 중', ready: '사용 가능', needs_preparation: '준비 필요', unavailable: '사용 불가' },
+        chatModelModeEmpty: {
+            on_device: '이 브라우저에서 지금 선택할 수 있는 온디바이스 모델이 없습니다. 설정 > 대화 모델에서 Chrome 온디바이스 모델을 준비하거나 가이드를 확인하세요.',
+            ollama: 'Ollama에서 선택할 수 있는 모델이 없습니다. 가이드의 명령으로 Ollama를 실행하고 모델을 받은 뒤 새로고침하세요.',
+        },
+        chatModelActiveMode: '현재 대화 모드',
+        chatModelOptionCount: (count) => `선택 가능 ${count}개`,
+        chatModelOllamaLocalServerOnly: '로컬 Ollama 모드는 EVAI 로컬 서버로 열었을 때만 사용할 수 있습니다. 실행 방법은 가이드에 있습니다.',
+        chatModelSavedTo: (storageName) => `선택한 모델은 ${storageName}에 저장되고 모든 화면에 같은 값으로 적용됩니다.`,
         cheatMode: '치트모드',
         cheatModeDescription: '켜면 상단에 치트모드 화면이 생기고, 정령별 인연 레벨·성격·감정·말투 프리셋이 실제 응답에 적용됩니다.',
         cheatPageTitle: '정령 치트 설정',
@@ -1131,7 +1230,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageRecordsTitle: '저장된 레코드',
         storageRecordsCount: (shown, total) => `저장된 레코드 ${shown} / ${total}`,
         lastActivityLabel: '최근 활동',
-        setupModelSelectionHint: '대화에 쓸 모델을 지금 고릅니다. 여기서 고른 모델이 설정에 그대로 저장되고, 설정 화면의 모델 목록과 같은 목록입니다.',
+        setupModelSelectionHint: '대화에 쓸 모드와 모델을 지금 고릅니다. 여기서 고른 값은 설정 > 대화 모델과 같은 저장값입니다.',
         setupModelRequired: '모델을 하나 선택해야 시작할 수 있습니다.',
         storageObjectKinds: { object_store: '오브젝트 스토어', table: '테이블', view: '뷰' },
         storageDefinition: '정의',
@@ -1281,6 +1380,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `지원하지 않는 설정 값입니다: ${detail}`;
                 case 'invalid_model':
                     return `지원하지 않는 모델입니다: ${detail}`;
+                case 'model_not_selected':
+                    return '대화 모델이 아직 선택되지 않았습니다. 설정 > AI 모델에서 사용할 모델을 선택하세요.';
                 case 'model_not_ready':
                     return `대화 모델이 준비되지 않았습니다 (상태: ${detail}). 설정 > 온디바이스 모델 목록에서 모델을 준비하거나 선택하세요.`;
                 case 'persona_prompt_missing':
@@ -1511,7 +1612,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         deleteChat: 'Delete chat',
         confirmDeleteChat: 'Delete this chat history?',
         noSavedMessages: 'No saved messages',
-        firstMessageHint: 'Conversation history starts accumulating in this browser with the first message and is also mirrored beside the EXE when native SQLite is selected.',
+        firstMessageHint: 'Conversation history accumulates from the first message. On the plain web it is stored in this browser IndexedDB; through the EVAI local server it is stored in the SQLite database in the server folder.',
         messagePlaceholder: (name) => `Message ${name}...`,
         modelRequiredPlaceholder: 'Prepare a model in Settings > On-device Models',
         send: 'Send',
@@ -1561,6 +1662,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         roomMessageCount: (rooms, messages) => `${rooms} rooms · ${messages} messages`,
         manualSyncWaiting: 'Manual sync waiting',
         modelLoaded: 'Built-in browser model session ready',
+        modelNotSelected: 'No chat model selected',
         modelAvailabilityDetail: (availability) => {
             if (availability === 'available') {
                 return 'Available';
@@ -1593,7 +1695,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: 'Supported Environment',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                'Opened directly in a browser, chats run on PC Chrome on-device AI (Prompt API · Gemini Nano · Gemma 4) and on-device models installed by Chrome. Opened through the EVAI local server, local Ollama models can be selected in the same screen. Hugging Face models and the EXE extension are not provided.',
+                'Opened directly in a browser, chats run on PC Chrome on-device AI (Prompt API · Gemini Nano · Gemma 4) and on-device models installed by Chrome. Opened through the EVAI local server, local Ollama mode is available on the same screen and can use Ollama library models, Hugging Face (hf.co/…) GGUF models, and models created from GGUF files on your PC.',
                 'Chats, bonds, and memories are stored in this browser\'s IndexedDB and can be exported to a PC file or automatically backed up to a linked PC folder.',
                 `Before your first chat, prepare a Chrome on-device model in ${modelSettingsPath}.`,
             ],
@@ -1615,9 +1717,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         },
         platformBlockedHint: 'Supported: current desktop browsers on Windows, macOS, Linux, or ChromeOS',
         messageSendFailed: 'Failed to generate a response. Please try again.',
-        modelListTitle: 'On-device Models',
+        modelListTitle: 'Chat Models',
         modelListDescription: {
-            web_chrome: 'You can choose the Chrome Prompt API models (Gemini Nano · Gemma 4) and on-device models installed by Chrome. When the page is served by the EVAI local server, the local Ollama model list appears as well and the selected model stays fixed for chats. Hugging Face models and the EXE extension are not provided.',
+            web_chrome: 'You can choose the Chrome Prompt API models (Gemini Nano · Gemma 4) and on-device models installed by Chrome. When the page is served by the EVAI local server, every model installed in Ollama (Ollama library, Hugging Face GGUF, or created from a GGUF file) appears in local Ollama mode as well, and the selected model stays fixed for chats.',
             android_app: 'On-device AI models run on this device by the Google LiteRT-LM engine. Install and choose the model used for chat. Loading a model tries the GPU backend first and falls back to the CPU backend when the GPU cannot be used.',
         },
         modelRoleChat: 'Chat generation · Chrome Prompt API (built-in browser model)',
@@ -1654,14 +1756,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         chromeLocalStatePath: (path) => `Local State file · ${path} `,
         chromeLocalStateLink: 'Select Local State file',
         chromeInstalledModelSectionTitle: 'Browser-installed models (Nano · Gemma)',
-        chromeInstalledModelSectionDescription: 'Chrome on-device AI uses Gemini Nano by default and switches to Gemma 4 when the gemma4-for-built-in-ai flag is enabled. Link the model folders and Local State to show the installed models and the current flag state; the Prompt API model choice above is then verified against the real flag and pinned. Selecting a LiteRT-LM Gemma below makes this app run its weights directly.',
+        chromeInstalledModelSectionDescription: 'Chrome on-device AI uses Gemini Nano by default and switches to Gemma 4 when the gemma4-for-built-in-ai flag is enabled. Link the model folders and Local State to show the installed models and the current flag state; the Prompt API model in the chat model selector above is then verified against the real flag. A linked LiteRT-LM Gemma appears in on-device AI mode of the selector above, and choosing it makes this app run its weights directly.',
         chromeInstalledModelEmpty: 'No model folder is linked yet. Save the path below and select a model folder.',
         chromeInstalledModelTitle: (modelName, modelVersion) => `${modelName} (${modelVersion})`,
         chromeInstalledModelUnlinkedTitle: 'Saved model choice (relink the folder)',
         chromeInstalledModelMeta: (store, componentVersion, megabytes, format, performanceHints) => `${store} · component ${componentVersion} · ${megabytes} MB · weights ${format === 'litertlm' ? 'LiteRT-LM' : 'Chrome-only format'}${performanceHints.length > 0 ? ` · performance hints ${performanceHints.join(', ')}` : ''}`,
         chromeInstalledModelRelinkRequired: 'Choice saved · select the model folder again in this session to run it',
         chromeInstalledModelNotRunnable: 'Chrome-only format, cannot run directly in this app (usable only through the Chrome Prompt API)',
-        chromeInstalledModelRunnable: 'Linked · select to pin and run this model',
+        chromeInstalledModelRunnable: 'Linked · available in on-device AI mode of the chat model selector',
         chromeInstalledModelPathLabel: 'Browser user data folder path',
         chromeInstalledModelPathPlaceholder: 'C:\\Users\\you\\AppData\\Local\\Google\\Chrome\\User Data',
         chromeInstalledModelPathHint: 'The path differs per browser (Chrome, Edge, …). After saving, the model folder paths appear below; copy one and paste it into the folder picker address bar.',
@@ -1678,18 +1780,17 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             'Use "Select Local State file" to pick the Local State file in the user data folder and verify the current flag state.',
             'Press "Select model folder" and choose the OptGuideManifestModel folder (Gemma). Paste the copied path into the picker to jump there.',
             'Select the OptGuideOnDeviceModel folder (Gemini Nano) the same way to list both folders together.',
-            'Pick a model in the list to save and pin it. After reopening the page, select the model folder again to run the same model.',
+            'Choose the model in on-device AI mode of the chat model selector above to save and pin it. After reopening the page, select the model folder again to run the same model.',
         ],
         ollamaModelSectionTitle: 'Local Ollama Models',
-        ollamaModelSectionDescription: 'The EVAI local server relays to Ollama, so every model installed in Ollama appears in the list below. The model you select stays fixed as the chat model, and conversation, memory, and persona rules apply exactly as in Chrome on-device mode.',
+        ollamaModelSectionDescription: 'Manage the connection state and address of the Ollama instance the EVAI local server relays to. Every model installed in Ollama appears in local Ollama mode of the chat model selector above, and conversation, memory, and persona rules apply exactly as in on-device AI mode.',
         ollamaServerConnected: (version) => `Ollama connected · version ${version}`,
         ollamaServerUnavailable: 'Ollama is not connected · check that Ollama is running and that the Ollama address used by the EVAI local server is correct',
         ollamaModelEmpty: 'No models are installed in Ollama. Download one with ollama pull in a terminal.',
-        ollamaModelReady: 'Installed in Ollama · selecting it fixes this model for chats',
         ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
         ollamaBaseUrlLabel: 'Ollama address',
         ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
-        ollamaBaseUrlHint: 'The Ollama address the EVAI local server relays to. Enter only the http protocol, host, and port without a path. The default is http://127.0.0.1:11434.',
+        ollamaBaseUrlHint: 'The Ollama address the EVAI local server relays to. Enter only the http protocol, host, and port without a path. The default is http://127.0.0.1:11434. The saved value is written to the server SQLite settings, and both the server relay and the server console Ollama check use only this one value.',
         ollamaBaseUrlSave: 'Save address',
         generationLimitsTitle: 'Context and reply length',
         generationLimitsDescription: 'The model is loaded with exactly the values you enter here. Leave a field empty to use whatever the engine reports.',
@@ -1704,7 +1805,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         generationLimitsUnknownMaximum: 'The model maximum is known once the model is loaded',
         ollamaBaseUrlSaving: 'Saving…',
         ollamaGuideTitle: 'Local Ollama Connection Guide',
-        ollamaGuideDescription: 'The EVAI local server relays requests to Ollama on this PC. Prepare Ollama with the commands below, run the local server, then press "Check connection". Once connected, pick a model from the list below and that model stays fixed for chats.',
+        ollamaGuideDescription: 'The EVAI local server relays requests to Ollama on this PC. Prepare Ollama with the commands below, run the local server, then press "Check connection". Connected models are chosen in local Ollama mode under Chat Models in setup and settings, and the chosen model stays fixed for chats.',
         ollamaConnectionChecking: 'Checking the Ollama connection…',
         ollamaConnectionNotChecked: 'The Ollama connection has not been checked yet',
         ollamaConnectionReady: (version, modelCount) => modelCount > 0
@@ -1712,7 +1813,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             : `Ollama HTTP connection succeeded · version ${version} · no models installed (prepare one with the commands below)`,
         ollamaConnectionCheck: 'Check connection',
         localServerNoticeTitle: 'Running locally is recommended',
-        localServerNoticeDescription: 'This page is served as a plain web page, so only Chrome on-device AI is available and data is stored in this browser IndexedDB. Download and run the EVAI local server from the repository to use Ollama models together with the SQLite database.',
+        localServerNoticeDescription: 'This page is served as a plain web page, so only Chrome on-device AI is available and data is stored in this browser IndexedDB. Download and run the EVAI local server from the repository to use local Ollama mode (Ollama library and Hugging Face GGUF models) together with the SQLite database.',
         localServerNoticeSteps: [
             'Download the EVAI local server (evai-server) and the web bundle from the repository below.',
             'Run evai-server from the extracted folder. index.html and the evai-database folder must sit next to it.',
@@ -1731,16 +1832,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             create_from_gguf: 'Create a model from a local GGUF or blob file',
             run_model: 'Run the model and check the lists',
             remove_model: 'Remove the model',
-            expose_network: 'Expose Ollama to the network',
+            expose_network: '(Only for Ollama on another PC) Expose Ollama to the network',
             run_local_server: 'Run the EVAI local server',
         },
         ollamaCommandStepDescriptions: {
-            verify_install: 'After installing Ollama, check that a version is printed. If the command is not found, reinstall Ollama.',
+            verify_install: 'After installing Ollama, check that a version number is printed. If the command is not found, close and reopen the terminal; if it still fails, reinstall Ollama.',
             pull_model: 'Download the entered model from the Ollama library or Hugging Face (hf.co/…). Any model that fits your PC can be used.',
             create_from_gguf: 'Create a model with the entered name from the entered GGUF file (or a sha256 file in Ollama blobs) as FROM.',
-            run_model: 'Run the model once to confirm it works (exit with /bye), list installed models with ollama ls, and running models with ollama ps. The app uses only the model you select in the settings model list.',
+            run_model: 'Run the model once to confirm it works (exit with /bye), list installed models with ollama ls, and running models with ollama ps. The app uses only the model you choose in local Ollama mode of the chat model selector.',
             remove_model: 'Delete a model you no longer use.',
-            expose_network: 'Turn on "Expose Ollama to the network" in the Ollama settings, or set OLLAMA_HOST to 0.0.0.0:11434, then start Ollama again. The EVAI local server relays to that address.',
+            expose_network: 'Skip this when Ollama and the EVAI local server run on the same PC. Only when using Ollama running on another PC, turn on "Expose Ollama to the network" there (or set OLLAMA_HOST to 0.0.0.0:11434 and restart Ollama), then change the Ollama address under Settings > Chat Models to that PC.',
             run_local_server: 'Run the EVAI local server from the folder that holds the web bundle and open http://127.0.0.1:9999/. The browser talks to Ollama only through this server.',
         },
         ollamaCommandCopy: 'Copy commands',
@@ -1755,7 +1856,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelLanguageSupport: (languageTag, declared) => declared
             ? `Chat language ${languageTag}: session created with a Chrome-supported language`
             : `Chat language ${languageTag}: not in Chrome's supported list · using the model's base capability`,
-        modelUseForChat: 'Use for chat',
         modelInUse: 'In use',
         modelPrepare: 'Download and prepare',
         modelPreparing: (percent) => `Preparing ${percent}%`,
@@ -1774,7 +1874,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
                     `Press "${downloadLabel}" on a recommended model to open Hugging Face in the browser and download its .litertlm file to this device. For models that require accepting terms, sign in to Hugging Face in the browser and accept the terms on the model page first.`,
                     `Press "${installLabel}" and choose the downloaded .litertlm file; it is copied into the app's internal storage. After the copy finishes you can delete the original file in your Downloads folder. Any other .litertlm file can be installed the same way.`,
-                    `Choose "${useLabel}" on an installed model to load it. When loading finishes, you can chat with the selected spirit right away.`,
+                    `Choose an installed model in on-device AI mode of "${useLabel}" above to load it. When loading finishes, you can chat with the selected spirit right away.`,
                     'Loading a model tries the GPU backend first; if the device does not support it, the model runs on the CPU backend and is slower. The backend in use and the context size are shown in the model list.',
                     `Remove models you no longer need with "${removeLabel}" to delete them from app storage. After removing the model in use, choose another model again.`,
                 ],
@@ -1842,6 +1942,83 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         navMemory: 'Memory Flow',
         navStorage: 'Storage',
         navCheat: 'Cheat Mode',
+        navGuide: 'Guide',
+        navSetup: 'Setup',
+        navRequiresSetup: 'Available after setup is finished',
+        guidePageTitle: 'Connection Guide',
+        guidePageDescription: 'A step-by-step walkthrough, matched to the current state of your PC, from what an AI model is to your first conversation with a spirit.',
+        guideBeginnerTitle: 'New here? Start with this',
+        guideBeginnerIntro: 'EverTalk writes each spirit\'s replies with an AI that runs inside your own PC, not an online AI service. Your conversations never leave the PC, but you need to prepare the AI model that writes the replies. Read the terms below once, then follow "Follow along with your current setup" from the top.',
+        guideConcepts: [
+            { term: 'AI model (LLM)', description: 'An artificial-intelligence file that reads text and writes a reply. EverTalk organizes each spirit\'s personality, voice and memories and hands them to the model, which then writes the spirit\'s reply.' },
+            { term: 'Local LLM', description: 'An AI model that runs on your own PC\'s graphics card (GPU) and memory instead of a company server. There is no usage fee and chats stay on the PC, but reply speed and usable model size depend on your hardware.' },
+            { term: 'Chrome on-device AI', description: 'The AI built into desktop Chrome (Gemini Nano by default, Gemma 4 when its flag is on). Nothing extra to install; Chrome downloads the model once. The easiest way to start.' },
+            { term: 'Ollama', description: 'A free program that downloads and runs local LLMs. Once installed it stays running in the background, and one command downloads the model you want. It lets you use larger, more expressive models than Chrome\'s built-in one.' },
+            { term: 'Model names and sizes', description: 'Ollama models are named "name:tag". Numbers such as 4b or 9b are the model size (4 or 9 billion parameters): larger is smarter but needs more memory. Marks such as q4 or Q4_K_M mean a compressed version. Start with a model whose file is smaller than your graphics memory (VRAM).' },
+            { term: 'Hugging Face · GGUF', description: 'Hugging Face is the site where AI models are published, and GGUF is the file format for local LLMs. GGUF models on Hugging Face can be pulled straight into Ollama with ollama pull hf.co/user/repository, and a GGUF file you already have can be turned into an Ollama model.' },
+            { term: 'EVAI local server', description: 'A small program (evai-server) that serves the EverTalk screen from your PC. Opening the app through it lets you use Ollama models and stores chats, memories and settings in the SQLite database in the server folder. Opened from a plain web address, only Chrome on-device AI is available and data stays in this browser (IndexedDB).' },
+        ],
+        guideChecklistTitle: 'Follow along with your current setup',
+        guideChecklistIntro: {
+            web: 'This page is open as a plain web page. You can start right away with Chrome on-device AI; to use Ollama models, run the EVAI local server as in the last, optional step. Every completion mark is read from the actual state of this PC.',
+            local_server: 'This page is open through the EVAI local server, so Ollama models are available (Chrome on-device AI works as well). Every completion mark is read from the actual state of this PC; press "Refresh status" after finishing a step to check again.',
+        },
+        guideStepTitles: {
+            use_pc_chrome: 'Open in desktop Chrome',
+            prepare_on_device: 'Prepare Chrome\'s built-in AI model',
+            get_local_server: '(Optional) Run the EVAI local server to use Ollama models',
+            run_local_server: 'Open through the EVAI local server',
+            install_ollama: 'Install and start Ollama',
+            pull_model: 'Download a model for chatting',
+            select_model: 'Choose the chat model',
+            start_chat: 'Start talking with a spirit',
+        },
+        guideStepDescriptions: {
+            use_pc_chrome: 'On-device AI works only in current desktop Chrome on Windows, macOS or Linux. It needs at least 22 GB of free storage and more than 4 GB of graphics memory (or 16 GB of RAM). If this does not turn complete, update Chrome and press "Refresh status".',
+            prepare_on_device: 'Under "Open settings" > Chat Models, press "Download and prepare" on Gemini Nano and Chrome downloads the model. It is large and can take a few minutes; the step is complete when the state becomes "Available".',
+            get_local_server: 'Download evai-server from "Open repository", run it, and open http://127.0.0.1:9999/ in the browser; this guide then switches to the Ollama installation steps.',
+            run_local_server: 'This screen is already served by the EVAI local server, so this step is complete. Closing the server window stops the app, so keep it open while you use it.',
+            install_ollama: 'Get the installer from the official site with "Download Ollama" and install it. Ollama starts automatically afterwards (on Windows its icon appears in the notification area at the right of the taskbar). Then press "Refresh status" to check the connection.',
+            pull_model: 'Open a terminal as described in "How to enter commands" below and type ollama pull model-name. Pick a model from "Browse Ollama models" or "Hugging Face GGUF guide"; entering it in "Model name" of the connection guide below builds the command for you. Press "Refresh status" when the download finishes.',
+            select_model: 'In the setup screen or Settings > Chat Models, pick on-device AI mode or local Ollama mode and select one model. The choice is saved and applied identically on every screen.',
+            start_chat: 'Once the model shows "Running" you are ready. Pick a spirit in the lobby or chat screen and say hello. The first reply can take a little longer while the model loads.',
+        },
+        guideStepStates: { checking: 'Checking', done: 'Done', current: 'Do this now', todo: 'Waiting', optional: 'Optional' },
+        guideActionLabels: {
+            open_ollama_download: 'Download Ollama',
+            open_ollama_library: 'Browse Ollama models',
+            open_hugging_face_guide: 'Hugging Face GGUF guide',
+            open_repository: 'Open repository',
+            open_settings: 'Open settings',
+            choose_model: 'Go choose a model',
+            open_chat: 'Go to chat',
+            finish_setup: 'Back to setup',
+            refresh_status: 'Refresh status',
+        },
+        guideTerminalTitle: 'How to enter commands',
+        guideTerminalSteps: {
+            powershell: [
+                'Press Start, search for "PowerShell" and open Windows PowerShell.',
+                'Press "Copy command" on a step below, then right-click inside the PowerShell window to paste it.',
+                'Press Enter to run it. For long commands such as downloading a model, keep the window open until the progress finishes.',
+            ],
+            posix: [
+                'On macOS open "Terminal" from Spotlight (⌘+Space); on Linux open your distribution\'s terminal app.',
+                'Press "Copy command" on a step below and paste it into the terminal (macOS ⌘+V, Linux Ctrl+Shift+V).',
+                'Press Enter to run it. For long commands such as downloading a model, keep the window open until the progress finishes.',
+            ],
+        },
+        chatModelSelectorDescription: 'Choose between on-device AI mode and local Ollama mode, then pick a model that is actually connected in that mode. Setup and settings share the same list and the same saved value.',
+        chatModelModeTitles: { on_device: 'On-device AI mode', ollama: 'Local Ollama mode' },
+        chatModelRuntimeStates: { checking: 'Checking', running: 'Running', ready: 'Available', needs_preparation: 'Needs preparation', unavailable: 'Unavailable' },
+        chatModelModeEmpty: {
+            on_device: 'No on-device model can be selected in this browser right now. Prepare a Chrome on-device model under Settings > Chat Models, or open the guide.',
+            ollama: 'No Ollama model can be selected. Start Ollama and pull a model with the commands in the guide, then refresh.',
+        },
+        chatModelActiveMode: 'Current chat mode',
+        chatModelOptionCount: (count) => `${count} selectable`,
+        chatModelOllamaLocalServerOnly: 'Local Ollama mode is available only when the app is opened through the EVAI local server. The guide explains how to run it.',
+        chatModelSavedTo: (storageName) => `The selected model is saved in the ${storageName} and applied identically on every screen.`,
         cheatMode: 'Cheat mode',
         cheatModeDescription: 'Adds a Cheat Mode view to the top bar and applies each spirit\'s bond level, personality, emotion, and speech presets to real replies.',
         cheatPageTitle: 'Spirit Cheat Settings',
@@ -1878,7 +2055,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageRecordsTitle: 'Stored records',
         storageRecordsCount: (shown, total) => `Stored records ${shown} / ${total}`,
         lastActivityLabel: 'Last activity',
-        setupModelSelectionHint: 'Choose the model for your conversations now. What you pick here is saved into settings, and this is the same list the settings screen shows.',
+        setupModelSelectionHint: 'Choose the chat mode and model now. What you pick here is the same saved value as Settings > Chat Models.',
         setupModelRequired: 'Select one model to start.',
         storageObjectKinds: { object_store: 'Object store', table: 'Table', view: 'View' },
         storageDefinition: 'Definition',
@@ -2028,6 +2205,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `Unsupported setting value: ${detail}`;
                 case 'invalid_model':
                     return `Unsupported model: ${detail}`;
+                case 'model_not_selected':
+                    return 'No chat model has been selected yet. Pick one in Settings > AI model.';
                 case 'model_not_ready':
                     return `The chat model is not ready (status: ${detail}). Prepare or choose a model in Settings > On-device Models.`;
                 case 'persona_prompt_missing':
@@ -2258,7 +2437,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         deleteChat: '删除对话',
         confirmDeleteChat: '确定要删除这段对话记录吗？',
         noSavedMessages: '暂无保存的对话',
-        firstMessageHint: '从第一条消息起，对话会保存在本浏览器中；选择原生 SQLite 后，也会镜像到 EXE 同目录的数据库。',
+        firstMessageHint: '从第一条消息起开始累积对话。普通网页保存在本浏览器的 IndexedDB 中，通过 EVAI 本地服务器时保存在服务器文件夹的 SQLite 数据库中。',
         messagePlaceholder: (name) => `向 ${name} 发送消息...`,
         modelRequiredPlaceholder: '请在 设置 > 设备端模型列表 中准备模型',
         send: '发送',
@@ -2308,6 +2487,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         roomMessageCount: (rooms, messages) => `${rooms} 个聊天室 · ${messages} 条消息`,
         manualSyncWaiting: '等待手动同步',
         modelLoaded: '浏览器内置模型会话已就绪',
+        modelNotSelected: '未选择对话模型',
         modelAvailabilityDetail: (availability) => {
             if (availability === 'available') {
                 return '可用';
@@ -2340,7 +2520,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: '使用环境说明',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                '直接在浏览器中打开时，使用 PC Chrome 设备端 AI（Prompt API · Gemini Nano · Gemma 4）与 Chrome 安装的设备端模型进行对话；通过 EVAI 本地服务器打开时，可以在同一界面选择本地 Ollama 模型。不提供 Hugging Face 模型和 EXE 扩展。',
+                '直接在浏览器中打开时，使用 PC Chrome 设备端 AI（Prompt API · Gemini Nano · Gemma 4）与 Chrome 安装的设备端模型进行对话；通过 EVAI 本地服务器打开时，可以在同一界面选择本地 Ollama 模式，并使用 Ollama 模型库模型、Hugging Face（hf.co/…）GGUF 模型以及由电脑上的 GGUF 文件创建的模型。',
                 '对话、羁绊与记忆保存在本浏览器的 IndexedDB 中，可导出为电脑文件或自动备份到已关联的电脑文件夹。',
                 `首次对话前，请在“${modelSettingsPath}”中准备 Chrome 设备端模型。`,
             ],
@@ -2362,9 +2542,9 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         },
         platformBlockedHint: '支持环境：Windows、macOS、Linux、ChromeOS 上的最新版桌面浏览器',
         messageSendFailed: '生成响应失败。请重试。',
-        modelListTitle: '设备端模型列表',
+        modelListTitle: '对话模型',
         modelListDescription: {
-            web_chrome: '可以选择 Chrome Prompt API 模型（Gemini Nano · Gemma 4）与 Chrome 安装的设备端模型。通过 EVAI 本地服务器打开时，会同时显示本地 Ollama 模型列表，所选模型会固定用于对话。不提供 Hugging Face 模型和 EXE 扩展。',
+            web_chrome: '可以选择 Chrome Prompt API 模型（Gemini Nano · Gemma 4）与 Chrome 安装的设备端模型。通过 EVAI 本地服务器打开时，Ollama 中安装的所有模型（Ollama 模型库、Hugging Face GGUF、由 GGUF 文件创建）会一并显示在本地 Ollama 模式中，所选模型会固定用于对话。',
             android_app: '这是在本设备上由 Google LiteRT-LM 引擎运行的设备端 AI 模型。请安装并选择用于对话的模型。加载模型时会优先尝试 GPU 后端，无法使用时改用 CPU 后端运行。',
         },
         modelRoleChat: '对话生成 · Chrome Prompt API（浏览器内置模型）',
@@ -2401,14 +2581,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         chromeLocalStatePath: (path) => `Local State 文件 · ${path} `,
         chromeLocalStateLink: '选择 Local State 文件',
         chromeInstalledModelSectionTitle: '浏览器已安装模型列表（Nano · Gemma）',
-        chromeInstalledModelSectionDescription: 'Chrome 设备端 AI 默认使用 Gemini Nano，启用 gemma4-for-built-in-ai 旗标后切换为 Gemma 4。连接模型文件夹和 Local State 后会显示已安装模型和当前旗标状态，上方 Prompt API 的模型选择会按实际旗标验证并固定。在下方选择 LiteRT-LM 格式的 Gemma，本应用会直接运行其权重。',
+        chromeInstalledModelSectionDescription: 'Chrome 设备端 AI 默认使用 Gemini Nano，启用 gemma4-for-built-in-ai 旗标后切换为 Gemma 4。连接模型文件夹和 Local State 后会显示已安装模型和当前旗标状态，上方对话模型选择中的 Prompt API 模型会按实际旗标验证。已连接的 LiteRT-LM 格式 Gemma 会出现在上方选择器的设备端 AI 模式中，选择后本应用会直接运行其权重。',
         chromeInstalledModelEmpty: '尚未连接模型文件夹。请在下方保存路径并选择模型文件夹。',
         chromeInstalledModelTitle: (modelName, modelVersion) => `${modelName}（${modelVersion}）`,
         chromeInstalledModelUnlinkedTitle: '已保存的模型选择（需重新连接文件夹）',
         chromeInstalledModelMeta: (store, componentVersion, megabytes, format, performanceHints) => `${store} · 组件 ${componentVersion} · ${megabytes} MB · 权重 ${format === 'litertlm' ? 'LiteRT-LM' : 'Chrome 专用格式'}${performanceHints.length > 0 ? ` · 性能提示 ${performanceHints.join(', ')}` : ''}`,
         chromeInstalledModelRelinkRequired: '选择已保存 · 本次会话需重新选择模型文件夹才能运行',
         chromeInstalledModelNotRunnable: 'Chrome 专用格式，无法在本应用中直接运行（只能通过 Chrome Prompt API 使用）',
-        chromeInstalledModelRunnable: '已连接 · 选择后固定使用此模型运行',
+        chromeInstalledModelRunnable: '已连接 · 可在对话模型选择的设备端 AI 模式中选择',
         chromeInstalledModelPathLabel: '浏览器用户数据文件夹路径',
         chromeInstalledModelPathPlaceholder: 'C:\\Users\\用户\\AppData\\Local\\Google\\Chrome\\User Data',
         chromeInstalledModelPathHint: '不同浏览器（Chrome、Edge 等）路径不同。保存后下方会显示模型文件夹路径，复制后粘贴到文件夹选择窗口的地址栏即可。',
@@ -2425,18 +2605,17 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             '通过“选择 Local State 文件”选择用户数据文件夹中的 Local State 文件，即可确认当前旗标状态。',
             '点击“选择模型文件夹”，选择 OptGuideManifestModel 文件夹（Gemma）。把复制的路径粘贴到选择窗口即可直接跳转。',
             '用同样方式选择 OptGuideOnDeviceModel 文件夹（Gemini Nano），两个文件夹的模型会一起列出。',
-            '在列表中选择要使用的模型即会保存并固定。重新打开页面后，只需再次选择模型文件夹即可用同一模型运行。',
+            '在上方对话模型选择的设备端 AI 模式中选择模型即会保存并固定。重新打开页面后，只需再次选择模型文件夹即可用同一模型运行。',
         ],
         ollamaModelSectionTitle: '本地 Ollama 模型列表',
-        ollamaModelSectionDescription: 'EVAI 本地服务器会转发到 Ollama，因此 Ollama 中安装的所有模型都会原样出现在下方列表中。所选模型会固定为对话模型，对话、记忆与角色设定规则与 Chrome 设备端模式完全相同。',
+        ollamaModelSectionDescription: '管理 EVAI 本地服务器所转发的 Ollama 的连接状态与地址。Ollama 中安装的所有模型会出现在上方对话模型选择的本地 Ollama 模式中，对话、记忆与角色设定规则与设备端 AI 模式完全相同。',
         ollamaServerConnected: (version) => `Ollama 已连接 · 版本 ${version}`,
         ollamaServerUnavailable: '未连接 Ollama · 请确认 Ollama 正在运行，以及 EVAI 本地服务器使用的 Ollama 地址是否正确',
         ollamaModelEmpty: 'Ollama 中没有已安装的模型。请在终端中使用 ollama pull 下载模型。',
-        ollamaModelReady: '已安装于 Ollama · 选择后固定使用该模型',
         ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
         ollamaBaseUrlLabel: 'Ollama 地址',
         ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
-        ollamaBaseUrlHint: 'EVAI 本地服务器要转发到的 Ollama 地址。只输入 http 协议、主机和端口，不含路径。默认值为 http://127.0.0.1:11434。',
+        ollamaBaseUrlHint: 'EVAI 本地服务器要转发到的 Ollama 地址。只输入 http 协议、主机和端口，不含路径。默认值为 http://127.0.0.1:11434。保存的值写入服务器的 SQLite 设置，服务器转发与服务器控制台的 Ollama 连接检查都只使用这一个值。',
         ollamaBaseUrlSave: '保存地址',
         generationLimitsTitle: '上下文与回复长度',
         generationLimitsDescription: '按这里填写的数值加载并使用模型。留空则采用引擎报告的数值。',
@@ -2451,7 +2630,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         generationLimitsUnknownMaximum: '加载模型后才能确认模型上限',
         ollamaBaseUrlSaving: '正在保存…',
         ollamaGuideTitle: '本地 Ollama 连接指南',
-        ollamaGuideDescription: 'EVAI 本地服务器会把请求转发到本机的 Ollama。请按下面的命令准备 Ollama 并运行本地服务器，然后点击“检查连接”。连接成功后，请在下方列表中选择要使用的模型，所选模型会固定用于对话。',
+        ollamaGuideDescription: 'EVAI 本地服务器会把请求转发到本机的 Ollama。请按下面的命令准备 Ollama 并运行本地服务器，然后点击“检查连接”。已连接的模型请在初始设置与设置的对话模型中以本地 Ollama 模式选择，所选模型会固定用于对话。',
         ollamaConnectionChecking: '正在检查 Ollama 连接…',
         ollamaConnectionNotChecked: '尚未检查 Ollama 连接',
         ollamaConnectionReady: (version, modelCount) => modelCount > 0
@@ -2459,7 +2638,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             : `Ollama HTTP 连接成功 · 版本 ${version} · 没有已安装的模型（请用下方命令准备模型）`,
         ollamaConnectionCheck: '检查连接',
         localServerNoticeTitle: '建议在本地运行',
-        localServerNoticeDescription: '当前以普通网页方式打开，只能使用 Chrome 设备端 AI，数据保存在本浏览器的 IndexedDB 中。从仓库下载并运行 EVAI 本地服务器后，可以同时使用 Ollama 模型与 SQLite 数据库。',
+        localServerNoticeDescription: '当前以普通网页方式打开，只能使用 Chrome 设备端 AI，数据保存在本浏览器的 IndexedDB 中。从仓库下载并运行 EVAI 本地服务器后，可以同时使用本地 Ollama 模式（Ollama 模型库与 Hugging Face GGUF 模型）与 SQLite 数据库。',
         localServerNoticeSteps: [
             '从下方仓库下载 EVAI 本地服务器（evai-server）与网页包。',
             '在解压后的文件夹中运行 evai-server。index.html 与 evai-database 文件夹必须位于同一文件夹。',
@@ -2478,16 +2657,16 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             create_from_gguf: '用本地 GGUF 或 blob 文件创建模型',
             run_model: '运行模型并查看列表',
             remove_model: '删除模型',
-            expose_network: '允许 Ollama 外部访问',
+            expose_network: '（仅使用其他电脑上的 Ollama 时）允许外部访问',
             run_local_server: '运行 EVAI 本地服务器',
         },
         ollamaCommandStepDescriptions: {
-            verify_install: '安装 Ollama 后确认能输出版本号。如果找不到命令，请重新安装 Ollama。',
+            verify_install: '安装 Ollama 后确认能输出版本号。如果找不到命令，请关闭并重新打开终端；仍然不行时请重新安装 Ollama。',
             pull_model: '从 Ollama 模型库或 Hugging Face（hf.co/…）下载输入的模型。可以使用任何适合电脑配置的模型。',
             create_from_gguf: '以输入的 GGUF 文件（或 Ollama blobs 中的 sha256 文件）作为 FROM，创建输入名称的模型。',
-            run_model: '运行一次模型确认可用（用 /bye 退出），用 ollama ls 查看已安装模型，用 ollama ps 查看正在运行的模型。应用只使用在设置模型列表中所选的模型。',
+            run_model: '运行一次模型确认可用（用 /bye 退出），用 ollama ls 查看已安装模型，用 ollama ps 查看正在运行的模型。应用只使用在对话模型选择的本地 Ollama 模式中所选的模型。',
             remove_model: '删除不再使用的模型。',
-            expose_network: '在 Ollama 设置中开启 "Expose Ollama to the network"，或将 OLLAMA_HOST 设为 0.0.0.0:11434，然后重新启动 Ollama。EVAI 本地服务器会转发到该地址。',
+            expose_network: 'Ollama 与 EVAI 本地服务器在同一台电脑上时不需要此步骤。只有使用其他电脑上运行的 Ollama 时，才在那台电脑的 Ollama 设置中开启 "Expose Ollama to the network"（或将 OLLAMA_HOST 设为 0.0.0.0:11434 后重启 Ollama），再把 设置 > 对话模型 中的 Ollama 地址改为那台电脑的地址。',
             run_local_server: '在存放网页包的文件夹中运行 EVAI 本地服务器，并打开 http://127.0.0.1:9999/。浏览器只通过该服务器与 Ollama 通信。',
         },
         ollamaCommandCopy: '复制命令',
@@ -2502,7 +2681,6 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelLanguageSupport: (languageTag, declared) => declared
             ? `对话语言 ${languageTag}：以 Chrome 官方支持语言创建会话`
             : `对话语言 ${languageTag}：不在 Chrome 官方支持列表中 · 使用模型基础能力对话`,
-        modelUseForChat: '用于对话',
         modelInUse: '使用中',
         modelPrepare: '下载并准备',
         modelPreparing: (percent) => `准备中 ${percent}%`,
@@ -2521,7 +2699,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 guideSteps: (downloadLabel, installLabel, useLabel, removeLabel) => [
                     `点击推荐模型的“${downloadLabel}”，会在浏览器中打开 Hugging Face，并将 .litertlm 文件下载到本设备。需要同意条款的模型，请先在浏览器中登录 Hugging Face 并在模型页面同意条款后再下载。`,
                     `点击“${installLabel}”并选择下载的 .litertlm 文件，文件会被复制到应用内部存储中。复制完成后可以删除下载文件夹中的原始文件。其他 .litertlm 文件也可以用同样的方法安装。`,
-                    `选择已安装模型的“${useLabel}”即可加载模型。加载完成后即可与所选精灵对话。`,
+                    `在上方“${useLabel}”的设备端 AI 模式中选择已安装的模型即可加载。加载完成后即可与所选精灵对话。`,
                     '加载模型时会优先尝试 GPU 后端；如果设备不支持，则在 CPU 后端运行，速度较慢。正在使用的后端和上下文大小会显示在模型列表中。',
                     `不再需要的模型可以用“${removeLabel}”从应用存储中删除。删除正在使用的模型后，请重新选择其他模型。`,
                 ],
@@ -2589,6 +2767,83 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         navMemory: '记忆流程',
         navStorage: '存储',
         navCheat: '作弊模式',
+        navGuide: '指南',
+        navSetup: '初始设置',
+        navRequiresSetup: '完成初始设置后才能使用',
+        guidePageTitle: '连接指南',
+        guidePageDescription: '从什么是 AI 模型，到与精灵的第一次对话，按照这台电脑的当前状态一步步引导。',
+        guideBeginnerTitle: '第一次使用？请从这里开始',
+        guideBeginnerIntro: 'EverTalk 使用在你电脑内运行的 AI（而不是网上的 AI 服务）来生成精灵的回复。对话内容不会发送到外部，但需要先在电脑上准备生成回复的 AI 模型。请先读一遍下面的术语，再从上到下依次完成“按当前状态一步步操作”中的步骤。',
+        guideConcepts: [
+            { term: 'AI 模型（LLM）', description: '读取文字并续写回复的人工智能文件。精灵的性格、语气和记忆由 EverTalk 整理后交给模型，模型再据此写出精灵的回复。' },
+            { term: '本地 LLM', description: '不在公司服务器上，而是用你电脑的显卡（GPU）和内存直接运行的 AI 模型。没有使用费，对话也不会离开电脑，但回复速度和可用的模型大小取决于电脑性能。' },
+            { term: 'Chrome 设备端 AI', description: '电脑版 Chrome 内置的 AI（默认 Gemini Nano，开启旗标后为 Gemma 4）。无需另外安装程序，Chrome 会在第一次使用时下载模型。这是最简单的开始方式。' },
+            { term: 'Ollama', description: '下载并运行本地 LLM 的免费程序。安装后会在后台运行，一条命令即可下载想要的模型。可以使用比 Chrome 内置模型更大、表现力更好的模型。' },
+            { term: '模型名称与大小', description: 'Ollama 模型以“名称:标签”的形式表示。标签里的 4b、9b 等数字是模型规模（40 亿、90 亿个参数），越大越聪明但占用内存越多。q4、Q4_K_M 等标记表示压缩后的版本。刚开始请选择文件大小小于显卡显存（VRAM）的模型。' },
+            { term: 'Hugging Face · GGUF', description: 'Hugging Face 是发布 AI 模型的网站，GGUF 是本地 LLM 使用的模型文件格式。Hugging Face 上的 GGUF 模型可以用 ollama pull hf.co/用户/仓库 直接下载到 Ollama，手头已有的 GGUF 文件也可以制作成 Ollama 模型。' },
+            { term: 'EVAI 本地服务器', description: '在你电脑上提供 EverTalk 页面的小程序（evai-server）。通过它打开时才能使用 Ollama 模型，对话、记忆和设置会保存在服务器文件夹的 SQLite 数据库中。用普通网址打开时只能使用 Chrome 设备端 AI，数据保存在本浏览器（IndexedDB）中。' },
+        ],
+        guideChecklistTitle: '按当前状态一步步操作',
+        guideChecklistIntro: {
+            web: '当前以普通网页方式打开。可以直接用 Chrome 设备端 AI 开始；如需使用 Ollama 模型，请按最后的可选步骤运行 EVAI 本地服务器。每个完成标记都读取这台电脑的实际状态。',
+            local_server: '当前通过 EVAI 本地服务器打开，可以使用 Ollama 模型（也可以同时使用 Chrome 设备端 AI）。每个完成标记都读取这台电脑的实际状态，完成步骤后点击“刷新状态”即可重新确认。',
+        },
+        guideStepTitles: {
+            use_pc_chrome: '用电脑版 Chrome 打开',
+            prepare_on_device: '准备 Chrome 内置 AI 模型',
+            get_local_server: '（可选）要使用 Ollama 模型请运行 EVAI 本地服务器',
+            run_local_server: '通过 EVAI 本地服务器打开',
+            install_ollama: '安装并启动 Ollama',
+            pull_model: '下载用于对话的模型',
+            select_model: '选择对话模型',
+            start_chat: '开始与精灵对话',
+        },
+        guideStepDescriptions: {
+            use_pc_chrome: '设备端 AI 只能在 Windows、macOS、Linux 的最新电脑版 Chrome 中运行。需要至少 22GB 可用存储空间，以及超过 4GB 的显存（或 16GB 以上内存）。如果没有变为完成，请把 Chrome 更新到最新版本后点击“刷新状态”。',
+            prepare_on_device: '在“打开设置”> 对话模型中，点击 Gemini Nano 项的“下载并准备”，Chrome 会下载模型。模型较大，可能需要几分钟；状态变为“可用”即完成。',
+            get_local_server: '通过“打开仓库”下载并运行 evai-server，然后在浏览器中打开 http://127.0.0.1:9999/，本指南会切换为 Ollama 安装步骤。',
+            run_local_server: '当前页面已由 EVAI 本地服务器提供，因此此步骤已完成。关闭服务器窗口会让应用停止，使用期间请保持开启。',
+            install_ollama: '点击“下载 Ollama”从官方网站获取安装程序并安装。安装完成后 Ollama 会自动启动（Windows 任务栏右侧通知区域会出现 Ollama 图标）。然后点击“刷新状态”确认连接。',
+            pull_model: '按照下方“如何输入命令”打开终端，输入 ollama pull 模型名称。模型可以在“浏览 Ollama 模型”或“Hugging Face GGUF 指南”中挑选；在下方连接指南的“要使用的模型名称”中输入后会自动生成命令。下载完成后点击“刷新状态”。',
+            select_model: '在初始设置页面或 设置 > 对话模型 中选择设备端 AI 模式或本地 Ollama 模式，再选择一个模型。选择会被保存，并在所有页面以相同的值生效。',
+            start_chat: '模型显示“运行中”即准备完毕。在大厅或对话页面选择精灵并打个招呼吧。第一次回复可能因加载模型而稍慢。',
+        },
+        guideStepStates: { checking: '确认中', done: '完成', current: '现在进行', todo: '等待', optional: '可选' },
+        guideActionLabels: {
+            open_ollama_download: '下载 Ollama',
+            open_ollama_library: '浏览 Ollama 模型',
+            open_hugging_face_guide: 'Hugging Face GGUF 指南',
+            open_repository: '打开仓库',
+            open_settings: '打开设置',
+            choose_model: '去选择模型',
+            open_chat: '前往对话',
+            finish_setup: '返回初始设置',
+            refresh_status: '刷新状态',
+        },
+        guideTerminalTitle: '如何输入命令',
+        guideTerminalSteps: {
+            powershell: [
+                '点击开始按钮，搜索“PowerShell”并打开 Windows PowerShell。',
+                '点击下方步骤中的“复制命令”，然后在 PowerShell 窗口中点击鼠标右键即可粘贴。',
+                '按 Enter 执行。下载模型等耗时较长的命令，请在进度结束前不要关闭窗口。',
+            ],
+            posix: [
+                'macOS 通过 Spotlight（⌘+Space）打开“终端”，Linux 打开发行版自带的终端应用。',
+                '点击下方步骤中的“复制命令”，粘贴到终端中（macOS ⌘+V，Linux Ctrl+Shift+V）。',
+                '按 Enter 执行。下载模型等耗时较长的命令，请在进度结束前不要关闭窗口。',
+            ],
+        },
+        chatModelSelectorDescription: '在设备端 AI 模式与本地 Ollama 模式中选择其一，再选择该模式下实际已连接的模型。初始设置与设置使用同一列表和同一保存值。',
+        chatModelModeTitles: { on_device: '设备端 AI 模式', ollama: '本地 Ollama 模式' },
+        chatModelRuntimeStates: { checking: '确认中', running: '运行中', ready: '可用', needs_preparation: '需要准备', unavailable: '不可用' },
+        chatModelModeEmpty: {
+            on_device: '当前浏览器中没有可选择的设备端模型。请在 设置 > 对话模型 中准备 Chrome 设备端模型，或查看指南。',
+            ollama: 'Ollama 中没有可选择的模型。请按指南中的命令启动 Ollama 并下载模型，然后刷新。',
+        },
+        chatModelActiveMode: '当前对话模式',
+        chatModelOptionCount: (count) => `可选择 ${count} 个`,
+        chatModelOllamaLocalServerOnly: '只有通过 EVAI 本地服务器打开时才能使用本地 Ollama 模式。运行方法请查看指南。',
+        chatModelSavedTo: (storageName) => `所选模型保存在${storageName}中，并在所有页面以同一值生效。`,
         cheatMode: '作弊模式',
         cheatModeDescription: '开启后顶部会出现作弊模式页面，每位精灵的羁绊等级、性格、情绪与语气预设会应用到实际回复中。',
         cheatPageTitle: '精灵作弊设置',
@@ -2625,7 +2880,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageRecordsTitle: '已保存记录',
         storageRecordsCount: (shown, total) => `已保存记录 ${shown} / ${total}`,
         lastActivityLabel: '最近活动',
-        setupModelSelectionHint: '现在选择用于对话的模型。这里选择的模型会直接保存到设置，且与设置页面的模型列表相同。',
+        setupModelSelectionHint: '现在选择对话模式与模型。这里选择的值与 设置 > 对话模型 使用同一保存值。',
         setupModelRequired: '需要选择一个模型才能开始。',
         storageObjectKinds: { object_store: '对象存储', table: '数据表', view: '视图' },
         storageDefinition: '定义',
@@ -2775,6 +3030,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                     return `不支持的设置值：${detail}`;
                 case 'invalid_model':
                     return `不支持的模型：${detail}`;
+                case 'model_not_selected':
+                    return '尚未选择对话模型。请在设置 > AI 模型中选择要使用的模型。';
                 case 'model_not_ready':
                     return `对话模型尚未就绪（状态：${detail}）。请在 设置 > 设备端模型列表 中准备或选择模型。`;
                 case 'persona_prompt_missing':

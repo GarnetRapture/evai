@@ -109,11 +109,16 @@ OllamaProbe probe_ollama(std::string_view base_url)
     }
 }
 
-void proxy_ollama_request(const net::TcpSocket& client, const http::HttpRequest& request, std::string_view upstream_path)
+std::string resolve_ollama_base_url(const std::optional<std::string>& stored_base_url)
 {
-    const std::optional<OllamaUpstream> upstream = parse_ollama_base_url(request.header(ollama_base_url_header));
+    return stored_base_url.value_or(std::string(default_ollama_base_url));
+}
+
+void proxy_ollama_request(const net::TcpSocket& client, const http::HttpRequest& request, std::string_view base_url, std::string_view upstream_path)
+{
+    const std::optional<OllamaUpstream> upstream = parse_ollama_base_url(base_url);
     if (!upstream.has_value()) {
-        http::send_json(client, 400, "Bad Request", http::json_error_body("invalid_upstream", request.header(ollama_base_url_header)));
+        http::send_json(client, 400, "Bad Request", http::json_error_body("invalid_upstream", base_url));
         return;
     }
     net::TcpSocket connection;

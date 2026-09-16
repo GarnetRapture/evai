@@ -5,7 +5,7 @@ import { ChromeInstalledModelItem } from './ChromeInstalledModelItem';
 
 const DIRECTORY_INPUT_ATTRIBUTES = { webkitdirectory: '', directory: '' };
 
-export function ChromeInstalledModelSection({ library, modelLoadingId, linking, labels, onSelectChatModel, onLinkChromeInstalledModelFolder, onLinkChromeLocalState, onSaveChromeModelFolderPath }: ChromeInstalledModelSectionProps) {
+export function ChromeInstalledModelSection({ library, modelLoadingId, linking, labels, onLinkChromeInstalledModelFolder, onLinkChromeLocalState, onSaveChromeModelFolderPath }: ChromeInstalledModelSectionProps) {
     const inputRef = useRef<HTMLInputElement>(null);
     const localStateInputRef = useRef<HTMLInputElement>(null);
     const handleLocalStateChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -39,7 +39,7 @@ export function ChromeInstalledModelSection({ library, modelLoadingId, linking, 
         <p>{labels.chromeInstalledModelSectionDescription}</p>
         <div className="ever-model-list">
           {library.entries.length === 0 ? <small>{labels.chromeInstalledModelEmpty}</small> : null}
-          {library.entries.map((entry) => (<ChromeInstalledModelItem key={entry.id} entry={entry} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel}/>))}
+          {library.entries.map((entry) => (<ChromeInstalledModelItem key={entry.id} entry={entry} modelLoadingId={modelLoadingId} labels={labels}/>))}
         </div>
         <div className="ever-context-storage__path">
           <label htmlFor={pathInputId}>{labels.chromeInstalledModelPathLabel}</label>

@@ -96,6 +96,20 @@ DatabaseSummary EvaiDatabase::read_summary()
     return summary;
 }
 
+std::optional<std::string> EvaiDatabase::read_ollama_base_url()
+{
+    const std::lock_guard<std::mutex> lock(mutex_);
+    SqliteStatement statement = database_.prepare("SELECT ollama_base_url FROM app_settings WHERE slot = 'current'");
+    if (!statement.step()) {
+        return std::nullopt;
+    }
+    std::string base_url = statement.column_text(0);
+    if (base_url.empty()) {
+        return std::nullopt;
+    }
+    return base_url;
+}
+
 const std::filesystem::path& EvaiDatabase::file() const
 {
     return database_.file();

@@ -121,6 +121,7 @@ function toGenerationRequest(
         ...(format === null ? {} : { format }),
         ...(ollamaClient.supportsThinking(model.profile) ? { think: false } : {}),
         options: {
+            num_ctx: model.context_window,
             num_predict: payload.max_output_tokens,
             temperature: payload.sampling.temperature,
             top_k: payload.sampling.top_k,
@@ -167,11 +168,10 @@ async function expandContextWindow(model: OllamaLoadedModel, requiredContext: nu
     if (target <= model.context_window) {
         return model;
     }
-    const contextWindow = await ollamaClient.loadModel(model.base_url, model.profile.name, target);
     if (generation !== loadGeneration) {
         throw new DomainError('cancelled', model.profile.name);
     }
-    const expanded: OllamaLoadedModel = { ...model, context_window: contextWindow };
+    const expanded: OllamaLoadedModel = { ...model, context_window: target };
     loadedModel = expanded;
     return expanded;
 }
@@ -227,7 +227,7 @@ async function selectContextWithinWindow(model: OllamaLoadedModel, request: OnDe
     while (low <= high) {
         const middle = Math.floor((low + high) / 2);
         const candidate = candidateFor(middle);
-        const measurement = await ollamaClient.measurePrompt(model.base_url, candidate, request.signal);
+        const measurement = await ollamaClient.measurePrompt(activeModel.base_url, candidate, request.signal);
         if (measurement.fits_context && measurement.prompt_tokens <= promptBudget) {
             best = selectionFor(middle, candidate, measurement.prompt_tokens, fullMeasurement.prompt_tokens);
             high = middle - 1;

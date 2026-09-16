@@ -1,10 +1,8 @@
 import { Save } from 'lucide-react';
 import { useId, useState } from 'react';
 import type { OllamaModelSectionProps } from '../types';
-import { OllamaConnectionGuide } from './OllamaConnectionGuide';
-import { OllamaModelItem } from './OllamaModelItem';
 
-export function OllamaModelSection({ library, modelLoadingId, platform, labels, onRefreshModelCatalog, onSelectChatModel, onSaveOllamaBaseUrl }: OllamaModelSectionProps) {
+export function OllamaModelSection({ library, labels, onSaveOllamaBaseUrl }: OllamaModelSectionProps) {
     const baseUrlInputId = useId();
     const [baseUrlDraft, setBaseUrlDraft] = useState(library.base_url);
     const [saving, setSaving] = useState(false);
@@ -25,10 +23,7 @@ export function OllamaModelSection({ library, modelLoadingId, platform, labels, 
         </div>
         {!library.server.available ? <small className="ever-context-storage__detail">{library.server.detail}</small> : null}
         {library.list_error !== null ? <small className="ever-context-storage__detail">{library.list_error}</small> : null}
-        <div className="ever-model-list">
-          {library.server.available && library.entries.length === 0 && library.list_error === null ? <small>{labels.ollamaModelEmpty}</small> : null}
-          {library.entries.map((entry) => (<OllamaModelItem key={entry.id} entry={entry} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel}/>))}
-        </div>
+        {library.server.available && library.entries.length === 0 && library.list_error === null ? <small>{labels.ollamaModelEmpty}</small> : null}
         <div className="ever-context-storage__path">
           <label htmlFor={baseUrlInputId}>{labels.ollamaBaseUrlLabel}</label>
           <input id={baseUrlInputId} type="url" value={baseUrlDraft} placeholder={labels.ollamaBaseUrlPlaceholder} autoComplete="off" spellCheck={false} onChange={(event) => setBaseUrlDraft(event.target.value)}/>
@@ -40,6 +35,5 @@ export function OllamaModelSection({ library, modelLoadingId, platform, labels, 
             {saving ? labels.ollamaBaseUrlSaving : labels.ollamaBaseUrlSave}
           </button>
         </div>
-        <OllamaConnectionGuide library={library} checking={false} introVisible={false} platform={platform} labels={labels} onCheck={onRefreshModelCatalog}/>
       </div>);
 }

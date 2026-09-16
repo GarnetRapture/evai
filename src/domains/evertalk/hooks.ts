@@ -17,14 +17,13 @@ import {
     type LlmSessionStatus,
     type LlmStatus,
     type ModelPreparationState,
-    type OllamaModelLibrary,
 } from '../llm';
 import { modulesClient, type ImportedModule, type ModuleControl } from '../modules';
 import { DEFAULT_SPIRIT_SKIN_ID, getSpiritVisualAssets, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaCheatPresetPatch, type PersonaConfig, type SpiritDetail } from '../persona';
 import { settingsClient, type AppSettings, type SetupProgress } from '../settings';
 import { styleClient, type StyleProfile } from '../style';
 import { applyStorageRecordWrite, inspectBrowserStorage, readStorageRecords, syncClient, type BackupDirectoryStatus, type BrowserStorageInspection, type LocalStatusSnapshot, type StorageRecordPage, type StorageRecordWrite } from '../sync';
-import { buildGenerationEngineLimits, collectEventStickers, createApiStatus, computeFamiliarityLevel, filterSpirits, formatUnknownError, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from './logic';
+import { buildGenerationEngineLimits, collectEventStickers, createApiStatus, computeFamiliarityLevel, describeChatModelStatus, filterSpirits, formatUnknownError, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from './logic';
 import { getEverTalkLabels, type EverTalkLabels } from './i18n';
 import type { ApiStatusItem, EarnedSigil, EverTalkController, RosterTab, SaviorProfileSnapshot, SaviorStickerEntry, SpiritStickerBadge, StageTab, WorkspaceView } from './types';
 
@@ -106,19 +105,20 @@ export function useEverTalkController(): EverTalkController {
     const [setupInProgress, setSetupInProgress] = useState(false);
     const [setupProgress, setSetupProgress] = useState<SetupProgress | null>(null);
     const [appSettings, setAppSettings] = useState<AppSettings | null>(null);
+    const [platformGuideConfirmed, setPlatformGuideConfirmed] = useState(false);
+    const gatePending = (appSettings?.setup_stage ?? 'language') !== 'done' || !(appSettings?.platform_guide_acknowledged ?? false);
     const [userSession, setUserSession] = useState<UserSession | null>(null);
     const [deviceEnvironment, setDeviceEnvironment] = useState<DeviceEnvironmentInfo | null>(null);
     const [modelCatalog, setModelCatalog] = useState<ChatModelCatalog | null>(null);
     const [modelLoadingId, setModelLoadingId] = useState<string | null>(null);
     const [modelCatalogError, setModelCatalogError] = useState<string | null>(null);
+    const [modelCatalogRefreshing, setModelCatalogRefreshing] = useState(false);
     const [modelPreparation, setModelPreparation] = useState<ModelPreparationState | null>(null);
     const [chromeInstalledModelLinking, setChromeInstalledModelLinking] = useState(false);
     const [hostRuntime] = useState(readAppHostRuntime);
     const [storageKind] = useState(readAppStorageKind);
     const [ollamaGuideVisible] = useState(() => appPlatform === 'web_chrome' && isLocalServerRuntime());
     const [localServerNoticeVisible] = useState(() => appPlatform === 'web_chrome' && !isLocalServerRuntime());
-    const [ollamaConnection, setOllamaConnection] = useState<OllamaModelLibrary | null>(null);
-    const [ollamaConnectionChecking, setOllamaConnectionChecking] = useState(false);
     const [backupBusy, setBackupBusy] = useState(false);
     const [backupMessage, setBackupMessage] = useState<string | null>(null);
     const [backupError, setBackupError] = useState<string | null>(null);
@@ -173,7 +173,7 @@ export function useEverTalkController(): EverTalkController {
                 case 'style-db':
                     return createApiStatus('style-db', styles.length > 0 ? 'ready' : 'warning', uiLabels.loadedCount(styles.length));
                 case 'llm':
-                    return createApiStatus('llm', llmStatus?.is_loaded ? 'ready' : 'warning', llmStatus?.is_loaded ? uiLabels.modelLoaded : uiLabels.modelAvailabilityDetail(llmStatus?.availability ?? null));
+                    return createApiStatus('llm', llmStatus?.is_loaded ? 'ready' : 'warning', describeChatModelStatus(llmStatus, appSettings?.active_model ?? '', uiLabels));
                 case 'context-storage':
                     return createApiStatus('context-storage', 'ready', uiLabels.storageBackendName[readAppStorageKind()]);
                 case 'sync':
@@ -208,7 +208,7 @@ export function useEverTalkController(): EverTalkController {
                 status = await llmClient.loadEngine();
             }
             setLlmStatus(status);
-            setSystemStatus(createApiStatus('llm', status.is_loaded ? 'ready' : 'warning', status.is_loaded ? labels.modelLoaded : labels.modelAvailabilityDetail(status.availability)));
+            setSystemStatus(createApiStatus('llm', status.is_loaded ? 'ready' : 'warning', describeChatModelStatus(status, (await settingsClient.get()).active_model, labels)));
         }
         catch (err) {
             console.error(labels.logLocalLlmLoadFailed, err);
@@ -218,6 +218,15 @@ export function useEverTalkController(): EverTalkController {
         }
         frontendDebugLog('refreshLlmStatus:done');
     }
+    async function readLlmStatus() {
+        try {
+            setLlmStatus(await llmClient.getStatus());
+        }
+        catch (err) {
+            console.error(labels.logLocalLlmLoadFailed, err);
+            setLlmStatus({ ...EMPTY_LLM_STATUS, error_message: formatUnknownError(err, labels) });
+        }
+    }
     async function ensureLlmReadyForPersonaCache(): Promise<boolean> {
         try {
             let status = await llmClient.getStatus();
@@ -225,7 +234,7 @@ export function useEverTalkController(): EverTalkController {
                 status = await llmClient.loadEngine();
             }
             setLlmStatus(status);
-            setSystemStatus(createApiStatus('llm', status.is_loaded ? 'ready' : 'warning', status.is_loaded ? labels.modelLoaded : labels.modelAvailabilityDetail(status.availability)));
+            setSystemStatus(createApiStatus('llm', status.is_loaded ? 'ready' : 'warning', describeChatModelStatus(status, (await settingsClient.get()).active_model, labels)));
             return status.is_loaded;
         }
         catch (err) {
@@ -754,6 +763,10 @@ export function useEverTalkController(): EverTalkController {
     function closeSettings() {
         setSettingsOpen(false);
     }
+    function openGuide() {
+        setSettingsOpen(false);
+        void navigateWorkspace('guide');
+    }
     async function openModuleManagement() {
         setModuleManagementOpen(true);
         setModuleError(null);
@@ -854,6 +867,7 @@ export function useEverTalkController(): EverTalkController {
         if (isInitialSetupFlow) {
             setAppLanguage(language);
             setAppSettings(await settingsClient.setLanguage(language));
+            await refreshModelCatalog();
             return;
         }
         const updated = await settingsClient.setLanguage(language);
@@ -980,6 +994,7 @@ export function useEverTalkController(): EverTalkController {
     }
 
     async function refreshModelCatalog() {
+        setModelCatalogRefreshing(true);
         try {
             setModelCatalog(await llmClient.listModels());
             setModelCatalogError(null);
@@ -987,6 +1002,9 @@ export function useEverTalkController(): EverTalkController {
         catch (err) {
             console.error(labels.logLocalModelStatusCheckFailed, err);
             setModelCatalogError(formatUnknownError(err, labels));
+        }
+        finally {
+            setModelCatalogRefreshing(false);
         }
     }
 
@@ -1126,20 +1144,6 @@ export function useEverTalkController(): EverTalkController {
             setModelPreparation(null);
             setModelCatalogError(formatUnknownError(err, labels));
             await refreshModelCatalog();
-        }
-    }
-
-    async function checkOllamaConnection() {
-        setOllamaConnectionChecking(true);
-        try {
-            setOllamaConnection(await llmClient.inspectOllamaConnection());
-        }
-        catch (err) {
-            console.error(labels.logLocalModelStatusCheckFailed, err);
-            setModelCatalogError(formatUnknownError(err, labels));
-        }
-        finally {
-            setOllamaConnectionChecking(false);
         }
     }
 
@@ -1366,6 +1370,9 @@ export function useEverTalkController(): EverTalkController {
 
     async function navigateWorkspace(view: WorkspaceView) {
         setWorkspaceView(view);
+        if (gatePending) {
+            return;
+        }
         setLobbyOpen(false);
         if (view === 'ranking' || view === 'cheat') {
             await Promise.all([loadBondRanking(), loadFamiliarityList()]);
@@ -1418,9 +1425,7 @@ export function useEverTalkController(): EverTalkController {
         if (needsGate) {
             frontendDebugLog('initApp:needs_gate');
             setAppInitializing(false);
-            if (ollamaGuideVisible) {
-                await checkOllamaConnection();
-            }
+            await Promise.all([refreshModelCatalog(), readLlmStatus()]);
             return;
         }
         try {
@@ -1640,6 +1645,7 @@ export function useEverTalkController(): EverTalkController {
         deviceEnvironment,
         modelCatalog,
         modelCatalogError,
+        modelCatalogRefreshing,
         modelPreparation,
         backupBusy,
         backupMessage,
@@ -1729,10 +1735,8 @@ export function useEverTalkController(): EverTalkController {
         saveGenerationLimits,
         generationEngineLimits,
         ollamaGuideVisible,
-        ollamaConnection,
-        ollamaConnectionChecking,
         devicePlatform: deviceEnvironment?.browser.platform ?? navigator.platform,
-        checkOllamaConnection,
+        openGuide,
         removeLocalModel,
         modelLoadingId,
         exportBackup,
@@ -1760,6 +1764,9 @@ export function useEverTalkController(): EverTalkController {
         storageKind,
         localServerNoticeVisible,
         platformGuideAcknowledged: appSettings?.platform_guide_acknowledged ?? false,
+        platformGuideConfirmed,
+        setPlatformGuideConfirmed,
+        gatePending,
         acknowledgePlatformGuide,
         navigateWorkspace,
         refreshStorageInspection,
