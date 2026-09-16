@@ -4,18 +4,51 @@ export {
     EVERSOUL_DATABASE_NAME,
     EVERSOUL_INDEX,
     EVERSOUL_STORE,
+    EVERSOUL_STORE_DESCRIPTORS,
     SINGLETON_RECORD_KEY,
+    everSoulStoreDescriptor,
 } from './schema';
-export type { EverSoulDatabaseSchema, EverSoulDatabaseSnapshot, EverSoulStoreName } from './schema';
+export type {
+    EverSoulDatabaseSchema,
+    EverSoulDatabaseSnapshot,
+    EverSoulStoreDescriptor,
+    EverSoulStoreName,
+} from './schema';
 export {
     beginEverSoulDatabaseMaintenance,
-    deleteOriginIndexedDatabases,
     endEverSoulDatabaseMaintenance,
     getEverSoulDatabase,
     openEverSoulDatabaseForMaintenance,
     requestPersistentStorage,
+    resetEverSoulStorage,
 } from './database';
-export type { EverSoulDatabase } from './database';
+export { openIndexedDbConnection } from './indexedDbDatabase';
+export { isEverSoulKeyRange, keyRangeBound } from './keys';
+export type {
+    EverSoulCursor,
+    EverSoulCursorDirection,
+    EverSoulDatabase,
+    EverSoulIndexHandle,
+    EverSoulIndexKey,
+    EverSoulIndexName,
+    EverSoulKeyCursor,
+    EverSoulKeyRange,
+    EverSoulObjectStore,
+    EverSoulQuery,
+    EverSoulStoreKey,
+    EverSoulStoreValue,
+    EverSoulTransaction,
+    EverSoulTransactionMode,
+} from './types';
+export { localServerStorageClient } from './localServer/client';
+export type {
+    LocalServerSchema,
+    LocalServerSchemaColumn,
+    LocalServerSchemaForeignKey,
+    LocalServerSchemaIndex,
+    LocalServerSchemaTable,
+    LocalServerStorageStatus,
+} from './localServer/client';
 export {
     SNAPSHOT_STORE_NAMES,
     clearStores,

@@ -5,6 +5,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <span>
+#include <string>
 
 namespace evai::server::net {
 
@@ -19,6 +20,7 @@ public:
     TcpSocket& operator=(TcpSocket&& other) noexcept;
 
     static TcpSocket listen_loopback(std::uint16_t port);
+    static TcpSocket connect_to(const std::string& host, std::uint16_t port);
 
     [[nodiscard]] bool valid() const;
     [[nodiscard]] TcpSocket accept_client() const;

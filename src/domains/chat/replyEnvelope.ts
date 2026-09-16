@@ -20,6 +20,9 @@ const ACTION_WRAPPER_PATTERN = /^[(（*\s]+|[)）*\s]+$/gu;
 const MESSAGE_QUOTE_WRAPPER_PATTERN = /^(?:"([^"]+)"|“([^”]+)”|「([^」]+)」|『([^』]+)』)$/u;
 const EMBEDDED_QUOTE_BOUNDARY_PATTERN = /["”」』]\s*[,，、]?\s*["“「『]/u;
 const UTTERANCE_EDGE_QUOTE_PATTERN = /^["“「『]+|["”」』]+$/gu;
+const ENVELOPE_OBJECT_START_PATTERN = /\{\s*"(?:inner_thought|action|messages)"\s*:/u;
+const MESSAGE_JSON_TAIL_RESIDUE_PATTERN = /\s*["”]\s*(?:\]\s*\}?|\})\s*$/u;
+const MESSAGE_JSON_HEAD_RESIDUE_PATTERN = /^\s*\{?\s*"?(?:inner_thought|action|messages)"?\s*:\s*\[?\s*"?/u;
 const PERSONA_BREACH_PATTERN = /\b(?:AI|A\.I\.|LLM|chat ?bot|language model|assistant|system prompt)\b|인공지능|언어\s*모델|어시스턴트|챗봇|프롬프트|人工智能|语言模型|聊天机器人|提示词/iu;
 const JSON_ESCAPES: Record<string, string> = { '"': '"', '\\': '\\', '/': '/', b: '\b', f: '\f', n: '\n', r: '\r', t: '\t' };
 const UNICODE_ESCAPE_LENGTH = 4;
@@ -165,20 +168,29 @@ function envelopeFromPlainText(text: string): PersonaReplyEnvelope {
     return {
         inner_thought: '',
         action: actions.join(' '),
-        messages: spoken.split('\n').map((line) => line.trim()).filter((line) => line.length > 0),
+        messages: spoken.split('\n').map(removeJsonResidue).filter((line) => line.length > 0),
     };
 }
 
+function locateEnvelopeObject(text: string): number {
+    const firstVisible = text.search(/\S/u);
+    if (firstVisible >= 0 && text[firstVisible] === '{') {
+        return firstVisible;
+    }
+    return text.search(ENVELOPE_OBJECT_START_PATTERN);
+}
+
 export function parsePersonaReplyEnvelope(text: string): PersonaReplyEnvelopeParse {
-    const objectStart = text.search(/\S/u);
-    if (objectStart < 0) {
+    if (text.trim().length === 0) {
         return { ...emptyEnvelope(), structured: true, complete: false };
     }
-    if (text[objectStart] !== '{') {
+    const objectStart = locateEnvelopeObject(text);
+    if (objectStart < 0) {
         return { ...envelopeFromPlainText(text), structured: false, complete: true };
     }
+    const objectEnd = text.lastIndexOf('}');
     try {
-        const envelope = coerceEnvelope(JSON.parse(text.slice(objectStart)));
+        const envelope = objectEnd > objectStart ? coerceEnvelope(JSON.parse(text.slice(objectStart, objectEnd + 1))) : null;
         if (envelope !== null) {
             return { ...envelope, structured: true, complete: true };
         }
@@ -187,6 +199,26 @@ export function parsePersonaReplyEnvelope(text: string): PersonaReplyEnvelopePar
         return scanPartialEnvelope(text, objectStart);
     }
     return scanPartialEnvelope(text, objectStart);
+}
+
+function liftNestedEnvelope(envelope: PersonaReplyEnvelope): PersonaReplyEnvelope {
+    let action = envelope.action;
+    const messages = envelope.messages.flatMap((message) => {
+        const nestedStart = message.search(ENVELOPE_OBJECT_START_PATTERN);
+        if (nestedStart < 0) {
+            return [message];
+        }
+        const nested = parsePersonaReplyEnvelope(message.slice(nestedStart));
+        if (action.trim().length === 0) {
+            action = nested.action;
+        }
+        return [message.slice(0, nestedStart).trim(), ...nested.messages];
+    });
+    return { ...envelope, action, messages };
+}
+
+export function removeJsonResidue(message: string): string {
+    return message.replace(MESSAGE_JSON_TAIL_RESIDUE_PATTERN, '').replace(MESSAGE_JSON_HEAD_RESIDUE_PATTERN, '').trim();
 }
 
 function unwrapWholeMessageQuotes(message: string): string {
@@ -205,11 +237,12 @@ function splitQuotedUtterances(message: string): string[] {
 }
 
 export function normalizePersonaReplyEnvelope(envelope: PersonaReplyEnvelope, language: AppLanguage): PersonaReplyEnvelope {
+    const lifted = liftNestedEnvelope(envelope);
     return {
-        inner_thought: unwrapEmphasisSpans(normalizeChatOutput(envelope.inner_thought, language)).trim(),
-        action: normalizeChatOutput(envelope.action, language).replace(ACTION_WRAPPER_PATTERN, '').trim(),
-        messages: envelope.messages
-            .flatMap((message) => splitQuotedUtterances(unwrapEmphasisSpans(normalizeChatOutput(message, language)).trim()))
+        inner_thought: removeJsonResidue(unwrapEmphasisSpans(normalizeChatOutput(lifted.inner_thought, language))),
+        action: removeJsonResidue(normalizeChatOutput(lifted.action, language)).replace(ACTION_WRAPPER_PATTERN, '').trim(),
+        messages: lifted.messages
+            .flatMap((message) => splitQuotedUtterances(removeJsonResidue(unwrapEmphasisSpans(normalizeChatOutput(message, language)))))
             .filter((message) => message.length > 0),
     };
 }

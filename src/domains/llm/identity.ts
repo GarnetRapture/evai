@@ -1,4 +1,5 @@
 import { isAndroidAppRuntime } from '../../shared/android';
+import { isLocalServerRuntime } from '../../shared/host';
 import { DomainError } from '../../shared/errors';
 import {
     ANDROID_GEMINI_NANO_MODEL_ID,
@@ -19,7 +20,10 @@ const LOCAL_MODEL_IDENTITY_CODECS: Record<LocalModelEngineKind, LocalModelIdenti
 };
 
 export function platformChatModelEngines(): ChatModelEngineKind[] {
-    return isAndroidAppRuntime() ? ['android_gemini_nano', 'litert_lm'] : ['chrome_prompt', 'chrome_installed', 'ollama'];
+    if (isAndroidAppRuntime()) {
+        return ['android_gemini_nano', 'litert_lm'];
+    }
+    return isLocalServerRuntime() ? ['chrome_prompt', 'chrome_installed', 'ollama'] : ['chrome_prompt', 'chrome_installed'];
 }
 
 export function ollamaModelId(modelName: string): string {

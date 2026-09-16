@@ -2,8 +2,8 @@ import { DomainError } from '../../shared/errors';
 import { normalizeAppLanguage } from '../../shared/i18n';
 import {
     beginEverSoulDatabaseMaintenance,
-    deleteOriginIndexedDatabases,
     endEverSoulDatabaseMaintenance,
+    resetEverSoulStorage,
 } from '../../shared/storage';
 import type { AppLanguage } from '../../shared/types';
 import { createMonotonicTimestamp } from '../../shared/time';
@@ -36,12 +36,11 @@ export const settingsClient = {
         await llmClient.unloadEngine();
         await beginEverSoulDatabaseMaintenance();
         try {
-            await deleteOriginIndexedDatabases();
+            await resetEverSoulStorage();
             localStorage.clear();
         }
-        catch (error) {
+        finally {
             endEverSoulDatabaseMaintenance();
-            throw error;
         }
     },
     async setLanguage(language: AppLanguage): Promise<AppSettings> {

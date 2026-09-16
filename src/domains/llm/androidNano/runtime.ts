@@ -9,7 +9,7 @@ import {
 import { DomainError, describeUnknownError } from '../../../shared/errors';
 import { assertPersonaSystemPrompt } from '../chrome/personaHook';
 import { ANDROID_GEMINI_NANO_CONSOLIDATION_TOKEN_LIMIT, ANDROID_GEMINI_NANO_RESPONSE_TOKEN_LIMIT } from '../constants';
-import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload } from '../localGeneration';
+import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload, resolveMaxOutputTokens } from '../localGeneration';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
 import type {
     LlmSessionStatus,
@@ -99,7 +99,7 @@ export const androidGeminiNanoRuntime = {
             assertPersonaSystemPrompt(request.session_prompt.system_prompt, request.persona_name);
             await androidGeminiNanoRuntime.focusPersonaSession(request.persona_id);
             recordRequestStatus({ ...status, state: 'running' });
-            const payload = JSON.stringify(buildPersonaGenerationPayload(request, ANDROID_GEMINI_NANO_RESPONSE_TOKEN_LIMIT));
+            const payload = JSON.stringify(buildPersonaGenerationPayload(request, await resolveMaxOutputTokens(ANDROID_GEMINI_NANO_RESPONSE_TOKEN_LIMIT)));
             const result = await streamGeneration(request.request_id, payload, (chunk) => request.handlers.onChunk(chunk), request.signal);
             recordRequestStatus({ ...status, state: result.cancelled ? 'cancelled' : 'completed' });
             return { text: result.text, cancelled: result.cancelled, truncated_message_count: 0 };

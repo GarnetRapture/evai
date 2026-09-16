@@ -1,6 +1,7 @@
 import React, { useEffect, useEffectEvent, useMemo, useRef, useState } from 'react';
-import { requestPersistentStorage } from '../../shared/storage';
+import { requestPersistentStorage, type EverSoulStoreName } from '../../shared/storage';
 import { detectBrowserAppLanguage } from '../../shared/i18n';
+import { isLocalServerRuntime, readAppHostRuntime, readAppStorageKind } from '../../shared/host';
 import { detectAppPlatform, detectPlatformSupport, inspectDeviceEnvironment, type DeviceEnvironmentInfo } from '../../shared/platform';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import { authClient, type UserSession } from '../auth';
@@ -22,8 +23,8 @@ import { modulesClient, type ImportedModule, type ModuleControl } from '../modul
 import { DEFAULT_SPIRIT_SKIN_ID, getSpiritVisualAssets, parseSpiritDetail, personaClient, type BondRankingEntry, type FamiliarityEntry, type PersonaCheatPresetPatch, type PersonaConfig, type SpiritDetail } from '../persona';
 import { settingsClient, type AppSettings, type SetupProgress } from '../settings';
 import { styleClient, type StyleProfile } from '../style';
-import { inspectBrowserStorage, syncClient, type BackupDirectoryStatus, type BrowserStorageInspection, type LocalStatusSnapshot } from '../sync';
-import { collectEventStickers, createApiStatus, computeFamiliarityLevel, filterSpirits, formatUnknownError, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from './logic';
+import { applyStorageRecordWrite, inspectBrowserStorage, readStorageRecords, syncClient, type BackupDirectoryStatus, type BrowserStorageInspection, type LocalStatusSnapshot, type StorageRecordPage, type StorageRecordWrite } from '../sync';
+import { buildGenerationEngineLimits, collectEventStickers, createApiStatus, computeFamiliarityLevel, filterSpirits, formatUnknownError, resolveFamiliaritySigilGrade, resolveSpiritStickerBadges } from './logic';
 import { getEverTalkLabels, type EverTalkLabels } from './i18n';
 import type { ApiStatusItem, EarnedSigil, EverTalkController, RosterTab, SaviorProfileSnapshot, SaviorStickerEntry, SpiritStickerBadge, StageTab, WorkspaceView } from './types';
 
@@ -112,7 +113,10 @@ export function useEverTalkController(): EverTalkController {
     const [modelCatalogError, setModelCatalogError] = useState<string | null>(null);
     const [modelPreparation, setModelPreparation] = useState<ModelPreparationState | null>(null);
     const [chromeInstalledModelLinking, setChromeInstalledModelLinking] = useState(false);
-    const [ollamaGuideVisible] = useState(() => appPlatform === 'web_chrome' && !llmClient.isChromeOnDeviceAiSupported());
+    const [hostRuntime] = useState(readAppHostRuntime);
+    const [storageKind] = useState(readAppStorageKind);
+    const [ollamaGuideVisible] = useState(() => appPlatform === 'web_chrome' && isLocalServerRuntime());
+    const [localServerNoticeVisible] = useState(() => appPlatform === 'web_chrome' && !isLocalServerRuntime());
     const [ollamaConnection, setOllamaConnection] = useState<OllamaModelLibrary | null>(null);
     const [ollamaConnectionChecking, setOllamaConnectionChecking] = useState(false);
     const [backupBusy, setBackupBusy] = useState(false);
@@ -136,6 +140,10 @@ export function useEverTalkController(): EverTalkController {
     const [storageInspection, setStorageInspection] = useState<BrowserStorageInspection | null>(null);
     const [storageInspectionLoading, setStorageInspectionLoading] = useState(false);
     const [storageInspectionError, setStorageInspectionError] = useState<string | null>(null);
+    const [storageRecords, setStorageRecords] = useState<Record<string, StorageRecordPage>>({});
+    const [storageRecordsLoading, setStorageRecordsLoading] = useState<string | null>(null);
+    const [storageWriteBusy, setStorageWriteBusy] = useState(false);
+    const [storageWriteMessage, setStorageWriteMessage] = useState<string | null>(null);
     const messagesListRef = useRef<HTMLDivElement>(null);
     const focusedChatRequestRef = useRef<AbortController | null>(null);
     const appInitStartedRef = useRef(false);
@@ -143,6 +151,7 @@ export function useEverTalkController(): EverTalkController {
     const proactiveCheckRunningRef = useRef(false);
     const maintenanceTasksRef = useRef<PersonaMaintenanceTask[]>([]);
     const filteredSpirits = useMemo(() => filterSpirits(spirits, searchQuery), [searchQuery, spirits]);
+    const generationEngineLimits = useMemo(() => buildGenerationEngineLimits(modelCatalog), [modelCatalog]);
     function setSystemStatus(status: ApiStatusItem) {
         setSystemStatuses((prev) => prev.map((item) => (item.id === status.id ? status : item)));
     }
@@ -166,7 +175,7 @@ export function useEverTalkController(): EverTalkController {
                 case 'llm':
                     return createApiStatus('llm', llmStatus?.is_loaded ? 'ready' : 'warning', llmStatus?.is_loaded ? uiLabels.modelLoaded : uiLabels.modelAvailabilityDetail(llmStatus?.availability ?? null));
                 case 'context-storage':
-                    return createApiStatus('context-storage', 'ready', uiLabels.browserStorage);
+                    return createApiStatus('context-storage', 'ready', uiLabels.storageBackendName[readAppStorageKind()]);
                 case 'sync':
                     return createApiStatus('sync', 'warning', uiLabels.manualSyncWaiting);
             }
@@ -174,7 +183,7 @@ export function useEverTalkController(): EverTalkController {
     }
     async function refreshEnvironment() {
         setDeviceEnvironment(await inspectDeviceEnvironment());
-        setSystemStatus(createApiStatus('context-storage', 'ready', labels.browserStorage));
+        setSystemStatus(createApiStatus('context-storage', 'ready', labels.storageBackendName[storageKind]));
     }
     async function refreshStyles() {
         try {
@@ -598,8 +607,8 @@ export function useEverTalkController(): EverTalkController {
                     activeRosterTab === 'bondRanking' ? personaClient.getBondRanking().then(setBondRanking) : Promise.resolve(),
                     activeRosterTab === 'familiarity' ? personaClient.getFamiliarityList().then(setFamiliarityList) : Promise.resolve(),
                     refreshMemoryInsight(spiritId),
-                    lobbyOpen ? refreshMemoryOverview() : Promise.resolve(),
-                    workspaceView === 'memory' ? loadContextGraph(spiritId, room.id) : Promise.resolve(),
+                    refreshMemoryOverview(),
+                    loadContextGraph(spiritId, room.id),
                 ]);
             }
             catch (err) {
@@ -666,8 +675,8 @@ export function useEverTalkController(): EverTalkController {
             syncClient.scheduleAutomaticBackup();
             await Promise.all([
                 activeSpiritId ? refreshMemoryInsight(activeSpiritId) : Promise.resolve(),
-                lobbyOpen ? refreshMemoryOverview() : Promise.resolve(),
-                workspaceView === 'memory' ? refreshContextGraph() : Promise.resolve(),
+                refreshMemoryOverview(),
+                refreshContextGraph(),
                 activeRosterTab === 'familiarity' ? personaClient.getFamiliarityList().then(setFamiliarityList) : Promise.resolve(),
             ]);
         }
@@ -1134,6 +1143,17 @@ export function useEverTalkController(): EverTalkController {
         }
     }
 
+    async function saveGenerationLimits(contextWindowTokens: number | null, maxOutputTokens: number | null) {
+        try {
+            setModelCatalog(await llmClient.saveGenerationLimits(contextWindowTokens, maxOutputTokens));
+            setAppSettings(await settingsClient.get());
+            setModelCatalogError(null);
+        }
+        catch (err) {
+            setModelCatalogError(formatUnknownError(err, labels));
+        }
+    }
+
     async function saveOllamaBaseUrl(baseUrl: string) {
         try {
             setModelCatalog(await llmClient.saveOllamaBaseUrl(baseUrl));
@@ -1305,6 +1325,42 @@ export function useEverTalkController(): EverTalkController {
         }
         finally {
             setStorageInspectionLoading(false);
+        }
+    }
+
+    async function loadStorageRecords(storeName: EverSoulStoreName) {
+        setStorageRecordsLoading(storeName);
+        setStorageInspectionError(null);
+        try {
+            const page = await readStorageRecords(storeName);
+            setStorageRecords((current) => ({ ...current, [storeName]: page }));
+        }
+        catch (err) {
+            setStorageInspectionError(formatUnknownError(err, labels));
+        }
+        finally {
+            setStorageRecordsLoading(null);
+        }
+    }
+
+    async function writeStorageRecord(write: StorageRecordWrite) {
+        setStorageWriteBusy(true);
+        setStorageWriteMessage(null);
+        setStorageInspectionError(null);
+        try {
+            await applyStorageRecordWrite(write);
+            const storeName = write.store_name as EverSoulStoreName;
+            const page = await readStorageRecords(storeName);
+            setStorageRecords((current) => ({ ...current, [storeName]: page }));
+            setStorageWriteMessage(labels.storageWriteSucceeded);
+            await refreshStorageInspection();
+            await refreshLocalStatus();
+        }
+        catch (err) {
+            setStorageInspectionError(formatUnknownError(err, labels));
+        }
+        finally {
+            setStorageWriteBusy(false);
         }
     }
 
@@ -1536,6 +1592,12 @@ export function useEverTalkController(): EverTalkController {
         storageInspection,
         storageInspectionLoading,
         storageInspectionError,
+        storageRecords,
+        storageRecordsLoading,
+        storageWriteBusy,
+        storageWriteMessage,
+        loadStorageRecords,
+        writeStorageRecord,
         appInitializing,
         llmStatus,
         allSpirits: spirits,
@@ -1664,6 +1726,8 @@ export function useEverTalkController(): EverTalkController {
         installLocalModel,
         downloadLocalModel,
         saveOllamaBaseUrl,
+        saveGenerationLimits,
+        generationEngineLimits,
         ollamaGuideVisible,
         ollamaConnection,
         ollamaConnectionChecking,
@@ -1692,6 +1756,9 @@ export function useEverTalkController(): EverTalkController {
         completeSetup,
         platformSupport,
         appPlatform,
+        hostRuntime,
+        storageKind,
+        localServerNoticeVisible,
         platformGuideAcknowledged: appSettings?.platform_guide_acknowledged ?? false,
         acknowledgePlatformGuide,
         navigateWorkspace,

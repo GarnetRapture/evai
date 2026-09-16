@@ -19,6 +19,8 @@ export interface AppSettings {
     savior_name: string;
     platform_guide_acknowledged: boolean;
     ollama_base_url: string;
+    context_window_tokens: number | null;
+    max_output_tokens: number | null;
     chrome_model_folder_path: string;
     chrome_installed_models: ChromeInstalledModel[];
     chrome_browser_model_state: ChromeBrowserModelState | null;
@@ -46,6 +48,8 @@ export interface GeneralSettingsRecord {
     savior_name: string;
     platform_guide_acknowledged: boolean;
     ollama_base_url: string;
+    context_window_tokens: number | null;
+    max_output_tokens: number | null;
     chrome_model_folder_path: string;
     chrome_installed_models: ChromeInstalledModel[];
     chrome_browser_model_state: ChromeBrowserModelState | null;

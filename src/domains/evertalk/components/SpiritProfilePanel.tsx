@@ -1,14 +1,16 @@
 import { Boxes, Images, PanelRightClose, PanelRightOpen, Settings } from 'lucide-react';
 import { getRaceTone, getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
-import { createTalkChoices } from '../logic';
+import { selectPanelKeywordThreads } from '../logic';
 import type { SpiritProfilePanelProps } from '../types';
 import { raceBadgeUrl } from '../uiAssets';
 import { SpiritSkinPicker } from './SpiritSkinPicker';
 import { MemoryInsightPanel } from './MemoryInsightPanel';
 import { SystemStatusPanel } from './SystemStatusPanel';
-export function SpiritProfilePanel({ activeDetail, activeSkinId, onSelectSkin, collapsed, systemStatuses, styles, activeStyle, isSyncing, onSyncStyles, onSelectStyle, onToggleCollapsed, onOpenSettings, onOpenModuleManagement, onOpenBackgroundGallery, localStatus, memoryInsight, memoryInsightLoading, labels, onOpenProfileDetail, }: SpiritProfilePanelProps) {
+export function SpiritProfilePanel({ activeDetail, activeSpiritId, activeSkinId, onSelectSkin, collapsed, systemStatuses, styles, activeStyle, isSyncing, onSyncStyles, onSelectStyle, onToggleCollapsed, onOpenSettings, onOpenModuleManagement, onOpenBackgroundGallery, localStatus, memoryInsight, memoryInsightLoading, memoryOverview, contextGraph, contextGraphLoading, labels, onOpenProfileDetail, }: SpiritProfilePanelProps) {
     const tone = activeDetail ? getRaceTone(activeDetail.race) : 'tone-neutral';
-    const choices = createTalkChoices(activeDetail, labels);
+    const graphMatchesSpirit = contextGraph !== null && contextGraph.persona_id === activeSpiritId;
+    const keywordThreads = graphMatchesSpirit ? selectPanelKeywordThreads(contextGraph.keyword_threads) : [];
+    const spiritUsage = memoryOverview?.entries.find((entry) => entry.persona_id === activeSpiritId) ?? null;
     const visualAssets = activeDetail ? getSpiritVisualAssets(activeDetail) : null;
     const skinOptions = visualAssets?.skinOptions ?? [];
     const activeSkin = visualAssets ? resolveSpiritSkin(visualAssets, activeSkinId) : null;
@@ -60,16 +62,25 @@ export function SpiritProfilePanel({ activeDetail, activeSkinId, onSelectSkin, c
               <div><small>{labels.chatMessages}</small><strong>{localStatus?.chat_message_count ?? '-'}</strong></div>
               <div><small>{labels.localMemories}</small><strong>{localStatus?.memory_count ?? '-'}</strong></div>
             </div>
+            <div className="ever-profile-grid ever-profile-grid--spirit">
+              <div><small>{labels.messagesLabel}</small><strong>{spiritUsage?.message_count ?? 0}</strong></div>
+              <div><small>{labels.memoriesLabel}</small><strong>{spiritUsage?.episodic_total ?? 0}</strong></div>
+              <div><small>{labels.bondStatus}</small><strong>{graphMatchesSpirit ? labels.familiarityLevel(contextGraph.familiarity_level) : '-'}</strong></div>
+              <div><small>{labels.lastActivityLabel}</small><strong>{spiritUsage ? new Date(spiritUsage.latest_activity_at).toLocaleDateString(labels.localeTag) : '-'}</strong></div>
+            </div>
           </section>
 
           <MemoryInsightPanel insight={memoryInsight} loading={memoryInsightLoading} labels={labels}/>
 
           <section className="ever-panel-section">
             <h3>{labels.conversationKeywords}</h3>
+            {contextGraphLoading && keywordThreads.length === 0 ? <p className="ever-profile-choices__empty">{labels.checking}</p> : null}
+            {!contextGraphLoading && keywordThreads.length === 0 ? <p className="ever-profile-choices__empty">{labels.noStoredData}</p> : null}
             <div className="ever-profile-choices">
-              {choices.map((choice) => (<div key={choice.id}>
-                  <span>{choice.source}</span>
-                  <strong>{choice.label}</strong>
+              {keywordThreads.map((thread) => (<div key={thread.keyword.token}>
+                  <span>{labels.memoryGraphKeywordCounts(thread.keyword.user_count, thread.keyword.spirit_count)}</span>
+                  <strong>{thread.keyword.token}</strong>
+                  <time dateTime={thread.keyword.last_seen_at}>{new Date(thread.keyword.last_seen_at).toLocaleDateString(labels.localeTag)}</time>
                 </div>))}
             </div>
           </section>

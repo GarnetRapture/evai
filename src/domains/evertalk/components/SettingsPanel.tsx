@@ -7,7 +7,7 @@ import type { SettingsPanelProps, SettingsSectionKey } from '../types';
 import { ModelCatalogSection } from './ModelCatalogSection';
 import { EnvironmentLayer } from './EnvironmentLayer';
 
-export function SettingsPanel({ open: isOpen, appPlatform, devicePlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, llmSessionStatuses, llmRequestStatuses, isResetting, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupMessage, backupError, backupDirectoryStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onSaveChromeModelFolderPath, onLinkChromeLocalState, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveOllamaBaseUrl, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
+export function SettingsPanel({ open: isOpen, appPlatform, storageKind, localServerNoticeVisible, devicePlatform, settings, preferredSpiritNames, activeStyleName, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, generationEngineLimits, llmSessionStatuses, llmRequestStatuses, isResetting, resetError, importedModules, moduleBusy, moduleError, moduleMessage, backupBusy, backupMessage, backupError, backupDirectoryStatus, deviceEnvironment, userSession, saviorProfile, labels, onClose, onReset, onSetLanguage, onSetShowReasoning, onSetCheatModeEnabled, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onSaveChromeModelFolderPath, onLinkChromeLocalState, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveOllamaBaseUrl, onSaveGenerationLimits, onImportModule, onSetModuleEnabled, onDeleteModule, onExportBackup, onImportBackup, onLinkBackupDirectory, onUnlinkBackupDirectory, onGrantBackupDirectoryPermission, onBackupNow, onRestoreBackupFile }: SettingsPanelProps) {
     const [confirming, setConfirming] = useState(false);
     const [activeSection, setActiveSection] = useState<SettingsSectionKey>('general');
     const contentRef = useRef<HTMLDivElement>(null);
@@ -93,7 +93,7 @@ export function SettingsPanel({ open: isOpen, appPlatform, devicePlatform, setti
         </section>
 
         <div className="ever-settings-content__anchor" data-settings-section="models">
-        <ModelCatalogSection appPlatform={appPlatform} devicePlatform={devicePlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareOnDeviceSystemModel={onPrepareOnDeviceSystemModel} onLinkChromeInstalledModelFolder={onLinkChromeInstalledModelFolder} onSaveChromeModelFolderPath={onSaveChromeModelFolderPath} onLinkChromeLocalState={onLinkChromeLocalState} chromeInstalledModelLinking={chromeInstalledModelLinking} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel} onSaveOllamaBaseUrl={onSaveOllamaBaseUrl}/>
+        <ModelCatalogSection appPlatform={appPlatform} localServerNoticeVisible={localServerNoticeVisible} devicePlatform={devicePlatform} modelCatalog={modelCatalog} modelCatalogError={modelCatalogError} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onPrepareOnDeviceSystemModel={onPrepareOnDeviceSystemModel} onLinkChromeInstalledModelFolder={onLinkChromeInstalledModelFolder} onSaveChromeModelFolderPath={onSaveChromeModelFolderPath} onLinkChromeLocalState={onLinkChromeLocalState} chromeInstalledModelLinking={chromeInstalledModelLinking} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel} onSaveOllamaBaseUrl={onSaveOllamaBaseUrl} contextWindowTokens={settings?.context_window_tokens ?? null} maxOutputTokens={settings?.max_output_tokens ?? null} generationEngineLimits={generationEngineLimits} onSaveGenerationLimits={onSaveGenerationLimits}/>
         </div>
 
         <section className="ever-panel-section" data-settings-section="modules">
@@ -146,8 +146,8 @@ export function SettingsPanel({ open: isOpen, appPlatform, devicePlatform, setti
 
         <section className="ever-panel-section" data-settings-section="data">
           <h3>{labels.backupTitle}</h3>
-          <p>{labels.backupDescription}</p>
-          <div className="ever-settings-result"><span>{labels.backupStorageScope}</span></div>
+          <p>{labels.backupDescription[storageKind]}</p>
+          <div className="ever-settings-result"><span>{labels.backupStorageScope[storageKind]}</span></div>
           <div className="ever-settings-actions">
             <button type="button" className="ever-settings-reset-button" disabled={backupBusy} onClick={() => void onExportBackup()}>
               <Save aria-hidden="true" size={16}/>
@@ -214,9 +214,9 @@ export function SettingsPanel({ open: isOpen, appPlatform, devicePlatform, setti
         <section className="ever-panel-section ever-settings-danger" data-settings-section="reset">
           <h3>{labels.resetData}</h3>
           <p>
-            {labels.resetDescription}
+            {labels.resetDescription[storageKind]}
           </p>
-          <div className="ever-settings-result"><span>{labels.resetStorageScope}</span></div>
+          <div className="ever-settings-result"><span>{labels.resetStorageScope[storageKind]}</span></div>
 
           {resetError && (<div className="ever-roster__error">
               <strong>{labels.resetFailed}</strong>

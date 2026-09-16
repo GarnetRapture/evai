@@ -1,6 +1,5 @@
-import type { IDBPObjectStore, StoreNames } from 'idb';
 import type { AppLanguage } from '../../shared/types';
-import { EVERSOUL_INDEX, EVERSOUL_STORE, getEverSoulDatabase, type EverSoulDatabaseSchema } from '../../shared/storage';
+import { EVERSOUL_INDEX, EVERSOUL_STORE, getEverSoulDatabase, keyRangeBound, type EverSoulKeyRange, type EverSoulObjectStore } from '../../shared/storage';
 import { EMPTY_AFFINITY_LEDGER, parseAffinityLedger, serializeAffinityLedger, withoutAffinityMessages } from './affinity';
 import { extractHabitTokens, habitMemoryId } from './habit';
 import { parsePersonaEmotion, serializePersonaEmotion, type PersonaEmotionState } from './affect';
@@ -84,8 +83,8 @@ function habitWithoutMemories(record: PersonaHabitMemoryRecord, removedMemoryIds
     };
 }
 
-async function removeKeywordSources<TxStores extends ArrayLike<StoreNames<EverSoulDatabaseSchema>>>(
-    store: IDBPObjectStore<EverSoulDatabaseSchema, TxStores, typeof EVERSOUL_STORE.personaMemory, 'readwrite'>,
+async function removeKeywordSources(
+    store: EverSoulObjectStore<typeof EVERSOUL_STORE.personaMemory>,
     removedMemoryIds: ReadonlySet<string>,
 ): Promise<void> {
     if (removedMemoryIds.size === 0) {
@@ -107,8 +106,8 @@ async function removeKeywordSources<TxStores extends ArrayLike<StoreNames<EverSo
     }
 }
 
-async function removeAffinityMessageEvents<TxStores extends ArrayLike<StoreNames<EverSoulDatabaseSchema>>>(
-    store: IDBPObjectStore<EverSoulDatabaseSchema, TxStores, typeof EVERSOUL_STORE.personaMemory, 'readwrite'>,
+async function removeAffinityMessageEvents(
+    store: EverSoulObjectStore<typeof EVERSOUL_STORE.personaMemory>,
     removedMessageIds: ReadonlySet<string>,
 ): Promise<void> {
     if (removedMessageIds.size === 0) {
@@ -145,28 +144,31 @@ function rankedTopics(counts: ReadonlyMap<string, number>): string[] {
         .map(([token]) => token);
 }
 
-function roomMessageRange(roomId: string): IDBKeyRange {
-    return IDBKeyRange.bound([roomId, ''], [roomId, TIMESTAMP_UPPER_BOUND]);
+function roomMessageRange(roomId: string): EverSoulKeyRange<[string, string]> {
+    return keyRangeBound<[string, string]>([roomId, ''], [roomId, TIMESTAMP_UPPER_BOUND]);
 }
 
-function roomMessageRangeAfter(roomId: string, createdAfter: string): IDBKeyRange {
-    return IDBKeyRange.bound(
+function roomMessageRangeAfter(roomId: string, createdAfter: string): EverSoulKeyRange<[string, string]> {
+    return keyRangeBound<[string, string]>(
         [roomId, createdAfter],
         [roomId, TIMESTAMP_UPPER_BOUND],
         createdAfter.length > 0,
     );
 }
 
-function personaMemoryOwnerRange(personaId: string): IDBKeyRange {
-    return IDBKeyRange.bound([personaId, '', ''], [personaId, TIMESTAMP_UPPER_BOUND, TIMESTAMP_UPPER_BOUND]);
+function personaMemoryOwnerRange(personaId: string): EverSoulKeyRange<[string, PersonaMemoryType, string]> {
+    return keyRangeBound<[string, PersonaMemoryType, string]>(
+        [personaId, '' as PersonaMemoryType, ''],
+        [personaId, TIMESTAMP_UPPER_BOUND as PersonaMemoryType, TIMESTAMP_UPPER_BOUND],
+    );
 }
 
-function personaMemoryRange(personaId: string, memoryType: PersonaMemoryType): IDBKeyRange {
-    return IDBKeyRange.bound([personaId, memoryType, ''], [personaId, memoryType, TIMESTAMP_UPPER_BOUND]);
+function personaMemoryRange(personaId: string, memoryType: PersonaMemoryType): EverSoulKeyRange<[string, PersonaMemoryType, string]> {
+    return keyRangeBound<[string, PersonaMemoryType, string]>([personaId, memoryType, ''], [personaId, memoryType, TIMESTAMP_UPPER_BOUND]);
 }
 
-function personaMemoryRangeAfter(personaId: string, memoryType: PersonaMemoryType, createdAfter: string): IDBKeyRange {
-    return IDBKeyRange.bound(
+function personaMemoryRangeAfter(personaId: string, memoryType: PersonaMemoryType, createdAfter: string): EverSoulKeyRange<[string, PersonaMemoryType, string]> {
+    return keyRangeBound<[string, PersonaMemoryType, string]>(
         [personaId, memoryType, createdAfter],
         [personaId, memoryType, TIMESTAMP_UPPER_BOUND],
         createdAfter.length > 0,

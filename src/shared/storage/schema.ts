@@ -14,6 +14,11 @@ export const EVERSOUL_DATABASE_ERROR_DETAIL = {
     maintenanceActive: 'indexeddb_maintenance_active',
     maintenanceNotActive: 'indexeddb_maintenance_not_active',
     deleteBlocked: 'indexeddb_delete_blocked',
+    unknownStore: 'unknown_store',
+    browserStoreUnavailable: 'browser_store_unavailable',
+    transactionAborted: 'transaction_aborted',
+    localServerRequired: 'local_server_required',
+    indexedDbForbiddenInLocalServer: 'indexeddb_forbidden_in_local_server',
 } as const;
 export const SINGLETON_RECORD_KEY = 'current';
 export const BACKUP_DIRECTORY_HANDLE_KEY = 'backup_directory';
@@ -41,6 +46,67 @@ export const EVERSOUL_INDEX = {
     personaMemoryByPersonaTypeCreated: 'by_persona_type_created',
     personaMemoryByType: 'by_type',
 } as const;
+
+export interface EverSoulStoreIndexDescriptor {
+    name: string;
+    key_path: string | readonly string[];
+}
+
+export interface EverSoulStoreDescriptor {
+    name: EverSoulStoreName;
+    key_path: string | readonly string[] | null;
+    indexes: readonly EverSoulStoreIndexDescriptor[];
+    server_backed: boolean;
+}
+
+export const EVERSOUL_STORE_DESCRIPTORS: readonly EverSoulStoreDescriptor[] = [
+    { name: EVERSOUL_STORE.authSession, key_path: null, indexes: [], server_backed: true },
+    {
+        name: EVERSOUL_STORE.chatRoom,
+        key_path: 'id',
+        indexes: [
+            { name: EVERSOUL_INDEX.chatRoomByPersonaId, key_path: 'persona_id' },
+            { name: EVERSOUL_INDEX.chatRoomByUpdatedAt, key_path: 'updated_at' },
+        ],
+        server_backed: true,
+    },
+    {
+        name: EVERSOUL_STORE.chatMessage,
+        key_path: 'id',
+        indexes: [{ name: EVERSOUL_INDEX.chatMessageByRoomCreated, key_path: ['room_id', 'created_at'] }],
+        server_backed: true,
+    },
+    { name: EVERSOUL_STORE.personaProfile, key_path: 'id', indexes: [], server_backed: true },
+    {
+        name: EVERSOUL_STORE.personaLocalizedPrompt,
+        key_path: ['persona_id', 'language', 'source_updated_at'],
+        indexes: [{ name: EVERSOUL_INDEX.personaLocalizedPromptByLanguage, key_path: 'language' }],
+        server_backed: true,
+    },
+    {
+        name: EVERSOUL_STORE.personaMemory,
+        key_path: 'id',
+        indexes: [
+            { name: EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, key_path: ['persona_id', 'memory_type', 'created_at'] },
+            { name: EVERSOUL_INDEX.personaMemoryByType, key_path: 'memory_type' },
+        ],
+        server_backed: true,
+    },
+    { name: EVERSOUL_STORE.styleProfile, key_path: 'id', indexes: [], server_backed: true },
+    { name: EVERSOUL_STORE.knowledgeChunk, key_path: 'id', indexes: [], server_backed: true },
+    { name: EVERSOUL_STORE.syncMetadata, key_path: 'key', indexes: [], server_backed: true },
+    { name: EVERSOUL_STORE.generalSettings, key_path: null, indexes: [], server_backed: true },
+    { name: EVERSOUL_STORE.importedModule, key_path: 'id', indexes: [], server_backed: true },
+    { name: EVERSOUL_STORE.fileHandle, key_path: null, indexes: [], server_backed: false },
+];
+
+export function everSoulStoreDescriptor(storeName: EverSoulStoreName): EverSoulStoreDescriptor {
+    const descriptor = EVERSOUL_STORE_DESCRIPTORS.find((entry) => entry.name === storeName);
+    if (descriptor === undefined) {
+        throw new Error(`${EVERSOUL_DATABASE_ERROR_DETAIL.unknownStore}:${storeName}`);
+    }
+    return descriptor;
+}
 
 export interface EverSoulDatabaseSchema extends DBSchema {
     auth_session: {

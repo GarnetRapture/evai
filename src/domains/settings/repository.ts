@@ -1,6 +1,6 @@
 import { EVERSOUL_STORE, SINGLETON_RECORD_KEY, clearStores, getEverSoulDatabase } from '../../shared/storage';
 import { DEFAULT_MEMORY_CONTEXT_FILTER, normalizeMemoryContextFilter } from '../chat/memoryContext';
-import { CHROME_PROMPT_MODEL_ID } from '../llm/constants';
+import { NO_CHAT_MODEL_ID } from '../llm/identity';
 import { OLLAMA_DEFAULT_BASE_URL } from '../ollama/constants';
 import type { AppSettings, GeneralSettingsRecord } from './types';
 
@@ -11,12 +11,14 @@ export const DEFAULT_GENERAL_SETTINGS: GeneralSettingsRecord = {
     language: null,
     setup_stage: 'language',
     show_reasoning: true,
-    active_model: CHROME_PROMPT_MODEL_ID,
+    active_model: NO_CHAT_MODEL_ID,
     persona_skin_ids: {},
     lobby_background: null,
     savior_name: '',
     platform_guide_acknowledged: false,
     ollama_base_url: OLLAMA_DEFAULT_BASE_URL,
+    context_window_tokens: null,
+    max_output_tokens: null,
     chrome_model_folder_path: '',
     chrome_installed_models: [],
     chrome_browser_model_state: null,
@@ -48,6 +50,10 @@ export const settingsRepository = {
     },
 };
 
+export function normalizeTokenSetting(value: number | null | undefined): number | null {
+    return typeof value === 'number' && Number.isInteger(value) && value > 0 ? value : null;
+}
+
 export function composeAppSettings(general: GeneralSettingsRecord): AppSettings {
     return {
         default_persona_id: general.default_persona_id,
@@ -63,6 +69,8 @@ export function composeAppSettings(general: GeneralSettingsRecord): AppSettings 
         savior_name: general.savior_name ?? '',
         platform_guide_acknowledged: general.platform_guide_acknowledged,
         ollama_base_url: general.ollama_base_url ?? OLLAMA_DEFAULT_BASE_URL,
+        context_window_tokens: normalizeTokenSetting(general.context_window_tokens),
+        max_output_tokens: normalizeTokenSetting(general.max_output_tokens),
         chrome_model_folder_path: general.chrome_model_folder_path ?? '',
         chrome_installed_models: general.chrome_installed_models ?? [],
         chrome_browser_model_state: general.chrome_browser_model_state ?? null,

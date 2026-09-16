@@ -1,75 +1,25 @@
-import { deleteDB, openDB, type IDBPDatabase } from 'idb';
+import { deleteDB } from 'idb';
 import { DomainError } from '../errors';
-import {
-    EVERSOUL_DATABASE_ERROR_DETAIL,
-    EVERSOUL_DATABASE_NAME,
-    EVERSOUL_INDEX,
-    EVERSOUL_STORE,
-    type EverSoulDatabaseSchema,
-} from './schema';
+import { resolveAppHostRuntime } from '../host';
+import { createIndexedDbDatabase, openIndexedDbConnection, type IndexedDbConnection } from './indexedDbDatabase';
+import { createLocalServerDatabase } from './localServer/database';
+import { localServerStorageClient } from './localServer/client';
+import { EVERSOUL_DATABASE_ERROR_DETAIL, EVERSOUL_DATABASE_NAME } from './schema';
+import type { EverSoulDatabase } from './types';
 
-export type EverSoulDatabase = IDBPDatabase<EverSoulDatabaseSchema>;
-
-let databaseConnection: Promise<EverSoulDatabase> | null = null;
+let indexedDbConnection: Promise<IndexedDbConnection> | null = null;
+let localServerDatabase: EverSoulDatabase | null = null;
 let databaseMaintenanceActive = false;
 
-function createEverSoulStores(database: EverSoulDatabase): void {
-    database.createObjectStore(EVERSOUL_STORE.authSession);
-
-    const chatRoomStore = database.createObjectStore(EVERSOUL_STORE.chatRoom, { keyPath: 'id' });
-    chatRoomStore.createIndex(EVERSOUL_INDEX.chatRoomByPersonaId, 'persona_id');
-    chatRoomStore.createIndex(EVERSOUL_INDEX.chatRoomByUpdatedAt, 'updated_at');
-
-    const chatMessageStore = database.createObjectStore(EVERSOUL_STORE.chatMessage, { keyPath: 'id' });
-    chatMessageStore.createIndex(EVERSOUL_INDEX.chatMessageByRoomCreated, ['room_id', 'created_at']);
-
-    database.createObjectStore(EVERSOUL_STORE.personaProfile, { keyPath: 'id' });
-
-    const localizedPromptStore = database.createObjectStore(EVERSOUL_STORE.personaLocalizedPrompt, {
-        keyPath: ['persona_id', 'language', 'source_updated_at'],
-    });
-    localizedPromptStore.createIndex(EVERSOUL_INDEX.personaLocalizedPromptByLanguage, 'language');
-
-    const personaMemoryStore = database.createObjectStore(EVERSOUL_STORE.personaMemory, { keyPath: 'id' });
-    personaMemoryStore.createIndex(EVERSOUL_INDEX.personaMemoryByPersonaTypeCreated, ['persona_id', 'memory_type', 'created_at']);
-    personaMemoryStore.createIndex(EVERSOUL_INDEX.personaMemoryByType, 'memory_type');
-
-    database.createObjectStore(EVERSOUL_STORE.styleProfile, { keyPath: 'id' });
-    database.createObjectStore(EVERSOUL_STORE.knowledgeChunk, { keyPath: 'id' });
-    database.createObjectStore(EVERSOUL_STORE.syncMetadata, { keyPath: 'key' });
-    database.createObjectStore(EVERSOUL_STORE.generalSettings);
-    database.createObjectStore(EVERSOUL_STORE.importedModule, { keyPath: 'id' });
-}
-
-function createFileHandleStore(database: EverSoulDatabase): void {
-    database.createObjectStore(EVERSOUL_STORE.fileHandle);
-}
-
-function openEverSoulDatabaseConnection(onClosed: () => void): Promise<EverSoulDatabase> {
-    return openDB<EverSoulDatabaseSchema>(EVERSOUL_DATABASE_NAME, undefined, {
-        upgrade(database) {
-            createEverSoulStores(database);
-            createFileHandleStore(database);
-        },
-        blocking(_currentVersion, _blockedVersion, event) {
-            if (event.target instanceof IDBDatabase) {
-                event.target.close();
-            }
-            onClosed();
-        },
-        terminated: onClosed,
-    });
-}
-
-function forgetSharedConnection(connection: Promise<EverSoulDatabase>): void {
-    if (databaseConnection === connection) {
-        databaseConnection = null;
+function forgetIndexedDbConnection(connection: Promise<IndexedDbConnection>): void {
+    if (indexedDbConnection === connection) {
+        indexedDbConnection = null;
     }
 }
 
-async function closeSharedConnection(): Promise<void> {
-    const connection = databaseConnection;
-    databaseConnection = null;
+async function closeIndexedDbConnection(): Promise<void> {
+    const connection = indexedDbConnection;
+    indexedDbConnection = null;
     if (connection) {
         await connection.then((database) => database.close(), () => undefined);
     }
@@ -81,16 +31,24 @@ function assertMaintenanceActive(): void {
     }
 }
 
-export function getEverSoulDatabase(): Promise<EverSoulDatabase> {
+function openIndexedDbDatabase(): Promise<IndexedDbConnection> {
+    if (!indexedDbConnection) {
+        const connection: Promise<IndexedDbConnection> = openIndexedDbConnection(() => forgetIndexedDbConnection(connection));
+        connection.catch(() => forgetIndexedDbConnection(connection));
+        indexedDbConnection = connection;
+    }
+    return indexedDbConnection;
+}
+
+export async function getEverSoulDatabase(): Promise<EverSoulDatabase> {
     if (databaseMaintenanceActive) {
-        return Promise.reject(new DomainError('database', EVERSOUL_DATABASE_ERROR_DETAIL.maintenanceActive));
+        throw new DomainError('database', EVERSOUL_DATABASE_ERROR_DETAIL.maintenanceActive);
     }
-    if (!databaseConnection) {
-        const connection: Promise<EverSoulDatabase> = openEverSoulDatabaseConnection(() => forgetSharedConnection(connection));
-        connection.catch(() => forgetSharedConnection(connection));
-        databaseConnection = connection;
+    if ((await resolveAppHostRuntime()).kind === 'local_server') {
+        localServerDatabase ??= createLocalServerDatabase();
+        return localServerDatabase;
     }
-    return databaseConnection;
+    return createIndexedDbDatabase(await openIndexedDbDatabase());
 }
 
 export async function beginEverSoulDatabaseMaintenance(): Promise<void> {
@@ -98,7 +56,7 @@ export async function beginEverSoulDatabaseMaintenance(): Promise<void> {
         throw new DomainError('database', EVERSOUL_DATABASE_ERROR_DETAIL.maintenanceActive);
     }
     databaseMaintenanceActive = true;
-    await closeSharedConnection();
+    await closeIndexedDbConnection();
 }
 
 export function endEverSoulDatabaseMaintenance(): void {
@@ -107,7 +65,10 @@ export function endEverSoulDatabaseMaintenance(): void {
 
 export async function openEverSoulDatabaseForMaintenance(): Promise<EverSoulDatabase> {
     assertMaintenanceActive();
-    return openEverSoulDatabaseConnection(() => undefined);
+    if ((await resolveAppHostRuntime()).kind === 'local_server') {
+        throw new DomainError('database', EVERSOUL_DATABASE_ERROR_DETAIL.localServerRequired);
+    }
+    return createIndexedDbDatabase(await openIndexedDbConnection(() => undefined));
 }
 
 function deleteIndexedDatabase(name: string): Promise<void> {
@@ -120,8 +81,12 @@ function deleteIndexedDatabase(name: string): Promise<void> {
     });
 }
 
-export async function deleteOriginIndexedDatabases(): Promise<string[]> {
+export async function resetEverSoulStorage(): Promise<string[]> {
     assertMaintenanceActive();
+    if ((await resolveAppHostRuntime()).kind === 'local_server') {
+        await localServerStorageClient.reset();
+        return [EVERSOUL_DATABASE_NAME];
+    }
     const originDatabaseNames = (await indexedDB.databases())
         .map((entry) => entry.name)
         .filter((name): name is string => typeof name === 'string' && name.length > 0);
@@ -133,6 +98,9 @@ export async function deleteOriginIndexedDatabases(): Promise<string[]> {
 }
 
 export async function requestPersistentStorage(): Promise<boolean> {
+    if ((await resolveAppHostRuntime()).kind === 'local_server') {
+        return true;
+    }
     if (await navigator.storage.persisted()) {
         return true;
     }

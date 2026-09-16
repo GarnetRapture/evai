@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 176" width="720" height="176" role="img" aria-label="Mephistopheles greeting">
+  <style>
+    .bubble { fill: #ffffff; stroke: #9b5de5; stroke-width: 2; }
+    .name { font: 600 13px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #9b5de5; }
+    .line { font: 15px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #24231f; }
+    .strong { font: 600 15px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #6f2dbd; }
+  </style>
+  <path class="bubble" d="M26 10 h640 a14 14 0 0 1 14 14 v124 a14 14 0 0 1 -14 14 h-640 a14 14 0 0 1 -14 -14 v-48 l-14 -16 l14 -12 v-48 a14 14 0 0 1 14 -14 z"/>
+  <text class="name" x="40" y="34">Mephistopheles</text>
+  <text class="line" x="40" y="62">…Vital signs confirmed. Welcome, Savior.</text>
+  <text class="line" x="40" y="88">Nothing said in this room leaves it. All 99 spirits wake</text>
+  <text class="line" x="40" y="114">inside your own machine, and they remember yesterday’s talk.</text>
+  <text class="strong" x="40" y="140">No install, no account. A browser is all you need.</text>
+</svg>

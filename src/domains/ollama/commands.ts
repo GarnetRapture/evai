@@ -1,4 +1,6 @@
-import type { OllamaCommandGuideInput, OllamaCommandShell, OllamaCommandStep, OllamaOriginAccess } from './types';
+import { LOCAL_SERVER_DEFAULT_URL } from '../../shared/host';
+import { OLLAMA_DEFAULT_NETWORK_HOST } from './constants';
+import type { OllamaCommandGuideInput, OllamaCommandShell, OllamaCommandStep } from './types';
 
 const WINDOWS_PLATFORM_PATTERN = /^win/iu;
 const MACOS_PLATFORM_PATTERN = /^mac/iu;
@@ -21,19 +23,35 @@ export function resolveOllamaCommandShell(platform: string): OllamaCommandShell 
     return WINDOWS_PLATFORM_PATTERN.test(platform) ? 'powershell' : 'posix';
 }
 
-function allowOriginCommands(shell: OllamaCommandShell, platform: string, origin: string): string[] {
+function exposeNetworkCommands(shell: OllamaCommandShell, platform: string): string[] {
     if (shell === 'powershell') {
-        return [`[Environment]::SetEnvironmentVariable('OLLAMA_ORIGINS', '${origin}', 'User')`];
+        return [
+            `[Environment]::SetEnvironmentVariable('OLLAMA_HOST', '${OLLAMA_DEFAULT_NETWORK_HOST}', 'User')`,
+            'Get-Process ollama | Stop-Process',
+            'ollama serve',
+        ];
     }
     if (MACOS_PLATFORM_PATTERN.test(platform)) {
-        return [`launchctl setenv OLLAMA_ORIGINS "${origin}"`];
+        return [
+            `launchctl setenv OLLAMA_HOST "${OLLAMA_DEFAULT_NETWORK_HOST}"`,
+            'pkill ollama',
+            'ollama serve',
+        ];
     }
     return [
         'sudo systemctl edit ollama.service',
-        `[Service]\nEnvironment="OLLAMA_ORIGINS=${origin}"`,
+        `[Service]\nEnvironment="OLLAMA_HOST=${OLLAMA_DEFAULT_NETWORK_HOST}"`,
         'sudo systemctl daemon-reload',
         'sudo systemctl restart ollama',
     ];
+}
+
+function runLocalServerCommands(shell: OllamaCommandShell, platform: string): string[] {
+    if (shell === 'powershell') {
+        return ['.\\evai-server.exe', `Start-Process ${quotePowerShell(LOCAL_SERVER_DEFAULT_URL)}`];
+    }
+    const openCommand = MACOS_PLATFORM_PATTERN.test(platform) ? 'open' : 'xdg-open';
+    return ['./evai-server', `${openCommand} ${quotePosix(LOCAL_SERVER_DEFAULT_URL)}`];
 }
 
 function createFromGgufCommands(shell: OllamaCommandShell, modelName: string, ggufPath: string): string[] {
@@ -52,17 +70,18 @@ function createFromGgufCommands(shell: OllamaCommandShell, modelName: string, gg
     ];
 }
 
-export function buildOllamaCommandGuide(platform: string, originAccess: OllamaOriginAccess, input: OllamaCommandGuideInput): OllamaCommandStep[] {
+export function buildOllamaCommandGuide(platform: string, input: OllamaCommandGuideInput): OllamaCommandStep[] {
     const shell = resolveOllamaCommandShell(platform);
     const modelName = input.model_name.trim();
     const ggufPath = input.gguf_path.trim();
     const quotedModel = quoteForShell(shell, modelName);
     return [
         { key: 'verify_install', commands: ['ollama --version'] },
+        { key: 'expose_network', commands: exposeNetworkCommands(shell, platform) },
         ...(modelName.length > 0 ? [{ key: 'pull_model' as const, commands: [`ollama pull ${quotedModel}`] }] : []),
         ...(modelName.length > 0 && ggufPath.length > 0 ? [{ key: 'create_from_gguf' as const, commands: createFromGgufCommands(shell, modelName, ggufPath) }] : []),
         { key: 'run_model', commands: modelName.length > 0 ? [`ollama run ${quotedModel}`, 'ollama ls', 'ollama ps'] : ['ollama ls', 'ollama ps'] },
         ...(modelName.length > 0 ? [{ key: 'remove_model' as const, commands: [`ollama rm ${quotedModel}`] }] : []),
-        ...(originAccess.allowed_by_default ? [] : [{ key: 'allow_origin' as const, commands: allowOriginCommands(shell, platform, originAccess.origin) }]),
+        { key: 'run_local_server', commands: runLocalServerCommands(shell, platform) },
     ];
 }

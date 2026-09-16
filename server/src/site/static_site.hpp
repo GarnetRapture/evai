@@ -2,20 +2,18 @@
 
 #include "net/tcp_socket.hpp"
 
-#include <array>
-#include <cstdint>
 #include <filesystem>
-#include <string>
+#include <string_view>
 
 namespace evai::server::site {
 
 struct StaticSiteContext {
     std::filesystem::path root_directory;
-    std::array<std::string, 2> allowed_hosts;
+    std::filesystem::path hidden_directory;
 };
 
-[[nodiscard]] StaticSiteContext create_static_site_context(const std::filesystem::path& root_directory, std::uint16_t port);
+[[nodiscard]] StaticSiteContext create_static_site_context(const std::filesystem::path& root_directory, const std::filesystem::path& hidden_directory);
 
-void serve_static_site_connection(net::TcpSocket client, const StaticSiteContext& context);
+void serve_static_file(const net::TcpSocket& client, const StaticSiteContext& context, std::string_view request_path, bool include_body);
 
 }

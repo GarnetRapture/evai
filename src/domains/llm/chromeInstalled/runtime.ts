@@ -2,7 +2,7 @@ import { Backend, Engine, SamplerType, type ContentPart, type Message } from '@l
 import { DomainError, describeUnknownError, isAbortError } from '../../../shared/errors';
 import { assertPersonaSystemPrompt } from '../chrome/personaHook';
 import { CHROME_INSTALLED_CONSOLIDATION_TOKEN_LIMIT, CHROME_INSTALLED_CONTEXT_WINDOW, CHROME_INSTALLED_RESPONSE_TOKEN_LIMIT } from '../constants';
-import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload } from '../localGeneration';
+import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload, resolveContextWindowLimit, resolveMaxOutputTokens } from '../localGeneration';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
 import type {
     ChromeInstalledLoadedEngine,
@@ -45,16 +45,17 @@ async function releaseLoadedEngine(): Promise<void> {
 async function createEngine(modelKey: string, generation: number): Promise<ChromeInstalledLoadedEngine> {
     const source = requireRunnableSource(modelKey);
     await releaseLoadedEngine();
+    const contextWindow = await resolveContextWindowLimit(CHROME_INSTALLED_CONTEXT_WINDOW);
     const engine = await Engine.create({
         model: source.weights,
         backend: Backend.GPU_ARTISAN,
-        mainExecutorSettings: { maxNumTokens: CHROME_INSTALLED_CONTEXT_WINDOW },
+        mainExecutorSettings: { maxNumTokens: contextWindow },
     });
     if (generation !== loadGeneration) {
         await engine.delete();
         throw new DomainError('cancelled', modelKey);
     }
-    loadedEngine = { model_key: modelKey, engine };
+    loadedEngine = { model_key: modelKey, engine, context_window: contextWindow };
     return loadedEngine;
 }
 
@@ -200,7 +201,7 @@ export const chromeInstalledModelRuntime = {
             recordRequestStatus({ ...status, state: 'running' });
             const result = await streamPayload(
                 engine,
-                buildPersonaGenerationPayload(request, CHROME_INSTALLED_RESPONSE_TOKEN_LIMIT),
+                buildPersonaGenerationPayload(request, await resolveMaxOutputTokens(CHROME_INSTALLED_RESPONSE_TOKEN_LIMIT)),
                 request.signal,
                 (chunk) => request.handlers.onChunk(chunk),
             );
@@ -237,7 +238,7 @@ export const chromeInstalledModelRuntime = {
         return [{
             persona_id: focusedPersonaId,
             cached_tokens: 0,
-            context_window: CHROME_INSTALLED_CONTEXT_WINDOW,
+            context_window: loadedEngine.context_window,
             last_access: focusedPersonaAccess,
             last_generation: null,
         }];

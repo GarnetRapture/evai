@@ -35,6 +35,8 @@ third_party/
 
 # Build outputs (CMake build trees, native host artifacts, TypeScript build info)
 /build/
+tmp/
+.xmake/
 native/build/
 server/build/
 native/artifacts/

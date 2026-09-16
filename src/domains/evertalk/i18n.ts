@@ -1,5 +1,6 @@
 import type { DomainErrorCode } from '../../shared/errors';
 import { EVERSOUL_DATABASE_ERROR_DETAIL } from '../../shared/storage';
+import type { AppStorageKind } from '../../shared/host';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import type { ChromeBuiltInAiApiKind } from '../../shared/types/chromeOnDevice';
 import type { ChromePromptModelVariant, ChromePromptVariantVerification } from '../llm/types';
@@ -9,6 +10,7 @@ import type { MemoryGraphEdgeKind } from './types';
 import type { LocalModelEngineKind } from '../llm/types';
 import type { OllamaCommandStepKey } from '../ollama';
 import type { SpiritRaidEvent } from '../persona/types';
+import type { StorageObjectKind } from '../sync/types';
 
 export type PlatformBlockedReason = Exclude<PlatformSupportStatus, 'supported'>;
 
@@ -172,7 +174,7 @@ export interface EverTalkLabels {
     browserStorage: string;
     refreshEnvironment: string;
     resetData: string;
-    resetDescription: string;
+    resetDescription: Record<AppStorageKind, string>;
     resetFailed: string;
     notConfigured: string;
     resetting: string;
@@ -320,6 +322,17 @@ export interface EverTalkLabels {
     ollamaBaseUrlPlaceholder: string;
     ollamaBaseUrlHint: string;
     ollamaBaseUrlSave: string;
+    generationLimitsTitle: string;
+    generationLimitsDescription: string;
+    generationLimitsContextLabel: string;
+    generationLimitsContextHint: string;
+    generationLimitsOutputLabel: string;
+    generationLimitsOutputHint: string;
+    generationLimitsAutoPlaceholder: string;
+    generationLimitsInvalid: string;
+    generationLimitsModelMaximum: (tokens: number) => string;
+    generationLimitsActive: (tokens: number) => string;
+    generationLimitsUnknownMaximum: string;
     ollamaBaseUrlSaving: string;
     ollamaGuideTitle: string;
     ollamaGuideDescription: string;
@@ -327,8 +340,13 @@ export interface EverTalkLabels {
     ollamaConnectionNotChecked: string;
     ollamaConnectionReady: (version: string, modelCount: number) => string;
     ollamaConnectionCheck: string;
-    ollamaOriginAllowed: (origin: string) => string;
-    ollamaOriginRequired: (origin: string) => string;
+    localServerNoticeTitle: string;
+    localServerNoticeDescription: string;
+    localServerNoticeSteps: string[];
+    localServerNoticeRepository: string;
+    localServerConnected: (version: string, sqliteVersion: string) => string;
+    localServerDatabasePath: (databasePath: string) => string;
+    storageBackendName: Record<AppStorageKind, string>;
     ollamaCommandStepTitles: Record<OllamaCommandStepKey, string>;
     ollamaCommandStepDescriptions: Record<OllamaCommandStepKey, string>;
     ollamaCommandCopy: string;
@@ -367,8 +385,8 @@ export interface EverTalkLabels {
     modelSessionDetail: (personaId: string, cachedTokens: number, contextWindow: number, reusedTokens: number) => string;
     modelRequestDetail: (state: string, promptTokens: number | null, generatedTokens: number | null, truncatedTokens: number) => string;
     backupTitle: string;
-    backupDescription: string;
-    backupStorageScope: string;
+    backupDescription: Record<AppStorageKind, string>;
+    backupStorageScope: Record<AppStorageKind, string>;
     backupExport: string;
     backupImport: string;
     backupWorking: string;
@@ -390,7 +408,7 @@ export interface EverTalkLabels {
     backupFileRestore: string;
     backupRestoreConfirm: (fileName: string) => string;
     backupWritten: (fileName: string) => string;
-    resetStorageScope: string;
+    resetStorageScope: Record<AppStorageKind, string>;
     navChat: string;
     navRanking: string;
     navMemory: string;
@@ -423,6 +441,33 @@ export interface EverTalkLabels {
     storageQuota: string;
     snapshotEstimate: string;
     storeBreakdown: string;
+    storageStructureTitle: string;
+    storageSchemaVersion: string;
+    storageKeyPath: string;
+    storageColumns: string;
+    storageIndexes: string;
+    storageRelations: string;
+    storageRecordsTitle: string;
+    storageRecordsCount: (shown: number, total: number) => string;
+    lastActivityLabel: string;
+    setupModelSelectionHint: string;
+    setupModelRequired: string;
+    storageObjectKinds: Record<StorageObjectKind, string>;
+    storageDefinition: string;
+    storageLinkRowCount: (count: number) => string;
+    storageServerVersion: string;
+    storageReadOnlyStore: string;
+    storageCreateRecord: string;
+    storageEditRecord: string;
+    storageDeleteRecord: string;
+    storageClearStore: string;
+    storageSaveRecord: string;
+    storageCancelEdit: string;
+    storageDocumentJson: string;
+    storageInvalidJson: string;
+    storageConfirmDeleteRecord: (key: string) => string;
+    storageConfirmClearStore: (store: string) => string;
+    storageWriteSucceeded: string;
     personaBreakdown: string;
     storedContents: string;
     messagesLabel: string;
@@ -695,7 +740,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         browserStorage: '브라우저 저장소',
         refreshEnvironment: '환경 다시 확인',
         resetData: '데이터 초기화',
-        resetDescription: '현재 origin의 IndexedDB 데이터베이스 전체와 localStorage를 삭제해 대화, 정령/스타일/지식팩, 기억, 모듈, 설정 및 파일 연결을 초기 상태로 되돌린 뒤 페이지를 다시 불러옵니다. 다른 탭이 데이터베이스를 붙잡고 있으면 삭제를 중단하고 오류를 표시합니다.',
+        resetDescription: {
+            sqlite: '로컬 서버 SQLite 데이터베이스의 모든 행과 이 origin의 localStorage를 삭제해 대화, 정령/스타일/지식팩, 기억, 모듈, 설정을 초기 상태로 되돌린 뒤 페이지를 다시 불러옵니다.',
+            indexeddb: '현재 origin의 IndexedDB 데이터베이스 전체와 localStorage를 삭제해 대화, 정령/스타일/지식팩, 기억, 모듈, 설정 및 파일 연결을 초기 상태로 되돌린 뒤 페이지를 다시 불러옵니다. 다른 탭이 데이터베이스를 붙잡고 있으면 삭제를 중단하고 오류를 표시합니다.',
+        },
         resetFailed: '초기화 실패',
         notConfigured: '미지정',
         resetting: '초기화 중...',
@@ -798,8 +846,8 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: '이용 환경 안내',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                '웹 버전은 PC Chrome 온디바이스 AI를 기본으로 사용합니다. Chrome 내장 Prompt API 모델(Gemini Nano · Gemma 4)과 Chrome이 설치한 온디바이스 모델로 대화하며, 이 PC에 Ollama가 실행 중이면 로컬 Ollama 모델로도 대화할 수 있습니다. Hugging Face 모델과 EXE 확장은 제공하지 않습니다.',
-                '대화·인연·기억은 이 브라우저의 IndexedDB에 저장되며, PC 파일로 내보내거나 연결한 PC 폴더에 자동 백업할 수 있습니다.',
+                '브라우저에서 바로 열면 PC Chrome 온디바이스 AI(Prompt API · Gemini Nano · Gemma 4)와 Chrome이 설치한 온디바이스 모델로 대화합니다. EVAI 로컬 서버로 열면 같은 화면에서 로컬 Ollama 모델도 선택할 수 있습니다. Hugging Face 모델과 EXE 확장은 제공하지 않습니다.',
+                '일반 웹으로 열면 대화·인연·기억은 이 브라우저의 IndexedDB에 저장되고, EVAI 로컬 서버로 열면 서버 폴더의 SQLite 데이터베이스에 저장됩니다. 어느 쪽이든 JSON 파일로 내보내고 되돌릴 수 있습니다.',
                 `처음 대화하기 전에 ${modelSettingsPath}에서 Chrome 온디바이스 모델을 준비해야 합니다.`,
             ],
             android_app: (modelSettingsPath) => [
@@ -822,7 +870,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         messageSendFailed: '응답 생성에 실패했습니다. 다시 시도해 주세요.',
         modelListTitle: '온디바이스 모델 목록',
         modelListDescription: {
-            web_chrome: '웹 버전은 Chrome 온디바이스 AI를 기본으로 사용합니다. Chrome Prompt API 모델(Gemini Nano · Gemma 4)과 Chrome이 설치한 온디바이스 모델을 선택할 수 있고, 이 PC에 Ollama가 실행 중이면 로컬 Ollama 모델도 선택할 수 있습니다. Hugging Face 모델과 EXE 확장은 제공하지 않습니다.',
+            web_chrome: 'Chrome Prompt API 모델(Gemini Nano · Gemma 4)과 Chrome이 설치한 온디바이스 모델을 선택할 수 있습니다. EVAI 로컬 서버로 열었을 때는 로컬 Ollama 모델 목록이 함께 표시되며, 선택한 모델이 대화에 고정됩니다. Hugging Face 모델과 EXE 확장은 제공하지 않습니다.',
             android_app: '이 기기에서 Google LiteRT-LM 엔진으로 실행하는 온디바이스 AI 모델입니다. 대화에 사용할 모델을 설치하고 선택하세요. 모델을 불러올 때 GPU 백엔드를 먼저 시도하고, 사용할 수 없으면 CPU 백엔드로 실행합니다.',
         },
         modelRoleChat: '대화 생성 · Chrome Prompt API (브라우저 내장 모델)',
@@ -886,42 +934,67 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             '목록에서 사용할 모델을 선택하면 저장되어 고정됩니다. 페이지를 다시 열면 모델 폴더만 다시 선택하면 같은 모델로 실행됩니다.',
         ],
         ollamaModelSectionTitle: '로컬 Ollama 모델 목록',
-        ollamaModelSectionDescription: '이 PC에 Ollama가 실행 중이면 Ollama에 설치된 모델을 대화 모델로 선택할 수 있습니다. 모델 실행은 로컬 Ollama가 담당하고, 대화·기억·페르소나 규칙은 똑같이 적용됩니다.',
+        ollamaModelSectionDescription: 'EVAI 로컬 서버가 Ollama에 중계하므로, Ollama에 설치된 모든 모델이 아래 목록에 그대로 나타납니다. 선택한 모델이 대화 모델로 고정되며, 대화·기억·페르소나 규칙은 Chrome 온디바이스 모드와 동일하게 적용됩니다.',
         ollamaServerConnected: (version) => `Ollama 연결됨 · 버전 ${version}`,
-        ollamaServerUnavailable: 'Ollama에 연결되지 않음 · Ollama 실행 여부와 허용 origin 설정을 확인하세요',
+        ollamaServerUnavailable: 'Ollama에 연결되지 않음 · Ollama 실행 여부와 EVAI 로컬 서버의 Ollama 주소를 확인하세요',
         ollamaModelEmpty: 'Ollama에 설치된 모델이 없습니다. 터미널에서 ollama pull 로 모델을 받으세요.',
-        ollamaModelReady: 'Ollama 설치됨 · 선택하면 불러옵니다',
+        ollamaModelReady: 'Ollama 설치됨 · 선택하면 이 모델로 고정됩니다',
         ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
         ollamaBaseUrlLabel: 'Ollama 주소',
         ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
-        ollamaBaseUrlHint: '경로 없이 프로토콜·호스트·포트만 입력합니다. 기본값은 http://127.0.0.1:11434 입니다.',
+        ollamaBaseUrlHint: 'EVAI 로컬 서버가 중계할 Ollama 주소입니다. 경로 없이 http 프로토콜·호스트·포트만 입력합니다. 기본값은 http://127.0.0.1:11434 입니다.',
         ollamaBaseUrlSave: '주소 저장',
+        generationLimitsTitle: '컨텍스트와 응답 길이',
+        generationLimitsDescription: '여기에 적은 값만큼 모델을 올리고 그만큼 씁니다. 비워두면 엔진이 보고하는 값을 그대로 씁니다.',
+        generationLimitsContextLabel: '컨텍스트 토큰',
+        generationLimitsContextHint: 'Ollama는 이 값으로 num_ctx를 지정해 모델을 다시 올립니다. 모델 최대치를 넘으면 최대치로 내려 맞춥니다.',
+        generationLimitsOutputLabel: '응답 토큰',
+        generationLimitsOutputHint: '한 번의 답변에 생성할 최대 토큰 수입니다. 컨텍스트에서 이만큼을 응답 몫으로 남깁니다.',
+        generationLimitsAutoPlaceholder: '자동',
+        generationLimitsInvalid: '1 이상의 정수를 적거나 비워 주세요.',
+        generationLimitsModelMaximum: (tokens) => `모델 최대 ${tokens.toLocaleString('ko-KR')} 토큰`,
+        generationLimitsActive: (tokens) => `현재 적용 ${tokens.toLocaleString('ko-KR')} 토큰`,
+        generationLimitsUnknownMaximum: '모델 최대치는 모델을 올린 뒤에 확인됩니다',
         ollamaBaseUrlSaving: '저장 중…',
         ollamaGuideTitle: '로컬 Ollama 연결 가이드',
-        ollamaGuideDescription: '이 브라우저에는 Chrome 온디바이스 AI가 없으므로 이 PC의 Ollama를 대화 엔진으로 사용합니다. 아래 명령으로 모델을 준비하고 "연결 확인"을 누르세요. HTTP 연결이 성공하고 모델이 있으면 실행 중인 모델(없으면 가장 최근 모델)로 자동 연결됩니다.',
+        ollamaGuideDescription: 'EVAI 로컬 서버가 이 PC의 Ollama로 요청을 중계합니다. 아래 명령으로 Ollama를 준비하고 로컬 서버를 실행한 뒤 "연결 확인"을 누르세요. 연결되면 아래 목록에서 사용할 모델을 직접 선택하고, 선택한 모델이 대화에 고정됩니다.',
         ollamaConnectionChecking: 'Ollama 연결 확인 중…',
         ollamaConnectionNotChecked: '아직 Ollama 연결을 확인하지 않았습니다',
         ollamaConnectionReady: (version, modelCount) => modelCount > 0
             ? `Ollama HTTP 연결 성공 · 버전 ${version} · 모델 ${modelCount}개`
             : `Ollama HTTP 연결 성공 · 버전 ${version} · 설치된 모델 없음 (아래 명령으로 모델을 준비하세요)`,
         ollamaConnectionCheck: '연결 확인',
-        ollamaOriginAllowed: (origin) => `현재 페이지 origin ${origin} 은 Ollama 기본 허용 목록(localhost · 127.0.0.1 · 0.0.0.0)에 포함되어 추가 설정이 필요 없습니다.`,
-        ollamaOriginRequired: (origin) => `현재 페이지 origin ${origin} 은 Ollama 기본 허용 목록에 없습니다. 마지막 단계 명령으로 OLLAMA_ORIGINS에 추가한 뒤 Ollama를 완전히 종료하고 다시 실행해야 연결됩니다.`,
+        localServerNoticeTitle: '로컬 실행 권장',
+        localServerNoticeDescription: '지금은 일반 웹으로 열려 있어 Chrome 온디바이스 AI만 사용할 수 있고, 데이터는 이 브라우저 IndexedDB에 저장됩니다. 저장소에서 EVAI 로컬 서버를 받아 실행하면 Ollama 모델과 SQLite 데이터베이스를 함께 쓸 수 있습니다.',
+        localServerNoticeSteps: [
+            '아래 저장소에서 EVAI 로컬 서버(evai-server)와 웹 번들을 내려받습니다.',
+            '압축을 푼 폴더에서 evai-server를 실행합니다. index.html과 evai-database 폴더가 같은 폴더에 있어야 합니다.',
+            '브라우저에서 http://127.0.0.1:9999/ 를 엽니다. 이때부터 대화·기억·설정은 서버의 SQLite 데이터베이스에 저장되고, Ollama 모델을 선택할 수 있습니다.',
+        ],
+        localServerNoticeRepository: '저장소 및 실행 안내',
+        localServerConnected: (version, sqliteVersion) => `EVAI 로컬 서버 연결됨 · 버전 ${version} · SQLite ${sqliteVersion}`,
+        localServerDatabasePath: (databasePath) => `데이터베이스 파일 · ${databasePath}`,
+        storageBackendName: {
+            sqlite: '로컬 서버 SQLite 데이터베이스',
+            indexeddb: '브라우저 IndexedDB',
+        },
         ollamaCommandStepTitles: {
             verify_install: '설치 확인',
             pull_model: '모델 받기',
             create_from_gguf: '로컬 GGUF·blob 파일로 모델 만들기',
             run_model: '모델 실행 및 목록 확인',
             remove_model: '모델 삭제',
-            allow_origin: '이 페이지 origin 허용',
+            expose_network: 'Ollama 외부 접속 허용',
+            run_local_server: 'EVAI 로컬 서버 실행',
         },
         ollamaCommandStepDescriptions: {
             verify_install: 'Ollama를 설치한 뒤 버전이 출력되는지 확인합니다. 명령을 찾지 못하면 Ollama를 다시 설치하세요.',
             pull_model: '입력한 모델을 Ollama 라이브러리나 Hugging Face(hf.co/…)에서 받습니다. PC 사양에 맞는 어떤 모델이든 사용할 수 있습니다.',
             create_from_gguf: '입력한 GGUF 파일(또는 Ollama blobs의 sha256 파일)을 FROM으로 지정해 입력한 이름의 모델을 만듭니다.',
-            run_model: '모델을 한 번 실행해 동작을 확인하고(/bye 로 종료), ollama ls 로 설치 목록을, ollama ps 로 실행 중인 모델을 확인합니다. 앱은 실행 중인 모델을 먼저 연결합니다.',
+            run_model: '모델을 한 번 실행해 동작을 확인하고(/bye 로 종료), ollama ls 로 설치 목록을, ollama ps 로 실행 중인 모델을 확인합니다. 앱에서는 설정의 모델 목록에서 직접 선택한 모델만 사용합니다.',
             remove_model: '더 이상 쓰지 않는 모델을 지웁니다.',
-            allow_origin: '환경 변수를 등록한 뒤 Ollama를 완전히 종료하고 다시 실행합니다.',
+            expose_network: 'Ollama 설정의 "Expose Ollama to the network"를 켜거나 OLLAMA_HOST를 0.0.0.0:11434로 지정한 뒤 Ollama를 다시 실행합니다. EVAI 로컬 서버가 이 주소로 중계합니다.',
+            run_local_server: '웹 번들과 같은 폴더에서 EVAI 로컬 서버를 실행하고 http://127.0.0.1:9999/ 를 엽니다. 브라우저는 이 서버를 통해서만 Ollama와 통신합니다.',
         },
         ollamaCommandCopy: '명령 복사',
         ollamaGuideModelNameLabel: '사용할 모델 이름',
@@ -976,8 +1049,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · 컨텍스트 ${cachedTokens}/${contextWindow} · 재사용 ${reusedTokens}`,
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 입력 ${promptTokens ?? '-'} · 생성 ${generatedTokens ?? '-'} · 잘림 ${truncatedTokens}`,
         backupTitle: '데이터 저장 · 불러오기',
-        backupDescription: '이 브라우저 IndexedDB의 직렬화 가능한 데이터(대화, 기억, 설정, 모듈 등)를 JSON으로 저장하고, 불러올 때는 검증 후 한 번의 트랜잭션으로 교체한 뒤 페이지를 다시 불러옵니다. localStorage와 PC 백업 폴더 권한은 포함하지 않으며 기존 폴더 연결은 유지합니다.',
-        backupStorageScope: 'JSON은 현재 브라우저 IndexedDB의 직렬화 가능한 데이터만 교체 복원합니다. localStorage와 PC 백업 폴더 권한은 제외됩니다.',
+        backupDescription: {
+            sqlite: '로컬 서버 SQLite 데이터베이스의 데이터(대화, 기억, 설정, 모듈 등)를 JSON으로 저장하고, 불러올 때는 검증 후 서버에서 한 번의 트랜잭션으로 교체한 뒤 페이지를 다시 불러옵니다. localStorage와 PC 백업 폴더 권한은 포함하지 않습니다.',
+            indexeddb: '이 브라우저 IndexedDB의 직렬화 가능한 데이터(대화, 기억, 설정, 모듈 등)를 JSON으로 저장하고, 불러올 때는 검증 후 한 번의 트랜잭션으로 교체한 뒤 페이지를 다시 불러옵니다. localStorage와 PC 백업 폴더 권한은 포함하지 않으며 기존 폴더 연결은 유지합니다.',
+        },
+        backupStorageScope: {
+            sqlite: 'JSON은 로컬 서버 SQLite 데이터베이스의 데이터만 교체 복원합니다. localStorage와 PC 백업 폴더 권한은 제외됩니다.',
+            indexeddb: 'JSON은 현재 브라우저 IndexedDB의 직렬화 가능한 데이터만 교체 복원합니다. localStorage와 PC 백업 폴더 권한은 제외됩니다.',
+        },
         backupExport: 'PC 파일로 내보내기',
         backupImport: 'PC 파일에서 불러오기',
         backupWorking: '처리 중...',
@@ -1007,7 +1086,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: '복원',
         backupRestoreConfirm: (fileName) => `${fileName} 파일로 복원하면 현재 데이터가 모두 교체됩니다. 계속할까요?`,
         backupWritten: (fileName) => `${fileName} 백업을 저장했습니다.`,
-        resetStorageScope: '현재 origin의 localStorage와 IndexedDB 데이터베이스 전체를 초기화합니다.',
+        resetStorageScope: {
+            sqlite: '로컬 서버 SQLite 데이터베이스와 이 origin의 localStorage를 초기화합니다.',
+            indexeddb: '현재 origin의 localStorage와 IndexedDB 데이터베이스 전체를 초기화합니다.',
+        },
         navChat: '대화',
         navRanking: '인연 순위',
         navMemory: '기억 흐름',
@@ -1040,6 +1122,33 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageQuota: '브라우저 할당량',
         snapshotEstimate: '앱 데이터 추정량',
         storeBreakdown: '저장소별 구성',
+        storageStructureTitle: '데이터베이스 구조',
+        storageSchemaVersion: '스키마 버전',
+        storageKeyPath: '키',
+        storageColumns: '컬럼',
+        storageIndexes: '인덱스',
+        storageRelations: '관계(외래키)',
+        storageRecordsTitle: '저장된 레코드',
+        storageRecordsCount: (shown, total) => `저장된 레코드 ${shown} / ${total}`,
+        lastActivityLabel: '최근 활동',
+        setupModelSelectionHint: '대화에 쓸 모델을 지금 고릅니다. 여기서 고른 모델이 설정에 그대로 저장되고, 설정 화면의 모델 목록과 같은 목록입니다.',
+        setupModelRequired: '모델을 하나 선택해야 시작할 수 있습니다.',
+        storageObjectKinds: { object_store: '오브젝트 스토어', table: '테이블', view: '뷰' },
+        storageDefinition: '정의',
+        storageLinkRowCount: (count) => `기억-메시지 연결 ${count}행`,
+        storageServerVersion: '로컬 서버',
+        storageReadOnlyStore: '읽기 전용',
+        storageCreateRecord: '레코드 추가',
+        storageEditRecord: '편집',
+        storageDeleteRecord: '삭제',
+        storageClearStore: '전체 비우기',
+        storageSaveRecord: '저장',
+        storageCancelEdit: '취소',
+        storageDocumentJson: 'JSON 문서',
+        storageInvalidJson: 'JSON 형식이 올바르지 않습니다',
+        storageConfirmDeleteRecord: (key) => `키 ${key} 레코드를 삭제할까요?`,
+        storageConfirmClearStore: (store) => `${store}의 모든 레코드를 삭제할까요?`,
+        storageWriteSucceeded: '저장했습니다',
         personaBreakdown: '정령별 저장량',
         storedContents: '최근 저장 내용',
         messagesLabel: '대화',
@@ -1193,7 +1302,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'native_runtime':
                     return `기기 AI 엔진에서 오류가 발생했습니다: ${detail}`;
                 case 'ollama_unavailable':
-                    return `로컬 Ollama에 연결하지 못했습니다. Ollama 실행 여부, 주소, OLLAMA_ORIGINS, Chrome 로컬 네트워크 권한을 확인하세요 (${detail})`;
+                    return `로컬 Ollama에 연결하지 못했습니다. EVAI 로컬 서버 실행 여부, Ollama 실행 여부, Ollama 주소를 확인하세요 (${detail})`;
                 case 'ollama_runtime':
                     return `로컬 Ollama에서 오류가 발생했습니다: ${detail}`;
             }
@@ -1378,7 +1487,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         browserStorage: 'Browser storage',
         refreshEnvironment: 'Check environment again',
         resetData: 'Reset Data',
-        resetDescription: 'Deletes every IndexedDB database and the localStorage of this origin, including chats, soul/style/knowledge data, memories, modules, settings, and file links, then reloads the page. If another tab holds the database open, deletion stops and an error is shown.',
+        resetDescription: {
+            sqlite: 'Deletes every row of the local server SQLite database and the localStorage of this origin, including chats, soul/style/knowledge data, memories, modules, and settings, then reloads the page.',
+            indexeddb: 'Deletes every IndexedDB database and the localStorage of this origin, including chats, soul/style/knowledge data, memories, modules, settings, and file links, then reloads the page. If another tab holds the database open, deletion stops and an error is shown.',
+        },
         resetFailed: 'Reset failed',
         notConfigured: 'Not set',
         resetting: 'Resetting...',
@@ -1481,7 +1593,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: 'Supported Environment',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                'The web version uses PC Chrome on-device AI by default. Chats use the built-in Chrome Prompt API models (Gemini Nano · Gemma 4) and on-device models installed by Chrome, and local Ollama models when Ollama is running on this PC. Hugging Face models and the EXE extension are not provided.',
+                'Opened directly in a browser, chats run on PC Chrome on-device AI (Prompt API · Gemini Nano · Gemma 4) and on-device models installed by Chrome. Opened through the EVAI local server, local Ollama models can be selected in the same screen. Hugging Face models and the EXE extension are not provided.',
                 'Chats, bonds, and memories are stored in this browser\'s IndexedDB and can be exported to a PC file or automatically backed up to a linked PC folder.',
                 `Before your first chat, prepare a Chrome on-device model in ${modelSettingsPath}.`,
             ],
@@ -1505,7 +1617,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         messageSendFailed: 'Failed to generate a response. Please try again.',
         modelListTitle: 'On-device Models',
         modelListDescription: {
-            web_chrome: 'The web version uses Chrome on-device AI by default. You can choose the Chrome Prompt API models (Gemini Nano · Gemma 4) and on-device models installed by Chrome, and local Ollama models when Ollama is running on this PC. Hugging Face models and the EXE extension are not provided.',
+            web_chrome: 'You can choose the Chrome Prompt API models (Gemini Nano · Gemma 4) and on-device models installed by Chrome. When the page is served by the EVAI local server, the local Ollama model list appears as well and the selected model stays fixed for chats. Hugging Face models and the EXE extension are not provided.',
             android_app: 'On-device AI models run on this device by the Google LiteRT-LM engine. Install and choose the model used for chat. Loading a model tries the GPU backend first and falls back to the CPU backend when the GPU cannot be used.',
         },
         modelRoleChat: 'Chat generation · Chrome Prompt API (built-in browser model)',
@@ -1569,42 +1681,67 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             'Pick a model in the list to save and pin it. After reopening the page, select the model folder again to run the same model.',
         ],
         ollamaModelSectionTitle: 'Local Ollama Models',
-        ollamaModelSectionDescription: 'When Ollama is running on this PC, models installed in Ollama can be chosen as the chat model. The local Ollama server runs the model, and conversation, memory, and persona rules apply the same way.',
+        ollamaModelSectionDescription: 'The EVAI local server relays to Ollama, so every model installed in Ollama appears in the list below. The model you select stays fixed as the chat model, and conversation, memory, and persona rules apply exactly as in Chrome on-device mode.',
         ollamaServerConnected: (version) => `Ollama connected · version ${version}`,
-        ollamaServerUnavailable: 'Ollama is not connected · check that Ollama is running and that this origin is allowed',
+        ollamaServerUnavailable: 'Ollama is not connected · check that Ollama is running and that the Ollama address used by the EVAI local server is correct',
         ollamaModelEmpty: 'No models are installed in Ollama. Download one with ollama pull in a terminal.',
-        ollamaModelReady: 'Installed in Ollama · loads when selected',
+        ollamaModelReady: 'Installed in Ollama · selecting it fixes this model for chats',
         ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
         ollamaBaseUrlLabel: 'Ollama address',
         ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
-        ollamaBaseUrlHint: 'Enter only the protocol, host, and port without a path. The default is http://127.0.0.1:11434.',
+        ollamaBaseUrlHint: 'The Ollama address the EVAI local server relays to. Enter only the http protocol, host, and port without a path. The default is http://127.0.0.1:11434.',
         ollamaBaseUrlSave: 'Save address',
+        generationLimitsTitle: 'Context and reply length',
+        generationLimitsDescription: 'The model is loaded with exactly the values you enter here. Leave a field empty to use whatever the engine reports.',
+        generationLimitsContextLabel: 'Context tokens',
+        generationLimitsContextHint: 'Ollama reloads the model with this value as num_ctx. A value above the model maximum is lowered to that maximum.',
+        generationLimitsOutputLabel: 'Reply tokens',
+        generationLimitsOutputHint: 'Maximum tokens generated for one reply. This much of the context is reserved for the answer.',
+        generationLimitsAutoPlaceholder: 'Automatic',
+        generationLimitsInvalid: 'Enter a whole number of 1 or more, or leave it empty.',
+        generationLimitsModelMaximum: (tokens) => `Model maximum ${tokens.toLocaleString('en-US')} tokens`,
+        generationLimitsActive: (tokens) => `Currently applied ${tokens.toLocaleString('en-US')} tokens`,
+        generationLimitsUnknownMaximum: 'The model maximum is known once the model is loaded',
         ollamaBaseUrlSaving: 'Saving…',
         ollamaGuideTitle: 'Local Ollama Connection Guide',
-        ollamaGuideDescription: 'This browser has no Chrome on-device AI, so the Ollama server on this PC is used as the chat engine. Prepare a model with the commands below and press "Check connection". When the HTTP connection succeeds and a model exists, the app connects to the running model (or the most recent model when none is running).',
+        ollamaGuideDescription: 'The EVAI local server relays requests to Ollama on this PC. Prepare Ollama with the commands below, run the local server, then press "Check connection". Once connected, pick a model from the list below and that model stays fixed for chats.',
         ollamaConnectionChecking: 'Checking the Ollama connection…',
         ollamaConnectionNotChecked: 'The Ollama connection has not been checked yet',
         ollamaConnectionReady: (version, modelCount) => modelCount > 0
             ? `Ollama HTTP connection succeeded · version ${version} · ${modelCount} models`
             : `Ollama HTTP connection succeeded · version ${version} · no models installed (prepare one with the commands below)`,
         ollamaConnectionCheck: 'Check connection',
-        ollamaOriginAllowed: (origin) => `This page origin ${origin} is in Ollama's default allow list (localhost · 127.0.0.1 · 0.0.0.0), so no extra setup is needed.`,
-        ollamaOriginRequired: (origin) => `This page origin ${origin} is not in Ollama's default allow list. Add it to OLLAMA_ORIGINS with the last step, then fully quit and restart Ollama.`,
+        localServerNoticeTitle: 'Running locally is recommended',
+        localServerNoticeDescription: 'This page is served as a plain web page, so only Chrome on-device AI is available and data is stored in this browser IndexedDB. Download and run the EVAI local server from the repository to use Ollama models together with the SQLite database.',
+        localServerNoticeSteps: [
+            'Download the EVAI local server (evai-server) and the web bundle from the repository below.',
+            'Run evai-server from the extracted folder. index.html and the evai-database folder must sit next to it.',
+            'Open http://127.0.0.1:9999/ in the browser. From then on chats, memories, and settings are stored in the server SQLite database and Ollama models can be selected.',
+        ],
+        localServerNoticeRepository: 'Repository and run instructions',
+        localServerConnected: (version, sqliteVersion) => `EVAI local server connected · version ${version} · SQLite ${sqliteVersion}`,
+        localServerDatabasePath: (databasePath) => `Database file · ${databasePath}`,
+        storageBackendName: {
+            sqlite: 'Local server SQLite database',
+            indexeddb: 'Browser IndexedDB',
+        },
         ollamaCommandStepTitles: {
             verify_install: 'Verify installation',
             pull_model: 'Download the model',
             create_from_gguf: 'Create a model from a local GGUF or blob file',
             run_model: 'Run the model and check the lists',
             remove_model: 'Remove the model',
-            allow_origin: 'Allow this page origin',
+            expose_network: 'Expose Ollama to the network',
+            run_local_server: 'Run the EVAI local server',
         },
         ollamaCommandStepDescriptions: {
             verify_install: 'After installing Ollama, check that a version is printed. If the command is not found, reinstall Ollama.',
             pull_model: 'Download the entered model from the Ollama library or Hugging Face (hf.co/…). Any model that fits your PC can be used.',
             create_from_gguf: 'Create a model with the entered name from the entered GGUF file (or a sha256 file in Ollama blobs) as FROM.',
-            run_model: 'Run the model once to confirm it works (exit with /bye), list installed models with ollama ls, and running models with ollama ps. The app connects to a running model first.',
+            run_model: 'Run the model once to confirm it works (exit with /bye), list installed models with ollama ls, and running models with ollama ps. The app uses only the model you select in the settings model list.',
             remove_model: 'Delete a model you no longer use.',
-            allow_origin: 'After registering the environment variable, fully quit Ollama and start it again.',
+            expose_network: 'Turn on "Expose Ollama to the network" in the Ollama settings, or set OLLAMA_HOST to 0.0.0.0:11434, then start Ollama again. The EVAI local server relays to that address.',
+            run_local_server: 'Run the EVAI local server from the folder that holds the web bundle and open http://127.0.0.1:9999/. The browser talks to Ollama only through this server.',
         },
         ollamaCommandCopy: 'Copy commands',
         ollamaGuideModelNameLabel: 'Model name to use',
@@ -1659,8 +1796,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · context ${cachedTokens}/${contextWindow} · reused ${reusedTokens}`,
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · prompt ${promptTokens ?? '-'} · generated ${generatedTokens ?? '-'} · truncated ${truncatedTokens}`,
         backupTitle: 'Save · Load Data',
-        backupDescription: 'Save serializable IndexedDB data (chats, memories, settings, modules, and more) as JSON. Loading validates the file, replaces the data in a single transaction, and reloads the page. localStorage and PC backup-folder permissions are excluded; the existing folder link is preserved.',
-        backupStorageScope: 'JSON replaces only serializable data in this browser\'s IndexedDB. localStorage and PC backup-folder permissions are excluded.',
+        backupDescription: {
+            sqlite: 'Save the local server SQLite data (chats, memories, settings, modules, and more) as JSON. Loading validates the file, the server replaces the data in a single transaction, and the page reloads. localStorage and PC backup-folder permissions are excluded.',
+            indexeddb: 'Save serializable IndexedDB data (chats, memories, settings, modules, and more) as JSON. Loading validates the file, replaces the data in a single transaction, and reloads the page. localStorage and PC backup-folder permissions are excluded; the existing folder link is preserved.',
+        },
+        backupStorageScope: {
+            sqlite: 'JSON replaces only the data in the local server SQLite database. localStorage and PC backup-folder permissions are excluded.',
+            indexeddb: 'JSON replaces only serializable data in this browser\'s IndexedDB. localStorage and PC backup-folder permissions are excluded.',
+        },
         backupExport: 'Export to PC file',
         backupImport: 'Import from PC file',
         backupWorking: 'Working...',
@@ -1690,7 +1833,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: 'Restore',
         backupRestoreConfirm: (fileName) => `Restoring ${fileName} replaces all current data. Continue?`,
         backupWritten: (fileName) => `Saved backup ${fileName}.`,
-        resetStorageScope: 'Resets this origin\'s localStorage and every IndexedDB database.',
+        resetStorageScope: {
+            sqlite: 'Resets the local server SQLite database and this origin\'s localStorage.',
+            indexeddb: 'Resets this origin\'s localStorage and every IndexedDB database.',
+        },
         navChat: 'Chat',
         navRanking: 'Bond Ranking',
         navMemory: 'Memory Flow',
@@ -1723,6 +1869,33 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageQuota: 'Browser quota',
         snapshotEstimate: 'Estimated app data',
         storeBreakdown: 'Store composition',
+        storageStructureTitle: 'Database structure',
+        storageSchemaVersion: 'Schema version',
+        storageKeyPath: 'key',
+        storageColumns: 'Columns',
+        storageIndexes: 'Indexes',
+        storageRelations: 'Relations (foreign keys)',
+        storageRecordsTitle: 'Stored records',
+        storageRecordsCount: (shown, total) => `Stored records ${shown} / ${total}`,
+        lastActivityLabel: 'Last activity',
+        setupModelSelectionHint: 'Choose the model for your conversations now. What you pick here is saved into settings, and this is the same list the settings screen shows.',
+        setupModelRequired: 'Select one model to start.',
+        storageObjectKinds: { object_store: 'Object store', table: 'Table', view: 'View' },
+        storageDefinition: 'Definition',
+        storageLinkRowCount: (count) => `Memory-message links: ${count} rows`,
+        storageServerVersion: 'Local server',
+        storageReadOnlyStore: 'Read only',
+        storageCreateRecord: 'Add record',
+        storageEditRecord: 'Edit',
+        storageDeleteRecord: 'Delete',
+        storageClearStore: 'Clear all',
+        storageSaveRecord: 'Save',
+        storageCancelEdit: 'Cancel',
+        storageDocumentJson: 'JSON document',
+        storageInvalidJson: 'The JSON is not valid',
+        storageConfirmDeleteRecord: (key) => `Delete the record with key ${key}?`,
+        storageConfirmClearStore: (store) => `Delete every record in ${store}?`,
+        storageWriteSucceeded: 'Saved',
         personaBreakdown: 'Storage by spirit',
         storedContents: 'Recent stored content',
         messagesLabel: 'Messages',
@@ -1876,7 +2049,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'native_runtime':
                     return `The on-device AI engine reported an error: ${detail}`;
                 case 'ollama_unavailable':
-                    return `Could not reach local Ollama. Check that Ollama is running, the address, OLLAMA_ORIGINS, and Chrome's local network permission (${detail})`;
+                    return `Could not reach local Ollama. Check that the EVAI local server is running, that Ollama is running, and the Ollama address (${detail})`;
                 case 'ollama_runtime':
                     return `Local Ollama reported an error: ${detail}`;
             }
@@ -2061,7 +2234,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         browserStorage: '浏览器存储',
         refreshEnvironment: '重新检查环境',
         resetData: '重置数据',
-        resetDescription: '删除当前来源的全部 IndexedDB 数据库与 localStorage，包括聊天、精灵/风格/知识数据、记忆、模块、设置及文件连接，然后重新载入页面。如果其他标签页仍占用数据库，删除会中止并显示错误。',
+        resetDescription: {
+            sqlite: '删除本地服务器 SQLite 数据库的全部数据与当前来源的 localStorage，包括聊天、精灵/风格/知识数据、记忆、模块与设置，然后重新载入页面。',
+            indexeddb: '删除当前来源的全部 IndexedDB 数据库与 localStorage，包括聊天、精灵/风格/知识数据、记忆、模块、设置及文件连接，然后重新载入页面。如果其他标签页仍占用数据库，删除会中止并显示错误。',
+        },
         resetFailed: '重置失败',
         notConfigured: '未设置',
         resetting: '正在重置...',
@@ -2164,7 +2340,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         platformGuideTitle: '使用环境说明',
         platformGuideItems: {
             web_chrome: (modelSettingsPath) => [
-                '网页版默认使用 PC Chrome 设备端 AI。使用 Chrome 内置 Prompt API 模型（Gemini Nano · Gemma 4）和 Chrome 安装的设备端模型进行对话；本电脑正在运行 Ollama 时，也可以使用本地 Ollama 模型。不提供 Hugging Face 模型和 EXE 扩展。',
+                '直接在浏览器中打开时，使用 PC Chrome 设备端 AI（Prompt API · Gemini Nano · Gemma 4）与 Chrome 安装的设备端模型进行对话；通过 EVAI 本地服务器打开时，可以在同一界面选择本地 Ollama 模型。不提供 Hugging Face 模型和 EXE 扩展。',
                 '对话、羁绊与记忆保存在本浏览器的 IndexedDB 中，可导出为电脑文件或自动备份到已关联的电脑文件夹。',
                 `首次对话前，请在“${modelSettingsPath}”中准备 Chrome 设备端模型。`,
             ],
@@ -2188,7 +2364,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         messageSendFailed: '生成响应失败。请重试。',
         modelListTitle: '设备端模型列表',
         modelListDescription: {
-            web_chrome: '网页版默认使用 Chrome 设备端 AI。可以选择 Chrome Prompt API 模型（Gemini Nano · Gemma 4）和 Chrome 安装的设备端模型；本电脑正在运行 Ollama 时，也可以选择本地 Ollama 模型。不提供 Hugging Face 模型和 EXE 扩展。',
+            web_chrome: '可以选择 Chrome Prompt API 模型（Gemini Nano · Gemma 4）与 Chrome 安装的设备端模型。通过 EVAI 本地服务器打开时，会同时显示本地 Ollama 模型列表，所选模型会固定用于对话。不提供 Hugging Face 模型和 EXE 扩展。',
             android_app: '这是在本设备上由 Google LiteRT-LM 引擎运行的设备端 AI 模型。请安装并选择用于对话的模型。加载模型时会优先尝试 GPU 后端，无法使用时改用 CPU 后端运行。',
         },
         modelRoleChat: '对话生成 · Chrome Prompt API（浏览器内置模型）',
@@ -2252,42 +2428,67 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
             '在列表中选择要使用的模型即会保存并固定。重新打开页面后，只需再次选择模型文件夹即可用同一模型运行。',
         ],
         ollamaModelSectionTitle: '本地 Ollama 模型列表',
-        ollamaModelSectionDescription: '本电脑正在运行 Ollama 时，可以选择 Ollama 中已安装的模型作为对话模型。模型由本地 Ollama 运行，对话、记忆和角色设定规则同样适用。',
+        ollamaModelSectionDescription: 'EVAI 本地服务器会转发到 Ollama，因此 Ollama 中安装的所有模型都会原样出现在下方列表中。所选模型会固定为对话模型，对话、记忆与角色设定规则与 Chrome 设备端模式完全相同。',
         ollamaServerConnected: (version) => `Ollama 已连接 · 版本 ${version}`,
-        ollamaServerUnavailable: '未连接 Ollama · 请确认 Ollama 正在运行且已允许此来源',
+        ollamaServerUnavailable: '未连接 Ollama · 请确认 Ollama 正在运行，以及 EVAI 本地服务器使用的 Ollama 地址是否正确',
         ollamaModelEmpty: 'Ollama 中没有已安装的模型。请在终端中使用 ollama pull 下载模型。',
-        ollamaModelReady: '已安装于 Ollama · 选择后加载',
+        ollamaModelReady: '已安装于 Ollama · 选择后固定使用该模型',
         ollamaModelMeta: (family, parameterSize, quantization, megabytes) => `${family} · ${parameterSize} · ${quantization} · ${megabytes} MB`,
         ollamaBaseUrlLabel: 'Ollama 地址',
         ollamaBaseUrlPlaceholder: 'http://127.0.0.1:11434',
-        ollamaBaseUrlHint: '只输入协议、主机和端口，不含路径。默认值为 http://127.0.0.1:11434。',
+        ollamaBaseUrlHint: 'EVAI 本地服务器要转发到的 Ollama 地址。只输入 http 协议、主机和端口，不含路径。默认值为 http://127.0.0.1:11434。',
         ollamaBaseUrlSave: '保存地址',
+        generationLimitsTitle: '上下文与回复长度',
+        generationLimitsDescription: '按这里填写的数值加载并使用模型。留空则采用引擎报告的数值。',
+        generationLimitsContextLabel: '上下文令牌',
+        generationLimitsContextHint: 'Ollama 会以该值作为 num_ctx 重新加载模型。超过模型上限时按上限取值。',
+        generationLimitsOutputLabel: '回复令牌',
+        generationLimitsOutputHint: '单次回复生成的最大令牌数。上下文中会为回复预留这一部分。',
+        generationLimitsAutoPlaceholder: '自动',
+        generationLimitsInvalid: '请填写 1 以上的整数，或留空。',
+        generationLimitsModelMaximum: (tokens) => `模型上限 ${tokens.toLocaleString('zh-CN')} 令牌`,
+        generationLimitsActive: (tokens) => `当前生效 ${tokens.toLocaleString('zh-CN')} 令牌`,
+        generationLimitsUnknownMaximum: '加载模型后才能确认模型上限',
         ollamaBaseUrlSaving: '正在保存…',
         ollamaGuideTitle: '本地 Ollama 连接指南',
-        ollamaGuideDescription: '此浏览器没有 Chrome 设备端 AI，因此使用本电脑上的 Ollama 作为对话引擎。请用下方命令准备模型，然后点击“检查连接”。HTTP 连接成功且存在模型时，会自动连接正在运行的模型（没有则连接最新的模型）。',
+        ollamaGuideDescription: 'EVAI 本地服务器会把请求转发到本机的 Ollama。请按下面的命令准备 Ollama 并运行本地服务器，然后点击“检查连接”。连接成功后，请在下方列表中选择要使用的模型，所选模型会固定用于对话。',
         ollamaConnectionChecking: '正在检查 Ollama 连接…',
         ollamaConnectionNotChecked: '尚未检查 Ollama 连接',
         ollamaConnectionReady: (version, modelCount) => modelCount > 0
             ? `Ollama HTTP 连接成功 · 版本 ${version} · 模型 ${modelCount} 个`
             : `Ollama HTTP 连接成功 · 版本 ${version} · 没有已安装的模型（请用下方命令准备模型）`,
         ollamaConnectionCheck: '检查连接',
-        ollamaOriginAllowed: (origin) => `当前页面来源 ${origin} 位于 Ollama 默认允许列表（localhost · 127.0.0.1 · 0.0.0.0）中，无需额外设置。`,
-        ollamaOriginRequired: (origin) => `当前页面来源 ${origin} 不在 Ollama 默认允许列表中。请用最后一步命令将其加入 OLLAMA_ORIGINS，然后完全退出并重新启动 Ollama。`,
+        localServerNoticeTitle: '建议在本地运行',
+        localServerNoticeDescription: '当前以普通网页方式打开，只能使用 Chrome 设备端 AI，数据保存在本浏览器的 IndexedDB 中。从仓库下载并运行 EVAI 本地服务器后，可以同时使用 Ollama 模型与 SQLite 数据库。',
+        localServerNoticeSteps: [
+            '从下方仓库下载 EVAI 本地服务器（evai-server）与网页包。',
+            '在解压后的文件夹中运行 evai-server。index.html 与 evai-database 文件夹必须位于同一文件夹。',
+            '在浏览器中打开 http://127.0.0.1:9999/。此后聊天、记忆与设置保存在服务器的 SQLite 数据库中，并可以选择 Ollama 模型。',
+        ],
+        localServerNoticeRepository: '仓库与运行说明',
+        localServerConnected: (version, sqliteVersion) => `EVAI 本地服务器已连接 · 版本 ${version} · SQLite ${sqliteVersion}`,
+        localServerDatabasePath: (databasePath) => `数据库文件 · ${databasePath}`,
+        storageBackendName: {
+            sqlite: '本地服务器 SQLite 数据库',
+            indexeddb: '浏览器 IndexedDB',
+        },
         ollamaCommandStepTitles: {
             verify_install: '确认安装',
             pull_model: '下载模型',
             create_from_gguf: '用本地 GGUF 或 blob 文件创建模型',
             run_model: '运行模型并查看列表',
             remove_model: '删除模型',
-            allow_origin: '允许此页面来源',
+            expose_network: '允许 Ollama 外部访问',
+            run_local_server: '运行 EVAI 本地服务器',
         },
         ollamaCommandStepDescriptions: {
             verify_install: '安装 Ollama 后确认能输出版本号。如果找不到命令，请重新安装 Ollama。',
             pull_model: '从 Ollama 模型库或 Hugging Face（hf.co/…）下载输入的模型。可以使用任何适合电脑配置的模型。',
             create_from_gguf: '以输入的 GGUF 文件（或 Ollama blobs 中的 sha256 文件）作为 FROM，创建输入名称的模型。',
-            run_model: '运行一次模型确认可用（用 /bye 退出），用 ollama ls 查看已安装模型，用 ollama ps 查看正在运行的模型。应用会优先连接正在运行的模型。',
+            run_model: '运行一次模型确认可用（用 /bye 退出），用 ollama ls 查看已安装模型，用 ollama ps 查看正在运行的模型。应用只使用在设置模型列表中所选的模型。',
             remove_model: '删除不再使用的模型。',
-            allow_origin: '注册环境变量后，完全退出 Ollama 并重新启动。',
+            expose_network: '在 Ollama 设置中开启 "Expose Ollama to the network"，或将 OLLAMA_HOST 设为 0.0.0.0:11434，然后重新启动 Ollama。EVAI 本地服务器会转发到该地址。',
+            run_local_server: '在存放网页包的文件夹中运行 EVAI 本地服务器，并打开 http://127.0.0.1:9999/。浏览器只通过该服务器与 Ollama 通信。',
         },
         ollamaCommandCopy: '复制命令',
         ollamaGuideModelNameLabel: '要使用的模型名称',
@@ -2342,8 +2543,14 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         modelSessionDetail: (personaId, cachedTokens, contextWindow, reusedTokens) => `${personaId} · 上下文 ${cachedTokens}/${contextWindow} · 复用 ${reusedTokens}`,
         modelRequestDetail: (state, promptTokens, generatedTokens, truncatedTokens) => `${state} · 输入 ${promptTokens ?? '-'} · 生成 ${generatedTokens ?? '-'} · 截断 ${truncatedTokens}`,
         backupTitle: '数据保存 · 载入',
-        backupDescription: '将本浏览器 IndexedDB 中可序列化的数据（聊天、记忆、设置、模块等）保存为 JSON；导入时先验证，再以单个事务替换数据并重新载入页面。localStorage 与电脑备份文件夹权限不包含在内，现有文件夹连接会保留。',
-        backupStorageScope: 'JSON 只替换恢复当前浏览器 IndexedDB 中可序列化的数据。localStorage 与电脑备份文件夹权限不包含在内。',
+        backupDescription: {
+            sqlite: '将本地服务器 SQLite 数据库中的数据（聊天、记忆、设置、模块等）保存为 JSON；导入时先验证，再由服务器以单个事务替换数据并重新载入页面。localStorage 与电脑备份文件夹权限不包含在内。',
+            indexeddb: '将本浏览器 IndexedDB 中可序列化的数据（聊天、记忆、设置、模块等）保存为 JSON；导入时先验证，再以单个事务替换数据并重新载入页面。localStorage 与电脑备份文件夹权限不包含在内，现有文件夹连接会保留。',
+        },
+        backupStorageScope: {
+            sqlite: 'JSON 只替换恢复本地服务器 SQLite 数据库中的数据。localStorage 与电脑备份文件夹权限不包含在内。',
+            indexeddb: 'JSON 只替换恢复当前浏览器 IndexedDB 中可序列化的数据。localStorage 与电脑备份文件夹权限不包含在内。',
+        },
         backupExport: '导出为电脑文件',
         backupImport: '从电脑文件导入',
         backupWorking: '处理中...',
@@ -2373,7 +2580,10 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         backupFileRestore: '恢复',
         backupRestoreConfirm: (fileName) => `使用 ${fileName} 恢复会替换当前全部数据。是否继续？`,
         backupWritten: (fileName) => `已保存备份 ${fileName}。`,
-        resetStorageScope: '重置当前来源的 localStorage 与全部 IndexedDB 数据库。',
+        resetStorageScope: {
+            sqlite: '重置本地服务器 SQLite 数据库与当前来源的 localStorage。',
+            indexeddb: '重置当前来源的 localStorage 与全部 IndexedDB 数据库。',
+        },
         navChat: '对话',
         navRanking: '羁绊排行',
         navMemory: '记忆流程',
@@ -2406,6 +2616,33 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
         storageQuota: '浏览器配额',
         snapshotEstimate: '应用数据估算',
         storeBreakdown: '各存储构成',
+        storageStructureTitle: '数据库结构',
+        storageSchemaVersion: '架构版本',
+        storageKeyPath: '键',
+        storageColumns: '列',
+        storageIndexes: '索引',
+        storageRelations: '关系（外键）',
+        storageRecordsTitle: '已保存记录',
+        storageRecordsCount: (shown, total) => `已保存记录 ${shown} / ${total}`,
+        lastActivityLabel: '最近活动',
+        setupModelSelectionHint: '现在选择用于对话的模型。这里选择的模型会直接保存到设置，且与设置页面的模型列表相同。',
+        setupModelRequired: '需要选择一个模型才能开始。',
+        storageObjectKinds: { object_store: '对象存储', table: '数据表', view: '视图' },
+        storageDefinition: '定义',
+        storageLinkRowCount: (count) => `记忆与消息关联 ${count} 行`,
+        storageServerVersion: '本地服务器',
+        storageReadOnlyStore: '只读',
+        storageCreateRecord: '添加记录',
+        storageEditRecord: '编辑',
+        storageDeleteRecord: '删除',
+        storageClearStore: '全部清空',
+        storageSaveRecord: '保存',
+        storageCancelEdit: '取消',
+        storageDocumentJson: 'JSON 文档',
+        storageInvalidJson: 'JSON 格式无效',
+        storageConfirmDeleteRecord: (key) => `要删除键为 ${key} 的记录吗？`,
+        storageConfirmClearStore: (store) => `要删除 ${store} 中的所有记录吗？`,
+        storageWriteSucceeded: '已保存',
         personaBreakdown: '各精灵存储量',
         storedContents: '最近保存内容',
         messagesLabel: '对话',
@@ -2559,7 +2796,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
                 case 'native_runtime':
                     return `设备端 AI 引擎发生错误：${detail}`;
                 case 'ollama_unavailable':
-                    return `无法连接本地 Ollama。请检查 Ollama 是否正在运行、地址、OLLAMA_ORIGINS 以及 Chrome 本地网络权限（${detail}）`;
+                    return `无法连接本地 Ollama。请检查 EVAI 本地服务器是否正在运行、Ollama 是否正在运行以及 Ollama 地址（${detail}）`;
                 case 'ollama_runtime':
                     return `本地 Ollama 发生错误：${detail}`;
             }

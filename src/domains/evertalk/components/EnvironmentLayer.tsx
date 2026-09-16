@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Bell, ChevronDown, Cpu, Database, FlaskConical, HardDrive, Home, MessageCircle, Settings, Trophy, UserRound, Workflow, X } from 'lucide-react';
+import { readAppStorageKind } from '../../../shared/host';
 import type { DeviceEnvironmentInfo } from '../../../shared/platform';
 import type { UserSession } from '../../auth';
 import type { AppSettings } from '../../settings';
@@ -50,7 +51,7 @@ export function EnvironmentLayer({ settings, session, savior, environment, label
             </div>
             <dl>
                 <div><dt>{labels.userProfile}</dt><dd>{profileName}{session?.email ? ` · ${session.email}` : ''}</dd></div>
-                <div><dt>{labels.contextStorage}</dt><dd>{labels.browserStorage}</dd></div>
+                <div><dt>{labels.contextStorage}</dt><dd>{labels.storageBackendName[readAppStorageKind()]}</dd></div>
                 <div><dt>{labels.browserInfo}</dt><dd>{browser}</dd></div>
                 <div><dt>{labels.deviceProfile}</dt><dd>{device}</dd></div>
                 <div><dt>{labels.webGpuInfo}</dt><dd>{gpu}</dd></div>
@@ -140,7 +141,7 @@ export function EnvironmentLayer({ settings, session, savior, environment, label
                 >
                     <span className="ever-environment-layer__browser"><Cpu size={14}/>{browser}</span>
                     <span>
-                        <Database size={14}/>{labels.browserStorage}
+                        <Database size={14}/>{labels.storageBackendName[readAppStorageKind()]}
                     </span>
                     <ChevronDown className={open ? 'is-open' : ''} size={15} aria-hidden="true"/>
                 </button>

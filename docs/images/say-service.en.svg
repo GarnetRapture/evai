@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 150" width="720" height="150" role="img" aria-label="Mephistopheles on the web service">
+  <style>
+    .bubble { fill: #ffffff; stroke: #9b5de5; stroke-width: 2; }
+    .name { font: 600 13px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #9b5de5; }
+    .line { font: 15px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #24231f; }
+    .strong { font: 600 15px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #6f2dbd; }
+  </style>
+  <path class="bubble" d="M26 10 h640 a14 14 0 0 1 14 14 v98 a14 14 0 0 1 -14 14 h-640 a14 14 0 0 1 -14 -14 v-35 l-14 -16 l14 -12 v-35 a14 14 0 0 1 14 -14 z"/>
+  <text class="name" x="40" y="34">Mephistopheles</text>
+  <text class="line" x="40" y="62">This address is for Chrome on-device AI only. Please confirm that first.</text>
+  <text class="line" x="40" y="88">Ollama and the SQLite storage work only when opened through the local server.</text>
+  <text class="strong" x="40" y="114">There is no fee. Only a little of your time, Savior.</text>
+</svg>

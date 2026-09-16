@@ -1,10 +1,12 @@
 #include "net/tcp_socket.hpp"
 
+#include <cerrno>
 #include <cstddef>
 #include <cstdint>
 #include <format>
 #include <span>
 #include <stdexcept>
+#include <string>
 #include <utility>
 
 namespace evai::server::net {
@@ -37,6 +39,15 @@ void configure_listener(NativeSocketHandle handle)
     setsockopt(handle, SOL_SOCKET, SO_EXCLUSIVEADDRUSE, static_cast<const char*>(static_cast<void*>(&enabled)), sizeof(enabled));
 #else
     setsockopt(handle, SOL_SOCKET, SO_REUSEADDR, &enabled, sizeof(enabled));
+#endif
+}
+
+int last_socket_error()
+{
+#ifdef _WIN32
+    return WSAGetLastError();
+#else
+    return errno;
 #endif
 }
 
@@ -94,6 +105,36 @@ TcpSocket TcpSocket::listen_loopback(std::uint16_t port)
         throw std::runtime_error("listen failed");
     }
     return listener;
+}
+
+TcpSocket TcpSocket::connect_to(const std::string& host, std::uint16_t port)
+{
+    addrinfo hints{};
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_protocol = IPPROTO_TCP;
+    addrinfo* resolved = nullptr;
+    const std::string service = std::format("{}", port);
+    const int resolve_status = ::getaddrinfo(host.c_str(), service.c_str(), &hints, &resolved);
+    if (resolve_status != 0 || resolved == nullptr) {
+        throw std::runtime_error(std::format("cannot resolve {}:{} (status {}, error {})", host, port, resolve_status, last_socket_error()));
+    }
+    std::string attempts;
+    for (const addrinfo* candidate = resolved; candidate != nullptr; candidate = candidate->ai_next) {
+        TcpSocket upstream(::socket(candidate->ai_family, candidate->ai_socktype, candidate->ai_protocol));
+        if (!upstream.valid()) {
+            attempts += std::format(" family {} socket error {};", candidate->ai_family, last_socket_error());
+            continue;
+        }
+        if (::connect(upstream.handle_, candidate->ai_addr, static_cast<int>(candidate->ai_addrlen)) == 0) {
+            ::freeaddrinfo(resolved);
+            configure_client(upstream.handle_);
+            return upstream;
+        }
+        attempts += std::format(" family {} connect error {};", candidate->ai_family, last_socket_error());
+    }
+    ::freeaddrinfo(resolved);
+    throw std::runtime_error(std::format("cannot connect to {}:{}{}", host, port, attempts));
 }
 
 bool TcpSocket::valid() const

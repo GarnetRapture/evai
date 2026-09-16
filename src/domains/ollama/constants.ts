@@ -9,9 +9,17 @@ export const OLLAMA_API_PATH = {
 export const OLLAMA_PROBE_TIMEOUT_MS = 3_000;
 export const OLLAMA_CAPABILITY_THINKING = 'thinking';
 export const OLLAMA_UNLOAD_KEEP_ALIVE = 0;
-export const OLLAMA_ALLOWED_URL_PROTOCOLS: readonly string[] = ['http:', 'https:'];
+export const OLLAMA_ALLOWED_URL_PROTOCOLS: readonly string[] = ['http:'];
+export const OLLAMA_UPSTREAM_HEADER = 'X-Evai-Ollama-Base-Url';
+export const OLLAMA_PROXY_ERROR_HEADER = 'X-Evai-Proxy-Error';
+export const OLLAMA_PROXY_UPSTREAM_UNREACHABLE = 'upstream_unreachable';
+export const OLLAMA_DEFAULT_NETWORK_HOST = '0.0.0.0:11434';
 export const OLLAMA_STATUS_DETAIL_READY = 'ready';
 export const OLLAMA_MEASUREMENT_PREDICT_TOKENS = 1;
+export const OLLAMA_PS_REGISTRATION_ATTEMPTS = 4;
+export const OLLAMA_PS_REGISTRATION_RETRY_MS = 400;
+export const OLLAMA_MODEL_INFO_ARCHITECTURE_KEY = 'general.architecture';
+export const OLLAMA_MODEL_INFO_CONTEXT_LENGTH_SUFFIX = '.context_length';
 export const OLLAMA_CONTEXT_OVERFLOW_MARKERS: readonly string[] = [
     'exceed_context_size_error',
     'exceeds the available context size',
@@ -20,4 +28,3 @@ export const OLLAMA_CONTEXT_OVERFLOW_MARKERS: readonly string[] = [
     'the prompt is longer than the context length',
 ];
 export const OLLAMA_CONTEXT_OVERFLOW_TOKEN_COUNT_PATTERN = /\((\d+) tokens\)/u;
-export const OLLAMA_DEFAULT_ALLOWED_ORIGIN_HOSTS: readonly string[] = ['localhost', '127.0.0.1', '0.0.0.0'];

@@ -1,7 +1,7 @@
 import { isDomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
-import { EVERTALK_SESSION_TITLE, repairHangulComposition, splitPersonaReplyActions, type ChatMessage, type ChatRoom, type PersonaContextGraph, type PersonaContextRelation, type PersonaKeywordThread, type PersonaMemoryOverview } from '../chat';
-import type { ChatModelEntry, LocalModelFileEntry, ModelDownloadProgress } from '../llm';
+import { EVERTALK_SESSION_TITLE, removeJsonResidue, repairHangulComposition, splitPersonaReplyActions, type ChatMessage, type ChatRoom, type PersonaContextGraph, type PersonaContextRelation, type PersonaKeywordThread, type PersonaMemoryOverview } from '../chat';
+import type { ChatModelCatalog, ChatModelEntry, LocalModelFileEntry, ModelDownloadProgress } from '../llm';
 import type { ModuleControl, ModuleControlOption } from '../modules';
 import type { FamiliarityEntry, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import { FAMILIARITY_GRADE_MILESTONES, FAMILIARITY_MAX_LEVEL, computeFamiliarityLevel, resolveFamiliarityGrade, type FamiliarityGrade } from '../persona/familiarity';
@@ -15,7 +15,7 @@ export {
 } from '../persona/familiarity';
 import type { BackupFileEntry } from '../sync';
 import type { EverTalkLabels } from './i18n';
-import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphArcPlacement, MemoryGraphBounds, MemoryGraphDetailPosition, MemoryGraphEdge, MemoryGraphEmphasis, MemoryGraphLayout, MemoryGraphLayoutSubject, MemoryGraphNode, MemoryGraphPoint, MemoryGraphViewFilter, MemoryGraphViewTransform, MemoryOverviewRow, MemorySpiritRosterEntry, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
+import type { ApiConnectionState, ApiStatusItem, ImageViewerPanDirection, ImageViewerPoint, ImageViewerSize, ImageViewerTransform, LobbyActorMotion, LocalModelEntryGroup, MemoryGraphArcPlacement, MemoryGraphBounds, MemoryGraphDetailPosition, MemoryGraphEdge, MemoryGraphEmphasis, MemoryGraphLayout, MemoryGraphLayoutSubject, MemoryGraphNode, MemoryGraphPoint, MemoryGraphViewFilter, MemoryGraphViewTransform, GenerationEngineLimit, MemoryOverviewRow, MemorySpiritRosterEntry, SpiritReplyParts, PanelResizeHandle, PanelResizeResult, PanelResizeState, PreferredSpiritFamiliarity, SettingsSectionNavItem, SpiritRosterMeta, SpiritStickerBadge, SystemStatusId, TalkChoice } from './types';
 import {
     ANNIVERSARY_STICKER_URL,
     familiaritySigilFrameAsset,
@@ -188,7 +188,7 @@ export function splitSpiritReply(text: string, streaming: boolean): SpiritReplyP
     const { actions, spoken } = splitPersonaReplyActions(blocks.filter((block) => block.type === 'text').map((block) => block.content).join(''), streaming);
     return {
         reasoning: blocks.filter((block) => block.type === 'think').map((block) => block.content.trim()).filter((content) => content.length > 0).join('\n\n'),
-        reply: spoken,
+        reply: spoken.split('\n').map(removeJsonResidue).join('\n').trim(),
         actions,
     };
 }
@@ -429,6 +429,44 @@ export function filterMemoryKeywordThreads(threads: readonly PersonaKeywordThrea
     const query = filter.query.trim().toLocaleLowerCase();
     return threads.filter((thread) => (query.length === 0 || thread.keyword.token.toLocaleLowerCase().includes(query))
         && (!filter.recentOnly || thread.keyword.query_match || thread.keyword.recent_count > 0));
+}
+
+export function buildGenerationEngineLimits(catalog: ChatModelCatalog | null): GenerationEngineLimit[] {
+    if (catalog === null) {
+        return [];
+    }
+    const limits: GenerationEngineLimit[] = [];
+    for (const entry of catalog.ollama?.entries ?? []) {
+        if (!entry.selected && !entry.loaded) {
+            continue;
+        }
+        limits.push({
+            engine_label: entry.model_name,
+            maximum_context_length: entry.maximum_context_window,
+            active_context_length: entry.context_window,
+        });
+    }
+    for (const entry of catalog.entries) {
+        if (entry.selected && entry.context_window !== null) {
+            limits.push({ engine_label: entry.id, maximum_context_length: entry.context_window, active_context_length: entry.context_window });
+        }
+    }
+    for (const entry of catalog.chrome_installed?.entries ?? []) {
+        if (entry.selected && entry.context_window !== null) {
+            limits.push({ engine_label: entry.id, maximum_context_length: entry.context_window, active_context_length: entry.context_window });
+        }
+    }
+    return limits;
+}
+
+const PANEL_KEYWORD_LIMIT = 8;
+
+export function selectPanelKeywordThreads(threads: readonly PersonaKeywordThread[]): PersonaKeywordThread[] {
+    return [...threads]
+        .sort((left, right) => right.keyword.priority - left.keyword.priority
+            || right.keyword.last_seen_at.localeCompare(left.keyword.last_seen_at)
+            || left.keyword.token.localeCompare(right.keyword.token))
+        .slice(0, PANEL_KEYWORD_LIMIT);
 }
 
 function memoryRelationEmphasis(relation: PersonaContextRelation): MemoryGraphEmphasis {

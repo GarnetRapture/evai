@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 150" width="720" height="150" role="img" aria-label="Mephistopheles on Ollama">
+  <style>
+    .bubble { fill: #ffffff; stroke: #9b5de5; stroke-width: 2; }
+    .name { font: 600 13px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #9b5de5; }
+    .line { font: 15px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #24231f; }
+    .strong { font: 600 15px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #6f2dbd; }
+  </style>
+  <path class="bubble" d="M26 10 h640 a14 14 0 0 1 14 14 v98 a14 14 0 0 1 -14 14 h-640 a14 14 0 0 1 -14 -14 v-35 l-14 -16 l14 -12 v-35 a14 14 0 0 1 14 -14 z"/>
+  <text class="name" x="40" y="34">메피스토펠레스</text>
+  <text class="line" x="40" y="62">Ollama를 쓰시려면 evai-server를 먼저 실행해주세요.</text>
+  <text class="line" x="40" y="88">브라우저가 Ollama에 직접 접속하지는 않습니다. 서버가 중계합니다.</text>
+  <text class="strong" x="40" y="114">고르신 모델 하나가 그대로 대화에 쓰입니다. …후후, 준비됐습니다.</text>
+</svg>

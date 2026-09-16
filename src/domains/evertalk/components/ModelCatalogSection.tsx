@@ -4,9 +4,11 @@ import type { ModelCatalogSectionProps } from '../types';
 import { ChromeInstalledModelSection } from './ChromeInstalledModelSection';
 import { OnDeviceSystemModelItem } from './OnDeviceSystemModelItem';
 import { LocalModelSection } from './LocalModelSection';
+import { LocalServerNotice } from './LocalServerNotice';
+import { GenerationLimitsSection } from './GenerationLimitsSection';
 import { OllamaModelSection } from './OllamaModelSection';
 
-export function ModelCatalogSection({ appPlatform, devicePlatform, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, labels, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onLinkChromeLocalState, onSaveChromeModelFolderPath, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveOllamaBaseUrl }: ModelCatalogSectionProps) {
+export function ModelCatalogSection({ appPlatform, localServerNoticeVisible, devicePlatform, modelCatalog, modelCatalogError, modelPreparation, modelLoadingId, labels, onRefreshModelCatalog, onSelectChatModel, onPrepareOnDeviceSystemModel, onLinkChromeInstalledModelFolder, onLinkChromeLocalState, onSaveChromeModelFolderPath, chromeInstalledModelLinking, onInstallLocalModel, onDownloadLocalModel, onRemoveLocalModel, onSaveOllamaBaseUrl, contextWindowTokens, maxOutputTokens, generationEngineLimits, onSaveGenerationLimits }: ModelCatalogSectionProps) {
     const entries = modelCatalog?.entries ?? [];
     const localModelGroups = groupLocalModelEntries(entries);
     const chromeInstalledLibrary = modelCatalog?.chrome_installed ?? null;
@@ -27,7 +29,10 @@ export function ModelCatalogSection({ appPlatform, devicePlatform, modelCatalog,
 
         {chromeInstalledLibrary !== null ? (<ChromeInstalledModelSection key={chromeInstalledLibrary.folder_path} library={chromeInstalledLibrary} modelLoadingId={modelLoadingId} linking={chromeInstalledModelLinking} labels={labels} onSelectChatModel={onSelectChatModel} onLinkChromeInstalledModelFolder={onLinkChromeInstalledModelFolder} onLinkChromeLocalState={onLinkChromeLocalState} onSaveChromeModelFolderPath={onSaveChromeModelFolderPath}/>) : null}
 
+        {localServerNoticeVisible ? <LocalServerNotice labels={labels}/> : null}
+
         {ollamaLibrary !== null ? (<OllamaModelSection key={ollamaLibrary.base_url} library={ollamaLibrary} modelLoadingId={modelLoadingId} platform={devicePlatform} labels={labels} onRefreshModelCatalog={onRefreshModelCatalog} onSelectChatModel={onSelectChatModel} onSaveOllamaBaseUrl={onSaveOllamaBaseUrl}/>) : null}
+        <GenerationLimitsSection contextWindowTokens={contextWindowTokens} maxOutputTokens={maxOutputTokens} engineLimits={generationEngineLimits} labels={labels} onSaveGenerationLimits={onSaveGenerationLimits}/>
 
         {localModelGroups.map((group) => (<LocalModelSection key={group.engine} appPlatform={appPlatform} engine={group.engine} entries={group.entries} modelPreparation={modelPreparation} modelLoadingId={modelLoadingId} labels={labels} onSelectChatModel={onSelectChatModel} onInstallLocalModel={onInstallLocalModel} onDownloadLocalModel={onDownloadLocalModel} onRemoveLocalModel={onRemoveLocalModel}/>))}
 

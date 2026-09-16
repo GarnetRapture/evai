@@ -1,11 +1,17 @@
 import { DomainError, describeUnknownError, isAbortError, isDomainError } from '../../shared/errors';
 import {
     OLLAMA_API_PATH,
+    OLLAMA_PROXY_ERROR_HEADER,
+    OLLAMA_PROXY_UPSTREAM_UNREACHABLE,
     OLLAMA_CAPABILITY_THINKING,
     OLLAMA_CONTEXT_OVERFLOW_MARKERS,
     OLLAMA_CONTEXT_OVERFLOW_TOKEN_COUNT_PATTERN,
     OLLAMA_MEASUREMENT_PREDICT_TOKENS,
+    OLLAMA_MODEL_INFO_ARCHITECTURE_KEY,
+    OLLAMA_MODEL_INFO_CONTEXT_LENGTH_SUFFIX,
     OLLAMA_PROBE_TIMEOUT_MS,
+    OLLAMA_PS_REGISTRATION_ATTEMPTS,
+    OLLAMA_PS_REGISTRATION_RETRY_MS,
     OLLAMA_STATUS_DETAIL_READY,
     OLLAMA_UNLOAD_KEEP_ALIVE,
 } from './constants';
@@ -26,11 +32,24 @@ import type {
     OllamaTagsResponse,
     OllamaVersionResponse,
 } from './types';
-import { ollamaEndpoint } from './url';
+import { ollamaProxyEndpoint, ollamaUpstreamHeaders } from './url';
 
 const JSON_HEADERS = { 'Content-Type': 'application/json' };
 const NDJSON_LINE_SEPARATOR = '\n';
 const TIMEOUT_ERROR_NAME = 'TimeoutError';
+
+function readModelArchitecture(modelInfo: Record<string, unknown> | undefined): string {
+    const value = modelInfo?.[OLLAMA_MODEL_INFO_ARCHITECTURE_KEY];
+    return typeof value === 'string' ? value : '';
+}
+
+function readModelContextLength(modelInfo: Record<string, unknown> | undefined, architecture: string): number | null {
+    if (modelInfo === undefined || architecture.length === 0) {
+        return null;
+    }
+    const value = modelInfo[`${architecture}${OLLAMA_MODEL_INFO_CONTEXT_LENGTH_SUFFIX}`];
+    return typeof value === 'number' && Number.isInteger(value) && value > 0 ? value : null;
+}
 
 function isCallerCancellation(signal: AbortSignal | null | undefined, error: unknown): boolean {
     const timedOut = signal?.reason instanceof DOMException && signal.reason.name === TIMEOUT_ERROR_NAME;
@@ -44,7 +63,10 @@ function isOllamaErrorResponse(value: unknown): value is OllamaErrorResponse {
 async function requestOllama(baseUrl: string, path: string, init: RequestInit): Promise<Response> {
     let response: Response;
     try {
-        response = await fetch(ollamaEndpoint(baseUrl, path), init);
+        response = await fetch(ollamaProxyEndpoint(path), {
+            ...init,
+            headers: { ...ollamaUpstreamHeaders(baseUrl), ...init.headers },
+        });
     }
     catch (error) {
         if (isCallerCancellation(init.signal, error)) {
@@ -54,7 +76,11 @@ async function requestOllama(baseUrl: string, path: string, init: RequestInit): 
     }
     if (!response.ok) {
         const body: unknown = await response.json().catch(() => null);
-        throw new DomainError('ollama_runtime', isOllamaErrorResponse(body) ? body.error : `${response.status} ${response.statusText}`);
+        const detail = isOllamaErrorResponse(body) ? body.error : `${response.status} ${response.statusText}`;
+        if (response.headers.get(OLLAMA_PROXY_ERROR_HEADER) === OLLAMA_PROXY_UPSTREAM_UNREACHABLE) {
+            throw new DomainError('ollama_unavailable', `${baseUrl} · ${detail}`);
+        }
+        throw new DomainError('ollama_runtime', detail);
     }
     return response;
 }
@@ -100,11 +126,6 @@ export const ollamaClient = {
             .filter((model) => model.remote_host === undefined || model.remote_host.length === 0)
             .sort((left, right) => Date.parse(right.modified_at) - Date.parse(left.modified_at));
     },
-    async resolveServingModelName(baseUrl: string): Promise<string | null> {
-        const [localModels, runningModels] = await Promise.all([ollamaClient.listModels(baseUrl), ollamaClient.listRunningModels(baseUrl)]);
-        const localNames = new Set(localModels.map((model) => model.name));
-        return runningModels.find((model) => localNames.has(model.name))?.name ?? localModels[0]?.name ?? null;
-    },
     async listRunningModels(baseUrl: string): Promise<OllamaRunningModel[]> {
         const response = await readJson<OllamaPsResponse>(baseUrl, OLLAMA_API_PATH.ps, { signal: AbortSignal.timeout(OLLAMA_PROBE_TIMEOUT_MS) });
         return response.models;
@@ -141,22 +162,36 @@ export const ollamaClient = {
             headers: JSON_HEADERS,
             body: JSON.stringify({ model: modelName }),
         });
+        const architecture = readModelArchitecture(response.model_info);
         return {
             name: modelName,
             capabilities: response.capabilities ?? [],
+            architecture,
+            maximum_context_length: readModelContextLength(response.model_info, architecture),
         };
     },
     supportsThinking(profile: OllamaModelProfile): boolean {
         return profile.capabilities.includes(OLLAMA_CAPABILITY_THINKING);
     },
-    async loadModel(baseUrl: string, modelName: string): Promise<number> {
-        const request: OllamaChatRequest = { model: modelName, messages: [], stream: false };
+    async loadModel(baseUrl: string, modelName: string, contextLength: number | null): Promise<number> {
+        const request: OllamaChatRequest = {
+            model: modelName,
+            messages: [],
+            stream: false,
+            ...(contextLength === null ? {} : { options: { num_ctx: contextLength } }),
+        };
         await requestOllama(baseUrl, OLLAMA_API_PATH.chat, { method: 'POST', headers: JSON_HEADERS, body: JSON.stringify(request) });
-        const running = (await ollamaClient.listRunningModels(baseUrl)).find((model) => model.name === modelName);
-        if (running === undefined || !Number.isInteger(running.context_length) || running.context_length <= 0) {
-            throw new DomainError('ollama_runtime', `${OLLAMA_API_PATH.ps} · ${modelName}`);
+        let running: OllamaRunningModel | undefined;
+        for (let attempt = 0; attempt < OLLAMA_PS_REGISTRATION_ATTEMPTS; attempt += 1) {
+            if (attempt > 0) {
+                await new Promise((resolve) => setTimeout(resolve, OLLAMA_PS_REGISTRATION_RETRY_MS));
+            }
+            running = (await ollamaClient.listRunningModels(baseUrl)).find((model) => model.name === modelName);
+            if (running !== undefined && Number.isInteger(running.context_length) && running.context_length > 0) {
+                return running.context_length;
+            }
         }
-        return running.context_length;
+        throw new DomainError('ollama_runtime', `${OLLAMA_API_PATH.ps} · ${modelName} · ${running === undefined ? 'not_running' : `context_length ${String(running.context_length)}`}`);
     },
     async unloadModel(baseUrl: string, modelName: string): Promise<void> {
         const request: OllamaChatRequest = { model: modelName, messages: [], stream: false, keep_alive: OLLAMA_UNLOAD_KEEP_ALIVE };

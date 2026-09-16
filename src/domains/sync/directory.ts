@@ -9,7 +9,9 @@ import {
     requestDirectoryPermission,
     writeDirectoryFile,
 } from '../../shared/files';
+import { isLocalServerRuntime } from '../../shared/host';
 import { EVERSOUL_STORE, readBackupDirectoryHandle, removeBackupDirectoryHandle, saveBackupDirectoryHandle } from '../../shared/storage';
+import { serverBackupDirectoryAccess } from './serverBackup';
 import type { BackupDirectoryAccess, BackupFileEntry } from './types';
 
 const BACKUP_DIRECTORY_PICKER_ID = 'eversoul-backup-directory';
@@ -109,5 +111,8 @@ const androidBackupDirectoryAccess: BackupDirectoryAccess = {
 };
 
 export function backupDirectoryAccess(): BackupDirectoryAccess {
-    return isAndroidAppRuntime() ? androidBackupDirectoryAccess : webBackupDirectoryAccess;
+    if (isAndroidAppRuntime()) {
+        return androidBackupDirectoryAccess;
+    }
+    return isLocalServerRuntime() ? serverBackupDirectoryAccess : webBackupDirectoryAccess;
 }

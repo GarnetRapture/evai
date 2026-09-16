@@ -1,12 +1,14 @@
 import { DomainError } from '../errors';
+import { resolveAppHostRuntime } from '../host';
 import { createMonotonicTimestamp } from '../time';
 import {
     beginEverSoulDatabaseMaintenance,
     endEverSoulDatabaseMaintenance,
     getEverSoulDatabase,
     openEverSoulDatabaseForMaintenance,
-    type EverSoulDatabase,
 } from './database';
+import { localServerStorageClient } from './localServer/client';
+import type { EverSoulDatabase } from './types';
 import {
     BACKUP_DIRECTORY_HANDLE_KEY,
     EVERSOUL_BACKUP_FORMAT,
@@ -181,6 +183,11 @@ export function parseDatabaseSnapshot(text: string): EverSoulDatabaseSnapshot {
 export async function restoreDatabaseSnapshotForReload(snapshot: EverSoulDatabaseSnapshot): Promise<void> {
     await beginEverSoulDatabaseMaintenance();
     try {
+        if ((await resolveAppHostRuntime()).kind === 'local_server') {
+            await localServerStorageClient.restore(snapshot.stores as unknown as Record<string, unknown[]>);
+            endEverSoulDatabaseMaintenance();
+            return;
+        }
         const database = await openEverSoulDatabaseForMaintenance();
         try {
             await writeDatabaseSnapshot(database, snapshot.stores);

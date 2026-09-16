@@ -2,10 +2,12 @@
 
 #include <algorithm>
 #include <cctype>
+#include <charconv>
 #include <cstddef>
 #include <optional>
 #include <string>
 #include <string_view>
+#include <system_error>
 
 namespace evai::server::http {
 
@@ -24,11 +26,6 @@ std::string_view trim(std::string_view value)
     return value.substr(first, last - first + 1);
 }
 
-bool equals_ignore_case(std::string_view left, std::string_view right)
-{
-    return std::ranges::equal(left, right, [](unsigned char a, unsigned char b) { return std::tolower(a) == std::tolower(b); });
-}
-
 std::optional<int> hex_value(char character)
 {
     if (character >= '0' && character <= '9') {
@@ -43,6 +40,31 @@ std::optional<int> hex_value(char character)
     return std::nullopt;
 }
 
+}
+
+bool equals_ignore_case(std::string_view left, std::string_view right)
+{
+    return std::ranges::equal(left, right, [](unsigned char a, unsigned char b) { return std::tolower(a) == std::tolower(b); });
+}
+
+std::string_view HttpRequest::header(std::string_view name) const
+{
+    const auto match = std::ranges::find_if(headers, [name](const HttpHeader& entry) { return equals_ignore_case(entry.name, name); });
+    return match == headers.end() ? std::string_view{} : std::string_view(match->value);
+}
+
+std::optional<std::size_t> parse_content_length(std::string_view value)
+{
+    const std::string_view trimmed = trim(value);
+    if (trimmed.empty()) {
+        return std::nullopt;
+    }
+    std::size_t length = 0;
+    const auto [end, error] = std::from_chars(trimmed.data(), trimmed.data() + trimmed.size(), length);
+    if (error != std::errc{} || end != trimmed.data() + trimmed.size()) {
+        return std::nullopt;
+    }
+    return length;
 }
 
 std::optional<HttpRequest> parse_http_request(std::string_view header_block)
@@ -61,14 +83,21 @@ std::optional<HttpRequest> parse_http_request(std::string_view header_block)
         std::string(request_line.substr(0, method_end)),
         std::string(trim(request_line.substr(method_end + 1, target_end - method_end - 1))),
         {},
+        {},
+        {},
     };
     std::string_view remaining = header_block.substr(request_line_end + line_separator.size());
     while (!remaining.empty()) {
         const auto line_end = remaining.find(line_separator);
         const std::string_view line = remaining.substr(0, line_end);
         const auto colon = line.find(':');
-        if (colon != std::string_view::npos && equals_ignore_case(trim(line.substr(0, colon)), host_header_name)) {
-            request.host = std::string(trim(line.substr(colon + 1)));
+        if (colon != std::string_view::npos) {
+            const std::string_view name = trim(line.substr(0, colon));
+            const std::string_view value = trim(line.substr(colon + 1));
+            request.headers.push_back(HttpHeader{std::string(name), std::string(value)});
+            if (equals_ignore_case(name, host_header_name)) {
+                request.host = std::string(value);
+            }
         }
         if (line_end == std::string_view::npos) {
             break;

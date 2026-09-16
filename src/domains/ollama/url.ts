@@ -1,13 +1,5 @@
-import { OLLAMA_ALLOWED_URL_PROTOCOLS, OLLAMA_DEFAULT_ALLOWED_ORIGIN_HOSTS } from './constants';
-import type { OllamaOriginAccess } from './types';
-
-export function resolveOllamaOriginAccess(pageUrl: string): OllamaOriginAccess {
-    const url = new URL(pageUrl);
-    return {
-        origin: url.origin,
-        allowed_by_default: OLLAMA_ALLOWED_URL_PROTOCOLS.includes(url.protocol) && OLLAMA_DEFAULT_ALLOWED_ORIGIN_HOSTS.includes(url.hostname),
-    };
-}
+import { LOCAL_SERVER_OLLAMA_PATH } from '../../shared/host';
+import { OLLAMA_ALLOWED_URL_PROTOCOLS, OLLAMA_UPSTREAM_HEADER } from './constants';
 
 const ROOT_PATHNAME = '/';
 
@@ -23,6 +15,10 @@ export function normalizeOllamaBaseUrl(input: string): string | null {
     return url.origin;
 }
 
-export function ollamaEndpoint(baseUrl: string, path: string): string {
-    return `${baseUrl}${path}`;
+export function ollamaProxyEndpoint(path: string): string {
+    return `${LOCAL_SERVER_OLLAMA_PATH}${path}`;
+}
+
+export function ollamaUpstreamHeaders(baseUrl: string): Record<string, string> {
+    return { [OLLAMA_UPSTREAM_HEADER]: baseUrl };
 }

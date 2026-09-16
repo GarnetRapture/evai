@@ -15,6 +15,7 @@ namespace evai::server::app {
 namespace {
 
 constexpr std::string_view port_option = "--port";
+constexpr std::string_view create_database_option = "--create-database";
 
 std::uint16_t parse_port(std::string_view value)
 {
@@ -26,19 +27,30 @@ std::uint16_t parse_port(std::string_view value)
     return static_cast<std::uint16_t>(port);
 }
 
+std::string_view require_value(std::span<const std::string_view> arguments, std::size_t& index, std::string_view option)
+{
+    if (index + 1 >= arguments.size()) {
+        throw std::invalid_argument(std::format("{} requires a value", option));
+    }
+    return arguments[++index];
+}
+
 }
 
 ServerOptions parse_server_options(std::span<const std::string_view> arguments)
 {
-    ServerOptions options{default_server_port};
+    ServerOptions options{default_server_port, ServerRunMode::serve, std::string{}};
     for (std::size_t index = 0; index < arguments.size(); ++index) {
-        if (arguments[index] != port_option) {
-            throw std::invalid_argument(std::format("unknown argument: {}", arguments[index]));
+        if (arguments[index] == port_option) {
+            options.port = parse_port(require_value(arguments, index, port_option));
+            continue;
         }
-        if (index + 1 >= arguments.size()) {
-            throw std::invalid_argument(std::format("{} requires a value", port_option));
+        if (arguments[index] == create_database_option) {
+            options.run_mode = ServerRunMode::create_database;
+            options.database_path = std::string(require_value(arguments, index, create_database_option));
+            continue;
         }
-        options.port = parse_port(arguments[++index]);
+        throw std::invalid_argument(std::format("unknown argument: {}", arguments[index]));
     }
     return options;
 }

@@ -4,11 +4,12 @@ import { MEMORY_CONTEXT_KINDS } from '../../chat';
 import { parseSpiritDetail } from '../../persona';
 import { buildMemoryContextGraphLayout, filterMemoryKeywordThreads } from '../logic';
 import type { EverTalkController, MemoryGraphSelection, WorkspacePageProps } from '../types';
-import { LOBBY_UI_ASSETS } from '../uiAssets';
+import { DECOR_UI_ASSETS, LOBBY_UI_ASSETS } from '../uiAssets';
 import { CheatModePage } from './CheatModePage';
 import { MemoryKeywordDetail, MemoryRelationDetail } from './MemoryContextDetails';
 import { MemoryGraphCanvas } from './MemoryGraphCanvas';
 import { MemorySpiritRoster } from './MemorySpiritRoster';
+import { StorageStoreCard } from './StorageDataManager';
 import { SpiritViewAvatar, WorkspaceSurface } from './WorkspaceSurface';
 
 function formatBytes(bytes: number | null, locale: string): string {
@@ -43,15 +44,29 @@ export function StorageAnalyticsPage({ controller }: WorkspacePageProps) {
                 </button>
             </header>
             {controller.storageInspectionError ? <div className="ever-workspace-error">{controller.storageInspectionError}</div> : null}
+            {controller.storageWriteMessage ? <div className="ever-workspace-notice">{controller.storageWriteMessage}</div> : null}
             <section className="ever-storage-location-grid">
                 <article className="ever-insight-card is-active">
                     <div className="ever-insight-card__title"><Database size={20}/><strong>{labels.browserManagedLocation}</strong></div>
                     <p>{labels.browserManagedLocationDetail}</p>
-                    <dl><div><dt>Origin</dt><dd>{inspection?.origin || '-'}</dd></div><div><dt>IndexedDB</dt><dd>{inspection?.database_name || '-'}</dd></div></dl>
+                    <dl>
+                        <div><dt>Origin</dt><dd>{inspection?.origin || '-'}</dd></div>
+                        <div><dt>{labels.storageBackendName[inspection?.backend ?? controller.storageKind]}</dt><dd>{inspection?.database_name || '-'}</dd></div>
+                        {inspection?.engine_version ? <div><dt>SQLite</dt><dd>{inspection.engine_version}</dd></div> : null}
+                        {inspection?.schema_version ? <div><dt>{labels.storageSchemaVersion}</dt><dd>{inspection.schema_version}</dd></div> : null}
+                        {inspection?.server_version ? (<div>
+                            <dt>{labels.storageServerVersion}</dt>
+                            <dd>{inspection.server_version}{inspection.server_port === null ? '' : ` · :${inspection.server_port}`}</dd>
+                        </div>) : null}
+                        {inspection?.link_row_count === null || inspection?.link_row_count === undefined ? null : (<div>
+                            <dt>{labels.storageRelations}</dt>
+                            <dd>{labels.storageLinkRowCount(inspection.link_row_count)}</dd>
+                        </div>)}
+                    </dl>
                 </article>
             </section>
             <section className="ever-metric-grid">
-                <article><small>{labels.storageModeActive}</small><strong>{labels.browserStorage}</strong></article>
+                <article><small>{labels.storageModeActive}</small><strong>{labels.storageBackendName[inspection?.backend ?? controller.storageKind]}</strong></article>
                 <article><small>{labels.storageUsage}</small><strong>{formatBytes(inspection?.usage_bytes ?? null, locale)}</strong></article>
                 <article><small>{labels.storageQuota}</small><strong>{formatBytes(inspection?.quota_bytes ?? null, locale)}</strong></article>
                 <article><small>{labels.snapshotEstimate}</small><strong>{formatBytes(inspection?.estimated_snapshot_bytes ?? null, locale)}</strong></article>
@@ -67,9 +82,29 @@ export function StorageAnalyticsPage({ controller }: WorkspacePageProps) {
                 <article className="ever-chart-card">
                     <h2>{labels.storeBreakdown}</h2>
                     <div className="ever-bar-list">{inspection?.stores.map((store) => (
-                        <div key={store.store_name}><span><b>{store.store_name}</b><small>{store.record_count} {labels.recordsLabel} · {formatBytes(store.estimated_bytes, locale)}</small></span><i><em style={{ width: `${totalStoreBytes ? Math.max(2, store.estimated_bytes / totalStoreBytes * 100) : 0}%` }}/></i></div>
+                        <div key={store.physical_name}><span><b>{store.store_name}</b><small>{store.record_count} {labels.recordsLabel} · {formatBytes(store.estimated_bytes, locale)}</small></span><i><em style={{ width: `${totalStoreBytes ? Math.max(2, store.estimated_bytes / totalStoreBytes * 100) : 0}%`, backgroundImage: `url(${DECOR_UI_ASSETS.gaugeGradient})` }}/></i></div>
                     ))}</div>
                 </article>
+            </section>
+            <section className="ever-storage-schema">
+                <header className="ever-storage-schema__header">
+                    <img src={DECOR_UI_ASSETS.sectionDeco} alt="" aria-hidden="true"/>
+                    <h2>{labels.storageStructureTitle}</h2>
+                </header>
+                {!inspection?.stores.length ? <p>{labels.noStoredData}</p> : (<div className="ever-storage-schema__grid">
+                    {inspection.stores.map((store) => (
+                        <StorageStoreCard
+                            key={store.physical_name}
+                            controller={controller}
+                            store={store}
+                            page={controller.storageRecords[store.store_name]}
+                            loading={controller.storageRecordsLoading === store.store_name}
+                            locale={locale}
+                            labels={labels}
+                            formatBytes={(bytes) => formatBytes(bytes, locale)}
+                        />
+                    ))}
+                </div>)}
             </section>
             <section className="ever-persona-storage">
                 <h2>{labels.personaBreakdown}</h2>

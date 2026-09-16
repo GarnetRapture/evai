@@ -7,6 +7,7 @@ import {
     LITERT_LM_CONSOLIDATION_TOP_P,
     LITERT_LM_SAMPLING_SEED_LIMIT,
 } from './constants';
+import { normalizeTokenSetting, settingsRepository } from '../settings/repository';
 import { composeOnDeviceConversationMessages } from './turn';
 import type { LocalGenerationPayload, LocalSamplingParameters, OnDeviceGenerationRequest, OnDeviceTextMessage } from './types';
 
@@ -34,6 +35,15 @@ function personaConversationMessages(request: OnDeviceGenerationRequest): OnDevi
         ...request.session_prompt.priming_messages.map((message) => ({ role: message.role, content: message.content })),
         ...composeOnDeviceConversationMessages(request),
     ];
+}
+
+export async function resolveMaxOutputTokens(defaultLimit: number): Promise<number> {
+    return normalizeTokenSetting((await settingsRepository.readGeneral()).max_output_tokens) ?? defaultLimit;
+}
+
+export async function resolveContextWindowLimit(engineWindow: number): Promise<number> {
+    const configured = normalizeTokenSetting((await settingsRepository.readGeneral()).context_window_tokens);
+    return configured === null ? engineWindow : Math.min(configured, engineWindow);
 }
 
 // [핵심 아키텍처 · 수정 금지] 로컬 엔진 공통 생성 페이로드. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-3)

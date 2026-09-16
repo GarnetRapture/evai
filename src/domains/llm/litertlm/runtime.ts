@@ -9,7 +9,7 @@ import {
 import { DomainError, describeUnknownError } from '../../../shared/errors';
 import { assertPersonaSystemPrompt } from '../chrome/personaHook';
 import { LITERT_LM_CONSOLIDATION_TOKEN_LIMIT, LITERT_LM_RESPONSE_TOKEN_LIMIT } from '../constants';
-import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload } from '../localGeneration';
+import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload, resolveMaxOutputTokens } from '../localGeneration';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
 import type {
     InstalledModelFile,
@@ -155,7 +155,7 @@ export const liteRtLmRuntime = {
             assertPersonaSystemPrompt(request.session_prompt.system_prompt, request.persona_name);
             await liteRtLmRuntime.focusPersonaSession(fileName, request.persona_id);
             recordRequestStatus({ ...status, state: 'running', prompt_tokens: null, generated_tokens: null });
-            const payload = JSON.stringify(buildPersonaGenerationPayload(request, LITERT_LM_RESPONSE_TOKEN_LIMIT));
+            const payload = JSON.stringify(buildPersonaGenerationPayload(request, await resolveMaxOutputTokens(LITERT_LM_RESPONSE_TOKEN_LIMIT)));
             const result = await runAndroidStreamingRequest(
                 request.request_id,
                 (bridge) => bridge.generateLiteRtLm(request.request_id, payload),

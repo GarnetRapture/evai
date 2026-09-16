@@ -1,4 +1,5 @@
 import type React from 'react';
+import type { AppHostRuntime, AppStorageKind } from '../../shared/host';
 import type { AppLanguage, AppPlatform, PlatformSupportStatus } from '../../shared/types';
 import type { DeviceEnvironmentInfo } from '../../shared/platform';
 import type { UserSession } from '../auth';
@@ -33,7 +34,8 @@ import type { ImportedModule, ModuleControl } from '../modules';
 import type { BondRankingEntry, FamiliarityEntry, PersonaCheatPreset, PersonaCheatPresetPatch, PersonaConfig, SpiritDetail, SpiritSkinVisualAsset } from '../persona';
 import type { AppSettings, SetupPhase, SetupProgress } from '../settings';
 import type { StyleProfile } from '../style';
-import type { BackupDirectoryStatus, BrowserStorageInspection, LocalStatusSnapshot } from '../sync';
+import type { EverSoulStoreName } from '../../shared/storage';
+import type { BackupDirectoryStatus, BrowserStorageInspection, LocalStatusSnapshot, StorageRecordPage, StorageRecordWrite } from '../sync';
 import type { EverTalkLabels, PlatformBlockedReason } from './i18n';
 export interface LoadableAssetImageProps {
     candidates: string[];
@@ -397,8 +399,21 @@ export interface ChatStageProps {
     labels: EverTalkLabels;
     onOpenProfileDetail: () => void;
 }
+export interface GenerationEngineLimit {
+    engine_label: string;
+    maximum_context_length: number | null;
+    active_context_length: number | null;
+}
+export interface GenerationLimitsSectionProps {
+    contextWindowTokens: number | null;
+    maxOutputTokens: number | null;
+    engineLimits: GenerationEngineLimit[];
+    labels: EverTalkLabels;
+    onSaveGenerationLimits: (contextWindowTokens: number | null, maxOutputTokens: number | null) => Promise<void>;
+}
 export interface SpiritProfilePanelProps {
     activeDetail: SpiritDetail | null;
+    activeSpiritId: string;
     activeSkinId: string;
     onSelectSkin: (skinId: string) => Promise<void>;
     collapsed: boolean;
@@ -415,6 +430,9 @@ export interface SpiritProfilePanelProps {
     localStatus: LocalStatusSnapshot | null;
     memoryInsight: PersonaMemoryInsight | null;
     memoryInsightLoading: boolean;
+    memoryOverview: PersonaMemoryOverview | null;
+    contextGraph: PersonaContextGraph | null;
+    contextGraphLoading: boolean;
     labels: EverTalkLabels;
     onOpenProfileDetail: () => void;
 }
@@ -555,8 +573,12 @@ export interface SystemStatusPanelProps {
     statuses: ApiStatusItem[];
     labels: EverTalkLabels;
 }
+export interface LocalServerNoticeProps {
+    labels: EverTalkLabels;
+}
 export interface ModelCatalogSectionProps {
     appPlatform: AppPlatform;
+    localServerNoticeVisible: boolean;
     devicePlatform: string;
     modelCatalog: ChatModelCatalog | null;
     modelCatalogError: string | null;
@@ -574,6 +596,10 @@ export interface ModelCatalogSectionProps {
     onDownloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onRemoveLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     onSaveOllamaBaseUrl: (baseUrl: string) => Promise<void>;
+    contextWindowTokens: number | null;
+    maxOutputTokens: number | null;
+    generationEngineLimits: GenerationEngineLimit[];
+    onSaveGenerationLimits: (contextWindowTokens: number | null, maxOutputTokens: number | null) => Promise<void>;
 }
 export interface OllamaModelSectionProps {
     library: OllamaModelLibrary;
@@ -655,6 +681,7 @@ export interface SettingsSectionNavItem {
 }
 export interface SettingsPanelProps extends ModelCatalogSectionProps {
     open: boolean;
+    storageKind: AppStorageKind;
     settings: AppSettings | null;
     preferredSpiritNames: string[];
     activeStyleName: string | null;
@@ -721,15 +748,13 @@ export interface SetupProgressPanelProps {
     progress: SetupProgress | null;
     labels: EverTalkLabels;
 }
-export interface SetupWizardProps {
+export interface SetupWizardProps extends ModelCatalogSectionProps {
     open: boolean;
-    appPlatform: AppPlatform;
     language: AppLanguage;
-    labels: EverTalkLabels;
     ollamaGuideVisible: boolean;
     ollamaConnection: OllamaModelLibrary | null;
     ollamaConnectionChecking: boolean;
-    devicePlatform: string;
+    activeModelId: string;
     onCheckOllamaConnection: () => Promise<void>;
     onSelectLanguage: (language: AppLanguage) => Promise<void>;
     onCompleteSetup: () => Promise<void>;
@@ -742,6 +767,7 @@ export interface PlatformGuideNoticeProps {
 }
 export interface PlatformGuideGateProps {
     appPlatform: AppPlatform;
+    localServerNoticeVisible: boolean;
     labels: EverTalkLabels;
     ollamaGuideVisible: boolean;
     ollamaConnection: OllamaModelLibrary | null;
@@ -769,6 +795,12 @@ export interface EverTalkController {
     storageInspection: BrowserStorageInspection | null;
     storageInspectionLoading: boolean;
     storageInspectionError: string | null;
+    storageRecords: Record<string, StorageRecordPage>;
+    storageRecordsLoading: string | null;
+    storageWriteBusy: boolean;
+    storageWriteMessage: string | null;
+    loadStorageRecords: (storeName: EverSoulStoreName) => Promise<void>;
+    writeStorageRecord: (write: StorageRecordWrite) => Promise<void>;
     appInitializing: boolean;
     llmStatus: LlmStatus | null;
     allSpirits: PersonaConfig[];
@@ -898,6 +930,8 @@ export interface EverTalkController {
     installLocalModel: (engine: LocalModelEngineKind) => Promise<void>;
     downloadLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     saveOllamaBaseUrl: (baseUrl: string) => Promise<void>;
+    saveGenerationLimits: (contextWindowTokens: number | null, maxOutputTokens: number | null) => Promise<void>;
+    generationEngineLimits: GenerationEngineLimit[];
     ollamaGuideVisible: boolean;
     ollamaConnection: OllamaModelLibrary | null;
     ollamaConnectionChecking: boolean;
@@ -925,6 +959,9 @@ export interface EverTalkController {
     completeSetup: () => Promise<void>;
     platformSupport: PlatformSupportStatus;
     appPlatform: AppPlatform;
+    hostRuntime: AppHostRuntime;
+    storageKind: AppStorageKind;
+    localServerNoticeVisible: boolean;
     platformGuideAcknowledged: boolean;
     acknowledgePlatformGuide: () => Promise<void>;
     navigateWorkspace: (view: WorkspaceView) => Promise<void>;

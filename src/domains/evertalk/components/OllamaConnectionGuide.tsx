@@ -1,6 +1,6 @@
 import { Copy, RefreshCw } from 'lucide-react';
 import { useId, useMemo, useState } from 'react';
-import { buildOllamaCommandGuide, resolveOllamaOriginAccess } from '../../ollama';
+import { buildOllamaCommandGuide } from '../../ollama';
 import type { OllamaConnectionGuideProps } from '../types';
 
 export function OllamaConnectionGuide({ library, checking, introVisible, platform, labels, onCheck }: OllamaConnectionGuideProps) {
@@ -8,10 +8,9 @@ export function OllamaConnectionGuide({ library, checking, introVisible, platfor
     const ggufInputId = useId();
     const [modelName, setModelName] = useState('');
     const [ggufPath, setGgufPath] = useState('');
-    const originAccess = useMemo(() => resolveOllamaOriginAccess(window.location.href), []);
     const steps = useMemo(
-        () => buildOllamaCommandGuide(platform, originAccess, { model_name: modelName, gguf_path: ggufPath }),
-        [platform, originAccess, modelName, ggufPath],
+        () => buildOllamaCommandGuide(platform, { model_name: modelName, gguf_path: ggufPath }),
+        [platform, modelName, ggufPath],
     );
     const connected = library?.server.available === true;
     const modelCount = library?.entries.length ?? 0;
@@ -32,9 +31,6 @@ export function OllamaConnectionGuide({ library, checking, introVisible, platfor
         </div>
         {library !== null && !library.server.available ? <small className="ever-context-storage__detail">{library.server.detail}</small> : null}
         {library?.list_error ? <small className="ever-context-storage__detail">{library.list_error}</small> : null}
-        <small className="ever-context-storage__detail">
-          {originAccess.allowed_by_default ? labels.ollamaOriginAllowed(originAccess.origin) : labels.ollamaOriginRequired(originAccess.origin)}
-        </small>
         <div className="ever-context-storage__path">
           <label htmlFor={modelInputId}>{labels.ollamaGuideModelNameLabel}</label>
           <input id={modelInputId} type="text" value={modelName} placeholder={labels.ollamaGuideModelNamePlaceholder} autoComplete="off" spellCheck={false} onChange={(event) => setModelName(event.target.value)}/>

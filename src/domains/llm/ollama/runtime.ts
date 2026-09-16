@@ -1,9 +1,9 @@
 import { DomainError, describeUnknownError, isAbortError, isDomainError } from '../../../shared/errors';
-import { ollamaClient, type OllamaGenerationRequest } from '../../ollama';
-import { settingsRepository } from '../../settings/repository';
+import { ollamaClient, type OllamaGenerationRequest, type OllamaModelProfile } from '../../ollama';
+import { normalizeTokenSetting, settingsRepository } from '../../settings/repository';
 import { assertPersonaSystemPrompt } from '../chrome/personaHook';
 import { CHAT_MINIMUM_HISTORY_TURNS, OLLAMA_CONSOLIDATION_TOKEN_LIMIT, OLLAMA_RESPONSE_TOKEN_LIMIT } from '../constants';
-import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload } from '../localGeneration';
+import { buildPersonaGenerationPayload, buildPromptOnceGenerationPayload, resolveMaxOutputTokens } from '../localGeneration';
 import { createQueuedRequestStatus, recordRequestStatus } from '../requests';
 import { composeOnDeviceTurnMessage } from '../turn';
 import type {
@@ -34,6 +34,17 @@ async function readBaseUrl(): Promise<string> {
     return (await settingsRepository.readGeneral()).ollama_base_url;
 }
 
+async function readConfiguredContextWindow(): Promise<number | null> {
+    return normalizeTokenSetting((await settingsRepository.readGeneral()).context_window_tokens);
+}
+
+function resolveRequestedContextWindow(configured: number | null, profile: OllamaModelProfile): number | null {
+    if (configured === null) {
+        return null;
+    }
+    return profile.maximum_context_length === null ? configured : Math.min(configured, profile.maximum_context_length);
+}
+
 async function releaseServerModel(model: OllamaLoadedModel): Promise<void> {
     try {
         await ollamaClient.unloadModel(model.base_url, model.profile.name);
@@ -50,11 +61,12 @@ async function loadServerModel(baseUrl: string, modelName: string, generation: n
     loadedModel = null;
     focusedPersonaId = null;
     lastGeneration = null;
-    if (previous !== null) {
+    if (previous !== null && (previous.profile.name !== modelName || previous.base_url !== baseUrl)) {
         await releaseServerModel(previous);
     }
     const profile = await ollamaClient.showModel(baseUrl, modelName);
-    const contextWindow = await ollamaClient.loadModel(baseUrl, modelName);
+    const requestedContext = resolveRequestedContextWindow(await readConfiguredContextWindow(), profile);
+    const contextWindow = await ollamaClient.loadModel(baseUrl, modelName, requestedContext);
     const loaded: OllamaLoadedModel = { base_url: baseUrl, profile, context_window: contextWindow };
     if (generation !== loadGeneration) {
         await releaseServerModel(loaded);
@@ -66,8 +78,12 @@ async function loadServerModel(baseUrl: string, modelName: string, generation: n
 
 async function ensureModelLoaded(modelName: string): Promise<OllamaLoadedModel> {
     const baseUrl = await readBaseUrl();
+    const configuredContext = await readConfiguredContextWindow();
     if (loadedModel?.profile.name === modelName && loadedModel.base_url === baseUrl) {
-        return loadedModel;
+        const requested = resolveRequestedContextWindow(configuredContext, loadedModel.profile);
+        if (requested === null || requested === loadedModel.context_window) {
+            return loadedModel;
+        }
     }
     if (!loadingModel || loadingModel.model_name !== modelName || loadingModel.base_url !== baseUrl) {
         loadGeneration += 1;
@@ -139,12 +155,34 @@ function assembleContextMessages(request: OnDeviceGenerationRequest, removals: r
     ];
 }
 
+async function expandContextWindow(model: OllamaLoadedModel, requiredContext: number | null, generation: number): Promise<OllamaLoadedModel> {
+    const maximum = model.profile.maximum_context_length;
+    if (requiredContext === null || maximum === null || requiredContext <= model.context_window) {
+        return model;
+    }
+    if (await readConfiguredContextWindow() !== null) {
+        return model;
+    }
+    const target = Math.min(requiredContext, maximum);
+    if (target <= model.context_window) {
+        return model;
+    }
+    const contextWindow = await ollamaClient.loadModel(model.base_url, model.profile.name, target);
+    if (generation !== loadGeneration) {
+        throw new DomainError('cancelled', model.profile.name);
+    }
+    const expanded: OllamaLoadedModel = { ...model, context_window: contextWindow };
+    loadedModel = expanded;
+    return expanded;
+}
+
 // [핵심 아키텍처 · 수정 금지] Ollama 컨텍스트 창 선택. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-4)
 async function selectContextWithinWindow(model: OllamaLoadedModel, request: OnDeviceGenerationRequest, payload: LocalGenerationPayload): Promise<OllamaContextSelection> {
-    const promptBudget = model.context_window - payload.max_output_tokens;
+    let activeModel = model;
+    let promptBudget = activeModel.context_window - payload.max_output_tokens;
     const removalOrder = contextRemovalOrder(request);
     const candidateFor = (removedCount: number) => toGenerationRequest(
-        model,
+        activeModel,
         payload,
         assembleContextMessages(request, removalOrder.slice(0, removedCount)),
         request.structured_reply.json_schema,
@@ -156,14 +194,32 @@ async function selectContextWithinWindow(model: OllamaLoadedModel, request: OnDe
         truncated_message_count: removalOrder.slice(0, removedCount).filter((removal) => removal.kind === 'history').length,
     });
     const fullCandidate = candidateFor(0);
-    const fullMeasurement = await ollamaClient.measurePrompt(model.base_url, fullCandidate, request.signal);
+    const fullMeasurement = await ollamaClient.measurePrompt(activeModel.base_url, fullCandidate, request.signal);
     if (fullMeasurement.fits_context && fullMeasurement.prompt_tokens <= promptBudget) {
         return selectionFor(0, fullCandidate, fullMeasurement.prompt_tokens, fullMeasurement.prompt_tokens);
     }
-    const leanestCandidate = candidateFor(removalOrder.length);
-    const leanestMeasurement = await ollamaClient.measurePrompt(model.base_url, leanestCandidate, request.signal);
+    const generation = loadGeneration;
+    const fullRequirement = fullMeasurement.prompt_tokens === null ? null : fullMeasurement.prompt_tokens + payload.max_output_tokens;
+    activeModel = await expandContextWindow(activeModel, fullRequirement, generation);
+    promptBudget = activeModel.context_window - payload.max_output_tokens;
+    if (fullMeasurement.prompt_tokens !== null && fullMeasurement.prompt_tokens <= promptBudget) {
+        const widenedCandidate = candidateFor(0);
+        const widenedMeasurement = await ollamaClient.measurePrompt(activeModel.base_url, widenedCandidate, request.signal);
+        if (widenedMeasurement.fits_context && widenedMeasurement.prompt_tokens <= promptBudget) {
+            return selectionFor(0, widenedCandidate, widenedMeasurement.prompt_tokens, widenedMeasurement.prompt_tokens);
+        }
+    }
+    let leanestCandidate = candidateFor(removalOrder.length);
+    let leanestMeasurement = await ollamaClient.measurePrompt(activeModel.base_url, leanestCandidate, request.signal);
     if (!leanestMeasurement.fits_context || leanestMeasurement.prompt_tokens > promptBudget) {
-        throw new DomainError('ollama_runtime', `${model.profile.name} · num_ctx ${model.context_window} · prompt budget ${promptBudget}`);
+        const leanestRequirement = leanestMeasurement.prompt_tokens === null ? null : leanestMeasurement.prompt_tokens + payload.max_output_tokens;
+        activeModel = await expandContextWindow(activeModel, leanestRequirement, generation);
+        promptBudget = activeModel.context_window - payload.max_output_tokens;
+        leanestCandidate = candidateFor(removalOrder.length);
+        leanestMeasurement = await ollamaClient.measurePrompt(activeModel.base_url, leanestCandidate, request.signal);
+        if (!leanestMeasurement.fits_context || leanestMeasurement.prompt_tokens > promptBudget) {
+            throw new DomainError('ollama_runtime', `${activeModel.profile.name} · num_ctx ${activeModel.context_window} · prompt budget ${promptBudget} · prompt ${leanestMeasurement.prompt_tokens ?? '?'}`);
+        }
     }
     let best = selectionFor(removalOrder.length, leanestCandidate, leanestMeasurement.prompt_tokens, fullMeasurement.prompt_tokens);
     let low = 1;
@@ -189,6 +245,9 @@ export const ollamaRuntime = {
     },
     loadedContextWindow(modelName: string): number | null {
         return loadedModel?.profile.name === modelName ? loadedModel.context_window : null;
+    },
+    loadedMaximumContextWindow(modelName: string): number | null {
+        return loadedModel?.profile.name === modelName ? loadedModel.profile.maximum_context_length : null;
     },
     async load(modelName: string): Promise<void> {
         await ensureModelLoaded(modelName);
@@ -235,7 +294,7 @@ export const ollamaRuntime = {
             assertPersonaSystemPrompt(request.session_prompt.system_prompt, request.persona_name);
             await ollamaRuntime.focusPersonaSession(modelName, request.persona_id);
             const model = await ensureModelLoaded(modelName);
-            const payload = buildPersonaGenerationPayload(request, OLLAMA_RESPONSE_TOKEN_LIMIT);
+            const payload = buildPersonaGenerationPayload(request, await resolveMaxOutputTokens(OLLAMA_RESPONSE_TOKEN_LIMIT));
             const selection = await selectContextWithinWindow(model, request, payload);
             recordRequestStatus({
                 ...status,

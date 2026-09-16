@@ -1,9 +1,8 @@
 import { DomainError, describeUnknownError } from '../../shared/errors';
 import { normalizeAbsoluteLocalPath } from '../../shared/files';
 import { normalizeOllamaBaseUrl } from '../ollama';
-import { settingsRepository } from '../settings/repository';
+import { normalizeTokenSetting, settingsRepository } from '../settings/repository';
 import { chatModelCatalog, mergeChromeInstalledModels } from './catalog';
-import { isChromeLanguageModelSupported } from './chrome';
 import { chatModelRuntime } from './engine';
 import { localModelId } from './identity';
 import type {
@@ -20,13 +19,11 @@ import type {
 
 async function resolveUsableActiveModelId(): Promise<string | null> {
     const settings = await settingsRepository.readAppSettings();
-    const ollamaServingModelId = await chatModelCatalog.resolveOllamaServingModelId(settings.active_model);
-    if (ollamaServingModelId !== null) {
-        await settingsRepository.updateGeneral({ active_model: ollamaServingModelId });
-        return ollamaServingModelId;
-    }
     if (chatModelCatalog.isChatModelUsableHere(settings.active_model)) {
         return settings.active_model;
+    }
+    if (settings.active_model === NO_CHAT_MODEL_ID) {
+        return null;
     }
     const fallback = await chatModelCatalog.resolveFallbackChatModelId(settings.active_model);
     if (fallback === settings.active_model) {
@@ -99,9 +96,6 @@ export const llmClient = {
         await settingsRepository.updateGeneral({ chrome_model_folder_path: normalizedPath });
         return llmClient.listModels();
     },
-    isChromeOnDeviceAiSupported(): boolean {
-        return isChromeLanguageModelSupported();
-    },
     async inspectOllamaConnection(): Promise<OllamaModelLibrary | null> {
         return (await llmClient.listModels()).ollama;
     },
@@ -111,6 +105,13 @@ export const llmClient = {
             throw new DomainError('validation', baseUrl);
         }
         await settingsRepository.updateGeneral({ ollama_base_url: normalized });
+        return llmClient.listModels();
+    },
+    async saveGenerationLimits(contextWindowTokens: number | null, maxOutputTokens: number | null): Promise<ChatModelCatalog> {
+        await settingsRepository.updateGeneral({
+            context_window_tokens: normalizeTokenSetting(contextWindowTokens),
+            max_output_tokens: normalizeTokenSetting(maxOutputTokens),
+        });
         return llmClient.listModels();
     },
     async installLocalModel(engine: LocalModelEngineKind, onProgress: ModelDownloadProgressHandler): Promise<string | null> {

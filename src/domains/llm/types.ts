@@ -30,6 +30,7 @@ export interface OllamaModelEntry {
     size_bytes: number;
     loaded: boolean;
     context_window: number | null;
+    maximum_context_window: number | null;
     selected: boolean;
 }
 export interface OllamaModelLibrary {
@@ -126,6 +127,7 @@ export interface ChromeInstalledModelEntry {
 export interface ChromeInstalledLoadedEngine {
     model_key: string;
     engine: import('@litert-lm/core').Engine;
+    context_window: number;
 }
 export interface ChromeInstalledLoadingEngine {
     model_key: string;

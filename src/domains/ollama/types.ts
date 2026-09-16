@@ -40,6 +40,7 @@ export interface OllamaVersionResponse {
 
 export interface OllamaShowResponse {
     capabilities: string[] | undefined;
+    model_info: Record<string, unknown> | undefined;
 }
 
 export interface OllamaChatMessage {
@@ -55,12 +56,16 @@ export interface OllamaChatOptions {
     seed: number;
 }
 
+export interface OllamaContextLoadOptions {
+    num_ctx: number;
+}
+
 export interface OllamaChatRequest {
     model: string;
     messages: OllamaChatMessage[];
     stream: boolean;
     format?: Record<string, unknown>;
-    options?: OllamaChatOptions;
+    options?: OllamaChatOptions | OllamaContextLoadOptions;
     think?: boolean;
     keep_alive?: number;
     truncate?: boolean;
@@ -108,6 +113,8 @@ export interface OllamaServerStatus {
 export interface OllamaModelProfile {
     name: string;
     capabilities: string[];
+    architecture: string;
+    maximum_context_length: number | null;
 }
 
 export interface OllamaChatCompletion {
@@ -119,7 +126,7 @@ export interface OllamaChatCompletion {
 
 export type OllamaCommandShell = 'powershell' | 'posix';
 
-export type OllamaCommandStepKey = 'verify_install' | 'pull_model' | 'create_from_gguf' | 'run_model' | 'remove_model' | 'allow_origin';
+export type OllamaCommandStepKey = 'verify_install' | 'expose_network' | 'pull_model' | 'create_from_gguf' | 'run_model' | 'remove_model' | 'run_local_server';
 
 export interface OllamaCommandGuideInput {
     model_name: string;
@@ -131,7 +138,3 @@ export interface OllamaCommandStep {
     commands: string[];
 }
 
-export interface OllamaOriginAccess {
-    origin: string;
-    allowed_by_default: boolean;
-}

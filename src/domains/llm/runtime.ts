@@ -15,6 +15,7 @@ import {
     LANGUAGE_MODEL_TAG_BY_APP_LANGUAGE,
     PERSONA_SESSION_SAMPLING_MODE,
 } from './constants';
+import { resolveContextWindowLimit, resolveMaxOutputTokens } from './localGeneration';
 import { createQueuedRequestStatus, recordRequestStatus } from './requests';
 import { composeOnDeviceTurnMessage } from './turn';
 import type {
@@ -121,7 +122,8 @@ async function largestFittingPrefixCount<Item>(
 
 // [핵심 아키텍처 · 수정 금지] Chrome 컨텍스트 예산 선택. 사용자의 명시 지시 없이 변경하지 않는다. (AI_TRACKING.md 5A L-2)
 async function selectMessagesWithinBudget(conversation: LanguageModel, request: OnDeviceGenerationRequest): Promise<BudgetedMessages> {
-    const budget = conversation.contextWindow - conversation.contextUsage - CHAT_RESPONSE_TOKEN_RESERVE;
+    const contextWindow = await resolveContextWindowLimit(conversation.contextWindow);
+    const budget = contextWindow - conversation.contextUsage - await resolveMaxOutputTokens(CHAT_RESPONSE_TOKEN_RESERVE);
     const allPrefix = new Set(request.prefix_messages.map((_, index) => index));
     const allHistory = new Set(request.history_messages.map((_, index) => index));
     const allSections = new Set(request.turn.context_sections);

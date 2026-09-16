@@ -1,4 +1,5 @@
 import { isAndroidAppRuntime } from '../../shared/android';
+import { isLocalServerRuntime } from '../../shared/host';
 import { DomainError } from '../../shared/errors';
 import type { AppLanguage } from '../../shared/types';
 import { describeUnknownError } from '../../shared/errors';
@@ -170,6 +171,7 @@ async function ollamaModelLibrary(baseUrl: string, activeChatModelId: string): P
                     size_bytes: model.size,
                     loaded: ollamaRuntime.isLoaded(model.name),
                     context_window: ollamaRuntime.loadedContextWindow(model.name),
+                    maximum_context_window: ollamaRuntime.loadedMaximumContextWindow(model.name),
                     selected: activeChatModelId === id,
                 };
             }),
@@ -273,7 +275,7 @@ export const chatModelCatalog = {
                 browser_state: browserState,
                 entries: chromeInstalledModelEntries(general.chrome_installed_models ?? [], activeChatModelId),
             },
-            ollama: await ollamaModelLibrary(general.ollama_base_url, activeChatModelId),
+            ollama: isLocalServerRuntime() ? await ollamaModelLibrary(general.ollama_base_url, activeChatModelId) : null,
         };
     },
     async prepareOnDeviceSystemModel(entry: OnDeviceSystemModelEntry, language: AppLanguage, onDownloadProgress: ModelDownloadProgressHandler): Promise<void> {
@@ -362,21 +364,6 @@ export const chatModelCatalog = {
             }
         }
         return NO_CHAT_MODEL_ID;
-    },
-    async resolveOllamaServingModelId(activeChatModelId: string): Promise<string | null> {
-        if (isAndroidAppRuntime() || isChromeLanguageModelSupported()) {
-            return null;
-        }
-        if (isChatModelIdSupportedHere(activeChatModelId) && resolveChatModelEngine(activeChatModelId) !== 'chrome_prompt') {
-            return null;
-        }
-        const baseUrl = (await settingsRepository.readGeneral()).ollama_base_url;
-        const server = await ollamaClient.probe(baseUrl);
-        if (!server.available) {
-            return null;
-        }
-        const modelName = await ollamaClient.resolveServingModelName(baseUrl);
-        return modelName === null ? null : ollamaModelId(modelName);
     },
     isChatModelUsableHere(modelId: string): boolean {
         return isChatModelIdSupportedHere(modelId);
