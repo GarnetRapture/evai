@@ -104,13 +104,6 @@ export function buildStorySteps(episode: StoryEpisode, selections: Readonly<Reco
             index += 1;
             choices.push(episode.lines[index]);
         }
-        if (choices.length === 1) {
-            steps.push({ line, choices: [] });
-            if (line.choice_group !== undefined && line.choice_group > 0) {
-                branches.add(line.choice_group);
-            }
-            continue;
-        }
         const selected = choices.find((choice) => choice.id === selections[line.index]);
         if (selected === undefined) {
             steps.push({ line, choices });
