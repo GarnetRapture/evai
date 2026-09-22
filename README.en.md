@@ -58,7 +58,7 @@
 
 ### v0.0.7 — Hear the Spirits' Stories in Their Own Voices
 
-Hello, Savior. This is the EverSoul AI Chat team.
+Hello, Savior. 
 With this update you can **watch the spirits' stories from beginning to end**, and those scenes now carry **real voice acting**. From here on the app runs purely as a local server.
 
 **Story**
