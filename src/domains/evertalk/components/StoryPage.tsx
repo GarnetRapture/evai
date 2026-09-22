@@ -10,6 +10,7 @@ import {
   resolveStoryBackground,
   resolveStoryBgm,
   resolveStoryCast,
+  pickStoryBackground,
   resolveStoryCutscene,
   resolveStoryMovie,
   resolveStoryStage,
@@ -129,6 +130,28 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
   const choosing = current !== null && current.choices.length > 0;
   const waitingForMovie = movie?.fullscreen === true && movieEnded !== movieKey;
   const cutscene = useMemo(() => resolveStoryCutscene(steps, position), [steps, position]);
+  const episodeArt = useMemo(() => {
+    const picked = new Map<number, string>();
+    for (const entry of collection?.episodes ?? []) {
+      const art = pickStoryBackground(entry.backgrounds, entry.background);
+      if (art !== null) {
+        picked.set(entry.id, art);
+      }
+    }
+    return picked;
+  }, [collection]);
+  const shelfArt = useMemo(() => {
+    const picked = new Map<string, string>();
+    for (const kind of ["main", "love"] as StoryKind[]) {
+      for (const entry of index?.[kind] ?? []) {
+        const art = pickStoryBackground(entry.backgrounds, entry.background);
+        if (art !== null) {
+          picked.set(`${kind}/${entry.key}`, art);
+        }
+      }
+    }
+    return picked;
+  }, [index]);
   const cast = useMemo(
     () => resolveStoryCast(stage, collection?.actors ?? {}, current?.line.speaker),
     [stage, collection, current],
@@ -437,11 +460,12 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
               <button type="button" className="ever-story__episode" onClick={() => openEpisode(entry)}>
                 <span
                   className="ever-story__episode-art"
-                  style={
-                    entry.background
-                      ? { backgroundImage: `url(${storyBackgroundUrl(entry.background)})` }
-                      : undefined
-                  }
+                  style={(() => {
+                    const art = episodeArt.get(entry.id);
+                    return art === undefined
+                      ? undefined
+                      : { backgroundImage: `url(${storyBackgroundUrl(art)})` };
+                  })()}
                 >
                   <b>{entry.episode}</b>
                   {entry.ending === null ? null : (
@@ -507,7 +531,8 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
         <ul className="ever-story__books">
           {shelf.map((entry) => {
             const portrait = storyPortraitUrl(entry.asset_folder, entry.asset_prefix);
-            const scene = entry.background ? storyBackgroundUrl(entry.background) : null;
+            const art = shelfArt.get(`${category}/${entry.key}`);
+            const scene = art === undefined ? null : storyBackgroundUrl(art);
             const cover = portrait ?? scene;
             const title = entry.name
               ? storyTextOf(entry.name, language)

@@ -6673,14 +6673,13 @@ a.ever-settings-reset-button {
   .ever-story__bar span { order: 3; }
 }
 .ever-story__episodes {
-  list-style: none; margin: 0; padding: 0; display: grid;
-  gap: clamp(12px, 1.4vw, 20px); grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 17vw, 268px), 1fr));
+  list-style: none; margin: 0; padding: 0; display: grid; align-content: start;
+  gap: clamp(14px, 1.6vw, 24px);
+  grid-template-columns: repeat(auto-fill, minmax(clamp(240px, 21vw, 340px), 1fr));
 }
 .ever-story:not(.ever-story--viewer) > .ever-story__bar {
-  position: sticky; top: 0; z-index: 3;
-  margin: calc(clamp(16px, 2vw, 28px) * -1) calc(clamp(16px, 2vw, 28px) * -1) 0;
-  padding: clamp(16px, 2vw, 28px) clamp(16px, 2vw, 28px) 12px;
-  background: rgba(16,15,24,.96); border-bottom: 1px solid rgba(255,255,255,.07);
+  flex: 0 0 auto; padding-bottom: clamp(10px, 1.1vw, 16px);
+  border-bottom: 1px solid rgba(255,255,255,.09);
 }
 .ever-story__episode {
   display: flex; flex-direction: column; width: 100%; padding: 0; cursor: pointer; color: inherit;

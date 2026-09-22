@@ -193,10 +193,11 @@ Write-Step 'copying asset file list'
 Copy-Item -LiteralPath (Join-Path $projectRoot 'data\manifest.txt') -Destination (Join-Path $releaseDirectory 'evai-assets.list') -Force
 
 $releaseDatabaseDirectory = Join-Path $releaseDirectory 'evai-database'
-if (-not (Test-Path -LiteralPath $releaseDatabaseDirectory)) {
-    Write-Step 'copying fresh database'
-    Copy-Item -LiteralPath $serverDatabaseDirectory -Destination $releaseDirectory -Recurse -Force
+Write-Step 'resetting database to a clean build'
+if (Test-Path -LiteralPath $releaseDatabaseDirectory) {
+    Remove-Item -LiteralPath $releaseDatabaseDirectory -Recurse -Force -Confirm:$false
 }
+Copy-Item -LiteralPath $serverDatabaseDirectory -Destination $releaseDirectory -Recurse -Force
 
 Write-Step 'encoding asset source list'
 $assetSourceBytes = Write-AssetSourceBlob -PlainPath (Join-Path $projectRoot 'evai-assets.sources') -TargetPaths @(

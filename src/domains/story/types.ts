@@ -100,6 +100,7 @@ export interface StoryMediaLocation {
 
 export interface StoryEpisode {
     background?: string | null;
+    backgrounds?: string[];
     media?: StoryMediaLocation;
     id: number;
     act: number;
@@ -131,6 +132,7 @@ export interface StoryIndexEntry {
     endings: StoryEnding[];
     title: StoryText | null;
     background?: string | null;
+    backgrounds?: string[];
     name?: StoryText | null;
     asset_folder?: string;
     asset_prefix?: string;

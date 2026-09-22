@@ -57,6 +57,16 @@ export function storyBackgroundUrl(background: string): string {
     return `${STORY_BACKGROUND_ROOT}/${background}.png`;
 }
 
+export function pickStoryBackground(
+    candidates: readonly string[] | undefined,
+    fallback: string | null | undefined,
+): string | null {
+    if (candidates !== undefined && candidates.length > 0) {
+        return candidates[Math.floor(Math.random() * candidates.length)];
+    }
+    return fallback ?? null;
+}
+
 export const storyClient = {
     async readIndex(): Promise<StoryIndex> {
         if (indexCache === null) {
