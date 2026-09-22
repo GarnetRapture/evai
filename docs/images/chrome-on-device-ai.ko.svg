@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" role="img" aria-label="Chrome 온디바이스 AI 설정 안내">
+  <style>
+    .bg { fill: #fcfcfb; stroke: #c3c2b7; }
+    .panel { fill: #ffffff; stroke: #d5d4cb; }
+    .bar { fill: #eef3fb; stroke: #c9d8ef; }
+    .title { font: 600 15px system-ui, -apple-system, Segoe UI, sans-serif; fill: #0b0b0b; }
+    .label { font: 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #24231f; }
+    .muted { font: 12px system-ui, -apple-system, Segoe UI, sans-serif; fill: #6b6a63; }
+    .mono { font: 12px ui-monospace, SFMono-Regular, Consolas, monospace; fill: #24231f; }
+    .step { font: 600 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #ffffff; }
+    .accent { fill: #2a78d6; }
+    .on { fill: #008300; }
+    .check { stroke: #008300; stroke-width: 2.4; fill: none; }
+    .arrow { stroke: #52514e; stroke-width: 1.6; fill: none; marker-end: url(#head-ko); }
+  </style>
+  <defs>
+    <marker id="head-ko" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="8" y="8" width="884" height="454" rx="12"/>
+
+  <circle class="accent" cx="44" cy="52" r="14"/>
+  <text class="step" x="44" y="57" text-anchor="middle">1</text>
+  <rect class="panel" x="70" y="26" width="360" height="160" rx="10"/>
+  <rect class="bar" x="70" y="26" width="360" height="30" rx="10"/>
+  <text class="mono" x="86" y="46">chrome://settings/ai</text>
+  <text class="title" x="86" y="82">AI 혁신</text>
+  <text class="label" x="86" y="106">온디바이스 AI</text>
+  <text class="muted" x="86" y="126">기기에서 직접 실행되는 AI 모델을 사용합니다</text>
+  <rect x="368" y="96" width="44" height="22" rx="11" fill="#008300"/>
+  <circle cx="401" cy="107" r="8" fill="#ffffff"/>
+  <text class="muted" x="86" y="160">토글을 켜고 Chrome을 다시 시작합니다</text>
+
+  <circle class="accent" cx="44" cy="232" r="14"/>
+  <text class="step" x="44" y="237" text-anchor="middle">2</text>
+  <rect class="panel" x="70" y="206" width="360" height="132" rx="10"/>
+  <rect class="bar" x="70" y="206" width="360" height="30" rx="10"/>
+  <text class="mono" x="86" y="226">chrome://on-device-internals</text>
+  <text class="label" x="86" y="262">Model status</text>
+  <text class="muted" x="86" y="284">기반 모델 상태와 준비 여부를 확인합니다</text>
+  <text class="muted" x="86" y="304">Model path 항목이 Chrome이 받은 모델 폴더입니다</text>
+  <text class="muted" x="86" y="324">내려받기 진행률과 오류도 이 화면에서 봅니다</text>
+
+  <circle class="accent" cx="44" cy="392" r="14"/>
+  <text class="step" x="44" y="397" text-anchor="middle">3</text>
+  <rect class="panel" x="70" y="358" width="360" height="88" rx="10"/>
+  <rect class="bar" x="70" y="358" width="360" height="30" rx="10"/>
+  <text class="mono" x="86" y="378">chrome://flags</text>
+  <text class="muted" x="86" y="406">#optimization-guide-on-device-model : Enabled</text>
+  <text class="muted" x="86" y="428">#prompt-api-for-gemini-nano : Enabled</text>
+
+  <path class="arrow" d="M440 250 L486 250"/>
+
+  <rect class="panel" x="496" y="26" width="384" height="420" rx="10"/>
+  <rect class="bar" x="496" y="26" width="384" height="34" rx="10"/>
+  <text class="mono" x="514" y="48">chrome://on-device-internals</text>
+  <text class="muted" x="514" y="84">Model status</text>
+  <rect x="580" y="70" width="88" height="22" rx="6" fill="#cde2fb" stroke="#2a78d6"/>
+  <text class="label" x="596" y="86">Use Cases</text>
+  <text class="muted" x="684" y="84">Event logs</text>
+
+  <text class="title" x="514" y="124">Use Cases 플래그</text>
+  <text class="muted" x="514" y="146">prompt_api 가 체크되어 있어야 이 앱이 동작합니다</text>
+
+  <rect x="514" y="166" width="20" height="20" rx="4" fill="#ffffff" stroke="#008300" stroke-width="2"/>
+  <path class="check" d="M519 176 L523 181 L530 171"/>
+  <text class="mono" x="546" y="182">prompt_api</text>
+  <rect x="700" y="166" width="66" height="20" rx="10" fill="#c9f0d8" stroke="#008300"/>
+  <text class="on" x="712" y="181" style="font: 600 12px system-ui, sans-serif">활성</text>
+
+  <rect x="514" y="204" width="20" height="20" rx="4" fill="#ffffff" stroke="#b6b5ab" stroke-width="2"/>
+  <text class="mono" x="546" y="220">summarize</text>
+  <rect x="514" y="242" width="20" height="20" rx="4" fill="#ffffff" stroke="#b6b5ab" stroke-width="2"/>
+  <text class="mono" x="546" y="258">translate</text>
+  <rect x="514" y="280" width="20" height="20" rx="4" fill="#ffffff" stroke="#b6b5ab" stroke-width="2"/>
+  <text class="mono" x="546" y="296">language_detection</text>
+  <rect x="514" y="318" width="20" height="20" rx="4" fill="#ffffff" stroke="#b6b5ab" stroke-width="2"/>
+  <text class="mono" x="546" y="334">writing_assistance</text>
+
+  <rect class="bar" x="514" y="360" width="348" height="70" rx="8"/>
+  <text class="label" x="530" y="384">prompt_api 를 체크한 뒤</text>
+  <text class="muted" x="530" y="406">EVAI 설정 &gt; 온디바이스 모델 목록에 모델이 나타나고</text>
+  <text class="muted" x="530" y="424">"다운로드 및 준비" 버튼을 쓸 수 있습니다.</text>
+</svg>

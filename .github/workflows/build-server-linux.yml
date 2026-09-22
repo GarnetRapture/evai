@@ -1,0 +1,64 @@
+name: Build Server Linux
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-server-linux-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: evai-server linux-x86_64
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build web bundle
+        run: npm run build
+
+      - name: Set up xmake
+        uses: xmake-io/github-action-setup-xmake@v1
+        with:
+          xmake-version: '3.1.1'
+
+      - name: Build server
+        run: sh server/build.sh
+
+      - name: Package runnable release
+        id: package
+        run: |
+          version=$(node -p "require('./package.json').version")
+          archive="evai-server-linux-x86_64-v${version}-${GITHUB_SHA::7}.tar.gz"
+          cp server/build/evai-server dist/evai-server
+          cp -r server/build/evai-database dist/evai-database
+          rm -f dist/evai-database/evai.sqlite3-wal dist/evai-database/evai.sqlite3-shm dist/evai-server.ini dist/evai-server-error.log
+          find dist -name '*.map' -delete
+          chmod +x dist/evai-server
+          tar -czf "${archive}" -C dist .
+          echo "archive=${archive}" >> "$GITHUB_OUTPUT"
+
+      - name: Remove incremental build output
+        run: rm -rf build .xmake server/build
+
+      - name: Upload package
+        uses: actions/upload-artifact@v7
+        with:
+          name: ${{ steps.package.outputs.archive }}
+          path: ${{ steps.package.outputs.archive }}
+          archive: false
+          if-no-files-found: error
+          retention-days: 90
+          overwrite: true

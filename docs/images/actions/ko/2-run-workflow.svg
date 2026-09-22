@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" role="img" aria-label="Actions 탭에서 Build Web 워크플로를 선택하고 Run workflow 버튼을 누르는 화면">
+  <rect x="0" y="0" width="900" height="420" rx="8" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+  <path d="M250 0 L250 420" stroke="#d1d9e0" stroke-width="1"/>
+  <text x="24" y="42" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="16" font-weight="600" fill="#1f2328">Actions</text>
+  <text x="44" y="80" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13.5" fill="#1f2328">All workflows</text>
+  <rect x="44" y="92" width="190" height="32" rx="6" fill="#ddf4ff"/>
+  <circle cx="24" cy="108" r="13" fill="#0969da"/>
+  <text x="24" y="113" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" font-weight="700" fill="#ffffff">2</text>
+  <path d="M60 102 L72 108 L60 114 Z" fill="#1f883d"/>
+  <text x="82" y="113" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13.5" font-weight="600" fill="#1f2328">Build Web</text>
+  <text x="280" y="52" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="18" font-weight="600" fill="#1f2328">Build Web</text>
+  <text x="280" y="78" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13" fill="#59636e">build-web.yml — 수동 실행(workflow_dispatch) 트리거가 있는 워크플로</text>
+  <rect x="690" y="106" width="150" height="34" rx="6" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+  <text x="756" y="128" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13.5" font-weight="600" fill="#1f2328">Run workflow</text>
+  <path d="M812 121 L822 121 L817 128 Z" fill="#1f2328"/>
+  <circle cx="666" cy="123" r="13" fill="#0969da"/>
+  <text x="666" y="128" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" font-weight="700" fill="#ffffff">3</text>
+  <rect x="552" y="152" width="288" height="148" rx="6" fill="#ffffff" stroke="#d1d9e0" stroke-width="1"/>
+  <text x="572" y="180" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="12.5" fill="#59636e">Use workflow from</text>
+  <rect x="572" y="192" width="248" height="32" rx="6" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1"/>
+  <text x="588" y="213" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13" fill="#1f2328">Branch: main</text>
+  <path d="M796 206 L806 206 L801 213 Z" fill="#1f2328"/>
+  <rect x="572" y="240" width="248" height="38" rx="6" fill="#1f883d"/>
+  <text x="696" y="264" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" font-weight="600" fill="#ffffff">Run workflow</text>
+  <circle cx="530" cy="259" r="13" fill="#0969da"/>
+  <text x="530" y="264" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="14" font-weight="700" fill="#ffffff">4</text>
+  <text x="280" y="344" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13.5" fill="#1f2328">입력할 값은 없습니다. 브랜치를 그대로 두고 초록 Run workflow 버튼만 누르면 빌드가 시작됩니다.</text>
+  <text x="280" y="372" font-family="system-ui, -apple-system, 'Segoe UI', 'Malgun Gothic', sans-serif" font-size="13" fill="#59636e">왼쪽 목록에서 Build Web 선택 → 오른쪽 Run workflow 열기 → 초록 버튼 누르기</text>
+</svg>

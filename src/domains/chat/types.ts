@@ -1,0 +1,572 @@
+export interface ChatDigestNode {
+  id: string;
+  summary: string;
+  parent_node_id: string | null;
+  source_message_ids: string[];
+  covered_from: string;
+  covered_through: string;
+  source_message_count: number;
+  created_at: string;
+}
+export interface ChatRoomDigest {
+  summary: string;
+  covered_through: string;
+  covered_count: number;
+  updated_at: string;
+  root_node_id?: string;
+  nodes?: ChatDigestNode[];
+}
+export interface ChatRoomPersonaActivity {
+  latest_activity_at: string;
+  latest_user_at: string;
+  latest_user_content: string;
+  user_message_count: number;
+  spirit_message_count: number;
+}
+export interface ChatRoom {
+  id: string;
+  title: string;
+  persona_id: string | null;
+  session_started_at: string;
+  created_at: string;
+  updated_at: string;
+  digests?: Record<string, ChatRoomDigest>;
+  proactive_attempts?: Record<string, string>;
+  persona_activities?: Record<string, ChatRoomPersonaActivity>;
+  proactive_unread_counts?: Record<string, number>;
+}
+export type ChatMessageRole = "user" | "assistant" | "system";
+export type ChatMessageDelivery = "conversation" | "proactive";
+export interface ChatMessage {
+  id: string;
+  room_id: string;
+  persona_id: string | null;
+  role: ChatMessageRole;
+  content: string;
+  created_at: string;
+  delivery?: ChatMessageDelivery;
+  read_at?: string | null;
+  spirit_action?: string;
+}
+export interface ChatError {
+  code: string;
+  message: string;
+}
+export interface ChatStreamHandlers {
+  onText: (text: string) => void;
+}
+export interface PersonaSystemPrompt {
+  spirit_name: string;
+  // 정령 SNO (data/dataset/*.json의 id, 예: "2060"). 데이터셋 선택·주입의 기본 키.
+  spirit_sno: string;
+  session_prompt: import("../llm").PersonaSessionPrompt;
+  greeting: string;
+  address_term: string;
+  dialogue_excluded_terms: string[];
+  voice: import("../persona/types").PersonaVoiceAnchor;
+  teaching_questions: import("../persona/datasetService").PersonaTeachingQuestion[];
+  archive_key: string;
+}
+export type PersonaReplyViolation =
+  | "meta_breach"
+  | "language_drift"
+  | "echo_user"
+  | "deflected_question"
+  | "question_only"
+  | "register_drift"
+  | "role_drift"
+  | "empty_reply"
+  | "repeated_reply";
+export interface PersonaReplyParts {
+  actions: string[];
+  spoken: string;
+}
+export interface PersonaReplyEnvelope {
+  inner_thought: string;
+  action: string;
+  messages: string[];
+}
+export interface PersonaReplyEnvelopeParse extends PersonaReplyEnvelope {
+  structured: boolean;
+  complete: boolean;
+}
+export interface PersonaReplyShape {
+  reasoning: boolean;
+  max_messages: number;
+}
+export interface PersonaReplyGeneration {
+  content: string;
+  action: string;
+  cancelled: boolean;
+  redirected: boolean;
+  truncated_message_count: number;
+}
+export interface PersonaTurnContinuity {
+  latest_user_text: string | null;
+  previous_spirit_lines: string[];
+  previous_spirit_action: string;
+}
+export interface PersonaConversationStateRequest {
+  history: ChatMessage[];
+  latest_user_text: string | null;
+  latest_at: string;
+}
+export interface PersonaConversationState {
+  has_previous_exchange: boolean;
+  last_spirit_inner_thought: string;
+  last_spirit_lines: string[];
+  last_spirit_action: string;
+  last_spirit_asked_question: boolean;
+  minutes_since_last_message: number | null;
+  responds_to_user_message: boolean;
+}
+export interface PersonaFamiliaritySource {
+  message_count: number;
+  memory_count: number;
+  bonus_exp: number;
+}
+export interface PersonaTimelineEntry {
+  message: ChatMessage;
+  persona_id: string;
+}
+export interface PersonaHeartState {
+  affection: number;
+  trust: number;
+  longing: number;
+  hurt: number;
+  jealousy: number;
+  contact_days: number;
+  savior_message_count: number;
+  affectionate_message_count: number;
+  hurtful_message_count: number;
+  last_contact_at: string;
+  hours_since_contact: number | null;
+}
+export interface PersonaHeartExpression {
+  heart: PersonaHeartState;
+  openness: number;
+  outward_warmth: number;
+  receptiveness: number;
+  initiative: number;
+}
+export interface PersonaHeartTimelinePoint {
+  day: string;
+  affection: number;
+  trust: number;
+  longing: number;
+  hurt: number;
+  savior_message_count: number;
+  rival_message_count: number;
+}
+export interface PersonaJealousyLink {
+  from_persona_id: string;
+  to_persona_id: string;
+  stir: number;
+  savior_messages_to_target: number;
+  recent_messages_to_target: number;
+}
+export interface PersonaProactiveSchedule {
+  urge: number;
+  persistence: number;
+  unanswered_count: number;
+  min_idle_ms: number;
+  cooldown_ms: number;
+  chance: number;
+  max_unanswered: number;
+}
+export interface PersonaHeartRequest {
+  persona_id: string;
+  timeline: readonly PersonaTimelineEntry[];
+  now: string;
+  temperament: import("../persona/types").PersonaTemperament;
+  familiarity_level: number;
+  jealousy: number | null;
+}
+export interface PersonaEmotionPresetApplication {
+  levels: import("./affect").PersonaEmotionLevels;
+  applied_at: string;
+}
+export interface PersonaEmotionReplayDetectors {
+  profile_mentions: (
+    text: string,
+  ) => import("../persona/types").PersonaProfileMention[];
+  mentioned_persona_count: (
+    text: string,
+    personaIds: readonly string[],
+  ) => number;
+}
+export interface PersonaEmotionReplayRequest {
+  persona_id: string;
+  timeline: readonly PersonaTimelineEntry[];
+  episodic_created_at: readonly string[];
+  affinity_events: readonly PersonaAffinityEvent[];
+  bond_level_override: number | null;
+  baseline: import("./affect").PersonaEmotionLevels;
+  preset: PersonaEmotionPresetApplication | null;
+  seed_text: string;
+  detectors: PersonaEmotionReplayDetectors;
+}
+export interface PersonaReplyGenerationInput {
+  continuity: PersonaTurnContinuity;
+  model_id: string;
+  language: import("../../shared/types").AppLanguage;
+  request_id: string;
+  persona_id: string;
+  persona: PersonaSystemPrompt;
+  prefix_messages: import("../llm").OnDeviceTextMessage[];
+  history_messages: import("../llm").OnDeviceTextMessage[];
+  turn: import("../llm").OnDeviceTurn;
+  reasoning: boolean;
+  signal: AbortSignal;
+  on_text: (content: string) => void;
+}
+export type MemoryContextKind =
+  | "conversation"
+  | "directive"
+  | "episodic"
+  | "habit"
+  | "affect"
+  | "knowledge";
+export type MemoryContextFilter = Record<MemoryContextKind, boolean>;
+export interface PersonaSessionDigestEntry {
+  room_id: string;
+  covered_from: string;
+  covered_through: string;
+  summary: string;
+}
+export interface PersonaSessionContinuation {
+  previous_sessions: PersonaSessionDigestEntry[];
+  last_exchange: ChatMessage[];
+}
+export interface PersonaConversationFlowRequest {
+  persona_id: string;
+  room_id: string;
+  language: import("../../shared/types").AppLanguage;
+  query: string;
+  timeline: readonly PersonaTimelineEntry[];
+  excluded_message_ids?: readonly string[];
+  // 사용자 설정 컨텍스트 예산 (토큰, null = 엔진 기본). 최근 흐름 창과
+  // 이전 세션 개요 수를 이 값에 맞춰 확장한다 (8K..256K).
+  context_window_tokens?: number | null;
+  // 논리가 저장한 세션 요약 (room.digests[persona_id]). 표지가 있는 방은
+  // 재계산 대신 저장된 요약을 사용한다.
+  stored_digests?: ReadonlyMap<string, ChatRoomDigest>;
+}
+export interface PersonaConversationFlow {
+  recent_messages: ChatMessage[];
+  continuation: PersonaSessionContinuation;
+  live_history_since: string;
+  has_prior_context: boolean;
+}
+export interface PersonaCrossConversationExcerpt {
+  persona_id: string;
+  persona_name: string;
+  messages: ChatMessage[];
+  relevance: number;
+  latest_at: string;
+}
+export interface PersonaKeywordEpisode {
+  memory_id: string;
+  occurred_at: string;
+  user_text: string;
+  spirit_action: string;
+  spirit_messages: string[];
+}
+export interface PersonaKeywordNode {
+  token: string;
+  user_count: number;
+  spirit_count: number;
+  first_seen_at: string;
+  last_seen_at: string;
+  recent_count: number;
+  query_match: boolean;
+  priority: number;
+  episode_ids: string[];
+}
+export interface PersonaKeywordThread {
+  keyword: PersonaKeywordNode;
+  episodes: PersonaKeywordEpisode[];
+}
+export interface PersonaTurnContextSources {
+  conversation: PersonaConversationState;
+  continuation: PersonaSessionContinuation;
+  directives: string[];
+  episodic: string[];
+  keyword_threads: PersonaKeywordThread[];
+  knowledge: string[];
+  story_moments: string[];
+  emotion: import("./affect").PersonaEmotionState | null;
+  heart: PersonaHeartExpression | null;
+  familiarity_level: number;
+  profile_mentions: import("../persona/types").PersonaProfileMention[];
+  affinity_gained: PersonaAffinityGain[];
+  last_contact_at: string;
+  own_user_message_count: number;
+  rivals: PersonaRivalContext[];
+  other_conversations: PersonaCrossConversationExcerpt[];
+  mentioned_relations: import("../persona/types").PersonaRelationEvidence[];
+  today_holidays: import("../persona/types").PersonaHolidayReference[];
+  mentioned_holidays: import("../persona/types").PersonaHolidayReference[];
+  teaching_guidance: import("../persona/types").PersonaTeachingGuidance[];
+  intimacy_dialogue: import("../persona/types").PersonaIntimacyDialogue | null;
+  user_turn_pattern: import("../persona/types").PersonaUserTurnPattern;
+  story_memory: string[];
+  judgment_lines: string[];
+}
+export interface PersonaTurnContext {
+  context_sections: import("../llm").OnDeviceTurnContextSection[];
+  rehearsal_messages: import("../llm").OnDeviceTextMessage[];
+}
+export interface PersonaRivalAttention {
+  persona_id: string;
+  user_message_count: number;
+  spirit_message_count: number;
+  first_user_at: string;
+  latest_user_at: string;
+  topics: string[];
+  exchange_texts: string[];
+}
+export interface PersonaRivalContext {
+  relation: import("../persona/types").PersonaRelationEvidence;
+  user_message_count: number;
+  spirit_message_count: number;
+  first_user_at: string;
+  latest_user_at: string;
+  topics: string[];
+  mentioned_now: boolean;
+  spoke_of_you_count: number;
+  total_user_message_count: number;
+  total_spirit_message_count: number;
+  total_latest_user_at: string;
+}
+export interface PersonaPreparedTurnReferences {
+  references: import("../persona/types").PersonaTurnReferences;
+  rivals: PersonaRivalContext[];
+}
+export interface PersonaRivalHistory {
+  persona_id: string;
+  user_message_count: number;
+  spirit_message_count: number;
+  latest_user_at: string;
+}
+export interface PersonaContactSnapshot {
+  last_contact_at: string;
+  own_user_message_count: number;
+  rival_attention: PersonaRivalAttention[];
+  rival_history: PersonaRivalHistory[];
+  mention_candidate_ids: string[];
+}
+export interface PersonaTurnContextRequest {
+  persona_id: string;
+  room_id: string;
+  language: import("../../shared/types").AppLanguage;
+  spirit_name: string;
+  address_term: string;
+  query: string;
+  conversation: PersonaConversationStateRequest;
+  continuation: PersonaSessionContinuation;
+  timeline: readonly PersonaTimelineEntry[];
+  live_history_since: string;
+  recent_texts: string[];
+  filter: MemoryContextFilter;
+  excluded_terms: string[];
+  include_knowledge: boolean;
+  affinity_gained: PersonaAffinityGain[];
+  familiarity_level: number;
+  contact: PersonaContactSnapshot;
+  temperament: import("../persona/types").PersonaTemperament;
+  archive_key: string;
+  // 정령 SNO (예: "2060"). 친밀 패턴 등 데이터셋 선택의 정령 키.
+  spirit_sno: string;
+  teaching_questions: import("../persona/datasetService").PersonaTeachingQuestion[];
+}
+export interface ChatSendRequest {
+  room_id: string;
+  persona_id: string;
+  content: string;
+  request_id: string;
+  signal: AbortSignal;
+  handlers: ChatStreamHandlers;
+}
+export interface ProactiveConversationCandidate {
+  room_id: string;
+  persona_id: string;
+  latest_activity_at: string;
+  latest_user_content: string;
+  last_attempt_at: string | null;
+}
+export interface ProactiveGenerationOptions {
+  now?: Date;
+  chance?: number;
+  random?: () => number;
+  signal?: AbortSignal;
+}
+export type PersonaRecalledMemoryType = "episodic" | "semantic" | "directive";
+export type PersonaMemoryType =
+  | PersonaRecalledMemoryType
+  | "habit"
+  | "affect"
+  | "reflection"
+  | "affinity";
+export interface PersonaAffinityEvent {
+  kind: import("../persona/types").PersonaProfileMentionKind;
+  value: string;
+  exp: number;
+  occurred_at: string;
+  source_message_id: string;
+}
+export interface PersonaAffinityLedger {
+  bonus_exp: number;
+  events: PersonaAffinityEvent[];
+}
+export interface PersonaAffinityGain {
+  mention: import("../persona/types").PersonaProfileMention;
+  exp: number;
+}
+export interface PersonaAffinityUpdate {
+  ledger: PersonaAffinityLedger;
+  gains: PersonaAffinityGain[];
+}
+export interface SparseMemoryVector {
+  indices: number[];
+  values: number[];
+}
+export type MemoryVector = number[] | SparseMemoryVector;
+export type RelevantMemoryTieOrder = "older_first" | "newer_first";
+export interface RelevantMemoryCandidate {
+  relevance: number;
+  created_at: string;
+  text: string;
+}
+export interface PersonaMemoryRecordBase {
+  id: string;
+  persona_id: string;
+  memory_text: string;
+  created_at: string;
+}
+export interface PersonaRecalledMemoryRecord extends PersonaMemoryRecordBase {
+  memory_type: PersonaRecalledMemoryType;
+  memory_vector: MemoryVector;
+  source_room_id?: string;
+  source_message_ids?: string[];
+}
+export interface PersonaHabitMemoryRecord extends PersonaMemoryRecordBase {
+  memory_type: "habit";
+  occurrence_count: number;
+  spirit_occurrence_count: number;
+  last_seen_at: string;
+  sources: PersonaKeywordSource[];
+}
+export interface PersonaKeywordSource {
+  memory_id: string;
+  occurred_at: string;
+  user: boolean;
+  spirit: boolean;
+}
+export interface PersonaAffectMemoryRecord extends PersonaMemoryRecordBase {
+  memory_type: "affect";
+}
+export interface PersonaReflectionMemoryRecord extends PersonaMemoryRecordBase {
+  memory_type: "reflection";
+  covered_through: string;
+  source_room_id: string;
+  source_message_ids: string[];
+}
+export interface PersonaAffinityMemoryRecord extends PersonaMemoryRecordBase {
+  memory_type: "affinity";
+}
+export type PersonaMemoryRecord =
+  | PersonaRecalledMemoryRecord
+  | PersonaHabitMemoryRecord
+  | PersonaAffectMemoryRecord
+  | PersonaReflectionMemoryRecord
+  | PersonaAffinityMemoryRecord;
+export interface PersonaKeywordObservation {
+  token: string;
+  user_count: number;
+  spirit_count: number;
+}
+export interface PersonaMemoryInsightEntry {
+  id: string;
+  memory_text: string;
+  created_at: string;
+}
+export interface PersonaMemoryInsight {
+  semantic_summary: string | null;
+  reflection: PersonaMemoryInsightEntry | null;
+  emotion: import("./affect").PersonaEmotionState | null;
+  directives: PersonaMemoryInsightEntry[];
+  episodic: PersonaMemoryInsightEntry[];
+  episodic_total: number;
+}
+export interface PersonaMemoryOverviewEntry {
+  persona_id: string;
+  message_count: number;
+  episodic_total: number;
+  emotion: import("./affect").PersonaEmotionState | null;
+  reflection: PersonaMemoryInsightEntry | null;
+  latest_directive: PersonaMemoryInsightEntry | null;
+  latest_activity_at: string;
+}
+export interface PersonaMemoryOverviewSources {
+  generated_at: string;
+  message_counts: ReadonlyMap<string, number>;
+  episodic_counts: ReadonlyMap<string, number>;
+  emotions: ReadonlyMap<string, import("./affect").PersonaEmotionState>;
+  reflections: ReadonlyMap<string, PersonaReflectionMemoryRecord>;
+  latest_directives: ReadonlyMap<string, PersonaMemoryRecord>;
+}
+export interface PersonaMemoryOverview {
+  generated_at: string;
+  message_total: number;
+  episodic_total: number;
+  emotion_average: import("./affect").PersonaEmotionLevels | null;
+  dominant_counts: Record<import("./affect").PersonaEmotionKind, number>;
+  entries: PersonaMemoryOverviewEntry[];
+}
+export type PersonaBehaviorStageKind =
+  | "input"
+  | "keywords"
+  | "recall"
+  | "social"
+  | "inner_state"
+  | "emotion"
+  | "bond"
+  | "reply";
+export interface PersonaBehaviorStage {
+  kind: PersonaBehaviorStageKind;
+  items: string[];
+}
+export interface PersonaContextRelation {
+  relation: import("../persona/types").PersonaRelationEvidence;
+  canon_strength: number;
+  savior_familiarity_level: number | null;
+  savior_message_count: number;
+  rival: PersonaRivalContext | null;
+}
+export interface PersonaContextGraph {
+  persona_id: string;
+  generated_at: string;
+  familiarity_level: number;
+  savior_message_count: number;
+  latest_user_text: string;
+  keyword_threads: PersonaKeywordThread[];
+  relations: PersonaContextRelation[];
+  sessions: PersonaSessionDigestEntry[];
+  behavior_stages: PersonaBehaviorStage[];
+  heart: PersonaHeartExpression | null;
+  heart_timeline: PersonaHeartTimelinePoint[];
+  jealousy_links: PersonaJealousyLink[];
+}
+export interface PersonaNetworkNode {
+  persona_id: string;
+  familiarity_level: number;
+  savior_message_count: number;
+  last_contact_at: string;
+  heart: PersonaHeartExpression;
+}
+export interface PersonaRelationshipNetwork {
+  generated_at: string;
+  nodes: PersonaNetworkNode[];
+  jealousy_links: PersonaJealousyLink[];
+}

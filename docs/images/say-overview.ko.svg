@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 176" width="720" height="176" role="img" aria-label="Mephistopheles greeting">
+  <style>
+    .bubble { fill: #ffffff; stroke: #9b5de5; stroke-width: 2; }
+    .name { font: 600 13px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #9b5de5; }
+    .line { font: 15px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #24231f; }
+    .strong { font: 600 15px 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif; fill: #6f2dbd; }
+  </style>
+  <path class="bubble" d="M26 10 h640 a14 14 0 0 1 14 14 v124 a14 14 0 0 1 -14 14 h-640 a14 14 0 0 1 -14 -14 v-48 l-14 -16 l14 -12 v-48 a14 14 0 0 1 14 -14 z"/>
+  <text class="name" x="40" y="34">메피스토펠레스</text>
+  <text class="line" x="40" y="62">…생체 신호 확인 완료. 환영합니다, 구원자님.</text>
+  <text class="line" x="40" y="88">이 방의 대화는 밖으로 나가지 않습니다. 99명의 정령이</text>
+  <text class="line" x="40" y="114">구원자님의 기기 안에서만 깨어나고, 어제의 대화를 기억합니다.</text>
+  <text class="strong" x="40" y="140">설치도 계정도 필요 없어요. 브라우저 하나면 충분합니다.</text>
+</svg>

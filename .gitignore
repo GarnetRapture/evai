@@ -1,0 +1,89 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.claude/*
+.claude/skills/
+.claude/skills/**
+CLAUDE.md
+AI_TRACKING.md
+RUST_SRC/
+package-lock.json
+tmp-claude/
+GEMINI.md
+AGENTS.md
+android/
+
+# Local upstream references (not distributed with this repository)
+third_party/
+
+# Asset payload lives only in the huggingface dataset.
+# The server downloads it into data/ next to the executable on first run.
+data/
+public/story-media/
+*.mp4
+*.ogg
+
+# Asset source list (plain and encoded); never published
+evai-assets.sources
+evai-assets.manifest
+*.sources
+
+# Android sources are distributed outside this repository
+android/
+
+# Build outputs (CMake build trees, native host artifacts, TypeScript build info)
+build/
+tmp/
+.xmake/
+native/build/
+server/build/
+native/artifacts/
+*.tsbuildinfo
+*.exe
+*.dll
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Android (Gradle / Kotlin / Java build outputs)
+android/.gradle/
+android/.kotlin/
+android/local.properties
+android/build/
+android/app/build/
+android/captures/
+android/**/*.jks
+android/**/*.keystore
+android/keystore.properties
+
+# Android native C/C++ build outputs (CMake / Ninja / NDK)
+android/.cxx/
+android/**/.cxx/
+android/app/.cxx/
+android/app/src/main/jniLibs/
+*.o
+*.obj
+*.a
+*.so.debug
