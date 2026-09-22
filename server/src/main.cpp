@@ -50,6 +50,11 @@ evai::server::app::ServerConfig resolve_config(const std::filesystem::path &file
         config.voice_configured = true;
         changed = true;
     }
+    if (!config.bgm_configured)
+    {
+        config.bgm_configured = true;
+        changed = true;
+    }
     if (changed)
     {
         evai::server::app::write_server_config(file, config);
@@ -60,9 +65,14 @@ evai::server::app::ServerConfig resolve_config(const std::filesystem::path &file
 void ensure_assets(const std::filesystem::path &root, const evai::server::app::ServerConfig &config)
 {
     const evai::server::api::AssetSource source = evai::server::api::read_asset_source(root);
-    if (source.host.empty() || source.repo.empty() || source.index_path.empty() || source.file_path.empty())
+    if (source.host.empty() || source.repo.empty() || source.list_path.empty() || source.file_path.empty())
     {
         return;
+    }
+    std::string list_error;
+    if (!evai::server::api::refresh_asset_list(root, source, list_error))
+    {
+        evai::server::app::record_error("assets", list_error);
     }
     if (evai::server::api::asset_manifest_satisfied(root, source, config.voice))
     {
@@ -127,7 +137,8 @@ int run_server(const evai::server::app::ServerOptions &options)
     evai::server::storage::BackupStore backups(root / evai::server::storage::backup_directory_name, database_file);
     const evai::server::net::SocketRuntime socket_runtime;
     const evai::server::app::HttpServiceContext context =
-        evai::server::app::create_http_service_context(root, database_directory, database, backups, options.port);
+        evai::server::app::create_http_service_context(root, database_directory, database, backups, options.port,
+                                                      config_file);
     const evai::server::net::TcpSocket listener = evai::server::net::TcpSocket::listen_loopback(options.port);
     const std::string ollama_base_url = evai::server::api::resolve_ollama_base_url(database.read_ollama_base_url());
     const evai::server::api::OllamaProbe ollama = evai::server::api::probe_ollama(ollama_base_url);

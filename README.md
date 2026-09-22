@@ -215,7 +215,6 @@ Ollama는 EVAI 로컬 서버와 함께 씁니다. 브라우저가 Ollama에 직�
    ```bash
    ollama --version
    ollama pull <모델이름:태그>
-   ollama pull hf.co/<사용자>/<저장소>:<양자화>
    ```
 
    이미 가지고 있는 GGUF 파일로 모델을 만들 수도 있습니다. 윈도우 PowerShell 기준입니다.
@@ -346,23 +345,15 @@ GitHub Actions에 OS별 서버 빌드 워크플로(Build Server Windows, Build S
 
 ## 정령 자산 내려받기
 
-정령 일러스트·스토리 대본·컷신 영상·음성은 용량이 커서(약 3.9 GB) 이 저장소에 담지 않고 공개 데이터셋으로 분리했습니다.
+정령 일러스트·스토리 대본·컷신 영상·음성·BGM·효과음은 용량이 커서(약 4.58 GB) 이 저장소에 담지 않고 공개 데이터셋으로 분리했습니다.
 
 **로컬 서버를 쓰면 따로 받을 필요가 없습니다.** `evai-server.exe`를 처음 실행하면 콘솔 언어와 음성 언어(한국어 / 일본어 / 둘 다 / 받지 않음)를 물은 뒤, 없는 파일만 골라 병렬로 내려받고 완료되면 서비스를 엽니다. 중간에 끊겨도 다음 실행에서 이어받고, 파일이 엉뚱한 위치에 있으면 다시 받지 않고 제자리로 옮깁니다.
-
-직접 받으려면:
-
-```bash
-hf download garnetrapture/evai-assets --repo-type dataset --local-dir .
-```
-
-`hf` 명령이 없다면 `pip install -U huggingface_hub`로 설치하세요. 공개 레포라 로그인은 필요 없고, 인증 없이 `curl`로도 받을 수 있습니다.
 
 | 받는 위치 | 들어 있는 것 |
 | --- | --- |
 | `data/dataset/` | 정령 프로필과 대사 JSON |
 | `data/story/` | 메인·인연 스토리 대본 |
-| `data/story-media/` | 스토리 컷신 영상과 한국어·일본어 음성 |
+| `data/story-media/` | 스토리 컷신 영상, 한국어·일본어 음성, BGM·효과음 |
 | `data/eversoul-assets/` | 정령 일러스트, 배경, UI 이미지 |
 
 ## 기술 문서

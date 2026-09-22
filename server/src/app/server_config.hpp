@@ -24,6 +24,8 @@ struct ServerConfig {
     bool language_configured;
     VoiceLanguage voice;
     bool voice_configured;
+    bool bgm;
+    bool bgm_configured;
 };
 
 inline constexpr std::string_view config_file_name = "evai-server.ini";

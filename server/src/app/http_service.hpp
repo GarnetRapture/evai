@@ -19,6 +19,7 @@ struct HttpServiceContext {
     std::vector<std::string> allowed_hosts;
     std::vector<std::string> allowed_origins;
     std::uint16_t port;
+    std::filesystem::path config_file;
 };
 
 [[nodiscard]] HttpServiceContext create_http_service_context(
@@ -26,7 +27,8 @@ struct HttpServiceContext {
     const std::filesystem::path& database_directory,
     storage::EvaiDatabase& database,
     storage::BackupStore& backups,
-    std::uint16_t port);
+    std::uint16_t port,
+    const std::filesystem::path& config_file);
 
 void serve_http_connection(net::TcpSocket client, const HttpServiceContext& context);
 

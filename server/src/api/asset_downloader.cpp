@@ -1,11 +1,9 @@
 #include "api/asset_downloader.hpp"
 
-#include "storage/sqlite_database.hpp"
-
 #include <algorithm>
 #include <array>
-#include <atomic>
-#include <cctype>
+#include <charconv>
+#include <cstdio>
 #include <cstddef>
 #include <cstdint>
 #include <filesystem>
@@ -13,11 +11,11 @@
 #include <fstream>
 #include <functional>
 #include <iterator>
-#include <mutex>
+#include <memory>
+#include <stdexcept>
 #include <string>
 #include <string_view>
 #include <system_error>
-#include <thread>
 #include <unordered_map>
 #include <vector>
 
@@ -25,7 +23,8 @@
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
-#include <winhttp.h>
+#else
+#include <sys/wait.h>
 #endif
 
 namespace evai::server::api
@@ -34,18 +33,21 @@ namespace evai::server::api
 namespace
 {
 
-constexpr std::size_t download_worker_limit = 8;
-constexpr int download_attempt_limit = 3;
+constexpr std::size_t download_worker_limit = 65535;
 constexpr std::string_view manifest_repo_key = "repo";
 constexpr std::string_view manifest_voice_key = "voice";
 constexpr std::string_view manifest_files_key = "files";
 constexpr std::string_view manifest_bytes_key = "bytes";
+constexpr std::string_view manifest_list_files_key = "list_files";
+constexpr std::string_view manifest_list_bytes_key = "list_bytes";
 constexpr std::string_view source_magic = "EVAS1";
 constexpr std::string_view source_key = "evai-local-asset-index";
-constexpr std::string_view asset_scratch_name = ".evai-assets-tmp";
+constexpr std::string_view asset_scratch_name = "evai-assets.cache";
+constexpr std::string_view asset_list_name = "evai-assets.list";
 
-constexpr std::array<std::string_view, 8> excluded_directories{
-    ".git", ".xmake", "node_modules", "third_party", "tmp", "tmp-claude", "dist", "evai-database",
+constexpr std::array<std::string_view, 10> excluded_directories{
+    ".git",       ".xmake", "node_modules", "third_party",       "tmp",
+    "tmp-claude", "tmp-codex", "dist",      "evai-assets.cache", "evai-database",
 };
 
 struct DirectoryMeasure
@@ -138,6 +140,43 @@ DirectoryMeasure measure_directory(const std::filesystem::path &directory)
     return measure;
 }
 
+DirectoryMeasure measure_asset_list(const std::filesystem::path &root)
+{
+    DirectoryMeasure measure{0, 0};
+    for (const auto &file : {root / asset_list_name, root / "data" / "manifest.txt"})
+    {
+        std::ifstream stream(file, std::ios::binary);
+        if (!stream)
+        {
+            continue;
+        }
+        std::string line;
+        while (std::getline(stream, line))
+        {
+            if (!line.empty() && line.back() == '\r')
+            {
+                line.pop_back();
+            }
+            const auto tab = line.find('\t');
+            if (tab == std::string::npos)
+            {
+                continue;
+            }
+            std::uint64_t size = 0;
+            const char *begin = line.data() + tab + 1;
+            const char *end = line.data() + line.size();
+            if (std::from_chars(begin, end, size).ec != std::errc{})
+            {
+                continue;
+            }
+            ++measure.files;
+            measure.bytes += size;
+        }
+        break;
+    }
+    return measure;
+}
+
 LocalIndex build_local_index(const std::filesystem::path &root)
 {
     LocalIndex index;
@@ -170,7 +209,7 @@ LocalIndex build_local_index(const std::filesystem::path &root)
             code.clear();
             continue;
         }
-        std::string relative = normalized(std::filesystem::relative(entry.path(), root, code));
+        std::string relative = normalized(entry.path().lexically_relative(root));
         if (code || relative.empty())
         {
             code.clear();
@@ -231,29 +270,6 @@ bool relocate_existing(const std::filesystem::path &root, LocalIndex &index, con
         return true;
     }
     return false;
-}
-
-storage::SqliteDatabase &json_engine()
-{
-    static storage::SqliteDatabase engine(std::filesystem::path(":memory:"));
-    return engine;
-}
-
-void parse_tree_page(std::string_view body, std::vector<AssetEntry> &entries)
-{
-    storage::SqliteStatement statement = json_engine().prepare(
-        "SELECT json_extract(value, '$.path'), json_extract(value, '$.size') FROM json_each(?1)"
-        " WHERE json_extract(value, '$.type') = 'file'");
-    statement.bind_text(1, body);
-    while (statement.step())
-    {
-        if (statement.column_is_null(0))
-        {
-            continue;
-        }
-        const std::int64_t size = statement.column_is_null(1) ? 0 : statement.column_integer(1);
-        entries.push_back({statement.column_text(0), size < 0 ? 0 : static_cast<std::uint64_t>(size)});
-    }
 }
 
 std::string read_all(const std::filesystem::path &file)
@@ -389,463 +405,224 @@ std::string expand_target(std::string_view pattern, const AssetSource &source, s
     return expanded;
 }
 
-std::string next_page_target(std::string_view link)
+std::string config_quote(std::string_view value)
 {
-    if (link.find("rel=\"next\"") == std::string_view::npos)
+    std::string quoted = "\"";
+    for (const char character : value)
     {
-        return {};
+        switch (character)
+        {
+        case '\\': quoted += "\\\\"; break;
+        case '"': quoted += "\\\""; break;
+        case '\n': quoted += "\\n"; break;
+        case '\r': quoted += "\\r"; break;
+        case '\t': quoted += "\\t"; break;
+        default: quoted.push_back(character); break;
+        }
     }
-    const auto start = link.find('<');
-    const auto end = link.find('>', start == std::string_view::npos ? 0 : start + 1);
-    if (start == std::string_view::npos || end == std::string_view::npos)
-    {
-        return {};
-    }
-    const std::string_view url = link.substr(start + 1, end - start - 1);
-    const auto scheme = url.find("//");
-    if (scheme == std::string_view::npos)
-    {
-        return std::string(url);
-    }
-    const auto path = url.find('/', scheme + 2);
-    if (path == std::string_view::npos)
-    {
-        return std::string(url);
-    }
-    return std::string(url.substr(path));
+    return quoted + '"';
 }
 
 #if defined(_WIN32)
-
-class InternetHandle
+struct HandleCloser
 {
-public:
-    InternetHandle() = default;
-    explicit InternetHandle(HINTERNET handle) : handle_(handle) {}
-    ~InternetHandle()
-    {
-        if (handle_ != nullptr)
-        {
-            WinHttpCloseHandle(handle_);
-        }
-    }
-    InternetHandle(const InternetHandle &) = delete;
-    InternetHandle &operator=(const InternetHandle &) = delete;
-    InternetHandle(InternetHandle &&other) noexcept : handle_(other.handle_) { other.handle_ = nullptr; }
-    InternetHandle &operator=(InternetHandle &&other) noexcept
-    {
-        if (this != &other)
-        {
-            if (handle_ != nullptr)
-            {
-                WinHttpCloseHandle(handle_);
-            }
-            handle_ = other.handle_;
-            other.handle_ = nullptr;
-        }
-        return *this;
-    }
-
-    [[nodiscard]] HINTERNET get() const { return handle_; }
-    explicit operator bool() const { return handle_ != nullptr; }
-
-private:
-    HINTERNET handle_ = nullptr;
+    void operator()(void *handle) const { CloseHandle(handle); }
 };
+using OwnedHandle = std::unique_ptr<void, HandleCloser>;
+#endif
 
-std::wstring widen(std::string_view value)
+int run_curl(const std::filesystem::path &config, const std::function<void(std::string_view)> &on_line,
+             std::string &error)
 {
-    if (value.empty())
+    std::string pending;
+    const auto consume = [&](std::string_view chunk) {
+        pending.append(chunk);
+        for (auto end = pending.find('\n'); end != std::string::npos; end = pending.find('\n'))
+        {
+            on_line(std::string_view(pending).substr(0, end));
+            pending.erase(0, end + 1);
+        }
+    };
+#if defined(_WIN32)
+    SECURITY_ATTRIBUTES attributes{sizeof(SECURITY_ATTRIBUTES), nullptr, TRUE};
+    HANDLE raw_read = nullptr;
+    HANDLE raw_write = nullptr;
+    if (!CreatePipe(&raw_read, &raw_write, &attributes, 0))
     {
-        return {};
+        error = std::format("curl pipe: {}", GetLastError());
+        return -1;
     }
-    const int length = MultiByteToWideChar(CP_UTF8, 0, value.data(), static_cast<int>(value.size()), nullptr, 0);
-    std::wstring wide(static_cast<std::size_t>(length), L'\0');
-    MultiByteToWideChar(CP_UTF8, 0, value.data(), static_cast<int>(value.size()), wide.data(), length);
-    return wide;
-}
-
-std::string narrow(std::wstring_view value)
-{
-    if (value.empty())
+    OwnedHandle reader(raw_read);
+    OwnedHandle writer(raw_write);
+    if (!SetHandleInformation(reader.get(), HANDLE_FLAG_INHERIT, 0))
     {
-        return {};
+        error = std::format("curl pipe inheritance: {}", GetLastError());
+        return -1;
     }
-    const int length =
-        WideCharToMultiByte(CP_UTF8, 0, value.data(), static_cast<int>(value.size()), nullptr, 0, nullptr, nullptr);
-    std::string narrowed(static_cast<std::size_t>(length), '\0');
-    WideCharToMultiByte(CP_UTF8, 0, value.data(), static_cast<int>(value.size()), narrowed.data(), length, nullptr,
-                        nullptr);
-    return narrowed;
-}
-
-struct Response
-{
-    bool transferred;
-    DWORD status;
-    std::string link;
-    std::string error;
-};
-
-std::string describe_error(std::string_view stage)
-{
-    return std::format("{} failed ({})", stage, GetLastError());
-}
-
-std::string query_link_header(HINTERNET request)
-{
-    DWORD length = 0;
-    WinHttpQueryHeaders(request, WINHTTP_QUERY_CUSTOM, L"Link", WINHTTP_NO_OUTPUT_BUFFER, &length,
-                        WINHTTP_NO_HEADER_INDEX);
-    if (GetLastError() != ERROR_INSUFFICIENT_BUFFER || length == 0)
+    std::wstring command = L"curl.exe -q --config \"" + config.wstring() + L"\"";
+    STARTUPINFOW startup{};
+    startup.cb = sizeof(startup);
+    startup.dwFlags = STARTF_USESTDHANDLES;
+    startup.hStdOutput = writer.get();
+    startup.hStdError = writer.get();
+    PROCESS_INFORMATION process{};
+    if (!CreateProcessW(nullptr, command.data(), nullptr, nullptr, TRUE, CREATE_NO_WINDOW, nullptr, nullptr,
+                        &startup, &process))
     {
-        return {};
+        error = std::format("curl launch: {}", GetLastError());
+        return -1;
     }
-    std::wstring buffer(length / sizeof(wchar_t), L'\0');
-    if (!WinHttpQueryHeaders(request, WINHTTP_QUERY_CUSTOM, L"Link", buffer.data(), &length, WINHTTP_NO_HEADER_INDEX))
+    OwnedHandle process_handle(process.hProcess);
+    OwnedHandle thread_handle(process.hThread);
+    writer.reset();
+    std::array<char, 4096> buffer{};
+    DWORD count = 0;
+    while (ReadFile(reader.get(), buffer.data(), static_cast<DWORD>(buffer.size()), &count, nullptr) && count != 0)
     {
-        return {};
+        consume(std::string_view(buffer.data(), count));
     }
-    buffer.resize(length / sizeof(wchar_t));
-    while (!buffer.empty() && buffer.back() == L'\0')
+    const DWORD pipe_error = GetLastError();
+    if (count == 0 && pipe_error != ERROR_BROKEN_PIPE && pipe_error != ERROR_SUCCESS)
     {
-        buffer.pop_back();
+        error = std::format("curl output: {}", pipe_error);
     }
-    return narrow(buffer);
-}
-
-Response send_request(HINTERNET connect, std::wstring_view target, std::uint64_t range_start,
-                      const std::function<bool(DWORD)> &on_headers,
-                      const std::function<bool(const char *, DWORD)> &sink)
-{
-    Response response{false, 0, {}, {}};
-    const std::wstring path(target);
-    InternetHandle request(WinHttpOpenRequest(connect, L"GET", path.c_str(), nullptr, WINHTTP_NO_REFERER,
-                                              WINHTTP_DEFAULT_ACCEPT_TYPES, WINHTTP_FLAG_SECURE));
-    if (!request)
+    if (WaitForSingleObject(process_handle.get(), INFINITE) != WAIT_OBJECT_0)
     {
-        response.error = describe_error("open request");
-        return response;
-    }
-    const std::wstring headers = range_start > 0 ? widen(std::format("Range: bytes={}-", range_start)) : std::wstring();
-    if (!WinHttpSendRequest(request.get(), headers.empty() ? WINHTTP_NO_ADDITIONAL_HEADERS : headers.c_str(),
-                            headers.empty() ? 0 : static_cast<DWORD>(-1), WINHTTP_NO_REQUEST_DATA, 0, 0, 0))
-    {
-        response.error = describe_error("send request");
-        return response;
-    }
-    if (!WinHttpReceiveResponse(request.get(), nullptr))
-    {
-        response.error = describe_error("receive response");
-        return response;
+        error += std::format("curl wait: {}", GetLastError());
+        return -1;
     }
     DWORD status = 0;
-    DWORD status_size = sizeof(status);
-    if (!WinHttpQueryHeaders(request.get(), WINHTTP_QUERY_STATUS_CODE | WINHTTP_QUERY_FLAG_NUMBER,
-                             WINHTTP_HEADER_NAME_BY_INDEX, &status, &status_size, WINHTTP_NO_HEADER_INDEX))
+    if (!GetExitCodeProcess(process_handle.get(), &status))
     {
-        response.error = describe_error("query status");
-        return response;
+        error += std::format("curl exit status: {}", GetLastError());
+        return -1;
     }
-    response.status = status;
-    if (status != 200 && status != 206)
-    {
-        response.error = std::format("http status {}", status);
-        return response;
-    }
-    response.link = query_link_header(request.get());
-    if (on_headers && !on_headers(status))
-    {
-        response.error = "cannot open destination";
-        return response;
-    }
-    for (;;)
-    {
-        DWORD available = 0;
-        if (!WinHttpQueryDataAvailable(request.get(), &available))
-        {
-            response.error = describe_error("query data");
-            return response;
-        }
-        if (available == 0)
-        {
-            break;
-        }
-        std::vector<char> chunk(available);
-        DWORD read = 0;
-        if (!WinHttpReadData(request.get(), chunk.data(), available, &read))
-        {
-            response.error = describe_error("read data");
-            return response;
-        }
-        if (read == 0)
-        {
-            break;
-        }
-        if (!sink(chunk.data(), read))
-        {
-            response.error = "write failed";
-            return response;
-        }
-    }
-    response.transferred = true;
-    return response;
-}
-
-InternetHandle open_session()
-{
-    InternetHandle session(WinHttpOpen(L"evai-server", WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY, WINHTTP_NO_PROXY_NAME,
-                                       WINHTTP_NO_PROXY_BYPASS, 0));
-    if (session)
-    {
-        WinHttpSetTimeouts(session.get(), 15000, 15000, 30000, 120000);
-    }
-    return session;
-}
-
-InternetHandle open_connection(HINTERNET session, std::string_view host)
-{
-    return InternetHandle(WinHttpConnect(session, widen(host).c_str(), INTERNET_DEFAULT_HTTPS_PORT, 0));
-}
-
-std::vector<AssetEntry> load_remote_tree(HINTERNET connect, const AssetSource &source, std::string &error)
-{
-    std::vector<AssetEntry> entries;
-    std::string target = expand_target(source.index_path, source, {});
-    while (!target.empty())
-    {
-        std::string body;
-        const Response response = send_request(connect, widen(target), 0, nullptr,
-                                               [&body](const char *data, DWORD size) {
-                                                   body.append(data, size);
-                                                   return true;
-                                               });
-        if (!response.transferred)
-        {
-            error = std::format("asset index: {}", response.error);
-            return {};
-        }
-        parse_tree_page(body, entries);
-        target = next_page_target(response.link);
-    }
-    return entries;
-}
-
-bool download_entry(HINTERNET connect, const AssetSource &source, const AssetEntry &entry,
-                    const std::filesystem::path &destination, std::uint64_t &written, std::string &error)
-{
-    std::error_code code;
-    std::filesystem::create_directories(destination.parent_path(), code);
-    code.clear();
-    std::filesystem::path staging = destination;
-    staging += ".part";
-    std::uint64_t resume = 0;
-    const std::uintmax_t partial = std::filesystem::file_size(staging, code);
-    if (!code && (entry.size == 0 || static_cast<std::uint64_t>(partial) < entry.size))
-    {
-        resume = static_cast<std::uint64_t>(partial);
-    }
-    code.clear();
-    std::ofstream stream;
-    std::uint64_t received = 0;
-    const std::string target = expand_target(source.file_path, source, encode_path(entry.path));
-    const Response response = send_request(
-        connect, widen(target), resume,
-        [&stream, &staging, &received, resume](DWORD status) {
-            const bool append = status == 206 && resume > 0;
-            stream.open(staging, append ? (std::ios::binary | std::ios::app) : (std::ios::binary | std::ios::trunc));
-            if (!stream)
-            {
-                return false;
-            }
-            received = append ? resume : 0;
-            return true;
-        },
-        [&stream, &received](const char *data, DWORD size) {
-            stream.write(data, static_cast<std::streamsize>(size));
-            if (!stream)
-            {
-                return false;
-            }
-            received += size;
-            return true;
-        });
-    stream.close();
-    written = received > resume ? received - resume : 0;
-    if (!response.transferred)
-    {
-        error = std::format("{}: {}", entry.path, response.error);
-        return false;
-    }
-    if (entry.size != 0 && received != entry.size)
-    {
-        std::filesystem::remove(staging, code);
-        code.clear();
-        error = std::format("{}: size {} expected {}", entry.path, received, entry.size);
-        return false;
-    }
-    std::filesystem::remove(destination, code);
-    code.clear();
-    std::filesystem::rename(staging, destination, code);
-    if (code)
-    {
-        error = std::format("{}: {}", entry.path, code.message());
-        return false;
-    }
-    return true;
-}
-
 #else
-
-std::string quote_shell(std::string_view value)
-{
     std::string quoted = "'";
-    for (const char character : value)
+    for (const char character : config.string())
     {
-        if (character == '\'')
-        {
-            quoted += "'\\''";
-            continue;
-        }
-        quoted.push_back(character);
+        quoted += character == '\'' ? "'\\''" : std::string(1, character);
     }
-    quoted.push_back('\'');
-    return quoted;
+    quoted += '\'';
+    const std::string command = "curl -q --config " + quoted;
+    FILE *pipe = popen(command.c_str(), "r");
+    if (pipe == nullptr)
+    {
+        error = "curl launch failed";
+        return -1;
+    }
+    std::array<char, 4096> buffer{};
+    while (std::fgets(buffer.data(), static_cast<int>(buffer.size()), pipe) != nullptr)
+    {
+        consume(buffer.data());
+    }
+    const bool read_failed = std::ferror(pipe) != 0;
+    const int process_status = pclose(pipe);
+    if (read_failed || process_status == -1 || !WIFEXITED(process_status))
+    {
+        error = "curl process or output failed";
+        return -1;
+    }
+    const int status = WEXITSTATUS(process_status);
+#endif
+    if (!pending.empty())
+    {
+        consume("\n");
+    }
+    return static_cast<int>(status);
 }
 
-bool run_curl(const std::string &command)
+void write_curl_transfer(std::ostream &stream, const AssetSource &source, std::string_view target,
+                         const std::filesystem::path &output, bool resume)
 {
-    return std::system(command.c_str()) == 0;
-}
-
-std::string curl_header(const std::filesystem::path &dump, std::string_view name)
-{
-    const std::string body = read_all(dump);
-    for (std::size_t start = 0; start < body.size();)
-    {
-        const auto end = body.find('\n', start);
-        std::string_view line(body);
-        line = line.substr(start, end == std::string::npos ? body.size() - start : end - start);
-        start = end == std::string::npos ? body.size() : end + 1;
-        const auto separator = line.find(':');
-        if (separator == std::string_view::npos || separator != name.size())
-        {
-            continue;
-        }
-        bool matched = true;
-        for (std::size_t index = 0; index < name.size() && matched; ++index)
-        {
-            matched = std::tolower(static_cast<unsigned char>(line[index])) ==
-                      std::tolower(static_cast<unsigned char>(name[index]));
-        }
-        if (!matched)
-        {
-            continue;
-        }
-        std::string_view value = line.substr(separator + 1);
-        while (!value.empty() && (value.front() == ' ' || value.front() == '\t'))
-        {
-            value.remove_prefix(1);
-        }
-        while (!value.empty() && (value.back() == '\r' || value.back() == ' '))
-        {
-            value.remove_suffix(1);
-        }
-        return std::string(value);
-    }
-    return {};
-}
-
-std::vector<AssetEntry> load_remote_tree(const AssetSource &source, const std::filesystem::path &scratch,
-                                         std::string &error)
-{
-    std::vector<AssetEntry> entries;
-    std::error_code code;
-    std::filesystem::create_directories(scratch, code);
-    code.clear();
-    const std::filesystem::path body_file = scratch / "index.json";
-    const std::filesystem::path head_file = scratch / "index.head";
-    std::string target = expand_target(source.index_path, source, {});
-    while (!target.empty())
-    {
-        const std::string url = std::format("https://{}{}", source.host, target);
-        const std::string command =
-            std::format("curl -sfL --retry 3 --connect-timeout 15 -D {} -o {} {}", quote_shell(head_file.string()),
-                        quote_shell(body_file.string()), quote_shell(url));
-        if (!run_curl(command))
-        {
-            error = std::format("asset index: curl failed for {}", target);
-            return {};
-        }
-        parse_tree_page(read_all(body_file), entries);
-        target = next_page_target(curl_header(head_file, "link"));
-    }
-    std::filesystem::remove(body_file, code);
-    code.clear();
-    std::filesystem::remove(head_file, code);
-    return entries;
-}
-
-bool download_entry(const AssetSource &source, const AssetEntry &entry, const std::filesystem::path &destination,
-                    std::uint64_t &written, std::string &error)
-{
-    std::error_code code;
-    std::filesystem::create_directories(destination.parent_path(), code);
-    code.clear();
-    std::filesystem::path staging = destination;
-    staging += ".part";
-    const std::uintmax_t partial = std::filesystem::file_size(staging, code);
-    const bool resume = !code && (entry.size == 0 || static_cast<std::uint64_t>(partial) < entry.size);
-    const std::uint64_t carried = resume ? static_cast<std::uint64_t>(partial) : 0;
-    code.clear();
-    if (!resume)
-    {
-        std::filesystem::remove(staging, code);
-        code.clear();
-    }
-    const std::string url =
-        std::format("https://{}{}", source.host, expand_target(source.file_path, source, encode_path(entry.path)));
-    std::string command = "curl -sfL --retry 3 --connect-timeout 15";
+    stream << "silent\nshow-error\nfail\nlocation\ngloboff\nno-buffer\n"
+              "proto = \"=https\"\nproto-redir = \"=https\"\n"
+              "retry = 3\nconnect-timeout = 15\nspeed-time = 120\nspeed-limit = 1\n";
     if (resume)
     {
-        command += " -C -";
+        stream << "continue-at = \"-\"\n";
     }
-    command += " -o " + quote_shell(staging.string()) + ' ' + quote_shell(url);
-    if (!run_curl(command))
-    {
-        const std::uintmax_t progressed = std::filesystem::file_size(staging, code);
-        written = !code && static_cast<std::uint64_t>(progressed) > carried
-                      ? static_cast<std::uint64_t>(progressed) - carried
-                      : 0;
-        error = std::format("{}: curl failed", entry.path);
-        return false;
-    }
-    const std::uintmax_t received = std::filesystem::file_size(staging, code);
-    if (code)
-    {
-        error = std::format("{}: {}", entry.path, code.message());
-        return false;
-    }
-    written = static_cast<std::uint64_t>(received) > carried ? static_cast<std::uint64_t>(received) - carried : 0;
-    if (entry.size != 0 && static_cast<std::uint64_t>(received) != entry.size)
-    {
-        std::filesystem::remove(staging, code);
-        code.clear();
-        error = std::format("{}: size {} expected {}", entry.path, received, entry.size);
-        return false;
-    }
-    std::filesystem::remove(destination, code);
-    code.clear();
-    std::filesystem::rename(staging, destination, code);
-    if (code)
-    {
-        error = std::format("{}: {}", entry.path, code.message());
-        return false;
-    }
-    return true;
+    stream << "url = " << config_quote(std::format("https://{}{}", source.host, target)) << '\n'
+           << "output = " << config_quote(output.generic_string()) << '\n';
 }
 
-#endif
+std::vector<AssetEntry> parse_asset_list(const std::filesystem::path &file)
+{
+    std::ifstream stream(file, std::ios::binary);
+    if (!stream)
+    {
+        throw std::runtime_error("cannot read asset list: " + file.string());
+    }
+    std::vector<AssetEntry> entries;
+    std::string line;
+    std::size_t number = 0;
+    while (std::getline(stream, line))
+    {
+        ++number;
+        if (!line.empty() && line.back() == '\r')
+        {
+            line.pop_back();
+        }
+        const auto tab = line.find('\t');
+        std::uint64_t size = 0;
+        const char *end = line.data() + line.size();
+        const char *begin = tab == std::string::npos ? end : line.data() + tab + 1;
+        const auto parsed = std::from_chars(begin, end, size);
+        const std::string path = line.substr(0, tab);
+        if (parsed.ec != std::errc{} || parsed.ptr != end || !is_safe_relative(path) ||
+            path.find('\\') != std::string::npos || !path.starts_with("data/"))
+        {
+            throw std::runtime_error(std::format("invalid asset list {} line {}", file.string(), number));
+        }
+        entries.push_back({path, size});
+    }
+    if (stream.bad() || entries.empty())
+    {
+        throw std::runtime_error("empty or unreadable asset list: " + file.string());
+    }
+    return entries;
+}
+
+std::filesystem::path fetch_remote_list(const std::filesystem::path &root, const AssetSource &source)
+{
+    const auto scratch = std::filesystem::absolute(root / asset_scratch_name);
+    std::filesystem::create_directories(scratch);
+    const auto config = scratch / "list.curl";
+    const auto body = scratch / "manifest.txt";
+    const auto diagnostics = scratch / "list.stderr";
+    {
+        std::ofstream stream(config, std::ios::trunc);
+        stream << "stderr = " << config_quote(diagnostics.generic_string()) << '\n';
+        write_curl_transfer(stream, source, expand_target(source.list_path, source, {}), body, false);
+        stream.close();
+        if (!stream)
+        {
+            throw std::runtime_error("cannot write curl configuration: " + config.string());
+        }
+    }
+    std::string error;
+    const int status = run_curl(config, [](std::string_view) {}, error);
+    if (status != 0 || !error.empty())
+    {
+        throw std::runtime_error(std::format("asset list: curl exit {}: {}{}", status, error, read_all(diagnostics)));
+    }
+    return body;
+}
+
+std::vector<AssetEntry> load_asset_list(const std::filesystem::path &root, const AssetSource &source)
+{
+    for (const auto &file : {root / asset_list_name, root / "data" / "manifest.txt"})
+    {
+        if (std::filesystem::is_regular_file(file))
+        {
+            return parse_asset_list(file);
+        }
+    }
+    const auto body = fetch_remote_list(root, source);
+    auto entries = parse_asset_list(body);
+    std::filesystem::copy_file(body, root / asset_list_name, std::filesystem::copy_options::overwrite_existing);
+    return entries;
+}
 
 } // namespace
 
@@ -856,12 +633,29 @@ AssetSource read_asset_source(const std::filesystem::path &root)
     const std::string body =
         std::filesystem::is_regular_file(encoded) ? decode_source_file(encoded) : decode_source_file(plain);
     AssetSource source{source_value(body, "host"),  source_value(body, "repo"), source_value(body, "branch"),
-                       source_value(body, "index"), source_value(body, "file"), source_value(body, "prefix")};
+                       source_value(body, "list"), source_value(body, "file"), source_value(body, "prefix")};
     if (source.branch.empty())
     {
         source.branch = "main";
     }
     return source;
+}
+
+bool refresh_asset_list(const std::filesystem::path &root, const AssetSource &source, std::string &error)
+{
+    try
+    {
+        const std::filesystem::path body = fetch_remote_list(root, source);
+        parse_asset_list(body);
+        std::filesystem::copy_file(body, root / std::filesystem::path(asset_list_name),
+                                   std::filesystem::copy_options::overwrite_existing);
+        return true;
+    }
+    catch (const std::exception &failure)
+    {
+        error = failure.what();
+        return false;
+    }
 }
 
 bool asset_manifest_satisfied(const std::filesystem::path &root, const AssetSource &source, app::VoiceLanguage voice)
@@ -879,6 +673,16 @@ bool asset_manifest_satisfied(const std::filesystem::path &root, const AssetSour
     {
         return false;
     }
+    const DirectoryMeasure listed = measure_asset_list(root);
+    if (listed.files == 0)
+    {
+        return false;
+    }
+    if (read_manifest_value(manifest, manifest_list_files_key) != std::format("{}", listed.files) ||
+        read_manifest_value(manifest, manifest_list_bytes_key) != std::format("{}", listed.bytes))
+    {
+        return false;
+    }
     const DirectoryMeasure measure = measure_directory(root / std::filesystem::path(asset_root_name));
     if (measure.files == 0)
     {
@@ -891,6 +695,7 @@ bool asset_manifest_satisfied(const std::filesystem::path &root, const AssetSour
 void store_asset_manifest(const std::filesystem::path &root, const AssetSource &source, app::VoiceLanguage voice)
 {
     const DirectoryMeasure measure = measure_directory(root / std::filesystem::path(asset_root_name));
+    const DirectoryMeasure listed = measure_asset_list(root);
     std::ofstream stream(root / std::filesystem::path(asset_manifest_name), std::ios::trunc);
     if (!stream)
     {
@@ -899,30 +704,23 @@ void store_asset_manifest(const std::filesystem::path &root, const AssetSource &
     stream << manifest_repo_key << " = " << source.repo << '\n'
            << manifest_voice_key << " = " << app::voice_code(voice) << '\n'
            << manifest_files_key << " = " << measure.files << '\n'
-           << manifest_bytes_key << " = " << measure.bytes << '\n';
+           << manifest_bytes_key << " = " << measure.bytes << '\n'
+           << manifest_list_files_key << " = " << listed.files << '\n'
+           << manifest_list_bytes_key << " = " << listed.bytes << '\n';
 }
 
 AssetPlan plan_assets(const std::filesystem::path &root, const AssetSource &source, app::VoiceLanguage voice)
 {
     AssetPlan plan{{}, 0, 0, 0, {}};
     std::vector<AssetEntry> remote;
-#if defined(_WIN32)
-    const InternetHandle session = open_session();
-    if (!session)
+    try
     {
-        plan.error = describe_error("open session");
-        return plan;
+        remote = load_asset_list(root, source);
     }
-    const InternetHandle connect = open_connection(session.get(), source.host);
-    if (!connect)
+    catch (const std::exception &error)
     {
-        plan.error = describe_error("connect");
-        return plan;
+        plan.error = error.what();
     }
-    remote = load_remote_tree(connect.get(), source, plan.error);
-#else
-    remote = load_remote_tree(source, root / std::filesystem::path(asset_scratch_name), plan.error);
-#endif
     if (!plan.error.empty())
     {
         return plan;
@@ -965,89 +763,128 @@ AssetOutcome fetch_assets(const std::filesystem::path &root, const AssetSource &
     {
         return outcome;
     }
-#if defined(_WIN32)
-    const InternetHandle session = open_session();
-    if (!session)
+    std::vector<bool> completed(plan.pending.size(), false);
+    try
     {
-        outcome.error = describe_error("open session");
-        outcome.failed = plan.pending.size();
-        return outcome;
-    }
-#endif
-    std::atomic<std::size_t> cursor{0};
-    std::mutex guard;
-    AssetProgress progress{0, plan.pending.size(), 0, plan.pending_bytes, {}};
-    const std::size_t worker_count = std::min(download_worker_limit, plan.pending.size());
-    std::vector<std::thread> workers;
-    workers.reserve(worker_count);
-    for (std::size_t worker = 0; worker < worker_count; ++worker)
-    {
-        workers.emplace_back([&]() {
-#if defined(_WIN32)
-            const InternetHandle connect = open_connection(session.get(), source.host);
-            if (!connect)
+        const auto scratch = std::filesystem::absolute(root / asset_scratch_name);
+        std::filesystem::create_directories(scratch);
+        const auto config = scratch / "download.curl";
+        const auto diagnostics = scratch / "download.stderr";
+        std::vector<std::uint64_t> carried(plan.pending.size(), 0);
+        std::ofstream stream(config, std::ios::trunc);
+        stream << "parallel\nparallel-max = " << std::min(download_worker_limit, plan.pending.size()) << '\n'
+               << "stderr = " << config_quote(diagnostics.generic_string()) << '\n';
+        for (std::size_t index = 0; index < plan.pending.size(); ++index)
+        {
+            const auto &entry = plan.pending[index];
+            auto staging = std::filesystem::absolute(root / entry.path);
+            staging += ".part";
+            std::filesystem::create_directories(staging.parent_path());
+            if (std::filesystem::exists(staging))
             {
-                const std::scoped_lock lock(guard);
-                if (outcome.error.empty())
+                const auto size = std::filesystem::file_size(staging);
+                if (size < entry.size)
                 {
-                    outcome.error = describe_error("connect");
+                    carried[index] = size;
                 }
+                else
+                {
+                    std::filesystem::remove(staging);
+                }
+            }
+            if (index != 0)
+            {
+                stream << "next\n";
+            }
+            write_curl_transfer(stream, source, expand_target(source.file_path, source, encode_path(entry.path)),
+                                staging, carried[index] != 0);
+            stream << "write-out = \"%{urlnum}\\t%{exitcode}\\t%{errormsg}\\n\"\n";
+        }
+        stream.close();
+        if (!stream)
+        {
+            throw std::runtime_error("cannot write curl configuration: " + config.string());
+        }
+        AssetProgress progress{0, plan.pending.size(), 0, plan.pending_bytes, {}};
+        if (report)
+        {
+            report(progress);
+        }
+        std::string process_error;
+        const int status = run_curl(config, [&](std::string_view line) {
+            const auto first = line.find('\t');
+            const auto second = first == std::string_view::npos ? first : line.find('\t', first + 1);
+            if (second == std::string_view::npos)
+            {
+                outcome.error += std::format("curl output: {}\n", line);
                 return;
             }
-#endif
-            for (;;)
+            std::size_t index = 0;
+            int transfer_status = 0;
+            const auto parsed_index = std::from_chars(line.data(), line.data() + first, index);
+            const auto parsed_status = std::from_chars(line.data() + first + 1, line.data() + second, transfer_status);
+            if (parsed_index.ec != std::errc{} || parsed_index.ptr != line.data() + first ||
+                parsed_status.ec != std::errc{} || parsed_status.ptr != line.data() + second ||
+                index >= plan.pending.size() || completed[index])
             {
-                const std::size_t index = cursor.fetch_add(1);
-                if (index >= plan.pending.size())
+                outcome.error += std::format("invalid curl result: {}\n", line);
+                return;
+            }
+            completed[index] = true;
+            const auto &entry = plan.pending[index];
+            const auto destination = root / entry.path;
+            auto staging = destination;
+            staging += ".part";
+            std::error_code code;
+            const auto received = std::filesystem::file_size(staging, code);
+            const auto written = !code && received > carried[index] ? received - carried[index] : 0;
+            progress.bytes += written;
+            if (transfer_status != 0 || code || received != entry.size)
+            {
+                ++outcome.failed;
+                outcome.error += std::format("{}: curl {}, {}; {}\n", entry.path, transfer_status,
+                                             line.substr(second + 1),
+                                             code ? code.message() : std::format("size {} expected {}", received, entry.size));
+            }
+            else
+            {
+                std::filesystem::remove(destination, code);
+                if (!code)
                 {
-                    return;
+                    std::filesystem::rename(staging, destination, code);
                 }
-                const AssetEntry &entry = plan.pending[index];
-                std::uint64_t written = 0;
-                std::uint64_t total_written = 0;
-                std::string error;
-                bool downloaded = false;
-                for (int attempt = 0; attempt < download_attempt_limit && !downloaded; ++attempt)
+                if (code)
                 {
-                    written = 0;
-                    error.clear();
-#if defined(_WIN32)
-                    downloaded = download_entry(connect.get(), source, entry,
-                                                root / std::filesystem::path(entry.path), written, error);
-#else
-                    downloaded = download_entry(source, entry, root / std::filesystem::path(entry.path), written,
-                                                error);
-#endif
-                    total_written += written;
+                    ++outcome.failed;
+                    outcome.error += std::format("{}: {}\n", entry.path, code.message());
                 }
-                written = total_written;
-                const std::scoped_lock lock(guard);
-                if (downloaded)
+                else
                 {
                     ++outcome.downloaded;
                     outcome.bytes += written;
                 }
-                else
-                {
-                    ++outcome.failed;
-                    if (outcome.error.empty())
-                    {
-                        outcome.error = error;
-                    }
-                }
-                ++progress.completed;
-                progress.bytes += written;
-                progress.current = entry.path;
-                if (report)
-                {
-                    report(progress);
-                }
             }
-        });
+            ++progress.completed;
+            progress.current = entry.path;
+            if (report)
+            {
+                report(progress);
+            }
+        }, process_error);
+        if (status != 0 || !process_error.empty())
+        {
+            outcome.error += std::format("curl exit {}: {}{}\n", status, process_error, read_all(diagnostics));
+        }
     }
-    for (std::thread &worker : workers)
+    catch (const std::exception &error)
     {
-        worker.join();
+        outcome.error += error.what();
+    }
+    const auto missing = static_cast<std::size_t>(std::ranges::count(completed, false));
+    if (missing != 0)
+    {
+        outcome.failed += missing;
+        outcome.error += std::format("\ncurl did not complete {} transfers", missing);
     }
     return outcome;
 }

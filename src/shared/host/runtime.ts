@@ -113,3 +113,31 @@ export function isLocalServerRuntime(): boolean {
 export function readAppStorageKind(): AppStorageKind {
     return readAppHostRuntime().storage;
 }
+
+export function readServerBgmPreference(): boolean | null {
+    const runtime = readAppHostRuntime();
+    if (runtime.kind !== 'local_server' || typeof runtime.server.bgm !== 'boolean') {
+        return null;
+    }
+    return runtime.server.bgm;
+}
+
+export async function writeServerBgmPreference(enabled: boolean): Promise<void> {
+    const runtime = readAppHostRuntime();
+    if (runtime.kind !== 'local_server') {
+        return;
+    }
+    try {
+        const response = await fetch(LOCAL_SERVER_RUNTIME_PATH, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ bgm: enabled }),
+        });
+        if (response.ok) {
+            runtime.server.bgm = enabled;
+        }
+    }
+    catch (error) {
+        console.warn('[eversoul-frontend] bgm preference not stored', error);
+    }
+}

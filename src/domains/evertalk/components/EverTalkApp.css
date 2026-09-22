@@ -6577,8 +6577,10 @@ a.ever-settings-reset-button {
 }
 
 .ever-story {
+  position: fixed; inset: var(--ever-environment-bar-height) 0 0; z-index: 1;
   display: flex; flex-direction: column; gap: clamp(12px, 1.4vw, 20px);
-  padding: clamp(16px, 2vw, 28px); height: 100%; min-height: 0; overflow-y: auto;
+  padding: clamp(16px, 2vw, 28px); min-height: 0; overflow-y: auto;
+  box-sizing: border-box;
   container-type: inline-size; container-name: story;
 }
 .ever-story h2 { margin: 6px 0 0; font-size: 15px; letter-spacing: .02em; opacity: .85; }
@@ -6588,14 +6590,9 @@ a.ever-settings-reset-button {
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
 .ever-story__bar span { font-size: 12px; opacity: .7; white-space: nowrap; }
-.ever-story__bar button {
-  padding: 7px 14px; border-radius: 9px; font-size: 12px; cursor: pointer; color: inherit;
-  border: 1px solid rgba(255,255,255,.14); background: rgba(41,40,57,.8);
-}
-.ever-story__bar button:hover { background: rgba(57,135,229,.24); }
 .ever-story__notice { opacity: .75; }
 .ever-story--gallery {
-  position: relative; padding: 0; gap: 0; overflow: hidden;
+  padding: 0; gap: 0; overflow: hidden;
   display: grid; grid-template-rows: auto minmax(0, 1fr);
 }
 .ever-story__backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -6618,12 +6615,20 @@ a.ever-settings-reset-button {
   grid-template-columns: repeat(auto-fill, minmax(clamp(124px, 9vw, 164px), 1fr));
 }
 .ever-story__banner {
-  position: relative; align-self: center; display: grid; place-items: center;
-  width: clamp(168px, 16vw, 224px); margin-top: clamp(2px, .6vw, 8px);
+  position: relative; justify-self: center; align-self: center;
+  display: grid; place-items: center;
+  width: clamp(150px, 13vw, 196px); margin: clamp(6px, 1vw, 14px) 0 clamp(2px, .5vw, 6px);
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.65));
 }
 .ever-story__banner img { width: 100%; height: auto; display: block; }
 .ever-story__banner strong {
-  position: absolute; font-size: clamp(14px, 1.2vw, 18px); color: #2b2438; letter-spacing: .04em;
+  position: absolute; font-size: clamp(13px, 1.05vw, 17px); color: #2b2438;
+  letter-spacing: .04em; white-space: nowrap;
+}
+.ever-story--gallery::before {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: clamp(120px, 16vh, 220px);
+  background: linear-gradient(180deg, rgba(8,7,14,.82), rgba(8,7,14,0));
+  pointer-events: none; z-index: 0;
 }
 .ever-story__book {
   position: relative; display: grid; grid-template-rows: 1fr auto;
@@ -6656,7 +6661,6 @@ a.ever-settings-reset-button {
 @container story (max-width: 860px) {
   .ever-story__books { grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); }
   .ever-story__episodes { grid-template-columns: repeat(auto-fill, minmax(178px, 1fr)); }
-  .ever-story__actor { height: 62%; max-width: 38%; }
   .ever-story__banner { width: clamp(150px, 26cqw, 200px); }
   .ever-story__bar h1 { font-size: 15px; }
 }
@@ -6669,9 +6673,14 @@ a.ever-settings-reset-button {
   .ever-story__bar span { order: 3; }
 }
 .ever-story__episodes {
-  list-style: none; margin: 0; padding: clamp(16px, 2vw, 28px); display: grid;
+  list-style: none; margin: 0; padding: 0; display: grid;
   gap: clamp(12px, 1.4vw, 20px); grid-template-columns: repeat(auto-fill, minmax(clamp(200px, 17vw, 268px), 1fr));
-  overflow-y: auto;
+}
+.ever-story:not(.ever-story--viewer) > .ever-story__bar {
+  position: sticky; top: 0; z-index: 3;
+  margin: calc(clamp(16px, 2vw, 28px) * -1) calc(clamp(16px, 2vw, 28px) * -1) 0;
+  padding: clamp(16px, 2vw, 28px) clamp(16px, 2vw, 28px) 12px;
+  background: rgba(16,15,24,.96); border-bottom: 1px solid rgba(255,255,255,.07);
 }
 .ever-story__episode {
   display: flex; flex-direction: column; width: 100%; padding: 0; cursor: pointer; color: inherit;
@@ -6694,90 +6703,157 @@ a.ever-settings-reset-button {
 .ever-story__episode-art em.is-true { color: #ffd479; }
 .ever-story__episode-art em.is-normal { color: #9fd3ff; }
 .ever-story__episode-art em.is-bad { color: #ff9c9c; }
-.ever-story__episode-text { display: flex; flex-direction: column; gap: 3px; padding: 10px 12px 12px; text-align: left; }
+.ever-story__episode-text { display: flex; flex-direction: column; gap: 5px; padding: 10px 12px 12px; text-align: left; }
 .ever-story__episode-text strong { font-size: clamp(13px, 1vw, 15px); line-height: 1.35; }
 .ever-story__episode-text small { font-size: 11px; opacity: .6; }
+.ever-story__episode-summary {
+  font-size: 11.5px; line-height: 1.55; opacity: .68;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden;
+}
+.ever-story__episode-mark {
+  position: absolute; left: 8px; top: 8px; font-style: normal; font-size: 10px;
+  padding: 3px 8px; border-radius: 999px; color: #f4d79a;
+  background: rgba(30,20,6,.86); border: 1px solid rgba(201,133,0,.5);
+}
 .ever-story--viewer {
-  position: relative; padding: 0; gap: 0; height: 100%; min-height: 0; overflow: hidden;
+  padding: 0; gap: 0; min-height: 0; overflow: hidden;
   display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
 }
-.ever-story--viewer .ever-story__bar { padding: 10px clamp(14px, 2vw, 28px); }
+.ever-story--viewer .ever-story__bar {
+  position: relative; z-index: 5;
+  padding: clamp(10px, 1.1vw, 15px) clamp(14px, 1.8vw, 26px);
+  display: flex; align-items: center; gap: clamp(10px, 1.2vw, 16px); flex-wrap: nowrap;
+  background: rgba(13,12,20,.96); border-bottom: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,.45);
+}
+.ever-story--viewer .ever-story__bar h1 { flex: 1; min-width: 0; }
 .ever-story__stage {
   position: relative; min-height: 0; width: 100%; overflow: hidden;
-  margin: 0 auto; border-radius: 0; padding: clamp(12px, 1.8vw, 28px);
-  display: flex; flex-direction: column; align-items: center; justify-content: flex-end; cursor: pointer;
+  display: grid; grid-template-rows: minmax(0, 1fr) auto;
+}
+.ever-story__scene {
+  position: relative; min-height: 0; overflow: hidden;
   background-color: #14131d; background-size: cover; background-position: center;
 }
-.ever-story__bar {
-  position: sticky; top: 0; z-index: 3; background: rgba(16,15,24,.92); backdrop-filter: blur(8px);
+.ever-story__scene.is-cutscene::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(120% 90% at 50% 45%, rgba(8,7,14,.18), rgba(6,5,11,.86));
 }
-.ever-story__stage { overflow: hidden; }
 .ever-story__movie { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ever-story__movie.is-fullscreen { object-fit: contain; background: #05040a; z-index: 2; }
 .ever-story__cast { position: absolute; inset: 0; pointer-events: none; }
+.ever-story__actor-slot {
+  position: absolute; bottom: -7%; translate: -50% 0;
+  display: flex; align-items: flex-end; justify-content: center;
+}
+.ever-story__actor-slot.is-speaking { z-index: 2; }
 .ever-story__actor {
-  position: absolute; bottom: 0; height: 74%; width: auto; max-width: 30%; object-fit: contain;
-  object-position: bottom center; transform-origin: bottom center;
-  filter: brightness(.5) saturate(.75); transition: filter .25s ease, opacity .25s ease; opacity: .88;
+  max-width: 100%; max-height: 100%; width: auto; height: 100%;
+  object-fit: contain; object-position: bottom center; transform-origin: bottom center;
+  filter: brightness(.52) saturate(.78); opacity: .9;
+  transition: filter .25s ease, opacity .25s ease;
 }
-.ever-story__actor--left { left: 2%; }
-.ever-story__actor--center { left: 50%; translate: -50% 0; }
-.ever-story__actor--right { right: 2%; }
-.ever-story__actor.is-speaking { height: 82%; z-index: 2; }
-.ever-story__actor.is-speaking { filter: none; opacity: 1; }
+.ever-story__actor-slot.is-speaking .ever-story__actor { filter: none; opacity: 1; }
+.ever-story__dialogue-layer {
+  position: relative; z-index: 3;
+  padding: clamp(8px, 1vw, 14px) clamp(12px, 2vw, 30px) clamp(10px, 1.4vw, 18px);
+  background: linear-gradient(180deg, rgba(9,8,16,0), rgba(9,8,16,.7) 30%, rgba(9,8,16,.94));
+}
 .ever-story__bubble {
-  position: relative; width: 100%; max-width: min(1080px, 92%); margin: 0 auto;
-  font-size: clamp(14px, 1.05vw, 17px); border-radius: 14px; padding: clamp(16px, 1.6vw, 24px) clamp(18px, 2vw, 28px);
-  background-color: rgba(18,17,28,.86);
+  position: relative; display: grid; grid-template-columns: minmax(0, 1fr);
+  align-items: start; gap: clamp(10px, 1.2vw, 16px);
+  width: 100%; max-width: min(1120px, 100%); margin: 0 auto;
+  padding: clamp(14px, 1.5vw, 20px) clamp(16px, 1.8vw, 26px);
+  text-align: left; cursor: pointer; color: inherit;
+  font-size: clamp(14px, 1.05vw, 17px);
+  border: 1px solid rgba(255,255,255,.13); border-radius: 14px;
+  background-color: rgba(13,12,21,.9);
   background-size: 100% 100%; background-repeat: no-repeat;
-  box-shadow: 0 10px 30px rgba(0,0,0,.45);
+  box-shadow: 0 12px 34px rgba(0,0,0,.5);
 }
-.ever-story__bubble strong {
-  position: absolute; top: -15px; left: clamp(16px, 2vw, 28px); margin: 0;
-  padding: 5px 18px; border-radius: 999px; font-size: 13px; letter-spacing: .02em; color: #f2f6ff;
-  background: linear-gradient(135deg, rgba(57,95,180,.96), rgba(93,72,168,.96));
-  border: 1px solid rgba(160,196,255,.45); box-shadow: 0 6px 16px rgba(0,0,0,.45);
+.ever-story__bubble:has(.ever-story__portrait) { grid-template-columns: auto minmax(0, 1fr); }
+.ever-story__bubble:disabled { cursor: default; }
+.ever-story__bubble.is-narration .ever-story__text { font-style: italic; opacity: .92; }
+.ever-story__bubble.is-gameplay { border-color: rgba(201,133,0,.42); background-color: rgba(26,19,10,.9); }
+.ever-story__portrait {
+  width: clamp(54px, 5vw, 76px); height: clamp(54px, 5vw, 76px); border-radius: 12px;
+  object-fit: cover; object-position: top center; align-self: center;
+  border: 1px solid rgba(255,255,255,.16); background: rgba(8,7,14,.7);
 }
-.ever-story__bubble p { margin: 0; white-space: pre-line; line-height: 1.75; min-height: 3.5em; }
+.ever-story__dialogue { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.ever-story__speaker {
+  align-self: flex-start; margin: 0; padding: 5px 24px; border: none;
+  font-size: 13px; letter-spacing: .02em; color: #eaf2ff; white-space: nowrap;
+  background: linear-gradient(180deg, rgba(86,124,204,.96), rgba(44,64,126,.96));
+  clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0 50%);
+}
+.ever-story__text {
+  display: block; white-space: pre-line; line-height: 1.7; min-height: 3.4em; word-break: break-word;
+}
 .ever-story__choices {
-  position: absolute; left: 50%; top: 44%; translate: -50% -50%; z-index: 6;
-  display: flex; flex-direction: column; gap: 10px;
-  width: min(560px, 78cqw); padding: clamp(16px, 1.6vw, 22px);
-  border-radius: 16px; border: 1px solid rgba(201,133,0,.38);
-  background: rgba(10,9,17,.9); box-shadow: 0 24px 60px rgba(0,0,0,.6);
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%; z-index: 6;
+  display: flex; flex-direction: column; align-items: center; gap: clamp(8px, .9vw, 12px);
+  width: min(620px, 82%); max-height: 84%; overflow-y: auto;
+  padding: clamp(14px, 1.4vw, 20px);
+  border-radius: 16px; border: 1px solid rgba(201,133,0,.34);
+  background: rgba(9,8,16,.88); box-shadow: 0 24px 60px rgba(0,0,0,.6);
   backdrop-filter: blur(4px);
 }
-.ever-story__choices > span { font-size: 13px; opacity: .72; text-align: center; }
-.ever-story__choices button {
-  text-align: center; padding: 13px 18px; border-radius: 12px; cursor: pointer; color: inherit;
-  border: 1px solid rgba(201,133,0,.45); background: rgba(201,133,0,.14);
-  transition: background .16s ease, transform .16s ease;
+.ever-story__choices-title { font-size: 13px; opacity: .72; text-align: center; }
+.ever-story__choice {
+  position: relative; width: 100%; padding: 2px; border: none; cursor: pointer;
+  background: linear-gradient(180deg, rgba(226,182,96,.95), rgba(146,100,30,.95));
+  clip-path: polygon(22px 0, calc(100% - 22px) 0, 100% 50%, calc(100% - 22px) 100%, 22px 100%, 0 50%);
+  transition: filter .16s ease, transform .16s ease;
 }
-.ever-story__choices button:hover { background: rgba(201,133,0,.3); transform: translateY(-2px); }
+.ever-story__choice:hover { filter: brightness(1.25); transform: translateY(-2px); }
+.ever-story__choice-label {
+  display: block; padding: clamp(11px, 1vw, 15px) clamp(30px, 3vw, 46px);
+  text-align: center; color: #f7edd9; font-size: clamp(13px, .95vw, 15px); line-height: 1.5;
+  background: linear-gradient(180deg, rgba(46,33,14,.96), rgba(28,20,9,.97));
+  clip-path: polygon(21px 0, calc(100% - 21px) 0, 100% 50%, calc(100% - 21px) 100%, 21px 100%, 0 50%);
+}
 .ever-story__cursor {
   display: inline-block; width: .42em; height: 1em; margin-left: .22em; vertical-align: -.12em;
   background: currentColor; opacity: .65; animation: ever-story-blink 1s steps(1) infinite;
 }
 @keyframes ever-story-blink { 50% { opacity: 0; } }
 .ever-story__controls {
-  display: flex; gap: 8px; align-items: center; padding: 12px clamp(16px, 2.4vw, 32px);
-  background: rgba(14,13,21,.92);
+  display: flex; gap: clamp(6px, .7vw, 10px); align-items: center; flex-wrap: wrap;
+  padding: clamp(8px, 1vw, 12px) clamp(12px, 2vw, 28px);
+  background: rgba(11,10,18,.95); border-top: 1px solid rgba(255,255,255,.07);
 }
-.ever-story__spacer { flex: 1; }
-.ever-story__controls button {
-  padding: 9px 18px; border-radius: 10px; cursor: pointer; color: inherit; font-size: 13px;
-  border: 1px solid rgba(255,255,255,.12); background: rgba(41,40,57,.8);
-  transition: background .16s ease, border-color .16s ease;
+.ever-story__spacer { flex: 1; min-width: 8px; }
+.ever-story__button {
+  position: relative; display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 16px; border-radius: 10px; cursor: pointer; color: inherit; font-size: 13px;
+  white-space: nowrap; border: 1px solid rgba(255,255,255,.13); background: rgba(38,37,53,.85);
+  transition: background .16s ease, border-color .16s ease, opacity .16s ease;
 }
-.ever-story__controls button:hover:not(:disabled) { background: rgba(57,135,229,.24); }
-.ever-story__controls button.is-active { background: rgba(127,178,245,.3); border-color: rgba(127,178,245,.7); }
-.ever-story__controls button:disabled { opacity: .4; cursor: default; }
-.ever-story__controls button.ever-story__voice-language {
-  padding: 9px 14px; font-size: 12px; border-color: rgba(127,178,245,.34);
+.ever-story__button:hover:not(:disabled) { background: rgba(57,135,229,.26); border-color: rgba(127,178,245,.5); }
+.ever-story__button.is-active { background: rgba(127,178,245,.3); border-color: rgba(127,178,245,.72); }
+.ever-story__button:disabled { opacity: .4; cursor: default; }
+.ever-story__button-icon {
+  position: relative; display: inline-grid; place-items: center;
+  width: 22px; height: 20px; flex: none;
 }
+.ever-story__button-icon img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.ever-story__button-icon-glyph { padding: 3px; }
+.ever-story__button-label { display: inline-block; }
+.ever-story__button-label:empty { display: none; }
+.ever-story__media-error {
+  position: absolute; left: 50%; bottom: 14px; translate: -50% 0; z-index: 8;
+  display: flex; align-items: center; gap: 12px; max-width: min(720px, 92%);
+  padding: 10px 16px; border-radius: 12px; font-size: 12px;
+  border: 1px solid rgba(255,140,140,.4); background: rgba(38,14,18,.94);
+}
+.ever-story__media-error span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ever-story__log {
-  position: absolute; inset: auto 0 56px 0; max-height: 46%; overflow-y: auto; z-index: 4;
-  padding: 16px clamp(18px, 2.4vw, 32px); background: rgba(10,9,17,.96); display: flex; flex-direction: column; gap: 10px;
+  position: absolute; inset: 0; z-index: 7; overflow-y: auto;
+  padding: clamp(12px, 1.6vw, 20px) clamp(16px, 2.4vw, 32px);
+  background: rgba(8,7,15,.97); display: flex; flex-direction: column; gap: 12px;
 }
+.ever-story__log-head { position: sticky; top: 0; display: flex; justify-content: flex-end; }
 .ever-story__log p { margin: 0; display: flex; flex-direction: column; gap: 3px; }
 .ever-story__log strong { font-size: 12px; color: #7fb2f5; }
 .ever-story__log button {

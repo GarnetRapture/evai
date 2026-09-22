@@ -1,19 +1,26 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { suspendAmbientBgm } from "../../bgm/session";
+import { StoryButton } from "../../story/StoryButton";
+import { StoryCast } from "../../story/StoryCast";
+import { StoryText } from "../../story/StoryText";
+import { parseStoryText } from "../../story/markup";
 import {
   buildStorySteps,
   resolveStoryAmbience,
   resolveStoryBackground,
   resolveStoryBgm,
+  resolveStoryCast,
+  resolveStoryCutscene,
   resolveStoryMovie,
   resolveStoryStage,
+  storyActorPortraitUrl,
   storyAmbienceUrl,
   storyBgmUrl,
   storyClipUrl,
+  storyCutsceneUrl,
   storyBackgroundUrl,
   storyClient,
   storyPortraitUrl,
-  storySpiritUrl,
   storyUiUrl,
   storyVideoUrl,
   storyVoiceUrl,
@@ -25,7 +32,6 @@ import type {
   StoryEpisode,
   StoryIndex,
   StoryKind,
-  StoryStageSlot,
   StoryVoiceLanguage,
 } from "../../story/types";
 import type { EverTalkController } from "../types";
@@ -43,6 +49,7 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
   const [collection, setCollection] = useState<StoryCollection | null>(null);
   const [episode, setEpisode] = useState<StoryEpisode | null>(null);
   const [position, setPosition] = useState(0);
+  const [selections, setSelections] = useState<Record<number, number>>({});
   const [category, setCategory] = useState<StoryKind>("main");
   const [autoPlay, setAutoPlay] = useState(false);
   const [voiceEnabled, setVoiceEnabled] = useState(true);
@@ -51,6 +58,8 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
   const [reveal, setReveal] = useState({ text: "", count: 0 });
   const [loading, setLoading] = useState(true);
   const [failed, setFailed] = useState(false);
+  const [mediaError, setMediaError] = useState<string | null>(null);
+  const [movieEnded, setMovieEnded] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -105,7 +114,7 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
     };
   }, [selection]);
 
-  const steps = useMemo(() => (episode === null ? [] : buildStorySteps(episode)), [episode]);
+  const steps = useMemo(() => (episode === null ? [] : buildStorySteps(episode, selections)), [episode, selections]);
   const current = steps[position] ?? null;
   const background = useMemo(() => resolveStoryBackground(steps, position), [steps, position]);
   const stage = useMemo(() => resolveStoryStage(steps, position), [steps, position]);
@@ -114,6 +123,16 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
   const sceneAmbience = useMemo(() => resolveStoryAmbience(steps, position), [steps, position]);
   const bgmRef = useRef<HTMLAudioElement | null>(null);
   const ambienceRef = useRef<HTMLAudioElement | null>(null);
+  const voiceRef = useRef<HTMLAudioElement | null>(null);
+  const movieRef = useRef<HTMLVideoElement | null>(null);
+  const movieKey = movie === null ? null : `${movie.kind}/${movie.key}/${movie.clip}`;
+  const choosing = current !== null && current.choices.length > 0;
+  const waitingForMovie = movie?.fullscreen === true && movieEnded !== movieKey;
+  const cutscene = useMemo(() => resolveStoryCutscene(steps, position), [steps, position]);
+  const cast = useMemo(
+    () => resolveStoryCast(stage, collection?.actors ?? {}, current?.line.speaker),
+    [stage, collection, current],
+  );
 
   function actorOf(actorId: number | undefined): StoryActor | null {
     if (actorId === undefined || collection === null) {
@@ -123,23 +142,31 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
   }
 
   useEffect(() => {
-    if (!voiceEnabled || current === null || selection === null) {
+    if (!voiceEnabled || current === null || episode === null || choosing) {
       return;
     }
-    const source = storyVoiceUrl(selection.kind, selection.key, voiceLanguage, current.line);
+    const source = storyVoiceUrl(episode.media, voiceLanguage, current.line);
     if (source === null) {
       return;
     }
     const audio = new Audio(source);
+    voiceRef.current = audio;
     audio.volume = 0.85;
-    void audio.play().catch(() => undefined);
+    let active = true;
+    void audio.play().catch((error: unknown) => {
+      if (active) setMediaError(error instanceof Error ? error.message : String(error));
+    });
     return () => {
+      active = false;
       audio.pause();
+      voiceRef.current = null;
       audio.src = "";
     };
-  }, [voiceEnabled, voiceLanguage, current, selection]);
+  }, [voiceEnabled, voiceLanguage, current, episode, choosing]);
 
-  const lineText = current === null ? "" : storyTextOf(current.line.text, language);
+  const rawText = current === null ? "" : storyTextOf(current.line.text, language);
+  const parsed = useMemo(() => parseStoryText(rawText), [rawText]);
+  const lineText = parsed.plain;
   const revealed = reveal.text === lineText ? reveal.count : 0;
   const typing = revealed < lineText.length;
 
@@ -160,6 +187,7 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
   }, [lineText]);
 
   function advance() {
+    if (choosing || waitingForMovie) return;
     if (typing) {
       setReveal({ text: lineText, count: lineText.length });
       return;
@@ -168,12 +196,12 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
   }
 
   useEffect(() => {
-    if (!autoPlay || typing || steps.length === 0 || position >= steps.length - 1) {
+    if (!autoPlay || typing || choosing || waitingForMovie || mediaError !== null || steps.length === 0 || position >= steps.length - 1) {
       return;
     }
     const timer = window.setTimeout(() => setPosition((value) => value + 1), 1600);
     return () => window.clearTimeout(timer);
-  }, [autoPlay, typing, position, steps.length]);
+  }, [autoPlay, typing, choosing, waitingForMovie, mediaError, position, steps.length]);
 
   useEffect(() => {
     if (episode === null) {
@@ -203,7 +231,21 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
 
   function openEpisode(entry: StoryEpisode) {
     setEpisode(entry);
+    setSelections({});
     setPosition(0);
+    setReveal({ text: "", count: 0 });
+    setMediaError(null);
+    setMovieEnded(null);
+    setLogOpen(false);
+  }
+
+  function rewind(target: number) {
+    const targetLine = steps[target]?.line;
+    if (targetLine === undefined) return;
+    setSelections((values) => Object.fromEntries(Object.entries(values).filter(([key]) => Number(key) < targetLine.index)));
+    setPosition(target);
+    setReveal({ text: "", count: 0 });
+    setMovieEnded(null);
   }
 
   function openCollection(kind: StoryKind, key: string) {
@@ -225,156 +267,150 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
   }
 
   if (episode !== null) {
+    const episodeIndex = collection?.episodes.findIndex((entry) => entry.id === episode.id) ?? -1;
+    const nextEpisode = collection?.episodes[episodeIndex + 1];
+    const atEnd = position === steps.length - 1 && !choosing;
+    const shelfEntry = selection === null
+      ? null
+      : (index?.[selection.kind].find((entry) => entry.key === selection.key) ?? null);
+    const sceneBackground = background ?? episode.background ?? shelfEntry?.background ?? null;
+    const cutsceneSource = cutscene === null || cutscene.cutscene_clip === undefined
+      || cutscene.cutscene_available !== true
+      ? null
+      : storyCutsceneUrl(episode.media, cutscene.cutscene_clip);
+    const cutsceneStaged = cutscene !== null && cutsceneSource === null;
+    const castHidden = movie?.fullscreen === true || cutscene !== null;
+    const portrait = storyActorPortraitUrl(actorOf(current?.line.small_port));
+    const speaker = current === null || current.line.gameplay === true
+      ? ""
+      : storyTextOf(actorOf(current.line.speaker)?.name, language);
     return (
       <section className="ever-story ever-story--viewer">
         {sceneBgm === null ? null : (
-          <audio ref={bgmRef} key={sceneBgm} src={storyBgmUrl(sceneBgm)} loop autoPlay />
+          <audio ref={bgmRef} key={sceneBgm} src={storyBgmUrl(sceneBgm)} loop autoPlay
+            onError={() => setMediaError(storyBgmUrl(sceneBgm))} />
         )}
         {sceneAmbience === null ? null : (
-          <audio ref={ambienceRef} key={sceneAmbience} src={storyAmbienceUrl(sceneAmbience)} loop autoPlay />
+          <audio ref={ambienceRef} key={sceneAmbience} src={storyAmbienceUrl(sceneAmbience)} loop autoPlay
+            onError={() => setMediaError(storyAmbienceUrl(sceneAmbience))} />
         )}
         <header className="ever-story__bar">
-          <button type="button" onClick={() => setEpisode(null)}>
-            ← {labels.storyBackToList}
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setEpisode(null);
-              closeCollection();
-            }}
-          >
-            {labels.navStory}
-          </button>
+          <StoryButton onClick={() => setEpisode(null)}>← {labels.storyBackToList}</StoryButton>
           <h1>{storyTextOf(episode.title, language)}</h1>
-          <span>
-            {labels.storyProgress} {Math.min(position + 1, steps.length)} / {steps.length}
-          </span>
+          <span>{labels.storyProgress} {position + 1}</span>
         </header>
-        <div
-          className="ever-story__stage"
-          role="presentation"
-          onClick={advance}
-          style={background === null ? undefined : { backgroundImage: `url(${storyBackgroundUrl(background)})` }}
-        >
-          {movie === null ? null : (
-            <video
-              key={`${movie.kind}/${movie.key}/${movie.clip}`}
-              className="ever-story__movie"
-              src={storyClipUrl(movie)}
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          )}
-          <div className="ever-story__cast">
-            {(["left", "center", "right"] as StoryStageSlot[]).map((slot) => {
-              const placed = stage[slot];
-              const actor = actorOf(placed?.id);
-              const source = actor === null ? null : storySpiritUrl(actor);
-              if (actor === null || source === null) {
-                return null;
-              }
-              const speaking = current?.line.speaker === actor.id;
-              return (
-                <img
-                  key={slot}
-                  className={`ever-story__actor ever-story__actor--${slot}${speaking ? " is-speaking" : ""}`}
-                  src={source}
-                  alt=""
-                  style={{ transform: `scale(${actor.scale}) scaleX(${actor.flip ? -1 : 1})` }}
-                />
-              );
-            })}
-          </div>
-          {current === null ? (
-            <p className="ever-story__notice">{labels.storyEmpty}</p>
-          ) : (
-            <div
-              className="ever-story__bubble"
-              style={{ backgroundImage: `url(${storyUiUrl("TalkBG")})` }}
-            >
-              {actorOf(current.line.speaker)?.name ? (
-                <strong>{storyTextOf(actorOf(current.line.speaker)?.name, language)}</strong>
-              ) : null}
-              <p>
-                {lineText.slice(0, revealed)}
-                {typing ? null : <i className="ever-story__cursor" />}
-              </p>
-            </div>
-          )}
-        </div>
-        {current !== null && current.choices.length > 0 ? (
-          <div className="ever-story__choices">
-            <span>{labels.storyChoicePrompt}</span>
-            {current.choices.map((choice) => (
-              <button
-                key={choice.index}
-                type="button"
-                onClick={() => setPosition((value) => Math.min(value + 1, steps.length - 1))}
-              >
-                {storyTextOf(choice.text, language)}
-              </button>
-            ))}
-          </div>
-        ) : null}
-        {logOpen ? (
-          <div className="ever-story__log">
-            {steps.slice(0, position + 1).length === 0 ? (
-              <p className="ever-story__notice">{labels.storyLogEmpty}</p>
-            ) : (
-              steps.slice(0, position + 1).map((entry, entryIndex) => (
-                <p key={entry.line.id}>
-                  {actorOf(entry.line.speaker)?.name ? (
-                    <strong>{storyTextOf(actorOf(entry.line.speaker)?.name, language)}</strong>
-                  ) : null}
-                  <button type="button" onClick={() => setPosition(entryIndex)}>
-                    {storyTextOf(entry.line.text, language)}
+        <div className="ever-story__stage">
+          <div className={"ever-story__scene" + (cutsceneStaged ? " is-cutscene" : "")}
+            style={sceneBackground === null ? undefined : { backgroundImage: "url(" + storyBackgroundUrl(sceneBackground) + ")" }}>
+            {movie === null ? null : (
+              <video ref={movieRef} key={movieKey}
+                className={"ever-story__movie" + (movie.fullscreen ? " is-fullscreen" : "")}
+                src={storyClipUrl(movie)} autoPlay loop={!movie.fullscreen}
+                muted={!movie.fullscreen || !voiceEnabled} controls={movie.fullscreen} playsInline
+                onEnded={() => setMovieEnded(movieKey)}
+                onError={() => setMediaError(storyClipUrl(movie))}
+              />
+            )}
+            {cutsceneSource === null ? null : (
+              <video key={cutsceneSource} className="ever-story__movie" src={cutsceneSource}
+                autoPlay loop muted playsInline onError={() => setMediaError(cutsceneSource)} />
+            )}
+            {castHidden ? null : (
+              <StoryCast cast={cast} language={language} onMediaError={setMediaError} />
+            )}
+            {choosing ? (
+              <div className="ever-story__choices" role="group" aria-label={labels.storyChoicePrompt}>
+                <span className="ever-story__choices-title">{labels.storyChoicePrompt}</span>
+                {current.choices.map((choice) => (
+                  <button key={choice.id} type="button" className="ever-story__choice"
+                    onClick={() => {
+                      setSelections((value) => ({ ...value, [choice.index]: choice.id }));
+                      setPosition((value) => value + 1);
+                      setReveal({ text: "", count: 0 });
+                    }}>
+                    <span className="ever-story__choice-label">
+                      <StoryText parsed={parseStoryText(storyTextOf(choice.text, language))} />
+                    </span>
                   </button>
-                </p>
-              ))
+                ))}
+              </div>
+            ) : null}
+          </div>
+          <div className="ever-story__dialogue-layer">
+            {current === null ? (
+              <p className="ever-story__notice">{labels.storyEmpty}</p>
+            ) : (
+              <button type="button"
+                className={"ever-story__bubble" + (current.line.gameplay ? " is-gameplay" : "")
+                  + (current.line.ui_type === "Narration" ? " is-narration" : "")}
+                disabled={choosing || waitingForMovie} onClick={advance}
+                style={{ backgroundImage: "url(" + storyUiUrl("TalkBG") + ")" }}>
+                {portrait === null ? null : (
+                  <img className="ever-story__portrait" src={portrait} alt=""
+                    onError={() => setMediaError(portrait)} />
+                )}
+                <span className="ever-story__dialogue">
+                  {speaker.length === 0 ? null : (
+                    <strong className="ever-story__speaker">{speaker}</strong>
+                  )}
+                  <span className="ever-story__text" aria-live="polite">
+                    <StoryText parsed={parsed} reveal={revealed} />
+                    {typing ? null : <i className="ever-story__cursor" />}
+                  </span>
+                </span>
+              </button>
             )}
           </div>
-        ) : null}
+          {logOpen ? (
+            <div className="ever-story__log">
+              <div className="ever-story__log-head">
+                <StoryButton icon="icon_log2" onClick={() => setLogOpen(false)}>{labels.storyLog}</StoryButton>
+              </div>
+              {steps.slice(0, position + 1).map((entry, entryIndex) => (
+                <p key={entry.line.id}>
+                  <strong>{storyTextOf(actorOf(entry.line.speaker)?.name, language)}</strong>
+                  <button type="button" onClick={() => { rewind(entryIndex); setLogOpen(false); }}>
+                    <StoryText parsed={parseStoryText(storyTextOf(entry.line.text, language))} />
+                  </button>
+                </p>
+              ))}
+            </div>
+          ) : null}
+        </div>
         <footer className="ever-story__controls">
-          <button
-            type="button"
-            className={autoPlay ? "is-active" : ""}
-            onClick={() => setAutoPlay((value) => !value)}
-          >
-            {labels.storyAuto}
-          </button>
-          <button
-            type="button"
-            className={voiceEnabled ? "is-active" : ""}
-            onClick={() => setVoiceEnabled((value) => !value)}
-          >
-            {labels.storyVoice}
-          </button>
-          <button
-            type="button"
-            className="ever-story__voice-language"
-            disabled={!voiceEnabled}
-            onClick={() => setVoiceLanguage((value) => (value === "ko" ? "ja" : "ko"))}
-          >
+          <StoryButton icon="icon_autobattle" active={autoPlay} aria-pressed={autoPlay}
+            onClick={() => setAutoPlay((value) => !value)}>{labels.storyAuto}</StoryButton>
+          <StoryButton active={voiceEnabled} aria-pressed={voiceEnabled}
+            onClick={() => setVoiceEnabled((value) => !value)}>{labels.storyVoice}</StoryButton>
+          <StoryButton disabled={!voiceEnabled}
+            onClick={() => setVoiceLanguage((value) => value === "ko" ? "ja" : "ko")}>
             {voiceLanguage === "ko" ? labels.storyVoiceKorean : labels.storyVoiceJapanese}
-          </button>
-          <button type="button" className={logOpen ? "is-active" : ""} onClick={() => setLogOpen((value) => !value)}>
-            {labels.storyLog}
-          </button>
+          </StoryButton>
+          <StoryButton icon="icon_log2" active={logOpen} aria-pressed={logOpen}
+            onClick={() => setLogOpen((value) => !value)}>{labels.storyLog}</StoryButton>
           <span className="ever-story__spacer" />
-          <button type="button" disabled={position === 0} onClick={() => setPosition((value) => Math.max(value - 1, 0))}>
-            {labels.storyPrevious}
-          </button>
-          <button
-            type="button"
-            disabled={position >= steps.length - 1}
-            onClick={() => setPosition((value) => Math.min(value + 1, steps.length - 1))}
-          >
-            {labels.storyNext}
-          </button>
+          <StoryButton disabled={position === 0} onClick={() => rewind(position - 1)}>{labels.storyPrevious}</StoryButton>
+          <StoryButton disabled={choosing || waitingForMovie || (atEnd && nextEpisode === undefined)}
+            onClick={() => {
+              if (atEnd && !typing && nextEpisode !== undefined) openEpisode(nextEpisode);
+              else advance();
+            }}>
+            {atEnd && nextEpisode !== undefined ? labels.storyEpisodeLabel + " " + nextEpisode.episode + " →" : labels.storyNext}
+          </StoryButton>
         </footer>
+        {mediaError === null ? null : (
+          <div className="ever-story__media-error" role="alert">
+            <span>{labels.storyLoadFailed} {mediaError}</span>
+            <StoryButton onClick={() => {
+              const media = [voiceRef.current, bgmRef.current, ambienceRef.current, movieRef.current];
+              setMediaError(null);
+              for (const element of media) {
+                if (element !== null) void element.play().catch((error: unknown) =>
+                  setMediaError(error instanceof Error ? error.message : String(error)));
+              }
+            }}>{labels.storyVoice}</StoryButton>
+          </div>
+        )}
       </section>
     );
   }
@@ -383,13 +419,13 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
     const indexEntry = index?.[collection.kind].find((entry) => entry.key === collection.key) ?? null;
     const collectionTitle = indexEntry?.name
       ? storyTextOf(indexEntry.name, language)
-      : `${labels.storyChapterLabel} ${collection.key.replace("chapter", "")}`;
+      : collection.kind === "main"
+        ? `${labels.storyChapterLabel} ${collection.key.replace("chapter", "")}`
+        : collection.key;
     return (
       <section className="ever-story">
         <header className="ever-story__bar">
-          <button type="button" onClick={closeCollection}>
-            {labels.storyBackToList}
-          </button>
+          <StoryButton onClick={closeCollection}>← {labels.storyBackToList}</StoryButton>
           <h1>{collectionTitle}</h1>
           <span>
             {collection.episodes.length} {labels.storyEpisodeLabel}
@@ -411,9 +447,15 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
                   {entry.ending === null ? null : (
                     <em className={`is-${entry.ending}`}>{endingLabel(entry.ending)}</em>
                   )}
+                  {entry.gameplay === true ? (
+                    <i className="ever-story__episode-mark">{labels.storyGameplay}</i>
+                  ) : null}
                 </span>
                 <span className="ever-story__episode-text">
                   <strong>{storyTextOf(entry.title, language)}</strong>
+                  {entry.summary === null ? null : (
+                    <span className="ever-story__episode-summary">{storyTextOf(entry.summary, language)}</span>
+                  )}
                   <small>
                     {entry.required_affinity === null
                       ? `${entry.lines.length} ${labels.storyProgress}`
@@ -469,7 +511,9 @@ export function StoryPage({ controller }: { controller: EverTalkController }) {
             const cover = portrait ?? scene;
             const title = entry.name
               ? storyTextOf(entry.name, language)
-              : `${labels.storyChapterLabel} ${entry.key.replace("chapter", "")}`;
+              : category === "main"
+                ? `${labels.storyChapterLabel} ${entry.key.replace("chapter", "")}`
+                : entry.key;
             return (
               <li key={entry.key}>
                 <button

@@ -2,6 +2,7 @@
 
 #include "api/ollama_proxy.hpp"
 #include "app/error_log.hpp"
+#include "app/server_config.hpp"
 #include "http/http_request.hpp"
 #include "http/http_response.hpp"
 #include "http/http_writer.hpp"
@@ -123,12 +124,60 @@ bool is_allowed_origin(const HttpServiceContext &context, std::string_view origi
 
 std::string runtime_body(const HttpServiceContext &context)
 {
+    const ServerConfig config = read_server_config(context.config_file);
     return std::format(
         "{{\"service\":\"evai-local-server\",\"version\":\"{}\",\"storage\":\"sqlite\",\"sqlite_version\":\"{}\","
-        "\"database_path\":\"{}\",\"ollama_proxy_path\":\"{}\",\"port\":{}}}",
+        "\"database_path\":\"{}\",\"ollama_proxy_path\":\"{}\",\"port\":{},\"bgm\":{},\"voice\":\"{}\"}}",
         http::json_escaped(service_version), http::json_escaped(storage::sqlite_library_version()),
         http::json_escaped(context.database->file().string()), http::json_escaped(api::ollama_proxy_prefix),
-        context.port);
+        context.port, config.bgm ? "true" : "false", voice_code(config.voice));
+}
+
+bool parse_json_flag(std::string_view body, std::string_view key, bool &value)
+{
+    const std::string needle = std::format("\"{}\"", key);
+    const auto found = body.find(needle);
+    if (found == std::string_view::npos)
+    {
+        return false;
+    }
+    const auto colon = body.find(':', found + needle.size());
+    if (colon == std::string_view::npos)
+    {
+        return false;
+    }
+    const auto start = body.find_first_not_of(" \t\r\n", colon + 1);
+    if (start == std::string_view::npos)
+    {
+        return false;
+    }
+    if (body.compare(start, 4, "true") == 0)
+    {
+        value = true;
+        return true;
+    }
+    if (body.compare(start, 5, "false") == 0)
+    {
+        value = false;
+        return true;
+    }
+    return false;
+}
+
+void handle_runtime_update(const net::TcpSocket &client, const HttpServiceContext &context,
+                           const http::HttpRequest &request)
+{
+    ServerConfig config = read_server_config(context.config_file);
+    bool bgm = config.bgm;
+    if (!parse_json_flag(request.body, "bgm", bgm))
+    {
+        http::send_json(client, 400, "Bad Request", http::json_error_body("invalid_body", "bgm"));
+        return;
+    }
+    config.bgm = bgm;
+    config.bgm_configured = true;
+    write_server_config(context.config_file, config);
+    http::send_json(client, 200, "OK", runtime_body(context));
 }
 
 void handle_storage_request(const net::TcpSocket &client, const HttpServiceContext &context, std::string_view operation,
@@ -263,6 +312,11 @@ void handle_request(const net::TcpSocket &client, const HttpServiceContext &cont
         }
         if (*path == runtime_path)
         {
+            if (request.method == "PUT" || request.method == "POST")
+            {
+                handle_runtime_update(client, context, request);
+                return;
+            }
             http::send_json(client, 200, "OK", runtime_body(context));
             return;
         }
@@ -300,7 +354,7 @@ void handle_request(const net::TcpSocket &client, const HttpServiceContext &cont
 HttpServiceContext create_http_service_context(const std::filesystem::path &root_directory,
                                                const std::filesystem::path &database_directory,
                                                storage::EvaiDatabase &database, storage::BackupStore &backups,
-                                               std::uint16_t port)
+                                               std::uint16_t port, const std::filesystem::path &config_file)
 {
     return HttpServiceContext{
         site::create_static_site_context(root_directory, database_directory),
@@ -309,6 +363,7 @@ HttpServiceContext create_http_service_context(const std::filesystem::path &root
         {std::format("127.0.0.1:{}", port), std::format("localhost:{}", port)},
         {std::format("http://127.0.0.1:{}", port), std::format("http://localhost:{}", port)},
         port,
+        config_file,
     };
 }
 

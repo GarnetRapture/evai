@@ -2,6 +2,7 @@ import { ListOrdered, Music, Pause, Play, Shuffle, SkipBack, SkipForward, Volume
 import { useEffect, useMemo, useRef, useState } from "react";
 import { bgmArrangeOf, bgmTitleOf, bgmUrl, filterBgmTracks, loadBgmIndex, orderBgmTracks } from "../../bgm/client";
 import { ambientBgmSuspended, subscribeAmbientBgm } from "../../bgm/session";
+import { readServerBgmPreference, writeServerBgmPreference } from "../../../shared/host/runtime";
 import type { BgmOrder, BgmTrack } from "../../bgm/types";
 import type { AppLanguage } from "../../../shared/types";
 import type { EverTalkLabels } from "../i18n";
@@ -33,7 +34,10 @@ interface BgmPlayerProps {
 
 export function BgmPlayer({ labels, language }: BgmPlayerProps) {
   const [tracks, setTracks] = useState<BgmTrack[]>([]);
-  const [enabled, setEnabled] = useState(() => readStored(ENABLED_KEY, "off") === "on");
+  const [enabled, setEnabled] = useState(() => {
+    const stored = readServerBgmPreference();
+    return stored === null ? readStored(ENABLED_KEY, "on") === "on" : stored;
+  });
   const [paused, setPaused] = useState(false);
   const [position, setPosition] = useState(0);
   const [order, setOrder] = useState<BgmOrder>(() => readStored(ORDER_KEY, "listed") as BgmOrder);
@@ -66,6 +70,7 @@ export function BgmPlayer({ labels, language }: BgmPlayerProps) {
 
   useEffect(() => {
     writeStored(ENABLED_KEY, enabled ? "on" : "off");
+    void writeServerBgmPreference(enabled);
   }, [enabled]);
   useEffect(() => {
     writeStored(ORDER_KEY, order);
@@ -88,11 +93,28 @@ export function BgmPlayer({ labels, language }: BgmPlayerProps) {
     if (audio === null || current === null) {
       return;
     }
-    if (playing) {
-      void audio.play().catch(() => setPaused(true));
+    if (!playing) {
+      audio.pause();
       return;
     }
-    audio.pause();
+    let disposed = false;
+    const resume = () => {
+      if (!disposed) {
+        void audio.play().catch(() => undefined);
+      }
+    };
+    void audio.play().catch(() => {
+      if (disposed) {
+        return;
+      }
+      window.addEventListener("pointerdown", resume, { once: true });
+      window.addEventListener("keydown", resume, { once: true });
+    });
+    return () => {
+      disposed = true;
+      window.removeEventListener("pointerdown", resume);
+      window.removeEventListener("keydown", resume);
+    };
   }, [playing, current]);
 
   function step(delta: number) {

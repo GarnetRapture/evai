@@ -16,6 +16,7 @@ $serverExecutable = Join-Path $serverOutputDirectory 'evai-server.exe'
 $serverDatabaseDirectory = Join-Path $serverOutputDirectory 'evai-database'
 $releaseDirectory = Join-Path $projectRoot 'tmp\release'
 $userDataEntries = @('evai-database', 'evai-backup', 'evai-server.ini')
+$preservedDirectories = @('evai-database', 'evai-backup', 'data', 'evai-assets.cache')
 $systemModulePattern = '^(api-ms-win-|ext-ms-win-|kernel32|kernelbase|user32|shell32|advapi32|ws2_32|ntdll|ole32|oleaut32|gdi32|shlwapi|crypt32|bcrypt|secur32|version|winmm|dbghelp|powrprof|imm32|comdlg32|comctl32|setupapi|iphlpapi|userenv|wintrust|msvcrt)'
 
 function Write-Step {
@@ -146,7 +147,12 @@ function Write-AssetSourceBlob {
 }
 
 function Copy-WebBundle {
-    robocopy $distDirectory $releaseDirectory /E /PURGE /XF *.map evai-server.exe *.dll /XD $userDataEntries /NFL /NDL /NJH /NJS | Out-Null
+    $resolvedRelease = [System.IO.Path]::GetFullPath($releaseDirectory)
+    $expectedRelease = [System.IO.Path]::GetFullPath((Join-Path $projectRoot 'tmp\release'))
+    if ($resolvedRelease -ne $expectedRelease) {
+        throw "Unexpected release destination: $resolvedRelease"
+    }
+    robocopy $distDirectory $releaseDirectory /E /PURGE /XF *.map evai-server.exe *.dll evai-server.ini evai-assets.manifest evai-assets.list evai-assets.bin /XD $preservedDirectories /NFL /NDL /NJH /NJS | Out-Null
     if ($LASTEXITCODE -ge 8) {
         throw "robocopy failed with exit code $LASTEXITCODE"
     }
@@ -182,6 +188,9 @@ Copy-WebBundle
 
 Write-Step 'copying server executable'
 Copy-Item -LiteralPath $serverExecutable -Destination $releaseDirectory -Force
+
+Write-Step 'copying asset file list'
+Copy-Item -LiteralPath (Join-Path $projectRoot 'data\manifest.txt') -Destination (Join-Path $releaseDirectory 'evai-assets.list') -Force
 
 $releaseDatabaseDirectory = Join-Path $releaseDirectory 'evai-database'
 if (-not (Test-Path -LiteralPath $releaseDatabaseDirectory)) {

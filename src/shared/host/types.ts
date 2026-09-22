@@ -16,6 +16,8 @@ export interface LocalServerRuntimeInfo {
     database_path: string;
     ollama_proxy_path: string;
     port: number;
+    bgm?: boolean;
+    voice?: string;
 }
 
 export type AppHostRuntime =

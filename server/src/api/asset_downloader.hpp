@@ -20,7 +20,7 @@ struct AssetSource {
     std::string host;
     std::string repo;
     std::string branch;
-    std::string index_path;
+    std::string list_path;
     std::string file_path;
     std::string prefix;
 };
@@ -56,6 +56,7 @@ struct AssetOutcome {
 using AssetReporter = std::function<void(const AssetProgress&)>;
 
 [[nodiscard]] AssetSource read_asset_source(const std::filesystem::path& root);
+[[nodiscard]] bool refresh_asset_list(const std::filesystem::path& root, const AssetSource& source, std::string& error);
 [[nodiscard]] bool asset_manifest_satisfied(const std::filesystem::path& root, const AssetSource& source, app::VoiceLanguage voice);
 void store_asset_manifest(const std::filesystem::path& root, const AssetSource& source, app::VoiceLanguage voice);
 [[nodiscard]] AssetPlan plan_assets(const std::filesystem::path& root, const AssetSource& source, app::VoiceLanguage voice);

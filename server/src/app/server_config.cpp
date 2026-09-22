@@ -11,6 +11,7 @@ namespace {
 
 constexpr std::string_view language_key = "language";
 constexpr std::string_view voice_key = "voice";
+constexpr std::string_view bgm_key = "bgm";
 
 std::string trim(std::string_view value)
 {
@@ -57,6 +58,19 @@ VoiceLanguage parse_voice(std::string_view value, bool& configured)
     return VoiceLanguage::korean;
 }
 
+bool parse_bgm(std::string_view value, bool& configured)
+{
+    configured = true;
+    if (value == "off" || value == "false" || value == "0") {
+        return false;
+    }
+    if (value == "on" || value == "true" || value == "1") {
+        return true;
+    }
+    configured = false;
+    return true;
+}
+
 }
 
 std::string_view voice_code(VoiceLanguage voice)
@@ -89,7 +103,7 @@ std::string_view language_code(ConsoleLanguage language)
 
 ServerConfig read_server_config(const std::filesystem::path& file)
 {
-    ServerConfig config{ConsoleLanguage::korean, false, VoiceLanguage::korean, false};
+    ServerConfig config{ConsoleLanguage::korean, false, VoiceLanguage::korean, false, true, false};
     std::ifstream stream(file);
     if (!stream) {
         return config;
@@ -108,6 +122,9 @@ ServerConfig read_server_config(const std::filesystem::path& file)
         else if (key == voice_key) {
             config.voice = parse_voice(value, config.voice_configured);
         }
+        else if (key == bgm_key) {
+            config.bgm = parse_bgm(value, config.bgm_configured);
+        }
     }
     return config;
 }
@@ -120,7 +137,8 @@ void write_server_config(const std::filesystem::path& file, const ServerConfig& 
     }
     stream << "[evai-server]\n"
            << language_key << " = " << language_code(config.language) << '\n'
-           << voice_key << " = " << voice_code(config.voice) << '\n';
+           << voice_key << " = " << voice_code(config.voice) << '\n'
+           << bgm_key << " = " << (config.bgm ? "on" : "off") << '\n';
 }
 
 }

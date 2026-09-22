@@ -1,5 +1,20 @@
 import { DomainError } from '../../shared/errors';
-import type { StoryActor, StoryCollection, StoryEpisode, StoryIndex, StoryKind, StoryLine, StoryMovie, StoryStage, StoryStep, StoryVoiceLanguage } from './types';
+import type {
+    StoryActor,
+    StoryCollection,
+    StoryEpisode,
+    StoryIndex,
+    StoryKind,
+    StoryLayout,
+    StoryLine,
+    StoryMediaLocation,
+    StoryMovie,
+    StoryStage,
+    StoryStageActor,
+    StoryStageSlot,
+    StoryStep,
+    StoryVoiceLanguage,
+} from './types';
 
 export const STORY_ROOT = typeof document === 'undefined'
     ? './data/story'
@@ -61,45 +76,138 @@ export const storyClient = {
     },
 };
 
-export function buildStorySteps(episode: StoryEpisode): StoryStep[] {
+export function buildStorySteps(episode: StoryEpisode, selections: Readonly<Record<number, number>> = {}): StoryStep[] {
     const steps: StoryStep[] = [];
-    let pendingChoices: StoryLine[] = [];
-    for (const line of episode.lines) {
-        if (line.choice_group !== undefined && line.choice_group > 0) {
-            pendingChoices.push(line);
+    const branches = new Set<number>();
+    for (let index = 0; index < episode.lines.length; index += 1) {
+        const line = episode.lines[index];
+        if (line.choice_group !== undefined && line.choice_group > 0
+            && line.ui_type !== 'Choice' && !branches.has(line.choice_group)) {
             continue;
         }
-        steps.push({ line, choices: pendingChoices });
-        pendingChoices = [];
-    }
-    if (pendingChoices.length > 0 && steps.length > 0) {
-        steps[steps.length - 1] = { line: steps[steps.length - 1].line, choices: pendingChoices };
+        if (line.ui_type !== 'Choice') {
+            steps.push({ line, choices: [] });
+            continue;
+        }
+        const choices = [line];
+        while (episode.lines[index + 1]?.ui_type === 'Choice' && episode.lines[index + 1].index === line.index) {
+            index += 1;
+            choices.push(episode.lines[index]);
+        }
+        if (choices.length === 1) {
+            steps.push({ line, choices: [] });
+            if (line.choice_group !== undefined && line.choice_group > 0) {
+                branches.add(line.choice_group);
+            }
+            continue;
+        }
+        const selected = choices.find((choice) => choice.id === selections[line.index]);
+        if (selected === undefined) {
+            steps.push({ line, choices });
+            break;
+        }
+        steps.push({ line: selected, choices: [] });
+        for (const choice of choices) {
+            if (choice.choice_group !== undefined && choice.choice_group > 0) {
+                branches.delete(choice.choice_group);
+            }
+        }
+        if (selected.choice_group !== undefined && selected.choice_group > 0) {
+            branches.add(selected.choice_group);
+        }
     }
     return steps;
 }
 
 export function resolveStoryStage(steps: readonly StoryStep[], position: number): StoryStage {
-    const stage: StoryStage = {};
+    let stage: StoryStage = {};
     for (let index = 0; index <= Math.min(position, steps.length - 1); index += 1) {
-        const placed = steps[index]?.line.stage;
-        if (placed === undefined) {
+        const line = steps[index]?.line;
+        if (line === undefined) {
             continue;
         }
-        if (placed.left !== undefined) {
-            stage.left = placed.left;
+        if (line.cutscene !== undefined || line.movie?.fullscreen === true) {
+            stage = {};
+            continue;
         }
-        if (placed.center !== undefined) {
-            stage.center = placed.center;
-        }
-        if (placed.right !== undefined) {
-            stage.right = placed.right;
+        if (line.stage !== undefined) {
+            stage = line.stage;
         }
     }
     return stage;
 }
 
+export function resolveStoryLayout(steps: readonly StoryStep[], position: number): StoryLayout | null {
+    for (let index = Math.min(position, steps.length - 1); index >= 0; index -= 1) {
+        const layout = steps[index]?.line.layout;
+        if (layout !== undefined) {
+            return layout;
+        }
+    }
+    return null;
+}
+
+const CAST_SLOT_ORDER: readonly StoryStageSlot[] = ['left', 'center', 'right'];
+const CAST_SPREAD_BY_COUNT: Readonly<Record<number, readonly number[]>> = {
+    1: [0.5],
+    2: [0.26, 0.74],
+    3: [0.17, 0.5, 0.83],
+};
+const CAST_WIDTH_BY_COUNT: Readonly<Record<number, number>> = { 1: 0.54, 2: 0.47, 3: 0.33 };
+const CAST_HEIGHT = 1.18;
+
+export interface StoryCastMember {
+    actor: StoryActor;
+    slot: StoryStageSlot;
+    placement: StoryStageActor;
+    speaking: boolean;
+    center: number;
+    width: number;
+    height: number;
+}
+
+export function resolveStoryCast(
+    stage: StoryStage,
+    actors: Readonly<Record<string, StoryActor>>,
+    speakerId: number | undefined,
+): StoryCastMember[] {
+    const placed: { slot: StoryStageSlot; placement: StoryStageActor; actor: StoryActor }[] = [];
+    const seen = new Set<number>();
+    for (const slot of CAST_SLOT_ORDER) {
+        const placement = stage[slot];
+        if (placement === null || placement === undefined || seen.has(placement.id)) {
+            continue;
+        }
+        const actor = actors[String(placement.id)];
+        if (actor === undefined || actor.asset_folder === undefined) {
+            continue;
+        }
+        seen.add(placement.id);
+        placed.push({ slot, placement, actor });
+    }
+    const count = placed.length;
+    if (count === 0) {
+        return [];
+    }
+    const spread = CAST_SPREAD_BY_COUNT[count] ?? CAST_SPREAD_BY_COUNT[3];
+    const width = CAST_WIDTH_BY_COUNT[count] ?? CAST_WIDTH_BY_COUNT[3];
+    const height = CAST_HEIGHT;
+    return placed.map((entry, index) => ({
+        actor: entry.actor,
+        slot: entry.slot,
+        placement: entry.placement,
+        speaking: speakerId !== undefined && speakerId === entry.actor.id,
+        center: spread[index] ?? 0.5,
+        width,
+        height,
+    }));
+}
+
 export function storySpiritUrl(actor: StoryActor): string | null {
-    return storyPortraitUrl(actor.asset_folder, actor.asset_prefix);
+    if (actor.asset_folder === undefined || actor.asset_prefix === undefined) {
+        return null;
+    }
+    return `${STORY_SPIRIT_ROOT}/${actor.asset_folder}/base/${actor.asset_prefix}_1024.png`;
 }
 
 export function storyPortraitUrl(folder: string | undefined, prefix: string | undefined): string | null {
@@ -107,6 +215,13 @@ export function storyPortraitUrl(folder: string | undefined, prefix: string | un
         return null;
     }
     return `${STORY_SPIRIT_ROOT}/${folder}/base/${prefix}_512.png`;
+}
+
+export function storyActorPortraitUrl(actor: StoryActor | null): string | null {
+    if (actor === null) {
+        return null;
+    }
+    return storyPortraitUrl(actor.asset_folder, actor.asset_prefix);
 }
 
 export function storyUiUrl(name: string): string {
@@ -117,12 +232,16 @@ export function storyVideoUrl(name: string): string {
     return `${STORY_UI_ROOT}/${name}.mp4`;
 }
 
-export function storyVoiceUrl(kind: StoryKind, key: string, voice: StoryVoiceLanguage, line: StoryLine): string | null {
+export function storyVoiceUrl(
+    media: StoryMediaLocation | undefined,
+    voice: StoryVoiceLanguage,
+    line: StoryLine,
+): string | null {
     const clip = line.voice?.[voice];
-    if (clip === undefined) {
+    if (clip === undefined || media === undefined) {
         return null;
     }
-    return `${STORY_MEDIA_ROOT}/voice/${kind}/${key}/${voice}/${clip}.ogg`;
+    return `${STORY_MEDIA_ROOT}/voice/${media.kind}/${media.key}/${voice}/${clip}.ogg`;
 }
 
 export function storyVoiceLanguages(line: StoryLine): StoryVoiceLanguage[] {
@@ -168,11 +287,14 @@ export function resolveStoryAmbience(steps: readonly StoryStep[], position: numb
 
 export function resolveStoryMovie(steps: readonly StoryStep[], position: number): StoryMovie | null {
     for (let index = Math.min(position, steps.length - 1); index >= 0; index -= 1) {
-        const movie = steps[index]?.line.movie;
-        if (movie !== undefined) {
-            return movie;
+        const line = steps[index]?.line;
+        if (line === undefined) {
+            continue;
         }
-        if (steps[index]?.line.background !== undefined) {
+        if (line.movie !== undefined && line.movie !== null) {
+            return line.movie.available ? line.movie : null;
+        }
+        if (line.background !== undefined && line.background !== null) {
             return null;
         }
     }
@@ -182,9 +304,24 @@ export function resolveStoryMovie(steps: readonly StoryStep[], position: number)
 export function resolveStoryBackground(steps: readonly StoryStep[], position: number): string | null {
     for (let index = Math.min(position, steps.length - 1); index >= 0; index -= 1) {
         const background = steps[index]?.line.background;
-        if (background !== undefined && background.length > 0) {
+        if (background !== undefined && background !== null) {
             return background;
         }
     }
     return null;
+}
+
+export function resolveStoryCutscene(steps: readonly StoryStep[], position: number): StoryLine | null {
+    const line = steps[Math.min(position, steps.length - 1)]?.line;
+    if (line === undefined || line.cutscene === undefined) {
+        return null;
+    }
+    return line;
+}
+
+export function storyCutsceneUrl(media: StoryMediaLocation | undefined, clip: string): string | null {
+    if (media === undefined) {
+        return null;
+    }
+    return `${STORY_MEDIA_ROOT}/video/${media.kind}/${media.key}/${clip}.mp4`;
 }

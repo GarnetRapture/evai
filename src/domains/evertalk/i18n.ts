@@ -522,6 +522,7 @@ export interface EverTalkLabels {
   storyVoice: string;
   storyVoiceKorean: string;
   storyVoiceJapanese: string;
+  storyGameplay: string;
   bgmPlayer: string;
   bgmOn: string;
   bgmOff: string;
@@ -1445,6 +1446,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
     storyVoice: "음성",
     storyVoiceKorean: "한국어 음성",
     storyVoiceJapanese: "일본어 음성",
+    storyGameplay: "전투 진행",
     bgmPlayer: "BGM",
     bgmOn: "BGM 켜기",
     bgmOff: "BGM 끄기",
@@ -2620,6 +2622,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
     storyVoice: "Voice",
     storyVoiceKorean: "Korean voice",
     storyVoiceJapanese: "Japanese voice",
+    storyGameplay: "Battle segment",
     bgmPlayer: "BGM",
     bgmOn: "Turn BGM on",
     bgmOff: "Turn BGM off",
@@ -3782,6 +3785,7 @@ export const EVERTALK_LABELS: Record<AppLanguage, EverTalkLabels> = {
     storyVoice: "语音",
     storyVoiceKorean: "韩语语音",
     storyVoiceJapanese: "日语语音",
+    storyGameplay: "战斗进行",
     bgmPlayer: "BGM",
     bgmOn: "开启 BGM",
     bgmOff: "关闭 BGM",

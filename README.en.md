@@ -215,7 +215,6 @@ Ollama is used together with the EVAI local server. The browser never connects t
    ```bash
    ollama --version
    ollama pull <model:tag>
-   ollama pull hf.co/<user>/<repository>:<quantization>
    ```
 
    You can also build a model from a GGUF file you already have. This is Windows PowerShell:
@@ -346,23 +345,15 @@ Packaging removes the WAL/shm temporary files, `evai-server.ini`, the error log 
 
 ## Downloading the spirit assets
 
-Spirit artwork, story scripts, cutscene videos and voice lines are too large (about 3.9 GB) to keep in this repository, so they live in a public dataset.
+Spirit artwork, story scripts, cutscene videos, voice lines, BGM and sound effects are too large (about 4.58 GB) to keep in this repository, so they live in a public dataset.
 
 **With the local server you do not need to fetch them yourself.** The first run of `evai-server.exe` asks for the console language and the voice language (Korean / Japanese / both / skip), then downloads only the missing files in parallel and opens the service once that finishes. An interrupted download resumes on the next run, and a file that sits in the wrong place is moved instead of downloaded again.
-
-To fetch them manually:
-
-```bash
-hf download garnetrapture/evai-assets --repo-type dataset --local-dir .
-```
-
-If `hf` is missing, install it with `pip install -U huggingface_hub`. The dataset is public, so no login is required and plain `curl` works too.
 
 | Destination | Contents |
 | --- | --- |
 | `data/dataset/` | Spirit profiles and dialogue JSON |
 | `data/story/` | Main and bond story scripts |
-| `data/story-media/` | Story cutscene videos, Korean and Japanese voice lines |
+| `data/story-media/` | Story cutscene videos, Korean and Japanese voice lines, BGM and sound effects |
 | `data/eversoul-assets/` | Spirit artwork, backgrounds, UI images |
 
 ## Technical documents
