@@ -33,7 +33,8 @@ tmp-claude/
 tmp-codex/
 GEMINI.md
 AGENTS.md
-android/
+!AGENTS.md
+
 
 # Local upstream references (not distributed with this repository)
 third_party/
@@ -50,8 +51,7 @@ evai-assets.sources
 evai-assets.manifest
 *.sources
 
-# Android sources are distributed outside this repository
-android/
+
 
 # Build outputs (CMake build trees, native host artifacts, TypeScript build info)
 build/
@@ -84,6 +84,14 @@ android/.cxx/
 android/**/.cxx/
 android/app/.cxx/
 android/app/src/main/jniLibs/
+android/android/.gradle/
+android/android/.kotlin/
+android/android/local.properties
+android/android/captures/
+android/android/keystore.properties
+android/android/app/src/main/jniLibs/
+android/android/**/*.jks
+android/android/**/*.keystore
 *.o
 *.obj
 *.a

@@ -341,7 +341,7 @@ GitHub Actions에 OS별 서버 빌드 워크플로(Build Server Windows, Build S
   <img src="https://img.shields.io/badge/Android-준비_중-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android status" />
 </p>
 
-`android/`에 AICore Gemini Nano와 LiteRT-LM을 쓰는 안드로이드 앱 코드가 있습니다. PC 웹과 로컬 서버를 먼저 마무리하는 중이라 안드로이드는 **대기 상태**이며, 빌드 워크플로와 배포는 준비가 끝나는 대로 추가됩니다.
+`android/`에는 `@evai/android` React Native 모바일 전용 앱을 구현 중입니다. Android 앱은 원본 llama.cpp와 기기 내 GGUF 모델을 사용하도록 설계되었으며 Google AI/ML 라이브러리를 사용하지 않습니다. 현재 네이티브 연결과 화면은 개발 중이고 빌드·기기 동작은 검증되지 않았습니다. 구현 범위와 남은 작업은 [Android 전용 작업 트래킹](android/ANDROID_TRACKING.md)에 기록합니다.
 
 ## 정령 자산 내려받기
 
