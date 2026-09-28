@@ -10,9 +10,11 @@
 #include <cstddef>
 #include <cstdint>
 #include <filesystem>
+#include <format>
 #include <fstream>
 #include <optional>
 #include <span>
+#include <stdexcept>
 #include <string>
 #include <string_view>
 #include <system_error>
@@ -58,25 +60,38 @@ std::optional<ResolvedFile> resolve_file(const StaticSiteContext& context, std::
     return ResolvedFile{candidate, size};
 }
 
-void send_file(const net::TcpSocket& client, const ResolvedFile& file, bool include_body)
+void send_file(const http::HttpChannel& channel, const ResolvedFile& file, bool include_body)
 {
     std::ifstream stream(file.path, std::ios::binary);
     if (!stream) {
-        http::send_status_text(client, 500, "Internal Server Error");
+        http::send_status_text(channel, 500, "Internal Server Error");
         return;
     }
-    client.send_all(http::serialize_response_head({200, "OK", http::resolve_mime_type(file.path), file.size, {}}));
+    std::string message = http::serialize_response_head({200, "OK", http::resolve_mime_type(file.path), file.size, {}, channel.persistence});
     if (!include_body) {
+        channel.socket.send_all(message);
         return;
     }
     std::array<char, file_chunk_bytes> chunk{};
-    while (stream) {
-        stream.read(chunk.data(), static_cast<std::streamsize>(chunk.size()));
+    std::uintmax_t remaining = file.size;
+    while (remaining > 0) {
+        const auto wanted = static_cast<std::size_t>(std::min<std::uintmax_t>(remaining, chunk.size()));
+        stream.read(chunk.data(), static_cast<std::streamsize>(wanted));
         const auto read = static_cast<std::size_t>(stream.gcount());
         if (read == 0) {
-            break;
+            throw std::runtime_error(std::format("{} ended after {} of {} bytes", file.path.string(), file.size - remaining, file.size));
         }
-        client.send_all(std::span<const char>(chunk.data(), read));
+        remaining -= read;
+        if (!message.empty()) {
+            message.append(chunk.data(), read);
+            channel.socket.send_all(message);
+            message.clear();
+            continue;
+        }
+        channel.socket.send_all(std::span<const char>(chunk.data(), read));
+    }
+    if (!message.empty()) {
+        channel.socket.send_all(message);
     }
 }
 
@@ -89,14 +104,14 @@ StaticSiteContext create_static_site_context(const std::filesystem::path& root_d
     return StaticSiteContext{std::filesystem::canonical(root_directory), error ? std::filesystem::path{} : hidden};
 }
 
-void serve_static_file(const net::TcpSocket& client, const StaticSiteContext& context, std::string_view request_path, bool include_body)
+void serve_static_file(const http::HttpChannel& channel, const StaticSiteContext& context, std::string_view request_path, bool include_body)
 {
     const std::optional<ResolvedFile> file = resolve_file(context, request_path);
     if (!file) {
-        http::send_status_text(client, 404, "Not Found");
+        http::send_status_text(channel, 404, "Not Found");
         return;
     }
-    send_file(client, *file, include_body);
+    send_file(channel, *file, include_body);
 }
 
 }

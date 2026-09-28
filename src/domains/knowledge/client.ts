@@ -32,18 +32,14 @@ export const knowledgeClient = {
             return [];
         }
         const database = await getEverSoulDatabase();
-        const store = database.transaction(EVERSOUL_STORE.knowledgeChunk).store;
         const ranked: KnowledgeScoredChunk[] = [];
-        let cursor = await store.openCursor();
-        while (cursor) {
-            const chunk = cursor.value;
+        for (const chunk of await database.getAll(EVERSOUL_STORE.knowledgeChunk)) {
             if (documentNames === null || documentNames.has(chunk.document_name)) {
                 const score = scoreKnowledgeChunk(chunk, terms);
                 if (score > 0) {
                     retainTopKnowledgeChunk(ranked, { score, chunk }, limit);
                 }
             }
-            cursor = await cursor.continue();
         }
         return ranked.map((entry) => entry.chunk);
     },
@@ -55,9 +51,7 @@ export const knowledgeClient = {
             return rankedGroups.map(() => []);
         }
         const database = await getEverSoulDatabase();
-        let cursor = await database.transaction(EVERSOUL_STORE.knowledgeChunk).store.openCursor();
-        while (cursor) {
-            const chunk = cursor.value;
+        for (const chunk of await database.getAll(EVERSOUL_STORE.knowledgeChunk)) {
             const matchingGroups = activeGroups.filter(({ group }) => group.document_names.has(chunk.document_name));
             if (matchingGroups.length > 0) {
                 const score = scoreKnowledgeChunk(chunk, terms);
@@ -67,7 +61,6 @@ export const knowledgeClient = {
                     }
                 }
             }
-            cursor = await cursor.continue();
         }
         return rankedGroups.map((ranked) => ranked.map((entry) => entry.chunk));
     },
@@ -75,16 +68,13 @@ export const knowledgeClient = {
         const database = await getEverSoulDatabase();
         const transaction = database.transaction(EVERSOUL_STORE.knowledgeChunk, 'readwrite');
         const retainedIds = new Set(chunks.map((chunk) => chunk.id));
-        let cursor = await transaction.store.openCursor();
-        while (cursor) {
-            if (documentNames.has(cursor.value.document_name) && !retainedIds.has(cursor.value.id)) {
-                await cursor.delete();
-            }
-            cursor = await cursor.continue();
-        }
-        for (const chunk of chunks) {
-            await transaction.store.put(chunk);
-        }
+        const existing = await transaction.store.getAll();
+        await Promise.all([
+            ...existing
+                .filter((chunk) => documentNames.has(chunk.document_name) && !retainedIds.has(chunk.id))
+                .map((chunk) => transaction.store.delete(chunk.id)),
+            ...chunks.map((chunk) => transaction.store.put(chunk)),
+        ]);
         await transaction.done;
     },
     async insertChunk(chunk: KnowledgeChunk): Promise<void> {

@@ -37,85 +37,128 @@ constexpr std::string_view json_content_type_prefix = "application/json";
 constexpr std::size_t receive_chunk_bytes = 16 * 1024;
 constexpr std::string_view service_version = EVAI_SERVER_VERSION;
 
+enum class ReceiveOutcome
+{
+    request,
+    closed,
+    rejected,
+};
+
 struct ReceivedRequest
 {
+    ReceiveOutcome outcome;
     http::HttpRequest request;
     int failure_status;
     std::string_view failure_reason;
 };
 
-std::optional<std::string> receive_header_block(const net::TcpSocket &client, std::string &overflow)
+ReceivedRequest rejected_request(int status, std::string_view reason)
 {
-    std::string buffer;
-    std::array<char, receive_chunk_bytes> chunk{};
-    while (buffer.size() < http::http_header_limit_bytes)
-    {
-        const std::size_t received = client.receive_some(chunk);
-        if (received == 0)
-        {
-            return std::nullopt;
-        }
-        buffer.append(chunk.data(), received);
-        const auto terminator = buffer.find(http::http_header_terminator);
-        if (terminator != std::string::npos)
-        {
-            const std::size_t body_start = terminator + http::http_header_terminator.size();
-            overflow = buffer.substr(body_start);
-            buffer.resize(body_start);
-            return buffer;
-        }
-    }
-    return std::nullopt;
+    return ReceivedRequest{ReceiveOutcome::rejected, {}, status, reason};
 }
 
-ReceivedRequest receive_request(const net::TcpSocket &client)
+class RequestReader
 {
-    std::string overflow;
-    const std::optional<std::string> header_block = receive_header_block(client, overflow);
-    if (!header_block)
+public:
+    explicit RequestReader(const net::TcpSocket &client)
+        : client_(&client)
     {
-        return ReceivedRequest{{}, 400, "Bad Request"};
     }
-    std::optional<http::HttpRequest> request = http::parse_http_request(*header_block);
-    if (!request)
+
+    ReceivedRequest next()
     {
-        return ReceivedRequest{{}, 400, "Bad Request"};
+        std::size_t search_from = 0;
+        std::size_t header_end = std::string::npos;
+        while (header_end == std::string::npos)
+        {
+            while (buffer_.starts_with(http::http_line_separator))
+            {
+                buffer_.erase(0, http::http_line_separator.size());
+                search_from = 0;
+            }
+            const auto terminator = buffer_.find(http::http_header_terminator, search_from);
+            if (terminator != std::string::npos)
+            {
+                header_end = terminator + http::http_header_terminator.size();
+                break;
+            }
+            if (buffer_.size() >= http::http_header_limit_bytes)
+            {
+                return rejected_request(400, "Bad Request");
+            }
+            search_from = buffer_.size() < http::http_header_terminator.size()
+                              ? 0
+                              : buffer_.size() - http::http_header_terminator.size() + 1;
+            if (!receive_more())
+            {
+                return buffer_.empty() ? ReceivedRequest{ReceiveOutcome::closed, {}, 0, {}}
+                                       : rejected_request(400, "Bad Request");
+            }
+        }
+        std::optional<http::HttpRequest> request =
+            http::parse_http_request(std::string_view(buffer_).substr(0, header_end));
+        if (!request)
+        {
+            return rejected_request(400, "Bad Request");
+        }
+        if (!request->header("Transfer-Encoding").empty())
+        {
+            return rejected_request(411, "Length Required");
+        }
+        const std::string_view content_length_header = request->header("Content-Length");
+        std::size_t content_length = 0;
+        if (!content_length_header.empty())
+        {
+            const std::optional<std::size_t> parsed_length = http::parse_content_length(content_length_header);
+            if (!parsed_length)
+            {
+                return rejected_request(400, "Bad Request");
+            }
+            if (*parsed_length > http::http_body_limit_bytes)
+            {
+                return rejected_request(413, "Payload Too Large");
+            }
+            content_length = *parsed_length;
+        }
+        const std::size_t message_end = header_end + content_length;
+        buffer_.reserve(message_end);
+        while (buffer_.size() < message_end)
+        {
+            if (!receive_more())
+            {
+                return rejected_request(400, "Bad Request");
+            }
+        }
+        if (buffer_.size() == message_end)
+        {
+            buffer_.erase(0, header_end);
+            request->body = std::move(buffer_);
+            buffer_.clear();
+        }
+        else
+        {
+            request->body = buffer_.substr(header_end, content_length);
+            buffer_.erase(0, message_end);
+        }
+        return ReceivedRequest{ReceiveOutcome::request, std::move(*request), 0, {}};
     }
-    if (!request->header("Transfer-Encoding").empty())
+
+private:
+    bool receive_more()
     {
-        return ReceivedRequest{{}, 411, "Length Required"};
-    }
-    const std::string_view content_length_header = request->header("Content-Length");
-    if (content_length_header.empty())
-    {
-        request->body = std::move(overflow);
-        return ReceivedRequest{std::move(*request), 0, {}};
-    }
-    const std::optional<std::size_t> content_length = http::parse_content_length(content_length_header);
-    if (!content_length)
-    {
-        return ReceivedRequest{{}, 400, "Bad Request"};
-    }
-    if (*content_length > http::http_body_limit_bytes)
-    {
-        return ReceivedRequest{{}, 413, "Payload Too Large"};
-    }
-    std::string body = std::move(overflow);
-    body.reserve(*content_length);
-    std::array<char, receive_chunk_bytes> chunk{};
-    while (body.size() < *content_length)
-    {
-        const std::size_t received = client.receive_some(chunk);
+        std::array<char, receive_chunk_bytes> chunk{};
+        const std::size_t received = client_->receive_some(chunk);
         if (received == 0)
         {
-            return ReceivedRequest{{}, 400, "Bad Request"};
+            return false;
         }
-        body.append(chunk.data(), received);
+        buffer_.append(chunk.data(), received);
+        return true;
     }
-    body.resize(*content_length);
-    request->body = std::move(body);
-    return ReceivedRequest{std::move(*request), 0, {}};
-}
+
+    const net::TcpSocket *client_;
+    std::string buffer_;
+};
 
 bool is_allowed_origin(const HttpServiceContext &context, std::string_view origin)
 {
@@ -164,47 +207,47 @@ bool parse_json_flag(std::string_view body, std::string_view key, bool &value)
     return false;
 }
 
-void handle_runtime_update(const net::TcpSocket &client, const HttpServiceContext &context,
+void handle_runtime_update(const http::HttpChannel &channel, const HttpServiceContext &context,
                            const http::HttpRequest &request)
 {
     ServerConfig config = read_server_config(context.config_file);
     bool bgm = config.bgm;
     if (!parse_json_flag(request.body, "bgm", bgm))
     {
-        http::send_json(client, 400, "Bad Request", http::json_error_body("invalid_body", "bgm"));
+        http::send_json(channel, 400, "Bad Request", http::json_error_body("invalid_body", "bgm"));
         return;
     }
     config.bgm = bgm;
     config.bgm_configured = true;
     write_server_config(context.config_file, config);
-    http::send_json(client, 200, "OK", runtime_body(context));
+    http::send_json(channel, 200, "OK", runtime_body(context));
 }
 
-void handle_storage_request(const net::TcpSocket &client, const HttpServiceContext &context, std::string_view operation,
+void handle_storage_request(const http::HttpChannel &channel, const HttpServiceContext &context, std::string_view operation,
                             const http::HttpRequest &request)
 {
     if (operation == "status" && request.method == "GET")
     {
         const storage::StorageResponse response = context.database->read_status();
-        http::send_json(client, response.status_code, response.status_code == 200 ? "OK" : "Bad Request",
+        http::send_json(channel, response.status_code, response.status_code == 200 ? "OK" : "Bad Request",
                         response.body);
         return;
     }
     if (operation == "schema" && request.method == "GET")
     {
         const storage::StorageResponse response = context.database->read_schema();
-        http::send_json(client, response.status_code, response.status_code == 200 ? "OK" : "Bad Request",
+        http::send_json(channel, response.status_code, response.status_code == 200 ? "OK" : "Bad Request",
                         response.body);
         return;
     }
     if (request.method != "POST")
     {
-        http::send_json(client, 405, "Method Not Allowed", http::json_error_body("method_not_allowed", request.method));
+        http::send_json(channel, 405, "Method Not Allowed", http::json_error_body("method_not_allowed", request.method));
         return;
     }
     if (!request.header("Content-Type").starts_with(json_content_type_prefix))
     {
-        http::send_json(client, 415, "Unsupported Media Type",
+        http::send_json(channel, 415, "Unsupported Media Type",
                         http::json_error_body("unsupported_media_type", request.header("Content-Type")));
         return;
     }
@@ -235,16 +278,16 @@ void handle_storage_request(const net::TcpSocket &client, const HttpServiceConte
         }
         return storage::StorageResponse{404, http::json_error_body("unknown_operation", operation)};
     }();
-    http::send_json(client, response.status_code, response.status_code == 200 ? "OK" : "Bad Request", response.body);
+    http::send_json(channel, response.status_code, response.status_code == 200 ? "OK" : "Bad Request", response.body);
 }
 
-void handle_backup_request(const net::TcpSocket &client, const HttpServiceContext &context, std::string_view operation,
+void handle_backup_request(const http::HttpChannel &channel, const HttpServiceContext &context, std::string_view operation,
                            const http::HttpRequest &request)
 {
     if (operation == "list" && request.method == "GET")
     {
         const storage::BackupResponse response = context.backups->list_files();
-        http::send_json(client, response.status_code, response.status_code == 200 ? "OK" : "Bad Request",
+        http::send_json(channel, response.status_code, response.status_code == 200 ? "OK" : "Bad Request",
                         response.body);
         return;
     }
@@ -252,18 +295,18 @@ void handle_backup_request(const net::TcpSocket &client, const HttpServiceContex
     {
         const storage::MaintenanceLease lease = context.database->lock_for_maintenance();
         const storage::BackupResponse response = context.backups->create_backup();
-        http::send_json(client, response.status_code, response.status_code == 200 ? "OK" : "Bad Request",
+        http::send_json(channel, response.status_code, response.status_code == 200 ? "OK" : "Bad Request",
                         response.body);
         return;
     }
     if (request.method != "POST")
     {
-        http::send_json(client, 405, "Method Not Allowed", http::json_error_body("method_not_allowed", request.method));
+        http::send_json(channel, 405, "Method Not Allowed", http::json_error_body("method_not_allowed", request.method));
         return;
     }
     if (!request.header("Content-Type").starts_with(json_content_type_prefix))
     {
-        http::send_json(client, 415, "Unsupported Media Type",
+        http::send_json(channel, 415, "Unsupported Media Type",
                         http::json_error_body("unsupported_media_type", request.header("Content-Type")));
         return;
     }
@@ -279,74 +322,70 @@ void handle_backup_request(const net::TcpSocket &client, const HttpServiceContex
         }
         return storage::BackupResponse{404, http::json_error_body("unknown_operation", operation)};
     }();
-    http::send_json(client, response.status_code, response.status_code == 200 ? "OK" : "Bad Request", response.body);
+    http::send_json(channel, response.status_code, response.status_code == 200 ? "OK" : "Bad Request", response.body);
 }
 
-void handle_request(const net::TcpSocket &client, const HttpServiceContext &context)
+http::ConnectionPersistence handle_request(const http::HttpChannel &channel, const HttpServiceContext &context,
+                                           const http::HttpRequest &request)
 {
-    ReceivedRequest received = receive_request(client);
-    if (received.failure_status != 0)
-    {
-        http::send_status_text(client, received.failure_status, received.failure_reason);
-        return;
-    }
-    const http::HttpRequest &request = received.request;
     if (std::ranges::find(context.allowed_hosts, request.host) == context.allowed_hosts.end())
     {
-        http::send_status_text(client, 403, "Forbidden");
-        return;
+        http::send_status_text({channel.socket, http::ConnectionPersistence::close}, 403, "Forbidden");
+        return http::ConnectionPersistence::close;
     }
     const std::optional<std::string> path = http::decode_request_path(request.target);
     if (!path)
     {
-        http::send_status_text(client, 400, "Bad Request");
-        return;
+        http::send_status_text(channel, 400, "Bad Request");
+        return channel.persistence;
     }
     if (path->starts_with(api_prefix))
     {
         if (!is_allowed_origin(context, request.header("Origin")))
         {
-            http::send_json(client, 403, "Forbidden",
+            http::send_json(channel, 403, "Forbidden",
                             http::json_error_body("forbidden_origin", request.header("Origin")));
-            return;
+            return channel.persistence;
         }
         if (*path == runtime_path)
         {
             if (request.method == "PUT" || request.method == "POST")
             {
-                handle_runtime_update(client, context, request);
-                return;
+                handle_runtime_update(channel, context, request);
+                return channel.persistence;
             }
-            http::send_json(client, 200, "OK", runtime_body(context));
-            return;
+            http::send_json(channel, 200, "OK", runtime_body(context));
+            return channel.persistence;
         }
         if (path->starts_with(storage_prefix))
         {
-            handle_storage_request(client, context, std::string_view(*path).substr(storage_prefix.size()), request);
-            return;
+            handle_storage_request(channel, context, std::string_view(*path).substr(storage_prefix.size()), request);
+            return channel.persistence;
         }
         if (path->starts_with(backup_prefix))
         {
-            handle_backup_request(client, context, std::string_view(*path).substr(backup_prefix.size()), request);
-            return;
+            handle_backup_request(channel, context, std::string_view(*path).substr(backup_prefix.size()), request);
+            return channel.persistence;
         }
         if (path->starts_with(api::ollama_proxy_prefix))
         {
             const std::string_view target = request.target;
             const std::string base_url = api::resolve_ollama_base_url(context.database->read_ollama_base_url());
-            api::proxy_ollama_request(client, request, base_url, target.substr(api::ollama_proxy_prefix.size()));
-            return;
+            api::proxy_ollama_request({channel.socket, http::ConnectionPersistence::close}, request, base_url,
+                                      target.substr(api::ollama_proxy_prefix.size()));
+            return http::ConnectionPersistence::close;
         }
-        http::send_json(client, 404, "Not Found", http::json_error_body("unknown_endpoint", *path));
-        return;
+        http::send_json(channel, 404, "Not Found", http::json_error_body("unknown_endpoint", *path));
+        return channel.persistence;
     }
     const bool is_head = request.method == "HEAD";
     if (request.method != "GET" && !is_head)
     {
-        http::send_status_text(client, 405, "Method Not Allowed");
-        return;
+        http::send_status_text(channel, 405, "Method Not Allowed");
+        return channel.persistence;
     }
-    site::serve_static_file(client, context.site, *path, !is_head);
+    site::serve_static_file(channel, context.site, *path, !is_head);
+    return channel.persistence;
 }
 
 } // namespace
@@ -371,7 +410,30 @@ void serve_http_connection(net::TcpSocket client, const HttpServiceContext &cont
 {
     try
     {
-        handle_request(client, context);
+        client.set_no_delay();
+        client.set_receive_timeout(http::keep_alive_idle_timeout);
+        RequestReader reader(client);
+        for (;;)
+        {
+            const ReceivedRequest received = reader.next();
+            if (received.outcome == ReceiveOutcome::closed)
+            {
+                return;
+            }
+            if (received.outcome == ReceiveOutcome::rejected)
+            {
+                http::send_status_text({client, http::ConnectionPersistence::close}, received.failure_status,
+                                       received.failure_reason);
+                return;
+            }
+            const http::HttpChannel channel{client, received.request.keeps_connection_open()
+                                                        ? http::ConnectionPersistence::keep_alive
+                                                        : http::ConnectionPersistence::close};
+            if (handle_request(channel, context, received.request) == http::ConnectionPersistence::close)
+            {
+                return;
+            }
+        }
     }
     catch (const std::exception &error)
     {

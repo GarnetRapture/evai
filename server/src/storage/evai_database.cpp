@@ -153,10 +153,62 @@ void DatabaseConnection::clear_cache()
     statements_.clear();
 }
 
-ReaderLease::ReaderLease(DatabaseConnection& connection, std::unique_lock<std::mutex> lock)
-    : connection_(&connection)
-    , lock_(std::move(lock))
+ReaderPool::ReaderPool(const std::filesystem::path& file, std::size_t count)
 {
+    connections_.reserve(count);
+    idle_.reserve(count);
+    for (std::size_t index = 0; index < count; index += 1) {
+        connections_.push_back(std::make_unique<DatabaseConnection>(file));
+        idle_.push_back(connections_.back().get());
+    }
+}
+
+DatabaseConnection& ReaderPool::take()
+{
+    std::unique_lock<std::mutex> lock(mutex_);
+    released_.wait(lock, [this] { return !idle_.empty(); });
+    DatabaseConnection* connection = idle_.back();
+    idle_.pop_back();
+    return *connection;
+}
+
+void ReaderPool::give_back(DatabaseConnection& connection)
+{
+    {
+        const std::lock_guard<std::mutex> lock(mutex_);
+        idle_.push_back(&connection);
+    }
+    released_.notify_one();
+}
+
+std::vector<std::unique_lock<std::mutex>> ReaderPool::lock_all()
+{
+    std::vector<std::unique_lock<std::mutex>> locks;
+    locks.reserve(connections_.size());
+    for (const std::unique_ptr<DatabaseConnection>& connection : connections_) {
+        locks.emplace_back(connection->mutex());
+        connection->clear_cache();
+    }
+    return locks;
+}
+
+ReaderLease::ReaderLease(ReaderPool& pool)
+    : pool_(&pool)
+    , connection_(&pool.take())
+{
+    try {
+        lock_ = std::unique_lock<std::mutex>(connection_->mutex());
+    }
+    catch (...) {
+        pool_->give_back(*connection_);
+        throw;
+    }
+}
+
+ReaderLease::~ReaderLease()
+{
+    lock_.unlock();
+    pool_->give_back(*connection_);
 }
 
 DatabaseConnection& ReaderLease::connection() const
@@ -174,29 +226,13 @@ MaintenanceLease::MaintenanceLease(
 
 EvaiDatabase::EvaiDatabase(const std::filesystem::path& file)
     : writer_(file)
+    , readers_(file, resolve_reader_count())
 {
-    const std::size_t reader_count = resolve_reader_count();
-    readers_.reserve(reader_count);
-    for (std::size_t index = 0; index < reader_count; index += 1) {
-        readers_.push_back(std::make_unique<DatabaseConnection>(file));
-    }
-}
-
-ReaderLease EvaiDatabase::acquire_reader()
-{
-    for (const std::unique_ptr<DatabaseConnection>& reader : readers_) {
-        std::unique_lock<std::mutex> lock(reader->mutex(), std::try_to_lock);
-        if (lock.owns_lock()) {
-            return ReaderLease(*reader, std::move(lock));
-        }
-    }
-    std::unique_lock<std::mutex> lock(readers_.front()->mutex());
-    return ReaderLease(*readers_.front(), std::move(lock));
 }
 
 DatabaseSummary EvaiDatabase::read_summary()
 {
-    const ReaderLease reader = acquire_reader();
+    const ReaderLease reader(readers_);
     DatabaseSummary summary{0};
     for (const StoreDescriptor& descriptor : store_descriptors()) {
         SqliteStatement& statement = reader.connection().cached(
@@ -210,7 +246,7 @@ DatabaseSummary EvaiDatabase::read_summary()
 
 std::optional<std::string> EvaiDatabase::read_ollama_base_url()
 {
-    const ReaderLease reader = acquire_reader();
+    const ReaderLease reader(readers_);
     SqliteStatement& statement = reader.connection().cached(
         "settings|ollama_base_url", "SELECT ollama_base_url FROM app_settings WHERE slot = 'current'");
     if (!statement.step()) {
@@ -232,7 +268,7 @@ const std::filesystem::path& EvaiDatabase::file() const
 
 StorageResponse EvaiDatabase::read_document(std::string_view request_body)
 {
-    const ReaderLease reader = acquire_reader();
+    const ReaderLease reader(readers_);
     try {
         SqliteStatement& fields = reader.connection().cached("request|get", document_request_sql);
         fields.bind_text(1, request_body);
@@ -405,7 +441,7 @@ void bind_range(SqliteStatement& statement, const ParsedQuery& parsed)
 
 StorageResponse EvaiDatabase::query_entries(std::string_view request_body)
 {
-    const ReaderLease reader = acquire_reader();
+    const ReaderLease reader(readers_);
     try {
         std::string failure;
         const std::optional<ParsedQuery> parsed = parse_query(reader.connection(), request_body, failure);
@@ -444,7 +480,7 @@ StorageResponse EvaiDatabase::query_entries(std::string_view request_body)
 
 StorageResponse EvaiDatabase::count_entries(std::string_view request_body)
 {
-    const ReaderLease reader = acquire_reader();
+    const ReaderLease reader(readers_);
     try {
         std::string failure;
         const std::optional<ParsedQuery> parsed = parse_query(reader.connection(), request_body, failure);
@@ -647,12 +683,7 @@ StorageResponse EvaiDatabase::restore_snapshot(std::string_view request_body)
 MaintenanceLease EvaiDatabase::lock_for_maintenance()
 {
     std::unique_lock<std::mutex> writer_lock(writer_.mutex());
-    std::vector<std::unique_lock<std::mutex>> reader_locks;
-    reader_locks.reserve(readers_.size());
-    for (const std::unique_ptr<DatabaseConnection>& reader : readers_) {
-        reader_locks.emplace_back(reader->mutex());
-        reader->clear_cache();
-    }
+    std::vector<std::unique_lock<std::mutex>> reader_locks = readers_.lock_all();
     writer_.clear_cache();
     return MaintenanceLease(std::move(writer_lock), std::move(reader_locks));
 }
@@ -742,7 +773,7 @@ std::string store_name_for_table(std::string_view table)
 
 StorageResponse EvaiDatabase::read_schema()
 {
-    const ReaderLease reader = acquire_reader();
+    const ReaderLease reader(readers_);
     try {
         std::vector<SchemaObject> objects;
         SqliteStatement& listing = reader.connection().cached(
@@ -794,7 +825,7 @@ StorageResponse EvaiDatabase::read_schema()
 
 StorageResponse EvaiDatabase::read_status()
 {
-    const ReaderLease reader = acquire_reader();
+    const ReaderLease reader(readers_);
     try {
         std::string counts;
         for (const StoreDescriptor& descriptor : store_descriptors()) {

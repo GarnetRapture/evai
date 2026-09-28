@@ -1,7 +1,7 @@
 #pragma once
 
 #include "http/http_request.hpp"
-#include "net/tcp_socket.hpp"
+#include "http/http_writer.hpp"
 
 #include <cstdint>
 #include <optional>
@@ -29,6 +29,6 @@ struct OllamaProbe {
 
 [[nodiscard]] std::string resolve_ollama_base_url(const std::optional<std::string>& stored_base_url);
 
-void proxy_ollama_request(const net::TcpSocket& client, const http::HttpRequest& request, std::string_view base_url, std::string_view upstream_path);
+void proxy_ollama_request(const http::HttpChannel& channel, const http::HttpRequest& request, std::string_view base_url, std::string_view upstream_path);
 
 }

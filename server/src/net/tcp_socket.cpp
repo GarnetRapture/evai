@@ -1,6 +1,7 @@
 #include "net/tcp_socket.hpp"
 
 #include <cerrno>
+#include <chrono>
 #include <cstddef>
 #include <cstdint>
 #include <format>
@@ -165,6 +166,36 @@ void TcpSocket::send_all(std::span<const char> data) const
             throw std::runtime_error("send failed");
         }
         data = data.subspan(static_cast<std::size_t>(sent));
+    }
+}
+
+void TcpSocket::set_no_delay() const
+{
+    int enabled = 1;
+#ifdef _WIN32
+    const int status = setsockopt(handle_, IPPROTO_TCP, TCP_NODELAY, static_cast<const char*>(static_cast<const void*>(&enabled)), sizeof(enabled));
+#else
+    const int status = setsockopt(handle_, IPPROTO_TCP, TCP_NODELAY, &enabled, sizeof(enabled));
+#endif
+    if (status != 0) {
+        throw std::runtime_error(std::format("TCP_NODELAY failed: error {}", last_socket_error()));
+    }
+}
+
+void TcpSocket::set_receive_timeout(std::chrono::milliseconds timeout) const
+{
+#ifdef _WIN32
+    const DWORD milliseconds = static_cast<DWORD>(timeout.count());
+    const int status = setsockopt(handle_, SOL_SOCKET, SO_RCVTIMEO, static_cast<const char*>(static_cast<const void*>(&milliseconds)), sizeof(milliseconds));
+#else
+    const auto whole_seconds = std::chrono::duration_cast<std::chrono::seconds>(timeout);
+    timeval interval{};
+    interval.tv_sec = static_cast<decltype(interval.tv_sec)>(whole_seconds.count());
+    interval.tv_usec = static_cast<decltype(interval.tv_usec)>(std::chrono::duration_cast<std::chrono::microseconds>(timeout - whole_seconds).count());
+    const int status = setsockopt(handle_, SOL_SOCKET, SO_RCVTIMEO, &interval, sizeof(interval));
+#endif
+    if (status != 0) {
+        throw std::runtime_error(std::format("SO_RCVTIMEO failed: error {}", last_socket_error()));
     }
 }
 
