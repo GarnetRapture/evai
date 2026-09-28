@@ -2,7 +2,6 @@ import type { AppLanguage } from '../../../../src/shared/types';
 import type {
     HuggingFaceModelSource,
     InstalledModelFile,
-    ModelDownloadProgressHandler,
     OllamaModelLibrary,
     OnDeviceTextMessage,
 } from '../../../../src/domains/llm/types';
@@ -20,9 +19,6 @@ export type {
     LocalModelLoadState,
     LocalModelStorage,
     LocalSamplingParameters,
-    ModelDownloadProgress,
-    ModelDownloadProgressHandler,
-    ModelPreparationState,
     OllamaContextRemoval,
     OllamaContextRemovalKind,
     OllamaContextSelection,
@@ -43,6 +39,18 @@ export type {
 
 export type LocalModelEngineKind = 'llama_cpp';
 export type ChatModelEngineKind = 'ollama' | LocalModelEngineKind;
+export interface ModelDownloadProgress {
+    ratio: number;
+    done: boolean;
+    loaded_bytes: number;
+    total_bytes: number;
+}
+export type ModelDownloadProgressHandler = (progress: ModelDownloadProgress) => void;
+export interface ModelPreparationState {
+    model_id: string;
+    progress: ModelDownloadProgress | null;
+    error: string | null;
+}
 export interface LocalModelIdentityCodec {
     modelId: (fileName: string) => string;
     fileName: (modelId: string) => string;

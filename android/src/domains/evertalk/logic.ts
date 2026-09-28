@@ -20,6 +20,16 @@ export interface LocalModelEntryGroup {
     entries: LocalModelFileEntry[];
 }
 
+const MEGABYTE = 1048576;
+
+export function formatTransferMegabytes(bytes: number): string {
+    return (bytes / MEGABYTE).toFixed(1);
+}
+
+export function toWholeMegabytes(bytes: number): number {
+    return Math.round(bytes / MEGABYTE);
+}
+
 function withContextWindow(detail: string, contextWindow: number | null, labels: AndroidLabels): string {
     return contextWindow === null ? detail : `${detail} · ${labels.modelContextWindow(contextWindow)}`;
 }

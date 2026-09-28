@@ -289,13 +289,19 @@ async function streamGeneration(requestId: string, request: LlamaCppGenerationRe
 
 async function runModelTransfer(start: (requestId: string) => Promise<string>, onProgress: ModelDownloadProgressHandler): Promise<LlamaCppInstalledModelFile | null> {
     const requestId = NativeEvaiDevice.createUuid();
-    const subscription = subscribeRequestEvent(NATIVE_EVENT.llmTransfer, requestId, (event) => onProgress({ ratio: event.ratio, done: false }));
+    let loadedBytes = 0;
+    let totalBytes = 0;
+    const subscription = subscribeRequestEvent(NATIVE_EVENT.llmTransfer, requestId, (event) => {
+        loadedBytes = event.loaded_bytes;
+        totalBytes = event.total_bytes;
+        onProgress({ ratio: event.ratio, done: false, loaded_bytes: event.loaded_bytes, total_bytes: event.total_bytes });
+    });
     try {
         const transfer = JSON.parse(await runNative(() => start(requestId))) as LlamaCppModelTransfer;
         if (transfer.model === null) {
             return null;
         }
-        onProgress({ ratio: 1, done: true });
+        onProgress({ ratio: 1, done: true, loaded_bytes: loadedBytes, total_bytes: totalBytes });
         return toInstalledModelFile(transfer.model);
     }
     finally {

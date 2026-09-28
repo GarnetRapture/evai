@@ -6,15 +6,10 @@ import { detectDeviceAppLanguage } from '../../../shared/platform';
 import { ASSET_VOICE_LANGUAGES, assetsClient } from '../../assets/client';
 import type { AssetPreparationState, AssetVoiceLanguage } from '../../assets/types';
 import { getAndroidLabels } from '../labels';
-
-const MEGABYTE = 1048576;
+import { formatTransferMegabytes } from '../logic';
 
 export interface AssetPreparationGateProps {
     onReady: (state: AssetPreparationState) => void;
-}
-
-function formatMegabyteValue(bytes: number): string {
-    return (bytes / MEGABYTE).toFixed(1);
 }
 
 export function AssetPreparationGate({ onReady }: AssetPreparationGateProps) {
@@ -126,7 +121,7 @@ export function AssetPreparationGate({ onReady }: AssetPreparationGateProps) {
                                 <View style={[styles.barFill, { width: `${Math.min(100, ratio * 100)}%` }]}/>
                             </View>
                             <Text style={styles.count}>
-                                {labels.assetProgressCount(progress.completed, progress.total)} · {labels.assetProgressBytes(formatMegabyteValue(progress.bytes), formatMegabyteValue(progress.total_bytes))}
+                                {labels.assetProgressCount(progress.completed, progress.total)} · {labels.assetProgressBytes(formatTransferMegabytes(progress.bytes), formatTransferMegabytes(progress.total_bytes))}
                             </Text>
                             {progress.current.length > 0 && <Text style={styles.current} numberOfLines={1} ellipsizeMode="middle">{progress.current}</Text>}
                             <Pressable
@@ -146,7 +141,7 @@ export function AssetPreparationGate({ onReady }: AssetPreparationGateProps) {
                                 <Text style={styles.reportItem}>{labels.assetPresent} {report.present}</Text>
                                 <Text style={styles.reportItem}>{labels.assetRelocated} {report.relocated}</Text>
                                 <Text style={styles.reportItem}>{labels.assetDownloaded} {report.downloaded}</Text>
-                                <Text style={styles.reportItem}>{labels.assetMegabytes(formatMegabyteValue(report.bytes))}</Text>
+                                <Text style={styles.reportItem}>{labels.assetMegabytes(formatTransferMegabytes(report.bytes))}</Text>
                                 {report.failed > 0 && <Text style={[styles.reportItem, styles.reportFailed]}>{labels.assetFailed} {report.failed}</Text>}
                             </View>
                             {report.detail.length > 0 && <Text style={styles.detail}>{report.detail}</Text>}

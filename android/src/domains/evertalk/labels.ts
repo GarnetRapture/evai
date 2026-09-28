@@ -1,6 +1,7 @@
 import type { DomainErrorCode } from '../../../../src/shared/errors';
 import type { AppLanguage } from '../../../../src/shared/types';
 import { getEverTalkLabels, type EverTalkLabels, type LocalModelSectionLabels } from '../../../../src/domains/evertalk/i18n';
+import { formatModelSettingsPath } from '../../../../src/domains/evertalk/logic';
 import type { AssetVoiceLanguage } from '../assets/types';
 import type { LocalModelEngineKind } from '../llm/types';
 
@@ -78,6 +79,7 @@ type AndroidLabelOverrides = Pick<
     | 'backupImport'
     | 'backupFolderDescription'
     | 'backupFolderLink'
+    | 'chatModelModeEmpty'
 >;
 
 function overrideLabels(root: EverTalkLabels, language: AppLanguage): AndroidLabelOverrides {
@@ -128,6 +130,10 @@ function overrideLabels(root: EverTalkLabels, language: AppLanguage): AndroidLab
             backupImport: 'Import from file',
             backupFolderDescription: 'There is no automatic backup. A JSON backup file is written to the linked folder only when you press Back up now, and you can restore any point from the list exactly as it was.',
             backupFolderLink: 'Link backup folder',
+            chatModelModeEmpty: {
+                ...root.chatModelModeEmpty,
+                on_device: `No GGUF model on this device can be selected right now. Download or import a GGUF model in ${formatModelSettingsPath(root)}, then choose it.`,
+            },
         };
     }
     if (language === 'zh_cn') {
@@ -177,6 +183,10 @@ function overrideLabels(root: EverTalkLabels, language: AppLanguage): AndroidLab
             backupImport: '从文件导入',
             backupFolderDescription: '没有自动备份。只有按下“立即备份”时才会在已连接的文件夹中写入 JSON 备份文件，并可从列表选择任意时间点原样恢复。',
             backupFolderLink: '连接备份文件夹',
+            chatModelModeEmpty: {
+                ...root.chatModelModeEmpty,
+                on_device: `本设备上目前没有可选择的 GGUF 模型。请在“${formatModelSettingsPath(root)}”中下载或导入 GGUF 模型后再选择。`,
+            },
         };
     }
     return {
@@ -225,6 +235,10 @@ function overrideLabels(root: EverTalkLabels, language: AppLanguage): AndroidLab
         backupImport: '파일에서 불러오기',
         backupFolderDescription: '자동 백업은 없습니다. 지금 백업을 누를 때만 연결한 폴더에 JSON 백업 파일이 만들어지고, 목록에서 원하는 시점을 골라 그대로 복원할 수 있습니다.',
         backupFolderLink: '백업 폴더 연결',
+        chatModelModeEmpty: {
+            ...root.chatModelModeEmpty,
+            on_device: `이 기기에서 지금 선택할 수 있는 GGUF 모델이 없습니다. ${formatModelSettingsPath(root)}에서 GGUF 모델을 내려받거나 가져온 뒤 선택하세요.`,
+        },
     };
 }
 
