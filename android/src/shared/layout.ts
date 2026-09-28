@@ -52,6 +52,10 @@ export function bottomWindowInset(insets: WindowInsets): number {
     return Math.max(insets.bottom, insets.ime);
 }
 
+export function clampSize(minimum: number, preferred: number, maximum: number): number {
+    return Math.min(maximum, Math.max(minimum, preferred));
+}
+
 export function useLayoutMode(): LayoutMode {
     const { width } = useWindowDimensions();
     return width >= EXPANDED_LAYOUT_MIN_WIDTH ? 'expanded' : 'compact';
