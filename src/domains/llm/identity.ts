@@ -8,12 +8,11 @@ import {
     CHROME_PROMPT_MODEL_ID,
     CHROME_PROMPT_MODEL_ID_PREFIX,
     CHROME_PROMPT_MODEL_VARIANTS,
+    NO_CHAT_MODEL_ID,
     OLLAMA_MODEL_ID_PREFIX,
 } from './constants';
 import { isLiteRtLmModelId, liteRtLmFileNameFromModelId, liteRtLmModelId } from './litertlm/catalog';
 import type { ChatModelEngineKind, ChromePromptModelVariant, LocalModelEngineKind, LocalModelIdentityCodec } from './types';
-
-export const NO_CHAT_MODEL_ID = '';
 
 const LOCAL_MODEL_IDENTITY_CODECS: Record<LocalModelEngineKind, LocalModelIdentityCodec> = {
     litert_lm: { modelId: liteRtLmModelId, fileName: liteRtLmFileNameFromModelId },

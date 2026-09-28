@@ -12,7 +12,7 @@ class MainApplication : Application(), ReactApplication {
         getDefaultReactHost(
             context = applicationContext,
             packageList = PackageList(this).packages.apply {
-                add(EvaiNativePackage())
+                add(EvaiPackage())
             },
         )
     }

@@ -1,0 +1,7 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/evai_window_background</item>
+        <item name="colorAccent">@color/evai_accent</item>
+        <item name="colorControlActivated">@color/evai_accent</item>
+    </style>
+</resources>

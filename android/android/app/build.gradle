@@ -1,9 +1,91 @@
+import groovy.json.JsonSlurper
+import java.security.MessageDigest
+
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
 
 react {
     autolinkLibrariesWithApp()
+}
+
+def evaiRepositoryDir = file("../../..")
+def evaiDatasetDir = new File(evaiRepositoryDir, "data/dataset")
+def evaiAssetSourceFile = new File(evaiRepositoryDir, "evai-assets.bin")
+def evaiAssetListFile = new File(evaiRepositoryDir, "data/manifest.txt")
+def evaiGeneratedAssetsDir = layout.buildDirectory.dir("generated/evai-assets")
+def evaiBundledModelsFile = file("../../src/domains/llm/llamaCpp/bundledModels.json")
+def evaiBundledModels = new JsonSlurper().parse(evaiBundledModelsFile)
+def evaiBundledModelCacheDir = new File(gradle.gradleUserHomeDir, "caches/evai-bundled-models")
+def evaiBundledModelAssetDirs = evaiBundledModels.collect { model -> new File(new File(evaiBundledModelCacheDir, model.sha256 as String), "assets") }
+
+def evaiSha256 = { File file ->
+    def digest = MessageDigest.getInstance("SHA-256")
+    file.withInputStream { stream ->
+        def buffer = new byte[1024 * 1024]
+        int read
+        while ((read = stream.read(buffer)) > 0) {
+            digest.update(buffer, 0, read)
+        }
+    }
+    digest.digest().encodeHex().toString()
+}
+
+def prepareEvaiBundledModels = tasks.register("prepareEvaiBundledModels") {
+    inputs.file(evaiBundledModelsFile)
+    doLast {
+        evaiBundledModels.each { model ->
+            def cacheDirectory = new File(evaiBundledModelCacheDir, model.sha256 as String)
+            def directory = new File(new File(cacheDirectory, "assets"), "models")
+            def target = new File(directory, model.file_name as String)
+            def marker = new File(cacheDirectory, "${model.file_name}.sha256")
+            if (target.isFile() && target.length() == (model.size_bytes as long) && marker.isFile() && marker.text == model.sha256) {
+                return
+            }
+            directory.mkdirs()
+            def staging = new File(cacheDirectory, "${model.file_name}.part")
+            def url = "https://huggingface.co/${model.repo}/resolve/main/${URLEncoder.encode(model.file_name as String, "UTF-8")}?download=true"
+            def connection = new URL(url).openConnection()
+            connection.connectTimeout = 15000
+            connection.readTimeout = 120000
+            connection.inputStream.withStream { input ->
+                staging.withOutputStream { output -> output << input }
+            }
+            if (staging.length() != (model.size_bytes as long)) {
+                staging.delete()
+                throw new GradleException("Bundled model ${model.file_name} size ${staging.length()} differs from ${model.size_bytes}")
+            }
+            def checksum = evaiSha256(staging)
+            if (checksum != model.sha256) {
+                staging.delete()
+                throw new GradleException("Bundled model ${model.file_name} sha256 ${checksum} differs from ${model.sha256}")
+            }
+            target.delete()
+            if (!staging.renameTo(target)) {
+                throw new GradleException("Bundled model ${model.file_name} could not be placed at ${target}")
+            }
+            marker.text = model.sha256
+        }
+    }
+}
+
+def prepareEvaiAssets = tasks.register("prepareEvaiAssets", Sync) {
+    doFirst {
+        if (!evaiDatasetDir.isDirectory()) {
+            throw new GradleException("Spirit dataset is required at ${evaiDatasetDir}")
+        }
+    }
+    into(evaiGeneratedAssetsDir)
+    from(evaiDatasetDir) {
+        into("dataset")
+    }
+    from(evaiAssetSourceFile.isFile() ? evaiAssetSourceFile : files()) {
+        into("source")
+    }
+    from(evaiAssetListFile.isFile() ? evaiAssetListFile : files()) {
+        into("source")
+        rename { "evai-assets.list" }
+    }
 }
 
 android {
@@ -14,8 +96,17 @@ android {
 
     sourceSets {
         main {
-            assets.srcDirs += ["../../../data/dataset"]
+            assets.srcDir(evaiGeneratedAssetsDir)
+            evaiBundledModelAssetDirs.each { directory -> assets.srcDir(directory) }
         }
+    }
+
+    androidResources {
+        noCompress "json", "jsonl", "gguf"
+    }
+
+    buildFeatures {
+        buildConfig true
     }
 
     defaultConfig {
@@ -26,11 +117,6 @@ android {
         versionName "0.0.7"
         ndk {
             abiFilters "arm64-v8a"
-        }
-        externalNativeBuild {
-            cmake {
-                arguments "-DGGML_NATIVE=OFF", "-DGGML_OPENMP=OFF", "-DGGML_LLAMAFILE=OFF", "-DLLAMA_OPENSSL=OFF", "-DLLAMA_BUILD_TESTS=OFF", "-DLLAMA_BUILD_EXAMPLES=OFF", "-DLLAMA_BUILD_SERVER=OFF"
-            }
         }
     }
 
@@ -44,4 +130,9 @@ android {
 dependencies {
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:hermes-android")
+}
+
+tasks.named("preBuild").configure {
+    dependsOn(prepareEvaiAssets)
+    dependsOn(prepareEvaiBundledModels)
 }

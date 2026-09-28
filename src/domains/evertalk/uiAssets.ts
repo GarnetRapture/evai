@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import { ASSET_ROOT } from '../persona';
+import { ASSET_ROOT } from '../persona/logic';
 import type { PersonaEmotionPresetId, PersonaPersonalityPresetId, PersonaSpeechPresetId } from '../persona';
 import type { FamiliaritySigilGrade } from './logic';
 

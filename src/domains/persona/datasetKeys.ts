@@ -1,4 +1,4 @@
-import { normalizePersonaKey } from "./archive";
+import { normalizePersonaKey } from "./archiveKey";
 
 export const PERSONA_DATASET_KEY_SEPARATOR = "\u001f";
 

@@ -3,8 +3,9 @@ import { normalizeAbsoluteLocalPath } from '../../shared/files';
 import { normalizeOllamaBaseUrl } from '../ollama';
 import { normalizeTokenSetting, settingsRepository } from '../settings/repository';
 import { chatModelCatalog, mergeChromeInstalledModels } from './catalog';
+import { NO_CHAT_MODEL_ID } from './constants';
 import { chatModelRuntime } from './engine';
-import { NO_CHAT_MODEL_ID, localModelId } from './identity';
+import { localModelId } from './identity';
 import type {
     ChatModelCatalog,
     HuggingFaceModelSource,
