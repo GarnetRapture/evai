@@ -15,6 +15,10 @@ export function raceToneColor(race: string | null): string {
     return RACE_TONE_COLORS[race === null ? 'tone-neutral' : getRaceTone(race)];
 }
 
+export const STRIPE_TILE_WIDTH = 64;
+export const STRIPE_TILE_HEIGHT = 26;
+export const WORKSPACE_STRIPE_TILE_WIDTH = 420;
+
 export const sharedStyles = StyleSheet.create({
     settingsOverlay: {
         flex: 1,

@@ -1158,6 +1158,12 @@ export function buildGuideChecklist(
             actions: ["open_repository"],
           },
         ];
+  return finalizeGuideChecklist(drafts);
+}
+
+export function finalizeGuideChecklist(
+  drafts: readonly GuideChecklistDraft[],
+): GuideChecklistStep[] {
   let currentAssigned = false;
   return drafts.map((draft) => {
     if (draft.optional) {

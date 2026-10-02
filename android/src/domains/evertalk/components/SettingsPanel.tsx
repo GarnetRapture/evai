@@ -5,7 +5,7 @@ import { formatBackupFileMeta, formatDateTime, formatLanguageName, settingsSecti
 import type { SaviorProfileSnapshot, SettingsSectionKey } from '../../../../../src/domains/evertalk/types';
 import type { AppLanguage } from '../../../../../src/shared/types';
 import { Icon, type IconName } from '../../../shared/icons';
-import { bottomWindowInset, useLayoutMode, useWindowInsets } from '../../../shared/layout';
+import { bottomWindowInset, clampSize, useLayoutMode, useWindowInsets } from '../../../shared/layout';
 import type { DeviceEnvironmentInfo } from '../../../shared/platform';
 import { ASSET_VOICE_LANGUAGES } from '../../assets/client';
 import type { AssetPreparationState, AssetVoiceLanguage } from '../../assets/types';
@@ -91,10 +91,6 @@ function buildSettingsSectionNavItems(labels: AndroidLabels): AndroidSettingsSec
         }
         return [item];
     });
-}
-
-function clampSize(minimum: number, preferred: number, maximum: number): number {
-    return Math.min(maximum, Math.max(minimum, preferred));
 }
 
 interface SettingsActionButtonProps {

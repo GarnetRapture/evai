@@ -1,8 +1,9 @@
-import { formatMegabytes } from '../../../../src/domains/evertalk/logic';
+import { finalizeGuideChecklist, formatMegabytes } from '../../../../src/domains/evertalk/logic';
 import type {
     ChatModelModeSelection,
     ChatModelSelection,
     GenerationEngineLimit,
+    GuideChecklistStep,
     SelectableChatModelOption,
 } from '../../../../src/domains/evertalk/types';
 import type {
@@ -14,10 +15,42 @@ import type {
     OllamaModelLibrary,
 } from '../llm/types';
 import type { AndroidLabels } from './labels';
+import type { OllamaHostPlatform } from './types';
+
+export const OLLAMA_HOST_PLATFORMS: readonly OllamaHostPlatform[] = ['Windows', 'macOS', 'Linux'];
 
 export interface LocalModelEntryGroup {
     engine: LocalModelEngineKind;
     entries: LocalModelFileEntry[];
+}
+
+export interface GuideChecklistInput {
+    catalog: ChatModelCatalog | null;
+    activeModelId: string;
+    llmStatus: LlmStatus | null;
+    gatePending: boolean;
+}
+
+export function buildGuideChecklist(input: GuideChecklistInput): GuideChecklistStep[] {
+    const { catalog } = input;
+    const known = <T>(evaluate: (loaded: ChatModelCatalog) => T): T | null => (catalog === null ? null : evaluate(catalog));
+    return finalizeGuideChecklist([
+        { key: 'run_local_server', done: true, optional: false, actions: [] },
+        {
+            key: 'install_ollama',
+            done: known((loaded) => loaded.ollama?.server.available === true),
+            optional: true,
+            actions: ['open_ollama_download', 'refresh_status'],
+        },
+        {
+            key: 'pull_model',
+            done: known((loaded) => loaded.ollama?.server.available === true && loaded.ollama.entries.length > 0),
+            optional: true,
+            actions: ['open_ollama_library', 'open_hugging_face_guide', 'refresh_status'],
+        },
+        { key: 'select_model', done: input.activeModelId.length > 0, optional: false, actions: ['choose_model'] },
+        { key: 'start_chat', done: input.llmStatus?.is_loaded === true, optional: false, actions: [input.gatePending ? 'finish_setup' : 'open_chat'] },
+    ]);
 }
 
 const MEGABYTE = 1048576;

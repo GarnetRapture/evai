@@ -1,7 +1,7 @@
 import { Modal, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
 import { formatLanguageName } from '../../../../../src/domains/evertalk/logic';
 import type { AppLanguage } from '../../../../../src/shared/types';
-import { bottomWindowInset, useWindowInsets } from '../../../shared/layout';
+import { bottomWindowInset, clampSize, useWindowInsets } from '../../../shared/layout';
 import type { AndroidLabels } from '../labels';
 import { sharedStyles } from './sharedStyles';
 
@@ -23,25 +23,21 @@ export interface ModalMetrics {
     guideTextSize: number;
 }
 
-function clamp(minimum: number, preferred: number, maximum: number): number {
-    return Math.min(maximum, Math.max(minimum, preferred));
-}
-
 export function useModalMetrics(): ModalMetrics {
     const { width, height } = useWindowDimensions();
     const viewportWidthUnit = width / 100;
     const viewportMinUnit = Math.min(width, height) / 100;
     return {
         overlayPadding: SETTINGS_OVERLAY_PADDING,
-        width: Math.min(clamp(320, 88 * viewportWidthUnit, 880), width - 32),
-        padding: clamp(18, 3 * viewportMinUnit, 28),
-        gap: clamp(12, 2.2 * viewportMinUnit, 20),
-        titleSize: clamp(1.15 * ROOT_FONT_SIZE, 2.4 * viewportMinUnit, 1.55 * ROOT_FONT_SIZE),
-        bodySize: clamp(0.9 * ROOT_FONT_SIZE, 1.7 * viewportMinUnit, 1.05 * ROOT_FONT_SIZE),
-        buttonSize: clamp(0.9 * ROOT_FONT_SIZE, 1.8 * viewportMinUnit, 1.1 * ROOT_FONT_SIZE),
-        controlHeight: clamp(44, 6.4 * viewportMinUnit, 56),
-        panelGap: clamp(8, 1.4 * viewportWidthUnit, 16),
-        guideTextSize: clamp(0.82 * ROOT_FONT_SIZE, 1.5 * viewportMinUnit, ROOT_FONT_SIZE),
+        width: Math.min(clampSize(320, 88 * viewportWidthUnit, 880), width - 32),
+        padding: clampSize(18, 3 * viewportMinUnit, 28),
+        gap: clampSize(12, 2.2 * viewportMinUnit, 20),
+        titleSize: clampSize(1.15 * ROOT_FONT_SIZE, 2.4 * viewportMinUnit, 1.55 * ROOT_FONT_SIZE),
+        bodySize: clampSize(0.9 * ROOT_FONT_SIZE, 1.7 * viewportMinUnit, 1.05 * ROOT_FONT_SIZE),
+        buttonSize: clampSize(0.9 * ROOT_FONT_SIZE, 1.8 * viewportMinUnit, 1.1 * ROOT_FONT_SIZE),
+        controlHeight: clampSize(44, 6.4 * viewportMinUnit, 56),
+        panelGap: clampSize(8, 1.4 * viewportWidthUnit, 16),
+        guideTextSize: clampSize(0.82 * ROOT_FONT_SIZE, 1.5 * viewportMinUnit, ROOT_FONT_SIZE),
     };
 }
 

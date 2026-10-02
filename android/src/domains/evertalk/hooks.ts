@@ -3,6 +3,7 @@ import { Alert, Dimensions } from "react-native";
 import type { AppLanguage } from "../../../../src/shared/types";
 import {
   buildGenerationEngineLimits,
+  OLLAMA_HOST_PLATFORMS,
 } from "./logic";
 import {
   collectEventStickers,
@@ -100,8 +101,17 @@ import {
   type StorageRecordPage,
   type StorageRecordWrite,
 } from "../sync";
+import {
+  readPreference,
+  VIEW_PREFERENCE_KEY,
+  writePreference,
+} from "../../shared/preferences";
 import { getAndroidLabels, type AndroidLabels } from "./labels";
-import type { AppStorageKind, EverTalkController } from "./types";
+import type {
+  AppStorageKind,
+  EverTalkController,
+  OllamaHostPlatform,
+} from "./types";
 
 const EMPTY_LLM_STATUS: LlmStatus = {
   is_loaded: false,
@@ -111,6 +121,12 @@ const EMPTY_LLM_STATUS: LlmStatus = {
 const STORAGE_KIND: AppStorageKind = "sqlite";
 const RESTART_REASON_RESET = "reset";
 const RESTART_REASON_RESTORE = "restore";
+const DEFAULT_OLLAMA_HOST_PLATFORM: OllamaHostPlatform = "Windows";
+function readOllamaHostPlatform(): OllamaHostPlatform {
+  const stored = readPreference(VIEW_PREFERENCE_KEY.ollamaHostPlatform);
+  return OLLAMA_HOST_PLATFORMS.find((platform) => platform === stored) ??
+    DEFAULT_OLLAMA_HOST_PLATFORM;
+}
 function frontendDebugLog(stage: string) {
   console.info(`[eversoul-frontend] ${stage}`);
 }
@@ -132,7 +148,7 @@ export function useFirstLoadableImage(
       })),
   ];
 }
-function confirmAction(labels: AndroidLabels, message: string): Promise<boolean> {
+export function confirmAction(labels: AndroidLabels, message: string): Promise<boolean> {
   return new Promise((resolve) => {
     Alert.alert(
       labels.confirmTitle,
@@ -290,6 +306,8 @@ export function useEverTalkController(
   const [assetPreparation, setAssetPreparation] =
     useState<AssetPreparationState | null>(initialAssetPreparation);
   const [assetBusy, setAssetBusy] = useState(false);
+  const [ollamaHostPlatform, setOllamaHostPlatformState] =
+    useState<OllamaHostPlatform>(readOllamaHostPlatform);
   const focusedChatRequestRef = useRef<AbortController | null>(null);
   const appInitStartedRef = useRef(false);
   const renderedLanguageRef = useRef<AppLanguage | null>(null);
@@ -1709,6 +1727,11 @@ export function useEverTalkController(
     assetsClient.cancelFetch();
   }
 
+  function setOllamaHostPlatform(platform: OllamaHostPlatform) {
+    writePreference(VIEW_PREFERENCE_KEY.ollamaHostPlatform, platform);
+    setOllamaHostPlatformState(platform);
+  }
+
   const initializeApp = useEffectEvent(async () => {
     frontendDebugLog("initApp:start");
     let initialLanguage: AppLanguage = appLanguage;
@@ -2074,6 +2097,8 @@ export function useEverTalkController(
     saveGenerationLimits,
     generationEngineLimits,
     ollamaGuideVisible: true,
+    ollamaHostPlatform,
+    setOllamaHostPlatform,
     openGuide,
     removeLocalModel,
     exportBackup,

@@ -52,6 +52,8 @@ import type { AndroidLabels } from './labels';
 
 export type AppStorageKind = 'sqlite';
 
+export type OllamaHostPlatform = 'Windows' | 'macOS' | 'Linux';
+
 export interface ProactiveNotificationItem {
     personaId: string;
     name: string;
@@ -202,6 +204,8 @@ export interface EverTalkController {
     saveGenerationLimits: (contextWindowTokens: number | null, maxOutputTokens: number | null) => Promise<void>;
     generationEngineLimits: GenerationEngineLimit[];
     ollamaGuideVisible: boolean;
+    ollamaHostPlatform: OllamaHostPlatform;
+    setOllamaHostPlatform: (platform: OllamaHostPlatform) => void;
     openGuide: () => void;
     removeLocalModel: (entry: LocalModelFileEntry) => Promise<void>;
     exportBackup: () => Promise<void>;

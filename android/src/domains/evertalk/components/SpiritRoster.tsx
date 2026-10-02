@@ -26,11 +26,12 @@ import { DECOR_UI_ASSETS, EVERTALK_UI_ASSETS, LOBBY_UI_ASSETS } from '../../../.
 import { resolveAssetUri } from '../../../shared/assets';
 import { mixColor, withAlpha } from '../../../shared/color';
 import { Icon } from '../../../shared/icons';
-import { useLayoutMode } from '../../../shared/layout';
+import { clampSize, useLayoutMode } from '../../../shared/layout';
+import EvaiPatternView from '../../../shared/native/specs/EvaiPatternViewNativeComponent';
 import { parseSpiritDetail, type BondRankingEntry, type FamiliarityEntry, type PersonaConfig } from '../../persona';
 import type { AndroidLabels } from '../labels';
 import { RosterAvatar, RosterExpBar, RosterRankBadge } from './SpiritRosterCard';
-import { raceToneColor, sharedStyles } from './sharedStyles';
+import { STRIPE_TILE_HEIGHT, STRIPE_TILE_WIDTH, raceToneColor, sharedStyles } from './sharedStyles';
 
 export interface SpiritRosterProps extends Omit<RootSpiritRosterProps, 'labels'> {
     labels: AndroidLabels;
@@ -91,8 +92,6 @@ const AVATAR_ROW_WIDTH_RATIO = 0.3;
 const SECTION_GAP = 6;
 const PREFERRED_LABEL_WIDTH = 72;
 const TAB_BUTTON_MAX_HEIGHT = 76;
-const STRIPE_TILE_WIDTH = 64;
-const STRIPE_TILE_HEIGHT = 26;
 const SECTION_LABEL_COLOR = '#8a6d1f';
 const NEUTRAL_TONE = raceToneColor(null);
 const TOGGLE_PRESSED_BACKGROUND = mixColor(NEUTRAL_TONE, 'rgba(255, 255, 255, 0.08)', 0.2);
@@ -102,10 +101,6 @@ const ROSTER_TABS: readonly RosterTabDescriptor[] = [
     { tab: 'bondRanking', icon: EVERTALK_UI_ASSETS.tabGallery, pressedIcon: EVERTALK_UI_ASSETS.tabGalleryPressed, label: (labels) => labels.bondRanking },
     { tab: 'familiarity', icon: EVERTALK_UI_ASSETS.tabBond, pressedIcon: EVERTALK_UI_ASSETS.tabBondPressed, label: (labels) => labels.familiarity },
 ];
-
-function clampLength(minimum: number, preferred: number, maximum: number): number {
-    return Math.min(maximum, Math.max(minimum, preferred));
-}
 
 function ProactiveUnreadBadge({ count, label }: { count: number; label: string }) {
     if (count <= 0) {
@@ -151,25 +146,14 @@ function RosterIndexIcon({ size, rank }: { size: number; rank: number }) {
 }
 
 function SpiritRosterRowTexture({ tone, heartOpacity }: { tone: string; heartOpacity: number }) {
-    const [frame, setFrame] = useState<RosterFrame | null>(null);
-    const columns = frame === null ? 0 : Math.ceil(frame.width / STRIPE_TILE_WIDTH);
-    const rows = frame === null ? 0 : Math.ceil(frame.height / STRIPE_TILE_HEIGHT);
-    const stripeUri = resolveAssetUri(LOBBY_UI_ASSETS.stripePattern);
     return (
-        <View
-            pointerEvents="none"
-            importantForAccessibility="no-hide-descendants"
-            style={styles.rowTexture}
-            onLayout={(event) => {
-                const { width, height } = event.nativeEvent.layout;
-                setFrame((current) => (current !== null && current.width === width && current.height === height ? current : { width, height }));
-            }}
-        >
-            <View style={[styles.stripeGrid, { width: columns * STRIPE_TILE_WIDTH }]}>
-                {Array.from({ length: columns * rows }, (_tile, index) => (
-                    <Image key={index} source={{ uri: stripeUri }} resizeMode="stretch" style={styles.stripeTile}/>
-                ))}
-            </View>
+        <View pointerEvents="none" importantForAccessibility="no-hide-descendants" style={styles.rowTexture}>
+            <EvaiPatternView
+                source={resolveAssetUri(LOBBY_UI_ASSETS.stripePattern)}
+                tileWidth={STRIPE_TILE_WIDTH}
+                tileHeight={STRIPE_TILE_HEIGHT}
+                style={StyleSheet.absoluteFill}
+            />
             <View
                 style={[
                     styles.rowGradient,
@@ -321,16 +305,16 @@ export function SpiritRoster({
 
     const horizontal = layoutMode === 'compact';
     const phone = windowWidth <= PHONE_MAX_WIDTH;
-    const headerHeight = phone ? clampLength(48, windowHeight * 0.07, 56) : clampLength(52, windowHeight * 0.08, 64);
-    const footerHeight = phone ? clampLength(58, windowHeight * 0.1, 72) : clampLength(66, windowHeight * 0.11, 84);
-    const columnWidth = clampLength(300, windowWidth * 0.27, 412);
-    const stripHeight = phone ? clampLength(112, windowHeight * 0.18, 150) : clampLength(150, windowHeight * 0.26, 210);
+    const headerHeight = phone ? clampSize(48, windowHeight * 0.07, 56) : clampSize(52, windowHeight * 0.08, 64);
+    const footerHeight = phone ? clampSize(58, windowHeight * 0.1, 72) : clampSize(66, windowHeight * 0.11, 84);
+    const columnWidth = clampSize(300, windowWidth * 0.27, 412);
+    const stripHeight = phone ? clampSize(112, windowHeight * 0.18, 150) : clampSize(150, windowHeight * 0.26, 210);
     const stripContentHeight = stripHeight - LIST_PADDING_TOP - LIST_PADDING_BOTTOM;
-    const compactRowWidth = phone ? clampLength(168, windowWidth * 0.72, 220) : clampLength(200, windowWidth * 0.62, 260);
-    const panelGap = clampLength(8, windowWidth * 0.014, 16);
-    const tabbarHeight = horizontal ? clampLength(52, windowHeight * 0.08, 64) : footerHeight;
+    const compactRowWidth = phone ? clampSize(168, windowWidth * 0.72, 220) : clampSize(200, windowWidth * 0.62, 260);
+    const panelGap = clampSize(8, windowWidth * 0.014, 16);
+    const tabbarHeight = horizontal ? clampSize(52, windowHeight * 0.08, 64) : footerHeight;
     const contentHeight = frame?.height ?? windowHeight;
-    const expandedRowHeight = clampLength(
+    const expandedRowHeight = clampSize(
         104,
         (contentHeight - headerHeight - footerHeight - ROW_HEIGHT_RESERVE) / ROW_VISIBLE_COUNT - 8,
         168,
@@ -890,14 +874,6 @@ const styles = StyleSheet.create({
         ...StyleSheet.absoluteFill,
         overflow: 'hidden',
         borderRadius: 11,
-    },
-    stripeGrid: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-    },
-    stripeTile: {
-        width: STRIPE_TILE_WIDTH,
-        height: STRIPE_TILE_HEIGHT,
     },
     rowGradient: {
         ...StyleSheet.absoluteFill,

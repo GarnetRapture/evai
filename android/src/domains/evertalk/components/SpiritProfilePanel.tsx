@@ -15,7 +15,7 @@ import { selectPanelKeywordThreads } from '../../../../../src/domains/evertalk/l
 import type { SpiritProfilePanelProps as RootSpiritProfilePanelProps } from '../../../../../src/domains/evertalk/types';
 import { mixColor } from '../../../shared/color';
 import { Icon, type IconName } from '../../../shared/icons';
-import { bottomWindowInset, useLayoutMode, useWindowInsets } from '../../../shared/layout';
+import { bottomWindowInset, clampSize, useLayoutMode, useWindowInsets } from '../../../shared/layout';
 import { getSpiritVisualAssets, resolveSpiritSkin } from '../../persona';
 import type { AndroidLabels } from '../labels';
 import { MemoryInsightPanel } from './MemoryInsightPanel';
@@ -308,7 +308,7 @@ export function SpiritProfilePanel({
         <View
             style={[
                 styles.column,
-                { width: Math.min(COLUMN_MAX_WIDTH, Math.max(COLUMN_MIN_WIDTH, windowWidth * COLUMN_WIDTH_RATIO)) },
+                { width: clampSize(COLUMN_MIN_WIDTH, windowWidth * COLUMN_WIDTH_RATIO, COLUMN_MAX_WIDTH) },
             ]}
         >
             <ScrollView style={styles.scroll} contentContainerStyle={styles.content}>

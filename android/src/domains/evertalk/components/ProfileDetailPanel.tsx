@@ -1,7 +1,7 @@
 import { Modal, Pressable, ScrollView, StyleSheet, Text, View, useWindowDimensions, type StyleProp, type ViewStyle } from 'react-native';
 import type { ProfileDetailPanelProps as RootProfileDetailPanelProps } from '../../../../../src/domains/evertalk/types';
 import { Icon } from '../../../shared/icons';
-import { bottomWindowInset, useLayoutMode, useWindowInsets } from '../../../shared/layout';
+import { bottomWindowInset, clampSize, useLayoutMode, useWindowInsets } from '../../../shared/layout';
 import type { AndroidLabels } from '../labels';
 import { sharedStyles } from './sharedStyles';
 
@@ -69,7 +69,7 @@ export function ProfileDetailPanel({ open, activeDetail, labels, onClose }: Prof
                         sheet
                             ? styles.modalSheet
                             : {
-                                width: Math.min(availableWidth, Math.max(320, Math.min(width * 0.92, 1200))),
+                                width: Math.min(availableWidth, clampSize(320, width * 0.92, 1200)),
                                 maxHeight: Math.min(height * 0.92, height - 24, availableHeight),
                             },
                     ]}

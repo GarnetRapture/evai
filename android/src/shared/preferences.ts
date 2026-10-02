@@ -9,6 +9,7 @@ export const VIEW_PREFERENCE_KEY = {
     bgmEnabled: 'evai.bgm.enabled',
     bgmVolume: 'evai.bgm.volume',
     bgmOrder: 'evai.bgm.order',
+    ollamaHostPlatform: 'evai.ollama.host-platform',
 } as const;
 
 export type HostPreferenceKey = (typeof HOST_PREFERENCE_KEY)[keyof typeof HOST_PREFERENCE_KEY];

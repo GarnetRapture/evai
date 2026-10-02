@@ -49,8 +49,12 @@ export interface AndroidLabelExtensions {
     confirmTitle: string;
     confirmCancel: string;
     confirmAccept: string;
-    menu: string;
-    back: string;
+    storyMoviePlay: string;
+    storyMoviePause: string;
+    storyMoviePosition: string;
+    storyMovieMute: string;
+    storyMovieUnmute: string;
+    ollamaHostPlatformTitle: string;
 }
 
 export type AndroidLabels = EverTalkLabels & AndroidLabelExtensions & {
@@ -80,6 +84,13 @@ type AndroidLabelOverrides = Pick<
     | 'backupFolderDescription'
     | 'backupFolderLink'
     | 'chatModelModeEmpty'
+    | 'guidePageDescription'
+    | 'guideBeginnerIntro'
+    | 'guideConcepts'
+    | 'guideChecklistIntro'
+    | 'guideStepTitles'
+    | 'guideStepDescriptions'
+    | 'memoryGraphSelectHint'
 >;
 
 function overrideLabels(root: EverTalkLabels, language: AppLanguage): AndroidLabelOverrides {
@@ -134,6 +145,49 @@ function overrideLabels(root: EverTalkLabels, language: AppLanguage): AndroidLab
                 ...root.chatModelModeEmpty,
                 on_device: `No GGUF model on this device can be selected right now. Download or import a GGUF model in ${formatModelSettingsPath(root)}, then choose it.`,
             },
+            guidePageDescription: 'A step-by-step walkthrough, matched to the current state of this device, from what an AI model is to your first conversation with a spirit.',
+            guideBeginnerIntro: 'EverTalk writes each spirit\'s replies with an AI that runs inside this device, not an online AI service. Your conversations never leave the device, and a small GGUF model ships with the app so you can start right away. Read the terms below once, then follow "Follow along with your current setup" from the top.',
+            guideConcepts: [
+                root.guideConcepts[0],
+                {
+                    term: 'Local LLM',
+                    description: 'An AI model that runs on this device\'s processor (CPU) and memory instead of a company server. There is no usage fee and chats stay on the device, but reply speed and usable model size depend on the device.',
+                },
+                {
+                    term: 'Built-in on-device AI (llama.cpp)',
+                    description: `The llama.cpp engine inside this app runs GGUF model files directly on this device. A small GGUF model is included, so you can start without installing anything, and you can download or import other GGUF models in ${formatModelSettingsPath(root)}.`,
+                },
+                {
+                    term: 'Ollama',
+                    description: 'A free program that downloads and runs local LLMs on a computer. Install it on a computer in the same network, expose it to the network and save its address, and this app connects to it so you can use larger, more expressive models than a phone can run.',
+                },
+                root.guideConcepts[4],
+                {
+                    term: 'Hugging Face · GGUF',
+                    description: `Hugging Face is the site where AI models are published, and GGUF is the file format for local LLMs. Paste the address of a GGUF file on Hugging Face into the URL download of ${formatModelSettingsPath(root)} to receive it on this device, or pull it into Ollama on a computer with ollama pull hf.co/user/repository.`,
+                },
+                {
+                    term: 'EverTalk Android app',
+                    description: 'Chats, memories and settings are stored in the SQLite database in this app\'s private storage, and assets such as spirit images and voices are downloaded on first launch and kept on the device. No other computer or server has to stay on.',
+                },
+            ],
+            guideChecklistIntro: {
+                ...root.guideChecklistIntro,
+                local_server: 'This app runs GGUF models on this device with its built-in llama.cpp engine, so you can start right away; connecting Ollama on a computer in the same network is optional. Every completion mark is read from the actual state of this device; press "Refresh status" after finishing a step to check again.',
+            },
+            guideStepTitles: {
+                ...root.guideStepTitles,
+                run_local_server: 'Run the EverTalk app',
+                install_ollama: '(Optional) Install and start Ollama on a computer in the same network',
+                pull_model: '(Optional) Download a model into Ollama',
+            },
+            guideStepDescriptions: {
+                ...root.guideStepDescriptions,
+                run_local_server: 'Complete, because this screen is open in the EverTalk Android app. Chats, memories and settings are stored in the app-internal SQLite database.',
+                install_ollama: 'Needed only when you want models larger than this device can run. On a computer in the same network, get the installer from the official site with "Download Ollama" and install it, expose it to the network as in the connection guide below, and save that computer\'s address. Then press "Refresh status" to check the connection.',
+                pull_model: 'On the computer running Ollama, open a terminal as described in "How to enter commands" below and type ollama pull model-name. Pick a model from "Browse Ollama models" or "Hugging Face GGUF guide"; entering it in "Model name" of the connection guide below builds the command for you. Press "Refresh status" when the download finishes.',
+            },
+            memoryGraphSelectHint: 'Pinch with two fingers to zoom, drag empty space to pan, drag nodes to arrange. Tap a keyword or spirit to see the conversations and what the spirit did at the time.',
         };
     }
     if (language === 'zh_cn') {
@@ -187,6 +241,49 @@ function overrideLabels(root: EverTalkLabels, language: AppLanguage): AndroidLab
                 ...root.chatModelModeEmpty,
                 on_device: `本设备上目前没有可选择的 GGUF 模型。请在“${formatModelSettingsPath(root)}”中下载或导入 GGUF 模型后再选择。`,
             },
+            guidePageDescription: '从什么是 AI 模型，到与精灵的第一次对话，按照本设备的当前状态一步步引导。',
+            guideBeginnerIntro: 'EverTalk 使用在本设备内运行的 AI（而不是网上的 AI 服务）来生成精灵的回复。对话内容不会离开设备，应用还内置了一个小型 GGUF 模型，可以立即开始。请先读一遍下面的术语，再从上到下依次完成“按当前状态一步步操作”中的步骤。',
+            guideConcepts: [
+                root.guideConcepts[0],
+                {
+                    term: '本地 LLM',
+                    description: '不在公司服务器上，而是用本设备的处理器（CPU）和内存直接运行的 AI 模型。没有使用费，对话也不会离开设备，但回复速度和可用的模型大小取决于设备性能。',
+                },
+                {
+                    term: '应用内置设备端 AI（llama.cpp）',
+                    description: `本应用内置的 llama.cpp 引擎直接在本设备上运行 GGUF 模型文件。应用自带一个小型 GGUF 模型，无需另外安装即可开始，也可以在“${formatModelSettingsPath(root)}”中下载或导入其他 GGUF 模型。`,
+                },
+                {
+                    term: 'Ollama',
+                    description: '在电脑上下载并运行本地 LLM 的免费程序。安装到同一网络中的电脑上，对网络开放并保存其地址后，本应用即可连接，使用比手机能运行的更大、表现力更好的模型。',
+                },
+                root.guideConcepts[4],
+                {
+                    term: 'Hugging Face · GGUF',
+                    description: `Hugging Face 是发布 AI 模型的网站，GGUF 是本地 LLM 使用的模型文件格式。把 Hugging Face 上 GGUF 文件的地址粘贴到“${formatModelSettingsPath(root)}”的 URL 下载中即可下载到本设备，也可以在电脑上用 ollama pull hf.co/用户/仓库 下载到 Ollama。`,
+                },
+                {
+                    term: 'EverTalk 安卓应用',
+                    description: '对话、记忆和设置保存在本应用私有存储区域的 SQLite 数据库中，精灵图片、语音等资源在首次启动时下载并保存在设备上。无需让其他电脑或服务器保持运行。',
+                },
+            ],
+            guideChecklistIntro: {
+                ...root.guideChecklistIntro,
+                local_server: '本应用通过内置的 llama.cpp 引擎在本设备上运行 GGUF 模型，可以立即开始；连接同一网络中电脑上的 Ollama 是可选步骤。每个完成标记都读取本设备的实际状态，完成步骤后点击“刷新状态”即可重新确认。',
+            },
+            guideStepTitles: {
+                ...root.guideStepTitles,
+                run_local_server: '运行 EverTalk 应用',
+                install_ollama: '（可选）在同一网络的电脑上安装并启动 Ollama',
+                pull_model: '（可选）为 Ollama 下载模型',
+            },
+            guideStepDescriptions: {
+                ...root.guideStepDescriptions,
+                run_local_server: '当前画面正在 EverTalk 安卓应用中打开，因此已完成。对话、记忆与设置保存在应用内部 SQLite 数据库中。',
+                install_ollama: '只有想使用超出本设备能力的更大模型时才需要。在同一网络的电脑上点击“下载 Ollama”从官方网站获取安装程序并安装，按照下方连接指南对网络开放，并保存那台电脑的地址。然后点击“刷新状态”确认连接。',
+                pull_model: '在运行 Ollama 的电脑上，按照下方“如何输入命令”打开终端，输入 ollama pull 模型名称。模型可以在“浏览 Ollama 模型”或“Hugging Face GGUF 指南”中挑选；在下方连接指南的“要使用的模型名称”中输入后会自动生成命令。下载完成后点击“刷新状态”。',
+            },
+            memoryGraphSelectHint: '双指捏合缩放，拖动空白处平移，拖动节点调整布局。点击关键词或精灵，查看当时的对话与精灵的行动。',
         };
     }
     return {
@@ -239,6 +336,49 @@ function overrideLabels(root: EverTalkLabels, language: AppLanguage): AndroidLab
             ...root.chatModelModeEmpty,
             on_device: `이 기기에서 지금 선택할 수 있는 GGUF 모델이 없습니다. ${formatModelSettingsPath(root)}에서 GGUF 모델을 내려받거나 가져온 뒤 선택하세요.`,
         },
+        guidePageDescription: 'AI 모델이 무엇인지부터 정령과 첫 대화를 나누기까지, 지금 이 기기의 상태에 맞춰 차근차근 안내합니다.',
+        guideBeginnerIntro: '에버톡은 온라인 AI 서비스가 아니라 이 기기 안에서 돌아가는 AI로 정령의 대답을 씁니다. 대화는 기기 밖으로 나가지 않으며, 앱에 작은 GGUF 모델이 들어 있어 바로 시작할 수 있습니다. 아래 용어를 한 번 읽은 뒤 "지금 내 상태로 따라하기"를 위에서부터 따라 하세요.',
+        guideConcepts: [
+            root.guideConcepts[0],
+            {
+                term: '로컬 LLM',
+                description: '회사 서버가 아니라 이 기기의 프로세서(CPU)와 메모리로 직접 돌리는 AI 모델입니다. 사용료가 없고 대화가 기기 밖으로 나가지 않지만, 기기 성능에 따라 답변 속도와 쓸 수 있는 모델 크기가 달라집니다.',
+            },
+            {
+                term: '앱 내장 온디바이스 AI (llama.cpp)',
+                description: `이 앱에 들어 있는 llama.cpp 엔진이 GGUF 모델 파일을 이 기기에서 직접 실행합니다. 작은 GGUF 모델이 앱에 함께 들어 있어 따로 설치할 것 없이 바로 시작할 수 있고, ${formatModelSettingsPath(root)}에서 다른 GGUF 모델을 내려받거나 가져올 수 있습니다.`,
+            },
+            {
+                term: 'Ollama (올라마)',
+                description: '컴퓨터에서 로컬 LLM을 내려받고 실행해 주는 무료 프로그램입니다. 같은 네트워크의 컴퓨터에 설치하고 네트워크에 공개한 뒤 그 주소를 저장하면, 이 앱이 연결해 휴대폰에서 돌리기 어려운 더 크고 표현력이 좋은 모델을 쓸 수 있습니다.',
+            },
+            root.guideConcepts[4],
+            {
+                term: 'Hugging Face · GGUF',
+                description: `Hugging Face는 AI 모델이 공개되는 사이트이고, GGUF는 로컬 LLM용 모델 파일 형식입니다. Hugging Face의 GGUF 파일 주소를 ${formatModelSettingsPath(root)}의 URL 내려받기에 넣으면 이 기기로 바로 받을 수 있고, 컴퓨터의 Ollama에는 ollama pull hf.co/사용자/저장소 명령으로 받을 수 있습니다.`,
+            },
+            {
+                term: '에버톡 안드로이드 앱',
+                description: '대화·기억·설정은 이 앱 전용 저장 영역의 SQLite 데이터베이스에 저장되고, 정령 이미지·음성 같은 에셋은 처음 실행할 때 내려받아 기기에 보관합니다. 다른 컴퓨터나 서버를 켜 둘 필요가 없습니다.',
+            },
+        ],
+        guideChecklistIntro: {
+            ...root.guideChecklistIntro,
+            local_server: '이 앱은 앱에 내장된 llama.cpp 엔진으로 이 기기에서 GGUF 모델을 실행하므로 바로 시작할 수 있고, 같은 네트워크 컴퓨터의 Ollama 연결은 선택 단계입니다. 각 단계의 완료 표시는 이 기기의 실제 상태를 읽어서 보여 주며, 단계를 마친 뒤 "상태 새로고침"을 누르면 다시 확인합니다.',
+        },
+        guideStepTitles: {
+            ...root.guideStepTitles,
+            run_local_server: '에버톡 앱 실행',
+            install_ollama: '(선택) 같은 네트워크의 컴퓨터에 Ollama 설치하고 켜기',
+            pull_model: '(선택) Ollama에 대화용 모델 받기',
+        },
+        guideStepDescriptions: {
+            ...root.guideStepDescriptions,
+            run_local_server: '지금 이 화면이 에버톡 안드로이드 앱에서 열려 있으므로 완료입니다. 대화·기억·설정은 앱 내부 SQLite 데이터베이스에 저장됩니다.',
+            install_ollama: '이 기기에서 돌리기 어려운 큰 모델을 쓰고 싶을 때만 필요합니다. 같은 네트워크의 컴퓨터에서 "Ollama 내려받기"로 공식 사이트의 설치 파일을 받아 설치하고, 아래 연결 가이드대로 네트워크에 공개한 뒤 그 컴퓨터의 주소를 저장하세요. 그다음 "상태 새로고침"을 누르면 연결을 확인합니다.',
+            pull_model: 'Ollama를 실행하는 컴퓨터에서 아래 "명령어 입력하는 법"대로 터미널을 열고 ollama pull 모델이름 을 입력합니다. 모델은 "Ollama 모델 찾아보기"나 "Hugging Face GGUF 안내"에서 고르고, 아래 연결 가이드의 "사용할 모델 이름"에 넣으면 명령이 자동으로 만들어집니다. 받기가 끝나면 "상태 새로고침"을 누르세요.',
+        },
+        memoryGraphSelectHint: '두 손가락으로 벌리거나 모아 확대·축소, 빈 곳을 끌어 이동, 노드를 끌어 배치합니다. 키워드나 정령을 누르면 그때 나눈 대화와 정령의 행동이 표시됩니다.',
     };
 }
 
@@ -343,8 +483,12 @@ function extensionLabels(language: AppLanguage): AndroidLabelExtensions {
             confirmTitle: 'Confirm',
             confirmCancel: 'Cancel',
             confirmAccept: 'OK',
-            menu: 'Menu',
-            back: 'Back',
+            storyMoviePlay: 'Play video',
+            storyMoviePause: 'Pause video',
+            storyMoviePosition: 'Video position',
+            storyMovieMute: 'Mute',
+            storyMovieUnmute: 'Unmute',
+            ollamaHostPlatformTitle: 'Operating system of the computer running Ollama',
         };
     }
     if (language === 'zh_cn') {
@@ -392,8 +536,12 @@ function extensionLabels(language: AppLanguage): AndroidLabelExtensions {
             confirmTitle: '确认',
             confirmCancel: '取消',
             confirmAccept: '确定',
-            menu: '菜单',
-            back: '返回',
+            storyMoviePlay: '播放视频',
+            storyMoviePause: '暂停视频',
+            storyMoviePosition: '视频播放位置',
+            storyMovieMute: '静音',
+            storyMovieUnmute: '取消静音',
+            ollamaHostPlatformTitle: '运行 Ollama 的电脑的操作系统',
         };
     }
     return {
@@ -440,8 +588,12 @@ function extensionLabels(language: AppLanguage): AndroidLabelExtensions {
         confirmTitle: '확인',
         confirmCancel: '취소',
         confirmAccept: '확인',
-        menu: '메뉴',
-        back: '뒤로',
+        storyMoviePlay: '영상 재생',
+        storyMoviePause: '영상 일시정지',
+        storyMoviePosition: '영상 재생 위치',
+        storyMovieMute: '음소거',
+        storyMovieUnmute: '음소거 해제',
+        ollamaHostPlatformTitle: 'Ollama를 실행하는 컴퓨터의 운영체제',
     };
 }
 

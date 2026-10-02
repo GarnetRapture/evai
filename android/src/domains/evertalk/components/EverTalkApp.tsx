@@ -1,9 +1,9 @@
-import { useEffect, useEffectEvent } from 'react';
+import { useEffect, useEffectEvent, useState } from 'react';
 import { Animated, BackHandler, Easing, Image, Pressable, StyleSheet, Text, View, useAnimatedValue, useWindowDimensions } from 'react-native';
 import { buildMoodAccent } from '../../../../../src/domains/evertalk/logic';
 import { EVERTALK_UI_ASSETS } from '../../../../../src/domains/evertalk/uiAssets';
 import { resolveAssetUri } from '../../../shared/assets';
-import { useLayoutMode, useWindowInsets } from '../../../shared/layout';
+import { clampSize, useLayoutMode, useWindowInsets } from '../../../shared/layout';
 import type { AssetPreparationState } from '../../assets/types';
 import { parseSpiritDetail } from '../../persona';
 import { MAX_PREFERRED_PERSONAS } from '../../settings';
@@ -62,6 +62,7 @@ export function EverTalkApp({ initialAssetPreparation }: EverTalkAppProps) {
     const insets = useWindowInsets();
     const layoutMode = useLayoutMode();
     const { height } = useWindowDimensions();
+    const [composerFocused, setComposerFocused] = useState(false);
     const handleBackPress = useEffectEvent((): boolean => {
         if (controller.lobbyOpen) {
             controller.closeLobby();
@@ -150,8 +151,9 @@ export function EverTalkApp({ initialAssetPreparation }: EverTalkAppProps) {
         controller.closeFamiliarityDetail();
     }
     const keyboardOpen = insets.ime > insets.bottom;
-    const fabHeight = Math.min(68, Math.max(52, height * 0.07));
+    const fabHeight = clampSize(52, height * 0.07, 68);
     const chatShellBottom = keyboardOpen ? insets.ime : insets.bottom + fabHeight + LOBBY_FAB_BAND_EXTRA;
+    const rosterHidden = layoutMode === 'compact' && keyboardOpen && composerFocused;
 
     return (
         <View style={styles.root}>
@@ -165,7 +167,7 @@ export function EverTalkApp({ initialAssetPreparation }: EverTalkAppProps) {
                             { paddingLeft: insets.left, paddingRight: insets.right, paddingBottom: chatShellBottom },
                         ]}
                     >
-                        <SpiritRoster
+                        {rosterHidden ? null : <SpiritRoster
                             spirits={controller.filteredSpirits}
                             activeSpiritId={controller.activeSpiritId}
                             defaultPersonaId={controller.defaultPersonaId}
@@ -189,7 +191,7 @@ export function EverTalkApp({ initialAssetPreparation }: EverTalkAppProps) {
                             onTabChange={controller.changeRosterTab}
                             onToggleCollapsed={() => controller.setRosterCollapsed(!controller.rosterCollapsed)}
                             onOpenFamiliarity={controller.openFamiliarityDetail}
-                        />
+                        />}
                         <ChatStage
                             activeDetail={controller.activeDetail}
                             activeStageTab={controller.activeStageTab}
@@ -219,6 +221,7 @@ export function EverTalkApp({ initialAssetPreparation }: EverTalkAppProps) {
                                 controller.memoryOverview?.entries.find((entry) => entry.persona_id === controller.activeSpiritId)?.emotion ?? null,
                             )}
                             onOpenProfilePanel={layoutMode === 'compact' ? () => controller.setProfileCollapsed(false) : null}
+                            onComposerFocusChange={setComposerFocused}
                         />
                         <SpiritProfilePanel
                             activeDetail={controller.activeDetail}

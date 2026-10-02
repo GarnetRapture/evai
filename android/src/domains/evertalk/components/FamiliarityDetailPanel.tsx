@@ -25,7 +25,7 @@ import { EVERTALK_UI_ASSETS } from '../../../../../src/domains/evertalk/uiAssets
 import { resolveAssetUri } from '../../../shared/assets';
 import { mixColor, withAlpha } from '../../../shared/color';
 import { Icon } from '../../../shared/icons';
-import { bottomWindowInset, useLayoutMode, useWindowInsets } from '../../../shared/layout';
+import { bottomWindowInset, clampSize, useLayoutMode, useWindowInsets } from '../../../shared/layout';
 import { getSpiritVisualAssets } from '../../persona';
 import type { AndroidLabels } from '../labels';
 import { LoadableAssetImage } from './LoadableAssetImage';
@@ -50,10 +50,6 @@ const PORTRAIT_OVERSCAN = 1.08;
 const PORTRAIT_FOCUS_X = 0.5;
 const PORTRAIT_FOCUS_Y = 0.3;
 const FAMILIARITY_TONE = raceToneColor(null);
-
-function clampLength(minimum: number, preferred: number, maximum: number): number {
-    return Math.min(maximum, Math.max(minimum, preferred));
-}
 
 function HeroPortrait({ candidates, alt, box, fallback }: { candidates: string[]; alt: string; box: number; fallback: ReactNode }) {
     const [natural, setNatural] = useState<NaturalImageSize | null>(null);
@@ -147,17 +143,17 @@ export function FamiliarityDetailPanel({ open, entry, detail, labels, onClose, o
     const availableWidth = width - insets.left - insets.right - overlayPadding * 2;
     const availableHeight = height - insets.top - bottomInset - overlayPadding * 2;
     const vmin = Math.min(width, height);
-    const modalGap = clampLength(14, vmin * 0.03, 22);
-    const modalPadding = clampLength(18, vmin * 0.03, 26);
-    const heroGap = clampLength(12, vmin * 0.03, 20);
-    const avatarSize = clampLength(96, vmin * 0.26, 148);
-    const sigilSize = clampLength(44, vmin * 0.09, 64);
-    const stickerSize = clampLength(56, vmin * 0.14, 88);
-    const levelFontSize = clampLength(16, vmin * 0.024, 20);
-    const progressFontSize = clampLength(13.12, vmin * 0.019, 15.2);
-    const rewardFontSize = clampLength(13.6, vmin * 0.019, 16);
-    const metricFontSize = clampLength(16.8, vmin * 0.026, 22.4);
-    const chatFontSize = clampLength(14.4, vmin * 0.02, 16.8);
+    const modalGap = clampSize(14, vmin * 0.03, 22);
+    const modalPadding = clampSize(18, vmin * 0.03, 26);
+    const heroGap = clampSize(12, vmin * 0.03, 20);
+    const avatarSize = clampSize(96, vmin * 0.26, 148);
+    const sigilSize = clampSize(44, vmin * 0.09, 64);
+    const stickerSize = clampSize(56, vmin * 0.14, 88);
+    const levelFontSize = clampSize(16, vmin * 0.024, 20);
+    const progressFontSize = clampSize(13.12, vmin * 0.019, 15.2);
+    const rewardFontSize = clampSize(13.6, vmin * 0.019, 16);
+    const metricFontSize = clampSize(16.8, vmin * 0.026, 22.4);
+    const chatFontSize = clampSize(14.4, vmin * 0.02, 16.8);
     const raceSize = avatarSize * 0.26;
     const openChatLabel = labels.familiarityOpenChat(displayName);
 
@@ -187,7 +183,7 @@ export function FamiliarityDetailPanel({ open, entry, detail, labels, onClose, o
                         sheet
                             ? styles.modalSheet
                             : {
-                                width: Math.min(availableWidth, clampLength(320, width * 0.88, 760)),
+                                width: Math.min(availableWidth, clampSize(320, width * 0.88, 760)),
                                 maxHeight: Math.min(height * 0.92, height - 24, availableHeight),
                             },
                     ]}

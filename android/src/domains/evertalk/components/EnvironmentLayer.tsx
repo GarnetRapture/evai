@@ -19,7 +19,7 @@ import type { SaviorProfileSnapshot, WorkspaceView } from '../../../../../src/do
 import { DECOR_UI_ASSETS } from '../../../../../src/domains/evertalk/uiAssets';
 import { resolveAssetUri } from '../../../shared/assets';
 import { Icon, type IconName } from '../../../shared/icons';
-import { bottomWindowInset, useWindowInsets } from '../../../shared/layout';
+import { bottomWindowInset, clampSize, useWindowInsets } from '../../../shared/layout';
 import type { DeviceEnvironmentInfo } from '../../../shared/platform';
 import type { AppSettings } from '../../settings';
 import type { AndroidLabels } from '../labels';
@@ -310,6 +310,7 @@ export function EnvironmentLayer({
     const notificationColor = hasUnread ? UNREAD_TEXT_COLOR : BAR_TEXT_COLOR;
     const notificationTrigger = (
         <Pressable
+            key="notifications"
             accessibilityRole="button"
             accessibilityLabel={hasUnread ? `${labels.notifications}: ${labels.proactiveUnreadCount(notificationTotal)}` : labels.notifications}
             accessibilityState={{ expanded: notificationsOpen }}
@@ -337,6 +338,7 @@ export function EnvironmentLayer({
     );
     const navigation = (
         <ScrollView
+            key="navigation"
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             role="navigation"
@@ -386,12 +388,13 @@ export function EnvironmentLayer({
         </ScrollView>
     );
     const bgmPlayer = (
-        <View style={styles.bgm}>
+        <View key="bgm" style={styles.bgm}>
             <BgmPlayer labels={labels} language={settings?.language ?? 'ko'}/>
         </View>
     );
     const profileTrigger = (
         <Pressable
+            key="profile"
             accessibilityRole="button"
             accessibilityLabel={profileName}
             accessibilityState={{ expanded: saviorMenuOpen }}
@@ -413,6 +416,7 @@ export function EnvironmentLayer({
     );
     const environmentTrigger = (
         <ScrollView
+            key="environment"
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             style={compact ? styles.environmentScrollCompact : styles.environmentScrollWide}
@@ -450,25 +454,12 @@ export function EnvironmentLayer({
     return (
         <>
             <View style={[styles.layer, { paddingTop: insets.top, paddingLeft: insets.left + barPadding, paddingRight: insets.right + barPadding }]}>
-                {compact ? (
-                    <>
-                        <View style={[styles.row, styles.rowCompact]}>
-                            {bgmPlayer}
-                            {notificationTrigger}
-                            {profileTrigger}
-                            {environmentTrigger}
-                        </View>
-                        {navigation}
-                    </>
-                ) : (
-                    <View style={[styles.row, styles.rowWide]}>
-                        {notificationTrigger}
-                        {navigation}
-                        {bgmPlayer}
-                        {profileTrigger}
-                        {environmentTrigger}
-                    </View>
-                )}
+                <View style={[styles.row, compact ? styles.rowCompact : styles.rowWide]}>
+                    {compact
+                        ? [bgmPlayer, notificationTrigger, profileTrigger, environmentTrigger]
+                        : [notificationTrigger, navigation, bgmPlayer, profileTrigger, environmentTrigger]}
+                </View>
+                {compact ? navigation : null}
             </View>
             {onRenameSavior ? (
                 <BarOverlay
@@ -484,7 +475,7 @@ export function EnvironmentLayer({
                         accessibilityLabel={labels.saviorProfile}
                         style={[
                             styles.saviorMenu,
-                            { width: Math.max(0, Math.min(SAVIOR_MENU_MAX_WIDTH, overlayContentWidth - saviorMenuMargin)), marginRight: saviorMenuMargin },
+                            { width: clampSize(0, overlayContentWidth - saviorMenuMargin, SAVIOR_MENU_MAX_WIDTH), marginRight: saviorMenuMargin },
                         ]}
                     >
                         <ScrollView contentContainerStyle={styles.saviorMenuContent} keyboardShouldPersistTaps="handled">
