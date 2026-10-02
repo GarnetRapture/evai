@@ -1,18 +1,20 @@
 # EverSoul AI Chat for Android
 
-`@evai/android` is an independent React Native application with Android application ID `evai.android`. It uses platform views and a private SQLite database. It is not a WebView of the PC application.
+`@evai/android` is an independent React Native 0.86 application (New Architecture, Hermes) with Android application ID `evai.android`. It renders native views, keeps its data in a private SQLite database, and runs GGUF models on the device with llama.cpp. It is not a WebView of the PC application.
 
-The Android project is currently an implementation in progress. The screens and native bridge are connected in source, but the complete `src` conversation, memory, persona, assets, and settings behavior has not been ported. [ANDROID_TRACKING.md](ANDROID_TRACKING.md) records the remaining acceptance work.
+The source now covers every PC screen. Each PC component in `src/domains/evertalk/components` has an Android file with the same name and the same controller logic, and only the UI is rebuilt natively for phone and tablet widths. The build and on-device behavior have not been verified yet; [ANDROID_TRACKING.md](ANDROID_TRACKING.md) records the implementation state, the verification evidence, and the remaining acceptance work.
 
 ## Native layout
 
-- `src/`: mobile screens, state, and domain adapters.
-- Pure persona and reply rules remain owned by the root `src/domains` and are consumed by Metro through `watchFolders`; the Android UI and platform services are separate.
-- `android/app/src/main/java/evai/android/`: Android bridge, private SQLite, bundled spirit access, and document picker for GGUF files.
-- `android/app/src/main/cpp/`: mobile C++ adapter that owns llama.cpp model and context lifetime, sampling, and cancellation.
-- `android/native/llama.cpp`: expected location of the original upstream llama.cpp source. It is absent from this repository and has not been cloned.
-- `../data/dataset/`: local source of the spirit JSON assets packaged by Gradle. This directory is ignored by the root repository, so a clean checkout needs an authorized asset provisioning path.
+- `src/App.tsx`: prepares the downloaded assets with `AssetPreparationGate`, then mounts `EverTalkApp`.
+- `src/domains/`: the Android domain layer. Chat turns are assembled through the same path as the PC (`chat/service.ts`, `prompt.ts`, `personaTurnHook.ts`, `llm/turn.ts`, `replyEnvelope.ts`), and pure modules are imported directly from the root `src/domains`.
+- `src/domains/evertalk/components/`: the native screens, one file per PC component, each with its own StyleSheet.
+- `src/shared/`: layout and window insets, icons, colors, vector shapes, gestures, preferences, storage, and the TurboModule and Fabric specs in `native/specs`.
+- `android/app/src/main/java/evai/android/`: TurboModules for storage, llama.cpp generation, files and backups, assets, audio, device information and preferences, plus the `EvaiVectorView`, `EvaiVideoView` and `EvaiPatternView` native views.
+- `android/app/src/main/cpp/`: JNI for the storage engine shared with the PC local server and for the llama.cpp engine that owns model and context lifetime, sampling, streaming and cancellation. CMake fetches llama.cpp pinned to commit `f1ea206218210afb913ae2f5d2c51faed35915da` (tag b11236).
+- `src/domains/llm/llamaCpp/bundledModels.json`: the small GGUF model packaged inside the APK. Gradle downloads it and checks its size and SHA-256 before the build. Larger models are downloaded over HTTP(S), imported from a `.gguf` file, or served by Ollama on a computer in the same network.
+- `../data/dataset/` and `../data/manifest.txt`: the spirit JSON and the asset manifest packaged by Gradle. The root repository ignores `data/`, so the build environment must provide them.
 
 No Google AI, ML, model runtime, Gemini, LiteRT, MediaPipe, or Play services library is used. The Android operating system API and Android build tooling are needed to produce an Android app.
 
-The React Native packages declared in `package.json` have not been installed. A Gradle wrapper, original llama.cpp source snapshot, packaged assets, and an Android build are still required before a runnable APK can be claimed. The project rule currently permits Android source review and does not permit a Gradle build without an explicit instruction.
+The React Native packages declared in `package.json` have not been installed, and no Gradle build, Metro bundle, or device run has been performed. The project rule permits Android source review and does not permit installs or a Gradle build without an explicit instruction.
