@@ -9,6 +9,7 @@ import com.facebook.react.uimanager.ViewManager
 import evai.android.assets.AssetsModule
 import evai.android.device.DeviceModule
 import evai.android.files.FilesModule
+import evai.android.graphics.PatternViewManager
 import evai.android.graphics.VectorViewManager
 import evai.android.llm.LlmModule
 import evai.android.media.AudioModule
@@ -40,7 +41,7 @@ class EvaiPackage : BaseReactPackage() {
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> =
-        listOf(VectorViewManager(), VideoViewManager())
+        listOf(VectorViewManager(), VideoViewManager(), PatternViewManager())
 
     companion object {
         private val MODULE_NAMES = listOf(

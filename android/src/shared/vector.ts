@@ -1,5 +1,10 @@
 import { toArgbHex } from './color';
 
+export interface VectorDashFlow {
+    to: number;
+    durationMs: number;
+}
+
 export interface VectorShape {
     d: string;
     fill?: string;
@@ -9,6 +14,8 @@ export interface VectorShape {
     cap?: 'butt' | 'round' | 'square';
     join?: 'miter' | 'round' | 'bevel';
     dash?: readonly number[];
+    dashOffset?: number;
+    dashFlow?: VectorDashFlow;
 }
 
 const NO_PAINT = 'none';

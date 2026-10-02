@@ -6,15 +6,24 @@ import android.graphics.Color
 import android.graphics.DashPathEffect
 import android.graphics.Paint
 import android.graphics.Path
+import android.os.SystemClock
 import android.view.View
 import kotlin.math.min
 import org.json.JSONArray
 import org.json.JSONObject
 
 class VectorView(context: Context) : View(context) {
-    private class VectorShape(val path: Path, val fill: Paint?, val stroke: Paint?)
+    private class DashFlow(val to: Float, val durationMilliseconds: Long)
+
+    private class Dash(val intervals: FloatArray, val offset: Float, val flow: DashFlow?) {
+        val period = intervals.sum()
+    }
+
+    private class VectorShape(val path: Path, val fill: Paint?, val stroke: Paint?, val dash: Dash?)
 
     private var shapes: List<VectorShape> = emptyList()
+    private var flowing = false
+    private val flowStart = SystemClock.uptimeMillis()
     private var viewBoxX = 0f
     private var viewBoxY = 0f
     private var viewBoxWidth = DEFAULT_VIEW_BOX
@@ -22,6 +31,7 @@ class VectorView(context: Context) : View(context) {
 
     fun setShapes(value: String?) {
         shapes = if (value.isNullOrEmpty()) emptyList() else parseShapes(JSONArray(value))
+        flowing = shapes.any { shape -> shape.stroke != null && shape.dash?.flow != null }
         invalidate()
     }
 
@@ -53,18 +63,63 @@ class VectorView(context: Context) : View(context) {
         canvas.translate(offsetX, offsetY)
         canvas.scale(scale, scale)
         canvas.translate(-viewBoxX, -viewBoxY)
+        val elapsed = SystemClock.uptimeMillis() - flowStart
         for (shape in shapes) {
             shape.fill?.let { paint -> canvas.drawPath(shape.path, paint) }
-            shape.stroke?.let { paint -> canvas.drawPath(shape.path, paint) }
+            val stroke = shape.stroke ?: continue
+            val dash = shape.dash
+            val flow = dash?.flow
+            if (dash != null && flow != null) {
+                stroke.pathEffect = dashEffect(dash, flowOffset(dash.offset, flow, elapsed))
+            }
+            canvas.drawPath(shape.path, stroke)
         }
         canvas.restoreToCount(saved)
+        if (flowing) {
+            postInvalidateOnAnimation()
+        }
+    }
+
+    override fun onVisibilityAggregated(isVisible: Boolean) {
+        super.onVisibilityAggregated(isVisible)
+        if (isVisible && flowing) {
+            invalidate()
+        }
     }
 
     private fun parseShapes(array: JSONArray): List<VectorShape> = (0 until array.length()).map { index ->
         val shape = array.getJSONObject(index)
         val path = SvgPathParser(shape.getString("d")).parse()
         val opacity = shape.optDouble("opacity", 1.0).toFloat().coerceIn(0f, 1f)
-        VectorShape(path, fillPaint(shape, opacity), strokePaint(shape, opacity))
+        val dash = parseDash(shape)
+        val stroke = strokePaint(shape, opacity)
+        if (stroke != null && dash != null) {
+            stroke.pathEffect = dashEffect(dash, dash.offset)
+        }
+        VectorShape(path, fillPaint(shape, opacity), stroke, dash)
+    }
+
+    private fun parseDash(shape: JSONObject): Dash? {
+        val values = shape.optJSONArray("dash") ?: return null
+        val listed = FloatArray(values.length()) { item -> values.getDouble(item).toFloat() }
+        val intervals = if (listed.size % 2 == 1) listed + listed else listed
+        if (intervals.isEmpty() || intervals.sum() <= 0f) {
+            return null
+        }
+        val flow = shape.optJSONObject("dashFlow")?.let { value ->
+            val duration = value.getLong("durationMs")
+            require(duration > 0L) { "dashFlow.durationMs must be positive: $duration" }
+            DashFlow(value.getDouble("to").toFloat(), duration)
+        }
+        return Dash(intervals, shape.optDouble("dashOffset", 0.0).toFloat(), flow)
+    }
+
+    private fun dashEffect(dash: Dash, offset: Float): DashPathEffect =
+        DashPathEffect(dash.intervals, ((offset % dash.period) + dash.period) % dash.period)
+
+    private fun flowOffset(offset: Float, flow: DashFlow, elapsed: Long): Float {
+        val progress = (elapsed % flow.durationMilliseconds).toFloat() / flow.durationMilliseconds
+        return offset + (flow.to - offset) * progress
     }
 
     private fun fillPaint(shape: JSONObject, opacity: Float): Paint? {
@@ -96,11 +151,6 @@ class VectorView(context: Context) : View(context) {
                 "miter" -> Paint.Join.MITER
                 "bevel" -> Paint.Join.BEVEL
                 else -> Paint.Join.ROUND
-            }
-            shape.optJSONArray("dash")?.let { dash ->
-                if (dash.length() >= 2) {
-                    pathEffect = DashPathEffect(FloatArray(dash.length()) { item -> dash.getDouble(item).toFloat() }, 0f)
-                }
             }
         }
     }
