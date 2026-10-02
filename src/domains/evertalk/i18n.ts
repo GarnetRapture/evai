@@ -1,6 +1,6 @@
 import type { DomainErrorCode } from "../../shared/errors";
 import type { AppStorageKind } from "../../shared/host";
-import { EVERSOUL_DATABASE_ERROR_DETAIL } from "../../shared/storage";
+import { EVERSOUL_DATABASE_ERROR_DETAIL } from "../../shared/storage/schema";
 import type {
   AppLanguage,
   AppPlatform,

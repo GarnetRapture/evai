@@ -2,6 +2,7 @@
 
 #include "net/native_socket.hpp"
 
+#include <chrono>
 #include <cstddef>
 #include <cstdint>
 #include <span>
@@ -26,6 +27,8 @@ public:
     [[nodiscard]] TcpSocket accept_client() const;
     [[nodiscard]] std::size_t receive_some(std::span<char> buffer) const;
     void send_all(std::span<const char> data) const;
+    void set_no_delay() const;
+    void set_receive_timeout(std::chrono::milliseconds timeout) const;
 
 private:
     void close_handle();

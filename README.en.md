@@ -341,7 +341,7 @@ Packaging removes the WAL/shm temporary files, `evai-server.ini`, the error log 
   <img src="https://img.shields.io/badge/Android-pending-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android status" />
 </p>
 
-`android/` contains the in-progress `@evai/android` React Native app designed for mobile. Its planned native runtime uses original llama.cpp and on-device GGUF models, without Google AI/ML libraries. Native integration and screens remain in development; an Android build and device behavior have not been verified. See the [Android work tracker](android/ANDROID_TRACKING.md) for implementation status and remaining work.
+`android/` contains the `@evai/android` React Native app designed for mobile. It runs original llama.cpp with on-device GGUF models, without Google AI/ML libraries. Every PC screen is implemented in source as a native screen with the same logic, but an Android build and device behavior have not been verified yet. See the [Android work tracker](android/ANDROID_TRACKING.md) for implementation status and remaining work.
 
 ## Downloading the spirit assets
 

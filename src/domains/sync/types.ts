@@ -29,23 +29,24 @@ export interface BackupFileEntry {
   size_bytes: number;
   modified_at: string;
 }
+export type BackupDirectoryPermission = "granted" | "denied" | "prompt";
 export interface BackupDirectoryStatus {
   linked: boolean;
   directory_name: string | null;
-  permission: PermissionState | null;
+  permission: BackupDirectoryPermission | null;
   last_backup_at: string | null;
   last_backup_error: string | null;
   files: BackupFileEntry[];
 }
 export interface BackupDirectoryAccessState {
   name: string;
-  permission: PermissionState;
+  permission: BackupDirectoryPermission;
 }
 export interface BackupDirectoryAccess {
   state(): Promise<BackupDirectoryAccessState | null>;
   link(): Promise<boolean>;
   unlink(): Promise<void>;
-  requestPermission(): Promise<PermissionState | null>;
+  requestPermission(): Promise<BackupDirectoryPermission | null>;
   create(): Promise<string>;
   restore(fileName: string): Promise<void>;
 

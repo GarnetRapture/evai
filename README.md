@@ -341,7 +341,7 @@ GitHub Actions에 OS별 서버 빌드 워크플로(Build Server Windows, Build S
   <img src="https://img.shields.io/badge/Android-준비_중-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android status" />
 </p>
 
-`android/`에는 `@evai/android` React Native 모바일 전용 앱을 구현 중입니다. Android 앱은 원본 llama.cpp와 기기 내 GGUF 모델을 사용하도록 설계되었으며 Google AI/ML 라이브러리를 사용하지 않습니다. 현재 네이티브 연결과 화면은 개발 중이고 빌드·기기 동작은 검증되지 않았습니다. 구현 범위와 남은 작업은 [Android 전용 작업 트래킹](android/ANDROID_TRACKING.md)에 기록합니다.
+`android/`에는 `@evai/android` React Native 모바일 전용 앱이 있습니다. Android 앱은 원본 llama.cpp와 기기 내 GGUF 모델을 사용하며 Google AI/ML 라이브러리를 사용하지 않습니다. PC의 모든 화면이 같은 로직의 네이티브 화면으로 소스에 구현되었지만, 빌드·기기 동작은 아직 검증되지 않았습니다. 구현 범위와 남은 작업은 [Android 전용 작업 트래킹](android/ANDROID_TRACKING.md)에 기록합니다.
 
 ## 정령 자산 내려받기
 

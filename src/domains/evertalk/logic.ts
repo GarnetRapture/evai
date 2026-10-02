@@ -1,20 +1,19 @@
 import { isDomainError } from "../../shared/errors";
 import type { AppLanguage } from "../../shared/types";
-import {
-  EVERTALK_SESSION_TITLE,
-  removeJsonResidue,
-  repairHangulComposition,
-  splitPersonaReplyActions,
-  type ChatMessage,
-  type ChatRoom,
-  type PersonaContextGraph,
-  type PersonaContextRelation,
-  type PersonaHeartTimelinePoint,
-  type PersonaKeywordThread,
-  type PersonaMemoryOverview,
-  type PersonaRelationshipNetwork,
+import type {
+  ChatMessage,
+  ChatRoom,
+  PersonaContextGraph,
+  PersonaContextRelation,
+  PersonaHeartTimelinePoint,
+  PersonaKeywordThread,
+  PersonaMemoryOverview,
+  PersonaRelationshipNetwork,
 } from "../chat";
 import type { PersonaEmotionKind, PersonaEmotionState } from "../chat/affect";
+import { repairHangulComposition, splitPersonaReplyActions } from "../chat/output";
+import { EVERTALK_SESSION_TITLE } from "../chat/prompt";
+import { removeJsonResidue } from "../chat/replyEnvelope";
 import type {
   ChatModelCatalog,
   ChatModelEntry,
@@ -24,7 +23,7 @@ import type {
   OllamaModelLibrary,
   OnDeviceSystemModelEntry,
 } from "../llm";
-import { NO_CHAT_MODEL_ID } from "../llm";
+import { NO_CHAT_MODEL_ID } from "../llm/constants";
 import type { ModuleControl, ModuleControlOption } from "../modules";
 import type {
   FamiliarityEntry,
@@ -1159,6 +1158,12 @@ export function buildGuideChecklist(
             actions: ["open_repository"],
           },
         ];
+  return finalizeGuideChecklist(drafts);
+}
+
+export function finalizeGuideChecklist(
+  drafts: readonly GuideChecklistDraft[],
+): GuideChecklistStep[] {
   let currentAssigned = false;
   return drafts.map((draft) => {
     if (draft.optional) {

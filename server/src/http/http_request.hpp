@@ -16,14 +16,17 @@ struct HttpHeader {
 struct HttpRequest {
     std::string method;
     std::string target;
+    std::string version;
     std::string host;
     std::vector<HttpHeader> headers;
     std::string body;
 
     [[nodiscard]] std::string_view header(std::string_view name) const;
+    [[nodiscard]] bool keeps_connection_open() const;
 };
 
 inline constexpr std::string_view http_header_terminator = "\r\n\r\n";
+inline constexpr std::string_view http_line_separator = "\r\n";
 inline constexpr std::size_t http_header_limit_bytes = 16 * 1024;
 inline constexpr std::size_t http_body_limit_bytes = static_cast<std::size_t>(512) * 1024 * 1024;
 

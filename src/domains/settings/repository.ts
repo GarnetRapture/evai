@@ -1,6 +1,6 @@
 import { EVERSOUL_STORE, SINGLETON_RECORD_KEY, clearStores, getEverSoulDatabase } from '../../shared/storage';
 import { DEFAULT_MEMORY_CONTEXT_FILTER, normalizeMemoryContextFilter } from '../chat/memoryContext';
-import { NO_CHAT_MODEL_ID } from '../llm/identity';
+import { NO_CHAT_MODEL_ID } from '../llm/constants';
 import { OLLAMA_DEFAULT_BASE_URL } from '../ollama/constants';
 import type { AppSettings, GeneralSettingsRecord } from './types';
 

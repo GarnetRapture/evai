@@ -1,5 +1,8 @@
 import { DomainError } from "../../shared/errors";
+import { normalizePersonaKey } from "./archiveKey";
 import type { PersonaArchiveEntry, SpiritDetail } from "./types";
+
+export { normalizePersonaKey };
 
 const PERSONA_ARCHIVE_FILE_EXTENSION = ".json";
 
@@ -24,10 +27,6 @@ const personaArchiveEntries: PersonaArchiveEntry[] = Object.entries(
     load,
   }))
   .sort((left, right) => left.archive_key.localeCompare(right.archive_key));
-
-export function normalizePersonaKey(value: string): string {
-  return value.toLowerCase().replace(/[^\p{L}\p{N}_-]/gu, "");
-}
 
 export function listPersonaArchiveKeys(): string[] {
   return personaArchiveEntries.map((entry) => entry.archive_key);

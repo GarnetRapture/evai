@@ -114,20 +114,21 @@ std::string resolve_ollama_base_url(const std::optional<std::string>& stored_bas
     return stored_base_url.value_or(std::string(default_ollama_base_url));
 }
 
-void proxy_ollama_request(const net::TcpSocket& client, const http::HttpRequest& request, std::string_view base_url, std::string_view upstream_path)
+void proxy_ollama_request(const http::HttpChannel& channel, const http::HttpRequest& request, std::string_view base_url, std::string_view upstream_path)
 {
     const std::optional<OllamaUpstream> upstream = parse_ollama_base_url(base_url);
     if (!upstream.has_value()) {
-        http::send_json(client, 400, "Bad Request", http::json_error_body("invalid_upstream", base_url));
+        http::send_json(channel, 400, "Bad Request", http::json_error_body("invalid_upstream", base_url));
         return;
     }
     net::TcpSocket connection;
     try {
         connection = net::TcpSocket::connect_to(upstream->host, upstream->port);
+        connection.set_no_delay();
     }
     catch (const std::exception& error) {
         http::send_response(
-            client,
+            channel,
             502,
             "Bad Gateway",
             http::json_content_type,
@@ -136,7 +137,7 @@ void proxy_ollama_request(const net::TcpSocket& client, const http::HttpRequest&
         return;
     }
     const std::string_view content_type = request.header("Content-Type");
-    const std::string head = std::format(
+    std::string message = std::format(
         "{} {} HTTP/1.1\r\n"
         "Host: {}:{}\r\n"
         "Accept: {}\r\n"
@@ -151,17 +152,15 @@ void proxy_ollama_request(const net::TcpSocket& client, const http::HttpRequest&
         request.header("Accept").empty() ? std::string_view("*/*") : request.header("Accept"),
         content_type.empty() ? std::string{} : std::format("Content-Type: {}\r\n", content_type),
         request.body.size());
-    connection.send_all(head);
-    if (!request.body.empty()) {
-        connection.send_all(request.body);
-    }
+    message.append(request.body);
+    connection.send_all(message);
     std::array<char, relay_chunk_bytes> chunk{};
     for (;;) {
         const std::size_t received = connection.receive_some(chunk);
         if (received == 0) {
             return;
         }
-        client.send_all(std::span<const char>(chunk.data(), received));
+        channel.socket.send_all(std::span<const char>(chunk.data(), received));
     }
 }
 

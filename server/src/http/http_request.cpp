@@ -13,8 +13,11 @@ namespace evai::server::http {
 
 namespace {
 
-constexpr std::string_view line_separator = "\r\n";
 constexpr std::string_view host_header_name = "host";
+constexpr std::string_view connection_header_name = "Connection";
+constexpr std::string_view close_connection_token = "close";
+constexpr std::string_view keep_alive_connection_token = "keep-alive";
+constexpr std::string_view http_1_0_version = "HTTP/1.0";
 
 std::string_view trim(std::string_view value)
 {
@@ -53,6 +56,29 @@ std::string_view HttpRequest::header(std::string_view name) const
     return match == headers.end() ? std::string_view{} : std::string_view(match->value);
 }
 
+bool HttpRequest::keeps_connection_open() const
+{
+    bool close_requested = false;
+    bool keep_alive_requested = false;
+    for (const HttpHeader& entry : headers) {
+        if (!equals_ignore_case(entry.name, connection_header_name)) {
+            continue;
+        }
+        std::string_view remaining = entry.value;
+        while (!remaining.empty()) {
+            const auto comma = remaining.find(',');
+            const std::string_view token = trim(remaining.substr(0, comma));
+            close_requested = close_requested || equals_ignore_case(token, close_connection_token);
+            keep_alive_requested = keep_alive_requested || equals_ignore_case(token, keep_alive_connection_token);
+            remaining = comma == std::string_view::npos ? std::string_view{} : remaining.substr(comma + 1);
+        }
+    }
+    if (close_requested) {
+        return false;
+    }
+    return version == http_1_0_version ? keep_alive_requested : true;
+}
+
 std::optional<std::size_t> parse_content_length(std::string_view value)
 {
     const std::string_view trimmed = trim(value);
@@ -69,7 +95,7 @@ std::optional<std::size_t> parse_content_length(std::string_view value)
 
 std::optional<HttpRequest> parse_http_request(std::string_view header_block)
 {
-    const auto request_line_end = header_block.find(line_separator);
+    const auto request_line_end = header_block.find(http_line_separator);
     if (request_line_end == std::string_view::npos) {
         return std::nullopt;
     }
@@ -82,13 +108,14 @@ std::optional<HttpRequest> parse_http_request(std::string_view header_block)
     HttpRequest request{
         std::string(request_line.substr(0, method_end)),
         std::string(trim(request_line.substr(method_end + 1, target_end - method_end - 1))),
+        std::string(trim(request_line.substr(target_end + 1))),
         {},
         {},
         {},
     };
-    std::string_view remaining = header_block.substr(request_line_end + line_separator.size());
+    std::string_view remaining = header_block.substr(request_line_end + http_line_separator.size());
     while (!remaining.empty()) {
-        const auto line_end = remaining.find(line_separator);
+        const auto line_end = remaining.find(http_line_separator);
         const std::string_view line = remaining.substr(0, line_end);
         const auto colon = line.find(':');
         if (colon != std::string_view::npos) {
@@ -102,7 +129,7 @@ std::optional<HttpRequest> parse_http_request(std::string_view header_block)
         if (line_end == std::string_view::npos) {
             break;
         }
-        remaining = remaining.substr(line_end + line_separator.size());
+        remaining = remaining.substr(line_end + http_line_separator.size());
     }
     return request;
 }

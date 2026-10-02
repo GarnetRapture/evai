@@ -1,6 +1,7 @@
 import type { AppLanguage } from '../../shared/types';
 import type { LocalModelEngineKind } from './types';
 
+export const NO_CHAT_MODEL_ID = '';
 export const CHROME_PROMPT_MODEL_ID = 'chrome-prompt-api';
 export const CHROME_PROMPT_MODEL_ID_PREFIX = 'chrome-prompt-api:';
 export const CHROME_PROMPT_MODEL_VARIANTS = ['nano', 'gemma4'] as const;

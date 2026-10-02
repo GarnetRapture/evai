@@ -3,9 +3,10 @@
     <application
         android:name=".MainApplication"
         android:label="EverSoul AI Chat"
+        android:icon="@mipmap/ic_launcher"
         android:allowBackup="false"
-        android:usesCleartextTraffic="false"
-        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        android:usesCleartextTraffic="true"
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:exported="true"

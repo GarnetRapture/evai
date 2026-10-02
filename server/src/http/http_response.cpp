@@ -8,6 +8,9 @@ namespace evai::server::http {
 
 std::string serialize_response_head(const HttpResponseHead& head)
 {
+    const std::string connection_headers = head.persistence == ConnectionPersistence::keep_alive
+        ? std::format("Connection: keep-alive\r\nKeep-Alive: timeout={}\r\n", keep_alive_idle_timeout.count())
+        : std::string("Connection: close\r\n");
     return std::format(
         "HTTP/1.1 {} {}\r\n"
         "Content-Type: {}\r\n"
@@ -16,13 +19,14 @@ std::string serialize_response_head(const HttpResponseHead& head)
         "Cross-Origin-Opener-Policy: same-origin\r\n"
         "Cross-Origin-Embedder-Policy: require-corp\r\n"
         "X-Content-Type-Options: nosniff\r\n"
-        "Connection: close\r\n"
+        "{}"
         "{}"
         "\r\n",
         head.status_code,
         head.reason,
         head.content_type,
         head.content_length,
+        connection_headers,
         head.extra_headers);
 }
 

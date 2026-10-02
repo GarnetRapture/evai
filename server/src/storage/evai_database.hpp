@@ -2,6 +2,7 @@
 
 #include "storage/sqlite_database.hpp"
 
+#include <condition_variable>
 #include <cstddef>
 #include <cstdint>
 #include <filesystem>
@@ -51,13 +52,38 @@ private:
     std::mutex mutex_;
 };
 
+class ReaderPool {
+public:
+    ReaderPool(const std::filesystem::path& file, std::size_t count);
+    ReaderPool(const ReaderPool&) = delete;
+    ReaderPool& operator=(const ReaderPool&) = delete;
+    ReaderPool(ReaderPool&&) = delete;
+    ReaderPool& operator=(ReaderPool&&) = delete;
+
+    [[nodiscard]] DatabaseConnection& take();
+    void give_back(DatabaseConnection& connection);
+    [[nodiscard]] std::vector<std::unique_lock<std::mutex>> lock_all();
+
+private:
+    std::vector<std::unique_ptr<DatabaseConnection>> connections_;
+    std::vector<DatabaseConnection*> idle_;
+    std::mutex mutex_;
+    std::condition_variable released_;
+};
+
 class ReaderLease {
 public:
-    ReaderLease(DatabaseConnection& connection, std::unique_lock<std::mutex> lock);
+    explicit ReaderLease(ReaderPool& pool);
+    ~ReaderLease();
+    ReaderLease(const ReaderLease&) = delete;
+    ReaderLease& operator=(const ReaderLease&) = delete;
+    ReaderLease(ReaderLease&&) = delete;
+    ReaderLease& operator=(ReaderLease&&) = delete;
 
     [[nodiscard]] DatabaseConnection& connection() const;
 
 private:
+    ReaderPool* pool_;
     DatabaseConnection* connection_;
     std::unique_lock<std::mutex> lock_;
 };
@@ -90,10 +116,8 @@ public:
     [[nodiscard]] const std::filesystem::path& file() const;
 
 private:
-    [[nodiscard]] ReaderLease acquire_reader();
-
     DatabaseConnection writer_;
-    std::vector<std::unique_ptr<DatabaseConnection>> readers_;
+    ReaderPool readers_;
 };
 
 void apply_evai_schema(SqliteDatabase& database);
