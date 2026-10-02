@@ -25,8 +25,7 @@ set(GGML_LLAMAFILE OFF CACHE BOOL "" FORCE)
 FetchContent_Declare(
     llama_cpp
     GIT_REPOSITORY https://github.com/ggml-org/llama.cpp.git
-    GIT_TAG b11236
-    GIT_SHALLOW TRUE
+    GIT_TAG f1ea206218210afb913ae2f5d2c51faed35915da
 )
 FetchContent_MakeAvailable(llama_cpp)
 set_target_properties(llama-common PROPERTIES INTERFACE_SYSTEM_INCLUDE_DIRECTORIES $<TARGET_PROPERTY:llama-common,INTERFACE_INCLUDE_DIRECTORIES>)
