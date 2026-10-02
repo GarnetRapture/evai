@@ -6,6 +6,8 @@ import android.graphics.SurfaceTexture
 import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.net.Uri
+import android.os.Handler
+import android.os.Looper
 import android.view.Surface
 import android.view.TextureView
 import java.io.IOException
@@ -15,6 +17,7 @@ import kotlin.math.min
 class VideoView(context: Context, private val events: VideoEvents) : TextureView(context), TextureView.SurfaceTextureListener {
     interface VideoEvents {
         fun onReady(view: VideoView, durationSeconds: Double)
+        fun onProgress(view: VideoView, positionSeconds: Double, durationSeconds: Double)
         fun onEnd(view: VideoView, completed: Boolean)
         fun onError(view: VideoView, message: String)
     }
@@ -29,6 +32,9 @@ class VideoView(context: Context, private val events: VideoEvents) : TextureView
     private var prepared = false
     private var videoWidth = 0
     private var videoHeight = 0
+    private var pendingSeekMilliseconds: Int? = null
+    private val progressHandler = Handler(Looper.getMainLooper())
+    private val progressTick = Runnable { reportProgress() }
 
     init {
         surfaceTextureListener = this
@@ -41,6 +47,7 @@ class VideoView(context: Context, private val events: VideoEvents) : TextureView
             return
         }
         source = next
+        pendingSeekMilliseconds = null
         openPlayer()
     }
 
@@ -62,6 +69,16 @@ class VideoView(context: Context, private val events: VideoEvents) : TextureView
     fun setContain(value: Boolean) {
         contain = value
         applyTransform()
+    }
+
+    fun seekTo(seconds: Double) {
+        val target = (seconds * MILLISECONDS_PER_SECOND).toInt().coerceAtLeast(0)
+        val active = player
+        if (active == null || !prepared) {
+            pendingSeekMilliseconds = target
+            return
+        }
+        active.seekTo(target)
     }
 
     fun release() {
@@ -114,12 +131,21 @@ class VideoView(context: Context, private val events: VideoEvents) : TextureView
                 return@setOnPreparedListener
             }
             prepared = true
+            pendingSeekMilliseconds?.let { milliseconds -> ready.seekTo(milliseconds) }
+            pendingSeekMilliseconds = null
             applyVolume()
             applyPlayback()
             events.onReady(this, ready.duration / MILLISECONDS_PER_SECOND)
+            reportProgress()
+        }
+        created.setOnSeekCompleteListener { seeked ->
+            if (player === seeked) {
+                reportProgress()
+            }
         }
         created.setOnCompletionListener { finished ->
             if (player === finished && !finished.isLooping) {
+                reportProgress()
                 events.onEnd(this, true)
             }
         }
@@ -143,6 +169,7 @@ class VideoView(context: Context, private val events: VideoEvents) : TextureView
     }
 
     private fun releasePlayer() {
+        progressHandler.removeCallbacks(progressTick)
         player?.release()
         player = null
         prepared = false
@@ -157,6 +184,19 @@ class VideoView(context: Context, private val events: VideoEvents) : TextureView
             active.pause()
         } else if (!paused && !active.isPlaying) {
             active.start()
+        }
+        reportProgress()
+    }
+
+    private fun reportProgress() {
+        progressHandler.removeCallbacks(progressTick)
+        val active = player ?: return
+        if (!prepared) {
+            return
+        }
+        events.onProgress(this, active.currentPosition / MILLISECONDS_PER_SECOND, active.duration / MILLISECONDS_PER_SECOND)
+        if (active.isPlaying) {
+            progressHandler.postDelayed(progressTick, PROGRESS_INTERVAL_MILLISECONDS)
         }
     }
 
@@ -182,5 +222,6 @@ class VideoView(context: Context, private val events: VideoEvents) : TextureView
 
     companion object {
         private const val MILLISECONDS_PER_SECOND = 1000.0
+        private const val PROGRESS_INTERVAL_MILLISECONDS = 250L
     }
 }

@@ -7,12 +7,14 @@ import android.content.Context
 import android.os.Build
 import android.os.LocaleList
 import android.os.StatFs
+import android.view.Window
 import com.facebook.react.ReactApplication
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableArray
+import com.facebook.react.interfaces.ExtraWindowEventListener
 import evai.android.BuildConfig
 import evai.android.specs.NativeEvaiDeviceSpec
 import java.security.SecureRandom
@@ -23,9 +25,19 @@ import org.json.JSONObject
 class DeviceModule(context: ReactApplicationContext) : NativeEvaiDeviceSpec(context) {
     private val random = SecureRandom()
     private val insetsObserver: (WindowInsetsTracker.Insets) -> Unit = ::emitWindowInsets
+    private val extraWindowListener = object : ExtraWindowEventListener {
+        override fun onExtraWindowCreate(window: Window) {
+            WindowInsetsTracker.track(window)
+        }
+
+        override fun onExtraWindowDestroy(window: Window) {
+            WindowInsetsTracker.untrack(window)
+        }
+    }
 
     init {
         WindowInsetsTracker.observe(insetsObserver)
+        context.addExtraWindowEventListener(extraWindowListener)
     }
 
     override fun readEnvironment(promise: Promise) {
@@ -77,6 +89,7 @@ class DeviceModule(context: ReactApplicationContext) : NativeEvaiDeviceSpec(cont
     }
 
     override fun invalidate() {
+        reactApplicationContext.removeExtraWindowEventListener(extraWindowListener)
         WindowInsetsTracker.release(insetsObserver)
         super.invalidate()
     }

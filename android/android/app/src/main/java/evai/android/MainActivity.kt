@@ -14,6 +14,11 @@ class MainActivity : ReactActivity() {
         WindowInsetsTracker.attach(this)
     }
 
+    override fun onDestroy() {
+        WindowInsetsTracker.untrack(window)
+        super.onDestroy()
+    }
+
     override fun createReactActivityDelegate(): ReactActivityDelegate =
         DefaultReactActivityDelegate(this, mainComponentName)
 }

@@ -37,9 +37,14 @@ class VideoViewManager : SimpleViewManager<VideoView>(), EvaiVideoViewManagerInt
 
     override fun getExportedCustomDirectEventTypeConstants(): Map<String, Any> = mapOf(
         READY_EVENT to mapOf("registrationName" to "onVideoReady"),
+        PROGRESS_EVENT to mapOf("registrationName" to "onVideoProgress"),
         END_EVENT to mapOf("registrationName" to "onVideoEnd"),
         ERROR_EVENT to mapOf("registrationName" to "onVideoError"),
     )
+
+    override fun seekTo(view: VideoView, seconds: Double) {
+        view.seekTo(seconds)
+    }
 
     @ReactProp(name = "source")
     override fun setSource(view: VideoView, value: String?) {
@@ -70,6 +75,17 @@ class VideoViewManager : SimpleViewManager<VideoView>(), EvaiVideoViewManagerInt
         dispatch(view, READY_EVENT, Arguments.createMap().apply { putDouble("duration", durationSeconds) })
     }
 
+    override fun onProgress(view: VideoView, positionSeconds: Double, durationSeconds: Double) {
+        dispatch(
+            view,
+            PROGRESS_EVENT,
+            Arguments.createMap().apply {
+                putDouble("position", positionSeconds)
+                putDouble("duration", durationSeconds)
+            },
+        )
+    }
+
     override fun onEnd(view: VideoView, completed: Boolean) {
         dispatch(view, END_EVENT, Arguments.createMap().apply { putBoolean("completed", completed) })
     }
@@ -87,6 +103,7 @@ class VideoViewManager : SimpleViewManager<VideoView>(), EvaiVideoViewManagerInt
     companion object {
         const val NAME = "EvaiVideoView"
         private const val READY_EVENT = "topVideoReady"
+        private const val PROGRESS_EVENT = "topVideoProgress"
         private const val END_EVENT = "topVideoEnd"
         private const val ERROR_EVENT = "topVideoError"
     }
